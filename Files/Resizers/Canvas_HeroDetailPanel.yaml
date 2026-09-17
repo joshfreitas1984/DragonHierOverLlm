@@ -4,11 +4,11 @@
   allowWordWrap: true
 - path: Canvas/HeroDetailPanel/Attri/*/*/Lv
   sampleText: C
-  idealFontSize: 24.0
-  alignment: TopLeft
+  idealFontSize: 14.0
+  alignment: Top
   allowWordWrap: false
-  adjustX: 2.0
-  adjustY: -20.0
+  adjustX: 25.0
+  adjustY: -45.0
 - path: Canvas/HeroDetailPanel/Force
   sampleText: Xianxia Sect<color=#8C8C8C>Outer Gate Disciple</color>
   idealFontSize: 18.0

@@ -41,10 +41,17 @@ internal static class GlobalDataListOverrides
     // scale should never silently mislabel it.
     private static readonly (string PropertyName, string[] Values)[] Overrides =
     {
-        ("BattleScoreText", new[] { "D", "C", "B", "A", "S", "SS" }),
-        ("AttriRatioString", new[] { "D", "C", "B", "A", "S", "SS", "SSS" }),
+        ("BattleScoreText", new[] { "Poor", "Average", "Good", "Excellent", "Supreme", "Peerless" }),
+        ("AttriRatioString", new[] { "Low", "Average", "High", "Refined", "Supreme", "Peerless", "Divine" }),
+        ("EquipmentWeightLvName", new[] { "None", "Mininmal", "Light", "Moderate", "Heavy", "Overloaded" }),
+        ("EquipLvName", new []{ "Poor", "Common", "Fine", "Superior", "Perfect", "Peerless"}),
+        ("SkillLvName", new []{ "Basic", "Advanced", "Superior", "Secret", "Ultimate", "Peerless"}),
+        ("BookRareLvName", new []{ "Incomplete", "Replica", "Fine", "Antique", "Rare", "Complete"}),
+        ("TreasureRareLvName", new []{ "Damaged", "Low Grade", "Mid Grade", "High Grade", "Rare", "Exquisite"}),
+        ("TreasureTypeName", new []{ "Instrument", "Go Records", "Calligraphy", "Paintings", "Incense Burners", "Apparel", "Gems", "Wineware", "Historical Records", "Classics"}),
         ("TreasureValueLvName", new[] { "Worthless", "Common", "Uncommon", "Fine", "Precious", "Extraordinary" }),
-        ("EquipmentWeightLvName", new[] { "None", "Light", "Slightly Light", "Moderate", "Heavy", "Overloaded" }),
+        ("TreasureValueLvTypeName", new []{ "Condition", "Age", "Material", "Craftmanship"}),
+        //("MaterialTypeName", new []{ "Timber", "Ore", "Medical", "Ingredients", "Poison"}),
     };
 
     [HarmonyPatch(typeof(PlotController), "Awake")]
@@ -106,6 +113,7 @@ internal static class GlobalDataListOverrides
             var listType = prop.PropertyType;
             var countProp = listType.GetProperty("Count");
             var itemProp = listType.GetProperty("Item");
+
             if (countProp == null || itemProp == null)
             {
                 MainPlugin.Logger.LogWarning($"[GlobalDataListOverrides] '{propertyName}' has no Count/Item property.");
@@ -122,6 +130,8 @@ internal static class GlobalDataListOverrides
                 MainPlugin.Logger.LogWarning($"[GlobalDataListOverrides] Failed reading Count for '{propertyName}': {ex.Message}");
                 continue;
             }
+
+            //LogPropertyValues(propertyName, list, itemProp, count);
 
             if (count != values.Length)
             {
@@ -143,6 +153,15 @@ internal static class GlobalDataListOverrides
             }
 
             MainPlugin.Logger.LogInfo($"[GlobalDataListOverrides] Overrode {propertyName} ({string.Join(", ", values)}).");
+        }
+    }
+
+    private static void LogPropertyValues(string propertyName, object list, PropertyInfo itemProp, int count)
+    {
+        for (var i = 0; i < count; i++)
+        {
+            var current = itemProp.GetValue(list, new object[] { i });
+            MainPlugin.Logger.LogWarning($"{propertyName}[{i}]: {current}");
         }
     }
 }

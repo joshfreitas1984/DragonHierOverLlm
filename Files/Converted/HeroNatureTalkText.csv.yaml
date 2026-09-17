@@ -357,11 +357,10 @@
     text: "#PlayerName#武功若不能精进，只怕要被我远远甩在身后了。"
     translated: "#PlayerName#, if my martial arts doesn't improve, I might be left far behind."
     qcReviewedText: "#PlayerName#, if my martial arts doesn't improve, I might be left far behind."
-    qcTranslated: "#PlayerName#, if your martial arts do not improve, I am afraid I will be left far behind."
+    qcTranslated: "#PlayerName#, if your martial arts don't improve, I'm afraid you'll be left far behind."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 90
+    qcDefectCategory: OtherNamedDefect
 - raw: "日常见面,#PlayerName#？抱歉我心有所思，没注意到你。,#PlayerName#我们有几日未见了？容我好好回忆回忆。,不知#PlayerName#寻我有何贵干？,#PlayerName#若有我帮得上忙的地方，只管吩咐。,#PlayerName#别来无恙？,真巧，我正要离开此处，便遇到了#PlayerName#你。,#PlayerName#你我又见面了，算不算是缘分使然？,#PlayerName#几日不见，风采依旧啊！,#PlayerName#前来寻我，只怕是有事相求？,#PlayerName#有话快说吧，我还有要事在身。"
   splits:
   - text: "日常见面"
@@ -386,11 +385,9 @@
     text: "不知#PlayerName#寻我有何贵干？"
     translated: "I don't know what #PlayerName# wants from me."
     qcReviewedText: "I don't know what #PlayerName# wants from me."
-    qcTranslated: "What does #PlayerName# seek from me?"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: DroppedContent
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 4
     text: "#PlayerName#若有我帮得上忙的地方，只管吩咐。"
     translated: "#PlayerName#, if there's anything I can help with, just let me know."
@@ -481,11 +478,10 @@
     text: "贵逼人来不自由，龙翔凤翥势难收。满堂花醉三千客，一剑霜寒十四州。"
     translated: "Compelled by one's status, the dragon soars and the phoenix rises, a momentum that cannot be halted. A sword's chill spans fourteen states as it intoxicates three thousand guests with its floral fragrance."
     qcReviewedText: "Compelled by one's status, the dragon soars and the phoenix rises, a momentum that cannot be halted. A sword's chill spans fourteen states as it intoxicates three thousand guests with its floral fragrance."
-    qcTranslated: "Compelled by one's status, the dragon soars and the phoenix rises, a momentum that cannot be halted. A hall full of flowers intoxicates three thousand guests; a single sword's frosty chill spans fourteen states."
+    qcTranslated: "Compelled by one's status, the dragon soars and the phoenix rises, a momentum that cannot be halted. A hall full of flowers intoxicates three thousand guests, one sword's frosty chill spans fourteen states."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 90
+    qcDefectCategory: DroppedContent
   - split: 7
     text: "人生得意须尽欢，莫使金樽空对月。天生我材必有用，千金散尽还复来。"
     translated: "Life is short; make the most of it by rejoicing. Do not let golden goblets remain empty under the moon. Heaven endowed me with talents that must serve some purpose; even if I spend a thousand gold pieces, they will come back to me."
@@ -497,11 +493,9 @@
     text: "名花倾国两相欢，长得君王带笑看。解释春风无限恨，沉香亭北倚阑干。"
     translated: "A beauty and the emperor both delight,   With his smile and laughter, they draw him in. In the spring breeze, their charm erases all resentment, by the fragrant pavilion railing, they lean on the rail."
     qcReviewedText: "A beauty and the emperor both delight,   With his smile and laughter, they draw him in. In the spring breeze, their charm erases all resentment, by the fragrant pavilion railing, they lean on the rail."
-    qcTranslated: "A beauty and the emperor, both delighting, \\nWith his smile, he watches them. Explaining the spring breeze's boundless resentment, \\nNorth of the Incense Pavilion, they lean on the railing."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 9
     text: "飞剑纵横乍可惊，翻疑风俗妄传声。如今至穷在何处，不出为人平不平。"
     translated: "Whirling sword strokes startle; one might doubt if they are mere rumors. Now where lies true poverty? Not but to right what is unjust for people."

@@ -24,11 +24,9 @@
   - text: "副掌门门以上方可参阅"
     translated: "Only the Sect Leader and above may refer to this."
     qcReviewedText: "(Only the Sect Leader and above may refer to this.)"
-    qcTranslated: "(Only the Deputy Sect Leader and above may refer to this.)"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: DroppedContent
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   templates:
   - template: "({0})"
 - raw: "[长按]"
@@ -54,11 +52,9 @@
   - text: "所有排名均不分先后"
     translated: "All rankings are unordered"
     qcReviewedText: "<b>(All rankings are unordered) </b>\\nDesigner：ZPP \\nProgram：ZPP \\nArt：TPP \\n\\nRelease：GreenBean,Sherry，Ouyi，lele，Lost, Rising Clouds and Ascending Dragons, Xiao Yun, Humble Hum, Yellow State, Doggies \\nTest：Zheng Yu, Xia Tianyi, Jiang Sheng, Yun Qilongxiang \\nPlayer support：Coconut Dr.Xuan \\n\\nSpecial thanks \\nPlayers participating in the free mode test：\\nCoconut \\nOxifa \\nDrinking by the riverside under the moonlight \\nSteamed bun king \\nRiver Relic Restorer \\nJust to meet you \\nQingqing Shen \\nFour Directions Yan \\nHai Senbao Revives with Skill\\n Shades"
-    qcTranslated: "<b>(All rankings are unordered) </b>\\nDesigner: ZPP \\nProgrammer: ZPP \\nArt: TPP \\n\\nPublishing: Green Bean, Sherry, Ouyi, lele, Lost, Yun Qi Long Xiang, Xiao Yun, Qian Qian, Huang Guo, Gou Gou\\nTesting: Zheng Yu, Xia Tian Yi Jing, Jiang Sheng, Yun Qi Long Xiang\\nPlayer Support: Coconut, Dr"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "策划"
     translated: "Designer"
@@ -253,11 +249,9 @@
   - text: "医术"
     translated: "Medicine"
     qcReviewedText: "<b>Medicine </b>\\nAffecting External Injuries Treatment/Internal Injury's efficiency"
-    qcTranslated: "<b>Medicine</b>\\nAffects the efficiency of treating External Injuries/Internal Injuries"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "影响治疗外伤"
     translated: "Affecting External Injuries Treatment"
@@ -412,11 +406,10 @@
   - text: "毒术"
     translated: "Poison Technique"
     qcReviewedText: "<b>Poison Technique </b>\\nAffect poisoning/Efficiency of detoxification"
-    qcTranslated: "<b>Poison Technique</b>\\nAffects the efficiency of poisoning and detoxification"
+    qcTranslated: "<b>Poison Technique </b>\\nAffects the efficiency of poisoning/detoxification"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "影响用毒"
     translated: "Affect poisoning"
@@ -449,11 +442,10 @@
   - text: "炼药"
     translated: "Alchemy"
     qcReviewedText: "<b>Alchemy </b>\\nAffecting the preparation of elixirs/Strengthening and consolidating/Efficiency in damaging the population"
-    qcTranslated: "<b>Alchemy</b>\\nAffects the crafting/enhancement of pills, as well as the efficiency of consolidating/destabilizing regional population"
+    qcTranslated: "<b>Alchemy </b>\\nAffecting the preparation of elixirs/Strengthening and consolidating/Destroying regional population efficiency"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcQualityScore: 82
+    qcDefectCategory: DroppedContent
   - subIndex: 1
     text: "影响丹药的制作"
     translated: "Affecting the preparation of elixirs"
@@ -470,10 +462,9 @@
   - text: "烹饪"
     translated: "Cooking"
     qcReviewedText: "<b>Cooking </b>\\nInfluences food preparation/Strengthening and consolidating/Efficiency in undermining the morale of the affected area"
-    qcTranslated: "<b>Cooking</b>\\nInfluences the efficiency of crafting and enhancing food, as well as boosting or undermining local morale"
+    qcTranslated: "<b>Cooking </b>\\nInfluences food preparation/Strengthening and consolidating/undermining the morale of the affected area"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 85
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "影响饮食的制作"
@@ -491,10 +482,9 @@
   - text: "经脉"
     translated: "Meridian"
     qcReviewedText: "<b>Meridian</b>\\n+2 Inner Power Cap\\n+0.5 consecutive hits\\n+0.5% recovery efficiency"
-    qcTranslated: "<b>Meridians</b>\\n+2 Inner Power Cap\\n+0.5% Combo\\n+0.5% Recovery Efficiency"
+    qcTranslated: "<b>Meridian</b>\\n+2 Inner Power Cap\\n+0.5% consecutive hits\\n+0.5% recovery efficiency"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 95
     qcDefectCategory: DroppedContent
   - subIndex: 1
     text: "+2内力上限"
@@ -536,11 +526,9 @@
   - text: "采伐"
     translated: "Resource Gathering"
     qcReviewedText: "<b>Resource Gathering </b>\\nAffecting Sect Timber Acquisition/Minerals, and reduce the effectiveness of the defense in the affected area"
-    qcTranslated: "<b>Resource Gathering</b>\\nAffects the efficiency of acquiring Sect timber and ore, and the efficiency of destroying area defenses"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "影响获取门派木料"
     translated: "Affecting Sect Timber Acquisition"
@@ -554,11 +542,10 @@
   - text: "锻造"
     translated: "Forging"
     qcReviewedText: "<b>Forging </b>\\nAffecting the crafting of equipment/Strengthening and consolidating/Efficiency in maintaining order in affected areas"
-    qcTranslated: "<b>Forging</b>\\nAffects the crafting and enhancement of equipment, as well as the efficiency of consolidating and disrupting public order in regions"
+    qcTranslated: "<b>Forging </b>\\nAffecting the crafting of equipment/Strengthening and consolidating/destroying the efficiency in maintaining order in affected areas"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: HardToParseSeam
+    qcQualityScore: 85
+    qcDefectCategory: DroppedContent
   - subIndex: 1
     text: "影响装备的制作"
     translated: "Affecting the crafting of equipment"
@@ -611,11 +598,9 @@
   - text: "从气海出发，一路打通穴位。"
     translated: "Starting from the Sea of Qi, they smoothly unblocked the meridians."
     qcReviewedText: "♦Starting from the Sea of Qi, they smoothly unblocked the meridians.\\n♦Return to the Qi Sea and you can unlock additional experience throughout the body.\\n♦Midway through cultivation, inner power will deplete automatically, ending the session. You can also click the button to end it manually."
-    qcTranslated: "♦Starting from the Qi Sea, unblock the acupoints along the way.\\n♦Finally return to the Qi Sea to unblock the Microcosmic Orbit and gain extra experience.\\n♦If Inner Power is depleted midway, cultivation will end automatically. You can also click the button to end it manually."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "最终回归气海，便可打通周天获取额外经验。"
     translated: "Return to the Qi Sea and you can unlock additional experience throughout the body."
@@ -629,11 +614,9 @@
   - text: "使用头盔"
     translated: "Use the helmet"
     qcReviewedText: "♦Use the helmet/Armor/Step the Mechanism Beast to modify it, and you will gain special bonuses applicable to all Mechanism Beasts for 30 days.\\n♦Each modification will increase the experience of the corresponding body part. After upgrading a body part, it will provide permanent enhancements to the mecha beast."
-    qcTranslated: "♦Use the helmet/armor/boots to modify the Mechanism Beast, gaining special bonuses that apply to all Mechanism Beasts for 30 days.\\n♦Each modification increases the experience of the corresponding slot"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "护甲"
     translated: "Armor"
@@ -650,11 +633,9 @@
   - text: "在物品上下毒，当物品转移至他人身上时，就会使其中毒。"
     translated: "To poison an item, when it is transferred to someone else, they will be poisoned."
     qcReviewedText: "♦To poison an item, when it is transferred to someone else, they will be poisoned.\\n♦Using poison‑equipped items or reading poison‑contaminated books can cause additional poisoning.\\n♦Taking toxic elixirs and consuming poisonous food will result in double poisoning."
-    qcTranslated: "♦Poison items; when an item is transferred to another player, they will be poisoned.\\n♦Using poisoned equipment or reading poisoned books will cause additional poisoning.\\n♦Consuming poisoned elixirs or food will result in double poisoning."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "使用带毒装备，阅读带毒书籍等，会导致额外中毒。"
     translated: "Using poison‑equipped items or reading poison‑contaminated books can cause additional poisoning."
@@ -697,11 +678,10 @@
   - text: "左"
     translated: "Left"
     qcReviewedText: "♦Left ctrl+~Press to open/Close the console\\n♦Top/Down arrow key to switch to the previous option./Next historical command\\n<color=red>♦Enabling cheat mode will prevent achievement unlocks and may cause unknown issues.bug, Please use this cautiously</color>"
-    qcTranslated: "♦Press Ctrl+~ to open/close the console.\\n♦Use the Up/Down arrow keys to switch to the previous/next command in history.\\n<color=red>♦Enabling cheat mode will prevent achievement unlocks and may cause unknown bugs. Please use with caution.</color>"
+    qcTranslated: "♦Left ctrl+~Press to open/Close the console\\n♦Top/Down arrow key to switch to the previous option./Next historical command\\n<color=red>♦Enabling cheat mode will prevent achievement unlocks and may cause unknown bugs. Please use this cautiously</color>"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 85
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "键打开"
     translated: "Press to open"
@@ -730,10 +710,9 @@
   - text: "弟子会根据方针设定的优先级自行安排行动。"
     translated: "Disciples will arrange their actions according to the prioritization set by the guidelines."
     qcReviewedText: "♦Disciples will arrange their actions according to the prioritization set by the guidelines.\\n♦Priority highest 5, lowest 0\\n♦Press and hold the left button Shift Priority can be set directly to 5\\n♦Press and hold the left button Ctrl Priority can be set directly to 0"
-    qcTranslated: "♦Disciples will arrange their actions according to the priorities set in the guidelines.\\n♦Highest priority: 5, lowest priority: 0\\n♦Hold left Shift to set the priority directly to 5.\\n♦Hold left Ctrl to set the priority directly to 0."
+    qcTranslated: "♦Disciples will arrange their actions according to the prioritization set by the guidelines.\\n♦Priority highest 5, lowest 0\\n♦Press and hold the left Shift key to directly set the priority to 5.\\n♦Press and hold the left Ctrl key to directly set the priority to 0."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "优先级最高5，最低0。"
@@ -783,11 +762,9 @@
   - text: "是否允许弟子学习新武功"
     translated: "Is it permissible for the disciple to learn new martial arts?"
     qcReviewedText: "♦Is it permissible for the disciple to learn new martial arts?\\n<b>Allow</b>：Allow learning any new martial arts technique \\n<b>Only Scripture Pavilion</b>：Only new martial arts from the Scripture Pavilion may be studied.\\n<b>No permission</b>：No learning new martial arts techniques"
-    qcTranslated: "♦Allow disciples to learn new martial arts?\\n<b>Allow</b>: Allow learning any new martial arts\\n<b>Scripture Pavilion Only</b>: Only allow learning new martial arts from the Scripture Pavilion\\n<b>Prohibit</b>: Prohibit learning new martial arts"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 45
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "允许"
     translated: "Allow"
@@ -839,10 +816,9 @@
   - text: "武功抵达瓶颈需突破才能升级"
     translated: "Martial arts proficiency must breakthrough to level up when it reaches a bottleneck."
     qcReviewedText: "♦Martial arts proficiency must breakthrough to level up when it reaches a bottleneck.\\n♦Breakthrough to add additional effects to martial arts skills using pills./Food and drink/A Secret Manual aids in achieving stronger effects.\\n♦Boosting building levels and corresponding martial skills can increase breakthrough efficiency."
-    qcTranslated: "♦Martial arts reach a bottleneck and require a breakthrough to level up.\\n♦Breakthroughs add extra effects to martial arts; use Pills, Food/Drink, or Secret Manuals to enhance the outcome.\\n♦Upgrading building levels and corresponding martial arts skills can increase breakthrough efficiency."
+    qcTranslated: "♦Martial arts proficiency must breakthrough to level up when it reaches a bottleneck.\\n♦Breakthrough adds additional effects to martial arts skills; use pills, food and drink, or Secret Manuals to aid in achieving stronger effects.\\n♦Boosting building levels and corresponding martial skills can increase breakthrough efficiency."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "突破为武功增加额外效果，用丹药"
@@ -863,11 +839,9 @@
   - text: "每级对"
     translated: "Level up by"
     qcReviewedText: "♦Level up by AI Sect influence is generated：\\n‑Speed up construction：Monthly production limit+, Construction consumes ‑5% resources, construction speed+5%\\n‑Speed up research and development：Research consumption ‑5%, research speed+5%\\n‑Speed up disciples' advancement：Promotion Frequency +5%, Promotion Consumption ‑5%, Promotion Martial Arts Level+, Recruitment costs ‑5% consumed, monthly salary costs consumed-2.5%"
-    qcTranslated: "♦Each level affects the AI Sect:\\n‑Speeds up construction: Monthly construction count +, construction cost 5%, construction speed +5%\\n‑Speeds up research: Research cost 5%, research speed +5%\\n‑Speeds up disciple promotion: Promotion frequency +5%, promotion cost 5%, promotion martial arts level +, recruitment cost 5%, monthly salary cost ‑2.5%"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "门派产生影响"
     translated: "Sect influence is generated"
@@ -941,11 +915,9 @@
   - text: "消耗资源制造目标物品，消耗越多产物等级越高"
     translated: "Consume more resources to produce higher‑grade items"
     qcReviewedText: "♦Consume more resources to produce higher‑grade items\\n♦Building level and corresponding skills(Forging/Cooking/Alchemy) Can increase production efficiency\\n♦When not using materials, consumption doubles\\n♦The products will inherit the bonuses from the materials.(Take the larger value)"
-    qcTranslated: "♦Consume resources to produce target items; the more consumed, the higher the product grade\\n♦Building level and corresponding skills (Forging/Cooking/Alchemy) can increase production efficiency\\n♦Consumption doubles when no materials are used\\n♦Products inherit the bonus effects of materials (for identical entries, the larger value is taken)"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "建筑等级和对应技能"
     translated: "Building level and corresponding skills"
@@ -1025,11 +997,9 @@
   - text: "点数组合从优到劣依次为"
     translated: "The best combinations of points are in order from top to bottom:"
     qcReviewedText: "♦The best combinations of points are in order from top to bottom:\\n  Same suit(1 1 1 1)\\n  Four Straight(1 2 3 4)\\n  Three trails(1 1 1 2)\\n  Two pairs(1 1 2 2)\\n  A pair(1 1 2 3)\\n  Multicolor(1 2 3 5)\\n♦Then the one with the higher total points wins.\\n♦Each roll allows you to reroll one die.\\n♦A flush will double the bet payout"
-    qcTranslated: "♦The point combinations ranked from best to worst are:\\n  Flush(1 1 1 1)\\n  Straight(1 2 3 4)\\n  Three of a Kind(1 1 1 2)\\n  Two Pair(1 1 2 2)\\n  One Pair(1 1"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "同花"
     translated: "Same suit"
@@ -1064,11 +1034,10 @@
   - text: "突破加成仅作用于该技能之上"
     translated: "Breakthrough bonus applies only to this skill"
     qcReviewedText: "♦Breakthrough bonus applies only to this skill\\n♦Neigong/Qinggong/The breakthrough bonus of the ultimate technique becomes effective after equipping it.\\n♦The bonus from breaking through external skill becomes effective only when used in battle."
-    qcTranslated: "♦Breakthrough bonus applies only to this skill\\n♦The breakthrough bonus for Neigong/Qinggong/Ultimate Skills takes effect after equipping\\n♦The breakthrough bonus for External Skills takes effect only when used in battle"
+    qcTranslated: "♦Breakthrough bonus applies only to this skill\\n♦The breakthrough bonus for Neigong/Qinggong/Ultimate Technique becomes effective after equipping it.\\n♦The bonus from breaking through External Skill becomes effective only when used in battle."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
-    qcDefectCategory: HardToParseSeam
+    qcQualityScore: 90
+    qcDefectCategory: DroppedContent
   - subIndex: 1
     text: "内功"
     translated: "Neigong"
@@ -1088,11 +1057,10 @@
   - text: "给武器"
     translated: "Equip weapon"
     qcReviewedText: "♦Equip weapon/Infuse the accessory with poison to apply a poisoning effect when attacking.\\n♦Apply armor/Helmet/Clog poisoning can inflict a poison effect on the opponent during defense.\\n♦Poisoning will decrease with use, and its effects will accordingly diminish.\\n♦Weapon/The poison effect of the armor is stronger than that of other equipment."
-    qcTranslated: "♦Infusing weapons/accessories with poison allows you to poison the opponent when attacking.\\n♦Infusing armor/helmets/shoes with poison allows you to poison the opponent when defending.\\n♦Poison potency decreases with use, and its effect will diminish accordingly.\\n♦The poison effect of weapons/armor is stronger than that of other equipment."
+    qcTranslated: "♦Equip weapon/Infuse the accessory with poison to apply a poisoning effect when attacking.\\n♦Apply armor/Helmet/Clog poisoning can inflict a poison effect on the opponent during defense.\\n♦Poisoning will decrease with use, and its effects will accordingly diminish.\\n♦The poison effect of weapons/armor is stronger than that of other equipment."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: HardToParseSeam
+    qcQualityScore: 85
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "饰品淬毒，可在攻击时让对方中毒。"
     translated: "Infuse the accessory with poison to apply a poisoning effect when attacking."
@@ -1121,11 +1089,10 @@
   - text: "自定义选项会在"
     translated: "Custom options will be available in"
     qcReviewedText: "♦Custom options will be available in <b>Based on the selected difficulty </b>Have an impact\\n♦Overall balance is being adjusted/More difficult/Difficulty/Achievements can only be obtained in extremely difficult situations\\n♦Every 10 points increase Skill Cap by +1.\\n♦I recommend understanding the game mechanics before adjusting the custom options."
-    qcTranslated: "♦Custom options will have an effect <b>based on the selected difficulty</b>\\n♦Overall balance is being adjusted/More difficult/Difficulty/Achievements can only be obtained in extremely difficult situations\\n♦Every 10 points increase Skill Cap by +1.\\n♦I recommend understanding the game mechanics before adjusting the custom options."
+    qcTranslated: "♦Custom options will have an impact <b>based on the selected difficulty</b>\\n♦Achievements can only be obtained when the overall level is Balanced/More Difficult/Difficult/Extremely Difficult\\n♦Every 10 points of difficulty increases the talent cap by +1.\\n♦It is recommended to understand the game mechanics before adjusting the custom options"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: HardToParseSeam
+    qcQualityScore: 90
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "所选难度基础上"
     translated: "Based on the selected difficulty"
@@ -1159,8 +1126,7 @@
     qcReviewedText: "♦The Scripture Pavilion's Secret Manual can boost the cultivation speed of all sect disciples for that martial art. The Scripture Pavilion's Secret Manual can increase the cultivation speed of all sect disciples for that martial art.\\n♦The rarer the Secret Manual, the higher the bonus.\\n(This buff is ineffective on players)"
     qcTranslated: "♦The Scripture Pavilion's Secret Manual can boost the cultivation speed of all sect disciples for that martial art.\\n♦The rarer the Secret Manual, the higher the bonus.\\n(This buff is ineffective on players)"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 95
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "秘籍越稀有加成越高。"
@@ -1236,11 +1202,9 @@
   - text: "鼠标悬停在图标上，可查看属性具体效果"
     translated: "Hovering the mouse over the icon allows you to view the specific effects of the properties."
     qcReviewedText: "♦Hovering the mouse over the icon allows you to view the specific effects of the properties.\\n♦Limit>At 70, increasing the cap by 1 points requires consuming 2 potential.\\n♦Limit>At 80, increasing the cap by 1 points requires consuming 3 potential."
-    qcTranslated: "♦Hover over the icon to view the specific effects of the attributes.\\n♦When Limit > 70, increasing the limit by 1 points requires consuming 2 potential.\\n♦When Limit > 80, increasing the limit by 1 points requires consuming 3 potential."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "上限"
     translated: "Limit"
@@ -1260,11 +1224,10 @@
   - text: "本游戏是一款武侠题材的开放世界游戏，适用于16周岁及以上的用户，建议未成年人在家长监护下使用游戏产品。"
     translated: "This is a wuxia‑themed open‑world game suitable for users aged 16 and above. It is recommended that minors play this game with parental guidance."
     qcReviewedText: "1. This is a wuxia‑themed open‑world game suitable for users aged 16 and above. It is recommended that minors play this game with parental guidance.\\n\\n2. The game features a ink‑wash style graphics, fresh and elegant, upholding the aesthetic culture of our country. It tells the story of the protagonist practicing chivalry to help the innocent and punish villains, aiming to promote his sect's glory and benefit the people. The background settings in the game are all fictional and will not be confused with reality. The gameplay focuses on strategic thinking rather than intense combat scenes. All content within the game adheres to relevant laws and regulations.\\n\\n3. This game has a real‑name authentication system for users. Minors will be subject to the following management measures.：\\n<color=#BC1717>  〇 Users under 8 years old cannot make in‑game purchases; users aged between 8 and under 16 years old are not allowed to spend more than 50 RMB per transaction, with monthly cumulative spending capped at no more than 200 RMB; users who are 16 years old or older can make single transactions of no more than 100 RMB, with monthly cumulative spending limited to no more than 400 RMB.\\n  〇 This game is only available for minors to play for up to 1 hours of online gaming service from 20 PM to 21 PM on Fridays, Saturdays, Sundays, and public holidays. It will not provide any form of online gaming service to minors at other times.</color>\\n\\n4. The game primarily focuses on strategic play. Players can become stronger by utilizing the resources and clues provided within the game, in conjunction with their own strengths, which enhances their enjoyment and relaxation. Throughout the gameplay, rich content, diverse playstyles, and engaging narratives immerse players, offering unique pleasures different from those in real life. After enjoying the game and taking a break, players can better engage in their real‑life work and studies.\\n"
-    qcTranslated: "1. This is a wuxia‑themed open‑world game suitable for users aged 16 and above. It is recommended that minors play this game with parental guidance.\\n\\n2. The game features ink‑wash style graphics, fresh and elegant, upholding the aesthetic culture of our country. It tells the story of the protagonist practicing chivalry to help the innocent and punish villains, aiming to promote his sect's glory and benefit the people. The background settings in the game are all fictional and will not be confused with reality. The gameplay focuses on strategic thinking rather than intense combat scenes. All content within the game adheres to relevant laws and regulations.\\n\\n3. This game has a real‑name authentication system for users. Minors will be subject to the following management measures:\\n<color=#BC1717>  〇 Users under 8 years old cannot make in‑game purchases; users aged 8 and above but under 16 years old are not allowed to spend more than 50 RMB per transaction, with monthly cumulative spending capped at no more than 200 RMB; users aged 16 and above can make single transactions of no more than 100 RMB, with monthly cumulative spending limited to no more than 400 RMB.\\n 〇 This game provides online gaming services to minors only from 1 to 20 hours daily for up to 21 hours on Fridays, Saturdays, Sundays, and public holidays. It will not provide any form of online gaming service to minors at other times.</color>\\n\\n4. The game primarily focuses on strategic play. Players can become stronger by utilizing the resources and clues provided within the game, in conjunction with their own strengths, which enhances their enjoyment and relaxation. Throughout the gameplay, rich content, diverse playstyles, and engaging narratives immerse players, offering unique pleasures different from those in real life. After enjoying the game and taking a break, players can better engage in their real‑life work and studies."
+    qcTranslated: "1. This is a wuxia‑themed open‑world game suitable for users aged 16 and above. It is recommended that minors play this game with parental guidance.\\n\\n2. The game features ink‑wash style graphics, fresh and elegant, upholding the aesthetic culture of our country. It tells the story of the protagonist practicing chivalry to help the innocent and punish villains, aiming to promote his sect's glory and benefit the people. The background settings in the game are all fictional and will not be confused with reality. The gameplay focuses on strategic thinking rather than intense combat scenes. All content within the game adheres to relevant laws and regulations.\\n\\n3. This game has a real‑name authentication system for users. Minors will be subject to the following management measures:\\n<color=#BC1717>  〇 Users under 8 years old cannot make in‑game purchases; users aged between 8 and under 16 years old are not allowed to spend more than 50 RMB per transaction, with monthly cumulative spending capped at no more than 200 RMB; users who are 16 years old or older can make single transactions of no more than 100 RMB, with monthly cumulative spending limited to no more than 400 RMB.\\n  〇 This game is only available for minors to play from 1 to 20 on Fridays, Saturdays, Sundays, and public holidays, providing up to 21 hours of online gaming service per day. It will not provide any form of online gaming service to minors at other times.</color>\\n\\n4. The game primarily focuses on strategic play. Players can become stronger by utilizing the resources and clues provided within the game, in conjunction with their own strengths, which enhances their enjoyment and relaxation. Throughout the gameplay, rich content, diverse playstyles, and engaging narratives immerse players, offering unique pleasures different from those in real life. After enjoying the game and taking a break, players can better engage in their real‑life work and studies.\\n"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcQualityScore: 85
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "本游戏画面为水墨风格，清新淡雅，弘扬我国美学文化。讲述了主角行侠仗义，惩奸除恶，帮助自己的门派发扬光大，造福百姓的故事。游戏中的背景皆为架空，不会与现实混淆。游戏中的玩法多为动脑的策略玩法，没有激烈刺激的战斗画面。游戏内所有内容都遵循相关法律法规。"
     translated: "The game features a ink‑wash style graphics, fresh and elegant, upholding the aesthetic culture of our country. It tells the story of the protagonist practicing chivalry to help the innocent and punish villains, aiming to promote his sect's glory and benefit the people. The background settings in the game are all fictional and will not be confused with reality. The gameplay focuses on strategic thinking rather than intense combat scenes. All content within the game adheres to relevant laws and regulations."
@@ -1345,11 +1308,9 @@
   - text: "3200点声望"
     translated: "3200 reputation points"
     qcReviewedText: "3200 reputation points Gain Sect Leader Favor by 100 points"
-    qcTranslated: "3200 Reputation Points, 100 Sect Leader Favor Points"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "100点掌门好感"
     translated: "Gain Sect Leader Favor by 100 points"
@@ -1415,11 +1376,10 @@
   - text: "一"
     translated: "One"
     qcReviewedText: "One \\nWait \\nPrize"
-    qcTranslated: "1st \\nPlace \\nPrize"
+    qcTranslated: "First \\nPlace \\nPrize"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: HardToParseSeam
+    qcQualityScore: 95
+    qcDefectCategory: DomainTerm
   - subIndex: 1
     text: "等"
     translated: "Wait"
@@ -1457,11 +1417,10 @@
   - text: "三"
     translated: "Three"
     qcReviewedText: "Three \\nWait \\nPrize"
-    qcTranslated: "Third \\nClass \\nPrize"
+    qcTranslated: "Third \\nPlace \\nPrize"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: GarbledNumber
+    qcQualityScore: 95
+    qcDefectCategory: DomainTerm
   - subIndex: 1
     text: "等"
     translated: "Wait"
@@ -1669,11 +1628,9 @@
   - text: "丹药"
     translated: "Elixir"
     qcReviewedText: "Elixir\\n(Consume)"
-    qcTranslated: "Elixir\\n(Consumable)"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "消耗"
     translated: "Consume"
@@ -1755,9 +1712,8 @@
     qcReviewedText: "Two \\nWait \\nPrize"
     qcTranslated: "Second \\nClass \\nPrize"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: HardToParseSeam
+    qcQualityScore: 95
+    qcDefectCategory: DomainTerm
   - subIndex: 1
     text: "等"
     translated: "Wait"
@@ -1955,11 +1911,9 @@
   - text: "仙霞派派正式正式"
     translated: "Xianxia Sect officially"
     qcReviewedText: "Xianxia Sect officially"
-    qcTranslated: "Xianxia Sect officially, officially"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: DroppedStutter
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "以此换取支持，稳固皇位。"
   splits:
   - text: "以此换取支持，稳固皇位。"
@@ -2010,11 +1964,9 @@
   - text: "休息"
     translated: "Rest"
     qcReviewedText: "Rest(Shortcut keys S)\\n♦Health+1% Inner Power+2%\\n♦Stamina+10\\n♦Restore 5% Stance Lost"
-    qcTranslated: "Rest (Shortcut Key S)\\n♦Health +1% Inner Power +2%\\n♦Stamina +10\\n♦Restore 5% Lost Stance"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "快捷键"
     translated: "Shortcut keys"
@@ -2106,11 +2058,9 @@
   - text: "传说仙霞派源自峨眉派一旁支，其祖师妙远真人，"
     translated: "Legend has it that the Xianxia Sect originated from a side branch of the Emei Sect. Its founding immortal is called Mao Yuan Immortal Charming Remote."
     qcReviewedText: "Legend has it that the Xianxia Sect originated from a side branch of the Emei Sect. Its founding immortal is called Mao Yuan Immortal Charming Remote."
-    qcTranslated: "Legend has it that the Xianxia Sect originated from a side branch of the Emei Sect. Its founding patriarch, the Immortal Miaoyuan,"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "传闻"
   splits:
   - text: "传闻"
@@ -2160,11 +2110,9 @@
   - text: "体力"
     translated: "Stamina"
     qcReviewedText: "Stamina\\n♦When your stamina is less than 50, every 1 point decrease grants ‑1% chance to combo./Dodge\\n♦Stamina recovery can exceed the limit by up to 1 points, increasing combo rate by +0.5% for each excess point./Hit Rate\\n♦When your stamina exceeds the limit, it decays by 50% each turn.(At least 5 points)。"
-    qcTranslated: "Stamina\\n♦When stamina is below 50, each 1 point decrease reduces Combo/Dodge by 1%.\\n♦Stamina recovery can exceed the cap. Each 1 point over the cap increases Combo/Hit Rate by +0.5%.\\n♦When stamina exceeds the cap, the excess decays by 50% each turn (minimum 5 points)."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "体力小于50时，每减少1点-1%连击"
     translated: "When your stamina is less than 50, every 1 point decrease grants ‑1% chance to combo."
@@ -2221,11 +2169,9 @@
   - text: "作为仙霞派弟子，体验一个小门派在江湖变局之中的恩怨浮沉。"
     translated: "As a disciple of the Xianxia Sect, experience the rise and fall of a small sect in the ever‑changing Jianghu."
     qcReviewedText: "As a disciple of the Xianxia Sect, experience the rise and fall of a small sect in the ever‑changing Jianghu.\\n<color=green>Unlock special intimate interactions with characters through the storyline/Recruit</color>\\n(I recommend using Sword Technique/Fist and Palm Character)"
-    qcTranslated: "As a disciple of the Xianxia Sect, experience the rise and fall of a small sect in the ever‑changing Jianghu.\\n<color=green>Unlock special character intimacy/recruitment through the storyline</color>\\n(It is recommended to use Sword Technique/Fist and Palm characters)"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: DroppedContent
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "通过剧情解锁特殊角色的亲密"
     translated: "Unlock special intimate interactions with characters through the storyline"
@@ -2321,11 +2267,9 @@
   - text: "信件格式测试文本信件格式测试文本信件格式测试文本信件格式测试文本信件格式测本信件格式测试文本信件格式测试文本"
     translated: "Letter format test text letter format test text letter format test text letter format test text letter format test text letter format test text"
     qcReviewedText: "Letter format test text letter format test text letter format test text letter format test text letter format test text letter format test text"
-    qcTranslated: "Letter format test text letter format test text letter format test text letter format test text letter format test letter format test text letter format test text"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: DroppedContent
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "信笺"
   splits:
   - text: "信笺"
@@ -2432,11 +2376,9 @@
   - text: "入群会友"
     translated: "Joining friends in the group"
     qcReviewedText: "Joining friends in the group"
-    qcTranslated: "Meet new friends in the group"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "入门弟子"
   splits:
   - text: "入门弟子"
@@ -2517,11 +2459,9 @@
   - text: "全属性"
     translated: "All attributes"
     qcReviewedText: "All attributes/All skills+4 \\nNon‑disciple experience points+10%\\nDifficulty increase speed+++"
-    qcTranslated: "All attributes/All skills+4 \\nNon‑faction disciple experience +10%\\nDifficulty ramp speed+++"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "全技能"
     translated: "All skills"
@@ -2715,11 +2655,9 @@
   - text: "其他角色与你的立场越接近，初始好感越高"
     translated: "The higher the initial goodwill is when other characters align more closely with your stance."
     qcReviewedText: "The higher the initial goodwill is when other characters align more closely with your stance."
-    qcTranslated: "The closer other characters' stances are to yours, the higher their initial favorability."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "内"
   splits:
   - text: "内"
@@ -2733,11 +2671,9 @@
   - text: "内伤"
     translated: "Internal Injury"
     qcReviewedText: "Internal Injury\\n‑0.5% All Attributes\\n‑0.5% Inner Power Cap\\n‑0.25% Max Stamina"
-    qcTranslated: "Internal Injury\\n0.5% All Attributes\\n0.5% Inner Power Cap\\n0.25% Max Stamina"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "-0.5%全属性"
     translated: "‑0.5% All Attributes"
@@ -2881,11 +2817,9 @@
   - text: "减少潜力"
     translated: "Reduce potential"
     qcReviewedText: "Reduce potential \\nPress and hold the left button shift Reduce 5 points continuously"
-    qcTranslated: "Reduce Potential \\nHold Left Shift to continuously reduce 5"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "按住左"
     translated: "Press and hold the left button"
@@ -2899,11 +2833,9 @@
   - text: "出"
     translated: "Out"
     qcReviewedText: "Out \\nSell"
-    qcTranslated: "Out for Sale"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "售"
     translated: "Sell"
@@ -2922,11 +2854,10 @@
   - text: "出售"
     translated: "Sell"
     qcReviewedText: "Sell \\nPress left Shift Ten times selling price"
-    qcTranslated: "Sell\\nPress Left Shift to sell at 10x price"
+    qcTranslated: "Sell \\nPress left Shift to sell at ten times the price"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: HardToParseSeam
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "按左"
     translated: "Press left"
@@ -3011,11 +2942,9 @@
   - text: "刀法武器"
     translated: "Blade Technique Weapon"
     qcReviewedText: "Blade Technique Weapon"
-    qcTranslated: "Blade Technique Weapon"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "分散"
   splits:
   - text: "分散"
@@ -3475,11 +3404,9 @@
   - text: "博"
     translated: "Brother"
     qcReviewedText: "Brother \\nDice"
-    qcTranslated: "Die\\nDice"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "骰"
     translated: "Dice"
@@ -3514,10 +3441,9 @@
   - text: "却遭武当，少林，丐帮，大隐等各大门派围攻，"
     translated: "Yet they were besieged by the Wudang, Shaolin, Beggar Sect, and other major sects."
     qcReviewedText: "Yet they were besieged by the Wudang, Shaolin, Beggar Sect, and other major sects."
-    qcTranslated: "Yet they were besieged by Wudang, Shaolin, the Beggar Sect, Dayin, and other major sects,"
+    qcTranslated: "Yet they were besieged by the Wudang, Shaolin, Beggar Sect, Dayin, and other major sects."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 95
     qcDefectCategory: DroppedContent
 - raw: "原地休息\\n<color=grey>长按空格</color>"
   splits:
@@ -3808,10 +3734,9 @@
   - text: "在设置界面开启"
     translated: "Enable in the settings interface"
     qcReviewedText: "Enable in the settings interface \\nEvery in‑game specific date attempts automatic saving"
-    qcTranslated: "Enable in the settings interface \\nOn specific in‑game dates, the game will attempt to auto‑save"
+    qcTranslated: "Enable in the settings interface \\nOn specific in‑game dates, the game will attempt to save automatically"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "每到游戏内特定日期会尝试自动存档"
@@ -4071,11 +3996,9 @@
   - text: "头"
     translated: "Head"
     qcReviewedText: "Head \\nHelmet"
-    qcTranslated: "Helmet"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "盔"
     translated: "Helmet"
@@ -4178,11 +4101,9 @@
   - text: "如果大侠在游玩时遇到"
     translated: "If the great hero encounters"
     qcReviewedText: "If the great hero encounters Bug Or any place you want to vent, feel free to join our official player community or channel for discussion.\\nRelease is just the beginning of a new journey. We will continue to make adjustments and updates so that every player can enjoy an even better experience.\\nIf the Great Hero enjoys the Jianghu we strive to portray during your gameplay, please consider giving us a positive review. 。"
-    qcTranslated: "If you, Great Hero, encounter any bugs or have any complaints while playing, feel free to join our official player community or channel for discussion.\\nRelease is just the beginning of a new journey. We will continue to make adjustments and updates so that every player can enjoy an even better experience.\\nIf the Great Hero enjoys the Jianghu we strive to portray during your gameplay, please consider giving us a positive review."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "或者任何想吐槽的地方，欢迎来我们的官方玩家群或频道进行交流。"
     translated: "Or any place you want to vent, feel free to join our official player community or channel for discussion."
@@ -4358,10 +4279,9 @@
   - text: "守卫警戒越高"
     translated: "Security alert levels are higher"
     qcReviewedText: "Security alert levels are higher \\nEscape/Difficulty of escaping increases"
-    qcTranslated: "The higher the security alert level, the more difficult it is to escape/commit a jailbreak"
+    qcTranslated: "The higher the security alert level \\nThe higher the difficulty of escape/breakout"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 82
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "逃跑"
@@ -4432,11 +4352,10 @@
   - text: "宴"
     translated: "Banquet"
     qcReviewedText: "Banquet \\nWill"
-    qcTranslated: "Banquet\\nParty"
+    qcTranslated: "Banquet"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
-    qcDefectCategory: HardToParseSeam
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "会"
     translated: "Will"
@@ -4500,11 +4419,9 @@
   - text: "对"
     translated: "For"
     qcReviewedText: "For \\nDrink"
-    qcTranslated: "To \\nDrink"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "饮"
     translated: "Drink"
@@ -4751,8 +4668,7 @@
     qcReviewedText: "Sneakers"
     qcTranslated: "Cloth shoes"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 95
     qcDefectCategory: DomainTerm
 - raw: "师傅"
   splits:
@@ -4934,11 +4850,9 @@
   - text: "强化特性"
     translated: "Enhanced Traits"
     qcReviewedText: "Enhanced Traits \\nAttributes Attributes+999 \\nAttributes Attributes+999 \\nAttributes Attributes+999"
-    qcTranslated: "Enhanced Traits \\nTrait Trait+999 \\nTrait Trait+999 \\nTrait Trait+999"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "特性特性"
     translated: "Attributes Attributes"
@@ -5220,11 +5134,9 @@
   - text: "恶名"
     translated: "Infamy"
     qcReviewedText: "Infamy\\n♦For affection points/Trading activities causing negative impacts will result in a wanted notice if they exceed 50.\\n♦Town center infamy +100%, town perimeter green safe zone+50%。\\n♦Attacking fellow disciples or family and friends will cause your infamy to increase exponentially.\\n♦Decreases slowly over time and can be reduced through patrolling sentry posts or performing acts of chivalry. It can also be cleared by paying a fine to the official government."
-    qcTranslated: "Infamy\\n♦Negative impacts on affinity and trading; exceeding 50. results in a wanted status.\\n♦Infamy gain is +100% in town centers and +50% in the green safe zones surrounding towns.\\n♦Attacking fellow disciples or relatives and friends will cause Infamy to increase exponentially.\\n♦Decays slowly each month. Can be reduced by patrolling Sentry Posts or performing acts of chivalry, or cleared by paying a fine to the authorities."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "对好感"
     translated: "For affection points"
@@ -5414,11 +5326,9 @@
   - text: "战斗时长"
     translated: "Battle duration"
     qcReviewedText: "Battle duration 999    Defeat the enemy 999    Cause damage 999    Take damage 999"
-    qcTranslated: "Battle duration 999    Enemies defeated 999    Damage dealt 999    Damage taken 999"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: DroppedContent
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "击败敌人"
     translated: "Defeat the enemy"
@@ -5532,10 +5442,9 @@
   - text: "打开自动建造后，每月6日会自动建造"
     translated: "After enabling automatic construction, it will automatically build on the 6th day of each month."
     qcReviewedText: "After enabling automatic construction, it will automatically build on the 6th day of each month./Upgrade building"
-    qcTranslated: "After enabling automatic construction, buildings will be automatically built or upgraded on the 6th of each month."
+    qcTranslated: "After enabling automatic construction, buildings will be automatically built/upgraded on the 6th day of each month."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "升级建筑"
@@ -5649,8 +5558,7 @@
     qcReviewedText: "Protect \\nJia"
     qcTranslated: "Protect \\nArmor"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 95
     qcDefectCategory: UntranslatedPinyin
   - subIndex: 1
     text: "甲"
@@ -5786,11 +5694,10 @@
   - text: "换装冷却"
     translated: "Swap cooldown"
     qcReviewedText: "Swap cooldown 30th"
-    qcTranslated: "Outfit Swap Cooldown: 30 Days"
+    qcTranslated: "Swap cooldown 30 days"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "30日"
     translated: "30th"
@@ -5845,11 +5752,9 @@
   - text: "探索度40%"
     translated: "Explore Percentage 40%"
     qcReviewedText: "Explore Percentage 40%\\nReveal all maps and campsites"
-    qcTranslated: "Exploration 40%\\nReveal all maps and camps"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "揭示所有地图和营地"
     translated: "Reveal all maps and campsites"
@@ -6459,11 +6364,9 @@
   - text: "木植"
     translated: "Forest Plant"
     qcReviewedText: "Forest Plant"
-    qcTranslated: "Muzhi"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "未获取"
   splits:
   - text: "未获取"
@@ -6601,8 +6504,7 @@
     qcReviewedText: "Detection of minor status, please take notice：\\n\\nThis game is only available for minors to play for up to 1 hours of online gaming from 20 PM to 21 PM on Fridays, Saturdays, Sundays, and public holidays. It must not be provided to minors in any other form or at any other time."
     qcTranslated: "Detection of minor status, please take notice：\\n\\nThis game is only available for minors to play from 1 to 20 on Fridays, Saturdays, Sundays, and public holidays, providing 21 hours of online gaming service. It must not be provided to minors in any other form or at any other time."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 90
     qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "本游戏仅可在周五、周六、周日和法定节假日每日20时至21时向未成年人提供1小时网络游戏服务，其他时间均不得以任何形式向未成年人提供网络游戏服务。"
@@ -6654,11 +6556,9 @@
   - text: "正是于巴蜀一带小有名气的门派"
     translated: "It is a Sect with some reputation in the Bashu region."
     qcReviewedText: "It is a Sect with some reputation in the Bashu region.：Xianxia Sect"
-    qcTranslated: "It is the Xianxia Sect, which has some reputation in the Bashu region."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "仙霞派。"
     translated: "Xianxia Sect"
@@ -6695,8 +6595,7 @@
     qcReviewedText: "Martial \\nVessel"
     qcTranslated: "Martial \\nWeapon"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 95
     qcDefectCategory: DomainTerm
   - subIndex: 1
     text: "器"
@@ -6795,11 +6694,9 @@
   - text: "武当派"
     translated: "Wudang Sect"
     qcReviewedText: "Wudang Sect \\nDirect Disciple wore the Daoist robe"
-    qcTranslated: "Wudang Sect \\nDirect Disciple Daoist Robe"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "亲传弟子道袍道"
     translated: "Direct Disciple wore the Daoist robe"
@@ -7082,11 +6979,9 @@
   - text: "泥泞路"
     translated: "Muddy road"
     qcReviewedText: "Muddy road \\nMoving upwards is equivalent to moving slower in water."
-    qcTranslated: "Muddy Road\\nMoving on it is equivalent to moving slower in water."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "在上面移动相当于水中减速"
     translated: "Moving upwards is equivalent to moving slower in water."
@@ -7197,11 +7092,9 @@
   - text: "消耗药引"
     translated: "Consume materia"
     qcReviewedText: "Consume materia/Poison from ingredient acquisition"
-    qcTranslated: "Consume medicinal guides/ingredients to obtain poisons"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "食材获取毒物"
     translated: "Poison from ingredient acquisition"
@@ -7276,11 +7169,9 @@
   - text: "游戏名称"
     translated: "Game Name"
     qcReviewedText: "Game Name：Dragon's Heir's Resolve Approval Number：National Press and Publication Administration Permit 2025No.100 No Publication Number：ISBN 978-7-498-14483-6 \\nCopyright holder：Tutian County PiPiTang Software Development Studio Publishing House：East China Normal University Electronic Audio‑Visual Publishing House Limited Company"
-    qcTranslated: "Game Name: Dragon's Heir's Chronicles\\nApproval Number: Guoxin Chushen [2025] No. .100\\nPublication Number: ISBN 978‑7‑498‑14483‑6\\nCopyright Holder: Dangtu County Pipitang Software Development Studio\\nPublisher: East China Normal University Electronic Audio‑Visual Publishing House Co., Ltd."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: DroppedContent
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "《龙胤立志传》"
     translated: "Dragon's Heir's Resolve"
@@ -7414,11 +7305,9 @@
   - text: "灼烧"
     translated: "Scorching"
     qcReviewedText: "Scorching: Reduce opponent's current health by 5% inner power, 5% health, 5% inner power, 5% health, 5% inner power, 5% health each turn."
-    qcTranslated: "Scorching: Each turn, reduce opponent's current health by 5%, Inner Power by 5%, health by 5%, Inner Power by 5%, health by 5%, and Inner Power by 5%."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "每回合减少对手当前血量5%内力5%血量5%内力5%血量5%内力5%"
     translated: "Reduce opponent's current health by 5% inner power, 5% health, 5% inner power, 5% health, 5% inner power, 5% health each turn."
@@ -7431,8 +7320,7 @@
     qcReviewedText: "Click to toggle read status \\nPress and hold the left button Shift Click to delete"
     qcTranslated: "Click to toggle read status \\nHold left Shift and click to delete"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "按住左"
@@ -7749,11 +7637,9 @@
   - text: "百会"
     translated: "Meeting of the Hundred Sands"
     qcReviewedText: "Meeting of the Hundred Sands"
-    qcTranslated: "Baihui"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: DomainTerm
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "监牢"
   splits:
   - text: "监牢"
@@ -7783,11 +7669,9 @@
   - text: "眼看日薄西山，朝廷只能将治下城镇分封给各大门派，"
     translated: "As the sun set, the court was forced to grant control of the towns under its jurisdiction to the major sects."
     qcReviewedText: "As the sun set, the court was forced to grant control of the towns under its jurisdiction to the major sects."
-    qcTranslated: "As the empire's twilight approached, the court was forced to grant control of the towns under its jurisdiction to the major sects."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "眼睛"
   splits:
   - text: "眼睛"
@@ -8042,11 +7926,9 @@
   - text: "突破效率"
     translated: "Boost efficiency"
     qcReviewedText: "Boost efficiency+10%\\nTime to breakthrough+50%\\nOvercome injuries+20%"
-    qcTranslated: "Breakthrough efficiency+10%\\nBreakthrough time+50%\\nBreakthrough injury+20%"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "突破耗时"
     translated: "Time to breakthrough"
@@ -8148,11 +8030,9 @@
   - text: "第三章"
     translated: "Chapter Three"
     qcReviewedText: "Chapter Three Jianghu boils; valiant warriors die \\nThe great trend of the world：\\nGlobal Infamy Modifier-20%\\nSects between Can attack resources \\nSects between Can attack towns \\nSects between Cannot attack the main den"
-    qcTranslated: "Chapter Three: The Jianghu Boils, Warriors Fall\\nThe Great Trend:\\nGlobal Infamy Modifier ‑20%\\nSects: Can attack resources\\nSects: Can attack towns\\nSects: Cannot attack main headquarters"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "江湖翻沸壮士死"
     translated: "Jianghu boils; valiant warriors die"
@@ -8232,11 +8112,9 @@
   - text: "等级加成"
     translated: "Level bonus"
     qcReviewedText: "Level bonus \\nFist and palm attacks are powerful +10%"
-    qcTranslated: "Level Bonus\\nFist and Palm Power +10%"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "拳掌威力"
     translated: "Fist and palm attacks are powerful"
@@ -8788,11 +8666,9 @@
   - text: "至少6位"
     translated: "At least 6 people agree with them"
     qcReviewedText: "At least 6 people agree with them"
-    qcTranslated: "At least 6"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "舵主"
   splits:
   - text: "舵主"
@@ -8867,11 +8743,10 @@
   - text: "获胜条件"
     translated: "Winning conditions"
     qcReviewedText: "Winning conditions：\\nDefeat the enemy stronghold within 3 minutes Five\\n"
-    qcTranslated: "Winning conditions:\\nDefeat the enemy's main stronghold within 3 minutes ‑ Five"
+    qcTranslated: "Winning conditions：\\nDefeat the enemy stronghold within 3 minutes"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "时间3以内击败敌方总舵"
     translated: "Defeat the enemy stronghold within 3 minutes"
@@ -8988,11 +8863,9 @@
   - text: "行侠四方"
     translated: "Wander as a wanderer across the four seas"
     qcReviewedText: "Wander as a wanderer across the four seas"
-    qcTranslated: "Roam the world as a chivalrous hero"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "行赏"
   splits:
   - text: "行赏"
@@ -9019,11 +8892,9 @@
   - text: "袭击黄河帮"
     translated: "Attack the Yellow River Gang"
     qcReviewedText: "Attack the Yellow River Gang <color=#8C8C8C>Outer Disciple </color>East Gate: Delighted by Joy 1 Times"
-    qcTranslated: "Attack the Yellow River Gang <color=#8C8C8C>Outer Disciple </color>Dongmen Jing Le 1 Times"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "外门弟子"
     translated: "Outer Disciple"
@@ -9069,11 +8940,10 @@
   - text: "角色服装会提供不同的加成效果，需要在游戏内自行解锁"
     translated: "Character clothing provides different bonuses, which need to be unlocked in‑game."
     qcReviewedText: "Character clothing provides different bonuses, which need to be unlocked in‑game./Upgrade"
-    qcTranslated: "Character clothing provides different bonus effects, which need to be unlocked/upgraded in‑game."
+    qcTranslated: "Character clothing provides different bonuses, which need to be unlocked/upgraded in‑game."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "升级。"
     translated: "Upgrade"
@@ -9327,11 +9197,9 @@
   - text: "购"
     translated: "Buy"
     qcReviewedText: "Buy \\nBuy"
-    qcTranslated: "Buy"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "买"
     translated: "Buy"
@@ -9342,10 +9210,9 @@
   - text: "购买"
     translated: "Purchase"
     qcReviewedText: "Purchase \\nPress left Shift Ten times purchase volume"
-    qcTranslated: "Purchase\\nHold left Shift to purchase 10x"
+    qcTranslated: "Purchase \\nPress left Shift to purchase ten times"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 90
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "按左"
@@ -9410,11 +9277,9 @@
   - text: "足"
     translated: "Foot"
     qcReviewedText: "Foot \\nWalk"
-    qcTranslated: "Shoes"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "履"
     translated: "Walk"
@@ -9945,11 +9810,9 @@
   - text: "门派功绩"
     translated: "Sect Achievements"
     qcReviewedText: "Sect Achievements \\nPurpose：\\n♦Boost the Sect's Status\\n♦Scripture Pavilion reads new secret manuals\\n♦Sect warehouse item exchange \\nRetrieve：\\n♦Monthly sect tasks\\n♦Complete Sect Commission\\n♦Acquire Sect Resources"
-    qcTranslated: "Sect Achievements \\nPurpose:\\n♦Elevate Sect Status\\n♦Read new Secret Manuals in the Scripture Pavilion\\n♦Exchange items in the Sect Warehouse \\nAcquisition:\\n♦Monthly Sect Tasks\\n♦Complete Sect Commissions\\n♦Acquire Sect Resources"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "用途"
     translated: "Purpose"
@@ -9981,11 +9844,9 @@
   - text: "门派功绩已满"
     translated: "Sect achievements have reached the maximum"
     qcReviewedText: "Sect achievements have reached the maximum \\nIn the main hall-Promotion of disciples' positions"
-    qcTranslated: "Sect achievements are full\\nYou can promote your disciple rank in the Main Hall ‑ Disciple Rank"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "可在正厅"
     translated: "In the main hall"
@@ -9999,11 +9860,9 @@
   - text: "门派区域"
     translated: "Sect Area"
     qcReviewedText: "Sect Area\\n♦After reaching the limit, no new areas can be conquered.\\n♦Can upgrade the sect main hall/Research/Build a casino/Capture the Capital/Raise your title in the palace to increase the area limit"
-    qcTranslated: "Sect Area\\n♦Once the limit is reached, you will be unable to occupy new areas.\\n♦Upgrade the Sect Main Hall/Research/Building of the Money‑Pit/Occupy the Capital/Increase your Merit Rank in the Imperial Palace to raise the area limit"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "达到上限后将无法占领新区域"
     translated: "After reaching the limit, no new areas can be conquered."
@@ -10232,11 +10091,9 @@
   - text: "陨铁"
     translated: "Meteoric iron"
     qcReviewedText: "Meteoric iron\\n♦Appears randomly during exploration, crafted by reclusive blacksmiths/Rich vein fortune events can yield more resources.\\n♦In <b>Sword Pool </b>Use <b>Heavenly Artisan </b>Function allows for special reinforcement of equipment by consuming meteor iron."
-    qcTranslated: "Meteoric Iron\\n♦Appears randomly during exploration. Reclusive Blacksmiths and Rich Vein encounters can yield larger amounts.\\n♦Use the <b>Heavenly Artisan</b> function in <b>Sword Pool</b> to consume Meteoric Iron for special equipment reinforcement."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "在探索中随机出现，通过隐居铁匠"
     translated: "Appears randomly during exploration, crafted by reclusive blacksmiths"
@@ -10420,11 +10277,9 @@
   - text: "非本门弟子经验"
     translated: "Non‑disciple experience points"
     qcReviewedText: "Non‑disciple experience points+30%\\nDifficulty increase speed+++++"
-    qcTranslated: "Non‑sect disciple experience +30%\\nDifficulty ramp speed +++++"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "难度提升速度"
     translated: "Difficulty increase speed"
@@ -10554,11 +10409,9 @@
   - text: "饰"
     translated: "Acted"
     qcReviewedText: "Acted \\nTasting"
-    qcTranslated: "Accessory"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "品"
     translated: "Tasting"

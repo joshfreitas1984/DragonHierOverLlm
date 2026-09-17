@@ -22,11 +22,10 @@
     text: "负面词缀"
     translated: "Negativesuffix"
     qcReviewedText: "Negativesuffix"
-    qcTranslated: "Negative Affix"
+    qcTranslated: "Negative Suffix"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
   - split: 5
     text: "百分比显示"
     translated: "Percentage display"
@@ -118,11 +117,10 @@
     text: "+0.5%暴击"
     translated: "+0.5% Critical Hit"
     qcReviewedText: "+0.5% Critical Hit\\n+0.5% Disconnected\\n+1 load capacity for equipment"
-    qcTranslated: "+0.5% Critical Hit\\n+0.5% Disconnection\\n+1 Equipment Load"
+    qcTranslated: "+0.5% Critical Hit\\n+0.5% Disconnect\\n+1 Equipment Load"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 90
+    qcDefectCategory: DomainTerm
   - split: 10
     subIndex: 1
     text: "+0.5%断连"
@@ -376,9 +374,8 @@
     qcReviewedText: "Fistfight"
     qcTranslated: "Remnant Fist"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 90
+    qcDefectCategory: DomainTerm
   - split: 10
     text: "提升拳掌伤害"
     translated: "Increase fist and palm attack damage"
@@ -889,10 +886,9 @@
     text: "影响装备制作"
     translated: "Affecting equipment crafting"
     qcReviewedText: "Affecting equipment crafting/Strengthen, consolidate/Efficiency in maintaining order in affected areas"
-    qcTranslated: "Affects the efficiency of equipment crafting/upgrade, and of consolidating/disrupting local public order."
+    qcTranslated: "Affecting the efficiency of equipment crafting/strengthening and consolidating/disrupting regional public order"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 85
     qcDefectCategory: HardToParseSeam
   - split: 10
     subIndex: 1
@@ -923,10 +919,9 @@
     text: "影响丹药制作"
     translated: "Affecting Dan Pill Production"
     qcReviewedText: "Affecting Dan Pill Production/Strengthen, consolidate/Efficiency in damaging the population"
-    qcTranslated: "Affects the efficiency of crafting/strengthening elixirs and consolidating/destroying regional populations"
+    qcTranslated: "Affecting the efficiency of Dan Pill production/strengthening and consolidating/damaging regional population"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 85
     qcDefectCategory: HardToParseSeam
   - split: 10
     subIndex: 1
@@ -957,10 +952,9 @@
     text: "影响饮食制作"
     translated: "Affect food preparation"
     qcReviewedText: "Affect food preparation/Strengthen, consolidate/Efficiency in undermining the morale of the affected area"
-    qcTranslated: "Affects the efficiency of food production/enhancement, and the consolidation/undermining of local morale"
+    qcTranslated: "Affect food preparation/Enhancement, consolidate/undermine the morale of the affected area"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 82
     qcDefectCategory: HardToParseSeam
   - split: 10
     subIndex: 1
@@ -3171,11 +3165,9 @@
     text: "受伤时削除内力"
     translated: "Explanation was provided when none should be given. Alternatives were provided when none should be given."
     qcReviewedText: "Explanation was provided when none should be given. Alternatives were provided when none should be given."
-    qcTranslated: "Inner Power is removed when injured"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "133,击退,1,无,无,0,1,1,0,0,将目标击退,敌方,1,1,1,1,0"
   splits:
   - split: 3
@@ -3809,11 +3801,9 @@
     text: "护足"
     translated: "Footrest"
     qcReviewedText: "Footrest"
-    qcTranslated: "Foot Protection"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 4
     text: "无"
     translated: "None"

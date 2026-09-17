@@ -38,7 +38,7 @@
   splits:
   - text: "10000两"
     translated: "10000 two"
-    qcReviewedText: "10000 two"
+    qcReviewedText: "10000 liang"
     qcStatus: Passed
     qcQualityScore: 90
     qcDefectCategory: None
@@ -46,17 +46,15 @@
   splits:
   - text: "1000两"
     translated: "1000 two"
-    qcReviewedText: "1000 two"
-    qcTranslated: "1000 liang"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcReviewedText: "1000 liang"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "100两"
   splits:
   - text: "100两"
     translated: "100 pairs"
-    qcReviewedText: "100 pairs"
+    qcReviewedText: "100 liang"
     qcStatus: Passed
     qcQualityScore: 95
     qcDefectCategory: None
@@ -95,16 +93,16 @@
 - raw: "5000两"
   splits:
   - text: "5000两"
-    translated: "5000 seconds"
-    qcReviewedText: "5000 seconds"
+    translated: "5000 liang"
+    qcReviewedText: "5000 liang"
     qcStatus: Passed
     qcQualityScore: 95
     qcDefectCategory: None
 - raw: "500两"
   splits:
   - text: "500两"
-    translated: "500 pairs"
-    qcReviewedText: "500 pairs"
+    translated: "500 liang"
+    qcReviewedText: "500 liang"
     qcStatus: Passed
     qcQualityScore: 95
     qcDefectCategory: None
@@ -328,11 +326,9 @@
   - text: "与"
     translated: "And"
     qcReviewedText: "And {0} Share"
-    qcTranslated: "Share with {0}"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "分享"
     translated: "Share"
@@ -671,11 +667,9 @@
   - text: "二位住手，要打就打我吧"
     translated: "Two of you stop. You can hit me instead."
     qcReviewedText: "Two of you stop. You can hit me instead."
-    qcTranslated: "Both of you, stop! If you're going to fight, fight me!"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: DroppedContent
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "♦好友关系好感获取+10%，好感消耗-10%\n♦对好友作恶，恶名x200%"
   splits:
   - text: "好友关系好感获取+10%，好感消耗"
@@ -847,11 +841,9 @@
   - text: "传授背包"
     translated: "Backpack Training"
     qcReviewedText: "♦Backpack Training/Warehouse/The martial arts recorded in the Scripture Pavilion's Secret Manual"
-    qcTranslated: "♦Learn martial arts recorded in Secret Manuals in the Backpack/Warehouse/Scripture Pavilion"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "仓库"
     translated: "Warehouse"
@@ -912,11 +904,10 @@
   - text: "修改本门弟子折扣"
     translated: "Modify discount for this disciple"
     qcReviewedText: "Modify discount for this disciple"
-    qcTranslated: "Modify sect disciple discount"
+    qcTranslated: "Modify discount for this sect's disciples"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 90
+    qcDefectCategory: DroppedContent
 - raw: "修改非本门弟子折扣"
   splits:
   - text: "修改非本门弟子折扣"
@@ -1064,9 +1055,8 @@
     qcReviewedText: "Join the queue"
     qcTranslated: "Join the party"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 95
+    qcDefectCategory: DomainTerm
 - raw: "♦邀请对方入队30天\n♦{0}{2}"
   splits:
   - text: "邀请对方入队30天"
@@ -1199,11 +1189,10 @@
   - text: "分文不取"
     translated: "Not a cent for free"
     qcReviewedText: "Not a cent for free"
-    qcTranslated: "Not a penny taken"
+    qcTranslated: "Not a single cent"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 85
+    qcDefectCategory: LostIdiom
 - raw: "分而食之"
   splits:
   - text: "分而食之"
@@ -1257,11 +1246,10 @@
   - text: "劝入门派"
     translated: "AdviseEntry"
     qcReviewedText: "AdviseEntry"
-    qcTranslated: "Persuade to Join a Sect"
+    qcTranslated: "Advise Joining a Sect"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 90
+    qcDefectCategory: UntranslatedPinyin
 - raw: "动之以理"
   splits:
   - text: "动之以理"
@@ -1275,11 +1263,10 @@
   - text: "助"
     translated: "Help"
     qcReviewedText: "Help {0} A helping hand"
-    qcTranslated: "Lend {0} a helping hand"
+    qcTranslated: "Help {0} out"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 85
+    qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "一臂之力"
     translated: "A helping hand"
@@ -1337,11 +1324,9 @@
   - text: "千恩万谢"
     translated: "Thousand thanks"
     qcReviewedText: "Thousand thanks"
-    qcTranslated: "A thousand thanks"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "单次指点"
   splits:
   - text: "单次指点"
@@ -2706,10 +2691,9 @@
   - text: "敬酒不吃吃罚酒"
     translated: "Decline the offer but accept the punishment"
     qcReviewedText: "Decline the offer but accept the punishment"
-    qcTranslated: "Refuse the toast but drink the penalty wine"
+    qcTranslated: "Refuse the toast but drink the penalty"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 82
     qcDefectCategory: LostIdiom
 - raw: "斗胆向两位一齐讨教"
   splits:
@@ -2748,11 +2732,9 @@
   - text: "断义"
     translated: "Cut Meaning"
     qcReviewedText: "Cut Meaning"
-    qcTranslated: "Severing Bonds"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "♦与对方断绝结义关系\n♦降低100点好感\n♦固定增加20恶名"
   splits:
   - text: "与对方断绝结义关系"
@@ -3264,11 +3246,9 @@
   - text: "狡兔三窟"
     translated: "A fox has three dens"
     qcReviewedText: "A fox has three dens"
-    qcTranslated: "A cunning rabbit has three burrows"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "独吞财宝"
   splits:
   - text: "独吞财宝"
@@ -3284,8 +3264,7 @@
     qcReviewedText: "Open wide the lion's mouth"
     qcTranslated: "Asking for the moon"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 85
     qcDefectCategory: LostIdiom
 - raw: "献上银两"
   splits:
@@ -3393,11 +3372,9 @@
   - text: "赠礼或消耗好感降低对方忠诚"
     translated: "Gift‑giving or expending goodwill to lower their loyalty"
     qcReviewedText: "♦Gift‑giving or expending goodwill to lower their loyalty\n♦If the other party's loyalty is below 20% of their affinity, they will join your sect."
-    qcTranslated: "♦Gift‑giving or expending affinity reduces their loyalty\\n♦If their loyalty is below 20% of their affinity, they will join your sect"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: DroppedContent
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "对方忠诚低于好感度20%，便会加入你的门派"
     translated: "If the other party's loyalty is below 20% of their affinity, they will join your sect."
@@ -3517,11 +3494,9 @@
   - text: "需100门派好感"
     translated: "Translate 100 Sect Favor"
     qcReviewedText: "Translate 100 Sect Favor\nAlliance established for permanent peace and reinforcements+1\nAdjacent areas that can be attacked by allies\nFavor below 80 will automatically cut the alliance."
-    qcTranslated: "Requires 100 Sect Favor\\nPermanent peace and +1 reinforcements after alliance\\nCan attack adjacent territories of allies\\nAlliance is automatically broken if Favor drops below 80"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "结盟后永久停战且援军"
     translated: "Alliance established for permanent peace and reinforcements"
@@ -3580,11 +3555,9 @@
   - text: "绝技"
     translated: "Ultimate Technique"
     qcReviewedText: "Ultimate Technique Gravitational pull"
-    qcTranslated: "Ultimate Technique: Gravitational pull"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "千斤坠"
     translated: "Gravitational pull"
@@ -3743,11 +3716,9 @@
   - text: "解开脚镣"
     translated: "Unsheathe the ankle chains"
     qcReviewedText: "Unsheathe the ankle chains"
-    qcTranslated: "Remove the ankle chains"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "解毒"
   splits:
   - text: "解毒"
@@ -4057,11 +4028,9 @@
   - text: "赠送礼物"
     translated: "Gift a present"
     qcReviewedText: "Gift a present"
-    qcTranslated: "Give a gift"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "♦降低10好感\n♦若好感小于50会断绝情侣关系"
   splits:
   - text: "降低10好感"
@@ -4234,11 +4203,10 @@
   - text: "消耗剩余指点次数"
     translated: "Consume remaining directional inputs"
     qcReviewedText: "♦Consume remaining directional inputs\n♦When the opponent's martial arts level is maxed out or exceeds yours, it will automatically stop."
-    qcTranslated: "♦Consume remaining point uses\\n♦When the opponent's martial arts level is maxed out or exceeds yours, it will automatically stop."
+    qcTranslated: "♦Consume remaining point allocations\n♦When the opponent's martial arts level is maxed out or exceeds yours, it will automatically stop."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 90
+    qcDefectCategory: DomainTerm
   - subIndex: 1
     text: "对方武学满级或超过你时自动停止"
     translated: "When the opponent's martial arts level is maxed out or exceeds yours, it will automatically stop."
@@ -4465,11 +4433,9 @@
   - text: "雇佣对方加入队伍15天"
     translated: "Hire the other party to join the team for 15 days"
     qcReviewedText: "♦Hire the other party to join the team for 15 days\n♦Based on the opponent's combat power, they expend silver money."
-    qcTranslated: "♦Hire the other party to join the team for 15 days\\n♦Costs silver money based on the other party's combat power"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "根据对方战力消耗银钱"
     translated: "Based on the opponent's combat power, they expend silver money."
@@ -4488,11 +4454,9 @@
   - text: "骇然出手"
     translated: "Startle into action"
     qcReviewedText: "Startle into action"
-    qcTranslated: "Strike in alarm"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "高人，我来助你！"
   splits:
   - text: "高人，我来助你！"

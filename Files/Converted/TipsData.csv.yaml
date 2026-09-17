@@ -207,8 +207,7 @@
     qcReviewedText: "The higher the initial affinity starts at if your stance aligns more closely with the other party."
     qcTranslated: "The closer your stance is to the other party's, the higher the initial affinity."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
 - raw: "较高的恶名会降低好感获取，\\n其他侠士在野外遭遇时也会避而远之。"
   splits:

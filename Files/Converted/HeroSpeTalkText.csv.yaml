@@ -102,10 +102,9 @@
     text: "#PlayerName#，你不会和那些无趣江湖人士一般，"
     translated: "#PlayerName#, you won't be like those dull Jianghu folk."
     qcReviewedText: "#PlayerName#, you won't be like those dull Jianghu folk.\\nDoes he only know how to practice martial arts and cultivation all day long!"
-    qcTranslated: "#PlayerName#, you won't be like those dull Jianghu folk,\\nspending all day only practicing martial arts and training, will you!"
+    qcTranslated: "#PlayerName#, you won't be like those dull Jianghu folk.\\nYou don't just know how to practice martial arts and cultivation all day long!"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 85
     qcDefectCategory: DroppedContent
   - split: 3
     subIndex: 1
@@ -472,11 +471,10 @@
     text: "归墟秘典之核心法门，唯有阁主知晓。"
     translated: "The core heart method of the Secret Canon of Guixu are known only by the Pavilion Master."
     qcReviewedText: "The core heart method of the Secret Canon of Guixu are known only by the Pavilion Master.\\nThis way, those without sufficient cultivation can avoid forcing themselves and going astray."
-    qcTranslated: "The core Heart Method of the Secret Canon of Guixu is known only to the Pavilion Master.\\nOnly then can we prevent those with insufficient cultivation from forcibly practicing it and going astray."
+    qcTranslated: "The core Heart Method of the Secret Canon of Guixu is known only by the Pavilion Master.\\nThis way, those without sufficient cultivation can avoid forcing themselves to practice and going astray."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: HardToParseSeam
+    qcQualityScore: 85
+    qcDefectCategory: DroppedContent
   - split: 9
     subIndex: 1
     text: "如此，方能避免修为不足之人强行修习，走火入魔。"
@@ -565,11 +563,9 @@
     text: "#PlayerName#，你这身形笨重，步伐迟缓，"
     translated: "#PlayerName#, your movements are slow and cumbersome"
     qcReviewedText: "#PlayerName#, your movements are slow and cumbersome \\nOne needs to practice lightness more"
-    qcTranslated: "#PlayerName#, your movements are slow and cumbersome\\nYou need to practice your Lightness more."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 3
     subIndex: 1
     text: "还得多练练轻功才行。"
@@ -618,11 +614,9 @@
     text: "#PlayerName#和师傅老人家比，不知武功谁高谁低？"
     translated: "Compared to Master Senior Citizen, #PlayerName# doesn't know who has higher martial arts skills."
     qcReviewedText: "Compared to Master Senior Citizen, #PlayerName# doesn't know who has higher martial arts skills.\\n...I feel #PlayerName# should still be more powerful.\\nAfter all, Master has a full head of white hair; his old body probably can't withstand many punches."
-    qcTranslated: "Compared to old Master, who do you think has the higher martial arts skills?\\n...I feel #PlayerName# is probably still the stronger one.\\nAfter all, Master has a full beard of white hair; his old body likely can't take a few punches."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 8
     subIndex: 1
     text: "......感觉应该还是#PlayerName#厉害些。"
@@ -653,10 +647,9 @@
     text: "#PlayerName#若在武学上有疑惑之处，大可来与我探讨。"
     translated: "#PlayerName#, if you have any doubts in martial arts, feel free to come and discuss with me."
     qcReviewedText: "#PlayerName#, if you have any doubts in martial arts, feel free to come and discuss with me.\\nHe will speak his mind fully and without reservation."
-    qcTranslated: "#PlayerName#, if you have any doubts in martial arts, feel free to come and discuss with me.\\nI will speak my mind fully and without reservation."
+    qcTranslated: "#PlayerName#, if you have any doubts in martial arts, feel free to come and discuss with me.\\nI will certainly share everything I know without reservation."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 85
     qcDefectCategory: DroppedContent
   - split: 11
     subIndex: 1
@@ -716,10 +709,9 @@
     text: "#PlayerName#，最近可有得手什么好宝物？"
     translated: "#PlayerName#, have you come across any good treasures lately?"
     qcReviewedText: "#PlayerName#, have you come across any good treasures lately?\\n...What expression is that? I didn't mean to steal anything from you."
-    qcTranslated: "#PlayerName#, have you come across any good treasures lately?\\n...What expression is that? I‑I didn't mean to steal anything from you."
+    qcTranslated: "#PlayerName#, have you come across any good treasures lately?\\n...What expression is that? I, I didn't mean to steal anything from you."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 95
     qcDefectCategory: DroppedStutter
   - split: 3
     subIndex: 1
@@ -754,11 +746,10 @@
     text: "呵呵呵呵，#PlayerName#今日前来拜访，老朽恐怕早已猜到了。"
     translated: "Haha, #PlayerName# came to visit today‑I suspect I would have guessed it even without your notice."
     qcReviewedText: "Haha, #PlayerName# came to visit today‑I suspect I would have guessed it even without your notice."
-    qcTranslated: "Heh heh, #PlayerName#, I suspect I had already guessed you would come to visit today."
+    qcTranslated: "Haha, #PlayerName# came to visit today‑I suspect I would have guessed it long ago."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 85
+    qcDefectCategory: DroppedContent
   - split: 8
     text: "这世间有比山上野果更好吃的东西？我可不信！"
     translated: "Is there anything better to eat than wild berries on the mountain? I don't believe it!"
@@ -800,11 +791,9 @@
     text: "#PlayerName#又见面了，看来你我也算缘分不浅。"
     translated: "#PlayerName# meets again, it seems we have some unspoken connection."
     qcReviewedText: "#PlayerName# meets again, it seems we have some unspoken connection."
-    qcTranslated: "#PlayerName#, it's nice to see you again. It seems we share a deep affinity."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: DroppedContent
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   templates:
   - split: 3
     template: "{0}\\n{1}"
@@ -937,10 +926,9 @@
     text: "兵者，诡道也。"
     translated: "A soldier fights not because he values his life but because he values victory."
     qcReviewedText: "A soldier fights not because he values his life but because he values victory.\\nBy being capable yet demonstrating incapability, by using something yet showing as if not using it, by drawing close yet appearing distant, and by being far away yet seeming near.\\nCatch them unprepared, strike when they least expect it. This is a victory in warfare, not to be prematurely disclosed."
-    qcTranslated: "In war, deception is the way.\\nTherefore, when able to attack, feign inability; when intending to use troops, feign inaction; when near, appear far away; when far away, appear near.\\nAttack where they are unprepared, appear where you are not expected. This is the victory of the military strategist, which must not be revealed beforehand."
+    qcTranslated: "A soldier fights not because he values his life but because he values victory.\\nWar is a matter of deception.\\nBy being capable yet demonstrating incapability, by using something yet showing as if not using it, by drawing close yet appearing distant, and by being far away yet seeming near.\\nCatch them unprepared, strike when they least expect it. This is a victory in warfare, not to be prematurely disclosed."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 90
     qcDefectCategory: DroppedContent
   - split: 10
     subIndex: 1
@@ -1159,10 +1147,9 @@
     text: "天下之间，太多蝇营狗苟之辈。"
     translated: "There are too many xingyinggouguo beggars in this world."
     qcReviewedText: "There are too many xingyinggouguo beggars in this world.\\nHow many devoted and like‑minded heroes can one encounter in a lifetime?"
-    qcTranslated: "There are too many sycophantic, petty schemers in this world.\\nHow many devoted and like‑minded heroes can one encounter in a lifetime?"
+    qcTranslated: "There are too many sycophantic and petty people in this world.\\nHow many devoted and like‑minded heroes can one encounter in a lifetime?"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 85
     qcDefectCategory: UntranslatedPinyin
   - split: 2
     subIndex: 1
@@ -1247,10 +1234,9 @@
     text: "#PlayerName#若能助一臂之力，我自然不会亏待于你。"
     translated: "#PlayerName#, if I can lend you a hand, I won't treat you shabbily."
     qcReviewedText: "#PlayerName#, if I can lend you a hand, I won't treat you shabbily."
-    qcTranslated: "#PlayerName#, if you can lend me a hand, I certainly won't let you down."
+    qcTranslated: "#PlayerName#, if you can lend me a hand, I will certainly not treat you shabbily."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 82
     qcDefectCategory: OtherNamedDefect
   - split: 11
     text: "兄弟义气，自当肝胆相照，一片赤诚。"
@@ -1266,11 +1252,9 @@
     text: "只要我等名门大派秉公持正，携手并进，"
     translated: "As long as the prestigious sects uphold justice and advance together,"
     qcReviewedText: "As long as the prestigious sects uphold justice and advance together,\\nSo let us ensure that the Wulin is clear and upright, with a peaceful sea and clean rivers.\\nUnknown if #PlayerName# thinks so as well"
-    qcTranslated: "As long as we, the prestigious sects, uphold justice and advance together,\\nwe shall ensure that the Wulin remains clear and upright, with seas calm and rivers clear.\\nDo you, #PlayerName#, share this view?"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 12
     subIndex: 1
     text: "就定能使这天下武林风清气正，海晏河清。"
@@ -1475,10 +1459,9 @@
     text: "别看那些江湖大侠，一个个道貌岸然。"
     translated: "Don't look at those so‑called great heroes of the Jianghu; they all wear a mask of righteousness."
     qcReviewedText: "Don't look at those so‑called great heroes of the Jianghu; they all wear a mask of righteousness.\\nPrivate killings and arson aren't rare either; I'm much worse than this Miss.\\n.... #PlayerName#, you couldn't be one of them, right?"
-    qcTranslated: "Don't look at those so‑called Great Heroes of the Jianghu; they all wear a mask of righteousness.\\nThey've done no small amount of killing and arson behind closed doors, much worse than this girl.\\n.... #PlayerName#, you couldn't be one of them, right?"
+    qcTranslated: "Don't look at those so‑called Great Heroes of the Jianghu; they all wear a mask of righteousness.\\nThey've done no small amount of private killing and arson behind closed doors, much worse than this Miss.\\n.... #PlayerName#, you couldn't be one of them, right?"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 82
     qcDefectCategory: DroppedContent
   - split: 3
     subIndex: 1
@@ -1525,11 +1508,9 @@
     text: "最难测算是人心，便是老朽这“江湖百晓”，怕也难解其分毫。"
     translated: "The hardest thing to measure is the heart, and even with my Hundred Witty Masters of Jianghu, it might be difficult to fathom its depths."
     qcReviewedText: "The hardest thing to measure is the heart, and even with my Hundred Witty Masters of Jianghu, it might be difficult to fathom its depths."
-    qcTranslated: "The hardest thing to measure is the human heart. Even this old fool, the Jianghu Know‑It‑All, fears he cannot fathom even a fraction of it."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: DroppedContent
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 8
     text: "什么是江湖？为啥要叫江湖？"
     translated: "What is the Jianghu? Why call it that?"

@@ -653,8 +653,7 @@
     qcReviewedText: "Minefield"
     qcTranslated: "Mine"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 95
     qcDefectCategory: DomainTerm
 - raw: "药园"
   splits:
@@ -1207,8 +1206,7 @@
     qcReviewedText: "Fetus alcohol"
     qcTranslated: "Deer Placenta Wine"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 95
     qcDefectCategory: DomainTerm
 - raw: "白牡丹茶"
   splits:
@@ -1247,11 +1245,9 @@
   - text: "凤凰水仙茶"
     translated: "Phoenix Dianhua Tea"
     qcReviewedText: "Phoenix Dianhua Tea"
-    qcTranslated: "Phoenix Shuixian Tea"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: DomainTerm
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "烧饼"
   splits:
   - text: "烧饼"
@@ -1313,11 +1309,9 @@
   - text: "烧刀子"
     translated: "Burn Blade"
     qcReviewedText: "Burn Blade"
-    qcTranslated: "Burning Knife"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "龙井茶"
   splits:
   - text: "龙井茶"
@@ -1421,9 +1415,8 @@
     qcReviewedText: "Abalone and Cordyceps Soup"
     qcTranslated: "Cordyceps and Old Duck Stew"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 90
+    qcDefectCategory: DomainTerm
 - raw: "四君子汤"
   splits:
   - text: "四君子汤"
@@ -1471,8 +1464,7 @@
     qcReviewedText: "Afternoon Tea"
     qcTranslated: "Gongfu Tea"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 95
     qcDefectCategory: DomainTerm
 - raw: "女儿红"
   splits:
@@ -2595,11 +2587,9 @@
   - text: "全员医术"
     translated: "All‑Clad Medical Skill"
     qcReviewedText: "All‑Clad Medical Skill"
-    qcTranslated: "Medical Skills of All"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "全员毒术"
   splits:
   - text: "全员毒术"
@@ -2629,21 +2619,17 @@
   - text: "全员采伐"
     translated: "All Resource Gathering"
     qcReviewedText: "All Resource Gathering"
-    qcTranslated: "Full Crew Resource Gathering"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: DroppedContent
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "全员木植"
   splits:
   - text: "全员木植"
     translated: "All Zhu Ye"
     qcReviewedText: "All Zhu Ye"
-    qcTranslated: "All Wood Planted"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "全员锻造"
   splits:
   - text: "全员锻造"
@@ -2913,11 +2899,9 @@
   - text: "白义马"
     translated: "White Meaning Horse"
     qcReviewedText: "White Meaning Horse"
-    qcTranslated: "White Steed"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "青骓马"
   splits:
   - text: "青骓马"
@@ -2987,11 +2971,9 @@
   - text: "白蹄乌"
     translated: "White horse"
     qcReviewedText: "White horse"
-    qcTranslated: "White‑Hoofed Black"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: DroppedContent
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "什伐赤"
   splits:
   - text: "什伐赤"
@@ -3037,11 +3019,9 @@
   - text: "照夜白"
     translated: "Zhonghuabeiyang"
     qcReviewedText: "Zhonghuabeiyang"
-    qcTranslated: "Night‑Shining White"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: UntranslatedPinyin
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "汗血马"
   splits:
   - text: "汗血马"
@@ -3079,11 +3059,9 @@
   - text: "特勒骠"
     translated: "Tellerion"
     qcReviewedText: "Tellerion"
-    qcTranslated: "Telupiao"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "神凫马"
   splits:
   - text: "神凫马"
@@ -3145,11 +3123,9 @@
   - text: "七窍玲珑"
     translated: "Seven‑orifices clear‑thinking"
     qcReviewedText: "Seven‑orifices clear‑thinking"
-    qcTranslated: "Seven Orifices of Clarity"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "足智多谋"
   splits:
   - text: "足智多谋"
@@ -3195,11 +3171,9 @@
   - text: "钢筋铁骨"
     translated: "Steel frame"
     qcReviewedText: "Steel frame"
-    qcTranslated: "Iron body and steel bones"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "运气自如"
   splits:
   - text: "运气自如"
@@ -3253,11 +3227,9 @@
   - text: "神出鬼没"
     translated: "Invisible"
     qcReviewedText: "Invisible"
-    qcTranslated: "Elusive"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "身怀绝技"
   splits:
   - text: "身怀绝技"
@@ -3287,10 +3259,9 @@
   - text: "铁手钢拳"
     translated: "Iron Fists"
     qcReviewedText: "Iron Fists"
-    qcTranslated: "Iron Hands, Steel Fists"
+    qcTranslated: "Iron Hands and Steel Fists"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 95
     qcDefectCategory: DroppedContent
 - raw: "御剑"
   splits:
@@ -3377,10 +3348,9 @@
   - text: "百步穿杨"
     translated: "Hundred steps through the willow"
     qcReviewedText: "Hundred steps through the willow"
-    qcTranslated: "Bullseye"
+    qcTranslated: "Piercing the Willow at a Hundred Paces"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 85
     qcDefectCategory: LostIdiom
 - raw: "例无虚发"
   splits:
@@ -3443,10 +3413,9 @@
   - text: "气冲斗牛"
     translated: "Boast to the stars"
     qcReviewedText: "Boast to the stars"
-    qcTranslated: "My anger reaches the heavens"
+    qcTranslated: "Qi surges to the stars"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 85
     qcDefectCategory: LostIdiom
 - raw: "刀锋"
   splits:
@@ -3609,11 +3578,10 @@
   - text: "万物归墟"
     translated: "Sea of Foes"
     qcReviewedText: "Sea of Foes"
-    qcTranslated: "All Things Return to the Ruins"
+    qcTranslated: "Return to Ruin"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 85
+    qcDefectCategory: DomainTerm
 - raw: "混元一气"
   splits:
   - text: "混元一气"
@@ -3635,11 +3603,9 @@
   - text: "至阴至柔"
     translated: "From Yin to Yang, From Soft to Hard"
     qcReviewedText: "From Yin to Yang, From Soft to Hard"
-    qcTranslated: "The Ultimate Yin, The Ultimate Softness"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "刚柔并济"
   splits:
   - text: "刚柔并济"
@@ -3693,11 +3659,9 @@
   - text: "神鬼莫测"
     translated: "Mysterious like a deity and a devil"
     qcReviewedText: "Mysterious like a deity and a devil"
-    qcTranslated: "Unpredictable as gods and demons"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "以劲御气"
   splits:
   - text: "以劲御气"
@@ -3751,11 +3715,9 @@
   - text: "功德圆满"
     translated: "Blessing complete"
     qcReviewedText: "Blessing complete"
-    qcTranslated: "Merit fulfilled"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "即身成佛"
   splits:
   - text: "即身成佛"
@@ -3801,10 +3763,9 @@
   - text: "术精岐黄"
     translated: "Skilled in Jing Huang"
     qcReviewedText: "Skilled in Jing Huang"
-    qcTranslated: "Master of Medicine"
+    qcTranslated: "Skilled in Medicine"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 85
     qcDefectCategory: UntranslatedPinyin
 - raw: "妙手回春"
   splits:
@@ -3819,11 +3780,9 @@
   - text: "五毒俱全"
     translated: "All poisons are present"
     qcReviewedText: "All poisons are present"
-    qcTranslated: "A complete scoundrel"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "见血封喉"
   splits:
   - text: "见血封喉"
@@ -4013,11 +3972,9 @@
   - text: "缚鸡之力"
     translated: "The strength to kill a chicken"
     qcReviewedText: "The strength to kill a chicken"
-    qcTranslated: "The strength to tie up a chicken"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "机敏"
   splits:
   - text: "机敏"
@@ -4191,11 +4148,9 @@
   - text: "多病"
     translated: "Ill often"
     qcReviewedText: "Ill often"
-    qcTranslated: "Sickly"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "身心交病"
   splits:
   - text: "身心交病"
@@ -4387,8 +4342,7 @@
     qcReviewedText: "Rage fills his hair, topping his crown"
     qcTranslated: "Fury makes his hair stand on end"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 82
     qcDefectCategory: LostIdiom
 - raw: "幸运"
   splits:
@@ -4483,11 +4437,9 @@
   - text: "百丑千拙"
     translated: "Hundred Follies Thousand Naive"
     qcReviewedText: "Hundred Follies Thousand Naive"
-    qcTranslated: "A Hundred Follies and a Thousand Clumsinesses"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "锐眼"
   splits:
   - text: "锐眼"
@@ -4533,10 +4485,9 @@
   - text: "雾里看花"
     translated: "Foggy mist scenery"
     qcReviewedText: "Foggy mist scenery"
-    qcTranslated: "Seeing flowers through the fog"
+    qcTranslated: "Seeing flowers through fog"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 85
     qcDefectCategory: LostIdiom
 - raw: "谦逊"
   splits:
@@ -4863,11 +4814,10 @@
   - text: "位极人臣"
     translated: "Second‑in‑command"
     qcReviewedText: "Second‑in‑command"
-    qcTranslated: "The most powerful minister under the emperor"
+    qcTranslated: "Most powerful minister"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 85
+    qcDefectCategory: DomainTerm
 - raw: "杂学"
   splits:
   - text: "杂学"
@@ -4961,10 +4911,9 @@
   - text: "仙风道骨"
     translated: "Immortal wind and fairy bone"
     qcReviewedText: "Immortal wind and fairy bone"
-    qcTranslated: "Ethereal and noble bearing"
+    qcTranslated: "An air of immortal grace"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 82
     qcDefectCategory: LostIdiom
 - raw: "学佛"
   splits:
@@ -4987,10 +4936,9 @@
   - text: "四大皆空"
     translated: "Four Empty Seats"
     qcReviewedText: "Four Empty Seats"
-    qcTranslated: "All is Void"
+    qcTranslated: "All Four Are Empty"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 65
     qcDefectCategory: LostIdiom
 - raw: "行乞"
   splits:
@@ -5245,11 +5193,9 @@
   - text: "笔走龙蛇"
     translated: "Brush moves like dragonsisciendi"
     qcReviewedText: "Brush moves like dragonsisciendi"
-    qcTranslated: "The brush moves like dragons and snakes"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "铁画银钩"
   splits:
   - text: "铁画银钩"
@@ -5375,11 +5321,10 @@
   - text: "面壁功深"
     translated: "Wall‑Buddhing Skill Profound"
     qcReviewedText: "Wall‑Buddhing Skill Profound"
-    qcTranslated: "Profound Wall‑Facing Skill"
+    qcTranslated: "Wall‑Facing Skill Profound"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 90
+    qcDefectCategory: DomainTerm
 - raw: "舞技"
   splits:
   - text: "舞技"
@@ -5401,11 +5346,9 @@
   - text: "羽衣蹁跹"
     translated: "Feathered Dancelightly"
     qcReviewedText: "Feathered Dancelightly"
-    qcTranslated: "Feathered Dance"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "随从"
   splits:
   - text: "随从"
@@ -5819,11 +5762,9 @@
   - text: "机关石甲"
     translated: "Mechanical Armor Stone"
     qcReviewedText: "Mechanical Armor Stone"
-    qcTranslated: "Mechanical Stone Armor"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "机关铁甲"
   splits:
   - text: "机关铁甲"
@@ -5845,10 +5786,9 @@
   - text: "鲁班在世"
     translated: "Lu Ban be alive"
     qcReviewedText: "Lu Ban be alive"
-    qcTranslated: "Lu Ban Lives"
+    qcTranslated: "Lu Ban is alive"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 90
     qcDefectCategory: OtherNamedDefect
 - raw: "机关义手"
   splits:
@@ -5873,8 +5813,7 @@
     qcReviewedText: "Handcuffs"
     qcTranslated: "Shackles"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
+    qcQualityScore: 95
     qcDefectCategory: DomainTerm
 - raw: "登顶泰岳"
   splits:
@@ -5921,11 +5860,9 @@
   - text: "背叛师门"
     translated: "Betray the sect elders"
     qcReviewedText: "Betray the sect elders"
-    qcTranslated: "Betray the sect"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: DroppedContent
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "吐纳法"
   splits:
   - text: "吐纳法"
@@ -6118,8 +6055,7 @@
     qcReviewedText: "Willow stick posts"
     qcTranslated: "Plum Blossom Stakes"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 95
     qcDefectCategory: DomainTerm
 - raw: "智力4;意志4;闪避0.04"
   splits:
@@ -6344,8 +6280,7 @@
     qcReviewedText: "Acupoint 1"
     qcTranslated: "Meridian 1"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 95
     qcDefectCategory: DomainTerm
 - raw: "拳掌2"
   splits:
@@ -6581,11 +6516,10 @@
   - text: "劈柴刀法"
     translated: "Chopping Wood Blade Technique"
     qcReviewedText: "Chopping Wood Blade Technique"
-    qcTranslated: "Wood‑Chopping Blade Technique"
+    qcTranslated: "Chopping Wood Blade Art"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 85
+    qcDefectCategory: DomainTerm
 - raw: "力道2;刀法2;内力0.2"
   splits:
   - text: "力道2"
@@ -7325,11 +7259,10 @@
   - text: "五指点石功"
     translated: "Five‑Finger Stoned‑Skipping Technique"
     qcReviewedText: "Five‑Finger Stoned‑Skipping Technique"
-    qcTranslated: "Five‑Finger Stone‑Touching Technique"
+    qcTranslated: "Five‑Finger Stone‑Pointing Technique"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 90
+    qcDefectCategory: DomainTerm
 - raw: "内功1;体质1"
   splits:
   - text: "内功1"
@@ -7681,11 +7614,9 @@
   - text: "一线穿"
     translated: "One‑line‑through"
     qcReviewedText: "One‑line‑through"
-    qcTranslated: "Thread Through"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "轻功6;经脉6;轻灵0.06"
   splits:
   - text: "轻功6"
@@ -7822,11 +7753,10 @@
   - text: "缸沿功"
     translated: "Kanenaga Ichirou"
     qcReviewedText: "Kanenaga Ichirou"
-    qcTranslated: "Vat Rim Kung Fu"
+    qcTranslated: "Vat Rim Technique"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 85
+    qcDefectCategory: DomainTerm
 - raw: "轻功6;灵巧3;意志3;命中0.06"
   splits:
   - text: "轻功6"
@@ -8718,11 +8648,9 @@
   - text: "形意拳"
     translated: "Form Sandboxing Fist"
     qcReviewedText: "Form Sandboxing Fist"
-    qcTranslated: "Xingyiquan"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: DomainTerm
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "拳掌10;经脉10"
   splits:
   - text: "拳掌10"
@@ -9011,11 +8939,9 @@
   - text: "急速0.06"
     translated: "0.06 rapidly"
     qcReviewedText: "0.06 rapidly"
-    qcTranslated: "Rapid 0.06"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "心18"
   splits:
   - text: "心18"
@@ -9287,11 +9213,9 @@
   - text: "劈挂刀法"
     translated: "Blade Technique"
     qcReviewedText: "Blade Technique"
-    qcTranslated: "Pigua Blade Technique"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: DroppedContent
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "力道2;刀法2;内力0.1"
   splits:
   - text: "力道2"
@@ -9910,11 +9834,9 @@
   - text: "千钧棍法"
     translated: "Staff technique of a thousand catties"
     qcReviewedText: "Staff technique of a thousand catties"
-    qcTranslated: "Thousand‑Pound Staff Technique"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "长兵1;力道1"
   splits:
   - text: "长兵1"
@@ -10072,11 +9994,9 @@
   - text: "碎石铁鞭"
     translated: "Cracked Stone Whip"
     qcReviewedText: "Cracked Stone Whip"
-    qcTranslated: "Crushed Iron Whip"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: DomainTerm
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "奇门1;力道1"
   splits:
   - text: "奇门1"
@@ -10434,8 +10354,7 @@
     qcReviewedText: "Silkworm Needle"
     qcTranslated: "Jade Bee Needle"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 95
     qcDefectCategory: DomainTerm
 - raw: "射术1;灵巧1"
   splits:
@@ -10508,11 +10427,9 @@
   - text: "枣核钉"
     translated: "Split pin"
     qcReviewedText: "Split pin"
-    qcTranslated: "Jujube Pit Nail"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "射术1;意志1"
   splits:
   - text: "射术1"
@@ -10564,11 +10481,9 @@
   - text: "甩袖箭"
     translated: "Wielded sleeve‑jar arrows"
     qcReviewedText: "Wielded sleeve‑jar arrows"
-    qcTranslated: "Sleeve‑Shake Arrows"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "笨拙0.02"
   splits:
   - text: "笨拙0.02"
@@ -10655,8 +10570,7 @@
     qcReviewedText: "Boomerang"
     qcTranslated: "Rope Dart"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 95
     qcDefectCategory: DomainTerm
 - raw: "射术15;智力15"
   splits:
@@ -11028,9 +10942,8 @@
     qcReviewedText: "The Heart Sutra of Manjushri Bodhisattva"
     qcTranslated: "Heart Sutra of Samantabhadra"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 95
+    qcDefectCategory: DomainTerm
 - raw: "内功2;经脉1"
   splits:
   - text: "内功2"
@@ -11116,11 +11029,9 @@
   - text: "紫气氤氲法"
     translated: "Vapor of Mystic Qi Surrounding Technique"
     qcReviewedText: "Vapor of Mystic Qi Surrounding Technique"
-    qcTranslated: "Violet Mist Diffusion Method"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "内功2;意志1"
   splits:
   - text: "内功2"
@@ -11247,11 +11158,9 @@
   - text: "燕子三抄水"
     translated: "Swallow Triple Dip the Water"
     qcReviewedText: "Swallow Triple Dip the Water"
-    qcTranslated: "Swallow Skims the Water Three Times"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "轻功2;灵巧1"
   splits:
   - text: "轻功2"
@@ -11457,11 +11366,9 @@
   - text: "白马悬蹄"
     translated: "White Horse Hoof Dangling"
     qcReviewedText: "White Horse Hoof Dangling"
-    qcTranslated: "White Horse's Hoof Suspended"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "轻功1;力道1;意志1"
   splits:
   - text: "轻功1"
@@ -11763,11 +11670,9 @@
   - text: "隔山打牛"
     translated: "Hit the bull from afar"
     qcReviewedText: "Hit the bull from afar"
-    qcTranslated: "Strike the bull through the mountain"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "绝技2;意志1"
   splits:
   - text: "绝技2"
@@ -11941,11 +11846,9 @@
   - text: "柔骨摆柳功"
     translated: "Rou Gu Ba Liu Gong"
     qcReviewedText: "Rou Gu Ba Liu Gong"
-    qcTranslated: "Willow‑Swaying Bone Technique"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: UntranslatedPinyin
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "绝技2;灵巧1"
   splits:
   - text: "绝技2"
@@ -12060,10 +11963,9 @@
   - text: "霸王肘"
     translated: "Butterfly Sweep"
     qcReviewedText: "Butterfly Sweep"
-    qcTranslated: "Tyrant Elbow"
+    qcTranslated: "Overlord Elbow"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 90
     qcDefectCategory: DomainTerm
 - raw: "绝技1;力道1;意志1"
   splits:
@@ -12109,11 +12011,10 @@
   - text: "摔碑手"
     translated: "Crushing themHand"
     qcReviewedText: "Crushing themHand"
-    qcTranslated: "Tombstone Crusher"
+    qcTranslated: "Stele‑Crushing Hand"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: HardToParseSeam
+    qcQualityScore: 90
+    qcDefectCategory: DomainTerm
 - raw: "拳掌2;力道1"
   splits:
   - text: "拳掌2"
@@ -12608,10 +12509,9 @@
   - text: "铁琵琶手"
     translated: "Iron Mallet Hand"
     qcReviewedText: "Iron Mallet Hand"
-    qcTranslated: "Iron Pipa Hand"
+    qcTranslated: "Iron Cymbal Hand"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 90
     qcDefectCategory: DomainTerm
 - raw: "拳掌2;体质1"
   splits:
@@ -13070,11 +12970,9 @@
   - text: "周公剑法"
     translated: "Wu Geng's Sword Technique"
     qcReviewedText: "Wu Geng's Sword Technique"
-    qcTranslated: "Duke of Zhou's Sword Technique"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "剑法1;智力1;体质1"
   splits:
   - text: "剑法1"
@@ -13488,11 +13386,9 @@
   - text: "杀机0.08"
     translated: "‑threat from 0.08‑"
     qcReviewedText: "‑threat from 0.08‑"
-    qcTranslated: "Kill Intent 0.08"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "胸21"
   splits:
   - text: "胸21"
@@ -13630,9 +13526,8 @@
     qcReviewedText: "Tiger's Claw Blade Technique"
     qcTranslated: "Hundred Beasts Blade Technique"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 85
+    qcDefectCategory: DomainTerm
 - raw: "刀法1;体质1;绝技1"
   splits:
   - text: "刀法1"
@@ -14201,8 +14096,7 @@
     qcReviewedText: "Great Night Hare Staff Technique"
     qcTranslated: "Great Yaksha Staff Technique"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 95
     qcDefectCategory: DomainTerm
 - raw: "力道3;长兵1;内力0.1"
   splits:
@@ -15340,10 +15234,9 @@
   - text: "含沙射影"
     translated: "Sling sand to accuse"
     qcReviewedText: "Sling sand to accuse"
-    qcTranslated: "Hint at someone's faults"
+    qcTranslated: "Cast oblique accusations"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 82
     qcDefectCategory: LostIdiom
 - raw: "射术1;灵巧1;轻功1"
   splits:
@@ -15516,11 +15409,9 @@
   - text: "潜渊心经"
     translated: "Qian Yuan Heart Sutra"
     qcReviewedText: "Qian Yuan Heart Sutra"
-    qcTranslated: "Abyssal Heart Sutra"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: UntranslatedPinyin
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "经脉潜力1;内功1;体质1"
   splits:
   - text: "经脉潜力1"
@@ -15618,11 +15509,9 @@
   - text: "乾元功"
     translated: "Kan Yuan Skill"
     qcReviewedText: "Kan Yuan Skill"
-    qcTranslated: "Qian Yuan Skill"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: UntranslatedPinyin
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "智力潜力1;内功1;意志1"
   splits:
   - text: "智力潜力1"
@@ -16506,11 +16395,9 @@
   - text: "分筋错骨手"
     translated: "Bone‑setting hand"
     qcReviewedText: "Bone‑setting hand"
-    qcTranslated: "Sinew‑Splitting Bone‑Breaking Hand"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "拳掌潜力1;拳掌1;灵巧1"
   splits:
   - text: "拳掌潜力1"
@@ -16637,11 +16524,9 @@
   - text: "子午十二剑"
     translated: "Midnight Twelve Swords"
     qcReviewedText: "Midnight Twelve Swords"
-    qcTranslated: "Zi‑Wu Twelve Swords"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "灵巧潜力1;剑法1;智力1"
   splits:
   - text: "灵巧潜力1"
@@ -17221,11 +17106,9 @@
   - text: "阴符枪谱"
     translated: "Yinfu Qiangpu"
     qcReviewedText: "Yinfu Qiangpu"
-    qcTranslated: "Yin Fu Spear Manual"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: UntranslatedPinyin
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "长兵潜力1;长兵1;智力1"
   splits:
   - text: "长兵潜力1"
@@ -19394,11 +19277,10 @@
   - text: "傲世奇枪"
     translated: "Domination Strange Spear"
     qcReviewedText: "Domination Strange Spear"
-    qcTranslated: "Arrogant World's Strange Spear"
+    qcTranslated: "World‑Defying Wondrous Spear"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 85
+    qcDefectCategory: DomainTerm
 - raw: "长兵潜力1;体质潜力1;长兵2"
   splits:
   - text: "长兵潜力1"
@@ -20252,8 +20134,7 @@
     qcReviewedText: "Zhou Ji Wind and Thunder Blade"
     qcTranslated: "Nine Provinces Wind and Thunder Blade"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 90
     qcDefectCategory: UntranslatedPinyin
 - raw: "刀法潜力2;力道潜力1;力道2"
   splits:
@@ -20608,8 +20489,7 @@
     qcReviewedText: "Tightrope Walking"
     qcTranslated: "Pole Climbing"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 95
     qcDefectCategory: DomainTerm
 - raw: "轻功4;体质4;闪避0.04"
   splits:
@@ -20770,11 +20650,9 @@
   - text: "走马灯"
     translated: "Carousel lamp"
     qcReviewedText: "Carousel lamp"
-    qcTranslated: "Kaleidoscope"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "轻功6;意志6;混乱0.06"
   splits:
   - text: "轻功6"
@@ -20801,11 +20679,9 @@
   - text: "虎口吞枪"
     translated: "Clawed through the spear"
     qcReviewedText: "Clawed through the spear"
-    qcTranslated: "Swallowed the spear at the tiger's mouth"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "绝技4;灵巧4;体质4;卸力0.06"
   splits:
   - text: "绝技4"
@@ -21173,11 +21049,9 @@
   - text: "得意春风步"
     translated: "Pleased by the Spring Breeze Step"
     qcReviewedText: "Pleased by the Spring Breeze Step"
-    qcTranslated: "Pride Spring Wind Step"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "轻功12;意志12;速度0.1"
   splits:
   - text: "轻功12"
@@ -22307,11 +22181,10 @@
   - text: "机关弹刀"
     translated: "Mechanism Critique"
     qcReviewedText: "Mechanism Critique"
-    qcTranslated: "Mechanical Pop‑up Knife"
+    qcTranslated: "Mechanism Spring Blade"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 85
+    qcDefectCategory: DomainTerm
 - raw: "刀法1;智力1"
   splits:
   - text: "刀法1"
@@ -22405,11 +22278,9 @@
   - text: "金蝉脱壳"
     translated: "Golden Cicada Shell"
     qcReviewedText: "Golden Cicada Shell"
-    qcTranslated: "Shedding the Cicada's Shell"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "轻功9;智力9;闪避0.08"
   splits:
   - text: "轻功9"
@@ -22585,9 +22456,8 @@
     qcReviewedText: "Stabbing dagger"
     qcTranslated: "Heart‑Piercing Nail"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 90
+    qcDefectCategory: DomainTerm
 - raw: "智力3;射术1;内力0.1"
   splits:
   - text: "智力3"
@@ -23283,11 +23153,9 @@
   - text: "万化玄机刀"
     translated: "Wan Hua Xuan Ji Sword"
     qcReviewedText: "Wan Hua Xuan Ji Sword"
-    qcTranslated: "Myriad Transformations Mystery Sword"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: UntranslatedPinyin
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "灵巧潜力2;刀法1;力道1"
   splits:
   - text: "灵巧潜力2"
@@ -23707,10 +23575,9 @@
   - text: "采补养元功"
     translated: "Cai Bu Yang Yuan Gong"
     qcReviewedText: "Cai Bu Yang Yuan Gong"
-    qcTranslated: "Gathering and Supplementing to Nourish the Origin Technique"
+    qcTranslated: "Cultivation and Restoration of Vital Essence Technique"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 85
     qcDefectCategory: UntranslatedPinyin
 - raw: "生命上限40;内力上限40;内功4;经脉4;体质4;疗伤0.04;康复0.04"
   splits:
@@ -24073,11 +23940,9 @@
   - text: "金钗刮膜功"
     translated: "Golden Hairpin Skin Peeling Technique"
     qcReviewedText: "Golden Hairpin Skin Peeling Technique"
-    qcTranslated: "Golden Hairpin Membrane Scraping Technique"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "绝技2;智力1"
   splits:
   - text: "绝技2"
@@ -24386,10 +24251,9 @@
   - text: "移花接木"
     translated: "Planting a seed out of season"
     qcReviewedText: "Planting a seed out of season"
-    qcTranslated: "Substitution"
+    qcTranslated: "Stealing a flower to graft onto a tree"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 85
     qcDefectCategory: LostIdiom
 - raw: "智力潜力1;绝技1;智力1;医术1"
   splits:
@@ -24512,11 +24376,9 @@
   - text: "药王毒手"
     translated: "Poison‑Finger Medicrowad"
     qcReviewedText: "Poison‑Finger Medicrowad"
-    qcTranslated: "Medicine King's Poison Hand"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "毒术潜力1;拳掌1;智力1"
   splits:
   - text: "毒术潜力1"
@@ -25239,11 +25101,9 @@
   - text: "花子棍"
     translated: "Hachiko Staff"
     qcReviewedText: "Hachiko Staff"
-    qcTranslated: "Hanako's Staff"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "长兵3;内力0.2"
   splits:
   - text: "长兵3"
@@ -25266,11 +25126,9 @@
   - text: "内家数来宝"
     translated: "Internal School's Coming to Showcase"
     qcReviewedText: "Internal School's Coming to Showcase"
-    qcTranslated: "Internal School's Number"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "生命上限40;内力上限40;内功6;经脉6;卸力0.03;拳掌威力0.03"
   splits:
   - text: "生命上限40"
@@ -25451,11 +25309,10 @@
   - text: "双棍缠身"
     translated: "Staff wearing the Bind of Duty"
     qcReviewedText: "Staff wearing the Bind of Duty"
-    qcTranslated: "Staffs Entangling the Body"
+    qcTranslated: "Twin Staffs Entangling the Body"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 85
+    qcDefectCategory: DomainTerm
 - raw: "经脉1;灵巧2;长兵2"
   splits:
   - text: "经脉1"
@@ -25706,11 +25563,9 @@
   - text: "哭丧棍法"
     translated: "Staff of Mourning Weeping"
     qcReviewedText: "Staff of Mourning Weeping"
-    qcTranslated: "Mourning Wailing Staff Technique"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "长兵1;体质2"
   splits:
   - text: "长兵1"
@@ -26206,9 +26061,8 @@
     qcReviewedText: "Dreamless Meditation Fist"
     qcTranslated: "Sleeping Arhat Fist"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 85
+    qcDefectCategory: DomainTerm
 - raw: "经脉潜力2;拳掌1;经脉1"
   splits:
   - text: "经脉潜力2"
@@ -26674,8 +26528,7 @@
     qcReviewedText: "Shield Bash"
     qcTranslated: "Shield Raise"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 95
     qcDefectCategory: DomainTerm
 - raw: "绝技2;体质2;护甲2;反击0.04;装备负重4"
   splits:
@@ -26831,11 +26684,9 @@
   - text: "衔枚疾走"
     translated: "March in silence hurry"
     qcReviewedText: "March in silence hurry"
-    qcTranslated: "March swiftly in silence"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "坐骑加成0.07;速度0.03;长兵威力0.03"
   splits:
   - text: "坐骑加成0.07"
@@ -26968,11 +26819,9 @@
   - text: "泣血戈术"
     translated: "Blood‑Curdling Gore Technique"
     qcReviewedText: "Blood‑Curdling Gore Technique"
-    qcTranslated: "Blood‑Crying Halberd Art"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "力道3;长兵2"
   splits:
   - text: "力道3"
@@ -26995,11 +26844,9 @@
   - text: "斩马刀法"
     translated: "Blade Technique"
     qcReviewedText: "Blade Technique"
-    qcTranslated: "Horse‑Slaying Blade Technique"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: DroppedContent
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "手20"
   splits:
   - text: "手20"
@@ -27559,11 +27406,9 @@
   - text: "百战刀法"
     translated: "Hundred‑Fight Blade Technique"
     qcReviewedText: "Hundred‑Fight Blade Technique"
-    qcTranslated: "Hundred‑Fight Blade Technique"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: DomainTerm
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "力道潜力1;刀法1;力道1"
   splits:
   - text: "力道潜力1"
@@ -28231,11 +28076,9 @@
   - text: "醒脑0.2"
     translated: "Wake Brain0.2"
     qcReviewedText: "Wake Brain0.2"
-    qcTranslated: "Refreshing Mind0.2"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "安神咒"
   splits:
   - text: "安神咒"
@@ -28548,11 +28391,9 @@
   - text: "玄门胎息功"
     translated: "Xianmen Taisi Gong"
     qcReviewedText: "Xianmen Taisi Gong"
-    qcTranslated: "Mystic Gate Fetal Breathing Technique"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: UntranslatedPinyin
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "内功1;经脉2"
   splits:
   - text: "内功1"
@@ -29171,11 +29012,9 @@
   - text: "霸体0.3"
     translated: "Invincibility 0.3"
     qcReviewedText: "Invincibility 0.3"
-    qcTranslated: "Super Armor 0.3"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "钟馗斩妖剑"
   splits:
   - text: "钟馗斩妖剑"
@@ -29183,9 +29022,8 @@
     qcReviewedText: "Ghosts destroy their sword"
     qcTranslated: "Zhong Kui's Demon‑Slaying Sword"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 95
+    qcDefectCategory: DomainTerm
 - raw: "经脉4;剑法2;内力0.1"
   splits:
   - text: "经脉4"
@@ -29436,10 +29274,9 @@
   - text: "三昧真火"
     translated: "Flaming Mallet Mastery"
     qcReviewedText: "Flaming Mallet Mastery"
-    qcTranslated: "Samadhi Fire"
+    qcTranslated: "Samadhi True Fire"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 85
     qcDefectCategory: DomainTerm
 - raw: "奇门潜力1;智力潜力1;奇门1;智力1"
   splits:
@@ -29959,8 +29796,7 @@
     qcReviewedText: "Aging Skill"
     qcTranslated: "Hundred Refinements Art"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 85
     qcDefectCategory: DomainTerm
 - raw: "生命上限60;内力上限20;内功6;力道6;装备强化0.06;坚毅0.03;装备负重3"
   splits:
@@ -30086,11 +29922,10 @@
   - text: "胜邪剑法"
     translated: "Sword Technique of Victory Evil"
     qcReviewedText: "Sword Technique of Victory Evil"
-    qcTranslated: "Victory Over Evil Sword Technique"
+    qcTranslated: "Sheng Xie Sword Technique"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 85
+    qcDefectCategory: DomainTerm
 - raw: "剑法4;内力0.1"
   splits:
   - text: "剑法4"
@@ -30180,11 +30015,10 @@
   - text: "名山寻路"
     translated: "Seeking the Path in Mount Name"
     qcReviewedText: "Seeking the Path in Mount Name"
-    qcTranslated: "Seeking the Path on the Famous Mountain"
+    qcTranslated: "Seeking the Path in the Famous Mountain"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 85
+    qcDefectCategory: DomainTerm
 - raw: "轻功8;灵巧8;速度0.06;坚毅0.06"
   splits:
   - text: "轻功8"
@@ -30366,11 +30200,9 @@
   - text: "庖丁解牛刀"
     translated: "Butterfly Master Slices Ox"
     qcReviewedText: "Butterfly Master Slices Ox"
-    qcTranslated: "Pao Ding's Ox Carving Knife"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "灵巧4;刀法2"
   splits:
   - text: "灵巧4"
@@ -30572,8 +30404,7 @@
     qcReviewedText: "Dryad Sword"
     qcTranslated: "Gan Jiang Mo Ye Sword"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 95
     qcDefectCategory: DomainTerm
 - raw: "力道潜力1;灵巧潜力1"
   splits:
@@ -30762,11 +30593,9 @@
   - text: "赤霄斩蛇剑"
     translated: "Sword of Crimson Heaven Slice Snake"
     qcReviewedText: "Sword of Crimson Heaven Slice Snake"
-    qcTranslated: "Sword of Crimson Sky Serpent Slaying"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "剑法潜力2;剑法1;灵巧1"
   splits:
   - text: "剑法潜力2"
@@ -31230,8 +31059,7 @@
     qcReviewedText: "Fish toad trap"
     qcTranslated: "Loach Gu"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 90
     qcDefectCategory: DomainTerm
 - raw: "意志1;奇门2;毒术2"
   splits:
@@ -31333,8 +31161,7 @@
     qcReviewedText: "Pit Treating Technique"
     qcTranslated: "Gu Refining Technique"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 85
     qcDefectCategory: DomainTerm
 - raw: "绝技4;智力4;毒术4;毒素0.06;负面加成0.03"
   splits:
@@ -31525,8 +31352,7 @@
     qcReviewedText: "Yin Snake Pesticide"
     qcTranslated: "Yin Snake Gu"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 90
     qcDefectCategory: DomainTerm
 - raw: "意志2;奇门2;毒术1"
   splits:
@@ -31673,8 +31499,7 @@
     qcReviewedText: "Three Corpses Scorpion Claw"
     qcTranslated: "Three Corpses Centipede Claw"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 95
     qcDefectCategory: DomainTerm
 - raw: "意志2;拳掌2;毒术2"
   splits:
@@ -32000,10 +31825,9 @@
   - text: "蜈蚣遁地术"
     translated: "Earthworm Diving Technique"
     qcReviewedText: "Earthworm Diving Technique"
-    qcTranslated: "Centipede Earth‑Dodging Technique"
+    qcTranslated: "Centipede Earth‑Diving Technique"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 95
     qcDefectCategory: DomainTerm
 - raw: "轻功12;意志12;闪避0.05;乱神0.05"
   splits:
@@ -32066,10 +31890,9 @@
   - text: "千蛛万毒手"
     translated: "Ten Thousand Poison Hands"
     qcReviewedText: "Ten Thousand Poison Hands"
-    qcTranslated: "Ten Thousand Spider Myriad Poison Hand"
+    qcTranslated: "Ten Thousand Spiders and Myriad Poisons Hand"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 85
     qcDefectCategory: DroppedContent
 - raw: "意志2;拳掌2;毒术3"
   splits:
@@ -32504,11 +32327,9 @@
   - text: "五毒神掌"
     translated: "Poison Palm Technique"
     qcReviewedText: "Poison Palm Technique"
-    qcTranslated: "Five Poisons Divine Palm"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: DroppedContent
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "意志潜力2;拳掌1;智力1"
   splits:
   - text: "意志潜力2"
@@ -32580,11 +32401,9 @@
   - text: "鹤顶红"
     translated: "Red venom dripped into their throat"
     qcReviewedText: "Red venom dripped into their throat"
-    qcTranslated: "Red Crown Poison"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "毒术潜力1;智力潜力1;射术2"
   splits:
   - text: "毒术潜力1"
@@ -33491,8 +33310,7 @@
     qcReviewedText: "Devil Slice Blade Technique"
     qcTranslated: "Asura Blade Technique"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 85
     qcDefectCategory: DomainTerm
 - raw: "刀法1;体质2"
   splits:
@@ -33814,11 +33632,9 @@
   - text: "阴阳乱刃"
     translated: "Blade of Chaos"
     qcReviewedText: "Blade of Chaos"
-    qcTranslated: "Yin‑Yang Chaotic Blades"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "体质2;刀法3;内力0.2"
   splits:
   - text: "体质2"
@@ -34723,8 +34539,7 @@
     qcReviewedText: "Seventeenth String Without Formed Sound"
     qcTranslated: "Seven‑String Formless Sound"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 90
     qcDefectCategory: GarbledNumber
 - raw: "棋盘四式"
   splits:
@@ -35011,11 +34826,9 @@
   - text: "手谈十九路"
     translated: "Go on the nineteenth road"
     qcReviewedText: "Go on the nineteenth road"
-    qcTranslated: "Hand‑talk, nineteen paths"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "昏沉0.05;腰腹点穴0.05"
   splits:
   - text: "昏沉0.05"
@@ -35066,11 +34879,10 @@
   - text: "泼墨成画功"
     translated: "Murphy's Law Painting Technique"
     qcReviewedText: "Murphy's Law Painting Technique"
-    qcTranslated: "Ink Splashing Painting Technique"
+    qcTranslated: "Ink Splatter Painting Technique"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 90
+    qcDefectCategory: DomainTerm
 - raw: "奇门1;意志2"
   splits:
   - text: "奇门1"
@@ -35258,9 +35070,8 @@
     qcReviewedText: "Carving Dragon on Literature"
     qcTranslated: "The Literary Mind and the Carving of Dragons"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 95
+    qcDefectCategory: DomainTerm
 - raw: "绝技8;智力8;意志8;醒脑0.1"
   splits:
   - text: "绝技8"
@@ -35652,11 +35463,9 @@
   - text: "螺旋九影"
     translated: "Nine‑Division Spiral Shadow"
     qcReviewedText: "Nine‑Division Spiral Shadow"
-    qcTranslated: "Nine Shadows of the Spiral"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "轻功15;灵巧15;急速0.06;飘逸0.06"
   splits:
   - text: "轻功15"
@@ -35733,11 +35542,9 @@
   - text: "广陵散曲功"
     translated: "Broadsong Skill"
     qcReviewedText: "Broadsong Skill"
-    qcTranslated: "Guangling San Skill"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "智力潜力2;射术1;智力1"
   splits:
   - text: "智力潜力2"
@@ -36306,11 +36113,9 @@
   - text: "稍子棍法"
     translated: "Subduing Staff Technique"
     qcReviewedText: "Subduing Staff Technique"
-    qcTranslated: "Xiaozi Staff Technique"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "意志2;长兵2"
   splits:
   - text: "意志2"
@@ -36368,8 +36173,7 @@
     qcReviewedText: "Khan Protection Technique"
     qcTranslated: "Arhat Body Protection Technique"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 90
     qcDefectCategory: DomainTerm
 - raw: "生命上限60;内力上限20;内功6;力道6;疗伤0.03;坚毅0.03"
   splits:
@@ -36600,11 +36404,9 @@
   - text: "伏魔铲法"
     translated: "Method of the Devil‑subduing Tongs"
     qcReviewedText: "Method of the Devil‑subduing Tongs"
-    qcTranslated: "Demon‑Quelling Shovel Technique"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "意志1;奇门2,内力0.1"
   splits:
   - text: "意志1"
@@ -36860,11 +36662,9 @@
   - text: "五虎群羊棍"
     translated: "Five Tigers Gathered Lambs Staff"
     qcReviewedText: "Five Tigers Gathered Lambs Staff"
-    qcTranslated: "Five Tigers Herding Lambs Staff"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "长兵25;意志15"
   splits:
   - text: "长兵25"
@@ -36914,8 +36714,7 @@
     qcReviewedText: "Great Gandharva Mace"
     qcTranslated: "Great Vajra Mace"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 95
     qcDefectCategory: DomainTerm
 - raw: "奇门2;力道1"
   splits:
@@ -36969,11 +36768,10 @@
   - text: "袈裟伏魔功"
     translated: "Robe Suppression Evil Skill"
     qcReviewedText: "Robe Suppression Evil Skill"
-    qcTranslated: "Kasaya Demon Subjugation Art"
+    qcTranslated: "Kasaya Demon‑Subduing Skill"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 85
+    qcDefectCategory: DomainTerm
 - raw: "生命上限100;内力上限60;内功12;力道12;眩晕0.05;阻滞0.05"
   splits:
   - text: "生命上限100"
@@ -37821,11 +37619,10 @@
   - text: "金刚伏魔圈"
     translated: "Golden Wheel of Subduing Evil Circle"
     qcReviewedText: "Golden Wheel of Subduing Evil Circle"
-    qcTranslated: "Golden Wheel of Subduing Demons"
+    qcTranslated: "Vajra Demon‑Subduing Ring"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 85
+    qcDefectCategory: DomainTerm
 - raw: "体质4;奇门3;内力0.1"
   splits:
   - text: "体质4"
@@ -38242,11 +38039,9 @@
   - text: "武当绵掌"
     translated: "Wudang Mian Palm"
     qcReviewedText: "Wudang Mian Palm"
-    qcTranslated: "Wudang Soft Palm"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: UntranslatedPinyin
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "拳掌10;经脉5"
   splits:
   - text: "拳掌10"
@@ -38269,11 +38064,9 @@
   - text: "武当丹剑"
     translated: "Wudang Dancane Sword"
     qcReviewedText: "Wudang Dancane Sword"
-    qcTranslated: "Wudang Elixir Sword"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: UntranslatedPinyin
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "经脉2;剑法1;内力0.1"
   splits:
   - text: "经脉2"
@@ -38595,11 +38388,9 @@
   - text: "四象疑步"
     translated: "Four Symbols Doubtful Steps"
     qcReviewedText: "Four Symbols Doubtful Steps"
-    qcTranslated: "Four Symbols Uncertain Steps"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "轻功8;灵巧8;疲劳0.04;反击0.06"
   splits:
   - text: "轻功8"
@@ -39165,11 +38956,9 @@
   - text: "北斗仙踪"
     translated: "Northern Dipper Xinzong"
     qcReviewedText: "Northern Dipper Xinzong"
-    qcTranslated: "Northern Dipper Immortal Trace"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: UntranslatedPinyin
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "轻功15;灵巧15;急速0.04;反击0.04;反弹0.02"
   splits:
   - text: "轻功15"
@@ -39736,11 +39525,9 @@
   - text: "开山刀法"
     translated: "Mountain‑Cleaving Blade Technique"
     qcReviewedText: "Mountain‑Cleaving Blade Technique"
-    qcTranslated: "Mountain‑Cleaving Blade Art"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "力道2;刀法1"
   splits:
   - text: "力道2"
@@ -40192,10 +39979,9 @@
   - text: "霸王举鼎功"
     translated: "Peng Jiang Raising Cauldron Technique"
     qcReviewedText: "Peng Jiang Raising Cauldron Technique"
-    qcTranslated: "Overlord Raising the Cauldron Technique"
+    qcTranslated: "Overlord's Cauldron‑Lifting Technique"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 85
     qcDefectCategory: UntranslatedPinyin
 - raw: "生命上限130;内力上限30;内功12;力道12;刀法威力0.06;不屈0.04"
   splits:
@@ -40232,11 +40018,9 @@
   - text: "千里横行"
     translated: "Mile‑long March"
     qcReviewedText: "Mile‑long March"
-    qcTranslated: "Roaming a Thousand Li"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "轻功4;意志10;断骨0.08;重碾0.08;减伤4"
   splits:
   - text: "轻功4"
@@ -40450,11 +40234,9 @@
   - text: "天命刀法"
     translated: "Heavenly Mandate Blade Technique"
     qcReviewedText: "Heavenly Mandate Blade Technique"
-    qcTranslated: "Heavenly Mandate Blade Art"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "力道4;刀法4"
   splits:
   - text: "力道4"
@@ -40560,8 +40342,7 @@
     qcReviewedText: "Butterfly Spear Technique"
     qcTranslated: "Overlord Spear Technique"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 85
     qcDefectCategory: DomainTerm
 - raw: "意志3;长兵4"
   splits:
@@ -40993,11 +40774,9 @@
   - text: "乘风归"
     translated: "Soar goes home"
     qcReviewedText: "Soar goes home"
-    qcTranslated: "Ride the wind home"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "轻功9;灵巧9;闪避0.08"
   splits:
   - text: "轻功9"
@@ -41180,11 +40959,9 @@
   - text: "仙人抚顶功"
     translated: "Immortal Stroke Top Technique"
     qcReviewedText: "Immortal Stroke Top Technique"
-    qcTranslated: "Immortal's Head‑Pat Technique"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "生命上限60;内力上限100;内功12;经脉12;内伤0.05;剑法威力0.05"
   splits:
   - text: "生命上限60"
@@ -41290,11 +41067,9 @@
   - text: "溟海逐月剑"
     translated: "Moonchaser Sword"
     qcReviewedText: "Moonchaser Sword"
-    qcTranslated: "Moonchaser Sword of the Gloomy Sea"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: DroppedContent
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "灵巧2;剑法4;内力0.2"
   splits:
   - text: "灵巧2"
@@ -41682,11 +41457,9 @@
   - text: "五尺混天绫"
     translated: "Five‑zhi Huandian Ling"
     qcReviewedText: "Five‑zhi Huandian Ling"
-    qcTranslated: "Five‑Zhi Heaven‑Mixing Ribbon"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: UntranslatedPinyin
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "经脉潜力2;奇门1;意志1"
   splits:
   - text: "经脉潜力2"
@@ -42171,11 +41944,9 @@
   - text: "猿公剑法"
     translated: "Monkey King Sword Technique"
     qcReviewedText: "Monkey King Sword Technique"
-    qcTranslated: "Yuan Gong Sword Technique"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: DomainTerm
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "舒筋0.03;通脉0.03"
   splits:
   - text: "舒筋0.03"
@@ -42515,8 +42286,7 @@
     qcReviewedText: "Laoran Fuxie Hand"
     qcTranslated: "Orchid Brushing Acupoint Hand"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 85
     qcDefectCategory: UntranslatedPinyin
 - raw: "拳掌潜力1;灵巧潜力1"
   splits:
@@ -42567,9 +42337,8 @@
     qcReviewedText: "Golden State Palm"
     qcTranslated: "Vajra Samadhi Palm"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 95
+    qcDefectCategory: DomainTerm
 - raw: "经脉3;拳掌2;内力0.2"
   splits:
   - text: "经脉3"
@@ -42993,11 +42762,9 @@
   - text: "诸天化身步"
     translated: "Step of Infinite Body Factions"
     qcReviewedText: "Step of Infinite Body Factions"
-    qcTranslated: "Step of Celestial Incarnations"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "轻功潜力1;灵巧潜力2;智力潜力1"
   splits:
   - text: "轻功潜力1"
@@ -43200,11 +42967,10 @@
   - text: "子午流注功"
     translated: "Midday and Midnight Skill"
     qcReviewedText: "Midday and Midnight Skill"
-    qcTranslated: "Zi‑Wu Flowing Infusion Skill"
+    qcTranslated: "Zi‑Wu Meridian Flowing Infusion Skill"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 85
+    qcDefectCategory: DomainTerm
 - raw: "生命上限60;内力上限20;内功6;体质6;疗伤0.04;奇门威力0.02"
   splits:
   - text: "生命上限60"
@@ -43416,8 +43182,7 @@
     qcReviewedText: "Phoenix rises"
     qcTranslated: "Roc spreads its wings"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 85
     qcDefectCategory: DomainTerm
 - raw: "轻功9;灵巧9;压制0.04;反击0.04"
   splits:
@@ -43939,11 +43704,9 @@
   - text: "生死一线鞭"
     translated: "Life and Death Thin Thread Whip"
     qcReviewedText: "Life and Death Thin Thread Whip"
-    qcTranslated: "Life‑or‑Death Hairline Whip"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "奇门潜力2;奇门1;灵巧1"
   splits:
   - text: "奇门潜力2"
@@ -44376,8 +44139,7 @@
     qcReviewedText: "Have five cars"
     qcTranslated: "Read five carts of books"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 85
     qcDefectCategory: LostIdiom
 - raw: "轻功4;灵巧4;智力4;急速0.04;机关速度0.04"
   splits:
@@ -44602,9 +44364,8 @@
     qcReviewedText: "Six‑turning Clever Lock"
     qcTranslated: "Six‑Turn Kongming Lock"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 90
+    qcDefectCategory: DomainTerm
 - raw: "奇门1;智力2"
   splits:
   - text: "奇门1"
@@ -44768,11 +44529,9 @@
   - text: "指算玄通"
     translated: "Calculation by Finger Wisdom"
     qcReviewedText: "Calculation by Finger Wisdom"
-    qcTranslated: "Finger Counting: Mystical Proficiency"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "绝技12;智力12;弱点0.04;醒脑0.04;机关速度0.04"
   splits:
   - text: "绝技12"
@@ -44805,11 +44564,9 @@
   - text: "燎原朱雀"
     translated: "Prickly Heat Phoenix"
     qcReviewedText: "Prickly Heat Phoenix"
-    qcTranslated: "Prairie Fire Vermilion Bird"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "奇门40;智力45"
   splits:
   - text: "奇门40"
@@ -45417,10 +45174,9 @@
   - text: "风火轮"
     translated: "Magic wheel"
     qcReviewedText: "Magic wheel"
-    qcTranslated: "Wind and Fire Wheel"
+    qcTranslated: "Wind and Fire Wheels"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 95
     qcDefectCategory: DomainTerm
 - raw: "轻功6;灵巧6;急速0.06"
   splits:
@@ -45573,8 +45329,7 @@
     qcReviewedText: "Chang‑fan‑hai‑bo Skill"
     qcTranslated: "River‑Turning Sea‑Boiling Skill"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 90
     qcDefectCategory: UntranslatedPinyin
 - raw: "生命上限30;内力上限30;内功9;意志9;锻造9;灼烧0.08"
   splits:
@@ -45782,11 +45537,10 @@
   - text: "祝融真火诀"
     translated: "Wishing You True Fire Technique Success"
     qcReviewedText: "Wishing You True Fire Technique Success"
-    qcTranslated: "Zhurong True Fire Formula"
+    qcTranslated: "Zhurong True Fire Technique"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 90
+    qcDefectCategory: DomainTerm
 - raw: "生命上限60;内力上限30;内功12;意志12;锻造12;灼烧0.05;动摇0.05"
   splits:
   - text: "生命上限60"
@@ -46478,11 +46232,10 @@
   - text: "灌顶法"
     translated: "Crown Pouring Method"
     qcReviewedText: "Crown Pouring Method"
-    qcTranslated: "Abhisheka"
+    qcTranslated: "Crown Anointing Method"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 90
+    qcDefectCategory: DomainTerm
 - raw: "绝技4;智力4;暴击0.04"
   splits:
   - text: "绝技4"
@@ -46648,10 +46401,9 @@
   - text: "密宗缩骨功"
     translated: "Taoist bone compression technique"
     qcReviewedText: "Taoist bone compression technique"
-    qcTranslated: "Esoteric bone‑shrinking technique"
+    qcTranslated: "Esoteric bone compression technique"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 85
     qcDefectCategory: DomainTerm
 - raw: "绝技6;体质6;坚毅0.06"
   splits:
@@ -46754,10 +46506,9 @@
   - text: "不动明王功"
     translated: "Eye of Wisdom Technique"
     qcReviewedText: "Eye of Wisdom Technique"
-    qcTranslated: "Acala Vajra Technique"
+    qcTranslated: "Akshobhya Vajra Technique"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 90
     qcDefectCategory: DomainTerm
 - raw: "生命上限90;内力上限30;内功6;力道6;体质6;反弹0.02;坚毅0.04"
   splits:
@@ -46829,11 +46580,9 @@
   - text: "金刚怒目"
     translated: "Furious Eyes of Golden Firmament"
     qcReviewedText: "Furious Eyes of Golden Firmament"
-    qcTranslated: "Wrathful Gaze of Vajra"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "体质潜力1;意志1"
   splits:
   - text: "体质潜力1"
@@ -46878,11 +46627,10 @@
   - text: "降龙伏虎功"
     translated: "Dragon Tames Dragon, Tiger Calms Tiger Kung Fu Technique"
     qcReviewedText: "Dragon Tames Dragon, Tiger Calms Tiger Kung Fu Technique"
-    qcTranslated: "Dragon‑Taming and Tiger‑Subduing Kung Fu Technique"
+    qcTranslated: "Dragon Subduing and Tiger Taming Kung Fu Technique"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 85
+    qcDefectCategory: GarbledNumber
 - raw: "绝技9;力道9;外伤0.08"
   splits:
   - text: "绝技9"
@@ -46956,11 +46704,10 @@
   - text: "五轮大法"
     translated: "Five Rims Method"
     qcReviewedText: "Five Rims Method"
-    qcTranslated: "Five Wheels of Dharma"
+    qcTranslated: "Five Wheels Great Dharma"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 85
+    qcDefectCategory: DomainTerm
 - raw: "智力3;奇门1;内力0.2"
   splits:
   - text: "智力3"
@@ -47128,8 +46875,7 @@
     qcReviewedText: "Yoga on the Mat"
     qcTranslated: "Yogacarabhumi"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 95
     qcDefectCategory: DomainTerm
 - raw: "绝技8;力道8;智力8;慧眼0.05;回血0.005"
   splits:
@@ -47168,8 +46914,7 @@
     qcReviewedText: "Vajra"
     qcTranslated: "Great Vajra"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 85
     qcDefectCategory: DroppedContent
 - raw: "力道2;奇门4;内力0.1"
   splits:
@@ -47259,11 +47004,9 @@
   - text: "阿鼻八刀"
     translated: "Avalanche Eight Blades"
     qcReviewedText: "Avalanche Eight Blades"
-    qcTranslated: "Avici Eight Blades"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "体质3;刀法3"
   splits:
   - text: "体质3"
@@ -47361,10 +47104,9 @@
   - text: "密宗大手印"
     translated: "Vajra Hand Trajectory"
     qcReviewedText: "Vajra Hand Trajectory"
-    qcTranslated: "Vajrayana Mahamudra"
+    qcTranslated: "Vajra Great Seal"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 90
     qcDefectCategory: DomainTerm
 - raw: "智力潜力2;体质潜力1"
   splits:
@@ -47883,9 +47625,8 @@
     qcReviewedText: "Northeast wind blows"
     qcTranslated: "North Wind Finger"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 95
+    qcDefectCategory: DomainTerm
 - raw: "经脉2;拳掌1;内力0.1"
   splits:
   - text: "经脉2"
@@ -50116,11 +49857,9 @@
   - text: "达摩剑法"
     translated: "Shaolin Swordsmanship"
     qcReviewedText: "Shaolin Swordsmanship"
-    qcTranslated: "Bodhidharma Swordsmanship"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "智力潜力1;意志潜力1;剑法1;智力1"
   splits:
   - text: "智力潜力1"
@@ -50366,11 +50105,9 @@
   - text: "飞虎提芦枪"
     translated: "Tiger Hawk Wields a Reed Gun"
     qcReviewedText: "Tiger Hawk Wields a Reed Gun"
-    qcTranslated: "Flying Tiger Raises the Reeds Spear"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "长兵潜力1;力道潜力1;长兵1;力道1"
   splits:
   - text: "长兵潜力1"
@@ -50663,8 +50400,7 @@
     qcReviewedText: "Hand grenade"
     qcTranslated: "Palm Thunder"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 90
     qcDefectCategory: DomainTerm
 - raw: "灵巧潜力1;意志潜力1;灵巧1;意志1"
   splits:
@@ -51781,11 +51517,9 @@
   - text: "山河社稷笔"
     translated: "River Mountain and State Pen"
     qcReviewedText: "River Mountain and State Pen"
-    qcTranslated: "Brush of Mountains, Rivers, and the State"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "奇门潜力1;智力潜力1;经脉潜力1;经脉2"
   splits:
   - text: "奇门潜力1"
@@ -52191,19 +51925,16 @@
     qcReviewedText: "Reishi and Ginseng Tonifying Pill"
     qcTranslated: "Ginseng Yangrong Pill"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 90
     qcDefectCategory: DomainTerm
 - raw: "玉洞黑石丹"
   splits:
   - text: "玉洞黑石丹"
     translated: "E‑black‑stone‑pill Cave"
     qcReviewedText: "E‑black‑stone‑pill Cave"
-    qcTranslated: "Jade Cave Black Stone Pill"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "万灵回生散"
   splits:
   - text: "万灵回生散"
@@ -52243,19 +51974,16 @@
     qcReviewedText: "Participating Ginseng and Atractylodes Decoction"
     qcTranslated: "Shen Ling Bai Zhu San"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 90
     qcDefectCategory: DomainTerm
 - raw: "济生养气丸"
   splits:
   - text: "济生养气丸"
     translated: "Jisheng Naiqi Pills"
     qcReviewedText: "Jisheng Naiqi Pills"
-    qcTranslated: "Jisheng Yangqi Pills"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: UntranslatedPinyin
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "紫霄玄关散"
   splits:
   - text: "紫霄玄关散"
@@ -52287,9 +52015,8 @@
     qcReviewedText: "Golden Lotus Pill"
     qcTranslated: "Purple Gold Pill"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 90
+    qcDefectCategory: DomainTerm
 - raw: "天王补心丹"
   splits:
   - text: "天王补心丹"
@@ -52329,8 +52056,7 @@
     qcReviewedText: "Tiger Balm"
     qcTranslated: "Golden Wound Powder"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 95
     qcDefectCategory: DomainTerm
 - raw: "三七跌打散"
   splits:
@@ -52385,11 +52111,10 @@
   - text: "牛黄血竭丹"
     translated: "Orchid Bull Blood‑Resolving Pill"
     qcReviewedText: "Orchid Bull Blood‑Resolving Pill"
-    qcTranslated: "Calculus Bovis and Dragon's Blood Pill"
+    qcTranslated: "Calculus Blood‑Resolving Pill"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 85
+    qcDefectCategory: DomainTerm
 - raw: "田七鲨胆丹"
   splits:
   - text: "田七鲨胆丹"
@@ -52443,11 +52168,9 @@
   - text: "天心解毒丸"
     translated: "Heart Heaven Detox Pill"
     qcReviewedText: "Heart Heaven Detox Pill"
-    qcTranslated: "Tianxin Detox Pill"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "金花玉露丸"
   splits:
   - text: "金花玉露丸"
@@ -52957,11 +52680,10 @@
   - text: "横练"
     translated: "Horizontal training"
     qcReviewedText: "Horizontal training"
-    qcTranslated: "Iron Body Training"
+    qcTranslated: "Iron Body"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 90
+    qcDefectCategory: DomainTerm
 - raw: "破甲"
   splits:
   - text: "破甲"
@@ -53161,8 +52883,7 @@
     qcReviewedText: "Piercing damage"
     qcTranslated: "Reflective damage"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 90
     qcDefectCategory: DomainTerm
 - raw: "反伤吸内"
   splits:
@@ -53177,11 +52898,9 @@
   - text: "反伤削内"
     translated: "Penetration Reduction"
     qcReviewedText: "Penetration Reduction"
-    qcTranslated: "Reflective Damage Internal Reduction"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: DomainTerm
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "击退"
   splits:
   - text: "击退"
@@ -53379,11 +53098,9 @@
   - text: "护心"
     translated: "Heart protection"
     qcReviewedText: "Heart protection"
-    qcTranslated: "Heart Guard"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "护胸"
   splits:
   - text: "护胸"
@@ -53469,11 +53186,9 @@
   - text: "裂膝"
     translated: "Split‑knee"
     qcReviewedText: "Split‑knee"
-    qcTranslated: "Split‑Knee"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "声望获取"
   splits:
   - text: "声望获取"
@@ -53973,8 +53688,7 @@
     qcReviewedText: "Lawful/Kindness"
     qcTranslated: "Lawful/Good"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 95
     qcDefectCategory: DomainTerm
   - subIndex: 1
     text: "善良"
@@ -54252,11 +53966,9 @@
   - text: "净乐琉璃"
     translated: "Jingle Luliu"
     qcReviewedText: "Jingle Luliu"
-    qcTranslated: "Pure Joy Lapis"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: UntranslatedPinyin
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "师傅:10"
   splits:
   - text: "师傅"
@@ -54314,11 +54026,9 @@
   - text: "铁算盘"
     translated: "Iron calculator"
     qcReviewedText: "Iron calculator"
-    qcTranslated: "Iron Abacus"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "唐.逸影"
   splits:
   - text: "唐.逸影"
@@ -54849,11 +54559,9 @@
   - text: "小卧龙"
     translated: "Young Dragon‑Origin"
     qcReviewedText: "Young Dragon‑Origin"
-    qcTranslated: "Young Zhuge Liang"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "南宫.瑶"
   splits:
   - text: "南宫.瑶"
@@ -55677,11 +55385,9 @@
   - text: "霓裳仙子"
     translated: "Fairy Nishang"
     qcReviewedText: "Fairy Nishang"
-    qcTranslated: "Fairy of the Rainbow Robe"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: UntranslatedPinyin
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "空闻.大师"
   splits:
   - text: "空闻.大师"
@@ -56004,11 +55710,9 @@
   - text: "清虚真人"
     translated: "Immortal Qingqi"
     qcReviewedText: "Immortal Qingqi"
-    qcTranslated: "Immortal Qingxu"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "项.元霸"
   splits:
   - text: "项.元霸"
@@ -58684,11 +58388,9 @@
   - text: "霸刀狂侠"
     translated: "Frenzied Blade"
     qcReviewedText: "Frenzied Blade"
-    qcTranslated: "Tyrant Blade Mad Hero"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: DroppedContent
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "郭.淮"
   splits:
   - text: "郭.淮"
@@ -60555,10 +60257,9 @@
   - text: "手甲"
     translated: "Bracelets"
     qcReviewedText: "Bracelets"
-    qcTranslated: "Bracers"
+    qcTranslated: "Hand Guards"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 85
     qcDefectCategory: DomainTerm
 - raw: "指刺"
   splits:
@@ -60621,11 +60322,9 @@
   - text: "细剑"
     translated: "Fine Sword"
     qcReviewedText: "Fine Sword"
-    qcTranslated: "Rapier"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: DomainTerm
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "长剑"
   splits:
   - text: "长剑"
@@ -60671,21 +60370,17 @@
   - text: "唐刀"
     translated: "Saber"
     qcReviewedText: "Saber"
-    qcTranslated: "Tang Dao"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: DomainTerm
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "朴刀"
   splits:
   - text: "朴刀"
     translated: "Cutlass"
     qcReviewedText: "Cutlass"
-    qcTranslated: "Poda"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: DomainTerm
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "大刀"
   splits:
   - text: "大刀"
@@ -60813,8 +60508,7 @@
     qcReviewedText: "Drawn bow"
     qcTranslated: "Straight bow"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 95
     qcDefectCategory: DomainTerm
 - raw: "硬弓"
   splits:
@@ -60837,11 +60531,9 @@
   - text: "天赋"
     translated: "Gift"
     qcReviewedText: "Gift:Steel frame"
-    qcTranslated: "Gift: Iron Body"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "钢筋铁骨"
     translated: "Steel frame"
@@ -60865,11 +60557,9 @@
   - text: "天赋"
     translated: "Gift"
     qcReviewedText: "Gift:Inner Qi is hot"
-    qcTranslated: "Talent: Scorching Inner Qi"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "内息灼热"
     translated: "Inner Qi is hot"
@@ -61115,11 +60805,10 @@
   - text: "天赋"
     translated: "Gift"
     qcReviewedText: "Gift:Ill often"
-    qcTranslated: "Talent: Frail"
+    qcTranslated: "Gift: Prone to Illness"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 85
+    qcDefectCategory: LostIdiom
   - subIndex: 1
     text: "多病"
     translated: "Ill often"
@@ -61156,11 +60845,9 @@
   - text: "天赋"
     translated: "Gift"
     qcReviewedText: "Gift:Clearly understood"
-    qcTranslated: "Gift: Meridians Connected"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "脉络贯通"
     translated: "Clearly understood"
@@ -61628,11 +61315,9 @@
   - text: "天赋"
     translated: "Gift"
     qcReviewedText: "Gift:Diligent"
-    qcTranslated: "Talent: Indefatigable"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "孜孜不倦"
     translated: "Diligent"
@@ -61656,11 +61341,9 @@
   - text: "天赋"
     translated: "Gift"
     qcReviewedText: "Gift:Idle"
-    qcTranslated: "Gift:Idle Hands"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: LostIdiom
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "游手好闲"
     translated: "Idle"
@@ -61775,10 +61458,9 @@
   - text: "天赋"
     translated: "Gift"
     qcReviewedText: "Gift:Xwen"
-    qcTranslated: "Gift: Literary Studies"
+    qcTranslated: "Gift: Learning Literature"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 85
     qcDefectCategory: UntranslatedPinyin
   - subIndex: 1
     text: "习文"
@@ -62336,11 +62018,10 @@
   - text: "天赋"
     translated: "Gift"
     qcReviewedText: "Gift:Brush moves like dragonsisciendi"
-    qcTranslated: "Gift: Brush moves like dragons"
+    qcTranslated: "Gift: Brush moves like dragons and snakes"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "笔走龙蛇"
     translated: "Brush moves like dragonsisciendi"
@@ -62364,11 +62045,9 @@
   - text: "天赋"
     translated: "Gift"
     qcReviewedText: "Gift:Skillful Painter"
-    qcTranslated: "Talent: Master of Ink"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "丹青妙手"
     translated: "Skillful Painter"
@@ -62861,8 +62540,7 @@
     qcReviewedText: "Read the inventory/Obtaining the Secret Manual from the warehouse yields theoretical experience."
     qcTranslated: "Read the inventory/warehouse Secret Manual to gain theoretical experience."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 90
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "仓库秘籍获取理论经验"
@@ -63066,11 +62744,9 @@
   - text: "对物品进行淬毒"
     translated: "Poison the item"
     qcReviewedText: "Poison the item/Poisoning/Disinfection"
-    qcTranslated: "Poison/Contaminate/Disinfect the item"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "下毒"
     translated: "Poisoning"
@@ -63247,11 +62923,9 @@
   - text: "增加资源储量"
     translated: "Increase resource reserves"
     qcReviewedText: "Increase resource reserves\nSkill impact：Forest Plant Scholarship"
-    qcTranslated: "Increase resource reserves\\nSkill impact: Wood, Cultivation"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "技能影响"
     translated: "Skill impact"
@@ -63401,11 +63075,9 @@
   - text: "获取门派药材"
     translated: "Acquire Sect Herbal Medicines"
     qcReviewedText: "Acquire Sect Herbal Medicines\nSkill impact：Forest Plant"
-    qcTranslated: "Acquire Sect Herbs\\nSkill Influence: Forestry"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "技能影响"
     translated: "Skill impact"
@@ -63443,11 +63115,9 @@
   - text: "用官府功绩兑换物品"
     translated: "Exchange items for official achievements"
     qcReviewedText: "Exchange items for official achievements/Guard"
-    qcTranslated: "Exchange items/guards using official achievements"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "护卫"
     translated: "Guard"
@@ -64627,9 +64297,8 @@
     qcReviewedText: "Round table"
     qcTranslated: "Square table"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 95
+    qcDefectCategory: DomainTerm
 - raw: "木柜"
   splits:
   - text: "木柜"
@@ -64709,8 +64378,7 @@
     qcReviewedText: "Villager Ding"
     qcTranslated: "Villager Bing"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
+    qcQualityScore: 95
     qcDefectCategory: GarbledNumber
 - raw: "村民丁"
   splits:
@@ -64743,8 +64411,7 @@
     qcReviewedText: "Hero C"
     qcTranslated: "Wanderer C"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 95
     qcDefectCategory: DomainTerm
 - raw: "狱卒甲"
   splits:
@@ -65284,8 +64951,7 @@
     qcReviewedText: "Strawberry"
     qcTranslated: "Strange Fruit"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 90
     qcDefectCategory: DomainTerm
 - raw: "体力+30%\n内力+10%"
   splits:
@@ -65490,10 +65156,9 @@
   - text: "跌打梅山符"
     translated: "Meridional MerMAID Sticker"
     qcReviewedText: "Meridional MerMAID Sticker"
-    qcTranslated: "Bruise & Fracture Meishan Talisman"
+    qcTranslated: "Bruise‑Healing Meishan Talisman"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 85
     qcDefectCategory: DomainTerm
 - raw: "闪避-0.04"
   splits:
@@ -65670,11 +65335,9 @@
   - text: "辩才大赛"
     translated: "Talentspeak Contest"
     qcReviewedText: "Talentspeak Contest"
-    qcTranslated: "Debate Contest"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "春节"
   splits:
   - text: "春节"
@@ -66017,11 +65680,9 @@
   - text: "全场经验"
     translated: "Xp throughout the map"
     qcReviewedText: "Xp throughout the map+10%"
-    qcTranslated: "XP gain throughout the map+10%"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   templates:
   - template: "{0}+10%"
 - raw: "迷惑"

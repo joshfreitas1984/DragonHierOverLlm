@@ -13,11 +13,9 @@
   - text: "与"
     translated: "And"
     qcReviewedText: "{0} And {1} They put the past behind them and resolved their hatred."
-    qcTranslated: "{0} and {1} buried the hatchet, resolving the hatred between them."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "冰释前嫌，化解了二人间的仇恨。"
     translated: "They put the past behind them and resolved their hatred."
@@ -41,10 +39,9 @@
   - text: "从"
     translated: "From"
     qcReviewedText: "{0} From {3} Purchased from the warehouse {1}, Spend silver coins {2}"
-    qcTranslated: "{0} purchased {1} from the {3} warehouse for {2} silver coins"
+    qcTranslated: "{0} purchased {1} from the {3} warehouse, spending {2} silver coins"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "仓库购买了"
@@ -145,11 +142,10 @@
   - text: "加入了由"
     translated: "Joined the party led by"
     qcReviewedText: "{0} Joined the party led by {1} Leader's team"
-    qcTranslated: "{0} joined the party led by {1}"
+    qcTranslated: "{0} joined the team led by {1}"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
-    qcDefectCategory: HardToParseSeam
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "领导的队伍。"
     translated: "Leader's team"
@@ -201,9 +197,8 @@
     qcReviewedText: "{0} With your lucky star shining bright, you've found a lost treasure and acquired items after searching through it.{1} Silver coins"
     qcTranslated: "{0} With your lucky star shining bright, you've found a lost treasure and acquired {1} taels of silver after searching through it."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "两银钱。"
     translated: "Silver coins"
@@ -224,11 +219,9 @@
   - text: "吉星高照，得到一株异草，服食后生命上限增加"
     translated: "Lucky day, received a strange herb. After consuming it, Health maximum increased."
     qcReviewedText: "{0} Lucky day, received a strange herb. After consuming it, Health maximum increased.{1}。"
-    qcTranslated: "{0} Lucky Star shines bright; you have obtained a rare herb. Consuming it will increase your maximum Health by {1}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   templates:
   - template: "⟦0⟧{0}⟦1⟧。"
 - raw: "{0}向{3}仓库捐赠了{1}，获取功绩{2}"
@@ -236,10 +229,9 @@
   - text: "向"
     translated: "Towards"
     qcReviewedText: "{0} Towards {3} Warehouse made a donation {1}, Earn Merit {2}"
-    qcTranslated: "{0} donated {1} to the {3} warehouse, earning {2} merit"
+    qcTranslated: "{0} donated {1} to {3} Warehouse, earning Merit {2}"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "仓库捐赠了"
@@ -254,11 +246,9 @@
   - text: "因功勋卓著，被晋升为"
     translated: "Due to outstanding merit, was promoted to"
     qcReviewedText: "{0} Due to outstanding merit, was promoted to {1}。"
-    qcTranslated: "{0} was promoted to {1} for outstanding merit."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   templates:
   - template: "⟦0⟧{0}⟦1⟧。"
 - raw: "{0}在{1}上下打点，花费{3}银两降低了{2}点恶名。"
@@ -266,11 +256,10 @@
   - text: "在"
     translated: "In"
     qcReviewedText: "{0} In {1} Allocate resources, manage expenses {3} Silver has decreased {2} Increase Infamy"
-    qcTranslated: "{0} spent {3} silver in {1}, reducing Infamy by {2} points."
+    qcTranslated: "{0} In {1} Allocate resources, manage expenses {3} Silver has decreased {2} Infamy"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 85
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "上下打点，花费"
     translated: "Allocate resources, manage expenses"
@@ -287,11 +276,10 @@
   - text: "在"
     translated: "In"
     qcReviewedText: "{0} In {1} And {2} Exchange insights, hone combat skills, and ultimately {3}。"
-    qcTranslated: "{0} exchanged insights and honed combat skills with {1} and {2}, ultimately {3}."
+    qcTranslated: "{0} exchanges insights and hones combat skills with {1} and {2}, ultimately {3}."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 85
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "与"
     translated: "And"
@@ -321,10 +309,9 @@
   - text: "在"
     translated: "In"
     qcReviewedText: "{0} In {1} And {2} They got along wonderfully, as if old friends reunited, and became close friends."
-    qcTranslated: "{0} had a wonderful chat with {1} and {2} in {1}, hit it off immediately, and became close friends."
+    qcTranslated: "{0} and {1} got along wonderfully with {2}, as if old friends reunited, and became close friends."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 85
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "与"
@@ -341,8 +328,7 @@
     qcReviewedText: "{0} In {1} And {2} Chat for a while"
     qcTranslated: "{0} chats with {1} and {2} for a while."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "与"
@@ -357,11 +343,9 @@
   - text: "在"
     translated: "In"
     qcReviewedText: "{0} In {1} Learned a new martial art skill {2}。"
-    qcTranslated: "{0} learned a new martial art, {2}, in {1}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "习得了新武功"
     translated: "Learned a new martial art skill"
@@ -372,11 +356,10 @@
   - text: "在"
     translated: "In"
     qcReviewedText: "{0} In {1} Made a transaction, sold idle items {2} {3}。"
-    qcTranslated: "{0} made a transaction in {1}, selling unused items {2} {3}."
+    qcTranslated: "{0} made a transaction in {1}, selling idle items {2} {3}."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "买卖交易，出售了闲置物品"
     translated: "Made a transaction, sold idle items"
@@ -403,11 +386,9 @@
   - text: "在"
     translated: "In"
     qcReviewedText: "{0} In {1} Practiced martial arts {2}。"
-    qcTranslated: "{0} practiced martial arts in {1}{2}"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "修习了武功"
     translated: "Practiced martial arts"
@@ -418,11 +399,10 @@
   - text: "在"
     translated: "In"
     qcReviewedText: "{0} In {1} Attend {2} Auction conference, expenses {3} I bought an item {4}。"
-    qcTranslated: "{0} attended the {2} Auction in {1} and purchased a {4} for {3} taels."
+    qcTranslated: "{0} attended the {2} auction held in {1}, spending {3} to acquire a {4}."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: HardToParseSeam
+    qcQualityScore: 90
+    qcDefectCategory: OtherNamedDefect
   - subIndex: 1
     text: "参加"
     translated: "Attend"
@@ -439,11 +419,10 @@
   - text: "在"
     translated: "In"
     qcReviewedText: "{0} In {1} Attend {5} Horse Racing Festival, securing the %d place {2} Name, silver coins+{3}, Reputation+{4}。"
-    qcTranslated: "{0} participated in the {5} Horse Racing Festival in {1}, winning {2}nd place, silver coins +{3}, reputation +{4}."
+    qcTranslated: "{0} In {1} Attend {5} Horse Racing Festival, securing the {2} place, silver coins+{3}, Reputation+{4}."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 92
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "参加"
     translated: "Attend"
@@ -463,11 +442,9 @@
   - text: "在"
     translated: "In"
     qcReviewedText: "{0} In {1} Attend {6}, Claim the top spot as the first {2} Name, silver coins+{3}，{4}, And won the prize {5}。"
-    qcTranslated: "{0} participated in {6} at {1}, winning {2}nd place, earning {3} silver taels, {4}, and receiving the prize {5}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "参加"
     translated: "Attend"
@@ -487,10 +464,9 @@
   - text: "在"
     translated: "In"
     qcReviewedText: "{0} In {1} While exploring, I unexpectedly discovered {2}。"
-    qcTranslated: "{0} unexpectedly discovered {2} while exploring {1}"
+    qcTranslated: "{0} While exploring {1}, I unexpectedly discovered {2}."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "四下探索之时，意外发现了"
@@ -521,10 +497,9 @@
   - text: "在"
     translated: "In"
     qcReviewedText: "{0} In {1} Implement governance, making the place more orderly {2} Improved {3} Dot"
-    qcTranslated: "{0} implemented governance in {1}, raising {2} by {3} points."
+    qcTranslated: "{0} In {1} Implement governance, making the place more orderly {2} Improved by {3} points"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 85
     qcDefectCategory: OtherNamedDefect
   - subIndex: 1
     text: "开展治理，使该地"
@@ -542,10 +517,9 @@
   - text: "在"
     translated: "In"
     qcReviewedText: "{0} In {1} Earned money by working {2} Silver coins"
-    qcTranslated: "{0} earned {2} silver coins by working at {1}."
+    qcTranslated: "{0} earned money by working at {1}, obtaining {2} silver coins."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 30
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "打工赚钱，获取了"
@@ -560,11 +534,10 @@
   - text: "在"
     translated: "In"
     qcReviewedText: "{0} In {1} Undermining things behind the scenes, causing trouble in that place {2} Reduce {3} Dot"
-    qcTranslated: "{0} is secretly undermining {1} behind the scenes, reducing that region's {2} by {3} points."
+    qcTranslated: "{0} In {1} Undermining things behind the scenes, causing trouble in that place {2} Reduce {3} points"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcQualityScore: 90
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "暗中破坏，使该地"
     translated: "Undermining things behind the scenes, causing trouble in that place"
@@ -581,11 +554,10 @@
   - text: "在"
     translated: "In"
     qcReviewedText: "{0} In {1} Undermining things behind the scenes, causing trouble in that place {2} Lowered {3} Dot"
-    qcTranslated: "{0} is secretly sabotaging in {1}, causing the local {2} to decrease by {3} points."
+    qcTranslated: "{0} In {1} Undermining things behind the scenes, causing trouble in that place {2} Lowered by {3} points."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 90
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "暗中破坏，使该地"
     translated: "Undermining things behind the scenes, causing trouble in that place"
@@ -617,10 +589,9 @@
   - text: "在"
     translated: "In"
     qcReviewedText: "{0} In {1} Want to poison secretly to harm {2}，{3}。"
-    qcTranslated: "{0} attempted to poison {2} in {1}，{3}"
+    qcTranslated: "{0} intends to poison {2} in {1}, {3}."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 10
+    qcQualityScore: 85
     qcDefectCategory: OtherNamedDefect
   - subIndex: 1
     text: "欲下毒暗害"
@@ -632,11 +603,9 @@
   - text: "在"
     translated: "In"
     qcReviewedText: "{0} In {1} Wants to sneakily learn from someone {2} Of {3}，{4}。"
-    qcTranslated: "{0} tries to steal {3} of {2} at {1}, {4}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "欲偷师"
     translated: "Wants to sneakily learn from someone"
@@ -650,11 +619,9 @@
   - text: "在"
     translated: "In"
     qcReviewedText: "{0} In {1} Ended the confinement, regained freedom"
-    qcTranslated: "{0} will end confinement in {1} and regain freedom."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "结束关押，恢复了自由之身。"
     translated: "Ended the confinement, regained freedom"
@@ -667,9 +634,8 @@
     qcReviewedText: "{0} In {1} Attacked {2}, Fought a bloody battle until the end {3}。"
     qcTranslated: "{0} attacked {2} in {1}, and after a bloody battle, {3}."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "袭击了"
     translated: "Attacked"
@@ -683,11 +649,10 @@
   - text: "在"
     translated: "In"
     qcReviewedText: "{0} In {1} Hard work, bringing in the harvest for the sect.{2}。"
-    qcTranslated: "{0} worked hard in {1}, gathering {2} for the Sect."
+    qcTranslated: "{0} worked hard in {1}, bringing in a harvest of {2} for the Sect."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "辛勤劳作，为门派收获了"
     translated: "Hard work, bringing in the harvest for the sect."
@@ -698,11 +663,9 @@
   - text: "在"
     translated: "In"
     qcReviewedText: "{0} In {1} Encounter {5} Adventure, Reputation {2}, Silver taels {3}, And obtained {4}。"
-    qcTranslated: "{0} had a fortunate encounter with {5} in {1}. Reputation {2}, Silver taels {3}, and obtained {4}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "遭逢"
     translated: "Encounter"
@@ -722,10 +685,9 @@
   - text: "在"
     translated: "In"
     qcReviewedText: "{0} In {1} While wandering around, I unexpectedly obtained {2} Silver coins"
-    qcTranslated: "{0} obtained {2} silver coins while wandering in {1}."
+    qcTranslated: "{0} While wandering around in {1}, I unexpectedly obtained {2} Silver coins"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "闲逛之时，意外获取了"
@@ -740,10 +702,9 @@
   - text: "在"
     translated: "In"
     qcReviewedText: "{0} In {1} While wandering around, I unexpectedly obtained an item.{2}。"
-    qcTranslated: "{0} While wandering around in {1}, I unexpectedly obtained a {2}."
+    qcTranslated: "{0} While wandering around in {1}, I unexpectedly obtained an item.{2}"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "闲逛之时，意外获取了一件"
@@ -755,10 +716,9 @@
   - text: "对自身的"
     translated: "One's own"
     qcReviewedText: "{0} One's own {1} Poison was administered there"
-    qcTranslated: "{0} applied a poison to their own {1}."
+    qcTranslated: "{0} administered poison to their own {1}"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "上进行了下毒。"
@@ -770,10 +730,9 @@
   - text: "对自身装备的"
     translated: "Equipped items on oneself"
     qcReviewedText: "{0} Equipped items on oneself {1} Poison refinement complete"
-    qcTranslated: "{0} refined the poison of {1} on their own equipment."
+    qcTranslated: "{0} refined the poison on their equipped {1}."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 85
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "进行了粹毒。"
@@ -785,10 +744,9 @@
   - text: "掌门"
     translated: "Sect Master"
     qcReviewedText: "{0} Sect Master {1} Will《{2}》{3} The secret manual has been placed in the Scripture Pavilion for all disciples in the sect to review."
-    qcTranslated: "{0}Sect Master {1} placed the {3}Secret Manual of《{2}》 in the Scripture Pavilion for all disciples in the sect"
+    qcTranslated: "{0} Sect Master {1} placed the《{2}》{3} Secret Manual in the Scripture Pavilion for all disciples in the sect to review."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 25
+    qcQualityScore: 88
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "将"
@@ -803,11 +761,9 @@
   - text: "掌门"
     translated: "Sect Master"
     qcReviewedText: "{0} Sect Master {1} Use《{2}》{3} Replaced the one in the Scripture Pavilion with《{2}》{4} Secret manual, for all disciples to consult"
-    qcTranslated: "{0} Sect Master {1} used 《{2}》{3} to replace the 《{2}》{4} manual in the Scripture Pavilion, for all disciples to consult."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "用"
     translated: "Use"
@@ -837,11 +793,10 @@
   - text: "攻击了"
     translated: "Attacked"
     qcReviewedText: "{0} Attacked {2} Under control {1}, In the end {3}。"
-    qcTranslated: "{0} attacked {1} under {2}'s control, and {3} in the end."
+    qcTranslated: "{0} attacked {1} under {2}'s control, and ultimately {3}."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "掌控下的"
     translated: "Under control"
@@ -875,11 +830,9 @@
   - text: "气运过人，寻得一本失传秘籍，鉴别后竟是传说中的"
     translated: "With extraordinary fate, he found a lost manual, and after identification, it turned out to be the legendary one."
     qcReviewedText: "{0} With extraordinary fate, he found a lost manual, and after identification, it turned out to be the legendary one.{1}。"
-    qcTranslated: "{0} is blessed with extraordinary fate, finding a lost Secret Manual. Upon appraisal, it turns out to be the legendary {1}."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   templates:
   - template: "⟦0⟧{0}⟦1⟧。"
 - raw: "{0}炼制了{1}并放入行囊(消耗{2}银钱{3})"
@@ -887,11 +840,9 @@
   - text: "炼制了"
     translated: "Refined"
     qcReviewedText: "{0} Refined {1} And put it in my bag(Consume {2} Money {3})"
-    qcTranslated: "{0} refined {1} and placed it in the inventory (consumed {2} silver {3})"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "并放入行囊"
     translated: "And put it in my bag"
@@ -946,11 +897,9 @@
   - text: "烹饪了"
     translated: "Cooked"
     qcReviewedText: "{0} Cooked {1} And put it in my bag(Consume {2} Money {3})"
-    qcTranslated: "{0} cooked {1} and put it in the inventory (cost: {2} silver, {3})"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
-    qcDefectCategory: HardToParseSeam
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "并放入行囊"
     translated: "And put it in my bag"
@@ -1005,11 +954,10 @@
   - text: "的"
     translated: "Of"
     qcReviewedText: "{0} Of {1} End {2} Ok"
-    qcTranslated: "The {2} of {0}'s {1} has ended"
+    qcTranslated: "{0} of {1} has ended{2}"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 85
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "结束"
     translated: "End"
@@ -1025,8 +973,7 @@
     qcReviewedText: "{0} Left the place where {1} Leader's team"
     qcTranslated: "{0} left the team led by {1}"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 15
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "领导的队伍。"
@@ -1038,11 +985,10 @@
   - text: "被"
     translated: "Be"
     qcReviewedText: "{0} Be {1} Arrest and imprison, detain in {2} Among them"
-    qcTranslated: "{0} was arrested by {1} and imprisoned, held in {2}."
+    qcTranslated: "{0} was arrested by {1} and imprisoned, detained in {2}."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
-    qcDefectCategory: HardToParseSeam
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
   - subIndex: 1
     text: "抓捕入狱，关押在"
     translated: "Arrest and imprison, detain in"
@@ -1069,10 +1015,9 @@
   - text: "近日大兴土木，开始在"
     translated: "Recently, they have been constructing buildings and starting work at"
     qcReviewedText: "{0} Recently, they have been constructing buildings and starting work at {1} Create New {2}"
-    qcTranslated: "{0} has recently been doing a lot of construction, starting to build {2} at {1}"
+    qcTranslated: "{0} Recently, they have been constructing buildings and starting work at {1} to create new {2}"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "新建"
@@ -1097,10 +1042,9 @@
   - text: "近日开始加强"
     translated: "Recently, we've been stepping up our efforts"
     qcReviewedText: "{0} Recently, we've been stepping up our efforts {1} Branch headquarters of the faction's {2} Defense level({3} Level)"
-    qcTranslated: "{0} has recently strengthened the {2} defense level of the {1} branch to Level {3}"
+    qcTranslated: "{0} Recently, we've been stepping up the defense level of the {1} Branch headquarters' {2} ({3} Level)"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 35
+    qcQualityScore: 85
     qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "分舵之"
