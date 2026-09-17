@@ -1,3 +1,4 @@
+using System.Text;
 using System.Text.RegularExpressions;
 using FanslationStudio.LlmKit;
 using FanslationStudio.LlmKit.Support;
@@ -313,8 +314,6 @@ namespace Tests
 
         private static void RepairRobHeroItemChooseCallParam(string workingDirectory, TextFileToSplit textFile)
         {
-            //return;
-
             if (textFile.Path != "PlotData.csv")
                 return;
 
@@ -352,10 +351,20 @@ namespace Tests
             if (packagedToRaw.Count == 0)
                 return;
 
-            var csvLines = File.ReadAllLines(modPath);
+            // NOT File.ReadAllLines: PlotData.csv's own narrative column routinely embeds a real
+            // "\n" inside a quoted field (RFC 4180-style), so naive line-splitting chops a single
+            // logical row into multiple array entries whenever that row's own last column spans
+            // multiple physical lines. Re-parsing/rebuilding a truncated fragment as if it were the
+            // whole row loses track of the still-open quote, dropping it entirely once rebuilt -
+            // exactly the "one bad row poisons the whole sequential load" IndexOutOfRangeException
+            // crash documented in plotdata-column9-crash-and-repair-pattern.md, just introduced here
+            // instead of by the LLM. SplitCsvRecords below only splits on an unquoted newline, so
+            // each entry is always one full logical row (which may itself still contain an embedded
+            // "\n").
+            var csvLines = SplitCsvRecords(File.ReadAllText(modPath));
             var changed = false;
 
-            for (var i = 0; i < csvLines.Length; i++)
+            for (var i = 0; i < csvLines.Count; i++)
             {
                 var columns = CompoundFieldSplitter.ParseCsvRow(csvLines[i]);
                 if (columns.Length <= 9 || !packagedToRaw.TryGetValue(columns[9], out var rawValue) || columns[9] == rawValue)
@@ -369,6 +378,41 @@ namespace Tests
             if (changed)
                 FileHelper.WriteAllLinesWithRetry(modPath, csvLines);
         }
+
+        // Quote-aware record split: only breaks on '\n' when not inside a quoted field, so a
+        // narrative cell's own embedded newline never gets mistaken for a row boundary. Toggling
+        // in/out-of-quotes on every literal '"' (rather than look-ahead matching) already handles
+        // RFC 4180's doubled-quote escape correctly, since a "" pair toggles twice and nets out to
+        // no state change - same convention CompoundFieldSplitter.ParseCsvRow relies on.
+        private static List<string> SplitCsvRecords(string content)
+        {
+            var records = new List<string>();
+            var current = new StringBuilder();
+            var inQuotes = false;
+
+            foreach (var c in content)
+            {
+                if (c == '"')
+                    inQuotes = !inQuotes;
+
+                if (c == '\n' && !inQuotes)
+                {
+                    records.Add(StripTrailingCr(current.ToString()));
+                    current.Clear();
+                    continue;
+                }
+
+                current.Append(c);
+            }
+
+            if (current.Length > 0)
+                records.Add(StripTrailingCr(current.ToString()));
+
+            return records;
+        }
+
+        private static string StripTrailingCr(string line) =>
+            line.EndsWith('\r') ? line[..^1] : line;
 
         // Drops junk dynamic-string dictionary entries whose Raw contains no Chinese characters at
         // all (same pattern as DragonHeirPlugin/MainPlugin.cs's ChineseCharPattern) - only text
