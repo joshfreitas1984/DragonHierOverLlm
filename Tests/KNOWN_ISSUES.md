@@ -56,10 +56,12 @@ was a prerequisite for the load sequence progressing far enough to hit the next 
 - [`docs/dynamicstrings-dangling-color-tag-templates.md`](docs/dynamicstrings-dangling-color-tag-templates.md)
   — a color span left unclosed in-game (Enhance-UI string) because `{0}`/`{2}` are runtime-computed
   `<color=...>` opens while the matching `</color>` is literal raw text; QC's correction dropped the
-  literal close. Fixed via a new `GameHooks.CustomTranslationExclusionRule` (LlmKit) plus a 44-entry
-  manual-override dictionary in `GameFileHandling.cs` covering every raw string in
-  `dynamicStrings*.yaml` with this shape (found by scanning raw text for a `{n}` placeholder +
-  dangling literal closing tag).
+  literal close. A first-attempt fix (a new per-split `GameHooks.CustomTranslationExclusionRule` in
+  LlmKit) never fired, since `CompoundFieldSplitter` decomposes these raw strings before any single
+  split sees the whole template - reverted. Actual fix: a 44-entry manual-override dictionary added
+  to `TranslationPackaging.DynamicStringResultOverrides` (whole-raw → whole-result, post-packaging -
+  the correct layer), covering every raw string in `dynamicStrings*.yaml` with this shape (found by
+  scanning raw text for a `{n}` placeholder + dangling literal closing tag).
 - [`docs/qc-run-startup-crash-investigation-2026-09-15.md`](docs/qc-run-startup-crash-investigation-2026-09-15.md)
   — **RESOLVED (2026-09-16)**: "QC run broke game startup" after commit `551bb94` was
   `PrefabTextWorkflow`/`DynamicStringWorkflow` (FanslationStudio.LlmKit) discarding a low-scoring

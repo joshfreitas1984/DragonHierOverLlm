@@ -6049,7 +6049,7 @@
     translated: "Could participate in the sect meeting once every two months."
     qcReviewedText: "<b>Could participate in the sect meeting once every two months.</b>\nGain 80% sect bonus effect\n<i><color=#696969>Add new Sect functionality：\n♦(Main Hall) Research project：Arrange for scientific research\n♦Function creation：Firing\n♦Construction Mode：Upgrade building</color></i>"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "获得80%门派加成效果"
@@ -6242,7 +6242,7 @@
     translated: "Every month, you must attend the sect meeting."
     qcReviewedText: "<b>Every month, you must attend the sect meeting.</b>\nGain 60% sect bonus effect\n<i><color=#696969>Add new Sect functionality：\n♦(Main Hall) Sect Commission：Accept the Sect's Commission\n♦(Ancestral hall) Identification：Actively appraise treasures\n♦(Warehouse) Sect Treasury：Donate silver coins\n♦Function creation：Essence/Alchemy/Poisoning</color></i>"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "获得60%门派加成效果"
@@ -6869,6 +6869,7 @@
     qcReviewedText: "<i>Please complete the task within the time limit.\nThen return to the main hall of the sect to report.</i>"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "然后返回门派正厅复命"
     translated: "Then return to the main hall of the sect to report."
@@ -40914,6 +40915,7 @@
     qcReviewedText: "Since completing Zhao Dianjian's unfinished business, perhaps there's no need to push for total annihilation and cause more military disasters.\n<color=red>Choosing the Taiyue Grand Ceremony will trigger the ending and unlock the corresponding achievement.\nYou can continue playing and trigger other endings thereafter.</color>"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "选择泰岳大典将会触发结局并解锁对应成就"
     translated: "Choosing the Taiyue Grand Ceremony will trigger the ending and unlock the corresponding achievement."
@@ -50505,6 +50507,7 @@
     qcReviewedText: "Are you sure you want to exit the game?\n<color=red>Unsaved progress will be lost!</color>"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "未保存的进度将会丢失！"
     translated: "Unsaved progress will be lost!"

@@ -2,7 +2,7 @@
 
 This game's translation pipeline is split across several focused files under `Tests/` (each kept small on purpose):
 
-- **`GameFileHandling.cs`** — `WorkingDirectory`/`GameFolder` constants, the LLM repair/validation hooks (`RepairKnownLlmQuirks`, `RepairGameSpecificColumn`, `ValidateGameSpecificColumn`, `ExcludeFunctionRoutedDynamicStringFromQc`, `GetDanglingColorTagOverride`), `SplitterOptions`, and the shared CSV helpers (`ParseCsvRow`/`RebuildCsvRow`/`StripTrailingCommaBeforeQuote`).
+- **`GameFileHandling.cs`** — `WorkingDirectory`/`GameFolder` constants, the LLM repair/validation hooks (`RepairKnownLlmQuirks`, `RepairGameSpecificColumn`, `ValidateGameSpecificColumn`, `ExcludeFunctionRoutedDynamicStringFromQc`), `SplitterOptions`, and the shared CSV helpers (`ParseCsvRow`/`RebuildCsvRow`/`StripTrailingCommaBeforeQuote`).
 - **`TextFileConfiguration.cs`** — `TextFileConfiguration.TextFilesToSplit`, the authoritative per-file translation/package configuration.
 - **`DynamicStringSources.cs`** — the column-source tables (`DynamicStringSources.DynamicStringColumnSources`, `AtlasSpriteNameColumnSources`, `DynamicStringSources.DynamicStringLabelColumnSources`, `DynamicStringNamePartColumnSources`, `DynamicStringSources.DynamicStringTempNpcNameColumnSources`, `DynamicStringInteractionOptionColumnSources`, `DynamicStringSources.DynamicStringOtherTextFields`) and the extraction regexes.
 - **`DynamicStringExtraction.cs`** — the `Extract*` passes that populate `Raw/Dumped/DynamicStrings/*.txt`, plus `DedupeDynamicStringFiles`.
@@ -33,21 +33,21 @@ CSV parsing and reconstruction must always use `CompoundFieldSplitter.ParseCsvRo
 
 `ExcludePlotChoiceColumnFromQc` (combined with the rule above via the same `CustomQcExclusionRule` delegate) does the equivalent for `PlotData.csv` column 9 itself. Unlike the initial translation pass, which repairs/validates one `choiceText` fragment at a time via `RepairGameSpecificColumn`/`ValidateGameSpecificColumn` (see [plotdata-column9-crash-and-repair-pattern.md](plotdata-column9-crash-and-repair-pattern.md)), the QC review pass hands the model the whole reconstructed cell to "improve" — and a model asked to smooth a multi-choice `"text;FunctionName;0|text;FunctionName;1"`-shaped blob into fluent prose reliably drops every `|`/`;` it contains. The validator already rejects any such corrupted correction (confirmed via a real triage cluster: 33 proposed corrections for this shape, all rejected for the same `|`-count mismatch), so no data was ever at risk of corruption — the exclusion exists purely to stop generating QC work items that are guaranteed to fail forever. Any raw column-9 cell containing `|` or `;` is excluded, which covers both the multi-choice pipe-joined shape and a single `"choiceText;FunctionName[;param]"` entry with no `|` at all.
 
-### Translation exclusion hook (manual overrides for runtime-color-placeholder templates)
+### Packaging-time overrides for runtime-color-placeholder templates
 
-`GameFileHandling.Hooks.CustomTranslationExclusionRule` (`GetDanglingColorTagOverride`, backed by
-the `DanglingColorTagOverrides` dictionary) keeps 44 `dynamicStrings.txt` raw strings away from both
-the LLM translation pass and the QC pass entirely, replacing each with a hand-written override.
-These are templates where a `<color=...>` opening tag is a runtime-computed game value (substituted
-through a `{n}` placeholder) but the matching `</color>` is literal text in the raw string — no
-mechanical validator can verify a freely-reworded translation keeps that placeholder positioned
-correctly relative to the literal close, since normal grammatical word-order changes are otherwise
-indistinguishable from a corruption that silently detaches the color span. See
+`TranslationPackaging.DynamicStringResultOverrides` includes 44 `dynamicStrings.txt` raw strings
+where a `<color=...>` opening tag is a runtime-computed game value (substituted through a `{n}`
+placeholder) but the matching `</color>` is literal text in the raw string — no mechanical validator
+can verify a freely-reworded translation keeps that placeholder positioned correctly relative to the
+literal close, since normal grammatical word-order changes are otherwise indistinguishable from a
+corruption that silently detaches the color span. These force the correct whole-raw → whole-result
+translation post-packaging, same mechanism (and same reason: `CompoundFieldSplitter` decomposes the
+raw string into fragments an LLM/QC hook can only ever see individually, never as the whole
+template) as every other entry in that dictionary. See
 [dynamicstrings-dangling-color-tag-templates.md](dynamicstrings-dangling-color-tag-templates.md) for
-the originating bug (a dropped `</color>` in the Enhance-UI string), the scan methodology used to
-find all 44 candidates, and the shared library's
-`../../FanslationStudio.LlmKit/docs/translation-retry-escalation-and-fixes.md` for the
-`CustomTranslationExclusionRule` hook mechanism itself.
+the originating bug (a dropped `</color>` in the Enhance-UI string), a reverted first-attempt fix at
+the translation-hook layer that never actually fired, and the scan methodology used to find all 44
+candidates.
 
 ### `TextFileConfiguration.TextFilesToSplit` per-file skip-column detail
 

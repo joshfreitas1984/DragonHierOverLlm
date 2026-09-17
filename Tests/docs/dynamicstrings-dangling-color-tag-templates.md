@@ -29,17 +29,26 @@ close) — see the LlmKit-side postmortem, since that's where the actual validat
 
 ## Fix
 
-1. **`FanslationStudio.LlmKit`** (sibling repo, project reference): added
-   `GameHooks.CustomTranslationExclusionRule` — checked once per split at the top of
-   `TranslationWorkflow.UpdateSplit`, before any LLM call. When a downstream project's hook returns
-   a non-null override for a raw string, the split is marked `SafeToTranslate = false` and
-   `Translated` is set to the override directly — the raw string never reaches the LLM, and (since
-   `QualityReviewWorkflow` already skips any split with `!SafeToTranslate`) never reaches QC either.
-   See that repo's `docs/translation-retry-escalation-and-fixes.md` for the full writeup.
+**First attempt (tried, then reverted):** added `GameHooks.CustomTranslationExclusionRule` to
+`FanslationStudio.LlmKit` — checked once per split at the top of `TranslationWorkflow.UpdateSplit`,
+before any LLM call, meant to keep these raw strings away from the LLM/QC entirely by supplying a
+manual override up front. This was the wrong layer: `UpdateSplit` runs per-`TranslationSplit`, but
+`CompoundFieldSplitter` decomposes every one of these raw strings into multiple fragments plus a
+`templates:` reconstruction list, so no single split's `Text` ever equals the *whole* raw template
+with its `{n}` tokens intact. The hook's raw parameter never matched any dictionary key, so it
+silently never fired — confirmed by running `ApplyAllRulesToCurrentTranslation` and seeing "Writing
+0 records" for every file. Reverted entirely (`GameHooks.cs`/`TranslationWorkflow.cs` in the sibling
+repo) rather than left in as unused infrastructure.
 
-2. **This repo**: `Tests/GameFileHandling.cs` registers
-   `CustomTranslationExclusionRule = GetDanglingColorTagOverride`, backed by a `DanglingColorTagOverrides`
-   dictionary of 44 hand-written overrides.
+**Actual fix:** these need a **whole-raw → whole-result** override, applied *after*
+`CompoundFieldSplitter.Reconstruct` has already glued the fragments back together — exactly the
+layer `Tests/TranslationPackaging.cs`'s existing `DynamicStringResultOverrides` dictionary already
+operates at (it was built for the adjacent "reconstructed fragments have no connective words"
+problem, but the mechanism is identical: force the correct `Result` post-packaging, regardless of
+what the LLM/QC produced upstream). All 44 raw strings below were added there instead. Verified for
+real, not just by inspection: ran `TranslationPackaging.PackageFinalTranslationAsync` and confirmed
+`Files/Mod/dynamicStrings.txt.yaml` now shows the corrected, tag-balanced `result` for the Enhance
+string and several others.
 
 ## Finding every other affected string
 
@@ -78,7 +87,6 @@ the English verb "pass". Corrected to `"{0}\nRequires {2}{1}</color>"`.
 
 ## Where the full override list lives
 
-`Tests/GameFileHandling.cs`'s `DanglingColorTagOverrides` dictionary (and the
-`GetDanglingColorTagOverride`/`CustomTranslationExclusionRule` wiring right above it) — not
-duplicated here, since the dictionary itself is the single source of truth and would drift from
-this doc otherwise.
+`Tests/TranslationPackaging.cs`'s `DynamicStringResultOverrides` dictionary (the 44 entries added
+under the "Runtime-color-placeholder templates" comment) — not duplicated here, since the
+dictionary itself is the single source of truth and would drift from this doc otherwise.

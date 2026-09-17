@@ -1077,7 +1077,7 @@
     translated: "You can click here to view the character details."
     qcReviewedText: "<b>You can click here to view the character details.</b>"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   templates:
   - template: "<b>{0}</b>"
@@ -1957,7 +1957,7 @@
     translated: "This month, a celebration banquet in honor of Master will be held within the gate. #PlayerName#, don't forget to prepare a gift."
     qcReviewedText: "<b>This month, a celebration banquet in honor of Master will be held within the gate. #PlayerName#, don't forget to prepare a gift.</b>If you anger Master, don't blame Senior Sister for not warning you."
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "若惹得师父他老人家生气，可别怪师姐我没提醒你。"
@@ -6779,8 +6779,11 @@
   splits:
   - text: "传闻中原大侠郭淮一路追捕西凉富商凤南飞，如今已到了"
     translated: "It is said that Great Hero Guo Huai has been chasing the wealthy merchant Feng Nanfei of Xiliang all the way to here."
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "It is said that Great Hero Guo Huai has been chasing the wealthy merchant Feng Nanfei of Xiliang all the way to here.<b>#PosText#</b>Inside"
+    qcReviewedText: "It is said that Great Hero Guo Huai has been chasing the wealthy merchant Feng Nanfei of Xiliang all the way to here.<b>#PosText#</b>Inside"
+    qcTranslated: "It is said that Great Hero Guo Huai has been chasing the wealthy merchant Feng Nanfei of Xiliang all the way to <b>#PosText#</b>."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "内。"
     translated: "Inside"
@@ -11170,7 +11173,7 @@
     translated: "I heard"
     qcReviewedText: "I heard <b>This month, the Martial Uncle will return to the Xianxia Sect to visit Master.</b>, #PlayerName#, don't forget to come back and meet him in person."
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "这个月师伯会回仙霞派探望师傅"
@@ -12306,7 +12309,7 @@
     translated: "The Four Grand Censors entered the palace simultaneously, ready to report a major treason case."
     qcReviewedText: "The Four Grand Censors entered the palace simultaneously, ready to report a major treason case.<b>#PosText#</b>Dark clouds loom, signaling an impending great battle."
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "中阴云密布，一场大战已迫在眉睫。"
@@ -16044,7 +16047,7 @@
     translated: "Guide Yang Sichi through his cultivation session"
     qcReviewedText: "Guide Yang Sichi through his cultivation session \\n<i>Click Yang Sichi and choose Cultivation-Guide, then select a martial art skill of a higher rank to proceed.</i>"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "点击杨思迟，选择修行"
@@ -18709,7 +18712,7 @@
     translated: "After Younian was injured, our sect's manpower has become increasingly strained. I have decided to convene a grand meeting within the sect to promote the positions of several disciples. This matter is of great importance, so #PlayerName# must attend."
     qcReviewedText: "After Younian was injured, our sect's manpower has become increasingly strained. I have decided to convene a grand meeting within the sect to promote the positions of several disciples. This matter is of great importance, so #PlayerName# must attend.<b>Return to the Sect to Participate</b>。"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "回门派参与"
@@ -21814,9 +21817,10 @@
   - text: "走过路过千万不能错过了噢！"
     translated: "Don't miss this even if you're just passing by!"
     qcReviewedText: "Don't miss this even if you're just passing by!\\nXinglong Business Hall, Clearance Mega Sale!<b>All 90% off</b>, Only one day left!\\nThis offer won't last, so don't miss it!"
-    qcStatus: Passed
+    qcTranslated: "Don't miss this even if you're just passing by!\\nXinglong Business Hall, Clearance Mega Sale!<b>All 10% off</b>, Only one day left!\\nThis offer won't last, so don't miss it!"
+    qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: None
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "兴隆商号，清仓钜惠！"
     translated: "Xinglong Business Hall, Clearance Mega Sale!"

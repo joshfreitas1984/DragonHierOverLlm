@@ -57775,9 +57775,9 @@
   splits:
   - text: "刀劳鬼"
     translated: "Daolao Ghost"
-    qcReviewedText: "Butcher Ghost"
+    qcReviewedText: "Daolao Ghost"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "迟.百城"
   splits:
