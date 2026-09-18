@@ -1,5 +1,13 @@
 # DragonHierOverLlm documentation hub
 
+# Latest release
+
+Install [BepinEx Bleeding Edge build for IL2CPP 64bit build 785](https://builds.bepinex.dev/projects/bepinex_be)
+Extract the [Latest Release](https://github.com/joshfreitas1984/DragonHierOverLlm/releases) into your `<Game Folder>` folder where the game .exe is.
+
+# Contacting us
+You can join us here: [Discord](https://discord.gg/sqXd5ceBWT)
+
 This is the canonical navigation entry point for the repository. DragonHierOverLlm builds an
 English fan-translation patch for *Legend of Dragon Heir* and contains the tooling, runtime plugin,
 and working data used to produce it.
