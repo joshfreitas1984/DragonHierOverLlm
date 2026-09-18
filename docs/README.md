@@ -2,7 +2,8 @@
 
 # Latest release
 
-Install [BepinEx Bleeding Edge build for IL2CPP 64bit build 785](https://builds.bepinex.dev/projects/bepinex_be)
+Install [BepinEx Bleeding Edge build for IL2CPP 64bit build 785](https://builds.bepinex.dev/projects/bepinex_be).
+
 Extract the [Latest Release](https://github.com/joshfreitas1984/DragonHierOverLlm/releases) into your `<Game Folder>` folder where the game .exe is.
 
 # Contacting us
