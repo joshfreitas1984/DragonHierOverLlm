@@ -117,9 +117,9 @@ After fixing columns 11/12/13/14/18, a `NullReferenceException` in `HeroData.Ran
 (fired both from the character-creation face-randomize button and during `GenerateHero`'s NPC
 generation) turned out to be a downstream symptom of the same `LoadAllGameData`
 abort-on-first-exception mechanism documented in
-`Tests/docs/skipcolumns-stringtospeadddata-family.md`: `SpeHeroDataBase` itself was ending up
+`docs/investigations/tests/skipcolumns-stringtospeadddata-family.md`: `SpeHeroDataBase` itself was ending up
 `Count=0` (confirmed via `DiagnosticPatches.DumpGameDataController`, see
-`DragonHeirPlugin/docs/resetfacesetting-crash-investigation.md`), which meant the load sequence
+`docs/investigations/plugin/resetfacesetting-crash-investigation.md`), which meant the load sequence
 aborted **during** the `SpeHeroData.csv` row loop itself, before ever reaching `SpeHeroFaceData`'s
 `MaleFaceRandomID`/`FemaleFaceRandomID` population later on.
 

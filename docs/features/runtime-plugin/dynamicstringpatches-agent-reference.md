@@ -1,6 +1,6 @@
 # DynamicStringPatches agent reference
 
-Use this document before changing `DynamicStringPatches.cs`. The source intentionally keeps only short pointers; detailed investigations are indexed from `DragonHeirPlugin/KNOWN_ISSUES.md`.
+Use this document before changing `DynamicStringPatches.cs`. The source intentionally keeps only short pointers; detailed investigations are indexed from `docs/KNOWN_ISSUES.md`.
 
 ## Ownership and flow
 

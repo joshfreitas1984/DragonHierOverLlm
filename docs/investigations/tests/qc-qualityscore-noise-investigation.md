@@ -7,7 +7,7 @@
 > policy (implemented)" near the end of this doc for what was found and what `Config.yaml`'s
 > `qualityReview.autoAcceptDefectCategories` is currently set to. The mechanism lives in the
 > **sibling repo** `FanslationStudio.LlmKit` — see
-> `../../FanslationStudio.LlmKit/docs/quality-review-pass-architecture.md`'s "DEFECT categories and
+> `../../FanslationStudio.LlmKit/docs/features/translation-pipeline/quality-review-pass.md`'s "DEFECT categories and
 > per-category policy" section for the current-state technical reference; this document remains the
 > investigation history and the record of *why* each category landed where it did. See "Two-stage
 > DEFECT verification (root-cause fix, implemented)" near the end of this doc for the newest change:
@@ -207,7 +207,7 @@ needs its own re-run via `Tests/QualityControlWorkflowTests.cs`'s `"8. Reset Non
 Quality Review State"` + `"2. RunQualityReviewPass"` before it can be categorized at all. The
 mechanism (`QualityReviewConfig.AutoAcceptDefectCategories`, `QualityReviewHelpers
 .PassesQcScoreGate`, `QualityReviewWorkflow.ResetNonAutoAcceptedQcState`) lives in
-`FanslationStudio.LlmKit` — see its `docs/quality-review-pass-architecture.md`'s "DEFECT categories
+`FanslationStudio.LlmKit` — see its `docs/features/translation-pipeline/quality-review-pass.md`'s "DEFECT categories
 and per-category policy" section.
 
 **Re-running this process**: if `LostIdiom` (or any category) gets re-hand-validated later — a
@@ -251,7 +251,7 @@ category" section describes), or a different DEFECT token (recategorize). A corr
 accepted from this second, narrowly-scoped call, never from the first call's freehand rewrite — this
 is what should prevent the "Cui Cui Cui" → "Charge!" class of bad fix going forward. Costs one extra
 LLM call, but only for the ~10-15% of lines already flagged, not the whole corpus. Full technical
-reference: `../../FanslationStudio.LlmKit/docs/quality-review-pass-architecture.md`'s "Two-stage
+reference: `../../FanslationStudio.LlmKit/docs/features/translation-pipeline/quality-review-pass.md`'s "Two-stage
 DEFECT verification" section.
 
 Not yet done (at the time this section was written): turning this on for a full corpus run and

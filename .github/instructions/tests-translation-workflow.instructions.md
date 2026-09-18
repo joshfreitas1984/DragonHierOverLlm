@@ -1,18 +1,18 @@
 ---
-applyTo: "Tests/**"
+applyTo: "{Translate,Tests}/**"
 ---
 
-# Tests (translation workflow) — Copilot Instructions
+# Translate and Tests (translation workflow) — Copilot Instructions
 
 > **Workflow rule:** After any significant feature or fix here, update this file (and
 > `FanslationStudio.LlmKit`'s own `.github/copilot-instructions.md` if the change touches shared
 > Line/Split/Template types or `CompoundFieldSplitter`) — these are the primary source of truth.
-> Keep this file short — it's auto-injected into context on every `Tests/**` edit. Put detailed
+> Keep this file short — it's auto-injected into context on every `Translate/**` or `Tests/**` edit. Put detailed
 > bug-investigation narratives/case studies in a topic file under
-> [`Tests/docs/`](../../Tests/docs/) instead (read on-demand, not auto-loaded, indexed by
-> [`Tests/KNOWN_ISSUES.md`](../../Tests/KNOWN_ISSUES.md)), and only summarize the current-state
+> [`docs/investigations/tests/`](../../docs/investigations/tests/) instead (read on-demand, not auto-loaded, indexed by
+> [`docs/KNOWN_ISSUES.md`](../../docs/KNOWN_ISSUES.md)), and only summarize the current-state
 > rule here. **Batch write-backs**: during a task, jot scratch notes in session memory as you find
-> things — write ONE consolidated update (a new/extended `Tests/docs/*.md` file + this file's
+> things — write ONE consolidated update (a new/extended `docs/investigations/tests/*.md` file + this file's
 > summary + a one-line index entry) at the end of the task, not after every individual fix.
 
 ## What this project actually is
@@ -45,6 +45,10 @@ For genuine regression testing of logic changes (e.g. CSV parsing, fragment
 decomposition/reconstruction), write plain xUnit tests against pure functions — see
 `CompoundFieldSplitterTests.cs` — that don't touch `Files/` at all, and run only those.
 
+`Translate/` contains the reusable game-specific workflow, configuration, extraction, and
+packaging code referenced by those facts. Keep numbered workflow execution in `Tests/`; do not
+move test-runner facts into `Translate/`.
+
 ## Asset dumper (`AssetDumperWorkflowTests.cs`) — finding hardcoded Chinese in prefabs/assets
 
 `AssetDumperWorkflowTests.DumpChineseTextFromAssets` is a standalone, one-off discovery tool (not
@@ -68,7 +72,7 @@ fields — hardcoded UI text that never goes through the CSV pipeline. Output is
 
 Full architecture (tool design, `ScanFile`/`classdata.tpk`/`Cpp2IlTempGenerator` details, noise
 filtering, `IsPrimaryTextField` output split, and the version-pin investigation) is in
-[`Tests/docs/assetdumper-libcpp2il-and-noise-filtering.md`](../../Tests/docs/assetdumper-libcpp2il-and-noise-filtering.md).
+[`docs/investigations/tests/assetdumper-libcpp2il-and-noise-filtering.md`](../../docs/investigations/tests/assetdumper-libcpp2il-and-noise-filtering.md).
 
 ## PrefabText pipeline (`dumpedPrefabText.txt` → `Files/Mod/dumpedPrefabText.txt.yaml`)
 
@@ -82,7 +86,7 @@ reconstruction loop). Output is `Files/Mod/dumpedPrefabText.txt.yaml`, a flat `r
 looked up at runtime by exact whole-string match in `DragonHeirPlugin/PrefabTextPatches.cs`
 (resource/asset-bundle/scene-load hooks plus TMP/UI text-setter patches).
 Full wiring details, the packaging-fallback shape, and the 2026-08-27 Passed/Failed-count bug fix:
-[`Tests/docs/prefabtext-pipeline-architecture.md`](../../Tests/docs/prefabtext-pipeline-architecture.md).
+[`docs/features/translation-pipeline/prefabtext-pipeline-architecture.md`](../../docs/features/translation-pipeline/prefabtext-pipeline-architecture.md).
 
 ## DynamicStringsIL2CPP pipeline (`dynamicStrings.txt` → `Files/Mod/dynamicStrings.txt.yaml`)
 
@@ -96,14 +100,14 @@ facts 3, 4a–4f) feed `Files/Raw/Dumped/DynamicStrings/dynamicStrings*.txt`, fo
 cross-file dedup pass and fact 6's export. Dialogue-option buttons additionally need a bare-label
 dictionary entry (see doc). Full wiring details for every source, the dedup priority order, and
 the dialogue-button fix:
-[`Tests/docs/dynamicstrings-pipeline-architecture.md`](../../Tests/docs/dynamicstrings-pipeline-architecture.md).
+[`docs/features/translation-pipeline/dynamicstrings-pipeline-architecture.md`](../../docs/features/translation-pipeline/dynamicstrings-pipeline-architecture.md).
 
 **The "log narrative" `HeroData.AddLog`/`AreaData.AddLog` template family** (HeroDetailPanel's Log
 tab, AreaLog, PlotPanel's RecordScrollView) is carved out of `dynamicStrings.txt` into its own
 `dynamicStringsLogNarratives.txt` via fact `"4g. ExtractLogNarrativeCandidates"`, against a curated
 allowlist in `DynamicStringSources.LogNarrativeTemplates` (re-derivable after a game update via
 `Converter/Scripts/ExtractAddLogTemplates.ps1` - see that field's doc comment). See
-[dynamicstrings-pipeline-architecture.md](../../Tests/docs/dynamicstrings-pipeline-architecture.md#log-narrative-isolation-dynamicstringslognarrativestxt)
+[dynamicstrings-pipeline-architecture.md](../../docs/features/translation-pipeline/dynamicstrings-pipeline-architecture.md#log-narrative-isolation-dynamicstringslognarrativestxt)
 for why a dedicated file (not a tag field) was used and why its dedup-priority ordering matters.
 
 **Known-bad reconstructed template Results are forced via `GameFileHandling.DynamicStringResultOverrides`**,
@@ -150,17 +154,16 @@ self-rated confidence score only flags it for human review, it no longer discard
 re-rolls (see the shared library's postmortem notes below). Full mechanics (data model,
 staleness/freshness, packaging interaction, prompt-per-model-family convention, DEFECT-category
 parsing/policy, and the 2026-09 omitted-subject/response-truncation/low-score-discard postmortems)
-live in the shared library's `docs/quality-review-pass-architecture.md`
-(`../../FanslationStudio.LlmKit/docs/` - a SIBLING repo, see "Shared library boundary" below); the original
-design rationale is in `docs/plans/quality-review-pass.md`, and the `DEFECT`-category noise
-investigation/precision findings/policy decisions are in
-`Tests/docs/qc-qualityscore-noise-investigation.md`.
+live in the shared library's `docs/features/translation-pipeline/quality-review-pass.md`
+(`../../FanslationStudio.LlmKit/docs/` - a SIBLING repo, see "Shared library boundary" below); the
+`DEFECT`-category noise investigation/precision findings/policy decisions are in
+`docs/investigations/tests/qc-qualityscore-noise-investigation.md`.
 
 ### DEFECT-category policy (`qualityReview.autoAcceptDefectCategories` in `Config.yaml`)
 
 A hand-validated-precision-per-category policy, not a code-level default: `Config.yaml` currently
 auto-accepts `HardToParseSeam`/`OtherNamedDefect`/`DroppedContent` (near-0% precision on a 40-line
-sample each - see `Tests/docs/qc-qualityscore-noise-investigation.md` for the per-category
+sample each - see `docs/investigations/tests/qc-qualityscore-noise-investigation.md` for the per-category
 findings) and deliberately leaves `GarbledNumber`/`DomainTerm`/`UntranslatedPinyin` (high precision
 - worth the human review queue) and `LostIdiom` (low precision, but at least one hand-checked
 correction made a fine idiom *worse* - a different risk than wasted review time) off the list. If
@@ -174,8 +177,8 @@ ExcludeFunctionRoutedDynamicStringFromQc`) keeps a column out of the QC pass ent
 LLM call - when its raw/effective text looks like prose but is actually a machine-readable record a
 QC model has no business "correcting". This game's only current use: `dynamicStrings.txt`'s
 `"{choiceText};FunctionName"` dialogue-choice/routing entries. See
-[dynamicstrings-pipeline-architecture.md](../../Tests/docs/dynamicstrings-pipeline-architecture.md#quality-review-exclusion-for-function-routed-choice-entries)
-for this game's case and the shared library's `quality-review-pass-architecture.md` for the general
+[dynamicstrings-pipeline-architecture.md](../../docs/features/translation-pipeline/dynamicstrings-pipeline-architecture.md#quality-review-exclusion-for-function-routed-choice-entries)
+for this game's case and the shared library's `quality-review-pass.md` for the general
 mechanism/guidance if a new file+pattern combination needs the same treatment.
 
 ## Working directory layout (`Files/`)
@@ -311,7 +314,7 @@ this, both registered in `Tests/GameFileHandling.cs`'s static constructor:
   packaging (`PackageFinalTranslationAsync`'s reconstruction loops `continue`/skip entirely for any
   `SkipColumns` column). Use this only for columns that should never be translated at all (icon
   names, resource paths, internal keys, or a `Label+Number` cell cross-referenced by exact string
-  match elsewhere — see [`Tests/docs/skipcolumns-stringtospeadddata-family.md`](../../Tests/docs/skipcolumns-stringtospeadddata-family.md) for confirmed examples:
+  match elsewhere — see [`docs/investigations/tests/skipcolumns-stringtospeadddata-family.md`](../../docs/investigations/tests/skipcolumns-stringtospeadddata-family.md) for confirmed examples:
   `HeroTagData.csv` col 4, `ResourcePointTypeData.csv` cols 2/3/4, `SkinDataBase.csv` col 2,
   `NameData.csv` col 0, `AreaData.csv` col 3).
 - **`LineValidation.CustomColumnRepair`** / **`CustomColumnValidator`** (both
@@ -330,7 +333,7 @@ this, both registered in `Tests/GameFileHandling.cs`'s static constructor:
 **Prefer the repair/validator hooks over `SkipColumns` whenever the column has real user-facing
 text** — `SkipColumns` throws away translatable content and should be reserved for columns never
 meant to be translated. When investigating a new "database ends up empty at startup" or "game
-crashes on load" case, see [`Tests/KNOWN_ISSUES.md`](../../Tests/KNOWN_ISSUES.md) for the full investigation methodology
+crashes on load" case, see [`docs/KNOWN_ISSUES.md`](../../docs/KNOWN_ISSUES.md) for the full investigation methodology
 (decompiling `GameDataController.LoadAllGameData`, checking `Player.log` when `BepInEx/LogOutput.log`
 just stops with no exception, the `StringToSpeAddData` label-lookup heuristic, and verifying a fix
 via the packaging-only test fact without a full game relaunch) and to record a new case once solved.

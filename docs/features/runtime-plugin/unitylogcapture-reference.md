@@ -1,6 +1,6 @@
 # UnityLogCapture agent reference
 
-Read this before changing `UnityLogCapture.cs`. The source keeps only short pointers; the metadata investigation is in `unitylogcapture-no-logmessagereceived.md` and is indexed by `DragonHeirPlugin/KNOWN_ISSUES.md`.
+Read this before changing `UnityLogCapture.cs`. The source keeps only short pointers; the metadata investigation is in `unitylogcapture-no-logmessagereceived.md` and is indexed by `docs/KNOWN_ISSUES.md`.
 
 ## Hook contract
 

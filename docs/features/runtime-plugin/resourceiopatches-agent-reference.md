@@ -1,6 +1,6 @@
 # ResourceIoPatches agent reference
 
-Read this before changing `ResourceIoPatches.cs`. The source keeps only short pointers; detailed investigations are indexed in `DragonHeirPlugin/KNOWN_ISSUES.md`.
+Read this before changing `ResourceIoPatches.cs`. The source keeps only short pointers; detailed investigations are indexed in `docs/KNOWN_ISSUES.md`.
 
 ## Purpose and flow
 

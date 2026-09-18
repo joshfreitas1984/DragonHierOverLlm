@@ -157,7 +157,7 @@ entirely instead. See [gamefilehandling-reference.md](gamefilehandling-reference
 translated at all**, not just guarded against delimiter leakage — `PlotController.RobHeroItemChoose(n)`
 passes that callParam straight into `WorldData.GetHero`, which looks a hero up by its *raw* Chinese
 name, never its translated display name (see
-[robheroitemchoose-getherofix.md](../../DragonHeirPlugin/docs/robheroitemchoose-getherofix.md), which
+[robheroitemchoose-getherofix.md](../plugin/robheroitemchoose-getherofix.md), which
 already carries a runtime Harmony patch reversing this at the point of use). This is now also
 guaranteed at the packaging level: `Tests/TranslationPackaging.cs`'s
 `RepairRobHeroItemChooseCallParam` runs after `CsvGameDataWorkflow.PackageAsync` writes

@@ -6,8 +6,8 @@ applyTo: "DragonHeirPlugin/**"
 
 > Keep this file short — it's auto-injected into context on every `DragonHeirPlugin/**` edit. Put
 > detailed crash-investigation narratives/case studies in a topic file under
-> [`DragonHeirPlugin/docs/`](../../DragonHeirPlugin/docs/) instead (read on-demand, not
-> auto-loaded, indexed by [`DragonHeirPlugin/KNOWN_ISSUES.md`](../../DragonHeirPlugin/KNOWN_ISSUES.md)),
+> [`docs/investigations/plugin/`](../../docs/investigations/plugin/) instead (read on-demand, not
+> auto-loaded, indexed by [`docs/KNOWN_ISSUES.md`](../../docs/KNOWN_ISSUES.md)),
 > and only summarize the current-state rule/pattern here. **Batch write-backs**: during a task,
 > jot scratch notes in session memory as you find things — write ONE consolidated update (a
 > new/extended `docs/*.md` file + this file's summary + a one-line index entry) at the end of the
@@ -50,7 +50,7 @@ signatures once both namespaces are in scope.
   present while `is ContentSizeFitter`/`is LayoutGroup` kept missing them). Use a direct,
   statically-typed `GetComponent<T>()` call instead of enumerating `GetComponents<Component>()` and
   pattern-matching each element. See
-  `DragonHeirPlugin/docs/plottext-width-overflow-investigation.md`.
+  `docs/investigations/plugin/plottext-width-overflow-investigation.md`.
 - **`RectTransform.GetWorldCorners`** does not marshal correctly through this game's IL2CPP
   interop — it always returns 4 identical, effectively-zeroed corners regardless of the
   RectTransform's real bounds. Use `.position` (a plain property read) plus
@@ -66,7 +66,7 @@ signatures once both namespaces are in scope.
   instead of generic `Cast<T>()`/`TryCast<T>()`. **Caveat confirmed for build `be.785`:**
   `TextAsset` has no public `(string)` constructor — mutate an already-loaded wrapper via
   `TextAsset.Internal_CreateInstance(self, text)` instead of constructing a new one; see
-  [`DragonHeirPlugin/docs/resourceiopatches-agent-reference.md`](../../DragonHeirPlugin/docs/resourceiopatches-agent-reference.md)
+  [`docs/features/runtime-plugin/resourceiopatches-agent-reference.md`](../../docs/features/runtime-plugin/resourceiopatches-agent-reference.md)
   for why and the reference implementation. Verify per-type via reflection before assuming any
   other wrapper type has a usable `(string)` ctor.
 - Guard on plain property reads (e.g. `Il2CppSystem.Type.FullName`) before doing anything — these
@@ -89,9 +89,9 @@ non-generic static helpers `IL2CPP.il2cpp_object_get_class`/`il2cpp_class_get_na
 `Il2CppStringToManaged` (safe — the "generic interop call" danger is specifically about generic
 methods like `Cast<T>`, not non-generic static helpers).
 
-See [`DragonHeirPlugin/docs/unitylogcapture-reference.md`](../../DragonHeirPlugin/docs/unitylogcapture-reference.md)
+See [`docs/features/runtime-plugin/unitylogcapture-reference.md`](../../docs/features/runtime-plugin/unitylogcapture-reference.md)
 for the concrete implementation (`UnityLogCapture.cs`) and
-[`DragonHeirPlugin/docs/unitylogcapture-no-logmessagereceived.md`](../../DragonHeirPlugin/docs/unitylogcapture-no-logmessagereceived.md)
+[`docs/investigations/plugin/unitylogcapture-no-logmessagereceived.md`](../../docs/investigations/plugin/unitylogcapture-no-logmessagereceived.md)
 for how both gotchas were found.
 
 ## Gotcha: Harmony prefix/postfix parameter names must match the real IL2CPP parameter name
@@ -132,7 +132,7 @@ and has been observed to throw a `NullReferenceException` deep in
 not a metadata-staleness issue). Use `ResourceIoPatches.GetTextAssetBytesRaw(TextAsset)` instead,
 which invokes the native `get_bytes` getter and reads the resulting array via raw pointer/`Marshal.Copy`
 instead of constructing any generic wrapper. See
-`DragonHeirPlugin/docs/resourceio-generic-bytearray-classpointerstore-crash.md` for the full
+`docs/investigations/plugin/resourceio-generic-bytearray-classpointerstore-crash.md` for the full
 investigation.
 
 ## `ResourceIoPatches` — CSV override strategy (whole-file replace, not row merge)
@@ -145,14 +145,14 @@ contents verbatim** — no row-level merging. `Tests/GameFileHandling.cs`'s
 row present, untranslated/failed rows kept as original raw text), so the override file is always
 the full intended replacement, never a partial patch. A row-level merge by column-0 ID
 (`CsvMerger.MergeByFirstColumn`) was tried and abandoned, then deleted entirely as dead code — see
-`DragonHeirPlugin/docs/resourceio-csv-merge-abandoned.md` for why it doesn't hold up for every
+`docs/investigations/plugin/resourceio-csv-merge-abandoned.md` for why it doesn't hold up for every
 file.
 
 ## `UnityLogCapture` — capturing Unity engine log output without BepInEx's log hook
 
 BepInEx's built-in Unity log redirection does not fire for this game/build, and
 `UnityEngine.Application.logMessageReceived` does not exist in this stripped interop build (do not
-try to use it — see `DragonHeirPlugin/docs/unitylogcapture-no-logmessagereceived.md` for how this
+try to use it — see `docs/investigations/plugin/unitylogcapture-no-logmessagereceived.md` for how this
 was verified). Instead,
 `UnityLogCapture.cs` Harmony-postfix-patches `UnityEngine.Debug`'s `Log`/`LogWarning`/`LogError`/
 `LogException`/`LogAssertion` overloads and writes every message to
@@ -176,7 +176,7 @@ external dependency to `GamePlugin.csproj`:
    throwaway separate process (a bigger output DLL size alone is not proof) — look for
    `costura.<packagename>.dll.compressed` in the resource list.
 
-See `DragonHeirPlugin/docs/costura-embedded-dependencies.md` for the full investigation (the
+See `docs/investigations/plugin/costura-embedded-dependencies.md` for the full investigation (the
 `System.Text.Encoding.CodePages` case) including why Costura alone wasn't sufficient without step 1.
 
 ## `DynamicStringPatches` — composite `String.Format` templates (current state)
@@ -202,7 +202,7 @@ bare-fragment `ApplyDictionary` pass in both `GenericPostfix` and the sink-level
   source" pattern is only safe for genuinely transient, never-serialized buffers (the HUD
   scrolling log, the battle combat log) — check whether the target field is actually part of save
   state before reusing that pattern anywhere else. See
-  [`DragonHeirPlugin/docs/herodetailpanel-slow-load-investigation.md`](../../DragonHeirPlugin/docs/herodetailpanel-slow-load-investigation.md).
+  [`docs/investigations/plugin/herodetailpanel-slow-load-investigation.md`](../../docs/investigations/plugin/herodetailpanel-slow-load-investigation.md).
 - Every compiled template's `Pattern`/`PermissivePattern` carries a `MatchTimeout`
   (`TemplateRegexTimeout`, 25ms) — a template whose raw shape no longer matches already-partially-
   substituted text (e.g. a persisted log entry redisplayed on a fresh component) can otherwise
@@ -211,10 +211,10 @@ bare-fragment `ApplyDictionary` pass in both `GenericPostfix` and the sink-level
 
 Full current-state design (template compiler rules, CJK-permissive fallback, short-entry
 word-boundary spacing, re-entrancy, loading conventions, change checklist) is in
-[`DragonHeirPlugin/docs/dynamicstringpatches-agent-reference.md`](../../DragonHeirPlugin/docs/dynamicstringpatches-agent-reference.md).
+[`docs/features/runtime-plugin/dynamicstringpatches-agent-reference.md`](../../docs/features/runtime-plugin/dynamicstringpatches-agent-reference.md).
 Confirmed-bug narratives (`Regex.Escape` root cause, CJK-placeholder fallback, adjacent-placeholder-merge
 bugs #5–#9, and the still-unfixed `"在下#$PlayerName#"` prefix false-positive) are indexed from
-[`DragonHeirPlugin/KNOWN_ISSUES.md`](../../DragonHeirPlugin/KNOWN_ISSUES.md) — read the specific
+[`docs/KNOWN_ISSUES.md`](../../docs/KNOWN_ISSUES.md) — read the specific
 doc before modifying a confirmed bug fix.
 
 ## Every new Harmony patch class MUST be explicitly registered — verify it, don't assume it
@@ -226,7 +226,7 @@ on it. **Confirmed live mistake (2026-09-13)**: `RecordLogDisplayPatches.cs` was
 cleanly, and was deployed to the live game folder - but no `Harmony.CreateAndPatchAll` call for it
 was ever added to `MainPlugin.cs`. It produced zero errors/warnings; the only symptom was "the fix
 doesn't seem to do anything" (the original unpatched game method kept running). See
-[`DragonHeirPlugin/docs/herodetailpanel-slow-load-investigation.md`](../../DragonHeirPlugin/docs/herodetailpanel-slow-load-investigation.md)'s
+[`docs/investigations/plugin/herodetailpanel-slow-load-investigation.md`](../../docs/investigations/plugin/herodetailpanel-slow-load-investigation.md)'s
 "was written but never wired up" section for the full narrative.
 
 When adding a new Harmony patch class:
@@ -251,17 +251,17 @@ force/sect names). `Tests/GameFileHandling.cs`'s `DynamicStringColumnSources`/
 `DynamicStringLabelColumnSources` feed `dynamicStringsFromColumns.txt`, loaded via the same
 `dynamicStrings*.txt.yaml` glob — adding a new dynamicStrings-family file never requires a plugin
 change. Full narrative:
-[`DragonHeirPlugin/docs/dynamicstrings-column-source-extraction.md`](../../DragonHeirPlugin/docs/dynamicstrings-column-source-extraction.md);
+[`docs/investigations/plugin/dynamicstrings-column-source-extraction.md`](../../docs/investigations/plugin/dynamicstrings-column-source-extraction.md);
 follow-on multi-line/token-placeholder bugs:
-[`DragonHeirPlugin/docs/prefabtext-multiline-and-token-placeholder-bugs.md`](../../DragonHeirPlugin/docs/prefabtext-multiline-and-token-placeholder-bugs.md).
+[`docs/investigations/plugin/prefabtext-multiline-and-token-placeholder-bugs.md`](../../docs/investigations/plugin/prefabtext-multiline-and-token-placeholder-bugs.md).
 
 **General debugging lesson**: if `BepInEx/LogOutput.log` stops mid-sequence with no exception
 logged, an uncaught exception occurred synchronously inside `GameDataController.LoadAllGameData`
 (or its patched call chain) — check Unity's own `Player.log`
 (`%USERPROFILE%\AppData\LocalLow\TppStudio\LongYinLiZhiZhuan\Player.log`) for the real stack
 trace, since BepInEx's own logging never gets a chance to react to a crash that fatal. See
-[`DragonHeirPlugin/KNOWN_ISSUES.md`](../../DragonHeirPlugin/KNOWN_ISSUES.md) and
-[`Tests/KNOWN_ISSUES.md`](../../Tests/KNOWN_ISSUES.md) for the established crash/data-loss
+[`docs/KNOWN_ISSUES.md`](../../docs/KNOWN_ISSUES.md) and
+[`docs/KNOWN_ISSUES.md`](../../docs/KNOWN_ISSUES.md) for the established crash/data-loss
 investigation methodology and known hazard patterns (`Label<sign><number>` cross-reference cells,
 etc.) before re-deriving them from scratch.
 
@@ -285,9 +285,9 @@ method name/args overload throws `ArgumentException` at `Harmony.CreateAndPatchA
 fails to load entirely).
 
 Full current-state design and change checklist:
-[`DragonHeirPlugin/docs/prefabtextpatches-agent-reference.md`](../../DragonHeirPlugin/docs/prefabtextpatches-agent-reference.md).
+[`docs/features/runtime-plugin/prefabtextpatches-agent-reference.md`](../../docs/features/runtime-plugin/prefabtextpatches-agent-reference.md).
 Investigation narrative:
-[`DragonHeirPlugin/docs/prefabtextpatches-full-investigation.md`](../../DragonHeirPlugin/docs/prefabtextpatches-full-investigation.md).
+[`docs/investigations/plugin/prefabtextpatches-full-investigation.md`](../../docs/investigations/plugin/prefabtextpatches-full-investigation.md).
 
 ## `HeroNamePatches` — relationship-title translation for `GameController.GetHeroName`
 
@@ -342,9 +342,9 @@ frame by ordinary game code), deduped by `Time.frameCount` — the same pattern 
 `FanslationStudio.Plugins.TextResizerPlugin`.
 
 Full rationale, formulas, and change checklist:
-[`DragonHeirPlugin/docs/plottextsizepatches-agent-reference.md`](../../DragonHeirPlugin/docs/plottextsizepatches-agent-reference.md).
+[`docs/features/runtime-plugin/plottextsizepatches-agent-reference.md`](../../docs/features/runtime-plugin/plottextsizepatches-agent-reference.md).
 Investigation narrative (the wrong-node and wrong-formula misdiagnoses along the way):
-[`DragonHeirPlugin/docs/plottext-width-overflow-investigation.md`](../../DragonHeirPlugin/docs/plottext-width-overflow-investigation.md).
+[`docs/investigations/plugin/plottext-width-overflow-investigation.md`](../../docs/investigations/plugin/plottext-width-overflow-investigation.md).
 
 ## `GlobalDataListOverrides` — direct static-list overrides for auto-translated tier scales
 
@@ -375,5 +375,5 @@ of similarly-named `...LvName`/`...LvText` static lists (`HeroForceLvName`, `Her
 confirmed broken, just unexamined - worth a look next time one of those screens is touched.
 
 Full investigation narrative and the complete current override list:
-[`DragonHeirPlugin/docs/globaldata-tier-scale-overrides.md`](../../DragonHeirPlugin/docs/globaldata-tier-scale-overrides.md).
+[`docs/investigations/plugin/globaldata-tier-scale-overrides.md`](../../docs/investigations/plugin/globaldata-tier-scale-overrides.md).
 

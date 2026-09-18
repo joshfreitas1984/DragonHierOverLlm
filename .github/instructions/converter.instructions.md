@@ -9,8 +9,8 @@ applyTo: "Converter/**"
 > reference here; the post-processing passes table and file responsibilities in the README). Keep
 > this file short — it's auto-injected into context on every `Converter/**` edit. Put detailed
 > decompiler bug/limitation narratives in a topic file under
-> [`Converter/docs/`](../../Converter/docs/) instead (read on-demand, not auto-loaded, indexed by
-> [`Converter/KNOWN_ISSUES.md`](../../Converter/KNOWN_ISSUES.md)), and only summarize the
+> [`docs/investigations/converter/`](../../docs/investigations/converter/) instead (read on-demand, not auto-loaded, indexed by
+> [`docs/KNOWN_ISSUES.md`](../../docs/KNOWN_ISSUES.md)), and only summarize the
 > current-state finding here. **Batch write-backs**: during a task, jot scratch notes in session
 > memory as you find things — write ONE consolidated update (a new/extended `docs/*.md` file +
 > this file's summary + a one-line index entry) at the end of the task, not after every individual
@@ -144,8 +144,8 @@ full current-state detail on each of these before making a non-trivial change.
 
 ## Known decompiler limitations / bugs found through real investigations
 
-> Full narratives for each item below are in `Converter/docs/` (indexed by
-> [`Converter/KNOWN_ISSUES.md`](../../Converter/KNOWN_ISSUES.md)) — read the specific topic doc,
+> Full narratives for each item below are in `docs/investigations/converter/` (indexed by
+> [`docs/KNOWN_ISSUES.md`](../../docs/KNOWN_ISSUES.md)) — read the specific topic doc,
 > not this whole file, when investigating a similar issue.
 
 - **Fixed**: `NativeMethodExtractor.ExtractMethodLabels` used to mislabel shared-generic-code

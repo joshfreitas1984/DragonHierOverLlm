@@ -134,5 +134,5 @@ raw dump also contains temp-NPC spawn records (`临时:传令&随机;;-1;3;-1`) 
 dialogue-option fragments (`另选它物;`), all part of the same "machine record, not prose"
 convention; a real corpus sample confirmed every raw entry containing `;` is one of these shapes,
 never ordinary Chinese sentence text (which never contains an ASCII semicolon). See the shared
-library's [`quality-review-pass-architecture.md`](../../../FanslationStudio.LlmKit/docs/quality-review-pass-architecture.md)
+library's [`quality-review-pass.md`](../../../../FanslationStudio.LlmKit/docs/features/translation-pipeline/quality-review-pass.md)
 for the general `CustomQcExclusionRule` mechanism and guidance for writing a similar rule elsewhere.

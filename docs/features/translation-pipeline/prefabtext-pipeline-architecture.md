@@ -64,5 +64,5 @@ similar flat-list dumper can reuse this as-is):
 - **Implemented:** `DragonHeirPlugin/PrefabTextPatches.cs` loads `dumpedPrefabText*.txt.yaml` and
   applies exact whole-string matches at resource load, asset-bundle load, scene load, and the
   `UI.Text`/`TMP_Text` setters. See
-  [`dynamicstringpatches-agent-reference.md`](../../DragonHeirPlugin/docs/prefabtextpatches-agent-reference.md)
+  [`dynamicstringpatches-agent-reference.md`](../runtime-plugin/prefabtextpatches-agent-reference.md)
   for the runtime hook details.

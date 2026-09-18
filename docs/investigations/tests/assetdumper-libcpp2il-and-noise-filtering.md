@@ -47,13 +47,13 @@ process/Harmony/IL2CPP-awareness is needed to read them.
 - `dumpedPrefabText.txt` feeds directly into the numbered workflow via
   `GameFileHandling.ExportPrefabTextAssetToCustomFormat` (`FileInputWorkflowTests`'s
   `"1b. ExportPrefabTextIntoTranslated"`, run right after step 1, before step 2's merge) — see
-  `Tests/docs/prefabtext-pipeline-architecture.md`.
+  `docs/features/translation-pipeline/prefabtext-pipeline-architecture.md`.
 - `IsPrimaryTextField`'s allowlist misses real displayed text on several other fields (`name`,
   `eventName`/`tutorialName`/`showName`/`bulletName`/`fullName`/`jobName`/`spellName`/`pointName`/
   `sourceName`/`plotName`) — these land in `dumpedOtherText.txt` only. Handled via the automated
   dynamic-string extraction sources (`ExtractDynamicStringCandidatesFromOtherText`/
   `ExtractDynamicStringCandidatesFromIl2CppStringMap`/`DynamicStringOtherTextFields`, see
-  `Tests/docs/dynamicstrings-pipeline-architecture.md`) rather than widening `IsPrimaryTextField`
+  `docs/features/translation-pipeline/dynamicstrings-pipeline-architecture.md`) rather than widening `IsPrimaryTextField`
   (risky — `data`/`targetName` mix real content with internal asset/UI names on the same field).
 
 ## `Samboy063.LibCpp2IL` NuGet version pin investigation

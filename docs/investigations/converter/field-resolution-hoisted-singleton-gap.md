@@ -19,7 +19,7 @@ into a separately-named local several statements earlier.
 pointer arithmetic instead of being resolved to `GameDataController.someFieldName`.
 
 **Found while investigating**: the `StartMenuController.ResetFaceSetting`/`ResetPlayerTag` crash
-(see `DragonHeirPlugin/docs/resetfacesetting-crash-investigation.md`) — worked around there via a
+(see `docs/investigations/plugin/resetfacesetting-crash-investigation.md`) — worked around there via a
 runtime reflection-based diagnostic patch instead of fixing this pass, since getting real field
 names from a live process is more reliable than perfecting this disambiguation.
 

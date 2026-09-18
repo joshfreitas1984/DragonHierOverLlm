@@ -45,7 +45,7 @@ Mechanism (`Tests/` pipeline side):
   never removes.
 - A new `TextFileToSplit` entry in `TextFileConfiguration.cs` packages it through the same
   `DynamicStringsIL2CPP` plumbing as every other dynamic-string file.
-- Full mechanism detail: `Tests/docs/dynamicstrings-pipeline-architecture.md`'s "Log-narrative
+- Full mechanism detail: `docs/features/translation-pipeline/dynamicstrings-pipeline-architecture.md`'s "Log-narrative
   isolation" section.
 
 **Re-deriving the list after a future game update**: `Converter/Scripts/ExtractAddLogTemplates.ps1`

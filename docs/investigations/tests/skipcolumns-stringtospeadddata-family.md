@@ -14,7 +14,7 @@ looks the label up by **exact string match** against label text in `ForceSpeAddD
 `GameDataController.cs`). Since this pipeline translates every file's label text independently,
 an LLM can translate the "same" underlying Chinese label differently in `HeroTagData.csv` vs.
 `ForceSpeAddDataBase.csv`, breaking the exact-match lookup — this was root-caused (see
-`DragonHeirPlugin/KNOWN_ISSUES.md`'s "CONFIRMED root cause" section) as the cause of a
+`docs/KNOWN_ISSUES.md`'s "CONFIRMED root cause" section) as the cause of a
 `LoadAllGameData` abort that cascaded into a `StartMenuController.ResetFaceSetting` /
 `ResetPlayerTag` crash and an incomplete-resource-dump regression.
 

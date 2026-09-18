@@ -3,6 +3,7 @@
   <Project Path="../FanslationStudio.LlmKit/FanslationStudio.LlmKit/FanslationStudio.LlmKit.csproj" />
   <Project Path="DragonHeirPlugin/GamePlugin.csproj" />
   <Project Path="Files/Files.csproj" />
+  <Project Path="Translate/Translate.csproj" />
   <Project Path="Tests/Tests.csproj" />
   <Project Path="Verify/Verify.csproj" />
 </Solution>

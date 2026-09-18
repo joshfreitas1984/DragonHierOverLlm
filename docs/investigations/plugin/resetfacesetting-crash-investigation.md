@@ -154,6 +154,6 @@ analogous "守城效果" column is presumed to hit the same or a structurally id
 **Real fix (pipeline-side, not this plugin)**: mark the effect-string columns on
 `HeroTagData.csv` (column 4) and `ResourcePointTypeData.csv` (column 4) as `SkipColumns` in
 `Tests/GameFileHandling.cs`'s `TextFilesToSplit` — see
-`Tests/docs/skipcolumns-stringtospeadddata-family.md` for the pipeline change and re-run
+`docs/investigations/tests/skipcolumns-stringtospeadddata-family.md` for the pipeline change and re-run
 instructions. `DiagnosticPatches.cs`/`CrashMitigationPatches.cs` in this plugin have since been
 removed now that the pipeline fix is applied and confirmed.

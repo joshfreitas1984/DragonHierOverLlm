@@ -156,7 +156,7 @@ always-empty; 13 is the column that actually mattered).
 
 ## Third occurrence: `StringToAttriRatio` (fatal, no try/catch) on the same two files' columns 9/10
 
-See `Tests/docs/kungfudata-stringtoattriratio-fatal.md` for the full writeup — same file/row, but a
+See `docs/investigations/tests/kungfudata-stringtoattriratio-fatal.md` for the full writeup — same file/row, but a
 *different* decompiled method (`StringToAttriRatio`, not `StringToSpeAddData`) with no try/catch at
 all around `Single.Parse`, making it immediately fatal rather than merely logged. Fixed by adding
 columns `9, 10` to the same `SkipColumns` lists.

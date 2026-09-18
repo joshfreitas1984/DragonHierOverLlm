@@ -39,7 +39,7 @@ doesn't handle cleanly, but nothing here correlates with anything our pipeline c
 **Mitigation applied, then refined (not a real fix)**: initially added
 `CrashMitigationPatches.GenerateHero_Finalizer` in `DragonHeirPlugin/CrashMitigationPatches.cs`
 (same established pattern as the `ResetFaceSetting`/`ResetPlayerTag` mitigations documented in
-`DragonHeirPlugin/KNOWN_ISSUES.md`) — logged the full exception plus
+`docs/KNOWN_ISSUES.md`) — logged the full exception plus
 `worldData.Forces.Count`/`worldData.Heros.Count` and swallowed it so a new game could still start
 instead of hard-crashing at `GameController.Start`.
 

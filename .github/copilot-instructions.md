@@ -8,10 +8,10 @@ This repository contains multiple independent sub-projects. Scoped instructions 
   project.
 - `.github/instructions/dragonheirplugin.instructions.md` (`applyTo: DragonHeirPlugin/**`) —
   IL2CPP interop safety notes for the `DragonHeirPlugin` BepInEx plugin.
-- `.github/instructions/tests-translation-workflow.instructions.md` (`applyTo: Tests/**`) — how
-  the `Tests/` project's numbered workflow facts drive the game translation pipeline (built on the
-  shared `FanslationStudio.LlmKit` library), the `Files/` working-directory layout, and the CSV
-  compound-field conventions used by `GameFileHandling.cs`.
+- `.github/instructions/tests-translation-workflow.instructions.md` (`applyTo: {Translate,Tests}/**`) —
+  how reusable code in `Translate/` and numbered workflow facts in `Tests/` drive the game
+  translation pipeline (built on the shared `FanslationStudio.LlmKit` library), the `Files/`
+  working-directory layout, and the CSV compound-field conventions used by `GameFileHandling.cs`.
 
 > **Workflow rule:** Only update a sub-project's scoped instructions file, `KNOWN_ISSUES.md`, or
 > `docs/` topic files when the user explicitly asks for documentation to be updated (e.g. "update
@@ -67,8 +67,7 @@ workflow pipeline, `Files/` layout, and CSV/compound-field conventions. Note the
 own `.github/copilot-instructions.md` covering the Line/Split/Template data model and
 `CompoundFieldSplitter` rules.
 
-Each sub-project's `KNOWN_ISSUES.md` (`Converter/`, `DragonHeirPlugin/`, `Tests/`) is a short
-**index only** — full investigation narratives live one-per-topic under that project's `docs/`
-folder (e.g. `Tests/docs/`, `DragonHeirPlugin/docs/`, `Converter/docs/`). Read the specific topic
-doc linked from the index, not the whole index or every doc in the folder.
+[`docs/KNOWN_ISSUES.md`](docs/KNOWN_ISSUES.md) is the repository-wide **index only** — full
+investigation narratives live under `docs/investigations/`, while current-state references live
+under `docs/features/`. Read the specific topic linked from the index, not the whole docs tree.
 
