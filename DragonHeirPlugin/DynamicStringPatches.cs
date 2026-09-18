@@ -469,22 +469,6 @@ internal static class DynamicStringPatches
         };
     }
 
-    private static DictionaryEntry BuildTranslatedLiteralVariant(DictionaryEntry entry)
-    {
-        var translatedRaw = ApplyDictionary(entry.Raw ?? string.Empty, _dictionaryByFirstChar);
-        if (string.IsNullOrEmpty(translatedRaw)
-            || string.Equals(translatedRaw, entry.Raw, StringComparison.Ordinal))
-            return null;
-
-        return new DictionaryEntry
-        {
-            Raw = translatedRaw,
-            Result = entry.Result,
-            IsTemplate = true,
-            IsLogNarrative = entry.IsLogNarrative
-        };
-    }
-
     [ThreadStatic]
     private static bool _inTextSetterPostfix;
 
@@ -516,6 +500,21 @@ internal static class DynamicStringPatches
         public bool IsLogNarrative { get; set; }
     }
 
+    // Shared by PatchAll's raw-entry and translated-literal-variant compilation loops.
+    private static void CompileTemplateInto(DictionaryEntry entry, List<(DictionaryEntry Entry, CompiledTemplate Compiled)> into)
+    {
+        try
+        {
+            var compiled = BuildCompiledTemplate(entry);
+            if (compiled != null)
+                into.Add((entry, compiled));
+        }
+        catch (Exception ex)
+        {
+            MainPlugin.Logger.LogError($"[DynamicStringPatches] Failed to compile template '{entry.Raw}': {ex}");
+        }
+    }
+
     // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
     public static void PatchAll()
     {
@@ -542,32 +541,33 @@ internal static class DynamicStringPatches
             // separately for _logNarrativeCompiledTemplates, so that subset is always the exact
             // same Regex/CompiledTemplate instances as in _compiledTemplates (no double regex
             // compilation cost at load time, and no risk of the two lists drifting apart).
-            var compiledPairs = new List<(DictionaryEntry Entry, CompiledTemplate Compiled)>();
+            //
+            // NOTE: this used to also compile a "translated-literal variant" of each template (via
+            // a since-removed BuildTranslatedLiteralVariant) as an extra fallback for the
+            // meet-favor precedence bug - see docs/investigations/plugin/
+            // dynamicstringpatches-meet-favor-template-precedence.md. Reverted: that mechanism
+            // roughly doubled the compiled-template count (confirmed live: 2,789 -> 5,539) with no
+            // proven benefit - the investigation's own verification trace confirmed the fix through
+            // ordering + the existing CJK-inclusive PermissivePattern fallback alone, never through
+            // a variant match. Worse, unlike a raw (Chinese-literal) template - which is naturally
+            // idempotent, since a successful match removes the Chinese literal its own pattern
+            // depends on - a translated-literal variant's pattern is built from English text that
+            // can still resemble its own replacement output, so MultiPassTemplateApplicationEnabled
+            // re-running the template list (or a later redisplay of the same cached log text
+            // re-entering this pipeline) could match a variant's own prior output and re-insert
+            // replacement fragments - confirmed live as runaway text corruption on combat/battle
+            // logs (e.g. "Rumored ed ed ed ed ed ed ..."). The ordering fix below is the actual,
+            // sufficient fix; only raw entries are compiled now.
+            var rawPairs = new List<(DictionaryEntry Entry, CompiledTemplate Compiled)>();
             foreach (var entry in _templateDictionary)
-            {
-                var variants = new[] { entry, BuildTranslatedLiteralVariant(entry) }
-                    .Where(e => e != null);
-                foreach (var variant in variants)
-                {
-                    try
-                    {
-                        var compiled = BuildCompiledTemplate(variant);
-                        if (compiled != null)
-                            compiledPairs.Add((variant, compiled));
-                    }
-                    catch (Exception ex)
-                    {
-                        MainPlugin.Logger.LogError($"[DynamicStringPatches] Failed to compile template '{variant.Raw}': {ex}");
-                    }
-                }
-            }
+                CompileTemplateInto(entry, rawPairs);
 
-            var orderedCompiledPairs = compiledPairs
+            var orderedRawPairs = rawPairs
                 .OrderByDescending(p => p.Compiled.LiteralSegments.Sum(segment => segment.Length))
                 .ThenByDescending(p => p.Entry.Raw?.Length ?? 0)
                 .ToList();
-            _compiledTemplates = orderedCompiledPairs.Select(p => p.Compiled).ToList();
-            _logNarrativeCompiledTemplates = orderedCompiledPairs
+            _compiledTemplates = orderedRawPairs.Select(p => p.Compiled).ToList();
+            _logNarrativeCompiledTemplates = orderedRawPairs
                 .Where(p => p.Entry.IsLogNarrative)
                 .Select(p => p.Compiled)
                 .ToList();

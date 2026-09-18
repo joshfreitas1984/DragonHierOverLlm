@@ -60765,8 +60765,8 @@
 - raw: "铩羽而归"
   splits:
   - text: "铩羽而归"
-    translated: "Return empty‑handed"
-    qcReviewedText: "Return empty‑handed"
+    translated: "Returned empty handed"
+    qcReviewedText: "Returned empty handed"
     qcStatus: Passed
     qcQualityScore: 100
 - raw: "银两:{0}"

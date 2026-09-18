@@ -66,7 +66,7 @@ namespace Tests
             ["{0}在{1}欲偷师{2}的{3}，{4}。"] = "{0} tried to secretly learn {2}'s {3} at {1} - {4}.",
             ["{0}在{1}与{2}心生嫌隙，结下了深仇大恨。"] = "{0} had a falling out with {2} at {1}, and a deep grudge formed between them.",
             ["{0}在{1}与{2}交流心得，切磋武艺，最终{3}。"] = "{0} traded notes and sparred with {2} at {1}, and in the end {3}.",
-            ["{0}在{1}袭击了{2}，血战一场最终{3}。"] = "{0} attacked {2} at {1}; after a bloody battle, {3}.",
+            ["{0}在{1}袭击了{2}，血战一场最终{3}。"] = "{0} attacked {2} at {1}; after a bloody battle, {3}",
             ["{0}在{1}完成了重要委托，名望{2}，银两{3}，并获得了{4}。"] =
                 "{0} completed an important commission at {1}, gaining {2} renown and {3} silver, and receiving {4}.",
             ["{0}在{1}遭逢{5}奇遇，名望{2}，银两{3}，并获得了{4}。"] =
