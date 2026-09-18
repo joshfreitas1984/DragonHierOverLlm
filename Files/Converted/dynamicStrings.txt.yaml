@@ -774,8 +774,10 @@
   splits:
   - text: "#PlayerName#你初入本门，修为尚浅，为师今天就先传你一式基础武学。"
     translated: "#PlayerName#, you are new to our sect and your cultivation is still shallow. Today, I will first teach you a basic martial technique."
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "#PlayerName#, you are new to our sect and your cultivation is still shallow. Today, I will first teach you a basic martial technique.\nWhich one would you like to learn first among our sect's basic internal skill, lightness, and special technique?"
+    qcReviewedText: "#PlayerName#, you are new to our sect and your cultivation is still shallow. Today, I will first teach you a basic martial technique.\nWhich one would you like to learn first among our sect's basic internal skill, lightness, and special technique?"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "不知本门的基础内功，轻功与绝技之中，你想先学哪一门？"
     translated: "Which one would you like to learn first among our sect's basic internal skill, lightness, and special technique?"
@@ -785,8 +787,10 @@
   splits:
   - text: "#PlayerName#你初入江湖，修为尚浅，为师今天就先传你一式基础武学。"
     translated: "#PlayerName#, you're just starting out in the Jianghu, and your cultivation is still shallow. Today, I'll teach you a basic martial art technique."
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "#PlayerName#, you're just starting out in the Jianghu, and your cultivation is still shallow. Today, I'll teach you a basic martial art technique.\nWhich one would you like to learn first among my basic internal skill, lightness, and special technique?"
+    qcReviewedText: "#PlayerName#, you're just starting out in the Jianghu, and your cultivation is still shallow. Today, I'll teach you a basic martial art technique.\nWhich one would you like to learn first among my basic internal skill, lightness, and special technique?"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "不知为师的基础内功，轻功与绝技之中，你想先学哪一门？"
     translated: "Which one would you like to learn first among my basic internal skill, lightness, and special technique?"
@@ -4167,10 +4171,11 @@
   splits:
   - text: "#TargetInteractName#可敢按照江湖规矩与我角力一番，胜利者就能获得这件"
     translated: "#TargetInteractName# dare to abide by the Jianghu rules and compete with me, with the victor earning this."
-    qcReviewedText: "#TargetInteractName# dare to abide by the Jianghu rules and compete with me, with the victor earning this.{0} How?\n(The more strength, constitution, and special skills exceed those of the opponent, and the higher the affection, the higher the success rate.\nCurrent grapple success rate {1}%, Expected increase in infamy {2} Dot)"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcReviewedText: "#TargetInteractName# dare to abide by the Jianghu rules and compete with me, with the victor earning this.{0} How?\n(The higher your Strength, Constitution, and Special Technique are compared to your opponent's, and the better your relationship is with them, the higher your success rate will be.\nCurrent grapple success rate {1}%, Expected increase in infamy {2} Dot)"
+    qcTranslated: "#TargetInteractName# dare to abide by the Jianghu rules and compete with me, with the victor earning this {0}? How about it?\n(The higher your Strength, Constitution, and Special Technique are compared to your opponent's, and the better your relationship is with them, the higher your success rate will be.\nCurrent grapple success rate {1}%, Expected increase in infamy {2} Dot)"
+    qcStatus: Corrected
+    qcQualityScore: 85
+    qcDefectCategory: HardToParseSeam
   - subIndex: 1
     text: "如何？"
     translated: "How?"
@@ -5812,7 +5817,7 @@
   - text: "乃"
     translated: "Is"
     qcReviewedText: "<b>{0}</b> Is {1}, Now I have attained {2} Build strength\n{3}。\nIf I have the time to spar with #PlayerName#, I will certainly show you something."
-    qcTranslated: "<b>{0}</b> Is {1}, Now I have attained {2} layers of power\n{3}.\nIf I have the time to spar with #PlayerName#, I will certainly show you something."
+    qcTranslated: "I have now reached level {2} mastery of {1}, <b>{0}</b>.\n{3}.\nIf I get the chance to spar with #PlayerName#, I’ll show you what I can do."
     qcStatus: Corrected
     qcQualityScore: 90
     qcDefectCategory: DroppedContent
@@ -11813,8 +11818,8 @@
 - raw: "不知#PlayerName#可有耳闻："
   splits:
   - text: "不知#PlayerName#可有耳闻"
-    translated: "Unknown to you, #PlayerName# may have heard of this."
-    qcReviewedText: "Unknown to you, #PlayerName# may have heard of this.："
+    translated: "I wonder if #PlayerName# may have heard of this"
+    qcReviewedText: "I wonder if #PlayerName# may have heard of this："
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -11823,16 +11828,15 @@
 - raw: "不知#PlayerName#想要如何调解这场恩怨？"
   splits:
   - text: "不知#PlayerName#想要如何调解这场恩怨？"
-    translated: "Unknown, #PlayerName#, how do you want to settle this grudge?"
-    qcReviewedText: "Unknown, #PlayerName#, how do you want to settle this grudge?"
-    qcTranslated: "I wonder how #PlayerName# wishes to settle this grudge?"
-    qcStatus: Corrected
-    qcQualityScore: 90
+    translated: "I wonder how #PlayerName# wants to settle this grudge?"
+    qcReviewedText: "I wonder how #PlayerName# wants to settle this grudge?"
+    qcStatus: Passed
+    qcQualityScore: 100
 - raw: "不知#PlayerName#有何高见，尽管道来。"
   splits:
   - text: "不知#PlayerName#有何高见，尽管道来。"
-    translated: "Unknown #PlayerName#, feel free to share your insights."
-    qcReviewedText: "Unknown #PlayerName#, feel free to share your insights."
+    translated: "I wonder what insights #PlayerName# has, feel free to share them."
+    qcReviewedText: "I wonder what insights #PlayerName# has, feel free to share them."
     qcTranslated: "I wonder what brilliant insights #PlayerName# has. Please, share them freely."
     qcStatus: Corrected
     qcQualityScore: 80
@@ -11846,9 +11850,9 @@
 - raw: "不知{1}之“{0}”，\n与我相比孰强孰弱？"
   splits:
   - text: "不知"
-    translated: "Unknown"
-    qcReviewedText: "Unknown {1} Of“{0}”，\nWho is stronger compared to me?"
-    qcTranslated: "{1}'s {0},\\nWho is stronger or weaker, them or me?"
+    translated: "I wonder"
+    qcReviewedText: "I wonder about {1}'s “{0}”，\nWho is stronger compared to me?"
+    qcTranslated: "I wonder about {1}'s “{0}”,\\nWho is stronger or weaker, them or me?"
     qcStatus: Corrected
     qcQualityScore: 70
   - subIndex: 1
@@ -16151,9 +16155,10 @@
   splits:
   - text: "你施展绝技，掀起漫天沙尘向包围圈外猛冲而去。"
     translated: "You unleashed your Special Technique, stirring up a cloud of sand as you charged out of the encirclement circle."
-    qcReviewedText: "You unleash your ultimate technique, creating a whirlwind of sand as you surge outward from the encirclement.\nThe officials could do nothing to stop you and could only watch as you disappeared into the distance."
+    qcReviewedText: "You unleashed your Special Technique, stirring up a cloud of sand as you charged out of the encirclement circle.\nThe officials could do nothing to stop you and could only watch as you disappeared into the distance."
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "官差们根本抵挡不住，只能眼睁睁看着你一路远去。"
     translated: "The officials could do nothing to stop you and could only watch as you disappeared into the distance."
@@ -16682,8 +16687,10 @@
   splits:
   - text: "修炼绝技"
     translated: "Practicing Special Techniques"
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Practicing Special Techniques"
+    qcReviewedText: "Practicing Special Techniques"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "修炼轻功"
   splits:
   - text: "修炼轻功"
@@ -19452,10 +19459,11 @@
   splits:
   - text: "千里之行，始于足下。接下来该修炼哪门武功呢？"
     translated: "A journey of a thousand miles begins with a single step. Which martial art should we practice next?"
-    qcReviewedText: "A journey of a thousand miles begins with a single step. Which martial art should we practice next?\n(Training can increase neigong/Qinggong/Combat experience with advanced techniques,{0} Best effect within the grade)"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcReviewedText: "A journey of a thousand miles begins with a single step. Which martial art should we practice next?\n(Training can increase neigong/Qinggong/Combat experience with Special Techniques {0} Best effect within the grade)"
+    qcTranslated: "A journey of a thousand miles begins with a single step. Which martial art should we practice next?\n(Training can increase neigong/Qinggong/Combat experience with Special Techniques {0} Best effect within level)"
+    qcStatus: Corrected
+    qcQualityScore: 85
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "修炼可增加内功"
     translated: "Training can increase neigong"
@@ -20408,9 +20416,10 @@
   splits:
   - text: "只是你现在根基未稳，为师今天先传你一门基础武学。"
     translated: "But your foundation is not yet stable, so I will teach you a basic martial art for today."
-    qcReviewedText: "But your foundation is not yet stable, so I will teach you a basic martial art for today.\nThis internal skill, lightness, and ultimate technique, #PlayerName#, which do you want to practice first?"
+    qcReviewedText: "But your foundation is not yet stable, so I will teach you a basic martial art for today.\nThis internal skill, lightness, or special technique, #PlayerName#, which one would you like to practice first?"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "这内功，轻功与绝技，#PlayerName#想先选择哪门进行修习？"
     translated: "This internal skill, lightness, or special technique, #PlayerName#, which one would you like to practice first?"
@@ -21473,7 +21482,7 @@
   splits:
   - text: "听说#TargetInteractName#最近得了件"
     translated: "I heard #TargetInteractName# recently got an item"
-    qcReviewedText: "I heard #TargetInteractName# recently got an item {0}, Why don't you watch how it's done?\n(The more strength, constitution, and special skills exceed those of the opponent, and the higher the affection, the higher the success rate.\nCurrent Raid Success Rate {1}%, Expected increase in infamy {2} Dot)"
+    qcReviewedText: "I heard #TargetInteractName# recently got an item {0}, Why don't you watch how it's done?\n(The higher your Strength, Constitution, and Special Technique are compared to your opponent's, and the better your relationship is with them, the higher your success rate will be.\nCurrent Raid Success Rate {1}%, Expected increase in infamy {2} Dot)"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -26530,7 +26539,7 @@
     translated: ", Has gained some valuable insights"
   - subIndex: 2
     text: "不知#TargetInteractName#可愿与我讲经说法，一试这"
-    translated: "Unknown #TargetInteractName#, would you be willing to lecture and discuss with me to try this out?"
+    translated: "I wonder, #TargetInteractName#, would you be willing to lecture and discuss with me to try this out?"
   - subIndex: 3
     text: "之法门？"
     translated: "Dharma Door?"
@@ -26550,7 +26559,7 @@
     translated: ", Has gained some valuable insights"
   - subIndex: 2
     text: "不知#TargetInteractName#可愿花费三日时间，听我讲解这"
-    translated: "Unknown #TargetInteractName#, are you willing to spend three days listening to me explain this?"
+    translated: "I wonder, #TargetInteractName#, are you willing to spend three days listening to me explain this?"
   - subIndex: 3
     text: "之法门？"
     translated: "Dharma Door?"
@@ -38975,9 +38984,10 @@
   splits:
   - text: "提升绝技"
     translated: "Improve Special Technique"
-    qcReviewedText: "Boost ultimate skill"
+    qcReviewedText: "Improve Special Technique"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "提升轻功"
   splits:
   - text: "提升轻功"
@@ -40652,7 +40662,7 @@
     translated: "I only just noticed a particularly lush plant. It seems to contain rare herbs."
   - subIndex: 2
     text: "不知#PlayerName#是否知晓应当如何采摘？"
-    translated: "Unknown #PlayerName# whether you know how to pick them."
+    translated: "I wonder if #PlayerName# knows whether you know how to pick them."
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "是#PlayerName#啊！来的正巧，\n我适才发现一处历史悠久的遗迹，里面似乎埋藏有珍稀古董，\n不知#PlayerName#是否知晓应当如何发掘？"
@@ -40669,15 +40679,15 @@
     translated: "I just discovered an ancient relic with what seems to be rare antiquities buried within."
   - subIndex: 2
     text: "不知#PlayerName#是否知晓应当如何发掘？"
-    translated: "Unknown to #PlayerName#, how should one proceed with the excavation?"
+    translated: "I wonder if #PlayerName# knows how one should proceed with the excavation?"
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "是#PlayerName#啊！来的正巧，\n我适才发现一处物产丰饶的峡谷，里面似乎生长有珍稀食材，\n不知#PlayerName#是否知晓应当如何采摘？"
   splits:
   - text: "是#PlayerName#啊！来的正巧，"
     translated: "It's you, #PlayerName#! You timed it just right!"
-    qcReviewedText: "It's you, #PlayerName#! You timed it just right!\nI just noticed a fertile valley filled with rare ingredients.\nUnknown #PlayerName# whether you know how to pick them."
-    qcTranslated: "It's you, #PlayerName#! You timed it just right!\nI just noticed a fertile valley filled with rare ingredients.\nI don't know whether #PlayerName# knows how to pick them."
+    qcReviewedText: "It's you, #PlayerName#! You timed it just right!\nI just noticed a fertile valley filled with rare ingredients.\nI wonder if #PlayerName# knows how to pick them."
+    qcTranslated: "It's you, #PlayerName#! You timed it just right!\nI just noticed a fertile valley filled with rare ingredients.\nI wonder if #PlayerName# knows how to pick them."
     qcStatus: Corrected
     qcQualityScore: 90
     qcDefectCategory: DroppedContent
@@ -40686,15 +40696,15 @@
     translated: "I just noticed a fertile valley filled with rare ingredients."
   - subIndex: 2
     text: "不知#PlayerName#是否知晓应当如何采摘？"
-    translated: "Unknown #PlayerName# whether you know how to pick them."
+    translated: "I wonder if #PlayerName# knows how to pick them."
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "是#PlayerName#啊！来的正巧，\n我适才发现一处矿藏丰饶的山脉，里面似乎埋藏有珍稀材料，\n不知#PlayerName#是否知晓应当如何采伐？"
   splits:
   - text: "是#PlayerName#啊！来的正巧，"
     translated: "It's you, #PlayerName#! You timed it just right!"
-    qcReviewedText: "It's you, #PlayerName#! You timed it just right!\nI just discovered a mountain range rich in mineral deposits, and it seems to contain rare materials.\nDo you know, #PlayerName#, how to gather Resources?"
-    qcTranslated: "It's you, #PlayerName#! You timed it just right.\nI just discovered a mountain range rich in mineral deposits, and it seems to contain rare materials.\nDo you know, #PlayerName#, how to Gather Resources?"
+    qcReviewedText: "It's you, #PlayerName#! You timed it just right!\nI just discovered a mountain range rich in mineral deposits, and it seems to contain rare materials.\nI wonder if #PlayerName# knows how to gather Resources?"
+    qcTranslated: "It's you, #PlayerName#! You timed it just right.\nI just discovered a mountain range rich in mineral deposits, and it seems to contain rare materials.\nI wonder if #PlayerName# knows how to Gather Resources?"
     qcStatus: Corrected
     qcQualityScore: 95
   - subIndex: 1
@@ -40702,15 +40712,15 @@
     translated: "I just discovered a mountain range rich in mineral deposits, and it seems to contain rare materials."
   - subIndex: 2
     text: "不知#PlayerName#是否知晓应当如何采伐？"
-    translated: "Do you know, #PlayerName#, how to gather Resources?"
+    translated: "I wonder if #PlayerName# knows how to gather Resources?"
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "是#PlayerName#啊！来的正巧，\n我适才发现一群毒性异常的蛇虫，里面似乎混杂有珍稀毒物，\n不知#PlayerName#是否知晓应当如何捉捕？"
   splits:
   - text: "是#PlayerName#啊！来的正巧，"
     translated: "It's you, #PlayerName#! You timed it just right!"
-    qcReviewedText: "It's you, #PlayerName#! You timed it just right!\nI just realized there was a group of abnormally toxic snakes and insects, and it seems to include rare poisonous substances.\nUnknown #PlayerName# whether you know how to capture?"
-    qcTranslated: "It's you, #PlayerName#! You timed it just right!\nI just realized there was a group of abnormally toxic snakes and insects, and it seems to include rare poisonous substances.\nDo you know how to capture them, #PlayerName#?"
+    qcReviewedText: "It's you, #PlayerName#! You timed it just right!\nI just realized there was a group of abnormally toxic snakes and insects, and it seems to include rare poisonous substances.\nI wonder if #PlayerName# knows how to capture them."
+    qcTranslated: "It's you, #PlayerName#! You timed it just right!\nI just realized there was a group of abnormally toxic snakes and insects, and it seems to include rare poisonous substances.\nI wonder if #PlayerName# knows how to capture them."
     qcStatus: Corrected
     qcQualityScore: 90
     qcDefectCategory: HardToParseSeam
@@ -40719,15 +40729,17 @@
     translated: "I just realized there was a group of abnormally toxic snakes and insects, and it seems to include rare poisonous substances."
   - subIndex: 2
     text: "不知#PlayerName#是否知晓应当如何捉捕？"
-    translated: "Unknown #PlayerName# whether you know how to capture?"
+    translated: "I wonder if #PlayerName# knows how to capture them?"
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "是#PlayerName#啊！来的正巧，\n这古老遗迹之中埋藏着一件颇为珍稀的古董，\n久闻#PlayerName#绝技高强，能否替我去挖掘一件出来？"
   splits:
   - text: "是#PlayerName#啊！来的正巧，"
     translated: "It's you, #PlayerName#! You timed it just right!"
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "It's you, #PlayerName#! You timed it just right!\nThis ancient relic conceals a rather rare antique.\n'#PlayerName#' has been heard to have powerful Special Techniques. Could you dig one up for me?"
+    qcReviewedText: "It's you, #PlayerName#! You timed it just right!\nThis ancient relic conceals a rather rare antique.\n'#PlayerName#' has been heard to have powerful Special Techniques. Could you dig one up for me?"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "这古老遗迹之中埋藏着一件颇为珍稀的古董，"
     translated: "This ancient relic conceals a rather rare antique."
@@ -40740,8 +40752,10 @@
   splits:
   - text: "是#PlayerName#啊！来的正巧，"
     translated: "It's you, #PlayerName#! You timed it just right!"
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "It's you, #PlayerName#! You timed it just right!\nThis giant rock contains a rather scarce material.\n'#PlayerName#', I've heard that your Special Techniques are highly skilled. Could you dig some up for me?"
+    qcReviewedText: "It's you, #PlayerName#! You timed it just right!\nThis giant rock contains a rather scarce material.\n'#PlayerName#', I've heard that your Special Techniques are highly skilled. Could you dig some up for me?"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "这巨石之中深埋着一种颇为珍稀的材料，"
     translated: "This giant rock contains a rather scarce material."
@@ -41699,8 +41713,10 @@
   splits:
   - text: "本人初到贵宝地，身无长技，只是自幼练得一金刚不坏，刀枪不入的硬功绝技。"
     translated: "I am new to this esteemed place and have no special skills, except for a Special Technique I've practiced since childhood, making me invulnerable to blades and bullets."
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "I am new to this esteemed place and have no special skills, except for a Special Technique I've practiced since childhood, making me invulnerable to blades and bullets.\nPlease don't miss this! If you have money, please support with money; if you don't, please support with your presence!\nNo need for much talk; let me demonstrate breaking a large stone with my chest!"
+    qcReviewedText: "I am new to this esteemed place and have no special skills, except for a Special Technique I've practiced since childhood, making me invulnerable to blades and bullets.\nPlease don't miss this! If you have money, please support with money; if you don't, please support with your presence!\nNo need for much talk; let me demonstrate breaking a large stone with my chest!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "望您各位走过路过不要错过！有钱捧个钱场，没钱捧个人场！"
     translated: "Please don't miss this! If you have money, please support with money; if you don't, please support with your presence!"
@@ -51648,9 +51664,10 @@
   splits:
   - text: "绝技"
     translated: "Special Technique"
-    qcReviewedText: "Ultimate Technique"
+    qcReviewedText: "Special Technique"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "绝技 千斤坠;ForceFightChooseStartSkill;2"
   splits:
   - text: "绝技"
@@ -55824,7 +55841,7 @@
     qcDefectCategory: None
   - subIndex: 1
     text: "不知少侠能能否施舍一些银两，结个善缘？"
-    translated: "Unknown Young Hero, could you spare some silver to make a good karma?"
+    translated: "I wonder if Young Hero could spare some silver to make a good karma?"
   templates:
   - template: "{0}\n{1}"
 - raw: "贫尼"
@@ -55846,13 +55863,13 @@
   splits:
   - text: "贫道一路云游至此，盘缠已经捉襟见肘，"
     translated: "I have been wandering here and there, and my funds are now running low."
-    qcReviewedText: "I have been wandering here and there, and my funds are now running low.\nUnknown Young Hero, could you spare some silver to make a good karma?"
-    qcTranslated: "I have been wandering the world until arriving here, and my funds are now running low.\\nUnknown Young Hero, could you spare some silver to make a good karma?"
+    qcReviewedText: "I have been wandering here and there, and my funds are now running low.\nI wonder if Young Hero could spare some silver to make a good karma?"
+    qcTranslated: "I have been wandering the world until arriving here, and my funds are now running low.\\nI wonder if Young Hero could spare some silver to make a good karma?"
     qcStatus: Corrected
     qcQualityScore: 80
   - subIndex: 1
     text: "不知少侠能能否施舍一些银两，结个善缘？"
-    translated: "Unknown Young Hero, could you spare some silver to make a good karma?"
+    translated: "I wonder if Young Hero could spare some silver to make a good karma?"
   templates:
   - template: "{0}\n{1}"
 - raw: "购\n买"
@@ -58409,7 +58426,7 @@
     qcQualityScore: 85
   - subIndex: 1
     text: "不知施主可否布施一些银两，以作为本帮营造屋舍，施粥义诊等救贫济困之用。"
-    translated: "Unknown benefactor, could you donate some silver to help with the construction of our shelter, distributing soup, and providing free medical aid to those in need?"
+    translated: "I wonder if benefactor could donate some silver to help with the construction of our shelter, distributing soup, and providing free medical aid to those in need?"
   templates:
   - template: "{0}\n{1}"
 - raw: "这位施主面色清亮，道骨矍铄，贫道一眼便看出乃是有仙缘之人。\n不知施主可否布施些银两，以作为本观传经说法，炼丹撰符等修仙寻道之用。"
@@ -58422,14 +58439,14 @@
     qcDefectCategory: None
   - subIndex: 1
     text: "不知施主可否布施些银两，以作为本观传经说法，炼丹撰符等修仙寻道之用。"
-    translated: "Unknown benefactor, may you donate some silver to support the propagation of scriptures and alchemy for cultivation and questing after the Way in this monastery."
+    translated: "I wonder if benefactor could donate some silver to support the propagation of scriptures and alchemy for cultivation and questing after the Way in this monastery."
   templates:
   - template: "{0}\n{1}"
 - raw: "这位施主面色红润，顶冒金光，{0}一眼便看出乃是有佛缘之人。\n不知施主可否布施些银两，以作为本寺印经造像，燃香供奉等弘法利生之用。"
   splits:
   - text: "这位施主面色红润，顶冒金光，"
     translated: "This benefactor has a ruddy complexion and is emitting golden light."
-    qcReviewedText: "This benefactor has a ruddy complexion and is emitting golden light.{0} At a glance, one can see that you have a Buddhist disposition.\nUnknown benefactor, may I ask if you could make a donation in silver to support the printing of scriptures and the casting of statues for our temple, as well as the burning of incense and other religious practices for the benefit of all beings."
+    qcReviewedText: "This benefactor has a ruddy complexion and is emitting golden light.{0} At a glance, one can see that you have a Buddhist disposition.\nI wonder if benefactor could make a donation in silver to support the printing of scriptures and the casting of statues for our temple, as well as the burning of incense and other religious practices for the benefit of all beings."
     qcStatus: Passed
     qcQualityScore: 82
     qcDefectCategory: None
@@ -58438,7 +58455,7 @@
     translated: "At a glance, one can see that you have a Buddhist disposition."
   - subIndex: 2
     text: "不知施主可否布施些银两，以作为本寺印经造像，燃香供奉等弘法利生之用。"
-    translated: "Unknown benefactor, may I ask if you could make a donation in silver to support the printing of scriptures and the casting of statues for our temple, as well as the burning of incense and other religious practices for the benefit of all beings."
+    translated: "I wonder if benefactor could make a donation in silver to support the printing of scriptures and the casting of statues for our temple, as well as the burning of incense and other religious practices for the benefit of all beings."
   templates:
   - template: "{0}⟦0⟧{1}\n{2}"
 - raw: "这内功名为“混天功”，乃是丐帮高级内功心法，\n此功法内息刚猛，遒劲有力，\n左冲右突之时，颇有几分混天动地之威势。"
@@ -58474,9 +58491,9 @@
   splits:
   - text: "这千斤坠乃绝技筑基之法，还望你好生参悟。"
     translated: "This Gravitational Pull is a Special Technique for Foundation Establishment; I hope you study it diligently."
-    qcReviewedText: "This Gravitational Pull is a supreme technique for Foundation Establishment; I hope you will study it thoroughly.\nOnly after one's cultivation is complete can they practice more advanced martial arts."
+    qcReviewedText: "This Gravitational Pull is a Special Technique for Foundation Establishment; I hope you study it diligently.\nOnly after one's cultivation is complete can they practice more advanced martial arts."
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "待功力大成之后，方能修习更高深之武学。"
@@ -58877,8 +58894,10 @@
   splits:
   - text: "这绝技名为“妙手空空”，乃是一式探囊取物的偷盗手法，"
     translated: "This special technique is called Sleight of Hand, and it is a method for stealing by skillfully taking objects from someone's pocket."
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "This special technique is called Sleight of Hand, and it is a method for stealing by skillfully taking objects from someone's pocket.\nThough most members of the Beggar Sect adhere to laws and rules, in times of urgent need, they still have to resort to petty theft and other such deeds.\nBut if anyone dares to abuse this for personal gain, they will also face severe punishment."
+    qcReviewedText: "This special technique is called Sleight of Hand, and it is a method for stealing by skillfully taking objects from someone's pocket.\nThough most members of the Beggar Sect adhere to laws and rules, in times of urgent need, they still have to resort to petty theft and other such deeds.\nBut if anyone dares to abuse this for personal gain, they will also face severe punishment."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "虽说丐帮中人大多遵纪守法，但情急时仍需干些偷鸡摸狗的勾当，"
     translated: "Though most members of the Beggar Sect adhere to laws and rules, in times of urgent need, they still have to resort to petty theft and other such deeds."

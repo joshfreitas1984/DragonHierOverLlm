@@ -26,7 +26,13 @@ would never see a value assigned later at arbitrary runtime (e.g. when a plot di
 popup actually opens) — which is exactly when these fields get copied onto a UI component's
 `.text`. `DynamicStringPatches.cs`, by contrast, patches the `TMP_Text.text`/`UI.Text.text`
 **setters** themselves (sink-level, field-agnostic), so it catches the value the moment it's
-actually displayed regardless of which source field it came from — exactly what these need.
+actually displayed regardless of which source field it came from — exactly what most of these
+need. The `eventDescribe` world-event path is additionally pre-translated at its owning
+`EventData.GetDescribe(bool)` boundary by `WorldEventPatches.cs`, because the game expands
+`#PosText#` and `#DifficultyItemText#` while the description is being assembled. This prevents
+intermediate `String.Concat`/`String.Format` results from reaching generic fragment translation
+before the complete event template exists; see the linked world-event investigation in
+`docs/KNOWN_ISSUES.md`.
 `DynamicStringPatches.LoadDictionary` already sorts entries longest-first specifically so a
 full-paragraph entry can never be corrupted by a shorter, unrelated fragment matching part of it
 first, and the existing `GamePlaceholderTokenRegex`/`CheckTransalationSuccessful`

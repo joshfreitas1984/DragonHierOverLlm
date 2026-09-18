@@ -1033,11 +1033,10 @@
   splits:
   - text: "突破加成仅作用于该技能之上"
     translated: "Breakthrough bonus applies only to this skill"
-    qcReviewedText: "♦Breakthrough bonus applies only to this skill\\n♦Neigong/Qinggong/The breakthrough bonus of the Special Technique becomes effective after equipping it.\\n♦The bonus from breaking through external skill becomes effective only when used in battle."
-    qcTranslated: "♦Breakthrough bonus applies only to this skill\\n♦The breakthrough bonus for Neigong/Qinggong/Special Technique becomes effective after equipping it.\\n♦The bonus from breaking through External Skill becomes effective only when used in battle."
-    qcStatus: Corrected
-    qcQualityScore: 90
-    qcDefectCategory: DroppedContent
+    qcReviewedText: "♦Breakthrough bonus applies only to this skill\\n♦Neigong/Qinggong/The bonus from breaking through the Special Technique takes effect after equipping it.\\n♦The bonus from breaking through external skill becomes effective only when used in battle."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "内功"
     translated: "Neigong"

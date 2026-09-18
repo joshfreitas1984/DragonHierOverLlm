@@ -340,6 +340,8 @@ public class MainPlugin : BasePlugin
 
         DynamicStringPatches.PatchAll();
 
+        WorldEventPatches.PatchAll();
+
         MissionPatches.PatchAll();
 
         // Must patch AFTER DynamicStringPatches.PatchAll() - RecordLogDisplayPatches calls

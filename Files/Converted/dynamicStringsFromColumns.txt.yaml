@@ -2530,9 +2530,9 @@
   splits:
   - text: "全员绝技"
     translated: "Everyone's Special Techniques"
-    qcReviewedText: "All super skills"
+    qcReviewedText: "Everyone's Special Techniques"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "全员拳掌"
   splits:
@@ -3234,9 +3234,9 @@
   splits:
   - text: "身怀绝技"
     translated: "Possesses a Special Technique"
-    qcReviewedText: "Master of extraordinary skills"
+    qcReviewedText: "Possesses a Special Technique"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "绝艺超群"
   splits:
@@ -62599,9 +62599,9 @@
   splits:
   - text: "修炼内功"
     translated: "Cultivate neigong"
-    qcReviewedText: "Cultivate neigong/Qinggong/Master advanced techniques through practical experience"
+    qcReviewedText: "Cultivate neigong/Qinggong/Gain practical experience with Special Techniques"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "轻功"

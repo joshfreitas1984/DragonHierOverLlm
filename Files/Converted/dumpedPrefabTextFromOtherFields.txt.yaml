@@ -605,32 +605,32 @@
 - raw: "#PosText#城中正在举办一场#DifficultyItemText#拍卖大会，各种名品利器云集一堂，附近富商豪绅纷纷前往欲争相抢购。"
   splits:
   - text: "#PosText#城中正在举办一场#DifficultyItemText#拍卖大会，各种名品利器云集一堂，附近富商豪绅纷纷前往欲争相抢购。"
-    translated: "#PosText# A grand #DifficultyItemText# auction is taking place in the city, gathering various exquisite weapons and treasures. Nearby wealthy merchants and noble families are flocking there to vie for the best buys."
-    qcReviewedText: "#PosText# A grand #DifficultyItemText# auction is taking place in the city, gathering various exquisite weapons and treasures. Nearby wealthy merchants and noble families are flocking there to vie for the best buys."
+    translated: "At #PosText#, a #DifficultyItemText# auction is underway, featuring rare treasures and powerful weapons. Wealthy merchants and nobles from nearby are flocking there, eager to compete for the finest goods."
+    qcReviewedText: "At #PosText#, a #DifficultyItemText# auction is underway, featuring rare treasures and powerful weapons. Wealthy merchants and nobles from nearby are flocking there, eager to compete for the finest goods."
     qcStatus: Passed
     qcQualityScore: 90
     qcDefectCategory: None
 - raw: "#PosText#城中正在举办一场#DifficultyRateText#比武大赛，强者云集，奖励丰厚，附近武林人士纷纷前往欲一试高下。"
   splits:
   - text: "#PosText#城中正在举办一场#DifficultyRateText#比武大赛，强者云集，奖励丰厚，附近武林人士纷纷前往欲一试高下。"
-    translated: "#PosText# A #DifficultyRateText# martial arts tournament is currently taking place in the city, attracting powerful contenders with generous prizes, and martial artists from nearby are flocking there to test their skills."
-    qcReviewedText: "#PosText# A #DifficultyRateText# martial arts tournament is currently taking place in the city, attracting powerful contenders with generous prizes, and martial artists from nearby are flocking there to test their skills."
+    translated: "At #PosText#, a #DifficultyRateText# martial arts tournament is currently taking place in the city, attracting powerful contenders with generous prizes, and martial artists from nearby are flocking there to test their skills."
+    qcReviewedText: "At #PosText#, a #DifficultyRateText# martial arts tournament is currently taking place in the city, attracting powerful contenders with generous prizes, and martial artists from nearby are flocking there to test their skills."
     qcStatus: Passed
     qcQualityScore: 95
     qcDefectCategory: None
 - raw: "#PosText#城中正在举办一场#DifficultyRateText#赛马大会，名马云集，奖励丰厚，附近武林人士纷纷前往欲一试高下。"
   splits:
   - text: "#PosText#城中正在举办一场#DifficultyRateText#赛马大会，名马云集，奖励丰厚，附近武林人士纷纷前往欲一试高下。"
-    translated: "#PosText# The city is hosting a #DifficultyRateText# Horse Racing Festival, drawing in renowned horsemen from all over, with generous rewards, and nearby Wulin individuals are flocking there to test their skills."
-    qcReviewedText: "#PosText# The city is hosting a #DifficultyRateText# Horse Racing Festival, drawing in renowned horsemen from all over, with generous rewards, and nearby Wulin individuals are flocking there to test their skills."
+    translated: "At #PosText#, a #DifficultyRateText# Horse Racing Festival is taking place in the city, drawing in renowned horsemen from all over, with generous rewards, and nearby Wulin individuals are flocking there to test their skills."
+    qcReviewedText: "At #PosText#, a #DifficultyRateText# Horse Racing Festival is taking place in the city, drawing in renowned horsemen from all over, with generous rewards, and nearby Wulin individuals are flocking there to test their skills."
     qcStatus: Passed
     qcQualityScore: 95
     qcDefectCategory: None
 - raw: "#PosText#城中正在举办一场#DifficultyRateText#辩才大赛，强者云集，奖励丰厚，附近文人雅士纷纷前往欲一试高下。"
   splits:
   - text: "#PosText#城中正在举办一场#DifficultyRateText#辩才大赛，强者云集，奖励丰厚，附近文人雅士纷纷前往欲一试高下。"
-    translated: "#PosText# A #DifficultyRateText# Difficulty Contest is currently taking place in the city, attracting powerful contenders with generous rewards, and nearby scholars and literati are flocking to test their skills."
-    qcReviewedText: "#PosText# A #DifficultyRateText# Difficulty Contest is currently taking place in the city, attracting powerful contenders with generous rewards, and nearby scholars and literati are flocking to test their skills."
+    translated: "At #PosText#, a #DifficultyRateText# debate tournament is currently taking place in the city, attracting powerful contenders with generous rewards, and nearby scholars and literati are flocking to test their skills."
+    qcReviewedText: "At #PosText#, a #DifficultyRateText# debate tournament is currently taking place in the city, attracting powerful contenders with generous rewards, and nearby scholars and literati are flocking to test their skills."
     qcStatus: Passed
     qcQualityScore: 95
     qcDefectCategory: None
@@ -1356,10 +1356,11 @@
   splits:
   - text: "抢夺对方的一件物品"
     translated: "Steal an item from the other party"
-    qcReviewedText: "♦Steal an item from the other party\\n♦Robbing success rate depends on the item's value and mutual goodwill./Strength/Physique/Ultimate Skill Co‑Determined\\n♦Increase Infamy based on the result"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcReviewedText: "♦Steal an item from the other party\\n♦Robbing success rate depends on the item's value and mutual goodwill./Strength/Physique/Decide together on the Special Technique\\n♦Increase Infamy based on the result"
+    qcTranslated: "♦Steal an item from the other party\\n♦Robbing success rate depends on the item's value and mutual goodwill/Strength/Physique/Special Technique\\n♦Increase Infamy based on the result"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
   - subIndex: 1
     text: "抢夺成功率由物品价值和双方的好感"
     translated: "Robbing success rate depends on the item's value and mutual goodwill."
@@ -7783,9 +7784,9 @@
   splits:
   - text: "低等级的内功"
     translated: "Low‑level internal skill"
-    qcReviewedText: "Low‑level internal skill/Qinggong/Advanced techniques can be practiced in the seclusion room to quickly gain practical combat experience.\\nLet's try entering the seclusion room now"
+    qcReviewedText: "Low‑level internal skill/Qinggong/Special Techniques can be practiced in the meditation chamber to quickly gain combat experience.\\nLet's try entering the seclusion room now"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "轻功"
@@ -8101,9 +8102,9 @@
   splits:
   - text: "你当前运用的武功，包括"
     translated: "The martial arts you are currently using include"
-    qcReviewedText: "The martial arts you are currently using include：\\nInternal Skill, Qinggong, Superb Skill, and up to eight External Skills."
+    qcReviewedText: "The martial arts you are currently using include：\\nInternal Skill, Lightness, Special Technique, and up to eight External Skills."
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "内功，轻功，绝技，以及最多八门外功。"
@@ -8434,9 +8435,9 @@
   splits:
   - text: "修炼绝技"
     translated: "Practicing Special Techniques"
-    qcReviewedText: "Mastering Top Skills"
+    qcReviewedText: "Practicing Special Techniques"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "修炼轻功"
   splits:
@@ -8658,8 +8659,10 @@
   splits:
   - text: "内功"
     translated: "Neigong"
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Neigong/Qinggong/Special Techniques primarily provide passive bonus effects"
+    qcReviewedText: "Neigong/Qinggong/Special Techniques primarily provide passive bonus effects"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "轻功"
     translated: "Qinggong"
@@ -8672,9 +8675,9 @@
   splits:
   - text: "内功"
     translated: "Neigong"
-    qcReviewedText: "Neigong/Qinggong/Ultimate skill doubles its bonus effects when fully charged!\\nUse at critical moments, or it may turn the tide and reverse defeat into victory."
+    qcReviewedText: "Neigong/Qinggong/When the Special Technique is fully charged, it can be activated to double its bonus effects!\\nUse at critical moments, or it may turn the tide and reverse defeat into victory."
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "轻功"
@@ -9755,9 +9758,9 @@
   splits:
   - text: "单击武功栏中的图标，便可进行装备操作。"
     translated: "Click the icons in the Martial Arts bar to perform equipment operations."
-    qcReviewedText: "Click the icons in the Martial Arts bar to perform equipment operations.\\nNeigong/Qinggong/Special skill, once equipped, will remain active continuously."
+    qcReviewedText: "Click the icons in the Martial Arts bar to perform equipment operations.\\nNeigong/Qinggong/Special Technique, once equipped, will remain continuously active."
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "内功"
@@ -15742,9 +15745,9 @@
   splits:
   - text: "接下来点击闭关室内的修炼按钮，"
     translated: "Next, click the Cultivation button inside the Seclusion Chamber."
-    qcReviewedText: "Next, click the Cultivation button inside the Seclusion Chamber.\\nYou may now begin internal skill training/Qinggong/Mastering the ultimate technique"
+    qcReviewedText: "Next, click the Cultivation button inside the Seclusion Chamber.\\nYou may now begin internal skill training/Qinggong/Special Technique training"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "即可开始内功"
@@ -19592,9 +19595,9 @@
   splits:
   - text: "绝技主要通过遭受攻击充能。"
     translated: "The Special Technique primarily charges through sustaining attacks."
-    qcReviewedText: "The ultimate skill primarily gains charge through taking attacks.\\nActivating the ultimate technique doubles its effects and restores some health."
+    qcReviewedText: "The Special Technique primarily charges through sustaining attacks.\\nActivating a Special Technique doubles its effect and restores some Health."
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "激活绝技可使其效果翻倍，同时恢复部分生命。"
@@ -19605,9 +19608,9 @@
   splits:
   - text: "绝技修炼，需要你在场上运气，"
     translated: "Mastering the Special Technique requires you to channel your energy on the field,"
-    qcReviewedText: "Mastering an ultimate technique requires you to channel your energy on the field.\\nDefend against projectiles coming from all sides"
+    qcReviewedText: "Mastering the Special Technique requires you to channel your energy on the field,\\nDefend against projectiles coming from all sides"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "抵挡四周来袭的射击物。"
@@ -20832,7 +20835,7 @@
   splits:
   - text: "请尽量以完美抵挡所有飞射物为目标，"
     translated: "Please aim to perfectly deflect all projectiles"
-    qcReviewedText: "Please aim to perfectly deflect all projectiles \\nPractice your ultimate technique!"
+    qcReviewedText: "Please aim to perfectly deflect all projectiles \\nLet's begin the Special Technique training!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

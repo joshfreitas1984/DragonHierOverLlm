@@ -505,8 +505,10 @@
   - split: 4
     text: "专供练习闪转腾挪的功法，又练习心眼和拳脚的灵敏度，是武林人士经常练习的一门绝技"
     translated: "A specialized practice for honing agility and movement, as well as sharpening mental acuity and the responsiveness of one's fists and feet. It is a commonly practiced Special Technique among Wulin practitioners."
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "A specialized practice for honing agility and movement, as well as sharpening mental acuity and the responsiveness of one's fists and feet. It is a commonly practiced Special Technique among Wulin practitioners."
+    qcReviewedText: "A specialized practice for honing agility and movement, as well as sharpening mental acuity and the responsiveness of one's fists and feet. It is a commonly practiced Special Technique among Wulin practitioners."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "55,绝技,1,铁牛犁地,起源于农家的强身健体之功法，修习者身形拉伸起伏，如同黄牛犁地,,0.8,绝技1;体质1,生命上限12;绝技6;体质6,,绝技10;体质10,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -1252,8 +1254,10 @@
   - split: 4
     text: "着重锻炼头部和臂部抗击打能力的硬功绝技，运功之后，皮肤坚硬如铁，刀枪几不能入"
     translated: "A hardqong special technique that focuses on strengthening the head and arms against strikes. After practicing it, the skin becomes as hard as iron, making it nearly impervious to blades and spears."
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "A hardqong special technique that focuses on strengthening the head and arms against strikes. After practicing it, the skin becomes as hard as iron, making it nearly impervious to blades and spears."
+    qcReviewedText: "A hardqong special technique that focuses on strengthening the head and arms against strikes. After practicing it, the skin becomes as hard as iron, making it nearly impervious to blades and spears."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "139,绝技,2,隔山打牛,一种独特的运劲技巧，将内力冲击通过实体传导，功力深厚者可以一拳击飞数人,,1,绝技2;意志1,绝技6;意志6;经脉6;内伤0.08,,绝技35;意志15;经脉15,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -1955,9 +1959,10 @@
   - split: 4
     text: "此绝技身形兼具虎之刚劲威猛与鹤之柔韧灵速，可谓刚柔并济，攻守兼备"
     translated: "This Special Technique combines the powerful vigor and might of a tiger with the supple agility and swift grace of a crane, embodying both strength and flexibility, offensive and defensive prowess."
-    qcReviewedText: "This superb technique combines the tiger's fierce strength and majesty with the crane's flexibility and agility, achieving a perfect balance of hardness and softness, offense and defense."
+    qcReviewedText: "This Special Technique combines the powerful vigor and might of a tiger with the supple agility and swift grace of a crane, embodying both strength and flexibility, offensive and defensive prowess."
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "218,绝技,3,真元护体,将内息灌注周身经脉，用以抵挡攻击的防御法门，需有深厚内力根基方能发挥功效,,1,体质潜力1;绝技1;经脉1,绝技6;体质8;经脉10;护体真气0.2,,绝技45;经脉30;体质20,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -2329,8 +2334,10 @@
   - split: 4
     text: "出手运劲之姿似醉似醒，如梦如幻，招招皆出人意料，又在情理之中，只有智慧超绝者方能掌握的绝技法门"
     translated: "The way he moves and channels his energy is half‑dream, half‑reality, each move unexpected yet plausible. Only those of unparalleled wisdom can master such a special technique."
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "The way he moves and channels his energy is half‑dream, half‑reality, each move unexpected yet plausible. Only those of unparalleled wisdom can master such a special technique."
+    qcReviewedText: "The way he moves and channels his energy is half‑dream, half‑reality, each move unexpected yet plausible. Only those of unparalleled wisdom can master such a special technique."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "261,拳掌,4,泫然指法,此指法精妙非凡，饱含悲苦之意，内息运行低沉婉转，如怨如慕，如泣如诉，被命中之人血脉亦为之阻滞,20,0.9,拳掌潜力1;经脉潜力1;拳掌2,,拳掌4;内力0.4,拳掌55;经脉40,\"4,0,0\",\"4,1,4\",冰寒0.06;内伤0.06,25,-1,0,心12;腹11,心7;腹7,,,skill0_2,,冰龙卷-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -2754,8 +2761,11 @@
   - split: 4
     text: "此绝技姿势奇特，狂放不羁，大摇大摆之间，可将自身的力道催发到极致"
     translated: "This special technique has an unusual posture, unrestrained and flamboyant, allowing one to harness their strength to its limit between grand, confident movements. Catalyze to the limit The translation aims to convey the meaning of reaching maximum potential.)"
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "This special technique has an unusual posture, unrestrained and flamboyant, allowing one to harness their strength to its limit between grand, confident movements. Catalyze to the limit The translation aims to convey the meaning of reaching maximum potential.)"
+    qcReviewedText: "This special technique has an unusual posture, unrestrained and flamboyant, allowing one to harness their strength to its limit between grand, confident movements. Catalyze to the limit The translation aims to convey the meaning of reaching maximum potential.)"
+    qcTranslated: "This Special Technique has an unusual posture, unrestrained and flamboyant, allowing one to harness their Strength to its limit between grand, confident movements."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
 - raw: "309,射术,3,极乐刺,长乐帮独门暗器，专攻人头脑心腹，其毒性一旦侵入心脉，中毒者便会大笑狂舞三天三夜而死,16,1.1,射术潜力1;射术1;意志1,,意志2;射术3;内力0.2,射术50;意志30,\"0,2,5\",\"0,0,0\",混乱0.08;乱神0.08,18,0,0,头10;心14,头4;心4,,,skill5_0,7-----0.95,暗影-Target-Grid-Happen,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -2841,8 +2851,10 @@
   - split: 4
     text: "长乐帮主乐无疾成名绝技，刀势玲珑剔透，乍看之下一览无余，实则蕴含无数精妙无比的刀意，再严密之防御也如透明一般"
     translated: "Changle Gang's leader Yue Wuji is renowned for his Special Technique, where his swordsmanship is delicate and transparent at first glance, yet it harbors countless intricate and profound sword intents, rendering even the most rigorous defenses as if they were transparent."
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Changle Gang's leader Yue Wuji is renowned for his Special Technique, where his swordsmanship is delicate and transparent at first glance, yet it harbors countless intricate and profound sword intents, rendering even the most rigorous defenses as if they were transparent."
+    qcReviewedText: "Changle Gang's leader Yue Wuji is renowned for his Special Technique, where his swordsmanship is delicate and transparent at first glance, yet it harbors countless intricate and profound sword intents, rendering even the most rigorous defenses as if they were transparent."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "319,内功,0,阴手伤人法,唐门入门心法，专练收发暗器之阴狠内劲,,1,内功1,生命上限10;内力上限10;内功6;力道6;射术威力0.04,,内功10;射术5,,,,0,1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -3347,8 +3359,10 @@
   - split: 4
     text: "本是园艺嫁接手法，经药王谷改进成一门复位关节，接骨正畸之绝技，对使用者手眼功夫和心智神识均有裨益"
     translated: "Originally a gardening grafting technique, it was improved by the Medicine King Valley into a special technique for resetting joints and setting bones, which benefits both the user's dexterity and mental acumen."
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Originally a gardening grafting technique, it was improved by the Medicine King Valley into a special technique for resetting joints and setting bones, which benefits both the user's dexterity and mental acumen."
+    qcReviewedText: "Originally a gardening grafting technique, it was improved by the Medicine King Valley into a special technique for resetting joints and setting bones, which benefits both the user's dexterity and mental acumen."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "375,拳掌,3,九幽黄泉指,专攻人体周身紧要死穴的狠毒指法，中招者五内翻滚，经脉逆行，如坠九幽黄泉,18,1.1,拳掌潜力1;拳掌1;经脉1,,经脉1;拳掌2;内力0.4,拳掌45;经脉35,\"4,0,0\",\"4,1,3\",截脉0.06;不愈0.06,20,2,0,心10;腹12,心8;腹4,,,skill0_2,,喷毒-Target-Grid-Happen,拳,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -4018,9 +4032,9 @@
   - split: 4
     text: "名将所传，隐于诗词之绝技。练成此功者体魄心智均如脱胎换骨、神仙再造一般"
     translated: "A special technique passed down by renowned generals, hidden within poetry. Those who master this skill will have both their resilience and minds reborn, as if they were created anew by gods and immortals."
-    qcReviewedText: "The skills passed down by renowned generals are hidden within the extremes of poetry and verse. Those who perfect this art find their body and mind transformed as if reborn, much like a deity being recreated."
+    qcReviewedText: "A special technique passed down by renowned generals, hidden within poetry. Those who master this skill will have both their resilience and minds reborn, as if they were created anew by gods and immortals."
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "451,长兵,4,八荒六合戟,西楚霸王项羽所传，一式极尽霸道之戟法，扫八荒，清六合，荡平群魔，铲除奸邪，只在举手之间,23,1.2,体质潜力2;长兵1;体质1,,体质2;长兵4,长兵65;体质50,\"4,0,0\",\"5,1,3\",外伤0.04;活血0.04;无敌0.02,17,4,0,腹12;足16,腹4;足8,,,skill3_1,,墨爪狂-Target-Grid-Start;墨爪爆-Target-Grid-Happen,长兵,Same,FALSE,0,0"
   splits:
@@ -4510,8 +4524,10 @@
   - split: 4
     text: "铸剑山庄绝技，练成后可同时使用两把武器，左右开弓，令敌人应接不暇"
     translated: "The Special Technique of Swordforging Manor allows you to use two weapons simultaneously, attacking with both hands, leaving your enemies overwhelmed."
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "The Special Technique of Swordforging Manor allows you to use two weapons simultaneously, attacking with both hands, leaving your enemies overwhelmed."
+    qcReviewedText: "The Special Technique of Swordforging Manor allows you to use two weapons simultaneously, attacking with both hands, leaving your enemies overwhelmed."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "506,剑法,1,青釭剑法,以攻代守，灵巧锐利的剑法招式，铸剑低级弟子常以此功试剑,11,1,剑法1;灵巧1,,灵巧2;剑法2;内力0.2,剑法15;灵巧10,\"4,0,0\",\"4,1,3\",穿甲0.06,6,6,0,胸17,胸12,,,skill1_0,,气流-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -4616,8 +4632,10 @@
   - split: 4
     text: "铸剑山庄秘传绝技，练成后可同时使用三把武器，切换迅捷，上下翻飞，如同百刃出击"
     translated: "The Swordforging Manor's secret Special Technique allows the simultaneous use of three weapons, with swift switching and rapid movements up and down, like a hundred blades striking out."
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "The Swordforging Manor's secret Special Technique allows the simultaneous use of three weapons, with swift switching and rapid movements up and down, like a hundred blades striking out."
+    qcReviewedText: "The Swordforging Manor's secret Special Technique allows the simultaneous use of three weapons, with swift switching and rapid movements up and down, like a hundred blades striking out."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "518,剑法,3,破军剑法,攻击范围和威力都不俗的剑法，其所过之处，草木催折，兵甲披靡，堪称可于万军丛中取上将首级,17,0.9,剑法潜力1;剑法1;灵巧1,,灵巧3;剑法3;内力0.1,剑法45;灵巧30,\"2,1,2\",\"0,0,1\",破甲0.05;坚毅0.05,15,6,0,足10;胸14,足4;胸6,,,skill1_1,,碎地-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -4649,10 +4667,10 @@
   - split: 4
     text: "铸剑山庄兵械绝技之首，练成后可同时使用四把武器，长短交接，软硬兼施，如同万刃齐发"
     translated: "The premier special technique of Swordforging Manor, once mastered, allows the simultaneous use of four weapons, combining long and short arms, hard and soft styles, like a thousand blades unleashed."
-    qcReviewedText: "The top martial skill in Swordforging Manor's arsenal allows the user to wield four weapons simultaneously. The techniques combine long and short weapons, as well as soft and hard ones, much like a thousand blades attacking at once."
-    qcTranslated: "The premier special technique of Swordforging Manor's armaments allows the user to wield four weapons simultaneously, combining long and short, hard and soft techniques, as if ten thousand blades were unleashed at once."
-    qcStatus: Corrected
-    qcQualityScore: 95
+    qcReviewedText: "The premier special technique of Swordforging Manor, once mastered, allows the simultaneous use of four weapons, combining long and short arms, hard and soft styles, like a thousand blades unleashed."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "522,绝技,4,金甲万重,铸剑山庄甲胄硬功之首，配合庄内锻造之重甲，反震之力极大，寻常兵刃触之立折，可谓一夫当关，万夫莫开,,1,绝技潜力2;绝技1;体质1,绝技6;体质14;护甲6;横练0.05;装备强化0.15;装备负重5,,绝技60;体质45,,,,0,6,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -4857,9 +4875,10 @@
   - split: 4
     text: "从口中喷吐能迷惑人心神的毒雾之绝技，中者丧魂失魄，精神萎靡，苗疆女子有时会用此法对付中意之男子"
     translated: "An special technique that spews toxic mist to confuse the mind and spirit of those it strikes, leaving victims soulless and listless. Miaojiang women sometimes use this method to deal with men they fancy."
-    qcReviewedText: "A special technique that spews toxic fog to confuse one's mind and spirit; those affected lose their wits and vitality. Female tribeswomen from the Mujiang region sometimes use this method to deal with men they are interested in."
+    qcReviewedText: "An special technique that spews toxic mist to confuse the mind and spirit of those it strikes, leaving victims soulless and listless. Miaojiang women sometimes use this method to deal with men they fancy."
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "546,拳掌,2,三尸蜈蚣爪,五指柔韧灵活，如百足蜈蚣在敌人周身攀爬游移，所过之处皆留黑紫印记，不多时便会溃烂化脓，颇为狠毒,15,1.1,拳掌2;意志1,,意志2;拳掌2;毒术2,拳掌30;意志20;毒术20,\"0,1,1\",\"7,0,0\",毒素0.08,17,7,0,手8;心14,手6;心3,,,skill0_0,,毒雾-Target-Grid-Happen;爪痕-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -5276,8 +5295,10 @@
   - split: 4
     text: "阎罗殿独门绝技，运功之时全身颤抖，手脚不受控制般狂乱舞动，实则为经脉和气血剧烈运行所致"
     translated: "The unique special technique of the Yama Hall causes the entire body to tremble and the limbs to wildly flail uncontrollably during practice, actually resulting from intense circulation in the meridians and lifeforce."
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "The unique special technique of the Yama Hall causes the entire body to tremble and the limbs to wildly flail uncontrollably during practice, actually resulting from intense circulation in the meridians and lifeforce."
+    qcReviewedText: "The unique special technique of the Yama Hall causes the entire body to tremble and the limbs to wildly flail uncontrollably during practice, actually resulting from intense circulation in the meridians and lifeforce."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "593,刀法,3,天玄七煞刀,此七式刀法每招名称中皆有一“杀”字，一刀比一刀更为邪气逼人，杀意旺盛，若七刀尽出则再无退路，不死不休,18,1,刀法潜力1;刀法1;力道1,,力道4;刀法2;内力0.1,刀法45;力道35,\"4,0,0\",\"5,1,3\",死战0.06;杀机0.06,20,8,0,头9;胸14,头5;胸6,,,skill2_1,,血雾-Target-Grid-Start;血十字-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -5336,8 +5357,10 @@
   - split: 4
     text: "以炼狱般炎热内息充盈四肢，使周身力道暴增之绝技，功力不足者若强行催动，则有血脉爆裂之危险"
     translated: "A Special Technique that fills one's limbs with Inner Qi as scorching as Purgatory, greatly increasing strength, but if those with insufficient skill force its use, there is a risk of their blood vessels rupturing."
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "A Special Technique that fills one's limbs with Inner Qi as scorching as Purgatory, greatly increasing strength, but if those with insufficient skill force its use, there is a risk of their blood vessels rupturing."
+    qcReviewedText: "A Special Technique that fills one's limbs with Inner Qi as scorching as Purgatory, greatly increasing strength, but if those with insufficient skill force its use, there is a risk of their blood vessels rupturing."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "600,刀法,4,饮血魔刀,专攻血脉要害之凶邪刀法，在伤敌之时可吸取气血充盈自身，而使用者也常因异种气血难以消化而陷入癫狂,21,1,刀法潜力2;刀法1;力道1,,力道4;刀法3;内力0.1,刀法55;力道50,\"4,0,0\",\"5,1,3\",吸血0.1;疯魔0.04,25,8,0,心16;头9,心8;头4,,,skill2_1,,血雾-Target-Grid-Happen;血斩-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -5765,8 +5788,10 @@
   - split: 4
     text: "大隐阁不传之绝技，运功者每遭重击，便借力将气血内息于体内轮回一次，直至行将落败，此前轮回之力同时爆发，便能凤凰涅槃，浴火重生"
     translated: "The Great Hidden Pavilion's secret Special Technique allows one to circulate their Lifeforce and Inner Qi within their body with each severe blow, until they are on the brink of defeat. At that moment, the accumulated power bursts forth, enabling a rebirth like a phoenix rising from the ashes."
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "The Great Hidden Pavilion's secret Special Technique allows one to circulate their Lifeforce and Inner Qi within their body with each severe blow, until they are on the brink of defeat. At that moment, the accumulated power bursts forth, enabling a rebirth like a phoenix rising from the ashes."
+    qcReviewedText: "The Great Hidden Pavilion's secret Special Technique allows one to circulate their Lifeforce and Inner Qi within their body with each severe blow, until they are on the brink of defeat. At that moment, the accumulated power bursts forth, enabling a rebirth like a phoenix rising from the ashes."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "647,内功,0,静禅功,以禅入静，静中修禅，乃少林一切佛法以及内功修行之基础,,1,内功1,生命上限20;内力上限20;内功4;意志4;经脉4;坚毅0.02,,内功5;意志5,,,,0,10,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -6012,6 +6037,10 @@
   - split: 4
     text: "少林闻名江湖之硬功绝技，其气劲化为金钟遮罩全身，任刀枪棍棒袭来，只听一声钟声巨响，或震颤弹开，或摧折当场"
     translated: "Shaolin's renowned in the Jianghu for its hard‑body special techniques, where its energy forms a golden bell shield covering the entire body. No matter how swords, spears, staffs, and cudgels attack, one hears a resounding gong sound, and the strikes either bounce off with a tremor or break on impact."
+    qcReviewedText: "Shaolin's renowned in the Jianghu for its hard‑body special techniques, where its energy forms a golden bell shield covering the entire body. No matter how swords, spears, staffs, and cudgels attack, one hears a resounding gong sound, and the strikes either bounce off with a tremor or break on impact."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "675,拳掌,3,般若掌,劲道威猛，招式亦不失精妙之少林正宗掌法，出手时需讲求了无杂念，心怀智慧与慈悲，方能发挥制敌奇功，伏魔定邪,18,1,力道潜力1;拳掌1;力道1,,力道3;拳掌3;内力0.2,拳掌45;力道30,\"4,0,0\",\"4,1,3\",壮骨0.05;断骨0.05,21,10,0,心12;胸10,心6;胸6,,,skill0_1,,佛升-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -6541,8 +6570,10 @@
   - split: 4
     text: "专练头部硬功之绝技，初学时需以棉布包裹避免受伤，练成后则以头碎石劈砖亦无大碍"
     translated: "A special technique for training head hardness. When first learning, one must wrap the head in cotton to avoid injury. Once mastered, smashing stones and splitting bricks with the head causes no significant harm."
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "A special technique for training head hardness. When first learning, one must wrap the head in cotton to avoid injury. Once mastered, smashing stones and splitting bricks with the head causes no significant harm."
+    qcReviewedText: "A special technique for training head hardness. When first learning, one must wrap the head in cotton to avoid injury. Once mastered, smashing stones and splitting bricks with the head causes no significant harm."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "735,刀法,0,开山刀法,西凉马贼常用刀法，招式简单，以蛮力取胜,12,0.9,刀法1,,力道2;刀法1,刀法5,\"0,1,1\",\"0,0,0\",破甲0.04,4,12,0,胸17,胸6,,,skill2_1,,黄沙-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -6700,8 +6731,10 @@
   - split: 4
     text: "在悬挂半空的刀阵中练习武功的霸刀门绝技，修成后可敏捷闪战，无惧刀兵，对于刀法理解亦更为深刻"
     translated: "Practicing the Tyrant Blade Sect's Special Technique while suspended in mid‑air within a blade array allows one to become agile and fearless in battle, with a deeper understanding of Blade Art."
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Practicing the Tyrant Blade Sect's Special Technique while suspended in mid‑air within a blade array allows one to become agile and fearless in battle, with a deeper understanding of Blade Art."
+    qcReviewedText: "Practicing the Tyrant Blade Sect's Special Technique while suspended in mid‑air within a blade array allows one to become agile and fearless in battle, with a deeper understanding of Blade Art."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "753,刀法,3,英雄刀法,每一招均以英雄命名，豪气干云，霸道纵横之刀法，若由臂力过人者使出，气度更是不凡,18,1,刀法潜力1;刀法1;力道1,,力道3;刀法2;内力0.1,刀法45;力道30,\"4,0,0\",\"5,1,2\",外伤0.05;铜皮0.05,12,12,0,手9;胸12,手6;胸7,,,skill2_0,,爆炸星-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -6734,9 +6767,10 @@
   - split: 4
     text: "霸刀门专攻盔甲防护薄弱位置之绝技，一旦连接处被砍断，敌人周身铠甲便轰然落地，此后自然破绽百出，不堪一击"
     translated: "The Tyrant Blade Sect specializes in a special technique that targets weak points in armor. Once the joints are cut, the enemy's armor falls off, leaving them vulnerable with countless weaknesses and unable to withstand further attacks."
-    qcReviewedText: "The Tyrant Blade Sect specializes in techniques that target the weakest points of armor. Once a seam is severed, the enemy's entire suit of armor crashes to the ground, leaving them vulnerable and easily defeated."
+    qcReviewedText: "The Tyrant Blade Sect specializes in a special technique that targets weak points in armor. Once the joints are cut, the enemy's armor falls off, leaving them vulnerable with countless weaknesses and unable to withstand further attacks."
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "757,刀法,4,天命刀法,\"上应天命,下从人心之刀法，出手时引动全身霸道无比之劲道，去势威猛，勇往直前，可谓天命所归，所向披靡\",22,1,刀法潜力2;刀法1;力道1,,力道4;刀法4,刀法55;力道50,\"4,0,0\",\"5,1,3\",壮骨0.05;破甲0.05;死战0.05,16,12,0,头15;胸15,头4;胸2,,,skill2_1,,劈砍_红连续-Target-Grid-Start;地爆-Target-Grid-Happen,刀,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -7454,6 +7488,10 @@
   - split: 4
     text: "将下盘以磐石之劲道扎根地面的硬功绝技，可增强身体平衡和腿脚抗击打能力"
     translated: "A hard‑body special technique rooted to the ground with the strength of solid rock, enhancing bodily balance and leg resilience."
+    qcReviewedText: "A hard‑body special technique rooted to the ground with the strength of solid rock, enhancing bodily balance and leg resilience."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "836,奇门,1,五鬼追魂鞭,凶狠诡谲之鞭法，形同五鬼缠绕敌身，不断撕扯其皮肉，逃避不掉亦甩脱不开,12,1.1,奇门1;灵巧1,,灵巧2;奇门2;内力0.2,奇门15;灵巧15,\"3,1,1\",\"7,0,0\",流血0.04;定身0.04,10,15,0,心17,心11,,,skill4_4,,乱斩-Target-Grid-Happen,鞭,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -7611,6 +7649,10 @@
   - split: 4
     text: "传说乃目盲高人所创，以内力催发极为尖细之声响，再根据声响反射进行定位的神奇绝技，能令周遭敌人无所遁形"
     translated: "This legendary special technique, created by a blind master, uses Inner Power to generate an extremely fine sound and then locates enemies by the echo of that sound, leaving nowhere for foes to hide."
+    qcReviewedText: "This legendary special technique, created by a blind master, uses Inner Power to generate an extremely fine sound and then locates enemies by the echo of that sound, leaving nowhere for foes to hide."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "854,奇门,4,生死一线鞭,将鞭收于脑后引而不发，全神贯注，将生死悬于身后一线之超绝鞭法，此鞭挥出力道时机方位均是精妙非凡，可谓高下立判，胜负立分,22,1,奇门潜力2;奇门1;灵巧1,,灵巧3;奇门4;内力0.1,奇门60;灵巧45,\"2,1,2\",\"0,0,1\",重碾0.1;蓄力0.04,24,15,0,手8;足16,手4;足8,,,skill4_4,,血雾-Target-Grid-Start;血斩-Target-Grid-Happen,鞭,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -8443,8 +8485,10 @@
   - split: 4
     text: "能感知众生过去之宿业，知晓现时或未来之果报的密宗绝技，非修持禅定多年者难以得此神通"
     translated: "A secret Buddhist special technique that can sense the past karma of all beings and know the consequences of their actions in the present or future. Only those who have practiced meditation for many years can attain such spiritual powers."
-    qcStatus: Corrected
-    qcQualityScore: 92
+    qcReviewedText: "A secret Buddhist special technique that can sense the past karma of all beings and know the consequences of their actions in the present or future. Only those who have practiced meditation for many years can attain such spiritual powers."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "949,奇门,4,无上大力杵,将周身之无上力道凝聚于杵尖，以平常招式击出，便有石破天惊，鬼哭神嚎之威势，世间甲盾罕有能撄其锋芒者,23,0.9,力道潜力2;奇门1;力道1,,力道5;奇门2;内力0.1,奇门55;力道50,\"4,0,0\",\"6,1,3\",暴击0.06;破甲0.06,25,18,0,头9;胸20,头2;胸4,,,skill4_0,,地面打击5-Target-Grid-Happen;佛散-Target-Grid-Happen,对刺,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -8715,8 +8759,10 @@
   - split: 4
     text: "天山山脚水草丰茂，时常有仙鹤驻留，此擒拿绝技擅长攻其不备，快速捕捉而不伤分毫，若力道和内功修为稍有不足，便难以得手"
     translated: "At the foot of Tianshan, where water and grass are abundant, cranes often linger. This grappling special technique excels at catching opponents off guard, swiftly capturing them without causing a scratch. If one's strength and Neigong cultivation are slightly lacking, success will be hard to achieve."
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "At the foot of Tianshan, where water and grass are abundant, cranes often linger. This grappling special technique excels at catching opponents off guard, swiftly capturing them without causing a scratch. If one's strength and Neigong cultivation are slightly lacking, success will be hard to achieve."
+    qcReviewedText: "At the foot of Tianshan, where water and grass are abundant, cranes often linger. This grappling special technique excels at catching opponents off guard, swiftly capturing them without causing a scratch. If one's strength and Neigong cultivation are slightly lacking, success will be hard to achieve."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "979,拳掌,3,飘雪穿云掌,此掌法招势直上直下，看似平平无奇，却擅长不以手掌本身，而以掌中所含凌厉气劲伤人，故其距离亦远于寻常掌法,17,0.9,拳掌潜力1;拳掌1;力道1,,力道2;拳掌4;内力0.2,拳掌40;力道25,\"0,1,2\",\"0,0,1\",内劲0.1,16,19,0,胸10;腹10,胸8;腹6,,,skill0_1,,冰域-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -8839,7 +8885,7 @@
   - split: 4
     text: "武绝义融合了飞龙门帝王封禅功和崆峒派斗转星移，所创独门绝技，出招方式与内息运行完全逆常理而行，诡异莫测，修习者稍有不慎便会走火入魔"
     translated: "Wu Jueyi combined the Flying Dragon Gate's Imperial Fengshan Technique and the Kongtong Sect's Stars Shift and Stars Turn to create a unique special technique. The method of execution and the flow of Inner Qi are completely contrary to conventional logic, making it mysterious and unpredictable. Practitioners who are not careful will fall into madness."
-    qcReviewedText: "Wu Jueyi's unique martial art, created by combining the Flying Dragon Gate's Imperial Fengshan Technique with the Kongtong Sect's Stars Shift and Stars Turn, employs attack methods and internal energy circulation that completely defy conventional principles. Its workings are strange and unpredictable, and practitioners who are even slightly careless may suffer qi deviation and fall into demonic madness."
+    qcReviewedText: "Wu Jueyi combined the Flying Dragon Gate's Imperial Fengshan Technique and the Kongtong Sect's Stars Shift and Stars Turn to create a unique special technique. The method of execution and the flow of Inner Qi are completely contrary to conventional logic, making it mysterious and unpredictable. Practitioners who are not careful will fall into madness."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

@@ -587,8 +587,10 @@
   - split: 10
     text: "绝技威力"
     translated: "Special Technique power"
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Special Technique power"
+    qcReviewedText: "Special Technique power"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "18,拳掌威力,0.01,无,无,1,1,0,0,0,拳掌威力,伤害,0,0,1,0,0"
   splits:
   - split: 3
@@ -1142,9 +1144,10 @@
   - split: 10
     text: "绝技潜力"
     translated: "Potential for Special Technique"
-    qcReviewedText: "Potential for ultimate technique"
+    qcReviewedText: "Potential for Special Technique"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "42,拳掌潜力,1,无,无,0,1,0,0,0,拳掌潜力,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -2403,8 +2406,10 @@
   - split: 10
     text: "灵巧"
     translated: "Nimble"
-    qcRuleCheckFailureCount: 1
-    qcRuleCheckFailureBaseline: "Nimble/Physique-30%;Disable Special Technique"
+    qcReviewedText: "Nimble/Physique-30%;Disable Special Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 10
     subIndex: 1
     text: "体质"
@@ -4225,9 +4230,10 @@
   - split: 10
     text: "绝技经验"
     translated: "Special Technique Experience"
-    qcReviewedText: "Master Skill Experience"
+    qcReviewedText: "Special Technique Experience"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "182,拳掌经验,0.04,无,无,1,1,1,0,0,拳掌经验,伤害,0,0,0,0,0"
   splits:
   - split: 3

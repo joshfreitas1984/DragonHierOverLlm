@@ -469,6 +469,22 @@ internal static class DynamicStringPatches
         };
     }
 
+    private static DictionaryEntry BuildTranslatedLiteralVariant(DictionaryEntry entry)
+    {
+        var translatedRaw = ApplyDictionary(entry.Raw ?? string.Empty, _dictionaryByFirstChar);
+        if (string.IsNullOrEmpty(translatedRaw)
+            || string.Equals(translatedRaw, entry.Raw, StringComparison.Ordinal))
+            return null;
+
+        return new DictionaryEntry
+        {
+            Raw = translatedRaw,
+            Result = entry.Result,
+            IsTemplate = true,
+            IsLogNarrative = entry.IsLogNarrative
+        };
+    }
+
     [ThreadStatic]
     private static bool _inTextSetterPostfix;
 
@@ -526,21 +542,32 @@ internal static class DynamicStringPatches
             // separately for _logNarrativeCompiledTemplates, so that subset is always the exact
             // same Regex/CompiledTemplate instances as in _compiledTemplates (no double regex
             // compilation cost at load time, and no risk of the two lists drifting apart).
-            var compiledPairs = _templateDictionary
-                .Select(entry =>
+            var compiledPairs = new List<(DictionaryEntry Entry, CompiledTemplate Compiled)>();
+            foreach (var entry in _templateDictionary)
+            {
+                var variants = new[] { entry, BuildTranslatedLiteralVariant(entry) }
+                    .Where(e => e != null);
+                foreach (var variant in variants)
                 {
-                    try { return (Entry: entry, Compiled: BuildCompiledTemplate(entry)); }
+                    try
+                    {
+                        var compiled = BuildCompiledTemplate(variant);
+                        if (compiled != null)
+                            compiledPairs.Add((variant, compiled));
+                    }
                     catch (Exception ex)
                     {
-                        MainPlugin.Logger.LogError($"[DynamicStringPatches] Failed to compile template '{entry.Raw}': {ex}");
-                        return (Entry: entry, Compiled: (CompiledTemplate)null);
+                        MainPlugin.Logger.LogError($"[DynamicStringPatches] Failed to compile template '{variant.Raw}': {ex}");
                     }
-                })
-                .Where(p => p.Compiled != null)
-                .ToList();
+                }
+            }
 
-            _compiledTemplates = compiledPairs.Select(p => p.Compiled).ToList();
-            _logNarrativeCompiledTemplates = compiledPairs
+            var orderedCompiledPairs = compiledPairs
+                .OrderByDescending(p => p.Compiled.LiteralSegments.Sum(segment => segment.Length))
+                .ThenByDescending(p => p.Entry.Raw?.Length ?? 0)
+                .ToList();
+            _compiledTemplates = orderedCompiledPairs.Select(p => p.Compiled).ToList();
+            _logNarrativeCompiledTemplates = orderedCompiledPairs
                 .Where(p => p.Entry.IsLogNarrative)
                 .Select(p => p.Compiled)
                 .ToList();
@@ -1382,9 +1409,11 @@ internal static class DynamicStringPatches
             try
             {
                 result = pattern.Replace(result, m =>
-                    template.BlockingRawEntries.Count > 0 && OverlapsBlockingEntry(beforeThisTemplate, m, template.BlockingRawEntries)
-                        ? m.Value
-                        : m.Result(template.ReplacementPattern));
+                {
+                    var blocked = template.BlockingRawEntries.Count > 0
+                        && OverlapsBlockingEntry(beforeThisTemplate, m, template.BlockingRawEntries);
+                    return blocked ? m.Value : m.Result(template.ReplacementPattern);
+                });
             }
             catch (RegexMatchTimeoutException)
             {
