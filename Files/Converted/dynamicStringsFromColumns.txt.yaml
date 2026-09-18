@@ -1555,7 +1555,7 @@
 - raw: "绝技;射术;刀法"
   splits:
   - text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - subIndex: 1
     text: "射术"
     translated: "Archery"
@@ -1614,7 +1614,7 @@
     translated: "Long weapon"
   - subIndex: 2
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   templates:
   - template: "{0};{1};{2}"
 - raw: "口才;烹饪"
@@ -1639,7 +1639,7 @@
 - raw: "绝技;长兵;刀法"
   splits:
   - text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - subIndex: 1
     text: "长兵"
     translated: "Long weapon"
@@ -1661,7 +1661,7 @@
 - raw: "绝技;奇门;剑法"
   splits:
   - text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - subIndex: 1
     text: "奇门"
     translated: "Qimen"
@@ -1686,7 +1686,7 @@
     translated: "Sword Art"
   - subIndex: 1
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - subIndex: 2
     text: "刀法"
     translated: "Blade Art"
@@ -1717,7 +1717,7 @@
     translated: "Qimen"
   - subIndex: 1
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - subIndex: 2
     text: "拳掌"
     translated: "Fists and palms"
@@ -1751,7 +1751,7 @@
     translated: "Blade Art"
   - subIndex: 2
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - subIndex: 3
     text: "拳掌"
     translated: "Fists and palms"
@@ -1807,7 +1807,7 @@
     translated: "Neigong"
   - subIndex: 1
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - subIndex: 2
     text: "长兵"
     translated: "Long weapon"
@@ -1832,7 +1832,7 @@
     translated: "Neigong"
   - subIndex: 1
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - subIndex: 2
     text: "剑法"
     translated: "Sword Art"
@@ -1869,7 +1869,7 @@
     translated: "Long weapon"
   - subIndex: 2
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   templates:
   - template: "{0};{1};{2}"
 - raw: "饮食:1"
@@ -1930,7 +1930,7 @@
 - raw: "绝技;奇门;长兵"
   splits:
   - text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - subIndex: 1
     text: "奇门"
     translated: "Qimen"
@@ -1958,7 +1958,7 @@
     translated: "Archery"
   - subIndex: 2
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   templates:
   - template: "{0};{1};{2}"
 - raw: "学识;锻造"
@@ -1986,7 +1986,7 @@
     translated: "Archery"
   - subIndex: 1
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - subIndex: 2
     text: "长兵"
     translated: "Long weapon"
@@ -2008,7 +2008,7 @@
     translated: "Neigong"
   - subIndex: 1
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - subIndex: 2
     text: "奇门"
     translated: "Qimen"
@@ -2090,7 +2090,7 @@
 - raw: "绝技;剑法;奇门"
   splits:
   - text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - subIndex: 1
     text: "剑法"
     translated: "Sword Art"
@@ -2112,7 +2112,7 @@
 - raw: "绝技;刀法"
   splits:
   - text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - subIndex: 1
     text: "刀法"
     translated: "Blade Art"
@@ -2190,7 +2190,7 @@
 - raw: "绝技;长兵"
   splits:
   - text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - subIndex: 1
     text: "长兵"
     translated: "Long weapon"
@@ -2337,8 +2337,8 @@
 - raw: "绝技经验"
   splits:
   - text: "绝技经验"
-    translated: "Master Skill Experience"
-    qcReviewedText: "Master Skill Experience"
+    translated: "Special Technique Experience"
+    qcReviewedText: "Special Technique Experience"
     qcStatus: Passed
     qcQualityScore: 95
     qcDefectCategory: None
@@ -2529,7 +2529,7 @@
 - raw: "全员绝技"
   splits:
   - text: "全员绝技"
-    translated: "All super skills"
+    translated: "Everyone's Special Techniques"
     qcReviewedText: "All super skills"
     qcStatus: Passed
     qcQualityScore: 90
@@ -3233,7 +3233,7 @@
 - raw: "身怀绝技"
   splits:
   - text: "身怀绝技"
-    translated: "Master of extraordinary skills"
+    translated: "Possesses a Special Technique"
     qcReviewedText: "Master of extraordinary skills"
     qcStatus: Passed
     qcQualityScore: 85
@@ -6088,8 +6088,8 @@
 - raw: "绝技1"
   splits:
   - text: "绝技1"
-    translated: "Master Skill 1"
-    qcReviewedText: "Master Skill 1"
+    translated: "Special Technique 1"
+    qcReviewedText: "Special Technique 1"
     qcStatus: Passed
     qcQualityScore: 90
     qcDefectCategory: None
@@ -6128,8 +6128,8 @@
 - raw: "绝技5"
   splits:
   - text: "绝技5"
-    translated: "Master Skill 5"
-    qcReviewedText: "Master Skill 5"
+    translated: "Special Technique 5"
+    qcReviewedText: "Special Technique 5"
     qcStatus: Passed
     qcQualityScore: 95
     qcDefectCategory: None
@@ -6164,8 +6164,8 @@
 - raw: "绝技10"
   splits:
   - text: "绝技10"
-    translated: "Ultimate Technique 10"
-    qcReviewedText: "Ultimate Technique 10"
+    translated: "Special Technique 10"
+    qcReviewedText: "Special Technique 10"
     qcStatus: Passed
     qcQualityScore: 90
     qcDefectCategory: None
@@ -7826,7 +7826,7 @@
 - raw: "绝技1;力道1"
   splits:
   - text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 1
     text: "力道1"
     translated: "Strength 1"
@@ -7835,7 +7835,7 @@
 - raw: "绝技6;力道3;经脉3;暴击0.06"
   splits:
   - text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 1
     text: "力道3"
     translated: "Strength 3"
@@ -7850,7 +7850,7 @@
 - raw: "绝技10;力道15"
   splits:
   - text: "绝技10"
-    translated: "Ultimate Technique 10"
+    translated: "Special Technique 10"
   - subIndex: 1
     text: "力道15"
     translated: "Strength 15"
@@ -7867,7 +7867,7 @@
 - raw: "绝技1;体质1"
   splits:
   - text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 1
     text: "体质1"
     translated: "1 stamina"
@@ -7876,7 +7876,7 @@
 - raw: "绝技4;体质4;护甲2;减伤3"
   splits:
   - text: "绝技4"
-    translated: "Ultimate Technique 4"
+    translated: "Special Technique 4"
   - subIndex: 1
     text: "体质4"
     translated: "4 physique"
@@ -7908,7 +7908,7 @@
 - raw: "绝技6;力道6;体质6"
   splits:
   - text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 1
     text: "力道6"
     translated: "Strength 6"
@@ -7937,7 +7937,7 @@
 - raw: "绝技3;力道9;伤害0.06"
   splits:
   - text: "绝技3"
-    translated: "Ultimate Technique 3"
+    translated: "Special Technique 3"
   - subIndex: 1
     text: "力道9"
     translated: "Strength 9"
@@ -7949,7 +7949,7 @@
 - raw: "绝技15;力道10"
   splits:
   - text: "绝技15"
-    translated: "Ultimate Technique 15"
+    translated: "Special Technique 15"
   - subIndex: 1
     text: "力道10"
     translated: "Strength 10"
@@ -7966,7 +7966,7 @@
 - raw: "绝技1;轻功1"
   splits:
   - text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 1
     text: "轻功1"
     translated: "Qinggong 1"
@@ -7975,7 +7975,7 @@
 - raw: "绝技3;轻功3;灵巧6;反击0.06"
   splits:
   - text: "绝技3"
-    translated: "Ultimate Technique 3"
+    translated: "Special Technique 3"
   - subIndex: 1
     text: "轻功3"
     translated: "Qinggong 3"
@@ -7990,7 +7990,7 @@
 - raw: "绝技10;轻功10"
   splits:
   - text: "绝技10"
-    translated: "Ultimate Technique 10"
+    translated: "Special Technique 10"
   - subIndex: 1
     text: "轻功10"
     translated: "Qinggong 10"
@@ -8007,7 +8007,7 @@
 - raw: "绝技1;灵巧1"
   splits:
   - text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 1
     text: "灵巧1"
     translated: "Agile 1"
@@ -8016,7 +8016,7 @@
 - raw: "绝技4;灵巧4;意志4;闪避0.06"
   splits:
   - text: "绝技4"
-    translated: "Ultimate Technique 4"
+    translated: "Special Technique 4"
   - subIndex: 1
     text: "灵巧4"
     translated: "Agile 4"
@@ -8031,7 +8031,7 @@
 - raw: "绝技15;意志10"
   splits:
   - text: "绝技15"
-    translated: "Ultimate Technique 15"
+    translated: "Special Technique 15"
   - subIndex: 1
     text: "意志10"
     translated: "10 will"
@@ -8048,7 +8048,7 @@
 - raw: "绝技1;意志1"
   splits:
   - text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 1
     text: "意志1"
     translated: "1 will"
@@ -8057,7 +8057,7 @@
 - raw: "绝技4;力道4;意志4;压制0.06"
   splits:
   - text: "绝技4"
-    translated: "Ultimate Technique 4"
+    translated: "Special Technique 4"
   - subIndex: 1
     text: "力道4"
     translated: "Strength 4"
@@ -8072,8 +8072,8 @@
 - raw: "绝技15"
   splits:
   - text: "绝技15"
-    translated: "Ultimate Technique 15"
-    qcReviewedText: "Ultimate Technique 15"
+    translated: "Special Technique 15"
+    qcReviewedText: "Special Technique 15"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -8088,7 +8088,7 @@
 - raw: "绝技4;灵巧4;智力4;命中0.06"
   splits:
   - text: "绝技4"
-    translated: "Ultimate Technique 4"
+    translated: "Special Technique 4"
   - subIndex: 1
     text: "灵巧4"
     translated: "Agile 4"
@@ -8103,7 +8103,7 @@
 - raw: "绝技10;灵巧10"
   splits:
   - text: "绝技10"
-    translated: "Ultimate Technique 10"
+    translated: "Special Technique 10"
   - subIndex: 1
     text: "灵巧10"
     translated: "Agile 10"
@@ -8123,7 +8123,7 @@
     translated: "HealthCap12"
   - subIndex: 1
     text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 2
     text: "体质6"
     translated: "6 stamina"
@@ -8132,7 +8132,7 @@
 - raw: "绝技10;体质10"
   splits:
   - text: "绝技10"
-    translated: "Ultimate Technique 10"
+    translated: "Special Technique 10"
   - subIndex: 1
     text: "体质10"
     translated: "10 stamina"
@@ -8158,7 +8158,7 @@
 - raw: "绝技3;智力6;经脉3;负面加成0.06"
   splits:
   - text: "绝技3"
-    translated: "Ultimate Technique 3"
+    translated: "Special Technique 3"
   - subIndex: 1
     text: "智力6"
     translated: "6 intelligence"
@@ -8173,7 +8173,7 @@
 - raw: "绝技20;智力10"
   splits:
   - text: "绝技20"
-    translated: "Ultimate Technique 20"
+    translated: "Special Technique 20"
   - subIndex: 1
     text: "智力10"
     translated: "10 intelligence"
@@ -11588,7 +11588,7 @@
 - raw: "绝技1;灵巧1;智力1"
   splits:
   - text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 1
     text: "灵巧1"
     translated: "Agile 1"
@@ -11600,7 +11600,7 @@
 - raw: "绝技9;灵巧6;智力3;卸力0.1"
   splits:
   - text: "绝技9"
-    translated: "Ultimate Technique 9"
+    translated: "Special Technique 9"
   - subIndex: 1
     text: "灵巧6"
     translated: "Agile 6"
@@ -11615,7 +11615,7 @@
 - raw: "绝技35;灵巧20;智力15"
   splits:
   - text: "绝技35"
-    translated: "Ultimate Skill 35"
+    translated: "Special Technique 35"
   - subIndex: 1
     text: "灵巧20"
     translated: "Nimble 20"
@@ -11635,7 +11635,7 @@
 - raw: "绝技2;体质1"
   splits:
   - text: "绝技2"
-    translated: "2 Ultimate Technique"
+    translated: "2 Special Technique"
   - subIndex: 1
     text: "体质1"
     translated: "1 stamina"
@@ -11644,7 +11644,7 @@
 - raw: "绝技6;体质6;护甲3;减伤4"
   splits:
   - text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 1
     text: "体质6"
     translated: "6 stamina"
@@ -11659,7 +11659,7 @@
 - raw: "绝技30;体质20"
   splits:
   - text: "绝技30"
-    translated: "Ultimate Technique 30"
+    translated: "Special Technique 30"
   - subIndex: 1
     text: "体质20"
     translated: "20 stamina"
@@ -11676,7 +11676,7 @@
 - raw: "绝技2;意志1"
   splits:
   - text: "绝技2"
-    translated: "2 Ultimate Technique"
+    translated: "2 Special Technique"
   - subIndex: 1
     text: "意志1"
     translated: "1 will"
@@ -11685,7 +11685,7 @@
 - raw: "绝技6;意志6;经脉6;内伤0.08"
   splits:
   - text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 1
     text: "意志6"
     translated: "6 will"
@@ -11700,7 +11700,7 @@
 - raw: "绝技35;意志15;经脉15"
   splits:
   - text: "绝技35"
-    translated: "Ultimate Skill 35"
+    translated: "Special Technique 35"
   - subIndex: 1
     text: "意志15"
     translated: "15 will"
@@ -11720,7 +11720,7 @@
 - raw: "绝技1;力道1;体质1"
   splits:
   - text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 1
     text: "力道1"
     translated: "Strength 1"
@@ -11732,7 +11732,7 @@
 - raw: "绝技9;力道9;伤害0.08"
   splits:
   - text: "绝技9"
-    translated: "Ultimate Technique 9"
+    translated: "Special Technique 9"
   - subIndex: 1
     text: "力道9"
     translated: "Strength 9"
@@ -11744,7 +11744,7 @@
 - raw: "绝技35;力道25"
   splits:
   - text: "绝技35"
-    translated: "Ultimate Skill 35"
+    translated: "Special Technique 35"
   - subIndex: 1
     text: "力道25"
     translated: "Strength 25"
@@ -11761,7 +11761,7 @@
 - raw: "绝技1;灵巧1;体质1"
   splits:
   - text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 1
     text: "灵巧1"
     translated: "Agile 1"
@@ -11773,7 +11773,7 @@
 - raw: "绝技9;体质6;经脉3;蓄力0.08"
   splits:
   - text: "绝技9"
-    translated: "Ultimate Technique 9"
+    translated: "Special Technique 9"
   - subIndex: 1
     text: "体质6"
     translated: "6 stamina"
@@ -11788,7 +11788,7 @@
 - raw: "绝技25;体质20;经脉10"
   splits:
   - text: "绝技25"
-    translated: "Ultimate Technique 25"
+    translated: "Special Technique 25"
   - subIndex: 1
     text: "体质20"
     translated: "20 stamina"
@@ -11808,7 +11808,7 @@
 - raw: "绝技1;意志1;经脉1"
   splits:
   - text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 1
     text: "意志1"
     translated: "1 will"
@@ -11823,7 +11823,7 @@
     translated: "Inner Power Cap32"
   - subIndex: 1
     text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 2
     text: "意志6"
     translated: "6 will"
@@ -11835,7 +11835,7 @@
 - raw: "绝技25;意志20"
   splits:
   - text: "绝技25"
-    translated: "Ultimate Technique 25"
+    translated: "Special Technique 25"
   - subIndex: 1
     text: "意志20"
     translated: "Will20"
@@ -11852,7 +11852,7 @@
 - raw: "绝技2;灵巧1"
   splits:
   - text: "绝技2"
-    translated: "2 Ultimate Technique"
+    translated: "2 Special Technique"
   - subIndex: 1
     text: "灵巧1"
     translated: "Agile 1"
@@ -11861,7 +11861,7 @@
 - raw: "绝技9;灵巧9;闪避0.08"
   splits:
   - text: "绝技9"
-    translated: "Ultimate Technique 9"
+    translated: "Special Technique 9"
   - subIndex: 1
     text: "灵巧9"
     translated: "Agile 9"
@@ -11873,7 +11873,7 @@
 - raw: "绝技30;灵巧20"
   splits:
   - text: "绝技30"
-    translated: "Ultimate Technique 30"
+    translated: "Special Technique 30"
   - subIndex: 1
     text: "灵巧20"
     translated: "Nimble 20"
@@ -11890,7 +11890,7 @@
 - raw: "绝技1;力道1;智力1"
   splits:
   - text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 1
     text: "力道1"
     translated: "Strength 1"
@@ -11902,7 +11902,7 @@
 - raw: "绝技9;力道9;暴击0.08"
   splits:
   - text: "绝技9"
-    translated: "Ultimate Technique 9"
+    translated: "Special Technique 9"
   - subIndex: 1
     text: "力道9"
     translated: "Strength 9"
@@ -11914,7 +11914,7 @@
 - raw: "绝技30;力道20"
   splits:
   - text: "绝技30"
-    translated: "Ultimate Technique 30"
+    translated: "Special Technique 30"
   - subIndex: 1
     text: "力道20"
     translated: "Strength 20"
@@ -11931,7 +11931,7 @@
 - raw: "绝技2;经脉1"
   splits:
   - text: "绝技2"
-    translated: "2 Ultimate Technique"
+    translated: "2 Special Technique"
   - subIndex: 1
     text: "经脉1"
     translated: "Acupoint 1"
@@ -11940,7 +11940,7 @@
 - raw: "绝技9;智力9;动摇0.08"
   splits:
   - text: "绝技9"
-    translated: "Ultimate Technique 9"
+    translated: "Special Technique 9"
   - subIndex: 1
     text: "智力9"
     translated: "9 Intelligence"
@@ -11952,7 +11952,7 @@
 - raw: "绝技30;智力20"
   splits:
   - text: "绝技30"
-    translated: "Ultimate Technique 30"
+    translated: "Special Technique 30"
   - subIndex: 1
     text: "智力20"
     translated: "Intelligence20"
@@ -11970,7 +11970,7 @@
 - raw: "绝技1;力道1;意志1"
   splits:
   - text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 1
     text: "力道1"
     translated: "Strength 1"
@@ -11982,7 +11982,7 @@
 - raw: "绝技6;力道6;意志6;霸体0.04"
   splits:
   - text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 1
     text: "力道6"
     translated: "Strength 6"
@@ -11997,7 +11997,7 @@
 - raw: "绝技25;力道20;意志15"
   splits:
   - text: "绝技25"
-    translated: "Ultimate Technique 25"
+    translated: "Special Technique 25"
   - subIndex: 1
     text: "力道20"
     translated: "Strength 20"
@@ -12402,7 +12402,7 @@
     translated: "Strength 1"
   - subIndex: 2
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   templates:
   - template: "{0};{1};{2}"
 - raw: "力道3;拳掌3;内力0.1"
@@ -13537,7 +13537,7 @@
     translated: "1 stamina"
   - subIndex: 2
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   templates:
   - template: "{0};{1};{2}"
 - raw: "体质3;刀法3;内力0.1"
@@ -14162,7 +14162,7 @@
     translated: "1 stamina"
   - subIndex: 2
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   templates:
   - template: "{0};{1};{2}"
 - raw: "智力2;体质2;长兵2"
@@ -14589,7 +14589,7 @@
     translated: "1 will"
   - subIndex: 2
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   templates:
   - template: "{0};{1};{2}"
 - raw: "意志3;奇门3;内力0.1"
@@ -15888,10 +15888,10 @@
 - raw: "绝技潜力1;绝技1;力道1"
   splits:
   - text: "绝技潜力1"
-    translated: "Potential for Ultimate Technique 1"
+    translated: "Potential for Special Technique 1"
   - subIndex: 1
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 2
     text: "力道1"
     translated: "Strength 1"
@@ -15900,7 +15900,7 @@
 - raw: "绝技8;力道8;灵巧8;压制0.05;反击0.05"
   splits:
   - text: "绝技8"
-    translated: "Master Skill 8"
+    translated: "Special Technique 8"
   - subIndex: 1
     text: "力道8"
     translated: "Strength 8"
@@ -15918,7 +15918,7 @@
 - raw: "绝技55;力道35;灵巧20"
   splits:
   - text: "绝技55"
-    translated: "Ultimate Technique 55"
+    translated: "Special Technique 55"
   - subIndex: 1
     text: "力道35"
     translated: "Strength 35"
@@ -15941,7 +15941,7 @@
     translated: "Potential in constitution 1"
   - subIndex: 1
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 2
     text: "经脉1"
     translated: "Acupoint 1"
@@ -15950,7 +15950,7 @@
 - raw: "绝技6;体质8;经脉10;护体真气0.2"
   splits:
   - text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 1
     text: "体质8"
     translated: "8 stamina"
@@ -15965,7 +15965,7 @@
 - raw: "绝技45;经脉30;体质20"
   splits:
   - text: "绝技45"
-    translated: "Master Skill 45"
+    translated: "Special Technique 45"
   - subIndex: 1
     text: "经脉30"
     translated: "Acupuncture Point 30"
@@ -15985,10 +15985,10 @@
 - raw: "绝技潜力1;绝技1;意志1"
   splits:
   - text: "绝技潜力1"
-    translated: "Potential for Ultimate Technique 1"
+    translated: "Potential for Special Technique 1"
   - subIndex: 1
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 2
     text: "意志1"
     translated: "1 will"
@@ -15997,7 +15997,7 @@
 - raw: "绝技12;智力3;意志9;慧眼0.05;鹰眼0.05"
   splits:
   - text: "绝技12"
-    translated: "Master Skill 12"
+    translated: "Special Technique 12"
   - subIndex: 1
     text: "智力3"
     translated: "3 intelligence"
@@ -16015,7 +16015,7 @@
 - raw: "绝技45;意志25"
   splits:
   - text: "绝技45"
-    translated: "Master Skill 45"
+    translated: "Special Technique 45"
   - subIndex: 1
     text: "意志25"
     translated: "25 will"
@@ -16032,10 +16032,10 @@
 - raw: "绝技潜力1;绝技1;体质1"
   splits:
   - text: "绝技潜力1"
-    translated: "Potential for Ultimate Technique 1"
+    translated: "Potential for Special Technique 1"
   - subIndex: 1
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 2
     text: "体质1"
     translated: "1 stamina"
@@ -16044,7 +16044,7 @@
 - raw: "绝技12;意志3;体质9;卸力0.1"
   splits:
   - text: "绝技12"
-    translated: "Master Skill 12"
+    translated: "Special Technique 12"
   - subIndex: 1
     text: "意志3"
     translated: "3 will"
@@ -16059,7 +16059,7 @@
 - raw: "绝技50;体质30;意志25"
   splits:
   - text: "绝技50"
-    translated: "Ultimate Technique 50"
+    translated: "Special Technique 50"
   - subIndex: 1
     text: "体质30"
     translated: "30 stamina"
@@ -16082,7 +16082,7 @@
     translated: "Strength Potential 1"
   - subIndex: 1
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 2
     text: "灵巧1"
     translated: "Agile 1"
@@ -16091,7 +16091,7 @@
 - raw: "绝技9;力道6;灵巧9;雷电0.1"
   splits:
   - text: "绝技9"
-    translated: "Ultimate Technique 9"
+    translated: "Special Technique 9"
   - subIndex: 1
     text: "力道6"
     translated: "Strength 6"
@@ -16106,7 +16106,7 @@
 - raw: "绝技40;灵巧30;力道20"
   splits:
   - text: "绝技40"
-    translated: "40 Ultimate Technique"
+    translated: "40 Special Technique"
   - subIndex: 1
     text: "灵巧30"
     translated: "Agile 30"
@@ -18459,13 +18459,13 @@
 - raw: "绝技潜力1;体质潜力1;绝技1;体质1"
   splits:
   - text: "绝技潜力1"
-    translated: "Potential for Ultimate Technique 1"
+    translated: "Potential for Special Technique 1"
   - subIndex: 1
     text: "体质潜力1"
     translated: "Potential in constitution 1"
   - subIndex: 2
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 3
     text: "体质1"
     translated: "1 stamina"
@@ -18474,7 +18474,7 @@
 - raw: "绝技15;体质15;护甲6"
   splits:
   - text: "绝技15"
-    translated: "Ultimate Technique 15"
+    translated: "Special Technique 15"
   - subIndex: 1
     text: "体质15"
     translated: "15 stamina"
@@ -18486,7 +18486,7 @@
 - raw: "绝技55;体质45"
   splits:
   - text: "绝技55"
-    translated: "Ultimate Technique 55"
+    translated: "Special Technique 55"
   - subIndex: 1
     text: "体质45"
     translated: "45 stamina"
@@ -18503,7 +18503,7 @@
 - raw: "绝技潜力1;智力潜力1;意志潜力1"
   splits:
   - text: "绝技潜力1"
-    translated: "Potential for Ultimate Technique 1"
+    translated: "Potential for Special Technique 1"
   - subIndex: 1
     text: "智力潜力1"
     translated: "Intellectual potential 1"
@@ -18515,7 +18515,7 @@
 - raw: "绝技10;力道10;意志10;杀机0.06;铜皮0.06"
   splits:
   - text: "绝技10"
-    translated: "Ultimate Technique 10"
+    translated: "Special Technique 10"
   - subIndex: 1
     text: "力道10"
     translated: "Strength 10"
@@ -18533,7 +18533,7 @@
 - raw: "绝技60;意志50;力道30"
   splits:
   - text: "绝技60"
-    translated: "Ultimate Technique 60"
+    translated: "Special Technique 60"
   - subIndex: 1
     text: "意志50"
     translated: "50 willpower"
@@ -18553,10 +18553,10 @@
 - raw: "绝技潜力2;绝技1;智力1"
   splits:
   - text: "绝技潜力2"
-    translated: "Potential for Ultimate Skill 2"
+    translated: "Potential of Special Technique 2"
   - subIndex: 1
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 2
     text: "智力1"
     translated: "Intellect 1"
@@ -18565,7 +18565,7 @@
 - raw: "绝技12;灵巧6;智力12;鹰眼0.06;破招0.06"
   splits:
   - text: "绝技12"
-    translated: "Master Skill 12"
+    translated: "Special Technique 12"
   - subIndex: 1
     text: "灵巧6"
     translated: "Agile 6"
@@ -18583,7 +18583,7 @@
 - raw: "绝技65;智力45;灵巧35"
   splits:
   - text: "绝技65"
-    translated: "65 Ultimate Technique"
+    translated: "65 Special Technique"
   - subIndex: 1
     text: "智力45"
     translated: "Intellectual 45"
@@ -19822,7 +19822,7 @@
     translated: "Internal Skill Potential 2"
   - subIndex: 1
     text: "绝技潜力1"
-    translated: "Potential for Ultimate Technique 1"
+    translated: "Potential for Special Technique 1"
   - subIndex: 2
     text: "智力1"
     translated: "Intellect 1"
@@ -19931,7 +19931,7 @@
 - raw: "绝技潜力2;轻功潜力1;力道1;体质1"
   splits:
   - text: "绝技潜力2"
-    translated: "Potential for Ultimate Skill 2"
+    translated: "Potential of Special Technique 2"
   - subIndex: 1
     text: "轻功潜力1"
     translated: "Qinggong potential 1"
@@ -19946,7 +19946,7 @@
 - raw: "绝技12;力道12;体质12;眩晕0.08;脆弱0.08"
   splits:
   - text: "绝技12"
-    translated: "Master Skill 12"
+    translated: "Special Technique 12"
   - subIndex: 1
     text: "力道12"
     translated: "Strength 12"
@@ -19964,7 +19964,7 @@
 - raw: "绝技75;体质60;力道50"
   splits:
   - text: "绝技75"
-    translated: "Ultimate Skill 75"
+    translated: "Special Technique 75"
   - subIndex: 1
     text: "体质60"
     translated: "60 stamina"
@@ -20523,7 +20523,7 @@
 - raw: "绝技4;力道4;外伤0.04"
   splits:
   - text: "绝技4"
-    translated: "Ultimate Technique 4"
+    translated: "Special Technique 4"
   - subIndex: 1
     text: "力道4"
     translated: "Strength 4"
@@ -20685,7 +20685,7 @@
 - raw: "绝技4;灵巧4;体质4;卸力0.06"
   splits:
   - text: "绝技4"
-    translated: "Ultimate Technique 4"
+    translated: "Special Technique 4"
   - subIndex: 1
     text: "灵巧4"
     translated: "Agile 4"
@@ -20700,7 +20700,7 @@
 - raw: "绝技10;体质10;灵巧5"
   splits:
   - text: "绝技10"
-    translated: "Ultimate Technique 10"
+    translated: "Special Technique 10"
   - subIndex: 1
     text: "体质10"
     translated: "10 stamina"
@@ -20884,7 +20884,7 @@
 - raw: "绝技9;意志9;卸力0.08;负面抗性0.08"
   splits:
   - text: "绝技9"
-    translated: "Ultimate Technique 9"
+    translated: "Special Technique 9"
   - subIndex: 1
     text: "意志9"
     translated: "9 will"
@@ -20899,7 +20899,7 @@
 - raw: "绝技30;意志20"
   splits:
   - text: "绝技30"
-    translated: "Ultimate Technique 30"
+    translated: "Special Technique 30"
   - subIndex: 1
     text: "意志20"
     translated: "Will20"
@@ -21084,7 +21084,7 @@
 - raw: "绝技12;力道12;虚弱0.05;昏沉0.05"
   splits:
   - text: "绝技12"
-    translated: "Master Skill 12"
+    translated: "Special Technique 12"
   - subIndex: 1
     text: "力道12"
     translated: "Strength 12"
@@ -21099,7 +21099,7 @@
 - raw: "绝技50;力道30"
   splits:
   - text: "绝技50"
-    translated: "Ultimate Technique 50"
+    translated: "Special Technique 50"
   - subIndex: 1
     text: "力道30"
     translated: "Strength 30"
@@ -21811,7 +21811,7 @@
 - raw: "绝技4;智力4;暴击0.04;负面加成0.04"
   splits:
   - text: "绝技4"
-    translated: "Ultimate Technique 4"
+    translated: "Special Technique 4"
   - subIndex: 1
     text: "智力4"
     translated: "Intelligence 4"
@@ -22029,7 +22029,7 @@
 - raw: "绝技1;智力1"
   splits:
   - text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 1
     text: "智力1"
     translated: "Intellect 1"
@@ -22038,7 +22038,7 @@
 - raw: "绝技6;灵巧6;暴击0.06;负面加成0.06"
   splits:
   - text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 1
     text: "灵巧6"
     translated: "Agile 6"
@@ -22313,7 +22313,7 @@
 - raw: "绝技2;射术潜力1"
   splits:
   - text: "绝技2"
-    translated: "2 Ultimate Technique"
+    translated: "2 Special Technique"
   - subIndex: 1
     text: "射术潜力1"
     translated: "Archery potential 1"
@@ -22322,7 +22322,7 @@
 - raw: "绝技9;射术9;连绵0.04;射术威力0.04;负面加成0.04"
   splits:
   - text: "绝技9"
-    translated: "Ultimate Technique 9"
+    translated: "Special Technique 9"
   - subIndex: 1
     text: "射术9"
     translated: "Archery 9"
@@ -22340,7 +22340,7 @@
 - raw: "绝技25;射术25"
   splits:
   - text: "绝技25"
-    translated: "Ultimate Technique 25"
+    translated: "Special Technique 25"
   - subIndex: 1
     text: "射术25"
     translated: "Archery25"
@@ -22631,10 +22631,10 @@
 - raw: "绝技潜力1;绝技1;智力1"
   splits:
   - text: "绝技潜力1"
-    translated: "Potential for Ultimate Technique 1"
+    translated: "Potential for Special Technique 1"
   - subIndex: 1
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 2
     text: "智力1"
     translated: "Intellect 1"
@@ -22643,7 +22643,7 @@
 - raw: "绝技12;智力12;暴击0.05;射术威力0.05;负面加成0.05"
   splits:
   - text: "绝技12"
-    translated: "Master Skill 12"
+    translated: "Special Technique 12"
   - subIndex: 1
     text: "智力12"
     translated: "12 intelligence"
@@ -22661,7 +22661,7 @@
 - raw: "绝技45;智力30;射术25"
   splits:
   - text: "绝技45"
-    translated: "Master Skill 45"
+    translated: "Special Technique 45"
   - subIndex: 1
     text: "智力30"
     translated: "Intelligence 30"
@@ -22917,19 +22917,19 @@
 - raw: "绝技潜力1;灵巧潜力1;绝技2"
   splits:
   - text: "绝技潜力1"
-    translated: "Potential for Ultimate Technique 1"
+    translated: "Potential for Special Technique 1"
   - subIndex: 1
     text: "灵巧潜力1"
     translated: "Agile Potential 1"
   - subIndex: 2
     text: "绝技2"
-    translated: "2 Ultimate Technique"
+    translated: "2 Special Technique"
   templates:
   - template: "{0};{1};{2}"
 - raw: "绝技15;灵巧15;暴击0.08;射术威力0.04;负面加成0.04"
   splits:
   - text: "绝技15"
-    translated: "Ultimate Technique 15"
+    translated: "Special Technique 15"
   - subIndex: 1
     text: "灵巧15"
     translated: "Agile 15"
@@ -22947,7 +22947,7 @@
 - raw: "绝技55;灵巧55;射术45"
   splits:
   - text: "绝技55"
-    translated: "Ultimate Technique 55"
+    translated: "Special Technique 55"
   - subIndex: 1
     text: "灵巧55"
     translated: "Nimble 55"
@@ -23229,7 +23229,7 @@
 - raw: "绝技潜力1;射术潜力1;灵巧潜力1;智力潜力1"
   splits:
   - text: "绝技潜力1"
-    translated: "Potential for Ultimate Technique 1"
+    translated: "Potential for Special Technique 1"
   - subIndex: 1
     text: "射术潜力1"
     translated: "Archery potential 1"
@@ -23244,7 +23244,7 @@
 - raw: "绝技12;灵巧12;智力12;连绵0.06;暴击0.06;射术威力0.06"
   splits:
   - text: "绝技12"
-    translated: "Master Skill 12"
+    translated: "Special Technique 12"
   - subIndex: 1
     text: "灵巧12"
     translated: "Agile 12"
@@ -23265,7 +23265,7 @@
 - raw: "绝技60;灵巧60;智力60;射术60"
   splits:
   - text: "绝技60"
-    translated: "Ultimate Technique 60"
+    translated: "Special Technique 60"
   - subIndex: 1
     text: "灵巧60"
     translated: "Nimble 60"
@@ -23438,7 +23438,7 @@
 - raw: "绝技4;智力2;经脉2;康复0.04"
   splits:
   - text: "绝技4"
-    translated: "Ultimate Technique 4"
+    translated: "Special Technique 4"
   - subIndex: 1
     text: "智力2"
     translated: "2 intelligence"
@@ -23453,7 +23453,7 @@
 - raw: "绝技5;智力5"
   splits:
   - text: "绝技5"
-    translated: "Master Skill 5"
+    translated: "Special Technique 5"
   - subIndex: 1
     text: "智力5"
     translated: "5 intelligence"
@@ -23658,7 +23658,7 @@
 - raw: "绝技4;智力4;经脉4;疗伤0.04;康复0.02;药性0.04"
   splits:
   - text: "绝技4"
-    translated: "Ultimate Technique 4"
+    translated: "Special Technique 4"
   - subIndex: 1
     text: "智力4"
     translated: "Intelligence 4"
@@ -23679,7 +23679,7 @@
 - raw: "绝技10;智力5"
   splits:
   - text: "绝技10"
-    translated: "Ultimate Technique 10"
+    translated: "Special Technique 10"
   - subIndex: 1
     text: "智力5"
     translated: "5 intelligence"
@@ -23946,7 +23946,7 @@
 - raw: "绝技2;智力1"
   splits:
   - text: "绝技2"
-    translated: "2 Ultimate Technique"
+    translated: "2 Special Technique"
   - subIndex: 1
     text: "智力1"
     translated: "Intellect 1"
@@ -23955,7 +23955,7 @@
 - raw: "绝技6;灵巧6;智力6;疗伤0.04;鹰眼0.04;药性0.04"
   splits:
   - text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 1
     text: "灵巧6"
     translated: "Agile 6"
@@ -23976,7 +23976,7 @@
 - raw: "绝技25;智力25;医术25"
   splits:
   - text: "绝技25"
-    translated: "Ultimate Technique 25"
+    translated: "Special Technique 25"
   - subIndex: 1
     text: "智力25"
     translated: "Intelligence25"
@@ -24261,7 +24261,7 @@
     translated: "Intellectual potential 1"
   - subIndex: 1
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 2
     text: "智力1"
     translated: "Intellect 1"
@@ -24273,7 +24273,7 @@
 - raw: "绝技3;灵巧9;智力9;医术6;康复0.05;斗转0.05;药性0.05"
   splits:
   - text: "绝技3"
-    translated: "Ultimate Technique 3"
+    translated: "Special Technique 3"
   - subIndex: 1
     text: "灵巧9"
     translated: "Agile 9"
@@ -24297,7 +24297,7 @@
 - raw: "绝技45;智力40"
   splits:
   - text: "绝技45"
-    translated: "Master Skill 45"
+    translated: "Special Technique 45"
   - subIndex: 1
     text: "智力40"
     translated: "40 intelligence"
@@ -24592,7 +24592,7 @@
 - raw: "绝技50;智力45;医术65"
   splits:
   - text: "绝技50"
-    translated: "Ultimate Technique 50"
+    translated: "Special Technique 50"
   - subIndex: 1
     text: "智力45"
     translated: "Intellectual 45"
@@ -25000,7 +25000,7 @@
 - raw: "绝技4;灵巧2;经脉2;蓄力0.02;拳掌威力0.02"
   splits:
   - text: "绝技4"
-    translated: "Ultimate Technique 4"
+    translated: "Special Technique 4"
   - subIndex: 1
     text: "灵巧2"
     translated: "Agile 2"
@@ -25018,7 +25018,7 @@
 - raw: "绝技5;灵巧5"
   splits:
   - text: "绝技5"
-    translated: "Master Skill 5"
+    translated: "Special Technique 5"
   - subIndex: 1
     text: "灵巧5"
     translated: "Agile 5"
@@ -25202,7 +25202,7 @@
 - raw: "绝技6;力道3;体质3;壮骨0.03;拳掌威力0.03"
   splits:
   - text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 1
     text: "力道3"
     translated: "Strength 3"
@@ -25414,7 +25414,7 @@
 - raw: "绝技9;体质9;铜皮0.04;卸力0.04"
   splits:
   - text: "绝技9"
-    translated: "Ultimate Technique 9"
+    translated: "Special Technique 9"
   - subIndex: 1
     text: "体质9"
     translated: "9 stamina"
@@ -25429,7 +25429,7 @@
 - raw: "绝技25;体质20"
   splits:
   - text: "绝技25"
-    translated: "Ultimate Technique 25"
+    translated: "Special Technique 25"
   - subIndex: 1
     text: "体质20"
     translated: "20 stamina"
@@ -25688,10 +25688,10 @@
 - raw: "绝技潜力1;绝技1;灵巧1"
   splits:
   - text: "绝技潜力1"
-    translated: "Potential for Ultimate Technique 1"
+    translated: "Potential for Special Technique 1"
   - subIndex: 1
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 2
     text: "灵巧1"
     translated: "Agile 1"
@@ -25700,7 +25700,7 @@
 - raw: "绝技8;灵巧8;意志8;破招0.05;拳掌威力0.05"
   splits:
   - text: "绝技8"
-    translated: "Master Skill 8"
+    translated: "Special Technique 8"
   - subIndex: 1
     text: "灵巧8"
     translated: "Nimble 8"
@@ -25718,7 +25718,7 @@
 - raw: "绝技40;灵巧30;意志15"
   splits:
   - text: "绝技40"
-    translated: "40 Ultimate Technique"
+    translated: "40 Special Technique"
   - subIndex: 1
     text: "灵巧30"
     translated: "Agile 30"
@@ -26021,16 +26021,16 @@
     translated: "Strength Potential 1"
   - subIndex: 1
     text: "绝技潜力1"
-    translated: "Potential for Ultimate Technique 1"
+    translated: "Potential for Special Technique 1"
   - subIndex: 2
     text: "绝技2"
-    translated: "2 Ultimate Technique"
+    translated: "2 Special Technique"
   templates:
   - template: "{0};{1};{2}"
 - raw: "绝技15;力道15;铜皮0.05;壮骨0.05;拳掌威力0.05"
   splits:
   - text: "绝技15"
-    translated: "Ultimate Technique 15"
+    translated: "Special Technique 15"
   - subIndex: 1
     text: "力道15"
     translated: "Strength 15"
@@ -26048,7 +26048,7 @@
 - raw: "绝技55;力道45"
   splits:
   - text: "绝技55"
-    translated: "Ultimate Technique 55"
+    translated: "Special Technique 55"
   - subIndex: 1
     text: "力道45"
     translated: "Strength 45"
@@ -26533,7 +26533,7 @@
 - raw: "绝技2;体质2;护甲2;反击0.04;装备负重4"
   splits:
   - text: "绝技2"
-    translated: "2 Ultimate Technique"
+    translated: "2 Special Technique"
   - subIndex: 1
     text: "体质2"
     translated: "2 stamina"
@@ -26551,7 +26551,7 @@
 - raw: "绝技5;体质5"
   splits:
   - text: "绝技5"
-    translated: "Master Skill 5"
+    translated: "Special Technique 5"
   - subIndex: 1
     text: "体质5"
     translated: "5 constitution"
@@ -26719,7 +26719,7 @@
 - raw: "绝技2;力道6;护甲2;卸力0.06;装备负重6"
   splits:
   - text: "绝技2"
-    translated: "2 Ultimate Technique"
+    translated: "2 Special Technique"
   - subIndex: 1
     text: "力道6"
     translated: "Strength 6"
@@ -26737,7 +26737,7 @@
 - raw: "绝技15;力道5"
   splits:
   - text: "绝技15"
-    translated: "Ultimate Technique 15"
+    translated: "Special Technique 15"
   - subIndex: 1
     text: "力道5"
     translated: "Strength 5"
@@ -26936,7 +26936,7 @@
 - raw: "绝技2;力道1"
   splits:
   - text: "绝技2"
-    translated: "2 Ultimate Technique"
+    translated: "2 Special Technique"
   - subIndex: 1
     text: "力道1"
     translated: "Strength 1"
@@ -26945,7 +26945,7 @@
 - raw: "绝技8;意志8;体质2;霸体0.04;长兵威力0.04"
   splits:
   - text: "绝技8"
-    translated: "Master Skill 8"
+    translated: "Special Technique 8"
   - subIndex: 1
     text: "意志8"
     translated: "8 will"
@@ -26963,7 +26963,7 @@
 - raw: "绝技20;力道30"
   splits:
   - text: "绝技20"
-    translated: "Ultimate Technique 20"
+    translated: "Special Technique 20"
   - subIndex: 1
     text: "力道30"
     translated: "Strength 30"
@@ -27212,7 +27212,7 @@
 - raw: "绝技10;意志4;护甲5;横练0.05;霸体0.05;装备负重5"
   splits:
   - text: "绝技10"
-    translated: "Ultimate Technique 10"
+    translated: "Special Technique 10"
   - subIndex: 1
     text: "意志4"
     translated: "4 will"
@@ -27233,7 +27233,7 @@
 - raw: "绝技45;意志35"
   splits:
   - text: "绝技45"
-    translated: "Master Skill 45"
+    translated: "Special Technique 45"
   - subIndex: 1
     text: "意志35"
     translated: "35 will not be altered"
@@ -27524,7 +27524,7 @@
 - raw: "绝技10;力道10;意志10;外伤0.05;霸体0.05;真伤0.05;装备负重10"
   splits:
   - text: "绝技10"
-    translated: "Ultimate Technique 10"
+    translated: "Special Technique 10"
   - subIndex: 1
     text: "力道10"
     translated: "Strength 10"
@@ -27548,7 +27548,7 @@
 - raw: "绝技55;力道60;意志40"
   splits:
   - text: "绝技55"
-    translated: "Ultimate Technique 55"
+    translated: "Special Technique 55"
   - subIndex: 1
     text: "力道60"
     translated: "Strength 60"
@@ -27798,19 +27798,19 @@
 - raw: "绝技潜力2;体质潜力1;绝技2"
   splits:
   - text: "绝技潜力2"
-    translated: "Potential for Ultimate Skill 2"
+    translated: "Potential of Special Technique 2"
   - subIndex: 1
     text: "体质潜力1"
     translated: "Potential in constitution 1"
   - subIndex: 2
     text: "绝技2"
-    translated: "2 Ultimate Technique"
+    translated: "2 Special Technique"
   templates:
   - template: "{0};{1};{2}"
 - raw: "绝技12;体质12;力道6;护甲12;横练0.06;霸体0.06;装备负重8"
   splits:
   - text: "绝技12"
-    translated: "Master Skill 12"
+    translated: "Special Technique 12"
   - subIndex: 1
     text: "体质12"
     translated: "12 stamina"
@@ -27834,7 +27834,7 @@
 - raw: "绝技70;体质65"
   splits:
   - text: "绝技70"
-    translated: "Master Skill 70"
+    translated: "Special Technique 70"
   - subIndex: 1
     text: "体质65"
     translated: "65 stamina"
@@ -27998,7 +27998,7 @@
 - raw: "绝技3;体质3;经脉3;康复0.04"
   splits:
   - text: "绝技3"
-    translated: "Ultimate Technique 3"
+    translated: "Special Technique 3"
   - subIndex: 1
     text: "体质3"
     translated: "3 stamina"
@@ -28214,7 +28214,7 @@
 - raw: "绝技2;智力5;意志5;鹰眼0.06"
   splits:
   - text: "绝技2"
-    translated: "2 Ultimate Technique"
+    translated: "2 Special Technique"
   - subIndex: 1
     text: "智力5"
     translated: "5 intelligence"
@@ -28229,7 +28229,7 @@
 - raw: "绝技15;智力10"
   splits:
   - text: "绝技15"
-    translated: "Ultimate Technique 15"
+    translated: "Special Technique 15"
   - subIndex: 1
     text: "智力10"
     translated: "10 intelligence"
@@ -28518,7 +28518,7 @@
 - raw: "绝技6;智力6;意志6;护体真气0.16"
   splits:
   - text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 1
     text: "智力6"
     translated: "6 intelligence"
@@ -28533,7 +28533,7 @@
 - raw: "绝技35;意志20"
   splits:
   - text: "绝技35"
-    translated: "Ultimate Skill 35"
+    translated: "Special Technique 35"
   - subIndex: 1
     text: "意志20"
     translated: "Will20"
@@ -28838,7 +28838,7 @@
 - raw: "绝技12;智力12;鹰眼0.05;醒脑0.05"
   splits:
   - text: "绝技12"
-    translated: "Master Skill 12"
+    translated: "Special Technique 12"
   - subIndex: 1
     text: "智力12"
     translated: "12 intelligence"
@@ -28853,7 +28853,7 @@
 - raw: "绝技45;智力35"
   splits:
   - text: "绝技45"
-    translated: "Master Skill 45"
+    translated: "Special Technique 45"
   - subIndex: 1
     text: "智力35"
     translated: "Intellect 35"
@@ -29239,7 +29239,7 @@
 - raw: "绝技6;智力12;意志12;醒脑0.06;护体真气0.12;负面抗性0.04"
   splits:
   - text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 1
     text: "智力12"
     translated: "12 intelligence"
@@ -29260,7 +29260,7 @@
 - raw: "绝技60;智力50;意志30"
   splits:
   - text: "绝技60"
-    translated: "Ultimate Technique 60"
+    translated: "Special Technique 60"
   - subIndex: 1
     text: "智力50"
     translated: "Intelligence 50"
@@ -29506,7 +29506,7 @@
 - raw: "绝技潜力1;智力潜力2;经脉潜力1"
   splits:
   - text: "绝技潜力1"
-    translated: "Potential for Ultimate Technique 1"
+    translated: "Potential for Special Technique 1"
   - subIndex: 1
     text: "智力潜力2"
     translated: "Intellectual potential 2"
@@ -29518,7 +29518,7 @@
 - raw: "绝技12;智力12;经脉12;雷电0.05;震脑0.05;斗转0.05"
   splits:
   - text: "绝技12"
-    translated: "Master Skill 12"
+    translated: "Special Technique 12"
   - subIndex: 1
     text: "智力12"
     translated: "12 intelligence"
@@ -29539,7 +29539,7 @@
 - raw: "绝技75;经脉65;智力55"
   splits:
   - text: "绝技75"
-    translated: "Ultimate Skill 75"
+    translated: "Special Technique 75"
   - subIndex: 1
     text: "经脉65"
     translated: "Meridian 65"
@@ -29883,7 +29883,7 @@
 - raw: "绝技15;灵巧15;剑法15"
   splits:
   - text: "绝技15"
-    translated: "Ultimate Technique 15"
+    translated: "Special Technique 15"
   - subIndex: 1
     text: "灵巧15"
     translated: "Agile 15"
@@ -30054,7 +30054,7 @@
 - raw: "绝技8;体质8;护甲4;装备强化0.04;装备负重8"
   splits:
   - text: "绝技8"
-    translated: "Master Skill 8"
+    translated: "Special Technique 8"
   - subIndex: 1
     text: "体质8"
     translated: "8 stamina"
@@ -30344,7 +30344,7 @@
 - raw: "绝技35;灵巧25;剑法45"
   splits:
   - text: "绝技35"
-    translated: "Ultimate Skill 35"
+    translated: "Special Technique 35"
   - subIndex: 1
     text: "灵巧25"
     translated: "Agile 25"
@@ -30529,7 +30529,7 @@
 - raw: "绝技50;灵巧45;剑法65"
   splits:
   - text: "绝技50"
-    translated: "Ultimate Technique 50"
+    translated: "Special Technique 50"
   - subIndex: 1
     text: "灵巧45"
     translated: "Agile 45"
@@ -30549,10 +30549,10 @@
 - raw: "绝技潜力2;绝技1;体质1"
   splits:
   - text: "绝技潜力2"
-    translated: "Potential for Ultimate Skill 2"
+    translated: "Potential of Special Technique 2"
   - subIndex: 1
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 2
     text: "体质1"
     translated: "1 stamina"
@@ -30561,7 +30561,7 @@
 - raw: "绝技6;体质14;护甲6;横练0.05;装备强化0.15;装备负重5"
   splits:
   - text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 1
     text: "体质14"
     translated: "14 physique"
@@ -30582,7 +30582,7 @@
 - raw: "绝技60;体质45"
   splits:
   - text: "绝技60"
-    translated: "Ultimate Technique 60"
+    translated: "Special Technique 60"
   - subIndex: 1
     text: "体质45"
     translated: "45 stamina"
@@ -30910,7 +30910,7 @@
 - raw: "绝技3;智力3;毒术3;毒素0.04;负面加成0.02"
   splits:
   - text: "绝技3"
-    translated: "Ultimate Technique 3"
+    translated: "Special Technique 3"
   - subIndex: 1
     text: "智力3"
     translated: "3 intelligence"
@@ -30928,7 +30928,7 @@
 - raw: "绝技5;毒术5"
   splits:
   - text: "绝技5"
-    translated: "Master Skill 5"
+    translated: "Special Technique 5"
   - subIndex: 1
     text: "毒术5"
     translated: "5 Toxic Skill"
@@ -31166,7 +31166,7 @@
 - raw: "绝技4;智力4;毒术4;毒素0.06;负面加成0.03"
   splits:
   - text: "绝技4"
-    translated: "Ultimate Technique 4"
+    translated: "Special Technique 4"
   - subIndex: 1
     text: "智力4"
     translated: "Intelligence 4"
@@ -31184,7 +31184,7 @@
 - raw: "绝技10;智力10;毒术10"
   splits:
   - text: "绝技10"
-    translated: "Ultimate Technique 10"
+    translated: "Special Technique 10"
   - subIndex: 1
     text: "智力10"
     translated: "10 intelligence"
@@ -31465,7 +31465,7 @@
 - raw: "绝技6;意志8;毒术6;混乱0.08;负面加成0.04"
   splits:
   - text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 1
     text: "意志8"
     translated: "8 will"
@@ -31483,7 +31483,7 @@
 - raw: "绝技25;意志20;毒术25"
   splits:
   - text: "绝技25"
-    translated: "Ultimate Technique 25"
+    translated: "Special Technique 25"
   - subIndex: 1
     text: "意志20"
     translated: "Will20"
@@ -31855,7 +31855,7 @@
 - raw: "绝技8;智力10;毒术8;毒素0.04;混乱0.06;负面加成0.04"
   splits:
   - text: "绝技8"
-    translated: "Master Skill 8"
+    translated: "Special Technique 8"
   - subIndex: 1
     text: "智力10"
     translated: "10 intelligence"
@@ -31876,7 +31876,7 @@
 - raw: "绝技35;智力30;毒术45"
   splits:
   - text: "绝技35"
-    translated: "Ultimate Skill 35"
+    translated: "Special Technique 35"
   - subIndex: 1
     text: "智力30"
     translated: "Intelligence 30"
@@ -32631,7 +32631,7 @@
     translated: "Intellectual potential 1"
   - subIndex: 2
     text: "绝技潜力1"
-    translated: "Potential for Ultimate Technique 1"
+    translated: "Potential for Special Technique 1"
   - subIndex: 3
     text: "智力2"
     translated: "2 intelligence"
@@ -32640,7 +32640,7 @@
 - raw: "绝技14;智力14;毒术12;毒素0.12;负面加成0.12"
   splits:
   - text: "绝技14"
-    translated: "Ultimate Skill 14"
+    translated: "Special Technique 14"
   - subIndex: 1
     text: "智力14"
     translated: "14 intelligence"
@@ -32658,7 +32658,7 @@
 - raw: "绝技70;智力40;毒术75"
   splits:
   - text: "绝技70"
-    translated: "Master Skill 70"
+    translated: "Special Technique 70"
   - subIndex: 1
     text: "智力40"
     translated: "40 intelligence"
@@ -32801,7 +32801,7 @@
 - raw: "绝技4;力道4;壮骨0.04"
   splits:
   - text: "绝技4"
-    translated: "Ultimate Technique 4"
+    translated: "Special Technique 4"
   - subIndex: 1
     text: "力道4"
     translated: "Strength 4"
@@ -32813,7 +32813,7 @@
 - raw: "绝技5;力道5"
   splits:
   - text: "绝技5"
-    translated: "Master Skill 5"
+    translated: "Special Technique 5"
   - subIndex: 1
     text: "力道5"
     translated: "Strength 5"
@@ -33011,7 +33011,7 @@
 - raw: "绝技6;体质6;动摇0.03;刀法威力0.03"
   splits:
   - text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 1
     text: "体质6"
     translated: "6 stamina"
@@ -33026,7 +33026,7 @@
 - raw: "绝技10;力道10"
   splits:
   - text: "绝技10"
-    translated: "Ultimate Technique 10"
+    translated: "Special Technique 10"
   - subIndex: 1
     text: "力道10"
     translated: "Strength 10"
@@ -33244,7 +33244,7 @@
 - raw: "绝技6;力道6;体质6;霸体0.08"
   splits:
   - text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 1
     text: "力道6"
     translated: "Strength 6"
@@ -33259,7 +33259,7 @@
 - raw: "绝技25;力道20"
   splits:
   - text: "绝技25"
-    translated: "Ultimate Technique 25"
+    translated: "Special Technique 25"
   - subIndex: 1
     text: "力道20"
     translated: "Strength 20"
@@ -33553,7 +33553,7 @@
 - raw: "绝技8;体质8;经脉8;死战0.04;霸体0.04;疯魔0.04"
   splits:
   - text: "绝技8"
-    translated: "Master Skill 8"
+    translated: "Special Technique 8"
   - subIndex: 1
     text: "体质8"
     translated: "8 stamina"
@@ -33574,7 +33574,7 @@
 - raw: "绝技40;体质35"
   splits:
   - text: "绝技40"
-    translated: "40 Ultimate Technique"
+    translated: "40 Special Technique"
   - subIndex: 1
     text: "体质35"
     translated: "35 physique"
@@ -33876,10 +33876,10 @@
 - raw: "绝技潜力2;绝技1;力道1"
   splits:
   - text: "绝技潜力2"
-    translated: "Potential for Ultimate Skill 2"
+    translated: "Potential of Special Technique 2"
   - subIndex: 1
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 2
     text: "力道1"
     translated: "Strength 1"
@@ -33888,7 +33888,7 @@
 - raw: "绝技15;力道15;吸血0.05;壮骨0.05;动摇0.05"
   splits:
   - text: "绝技15"
-    translated: "Ultimate Technique 15"
+    translated: "Special Technique 15"
   - subIndex: 1
     text: "力道15"
     translated: "Strength 15"
@@ -33906,7 +33906,7 @@
 - raw: "绝技60;力道45"
   splits:
   - text: "绝技60"
-    translated: "Ultimate Technique 60"
+    translated: "Special Technique 60"
   - subIndex: 1
     text: "力道45"
     translated: "Strength 45"
@@ -34185,10 +34185,10 @@
     translated: "Meridian Potential 2"
   - subIndex: 1
     text: "绝技潜力1"
-    translated: "Potential for Ultimate Technique 1"
+    translated: "Potential for Special Technique 1"
   - subIndex: 2
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 3
     text: "经脉1"
     translated: "Acupoint 1"
@@ -34197,7 +34197,7 @@
 - raw: "绝技12;力道12;体质12;凝血0.06;吸血0.12;疯魔0.06;负面抗性-0.02"
   splits:
   - text: "绝技12"
-    translated: "Master Skill 12"
+    translated: "Special Technique 12"
   - subIndex: 1
     text: "力道12"
     translated: "Strength 12"
@@ -34221,7 +34221,7 @@
 - raw: "绝技75;体质70;经脉50"
   splits:
   - text: "绝技75"
-    translated: "Ultimate Skill 75"
+    translated: "Special Technique 75"
   - subIndex: 1
     text: "体质70"
     translated: "70 physique"
@@ -34394,7 +34394,7 @@
 - raw: "绝技4;智力4;定神0.04"
   splits:
   - text: "绝技4"
-    translated: "Ultimate Technique 4"
+    translated: "Special Technique 4"
   - subIndex: 1
     text: "智力4"
     translated: "Intelligence 4"
@@ -34514,7 +34514,7 @@
 - raw: "绝技6;智力6;弱点0.06"
   splits:
   - text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 1
     text: "智力6"
     translated: "6 intelligence"
@@ -34526,7 +34526,7 @@
 - raw: "绝技15;智力20"
   splits:
   - text: "绝技15"
-    translated: "Ultimate Technique 15"
+    translated: "Special Technique 15"
   - subIndex: 1
     text: "智力20"
     translated: "Intelligence20"
@@ -34774,7 +34774,7 @@
 - raw: "绝技25;智力25;意志10"
   splits:
   - text: "绝技25"
-    translated: "Ultimate Technique 25"
+    translated: "Special Technique 25"
   - subIndex: 1
     text: "智力25"
     translated: "Intelligence25"
@@ -35075,7 +35075,7 @@
 - raw: "绝技8;智力8;意志8;醒脑0.1"
   splits:
   - text: "绝技8"
-    translated: "Master Skill 8"
+    translated: "Special Technique 8"
   - subIndex: 1
     text: "智力8"
     translated: "8 intelligence"
@@ -35090,7 +35090,7 @@
 - raw: "绝技40;智力35;意志30"
   splits:
   - text: "绝技40"
-    translated: "40 Ultimate Technique"
+    translated: "40 Special Technique"
   - subIndex: 1
     text: "智力35"
     translated: "Intellect 35"
@@ -35501,7 +35501,7 @@
 - raw: "绝技潜力1;灵巧潜力2"
   splits:
   - text: "绝技潜力1"
-    translated: "Potential for Ultimate Technique 1"
+    translated: "Potential for Special Technique 1"
   - subIndex: 1
     text: "灵巧潜力2"
     translated: "Dexterous Potential 2"
@@ -35510,7 +35510,7 @@
 - raw: "绝技15;智力15;破招0.04;定身0.04;负面抗性0.08"
   splits:
   - text: "绝技15"
-    translated: "Ultimate Technique 15"
+    translated: "Special Technique 15"
   - subIndex: 1
     text: "智力15"
     translated: "15 intelligence"
@@ -35528,7 +35528,7 @@
 - raw: "绝技55;智力45;灵巧35"
   splits:
   - text: "绝技55"
-    translated: "Ultimate Technique 55"
+    translated: "Special Technique 55"
   - subIndex: 1
     text: "智力45"
     translated: "Intellectual 45"
@@ -35946,10 +35946,10 @@
     translated: "Potential willpower 2"
   - subIndex: 1
     text: "绝技潜力1"
-    translated: "Potential for Ultimate Technique 1"
+    translated: "Potential for Special Technique 1"
   - subIndex: 2
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 3
     text: "意志1"
     translated: "1 will"
@@ -35958,7 +35958,7 @@
 - raw: "绝技12;意志12;体质12;复生0.12;反伤吸内0.06;护体真气0.06"
   splits:
   - text: "绝技12"
-    translated: "Master Skill 12"
+    translated: "Special Technique 12"
   - subIndex: 1
     text: "意志12"
     translated: "12 will"
@@ -35979,7 +35979,7 @@
 - raw: "绝技70;意志70;意志45"
   splits:
   - text: "绝技70"
-    translated: "Master Skill 70"
+    translated: "Special Technique 70"
   - subIndex: 1
     text: "意志70"
     translated: "Will70"
@@ -36048,7 +36048,7 @@
 - raw: "绝技4;体质4;护甲2;负面抗性0.02"
   splits:
   - text: "绝技4"
-    translated: "Ultimate Technique 4"
+    translated: "Special Technique 4"
   - subIndex: 1
     text: "体质4"
     translated: "4 physique"
@@ -36239,7 +36239,7 @@
 - raw: "绝技6;体质6;护甲3;负面抗性0.03"
   splits:
   - text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 1
     text: "体质6"
     translated: "6 stamina"
@@ -36254,7 +36254,7 @@
 - raw: "绝技10;体质15"
   splits:
   - text: "绝技10"
-    translated: "Ultimate Technique 10"
+    translated: "Special Technique 10"
   - subIndex: 1
     text: "体质15"
     translated: "15 stamina"
@@ -36541,7 +36541,7 @@
 - raw: "绝技6;力道6;体质6;壮骨0.04;活血0.04"
   splits:
   - text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 1
     text: "力道6"
     translated: "Strength 6"
@@ -36559,7 +36559,7 @@
 - raw: "绝技30;力道20;体质10"
   splits:
   - text: "绝技30"
-    translated: "Ultimate Technique 30"
+    translated: "Special Technique 30"
   - subIndex: 1
     text: "力道20"
     translated: "Strength 20"
@@ -36886,7 +36886,7 @@
 - raw: "绝技10;体质10;护甲5;霸体0.04;负面抗性0.04"
   splits:
   - text: "绝技10"
-    translated: "Ultimate Technique 10"
+    translated: "Special Technique 10"
   - subIndex: 1
     text: "体质10"
     translated: "10 stamina"
@@ -36904,7 +36904,7 @@
 - raw: "绝技50;体质30"
   splits:
   - text: "绝技50"
-    translated: "Ultimate Technique 50"
+    translated: "Special Technique 50"
   - subIndex: 1
     text: "体质30"
     translated: "30 stamina"
@@ -37286,7 +37286,7 @@
 - raw: "绝技15;体质15;昏沉0.04;眩晕0.04;负面加成0.08"
   splits:
   - text: "绝技15"
-    translated: "Ultimate Technique 15"
+    translated: "Special Technique 15"
   - subIndex: 1
     text: "体质15"
     translated: "15 stamina"
@@ -37304,7 +37304,7 @@
 - raw: "绝技60;体质45;力道30"
   splits:
   - text: "绝技60"
-    translated: "Ultimate Technique 60"
+    translated: "Special Technique 60"
   - subIndex: 1
     text: "体质45"
     translated: "45 stamina"
@@ -37815,10 +37815,10 @@
     translated: "Potential in physique 2"
   - subIndex: 1
     text: "绝技潜力1"
-    translated: "Potential for Ultimate Technique 1"
+    translated: "Potential for Special Technique 1"
   - subIndex: 2
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 3
     text: "体质1"
     translated: "1 stamina"
@@ -37827,7 +37827,7 @@
 - raw: "绝技12;体质12;护甲6;无敌0.05;坚毅0.05;霸体0.05"
   splits:
   - text: "绝技12"
-    translated: "Master Skill 12"
+    translated: "Special Technique 12"
   - subIndex: 1
     text: "体质12"
     translated: "12 stamina"
@@ -37848,7 +37848,7 @@
 - raw: "绝技80;体质70"
   splits:
   - text: "绝技80"
-    translated: "Ultimate Technique 80"
+    translated: "Special Technique 80"
   - subIndex: 1
     text: "体质70"
     translated: "70 physique"
@@ -38009,7 +38009,7 @@
 - raw: "绝技4;灵巧4;反弹0.02"
   splits:
   - text: "绝技4"
-    translated: "Ultimate Technique 4"
+    translated: "Special Technique 4"
   - subIndex: 1
     text: "灵巧4"
     translated: "Agile 4"
@@ -38168,7 +38168,7 @@
 - raw: "绝技6;智力6;疲劳0.03;蓄力0.03"
   splits:
   - text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 1
     text: "智力6"
     translated: "6 intelligence"
@@ -38183,7 +38183,7 @@
 - raw: "绝技15;智力10;灵巧5"
   splits:
   - text: "绝技15"
-    translated: "Ultimate Technique 15"
+    translated: "Special Technique 15"
   - subIndex: 1
     text: "智力10"
     translated: "10 intelligence"
@@ -38426,7 +38426,7 @@
 - raw: "绝技9;智力9;舒筋0.04;反弹0.02"
   splits:
   - text: "绝技9"
-    translated: "Ultimate Technique 9"
+    translated: "Special Technique 9"
   - subIndex: 1
     text: "智力9"
     translated: "9 Intelligence"
@@ -38711,7 +38711,7 @@
 - raw: "绝技12;智力12;反弹0.03;疲劳0.05"
   splits:
   - text: "绝技12"
-    translated: "Master Skill 12"
+    translated: "Special Technique 12"
   - subIndex: 1
     text: "智力12"
     translated: "12 intelligence"
@@ -38726,7 +38726,7 @@
 - raw: "绝技45;智力30"
   splits:
   - text: "绝技45"
-    translated: "Master Skill 45"
+    translated: "Special Technique 45"
   - subIndex: 1
     text: "智力30"
     translated: "Intelligence 30"
@@ -38988,7 +38988,7 @@
 - raw: "绝技10;智力15;经脉5;内伤0.06;连绵0.06"
   splits:
   - text: "绝技10"
-    translated: "Ultimate Technique 10"
+    translated: "Special Technique 10"
   - subIndex: 1
     text: "智力15"
     translated: "15 intelligence"
@@ -39006,7 +39006,7 @@
 - raw: "绝技50;智力50;经脉30"
   splits:
   - text: "绝技50"
-    translated: "Ultimate Technique 50"
+    translated: "Special Technique 50"
   - subIndex: 1
     text: "智力50"
     translated: "Intelligence 50"
@@ -39320,7 +39320,7 @@
 - raw: "绝技潜力1;经脉潜力2;灵巧潜力1"
   splits:
   - text: "绝技潜力1"
-    translated: "Potential for Ultimate Technique 1"
+    translated: "Potential for Special Technique 1"
   - subIndex: 1
     text: "经脉潜力2"
     translated: "Meridian Potential 2"
@@ -39353,7 +39353,7 @@
 - raw: "绝技75;灵巧60;智力55"
   splits:
   - text: "绝技75"
-    translated: "Ultimate Skill 75"
+    translated: "Special Technique 75"
   - subIndex: 1
     text: "灵巧60"
     translated: "Nimble 60"
@@ -39508,7 +39508,7 @@
 - raw: "绝技2;体质2;不屈0.04;减伤2"
   splits:
   - text: "绝技2"
-    translated: "2 Ultimate Technique"
+    translated: "2 Special Technique"
   - subIndex: 1
     text: "体质2"
     translated: "2 stamina"
@@ -39659,7 +39659,7 @@
 - raw: "绝技3;力道3;体质3;铜皮0.03;不屈0.03;减伤3"
   splits:
   - text: "绝技3"
-    translated: "Ultimate Technique 3"
+    translated: "Special Technique 3"
   - subIndex: 1
     text: "力道3"
     translated: "Strength 3"
@@ -39680,7 +39680,7 @@
 - raw: "绝技20;体质5"
   splits:
   - text: "绝技20"
-    translated: "Ultimate Technique 20"
+    translated: "Special Technique 20"
   - subIndex: 1
     text: "体质5"
     translated: "5 constitution"
@@ -39821,7 +39821,7 @@
 - raw: "绝技6;体质6;横练0.04;坚毅0.04;减伤4"
   splits:
   - text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 1
     text: "体质6"
     translated: "6 stamina"
@@ -40059,7 +40059,7 @@
 - raw: "绝技8;体质8;刀法威力0.1;横练0.03;减伤6"
   splits:
   - text: "绝技8"
-    translated: "Master Skill 8"
+    translated: "Special Technique 8"
   - subIndex: 1
     text: "体质8"
     translated: "8 stamina"
@@ -40077,7 +40077,7 @@
 - raw: "绝技45;体质30"
   splits:
   - text: "绝技45"
-    translated: "Master Skill 45"
+    translated: "Special Technique 45"
   - subIndex: 1
     text: "体质30"
     translated: "30 stamina"
@@ -40202,7 +40202,7 @@
 - raw: "绝技潜力2;力道潜力1"
   splits:
   - text: "绝技潜力2"
-    translated: "Potential for Ultimate Skill 2"
+    translated: "Potential of Special Technique 2"
   - subIndex: 1
     text: "力道潜力1"
     translated: "Strength Potential 1"
@@ -40211,7 +40211,7 @@
 - raw: "绝技10;力道10;刀法威力0.05;破甲0.05;穿甲0.05;减伤8"
   splits:
   - text: "绝技10"
-    translated: "Ultimate Technique 10"
+    translated: "Special Technique 10"
   - subIndex: 1
     text: "力道10"
     translated: "Strength 10"
@@ -40520,7 +40520,7 @@
 - raw: "绝技4;意志4;回内0.006"
   splits:
   - text: "绝技4"
-    translated: "Ultimate Technique 4"
+    translated: "Special Technique 4"
   - subIndex: 1
     text: "意志4"
     translated: "4 will"
@@ -40639,7 +40639,7 @@
 - raw: "绝技4;意志4;经脉4;调息0.06"
   splits:
   - text: "绝技4"
-    translated: "Ultimate Technique 4"
+    translated: "Special Technique 4"
   - subIndex: 1
     text: "意志4"
     translated: "4 will"
@@ -40654,7 +40654,7 @@
 - raw: "绝技10;意志10"
   splits:
   - text: "绝技10"
-    translated: "Ultimate Technique 10"
+    translated: "Special Technique 10"
   - subIndex: 1
     text: "意志10"
     translated: "10 will"
@@ -40800,7 +40800,7 @@
 - raw: "绝技1;意志1;剑法1"
   splits:
   - text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 1
     text: "意志1"
     translated: "1 will"
@@ -40827,7 +40827,7 @@
 - raw: "绝技20;意志20;剑法20"
   splits:
   - text: "绝技20"
-    translated: "Ultimate Technique 20"
+    translated: "Special Technique 20"
   - subIndex: 1
     text: "意志20"
     translated: "Will20"
@@ -41053,7 +41053,7 @@
 - raw: "绝技30;意志30;剑法40"
   splits:
   - text: "绝技30"
-    translated: "Ultimate Technique 30"
+    translated: "Special Technique 30"
   - subIndex: 1
     text: "意志30"
     translated: "Willpower 30"
@@ -41290,7 +41290,7 @@
 - raw: "绝技45;灵巧45;剑法55"
   splits:
   - text: "绝技45"
-    translated: "Master Skill 45"
+    translated: "Special Technique 45"
   - subIndex: 1
     text: "灵巧45"
     translated: "Agile 45"
@@ -41719,7 +41719,7 @@
 - raw: "绝技4;智力4;慧眼0.04"
   splits:
   - text: "绝技4"
-    translated: "Ultimate Technique 4"
+    translated: "Special Technique 4"
   - subIndex: 1
     text: "智力4"
     translated: "Intelligence 4"
@@ -41893,7 +41893,7 @@
 - raw: "绝技6;智力6;慧眼0.06"
   splits:
   - text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 1
     text: "智力6"
     translated: "6 intelligence"
@@ -42016,7 +42016,7 @@
 - raw: "绝技1;智力2"
   splits:
   - text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 1
     text: "智力2"
     translated: "2 intelligence"
@@ -42025,7 +42025,7 @@
 - raw: "绝技6;智力6;经脉6;反击0.04;慧眼0.04"
   splits:
   - text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 1
     text: "智力6"
     translated: "6 intelligence"
@@ -42043,7 +42043,7 @@
 - raw: "绝技25;智力35"
   splits:
   - text: "绝技25"
-    translated: "Ultimate Technique 25"
+    translated: "Special Technique 25"
   - subIndex: 1
     text: "智力35"
     translated: "Intellect 35"
@@ -42879,7 +42879,7 @@
 - raw: "绝技4;意志4;压制0.04"
   splits:
   - text: "绝技4"
-    translated: "Ultimate Technique 4"
+    translated: "Special Technique 4"
   - subIndex: 1
     text: "意志4"
     translated: "4 will"
@@ -42891,7 +42891,7 @@
 - raw: "绝技5;意志5"
   splits:
   - text: "绝技5"
-    translated: "Master Skill 5"
+    translated: "Special Technique 5"
   - subIndex: 1
     text: "意志5"
     translated: "5 will"
@@ -43032,7 +43032,7 @@
 - raw: "绝技4;意志4;体质4;重碾0.03;奇门威力0.03"
   splits:
   - text: "绝技4"
-    translated: "Ultimate Technique 4"
+    translated: "Special Technique 4"
   - subIndex: 1
     text: "意志4"
     translated: "4 will"
@@ -43050,7 +43050,7 @@
 - raw: "绝技15;意志5"
   splits:
   - text: "绝技15"
-    translated: "Ultimate Technique 15"
+    translated: "Special Technique 15"
   - subIndex: 1
     text: "意志5"
     translated: "5 will"
@@ -43210,7 +43210,7 @@
 - raw: "绝技8;意志8;反击0.08;奇门威力0.04"
   splits:
   - text: "绝技8"
-    translated: "Master Skill 8"
+    translated: "Special Technique 8"
   - subIndex: 1
     text: "意志8"
     translated: "8 will"
@@ -43423,7 +43423,7 @@
 - raw: "绝技12;意志10;重碾0.04;不屈0.04;奇门威力0.04"
   splits:
   - text: "绝技12"
-    translated: "Master Skill 12"
+    translated: "Special Technique 12"
   - subIndex: 1
     text: "意志10"
     translated: "10 will"
@@ -43441,7 +43441,7 @@
 - raw: "绝技50;意志30"
   splits:
   - text: "绝技50"
-    translated: "Ultimate Technique 50"
+    translated: "Special Technique 50"
   - subIndex: 1
     text: "意志30"
     translated: "Willpower 30"
@@ -43663,10 +43663,10 @@
 - raw: "绝技潜力2;绝技1;意志1"
   splits:
   - text: "绝技潜力2"
-    translated: "Potential for Ultimate Skill 2"
+    translated: "Potential of Special Technique 2"
   - subIndex: 1
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 2
     text: "意志1"
     translated: "1 will"
@@ -43675,7 +43675,7 @@
 - raw: "绝技15;意志15;鹰眼0.04;负面加成0.04;奇门威力0.06"
   splits:
   - text: "绝技15"
-    translated: "Ultimate Technique 15"
+    translated: "Special Technique 15"
   - subIndex: 1
     text: "意志15"
     translated: "15 will"
@@ -43693,7 +43693,7 @@
 - raw: "绝技65;意志45"
   splits:
   - text: "绝技65"
-    translated: "65 Ultimate Technique"
+    translated: "65 Special Technique"
   - subIndex: 1
     text: "意志45"
     translated: "45 will"
@@ -43905,7 +43905,7 @@
 - raw: "绝技12;意志12;体质12;斗转0.1;反伤吸内0.1;负面抗性0.05"
   splits:
   - text: "绝技12"
-    translated: "Master Skill 12"
+    translated: "Special Technique 12"
   - subIndex: 1
     text: "意志12"
     translated: "12 will"
@@ -44004,7 +44004,7 @@
 - raw: "绝技2;智力6;弱点0.02;机关伤害0.04"
   splits:
   - text: "绝技2"
-    translated: "2 Ultimate Technique"
+    translated: "2 Special Technique"
   - subIndex: 1
     text: "智力6"
     translated: "6 intelligence"
@@ -44170,7 +44170,7 @@
 - raw: "绝技4;智力8;弱点0.03;脆弱0.03"
   splits:
   - text: "绝技4"
-    translated: "Ultimate Technique 4"
+    translated: "Special Technique 4"
   - subIndex: 1
     text: "智力8"
     translated: "8 intelligence"
@@ -44185,7 +44185,7 @@
 - raw: "绝技15;智力15"
   splits:
   - text: "绝技15"
-    translated: "Ultimate Technique 15"
+    translated: "Special Technique 15"
   - subIndex: 1
     text: "智力15"
     translated: "15 intelligence"
@@ -44328,7 +44328,7 @@
 - raw: "绝技9;灵巧9;弱点0.04;机关伤害0.08"
   splits:
   - text: "绝技9"
-    translated: "Ultimate Technique 9"
+    translated: "Special Technique 9"
   - subIndex: 1
     text: "灵巧9"
     translated: "Agile 9"
@@ -44535,7 +44535,7 @@
 - raw: "绝技12;智力12;弱点0.04;醒脑0.04;机关速度0.04"
   splits:
   - text: "绝技12"
-    translated: "Master Skill 12"
+    translated: "Special Technique 12"
   - subIndex: 1
     text: "智力12"
     translated: "12 intelligence"
@@ -44553,7 +44553,7 @@
 - raw: "绝技35;智力50"
   splits:
   - text: "绝技35"
-    translated: "Ultimate Skill 35"
+    translated: "Special Technique 35"
   - subIndex: 1
     text: "智力50"
     translated: "Intelligence 50"
@@ -44733,7 +44733,7 @@
     translated: "Intellectual potential 1"
   - subIndex: 2
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 3
     text: "灵巧1"
     translated: "Agile 1"
@@ -44742,7 +44742,7 @@
 - raw: "绝技10;灵巧10;智力10;脆弱0.04;舒筋0.04;机关伤害0.06;机关速度0.06"
   splits:
   - text: "绝技10"
-    translated: "Ultimate Technique 10"
+    translated: "Special Technique 10"
   - subIndex: 1
     text: "灵巧10"
     translated: "Agile 10"
@@ -44766,7 +44766,7 @@
 - raw: "绝技50;灵巧50;智力50"
   splits:
   - text: "绝技50"
-    translated: "Ultimate Technique 50"
+    translated: "Special Technique 50"
   - subIndex: 1
     text: "灵巧50"
     translated: "Agile 50"
@@ -45069,7 +45069,7 @@
 - raw: "绝技4;意志4;伤害0.04"
   splits:
   - text: "绝技4"
-    translated: "Ultimate Technique 4"
+    translated: "Special Technique 4"
   - subIndex: 1
     text: "意志4"
     translated: "4 will"
@@ -45201,7 +45201,7 @@
 - raw: "绝技2;智力8;意志2;伤害0.06"
   splits:
   - text: "绝技2"
-    translated: "2 Ultimate Technique"
+    translated: "2 Special Technique"
   - subIndex: 1
     text: "智力8"
     translated: "8 intelligence"
@@ -45398,7 +45398,7 @@
 - raw: "绝技4;智力10;意志4;锻造4;伤害0.04;震脑0.04"
   splits:
   - text: "绝技4"
-    translated: "Ultimate Technique 4"
+    translated: "Special Technique 4"
   - subIndex: 1
     text: "智力10"
     translated: "10 intelligence"
@@ -45419,7 +45419,7 @@
 - raw: "绝技20;智力30"
   splits:
   - text: "绝技20"
-    translated: "Ultimate Technique 20"
+    translated: "Special Technique 20"
   - subIndex: 1
     text: "智力30"
     translated: "Intelligence 30"
@@ -45629,13 +45629,13 @@
     translated: "Forge potential 1"
   - subIndex: 3
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   templates:
   - template: "{0};{1};{2};{3}"
 - raw: "绝技6;智力12;意志6;锻造6;伤害0.05;震脑0.05"
   splits:
   - text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 1
     text: "智力12"
     translated: "12 intelligence"
@@ -45656,7 +45656,7 @@
 - raw: "绝技45;智力35;意志20"
   splits:
   - text: "绝技45"
-    translated: "Master Skill 45"
+    translated: "Special Technique 45"
   - subIndex: 1
     text: "智力35"
     translated: "Intellect 35"
@@ -45874,7 +45874,7 @@
 - raw: "绝技55;智力45;锻造55"
   splits:
   - text: "绝技55"
-    translated: "Ultimate Technique 55"
+    translated: "Special Technique 55"
   - subIndex: 1
     text: "智力45"
     translated: "Intellectual 45"
@@ -46218,7 +46218,7 @@
 - raw: "绝技2;智力6;命中0.04"
   splits:
   - text: "绝技2"
-    translated: "2 Ultimate Technique"
+    translated: "2 Special Technique"
   - subIndex: 1
     text: "智力6"
     translated: "6 intelligence"
@@ -46239,7 +46239,7 @@
 - raw: "绝技4;智力4;暴击0.04"
   splits:
   - text: "绝技4"
-    translated: "Ultimate Technique 4"
+    translated: "Special Technique 4"
   - subIndex: 1
     text: "智力4"
     translated: "Intelligence 4"
@@ -46387,7 +46387,7 @@
 - raw: "绝技6;智力6;鹰眼0.06"
   splits:
   - text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 1
     text: "智力6"
     translated: "6 intelligence"
@@ -46408,7 +46408,7 @@
 - raw: "绝技6;体质6;坚毅0.06"
   splits:
   - text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 1
     text: "体质6"
     translated: "6 stamina"
@@ -46420,7 +46420,7 @@
 - raw: "绝技20;体质15"
   splits:
   - text: "绝技20"
-    translated: "Ultimate Technique 20"
+    translated: "Special Technique 20"
   - subIndex: 1
     text: "体质15"
     translated: "15 stamina"
@@ -46595,7 +46595,7 @@
 - raw: "绝技6;力道6;体质6;脆弱0.04;坚毅0.04"
   splits:
   - text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 1
     text: "力道6"
     translated: "Strength 6"
@@ -46613,7 +46613,7 @@
 - raw: "绝技30;力道25;意志10"
   splits:
   - text: "绝技30"
-    translated: "Ultimate Technique 30"
+    translated: "Special Technique 30"
   - subIndex: 1
     text: "力道25"
     translated: "Strength 25"
@@ -46634,7 +46634,7 @@
 - raw: "绝技9;力道9;外伤0.08"
   splits:
   - text: "绝技9"
-    translated: "Ultimate Technique 9"
+    translated: "Special Technique 9"
   - subIndex: 1
     text: "力道9"
     translated: "Strength 9"
@@ -46646,7 +46646,7 @@
 - raw: "绝技35;力道20"
   splits:
   - text: "绝技35"
-    translated: "Ultimate Skill 35"
+    translated: "Special Technique 35"
   - subIndex: 1
     text: "力道20"
     translated: "Strength 20"
@@ -46850,7 +46850,7 @@
 - raw: "绝技12;力道12;暴击0.1"
   splits:
   - text: "绝技12"
-    translated: "Master Skill 12"
+    translated: "Special Technique 12"
   - subIndex: 1
     text: "力道12"
     translated: "Strength 12"
@@ -46862,7 +46862,7 @@
 - raw: "绝技45;力道30"
   splits:
   - text: "绝技45"
-    translated: "Master Skill 45"
+    translated: "Special Technique 45"
   - subIndex: 1
     text: "力道30"
     translated: "Strength 30"
@@ -46880,7 +46880,7 @@
 - raw: "绝技8;力道8;智力8;慧眼0.05;回血0.005"
   splits:
   - text: "绝技8"
-    translated: "Master Skill 8"
+    translated: "Special Technique 8"
   - subIndex: 1
     text: "力道8"
     translated: "Strength 8"
@@ -46898,7 +46898,7 @@
 - raw: "绝技40;智力35;力道25"
   splits:
   - text: "绝技40"
-    translated: "40 Ultimate Technique"
+    translated: "40 Special Technique"
   - subIndex: 1
     text: "智力35"
     translated: "Intellect 35"
@@ -47158,7 +47158,7 @@
 - raw: "绝技10;力道10;智力10;慧眼0.05;杀机0.05;斗转0.02"
   splits:
   - text: "绝技10"
-    translated: "Ultimate Technique 10"
+    translated: "Special Technique 10"
   - subIndex: 1
     text: "力道10"
     translated: "Strength 10"
@@ -47179,7 +47179,7 @@
 - raw: "绝技60;智力55"
   splits:
   - text: "绝技60"
-    translated: "Ultimate Technique 60"
+    translated: "Special Technique 60"
   - subIndex: 1
     text: "智力55"
     translated: "55 intelligence"
@@ -47381,13 +47381,13 @@
 - raw: "绝技潜力1;力道潜力2;绝技1;体质1"
   splits:
   - text: "绝技潜力1"
-    translated: "Potential for Ultimate Technique 1"
+    translated: "Potential for Special Technique 1"
   - subIndex: 1
     text: "力道潜力2"
     translated: "Strength potential 2"
   - subIndex: 2
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 3
     text: "体质1"
     translated: "1 stamina"
@@ -47396,7 +47396,7 @@
 - raw: "绝技12;力道12;体质12;外伤0.06;反弹0.06"
   splits:
   - text: "绝技12"
-    translated: "Master Skill 12"
+    translated: "Special Technique 12"
   - subIndex: 1
     text: "力道12"
     translated: "Strength 12"
@@ -47414,7 +47414,7 @@
 - raw: "绝技75;力道60;体质45"
   splits:
   - text: "绝技75"
-    translated: "Ultimate Skill 75"
+    translated: "Special Technique 75"
   - subIndex: 1
     text: "力道60"
     translated: "Strength 60"
@@ -47569,7 +47569,7 @@
 - raw: "绝技2;轻功3;力道3;回内0.006"
   splits:
   - text: "绝技2"
-    translated: "2 Ultimate Technique"
+    translated: "2 Special Technique"
   - subIndex: 1
     text: "轻功3"
     translated: "Qinggong 3"
@@ -47584,7 +47584,7 @@
 - raw: "绝技5;轻功5"
   splits:
   - text: "绝技5"
-    translated: "Master Skill 5"
+    translated: "Special Technique 5"
   - subIndex: 1
     text: "轻功5"
     translated: "Qinggong 5"
@@ -47731,7 +47731,7 @@
 - raw: "绝技4;力道4;体质4;恢复0.06;药性0.03"
   splits:
   - text: "绝技4"
-    translated: "Ultimate Technique 4"
+    translated: "Special Technique 4"
   - subIndex: 1
     text: "力道4"
     translated: "Strength 4"
@@ -48134,7 +48134,7 @@
     translated: "Strength Potential 1"
   - subIndex: 1
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 2
     text: "力道1"
     translated: "Strength 1"
@@ -48143,7 +48143,7 @@
 - raw: "绝技8;力道8;经脉8;鹰眼0.05;飘逸0.05"
   splits:
   - text: "绝技8"
-    translated: "Master Skill 8"
+    translated: "Special Technique 8"
   - subIndex: 1
     text: "力道8"
     translated: "Strength 8"
@@ -48161,7 +48161,7 @@
 - raw: "绝技40;力道30"
   splits:
   - text: "绝技40"
-    translated: "40 Ultimate Technique"
+    translated: "40 Special Technique"
   - subIndex: 1
     text: "力道30"
     translated: "Strength 30"
@@ -48754,7 +48754,7 @@
 - raw: "绝技9;力道9;意志9;体质15;护甲6;反弹0.05;负面抗性0.05;疯魔0.05"
   splits:
   - text: "绝技9"
-    translated: "Ultimate Technique 9"
+    translated: "Special Technique 9"
   - subIndex: 1
     text: "力道9"
     translated: "Strength 9"
@@ -49013,7 +49013,7 @@
     translated: "Agile 1"
   - subIndex: 1
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   templates:
   - template: "{0};{1}"
 - raw: "生命上限40;内功4;绝技4;经脉4"
@@ -49025,7 +49025,7 @@
     translated: "Internal Skill 4"
   - subIndex: 2
     text: "绝技4"
-    translated: "Ultimate Technique 4"
+    translated: "Special Technique 4"
   - subIndex: 3
     text: "经脉4"
     translated: "Meridian 4"
@@ -49082,7 +49082,7 @@
 - raw: "绝技4;力道4;压制0.04"
   splits:
   - text: "绝技4"
-    translated: "Ultimate Technique 4"
+    translated: "Special Technique 4"
   - subIndex: 1
     text: "力道4"
     translated: "Strength 4"
@@ -49621,7 +49621,7 @@
     translated: "Potential of Meridians 1"
   - subIndex: 2
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 3
     text: "力道1"
     translated: "Strength 1"
@@ -49630,7 +49630,7 @@
 - raw: "绝技6;力道12;经脉12;眩晕0.06;通脉0.06"
   splits:
   - text: "绝技6"
-    translated: "Master Technique 6"
+    translated: "Special Technique 6"
   - subIndex: 1
     text: "力道12"
     translated: "Strength 12"
@@ -49648,7 +49648,7 @@
 - raw: "绝技40;力道60;经脉50"
   splits:
   - text: "绝技40"
-    translated: "40 Ultimate Technique"
+    translated: "40 Special Technique"
   - subIndex: 1
     text: "力道60"
     translated: "Strength 60"
@@ -49674,7 +49674,7 @@
     translated: "Potential in constitution 1"
   - subIndex: 2
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 3
     text: "智力1"
     translated: "Intellect 1"
@@ -49683,7 +49683,7 @@
 - raw: "绝技8;智力12;体质10;慧眼0.05;弱点0.05;拆招0.05"
   splits:
   - text: "绝技8"
-    translated: "Master Skill 8"
+    translated: "Special Technique 8"
   - subIndex: 1
     text: "智力12"
     translated: "12 intelligence"
@@ -49704,7 +49704,7 @@
 - raw: "绝技45;智力65;体质40"
   splits:
   - text: "绝技45"
-    translated: "Master Skill 45"
+    translated: "Special Technique 45"
   - subIndex: 1
     text: "智力65"
     translated: "65 intelligence"
@@ -50336,7 +50336,7 @@
     translated: "Qimen potential 1"
   - subIndex: 2
     text: "绝技1"
-    translated: "Master Skill 1"
+    translated: "Special Technique 1"
   - subIndex: 3
     text: "体质1"
     translated: "1 stamina"
@@ -50777,7 +50777,7 @@
 - raw: "绝技潜力1;力道潜力1;智力潜力1;智力2"
   splits:
   - text: "绝技潜力1"
-    translated: "Potential for Ultimate Technique 1"
+    translated: "Potential for Special Technique 1"
   - subIndex: 1
     text: "力道潜力1"
     translated: "Strength Potential 1"
@@ -50792,7 +50792,7 @@
 - raw: "绝技12;力道12;智力12;慧眼0.08;昏沉0.08"
   splits:
   - text: "绝技12"
-    translated: "Master Skill 12"
+    translated: "Special Technique 12"
   - subIndex: 1
     text: "力道12"
     translated: "Strength 12"
@@ -50810,7 +50810,7 @@
 - raw: "绝技70;力道65;智力60"
   splits:
   - text: "绝技70"
-    translated: "Master Skill 70"
+    translated: "Special Technique 70"
   - subIndex: 1
     text: "力道65"
     translated: "Strength 65"
@@ -50830,7 +50830,7 @@
 - raw: "绝技潜力1;灵巧潜力1;经脉潜力1;经脉2"
   splits:
   - text: "绝技潜力1"
-    translated: "Potential for Ultimate Technique 1"
+    translated: "Potential for Special Technique 1"
   - subIndex: 1
     text: "灵巧潜力1"
     translated: "Agile Potential 1"
@@ -50845,7 +50845,7 @@
 - raw: "绝技16;意志10;经脉10;霸体0.06;不屈0.06;坚毅0.06"
   splits:
   - text: "绝技16"
-    translated: "Ultimate Technique 16"
+    translated: "Special Technique 16"
   - subIndex: 1
     text: "意志10"
     translated: "10 will"
@@ -50866,7 +50866,7 @@
 - raw: "绝技80;意志55;经脉45"
   splits:
   - text: "绝技80"
-    translated: "Ultimate Technique 80"
+    translated: "Special Technique 80"
   - subIndex: 1
     text: "意志55"
     translated: "55 will"
@@ -52326,8 +52326,8 @@
 - raw: "绝技威力"
   splits:
   - text: "绝技威力"
-    translated: "Ultimate technique power"
-    qcReviewedText: "Ultimate technique power"
+    translated: "Special Technique power"
+    qcReviewedText: "Special Technique power"
     qcStatus: Passed
     qcQualityScore: 85
     qcDefectCategory: None
@@ -52446,8 +52446,8 @@
 - raw: "绝技潜力"
   splits:
   - text: "绝技潜力"
-    translated: "Potential for ultimate technique"
-    qcReviewedText: "Potential for ultimate technique"
+    translated: "Potential for Special Technique"
+    qcReviewedText: "Potential for Special Technique"
     qcStatus: Passed
     qcQualityScore: 85
     qcDefectCategory: None
@@ -53426,8 +53426,8 @@
 - raw: "绝技/拳掌/剑法"
   splits:
   - text: "绝技"
-    translated: "Ultimate Technique"
-    qcReviewedText: "Ultimate Technique/Fists and palms/Sword Art"
+    translated: "Special Technique"
+    qcReviewedText: "Special Technique/Fists and palms/Sword Art"
     qcStatus: Passed
     qcQualityScore: 85
     qcDefectCategory: None
@@ -53648,8 +53648,8 @@
 - raw: "绝技/剑法/射术"
   splits:
   - text: "绝技"
-    translated: "Ultimate Technique"
-    qcReviewedText: "Ultimate Technique/Sword Art/Archery"
+    translated: "Special Technique"
+    qcReviewedText: "Special Technique/Sword Art/Archery"
     qcStatus: Passed
     qcQualityScore: 90
     qcDefectCategory: None
@@ -53763,8 +53763,8 @@
 - raw: "绝技/拳掌/长兵"
   splits:
   - text: "绝技"
-    translated: "Ultimate Technique"
-    qcReviewedText: "Ultimate Technique/Fists and palms/Long weapon"
+    translated: "Special Technique"
+    qcReviewedText: "Special Technique/Fists and palms/Long weapon"
     qcStatus: Passed
     qcQualityScore: 90
     qcDefectCategory: None
@@ -54180,7 +54180,7 @@
     translated: "Invisible"
   - subIndex: 3
     text: "身怀绝技"
-    translated: "Master of extraordinary skills"
+    translated: "Possesses a Special Technique"
   - subIndex: 4
     text: "桀骜不驯"
     translated: "Rebellious"
@@ -54367,7 +54367,7 @@
     translated: "Internal kung fu"
   - subIndex: 5
     text: "身怀绝技"
-    translated: "Master of extraordinary skills"
+    translated: "Possesses a Special Technique"
   - subIndex: 6
     text: "容光焕发"
     translated: "Energetic and vibrant"
@@ -54433,7 +54433,7 @@
     translated: "Inner power refined"
   - subIndex: 4
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - subIndex: 5
     text: "康健"
     translated: "Healthy"
@@ -54545,7 +54545,7 @@
     translated: "Wield spear and staff"
   - subIndex: 4
     text: "身怀绝技"
-    translated: "Master of extraordinary skills"
+    translated: "Possesses a Special Technique"
   - subIndex: 5
     text: "位极人臣"
     translated: "Second‑in‑command"
@@ -54588,7 +54588,7 @@
     translated: "Backdoor method"
   - subIndex: 5
     text: "身怀绝技"
-    translated: "Master of extraordinary skills"
+    translated: "Possesses a Special Technique"
   - subIndex: 6
     text: "淡泊"
     translated: "Tranquil"
@@ -54678,7 +54678,7 @@
     translated: "Become a government official"
   - subIndex: 4
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - subIndex: 5
     text: "体质"
     translated: "Physique"
@@ -54718,7 +54718,7 @@
     translated: "Sword moves at will"
   - subIndex: 3
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - subIndex: 4
     text: "意志"
     translated: "Willpower"
@@ -54833,7 +54833,7 @@
     translated: "Climbing walls and rooftops"
   - subIndex: 5
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - subIndex: 6
     text: "百毒不侵"
     translated: "Invulnerable to toxins"
@@ -54876,7 +54876,7 @@
     translated: "Qinggong"
   - subIndex: 5
     text: "身怀绝技"
-    translated: "Master of extraordinary skills"
+    translated: "Possesses a Special Technique"
   - subIndex: 6
     text: "食客"
     translated: "Dining guest"
@@ -55017,7 +55017,7 @@
     translated: "Internal kung fu"
   - subIndex: 5
     text: "身怀绝技"
-    translated: "Master of extraordinary skills"
+    translated: "Possesses a Special Technique"
   - subIndex: 6
     text: "弈棋"
     translated: "Go playing"
@@ -55063,7 +55063,7 @@
     translated: "Invisible"
   - subIndex: 6
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - subIndex: 7
     text: "瑶琴"
     translated: "Yaqin"
@@ -55180,7 +55180,7 @@
     translated: "Practice makes perfect"
   - subIndex: 3
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - subIndex: 4
     text: "农家"
     translated: "Farmer's"
@@ -55331,7 +55331,7 @@
     translated: "Climbing walls and rooftops"
   - subIndex: 6
     text: "身怀绝技"
-    translated: "Master of extraordinary skills"
+    translated: "Possesses a Special Technique"
   - subIndex: 7
     text: "剑随意动"
     translated: "Sword moves at will"
@@ -55371,7 +55371,7 @@
     translated: "Invisible"
   - subIndex: 5
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - subIndex: 6
     text: "儒生"
     translated: "Scholar‑official"
@@ -55427,7 +55427,7 @@
     translated: "Impervious to blades and spears"
   - subIndex: 5
     text: "身怀绝技"
-    translated: "Master of extraordinary skills"
+    translated: "Possesses a Special Technique"
   - subIndex: 6
     text: "慈悲为怀"
     translated: "With compassion in heart"
@@ -55647,7 +55647,7 @@
     translated: "Inner power refined"
   - subIndex: 5
     text: "身怀绝技"
-    translated: "Master of extraordinary skills"
+    translated: "Possesses a Special Technique"
   - subIndex: 6
     text: "万木争荣"
     translated: "Vast forests flourish"
@@ -55690,7 +55690,7 @@
     translated: "Inner power refined"
   - subIndex: 4
     text: "身怀绝技"
-    translated: "Master of extraordinary skills"
+    translated: "Possesses a Special Technique"
   - subIndex: 5
     text: "经脉"
     translated: "Meridian"
@@ -55795,7 +55795,7 @@
     translated: "As solid as a rock"
   - subIndex: 5
     text: "身怀绝技"
-    translated: "Master of extraordinary skills"
+    translated: "Possesses a Special Technique"
   - subIndex: 6
     text: "排兵布阵"
     translated: "Arranging troops on the battlefield"
@@ -56300,7 +56300,7 @@
     translated: "Hundred steps through the willow"
   - subIndex: 4
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - subIndex: 5
     text: "聪慧"
     translated: "Wise"
@@ -56369,7 +56369,7 @@
     translated: "Long weapon"
   - subIndex: 5
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - subIndex: 6
     text: "脉络阻塞"
     translated: "Blocked meridian"
@@ -56472,7 +56472,7 @@
     translated: "Mature beyond measure"
   - subIndex: 4
     text: "身怀绝技"
-    translated: "Master of extraordinary skills"
+    translated: "Possesses a Special Technique"
   - subIndex: 5
     text: "力道"
     translated: "Strength"
@@ -56568,7 +56568,7 @@
     translated: "Mature beyond measure"
   - subIndex: 4
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - subIndex: 5
     text: "奇技"
     translated: "Strange Art"
@@ -56728,7 +56728,7 @@
     translated: "Internal kung fu"
   - subIndex: 4
     text: "身怀绝技"
-    translated: "Master of extraordinary skills"
+    translated: "Possesses a Special Technique"
   templates:
   - template: "{0};{1};{2};{3};{4}"
 - raw: "叶.一鸣"
@@ -57414,7 +57414,7 @@
 - raw: "身怀绝技;一刀两断;外门;孔武有力;暴躁"
   splits:
   - text: "身怀绝技"
-    translated: "Master of extraordinary skills"
+    translated: "Possesses a Special Technique"
   - subIndex: 1
     text: "一刀两断"
     translated: "Cut off completely"
@@ -57578,7 +57578,7 @@
     translated: "Long weapon"
   - subIndex: 2
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   templates:
   - template: "{0};{1};{2}"
 - raw: "山魈鬼"
@@ -58349,8 +58349,8 @@
 - raw: "绝技/刀法"
   splits:
   - text: "绝技"
-    translated: "Ultimate Technique"
-    qcReviewedText: "Ultimate Technique/Blade Art"
+    translated: "Special Technique"
+    qcReviewedText: "Special Technique/Blade Art"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -58374,7 +58374,7 @@
     translated: "Impartial"
   - subIndex: 4
     text: "身怀绝技"
-    translated: "Master of extraordinary skills"
+    translated: "Possesses a Special Technique"
   - subIndex: 5
     text: "横刀跃马"
     translated: "Wield the saber and leap on horseback"
@@ -59098,7 +59098,7 @@
   splits:
   - text: "内功"
     translated: "Neigong"
-    qcReviewedText: "Neigong/Qinggong/Ultimate Technique"
+    qcReviewedText: "Neigong/Qinggong/Special Technique"
     qcStatus: Passed
     qcQualityScore: 90
     qcDefectCategory: None
@@ -59107,7 +59107,7 @@
     translated: "Qinggong"
   - subIndex: 2
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   templates:
   - template: "{0}/{1}/{2}"
 - raw: "武学天才;鸿儒大学;未卜先知;神机妙算;慧眼独具;博学多才;不老长生;起死回生;艺成百家;武学宗师"
@@ -59407,13 +59407,13 @@
   splits:
   - text: "奇门"
     translated: "Qimen"
-    qcReviewedText: "Qimen/Ultimate Technique/Qinggong"
+    qcReviewedText: "Qimen/Special Technique/Qinggong"
     qcStatus: Passed
     qcQualityScore: 95
     qcDefectCategory: None
   - subIndex: 1
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - subIndex: 2
     text: "轻功"
     translated: "Qinggong"
@@ -59521,7 +59521,7 @@
   splits:
   - text: "射术"
     translated: "Archery"
-    qcReviewedText: "Archery/Qinggong/Ultimate Technique"
+    qcReviewedText: "Archery/Qinggong/Special Technique"
     qcStatus: Passed
     qcQualityScore: 95
     qcDefectCategory: None
@@ -59530,7 +59530,7 @@
     translated: "Qinggong"
   - subIndex: 2
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   templates:
   - template: "{0}/{1}/{2}"
 - raw: "不老长生;天人合一;先天真气;例无虚发;摘叶飞花;见血封喉;仙风道骨;皓首穷经;鸾吟凤唱;先天气海"
@@ -59578,13 +59578,13 @@
   splits:
   - text: "长兵"
     translated: "Long weapon"
-    qcReviewedText: "Long weapon/Ultimate Technique/Neigong"
+    qcReviewedText: "Long weapon/Special Technique/Neigong"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - subIndex: 2
     text: "内功"
     translated: "Neigong"
@@ -59635,7 +59635,7 @@
   splits:
   - text: "刀法"
     translated: "Blade Art"
-    qcReviewedText: "Blade Art/Neigong/Ultimate Technique"
+    qcReviewedText: "Blade Art/Neigong/Special Technique"
     qcStatus: Passed
     qcQualityScore: 85
     qcDefectCategory: None
@@ -59644,7 +59644,7 @@
     translated: "Neigong"
   - subIndex: 2
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   templates:
   - template: "{0}/{1}/{2}"
 - raw: "十殿阎王;以劲御气;力降十会;一刀两断;削铁无声;避世绝俗;天煞孤星;侠义无双;至死不渝;背水一战"
@@ -59828,7 +59828,7 @@
     translated: "Climbing walls and rooftops"
   - subIndex: 5
     text: "身怀绝技"
-    translated: "Master of extraordinary skills"
+    translated: "Possesses a Special Technique"
   templates:
   - template: "{0};{1};{2};{3};{4};{5}"
 - raw: "侠盗四丑"
@@ -59865,7 +59865,7 @@
     translated: "Climbing walls and rooftops"
   - subIndex: 5
     text: "身怀绝技"
-    translated: "Master of extraordinary skills"
+    translated: "Possesses a Special Technique"
   templates:
   - template: "{0};{1};{2};{3};{4};{5}"
 - raw: "中年南.丑"
@@ -59894,7 +59894,7 @@
     translated: "Climbing walls and rooftops"
   - subIndex: 5
     text: "身怀绝技"
-    translated: "Master of extraordinary skills"
+    translated: "Possesses a Special Technique"
   templates:
   - template: "{0};{1};{2};{3};{4};{5}"
 - raw: "中年北.怪"
@@ -59923,7 +59923,7 @@
     translated: "Climbing walls and rooftops"
   - subIndex: 5
     text: "身怀绝技"
-    translated: "Master of extraordinary skills"
+    translated: "Possesses a Special Technique"
   templates:
   - template: "{0};{1};{2};{3};{4};{5}"
 - raw: "赵.义仁"
@@ -62608,7 +62608,7 @@
     translated: "Qinggong"
   - subIndex: 2
     text: "绝技获取实战经验"
-    translated: "Master advanced techniques through practical experience"
+    translated: "Gain practical experience with Special Techniques"
   templates:
   - template: "{0}/{1}/{2}"
 - raw: "突破抵达瓶颈的武学"
@@ -63872,8 +63872,8 @@
 - raw: "提升绝技潜力"
   splits:
   - text: "提升绝技潜力"
-    translated: "Boost their Potential for Ultimate Technique"
-    qcReviewedText: "Boost their Potential for Ultimate Technique"
+    translated: "Boost their Potential for Special Technique"
+    qcReviewedText: "Boost their Potential for Special Technique"
     qcStatus: Passed
     qcQualityScore: 85
     qcDefectCategory: None

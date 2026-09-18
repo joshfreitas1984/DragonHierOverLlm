@@ -91,7 +91,7 @@
     translated: "Jinyang"
   - split: 1
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - split: 1
     subIndex: 1
     text: "长兵"
@@ -133,7 +133,7 @@
     translated: "Jiangling"
   - split: 1
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - split: 1
     subIndex: 1
     text: "剑法"
@@ -189,7 +189,7 @@
     translated: "Yingtian"
   - split: 1
     text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - split: 1
     subIndex: 1
     text: "拳掌"

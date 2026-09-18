@@ -2802,7 +2802,7 @@
 - raw: "施展绝技挖掘遗迹"
   splits:
   - text: "施展绝技挖掘遗迹"
-    translated: "Deploy ultimate skill to excavate ancient ruins"
+    translated: "Unleash the Special Technique to excavate the ruins."
     qcReviewedText: "Deploy ultimate skill to excavate ancient ruins"
     qcStatus: Passed
     qcQualityScore: 95
@@ -2810,7 +2810,7 @@
 - raw: "施展绝技震碎巨石"
   splits:
   - text: "施展绝技震碎巨石"
-    translated: "Perform the ultimate technique to shatter the giant rock"
+    translated: "Unleash the Special Technique to shatter the giant rock\\n"
     qcReviewedText: "Perform the ultimate technique to shatter the giant rock"
     qcStatus: Passed
     qcQualityScore: 90
@@ -3553,7 +3553,7 @@
 - raw: "绝技 千斤坠"
   splits:
   - text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
     qcReviewedText: "Ultimate Technique Gravitational pull"
     qcStatus: Passed
     qcQualityScore: 100
@@ -3566,7 +3566,7 @@
 - raw: "绝技硬闯"
   splits:
   - text: "绝技硬闯"
-    translated: "Master Skill Charge Bravely"
+    translated: "Special Technique Forced Entry"
     qcReviewedText: "Master Skill Charge Bravely"
     qcStatus: Passed
     qcQualityScore: 85

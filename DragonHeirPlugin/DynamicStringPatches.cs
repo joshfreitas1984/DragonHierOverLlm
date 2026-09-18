@@ -477,6 +477,9 @@ internal static class DynamicStringPatches
     [ThreadStatic]
     internal static bool _inFormatConcatPatch;
 
+    [ThreadStatic]
+    internal static bool _suppressGenericTranslation;
+
     public sealed class DictionaryEntry
     {
         public string Raw { get; set; }
@@ -777,6 +780,24 @@ internal static class DynamicStringPatches
         }
     }
 
+    internal static void LogMissionDebug(string stage, string before, string after)
+    {
+        if (!MainPlugin.ResidualCjkDebugEnabledCached) return;
+
+        try
+        {
+            var logPath = Path.Combine(PluginDir, ResidualCjkDebugLogFileName);
+            File.AppendAllText(logPath,
+                $"[{DateTime.Now:HH:mm:ss.fff}] {stage}{Environment.NewLine}" +
+                $"  before: {before}{Environment.NewLine}" +
+                $"  after:  {after}{Environment.NewLine}");
+        }
+        catch
+        {
+            // Best-effort diagnostic only - never let logging affect translation.
+        }
+    }
+
     // Manual type check (per the confirmed-safe pattern in dragonheirplugin.instructions.md) over
     // the concrete component types ApplyToComponentText's sink patches actually cover - never a
     // generic Cast<T>()/TryCast<T>() over `instance`. Walks the transform.parent chain via plain,
@@ -870,7 +891,7 @@ internal static class DynamicStringPatches
     // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
     private static void GenericPostfix(ref string __result)
     {
-        if (string.IsNullOrEmpty(__result) || _inFormatConcatPatch) return;
+        if (string.IsNullOrEmpty(__result) || _inFormatConcatPatch || _suppressGenericTranslation) return;
         if (_compiledTemplates.Count == 0 && _dictionary.Count == 0) return;
         if (!ContainsCjk(__result)) return;
 
@@ -896,7 +917,7 @@ internal static class DynamicStringPatches
     // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
     private static void FormatPrefix(ref string format)
     {
-        if (string.IsNullOrEmpty(format) || _templateDictionary.Count == 0 || _inFormatConcatPatch) return;
+        if (string.IsNullOrEmpty(format) || _templateDictionary.Count == 0 || _inFormatConcatPatch || _suppressGenericTranslation) return;
         if (!ContainsCjk(format)) return;
 
         // Guard MUST be set before any diagnostic logging below - see the recursion note in

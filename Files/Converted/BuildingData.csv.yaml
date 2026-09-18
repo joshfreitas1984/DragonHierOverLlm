@@ -37,11 +37,11 @@
   splits:
   - split: 19
     text: "位于门派深处一处幽僻隐秘的建筑，设有修习内功，轻功以及绝技的各类器械秘籍、机关装置，以及突破武学境界所需的闭关房。"
-    translated: "In a secluded and hidden building deep within the sect, there are various manuals and devices for cultivating neigong and qinggong, as well as supreme techniques. Mechanism traps and seclusion rooms have also been installed to aid in breaking through the martial arts realm."
-    qcReviewedText: "In a secluded and hidden building deep within the sect, there are various manuals and devices for cultivating neigong and qinggong, as well as supreme techniques. Mechanism traps and seclusion rooms have also been installed to aid in breaking through the martial arts realm."
-    qcTranslated: "Located in a secluded and hidden building deep within the sect, it houses various manuals and mechanical devices for cultivating Neigong, Qinggong, and supreme techniques, as well as seclusion rooms required for breaking through martial arts realms."
-    qcStatus: Corrected
-    qcQualityScore: 85
+    translated: "Deep within the sect, in a secluded and hidden building, there are various machines, secret manuals, mechanisms, and devices for practicing internal skill, lightness, and special techniques, as well as meditation rooms needed to break through martial arts realms."
+    qcReviewedText: "Deep within the sect, in a secluded and hidden building, there are various machines, secret manuals, mechanisms, and devices for practicing internal skill, lightness, and special techniques, as well as meditation rooms needed to break through martial arts realms."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "4,祠堂,4,0,1,0,3,祭典?获取门派威望\\n技能影响：学识-我-ProduceBuildingWork-5;鉴定?鉴定珍宝-我&入门弟子-IdentifyItem;门派展厅?管理门派展厅-我&正式弟子-ShowForceShowRoom;宴会?与门派弟子宴饮提升忠诚-我&掌门-StartForceParty,威望+10,银钱-100,科研效率0.4;学识经验0.1;口才经验0.1,,威望100;木料500;矿石500,10,2,,11,door,0;0,供奉祭祀门派历代掌门先贤之所，同时设有陈列珍宝之展厅，以及研习技艺，鉴定珍宝所需的各类工具书籍。"
   splits:
   - split: 19
@@ -622,10 +622,10 @@
   splits:
   - split: 19
     text: "崆峒之山，险恶奇绝，传说有山洞七十二处，深不可测，不知所通，经历代穿凿后，更是相互勾连，回环曲折。崆峒弟子借此地势修炼奇门绝技，往往险招百出，防不胜防。"
-    translated: "The Mountain of Kongtong is perilous and unparalleled in its danger. Legend has it that there are seventy‑two caves, deep and unfathomable, with unknown connections. After generations of excavation, these caves have become interconnected, twisting and turning. The disciples of Kongtong use this terrain to practice their unorthodox and extraordinary skills, often employing risky tactics that are hard to guard against."
-    qcReviewedText: "The Mountain of Kongtong is perilous and unparalleled in its danger. Legend has it that there are seventy‑two caves, deep and unfathomable, with unknown connections. After generations of excavation, these caves have become interconnected, twisting and turning. The disciples of Kongtong use this terrain to practice their unorthodox and extraordinary skills, often employing risky tactics that are hard to guard against."
+    translated: "The perilous and extraordinary Kongtong Mountain, with its legend of seventy‑two caves, deep and unfathomable, whose connections are unknown. After generations of excavation, these caves interconnect in a labyrinthine fashion. The disciples of Kongtong use this terrain to hone their unorthodox special techniques, often employing risky maneuvers that are hard to guard against."
+    qcReviewedText: "The perilous and extraordinary Kongtong Mountain, with its legend of seventy‑two caves, deep and unfathomable, whose connections are unknown. After generations of excavation, these caves interconnect in a labyrinthine fashion. The disciples of Kongtong use this terrain to hone their unorthodox special techniques, often employing risky maneuvers that are hard to guard against."
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "69,机关坊,69,6,1,0,4,提升学识潜力--StudyMaxLivingSkill-2;机关-我&门派功能16-ShowSpeSummonResearch,威望+10;银钱+100,木料-150,城防耐久0.2;科研效率0.4;全员灵巧2;全员智力2,,银钱1000;木料2000,20,46,,9,door,0;0,墨子所创工坊，号称穷尽天下机巧构造，其间工匠器具，榫卯零件，木牛流马，不可胜数，各式鬼斧神工，世所罕见，神机门弟子需在此修习工匠技艺，其所携机关器械亦大多出于此。"
   splits:

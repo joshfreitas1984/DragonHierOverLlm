@@ -1,3 +1,6 @@
+
+- raw: 绝技
+  result: Special Technique
 - raw: 道无名
   result: Dao Wuming
   allowalt:
@@ -148,3 +151,7 @@
 
 - raw: 刀劳鬼
   result: Daolao Ghost
+- raw: 退儿
+  result: "Tui'er"
+- raw: 婉儿
+  result: "Wan'er"

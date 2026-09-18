@@ -1371,7 +1371,7 @@
     translated: "Physique"
   - subIndex: 4
     text: "绝技共同决定"
-    translated: "Ultimate Skill Co‑Determined"
+    translated: "Decide together on the Special Technique"
   - subIndex: 5
     text: "根据结果增加恶名"
     translated: "Increase Infamy based on the result"
@@ -7792,7 +7792,7 @@
     translated: "Qinggong"
   - subIndex: 2
     text: "绝技可在闭关室修炼，从而快速获取实战经验。"
-    translated: "Advanced techniques can be practiced in the seclusion room to quickly gain practical combat experience."
+    translated: "Special Techniques can be practiced in the meditation chamber to quickly gain combat experience."
   - subIndex: 3
     text: "眼下不妨进入闭关室一试。"
     translated: "Let's try entering the seclusion room now"
@@ -8107,7 +8107,7 @@
     qcDefectCategory: None
   - subIndex: 1
     text: "内功，轻功，绝技，以及最多八门外功。"
-    translated: "Internal Skill, Qinggong, Superb Skill, and up to eight External Skills."
+    translated: "Internal Skill, Lightness, Special Technique, and up to eight External Skills."
   templates:
   - template: "{0}：\\n{1}"
 - raw: "你按镖头指示抵达目标地点，只见一群强人正围着镖队僵持不下，\\n有数名镖师已然身受重伤，勉强支撑着。"
@@ -8433,7 +8433,7 @@
 - raw: "修炼绝技"
   splits:
   - text: "修炼绝技"
-    translated: "Mastering Top Skills"
+    translated: "Practicing Special Techniques"
     qcReviewedText: "Mastering Top Skills"
     qcStatus: Passed
     qcQualityScore: 85
@@ -8658,17 +8658,14 @@
   splits:
   - text: "内功"
     translated: "Neigong"
-    qcReviewedText: "Neigong/Qinggong/The primary effect of the Ultimate Technique is passive bonuses."
-    qcTranslated: "Neigong/Qinggong/Ultimate Technique primarily provide passive bonus effects"
-    qcStatus: Corrected
-    qcQualityScore: 90
-    qcDefectCategory: GarbledNumber
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "Neigong/Qinggong/Special Techniques primarily provide passive bonus effects"
   - subIndex: 1
     text: "轻功"
     translated: "Qinggong"
   - subIndex: 2
     text: "绝技主要提供被动加成效果。"
-    translated: "The primary effect of the Ultimate Technique is passive bonuses."
+    translated: "Special Techniques primarily provide passive bonus effects"
   templates:
   - template: "{0}/{1}/{2}"
 - raw: "内功/轻功/绝技在充能满后可以激活，使其加成效果翻倍！\\n在关键时刻使用，或可力挽狂澜，反败为胜。"
@@ -8684,7 +8681,7 @@
     translated: "Qinggong"
   - subIndex: 2
     text: "绝技在充能满后可以激活，使其加成效果翻倍！"
-    translated: "Ultimate skill doubles its bonus effects when fully charged!"
+    translated: "When the Special Technique is fully charged, it can be activated to double its bonus effects!"
   - subIndex: 3
     text: "在关键时刻使用，或可力挽狂澜，反败为胜。"
     translated: "Use at critical moments, or it may turn the tide and reverse defeat into victory."
@@ -9770,7 +9767,7 @@
     translated: "Qinggong"
   - subIndex: 3
     text: "绝技，一经装备便会持续生效。"
-    translated: "Special skill, once equipped, will remain active continuously."
+    translated: "Special Technique, once equipped, will remain continuously active."
   templates:
   - template: "{0}\\n{1}/{2}/{3}"
 - raw: "单击物品栏中的图标，即可进行装备/使用等操作。"
@@ -15757,7 +15754,7 @@
     translated: "Qinggong"
   - subIndex: 3
     text: "绝技修炼。"
-    translated: "Mastering the ultimate technique"
+    translated: "Special Technique training"
   templates:
   - template: "{0}\\n{1}/{2}/{3}"
 - raw: "接应师伯"
@@ -19594,20 +19591,20 @@
 - raw: "绝技主要通过遭受攻击充能。\\n激活绝技可使其效果翻倍，同时恢复部分生命。"
   splits:
   - text: "绝技主要通过遭受攻击充能。"
-    translated: "The ultimate skill primarily gains charge through taking attacks."
+    translated: "The Special Technique primarily charges through sustaining attacks."
     qcReviewedText: "The ultimate skill primarily gains charge through taking attacks.\\nActivating the ultimate technique doubles its effects and restores some health."
     qcStatus: Passed
     qcQualityScore: 90
     qcDefectCategory: None
   - subIndex: 1
     text: "激活绝技可使其效果翻倍，同时恢复部分生命。"
-    translated: "Activating the ultimate technique doubles its effects and restores some health."
+    translated: "Activating a Special Technique doubles its effect and restores some Health."
   templates:
   - template: "{0}\\n{1}"
 - raw: "绝技修炼，需要你在场上运气，\\n抵挡四周来袭的射击物。"
   splits:
   - text: "绝技修炼，需要你在场上运气，"
-    translated: "Mastering an ultimate technique requires you to channel your energy on the field."
+    translated: "Mastering the Special Technique requires you to channel your energy on the field,"
     qcReviewedText: "Mastering an ultimate technique requires you to channel your energy on the field.\\nDefend against projectiles coming from all sides"
     qcStatus: Passed
     qcQualityScore: 95
@@ -20841,7 +20838,7 @@
     qcDefectCategory: None
   - subIndex: 1
     text: "进行绝技修炼吧！"
-    translated: "Practice your ultimate technique!"
+    translated: "Let's begin the Special Technique training!"
   templates:
   - template: "{0}\\n{1}"
 - raw: "请尽量以躲避所有钉刺和箭矢为目标，\\n进行轻功修炼吧！"

@@ -180,10 +180,11 @@
   splits:
   - split: 2
     text: "绝技经验"
-    translated: "Master Skill Experience"
-    qcReviewedText: "Master Skill Experience"
+    translated: "Special Technique Experience"
+    qcReviewedText: "Special Technique Experience"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "20,拳掌经验,拳掌经验,TRUE,0.02"
   splits:
   - split: 2
@@ -377,11 +378,11 @@
   splits:
   - split: 2
     text: "全员绝技"
-    translated: "All Special Skills"
-    qcReviewedText: "All Special Skills"
-    qcTranslated: "All Unique Skills"
-    qcStatus: Corrected
-    qcQualityScore: 85
+    translated: "Everyone's Special Techniques"
+    qcReviewedText: "Everyone's Special Techniques"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "44,全员拳掌,全员拳掌,FALSE,1"
   splits:
   - split: 2

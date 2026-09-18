@@ -138,6 +138,15 @@ public class FileInputWorkflowTests
         DynamicStringExtraction.ExtractLogNarrativeCandidates(GameFileHandling.WorkingDirectory);
     }
 
+    [Fact(DisplayName = "4h. ExtractMailBodies")]
+    public void ExtractMailBodies()
+    {
+        // PlotGetNewMail records route through the sender prefix before the game displays only
+        // the message body. Extract the body-only aliases into their dedicated dynamic-string
+        // source before the cross-file deduplication and translation-export steps.
+        RoutedMailExport.AddBodyAliasesToRawDump(GameFileHandling.WorkingDirectory);
+    }
+
     [Fact(DisplayName = "5. DedupeDynamicStringFiles")]
     public void DedupeDynamicStringFiles()
     {

@@ -500,8 +500,8 @@
 - raw: "<b>绝技</b>\\n+1%生命上限"
   splits:
   - text: "绝技"
-    translated: "Ultimate Technique"
-    qcReviewedText: "<b>Ultimate Technique</b>\\n+1% Health Maximum"
+    translated: "Special Technique"
+    qcReviewedText: "<b>Special Technique</b>\\n+1% Health Maximum"
     qcStatus: Passed
     qcQualityScore: 100
   - subIndex: 1
@@ -1033,8 +1033,8 @@
   splits:
   - text: "突破加成仅作用于该技能之上"
     translated: "Breakthrough bonus applies only to this skill"
-    qcReviewedText: "♦Breakthrough bonus applies only to this skill\\n♦Neigong/Qinggong/The breakthrough bonus of the ultimate technique becomes effective after equipping it.\\n♦The bonus from breaking through external skill becomes effective only when used in battle."
-    qcTranslated: "♦Breakthrough bonus applies only to this skill\\n♦The breakthrough bonus for Neigong/Qinggong/Ultimate Technique becomes effective after equipping it.\\n♦The bonus from breaking through External Skill becomes effective only when used in battle."
+    qcReviewedText: "♦Breakthrough bonus applies only to this skill\\n♦Neigong/Qinggong/The breakthrough bonus of the Special Technique becomes effective after equipping it.\\n♦The bonus from breaking through external skill becomes effective only when used in battle."
+    qcTranslated: "♦Breakthrough bonus applies only to this skill\\n♦The breakthrough bonus for Neigong/Qinggong/Special Technique becomes effective after equipping it.\\n♦The bonus from breaking through External Skill becomes effective only when used in battle."
     qcStatus: Corrected
     qcQualityScore: 90
     qcDefectCategory: DroppedContent
@@ -1046,7 +1046,7 @@
     translated: "Qinggong"
   - subIndex: 3
     text: "绝技的突破加成在装备后生效"
-    translated: "The breakthrough bonus of the ultimate technique becomes effective after equipping it."
+    translated: "The bonus from breaking through the Special Technique takes effect after equipping it."
   - subIndex: 4
     text: "外功的突破加成仅在战斗中使用时生效"
     translated: "The bonus from breaking through external skill becomes effective only when used in battle."
@@ -8336,16 +8336,16 @@
 - raw: "绝技"
   splits:
   - text: "绝技"
-    translated: "Ultimate Technique"
-    qcReviewedText: "Ultimate Technique"
+    translated: "Special Technique"
+    qcReviewedText: "Special Technique"
     qcStatus: Passed
     qcQualityScore: 95
     qcDefectCategory: None
 - raw: "绝技+5\\n锻造+5"
   splits:
   - text: "绝技"
-    translated: "Ultimate Technique"
-    qcReviewedText: "Ultimate Technique+5 \\nForging+5"
+    translated: "Special Technique"
+    qcReviewedText: "Special Technique+5 \\nForging+5"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

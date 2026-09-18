@@ -340,6 +340,8 @@ public class MainPlugin : BasePlugin
 
         DynamicStringPatches.PatchAll();
 
+        MissionPatches.PatchAll();
+
         // Must patch AFTER DynamicStringPatches.PatchAll() - RecordLogDisplayPatches calls
         // DynamicStringPatches.RunGenericPipeline/HasTranslationData, which need the
         // dictionary/templates already loaded. Wrapped like the other unverified-binding patches

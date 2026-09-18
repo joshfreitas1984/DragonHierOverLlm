@@ -301,11 +301,10 @@
   - split: 15
     text: "试炼"
     translated: "Trial"
-    qcReviewedText: "<b>Trial</b>：Tackle the Gate of Despair, they faced increasing challenges and gained progressively enhanced abilities.\\n<b>Domineering</b>：The Infamy ‑40% for stealing from others and stores; when caught by the authorities, you can use your special skill to break through."
-    qcTranslated: "<b>Trial</b>: Tackle the Gate of Despair, facing increasing challenges and gaining progressively enhanced abilities.\\n<b>Domineering</b>: The Infamy 40% for stealing from others and stores; when caught by the authorities, you can use your special skill to break through."
-    qcStatus: Corrected
-    qcQualityScore: 90
-    qcDefectCategory: GarbledNumber
+    qcReviewedText: "<b>Trial</b>：Tackle the Gate of Despair, they faced increasing challenges and gained progressively enhanced abilities.\\n<b>Domineering</b>：Infamy for stealing from others and shops: ‑40%. You can use a Special Technique to force your way out when caught by the authorities."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 15
     subIndex: 1
     text: "挑战难度不断提升的鬼门关试炼，获取逐渐增强的天赋效果。"
@@ -317,7 +316,7 @@
   - split: 15
     subIndex: 3
     text: "抢夺他人和商店物品的恶名-40%，被官兵抓捕时可以绝技硬闯。"
-    translated: "The Infamy ‑40% for stealing from others and stores; when caught by the authorities, you can use your special skill to break through."
+    translated: "Infamy for stealing from others and shops: ‑40%. You can use a Special Technique to force your way out when caught by the authorities."
   templates:
   - split: 15
     template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}"
@@ -670,14 +669,14 @@
   - split: 15
     text: "海沙"
     translated: "Desert sand"
-    qcReviewedText: "<b>Desert sand</b>：Special Skill Experience +20%, Cooking Experience+20%。"
-    qcTranslated: "<b>Sea Sand</b>: Special Skill Experience +20%, Cooking Experience +20%."
-    qcStatus: Corrected
-    qcQualityScore: 90
+    qcReviewedText: "<b>Desert sand</b>：Special Technique experience +20%, cooking experience+20%。"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 15
     subIndex: 1
     text: "绝技经验+20%，烹饪经验"
-    translated: "Special Skill Experience +20%, Cooking Experience"
+    translated: "Special Technique experience +20%, cooking experience"
   templates:
   - split: 15
     template: "<b>{0}</b>：{1}+20%。"

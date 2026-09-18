@@ -136,10 +136,10 @@
   splits:
   - split: 1
     text: "绝技纲要"
-    translated: "Overview of Ultimate Techniques"
+    translated: "Special Technique Outline"
   - split: 2
     text: "绝技纲要"
-    translated: "Overview of Ultimate Techniques"
+    translated: "Special Technique Outline"
 - raw: "15,拳掌纲要,拳掌纲要,1,拳掌经验,0.02,FALSE,1,银钱"
   splits:
   - split: 1
@@ -336,10 +336,10 @@
   splits:
   - split: 1
     text: "绝技训练"
-    translated: "Skill Training"
+    translated: "Special Technique Training"
   - split: 2
     text: "绝技训练"
-    translated: "Skill Training"
+    translated: "Special Technique Training"
 - raw: "40,拳掌训练,拳掌训练,3,全员拳掌,1,TRUE,2,银钱"
   splits:
   - split: 1

@@ -774,27 +774,22 @@
   splits:
   - text: "#PlayerName#你初入本门，修为尚浅，为师今天就先传你一式基础武学。"
     translated: "#PlayerName#, you are new to our sect and your cultivation is still shallow. Today, I will first teach you a basic martial technique."
-    qcReviewedText: "#PlayerName#, you are new to our sect and your cultivation is still shallow. Today, I will first teach you a basic martial technique.\nUnknown to you, which of the basic Neigong, Qinggong, or supreme techniques would you like to learn first?"
-    qcTranslated: "#PlayerName#, you are new to our sect and your cultivation is still shallow. Today, I will first teach you a basic martial technique.\\nWhich of the basic Neigong, Qinggong, or supreme techniques would you like to learn first?"
-    qcStatus: Corrected
-    qcQualityScore: 85
-    qcDefectCategory: LostIdiom
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "#PlayerName#, you are new to our sect and your cultivation is still shallow. Today, I will first teach you a basic martial technique.\nWhich one would you like to learn first among our sect's basic internal skill, lightness, and special technique?"
   - subIndex: 1
     text: "不知本门的基础内功，轻功与绝技之中，你想先学哪一门？"
-    translated: "Unknown to you, which of the basic Neigong, Qinggong, or supreme techniques would you like to learn first?"
+    translated: "Which one would you like to learn first among our sect's basic internal skill, lightness, and special technique?"
   templates:
   - template: "{0}\n{1}"
 - raw: "#PlayerName#你初入江湖，修为尚浅，为师今天就先传你一式基础武学。\n不知为师的基础内功，轻功与绝技之中，你想先学哪一门？"
   splits:
   - text: "#PlayerName#你初入江湖，修为尚浅，为师今天就先传你一式基础武学。"
     translated: "#PlayerName#, you're just starting out in the Jianghu, and your cultivation is still shallow. Today, I'll teach you a basic martial art technique."
-    qcReviewedText: "#PlayerName#, you're just starting out in the Jianghu, and your cultivation is still shallow. Today, I'll teach you a basic martial art technique.\nWhich foundation skill would you like to learn first‑neigong, qinggong, or an ultimate technique?"
-    qcTranslated: "#PlayerName#, you are just entering the Jianghu and your cultivation is still shallow. Today, I will first teach you a basic martial art technique.\nAmong my basic Neigong, Qinggong, and Ultimate Techniques, which do you wish to learn first?"
-    qcStatus: Corrected
-    qcQualityScore: 95
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "#PlayerName#, you're just starting out in the Jianghu, and your cultivation is still shallow. Today, I'll teach you a basic martial art technique.\nWhich one would you like to learn first among my basic internal skill, lightness, and special technique?"
   - subIndex: 1
     text: "不知为师的基础内功，轻功与绝技之中，你想先学哪一门？"
-    translated: "Which foundation skill would you like to learn first‑neigong, qinggong, or an ultimate technique?"
+    translated: "Which one would you like to learn first among my basic internal skill, lightness, and special technique?"
   templates:
   - template: "{0}\n{1}"
 - raw: "#PlayerName#你发烧糊涂了吗？我们已经是同门了啊！"
@@ -4181,7 +4176,7 @@
     translated: "How?"
   - subIndex: 2
     text: "力道，体质和绝技超过对方越多且好感越高，成功率越高。"
-    translated: "The more strength, constitution, and special skills exceed those of the opponent, and the higher the affection, the higher the success rate."
+    translated: "The higher your Strength, Constitution, and Special Technique are compared to your opponent's, and the better your relationship is with them, the higher your success rate will be."
   - subIndex: 3
     text: "当前角力成功率"
     translated: "Current grapple success rate"
@@ -16155,7 +16150,7 @@
 - raw: "你施展绝技，掀起漫天沙尘向包围圈外猛冲而去。\n官差们根本抵挡不住，只能眼睁睁看着你一路远去。"
   splits:
   - text: "你施展绝技，掀起漫天沙尘向包围圈外猛冲而去。"
-    translated: "You unleash your ultimate technique, creating a whirlwind of sand as you surge outward from the encirclement."
+    translated: "You unleashed your Special Technique, stirring up a cloud of sand as you charged out of the encirclement circle."
     qcReviewedText: "You unleash your ultimate technique, creating a whirlwind of sand as you surge outward from the encirclement.\nThe officials could do nothing to stop you and could only watch as you disappeared into the distance."
     qcStatus: Passed
     qcQualityScore: 100
@@ -16686,11 +16681,9 @@
 - raw: "修炼绝技"
   splits:
   - text: "修炼绝技"
-    translated: "Mastering Top Skills"
-    qcReviewedText: "Mastering Top Skills"
-    qcTranslated: "Mastering Ultimate Techniques"
-    qcStatus: Corrected
-    qcQualityScore: 80
+    translated: "Practicing Special Techniques"
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "Practicing Special Techniques"
 - raw: "修炼轻功"
   splits:
   - text: "修炼轻功"
@@ -19471,7 +19464,7 @@
     translated: "Qinggong"
   - subIndex: 3
     text: "绝技的实战经验，"
-    translated: "Combat experience with advanced techniques,"
+    translated: "Combat experience with Special Techniques"
   - subIndex: 4
     text: "级内效果最佳"
     translated: "Best effect within the grade"
@@ -20420,7 +20413,7 @@
     qcQualityScore: 95
   - subIndex: 1
     text: "这内功，轻功与绝技，#PlayerName#想先选择哪门进行修习？"
-    translated: "This internal skill, lightness, and ultimate technique, #PlayerName#, which do you want to practice first?"
+    translated: "This internal skill, lightness, or special technique, #PlayerName#, which one would you like to practice first?"
   templates:
   - template: "{0}\n{1}"
 - raw: "只是借你一看罢了;ChangePlot;1"
@@ -21489,7 +21482,7 @@
     translated: ", Why don't you watch how it's done?"
   - subIndex: 2
     text: "力道，体质和绝技超过对方越多且好感越高，成功率越高。"
-    translated: "The more strength, constitution, and special skills exceed those of the opponent, and the higher the affection, the higher the success rate."
+    translated: "The higher your Strength, Constitution, and Special Technique are compared to your opponent's, and the better your relationship is with them, the higher your success rate will be."
   - subIndex: 3
     text: "当前抢夺成功率"
     translated: "Current Raid Success Rate"
@@ -38981,7 +38974,7 @@
 - raw: "提升绝技"
   splits:
   - text: "提升绝技"
-    translated: "Boost ultimate skill"
+    translated: "Improve Special Technique"
     qcReviewedText: "Boost ultimate skill"
     qcStatus: Passed
     qcQualityScore: 95
@@ -39853,13 +39846,13 @@
 - raw: "施展绝技挖掘遗迹;HelpRandomNpcPickTreasure;1-0;;;Unique/"
   splits:
   - text: "施展绝技挖掘遗迹"
-    translated: "Deploy ultimate skill to excavate ancient ruins"
+    translated: "Unleash the Special Technique to excavate the ruins."
   templates:
   - template: "{0};HelpRandomNpcPickTreasure;1-0;;;Unique/"
 - raw: "施展绝技震碎巨石;HelpRandomNpcPickMaterial;1-0;;;Unique/"
   splits:
   - text: "施展绝技震碎巨石"
-    translated: "Perform the ultimate technique to shatter the giant rock"
+    translated: "Unleash the Special Technique to shatter the giant rock\\n"
   templates:
   - template: "{0};HelpRandomNpcPickMaterial;1-0;;;Unique/"
 - raw: "施展轻功攀登绝壁;HelpRandomNpcPickFood;1-0;;;Dodge/"
@@ -40733,32 +40726,28 @@
   splits:
   - text: "是#PlayerName#啊！来的正巧，"
     translated: "It's you, #PlayerName#! You timed it just right!"
-    qcReviewedText: "It's you, #PlayerName#! You timed it just right!\nThis ancient relic conceals a rather rare antique.\nI've heard that #PlayerName# is exceptionally skilled, could you dig something up for me?"
-    qcTranslated: "It's #PlayerName#! You came at the perfect time.\nBuried within this ancient ruin lies a rather rare antique.\nI've heard for a long time that #PlayerName# is exceptionally skilled. Could you dig one up for me?"
-    qcStatus: Corrected
-    qcQualityScore: 85
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "It's you, #PlayerName#! You timed it just right!\nThis ancient relic conceals a rather rare antique.\n'#PlayerName#' has been heard to have powerful Special Techniques. Could you dig one up for me?"
   - subIndex: 1
     text: "这古老遗迹之中埋藏着一件颇为珍稀的古董，"
     translated: "This ancient relic conceals a rather rare antique."
   - subIndex: 2
     text: "久闻#PlayerName#绝技高强，能否替我去挖掘一件出来？"
-    translated: "I've heard that #PlayerName# is exceptionally skilled, could you dig something up for me?"
+    translated: "'#PlayerName#' has been heard to have powerful Special Techniques. Could you dig one up for me?"
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "是#PlayerName#啊！来的正巧，\n这巨石之中深埋着一种颇为珍稀的材料，\n久闻#PlayerName#绝技高强，能否替我去挖掘一些出来？"
   splits:
   - text: "是#PlayerName#啊！来的正巧，"
     translated: "It's you, #PlayerName#! You timed it just right!"
-    qcReviewedText: "It's you, #PlayerName#! You timed it just right!\nThis giant rock contains a rather scarce material.\nI've heard that #PlayerName# has some powerful techniques. Could you dig those out for me?"
-    qcTranslated: "It's you, #PlayerName#! Perfect timing.\nA rather rare material is buried deep within this giant rock.\nI've long heard of #PlayerName#'s exceptional skills. Could you dig some out for me?"
-    qcStatus: Corrected
-    qcQualityScore: 95
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "It's you, #PlayerName#! You timed it just right!\nThis giant rock contains a rather scarce material.\n'#PlayerName#', I've heard that your Special Techniques are highly skilled. Could you dig some up for me?"
   - subIndex: 1
     text: "这巨石之中深埋着一种颇为珍稀的材料，"
     translated: "This giant rock contains a rather scarce material."
   - subIndex: 2
     text: "久闻#PlayerName#绝技高强，能否替我去挖掘一些出来？"
-    translated: "I've heard that #PlayerName# has some powerful techniques. Could you dig those out for me?"
+    translated: "'#PlayerName#', I've heard that your Special Techniques are highly skilled. Could you dig some up for me?"
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "是#PlayerName#啊！来的正巧，\n这悬崖绝壁之上生长着一味颇为珍稀的药材，\n久闻#PlayerName#轻功高强，能否替我去采摘几株下来？"
@@ -41709,11 +41698,9 @@
 - raw: "本人初到贵宝地，身无长技，只是自幼练得一金刚不坏，刀枪不入的硬功绝技。\n望您各位走过路过不要错过！有钱捧个钱场，没钱捧个人场！\n废话不多说，给各位表演一个胸口碎大石！"
   splits:
   - text: "本人初到贵宝地，身无长技，只是自幼练得一金刚不坏，刀枪不入的硬功绝技。"
-    translated: "I am new to your honored land, lacking in many skills, but I have practiced since childhood a hard Gong technique called Golden Body Immortal, which is indestructible by swords or spears."
-    qcReviewedText: "I am new to your honored land, lacking in many skills, but I have practiced since childhood a hard Gong technique called Golden Body Immortal, which is indestructible by swords or spears.\nPlease don't miss this! If you have money, please support with money; if you don't, please support with your presence!\nNo need for much talk; let me demonstrate breaking a large stone with my chest!"
-    qcTranslated: "I am new to your esteemed territory, lacking in any special skills, except for a hard qigong technique I've practiced since childhood‑the Indestructible Golden Body, impervious to blades and spears.\nTo all who pass by, please don't miss this! If you have money, please support with your purse; if not, please support with your presence!\nNo more idle talk; allow me to demonstrate cracking a big stone with my chest!"
-    qcStatus: Corrected
-    qcQualityScore: 90
+    translated: "I am new to this esteemed place and have no special skills, except for a Special Technique I've practiced since childhood, making me invulnerable to blades and bullets."
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "I am new to this esteemed place and have no special skills, except for a Special Technique I've practiced since childhood, making me invulnerable to blades and bullets.\nPlease don't miss this! If you have money, please support with money; if you don't, please support with your presence!\nNo need for much talk; let me demonstrate breaking a large stone with my chest!"
   - subIndex: 1
     text: "望您各位走过路过不要错过！有钱捧个钱场，没钱捧个人场！"
     translated: "Please don't miss this! If you have money, please support with money; if you don't, please support with your presence!"
@@ -51660,14 +51647,14 @@
 - raw: "绝技"
   splits:
   - text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
     qcReviewedText: "Ultimate Technique"
     qcStatus: Passed
     qcQualityScore: 100
 - raw: "绝技 千斤坠;ForceFightChooseStartSkill;2"
   splits:
   - text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   - subIndex: 1
     text: "千斤坠"
     translated: "Gravitational pull"
@@ -51676,13 +51663,13 @@
 - raw: "绝技;ShowBeggerFoodExchangeSkill;2"
   splits:
   - text: "绝技"
-    translated: "Ultimate Technique"
+    translated: "Special Technique"
   templates:
   - template: "{0};ShowBeggerFoodExchangeSkill;2"
 - raw: "绝技硬闯;CatchBadFamePlayerUniqueEscape;;;;Unique/"
   splits:
   - text: "绝技硬闯"
-    translated: "Master Skill Charge Bravely"
+    translated: "Forcefully charge with a Special Technique"
   templates:
   - template: "{0};CatchBadFamePlayerUniqueEscape;;;;Unique/"
 - raw: "绝离;LoverAskHeroBreakup;;;♦结束夫妻关系\n♦降低150点好感\n♦固定增加40恶名"
@@ -58486,7 +58473,7 @@
 - raw: "这千斤坠乃绝技筑基之法，还望你好生参悟。\n待功力大成之后，方能修习更高深之武学。"
   splits:
   - text: "这千斤坠乃绝技筑基之法，还望你好生参悟。"
-    translated: "This Gravitational Pull is a supreme technique for Foundation Establishment; I hope you will study it thoroughly."
+    translated: "This Gravitational Pull is a Special Technique for Foundation Establishment; I hope you study it diligently."
     qcReviewedText: "This Gravitational Pull is a supreme technique for Foundation Establishment; I hope you will study it thoroughly.\nOnly after one's cultivation is complete can they practice more advanced martial arts."
     qcStatus: Passed
     qcQualityScore: 90
@@ -58889,12 +58876,9 @@
 - raw: "这绝技名为“妙手空空”，乃是一式探囊取物的偷盗手法，\n虽说丐帮中人大多遵纪守法，但情急时仍需干些偷鸡摸狗的勾当，\n不过，要是有贸然以此作奸犯科者，也难逃重罚。"
   splits:
   - text: "这绝技名为“妙手空空”，乃是一式探囊取物的偷盗手法，"
-    translated: "This advanced technique is called Sleight of Hand, and it is a skill for secretly taking objects from someone's pocket."
-    qcReviewedText: "This advanced technique is called Sleight of Hand, and it is a skill for secretly taking objects from someone's pocket.\nThough most members of the Beggar Sect adhere to laws and rules, in times of urgent need, they still have to resort to petty theft and other such deeds.\nBut if anyone dares to abuse this for personal gain, they will also face severe punishment."
-    qcTranslated: "This advanced technique is called “Sleight of Hand,” and it is a pickpocketing skill for snatching items right out of a pocket.\\nThough most members of the Beggar Sect adhere to laws and rules, in times of urgent need, they still have to resort to petty theft and other such deeds.\\nBut if anyone dares to abuse this for personal gain, they will also face severe punishment."
-    qcStatus: Corrected
-    qcQualityScore: 65
-    qcDefectCategory: LostIdiom
+    translated: "This special technique is called Sleight of Hand, and it is a method for stealing by skillfully taking objects from someone's pocket."
+    qcRuleCheckFailureCount: 1
+    qcRuleCheckFailureBaseline: "This special technique is called Sleight of Hand, and it is a method for stealing by skillfully taking objects from someone's pocket.\nThough most members of the Beggar Sect adhere to laws and rules, in times of urgent need, they still have to resort to petty theft and other such deeds.\nBut if anyone dares to abuse this for personal gain, they will also face severe punishment."
   - subIndex: 1
     text: "虽说丐帮中人大多遵纪守法，但情急时仍需干些偷鸡摸狗的勾当，"
     translated: "Though most members of the Beggar Sect adhere to laws and rules, in times of urgent need, they still have to resort to petty theft and other such deeds."
