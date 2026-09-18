@@ -1,3 +1,10 @@
+- path: Canvas/MeetingPanel/HeroGrid/*/HeroName
+  sampleText: HanFang
+  idealFontSize: 12.0
+  allowWordWrap: true
+  adjustX: 50.0
+  adjustY: -75.0
+  adjustWidth: 100.0
 - path: Canvas/MeetingPanel/LastMonthContributionPrefab(Clone)/Text
   sampleText: ' Achievements0'
   idealFontSize: 10.0

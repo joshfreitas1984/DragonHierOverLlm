@@ -1,0 +1,16 @@
+- path: Canvas/HeroSearchPanel/HeroSearchRoot/HeroList/Viewport/Content/HeroIcon(Clone)/HeroName
+  sampleText: Jiang Yingquan
+  idealFontSize: 12.0
+  alignment: Center
+  allowWordWrap: true
+  adjustX: 46.0
+  adjustY: -70.0
+  adjustWidth: 100.0
+- path: Canvas/HeroSearchPanel/HeroSearchRoot/HeroList/Viewport/Content/HeroIcon(Clone)/HeroName
+  sampleText: Jiang Yingquan
+  idealFontSize: 12.0
+  alignment: Center
+  allowWordWrap: true
+  adjustX: 46.0
+  adjustY: -70.0
+  adjustWidth: 100.0

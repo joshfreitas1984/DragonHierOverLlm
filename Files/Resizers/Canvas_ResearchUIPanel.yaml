@@ -1,0 +1,11 @@
+- path: Canvas/ResearchUIPanel/Tech/*/Viewport/Content/ResearchTechPrefab(Clone)/Title
+  sampleText: Palm and Fist Fundamentals
+  idealFontSize: 14.0
+  allowWordWrap: true
+- path: Canvas/ResearchUIPanel/Tech/1/Viewport/Content/ResearchTechPrefab(Clone)/Text
+  sampleText: Theoretical experience+1%
+  idealFontSize: 12.0
+  allowWordWrap: true
+- path: Canvas/ResearchUIPanel/Tech/1/Viewport/Content/ResearchTechPrefab(Clone)/TimeText
+  idealFontSize: 11.0
+  allowWordWrap: false

@@ -1,3 +1,19 @@
+- path: Canvas/AreaUIPanel/AreaUIBelow/AreaHeroScrollView/Viewport/Content/*/HeroName
+  sampleText: Phantom
+  idealFontSize: 12.0
+  alignment: Center
+  allowWordWrap: true
+  adjustX: 46.0
+  adjustY: -72.0
+  adjustWidth: 40.0
+- path: Canvas/AreaUIPanel/AreaUIBelow/AreaHeroScrollView/Viewport/Content/*/HeroName
+  sampleText: Phantom
+  idealFontSize: 12.0
+  alignment: Center
+  allowWordWrap: true
+  adjustX: 46.0
+  adjustY: -72.0
+  adjustWidth: 40.0
 - path: Canvas/AreaUIPanel/AreaUIBelow/AreaTitle/Text
   sampleText: Baling Village
   idealFontSize: 20.0
@@ -19,6 +35,22 @@
   allowWordWrap: true
 - path: Canvas/AreaUIPanel/BuildingQuickButtonPanel/BuildQuickButtonGrid/*/Text
   sampleText: Government offices
+  idealFontSize: 14.0
+  allowWordWrap: true
+- path: Canvas/AreaUIPanel/BuildingQuickButtonPanel/BuildQuickButtonGrid/0000/Text
+  sampleText: Main Hall
+  idealFontSize: 14.0
+  allowWordWrap: true
+- path: Canvas/AreaUIPanel/BuildingQuickButtonPanel/BuildQuickButtonGrid/0000/Text
+  sampleText: Main Hall
+  idealFontSize: 14.0
+  allowWordWrap: true
+- path: Canvas/AreaUIPanel/BuildingQuickButtonPanel/BuildQuickButtonGrid/0005/Text
+  sampleText: Workshop
+  idealFontSize: 14.0
+  allowWordWrap: true
+- path: Canvas/AreaUIPanel/BuildingQuickButtonPanel/BuildQuickButtonGrid/0005/Text
+  sampleText: Workshop
   idealFontSize: 14.0
   allowWordWrap: true
 - path: Canvas/AreaUIPanel/BuildingQuickButtonPanel/BuildTitle/Text

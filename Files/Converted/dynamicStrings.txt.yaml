@@ -190,12 +190,10 @@
   splits:
   - text: "#$SourceInteractName#与#$TargetInteractName#一番闲聊，无甚收获。"
     translated: "Chatting with #$TargetInteractName# about #$SourceInteractName# didn't yield much."
-    qcRejectedCorrection: "Chatted with #$TargetInteractName# for a while, but didn't gain much.({0})"
-    qcFailureReason: "#$SourceInteractName#"
-    qcQualityScore: 85
-    qcDefectCategory: DroppedContent
-    qcRuleCheckFailureCount: 3
-    qcRuleCheckFailureBaseline: "Chatting with #$TargetInteractName# about #$SourceInteractName# didn't yield much.({0})"
+    qcReviewedText: "Chatting with #$TargetInteractName# about #$SourceInteractName# didn't yield much.({0})"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   templates:
   - template: "{0}(⟦0⟧)"
 - raw: "#$SourceInteractName#与#$TargetInteractName#促膝长谈，相识恨晚。({0})"
@@ -18518,25 +18516,27 @@
 - raw: "别派挑衅"
   splits:
   - text: "别派挑衅"
-    translated: "Don't provoke them"
-    qcReviewedText: "Don't provoke them"
+    translated: "Rival Sect Provocation"
+    qcReviewedText: "Rival Sect Provocation"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "别派比试"
   splits:
   - text: "别派比试"
-    translated: "Don't arrange a trial match"
-    qcReviewedText: "Don't arrange a trial match"
+    translated: "Compete with Other Sects"
+    qcReviewedText: "Compete with Other Sects"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "别派盗匪"
   splits:
   - text: "别派盗匪"
-    translated: "Don't dispatch bandits"
-    qcReviewedText: "Don't dispatch bandits"
-    qcTranslated: "Don't dispatch the bandits"
-    qcStatus: Corrected
-    qcQualityScore: 80
+    translated: "Bandits from rival sects"
+    qcReviewedText: "Bandits from rival sects"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "别生气啊;HelpArgueFriends;0"
   splits:
   - text: "别生气啊"
@@ -23276,12 +23276,11 @@
   splits:
   - text: "哎呀，一不小心玩过头，连续"
     translated: "Oh no, I got carried away and played for too long in a row,"
-    qcRejectedCorrection: "Oh no, I got carried away and played for too long in a row, {0} months without attending the Sect meeting..."
-    qcFailureReason: "Glossary term '掌門' (expected 'Sect Leader') is missing."
-    qcQualityScore: 90
+    qcReviewedText: "Oh no, I got carried away and played for too long in a row,{0} Hasn't attended the Sect meeting for a month.\nSect Master won't be angry, right......"
+    qcTranslated: "Oh no, I got carried away and played for too long in a row, {0} months without attending the Sect meeting.\nSect Master won't be angry, right......"
+    qcStatus: Corrected
+    qcQualityScore: 92
     qcDefectCategory: GarbledNumber
-    qcRuleCheckFailureCount: 3
-    qcRuleCheckFailureBaseline: "Oh no, I got carried away and played for too long in a row,{0} Hasn't attended the Sect meeting for a month.\nSect Master won't be angry, right......"
   - subIndex: 1
     text: "个月没参加门派会议。"
     translated: "Hasn't attended the Sect meeting for a month."
@@ -29635,11 +29634,12 @@
   splits:
   - text: "如今本门占领"
     translated: "Now our sect has taken control of"
-    qcRejectedCorrection: "Now our sect has taken control of {0} occupied/vassal/allied regions in total, already controlling {1}% of the nation's territory."
+    qcReviewedText: "Now our sect has taken control of/Vassal/All allied regions total {0}, already controls much of the nation's territory {1}%。\nRemaining monthly battle engagements {2}/{3}, Should we initiate an attack on the surrounding areas?"
+    qcStatus: FailedValidation
+    flaggedForQcReview: true
+    qcRejectedCorrection: "Now our sect has taken control of {0} regions in total, already controlling {1}% of the nation's territory."
     qcFailureReason: " Restore `{2}` to the translation, as it was incorrectly removed. Restore `{3}` to the translation, as it was incorrectly removed."
-    qcQualityScore: 82
-    qcDefectCategory: HardToParseSeam
-    qcRuleCheckFailureCount: 3
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Now our sect has taken control of/Vassal/All allied regions total {0}, already controls much of the nation's territory {1}%。\nRemaining monthly battle engagements {2}/{3}, Should we initiate an attack on the surrounding areas?"
   - subIndex: 1
     text: "附庸"
@@ -46106,10 +46106,11 @@
   splits:
   - text: "洛神赋图"
     translated: "Illustration of the Luo River Goddess Assignation"
+    qcReviewedText: "Illustration of the Luo River Goddess Assignation"
+    qcStatus: FailedValidation
+    flaggedForQcReview: true
     qcRejectedCorrection: "Illustration of the Ode to the Goddess of the Luo River"
-    qcQualityScore: 90
-    qcDefectCategory: DomainTerm
-    qcRuleCheckFailureCount: 3
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Illustration of the Luo River Goddess Assignation"
 - raw: "洞中方一日，世上已千年。\n此番闭关，确是令人领悟颇深。"
   splits:
@@ -50773,7 +50774,7 @@
 - raw: "算你识相！;MercyRandomEnemy;{0};;♦增加{1}恶名"
   splits:
   - text: "算你识相！"
-    translated: "You know when to stop!"
+    translated: "Glad you know your place!"
   - subIndex: 1
     text: "增加"
     translated: "Increase"
@@ -57680,11 +57681,12 @@
   splits:
   - text: "这"
     translated: "This"
+    qcReviewedText: "This {0} It's truly precious, and I don't wish to give it to anyone else.\nI hope #PlayerName# won't force someone to do something against their will.\n(Requesting this item will consume their goodwill {1}, Exceeded max affinity)"
+    qcStatus: FailedValidation
+    flaggedForQcReview: true
     qcRejectedCorrection: "This {0} is truly precious, and I don't wish to give it to anyone else."
     qcFailureReason: "#PlayerName#"
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcRuleCheckFailureCount: 3
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "This {0} It's truly precious, and I don't wish to give it to anyone else.\nI hope #PlayerName# won't force someone to do something against their will.\n(Requesting this item will consume their goodwill {1}, Exceeded max affinity)"
   - subIndex: 1
     text: "实在珍贵，我不愿赠与他人。"

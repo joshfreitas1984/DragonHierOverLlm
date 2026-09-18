@@ -1,3 +1,13 @@
+- path: Canvas/BuildingUIPanel/BuildingUI/ExtraButtonGrid/UpgradeButton/Text
+  sampleText: Upgrade
+  idealFontSize: 16.0
+  allowWordWrap: true
+  adjustWidth: 50.0
+- path: Canvas/BuildingUIPanel/BuildingUI/ExtraButtonGrid/UpgradeButton/Text
+  sampleText: Upgrade
+  idealFontSize: 16.0
+  allowWordWrap: true
+  adjustWidth: 50.0
 - path: Canvas/BuildingUIPanel/BuildingUI/Level
   sampleText: 0Level
   idealFontSize: 20.0

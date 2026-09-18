@@ -37,15 +37,15 @@
 - raw: "10000两"
   splits:
   - text: "10000两"
-    translated: "10000 two"
+    translated: "10000 liang"
     qcReviewedText: "10000 liang"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "1000两"
   splits:
   - text: "1000两"
-    translated: "1000 two"
+    translated: "1000 liang"
     qcReviewedText: "1000 liang"
     qcStatus: Passed
     qcQualityScore: 100
@@ -53,16 +53,16 @@
 - raw: "100两"
   splits:
   - text: "100两"
-    translated: "100 pairs"
+    translated: "100 liang"
     qcReviewedText: "100 liang"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "10天"
   splits:
   - text: "10天"
-    translated: "10 day"
-    qcReviewedText: "10 day"
+    translated: "10 days"
+    qcReviewedText: "10 days"
     qcStatus: Passed
     qcQualityScore: 95
     qcDefectCategory: None
@@ -85,8 +85,8 @@
 - raw: "2000两"
   splits:
   - text: "2000两"
-    translated: "2000 pairs"
-    qcReviewedText: "2000 pairs"
+    translated: "2000 liang"
+    qcReviewedText: "2000 liang"
     qcStatus: Passed
     qcQualityScore: 90
     qcDefectCategory: None
@@ -109,8 +109,8 @@
 - raw: "5天"
   splits:
   - text: "5天"
-    translated: "5 day"
-    qcReviewedText: "5 day"
+    translated: "5 days"
+    qcReviewedText: "5 days"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

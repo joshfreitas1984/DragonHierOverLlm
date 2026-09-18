@@ -3819,12 +3819,11 @@
   splits:
   - text: "#PlayerName#，师傅既已入土为安，按江湖规矩是时候邀请武林同道，在"
     translated: "#PlayerName#, since Master has passed away and found eternal rest, according to the rules of the Jianghu, it is time to invite fellow practitioners of the Wulin."
-    qcRejectedCorrection: "#PlayerName#, since Master has passed away and found eternal rest, according to the rules of the Jianghu, it is time to invite fellow practitioners of the Wulin to hold the succeeding Sect Leader ceremony inside the Xianxia Sect. I hope you will return promptly to prepare."
-    qcFailureReason: " Restore `<b>` to the translation, as it was incorrectly removed. Restore `</b>` to the translation, as it was incorrectly removed."
-    qcQualityScore: 95
+    qcReviewedText: "#PlayerName#, since Master has passed away and found eternal rest, according to the rules of the Jianghu, it is time to invite fellow practitioners of the Wulin.<b>Inside the Xianxia Sect </b>Hold the succeeding Sect Leader ceremony soon, and I hope you will return promptly to prepare."
+    qcTranslated: "#PlayerName#, since Master has passed away and found eternal rest, according to the rules of the Jianghu, it is time to invite fellow practitioners of the Wulin to hold the succeeding Sect Leader ceremony <b>inside the Xianxia Sect</b>. I hope you will return promptly to prepare."
+    qcStatus: Corrected
+    qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
-    qcRuleCheckFailureCount: 3
-    qcRuleCheckFailureBaseline: "#PlayerName#, since Master has passed away and found eternal rest, according to the rules of the Jianghu, it is time to invite fellow practitioners of the Wulin.<b>Inside the Xianxia Sect </b>Hold the succeeding Sect Leader ceremony soon, and I hope you will return promptly to prepare."
   - subIndex: 1
     text: "仙霞派内"
     translated: "Inside the Xianxia Sect"
@@ -6569,11 +6568,12 @@
   splits:
   - text: "传闻五毒金刚两派掌门亲率精锐，与阎罗殿再度兵临"
     translated: "It was said that the leaders of the Five Venom and Golden Vajra sects personally led their elite forces, once again bringing their armies before Yama Hall."
-    qcRejectedCorrection: "It was said that the leaders of the Five Venom and Golden Vajra sects personally led their elite forces, once again bringing their armies before the walls of <b>Dali</b>. \\nSima Deyuan, the Sect Leader of Mount Emei, has once again urgently appealed for aid from various sects in Central Plains."
+    qcReviewedText: "It was said that the leaders of the Five Venom and Golden Vajra sects personally led their elite forces, once again bringing their armies before Yama Hall.<b>Dali </b>Below the city walls \\nSima Deyuan, the Sect Leader of Mount Emei, has once again urgently appealed for aid from various sects in Central Plains."
+    qcStatus: FailedValidation
+    flaggedForQcReview: true
+    qcRejectedCorrection: "It was said that the leaders of the Five Venom and Golden Vajra sects personally led their elite forces, once again bringing their armies before the walls of Dali. \\nSima Deyuan, the Sect Leader of Mount Emei, has once again urgently appealed for aid from various sects in Central Plains."
     qcFailureReason: "Glossary term '阎罗殿' (expected 'Yama Hall') is missing."
-    qcQualityScore: 92
-    qcDefectCategory: HardToParseSeam
-    qcRuleCheckFailureCount: 3
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "It was said that the leaders of the Five Venom and Golden Vajra sects personally led their elite forces, once again bringing their armies before Yama Hall.<b>Dali </b>Below the city walls \\nSima Deyuan, the Sect Leader of Mount Emei, has once again urgently appealed for aid from various sects in Central Plains."
   - subIndex: 1
     text: "大理"
@@ -6892,11 +6892,12 @@
   splits:
   - text: "传闻大隐阁叛徒思中澜离开成都后，一路向西南逃亡，如今已抵达"
     translated: "It was said that after traitor Si Zhonglan left Chengdu, he fled southwest, and is now arrived at the Great Hidden Pavilion."
+    qcReviewedText: "It was said that after traitor Si Zhonglan left Chengdu, he fled southwest, and is now arrived at the Great Hidden Pavilion.<b>#PosText#</b>One belt"
+    qcStatus: FailedValidation
+    flaggedForQcReview: true
     qcRejectedCorrection: "It was said that after traitor Si Zhonglan left Chengdu, he fled southwest, and is now arrived at the <b>#PosText#</b> area."
     qcFailureReason: "Glossary term '大隐阁' (expected 'Great Hidden Pavilion') is missing."
-    qcQualityScore: 85
-    qcDefectCategory: GarbledNumber
-    qcRuleCheckFailureCount: 3
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "It was said that after traitor Si Zhonglan left Chengdu, he fled southwest, and is now arrived at the Great Hidden Pavilion.<b>#PosText#</b>One belt"
   - subIndex: 1
     text: "一带。"
@@ -7054,11 +7055,12 @@
   splits:
   - text: "传闻朝廷召集各派掌门，在"
     translated: "Rumor has it that the court summoned various sect leaders,"
+    qcReviewedText: "Rumor has it that the court summoned various sect leaders,<b>Capital </b>Hold a grand conference to discuss the assignment of defenses for the Capital."
+    qcStatus: FailedValidation
+    flaggedForQcReview: true
     qcRejectedCorrection: "Rumor has it that the court summoned various sect leaders to hold a grand conference in the Capital to discuss the assignment of defenses for the Capital."
     qcFailureReason: " Restore `<b>` to the translation, as it was incorrectly removed. Restore `</b>` to the translation, as it was incorrectly removed."
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcRuleCheckFailureCount: 3
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Rumor has it that the court summoned various sect leaders,<b>Capital </b>Hold a grand conference to discuss the assignment of defenses for the Capital."
   - subIndex: 1
     text: "京城"
@@ -7132,11 +7134,12 @@
   splits:
   - text: "传闻武当，阎罗等各派掌门会于"
     translated: "Whispers suggest that the Sect Leaders of Wudang, Yama, and other sects will convene."
+    qcReviewedText: "Whispers suggest that the Sect Leaders of Wudang, Yama, and other sects will convene.<b>Divine Mechanism Sect </b>Within, prepare to discuss the grand plan to eradicate the toxic harm of the Wulin."
+    qcStatus: FailedValidation
+    flaggedForQcReview: true
     qcRejectedCorrection: "Whispers suggest that the Sect Leaders of Wudang, Yama, and other sects will convene within the Divine Mechanism Sect to discuss the grand plan to eradicate the toxic harm of the Wulin."
     qcFailureReason: " Restore `<b>` to the translation, as it was incorrectly removed. Restore `</b>` to the translation, as it was incorrectly removed."
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcRuleCheckFailureCount: 3
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Whispers suggest that the Sect Leaders of Wudang, Yama, and other sects will convene.<b>Divine Mechanism Sect </b>Within, prepare to discuss the grand plan to eradicate the toxic harm of the Wulin."
   - subIndex: 1
     text: "神机门"
@@ -10291,10 +10294,11 @@
   splits:
   - text: "右侧的菜单栏，可以进行其他的战斗操作，"
     translated: "The menu on the right can be used for other battle operations."
+    qcReviewedText: "The menu on the right can be used for other battle operations.\\nIf you need, use, or move items, rest, or perform other actions."
+    qcStatus: FailedValidation
+    flaggedForQcReview: true
     qcRejectedCorrection: "The menu on the right can be used for other battle operations.\\nSuch as moving, resting, using items, etc."
-    qcQualityScore: 90
-    qcDefectCategory: GarbledNumber
-    qcRuleCheckFailureCount: 3
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "The menu on the right can be used for other battle operations.\\nIf you need, use, or move items, rest, or perform other actions."
   - subIndex: 1
     text: "如移动，休息，使用物品等。"

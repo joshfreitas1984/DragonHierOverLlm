@@ -1,0 +1,14 @@
+- path: Canvas/ForceDetailPanel/ForceDetailRoot/ForceDetail/HeroList/Viewport/Content/*/HeroName
+  sampleText: Yue Wuji
+  idealFontSize: 12.0
+  allowWordWrap: true
+  adjustX: 50.0
+  adjustY: -72.0
+  adjustWidth: 80.0
+- path: Canvas/ForceDetailPanel/ForceDetailRoot/ForceDetail/HeroList/Viewport/Content/*/HeroName
+  sampleText: Yue Wuji
+  idealFontSize: 12.0
+  allowWordWrap: true
+  adjustX: 50.0
+  adjustY: -72.0
+  adjustWidth: 80.0

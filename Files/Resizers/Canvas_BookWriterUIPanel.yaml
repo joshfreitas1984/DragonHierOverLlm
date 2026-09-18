@@ -1,0 +1,21 @@
+- path: Canvas/BookWriterUIPanel/BookWriterGrid/*/Root/Hero/icon/HeroName
+  sampleText: HanFang
+  idealFontSize: 12.0
+  allowWordWrap: true
+  adjustX: 50.0
+  adjustY: -76.0
+  adjustWidth: 100.0
+- path: Canvas/BookWriterUIPanel/Title
+  sampleText: Compile the Secret Manual
+  idealFontSize: 60.0
+  alignment: TopLeft
+  allowWordWrap: true
+  adjustX: 300.0
+  adjustWidth: 800.0
+- path: Canvas/BookWriterUIPanel/Title
+  sampleText: Compile the Secret Manual
+  idealFontSize: 60.0
+  alignment: TopLeft
+  allowWordWrap: true
+  adjustX: 300.0
+  adjustWidth: 800.0
