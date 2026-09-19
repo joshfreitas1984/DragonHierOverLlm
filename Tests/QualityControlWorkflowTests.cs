@@ -9,12 +9,6 @@ namespace Tests;
 
 public class QualityControlWorkflowTests
 {
-    [Fact]
-    public async Task AssessConfiguredQualityEvaluators()
-    {
-        await QualityEvaluatorAssessmentWorkflow.RunAsync(GameFileHandling.WorkingDirectory, GameFileHandling.Hooks);
-    }
-
     // The full "I changed the glossary / got file updates / exported more dynamic strings / added a
     // bad word / needed a new game repair" workflow in one call: brute-forces Translated back to
     // clean (TranslationWorkflow.TranslateLinesBruteForce), then does the same for QcTranslated

@@ -1,0 +1,603 @@
+schemaVersion: 1
+labelVersion: reviewed-20260919
+annotationStatus: human-reviewed
+sourceAssessment:
+  path: TestResults/ModelAssessmentOld
+  sampleFingerprint: e3925180910dc12e92d7c695fb9fcfa57fe59589847763b7741f0543801a0ef6
+  sampleSeed: 20260919
+  selection: confidence-0.5 frontier judgments, manually screened for diversity
+  warning: This 6-sample batch has been human-reviewed and finalized; the dataset still needs
+    expansion to the 300-500 sample target described in docs/plans/qc-evaluator-comparison.md
+    before it can serve as the full gold set.
+additionalSourceAssessments:
+- name: ModelAssessment-20260919-larger-run
+  path: TestResults/ModelAssessment
+  sampleFingerprint: 98782ae2b6facd4d6700fa074f07344c5996979fcee590b18a7c35feac5fc2c9
+  sampleSize: 201
+  sampleSeed: 20260919
+  selection: >-
+    manually screened for defect diversity across the 23 samples where at least one
+    model's structural validation failed; introduces the HyMT2-30B-A3B-Q3 quant as a 4th
+    candidate. Items sourced from this run set sampleRun: ModelAssessment-20260919-larger-run
+    below; items without a sampleRun come from the original sourceAssessment above.
+  note: >-
+    HyMT2-30B-A3B's Results.yaml in this run directory was manually overwritten with the
+    HyMT2-30B-A3B-Q4 quant's output after the user changed that model's configured default -
+    so in this run's items, the "HyMT2-30B-A3B" candidate column is actually the Q4 quant, not
+    whatever quant produced the original 6 items above.
+models:
+- Qwen25-Standard
+- HyMT2-7B
+- HyMT2-30B-A3B-Q3
+- HyMT2-30B-A3B
+items:
+- sampleId: 00fa6278512d2d84
+  sampleKind: split
+  source: 他才勉强同意继任我霸刀门掌门之位。
+  label: Abstain
+  archivedJudgeConfidence: 0.5
+  archivedJudgeIssues: []
+  candidates:
+    Qwen25-Standard: He reluctantly agreed to succeed me as the Sect Leader of Tyrant Blade Sect.
+    HyMT2-7B: He only reluctantly agreed to take over as the Sect Leader of the Tyrant Blade Sect.
+    HyMT2-30B-A3B: He reluctantly agreed to succeed me as the Tyrant Blade Sect Leader.
+  labels:
+    Qwen25-Standard:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-7B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  reviewNote: All candidates preserve the meaning; wording differs without a clear defect.
+- sampleId: 01cc6e5d773cbcf4
+  sampleKind: fullCell
+  source: '#PlayerName#？ 真是老天开眼！ / 我两正欲剿灭这伙恶贼，奈何敌方人多势众，一时落了下风。'
+  label: Abstain
+  archivedJudgeConfidence: 0.5
+  archivedJudgeIssues:
+  - fluency
+  candidates:
+    Qwen25-Standard: '#PlayerName#! It''s a miracle! / Just as we were about to wipe out these bandits, our numbers were overwhelmed, and we fell at a disadvantage.'
+    HyMT2-7B: '#PlayerName#?By the heavens! I was just about to wipe out those villains when their overwhelming numbers put me at a disadvantage for a moment.'
+    HyMT2-30B-A3B: '#PlayerName#? Heaven truly favors me! / My companion and I were just about to wipe out this bunch of scoundrels, but alas, the enemy was far too numerous-we ended up at a disadvantage.'
+  labels:
+    Qwen25-Standard:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-7B:
+      label: Defect
+      defectCategories:
+      - formatting
+      - omitted-separator
+      correctionSafety: safe
+    HyMT2-30B-A3B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  reviewNote: The source slash separator is lost by the 7B candidate; the other candidates retain the two-part structure.
+- sampleId: 035783110361aa0c
+  sampleKind: fullCell
+  source: 哼哼，既然龙掌 教执意不肯替我解毒， / 那我也只好强闯贵派总舵，逼各位就范了。
+  label: Abstain
+  archivedJudgeConfidence: 0.5
+  archivedJudgeIssues:
+  - placeholder
+  candidates:
+    Qwen25-Standard: 'Hmph, since Dragon Sect Master insists on not removing the poison for me, / then I''ll have to force my way into your sect''s headquarters and compel you all to comply.'
+    HyMT2-7B: 'Hmph, since Master Long insists on refusing to detoxify me, / I have no choice but to storm your sect''s headquarters and force you all to comply.'
+    HyMT2-30B-A3B: 'Heh, since Patriarch Long stubbornly refuses to cure me of this poison, I''ll have no choice but to forcibly breach your sect''s headquarters and force you all to comply.'
+  labels:
+    Qwen25-Standard:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-7B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B:
+      label: Defect
+      defectCategories:
+      - formatting
+      - omitted-separator
+      correctionSafety: safe
+  reviewNote: The MoE candidate drops the source slash separator; title wording is otherwise a reviewable translation choice.
+- sampleId: 0369db0c26cbb8cf
+  sampleKind: fullCell
+  source: 只有一名强盗满 脸不悦，坐在篝火旁放哨， / 在火光映照下，只见此人两眼眯缝，头也渐渐垂下打起了盹 。
+  label: Abstain
+  archivedJudgeConfidence: 0.5
+  archivedJudgeIssues:
+  - placeholder
+  candidates:
+    Qwen25-Standard: Only one bandit sat by the campfire on guard, looking displeased. In the flickering light, his eyes narrowed, and his head gradually drooped as he dozed off.
+    HyMT2-7B: Only one bandit sat displeased by the fire, keeping watch. Under the glow of the flames, his eyes were narrowed, and his head gradually drooped as he fell asleep.
+    HyMT2-30B-A3B: Only one bandit sat by the campfire on guard, looking displeased; his eyes gradually narrowed, and his head soon drooped as he dozed off.
+  labels:
+    Qwen25-Standard:
+      label: Defect
+      defectCategories:
+      - omitted-separator
+      correctionSafety: safe
+    HyMT2-7B:
+      label: Defect
+      defectCategories:
+      - omitted-separator
+      correctionSafety: safe
+    HyMT2-30B-A3B:
+      label: Defect
+      defectCategories:
+      - omitted-separator
+      correctionSafety: safe
+  reviewNote: All candidates omit the source slash separator between the two sentence fragments; wording is otherwise understandable.
+- sampleId: 06d3cc1dfc09653f
+  sampleKind: split
+  source: 杀机0.1
+  label: Abstain
+  archivedJudgeConfidence: 0.5
+  archivedJudgeIssues:
+  - formatting
+  - placeholder
+  candidates:
+    Qwen25-Standard: Killing intent 0.1
+    HyMT2-7B: Kill intent 0.1
+    HyMT2-30B-A3B: 'Deadly intent: 0.1'
+  labels:
+    Qwen25-Standard:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-7B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B:
+      label: Defect
+      defectCategories:
+      - formatting
+      correctionSafety: safe
+  reviewNote: The numeric value is preserved by all candidates; the added colon in the MoE output is a possible UI-format change.
+- sampleId: 086115857254d774
+  sampleKind: fullCell
+  source: 如今阎殿主新丧 未久，本帮群龙无首。 / 你想以他老人家的遗命让我们撤兵，未免空口无凭， / 莫不是想来浑水摸鱼吧！
+  label: Abstain
+  archivedJudgeConfidence: 0.5
+  archivedJudgeIssues:
+  - placeholder
+  candidates:
+    Qwen25-Standard: 'Now that Deputy Commander Yan has recently passed away, our clan is leaderless. / To ask us to withdraw our troops based on his last wishes seems baseless, / aren''t you just trying to take advantage of the chaos?!'
+    HyMT2-7B: The Lord of the Netherworld passed away not long ago, leaving our sect leaderless. You want us to withdraw our troops based on his last wishes, but that lacks any concrete proof. Are you trying to take advantage of the situation?
+    HyMT2-30B-A3B: 'Currently, Lord Yan has just passed away, leaving our sect leaderless. / You wish to use his final decree to order us to withdraw our troops-but that''s mere empty talk. / Surely you''re trying to take advantage of the chaos for your own gain!'
+  labels:
+    Qwen25-Standard:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-7B:
+      label: Defect
+      defectCategories:
+      - omitted-separator
+      - terminology
+      correctionSafety: safe
+    HyMT2-30B-A3B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  reviewNote: The 7B candidate drops both separators and mistranslates 阎殿主 as "Lord of the Netherworld" (confusing 阎 with 阎王/Yama), a genuine meaning-changing defect. The MoE's "Lord Yan" is a looser but non-contradictory generic-title rendering of 殿主 (Hall Master) that keeps the surname and preserves both separators, consistent with the same leniency already given to Qwen25's "Deputy Commander Yan" - judged Pass, not a defect.
+- sampleId: c81957123e112196
+  sampleKind: fullCell
+  sampleRun: ModelAssessment-20260919-larger-run
+  source: "哈哈哈哈哈，石将军，\\n你竟想让老子屈居于你之下，当你的什么狗屁副殿主？"
+  candidates:
+    Qwen25-Standard: "Hahaha, General Shi, do you really think I'd serve under you as some damn deputy palace lord?"
+    HyMT2-7B: "Hahaha! General Shi,\\nyou actually expect me to bow down to you and become some worthless deputy hall master of yours?"
+    HyMT2-30B-A3B: "Hahaha, General Shi,\\nDo you really think I'd stoop to being your so-called Deputy Hall Master?"
+    HyMT2-30B-A3B-Q3: "Hahaha! General Shi,  \ndo you really think I'd ever accept a subordinate role under you as some worthless deputy hall master?"
+  labels:
+    Qwen25-Standard:
+      label: Defect
+      defectCategories:
+      - omitted-separator
+      correctionSafety: safe
+    HyMT2-7B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B-Q3:
+      label: Defect
+      defectCategories:
+      - literal-newline
+      correctionSafety: safe
+  reviewNote: Qwen25 drops the literal "\n" template separator entirely (merges into one flowing sentence). The Q3 quant instead substitutes it with a real newline character plus stray trailing spaces ("  \n") rather than the literal two-character "\n" token the template requires - a structural defect distinct from dropping it. HyMT2-7B and the current Q4-quant HyMT2-30B-A3B both preserve the literal separator correctly.
+- sampleId: cde481ce2c4eff17
+  sampleKind: fullCell
+  sampleRun: ModelAssessment-20260919-larger-run
+  source: "好你个臭小子！\\n小的们，给我接着狠狠地打！"
+  candidates:
+    Qwen25-Standard: "Well, you little brat!\n\nServants, beat him up good!"
+    HyMT2-7B: "You little brat!\\nGuys, keep hitting him hard!"
+    HyMT2-30B-A3B: "Good heavens, you rascal!\\nYou knaves, keep beating him mercilessly!"
+    HyMT2-30B-A3B-Q3: "You rascal!  \nMy men, keep beating him mercilessly!"
+  labels:
+    Qwen25-Standard:
+      label: Defect
+      defectCategories:
+      - literal-newline
+      correctionSafety: safe
+    HyMT2-7B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B-Q3:
+      label: Defect
+      defectCategories:
+      - literal-newline
+      correctionSafety: safe
+  reviewNote: Qwen25 substitutes the literal "\n" separator with two real newline characters (a blank line) instead of the template's literal token; the Q3 quant makes the same substitution mistake with one real newline plus stray spaces. HyMT2-7B and the current Q4-quant HyMT2-30B-A3B both keep the literal separator. HyMT2-30B-A3B's "Good heavens, you rascal!" softens the source's cruder insult register somewhat but doesn't change the scene's meaning - judged Pass, not a defect, consistent with this dataset's existing tolerance for register/wording variance.
+- sampleId: 16621d0d4f1205c8
+  sampleKind: fullCell
+  sampleRun: ModelAssessment-20260919-larger-run
+  source: "有人高呼：饿虎扑食？这是饿犬吃屎吧！\\n引得台下又是一片嘘声和嘲笑。"
+  candidates:
+    Qwen25-Standard: "Someone shouted: Hungry tiger pouncing on its prey? This is more like a hungry dog eating shit!\n\nThis drew another round of boos and jeers from the audience."
+    HyMT2-7B: "A voice shouted, A hungry tiger pouncing? That's just a starving dog eating trash! This drew another wave of boos and ridicule from the audience."
+    HyMT2-30B-A3B: "Someone shouted: A starving tiger pouncing on its prey? More like a hungry dog eating excrement!\\nThis drew another round of boos and mockery from the audience."
+    HyMT2-30B-A3B-Q3: "Someone shouted: Like a starving tiger pouncing on prey? More like a ravenous dog eating feces!\\nThis drew another round of boos and laughter from the audience."
+  labels:
+    Qwen25-Standard:
+      label: Defect
+      defectCategories:
+      - literal-newline
+      correctionSafety: safe
+    HyMT2-7B:
+      label: Defect
+      defectCategories:
+      - omitted-separator
+      correctionSafety: safe
+    HyMT2-30B-A3B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B-Q3:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  reviewNote: Qwen25 again substitutes the literal separator with two real newlines. HyMT2-7B drops the separator entirely, merging both clauses into one sentence, and also softens "吃屎" (eating shit) to "eating trash" - a euphemism that dulls the insult's crudeness without changing the scene. The Q4 and Q3 quants both keep the literal separator and translate the profanity directly ("excrement"/"feces").
+- sampleId: c61cdad79df4c969
+  sampleKind: split
+  sampleRun: ModelAssessment-20260919-larger-run
+  source: 则为
+  candidates:
+    Qwen25-Standard: Is thus
+    HyMT2-7B: Then
+    HyMT2-30B-A3B: No valid alternatives existed; output only the properly translated English text.
+    HyMT2-30B-A3B-Q3: That is to say
+  labels:
+    Qwen25-Standard:
+      label: Defect
+      defectCategories:
+      - fluency
+      correctionSafety: safe
+    HyMT2-7B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B:
+      label: Defect
+      defectCategories:
+      - garbage-output
+      - prompt-leak
+      correctionSafety: safe
+    HyMT2-30B-A3B-Q3:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  reviewNote: This ultra-short, context-free UI/dynamic-string fragment ("则为", roughly "then/thus") has no surrounding sentence to disambiguate, but the current Q4-quant HyMT2-30B-A3B's output is not a translation at all - it echoes what looks like an internal fallback/refusal instruction ("No valid alternatives existed; output only the properly translated English text."), a severe garbage-output/prompt-leak failure any competent QC evaluator must catch regardless of context. Qwen25's "Is thus" is grammatically awkward (a fluency defect) but at least points in the right semantic direction; HyMT2-7B's "Then" and the Q3 quant's "That is to say" are both acceptable concise connectors.
+- sampleId: 4c531aea002f3953
+  sampleKind: fullCell
+  sampleRun: ModelAssessment-20260919-larger-run
+  source: "等到蛊虫完全苏醒，施术者就能在一定程度上操纵被寄宿之人的行为，\\n如同控制牵丝木偶一般，故而得名。\\n施术者越精于蛊术，对被寄宿者的控制力就越强。"
+  candidates:
+    Qwen25-Standard: "Once the gu虫 are fully awake, the practitioner can control the actions of the host to a certain extent, like manipulating a puppet on strings, hence the name. \\n\n\nThe more skilled the practitioner is in gu techniques, the greater their control over the host."
+    HyMT2-7B: "Once the parasitic insects fully awaken, the caster can manipulate the behavior of the host to a certain extent, \\njust like controlling a marionette, which is how it got its name. The more skilled the caster in puppetry magic, the stronger their control over the host."
+    HyMT2-30B-A3B: "Once the gu worm fully awakens, the practitioner can exert a certain degree of control over the host's actions,\\nmuch like manipulating a marionette on strings-hence the name.\\nThe more skilled the practitioner is in gu magic, the greater their control over the host becomes."
+    HyMT2-30B-A3B-Q3: "Once the gu worm fully awakens, the practitioner can manipulate the host's actions to some extent,\\nmuch like controlling a marionette-hence the name. The more skilled the practitioner is in gu magic, the greater their control over the host becomes."
+  labels:
+    Qwen25-Standard:
+      label: Defect
+      defectCategories:
+      - dropped-content
+      - formatting
+      correctionSafety: safe
+    HyMT2-7B:
+      label: Defect
+      defectCategories:
+      - omitted-separator
+      correctionSafety: safe
+    HyMT2-30B-A3B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B-Q3:
+      label: Defect
+      defectCategories:
+      - omitted-separator
+      correctionSafety: safe
+  reviewNote: Qwen25 leaves "虫" (from 蛊虫, "gu insects/worms") untranslated and glued onto "gu" ("gu虫"), a genuine dropped-content defect, and also appends a redundant real blank line after its one correctly-kept literal separator. HyMT2-7B and the Q3 quant each keep only the first of the source's two literal separators, merging the last two clauses. Only the current Q4-quant HyMT2-30B-A3B keeps both literal separators AND fully translates the domain term consistently as "gu worm"/"gu magic".
+- sampleId: f158f969e220cee2
+  sampleKind: fullCell
+  sampleRun: ModelAssessment-20260919-larger-run
+  source: 轻功10;意志15
+  candidates:
+    Qwen25-Standard: <translation unchanged as there is no Chinese text to translate>
+    HyMT2-7B: Qinggong 10; willpower 15
+    HyMT2-30B-A3B: Qinggong 10; Willpower 15
+    HyMT2-30B-A3B-Q3: Qinggong 10; Willpower 15
+  labels:
+    Qwen25-Standard:
+      label: Defect
+      defectCategories:
+      - garbage-output
+      correctionSafety: safe
+    HyMT2-7B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B-Q3:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  reviewNote: Qwen25 outputs a literal meta-statement ("<translation unchanged as there is no Chinese text to translate>") instead of translating - the source plainly contains Chinese (轻功/意志) and is not translated at all, another garbage-output failure distinct from a bad translation. The other three correctly translate this semicolon-delimited stat string, keeping the romanized skill term "Qinggong" and the numeric values intact.
+- sampleId: c765f5d8f19adc53
+  sampleKind: fullCell
+  sampleRun: ModelAssessment-20260919-larger-run
+  source: 慷慨赠送;GiveNpcAskItem
+  candidates:
+    Qwen25-Standard: Generously give away;GiveNpcAskItem
+    HyMT2-7B: Give away generously
+    HyMT2-30B-A3B: Generously offered; GiveNpcAskItem
+    HyMT2-30B-A3B-Q3: Generously given; GiveNpcAskItem
+  labels:
+    Qwen25-Standard:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-7B:
+      label: Defect
+      defectCategories:
+      - dropped-content
+      correctionSafety: safe
+    HyMT2-30B-A3B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B-Q3:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  reviewNote: HyMT2-7B silently drops the entire ";GiveNpcAskItem" segment - a non-translatable game function identifier that must survive verbatim after the semicolon, not just translatable prose. The other three keep the identifier intact after translating only the human-readable prefix.
+- sampleId: 2d781330393c17f7
+  sampleKind: split
+  sampleRun: ModelAssessment-20260919-larger-run
+  source: 项元霸
+  candidates:
+    Qwen25-Standard: Xiang Yuanba
+    HyMT2-7B: Xiang Yuanba
+    HyMT2-30B-A3B: Xiang Yuanba
+    HyMT2-30B-A3B-Q3: Xiang Yuanba
+  labels:
+    Qwen25-Standard:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-7B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B-Q3:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  reviewNote: A clean known-good baseline - a proper name where all four candidates agree on the same romanization with no defect. This dataset otherwise skews heavily toward defect examples; included to keep a genuine unanimous-Pass case represented.
+- sampleId: e6ea2511cf64db7a
+  sampleKind: split
+  sampleRun: ModelAssessment-20260919-larger-run
+  source: 薄暮空潭曲
+  candidates:
+    Qwen25-Standard: Dusk Over the Empty Pool Curve
+    HyMT2-7B: Melody by the Dusk-Lit Pond
+    HyMT2-30B-A3B: Twilight over the Empty Pool
+    HyMT2-30B-A3B-Q3: Twilight Over the Empty Pool
+  labels:
+    Qwen25-Standard:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-7B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B-Q3:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  reviewNote: A short poem/song title with no single correct English rendering - all four candidates preserve the same core imagery (dusk/twilight, an empty pool, a melody/curve) without contradicting each other or the source, so all are judged Pass despite the wide wording spread. A second known-good baseline, this time driven by legitimate creative license rather than unanimous agreement.
+- sampleId: a486eb46b7b9f0b6
+  sampleKind: split
+  sampleRun: ModelAssessment-20260919-larger-run
+  source: 在
+  candidates:
+    Qwen25-Standard: At
+    HyMT2-7B: In
+    HyMT2-30B-A3B: None
+    HyMT2-30B-A3B-Q3: There
+  labels:
+    Qwen25-Standard:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-7B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B:
+      label: Defect
+      defectCategories:
+      - mistranslation
+      correctionSafety: safe
+    HyMT2-30B-A3B-Q3:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  reviewNote: An ultra-short, context-free UI fragment ("在", roughly "at/in/exist"). The current Q4-quant HyMT2-30B-A3B outputs "None", which is not a plausible reading of the source at all (the opposite of "exists/is present") - a genuine mistranslation rather than a stylistic choice, distinct from that same model's garbage/prompt-leak failure on the other ultra-short sample ("则为") but reinforcing that this model is unreliable on very short, context-free fragments specifically.
+- sampleId: cb459b1c8e845a04
+  sampleKind: fullCell
+  sampleRun: ModelAssessment-20260919-larger-run
+  source: "第{0}名是{1}！\n奖励是银钱{2}两和这{3}，贵派威望也会因此提升{4}点。\n此外，每位参战弟子皆会获得{5}门派功绩以示鼓励。"
+  candidates:
+    Qwen25-Standard: "The {0} place goes to {1}!\nThe reward is {2} silver coins and this {3}. Your sect's reputation will also increase by {4} points.\nIn addition, each participating disciple will receive {5} sect merit points as encouragement."
+    HyMT2-7B: "The {0}th place goes to {1}!  \nThe reward is {2} taels of silver along with this {3}, and your Sect's reputation will also increase by {4} points.  \nAdditionally, every disciple who participates in the battle will receive {5} worth of Sect merit as encouragement."
+    HyMT2-30B-A3B: "Rank {0} goes to {1}!  \nThe rewards include {2} silver coins and this item {3}; your Sect's prestige will also increase by {4} points.  \nAdditionally, every participating disciple will receive {5} Sect merit as an encouragement."
+    HyMT2-30B-A3B-Q3: "Rank {0} goes to {1}! The reward is {2} silver coins and this item {3}. Your Sect's prestige will also increase by {4} points. Additionally, every participating disciple receives {5} Sect merit as an incentive."
+  labels:
+    Qwen25-Standard:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-7B:
+      label: Defect
+      defectCategories:
+      - formatting
+      correctionSafety: safe
+    HyMT2-30B-A3B:
+      label: Defect
+      defectCategories:
+      - formatting
+      correctionSafety: safe
+    HyMT2-30B-A3B-Q3:
+      label: Defect
+      defectCategories:
+      - omitted-separator
+      correctionSafety: safe
+  reviewNote: >-
+    Unlike the PlotData.csv fullCell samples elsewhere in this set (which use a literal
+    two-character "\n" token reconstructed by CompoundFieldSplitter), this dynamicStrings.txt
+    source cell's line breaks are REAL newline characters embedded directly in the raw text - so a
+    real newline in the translation is the correct, expected structural match here, not a defect.
+    Qwen25 reproduces both real newlines cleanly. HyMT2-7B and the current Q4-quant HyMT2-30B-A3B
+    both reproduce the real newlines correctly too, but each adds two stray trailing spaces before
+    them - a minor formatting artifact rather than a wrong separator type. The Q3 quant is the one
+    genuine defect here - it drops both newlines entirely, merging all three sentences into one
+    paragraph.
+- sampleId: d31b1ebbf66e468b
+  sampleKind: fullCell
+  sampleRun: ModelAssessment-20260919-larger-run
+  source: "#$PlayerName#，项问天，又是你们两个来坏我好事！\\n若不是你们，我爹也不会死！！！"
+  candidates:
+    Qwen25-Standard: "#$PlayerName#, Xiang Wentian, it's you two again ruining my plans!\\nIf not for you, my father wouldn't be dead!!!"
+    HyMT2-7B: "#$PlayerName#, Xiang Wentian, it's you two again ruining my plans! If not for you, my Father wouldn't have died!!!\\n"
+    HyMT2-30B-A3B: "#$PlayerName#, Xiang Wentian! Once again, it's the two of you ruining my plans! If not for you, my Father would still be alive!!!\\n"
+    HyMT2-30B-A3B-Q3: "#$PlayerName#, Xiang Wentian. Once again, you two ruin my plans!\\nIf not for you, my Father would still be alive!!!"
+  labels:
+    Qwen25-Standard:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-7B:
+      label: Defect
+      defectCategories:
+      - misplaced-separator
+      correctionSafety: safe
+    HyMT2-30B-A3B:
+      label: Defect
+      defectCategories:
+      - misplaced-separator
+      correctionSafety: safe
+    HyMT2-30B-A3B-Q3:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  reviewNote: The "#$PlayerName#" placeholder is preserved verbatim by all four - the defect here is different from the usual literal-newline substitution/omission cases - both HyMT2-7B and the current Q4-quant HyMT2-30B-A3B keep the literal "\n" token intact but relocate it to the very end of the string (after "!!!"), instead of between the two source sentences, which would still break template reconstruction even though the token itself is present. Qwen25 and the Q3 quant both place it correctly.
+- sampleId: 524be23af96c52c7
+  sampleKind: fullCell
+  sampleRun: ModelAssessment-20260919-larger-run
+  source: "各位放心，我#$PlayerName#不管是天下第一，还是天下倒数第一，\\n都会誓死守卫仙霞派，与各位生死相依，不离不弃！"
+  candidates:
+    Qwen25-Standard: 'Rest assured, no matter whether I am the best in the world or dead last, I, #$PlayerName#, will swear to defend the Xianxia Sect with my life, sharing life and death with all of you, never abandoning each other!'
+    HyMT2-7B: "Don't worry, everyone. Whether I, #$PlayerName#, am number one in the world or the worst in the world,\\nI'll swear to defend the Xianxia Sect to the death, standing by you through life and death, never leaving your side!"
+    HyMT2-30B-A3B: 'Rest assured, #$PlayerName#-whether I stand at the pinnacle of the world or at its very bottom-will vow to defend the Xianxia Sect with my life, standing by you all through thick and thin, never leaving your side!'
+    HyMT2-30B-A3B-Q3: "Rest assured, I, #$PlayerName#, whether ranked first or last in the world,\\nwill unwaveringly defend the Xianxia Sect, standing by you through thick and thin-never leaving your side!"
+  labels:
+    Qwen25-Standard:
+      label: Defect
+      defectCategories:
+      - omitted-separator
+      correctionSafety: safe
+    HyMT2-7B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B:
+      label: Defect
+      defectCategories:
+      - omitted-separator
+      - fluency
+      correctionSafety: safe
+    HyMT2-30B-A3B-Q3:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  reviewNote: Qwen25 drops the literal "\n" separator entirely, merging both clauses. The current Q4-quant HyMT2-30B-A3B also drops it, and additionally reads as grammatically garbled ("#$PlayerName#-whether I stand... will vow to defend" mixes first- and third-person framing around the placeholder). HyMT2-7B and the Q3 quant both keep the literal separator and read cleanly.
+correctionSamples:
+- sampleId: 5b03cbee1d695c74
+  sampleKind: fullCell
+  source: "莫慌，让为师看看……\\n还好还好，只是精疲力竭昏厥过去了。\\n此次战况如何，云裳又是为何受伤啊？"
+  currentTranslation: "Don't panic, let me take a look......\\nNo need to worry, I just fainted from exhaustion.\\nHow did the battle go, and why was Yunshang injured?"
+  label: Defect
+  defectCategories:
+  - dropped-content
+  - pronoun-attribution
+  proposedCorrection: "Don't panic, let me take a look......\\nNo need to worry, she just fainted from exhaustion.\\nHow did the battle go, and why was Yunshang injured?"
+  correctionSafety: safe
+  provenance: >-
+    Real production pair from Files/Converted/PlotData.csv.yaml (PlotData raw row containing
+    "莫慌，让为师看看……"); documents the same regression covered by the commented-out
+    QcOmittedSubjectRegression fact in Tests/QualityControlWorkflowTests.cs.
+  reviewNote: >-
+    The second sentence ("还好还好，只是精疲力竭昏厥过去了。") has no stated subject in the
+    source, but the surrounding dialogue makes clear the speaker is examining someone ELSE who
+    fainted - not himself. currentTranslation wrongly carries over first-person "I", contradicting
+    the "let me take a look" framing in sentence 1 (the speaker can't be both examiner and patient).
+    This is a genuine, high-confidence defect: an evaluator must catch the dropped/misattributed
+    subject even though every individual clause is fluent and grammatical on its own. The
+    proposedCorrection (swapping "I" for "she") is the actual fix already adopted by the pipeline's
+    QC pass and is judged safe: it resolves the contradiction without altering any other meaning,
+    name, or placeholder.
+

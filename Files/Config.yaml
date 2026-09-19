@@ -68,6 +68,20 @@ translationAssessment:
   outputPath: TestResults/ModelAssessment
   pinnedSampleSources:
     - "莫慌，让为师看看……\\n还好还好，只是精疲力竭昏厥过去了。\\n此次战况如何，云裳又是为何受伤啊？"
+    - "哈哈哈哈哈，石将军，\\n你竟想让老子屈居于你之下，当你的什么狗屁副殿主？"
+    - "好你个臭小子！\\n小的们，给我接着狠狠地打！"
+    - "有人高呼：饿虎扑食？这是饿犬吃屎吧！\\n引得台下又是一片嘘声和嘲笑。"
+    - "则为"
+    - "等到蛊虫完全苏醒，施术者就能在一定程度上操纵被寄宿之人的行为，\\n如同控制牵丝木偶一般，故而得名。\\n施术者越精于蛊术，对被寄宿者的控制力就越强。"
+    - "轻功10;意志15"
+    - "慷慨赠送;GiveNpcAskItem"
+    - "在"
+    - "第{0}名是{1}！\n奖励是银钱{2}两和这{3}，贵派威望也会因此提升{4}点。\n此外，每位参战弟子皆会获得{5}门派功绩以示鼓励。"
+    - "#$PlayerName#，项问天，又是你们两个来坏我好事！\\n若不是你们，我爹也不会死！！！"
+    - "各位放心，我#$PlayerName#不管是天下第一，还是天下倒数第一，\\n都会誓死守卫仙霞派，与各位生死相依，不离不弃！"
+    - "殷殷"
+    - "五毒弟子"
+    - "撤撤撤！你们三个给我记住！"
 qualityEvaluatorAssessment:
   enabled: false
   modelNames:
@@ -77,5 +91,5 @@ qualityEvaluatorAssessment:
     - HyMT2-30B-A3B-Q3
     - HyMT2-30B-A3B-Q3XXS
     - Qwen38Qc
-  goldSetPath: TestResults/QcEvaluatorAssessment/GoldSet.yaml
+  goldSetPath: Goldset/GoldSet.yaml
   outputPath: TestResults/QcEvaluatorAssessment
