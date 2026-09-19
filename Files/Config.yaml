@@ -19,15 +19,19 @@
     modelPreset: Qwen38
     modelPresetType: Standard
   - name: HyMT2-30B-A3B
-    modelPreset: Qwen25
+    modelPreset: HyMT2Moe
     modelPresetType: Standard
-    customPromptsPath: HyMT2-30B-A3B-Prompts
-    model: hf.co/mradermacher/Hy-MT2-30B-A3B-GGUF:Q3_K_S
   - name: HyMT2-7B
-    modelPreset: Qwen25
+    modelPreset: HyMT2
     modelPresetType: Standard
-    customPromptsPath: HyMT2-7B-Prompts
-    model: hf.co/unsloth/Hy-MT2-7B-GGUF:UD-Q6_K_XL
+  - name: HyMT2-30B-A3B-Q3
+    modelPreset: HyMT2Moe
+    modelPresetType: Standard
+    model: "hf.co/mradermacher/Hy-MT2-30B-A3B-i1-GGUF:i1-IQ3_XS"
+  - name: HyMT2-30B-A3B-Q3XXS
+    modelPreset: HyMT2Moe
+    modelPresetType: Standard
+    model: "hf.co/mradermacher/Hy-MT2-30B-A3B-i1-GGUF:i1-IQ3_XXS"
 glossaryPreset:
   usePresetChineseGlossary: true
   chineseGlossaryTypesToSupress:
@@ -56,7 +60,22 @@ translationAssessment:
     - Qwen25-Standard
     - HyMT2-7B
     - HyMT2-30B-A3B
-  sampleSize: 500
+    #- HyMT2-30B-A3B-Q3
+    #- HyMT2-30B-A3B-Q4
+  sampleSize: 200
   sampleSeed: 20260919
   fullCellSampleRatio: 0.5
   outputPath: TestResults/ModelAssessment
+  pinnedSampleSources:
+    - "莫慌，让为师看看……\\n还好还好，只是精疲力竭昏厥过去了。\\n此次战况如何，云裳又是为何受伤啊？"
+qualityEvaluatorAssessment:
+  enabled: false
+  modelNames:
+    - QwenQc-14B
+    - HyMT2-7B
+    - HyMT2-30B-A3B
+    - HyMT2-30B-A3B-Q3
+    - HyMT2-30B-A3B-Q3XXS
+    - Qwen38Qc
+  goldSetPath: TestResults/QcEvaluatorAssessment/GoldSet.yaml
+  outputPath: TestResults/QcEvaluatorAssessment

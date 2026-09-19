@@ -21,10 +21,7 @@
     <Folder Include="Raw\Dumped\DynamicStrings\" />
     <Folder Include="Raw\Dumped\PrefabText\" />
     <Folder Include="Raw\Export\" />
-    <Folder Include="TestResults\Failed\" />
-    <Folder Include="TestResults\Glossary\" />
-    <Folder Include="TestResults\Export\" />
-    <Folder Include="TestResults\OldFiles\" />
+    <Folder Include="TestResults" />
   </ItemGroup>
 
 </Project>
