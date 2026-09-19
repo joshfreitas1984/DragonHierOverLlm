@@ -18,6 +18,16 @@
   - name: Qwen38Qc
     modelPreset: Qwen38
     modelPresetType: Standard
+  - name: HyMT2-30B-A3B
+    modelPreset: Qwen25
+    modelPresetType: Standard
+    customPromptsPath: HyMT2-30B-A3B-Prompts
+    model: hf.co/mradermacher/Hy-MT2-30B-A3B-GGUF:Q3_K_S
+  - name: HyMT2-7B
+    modelPreset: Qwen25
+    modelPresetType: Standard
+    customPromptsPath: HyMT2-7B-Prompts
+    model: hf.co/unsloth/Hy-MT2-7B-GGUF:UD-Q6_K_XL
 glossaryPreset:
   usePresetChineseGlossary: true
   chineseGlossaryTypesToSupress:
@@ -40,3 +50,13 @@ qualityReview:
   autoAcceptDefectCategories: [HardToParseSeam, OtherNamedDefect, DroppedContent, DroppedStutter]  
   twoStageVerificationEnabled: true
   verifyNoDefectClaims: true
+translationAssessment:
+  enabled: true
+  modelNames:
+    - Qwen25-Standard
+    - HyMT2-7B
+    - HyMT2-30B-A3B
+  sampleSize: 500
+  sampleSeed: 20260919
+  fullCellSampleRatio: 0.5
+  outputPath: TestResults/ModelAssessment

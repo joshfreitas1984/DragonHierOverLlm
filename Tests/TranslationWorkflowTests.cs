@@ -36,6 +36,13 @@ public class TranslationWorkflowTests
         await FileOutputWorkflowTests.PackageFinalTranslation();
     }
 
+    [Fact(DisplayName = "8. Assess configured translation models")]
+    public async Task AssessConfiguredTranslationModels()
+    {
+        await TranslationAssessmentWorkflow.RunAsync(GameFileHandling.WorkingDirectory,
+            TextFileConfiguration.TextFilesToSplit, GameFileHandling.Hooks);
+    }
+
     [Fact(DisplayName = "5. Flag lines corrupted by bracket-split bug for retranslation")]
     public async Task SetBracketSplitBugLinesAsInvalid()
     {
