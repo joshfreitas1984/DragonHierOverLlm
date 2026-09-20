@@ -9,22 +9,22 @@ plan: [qc-evaluator-comparison.md](qc-evaluator-comparison.md).
 ## Theory
 
 Use a fast, strong-translator model (HyMT2 family) for correction generation (call 3) and repair
-(call 5), while keeping the most accurate detector (currently Qwen38Qc, per the 2026-09-20
-comparison run) for detection (calls 1/2) and correction verification (call 4). Rationale: HyMT2 is
+(call 5), while keeping the most accurate detector (currently `Qwen38Qc-IQ4XS`, per the parent
+plan's Twenty-first round) for detection (calls 1/2) and correction verification (call 4). Rationale: HyMT2 is
 already known to be a strong *translator* in the separate translation-model comparison, and
 producing a correction is close in shape to producing a translation, so it may not need the slower,
 more accurate model doing the actual rewrite - only judging it.
 
 ## Important framing correction
 
-This does **not** address Qwen38Qc's per-corpus latency cost, and should not be pitched as a speed
-fix for detection. Per the five-call design in
+This does **not** address the detector's per-corpus latency cost, and should not be pitched as a
+speed fix for detection. Per the five-call design in
 [qc-evaluator-comparison.md](qc-evaluator-comparison.md#production-process-shape), detection (calls
 1+2) runs on **every column in the corpus unconditionally** - that's the flat, corpus-wide cost.
 Correction (calls 3-5) only runs on the smaller subset of columns with a confirmed defect. So if
-Qwen38Qc stays the detector, its slowness still applies to the whole corpus regardless of which
-model does correction - swapping the corrector model only affects the cost of the already-smaller
-confirmed-defect subset.
+`Qwen38Qc-IQ4XS` stays the detector, its slowness still applies to the whole corpus regardless of
+which model does correction - swapping the corrector model only affects the cost of the
+already-smaller confirmed-defect subset.
 
 If full-corpus detection latency is the actual problem to solve, the relevant lever is the
 already-documented **doubled detection** Process Variant in the parent plan: whether call 2 (the
@@ -51,7 +51,7 @@ confirmed defect, would it actually be correct and safe?" without new code.
    model's `GenerateCorrectionAsync` and record the `proposedCorrection`.
 3. Score each output two ways:
    - **Safety** - feed it back through `GetVerificationVerdictAsync` using a trusted judge model
-     (Qwen38Qc, per the current comparison results) to check no new defect was introduced.
+     (`Qwen38Qc-IQ4XS`, the current production detector) to check no new defect was introduced.
    - **Completeness** - whether it actually resolves the confirmed defect. No automated ground truth
      exists for this yet, so at least an initial sample needs human review.
 4. Run it for each HyMT2 variant as corrector against the confirmed real defects from a comparison
@@ -62,7 +62,7 @@ confirmed defect, would it actually be correct and safe?" without new code.
 
 ## When to pick this up
 
-After the parent plan's more immediate open items - re-validating the `BaseQualityReviewPrompt.txt`
-detection fixes from 2026-09-20 (placeholder-leak, name-as-gloss patterns) across a larger run, and
-deciding whether QwenQc-14B's false-positive regression is worth chasing or whether Qwen38Qc alone
-is the detector to standardize on.
+The parent plan's model/prompt selection is now settled (`Qwen38Qc-IQ4XS`, per its Twenty-first
+round - see [qc-evaluator-comparison.md](qc-evaluator-comparison.md)), so this is no longer gated on
+an in-flux target. Still parked/opt-in - pick up when correction-generation quality (not just
+detection) becomes the priority.

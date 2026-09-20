@@ -1,5 +1,44 @@
 # QC Evaluator Comparison Plan
 
+## Current State (settled 2026-09-20)
+
+**Production QC evaluator: `Qwen38Qc-IQ4XS`** (`UD-IQ4_XS` quant, `Files/Config.yaml`'s
+`qualityReview.modelName` and `qualityEvaluatorAssessment.modelNames`). Chosen in the Twenty-first
+round: strictly beats the prior default `Qwen38Qc` (`UD-Q3_K_XL`) on both recall (0.855 vs 0.812)
+and precision (0.894 vs 0.875) on the full 108-entry gold set, at a real but bounded latency cost
+(~3.6 vs ~2.7 estimated days for a full cold-start corpus run). `Qwen38Qc-UDQ4KM` scored higher
+recall still (0.884) but lower precision than IQ4XS and a much larger latency cost (~5.7 days) -
+user-decided tradeoff, IQ4XS picked as the balanced option.
+
+The prompt (`BaseQualityReviewPrompt.txt`, shared text across the `Qwen38`/`HyMT2`/`HyMT2Moe`
+families in `FanslationStudio.LlmKit`) is treated as maxed out: every gold-set category clears a
+comfortable recall bar except two known, deliberately-deprioritized gaps -
+
+- **`formatting`** (8/12) - the remaining misses are a narrow, already-diagnosed salience gap
+  (a stray-trailing-whitespace pattern, isolated-tested and judged cosmetic/low-stakes) plus one
+  remaining internal-consistency miss. Not worth another round per the Twentieth round's own
+  conclusion.
+- **`terminology`** (see the Sixth round) - the two originally-failing gold items have a working
+  production backstop (`TranslateLinesBruteForce`/`RunBruteForce` deterministic glossary re-sync,
+  not yet run - explicitly declined by the user) independent of the QC LLM's own labeling skill.
+
+**One open, named false-positive mode, left unresolved by design**: the Twentieth round's
+internal-consistency self-check over-flags delimited lists of *independently-shaped* items (e.g. a
+4-item trait list) as inconsistent, when it should only compare entries that share one structural
+template (e.g. parallel stat/label pairs). Fix, if picked up: add that carve-out to the
+internal-consistency rule in `BaseQualityReviewPrompt.txt`. Decided not to chase further - net
+metrics were already ahead on every axis, and the mode is narrow/understood, not a mystery.
+
+Process Variants (doubled detection, doubled verification) are both implemented and measured -
+see "Process Variants" below - and kept as the production-matching defaults. Gold set size (108
+detection items + 6 correction samples) was user-confirmed sufficient, well below the plan's
+original 300-500 stretch target.
+
+See `Scripts/qc_excluded_methodology.py` for the recall/precision analysis methodology (excludes
+seam-shaped separator/newline gold rows, which are out of scope - see
+"Separator/Newline Defects Are Out of Scope" below - and one gold item marked EXCLUDE FROM QC
+EVALUATOR SCORING) used throughout the Status log below.
+
 ## Status
 
 The five-call production shape described below is implemented in `FanslationStudio.LlmKit`
