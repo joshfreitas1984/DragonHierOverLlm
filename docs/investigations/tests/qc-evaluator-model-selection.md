@@ -74,6 +74,66 @@ cost" below for why that matters.
   precision bug (flagging `GARBLED_NUMBER` on short stat-label strings purely because a number was
   present) and was only 27% faster - not worth chasing. All were dropped from routine detection
   rounds; their `models:` definitions were kept for the correction-generation work in question 3.
+- **Sub-question closed (2026-09-20): the HyMT2 gap is not English-instruction-following.** Both
+  prompt-tuning rounds above only ever tested `HyMT2-30B-A3B` against the shared, English-language
+  `BaseQualityReviewPrompt.txt` - never checked against a Chinese-language prompt, despite HyMT2
+  being a Chinese-origin model. Translated the prompt's full instructions/rules into Chinese
+  (`Files/HyMT2ZhPrompts/BaseQualityReviewPrompt.txt`, wired in via `customPromptsPath` as
+  `HyMT2-30B-A3B-ZhPrompt`), keeping every structural/output-format marker unchanged (`SOURCE`,
+  `TRANSLATION`, the `DEFECTS:` line, all category constants, and every placeholder/example token),
+  and re-ran both a fresh English-prompt `HyMT2-30B-A3B` baseline (the previously-recorded one had a
+  stale gold-set fingerprint from before the set grew to 108 entries) and the new Chinese-prompt
+  variant against the current full gold set:
+
+  | Model | `mistranslation` recall | Overall recall | Overall precision |
+  |---|---|---|---|
+  | `HyMT2-30B-A3B` (English prompt) | 0.700 (7/10) | 0.681 (47/69) | 0.770 (47/61) |
+  | `HyMT2-30B-A3B` (Chinese prompt) | 0.600 (6/10) | 0.696 (48/69) | 0.762 (48/63) |
+  | `Qwen38Qc-IQ4XS` (tuned, reference) | 1.000 (10/10) | 0.855 (59/69) | 0.894 (59/66) |
+
+  The two specific rows originally cited as evidence of the ceiling - `sampleId 083e1b05b5abaa3b`
+  (invented-synonym-pair, "Sect Rank/Position" for a source that names one concept) and `sampleId
+  b4c303b678cbd79d` (name-as-gloss, "White Cloud" for 白云子) - were missed identically under both
+  prompts (`actualLabel: Pass` against `expectedLabel: Defect` in both `Results.yaml`s, byte-for-byte
+  the same miss). `mistranslation`-category recall moved backward, not forward (0.700 -> 0.600), and
+  overall recall/precision stayed within noise of the English baseline. **Confirmed: this is a
+  genuine capability ceiling, not an English-instruction-following gap** - no further work justified
+  chasing a Chinese-prompt variant for HyMT2 as a QC judge. (One row in the Chinese-prompt run failed
+  to parse - `DEFECTS: OTHER_NAMED_DEFECT, UNCERTAIN`, violating the prompt's own
+  never-combine-UNCERTAIN-with-a-named-category rule - a second, independent instruction-following
+  miss under the translated prompt, not counted as evidence either way since it was skipped rather
+  than scored.) The Chinese prompt file and `HyMT2-30B-A3B-ZhPrompt` model definition are kept in
+  the repo as the investigation record; `qualityEvaluatorAssessment.modelNames` reverts to just
+  `Qwen38Qc-IQ4XS` now that the question is closed.
+- **Sub-question closed (2026-09-20): the ceiling is not a reasoning-budget problem either.** Using
+  the newly-added `qualityEvaluatorAssessment.detectionThinkingEnabled` flag (mirrors the
+  verification-call thinking precedent - see `quality-review-pass-architecture.md`'s "Verification-
+  call thinking" section) plus headroom raised in `HyMT2Moe`'s preset (`num_ctx`/`num_predict`
+  4096/2048 -> 8192/4096, harmless with thinking off), ran `HyMT2-30B-A3B` with detection-time
+  thinking enabled against the same 108-entry gold set (English prompt):
+
+  | Model | `mistranslation` recall | Overall recall | Overall precision |
+  |---|---|---|---|
+  | `HyMT2-30B-A3B` (English, no thinking) | 0.700 (7/10) | 0.681 (47/69) | 0.770 (47/61) |
+  | `HyMT2-30B-A3B` (English, thinking enabled) | 0.800 (8/10) | 0.681 (47/69) | 0.810 (47/58) |
+  | `Qwen38Qc-IQ4XS` (tuned, reference) | 1.000 (10/10) | 0.855 (59/69) | 0.894 (59/66) |
+
+  Thinking budget picked up one different `mistranslation` row somewhere else in the set (precision
+  improved too - 3 fewer false positives) but **the same two ceiling rows from the prompt-language
+  sub-test above** (`083e1b05b5abaa3b` invented-synonym-pair, `b4c303b678cbd79d` name-as-gloss) were
+  missed identically (`actualLabel: Pass` against `expectedLabel: Defect` in both) - a third
+  independent lever (language, then reasoning budget) moved other rows but never these two. Overall
+  recall stayed exactly flat (0.681, same 47/69). **Confirmed again: this is a genuine capability
+  ceiling specific to these two semantic-reasoning patterns, not a budget or language artifact** -
+  closes the loop on all three plausible non-capability explanations. (One transient failure hit
+  during this round: a `FileNotFoundException` on `WriteYamlAtomically`'s `File.Move` - not the
+  already-hardened `UnauthorizedAccessException` case, but a related concurrent-writer race where a
+  second in-flight `maxConcurrency: 2` worker's retry loop never regenerates the `.tmp` file another
+  worker already consumed; re-running the assessment succeeded cleanly. Worth hardening
+  `WriteYamlAtomically` against this race specifically if it recurs, but not chased further here
+  since a clean re-run was sufficient to get a valid result.) `qualityEvaluatorAssessment.modelNames`
+  reverts to `Qwen38Qc-IQ4XS` and `detectionThinkingEnabled` reverts to `false`, per this sub-test's
+  own scoping comment.
 - **Final quant sweep (Twenty-first round), full 108-entry gold set:**
 
   | Model | Quant | Recall | Precision | Avg latency |
@@ -100,13 +160,25 @@ either call's finding is kept) unconditionally on every corpus column, and can r
 twice (call 4, merged strictly - either call's objection rejects the correction) on the smaller
 confirmed-defect subset. Both costs were previously assumed necessary, never measured in isolation.
 
-- **Doubled detection: kept.** A clean single-vs-double comparison (repairing a latency-contamination
-  bug where scoring detection alone had been silently triggering calls 3-5) found a real, if thin,
-  recall lift: exactly 1 of 18 in-scope defect rows was caught by the merge but missed by call 1
-  alone, 0 rows regressed (`QcDetectionResult.Merge` is a set union, so doubling can only match or
-  exceed a single call's catch rate). At ~1.83x the latency (927ms vs 506ms) for a lift that's
-  small but never negative, and given a missed defect is the worse failure, **kept as the
-  production-matching default** (`doubledDetection: true`).
+- **Doubled detection: kept initially, then switched off for throughput (2026-09-20).** A clean
+  single-vs-double comparison (repairing a latency-contamination bug where scoring detection alone
+  had been silently triggering calls 3-5) found a real, if thin, recall lift: exactly 1 of 18
+  in-scope defect rows was caught by the merge but missed by call 1 alone, 0 rows regressed
+  (`QcDetectionResult.Merge` is a set union, so doubling can only match or exceed a single call's
+  catch rate). At the time this measured ~1.83x the latency (927ms vs 506ms, on the then-default
+  `Qwen38Qc` quant) for a lift that's small but never negative, and given a missed defect is the
+  worse failure, it was kept as the production-matching default.
+
+  Once the HyMT2 capability-ceiling sub-tests above closed off the "swap to a faster/smaller
+  detector model" family of speed options, doubled detection became the largest remaining lever:
+  re-measured directly against the current production quant (`Qwen38Qc-IQ4XS`), single detection
+  averages 601ms/row vs 1268ms/row doubled (2.11x, not 1.83x - the earlier ratio was quant-specific)
+  - roughly **15 hours across the full ~81,000-split corpus** for that same 1/18-row recall lift.
+  With speed now the priority, production added a real (non-assessment-only) toggle,
+  `QualityReviewConfig.DoubledDetectionEnabled` (default `true`, mirrors the assessment harness's
+  `doubledDetection` knob but gates `GetLlmVerdictAsync`'s own call 2, not just the evaluator),
+  and set `qualityReview.doubledDetectionEnabled: false` in `Files/Config.yaml`. Revisit if a missed
+  defect turns out to matter more than the ~15h saved.
 - **Doubled verification: no benefit, root-caused and fixed differently.** Both harmful-correction
   gold examples known at the time scored `Safe` identically whether verification ran once or
   twice - the second independent call made the *exact same mistake*, not a different one. This

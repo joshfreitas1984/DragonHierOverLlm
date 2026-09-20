@@ -67,6 +67,12 @@ qualityReview:
   maxConcurrency: 2
   inlineRuleCheckRetries: 2
   autoAcceptDefectCategories: [HardToParseSeam, OtherNamedDefect, DroppedContent, DroppedStutter]
+  # Switched off 2026-09-20 to prioritize detection-phase throughput: measured against the current
+  # production quant, doubled detection costs ~15h across the full corpus for a thin recall lift
+  # (1/18 in-scope defect rows in the original measurement) - see
+  # docs/investigations/tests/qc-evaluator-model-selection.md's "Process variants" section. Revert
+  # to true (or remove this line) if speed stops being the priority.
+  doubledDetectionEnabled: false
 translationAssessment:
   enabled: true
   modelNames:
