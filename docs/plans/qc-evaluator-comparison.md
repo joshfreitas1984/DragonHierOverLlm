@@ -302,8 +302,239 @@ relevant prompt commit) before trusting a round's numbers.
   win (1/6 -> 2/6); the trailing-whitespace half is accepted as a known, low-priority miss rather
   than a target for a third prompt round.
 
-## Next Steps (decided 2026-09-20 - read this before starting further work; Seventh round entry
-above supersedes this section's older `formatting`/`terminology` framing)
+- **Eighth round completed 2026-09-20**: re-ran the ad hoc separator-exclusion per-category
+  breakdown (methodology from the Fourth/Fifth round entries, scripted against the current
+  `Qwen38Qc/Results.yaml` and `GoldSet.yaml`) to check for any category still below a comfortable
+  recall bar before treating the prompt as maxed out, per Next Steps. Refined the methodology
+  slightly beyond earlier rounds' manual pass: a gold-set row is scored under a category only if
+  that row does **not** also carry a seam-mapped label (`omitted-separator`/`literal-newline`/
+  `misplaced-separator`) - e.g. 2 of the 6 `formatting`-labeled rows also carry `omitted-separator`
+  and are genuinely seam-shaped misses, not formatting misses, so they're excluded from
+  `formatting`'s denominator the same way seam-only rows are excluded from the overall metric (this
+  is what the Seventh round's manual analysis already did by hand; this round scripted it).
+
+  Result, on "does the model flag a defect at all" (the current bar per Next Steps - category
+  attribution accuracy is separately tracked but not the gate):
+
+  | Category (pure, non-seam-co-occurring) | Recall |
+  |---|---|
+  | garbage-output | 5/5 (1.00) |
+  | mistranslation | 3/3 (1.00) |
+  | prompt-leak | 1/1 (1.00) |
+  | terminology | 1/1 (1.00, but still 0/1 by strict category match - unchanged, known, deprioritized) |
+  | invented-tag | 1/1 (1.00) |
+  | dropped-content | 4/5 (0.80) - one isolated miss (`c765f5d8f19adc53`, HyMT2-7B drops the
+    `GiveNpcAskItem` identifier from a semicolon-delimited stat string), not a repeated pattern |
+  | formatting | 2/4 (0.50) - both misses are the already-decided-deprioritized
+    `cb459b1c8e845a04` stray-trailing-whitespace pair from the Seventh round; no new formatting gap |
+  | fluency | 0/1 (0.00) - single item `c61cdad79df4c969`, source `则为` (a bare 2-character
+    classical fragment, "Qwen25-Standard" candidate "Is thus" judged unnatural) |
+
+  `fluency`'s 0/1 is the only new low number, but n=1 and the failing case has the same shape as the
+  already-excluded `50ff7ccfb54c694e` (殷殷) item: a bare, context-free classical fragment sampled
+  with no surrounding sentence, where a literal short rendering reads stilted but isn't clearly
+  wrong - a possible unfair-test artifact, not a confirmed systemic weakness, and too small a sample
+  to prompt-tune against. **Not treated as a new active target** - flag for attention only if the
+  gold set's later growth (Next Steps item 6, 300-500 target) adds more `fluency` items and the
+  pattern repeats.
+
+  **Conclusion: no new category below a comfortable recall bar.** `formatting` and `terminology`
+  remain the only sub-bar categories and both are already decided/deprioritized (Fifth/Sixth/Seventh
+  rounds) - the prompt is confirmed maxed out. Proceeded immediately to Next Steps item 3: restored
+  `Qwen38Qc-IQ4XS`/`Qwen38Qc-UDQ4KM` to `qualityEvaluatorAssessment.modelNames` in
+  `Files/Config.yaml`, deleted the three quants' stale `Files/TestResults/QcEvaluatorAssessment/`
+  output directories, and started a fresh three-way quant sweep (`Tests/AssessmentWorkflowTests.cs`'s
+  "2. Assess configured QC models") to pick between `Qwen38Qc-UDQ4KM` (best precision, 0.789,
+  3130ms avg) and `Qwen38Qc-IQ4XS` (same recall 0.652, 37% faster, 1988ms) per the plan's model
+  choice.
+
+- **Ninth round completed 2026-09-20**: the final quant sweep from the Eighth round, all three
+  quants run fresh in one `dotnet test` pass (`Tests/AssessmentWorkflowTests.cs`'s "2. Assess
+  configured QC models", 12m26s wall time, all three `Results.yaml` timestamps confirmed to postdate
+  both the Config.yaml restore and the Seventh round's prompt-fix commit). Same excluded-methodology
+  (seam-category exclusion + the one excluded gold item) as every prior round:
+
+  | Model | Quant | Recall | Precision | Avg latency | p95 latency |
+  |---|---|---|---|---|---|
+  | **Qwen38Qc** | `UD-Q3_K_XL` (14.08 GB, the long-standing default) | **0.778** (14/18) | 0.778 (14/18) | **1429ms** | 3745ms |
+  | Qwen38Qc-IQ4XS | `UD-IQ4_XS` (15.18 GB) | 0.778 (14/18) | 0.778 (14/18) | 1893ms | 5403ms |
+  | Qwen38Qc-UDQ4KM | `UD-Q4_K_M` (17.4 GB) | 0.722 (13/18) | **0.812** (13/16) | 2796ms | 9059ms |
+
+  This is a materially different picture from the Fifth round's pre-prompt-maxing sweep (there,
+  recall climbed monotonically with quant precision: 0.609 -> 0.652 -> 0.652, and UDQ4KM's precision
+  edge, 0.789, was a clear win). After the Sixth/Seventh round prompt fixes, **Qwen38Qc and
+  Qwen38Qc-IQ4XS are now tied on both recall and precision** - the recall gap that used to justify
+  IQ4XS's extra latency (32% slower on avg, 44% slower on p95) has closed, so IQ4XS no longer earns
+  its cost; it is strictly dominated by the faster default quant. **Qwen38Qc-UDQ4KM now trades LOWER
+  recall (0.722 vs 0.778) for higher precision (0.812 vs 0.778) at roughly 2x the latency** - the
+  wrong direction of tradeoff for this task, per the Fifth round's own framing (accuracy priority
+  ordering): a missed defect ships silently and never gets a second chance, while a false positive
+  only costs one bounded correction/verify round-trip, so recall matters more than precision as a
+  tie-breaker, not less. Sample-size caveat: 18 gold-set defect samples in the excluded-methodology
+  denominator is small, and the recall gap here (13 vs 14 hits) is a single sample - within the
+  ±0.05-0.1 run-to-run variance band the Fifth round already flagged, so this is not overwhelming
+  evidence UDQ4KM is a worse model in general, only that this round found no measured recall benefit
+  to justify its cost, which is what the Acceptance Gates require ("use a slow model only when it
+  produces a measured improvement a faster model cannot provide").
+
+  **Decision: `Qwen38Qc` (the existing default `UD-Q3_K_XL` quant) is confirmed as the production QC
+  model** - `Files/Config.yaml`'s `qualityReview.modelName` already pointed at it, so no production
+  config change was needed; `qualityEvaluatorAssessment.modelNames` was narrowed back from all three
+  quants to `Qwen38Qc` alone for routine future rounds (Process Variants work, item 4 below, doesn't
+  need repeated quant comparisons). **Next Steps item 3 (final quant sweep) is now done.**
+
+- **Tenth round completed 2026-09-20 (Process Variants, Variant 1 - doubled detection): implemented
+  and measured, `Qwen38Qc`.** Per the "Handoff: Implementing Process Variants" section's code-audit
+  finding, `QualityEvaluatorAssessmentWorkflow.ReviewDetectionAsync` was rewired to call
+  `QualityReviewWorkflow.DetectDefectsAsync` directly (now `internal`, was `private`) instead of the
+  full five-call `GetLlmVerdictAsync`, gated by a new `qualityEvaluatorAssessment.doubledDetection`
+  bool (default `true`, matching production). This both implements the variant and fixes the
+  latency-contamination bug the handoff flagged (calls 3-5 no longer run as a side effect of scoring
+  detection). A `doubledVerification` flag was also added to the config for the not-yet-implemented
+  Variant 2, currently a no-op.
+
+  Three fresh runs against the current gold set (121 items, same excluded-methodology as every prior
+  round - seam-category rows and the one excluded gold item dropped from the denominator entirely,
+  18 in-scope `Defect` rows remain):
+
+  | Run | Code path | Recall | Precision | Avg latency |
+  |---|---|---|---|---|
+  | Ninth round's original baseline | OLD `GetLlmVerdictAsync`-based (calls 3-5 contaminate detection-scored rows) | 0.778 (14/18) | 0.778 (14/18) | 1429ms |
+  | Clean doubled detection | NEW `DetectDefectsAsync` x2 + `Merge`, no calls 3-5 | 0.722 (13/18) | 0.765 | 927ms |
+  | Single detection | NEW `DetectDefectsAsync` x1 | 0.667 (12/18) | 0.750 | 506ms |
+
+  The old baseline's own recall/precision numbers reproduce exactly (14/18, 0.778/0.778, 1429ms) -
+  confirms the excluded-methodology script here matches every prior round's. Two findings:
+
+  1. **The latency-contamination bug was real and material, not just theoretical**: even
+     doubled-detection-only latency (927ms, two calls, no drafting/verification) is 35% lower than
+     the 1429ms the Ninth round attributed to "detection" - that figure was always calls-1+2 blended
+     with calls 3-5 on confirmed-defect rows. This does NOT change the Ninth round's quant-selection
+     conclusion (production's real per-split cost still includes calls 3-5 when a defect is
+     confirmed, same as before - nothing about production's `GetLlmVerdictAsync` changed), but it
+     does mean the 1429ms figure should not be read as "how long detection alone takes."
+  2. **Doubled detection's recall lift is real but small, and provably non-negative**: aggregate
+     recall differs by one sample (13 vs 12 of 18) - on its own, within the ±0.05-0.1 run-to-run
+     noise band this doc has flagged since the Fifth round. A row-level paired comparison (same 18
+     in-scope `Defect` rows, doubled vs single from these same two runs) resolves the ambiguity:
+     exactly **1 row gained, 0 rows lost** - `679e93471a09d7ff:HyMT2-30B-A3B` (`dropped-content`)
+     is caught by the call-1+call-2 merge but missed by call 1 alone; no row single-detection caught
+     that doubled detection missed. Since `QcDetectionResult.Merge` is a set union, doubled detection
+     can only match or exceed call-1-alone's catch rate for any individual pair of real LLM calls
+     (never regress it) - the paired result confirms this held here, at the cost of ~1.83x the
+     latency (927ms vs 506ms, consistent with running the same call twice).
+
+  **Decision: keep `doubledDetection: true` as the production-matching default.** The measured lift
+  is thin at this sample size (1 of 18 defect rows) but never negative, and per the established
+  priority (a missed defect ships silently forever; the cost of doubled detection is bounded,
+  predictable latency) that asymmetry favors keeping it even though the *size* of the benefit isn't
+  well-pinned down yet. Revisit once the gold set grows past 121 (Next Steps item 6) - 18 defect
+  rows is too few to size this tradeoff precisely; a larger denominator might show a bigger or
+  smaller gap.
+
+  **Variant 2 (doubled verification) remains unimplemented and unmeasurable** - still gated on
+  mining harmful-labeled correction examples into the gold set first, per the Handoff section above.
+  Not attempted this round.
+
+- **Eleventh round completed 2026-09-20 (Variant 2 gold-set expansion): gold set now has its first 2
+  `harmful`-labeled correction examples, and `Qwen38Qc` misses both.** Per the Handoff section's
+  guidance, ran `QualityReviewWorkflow.RunAsync`'s 300-item real production sample pass
+  ("1. RunQualityReviewPassSample" test) against the live corpus to generate real corrections to
+  review. That specific run only touched a handful of rows (most of the 300-item sample had already
+  been QC'd in earlier sessions), but `Files/Converted` already holds ~22,000 production-generated
+  `qcStatus: Corrected` rows from all prior QC work - a large enough pool to mine directly without
+  needing a fresh corpus-wide run. Sampled ~150 of these (structured extraction reconstructing each
+  full templated cell's pre/post-correction text, not just a single sub-split - the raw per-split
+  fields are misleading in isolation, since one cell's `qcTranslated` covers ALL of that cell's
+  sub-splits joined, not just the one carrying the QC metadata) and reviewed for defects the
+  correction itself introduced. Found two clean, unambiguous harmful corrections and added them to
+  `Files/Goldset/GoldSet.yaml`'s `correctionSamples` (now 3 total, `Files/Goldset/GoldSet.yaml`):
+
+  - `cd12d3474f462380`: source's "都点检" (a historical military title, "Commander-in-Chief") is
+    correctly left as an ambiguous-but-acceptable "him" in the pre-correction text, but the
+    "corrected" version fabricates a nonexistent character name, "Du Dianjian", found nowhere in
+    source or the rest of the game's cast - actively invents a new character rather than fixing
+    anything.
+  - `bdbe7026ca751cf2`: the correction silently drops one of two `#PlayerName#` placeholders from a
+    two-sentence templated cell, replacing it with "them" - a structurally verifiable break (not a
+    judgment call) that would ship without ever substituting the player's actual name in that spot.
+
+  Ran a fresh `Qwen38Qc` assessment pass against the expanded gold set (deleted the cached
+  `Results.yaml` first, per the usual caching-trap precaution). **Result: `Qwen38Qc`'s verification
+  (call 4) scored BOTH new harmful examples `Safe`** (95/100 for the fabricated-name case, 90/100
+  for the dropped-placeholder case) - 0/2 recall on harmful corrections. This is not a fluke specific
+  to this test harness: the dropped-placeholder example was mined from a REAL production run where
+  the actual pipeline's own verify step also accepted it (75/100, above `minAcceptableScore: 60`).
+  Two real, independently-generated verify calls (production's real run, and this fresh assessment
+  run) both missed the same structurally-detectable defect. **This is a genuine, confirmed
+  verification blind spot** - not proof doubled verification (Variant 2) would fix it (an
+  independent second verify call could just as easily also miss it, the same open question doubled
+  detection answered empirically for detection), but it is now, for the first time, a measurable one:
+  Variant 2's implementation (per the Handoff section's plan) can be built and scored against these
+  2 examples as soon as it exists. 2 examples is still a thin denominator - treat any recall/precision
+  computed from it as directional, not final, until more harmful examples are mined (this pool of
+  ~22,000 already-corrected rows makes further mining cheap: no fresh LLM run needed, just more
+  sampling and review).
+
+- **Twelfth round completed 2026-09-20 (Variant 2 implemented and measured): doubled verification
+  does NOT catch either harmful example - both calls make the identical mistake.** Implemented per
+  the Handoff section's plan: added `QcVerificationResult.Merge` (`FanslationStudio.LlmKit/Support/
+  QcVerificationResult.cs`) - the mirror-opposite of `QcDetectionResult.Merge`: detection merges
+  permissively (either call's finding is kept, since a missed defect is the worse failure),
+  verification merges STRICTLY (either call's objection rejects the correction, since accepting a
+  harmful correction is the worse failure here). Wired `QualityEvaluatorAssessmentWorkflow.
+  ReviewCorrectionAsync` to call `GetVerificationVerdictAsync` once or twice (per
+  `doubledVerification`, matching `doubledDetection`'s pattern) and merge via the new method.
+
+  Ran a fresh `Qwen38Qc` pass (cache deleted first) with `doubledVerification: true` (the new
+  default, matching `doubledDetection`'s precedent): **both harmful examples still scored `Safe`,
+  at the exact same scores as the single-call run** (95/100 fabricated-name, 90/100 dropped-
+  placeholder) - only the latency changed (652ms -> 1353ms on the placeholder case, confirming both
+  calls actually ran, not a caching artifact). This means the two independent verify calls didn't
+  just partially disagree and get merged into a stricter rejection - they made the IDENTICAL
+  mistake both times. Unlike Variant 1 (where call 2 sometimes caught what call 1 missed, because
+  detection errors are apparently at least partly independent/random across calls), this looks like
+  a systematic prompt/model gap rather than call-to-call noise: nothing in
+  `BaseQualityReviewVerificationPrompt` explicitly instructs comparing placeholder-token counts
+  between `CURRENT TRANSLATION` and `PROPOSED CORRECTION`, or checking that no named entity appears
+  in the correction that isn't in `SOURCE` - so there's no reason to expect either call to notice by
+  chance. **Doubling a verify call that has no idea what to look for doesn't help**; this is a
+  concrete, falsifiable claim about *why* it failed, not just that it failed, and points squarely at
+  a verification-prompt fix (explicit placeholder-preservation and no-new-named-entities checks) as
+  the next lever to pull, rather than further process-shape changes like doubled verification.
+  2-example denominator caveat still applies - this is a strong directional signal (identical
+  failure twice, explainable by a concrete prompt gap) but not a final recall/precision number.
+
+- **Thirteenth round completed 2026-09-20 (verification-prompt fix): both harmful examples now
+  caught, no detection regression.** Added the two mechanical checks the Twelfth round identified as
+  missing - placeholder-token-count preservation and no-fabricated-named-entities - to
+  `BaseQualityReviewVerificationPrompt.txt` across all 5 model families (`FanslationStudio.LlmKit/
+  BaseFiles/{Qwen38,HyMT2,HyMT2Moe,Qwen25,Glm4}/Prompts/`), as an explicit numbered/lettered
+  sub-check under the existing "does the correction introduce a new problem" step, plus a matching
+  mention under `OTHER_NAMED_DEFECT` so the category vocabulary stays consistent. Qwen38/HyMT2/
+  HyMT2Moe shared one prompt text byte-for-byte; Glm4/Qwen25 shared a second, more heavily-elaborated
+  text - edited each of the two source texts once and propagated.
+
+  Deleted the cached `Results.yaml` (prompt change, same caching-trap precaution as every round) and
+  ran a fresh `Qwen38Qc` pass: **both harmful examples now correctly score `Harmful`** (0/100, both
+  `UNRESOLVED`/`NEW_DEFECTS` correctly populated) - up from 0/2 to 2/2 - and the pre-existing `safe`
+  correction sample (`5b03cbee1d695c74`) still scores `Safe` (no false-positive regression from the
+  new checks being overzealous). Detection recall/precision on the same 18-defect-row
+  excluded-methodology denominator is unchanged (0.722/0.765, ~910ms avg) from the Twelfth round's
+  clean-doubled baseline, confirming the verification-only prompt change had no side effect on
+  detection (expected, since `BaseQualityReviewPrompt` - detection's own prompt - was untouched).
+  Still only a 2-example denominator for the harmful-correction measurement specifically, but going
+  2-for-2 immediately after a targeted, mechanistic fix (not a broad prompt rewrite) for the exact
+  failure mode identified is a strong signal, not a coincidence. Uncommitted work now includes the 5
+  verification prompt files, `QcVerificationResult.Merge`, and `ReviewCorrectionAsync`'s doubling -
+  see Next Steps item 5 for the standing "commit when a checkpoint is reached" reminder.
+
+## Next Steps (decided 2026-09-20 - read this before starting further work; Seventh/Eighth/Ninth
+round entries above supersede this section's older `formatting`/`terminology`/quant framing.
+**Items 1-3 are now done. Item 4a (the brute-force glossary sync) was explicitly declined by the
+user 2026-09-20 - do not run it or ask about it again unless the user brings it up. Item 4 (process
+variants) is the chosen active work - see the "Handoff: Implementing Process Variants" subsection
+under Process Variants below for the concrete implementation plan.**)
 
 Priority order, chosen deliberately over "pick a quant now":
 
@@ -313,7 +544,10 @@ Priority order, chosen deliberately over "pick a quant now":
    dropped from `modelNames` (Fourth round) but their `models:` definitions stay for later
    process-variant work.
 2. **Prompt-max detection quality across every remaining weak category, on the fastest quant
-   (`Qwen38Qc`/`UD-Q3_K_XL`), before doing any further quant comparison.** Reasoning: prompt fixes
+   (`Qwen38Qc`/`UD-Q3_K_XL`), before doing any further quant comparison.** **Done 2026-09-20 (Eighth
+   round): re-ran the ad hoc separator-exclusion per-category breakdown and confirmed no category is
+   below a comfortable recall bar besides the already-decided `formatting`/`terminology` - prompt
+   treated as maxed out.** Reasoning: prompt fixes
    have now been shown (twice) to generalize across every quant level tested, but a quant
    comparison has to be redone from scratch after every future prompt change (same caching-trap
    risk as always). Iterating on the cheapest/fastest quant minimizes the cost of each prompt-tuning
@@ -355,7 +589,12 @@ Priority order, chosen deliberately over "pick a quant now":
    The goal at this stage is a **reliably good detector** - the current bar is "does it reliably
    flag that a translation has a real problem," not final speed or process-shape optimization.
 3. **Only after the prompt is maxed out, do one final quant sweep** to pick the production model,
-   trading off recall/precision against latency at corpus scale. Full-corpus math (81,165 splits in
+   trading off recall/precision against latency at corpus scale. **Done 2026-09-20 (Ninth round):
+   `Qwen38Qc` (the existing default `UD-Q3_K_XL` quant) is confirmed as the production model - it
+   ties `Qwen38Qc-IQ4XS` on recall/precision while being the fastest, and beats `Qwen38Qc-UDQ4KM`'s
+   higher precision with better recall (the more important metric for QC) at roughly half the
+   latency. No production config change was needed; `qualityEvaluatorAssessment.modelNames` narrowed
+   back to `Qwen38Qc` alone.** Full-corpus math (81,165 splits in
    `Files/Converted`, ~51.6% historical correction rate, `maxConcurrency: 2`) puts a full cold-start
    corpus run at **very roughly 4-9 days** depending on quant (~4.1 days at `Q3_K_XL`'s 1385ms/call,
    ~9.2 days at `UD-Q4_K_M`'s 3130ms/call) - so per-call latency compounds into a multi-day
@@ -370,13 +609,29 @@ Priority order, chosen deliberately over "pick a quant now":
    until after step 3.** These are real open questions but they compound with model/prompt choice
    rather than being independent of it - answering "do we need 2 verification scores" before
    knowing which model and prompt you're running is premature. Revisit once a specific model is
-   chosen as the production QC evaluator.
-4a. **Only after both step 2 (prompt maxed) and step 3 (model/quant chosen) are done, run the
-   `TranslateLinesBruteForce`/`RunBruteForce` sync** (see the Sixth round entry above) to
+   chosen as the production QC evaluator. **Variant 1 (doubled detection) done 2026-09-20 (Tenth
+   round): implemented as a `qualityEvaluatorAssessment.doubledDetection` flag (default `true`) and
+   measured against `Qwen38Qc` - a real but small (1 of 18 gold `Defect` rows, provably
+   non-negative via paired comparison) recall lift at ~1.83x the latency; kept as the
+   production-matching default. Variant 2 (doubled verification) gold-set-mining prerequisite done
+   2026-09-20 (Eleventh round): gold set now has its first 2 `harmful`-labeled correction examples,
+   mined from the ~22,000 already-corrected rows in `Files/Converted` rather than a fresh LLM run.
+   `Qwen38Qc`'s verification missed both (scored them `Safe`) - a confirmed, measurable verification
+   blind spot. `DoubledVerification` implemented and measured 2026-09-20 (Twelfth round): both
+   independent verify calls make the IDENTICAL mistake on both harmful examples - doubling doesn't
+   help here, unlike doubled detection. Root cause looks like a verification-PROMPT gap (no explicit
+   placeholder-preservation or no-new-named-entities check), not call-to-call noise. **Verification
+   prompt fixed 2026-09-20 (Thirteenth round): added both checks to all 5 model families'
+   `BaseQualityReviewVerificationPrompt.txt` - both harmful examples now correctly score `Harmful`
+   (0/100), the pre-existing safe example is unaffected, and detection recall/precision is unchanged.
+   Process Variants work (item 4) is done: both variants implemented and measured, and the concrete
+   prompt gap Variant 2's measurement surfaced has been fixed and re-verified.**
+4a. ~~Only after both step 2 (prompt maxed) and step 3 (model/quant chosen) are done, run the
+   `TranslateLinesBruteForce`/`RunBruteForce` sync~~ (see the Sixth round entry above) to
    deterministically re-sync `Files/Converted` against the current glossary, picking up 阁主/殿主
-   and any other glossary entries added along the way. Deliberately not run earlier - it would
-   retranslate/resync against a still-changing prompt or not-yet-chosen model, which is wasted work
-   if either changes again before this runs for real.
+   and any other glossary entries added along the way. **Declined by the user 2026-09-20** - both
+   gating conditions (prompt-maxed, model chosen) are now met, but the user does not want this run.
+   Do not run it or bring it up again unless the user asks.
 5. **Commit outstanding work in both repos** (`DragonHierOverLlm`: this plan doc, `Files/Config.yaml`;
    `FanslationStudio.LlmKit`: the 5 `BaseQualityReviewPrompt.txt` files, `BaseFiles/Qwen38/Config.yaml`'s
    `num_ctx` change, `docs/investigations/quality-review-postmortems.md`) once a natural checkpoint is
@@ -408,17 +663,19 @@ compile against the new multi-defect API but does not yet do the full per-stage 
 calls for (see Implementation Shape) - it currently measures end-to-end detection and correction
 safety, not "which stage caused this disagreement."
 
-The gold set (`Files/Goldset/GoldSet.yaml`) has 121 detection items and 1 correction sample as of
+The gold set (`Files/Goldset/GoldSet.yaml`) has 121 detection items and 3 correction samples as of
 2026-09-20 (grown from the original 36 via two later mining batches - see **Third round** in
 Status above; target remains 300-500). Its free-form category vocabulary is fully mapped onto
 `QcDefectCategory` in `ParseCategory` (locked in by
 `Tests/Workflow/QualityEvaluatorAssessmentWorkflowTests.cs`'s `ParseCategory_MapsEveryGoldSetCategory`
 theory) - a category is never silently collapsed into a shared catch-all it doesn't actually belong
-to. **The gold set still has zero `harmful`-labeled correction examples** - this can't be filled by
-mining translation-assessment output (it only contains independent translations, never a proposed
-correction to judge), so it can only be filled by running the real pipeline's correction generation
-and reviewing what comes back, which is downstream of running the comparison, not a precondition
-for it. Treat harmful-correction rate as unmeasured, not zero, until that happens.
+to. **The gold set now has its first 2 `harmful`-labeled correction examples** (added 2026-09-20,
+Eleventh round) - mined directly from the ~22,000 already-`qcStatus: Corrected` rows already sitting
+in `Files/Converted` from prior production QC runs, not from translation-assessment output (which
+never contains a proposed correction to judge) or a dedicated fresh correction-generation run (not
+needed - the corpus already has plenty of real corrections to review). `Qwen38Qc` missed both in a
+fresh assessment pass, scoring them `Safe`. 2 examples is still thin for a reliable harmful-correction
+rate - treat it as directionally measured, not final, until more are mined from the same pool.
 
 ## Objective
 
@@ -575,6 +832,81 @@ Neither variant is implemented in `QualityReviewWorkflow` yet. Add each as a fla
 harness only (not `QualityReviewConfig`) until its measured effect justifies a real production
 knob - mirroring how `MaxScoreRepairIterations`/`VerificationThinkingEnabled` already exist as
 knobs earned by measurement, not assumption.
+
+### Handoff: Implementing Process Variants (2026-09-20, item 4 chosen as active work)
+
+Code-audit finding that changes the starting point for this work, discovered while confirming the
+Ninth round's quant-sweep numbers: `QualityEvaluatorAssessmentWorkflow.ReviewDetectionAsync`
+(`FanslationStudio.LlmKit/Workflow/QualityEvaluatorAssessmentWorkflow.cs:141`) does not call the
+individual stage methods the Evaluation Protocol section calls for - it delegates the whole gold-set
+detection row to `QualityReviewWorkflow.GetLlmVerdictAsync`
+(`FanslationStudio.LlmKit/Workflow/QualityReviewWorkflow.cs:1025`), which is the full production
+five-call orchestrator. Two consequences, both relevant before writing any variant flag:
+
+1. **Doubled detection is already unconditionally "on" in every round measured so far** (Third
+   through Ninth) - `GetLlmVerdictAsync` always runs `DetectDefectsAsync` twice and merges via
+   `QcDetectionResult.Merge` (lines 1035-1043) before any scoring happens. There is currently no
+   call-1-only baseline anywhere in this doc's numbers to compare against - Variant 1's "recall lift
+   attributable to call 2" has never actually been measured, only assumed to exist.
+2. **Detection-row latency is contaminated by calls 3-5** whenever a defect is confirmed - if
+   `namedDefects.Count > 0`, `GetLlmVerdictAsync` also drafts a correction and runs
+   verify/repair (lines 1074-1115) even though `ReviewDetectionAsync` only scores the detection
+   outcome and throws the correction away. This is likely why some `Defect`-labeled rows show
+   2000-2400ms elapsed against a ~800ms typical `Pass` row in every `Results.yaml` to date - the
+   avg/p95 latency figures reported in the Fifth and Ninth round tables are end-to-end five-call
+   latency on confirmed-defect rows blended with pure-detection latency on clean rows, not a clean
+   per-stage number. Not disqualifying (it reflects real corpus-wide call-mix cost reasonably well
+   for the full-corpus runtime math), but a caveat for whoever reads those tables expecting "pure
+   detection latency."
+
+**Required changes, `FanslationStudio.LlmKit`:**
+
+1. Change `DetectDefectsAsync` (`QualityReviewWorkflow.cs:870`, currently `private static`) and
+   `GenerateCorrectionAsync` (`QualityReviewWorkflow.cs:924`, currently `private static`) to
+   `internal static`, matching `GetVerificationVerdictAsync`/`GetCorrectionRepairAsync`
+   (already `internal`, already called directly by `QualityEvaluatorAssessmentWorkflow.ReviewCorrectionAsync`
+   for the same reason) - the assessment harness needs to call each stage independently instead of
+   through the monolithic orchestrator.
+2. Add two `bool` flags to the QC evaluator assessment configuration (wherever `ModelNames`/
+   `GoldSetPath`/`OutputPath` live today - do NOT add these to `QualityReviewConfig`, per the
+   existing instruction above this section), e.g. `DoubledDetection` and `DoubledVerification`,
+   both defaulting to `true` to match current behavior.
+3. Rewrite `ReviewDetectionAsync` to stop calling `GetLlmVerdictAsync` and instead call
+   `DetectDefectsAsync` directly (once if `DoubledDetection` is off, twice + `Merge` if on) - this
+   both implements the variant AND fixes the latency-contamination problem above, since it no
+   longer triggers calls 3-5 as a side effect of scoring detection. Score/record exactly as today
+   (`ActualLabel`/`ActualDefectCategory`/`ActualDefectCategories` from the resulting
+   `QcDetectionResult`, mapping `None`/`Uncertain`/named the same way `GetLlmVerdictAsync` currently
+   does at lines 1047-1066).
+4. Simplest way to compare on vs. off without inventing new result schema: run the flag as two
+   separate passes into two separate output directories, the same way quant variants are already
+   just separate `qualityEvaluatorAssessment.modelNames` entries pointing at the same underlying
+   model - e.g. add a second `ModelExecutionConfig` alias (`Qwen38Qc-SingleDetect`) that points at
+   the same Ollama model but is only ever run with `DoubledDetection: false` (config plumbing TBD -
+   whichever is less invasive: a per-model override field, or a workflow-level flag applied to every
+   model in one run). This reuses 100% of the existing `Comparison.yaml`/`Results.yaml`/ad hoc
+   analysis script infra from this session (`category_breakdown.py`'s pattern - excluded-methodology
+   recall/precision plus a per-category breakdown) instead of building new reporting.
+5. Metric to report specifically (per the Process Variants section above): recall lift attributable
+   to call 2 alone - gold `Defect` rows where the single-detection pass misses/miscategorizes but
+   the merged pass catches it - separately from the aggregate recall/precision delta, since the
+   corpus-wide 2x cost has to be justified against that specific lift, not the aggregate number.
+
+**Doubled verification (call 4) is currently unmeasurable, not just unimplemented:** the gold set
+has zero `harmful`-labeled correction examples (noted in the "Separator/Newline Defects Are Out of
+Scope" section below) - it can only be filled by running the real pipeline's correction generation
+and reviewing what comes back, per that section's existing note, since mining translation-assessment
+output never contains a proposed correction to judge. **Recommended order:** do Variant 1 (doubled
+detection) first - the gold set already has plenty of `Defect` rows for it, no prerequisite work
+needed. Only take on Variant 2 after growing harmful-correction gold examples (via the
+`expand-qc-goldset` skill against a real correction-generation run, or a dedicated mining pass) -
+writing the harness flag before that data exists would have nothing to measure it against.
+
+**Same caching trap as every prior round applies**: `QualityEvaluatorAssessmentWorkflow` caches
+`Results.yaml` on gold-set fingerprint only, not on config/prompt content, so delete
+`Files/TestResults/QcEvaluatorAssessment/<model>/` before switching the flag and re-running, or the
+harness will silently return the previous flag's cached results. Write findings up as the next
+numbered round (Tenth) in Status above, same format as every round to date.
 
 ## Metrics
 

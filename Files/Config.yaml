@@ -119,15 +119,16 @@ qualityEvaluatorAssessment:
   # out) - see the plan doc's Status "Fifth round". This 16.3GB-VRAM card's zero-CPU-spill ceiling
   # sits right around Qwen38Qc's 14.08GB, so Q3-Q4 is the realistic operating band on this hardware
   # - not pursuing Q5+.
-  # PAUSED 2026-09-20: quant selection is deliberately on hold pending prompt-maxing (see the plan
-  # doc's "Next Steps" - prompt fixes generalize across quants, quant comparisons do not survive
-  # prompt changes, so tune the prompt first on the fastest quant, then do one final quant sweep).
+  # Final quant sweep completed 2026-09-20 (plan doc's Next Steps item 3, Ninth round): with the
+  # maxed-out prompt, Qwen38Qc (the default UD-Q3_K_XL quant) ties Qwen38Qc-IQ4XS on recall/precision
+  # while being the fastest of the three - IQ4XS no longer earns its latency cost now that the prompt
+  # closed the recall gap that used to justify it. Qwen38Qc-UDQ4KM has better precision but LOWER
+  # recall and ~2x the latency - the wrong tradeoff direction for this task (a missed defect ships
+  # silently forever; a false positive only costs one bounded correction round-trip). Narrowed back
+  # to Qwen38Qc alone for routine runs; see the plan doc's Status "Ninth round" for the full numbers.
   modelNames:
     - Qwen38Qc
-    # Qwen38Qc-IQ4XS and Qwen38Qc-UDQ4KM temporarily commented out 2026-09-20 for a
-    # terminology-glossary-fix verification run scoped to the fastest quant only, per the
-    # "Next Steps" prompt-max-first ordering. Restore both before any future quant-comparison run.
-    # - Qwen38Qc-IQ4XS
-    # - Qwen38Qc-UDQ4KM
   goldSetPath: Goldset/GoldSet.yaml
   outputPath: TestResults/QcEvaluatorAssessment
+  # doubledDetection defaults to true (matching production) - see plan doc's Status "Tenth round"
+  # for the Variant 1 measurement that confirmed this default is worth keeping.

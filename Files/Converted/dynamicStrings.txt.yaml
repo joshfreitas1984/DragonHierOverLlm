@@ -11851,10 +11851,14 @@
   splits:
   - text: "不知"
     translated: "I wonder"
-    qcReviewedText: "I wonder about {1}'s “{0}”，\nWho is stronger compared to me?"
-    qcTranslated: "I wonder about {1}'s “{0}”,\\nWho is stronger or weaker, them or me?"
+    qcReviewedText: "I wonder {1} Of“{0}”，\nWho is stronger compared to me?"
+    qcTranslated: "I wonder about {1}'s \"{0}\";\nWho is stronger compared to me?"
     qcStatus: Corrected
-    qcQualityScore: 70
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "之"
     translated: "Of"
@@ -26529,11 +26533,14 @@
   splits:
   - text: "在下近来修习"
     translated: "I have been practicing recently"
-    qcReviewedText: "I have been practicing recently {0}, Has gained some valuable insights\nUnknown #TargetInteractName#, would you be willing to lecture and discuss with me to try this out?{0} Dharma Door?"
-    qcTranslated: "I have been practicing {0} recently and have gained some valuable insights. Would you be willing to lecture and discuss with me, #TargetInteractName#, to try out this {0} Dharma Door?"
+    qcReviewedText: "I have been practicing recently {0}, Has gained some valuable insights\nI wonder, #TargetInteractName#, would you be willing to lecture and discuss with me to try this out?{0} Dharma Door?"
+    qcTranslated: "I have been practicing {0} recently and have gained some valuable insights. I wonder, #TargetInteractName#, would you be willing to expound the Dharma with me to test this {0} method?"
     qcStatus: Corrected
-    qcQualityScore: 82
+    qcQualityScore: 90
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "，颇有一些心得领悟。"
     translated: ", Has gained some valuable insights"
@@ -26549,11 +26556,14 @@
   splits:
   - text: "在下近来修习"
     translated: "I have been practicing recently"
-    qcReviewedText: "I have been practicing recently {0}, Has gained some valuable insights\nUnknown #TargetInteractName#, are you willing to spend three days listening to me explain this?{0} Dharma Door?"
-    qcTranslated: "I have been practicing {0} recently and have gained some valuable insights. May I ask #TargetInteractName# if you would be willing to spend three days listening to me explain the method of this {0}?"
+    qcReviewedText: "I have been practicing recently {0}, Has gained some valuable insights\nI wonder, #TargetInteractName#, are you willing to spend three days listening to me explain this?{0} Dharma Door?"
+    qcTranslated: "I have been practicing {0} recently and have gained some valuable insights. I wonder, #TargetInteractName#, are you willing to spend three days listening to me explain the method of this {0}?"
     qcStatus: Corrected
-    qcQualityScore: 82
+    qcQualityScore: 90
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "，颇有一些心得领悟。"
     translated: ", Has gained some valuable insights"
@@ -40652,11 +40662,13 @@
   splits:
   - text: "是#PlayerName#啊！来的正巧，"
     translated: "It's you, #PlayerName#! You timed it just right!"
-    qcReviewedText: "It's you, #PlayerName#! You timed it just right!\nI only just noticed a particularly lush plant. It seems to contain rare herbs.\nUnknown #PlayerName# whether you know how to pick them."
-    qcTranslated: "It's you, #PlayerName#! You timed it just right!\nI only just noticed a particularly lush plant. It seems to contain rare herbs.\nDo you know how to pick them?"
+    qcReviewedText: "It's you, #PlayerName#! You timed it just right!\nI only just noticed a particularly lush plant. It seems to contain rare herbs.\nI wonder if #PlayerName# knows whether you know how to pick them."
+    qcTranslated: "It's you, #PlayerName#! You timed it just right! I only just noticed a particularly lush plant. It seems to contain rare medicinal herbs. I wonder if #PlayerName# knows how to pick them."
     qcStatus: Corrected
-    qcQualityScore: 82
-    qcDefectCategory: HardToParseSeam
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "我适才发现一丛繁茂异常的植物，里面似乎生长有珍稀药材，"
     translated: "I only just noticed a particularly lush plant. It seems to contain rare herbs."
@@ -40669,11 +40681,10 @@
   splits:
   - text: "是#PlayerName#啊！来的正巧，"
     translated: "It's you, #PlayerName#! You timed it just right!"
-    qcReviewedText: "It's you, #PlayerName#! You timed it just right!\nI just discovered an ancient relic with what seems to be rare antiquities buried within.\nUnknown to #PlayerName#, how should one proceed with the excavation?"
-    qcTranslated: "It's you, #PlayerName#! You timed it just right!\nI just discovered an ancient relic with what seems to be rare antiquities buried within.\nI wonder if #PlayerName# knows how one should proceed with the excavation?"
-    qcStatus: Corrected
-    qcQualityScore: 90
-    qcDefectCategory: DroppedContent
+    qcReviewedText: "It's you, #PlayerName#! You timed it just right!\nI just discovered an ancient relic with what seems to be rare antiquities buried within.\nI wonder if #PlayerName# knows how one should proceed with the excavation?"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "我适才发现一处历史悠久的遗迹，里面似乎埋藏有珍稀古董，"
     translated: "I just discovered an ancient relic with what seems to be rare antiquities buried within."
@@ -40719,11 +40730,10 @@
   splits:
   - text: "是#PlayerName#啊！来的正巧，"
     translated: "It's you, #PlayerName#! You timed it just right!"
-    qcReviewedText: "It's you, #PlayerName#! You timed it just right!\nI just realized there was a group of abnormally toxic snakes and insects, and it seems to include rare poisonous substances.\nI wonder if #PlayerName# knows how to capture them."
-    qcTranslated: "It's you, #PlayerName#! You timed it just right!\nI just realized there was a group of abnormally toxic snakes and insects, and it seems to include rare poisonous substances.\nI wonder if #PlayerName# knows how to capture them."
-    qcStatus: Corrected
-    qcQualityScore: 90
-    qcDefectCategory: HardToParseSeam
+    qcReviewedText: "It's you, #PlayerName#! You timed it just right!\nI just realized there was a group of abnormally toxic snakes and insects, and it seems to include rare poisonous substances.\nI wonder if #PlayerName# knows how to capture them?"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "我适才发现一群毒性异常的蛇虫，里面似乎混杂有珍稀毒物，"
     translated: "I just realized there was a group of abnormally toxic snakes and insects, and it seems to include rare poisonous substances."
@@ -55835,10 +55845,13 @@
   splits:
   - text: "贫僧一路苦行至此，盘缠已经捉襟见肘，"
     translated: "As a pilgrim, I've traveled far and wide, and my funds are now scarce."
-    qcReviewedText: "As a pilgrim, I've traveled far and wide, and my funds are now scarce.\nUnknown Young Hero, could you spare some silver to make a good karma?"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcReviewedText: "As a pilgrim, I've traveled far and wide, and my funds are now scarce.\nI wonder if Young Hero could spare some silver to make a good karma?"
+    qcTranslated: "As a poor monk, I've traveled far and wide, and my funds are now scarce. I wonder if Young Hero could spare some silver to make a good karma?"
+    qcStatus: Corrected
+    qcQualityScore: 85
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - subIndex: 1
     text: "不知少侠能能否施舍一些银两，结个善缘？"
     translated: "I wonder if Young Hero could spare some silver to make a good karma?"
@@ -58420,10 +58433,10 @@
   splits:
   - text: "这位少侠面色俊朗，气度不凡，贫丐一眼便看出乃是有财缘之人。"
     translated: "This young hero has a handsome expression and an extraordinary air about him; even the beggar could see that he is someone with good fortune."
-    qcReviewedText: "This young hero has a handsome expression and an extraordinary air about him; even the beggar could see that he is someone with good fortune.\nUnknown benefactor, could you donate some silver to help with the construction of our shelter, distributing soup, and providing free medical aid to those in need?"
-    qcTranslated: "This Young Hero has a handsome face and a noble bearing; this poor beggar could see at a glance that he is a man of wealth.\nMight the Benefactor please donate some silver to help our guild build shelter, distribute porridge, and provide free medical aid to the poor?"
-    qcStatus: Corrected
-    qcQualityScore: 85
+    qcReviewedText: "This young hero has a handsome expression and an extraordinary air about him; even the beggar could see that he is someone with good fortune.\nI wonder if benefactor could donate some silver to help with the construction of our shelter, distributing soup, and providing free medical aid to those in need?"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "不知施主可否布施一些银两，以作为本帮营造屋舍，施粥义诊等救贫济困之用。"
     translated: "I wonder if benefactor could donate some silver to help with the construction of our shelter, distributing soup, and providing free medical aid to those in need?"
@@ -58433,10 +58446,13 @@
   splits:
   - text: "这位施主面色清亮，道骨矍铄，贫道一眼便看出乃是有仙缘之人。"
     translated: "This benefactor has a clear and bright complexion, a demeanor indicative of a spiritual disposition. I could tell at a glance that you are someone with a natural affinity for the divine."
-    qcReviewedText: "This benefactor has a clear and bright complexion, a demeanor indicative of a spiritual disposition. I could tell at a glance that you are someone with a natural affinity for the divine.\nUnknown benefactor, may you donate some silver to support the propagation of scriptures and alchemy for cultivation and questing after the Way in this monastery."
-    qcStatus: Passed
-    qcQualityScore: 85
-    qcDefectCategory: None
+    qcReviewedText: "This benefactor has a clear and bright complexion, a demeanor indicative of a spiritual disposition. I could tell at a glance that you are someone with a natural affinity for the divine.\nI wonder if benefactor could donate some silver to support the propagation of scriptures and alchemy for cultivation and questing after the Way in this monastery."
+    qcTranslated: "This benefactor has a clear and bright complexion, a vigorous and robust demeanor. I could tell at a glance that you are someone with a natural affinity for the divine.\\nI wonder if benefactor could donate some silver to support the propagation of scriptures, preaching the Dharma, alchemy, and talisman writing for cultivation and questing after the Way in this monastery."
+    qcStatus: Corrected
+    qcQualityScore: 90
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - subIndex: 1
     text: "不知施主可否布施些银两，以作为本观传经说法，炼丹撰符等修仙寻道之用。"
     translated: "I wonder if benefactor could donate some silver to support the propagation of scriptures and alchemy for cultivation and questing after the Way in this monastery."

@@ -1144,4 +1144,58 @@ correctionSamples:
     proposedCorrection (swapping "I" for "she") is the actual fix already adopted by the pipeline's
     QC pass and is judged safe: it resolves the contradiction without altering any other meaning,
     name, or placeholder.
+- sampleId: cd12d3474f462380
+  sampleKind: fullCell
+  source: "第一次泰岳封禅大典，老夫本欲和武统领一道，\\n为都点检黄袍加身，逼迫他登基称帝。\\n不成想走漏了风声，会场遭到各大门派围困。"
+  currentTranslation: "At the first Taiyue Fengshan grand ceremony, I had intended to go with Commander Wu.\\nTo force him to don the yellow robe and ascend the throne.\\nUnexpectedly, the news leaked out, and the hall was surrounded by various sects."
+  label: Defect
+  defectCategories:
+  - mistranslation
+  proposedCorrection: "At the first Taiyue Fengshan grand ceremony, I had intended to go with Commander Wu\\nto dress Du Dianjian in the yellow robe, forcing him to ascend the throne.\\nUnexpectedly, the news leaked out, and the hall was surrounded by various Sects."
+  correctionSafety: harmful
+  provenance: >-
+    Real production pair mined from Files/Converted/PlotData.csv.yaml (qcQualityScore: 70,
+    qcStatus: Corrected as of the 2026-09-20 QC sample run) - a full templated cell (raw's
+    "{0}\n{1}\n{2}" split across 3 sub-splits), one of at least 4 occurrences of the same
+    "都点检" mistranslation pattern found elsewhere in the same file (also rendered elsewhere as
+    "Zhao Dajian", "Zhao's...as a commander", and "the Yellow Robe Ceremony"/"all inspections of
+    the Yellow Robe Wearing" - none of the 4 renderings is correct).
+  reviewNote: >-
+    "都点检" is a historical military title (Commander-in-Chief of the Palace Guard), not a
+    person's name - the sentence means "[I intended] to put the yellow robe on [Commander Wu, in
+    his role as] Commander-in-Chief, forcing him to ascend the throne" (a reference to the
+    Chenqiao Mutiny/Zhao Kuangyin founding-of-Song-dynasty episode). currentTranslation's "him" is
+    an acceptable, if unremarkable, coreference to Commander Wu already named in sentence 1 - not
+    a strong defect. The proposedCorrection instead fabricates a proper name, "Du Dianjian", that
+    exists nowhere in the source or in the rest of this game's cast, actively introducing a
+    nonexistent character into the dialogue while doing nothing to fix the (mild) coreference
+    ambiguity it was drafted for. This is a genuine harmful correction: it makes the translation
+    strictly worse than the pre-correction text it replaced, which is exactly the failure mode
+    Variant 2 (doubled verification, see docs/plans/qc-evaluator-comparison.md's "Handoff:
+    Implementing Process Variants") needs real examples of to be measurable at all.
+- sampleId: bdbe7026ca751cf2
+  sampleKind: fullCell
+  source: "#PlayerName#急公好义，令人佩服！\\n我这就将遇袭之处标出，还请#PlayerName#尽快与我一道前去救援！"
+  currentTranslation: "#PlayerName# is eager to serve the public and ready to help others; it's truly admirable!\\nI will mark the place where we were attacked. Please come to rescue with me as soon as possible, #PlayerName#!"
+  label: Defect
+  defectCategories: []
+  proposedCorrection: "#PlayerName#'s dedication to public justice is truly admirable!\\nI will mark the location of the ambush. Please join me as soon as possible to rescue them!"
+  correctionSafety: harmful
+  provenance: >-
+    Real production pair mined from Files/Converted/dynamicStrings.txt.yaml (qcQualityScore: 75,
+    qcStatus: Corrected as of the 2026-09-20 QC sample run) - a two-sentence templated cell
+    ("{0}\n{1}") where the source's #PlayerName# placeholder appears twice, once per sentence.
+  reviewNote: >-
+    defectCategories is deliberately empty: the row carries no qcDefectCategory/
+    qcDefectCategories field in production (an unlabelled/stylistic-only correction trigger), and
+    currentTranslation itself reads as fluent and complete with both #PlayerName# occurrences
+    intact - if anything, closer to Pass than Defect. What makes proposedCorrection unambiguously
+    harmful is structural, not a judgment call: it silently drops the SECOND #PlayerName#
+    placeholder entirely, replacing it with the pronoun "them" - the shipped line would no longer
+    address the player by their in-game name where the source (and the pre-correction text) did.
+    Notably the production verify step (call 4) scored this candidate 75/100, above
+    qualityReview.minAcceptableScore (60), and accepted it - i.e. the current verification prompt
+    does not reliably catch a dropped mandatory placeholder token, a concrete finding worth
+    carrying into any future verification-prompt work, separate from the Variant 2 measurement
+    this example exists for.
 
