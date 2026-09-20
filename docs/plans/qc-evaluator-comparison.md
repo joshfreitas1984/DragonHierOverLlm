@@ -1,5 +1,32 @@
 # QC Evaluator Comparison Plan
 
+## Status
+
+The five-call production shape described below is implemented in `FanslationStudio.LlmKit`
+(`QualityReviewWorkflow.GetLlmVerdictAsync` and its `DetectDefectsAsync`/`GenerateCorrectionAsync`/
+`GetVerificationVerdictAsync`/`GetCorrectionRepairAsync` helpers), with prompts converted for all
+five model families (Qwen25, Qwen38, Glm4, HyMT2, HyMT2Moe). This has been validated with unit
+tests and scripted-HTTP end-to-end tests (`Tests/Workflow/QualityReviewFiveCallFlowTests.cs`,
+`FanslationStudio.LlmKit` repo) - **no real LLM has been run against the new prompts yet**. The
+comparison run described in this document is the next step before trusting the new prompts or
+tuning any of the process variants below.
+
+`QualityEvaluatorAssessmentWorkflow` (the existing gold-set comparison harness) has been updated to
+compile against the new multi-defect API but does not yet do the full per-stage isolation this plan
+calls for (see Implementation Shape) - it currently measures end-to-end detection and correction
+safety, not "which stage caused this disagreement."
+
+The gold set (`Files/Goldset/GoldSet.yaml`) has 36 detection items and 1 correction sample as of
+this writing (target remains 300-500). Its free-form category vocabulary is fully mapped onto
+`QcDefectCategory` in `ParseCategory` (locked in by
+`Tests/Workflow/QualityEvaluatorAssessmentWorkflowTests.cs`'s `ParseCategory_MapsEveryGoldSetCategory`
+theory) - a category is never silently collapsed into a shared catch-all it doesn't actually belong
+to. **The gold set still has zero `harmful`-labeled correction examples** - this can't be filled by
+mining translation-assessment output (it only contains independent translations, never a proposed
+correction to judge), so it can only be filled by running the real pipeline's correction generation
+and reviewing what comes back, which is downstream of running the comparison, not a precondition
+for it. Treat harmful-correction rate as unmeasured, not zero, until that happens.
+
 ## Objective
 
 Identify a QC evaluator that is accurate enough to detect genuine translation defects,
@@ -68,6 +95,42 @@ correction verification only when its measured quality improvement justifies the
 latency. The assessment must support fast-detector/slow-verifier combinations as well as a
 single model used for every stage.
 
+## Process Variants
+
+Two structural costs in the five-call shape are assumptions, not yet measured gains, and must be
+assessed as on/off variants - exactly like a model or prompt choice - before being treated as
+settled production behavior. Neither variant changes production configuration by default; both are
+toggled only inside the assessment harness until a variant earns promotion under the Acceptance
+Gates below.
+
+1. **Doubled detection (calls 1 + 2), on vs. off.** Calls 1 and 2 currently run unconditionally on
+   every column - a flat 2x LLM-call cost across the whole corpus, not just a flagged subset. This
+   is the higher-priority variant to resolve, precisely because its cost is unconditional. Compare:
+   - single-detection recall/false-positive rate (call 1 alone) against
+   - double-detection recall/false-positive rate (call 1 + 2, merged via `QcDetectionResult.Merge`).
+
+   Report the **recall lift specifically attributable to call 2** - cases where call 1 missed a
+   defect call 2 caught (see Evaluation Protocol's "first detector misses, independent detector
+   finds" case) - separately from any co-occurring-defect recall gain, since only the corpus-wide
+   2x cost has to be justified against the miss rate a single pass would have shipped. Also assess
+   a same-model-twice variant against a fast-detector/slow-second-opinion variant (cheaper model for
+   call 2, mirroring the existing fast-detector/slow-verifier idea already in this plan) as a way to
+   capture most of the recall lift for less than 2x the expensive model's cost.
+
+2. **Doubled verification (call 4), on vs. off.** Call 4 only runs for the subset of columns with
+   at least one confirmed named defect (already far cheaper than doubling detection). Compare:
+   - single verification (current behavior) against
+   - two independent call-4 invocations merged (reject/repair on disagreement) - a guard against
+     one verifier rubber-stamping a plausible-looking-but-wrong correction, the same self-consistency
+     concern doubled detection addresses at the detection stage.
+
+   Report harmful-correction rate and unnecessary-repair-loop rate with and without doubling.
+
+Neither variant is implemented in `QualityReviewWorkflow` yet. Add each as a flag in the assessment
+harness only (not `QualityReviewConfig`) until its measured effect justifies a real production
+knob - mirroring how `MaxScoreRepairIterations`/`VerificationThinkingEnabled` already exist as
+knobs earned by measurement, not assumption.
+
 ## Metrics
 
 Record per model:
@@ -123,11 +186,22 @@ The production QC workflow will use five logical calls:
 5. **Call 5 - repairer:** improves an incomplete or unsafe correction; its output returns to
    call 4.
 
-The single-category `QcDefectCategory` contract is removed rather than preserved for
-compatibility. Defects become a collection of findings, with category and confirmation state.
-Packaging and score gating consume the final verified outcome, not an arbitrarily selected
-primary category. A correction is accepted only when all confirmed defects are addressed and
-the verifier finds no new defect.
+Defects are a collection of findings (`TranslationSplit.QcDefectCategories`/`LlmVerdict.Findings`),
+each with category and confirmation state - this is the source of truth a future multi-defect
+packaging/triage pass should consume. The single-category `QcDefectCategory` scalar was **kept**,
+not removed, as a derived "primary" category (first in the confirmed set, or `None`/`Uncertain`)
+so `QualityReviewHelpers.PassesQcScoreGate` and every existing packaging workflow
+(`CsvGameDataWorkflow`, `DynamicStringWorkflow`, `JsonGameDataWorkflow`, `PrefabTextWorkflow`) keep
+working unmodified. Redesigning those consumers to gate on the full collection instead of the
+scalar is separate follow-up work, not done as part of this pass. `QcDefectCategory.Unknown` and
+`QcDefectCategory.Uncertain` are never collapsed into an empty/clean `QcDefectCategories` list the
+way `None` is - both mean "something is unresolved," never "nothing found," and must always
+surface as at least one finding so a human review queue can never mistake either for a clean pass.
+
+A correction is accepted only when all confirmed defects are addressed and the verifier finds no
+new defect (`QcVerificationResult.Accepted`) - verification always re-checks the FULL confirmed set
+on every repair iteration, never a shrinking "still open" list, so a repair that regresses an
+already-fixed defect is caught rather than silently missed.
 
 ## Implementation Shape
 
@@ -140,10 +214,27 @@ prompt changes follow only after the assessor shows the relevant quality and lat
 
 ## Validation
 
-Add pure tests for multi-defect parsing, sample fingerprinting, stable sample IDs, stage
-aggregation, metric calculation, disagreement handling, correction completeness, and newly
-introduced defects. Use mocked response fixtures for each stage and for multiple simultaneous
-defects. Include assessment cases where the first detector misses an issue that the independent
-detector finds.
+Done, in `FanslationStudio.LlmKit`'s `Tests` project:
+
+- pure parser tests for multi-defect detection parsing, including `NONE`/`UNCERTAIN` handling and
+  invalid/mixed-token responses (`QcDetectionResponseParserTests`);
+- pure parser tests for verification parsing, including the unresolved-must-be-a-subset-of-confirmed
+  check (`QcVerificationResponseParserTests`);
+- end-to-end orchestration tests against a scripted HTTP handler (no real LLM) covering: both
+  detectors agreeing `NONE`; call 2 catching a defect call 1 missed; `UNCERTAIN` never collapsing
+  into a pass; the verify-repair-reverify loop against a full confirmed set; a newly-introduced
+  defect blocking acceptance until repaired; and repair-budget exhaustion accepting the last
+  verified candidate (`QualityReviewFiveCallFlowTests`).
+
+Still needed:
+
+- sample fingerprinting, stable sample IDs, stage aggregation, and metric calculation tests once the
+  QC-specific assessment types (Implementation Shape) exist;
+- disagreement-handling tests once `QualityEvaluatorAssessmentWorkflow` does real per-stage
+  isolation instead of end-to-end detection/correction-safety measurement;
+- assessment-harness tests for both Process Variants (doubled detection, doubled verification) once
+  those flags exist in the harness, each exercising the "first pass misses, second pass catches it"
+  and "first pass wrongly accepts, second pass catches it" cases respectively.
+
 Do not run numbered or state-mutating translation/QC workflow facts as part of ordinary test
 validation.

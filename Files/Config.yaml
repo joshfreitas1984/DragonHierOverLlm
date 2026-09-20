@@ -51,9 +51,7 @@ qualityReview:
   minAcceptableScore: 60
   maxConcurrency: 2
   inlineRuleCheckRetries: 2
-  autoAcceptDefectCategories: [HardToParseSeam, OtherNamedDefect, DroppedContent, DroppedStutter]  
-  twoStageVerificationEnabled: true
-  verifyNoDefectClaims: true
+  autoAcceptDefectCategories: [HardToParseSeam, OtherNamedDefect, DroppedContent, DroppedStutter]
 translationAssessment:
   enabled: true
   modelNames:
@@ -82,6 +80,12 @@ translationAssessment:
     - "殷殷"
     - "五毒弟子"
     - "撤撤撤！你们三个给我记住！"
+    - "我#TargetForceName#与#SourceForceName#素来交好。\n此次特地带数名#TargetForceDescribe#弟子前来，\n是想要与贵派以武论友，切磋交流一番。"
+    - "继续将太祖长拳修炼至十重功力\\n<i>理论经验：在藏经阁阅读秘籍\\n实战经验：在练武场练习或切磋</i>"
+    - "另一方面，杀鸡儆猴，拿聚义门祭旗立威，\\n也好威慑中原那些原本中立的小门小派，\\n免得他们心怀侥幸，再来阻碍我军大事。"
+    - "呵呵，这牵丝蛊既是五毒教不传之秘，\\n那给思阁主下蛊之人，还能有谁？"
+    - "没想到反倒害了她，导致她命悬一线，功力丧尽。\\n白云子此番遭逢大难，皆因峨眉派保护不力，老朽心中实在过意不去。"
+    - "咳咳咳，这......\\n我要去扬州游玩几日，正好路过此地罢了。"
 qualityEvaluatorAssessment:
   enabled: true
   modelNames:

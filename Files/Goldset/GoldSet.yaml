@@ -818,6 +818,298 @@ items:
     Pass despite similarly splitting the third clause and adding a short interpretive closing
     phrase ("such is your noble character") - acceptable poetic license for a verse quotation, not
     a factual or structural defect.
+- sampleId: 679e93471a09d7ff
+  sampleKind: fullCell
+  sampleRun: ModelAssessment-20260919-pinned-recheck
+  source: '我#TargetForceName#与#SourceForceName#素来交好。
+
+    此次特地带数名#TargetForceDescribe#弟子前来，
+
+    是想要与贵派以武论友，切磋交流一番。'
+  candidates:
+    Qwen25-Standard: '''#TargetForceName#'' has specifically brought several of my #TargetForceDescribe#
+      disciples here,
+
+      to engage in friendly sparring and exchange with your esteemed sect.'
+    HyMT2-7B: 'I, #TargetForceName#, have long maintained a friendly relationship with #SourceForceName#.
+      This time, I''ve specially brought several #TargetForceDescribe# disciples with me, hoping to exchange
+      martial arts skills and learn from your school as fellow warriors.'
+    HyMT2-30B-A3B: 'I have always maintained a friendly relationship with #SourceForceName#. This time,
+      I brought along several disciples from #TargetForceDescribe# specifically to engage in friendly
+      sparring and exchange with your sect through martial arts.'
+  labels:
+    Qwen25-Standard:
+      label: Defect
+      defectCategories:
+      - dropped-content
+      correctionSafety: safe
+    HyMT2-7B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B:
+      label: Defect
+      defectCategories:
+      - dropped-content
+      correctionSafety: safe
+  reviewNote: 'This dynamicStrings.txt source embeds a REAL newline character between clauses (not the
+    literal two-character "\n" token PlotData.csv fullCell templates use - verified against the raw source
+    string) - this batch''s example of the real-vs-literal-newline convention gotcha. Qwen25 drops the
+    entire first sentence (the #SourceForceName# friendship clause) and its placeholder outright - a clear
+    dropped-content defect. HyMT2-30B-A3B keeps the meaning but drops the #TargetForceName# placeholder
+    entirely, changing who the speaker identifies as. HyMT2-7B is the only candidate that keeps both placeholders
+    and the full meaning; it also collapses the three real-newline-separated lines into continuous prose,
+    which is not flagged here as a defect since this repo''s own structural validator does not check newline
+    placement and there is no established rule yet for whether this file''s real newlines are UI-required
+    - worth revisiting once that convention is confirmed.'
+- sampleId: 4c306cf5e6818c63
+  sampleKind: fullCell
+  sampleRun: ModelAssessment-20260919-pinned-recheck
+  source: 继续将太祖长拳修炼至十重功力\n<i>理论经验：在藏经阁阅读秘籍\n实战经验：在练武场练习或切磋</i>
+  candidates:
+    Qwen25-Standard: 'Continue advancing the Great Ancestor Long Fist to the tenth level of proficiency.
+
+      <i>Theoretical Experience: Read the Secret Manual in the Scripture Pavilion
+
+      Practical Experience: Practice or spar in the training ground</i>'
+    HyMT2-7B: 'Continue practicing the Great Ancestor Long Fist until reaching the tenth level of mastery\n<i>Theoretical
+      experience: Reading Secret Manuals in the Scripture Pavilion\nPractical experience: Practicing or
+      sparring in the training ground</i>'
+    HyMT2-30B-A3B: "Continue to cultivate the Great Ancestor Long Fist until reaching the tenth level\
+      \ of mastery.  \n<i>Theoretical experience: Read the Secret Manual in the Scripture Pavilion. Practical\
+      \ experience: Practice or spar at the training ground.</i>"
+  labels:
+    Qwen25-Standard:
+      label: Defect
+      defectCategories:
+      - literal-newline
+      correctionSafety: safe
+    HyMT2-7B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B:
+      label: Defect
+      defectCategories:
+      - literal-newline
+      - omitted-separator
+      correctionSafety: safe
+  reviewNote: 'Structural-token variety case: two literal "\n" template tokens plus an <i></i> markup
+    span the second token sits inside. Qwen25 substitutes both literal tokens with real newline characters,
+    breaking template reconstruction. HyMT2-30B-A3B does the same for the first token (with stray trailing
+    double-space before it) and additionally drops the second token entirely, merging the two <i>-wrapped
+    clauses into one run-on sentence with no separator at all - two distinct defects on the same candidate.
+    HyMT2-7B is the only candidate that preserves both literal tokens and the <i></i> tag exactly.'
+- sampleId: 083e1b05b5abaa3b
+  sampleKind: split
+  sampleRun: ModelAssessment-20260919-pinned-recheck
+  source: 门派职位
+  candidates:
+    Qwen25-Standard: Sect position
+    HyMT2-7B: Sect position
+    HyMT2-30B-A3B: Sect Rank/Position
+  labels:
+    Qwen25-Standard:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-7B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B:
+      label: Defect
+      defectCategories:
+      - mistranslation
+      correctionSafety: safe
+  reviewNote: Ultra-short UI/dynamic-string label (source is 4 characters). Source names one concept ("sect
+    position"); HyMT2-30B-A3B invents a slash-separated alternative ("Rank/Position") that adds a synonym
+    pair not present in or implied by the source - an over-translation, not a defensible stylistic choice,
+    since it changes a single UI label into two. The other two candidates agree exactly.
+- sampleId: aab16c938a1c887d
+  sampleKind: fullCell
+  sampleRun: ModelAssessment-20260919-pinned-recheck
+  source: 另一方面，杀鸡儆猴，拿聚义门祭旗立威，\n也好威慑中原那些原本中立的小门小派，\n免得他们心怀侥幸，再来阻碍我军大事。
+  candidates:
+    Qwen25-Standard: 'On the other hand, by making an example of the weaker factions, using the Righteous
+      Alliance Gate as a warning and to establish dominance, it will also serve to intimidate the smaller,
+      previously neutral sects in Central Plains, preventing them from harboring侥幸 (taking chances) and
+      interfering with our plans again. Stop them from harboring侥幸 (taking chances) and interfering with
+      our plans again should be:
+
+
+      Stop them from getting any ideas and interfering with our plans again.'
+    HyMT2-7B: On the other hand, by executing a scapegoat to intimidate others and using the Righteous
+      Alliance Gate as a sacrifice to assert dominance, it can also deter those neutral minor sects in
+      the Central Plains from harboring hopes of blocking our military's ambitions again.
+    HyMT2-30B-A3B: On the other hand, killing one to warn others‑using the Righteous Alliance Gate as
+      a scapegoat to establish authority‑also serves to intimidate those small, neutral sects in the Central
+      Plains. This prevents them from harboring any false hopes and attempting to hinder our grand endeavors.
+  labels:
+    Qwen25-Standard:
+      label: Defect
+      defectCategories:
+      - garbage-output
+      correctionSafety: safe
+    HyMT2-7B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  reviewNote: Qwen25 leaves the source word for "harboring false hope" untranslated verbatim (twice) and
+    then appends a garbled, self-duplicating tail restating the same closing clause a third time with
+    no source justification - a clear leaked-language-plus-duplication garbage-output defect. Both other
+    candidates render the full meaning cleanly in one pass.
+- sampleId: f443997a161cdcae
+  sampleKind: fullCell
+  sampleRun: ModelAssessment-20260919-pinned-recheck
+  source: 呵呵，这牵丝蛊既是五毒教不传之秘，\n那给思阁主下蛊之人，还能有谁？
+  candidates:
+    Qwen25-Standard: 'Heh heh, since the Tethered Silk Bug is a secret technique of the Five Poisons Sect,
+
+
+      who else could have put Pavilion Master under its influence?'
+    HyMT2-7B: Hehe, since this Silk‑Tying Gu is an untold secret of the Five Poisons Sect,\nwho else could
+      have placed it on Master Si?
+    HyMT2-30B-A3B: Hehe, since this Silk Pulling Gu is a closely guarded secret of the Five Poisons Sect,\nwho
+      else could have placed it on Sect Leader Si?
+  labels:
+    Qwen25-Standard:
+      label: Defect
+      defectCategories:
+      - dropped-content
+      correctionSafety: safe
+    HyMT2-7B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B:
+      label: Defect
+      defectCategories:
+      - terminology
+      correctionSafety: safe
+  reviewNote: Source names a specific person - a surname plus the title "阁主" (Pavilion Master). Qwen25
+    drops the surname entirely, rendering only the generic title "Pavilion Master" with no name at all
+    - a dropped-content defect (also merges the literal "\n" into a real blank line, a secondary formatting
+    slip not separately categorized here since dropped-content is the more serious issue on this candidate).
+    HyMT2-30B-A3B keeps the name ("Si") but renders "阁主" as "Sect Leader" instead of "Pavilion Master"/"Master"
+    - conflating a distinct title, a terminology defect. HyMT2-7B keeps both the name and a generic-but-accurate
+    title ("Master Si").
+- sampleId: b4c303b678cbd79d
+  sampleKind: fullCell
+  sampleRun: ModelAssessment-20260919-pinned-recheck
+  source: 没想到反倒害了她，导致她命悬一线，功力丧尽。\n白云子此番遭逢大难，皆因峨眉派保护不力，老朽心中实在过意不去。
+  candidates:
+    Qwen25-Standard: I never thought it would end up harming her, putting her life in danger and depleting
+      her powers.\nThis great calamity that Master Baiyun has faced is all due to the Emei Sect's inadequate
+      protection; I truly feel guilty about it.
+    HyMT2-7B: I never expected it would instead harm her, putting her life in grave danger and stripping
+      her of all her martial skills. \nBai Yunzi has suffered such a great misfortune solely because the
+      Emei Sect failed to protect her properly, and I truly feel immense guilt for this.
+    HyMT2-30B-A3B: I never imagined it would end up harming her‑putting her life at risk and causing her
+      to lose all her cultivation.\n<b>White Cloud</b> has suffered such great misfortune this time, and
+      it is entirely due to the Emei Sect's failure to protect her. I truly feel deeply remorseful.
+  labels:
+    Qwen25-Standard:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-7B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B:
+      label: Defect
+      defectCategories:
+      - invented-tag
+      - mistranslation
+      correctionSafety: safe
+  reviewNote: Source names a person, "白云子" (Baiyunzi - a proper name, not a description). HyMT2-30B-A3B
+    translates it literally as "White Cloud" and wraps it in a fabricated <b></b> markup pair that does
+    not exist anywhere in the source - two distinct defects on one candidate (a name mistranslated as
+    a literal gloss, plus invented formatting). Both other candidates correctly keep it as a name ("Master
+    Baiyun" / "Bai Yunzi").
+- sampleId: 30248318dbf6189f
+  sampleKind: fullCell
+  sampleRun: ModelAssessment-20260919-pinned-recheck
+  source: 咳咳咳，这......\n我要去扬州游玩几日，正好路过此地罢了。
+  candidates:
+    Qwen25-Standard: Cough, cough, this... \nI'm just passing through on my way to spend a few days in
+      Yangzhou.
+    HyMT2-7B: Ahem, um... I'm heading to Yangzhou for a few days of sightseeing‑just passing through here
+      by chance.\nAhem, um... I'm heading to Yangzhou for a few days of sightseeing‑just passing through
+      here by chance.
+    HyMT2-30B-A3B: Ahem ahem... Well... \nI plan to spend a few days sightseeing in Yangzhou; this place
+      just happens to be on my way.
+  labels:
+    Qwen25-Standard:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-7B:
+      label: Defect
+      defectCategories:
+      - garbage-output
+      correctionSafety: safe
+    HyMT2-30B-A3B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  reviewNote: HyMT2-7B outputs the entire translated sentence TWICE, joined by the literal "\n" token,
+    with no corresponding repetition in the source - a clear duplicated-output defect, not a deliberate
+    stylistic repeat (the source has no repeated clause at all here). Both other candidates produce one
+    clean rendering.
+- sampleId: 1ae84b1894efec62
+  sampleKind: split
+  sampleRun: ModelAssessment-20260919-pinned-recheck
+  source: 灵巧45
+  candidates:
+    Qwen25-Standard: Agile 45
+    HyMT2-7B: Agile 45
+    HyMT2-30B-A3B: Agile 45
+  labels:
+    Qwen25-Standard:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-7B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  reviewNote: Clean triple-agreement baseline for a short stat-label string (name+number pattern, same
+    shape as the pinned "轻功10;意志15" sample) - deliberately included so the gold set does not skew entirely
+    toward defect examples; all three candidates produce the identical, correct rendering.
+- sampleId: ff23f5a5d16f1d15
+  sampleKind: split
+  sampleRun: ModelAssessment-20260919-pinned-recheck
+  source: 司仪接着道
+  candidates:
+    Qwen25-Standard: Master of ceremonies continued,
+    HyMT2-7B: Host continued
+    HyMT2-30B-A3B: Emcee continued,
+  labels:
+    Qwen25-Standard:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-7B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  reviewNote: Clean baseline with legitimate synonym variation only ("Master of ceremonies"/"Host"/"Emcee"
+    all correctly render the source term) - none of the differences change meaning, so none is a defect;
+    included as a known-good example of acceptable lexical choice divergence.
 correctionSamples:
 - sampleId: 5b03cbee1d695c74
   sampleKind: fullCell
