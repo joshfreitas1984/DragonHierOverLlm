@@ -38,6 +38,24 @@ additionalSourceAssessments:
     sourced from this run set sampleRun: ModelAssessment-20260919-pinned-recheck below. Only
     3 models were configured for this run (Qwen25-Standard, HyMT2-7B, HyMT2-30B-A3B) - no Q3/Q4
     quant variants were separately compared this time.
+- name: ConvertedCorpus-20260920-mining
+  path: Files/Converted
+  sampleFingerprint: n/a - not a TranslationAssessmentWorkflow run
+  sampleSize: n/a
+  sampleSeed: n/a
+  selection: >-
+    30 detection items hand-mined directly from Files/Converted's ~81,165 real production splits
+    (not from a ModelAssessment run - there is no fingerprint/seed to record). Candidates use each
+    row's pre-QC "translated" field as a single-candidate "ProductionTranslation" column, judged
+    independently of whatever qcStatus/qcDefectCategory that row already carries in production (to
+    avoid circularity - see docs/plans/qc-evaluator-comparison.md's Fifteenth round entry). Selected
+    for diversity across file types (PlotData, dynamicStrings, dynamicStringsFromColumns,
+    dynamicStringsPoetry, dumpedPrefabText(FromOtherFields), KungFuData, SpeAddDataBase,
+    SpeHeroData, heroFullNames) and defect categories (mistranslation, fabricated-content,
+    formatting, garbage-output, fluency), with a deliberate emphasis on lines carrying 2+
+    placeholders (#Token# and the game's ⟦n⟧ bracket style) in a single line, since the gold set
+    previously had only one such example. Items sourced from this batch set
+    sampleRun: ConvertedCorpus-20260920-mining below.
 models:
 - Qwen25-Standard
 - HyMT2-7B
@@ -1119,6 +1137,915 @@ items:
   reviewNote: Clean baseline with legitimate synonym variation only ("Master of ceremonies"/"Host"/"Emcee"
     all correctly render the source term) - none of the differences change meaning, so none is a defect;
     included as a known-good example of acceptable lexical choice divergence.
+- sampleId: 366323b3bea6a999
+  sampleKind: fullCell
+  source: "#PlayerName#任职门客时日未久，还需再为我#TargetForceName#效力⟦0⟧日方可卸任。\\n(门客叛离门派会固定增加50点恶名，且90天内不能拜师或加入其他门派)"
+  candidates:
+    ProductionTranslation: "#PlayerName# served as a retainer for me for only a short while under #TargetForceName#. He must serve me again.⟦0⟧The Day You May Step Down\\n(Leaving a sect will fixedly increase 50 points of infamy, and one cannot apprentice or join another sect for 90 days.)"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - garbage-output
+      - formatting
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    Three placeholders on one line (#PlayerName#, #TargetForceName#, the in-game ⟦0⟧ day-count
+    slot). The translation garbles the first sentence into an incoherent run-on ("He must serve me
+    again.⟦0⟧The Day You May Step Down") that inverts the meaning - source says the retainer must
+    serve ⟦0⟧ more days before being ALLOWED to step down, not that they must serve again after
+    stepping down.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: 32ee5f121eb2f603
+  sampleKind: fullCell
+  source: "哼哼，你#SourceForceName#与我#TargetForceName#素来不和，\\n今天特地来贵派仓库内取些钱财，作为此前冒犯本帮之赔礼！"
+  candidates:
+    ProductionTranslation: "Hmph, you #SourceForceName# and me #TargetForceName# have never gotten along well.\\nI specially came to your sect's warehouse to take some funds as a compensation for offending your faction earlier!"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    Two placeholders (#SourceForceName#, #TargetForceName#) in the same sentence, both preserved
+    correctly and meaning is faithful.
+  provenance: >-
+    Real production translation mined from Files/Converted/dumpedPrefabTextFromOtherFields.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: 79f1d71443a3483e
+  sampleKind: split
+  source: "#TargetPlace#愿以高价收购一件#BountyHeroItemDescribe#，有意者请速联系。"
+  candidates:
+    ProductionTranslation: "#TargetPlace# will purchase #BountyHeroItemDescribe# at a high price. Please contact us if you are interested."
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    Short single-line UI/bounty-board string with two placeholders, cleanly preserved.
+  provenance: >-
+    Real production translation mined from Files/Converted/dumpedPrefabTextFromOtherFields.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: 6a10ff17bd7bc553
+  sampleKind: fullCell
+  source: "#TargetForceDescribe##$TargetInteractName#，前来恭喜#$PlayerName#继任仙霞派掌门。\\n我还带了件#PlotInteractItemName#作为贺礼，请姜掌门笑纳。"
+  candidates:
+    ProductionTranslation: "#TargetForceDescribe##$TargetInteractName# comes to congratulate #$PlayerName# on becoming the new Sect Leader of Xianxia Sect.\\nI also brought a #PlotInteractItemName# as a gift, please accept it with a smile, Sect Leader Jiang."
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    Three placeholders concatenated on one line (#TargetForceDescribe##$TargetInteractName#) plus a
+    fourth (#$PlayerName#) later in the same sentence; all four preserved in the right order with
+    faithful meaning.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: c5a1a92c1cfcb6d7
+  sampleKind: fullCell
+  source: "百年恩爱双心结，千里姻缘一线牵，\\n看到#SourceInteractName#和⟦0⟧终于修成正果，我也是由衷欢喜！\\n这#PlotInteractItemName#作为贺礼虽不甚名贵，却也是我的一片心意，还请两位笑纳。"
+  candidates:
+    ProductionTranslation: "A century of loving hearts entwined, a thousand miles of marriage tied by a single thread.\\nSeeing #SourceInteractName# and⟦0⟧Finally, I am genuinely delighted to have achieved enlightenment!\\nThis #PlotInteractItemName# may not be particularly precious as a gift, but it is a token of my sincere intent. I hope you two will accept it with a smile."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - mistranslation
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    修成正果 is an idiom for a couple finally ending up together (matching the wedding-themed first
+    line), not literal Buddhist 'enlightenment'. The mistranslation also scrambles the sentence so
+    it reads as if the SPEAKER achieved enlightenment rather than the couple (#SourceInteractName#
+    and ⟦0⟧) getting married - a real meaning-inversion, not just an awkward idiom choice.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: 9652895eca983ca4
+  sampleKind: fullCell
+  source: "对了，在下#PlayerForceDescribe##$PlayerName#。\\n敢为兄台尊姓大名？"
+  candidates:
+    ProductionTranslation: "Right, I am #PlayerForceDescribe##$PlayerName#\\nMay I ask your honorable surname, Brother?"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    Two placeholders concatenated with no separator, matching the source's own concatenation
+    exactly.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: d386ec286c640b06
+  sampleKind: fullCell
+  source: "将门派地位提升为入门弟子\\n<i>♦通过为门派获取资源或每个月门派任务提升功绩\\n♦积累#UpgradeForceLvNeedContributionNum#功绩并习得#UpgradeForceLvNeedSkillNum#门基础武学后，可在<b>门派正厅</b>提升地位</i>"
+  candidates:
+    ProductionTranslation: "Raise the sect status to initiate disciples\\n<i>♦By acquiring resources for the sect or completing sect tasks monthly to boost merits\\n♦Accumulate #UpgradeForceLvNeedContributionNum# credits and learn #UpgradeForceLvNeedSkillNum# basic martial arts skills, after which you can<b>Sect main hall</b>Improve status</i>"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - formatting
+      - dropped-content
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    Two numbered placeholders (#UpgradeForceLvNeedContributionNum#, #UpgradeForceLvNeedSkillNum#)
+    on one line, both preserved - but the following clause drops the preposition/verb structure
+    entirely ("you can<b>Sect main hall</b>Improve status" instead of "you can improve your status
+    AT the Sect Main Hall"), a real, verifiable garbled-grammar defect independent of the
+    placeholders themselves.
+  provenance: >-
+    Real production translation mined from Files/Converted/dumpedPrefabTextFromOtherFields.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: 4a43e4e9371302d1
+  sampleKind: fullCell
+  source: "这莫高窟虽地处幽僻，却藏有经书典籍无数。\\n悬崖壁上的石窟亦是潜心闭关，修炼天赋的不二之选。\\n以少侠当前之天赋，在此处闭关十五日需消耗⟦0⟧两银钱，预计可获得⟦1⟧点天赋。"
+  candidates:
+    ProductionTranslation: "Though this Mogao Caves are secluded, they house countless scriptures and classics.\\nThe cave on the cliff wall is also an unmatched choice for deep meditation and cultivating one's innate talent.\\nWith your current talent, young hero, closing yourself off for fifteen days here will require you to consume⟦0⟧Silver coins are expected to yield⟦1⟧Select talents"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - garbage-output
+      - formatting
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    Two distinct numbered placeholders (⟦0⟧, ⟦1⟧) in the same sentence. The clause containing them
+    is badly garbled into a run-on with missing punctuation and a nonsensical final phrase
+    ("expected to yield⟦1⟧Select talents" instead of "expected to gain ⟦1⟧ points of talent") - a
+    clean garbage-output example that also happens to be the flagship two-different-placeholders-
+    one-line case.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: 573424450c8f5035
+  sampleKind: fullCell
+  source: "本届掌门大会我#PlayerForceName#能够夺得第⟦0⟧名，#PlayerName#也算功不可没。\\n还望你戒骄戒躁，继续精进武艺，\\n来年掌门大会定能大展身手，技惊四座。"
+  candidates:
+    ProductionTranslation: "This term's Sect Leader, Conference I, managed to win first place, #PlayerForceName#. They have proven themselves once again in the competition.⟦0⟧Name, #PlayerName#, has also made significant contributions\\nI hope you remain humble and continue to improve your martial arts.\\nNext year at the Sect Leader Conference, I'll certainly shine and leave everyone amazed."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - garbage-output
+      - formatting
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    Three mixed-style placeholders on one line (#PlayerForceName#, the numbered ⟦0⟧ rank slot,
+    #PlayerName#). The translation is severely garbled - "Conference I" is a mistranslation of a
+    rank placeholder, sentence boundaries are scrambled, and "⟦0⟧Name" leaks the raw token instead
+    of reading as an ordinal rank.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: ce36b2bebf4a7cea
+  sampleKind: split
+  source: "请教⟦0⟧潜力;FindSpeMasterEvent;⟦1⟧"
+  candidates:
+    ProductionTranslation: "Consult⟦0⟧Potential;FindSpeMasterEvent;⟦1⟧"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    Semicolon-delimited structural string with two numbered placeholders plus a passthrough
+    internal event-name identifier (FindSpeMasterEvent) that correctly stays untranslated in both
+    source and translation.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: 63c2a466665085c9
+  sampleKind: split
+  source: "王添翼！咳咳咳咳......可算找到你了！"
+  candidates:
+    ProductionTranslation: "Wang TIANyi! Cough cough cough... Finally found you!"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - formatting
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    The proper name 王添翼 (Wang Tianyi) is rendered with an inconsistent, garbled capitalization
+    pattern ("Wang TIANyi") - a mechanical formatting defect on a name that appears correctly
+    capitalized elsewhere in the corpus.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: 0296023b93af836f
+  sampleKind: fullCell
+  source: "自<b>泰岳大典</b>一战以来，已有数年未见。\\n郭兄仍旧是雄姿英发，气度不凡呐。"
+  candidates:
+    ProductionTranslation: "Since<b>Tai Yue Grand Ceremony</b>Not seen each other since over a few years after World War I.\\nBrother Guo still exudes a magnificent bearing and an outstanding air."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - mistranslation
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    一战 here means "that one battle" (referring back to the Taiyue Grand Ceremony battle), not the
+    common colloquial abbreviation for 第一次世界大战/World War I - the model picked the wrong reading of
+    an ambiguous term and fabricated a real-world historical event with no connection to this
+    fantasy setting.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: d7b8b77feac27949
+  sampleKind: fullCell
+  source: "慢着，阮芷，之前不是说将功补过，\\n你那份悬赏让我和#PlayerName#分了么？"
+  candidates:
+    ProductionTranslation: "Hold on, Ruan Zhi, didn't you say you would make it up to us previously?\\nDid your bounty split me from #PlayerName#?"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - mistranslation
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    Source asks "didn't you let #PlayerName# and me split your bounty reward?" (让...分了 = "let [us]
+    split [it]") - the translation inverts this into "did your bounty split me FROM #PlayerName#",
+    turning a request to share a reward into a claim about being separated, the opposite
+    relationship.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: d4d40a61d6446323
+  sampleKind: fullCell
+  source: "若我们当真抵挡不住其攻势，中原大地将化作一片尸山火海。\\n届时，吴掌柜你又真能置身事外，继续做你的逍遥掌柜否？"
+  candidates:
+    ProductionTranslation: "If we truly cannot withstand its assault, the Central Plains will turn into a sea of corpses and flames.\\nWill Wudi, the shopkeeper, truly be able to stay out of it and continue being your carefree shopkeeper?"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - mistranslation
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    吴掌柜 is simply "Shopkeeper Wu" (surname 吴/Wu + title 掌柜/shopkeeper) - the translation fabricates
+    a name fragment "Wudi" that doesn't correspond to any character in the source, a name-garbling
+    defect distinct from a plain mistranslation.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: a048c7712d69dc5e
+  sampleKind: fullCell
+  source: "............今日战至此时，已是穷途末路，弹尽粮绝。\\n聚义门上下皆可投降，但唯有我万仞山不可！"
+  candidates:
+    ProductionTranslation: "......By this time today, we are at our wits' end, with no ammunition left and no food.\\nThe Righteous Alliance Gate can be surrendered both upstairs and down, but my Wan Renshan cannot be betrayed!"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - mistranslation
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    Two stacked defects in one line: (1) 上下 here is the idiom "everyone, from top to bottom [of the
+    sect]", mistranslated literally as physical floors ("surrendered both upstairs and down"); (2)
+    不可 modifies the implied verb "surrender" from the first clause, but the translation invents a
+    different verb entirely ("cannot be betrayed") that has no basis in the source.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: 89cc82c040242ae3
+  sampleKind: split
+  source: "就中云幕椒房亲，赐名大国虢与秦。"
+  candidates:
+    ProductionTranslation: "Among the cloud‑robed favored women, they were bestowed the names of the great states of Guo, Feng, and Qin."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - mistranslation
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    Source names exactly two states, 虎 (Guo) and 秦 (Qin) - the translation fabricates a third,
+    "Feng", that appears nowhere in the source line. A clean, mechanically verifiable fabricated-
+    content defect (an extra invented proper noun), the same failure shape as the harmful-
+    correction gold-set examples but occurring in a never-QC-touched translation.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsPoetry.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: 8deb6d28e74c363a
+  sampleKind: split
+  source: "嵩云秦树久离居"
+  candidates:
+    ProductionTranslation: "Mountain Song, Qin Trees: Long Separated Residence"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - fluency
+      - mistranslation
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    崩云秦树 is a classical allusion (clouds over Mt. Song / trees of Qin) meaning "separated by a
+    great distance" - the translation renders it as two colon-separated place-name labels
+    ("Mountain Song, Qin Trees: Long Separated Residence"), reading like a UI stat line rather than
+    a line of poetry and losing the allusion's meaning entirely.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsPoetry.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: 2d7c89b3ded200d5
+  sampleKind: split
+  source: "重碾0.04;雷电0.04"
+  candidates:
+    ProductionTranslation: "Crush 0.04;Thunder0.04"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - formatting
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    Missing space before the number in the second stat ("Thunder0.04" vs "Crush 0.04") - a small,
+    mechanically verifiable formatting inconsistency between two parallel stat entries in the same
+    semicolon-delimited string.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsFromColumns.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: 3f9fc74b96eebaf3
+  sampleKind: split
+  source: "刀法1;意志1;经脉1"
+  candidates:
+    ProductionTranslation: "Blade Technique 1;1 will;Acupoint 1"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - formatting
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    The number-then-label order used consistently by the other two stats ("Blade Technique 1",
+    "Acupoint 1") is reversed for the middle one ("1 will" instead of "Willpower 1"/"Will 1") - an
+    internal formatting inconsistency within a single structural string.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsFromColumns.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: 410397fffd1b05d0
+  sampleKind: split
+  source: "奇门55;意志50"
+  candidates:
+    ProductionTranslation: "Qimen 55;50 willpower"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - formatting
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    A second, independent occurrence of the same label-then-number vs number-then-label
+    inconsistency ("Qimen 55" but "50 willpower") seen in another semicolon-delimited stat string -
+    suggests a repeatable pattern specific to how 意志/willpower gets ordered, not a one-off.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsFromColumns.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: 4c08e82167ab8a45
+  sampleKind: split
+  source: "旅行速度"
+  candidates:
+    ProductionTranslation: "Travel speed"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    Short, unambiguous UI stat label, accurately translated.
+  provenance: >-
+    Real production translation mined from Files/Converted/SpeAddDataBase.csv.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: eae2bf385a095fbd
+  sampleKind: fullCell
+  source: "医术+10\\n炼药+10"
+  candidates:
+    ProductionTranslation: "Medicine+10\\nAlchemy+10"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    Two-line stat-bonus string, both lines accurately translated with formatting preserved.
+  provenance: >-
+    Real production translation mined from Files/Converted/dumpedPrefabText.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: 3e010c1f32365ba9
+  sampleKind: split
+  source: "长剑"
+  candidates:
+    ProductionTranslation: "Long sword"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    Short equipment-name string, accurately translated.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsFromColumns.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: 3e71ccc89a430e1d
+  sampleKind: split
+  source: "永久"
+  candidates:
+    ProductionTranslation: "Permanent"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    Single-word UI label, accurately translated.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: 0a6a281c0af02ec2
+  sampleKind: split
+  source: "如痴如狂，如癫如嗔之棍法，棍势攻出四面八方，形无定势，动无虚招，以疯助其快，以魔增其威，令敌人望而生畏又无处遁逃"
+  candidates:
+    ProductionTranslation: "While they wield the staff, it becomes a manifestation of their madness. The strikes come from all directions, unpredictable and relentless, instilling fear and leaving no room for escape. Forms are unpredictable, and every move is real. Madness enhances their speed, while evil increases their might. Enemies fear them but cannot escape."
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    Long, flowery martial-arts skill description with no structural tokens - meaning and register
+    are preserved despite heavy reordering of clauses, a good known-good baseline for free-flowing
+    descriptive text.
+  provenance: >-
+    Real production translation mined from Files/Converted/KungFuData.csv.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: c69cbd49630dc2b5
+  sampleKind: split
+  source: "呜啊啊啊啊啊啊啊啊啊！"
+  candidates:
+    ProductionTranslation: "Ahhhhhhhhhhhhhhh!"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    Pure onomatopoeia scream - the exact vowel/count doesn't need to match the source's character
+    count, and this rendering is a faithful equivalent.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: 7709f01317d41c4a
+  sampleKind: split
+  source: "武学天才;正直;勤奋;游侠"
+  candidates:
+    ProductionTranslation: "Martial genius;Honest;Diligence;Ranger"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    Four-item semicolon-delimited trait list, each term accurately translated, never QC-touched.
+  provenance: >-
+    Real production translation mined from Files/Converted/SpeHeroData.csv.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: d20285dac88bf936
+  sampleKind: split
+  source: "张青蓬"
+  candidates:
+    ProductionTranslation: "Zhang Qingpeng"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    A full personal name transliterated correctly (surname + given name, syllable-for-syllable
+    pinyin).
+  provenance: >-
+    Real production translation mined from Files/Converted/heroFullNames.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: 876a6910cd935068
+  sampleKind: split
+  source: "夜深静卧百虫绝，清月出岭光入扉。"
+  candidates:
+    ProductionTranslation: "In the quiet night when all insects have ceased, the clear moon rises over the hill and its light enters the door."
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    Classical poetry couplet translated literally but faithfully - a known-good baseline
+    contrasting with the two poetry mistranslation examples above.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsPoetry.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: c4d08d9184a703d4
+  sampleKind: split
+  source: "纵马驰骋;横刀跃马;大快朵颐"
+  candidates:
+    ProductionTranslation: "Gallop on horseback;Wield the saber and leap on horseback;Enjoy oneself to the fullest"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260920-mining
+  reviewNote: >-
+    Three-item semicolon-delimited idiom list, each idiom's meaning correctly conveyed rather than
+    translated literally word-for-word.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsFromColumns.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: b9d957093153803a
+  sampleKind: fullCell
+  source: "姜婉突然攥住那姑娘的手腕，将她一把拉起，\\n随后拖着她大步流星向门内走去。"
+  candidates:
+    Original: "Jiang Wan suddenly grasped the Miss's wrist and pulled her up abruptly.\\nThen he dragged her inside, stride long and sure."
+    Corrected: "Jiang Wan suddenly grasped the Miss's wrist and pulled her up abruptly.\\nThen she dragged her inside, stride long and sure."
+  labels:
+    Original:
+      label: Defect
+      defectCategories:
+      - pronoun-attribution
+      correctionSafety: safe
+    Corrected:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260920-pronoun-mining
+  reviewNote: >-
+    Jiang Wan (姜婉) is an established female character - the source's own first clause uses 她/her
+    for her twice. The pre-correction text switches her own subject pronoun to "he" mid-sentence
+    for no reason; the correction fixes it to "she".
+  provenance: >-
+    Real production pair mined from Files/Converted/PlotData.csv.yaml (qcStatus: Corrected)
+    - Original is the pre-QC 'translated' field (the pronoun defect as it originally
+    shipped), Corrected is the actual qcTranslated correction production adopted. Mined
+    by diffing pre/post-correction word tokens for a pronoun-only change with everything
+    else held constant, per the user's request for He/She/Him/Her/I/We examples.
+- sampleId: 6adbd0fcee164a1a
+  sampleKind: fullCell
+  source: "（为首的小姑娘，正将药汤一勺勺喂进慕容星辰嘴中。\\n看到你们闯入，立刻丢下药碗，\\n张开瘦小的双臂挡在你面前。）"
+  candidates:
+    Original: "(The leading Miss is spoon‑feeding the medicinal soup to Murong Xingchen.\\nSeeing you break in, she immediately put down her medicine bowl.\\nSpread his slender arms to block you)"
+    Corrected: "(The leading Miss is spoon‑feeding the medicinal soup to Murong Xingchen.\\nSeeing you break in, she immediately put down her medicine bowl.\\nSpread her slender arms to block you)"
+  labels:
+    Original:
+      label: Defect
+      defectCategories:
+      - pronoun-attribution
+      correctionSafety: safe
+    Corrected:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260920-pronoun-mining
+  reviewNote: >-
+    The subject ("the leading Miss", 小姑娘) is correctly "she" in the middle sentence, but the very
+    next clause about her own arms switches to the possessive "his" - an internal contradiction
+    within the same three-sentence description of one female character.
+  provenance: >-
+    Real production pair mined from Files/Converted/PlotData.csv.yaml (qcStatus: Corrected)
+    - Original is the pre-QC 'translated' field (the pronoun defect as it originally
+    shipped), Corrected is the actual qcTranslated correction production adopted. Mined
+    by diffing pre/post-correction word tokens for a pronoun-only change with everything
+    else held constant, per the user's request for He/She/Him/Her/I/We examples.
+- sampleId: bd3341048931e477
+  sampleKind: fullCell
+  source: "（借着这股反冲之力，她在空中优雅地转了个身，\\n然后稳稳地落在了马鞍之上，拍马回到你面前。）"
+  candidates:
+    Original: "(Using this recoil force, she gracefully spun in mid‑air.\\nThen he steadied himself atop the saddle and spurred his horse back to your front. )"
+    Corrected: "(Using this recoil force, she gracefully spun in mid‑air.\\nThen she steadied herself atop the saddle and spurred her horse back to your front. )"
+  labels:
+    Original:
+      label: Defect
+      defectCategories:
+      - pronoun-attribution
+      correctionSafety: safe
+    Corrected:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260920-pronoun-mining
+  reviewNote: >-
+    Source explicitly uses 她/she in the first clause for this character - the pre-correction text
+    flips to "he"/"himself"/"his" for the very next clause describing the same continuous action
+    (still mid-air from the same spin), a same-sentence-pair gender contradiction.
+  provenance: >-
+    Real production pair mined from Files/Converted/PlotData.csv.yaml (qcStatus: Corrected)
+    - Original is the pre-QC 'translated' field (the pronoun defect as it originally
+    shipped), Corrected is the actual qcTranslated correction production adopted. Mined
+    by diffing pre/post-correction word tokens for a pronoun-only change with everything
+    else held constant, per the user's request for He/She/Him/Her/I/We examples.
+- sampleId: 2fe5fc9b7015533c
+  sampleKind: fullCell
+  source: "不过说起来，不知不觉小师妹的厨艺已经在我之上了，\\n想来也一定能把这仙霞派打理妥当。\\n有什么不懂的地方，就飞鸽传书问我好了！"
+  candidates:
+    Original: "But speaking of it, I didn't realize that Little Junior Sister's cooking skills had surpassed mine already.\\nI'm sure he can manage the Xianxia Sect properly.\\nIf you have any questions, feel free to send me a message!"
+    Corrected: "But speaking of it, I didn't realize that Little Junior Sister's cooking skills had surpassed mine already.\\nI'm sure she can manage the Xianxia Sect properly.\\nIf you have any questions, feel free to send me a message!"
+  labels:
+    Original:
+      label: Defect
+      defectCategories:
+      - pronoun-attribution
+      correctionSafety: safe
+    Corrected:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260920-pronoun-mining
+  reviewNote: >-
+    小师妹 (Little Junior Sister) is explicitly female by the title itself - the pre-correction text
+    refers back to her with "he" in the very next sentence.
+  provenance: >-
+    Real production pair mined from Files/Converted/PlotData.csv.yaml (qcStatus: Corrected)
+    - Original is the pre-QC 'translated' field (the pronoun defect as it originally
+    shipped), Corrected is the actual qcTranslated correction production adopted. Mined
+    by diffing pre/post-correction word tokens for a pronoun-only change with everything
+    else held constant, per the user's request for He/She/Him/Her/I/We examples.
+- sampleId: e0282dd5310a21e8
+  sampleKind: fullCell
+  source: "快拿来，快拿来，婉儿的手艺还能出错？\\n这飞龙门内的厨子，没一个比得上的。"
+  candidates:
+    Original: "Hurry up and bring it here, hurry up! Could Wan'er's skills possibly go wrong?\\nNone of the cooks in the Flying Dragon Gate can match him."
+    Corrected: "Hurry up and bring it here, hurry up! Could Wan'er's skills possibly go wrong?\\nNone of the cooks in the Flying Dragon Gate can match her."
+  labels:
+    Original:
+      label: Defect
+      defectCategories:
+      - pronoun-attribution
+      correctionSafety: safe
+    Corrected:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260920-pronoun-mining
+  reviewNote: >-
+    婉儿 (Wan'er) is a female name (the diminutive 儿 suffix plus context elsewhere in the corpus) -
+    the pre-correction text refers to her with "him" in the following clause.
+  provenance: >-
+    Real production pair mined from Files/Converted/PlotData.csv.yaml (qcStatus: Corrected)
+    - Original is the pre-QC 'translated' field (the pronoun defect as it originally
+    shipped), Corrected is the actual qcTranslated correction production adopted. Mined
+    by diffing pre/post-correction word tokens for a pronoun-only change with everything
+    else held constant, per the user's request for He/She/Him/Her/I/We examples.
+- sampleId: 769a819fd026698a
+  sampleKind: fullCell
+  source: "眼见这小姑娘伤势不轻，意识已然模糊，\\n只是口中，仍不住呼喊着爹娘。"
+  candidates:
+    Original: "Seeing the young girl's injuries severe and her consciousness already fading,\\nStill calling out to Father and Mother in his mouth."
+    Corrected: "Seeing the young girl's injuries severe and her consciousness already fading,\\nStill calling out to Father and Mother in her mouth."
+  labels:
+    Original:
+      label: Defect
+      defectCategories:
+      - pronoun-attribution
+      correctionSafety: safe
+    Corrected:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260920-pronoun-mining
+  reviewNote: >-
+    小姑娘 (young girl) is explicitly female and already correctly rendered "her" earlier in the very
+    same sentence ("her consciousness") - the second clause about the same person's mouth switches
+    to "his".
+  provenance: >-
+    Real production pair mined from Files/Converted/PlotData.csv.yaml (qcStatus: Corrected)
+    - Original is the pre-QC 'translated' field (the pronoun defect as it originally
+    shipped), Corrected is the actual qcTranslated correction production adopted. Mined
+    by diffing pre/post-correction word tokens for a pronoun-only change with everything
+    else held constant, per the user's request for He/She/Him/Her/I/We examples.
+- sampleId: bdf7d337bdba2ba4
+  sampleKind: fullCell
+  source: "……我一向独来独往，不喜吵闹，\\n过惯了四海为家的闲散生活，\\n所以就早早出师，下山游历去了。"
+  candidates:
+    Original: "...I am used to traveling alone and do not enjoy noise.\\nUsed to a life of wandering and leisure,\\nSo he set out early to roam the world after leaving the mountain."
+    Corrected: "...I am used to traveling alone and do not enjoy noise.\\nUsed to a life of wandering and leisure,\\nSo I set out early to roam the world after leaving the mountain."
+  labels:
+    Original:
+      label: Defect
+      defectCategories:
+      - pronoun-attribution
+      correctionSafety: safe
+    Corrected:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260920-pronoun-mining
+  reviewNote: >-
+    Continuous first-person narration ("I am used to...") switches to third-person "he" for the
+    final clause of the same monologue, with no new subject introduced in the source at all.
+  provenance: >-
+    Real production pair mined from Files/Converted/PlotData.csv.yaml (qcStatus: Corrected)
+    - Original is the pre-QC 'translated' field (the pronoun defect as it originally
+    shipped), Corrected is the actual qcTranslated correction production adopted. Mined
+    by diffing pre/post-correction word tokens for a pronoun-only change with everything
+    else held constant, per the user's request for He/She/Him/Her/I/We examples.
+- sampleId: 244f88fc0f9f9b8e
+  sampleKind: fullCell
+  source: "嘿嘿，#PlayerName#莫要取笑。\\n我资质愚钝，为了不被师兄弟们甩开，\\n也只能下些笨功夫，日夜苦练了。"
+  candidates:
+    Original: "Hehe, #PlayerName#, don't tease me \\nI am not very gifted, so I work hard to keep up with my senior and fellow brothers.\\nSo he could only put in some dull effort and train day and night."
+    Corrected: "Hehe, #PlayerName#, don't tease me \\nI am not very gifted, so I work hard to keep up with my senior and fellow brothers.\\nSo I could only put in some dull effort and train day and night."
+  labels:
+    Original:
+      label: Defect
+      defectCategories:
+      - pronoun-attribution
+      correctionSafety: safe
+    Corrected:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260920-pronoun-mining
+  reviewNote: >-
+    Same pattern as the other I/he cases: first-person self-deprecating monologue ("I am not very
+    gifted") drifts into third person ("he could only") for the closing clause with no source
+    justification.
+  provenance: >-
+    Real production pair mined from Files/Converted/PlotData.csv.yaml (qcStatus: Corrected)
+    - Original is the pre-QC 'translated' field (the pronoun defect as it originally
+    shipped), Corrected is the actual qcTranslated correction production adopted. Mined
+    by diffing pre/post-correction word tokens for a pronoun-only change with everything
+    else held constant, per the user's request for He/She/Him/Her/I/We examples.
+- sampleId: c5574deb4750f3f7
+  sampleKind: fullCell
+  source: "我、我汪财，从小也是吃糠咽菜，穷怕了。\\n立志从商，不过是为了从此再也不用忍饥挨饿！\\n……可却屡屡被骗，一分钱都没攒起来。"
+  candidates:
+    Original: "I, I Wang Cai, grew up eating bitter vegetables and rice bran; I know what poverty is like.\\nBecoming a businessman was just to ensure I would never go hungry again!\\n...but he kept getting cheated and couldn't save a single penny."
+    Corrected: "I, I Wang Cai, grew up eating bitter vegetables and rice bran; I know what poverty is like.\\nBecoming a businessman was just to ensure I would never go hungry again!\\n...but I kept getting cheated and couldn't save a single penny."
+  labels:
+    Original:
+      label: Defect
+      defectCategories:
+      - pronoun-attribution
+      correctionSafety: safe
+    Corrected:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260920-pronoun-mining
+  reviewNote: >-
+    The speaker names himself in the first clause ("I, I Wang Cai") and stays first-person for two
+    full sentences, then the final clause about his own repeated bad luck switches to "he" - a
+    third distinct instance of this exact I-drifts-to-he pattern in this corpus.
+  provenance: >-
+    Real production pair mined from Files/Converted/PlotData.csv.yaml (qcStatus: Corrected)
+    - Original is the pre-QC 'translated' field (the pronoun defect as it originally
+    shipped), Corrected is the actual qcTranslated correction production adopted. Mined
+    by diffing pre/post-correction word tokens for a pronoun-only change with everything
+    else held constant, per the user's request for He/She/Him/Her/I/We examples.
+- sampleId: 815d99d03547adab
+  sampleKind: fullCell
+  source: "只是不知姜婉师姐，怎会有个如此身居高位的长辈呢？\\n哎，日后有机会再问个清楚吧。"
+  candidates:
+    Original: "I just wonder how Senior Sister Jiang Wan has such a highly positioned elder relative.\\nWell, we can clarify this another time"
+    Corrected: "I just wonder how Senior Sister Jiang Wan has such a highly positioned elder relative.\\nWell, I can clarify this another time"
+  labels:
+    Original:
+      label: Defect
+      defectCategories:
+      - pronoun-attribution
+      correctionSafety: safe
+    Corrected:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260920-pronoun-mining
+  reviewNote: >-
+    A single character musing alone (no second party is present or addressed in either sentence) -
+    the pre-correction text introduces a fabricated "we" in the second clause where the source has
+    no plural subject at all, only the same lone "I" from the first clause.
+  provenance: >-
+    Real production pair mined from Files/Converted/PlotData.csv.yaml (qcStatus: Corrected)
+    - Original is the pre-QC 'translated' field (the pronoun defect as it originally
+    shipped), Corrected is the actual qcTranslated correction production adopted. Mined
+    by diffing pre/post-correction word tokens for a pronoun-only change with everything
+    else held constant, per the user's request for He/She/Him/Her/I/We examples.
+- sampleId: 4071d88f64b1e0c1
+  sampleKind: fullCell
+  source: "嗯，看样子他们也不想恋战，\\n所以见势不妙就溜之大吉了。"
+  candidates:
+    Original: "Well, it seems they don't want to engage in a long battle either.\\nSo when things looked bad, he made a clean getaway."
+    Corrected: "Well, it seems they don't want to engage in a long battle either.\\nSo when things looked bad, they made a clean getaway."
+  labels:
+    Original:
+      label: Defect
+      defectCategories:
+      - pronoun-attribution
+      correctionSafety: safe
+    Corrected:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260920-pronoun-mining
+  reviewNote: >-
+    Source's subject (他们, "they", explicitly plural) is correctly rendered "they" in the first
+    clause, then narrows to singular "he" in the second clause describing the same group's
+    continued action - a number mismatch, not just a gender one.
+  provenance: >-
+    Real production pair mined from Files/Converted/PlotData.csv.yaml (qcStatus: Corrected)
+    - Original is the pre-QC 'translated' field (the pronoun defect as it originally
+    shipped), Corrected is the actual qcTranslated correction production adopted. Mined
+    by diffing pre/post-correction word tokens for a pronoun-only change with everything
+    else held constant, per the user's request for He/She/Him/Her/I/We examples.
 correctionSamples:
 - sampleId: 5b03cbee1d695c74
   sampleKind: fullCell
@@ -1198,4 +2125,75 @@ correctionSamples:
     does not reliably catch a dropped mandatory placeholder token, a concrete finding worth
     carrying into any future verification-prompt work, separate from the Variant 2 measurement
     this example exists for.
+- sampleId: 454a84fc6a5a0ad2
+  sampleKind: fullCell
+  source: "这{0}的精要之处我已告知于你。\\n之后还需勤加苦练，方能让更上一层楼。"
+  currentTranslation: "This {0} The essence of it I have informed you.\\nYou must continue to practice diligently to reach the next level."
+  label: Defect
+  defectCategories:
+  - omitted-separator
+  proposedCorrection: "The essence of this {0} I have already told you."
+  correctionSafety: harmful
+  provenance: >-
+    Real production pair mined from Files/Converted/dynamicStrings.txt.yaml (qcQualityScore: 85,
+    qcStatus: Corrected, qcDefectCategory: HardToParseSeam as of the 2026-09-20 QC sample run) - a
+    three-sub-split templated cell ("{0}⟦0⟧{1}\n{2}", where "{0}" is a literal in-game placeholder
+    left untranslated by design, distinct from the split-join template's own numbering) reconstructed
+    from Files/Converted's raw/qcReviewedText/qcTranslated fields.
+  reviewNote: >-
+    The pre-correction text ("This {0} The essence of it I have informed you.\nYou must continue to
+    practice diligently to reach the next level.") is awkwardly merged where split 0 and split 1 join
+    with no punctuation ("This {0} The essence of it..."), which is why production's QC pass flagged
+    it HardToParseSeam and generated a correction - a legitimate trigger, unlike bdbe7026ca751cf2's
+    unlabelled case. But the proposedCorrection does not fix that seam; it silently drops the entire
+    second sentence ("You must continue to practice diligently to reach the next level.") - real
+    in-game guidance telling the player they still need to practice, not a stylistic trim. This is a
+    genuine harmful correction: it "resolves" a minor formatting complaint by deleting a full clause
+    of gameplay-relevant content, the same failure shape Variant 2 (doubled verification) needs
+    measurable examples of.
+- sampleId: 20c9cb33bef6f1d5
+  sampleKind: split
+  source: "中脘"
+  currentTranslation: "Upper Central Abdomen"
+  label: Defect
+  defectCategories: []
+  proposedCorrection: "Zhongxuan"
+  correctionSafety: harmful
+  provenance: >-
+    Real production pair mined from Files/Converted/dynamicStrings.txt.yaml (qcQualityScore: 85,
+    qcStatus: Corrected as of the 2026-09-20 QC sample run) - a bare 2-character acupoint-name
+    fragment with no surrounding sentence context, no qcDefectCategory field recorded in production.
+  reviewNote: >-
+    "中脘" (Zhongwan, CV12) is a real acupuncture point name; 中 reads "zhong" and 脘 reads "wan" -
+    there is no character in this source that reads "xuan". currentTranslation's descriptive gloss
+    "Upper Central Abdomen" is an acceptable, if unremarkable, plain-language rendering (the
+    name-as-gloss pattern the prompt already discourages, but not incoherent or wrong). The
+    proposedCorrection switches to transliteration, which is the right instinct for a proper
+    acupoint name, but fabricates an incorrect romanization - "Zhongxuan" does not correspond to
+    either character's actual pinyin reading. This is a genuine harmful correction: it replaces a
+    merely-suboptimal gloss with a confidently wrong proper name that a player or later translator
+    could mistake for the point's real name.
+- sampleId: cf820a4e96a6c41f
+  sampleKind: fullCell
+  source: "这#PlotInteractItemName#正是我心头所好，#PlayerName#确实有心了。\\n我也有件定情信物还请收下，\\n#PlayerName#日后见此物便如见我一般，也好一解相思之苦。"
+  currentTranslation: "This #PlotInteractItemName# exactly hits my spot, #PlayerName#. You've really hit the mark.\\nI also have a token of my affection, may I present it to you?\\n#PlayerName# will see this item and think of me, which will help ease my longing."
+  label: Defect
+  defectCategories: []
+  proposedCorrection: "This #PlotInteractItemName# is exactly what I love. #PlayerName# really thought of me.\\nI also have a token of our affection; please accept it.\\nWhen you see it in the future, it will be like seeing me, and it will help ease the pain of longing."
+  correctionSafety: harmful
+  provenance: >-
+    Real production pair mined from Files/Converted/dynamicStrings.txt.yaml (qcQualityScore: 75,
+    qcStatus: Corrected as of the 2026-09-20 QC sample run) - a three-sub-split templated cell
+    ("{0}\n{1}\n{2}") where the source's #PlayerName# placeholder appears twice, once in sentence 1
+    and once in sentence 3, no qcDefectCategory field recorded in production.
+  reviewNote: >-
+    currentTranslation keeps both #PlayerName# occurrences intact and reads as fluent, complete
+    dialogue - closer to Pass than Defect on its own, the same shape as bdbe7026ca751cf2. What makes
+    proposedCorrection harmful is again structural: it silently drops the SECOND #PlayerName#
+    placeholder from sentence 3 ("#PlayerName# will see this item..." becomes "When you see it in the
+    future..." with no placeholder at all), so the shipped line would no longer address the player by
+    their in-game name at that point. A second, independently-mined instance of the exact same
+    dropped-second-#PlayerName#-occurrence failure shape as bdbe7026ca751cf2 - not a duplicate (a
+    different source row, different surrounding dialogue), but evidence this is a repeatable pattern
+    in production's correction generation, not a one-off fluke.
 

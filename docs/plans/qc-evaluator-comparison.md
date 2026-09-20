@@ -529,6 +529,170 @@ relevant prompt commit) before trusting a round's numbers.
   verification prompt files, `QcVerificationResult.Merge`, and `ReviewCorrectionAsync`'s doubling -
   see Next Steps item 5 for the standing "commit when a checkpoint is reached" reminder.
 
+- **Fourteenth round completed 2026-09-20 (further harmful-correction mining): 3 more harmful
+  `correctionSamples` mined, denominator now 5 harmful + 1 safe (was 2 + 1).** Per Next Steps item 6's
+  "optionally mine more harmful-correction examples" suggestion, wrote a throwaway Python/PyYAML
+  script (deleted after use, not committed) over the same ~22,000-row `qcStatus: Corrected` pool in
+  `Files/Converted` used by the Eleventh round, this time scripted rather than manually sampled:
+  reconstructed each full templated cell's pre/post-correction text and flagged candidates by two
+  targeted heuristics - (a) a placeholder-token multiset mismatch between the pre- and
+  post-correction text (7 hits out of ~22,000, very high precision), and (b) a >45% length drop from
+  pre- to post-correction on cells over 20 characters (45 hits). A third heuristic (fabricated
+  capitalized-word bigrams, meant to catch invented proper names like `cd12d3474f462380`'s "Du
+  Dianjian") produced 4,041 hits and was almost entirely false positives - legitimate
+  terminology/title-casing corrections (e.g. "Sweeping a Thousand Armies") dominate that signal in
+  this corpus, so it was dropped rather than hand-filtered at that volume.
+
+  Manual review of the two useful heuristics' output found three new, clean, unambiguous harmful
+  corrections, added to `Files/Goldset/GoldSet.yaml`'s `correctionSamples`:
+  - `454a84fc6a5a0ad2`: production's own QC pass correctly flagged an awkward split-join seam
+    (`qcDefectCategory: HardToParseSeam`) between two sentences, but the generated correction doesn't
+    fix the seam - it silently deletes the entire second sentence ("You must continue to practice
+    diligently to reach the next level."), real in-game guidance, not a stylistic trim.
+  - `20c9cb33bef6f1d5`: a bare acupoint-name fragment ("中脘", pinyin "Zhongwan"). The pre-correction
+    gloss ("Upper Central Abdomen") was unremarkable; the correction switches to transliteration (the
+    right instinct) but fabricates an incorrect romanization ("Zhongxuan") that matches neither
+    character's actual reading - a confidently wrong proper name, not just a suboptimal one.
+  - `cf820a4e96a6c41f`: a second, independently-mined instance of `bdbe7026ca751cf2`'s exact failure
+    shape - a fluent, complete pre-correction translation where the correction silently drops the
+    SECOND of two `#PlayerName#` occurrences in a three-sentence templated cell. Confirms the
+    dropped-second-placeholder-occurrence pattern is repeatable in production's correction
+    generation, not a one-off.
+
+  Not yet re-run against `Qwen38Qc` - mining was this round's scope, per the user's explicit choice
+  of "mine more harmful examples" over "grow the detection gold set" as the next task. Re-running the
+  Twelfth/Thirteenth rounds' verification assessment against the now-5-example harmful denominator
+  (delete the cached `Results.yaml` first, per the usual caching-trap precaution) is the natural
+  immediate follow-up, to check whether the Thirteenth round's verification-prompt fix generalizes
+  beyond the 2 examples it was fixed against.
+
+- **Fifteenth round completed 2026-09-20 (detection gold-set mining from `Files/Converted`, and a
+  correction to a long-standing wrong number in this doc): the committed detection gold set had 36
+  items, not 121.** Before mining, checked `Files/Goldset/GoldSet.yaml` directly (per this doc's own
+  repeated advice not to trust a remembered count) and cross-checked with `git log` across every
+  commit that has touched the file - the item+correctionSample count never exceeded 39 total in any
+  committed revision. **The "121 detection items" figure repeated throughout this doc's Third through
+  Thirteenth round entries (and the recall/precision numbers computed against it, e.g. the Ninth
+  round's 14/18 on an "18 in-scope Defect rows" denominator) was never actually the committed gold
+  set** - it must reflect an uncommitted local/session copy that grew during those rounds' assessment
+  runs but was never written back to `Files/Goldset/GoldSet.yaml`. This doc's historical round
+  entries are left as-written (they're an accurate record of what was measured against whatever gold
+  set existed in-session at the time) rather than retroactively rewritten, but any future round citing
+  "121 items" or a "121-item set" should be treated as citing a set that no longer provably exists in
+  the repo - re-derive the actual committed count from the file before trusting it.
+
+  With the user's guidance that 150-200 total detection items would be enough (later relaxed to "even
+  under 100 is fine, ask after this batch"), mined 30 new detection items directly from
+  `Files/Converted`'s ~81,165 real production splits (not from a `TranslationAssessmentWorkflow` run,
+  unlike every prior mining batch) - single-candidate items using each row's pre-QC `translated`
+  field under a `ProductionTranslation` candidate key, hand-judged independently of whatever
+  `qcStatus`/`qcDefectCategory` that row already carries in production (the same anti-circularity
+  principle the Eleventh round's harmful-correction mining already established: production's own past
+  verdict on a row can't be trusted as the row's gold label). Mined via a scripted extraction
+  (deleted after use) covering every file in `Files/Converted`, with a deliberate emphasis on lines
+  containing 2+ placeholders together (per the user's explicit ask) - the gold set previously had
+  exactly one such example (`cb459b1c8e845a04`, and only earmarked for an unrelated whitespace
+  defect). Found 10 clean multi-placeholder-per-line examples (mixing `#Token#`-style and the game's
+  `⟦n⟧` bracket style; a dedicated search for multiple numbered `{0}{1}`-style placeholders on one
+  line came back with **zero** other occurrences anywhere in the corpus - that numbered-brace style
+  essentially never recurs outside the one already-known reward-table item), plus 20 more items
+  covering known-good baselines, mistranslation (including two fabricated-proper-noun cases in
+  classical poetry, the same failure shape as the harmful-correction examples but at the
+  translation-detection level), formatting (stat-string number/label ordering inconsistencies,
+  garbled-name capitalization), and fluency (idiom mishandling). Gold set now has **66 detection
+  items + 6 correction samples = 72 total entries** (up from 36 + 3 = 39).
+
+  Added a fourth `additionalSourceAssessments` entry (`ConvertedCorpus-20260920-mining`) documenting
+  this batch's provenance, adapted from the existing entries' shape since there's no
+  `TranslationAssessmentWorkflow` fingerprint/seed for a direct-from-corpus mining pass. Not yet run
+  through a fresh `Qwen38Qc` assessment pass - per the user's plan, check in on whether 72 total is
+  enough before mining further or running a measurement pass.
+
+- **Sixteenth round completed 2026-09-20 (targeted pronoun-attribution mining): 11 new He/She/Him/
+  Her/I/We detection items, all mined by diffing real production corrections.** The user flagged
+  pronoun misattribution (gender and person confusion - "he" for an established female character,
+  "we" appearing where only one speaker exists, first-person narration randomly drifting into
+  third-person) as a common, recurring problem worth dedicated gold-set coverage. Rather than hand-
+  scanning for this (slow and easy to miss), wrote a targeted script over the same `Files/Converted`
+  `qcStatus: Corrected` rows: tokenized the pre-correction (`qcReviewedText`) and post-correction
+  (`qcTranslated`) text, and kept only rows where every non-pronoun word matched exactly between the
+  two and the *only* difference was in pronoun frequency - i.e. a surgical, human-confirmed pronoun
+  fix, not a broader rewrite that happens to touch a pronoun. This heuristic alone found 282
+  candidates (extremely high precision - a real corrected pronoun error, by construction, on every
+  single hit) from which 11 were hand-selected for diversity of failure shape:
+  - **He/She (established-gender contradiction), 4 items**: a named female character (姜婉/Jiang Wan)
+    or an explicitly-titled female character (小姑娘/young girl, 小师妹/Little Junior Sister) referred
+    to correctly as "she" in one clause and wrongly as "he"/"his"/"himself" in the very next clause of
+    the same sentence or paragraph - including one case where the source's own 她/she appears in the
+    same sentence as the English error.
+  - **Him/Her, 2 items**: same shape, object pronoun instead of subject pronoun (Wan'er's cooking
+    "can't match him" instead of "her"; a girl's own "his mouth" instead of "her mouth", the second
+    following a correctly-rendered "her consciousness" two words earlier in the same sentence).
+  - **I/He, 3 items**: continuous first-person monologues (a Wudang disciple's self-deprecating
+    speech, a swordsman explaining his solitary lifestyle, the merchant Wang Cai's origin story) that
+    drift into third-person "he" for the closing clause with no new subject introduced anywhere in
+    the source - three independent instances of what looks like a systematic "long first-person
+    passage loses track of its own subject" failure mode, not a one-off.
+  - **I/We, 1 item**: a character musing alone (no second party present in either sentence) gets a
+    fabricated "we" in the second clause where the source has no plural subject at all.
+  - **He/They (number, not gender), 1 item**: source's plural 他们/they is correctly "they" in the
+    first clause but narrows to singular "he" in the second clause describing the same group's
+    continued action.
+
+  Each item uses the schema's existing multi-candidate/multi-label shape with two candidates -
+  `Original` (the pre-correction text, `label: Defect`, `defectCategories: [pronoun-attribution]`,
+  reusing the category from the correction-sample `5b03cbee1d695c74`) and `Corrected` (the actual
+  production fix, `label: Pass`) - so each entry doubles as both a defect example and a matched
+  known-good counterexample from the identical source, rather than needing a separate Pass item.
+  Tagged `sampleRun: ConvertedCorpus-20260920-pronoun-mining`. Gold set now has **77 detection items +
+  6 correction samples = 83 total entries** (up from 66 + 6 = 72). Not yet run through a fresh
+  `Qwen38Qc` assessment pass.
+
+- **Seventeenth round completed 2026-09-20 (first assessment pass against the full 83-entry gold
+  set): confirms the formatting weak spot on fresh examples, strong pronoun recall, harmful-
+  correction fix generalizes to all 5 examples.** Deleted the cached `Files/TestResults/
+  QcEvaluatorAssessment/Qwen38Qc/` first (per the usual caching-trap precaution) and ran
+  `Tests/AssessmentWorkflowTests.cs`'s "2. Assess configured QC models" fresh (2m49s, 179 calls -
+  121 from the original 36-item multi-candidate set + 30 single-candidate Converted-mining items +
+  22 from the 11 dual-candidate pronoun items + 6 correctionSamples, confirming full coverage).
+
+  **Overall excluded-methodology detection: recall 0.795 (35/44), precision 0.833 (35/42)** - the
+  best measured number yet for `Qwen38Qc`, though not directly comparable to the Ninth round's
+  0.778/0.778 since the denominator composition changed (this doc's "121-item" denominator from that
+  round was never real - see the Fifteenth round entry).
+
+  By batch (`sampleRun`): the two `ModelAssessment` batches from 2026-09-19 reproduced familiar
+  numbers (pinned-recheck 1.000/0.900, larger-run 0.500/1.000 - the harder frontier-judgment batch).
+  The two new batches:
+  - **Converted-corpus mining (30 items): recall 0.733 (11/15), precision 1.000 (11/11) - zero false
+    positives.** All 4 missed defects are `formatting` category - specifically the mechanical
+    stat-string issues mined this round (garbled name capitalization "Wang TIANyi", a missing space
+    in "Thunder0.04", and two number/label-order swaps like "1 will" vs "50 willpower"). This
+    independently reconfirms the `formatting` weak spot from the Fifth/Seventh/Eighth rounds using
+    entirely fresh, differently-sourced examples (mined from the raw corpus, not a translation-
+    assessment run) - strengthens it as a real, durable gap rather than an artifact of the old gold
+    set's specific items.
+  - **Pronoun mining (11 items, 22 candidate-results): recall 0.909 (10/11), precision 0.769
+    (10/13).** The one missed defect is the fabricated-"we" case (`815d99d03547adab`'s `Original`
+    candidate) - the model didn't catch the phantom plural where the source has a single speaker
+    musing alone. The 3 apparent false positives (flagging a `Corrected`/Pass candidate as `Defect`)
+    are NOT pronoun mistakes on inspection - checked each one's `actualDefectCategory`
+    (`DroppedContent` x2, `HardToParseSeam` x1) against the actual text and found the model flagging
+    unrelated minor issues (a missing final period, an implicit-subject sentence fragment) in text
+    that was labeled Pass purely on pronoun-correctness grounds during mining. This is a labeling-
+    scope nuance (the gold label only asserted "the pronoun is right," not "this text has zero other
+    micro-defects"), not a genuine evaluator false-positive - worth remembering when interpreting
+    precision on any single-dimension-labeled batch like this one.
+
+  **Harmful-correction verification: 5/5 correctly scored `Harmful`** (0/100 each), including all 3
+  newly-mined examples from the Fourteenth round (`454a84fc6a5a0ad2`, `20c9cb33bef6f1d5`,
+  `cf820a4e96a6c41f`) alongside the original 2 from the Eleventh round. The pre-existing `safe`
+  example (`5b03cbee1d695c74`) still scores `Safe` (`actualCorrectionSafety`, the field that matters
+  here) - no regression. **This confirms the Thirteenth round's verification-prompt fix (explicit
+  placeholder-preservation + no-fabricated-named-entities checks) generalizes cleanly beyond the 2
+  examples it was originally built and verified against** - the harmful-correction denominator is now
+  meaningfully validated at 5/5, not just directionally suggestive at 2/2.
+
 ## Next Steps (decided 2026-09-20 - read this before starting further work; Seventh/Eighth/Ninth
 round entries above supersede this section's older `formatting`/`terminology`/quant framing.
 **Items 1-3 are now done. Item 4a (the brute-force glossary sync) was explicitly declined by the
@@ -636,10 +800,15 @@ Priority order, chosen deliberately over "pick a quant now":
    `FanslationStudio.LlmKit`: the 5 `BaseQualityReviewPrompt.txt` files, `BaseFiles/Qwen38/Config.yaml`'s
    `num_ctx` change, `docs/investigations/quality-review-postmortems.md`) once a natural checkpoint is
    reached - there's a lot of uncommitted work stacked up as of this writing.
-6. **Lower priority, not blocking:** grow the gold set past its current 121 items toward the
-   300-500 target - today's rounds showed real run-to-run variance at this sample size (some
-   metrics moved +/-0.05-0.1 between identical-config runs), which matters more as prompt/quant
-   differences get smaller and more marginal.
+6. **Done 2026-09-20 (Sixteenth round): the user confirmed 83 total entries (77 detection items + 6
+   correction samples) is enough** - gold-set growth for this cycle is closed out. This is well below
+   the original 300-500 target (revised down mid-session to 150-200, then explicitly relaxed further
+   to "even under 100 is fine"); the user judged that's sufficient to measure QC evaluator
+   performance rather than a stopgap. See the Fifteenth and Sixteenth round entries above for what was
+   mined and the corrected-count context (the 121/300-500 figures earlier in this doc predate both the
+   discovered-wrong-count correction and the revised target). Revisit only if a future round's
+   run-to-run variance (some metrics moved +/-0.05-0.1 between identical-config runs in earlier
+   rounds, at the smaller 36-item set) turns out to still be a problem at 83.
 
 ## Separator/Newline Defects Are Out of Scope
 
@@ -663,19 +832,25 @@ compile against the new multi-defect API but does not yet do the full per-stage 
 calls for (see Implementation Shape) - it currently measures end-to-end detection and correction
 safety, not "which stage caused this disagreement."
 
-The gold set (`Files/Goldset/GoldSet.yaml`) has 121 detection items and 3 correction samples as of
-2026-09-20 (grown from the original 36 via two later mining batches - see **Third round** in
-Status above; target remains 300-500). Its free-form category vocabulary is fully mapped onto
+The gold set (`Files/Goldset/GoldSet.yaml`) has 77 detection items and 6 correction samples as of
+2026-09-20 (see the **Fifteenth** and **Sixteenth round** entries above for why this is 77, not the
+121 this doc claimed through the Third-Thirteenth rounds - that number was never actually committed
+to the file; target
+is now 150-200 total, relaxed to "even under 100 is fine" - see Next Steps item 6). Its free-form
+category vocabulary is fully mapped onto
 `QcDefectCategory` in `ParseCategory` (locked in by
 `Tests/Workflow/QualityEvaluatorAssessmentWorkflowTests.cs`'s `ParseCategory_MapsEveryGoldSetCategory`
 theory) - a category is never silently collapsed into a shared catch-all it doesn't actually belong
-to. **The gold set now has its first 2 `harmful`-labeled correction examples** (added 2026-09-20,
-Eleventh round) - mined directly from the ~22,000 already-`qcStatus: Corrected` rows already sitting
-in `Files/Converted` from prior production QC runs, not from translation-assessment output (which
-never contains a proposed correction to judge) or a dedicated fresh correction-generation run (not
-needed - the corpus already has plenty of real corrections to review). `Qwen38Qc` missed both in a
-fresh assessment pass, scoring them `Safe`. 2 examples is still thin for a reliable harmful-correction
-rate - treat it as directionally measured, not final, until more are mined from the same pool.
+to. **The gold set now has 5 `harmful`-labeled correction examples** (2 added 2026-09-20 Eleventh
+round, 3 more added 2026-09-20 Fourteenth round) - all mined directly from the ~22,000 already-
+`qcStatus: Corrected` rows already sitting in `Files/Converted` from prior production QC runs, not
+from translation-assessment output (which never contains a proposed correction to judge) or a
+dedicated fresh correction-generation run (not needed - the corpus already has plenty of real
+corrections to review). `Qwen38Qc` missed the first 2 in a fresh assessment pass (Eleventh round,
+scored `Safe`) before the Thirteenth round's verification-prompt fix made it catch both; the 3
+Fourteenth-round additions have not yet been run through a fresh assessment pass. 5 examples is
+still thin for a reliable harmful-correction rate - treat it as directionally measured, not final,
+until more are mined from the same pool.
 
 ## Objective
 
