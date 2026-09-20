@@ -61,7 +61,12 @@ correctionPromptsEnabled: true
 translateFlagged: true
 qualityReview:
   enabled: true
-  modelName: Qwen38Qc #QwenQc-14B #Glm4Qc-9B
+  # Changed from Qwen38Qc to Qwen38Qc-IQ4XS 2026-09-20 (plan doc Status "Twenty-first round") - the
+  # post-Twentieth-round-prompt quant sweep found IQ4XS strictly beats the default UD-Q3_K_XL quant
+  # on both recall (0.855 vs 0.812) and precision (0.894 vs 0.875) at +36% full-corpus latency cost
+  # (~3.6 vs ~2.7 days). Qwen38Qc-UDQ4KM has higher recall still (0.884) but lower precision than
+  # IQ4XS and a much larger latency cost (~5.7 days) - user chose IQ4XS as the balanced pick.
+  modelName: Qwen38Qc-IQ4XS #QwenQc-14B #Glm4Qc-9B
   minAcceptableScore: 60
   maxConcurrency: 2
   inlineRuleCheckRetries: 2
@@ -126,8 +131,13 @@ qualityEvaluatorAssessment:
   # recall and ~2x the latency - the wrong tradeoff direction for this task (a missed defect ships
   # silently forever; a false positive only costs one bounded correction round-trip). Narrowed back
   # to Qwen38Qc alone for routine runs; see the plan doc's Status "Ninth round" for the full numbers.
+  # Re-run 2026-09-20 (Twenty-first round) after the Twentieth round's prompt fix invalidated the
+  # Ninth round's standing quant comparison. This time the sweep found a real (not tied) recall/
+  # precision/latency spread; user picked Qwen38Qc-IQ4XS as the production model (best precision,
+  # strictly beats the old default on both recall and precision) - narrowed back to it alone for
+  # routine future rounds. See the plan doc's Status "Twenty-first round" for the full numbers.
   modelNames:
-    - Qwen38Qc
+    - Qwen38Qc-IQ4XS
   goldSetPath: Goldset/GoldSet.yaml
   outputPath: TestResults/QcEvaluatorAssessment
   # doubledDetection defaults to true (matching production) - see plan doc's Status "Tenth round"

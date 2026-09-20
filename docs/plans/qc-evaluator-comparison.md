@@ -837,6 +837,56 @@ relevant prompt commit) before trusting a round's numbers.
   of independently-shaped items" (do not flag just because entries differ) to the internal-
   consistency rule.
 
+- **Twenty-first round completed 2026-09-20 (final quant sweep re-run after the Twentieth round's
+  prompt fix, since a prompt change invalidates any standing quant comparison per this doc's own
+  repeated caching-trap-adjacent warning - the Ninth round's sweep predates the internal-consistency
+  rule and self-check added in the Twentieth round).** Restored `Qwen38Qc-IQ4XS`/`Qwen38Qc-UDQ4KM`
+  to `qualityEvaluatorAssessment.modelNames` in `Files/Config.yaml`, deleted the three quants' stale
+  `Files/TestResults/QcEvaluatorAssessment/` output directories, and ran
+  `Tests/AssessmentWorkflowTests.cs`'s "2. Assess configured QC models" fresh (14m39s, all three
+  `Results.yaml` confirmed to share one `goldSetFingerprint` postdating the run). The excluded-
+  methodology reconstruction script (previously ad hoc, redone from scratch every round - see the
+  Nineteenth round's note that it was never committed) is now committed at
+  `Scripts/qc_excluded_methodology.py`; validated against a pre-existing stale `Results.yaml` before
+  trusting its output on the fresh runs.
+
+  | Model | Quant | Recall | Precision | Avg latency | p95 latency |
+  |---|---|---|---|---|---|
+  | Qwen38Qc | `UD-Q3_K_XL` (14.08 GB, the long-standing default) | 0.812 (56/69) | 0.875 (56/64) | **929ms** | 1255ms |
+  | Qwen38Qc-IQ4XS | `UD-IQ4_XS` (15.18 GB) | 0.855 (59/69) | **0.894** (59/66) | 1268ms | 1784ms |
+  | Qwen38Qc-UDQ4KM | `UD-Q4_K_M` (17.4 GB) | **0.884** (61/69) | 0.871 (61/70) | 1986ms | 2956ms |
+
+  **This reopens the tie the Ninth round found**: on the 18-sample pre-Twentieth-round prompt, all
+  three quants scored within noise of each other and the fastest won on latency alone. On the full
+  108-entry set (69 defect items in the excluded-methodology denominator, a much larger and more
+  reliable sample) with the current prompt, recall now climbs monotonically with quant size again -
+  the same shape the pre-prompt-maxing Fifth round found, not the Ninth round's tie. The gap between
+  `Qwen38Qc` and `Qwen38Qc-UDQ4KM` is 5 TP out of 69 (7.2pp), larger than the single-sample gaps the
+  Ninth round dismissed as noise, though `Qwen38Qc-IQ4XS` also strictly beats the default on both
+  recall AND precision (+3 TP, +1.9pp precision) - a cleaner, unambiguous win before even weighing
+  `Qwen38Qc-UDQ4KM`'s further (but precision-costing) recall gain over IQ4XS.
+
+  Per-category, all three keep `formatting` and `fluency` as the two weakest, `formatting` improving
+  with quant size (7/12 -> 9/12 -> 9/12) same as the aggregate; `terminology` also climbs (8/9 -> 8/9
+  -> 9/9, `UDQ4KM` alone catching all).
+
+  Rescaling the Ninth round's corpus-latency math (`4.1 days at 1429ms/call` -> ~0.00287 days/ms,
+  same 81,165-split/51.6%-correction-rate/`maxConcurrency: 2` assumptions - all three quants got
+  meaningfully faster than the Ninth round's measurements, likely from the shorter self-check prompt
+  path on the common Pass case) puts a full cold-start corpus run at roughly **2.7 days** (`Qwen38Qc`),
+  **3.6 days** (`Qwen38Qc-IQ4XS`, +36% over the default), or **5.7 days** (`Qwen38Qc-UDQ4KM`, +111%
+  over the default, +58% over IQ4XS) - real weight to put against the recall gain per this doc's own
+  established priority ordering (recall > precision as a tie-breaker, but only "when it produces a
+  measured improvement a faster model cannot provide").
+
+  **Decision (user-made): `Qwen38Qc-IQ4XS` is now the production QC model.** `Files/Config.yaml`'s
+  `qualityReview.modelName` changed from `Qwen38Qc` to `Qwen38Qc-IQ4XS`; `qualityEvaluatorAssessment.modelNames`
+  narrowed back from all three quants to `Qwen38Qc-IQ4XS` alone for routine future rounds. Chosen as
+  the balanced pick: strictly beats the old default on both recall and precision, at a real but
+  bounded latency cost (+36%, ~3.6 vs ~2.7 days full-corpus), without `Qwen38Qc-UDQ4KM`'s further
+  precision dip and much larger latency cost (~5.7 days). **Next Steps item 3 (final quant sweep) is
+  re-confirmed done, superseding the Ninth round's now-stale `Qwen38Qc` pick.**
+
 ## Next Steps (decided 2026-09-20 - read this before starting further work; Seventh/Eighth/Ninth
 round entries above supersede this section's older `formatting`/`terminology`/quant framing.
 **Items 1-3 are now done. Item 4a (the brute-force glossary sync) was explicitly declined by the
