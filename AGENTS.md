@@ -26,6 +26,7 @@ edited before making changes.
 
 ## Engineering rules
 
+- Prefer targeted searches (grep/glob) over reading whole files; read only the specific ranges needed.
 - Do not create throwaway verification projects; use the persistent `Verify/` project.
 - Keep instruction files short and operational. Put detailed rationale in root `docs/` topics.
 - Follow the IL2CPP interop safety rules in

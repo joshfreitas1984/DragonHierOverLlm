@@ -7,9 +7,57 @@ The five-call production shape described below is implemented in `FanslationStud
 `GetVerificationVerdictAsync`/`GetCorrectionRepairAsync` helpers), with prompts converted for all
 five model families (Qwen25, Qwen38, Glm4, HyMT2, HyMT2Moe). This has been validated with unit
 tests and scripted-HTTP end-to-end tests (`Tests/Workflow/QualityReviewFiveCallFlowTests.cs`,
-`FanslationStudio.LlmKit` repo) - **no real LLM has been run against the new prompts yet**. The
-comparison run described in this document is the next step before trusting the new prompts or
-tuning any of the process variants below.
+`FanslationStudio.LlmKit` repo). The first real-LLM comparison run against the new prompts
+completed 2026-09-20 (`Files/TestResults/QcEvaluatorAssessment/Comparison.yaml`, 6 evaluators:
+QwenQc-14B, HyMT2-7B, HyMT2-30B-A3B, HyMT2-30B-A3B-Q3, HyMT2-30B-A3B-Q3XXS, Qwen38Qc). Findings:
+
+- Parse-success was solid (95-100%) across all six; the few failures surface as entries missing
+  the `parseSuccess`/`score` keys entirely (`actualLabel: Unscored`), not as `parseSuccess: false`.
+- Raw aggregate recall (0.04-0.43) looked uniformly weak across every model at first, which read
+  like a shared call 1/2 prompt problem. It wasn't: roughly half of every model's false negatives
+  came from the `omitted-separator`/`literal-newline`/`misplaced-separator`/`formatting` gold-set
+  categories (all mapped to `QcDefectCategory.HardToParseSeam`) - defects the shared
+  `BaseQualityReviewPrompt.txt` explicitly instructs every model family not to flag in most cases
+  (its "Literal \n sequences" rule). See **Separator/Newline Defects Are Out of Scope** below -
+  once those are excluded, the real ranking is Qwen38Qc (0.50 recall / 0.56 precision) clearly
+  ahead of QwenQc-14B (0.33 / 0.35), with the whole HyMT2 family still weak (0.05-0.18 recall) on
+  genuine (non-separator) defects.
+- Of the remaining real defect categories, `mistranslation` looked like the weakest for both
+  leading models (Qwen38Qc and QwenQc-14B each caught only 1 of 6) - but 3 of those ~6 misses per
+  model were the same single gold-set item (`50ff7ccfb54c694e`, source `殷殷`) counted against
+  multiple candidates. That item is a bare 2-character name-syllable fragment sampled with no
+  parent-name context, and both candidate translations ("Eagerly"/"Earnestly") are correct readings
+  of the classical adverb it happens to also spell - an unfair test, not a genuine miss (see its
+  `reviewNote` in `GoldSet.yaml`, marked excluded from scoring 2026-09-20; confirmed the only such
+  case among the gold set's 13 `sampleKind: split` items). The remaining, genuine misses were: a
+  candidate translation that was literally the placeholder string `"None"`, and a name
+  (白云子) rendered as a descriptive English gloss ("White Cloud") plus an invented `<b>` tag
+  instead of being transliterated. `BaseQualityReviewPrompt.txt` (all 5 families) was updated
+  2026-09-20 to explicitly call out both patterns - placeholder/null-value leaks, and names
+  translated as descriptive glosses instead of transliterated - both routed to
+  `OTHER_NAMED_DEFECT`, no new category needed. Re-running the comparison after this prompt change
+  is the next step, ahead of any correction-side work, per the Acceptance Gates ordering
+  (recall/safety before speed or correction quality).
+
+The comparison run described in this document remains the mechanism for evaluating further
+prompt or process-variant changes.
+
+## Separator/Newline Defects Are Out of Scope
+
+`\n`/`/`-separator omission in a translation (gold-set categories `omitted-separator`,
+`literal-newline`, `misplaced-separator`, and most `formatting` items) is **not counted as a QC
+defect** for this game, as of 2026-09-20. The in-game text control now wraps plot text properly,
+so where a literal line break lands no longer matters for most text; it only still matters for
+status-screen-style UI with fixed layout, which will be handled separately later (regex/flagging
+on the raw string, not the LLM QC pass). `BaseQualityReviewPrompt.txt`'s existing "Literal \n
+sequences" carve-out (identical across all five model families) was already correct for this -
+the gold set's labels were what was out of sync with current product reality, not the prompt or
+the models' detection ability.
+
+Do not delete the affected gold-set items; exclude them from scoring (recall/precision/per-category
+metrics) instead, since they may become relevant again once the status-screen regex/flagging work
+exists. `QualityEvaluatorAssessmentWorkflow`'s metric calculation should eventually do this
+exclusion itself rather than requiring a manual pass over `Results.yaml` per run.
 
 `QualityEvaluatorAssessmentWorkflow` (the existing gold-set comparison harness) has been updated to
 compile against the new multi-defect API but does not yet do the full per-stage isolation this plan
@@ -93,7 +141,11 @@ Model selection is per role, not necessarily one model for every call. Prefer th
 model that passes the relevant gate. A slower model may be used for independent detection or
 correction verification only when its measured quality improvement justifies the added
 latency. The assessment must support fast-detector/slow-verifier combinations as well as a
-single model used for every stage.
+single model used for every stage. A related, parked idea - using a fast strong-translator
+model (HyMT2) for correction generation/repair while a slower, more accurate model (Qwen38Qc)
+handles detection/verification - is written up separately in
+[qc-fast-corrector-model-swap.md](qc-fast-corrector-model-swap.md), including why it doesn't
+by itself address detection's corpus-wide latency cost and what building it out would take.
 
 ## Process Variants
 

@@ -621,6 +621,15 @@ items:
     underlying regression class (an "Eern eern" mistransliteration, see
     docs/investigations/tests/qc-qualityscore-noise-investigation.md) - confirms name-fragment
     files need name-aware handling, not just a fixed bad output to avoid.
+    EXCLUDE FROM QC EVALUATOR SCORING (2026-09-20): sampled as a bare 2-character fragment with
+    zero surrounding context (no parent name "雷殷殷", no file/field hint), so "Eagerly"/"Earnestly"
+    are correct, defensible translations of exactly what the evaluator is shown - a QC detector
+    cannot be expected to catch this without name-context it was never given. Unlike the other 12
+    `sampleKind: split` items in this gold set (checked 2026-09-20: all are genuinely
+    context-free-by-design UI/dynamic-string fragments, not name decompositions), this is the only
+    one that's an unfair test of detection ability rather than a real one. Keep for future
+    name-aware-splitting work, but treat any recall/precision computed against this item as noise
+    until the sampling includes the parent name or an equivalent context signal.
 - sampleId: 26a59178065f97d2
   sampleKind: split
   sampleRun: ModelAssessment-20260919-pinned-recheck
