@@ -83,7 +83,7 @@ translationAssessment:
     - "五毒弟子"
     - "撤撤撤！你们三个给我记住！"
 qualityEvaluatorAssessment:
-  enabled: false
+  enabled: true
   modelNames:
     - QwenQc-14B
     - HyMT2-7B

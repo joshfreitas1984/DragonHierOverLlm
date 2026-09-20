@@ -25,6 +25,19 @@ additionalSourceAssessments:
     HyMT2-30B-A3B-Q4 quant's output after the user changed that model's configured default -
     so in this run's items, the "HyMT2-30B-A3B" candidate column is actually the Q4 quant, not
     whatever quant produced the original 6 items above.
+- name: ModelAssessment-20260919-pinned-recheck
+  path: TestResults/ModelAssessment
+  sampleFingerprint: 811c4f24b1f70ff417b39ab06da24e36f1fb6e2f39a359227f488aa686e6559e
+  sampleSize: 215
+  sampleSeed: 20260919
+  selection: >-
+    a fresh 200-sample random draw plus all 15 pinnedSampleSources configured in
+    Files/Config.yaml at the time of the run (200 + 15 = 215). Mined for: (a) whether the
+    3 newly-pinned historically-QC-flagged terms (殷殷/五毒弟子/撤撤撤) still reproduce their
+    documented defects, and (b) a further diversity pass over newly-failed samples. Items
+    sourced from this run set sampleRun: ModelAssessment-20260919-pinned-recheck below. Only
+    3 models were configured for this run (Qwen25-Standard, HyMT2-7B, HyMT2-30B-A3B) - no Q3/Q4
+    quant variants were separately compared this time.
 models:
 - Qwen25-Standard
 - HyMT2-7B
@@ -575,6 +588,236 @@ items:
       defectCategories: []
       correctionSafety: unnecessary
   reviewNote: Qwen25 drops the literal "\n" separator entirely, merging both clauses. The current Q4-quant HyMT2-30B-A3B also drops it, and additionally reads as grammatically garbled ("#$PlayerName#-whether I stand... will vow to defend" mixes first- and third-person framing around the placeholder). HyMT2-7B and the Q3 quant both keep the literal separator and read cleanly.
+- sampleId: 50ff7ccfb54c694e
+  sampleKind: split
+  sampleRun: ModelAssessment-20260919-pinned-recheck
+  source: 殷殷
+  candidates:
+    Qwen25-Standard: Eagerly
+    HyMT2-7B: Earnestly
+    HyMT2-30B-A3B: Earnestly
+  labels:
+    Qwen25-Standard:
+      label: Defect
+      defectCategories:
+      - mistranslation
+      correctionSafety: safe
+    HyMT2-7B:
+      label: Defect
+      defectCategories:
+      - mistranslation
+      correctionSafety: safe
+    HyMT2-30B-A3B:
+      label: Defect
+      defectCategories:
+      - mistranslation
+      correctionSafety: safe
+  reviewNote: >-
+    This split comes from heroNameParts.txt, i.e. it is a NAME SYLLABLE (part of the hero
+    "雷殷殷"), not ordinary prose - it should be romanized (e.g. "Yinyin"), not semantically
+    translated. All three candidates instead translate it as the classical adverb 殷殷 means
+    ("eagerly"/"earnestly"), which is linguistically defensible in isolation but wrong for this
+    context. This is a different wrong answer than a previously-documented instance of the same
+    underlying regression class (an "Eern eern" mistransliteration, see
+    docs/investigations/tests/qc-qualityscore-noise-investigation.md) - confirms name-fragment
+    files need name-aware handling, not just a fixed bad output to avoid.
+- sampleId: 26a59178065f97d2
+  sampleKind: split
+  sampleRun: ModelAssessment-20260919-pinned-recheck
+  source: 五毒弟子
+  candidates:
+    Qwen25-Standard: Five Poison Sect disciple
+    HyMT2-7B: Disciple of the Five Poisons
+    HyMT2-30B-A3B: Disciples of the Five Poisons
+  labels:
+    Qwen25-Standard:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-7B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  reviewNote: >-
+    Historically this exact term was mistranslated as the nonsense "Poisson Disciple"
+    (docs/investigations/tests/qc-qualityscore-noise-investigation.md's DomainTerm findings).
+    This run all three candidates render it correctly and consistently - a clean regression-check
+    baseline confirming that specific historical bug is not currently reproducing.
+- sampleId: 507842647bb72ff8
+  sampleKind: split
+  sampleRun: ModelAssessment-20260919-pinned-recheck
+  source: 撤撤撤！你们三个给我记住！
+  candidates:
+    Qwen25-Standard: Retreat, retreat, retreat! You three, remember this!
+    HyMT2-7B: Back off, back off, back off! You three, remember this!
+    HyMT2-30B-A3B: Retreat! Retreat! All of you three, remember this!
+  labels:
+    Qwen25-Standard:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-7B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  reviewNote: >-
+    A QC correction on an equivalent 撤撤撤 ("retreat!") stutter line was previously found to
+    invert its meaning into "Charge!" (same investigation doc's DroppedStutter findings). This
+    run all three candidates correctly preserve the retreat meaning with no inversion - another
+    regression-check baseline.
+- sampleId: f18bec1d64caa097
+  sampleKind: split
+  sampleRun: ModelAssessment-20260919-pinned-recheck
+  source: 在
+  candidates:
+    Qwen25-Standard: At
+    HyMT2-7B: In
+    HyMT2-30B-A3B: "True"
+  labels:
+    Qwen25-Standard:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-7B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B:
+      label: Defect
+      defectCategories:
+      - garbage-output
+      correctionSafety: safe
+  reviewNote: >-
+    An ultra-short, context-free UI fragment. HyMT2-30B-A3B outputs the literal string "True" -
+    not a plausible reading of 在 at all. The same wrong output was produced for a second,
+    separate occurrence of this identical source string elsewhere in this run
+    (dynamicStrings.txt, sampleId 447ceaf82d59bb77), confirming this is a repeatable failure on
+    this exact fragment, not a one-off sampling fluke.
+- sampleId: 068754f117b71216
+  sampleKind: fullCell
+  sampleRun: ModelAssessment-20260919-pinned-recheck
+  source: "三人合力欺负一个弱女子，真是无耻至极！……\\n看暗器！"
+  candidates:
+    Qwen25-Standard: "Three of them ganging up on a weak woman is truly despicable!......\nLook out for the hidden weapon!"
+    HyMT2-7B: "Three men teaming up to bully a weak woman-how utterly shameless!......\\nWatch the Hidden Weapon!"
+    HyMT2-30B-A3B: "Three men ganging up to bully a helpless woman-how utterly disgraceful!......\\nWatch out for the hidden weapon!"
+  labels:
+    Qwen25-Standard:
+      label: Defect
+      defectCategories:
+      - literal-newline
+      correctionSafety: safe
+    HyMT2-7B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  reviewNote: >-
+    A clean, minimal example of the literal-newline substitution defect - Qwen25 renders the
+    source's literal "\n" separator as a real newline, while both other candidates preserve it as
+    the literal two-character token.
+- sampleId: 431b261b66d96bad
+  sampleKind: fullCell
+  sampleRun: ModelAssessment-20260919-pinned-recheck
+  source: "教主您千金之躯，不容有失。\\n还请先行退避，此处交由老臣抵挡！"
+  candidates:
+    Qwen25-Standard: "Master, your precious body is too valuable to risk.\\nPlease retreat and leave this to your old servant to handle!"
+    HyMT2-7B: "Your Eminence, your precious life must not be put at risk. Please step back first-let this old servant hold the line here!"
+    HyMT2-30B-A3B: "Your Excellency, your safety is of utmost importance; nothing must be allowed to harm you.\\nPlease retreat for now-this place shall be defended by this humble servant!"
+  labels:
+    Qwen25-Standard:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-7B:
+      label: Defect
+      defectCategories:
+      - omitted-separator
+      correctionSafety: safe
+    HyMT2-30B-A3B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  reviewNote: >-
+    HyMT2-7B - normally the most reliable candidate for preserving the literal separator across
+    this batch - drops it entirely here, merging both sentences into one. Shows the
+    omitted-separator defect is inconsistent per-sample even for an otherwise-reliable candidate,
+    not a fixed per-model trait.
+- sampleId: 3c12e575d41f4520
+  sampleKind: fullCell
+  sampleRun: ModelAssessment-20260919-pinned-recheck
+  source: "卢玉麟服食大量神药，眼下已彻底狂暴。\\n小师傅，多加小心！"
+  candidates:
+    Qwen25-Standard: "Lu Yulin has consumed a large amount of divine medicine and is now completely berserk.\\nLittle Master, be extra careful!"
+    HyMT2-7B: "Lu Yulin has consumed a massive amount of divine medicine and is now completely berserk. \\nLittle Master, be extra careful!"
+    HyMT2-30B-A3B: "Lu Yulin has consumed a massive amount of divine medicine; he is now completely frenzied.\n<b>Master</b>, please be extra careful!"
+  labels:
+    Qwen25-Standard:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-7B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+    HyMT2-30B-A3B:
+      label: Defect
+      defectCategories:
+      - invented-tag
+      - literal-newline
+      correctionSafety: safe
+  reviewNote: >-
+    HyMT2-30B-A3B invents an unwarranted "<b></b>" HTML emphasis tag around "Master" that has no
+    counterpart anywhere in the source, and also substitutes the literal separator with a real
+    newline - two independent defects in the same candidate. A second occurrence of the same
+    invented-tag pattern (wrapping a different name, "White Cloud") appears elsewhere in this run
+    (sampleId b4c303b678cbd79d), suggesting this is a systemic quirk of the currently-configured
+    HyMT2-30B-A3B model/quant rather than a one-off.
+- sampleId: 9d2bd18d6012b483
+  sampleKind: fullCell
+  sampleRun: ModelAssessment-20260919-pinned-recheck
+  source: "此情此景，有道是：\\n一别都门三改火，天涯踏尽红尘。\\n依然一笑作春温。无波真古井，有节是秋筠。"
+  candidates:
+    Qwen25-Standard: "In this situation, it is said:\n\nWe parted when the capital's fires had changed three times, and I've tread the red dust of distant lands. Yet still, a smile brings spring warmth anew. Unmoved like an ancient well, steadfast as autumn bamboo."
+    HyMT2-7B: "In such a scene, as the saying goes:  \nSince leaving the capital, three winters have passed; I've traversed the world's dust and strife.  \nYet her smile still brings warmth like spring.  \nA still pond reflects true depth;\\nA bamboo stalk remains unyielding through autumn."
+    HyMT2-30B-A3B: "In such a scene, one might well say:\\nThree cycles of seasons have passed since our parting at the city gate; I've roamed far and wide across this mortal world.\\nYet still that smile of yours brings warmth akin to springtime.\\nUnruffled like an ancient well, upright as bamboo in autumn-such is your noble character."
+  labels:
+    Qwen25-Standard:
+      label: Defect
+      defectCategories:
+      - literal-newline
+      - omitted-separator
+      correctionSafety: safe
+    HyMT2-7B:
+      label: Defect
+      defectCategories:
+      - literal-newline
+      correctionSafety: safe
+    HyMT2-30B-A3B:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  reviewNote: >-
+    A classical-verse quotation with two literal "\n" separators (3 segments). Qwen25 renders the
+    first as a double real newline (blank line) AND drops the second entirely, merging the last
+    two clauses. HyMT2-7B renders the first as a real newline (with stray leading spaces) but
+    keeps the second as the correct literal token; it also splits the third source clause into two
+    English sentences, which is a defensible stylistic restructuring, not counted as a separate
+    defect. HyMT2-30B-A3B keeps all separators as correct literal tokens throughout and is judged
+    Pass despite similarly splitting the third clause and adding a short interpretive closing
+    phrase ("such is your noble character") - acceptable poetic license for a verse quotation, not
+    a factual or structural defect.
 correctionSamples:
 - sampleId: 5b03cbee1d695c74
   sampleKind: fullCell

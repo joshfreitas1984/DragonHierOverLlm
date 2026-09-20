@@ -112,12 +112,18 @@ against the raw translation models too (independent of whatever the QC pass does
 
 - `殷殷` (a name-part fragment from `heroNameParts.txt`, part of `雷殷殷`) was previously
   mistransliterated as "Eern eern" instead of a plausible pinyin romanization like "Yinyin".
+  **Re-checked 2026-09-19**: the "Eern eern" mistransliteration did not reproduce, but all three
+  candidates now mistranslate it as the ordinary adverb "Eagerly"/"Earnestly" instead of
+  romanizing it as a name syllable - same underlying regression class (name-fragment files not
+  treated as names), different wrong output. Still an open defect, not yet fixed.
 - `五毒弟子` (an isolated `dynamicStrings.txt` term) was previously mistranslated as the nonsense
-  "Poisson Disciple" instead of "Five Poisons Sect disciple(s)".
+  "Poisson Disciple" instead of "Five Poisons Sect disciple(s)". **Re-checked 2026-09-19**: all
+  three candidates now translate it correctly - this specific bug is not currently reproducing.
 - `撤撤撤！你们三个给我记住！` (a `PlotData.csv` stutter/repetition line) is one of three source
   lines using the `撤撤撤` ("retreat!") stutter pattern; the investigation found a QC correction
-  elsewhere in this category that inverted an equivalent `撤撤撤` line's meaning to "Charge!" -
-  worth checking the raw translation doesn't independently make the same retreat/charge inversion.
+  elsewhere in this category that inverted an equivalent `撤撤撤` line's meaning to "Charge!".
+  **Re-checked 2026-09-19**: all three candidates correctly preserve the retreat meaning - this
+  specific bug is not currently reproducing either.
 
 A few other examples named in that investigation (an idiomatic, non-literal use of `鬼门关`
 downgraded from "narrow escape" to an over-literal "Gate of the Underworld"; a "T-T-Taoist" stutter
@@ -127,6 +133,32 @@ the exact source line, and `鬼门关`/`想当年`-style phrases recur hundreds 
 pinning the wrong occurrence would test nothing. Worth a follow-up pass through
 `Files/Converted/PlotData.csv.yaml`'s QC correction history to find the exact lines if these turn
 out to still matter.
+
+### 8. Unwarranted HTML tag invented around a name
+
+The current default `HyMT2-30B-A3B` wrapped a name in an unrequested `<b></b>` emphasis tag twice
+in the same assessment run, on two unrelated samples, where the source had no tags at all:
+`小师傅` ("Little Master") became `<b>Master</b>`, and a similar wrap appeared around "White
+Cloud" elsewhere in the same run. Both also independently substituted the literal `\n` separator
+with a real newline in the same output.
+
+- Pinned sample: `卢玉麟服食大量神药，眼下已彻底狂暴。\n小师傅，多加小心！`
+- Tuning idea: add a rule against introducing formatting markup (`<b>`, `<i>`, color tags, etc.)
+  that has no counterpart in the source text - the model should only ever preserve tags that were
+  already present, never add new ones.
+
+### 9. Ultra-short fragment reproducibly resolves to a wrong/garbage output
+
+Distinct from #4's fabricated-refusal-text case: the current default `HyMT2-30B-A3B` translated the
+single character `在` ("at/in/exist") as the literal string `"True"` - not a leaked instruction this
+time, just a flatly wrong word. This happened for two SEPARATE occurrences of the identical source
+string in the same run (`dumpedPrefabText.txt` and `dynamicStrings.txt`), confirming it's a
+repeatable failure on this fragment rather than a one-off sampling fluke.
+
+- Pinned sample: `在`
+- Tuning idea: same short-fragment investigation as #4 - this model is specifically unreliable on
+  ultra-short, context-free single-character/two-character inputs, independent of which particular
+  wrong output it lands on.
 
 ## Non-candidates (noted, not pinned)
 
