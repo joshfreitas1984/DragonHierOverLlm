@@ -15,6 +15,7 @@ root `docs/` taxonomy.
 - [Routed mail body export](investigations/tests/routed-mail-body-export.md)
 - [GenerateHero unresolved crash](investigations/tests/generatehero-unresolved-crash.md)
 - [PlotData column 9 crash and repair pattern](investigations/tests/plotdata-column9-crash-and-repair-pattern.md)
+- [QC evaluator model selection](investigations/tests/qc-evaluator-model-selection.md)
 - [QC quality-score noise investigation](investigations/tests/qc-qualityscore-noise-investigation.md)
 - [QC startup crash investigation](investigations/tests/qc-run-startup-crash-investigation-2026-09-15.md)
 - [SkipColumns StringToSpeAddData family](investigations/tests/skipcolumns-stringtospeadddata-family.md)

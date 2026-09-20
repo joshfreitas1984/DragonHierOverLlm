@@ -1,12 +1,19 @@
-﻿models:
-  - name: Qwen25-Standard
-    modelPreset: Qwen25 
+﻿# Model choices and the investigation behind them: docs/investigations/tests/qc-evaluator-model-selection.md
+# (QC model/quant/process-shape decision) and docs/plans/translation-prompt-tuning-candidates.md
+# (translation-model comparison). The FIRST entry in this list is the main translator model
+# (see FanslationStudio.LlmKit's LlmHelpers.CalculateModelConfig).
+models:
+  - name: HyMT2-7B
+    modelPreset: HyMT2
     modelPresetType: Standard
-    customPromptsPath: 
-    apiKeyPath: 
+  - name: Qwen25-Standard
+    modelPreset: Qwen25
+    modelPresetType: Standard
+    customPromptsPath:
+    apiKeyPath:
     model: qwen2.5:14b-instruct
   - name: Qwen25-StructuredText
-    modelPreset:  Qwen25
+    modelPreset: Qwen25
     modelPresetType: StructuredText
     customPromptsPath:
     apiKeyPath:
@@ -18,25 +25,16 @@
   - name: Qwen38Qc
     modelPreset: Qwen38
     modelPresetType: Standard
-    # Uses FanslationStudio.LlmKit's BaseFiles/Qwen38/Config.yaml default model:
-    # hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL - i.e. this "benchmark" model is itself a Q3 quant,
-    # not full weight. The two entries below are quant-comparison siblings, added 2026-09-20.
   - name: Qwen38Qc-IQ4XS
     modelPreset: Qwen38
     modelPresetType: Standard
     model: "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-IQ4_XS"
-    # Qwen38Qc-Q4KM (plain qwen3.8:27b-q4_K_M) removed 2026-09-20 - ruled out: UD-Q4_K_M below
-    # beat it outright at the same size/latency (+0.224 precision, false positives 10 -> 4). See
-    # docs/plans/qc-evaluator-comparison.md Status "Fifth round".
   - name: Qwen38Qc-UDQ4KM
     modelPreset: Qwen38
     modelPresetType: Standard
     model: "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M"
   - name: HyMT2-30B-A3B
     modelPreset: HyMT2Moe
-    modelPresetType: Standard
-  - name: HyMT2-7B
-    modelPreset: HyMT2
     modelPresetType: Standard
   - name: HyMT2-30B-A3B-Q3
     modelPreset: HyMT2Moe
@@ -61,12 +59,10 @@ correctionPromptsEnabled: true
 translateFlagged: true
 qualityReview:
   enabled: true
-  # Changed from Qwen38Qc to Qwen38Qc-IQ4XS 2026-09-20 (plan doc Status "Twenty-first round") - the
-  # post-Twentieth-round-prompt quant sweep found IQ4XS strictly beats the default UD-Q3_K_XL quant
-  # on both recall (0.855 vs 0.812) and precision (0.894 vs 0.875) at +36% full-corpus latency cost
-  # (~3.6 vs ~2.7 days). Qwen38Qc-UDQ4KM has higher recall still (0.884) but lower precision than
-  # IQ4XS and a much larger latency cost (~5.7 days) - user chose IQ4XS as the balanced pick.
-  modelName: Qwen38Qc-IQ4XS #QwenQc-14B #Glm4Qc-9B
+  # Single model for every QC role (detection/verification/correction/repair) - see
+  # docs/investigations/tests/qc-evaluator-model-selection.md for why, and why a faster/cheaper
+  # corrector model was tried and rejected.
+  modelName: Qwen38Qc-IQ4XS
   minAcceptableScore: 60
   maxConcurrency: 2
   inlineRuleCheckRetries: 2
@@ -107,38 +103,11 @@ translationAssessment:
     - "咳咳咳，这......\\n我要去扬州游玩几日，正好路过此地罢了。"
 qualityEvaluatorAssessment:
   enabled: true
-  # Narrowed 2026-09-20 per docs/plans/qc-evaluator-comparison.md's "Active Candidate Set" -
-  # QwenQc-14B, HyMT2-7B, and HyMT2-30B-A3B-Q3 dropped (no pickup from the prompt fix, or a
-  # standalone bug).
-  # HyMT2-30B-A3B and HyMT2-30B-A3B-Q3XXS dropped from routine rounds 2026-09-20 (final, after
-  # two independent verified prompt-tuning rounds each showed a real capability ceiling on
-  # semantic-reasoning defect categories, not a wording problem - see the plan doc's Status
-  # "Fourth round" entry). Their `models:` definitions above stay in place; they're the building
-  # blocks for the not-yet-built doubled-detection/fast-corrector process variants, which need
-  # their own purpose-built assessment, not a slot in this standalone-candidate comparison.
-  # Qwen38Qc-IQ4XS added 2026-09-20 - Qwen38Qc itself is a Q3_K_XL quant, not full weight, so this
-  # tests whether a higher-precision quant of the SAME accuracy-benchmark model recovers
-  # recall/precision the current default quant might be leaving on the table.
-  # Qwen38Qc-UDQ4KM added 2026-09-20 - Unsloth Dynamic method beat a same-size plain q4_K_M quant
-  # outright (that plain-quant entry, Qwen38Qc-Q4KM, was removed from `models:` above once ruled
-  # out) - see the plan doc's Status "Fifth round". This 16.3GB-VRAM card's zero-CPU-spill ceiling
-  # sits right around Qwen38Qc's 14.08GB, so Q3-Q4 is the realistic operating band on this hardware
-  # - not pursuing Q5+.
-  # Final quant sweep completed 2026-09-20 (plan doc's Next Steps item 3, Ninth round): with the
-  # maxed-out prompt, Qwen38Qc (the default UD-Q3_K_XL quant) ties Qwen38Qc-IQ4XS on recall/precision
-  # while being the fastest of the three - IQ4XS no longer earns its latency cost now that the prompt
-  # closed the recall gap that used to justify it. Qwen38Qc-UDQ4KM has better precision but LOWER
-  # recall and ~2x the latency - the wrong tradeoff direction for this task (a missed defect ships
-  # silently forever; a false positive only costs one bounded correction round-trip). Narrowed back
-  # to Qwen38Qc alone for routine runs; see the plan doc's Status "Ninth round" for the full numbers.
-  # Re-run 2026-09-20 (Twenty-first round) after the Twentieth round's prompt fix invalidated the
-  # Ninth round's standing quant comparison. This time the sweep found a real (not tied) recall/
-  # precision/latency spread; user picked Qwen38Qc-IQ4XS as the production model (best precision,
-  # strictly beats the old default on both recall and precision) - narrowed back to it alone for
-  # routine future rounds. See the plan doc's Status "Twenty-first round" for the full numbers.
+  # See docs/investigations/tests/qc-evaluator-model-selection.md for the full model/quant/prompt
+  # comparison history and the fast-corrector-model-swap investigation (correctorModelNames/
+  # judgeModelName/enableRepairLoop - tested, rejected, and removed from here; re-derive from that
+  # document's git history if ever revisited).
   modelNames:
     - Qwen38Qc-IQ4XS
   goldSetPath: Goldset/GoldSet.yaml
   outputPath: TestResults/QcEvaluatorAssessment
-  # doubledDetection defaults to true (matching production) - see plan doc's Status "Tenth round"
-  # for the Variant 1 measurement that confirmed this default is worth keeping.
