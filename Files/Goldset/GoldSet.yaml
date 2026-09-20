@@ -2046,6 +2046,553 @@ items:
     shipped), Corrected is the actual qcTranslated correction production adopted. Mined
     by diffing pre/post-correction word tokens for a pronoun-only change with everything
     else held constant, per the user's request for He/She/Him/Her/I/We examples.
+- sampleId: 28d9e299d8fa9f96
+  sampleKind: split
+  source: "文心雕龙"
+  candidates:
+    ProductionTranslation: "Carving Dragon on Literature"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - terminology
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-category-mining
+  reviewNote: >-
+    文心雕龙 is the standard English-known title of a famous classical Chinese literary-criticism work
+    (commonly rendered "The Literary Mind and the Carving of Dragons") - rendering it as a garbled
+    literal phrase loses the recognizable proper title entirely.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsFromColumns.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcDefectCategory already recorded
+    on that row). Mined per the user's request to fill out the gold set's thinnest
+    categories (terminology, garbled-number, fluency, untranslated-pinyin, prompt-leak) -
+    see docs/plans/qc-evaluator-comparison.md's Eighteenth round entry.
+- sampleId: 858394cc8d246294
+  sampleKind: split
+  source: "普贤心经"
+  candidates:
+    ProductionTranslation: "The Heart Sutra of Manjushri Bodhisattva"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - terminology
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-category-mining
+  reviewNote: >-
+    普贤 is Samantabhadra Bodhisattva, a specific, different Buddhist figure from Manjushri (文殊) - a
+    factual domain-term substitution error, not a stylistic choice.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsFromColumns.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcDefectCategory already recorded
+    on that row). Mined per the user's request to fill out the gold set's thinnest
+    categories (terminology, garbled-number, fluency, untranslated-pinyin, prompt-leak) -
+    see docs/plans/qc-evaluator-comparison.md's Eighteenth round entry.
+- sampleId: 033f6360f5a43cfb
+  sampleKind: split
+  source: "祝融真火诀"
+  candidates:
+    ProductionTranslation: "Wishing You True Fire Technique Success"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - terminology
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-category-mining
+  reviewNote: >-
+    祝融 (Zhurong) is a proper name - the God of Fire in Chinese mythology - misread as the verb 祝
+    ("to wish/bless"), turning a martial-arts technique name into a nonsensical blessing phrase.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsFromColumns.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcDefectCategory already recorded
+    on that row). Mined per the user's request to fill out the gold set's thinnest
+    categories (terminology, garbled-number, fluency, untranslated-pinyin, prompt-leak) -
+    see docs/plans/qc-evaluator-comparison.md's Eighteenth round entry.
+- sampleId: f2e3a84e0d4dca26
+  sampleKind: split
+  source: "此处应该如何是好......若内力向涌泉穴运转，是否有些不妥......"
+  candidates:
+    ProductionTranslation: "What should I do here......If their inner power flows to the Yongquan Mixtze, might that be inappropriate......"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - terminology
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-category-mining
+  reviewNote: >-
+    涸泉穴 (Yongquan) is a real acupuncture point name - the translation fabricates a nonsense suffix
+    "Mixtze" that corresponds to no character in the source, the same fabricated-proper-noun
+    failure shape as the harmful-correction gold-set examples.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcDefectCategory already recorded
+    on that row). Mined per the user's request to fill out the gold set's thinnest
+    categories (terminology, garbled-number, fluency, untranslated-pinyin, prompt-leak) -
+    see docs/plans/qc-evaluator-comparison.md's Eighteenth round entry.
+- sampleId: af8adb61f4a2d8d1
+  sampleKind: split
+  source: "霸王肘"
+  candidates:
+    ProductionTranslation: "Butterfly Sweep"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - terminology
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-category-mining
+  reviewNote: >-
+    霸王胘 literally means "Overlord's Elbow [strike]" - the translation substitutes a completely
+    unrelated fabricated move name with no connection to the source term at all.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsFromColumns.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcDefectCategory already recorded
+    on that row). Mined per the user's request to fill out the gold set's thinnest
+    categories (terminology, garbled-number, fluency, untranslated-pinyin, prompt-leak) -
+    see docs/plans/qc-evaluator-comparison.md's Eighteenth round entry.
+- sampleId: c0863817207fea6a
+  sampleKind: split
+  source: "密宗大手印"
+  candidates:
+    ProductionTranslation: "Vajra Hand Trajectory"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - terminology
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-category-mining
+  reviewNote: >-
+    大手印 is Mahamudra, a specific, real Tantric Buddhist term - the translation drops it entirely in
+    favor of an unrelated invented phrase, losing the recognizable Buddhist terminology.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsFromColumns.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcDefectCategory already recorded
+    on that row). Mined per the user's request to fill out the gold set's thinnest
+    categories (terminology, garbled-number, fluency, untranslated-pinyin, prompt-leak) -
+    see docs/plans/qc-evaluator-comparison.md's Eighteenth round entry.
+- sampleId: 8c1504d4fd25c3fa
+  sampleKind: split
+  source: "三尸蜈蚣爪"
+  candidates:
+    ProductionTranslation: "Three Corpses Scorpion Claw"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - terminology
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-category-mining
+  reviewNote: >-
+    蜡蝣 means centipede, not scorpion - a small but mechanically verifiable wrong-animal domain-term
+    substitution in a martial-arts move name.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsFromColumns.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcDefectCategory already recorded
+    on that row). Mined per the user's request to fill out the gold set's thinnest
+    categories (terminology, garbled-number, fluency, untranslated-pinyin, prompt-leak) -
+    see docs/plans/qc-evaluator-comparison.md's Eighteenth round entry.
+- sampleId: f4c899a901fdea8b
+  sampleKind: split
+  source: "枪如银蛇，灵巧锐利，招式以各种刺击为主"
+  candidates:
+    ProductionTranslation: "The sword moves like a silver snake, agile and sharp, with strikes dominating the technique."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - terminology
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-category-mining
+  reviewNote: >-
+    枪 (spear) is mistranslated as "sword" - a wrong weapon-category substitution for an established
+    domain term that recurs throughout this game's weapon system.
+  provenance: >-
+    Real production translation mined from Files/Converted/KungFuData.csv.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcDefectCategory already recorded
+    on that row). Mined per the user's request to fill out the gold set's thinnest
+    categories (terminology, garbled-number, fluency, untranslated-pinyin, prompt-leak) -
+    see docs/plans/qc-evaluator-comparison.md's Eighteenth round entry.
+- sampleId: 7c72c0151209d67b
+  sampleKind: fullCell
+  source: "本月已挑战过⟦0⟧之仓库。\\n还需另待良机才是。"
+  candidates:
+    ProductionTranslation: "Challenges for this month have already been completed.⟦0⟧Warehouse\\nNeed to wait for a better opportunity."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - garbled-number
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-category-mining
+  reviewNote: >-
+    The clause containing the ⟦0⟧ placeholder is garbled into a leaked sentence fragment
+    ("...completed.⟦0⟧Warehouse") instead of a coherent sentence like "You've already challenged
+    ⟦0⟧'s warehouse this month" - the placeholder's surrounding grammar collapses entirely.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcDefectCategory already recorded
+    on that row). Mined per the user's request to fill out the gold set's thinnest
+    categories (terminology, garbled-number, fluency, untranslated-pinyin, prompt-leak) -
+    see docs/plans/qc-evaluator-comparison.md's Eighteenth round entry.
+- sampleId: 318850a6b33569de
+  sampleKind: split
+  source: "⟦0⟧突破至第⟦1⟧重！"
+  candidates:
+    ProductionTranslation: "⟦0⟧Break through to the next level of⟦1⟧Heavily!"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - garbled-number
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-category-mining
+  reviewNote: >-
+    Two different ⟦n⟧ placeholders on one line, both garbled - "重" (a level/tier counter word) is
+    mistranslated as the adverb "Heavily", and the raw ⟦0⟧/⟦1⟧ tokens leak directly into a broken
+    sentence structure.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcDefectCategory already recorded
+    on that row). Mined per the user's request to fill out the gold set's thinnest
+    categories (terminology, garbled-number, fluency, untranslated-pinyin, prompt-leak) -
+    see docs/plans/qc-evaluator-comparison.md's Eighteenth round entry.
+- sampleId: c7cfe0f04051a304
+  sampleKind: fullCell
+  source: "你就是#$PlayerName#？\\n哼哼，你这家伙近来行凶作恶，犯下⟦0⟧恶名。\\n为了搜捕你，可费了咱们不少功夫。"
+  candidates:
+    ProductionTranslation: "You're #$PlayerName#?\\nHmph, you've been committing wicked deeds recently, haven't you?⟦0⟧Infamy\\nIt took us quite some effort to track you down."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - garbled-number
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-category-mining
+  reviewNote: >-
+    The source is a flat declarative statement ("you've committed evil deeds, earning ⟦0⟧ infamy")
+    - the translation both inverts it into a question ("haven't you?") and leaks the raw ⟦0⟧ token
+    as a dangling fragment ("⟦0⟧Infamy") instead of a proper sentence.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcDefectCategory already recorded
+    on that row). Mined per the user's request to fill out the gold set's thinnest
+    categories (terminology, garbled-number, fluency, untranslated-pinyin, prompt-leak) -
+    see docs/plans/qc-evaluator-comparison.md's Eighteenth round entry.
+- sampleId: 58d2f43a9092f693
+  sampleKind: fullCell
+  source: "少侠想在本⟦0⟧打杂几日？\\n每天的工钱为纹银十两。"
+  candidates:
+    ProductionTranslation: "Young Hero, would you like to stay at this inn?⟦0⟧Worked menial jobs for a few days?\\nEach day's wage is ten taels of silver."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - garbled-number
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-category-mining
+  reviewNote: >-
+    本⟦0⟧ ("this [place-name placeholder]") is guessed as "this inn" AND the raw ⟦0⟧ token still
+    leaks afterward attached to a duplicated, garbled second question - the placeholder is
+    effectively rendered twice, once paraphrased and once leaked raw.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcDefectCategory already recorded
+    on that row). Mined per the user's request to fill out the gold set's thinnest
+    categories (terminology, garbled-number, fluency, untranslated-pinyin, prompt-leak) -
+    see docs/plans/qc-evaluator-comparison.md's Eighteenth round entry.
+- sampleId: 5a27ff9f0b285c68
+  sampleKind: fullCell
+  source: "胜利了！这番血战我们不仅击败了⟦0⟧守军，夺取了大量资源财物，\\n更是终于将这⟦0⟧收归于我⟦1⟧麾下。"
+  candidates:
+    ProductionTranslation: "Victory! In this fierce battle, we not only defeated⟦0⟧The garrison has seized a large amount of resources and wealth.\\nHas finally managed to do this⟦0⟧Absorbed into my control⟦1⟧Under my command"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - garbled-number
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-category-mining
+  reviewNote: >-
+    Both sentences garble their ⟦n⟧ placeholders into leaked fragments with broken grammar, and the
+    second sentence redundantly states the same idea twice ("Absorbed into my control" and "Under
+    my command") where the source states it once - a compounded garbling defect across two
+    different placeholders.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcDefectCategory already recorded
+    on that row). Mined per the user's request to fill out the gold set's thinnest
+    categories (terminology, garbled-number, fluency, untranslated-pinyin, prompt-leak) -
+    see docs/plans/qc-evaluator-comparison.md's Eighteenth round entry.
+- sampleId: c6065f1328412fae
+  sampleKind: split
+  source: "#TargetInteractName#将此前⟦0⟧之遭遇向你娓娓道来......"
+  candidates:
+    ProductionTranslation: "#TargetInteractName# will do this previously⟦0⟧...and hear the tale of their encounter..."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - garbled-number
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-category-mining
+  reviewNote: >-
+    "Will do this previously" is self-contradictory tense/grammar, and the ⟦0⟧ token leaks raw mid-
+    sentence instead of being paraphrased into the intended "recounts their past encounter with
+    ⟦0⟧" meaning.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcDefectCategory already recorded
+    on that row). Mined per the user's request to fill out the gold set's thinnest
+    categories (terminology, garbled-number, fluency, untranslated-pinyin, prompt-leak) -
+    see docs/plans/qc-evaluator-comparison.md's Eighteenth round entry.
+- sampleId: 6ec8d7ef2d2c1c1e
+  sampleKind: split
+  source: "分文不取"
+  candidates:
+    ProductionTranslation: "Not a cent for free"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - fluency
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-category-mining
+  reviewNote: >-
+    The idiom means "not taking a single cent [for one's service]" (i.e. doing it for free) - "Not
+    a cent for free" inverts this into the opposite sense (implying payment is always required).
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsFromStructuredFragments.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcDefectCategory already recorded
+    on that row). Mined per the user's request to fill out the gold set's thinnest
+    categories (terminology, garbled-number, fluency, untranslated-pinyin, prompt-leak) -
+    see docs/plans/qc-evaluator-comparison.md's Eighteenth round entry.
+- sampleId: 0fc8963fe224a6ed
+  sampleKind: split
+  source: "百密一疏，百密一疏，看来只好来硬的了。"
+  candidates:
+    ProductionTranslation: "Better safe than sorry. Looks like we'll have to take the hard approach."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - fluency
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-category-mining
+  reviewNote: >-
+    百密一疏 means "even the most careful plan can have one oversight" - here the speaker is lamenting
+    their OWN just-discovered mistake. "Better safe than sorry" is the opposite sentiment
+    (proactive caution advice), not a lament about a slip-up despite care.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcDefectCategory already recorded
+    on that row). Mined per the user's request to fill out the gold set's thinnest
+    categories (terminology, garbled-number, fluency, untranslated-pinyin, prompt-leak) -
+    see docs/plans/qc-evaluator-comparison.md's Eighteenth round entry.
+- sampleId: 3b826ce7d21a9b3e
+  sampleKind: split
+  source: "无巧不成书，#PlayerName#且看我手中是何物？"
+  candidates:
+    ProductionTranslation: "No coincidence could be ruder‑#PlayerName#, behold what I hold in my hand?"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - fluency
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-category-mining
+  reviewNote: >-
+    无巧不成书 is a common idiom roughly meaning "what a coincidence!"/"speak of the devil" - "No
+    coincidence could be ruder" is grammatically broken and doesn't correspond to any sensible
+    reading of the idiom.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcDefectCategory already recorded
+    on that row). Mined per the user's request to fill out the gold set's thinnest
+    categories (terminology, garbled-number, fluency, untranslated-pinyin, prompt-leak) -
+    see docs/plans/qc-evaluator-comparison.md's Eighteenth round entry.
+- sampleId: f22556b9ac69fab1
+  sampleKind: fullCell
+  source: "老先生就是传闻中的神匠吧！\\n真是神龙见首不见尾啊，让我一通好找。"
+  candidates:
+    ProductionTranslation: "The elderly gentleman is the legendary Artisan God, right!\\nIt's truly out of sight, out of mind like the dragon. I had a tough time finding you."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - fluency
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-category-mining
+  reviewNote: >-
+    神龙见首不见尾 ("a divine dragon shows its head but not its tail") is an idiom for someone being
+    elusive/hard to find - "out of sight, out of mind" is a different English idiom entirely (about
+    forgetting an absent thing), not a match for "hard to find". The corpus has a second,
+    independently occurring instance of this exact same wrong-idiom substitution (神厨/"legendary
+    chef" variant), confirming it's a repeatable pattern, not a one-off.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcDefectCategory already recorded
+    on that row). Mined per the user's request to fill out the gold set's thinnest
+    categories (terminology, garbled-number, fluency, untranslated-pinyin, prompt-leak) -
+    see docs/plans/qc-evaluator-comparison.md's Eighteenth round entry.
+- sampleId: d3c6f1f0310db9ab
+  sampleKind: fullCell
+  source: "曹操？他奶奶的谁是曹操！\\n老子行不更名坐不改姓，滚地雷熊刚是也！"
+  candidates:
+    ProductionTranslation: "Cao Cao? Damn, who's Cao Cao!\\nI go by my name and never change it, even when seated‑I am the Rolling Bomb, Xiong Gang!"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - fluency
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-category-mining
+  reviewNote: >-
+    行不更名坐不改姓 is a classic boastful idiom meaning "I don't hide my identity" - translating it
+    literally ("never change it, even when seated") loses the idiom's declarative-bravado meaning
+    and reads as a non-sequitur about furniture.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcDefectCategory already recorded
+    on that row). Mined per the user's request to fill out the gold set's thinnest
+    categories (terminology, garbled-number, fluency, untranslated-pinyin, prompt-leak) -
+    see docs/plans/qc-evaluator-comparison.md's Eighteenth round entry.
+- sampleId: 954630dd0fb2b0d0
+  sampleKind: split
+  source: "嗯，孺子可教也，看来傅兄终于是想通了啊。"
+  candidates:
+    ProductionTranslation: "Hmm, Xu zi ke jiao ye, si kan Fu xiong dou shi xiang tong le ah."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - untranslated-pinyin
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-category-mining
+  reviewNote: >-
+    The entire sentence is left completely untranslated, rendered only in raw (and partly mis-
+    transcribed) pinyin - an unambiguous, extreme case of this category.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcDefectCategory already recorded
+    on that row). Mined per the user's request to fill out the gold set's thinnest
+    categories (terminology, garbled-number, fluency, untranslated-pinyin, prompt-leak) -
+    see docs/plans/qc-evaluator-comparison.md's Eighteenth round entry.
+- sampleId: 08df08c73e82965c
+  sampleKind: fullCell
+  source: "后人有诗赞云：\\n蜀中仙云映霞光，峨眉夜雨打苍茫。\\n江湖翻沸壮士死，山河泣血战未央。"
+  candidates:
+    ProductionTranslation: "Later, a poem was composed to praise:：\\nShuzhong xianyun ying xiaguang, Emei yeyu da cangmang.\\nJianghu boils as mighty warriors perish, mountains and rivers weep as the battle continues unsparing."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - untranslated-pinyin
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-category-mining
+  reviewNote: >-
+    The classical poem couplet is left entirely in raw pinyin instead of being translated, while
+    the surrounding narration IS translated - a second flagship whole-untranslated-block example,
+    this time in a poetry-quotation context rather than dialogue.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcDefectCategory already recorded
+    on that row). Mined per the user's request to fill out the gold set's thinnest
+    categories (terminology, garbled-number, fluency, untranslated-pinyin, prompt-leak) -
+    see docs/plans/qc-evaluator-comparison.md's Eighteenth round entry.
+- sampleId: cc858c8fd90793c2
+  sampleKind: split
+  source: "啊？动、动手？各位御史大人是何意思！"
+  candidates:
+    ProductionTranslation: "Ah? Move? Are the gewei yushi taking action!"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - untranslated-pinyin
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-category-mining
+  reviewNote: >-
+    各位御史大人 ("all you Imperial Censors") is left as raw, garbled pinyin ("gewei yushi") instead of
+    translating the official title, which has a clear English equivalent already used elsewhere in
+    this corpus ("Censor").
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcDefectCategory already recorded
+    on that row). Mined per the user's request to fill out the gold set's thinnest
+    categories (terminology, garbled-number, fluency, untranslated-pinyin, prompt-leak) -
+    see docs/plans/qc-evaluator-comparison.md's Eighteenth round entry.
+- sampleId: 0208361980d2bea3
+  sampleKind: split
+  source: "术精岐黄"
+  candidates:
+    ProductionTranslation: "Skilled in Jing Huang"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - untranslated-pinyin
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-category-mining
+  reviewNote: >-
+    岐黄 (a byword for "the medical arts", from the legendary physicians Qibo and the Yellow Emperor)
+    is left untranslated as pinyin - and even the pinyin itself is wrong (岐 reads "Qi", not
+    "Jing"), compounding an untranslated-term defect with a transcription error.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsFromColumns.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcDefectCategory already recorded
+    on that row). Mined per the user's request to fill out the gold set's thinnest
+    categories (terminology, garbled-number, fluency, untranslated-pinyin, prompt-leak) -
+    see docs/plans/qc-evaluator-comparison.md's Eighteenth round entry.
+- sampleId: 11027bacf29a41d0
+  sampleKind: split
+  source: "采补养元功"
+  candidates:
+    ProductionTranslation: "Cai Bu Yang Yuan Gong"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - untranslated-pinyin
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-category-mining
+  reviewNote: >-
+    A martial-arts technique name left entirely in pinyin rather than translated or given an
+    English technique name, consistent with how other technique names in this corpus are handled.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsFromColumns.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcDefectCategory already recorded
+    on that row). Mined per the user's request to fill out the gold set's thinnest
+    categories (terminology, garbled-number, fluency, untranslated-pinyin, prompt-leak) -
+    see docs/plans/qc-evaluator-comparison.md's Eighteenth round entry.
+- sampleId: b272bf58d561a7e3
+  sampleKind: fullCell
+  source: "哎，难怪世人传闻，归墟秘典乃是江湖中最神奇诡谲的内功心法。\\n如此看来，确实不是什么人都能学的……"
+  candidates:
+    ProductionTranslation: "No wonder people say that the Secret Canon of Guixu is the most magical and mysterious internal skill heart method in the Jianghu. The mystical and enigmatic inner strength cultivation techniques. I've kept the structure as per the original format, but it might need further context or clarification.)\\nIndeed, not everyone can learn this..."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - prompt-leak
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260920-category-mining
+  reviewNote: >-
+    The model's own meta-commentary about its translation process ("I've kept the structure as per
+    the original format, but it might need further context or clarification.)") leaks directly into
+    the output - a second, independently-mined instance of this exact leak phrasing pattern,
+    confirming it recurs rather than being a one-off. This phrasing isn't in LineValidation.cs's
+    InvalidPhrases keyword list, which is why it survived into committed data despite that
+    deterministic filter.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcDefectCategory already recorded
+    on that row). Mined per the user's request to fill out the gold set's thinnest
+    categories (terminology, garbled-number, fluency, untranslated-pinyin, prompt-leak) -
+    see docs/plans/qc-evaluator-comparison.md's Eighteenth round entry.
 correctionSamples:
 - sampleId: 5b03cbee1d695c74
   sampleKind: fullCell

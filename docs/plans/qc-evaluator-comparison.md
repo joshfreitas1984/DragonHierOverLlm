@@ -693,6 +693,67 @@ relevant prompt commit) before trusting a round's numbers.
   examples it was originally built and verified against** - the harmful-correction denominator is now
   meaningfully validated at 5/5, not just directionally suggestive at 2/2.
 
+- **Eighteenth round completed 2026-09-20 (mined the remaining thin categories: terminology,
+  garbled-number, fluency, untranslated-pinyin, prompt-leak; dropped invented-tag as unmineable):**
+  before mining, checked `FanslationStudio.LlmKit/LineValidation.cs` (per the user's question about
+  whether some of these are already caught by deterministic pre-QC validation) and found real,
+  material overlap:
+  - **`invented-tag` is fully covered already.** Any raw source containing `<` has its translation's
+    HTML tags checked by `HtmlTagHelpers.ValidateTags` and rejected/retried on mismatch - a tag defect
+    structurally cannot survive into `Files/Converted`. Confirmed empirically too: a tag-mismatch scan
+    across the whole corpus (the same kind of scan used for prior mining rounds) came back with
+    **zero hits**. Dropped this category from the mining plan entirely - it's not a gap in the gold
+    set, it's a gap that doesn't exist to mine.
+  - **`{0}`/`{1}`-style curly-brace placeholders are also deterministically count-checked**
+    (`PlaceholderPatternRegex`), explaining why the Fourteenth round's placeholder-mismatch scan over
+    ~22,000 corrected rows found only 7 hits. But the game's *other* placeholder convention - the
+    fullwidth `⟦n⟧` bracket style used throughout `dynamicStrings.txt` - is **not** matched by that
+    regex, so `GarbledNumber` defects involving `⟦n⟧` tokens remain a real, unprotected gap. Mining
+    was steered toward these specifically.
+  - **`prompt-leak` is only partially covered**, by a fixed `InvalidPhrases` exact-phrase list (e.g.
+    `"provide the text"`, `"translates to"`) that triggers a retry - not a semantic check. The one
+    example already in the gold set slipped through because its wording ("I've kept the structure as
+    per the original format...") isn't in that list. A narrowed keyword search (the first, broad
+    attempt returned ~150 hits that were almost all ordinary dialogue using words like "could you" -
+    dropped as noise) found exactly one more genuine instance, an independently-occurring case of the
+    *same* leak phrasing pattern - consistent with this category being inherently rare precisely
+    because of the partial deterministic filter, not because it's not worth testing.
+  - **`terminology` (`DomainTerm`) and `fluency` (`LostIdiom`) have no deterministic check at all** -
+    pure semantic/domain-knowledge judgment, and the real corpus turned out to have hundreds of
+    tagged candidates for each (313 `DomainTerm`, 419 `LostIdiom` rows) to choose from.
+
+  Also added `untranslated-pinyin` (`UntranslatedPinyin`) as a newly-represented category (0 examples
+  before this round) - it's an established production category with 80 real tagged candidates and was
+  one of the original Dataset section's stratification dimensions ("pinyin and dropped content"), just
+  never actually mined into the gold set until now.
+
+  Mined 25 new single-candidate detection items (`ProductionTranslation` key, pre-QC `translated`
+  field, independent of each row's own `qcStatus`/`qcDefectCategory` per the usual anti-circularity
+  principle), tagged `sampleRun: ConvertedCorpus-20260920-category-mining`:
+  - **terminology, 8 items**: wrong-deity substitution (普贤/Samantabhadra rendered as "Manjushri"),
+    a mythological figure's name misread as a verb (祝融/Zhurong → "Wishing You..."), a fabricated
+    acupoint-name suffix ("Yongquan Mixtze" - the same fabricated-proper-noun shape as the harmful-
+    correction examples but at raw-translation level), several martial-arts move names replaced with
+    unrelated invented names, a classical literary work's title garbled into word-salad, and a
+    wrong-animal substitution (centipede → "scorpion").
+  - **garbled-number, 6 items**: all `⟦n⟧`-bracket-style placeholder garbling (leaked raw tokens,
+    broken sentence structure around the placeholder, one case with two different `⟦n⟧` tokens on one
+    line, one case with a redundant doubled clause).
+  - **fluency, 5 items**: idiom meaning-inversions (分文不取/"not a cent for free" inverted;
+    百密一疏 lament misread as proactive-caution advice), a grammatically broken idiom rendering, an
+    over-literal idiom translation that reads as a non-sequitur, and a wrong-idiom substitution
+    (神龙见首不见尾 → "out of sight, out of mind", a different English idiom with a different
+    meaning) that recurs as an independently-occurring second instance in the corpus.
+  - **untranslated-pinyin, 5 items**: two flagship whole-sentence/whole-couplet examples left entirely
+    in raw pinyin, an official title left as garbled pinyin instead of using this corpus's own
+    established English rendering ("Censor"), a term left untranslated with additionally-wrong pinyin
+    transcription, and a technique name left in plain pinyin.
+  - **prompt-leak, 1 item**: the second genuine instance of the "I've kept the structure..." leak
+    phrasing pattern described above.
+
+  Gold set now has **102 detection items + 6 correction samples = 108 total entries** (up from 77 + 6
+  = 83). Not yet run through a fresh `Qwen38Qc` assessment pass.
+
 ## Next Steps (decided 2026-09-20 - read this before starting further work; Seventh/Eighth/Ninth
 round entries above supersede this section's older `formatting`/`terminology`/quant framing.
 **Items 1-3 are now done. Item 4a (the brute-force glossary sync) was explicitly declined by the
@@ -800,15 +861,19 @@ Priority order, chosen deliberately over "pick a quant now":
    `FanslationStudio.LlmKit`: the 5 `BaseQualityReviewPrompt.txt` files, `BaseFiles/Qwen38/Config.yaml`'s
    `num_ctx` change, `docs/investigations/quality-review-postmortems.md`) once a natural checkpoint is
    reached - there's a lot of uncommitted work stacked up as of this writing.
-6. **Done 2026-09-20 (Sixteenth round): the user confirmed 83 total entries (77 detection items + 6
-   correction samples) is enough** - gold-set growth for this cycle is closed out. This is well below
-   the original 300-500 target (revised down mid-session to 150-200, then explicitly relaxed further
-   to "even under 100 is fine"); the user judged that's sufficient to measure QC evaluator
-   performance rather than a stopgap. See the Fifteenth and Sixteenth round entries above for what was
-   mined and the corrected-count context (the 121/300-500 figures earlier in this doc predate both the
-   discovered-wrong-count correction and the revised target). Revisit only if a future round's
-   run-to-run variance (some metrics moved +/-0.05-0.1 between identical-config runs in earlier
-   rounds, at the smaller 36-item set) turns out to still be a problem at 83.
+6. **Done 2026-09-20 (Sixteenth round): the user confirmed 83 total entries was enough** on overall
+   size - gold-set *size* growth for this cycle was closed out at that point. This is well below the
+   original 300-500 target (revised down mid-session to 150-200, then explicitly relaxed further to
+   "even under 100 is fine"); the user judged that's sufficient to measure QC evaluator performance
+   rather than a stopgap. **The Eighteenth round's 25-item addition (now 108 total) is not a reopening
+   of that size question** - it's a category-completeness follow-up the user separately asked for
+   ("mine all the remaining categories"), filling out `terminology`/`garbled-number`/`fluency`/
+   `untranslated-pinyin`/`prompt-leak` rather than growing overall volume for its own sake. See the
+   Fifteenth, Sixteenth, and Eighteenth round entries above for what was mined and the corrected-count
+   context (the 121/300-500 figures earlier in this doc predate both the discovered-wrong-count
+   correction and the revised target). Revisit size only if a future round's run-to-run variance (some
+   metrics moved +/-0.05-0.1 between identical-config runs in earlier rounds, at the smaller 36-item
+   set) turns out to still be a problem at 108.
 
 ## Separator/Newline Defects Are Out of Scope
 
@@ -832,12 +897,12 @@ compile against the new multi-defect API but does not yet do the full per-stage 
 calls for (see Implementation Shape) - it currently measures end-to-end detection and correction
 safety, not "which stage caused this disagreement."
 
-The gold set (`Files/Goldset/GoldSet.yaml`) has 77 detection items and 6 correction samples as of
-2026-09-20 (see the **Fifteenth** and **Sixteenth round** entries above for why this is 77, not the
-121 this doc claimed through the Third-Thirteenth rounds - that number was never actually committed
-to the file; target
-is now 150-200 total, relaxed to "even under 100 is fine" - see Next Steps item 6). Its free-form
-category vocabulary is fully mapped onto
+The gold set (`Files/Goldset/GoldSet.yaml`) has 102 detection items and 6 correction samples as of
+2026-09-20 (see the **Fifteenth**, **Sixteenth**, and **Eighteenth round** entries above for why this
+is 102, not the 121 this doc claimed through the Third-Thirteenth rounds - that number was never
+actually committed to the file; the user closed out the size question at 83 in the Sixteenth round,
+then the Eighteenth round's 25-item category-completeness pass brought it to 108 total - see Next
+Steps item 6). Its free-form category vocabulary is fully mapped onto
 `QcDefectCategory` in `ParseCategory` (locked in by
 `Tests/Workflow/QualityEvaluatorAssessmentWorkflowTests.cs`'s `ParseCategory_MapsEveryGoldSetCategory`
 theory) - a category is never silently collapsed into a shared catch-all it doesn't actually belong
