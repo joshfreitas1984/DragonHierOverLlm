@@ -785,6 +785,58 @@ relevant prompt commit) before trusting a round's numbers.
   or well within the model's semantic-judgment strengths (terminology, prompt-leak), unlike the
   mechanical stat-string parsing that `formatting` keeps failing on.
 
+- **Twentieth round completed 2026-09-20 (targeted prompt fix for the Nineteenth round's
+  `formatting` misses, two iterations, `FanslationStudio.LlmKit` commit pending):** first broke
+  down the 6 misses behind `formatting`'s 0.500 recall rather than treating it as one undifferentiated
+  weak spot. Two of the six (`cb459b1c8e845a04`, both HyMT2 candidates) are the exact
+  stray-trailing-whitespace item the Seventh round already isolated-tested and explicitly decided to
+  deprioritize (cosmetic, low-stakes given text-control wrapping) - re-counting those every round is
+  noise, not a new gap. The other four are a single, tightly-defined, genuinely new pattern the model
+  had **zero** recall on: mechanical cross-entry consistency within a semicolon-delimited stat/label
+  string (number-before-label vs. label-before-number order, spacing before a number) or within a
+  proper name's internal capitalization - e.g. `"1 will"` vs. sibling entries `"Blade Technique 1"`/
+  `"Acupoint 1"` on the same line, or `"Wang TIANyi"` vs. the name's correct capitalization elsewhere.
+  None of the four require checking TRANSLATION against SOURCE semantics - just TRANSLATION against
+  its own other parts, a check class the prompt never asked for before.
+
+  Added an explicit `Internal formatting inconsistency within TRANSLATION itself` bullet to
+  `BaseQualityReviewPrompt.txt` (`Qwen38`/`HyMT2`/`HyMT2Moe` - the three families sharing identical
+  base text; `Glm4`/`Qwen25` have diverged wording and were left untouched since they're outside the
+  active candidate set) naming both sub-patterns, plus a matching clause added to
+  `OTHER_NAMED_DEFECT`'s category description. Verified fresh (cache deleted, full 108-entry set):
+  **2 of 4 targeted misses fixed** (`63c2a466665085c9` capitalization, `3f9fc74b96eebaf3` order-swap),
+  correctly categorized `OtherNamedDefect` both times. Overall: recall 0.812->0.841 (56/69->58/69),
+  precision 0.889->0.906 (56/63->58/64), formatting 6/12->7/12 - a real generalization, not
+  cherry-picked to the two fixed items, and no regression (FP count dropped 7->6). One unrelated
+  category (`terminology` 9/9->8/9, a wrong-animal substitution not touched by this rule) moved
+  within the documented run-to-run sampling variance band.
+
+  Second iteration: the rule caught 2/4 but the remaining 2 misses (`2d7c89b3ded200d5`,
+  `410397fffd1b05d0`) share the identical order-swap/spacing shape as the ones that *did* get
+  caught - a salience gap, not a wrong rule, so added a forced pre-finalize self-check (mirroring
+  the Third-round NAMES/OVER-TRANSLATION check pattern that's already proven to work) explicitly
+  requiring pairwise comparison across every delimited entry/occurrence before answering. Verified
+  fresh again: **3 of 4 now fixed** (`410397fffd1b05d0` also caught, `OtherNamedDefect`) - only
+  `2d7c89b3ded200d5` (`"Thunder0.04"` missing space) remains missed. Formatting improved further to
+  8/12 (0.667), overall recall held at 0.841 (58/69, same TP/FN - the flip landed entirely within
+  `formatting`), but precision dipped slightly to 0.892 (58/65, FP 6->7) and `garbage-output` dipped
+  9/8->6/8 (a boilerplate-refusal and a literal `"True"`-string garbage case, more likely sampling
+  noise than caused by this rule - neither touches delimited-entry or name-capitalization content).
+
+  **The one new false positive is directly attributable to the added self-check, not noise**:
+  `7709f01317d41c4a` (source `武学天才;正直;勤奋;游侠`, a semicolon-delimited list of four
+  *independent* trait words, gold-labeled Pass) is now flagged `OtherNamedDefect` - the model is
+  over-applying "compare every delimited entry against every other" to a list where the entries
+  were never meant to share one structural template (unlike the stat-string cases the rule targets,
+  where every entry *is* the same number+label shape). **Decided: stop here rather than iterate
+  further** - net metrics (0.812/0.889 -> 0.841/0.892) are still strictly better than the
+  pre-fix baseline on every axis, and the known false-positive mode (delimited lists of
+  independent concept labels vs. parallel same-template stat entries) is narrow and named, not a
+  mystery, if it needs revisiting later. If picked back up: the fix would be adding an explicit
+  carve-out distinguishing "entries sharing one structural template" (flag mismatches) from "a list
+  of independently-shaped items" (do not flag just because entries differ) to the internal-
+  consistency rule.
+
 ## Next Steps (decided 2026-09-20 - read this before starting further work; Seventh/Eighth/Ninth
 round entries above supersede this section's older `formatting`/`terminology`/quant framing.
 **Items 1-3 are now done. Item 4a (the brute-force glossary sync) was explicitly declined by the
