@@ -754,6 +754,37 @@ relevant prompt commit) before trusting a round's numbers.
   Gold set now has **102 detection items + 6 correction samples = 108 total entries** (up from 77 + 6
   = 83). Not yet run through a fresh `Qwen38Qc` assessment pass.
 
+- **Nineteenth round completed 2026-09-20 (first assessment pass against the full 108-entry gold
+  set, covering the Eighteenth round's 25 new items for the first time):** deleted the cached
+  `Files/TestResults/QcEvaluatorAssessment/Qwen38Qc/` first (per the usual caching-trap precaution;
+  confirmed stale by mtime - `Results.yaml` was 17 minutes older than the just-updated `GoldSet.yaml`)
+  and ran `Tests/AssessmentWorkflowTests.cs`'s "2. Assess configured QC models" fresh (3m14s, 204
+  results - 198 detection + 6 correctionSamples, confirming full coverage of the 108-entry set).
+
+  `Comparison.yaml`'s own raw aggregate (0.612 recall / 0.896 precision) is **not** the number to
+  cite - it includes seam-only-labeled rows and the one `EXCLUDE FROM QC EVALUATOR SCORING` item, per
+  every prior round's convention. The ad hoc separator-exclusion analysis script from earlier rounds
+  wasn't available in this session (never committed), so it was reconstructed from `Results.yaml` +
+  `GoldSet.yaml` directly (cross-referencing each `resultId`'s candidate against its gold
+  `defectCategories`, excluding `omitted-separator`/`literal-newline`/`misplaced-separator`-labeled
+  rows and `sampleId: 50ff7ccfb54c694e`) rather than trusting an un-reproducible prior artifact.
+
+  **Overall excluded-methodology detection: recall 0.812 (56/69), precision 0.889 (56/63)** - the
+  best measured number yet for `Qwen38Qc`, up from the Seventeenth round's 0.795/0.833, though as
+  always not directly comparable across rounds since the denominator composition changed (108 vs 83
+  entries).
+
+  Per-category recall on the full set: `terminology` 9/9, `mistranslation` 10/10, `garbled-number`
+  6/6, `prompt-leak` 2/2, `garbage-output` 7/8, `pronoun-attribution` 10/11, `untranslated-pinyin`
+  4/5, `fluency` 5/7, `dropped-content` 4/6, **`formatting` 6/12 (0.500)** - confirms `formatting` is
+  still the durable weak spot flagged every round since the Fifth, now on the largest and most
+  diverse formatting sample yet (12 items, spanning the original set, the Fifteenth round's
+  Converted-corpus mining, and general category mining). The three new categories mined specifically
+  in the Eighteenth round (`garbled-number`, `terminology`, `prompt-leak`) all scored perfectly on
+  first assessment - consistent with those being either deterministically-adjacent (garbled-number)
+  or well within the model's semantic-judgment strengths (terminology, prompt-leak), unlike the
+  mechanical stat-string parsing that `formatting` keeps failing on.
+
 ## Next Steps (decided 2026-09-20 - read this before starting further work; Seventh/Eighth/Ninth
 round entries above supersede this section's older `formatting`/`terminology`/quant framing.
 **Items 1-3 are now done. Item 4a (the brute-force glossary sync) was explicitly declined by the
