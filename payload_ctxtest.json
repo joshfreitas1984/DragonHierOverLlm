@@ -1,0 +1,6 @@
+{
+  "model": "qwen3.8:27b-q4_K_M",
+  "stream": false,
+  "messages": [{"role":"user","content":"Say hi."}],
+  "options": {"num_ctx": 4096}
+}

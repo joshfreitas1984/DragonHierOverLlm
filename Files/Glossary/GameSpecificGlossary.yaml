@@ -715,3 +715,9 @@
   result: Qingcheng Sect
 - raw: 伏牛派
   result: Funiu Sect
+
+# Titles
+- raw: 阁主
+  result: Pavilion Master
+- raw: 殿主
+  result: Hall Master

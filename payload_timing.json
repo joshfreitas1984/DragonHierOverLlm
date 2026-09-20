@@ -1,0 +1,7 @@
+{
+  "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL",
+  "stream": false,
+  "think": false,
+  "messages": [{"role":"user","content":"Say hi in one word."}],
+  "options": {"num_ctx": 4096}
+}

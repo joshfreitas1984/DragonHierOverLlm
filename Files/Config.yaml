@@ -18,6 +18,20 @@
   - name: Qwen38Qc
     modelPreset: Qwen38
     modelPresetType: Standard
+    # Uses FanslationStudio.LlmKit's BaseFiles/Qwen38/Config.yaml default model:
+    # hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q3_K_XL - i.e. this "benchmark" model is itself a Q3 quant,
+    # not full weight. The two entries below are quant-comparison siblings, added 2026-09-20.
+  - name: Qwen38Qc-IQ4XS
+    modelPreset: Qwen38
+    modelPresetType: Standard
+    model: "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-IQ4_XS"
+    # Qwen38Qc-Q4KM (plain qwen3.8:27b-q4_K_M) removed 2026-09-20 - ruled out: UD-Q4_K_M below
+    # beat it outright at the same size/latency (+0.224 precision, false positives 10 -> 4). See
+    # docs/plans/qc-evaluator-comparison.md Status "Fifth round".
+  - name: Qwen38Qc-UDQ4KM
+    modelPreset: Qwen38
+    modelPresetType: Standard
+    model: "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_M"
   - name: HyMT2-30B-A3B
     modelPreset: HyMT2Moe
     modelPresetType: Standard
@@ -88,12 +102,32 @@ translationAssessment:
     - "咳咳咳，这......\\n我要去扬州游玩几日，正好路过此地罢了。"
 qualityEvaluatorAssessment:
   enabled: true
+  # Narrowed 2026-09-20 per docs/plans/qc-evaluator-comparison.md's "Active Candidate Set" -
+  # QwenQc-14B, HyMT2-7B, and HyMT2-30B-A3B-Q3 dropped (no pickup from the prompt fix, or a
+  # standalone bug).
+  # HyMT2-30B-A3B and HyMT2-30B-A3B-Q3XXS dropped from routine rounds 2026-09-20 (final, after
+  # two independent verified prompt-tuning rounds each showed a real capability ceiling on
+  # semantic-reasoning defect categories, not a wording problem - see the plan doc's Status
+  # "Fourth round" entry). Their `models:` definitions above stay in place; they're the building
+  # blocks for the not-yet-built doubled-detection/fast-corrector process variants, which need
+  # their own purpose-built assessment, not a slot in this standalone-candidate comparison.
+  # Qwen38Qc-IQ4XS added 2026-09-20 - Qwen38Qc itself is a Q3_K_XL quant, not full weight, so this
+  # tests whether a higher-precision quant of the SAME accuracy-benchmark model recovers
+  # recall/precision the current default quant might be leaving on the table.
+  # Qwen38Qc-UDQ4KM added 2026-09-20 - Unsloth Dynamic method beat a same-size plain q4_K_M quant
+  # outright (that plain-quant entry, Qwen38Qc-Q4KM, was removed from `models:` above once ruled
+  # out) - see the plan doc's Status "Fifth round". This 16.3GB-VRAM card's zero-CPU-spill ceiling
+  # sits right around Qwen38Qc's 14.08GB, so Q3-Q4 is the realistic operating band on this hardware
+  # - not pursuing Q5+.
+  # PAUSED 2026-09-20: quant selection is deliberately on hold pending prompt-maxing (see the plan
+  # doc's "Next Steps" - prompt fixes generalize across quants, quant comparisons do not survive
+  # prompt changes, so tune the prompt first on the fastest quant, then do one final quant sweep).
   modelNames:
-    - QwenQc-14B
-    - HyMT2-7B
-    - HyMT2-30B-A3B
-    - HyMT2-30B-A3B-Q3
-    - HyMT2-30B-A3B-Q3XXS
     - Qwen38Qc
+    # Qwen38Qc-IQ4XS and Qwen38Qc-UDQ4KM temporarily commented out 2026-09-20 for a
+    # terminology-glossary-fix verification run scoped to the fastest quant only, per the
+    # "Next Steps" prompt-max-first ordering. Restore both before any future quant-comparison run.
+    # - Qwen38Qc-IQ4XS
+    # - Qwen38Qc-UDQ4KM
   goldSetPath: Goldset/GoldSet.yaml
   outputPath: TestResults/QcEvaluatorAssessment
