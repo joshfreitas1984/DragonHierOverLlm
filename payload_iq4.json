@@ -1,7 +1,0 @@
-{
-  "model": "hf.co/unsloth/Qwen3.8-27B-GGUF:UD-IQ4_XS",
-  "stream": false,
-  "think": false,
-  "messages": [{"role":"user","content":"Say hi."}],
-  "options": {"num_ctx": 4096}
-}

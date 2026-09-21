@@ -5,8 +5,10 @@
     qcReviewedText: "Yama Hall's army has advanced to face me.<b>Righteous Alliance Gate </b>Below the city walls, though our Righteous Alliance Gate may be outnumbered and outmatched, we will never yield to the wicked's evil intimidation!\nI am prepared to lead the entire faction in a desperate battle. Please come, #PlayerName#, to witness!"
     qcTranslated: "Yama Hall's army has advanced to the walls of our <b>Righteous Alliance Gate</b> city. Though our Righteous Alliance Gate may be outnumbered and outmatched, we will never yield to the wicked's evil intimidation!\nI am prepared to lead the entire faction in a desperate battle. Please come, #PlayerName#, to witness!"
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "聚义门"
     translated: "Righteous Alliance Gate"
@@ -27,6 +29,9 @@
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "杭州"
     translated: "Hangzhou"
@@ -45,8 +50,10 @@
     qcReviewedText: "#PlayerName#, Wudang Sect Master Zhang Qingpeng has come to pay respects to the mountain gate, hoping you will receive him kindly.<b>Hurry back to the sect </b>Confer on important matters!"
     qcTranslated: "#PlayerName#, Wudang Sect Master Zhang Qingpeng has come to pay respects to the mountain gate, hoping you will <b>return to the sect as soon as possible</b> to confer on important matters!"
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "尽快回门派"
     translated: "Hurry back to the sect"
@@ -60,10 +67,12 @@
   - text: "#PlayerName#，小生近来苦读经史典籍，已然成竹在胸。这次前往"
     translated: "#PlayerName#, I have recently immersed myself in the study of classical texts and historical works, and I am now fully prepared. This time, I will go..."
     qcReviewedText: "#PlayerName#, I have recently immersed myself in the study of classical texts and historical works, and I am now fully prepared. This time, I will go...<b>Southern Zhuxian Town</b>, You'll surely convince those bandits to reform with one go, so just wait for my good news!"
-    qcTranslated: "#PlayerName#, I have recently immersed myself in the study of classical texts and historical works, and I am now fully prepared. This time, going to <b>Southern Zhuxian Town</b>, I will surely convince those bandits to reform with one go, so just wait for my good news!"
+    qcTranslated: "#PlayerName#, I have recently immersed myself in the study of classical texts and historical works, and I am now fully prepared. This time, I will go to <b>Southern Zhuxian Town</b> and surely convince those bandits to reform with one go, so just wait for my good news!"
     qcStatus: Corrected
-    qcQualityScore: 85
-    qcDefectCategory: GarbledNumber
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "朱仙镇南方"
     translated: "Southern Zhuxian Town"
@@ -81,6 +90,9 @@
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "朱仙镇北方"
     translated: "Northern Zhuxian Town"
@@ -98,6 +110,9 @@
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "长乐帮"
     translated: "Changle Gang"
@@ -111,10 +126,12 @@
   - text: "#$PlayerName#少侠，长乐帮押运花石纲的队伍即将出发，还望你按照此前约定来"
     translated: "Young Hero #$PlayerName#, the Changle Gang's convoy transporting the Flower and Stone Convoy is about to depart. We hope you will come as previously agreed."
     qcReviewedText: "Young Hero #$PlayerName#, the Changle Gang's convoy transporting the Flower and Stone Convoy is about to depart. We hope you will come as previously agreed.<b>Hangzhou </b>Converge to fully safeguard these treasures"
-    qcTranslated: "Young Hero #$PlayerName#, the Changle Gang's convoy transporting the Flower and Stone Convoy is about to depart. We hope you will come as previously agreed to <b>Hangzhou</b> to converge and fully safeguard these treasures"
+    qcTranslated: "Young Hero #$PlayerName#, the Changle Gang's convoy transporting the Flower and Stone Convoy is about to depart. We hope you will come to <b>Hangzhou</b> as previously agreed to Guard the safety of these treasures"
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "杭州"
     translated: "Hangzhou"
@@ -130,8 +147,11 @@
     qcReviewedText: "#PlayerName#, I am <b>Northern Dali </b>Find yourself a good show; if you're interested, feel free to come and enjoy the spectacle."
     qcTranslated: "#PlayerName#, I found a good show in <b>Northern Dali</b>; if you're interested, feel free to come and enjoy the spectacle."
     qcStatus: Corrected
-    qcQualityScore: 90
-    qcDefectCategory: GarbledNumber
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "大理北方"
     translated: "Northern Dali"
@@ -147,8 +167,11 @@
     qcReviewedText: "#$PlayerName#, Sect Leader of the Cultivated Community, the Xie Pai Lian Jun, which had lain low for several months, suddenly launched an attack against <b>Dali </b>Initiate the attack! The situation is urgent. We look to you to lead the elite disciples of the Xianxia Sect to come and support us as per the agreement of the Golden Summit Conference!"
     qcTranslated: "#$PlayerName#, Sect Leader, the Xie Pai Lian Jun, which had lain low for several months, suddenly launched an attack against <b>Dali</b>! The situation is urgent. We look to you to lead the elite disciples of the Xianxia Sect to come and support us as per the agreement of the Golden Summit Conference!"
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
+    - HardToParseSeam
   - subIndex: 1
     text: "大理"
     translated: "Dali"
@@ -162,10 +185,13 @@
   - text: "#PlayerName#，大事不好！五毒金刚大军眼下已与阎罗王合兵一处，进逼"
     translated: "#PlayerName#, big trouble! The Five Venom Golden Army has now joined forces with King Yama, advancing towards us."
     qcReviewedText: "#PlayerName#, big trouble! The Five Venom Golden Army has now joined forces with King Yama, advancing towards us.<b>Dali </b>Below the city walls\nI hope #PlayerName# can quickly lead the #PlayerForceName# elite to come support us!"
-    qcTranslated: "#PlayerName#, big trouble! The Five Venom Golden Army has now joined forces with King Yama, advancing towards <b>Dali</b> city. I hope #PlayerName# can quickly lead the #PlayerForceName# elite to come support us!"
+    qcTranslated: "#PlayerName#, big trouble! The Five Venom Golden Army has now joined forces with King Yama, advancing towards the walls of <b>Dali</b>. I hope #PlayerName# can quickly lead the #PlayerForceName# elite to come support us!"
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "大理"
     translated: "Dali"
@@ -182,10 +208,13 @@
   - text: "#PlayerName#，邪派联军再度兵临城下，如今"
     translated: "#PlayerName#, the evil sect alliance has besieged the city once again. Now"
     qcReviewedText: "#PlayerName#, the evil sect alliance has besieged the city once again. Now <b>Dali </b>Already perilous, like eggs balanced on a pile. Yet for the safety of the Central Plains Wulin, though hope is faint, this old man will lead all the Meishan disciples in one final stand.\n#PlayerName# if you can bring #PlayerForceName# to lend your last bit of support, I would be immensely grateful."
-    qcTranslated: "#PlayerName#, the evil sect alliance has besieged the city once again. Now <b>Dali</b> is perilous, like eggs balanced on a pile. Yet for the safety of the Central Plains Wulin, though hope is faint, this old man will lead all the Meishan disciples in one final stand.\n#PlayerName#, if you can bring #PlayerForceName# to lend your last bit of support, I would be immensely grateful."
+    qcTranslated: "#PlayerName#, the evil sect alliance has besieged the city once again. Now <b>Dali</b> is perilous, like eggs balanced on a pile. Yet for the safety of the Central Plains Wulin, though hope is faint, this old man will lead all the Meishan disciples in one final stand.\\n#PlayerName#, if you can bring #PlayerForceName# to lend your last bit of support, I would be immensely grateful."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "大理"
     translated: "Dali"
@@ -202,10 +231,13 @@
   - text: "我峨眉与中原各大门派已在"
     translated: "I, the Meishan Sect, along with the major sects in Central Plains,"
     qcReviewedText: "I, the Meishan Sect, along with the major sects in Central Plains,<b>In the city of Dali </b>Unite our forces, prepare to launch an assault on Yama Hall together. For the safety of the Central Plains Wulin, we look to #PlayerName# to lend a helping hand!"
-    qcTranslated: "I, the Meishan Sect, along with the major sects in Central Plains, have united our forces <b>in the city of Dali</b>, preparing to launch an assault on Yama Hall together. For the safety of the Central Plains Wulin, we look to #PlayerName# to lend a helping hand!"
+    qcTranslated: "I, the Emei Sect, along with the major sects in Central Plains, have united our forces <b>in the city of Dali</b>, preparing to launch an assault on Yama Hall together. For the safety of the Central Plains Wulin, we look to #PlayerName# to lend a helping hand!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "大理城内"
     translated: "In the city of Dali"
@@ -219,10 +251,13 @@
   - text: "老朽与峨眉弟子在"
     translated: "The old man and the Emei disciple are"
     qcReviewedText: "The old man and the Emei disciple are <b>In the city of Dali </b>The investigation into the poisoner in Baiyunzi's medicine has begun to take shape.\nI hope #PlayerName# will come to help us uncover the truth as soon as possible to bring the murderer to justice!"
-    qcTranslated: "The old man and the Emei disciple are <b>in the city of Dali</b> investigating the person who poisoned Baiyunzi's medicine, and things have begun to take shape. I hope #PlayerName# will come to help us uncover the truth as soon as possible to bring the murderer to justice!"
+    qcTranslated: "The old man and the Emei disciple are <b>in the city of Dali</b> investigating the person who poisoned Baiyunzi's medicine, and we have already made some progress. I hope #PlayerName# will come to help us uncover the truth as soon as possible to bring the murderer to justice!"
     qcStatus: Corrected
-    qcQualityScore: 88
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "大理城内"
     translated: "In the city of Dali"
@@ -239,10 +274,13 @@
   - text: "老朽近来收到了一封奇怪信件，竟是出自五毒教龙凤娥掌教之手。"
     translated: "The old man has recently received a strange letter from Long Feng'e, the Sect Master of the Five Poisons Sect."
     qcReviewedText: "The old man has recently received a strange letter from Long Feng'e, the Sect Master of the Five Poisons Sect.\nThe content of the letter seems to be related to Bai Yuntian. I hope you, #PlayerName#, can come.<b>Emei Sect </b>Confer with me to devise a strategy"
-    qcTranslated: "The old man has recently received a strange letter from Long Feng'e, the Sect Master of the Five Poisons Sect.\nThe content of the letter seems to be related to Bai Yuntian. I hope you, #PlayerName#, can come to <b>Emei Sect</b> to confer with me and devise a strategy"
+    qcTranslated: "The old man has recently received a strange letter from Long Feng'e, the Sect Master of the Five Poisons Sect.\nThe content of the letter seems to be related to Bai Yuntian. I hope you, #PlayerName#, can come to <b>Emei Sect</b> to confer with me on a strategy."
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "信中内容似乎与白云天有关，还望#PlayerName#能来"
     translated: "The content of the letter seems to be related to Bai Yuntian. I hope you, #PlayerName#, can come."
@@ -263,6 +301,9 @@
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "晋阳"
     translated: "Jinyang"
@@ -276,9 +317,12 @@
   - text: "#PlayerName#，听闻师傅死讯，我也不准备独活。"
     translated: "#PlayerName#, hearing of Master's passing, I do not intend to survive alone either."
     qcReviewedText: "#PlayerName#, hearing of Master's passing, I do not intend to survive alone either.\nI am preparing to take my own life in the near future, to accompany my Master in the underworld.\nI hope you can come <b>Flying Dragon Gate</b>, Meet me for the last time"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "#PlayerName#, hearing of Master's passing, I do not intend to survive alone either.\nI am preparing to take my own life in the near future, to accompany my Master in the underworld.\nI hope you can come to <b>Flying Dragon Gate</b> to meet me for the last time"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "我准备于近日自尽，去九泉下陪师傅作伴。"
     translated: "I am preparing to take my own life in the near future, to accompany my Master in the underworld."
@@ -298,10 +342,13 @@
   - text: "#PlayerName#，我想到个办法，兴许可以治好顾游年师兄断绝的经脉。"
     translated: "#PlayerName#, I've come up with a method that might be able to heal the severed meridians of Senior Brother Gu Younian."
     qcReviewedText: "#PlayerName#, I've come up with a method that might be able to heal the severed meridians of Senior Brother Gu Younian.\nIf you have access to <b>Exquisite‑grade treasures</b>, Still please bring it <b>Flying Dragon Gate </b>Borrow from Senior Sis!"
-    qcTranslated: "#PlayerName#, I've come up with a method that might be able to heal the severed meridians of Senior Brother Gu Younian.\\nIf you have access to <b>Exquisite‑grade treasures</b>, please bring them to <b>Flying Dragon Gate</b> for Senior Sister to use!"
+    qcTranslated: "#PlayerName#, I've come up with a method that might be able to heal the severed meridians of Senior Brother Gu Younian.\\nIf you have access to <b>Exquisite‑grade treasures</b>, please bring them to <b>Flying Dragon Gate</b> for Senior Sister to borrow!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "你手边若有"
     translated: "If you have access to"
@@ -324,9 +371,12 @@
   - text: "#PlayerName#！诸葛姐姐将你上次所寻珍宝进献给皇上，果真求得了圣旨！你快"
     translated: "#PlayerName#! Zhuge Older Sister presented the treasure you sought last time to the emperor, and indeed she obtained a royal decree! You should hurry."
     qcReviewedText: "#PlayerName#! Zhuge Older Sister presented the treasure you sought last time to the emperor, and indeed she obtained a royal decree! You should hurry.<b>Return to the Xianxia Sect </b>And receive the imperial decree from Senior Brother Gu, then go to the Great Hidden Pavilion to focus on treating your injuries."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "#PlayerName#! Zhuge Older Sister presented the treasure you sought last time to the emperor, and indeed she obtained a royal decree! You should hurry back to the <b>Xianxia Sect</b> to receive the imperial decree with Senior Brother Gu, then go to the Great Hidden Pavilion to focus on treating your injuries."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "回仙霞派"
     translated: "Return to the Xianxia Sect"
@@ -353,18 +403,24 @@
   - text: "不知#PlayerName#近来练功可有懈怠？若是得空，不妨来与师姐我切磋切磋。"
     translated: "Unknown, #PlayerName#, have you been lax in your training lately? If you have some free time, why not come and spar with Senior Sister?"
     qcReviewedText: "Unknown, #PlayerName#, have you been lax in your training lately? If you have some free time, why not come and spar with Senior Sister?"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "I wonder, #PlayerName#, have you been lax in your training lately? If you have some free time, why not come and spar with Senior Sister?"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
 - raw: "魏师兄遭贼人围攻，事态紧急，#PlayerName#<b>速回门派</b>救援！"
   splits:
   - text: "魏师兄遭贼人围攻，事态紧急，#PlayerName#"
     translated: "Senior Brother Wei is under attack by bandits; the situation is urgent, #PlayerName#."
     qcReviewedText: "Senior Brother Wei is under attack by bandits; the situation is urgent, #PlayerName#.<b>Speed back to the sect </b>Rescue!"
-    qcTranslated: "Senior Brother Wei is under attack by bandits; the situation is urgent, #PlayerName#.<b>Speed back to the sect</b> to rescue him!"
+    qcTranslated: "Senior Brother Wei is under attack by bandits; the situation is urgent, #PlayerName#<b>hurry back to the Sect</b> to rescue him!"
     qcStatus: Corrected
-    qcQualityScore: 85
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "速回门派"
     translated: "Speed back to the sect"
@@ -378,9 +434,12 @@
   - text: "为师欲寻一弟子，拜会青城派周莫知掌门。#PlayerName#若愿前往，可"
     translated: "My master wishes to seek a disciple and meet the Sect Master Zhou Mozhi of the Qingcheng Sect. If #PlayerName# is willing to go, you may"
     qcReviewedText: "My master wishes to seek a disciple and meet the Sect Master Zhou Mozhi of the Qingcheng Sect. If #PlayerName# is willing to go, you may <b>Speed back to the Sect to receive your mission.</b>。"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "My master wishes to seek a disciple and meet the Sect Master Zhou Mozhi of the Qingcheng Sect. If #PlayerName# is willing to go, you may <b>hasten back to the Sect to receive your mission.</b>."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "速回门派领命"
     translated: "Speed back to the Sect to receive your mission."
@@ -391,9 +450,12 @@
   - text: "几位师兄已探得情报，铁掌帮近几日就将和黑风寨一道大举进攻。#PlayerName#"
     translated: "Several senior brothers have gathered intelligence. The Iron Palm Gang will join forces with the Black Wind Stronghold to launch a major attack in the coming days, #PlayerName#."
     qcReviewedText: "Several senior brothers have gathered intelligence. The Iron Palm Gang will join forces with the Black Wind Stronghold to launch a major attack in the coming days, #PlayerName#.<b>Speed back to the sect</b>, Assist Senior Brother in deploying the defense"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "Several senior brothers have gathered intelligence. The Iron Palm Gang will join forces with the Black Wind Stronghold to launch a major attack in the coming days, #PlayerName#.<b>Return to the sect immediately</b>, and assist Senior Brother in deploying the defense"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "速回门派"
     translated: "Speed back to the sect"
@@ -415,10 +477,12 @@
   - text: "近来七大恶人之一雨人屠现身"
     translated: "Recently, one of the Seven Evil Men, Yuren Tu, has reappeared."
     qcReviewedText: "Recently, one of the Seven Evil Men, Yuren Tu, has reappeared.<b>Jiangling Eastern</b>, This person's martial arts is powerful, extremely vicious, and dangerous. To prevent the local civilians from suffering, I will go to confront them first. I hope the Xianxia Sect disciples can arrive quickly to support me!"
-    qcTranslated: "Recently, one of the Seven Evil Men, Yuren Tu, has reappeared in <b>Jiangling Eastern</b>. This person's martial arts is powerful, extremely vicious, and dangerous. To prevent the local civilians from suffering, I will go to confront them first. I hope the Xianxia Sect disciples can arrive quickly to support me!"
+    qcTranslated: "Recently, one of the Seven Evil Men, Yuren Tu, has reappeared in <b>Eastern Jiangling</b>. This person's martial arts is powerful, extremely vicious, and dangerous. To prevent the local civilians from suffering, I will go to confront them first. I hope the Xianxia Sect disciples can arrive quickly to support me!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "江陵东方"
     translated: "Jiangling Eastern"
@@ -434,8 +498,10 @@
     qcReviewedText: "#PlayerName#，<b>Capital </b>A jade robbery has occurred, and it is likely related to the Blood Robe Alliance's conspiracy. If you can come to assist me in investigating this case, I would be incredibly grateful!"
     qcTranslated: "#PlayerName#，<b>Capital</b>, a jade robbery has occurred, and it is likely related to the Blood Robe Alliance's conspiracy. If you can come to assist me in investigating this case, I would be incredibly grateful!"
     qcStatus: Corrected
-    qcQualityScore: 90
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "之中发生一起璞玉劫案，很可能与血衣盟之阴谋有关。你若能前来助我一同查明此案，自当感激不尽！"
     translated: "A jade robbery has occurred, and it is likely related to the Blood Robe Alliance's conspiracy. If you can come to assist me in investigating this case, I would be incredibly grateful!"
@@ -446,10 +512,12 @@
   - text: "#PlayerName#，各大门派已如约会师于"
     translated: "#PlayerName#, various sects have gathered as scheduled"
     qcReviewedText: "#PlayerName#, various sects have gathered as scheduled <b>Yama Hall's northern area </b>In the Land of Death, I hope you will come quickly to command the attack."
-    qcTranslated: "#PlayerName#, various sects have gathered as scheduled in the <b>northern area of Yama Hall</b>, at the Gate of Ghosts, I hope you will come quickly to command the attack."
+    qcTranslated: "#PlayerName#, various sects have gathered as scheduled <b>in the northern area of Yama Hall</b> at the Gate of Ghosts, I hope you will come quickly to command the attack."
     qcStatus: Corrected
-    qcQualityScore: 85
+    qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "阎罗殿北方"
     translated: "Yama Hall's northern area"
@@ -463,10 +531,12 @@
   - text: "#PlayerName#，听闻你此前击败了血衣盟西统领上官凤，并见到了貌似是赵胤宗的神秘老将。"
     translated: "#PlayerName#, I heard that you previously defeated Blood Robe Alliance's Western Commander Shangguan Feng and met a mysterious old general who seems to be Zhao Yinzong."
     qcReviewedText: "#PlayerName#, I heard that you previously defeated Blood Robe Alliance's Western Commander Shangguan Feng and met a mysterious old general who seems to be Zhao Yinzong.\nI hope you can come <b>Beggar Sect </b>A journey to elucidate the situation might reveal that Great Hero Guo and Mr. Jin have a deep friendship, perhaps enabling him to persuade Mr. Jin to disclose his whereabouts."
-    qcTranslated: "#PlayerName#, I heard that you previously defeated Blood Robe Alliance's Western Commander Shangguan Feng and met a mysterious old general who seems to be Zhao Yinzong.\\nI hope you can come to the <b>Beggar Sect</b> to explain the situation. Great Hero Guo and Mr. Jin have a deep friendship, so perhaps he can be persuaded to reveal Mr. Jin's whereabouts."
+    qcTranslated: "#PlayerName#, I heard that you previously defeated Blood Robe Alliance's Western Commander Shangguan Feng and met a mysterious old general who seems to be Zhao Yinzong.\nI hope you can come to the <b>Beggar Sect</b> to explain the situation. Great Hero Guo and Mr. Jin have a deep friendship, so perhaps he can be persuaded to reveal Mr. Jin's whereabouts."
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "还望你能来"
     translated: "I hope you can come"
@@ -483,10 +553,13 @@
   - text: "#PlayerName#，听闻圣上已特许你入宫查案。咱们这就去"
     translated: "#PlayerName#, hearing that the emperor has specially allowed you to investigate inside the palace. Let's head there now."
     qcReviewedText: "#PlayerName#, hearing that the emperor has specially allowed you to investigate inside the palace. Let's head there now.<b>Capital </b>Prepare to enter the palace to jointly investigate the true cause of Zhou Shizong's sudden death. Perhaps this can also provide an opportunity to uncover the true identity of Bloodclothe Alliance's Grand Commander."
-    qcTranslated: "#PlayerName#, hearing that the emperor has specially allowed you to investigate inside the palace. Let's head to the <b>Capital</b> now to prepare for entering the palace and jointly investigate the true cause of Zhou Shizong's sudden death. Perhaps this can also provide an opportunity to uncover the true identity of Bloodclothe Alliance's Grand Commander."
+    qcTranslated: "#PlayerName#, hearing that the emperor has specially allowed you to investigate inside the palace. Let's head to <b>Capital</b> now to prepare for entering the palace, and jointly investigate the true cause of Zhou Shizong's sudden death. Perhaps this can also provide an opportunity to uncover the true identity of Bloodclothe Alliance's Grand Commander."
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "京城"
     translated: "Capital"
@@ -500,10 +573,13 @@
   - text: "#PlayerName#，听闻血衣盟东统领卢玉麟已经伏诛，其在扬州城内的总舵位置也被你得知。"
     translated: "#PlayerName#, I heard that Blood Robe Alliance's Eastern Commander Lu Yulin has already been dealt with, and you have also learned the location of their main headquarters in Yangzhou."
     qcReviewedText: "#PlayerName#, I heard that Blood Robe Alliance's Eastern Commander Lu Yulin has already been dealt with, and you have also learned the location of their main headquarters in Yangzhou.\nMaster wants to have you meet Wu Jueyi together.<b>Divine Mechanism Sect </b>Inside, they discussed the plan to capture Ji Xinkuang and eliminate the Blood Robe Alliance."
-    qcTranslated: "#PlayerName#, I heard that Blood Robe Alliance's Eastern Commander Lu Yulin has already been dealt with, and you have also learned the location of their main headquarters in Yangzhou.\\nMaster wants to have you meet Wu Jueyi at the <b>Divine Mechanism Sect</b> to discuss the plan to capture Ji Xinkuang and eliminate the Blood Robe Alliance."
+    qcTranslated: "#PlayerName#, I heard that Blood Robe Alliance's Eastern Commander Lu Yulin has already been dealt with, and you have also learned the location of their main headquarters in Yangzhou.\nMaster wants to have you meet Wu Jueyi together inside <b>Divine Mechanism Sect</b> to discuss the plan to capture Ji Xinkuang and eliminate the Blood Robe Alliance."
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "师傅想请你和武绝义一道会于"
     translated: "Master wants to have you meet Wu Jueyi together."
@@ -522,8 +598,10 @@
     qcReviewedText: "#PlayerName#, with the help of the Beggar Sect disciples, I've found out pretty much everything about the Four Legendary Thieves.\nI hope you can come <b>Capital </b>Help me out and join me in paying a visit to these four hermits."
     qcTranslated: "#PlayerName#, with the help of the Beggar Sect disciples, I've found out pretty much everything about the Four Legendary Thieves.\\nI hope you can come to <b>Capital</b> to lend a hand and join me in paying a visit to these four hermits."
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "还望你能来"
     translated: "I hope you can come"
@@ -540,10 +618,13 @@
   - text: "#PlayerName#，我与武殿主已准备妥当。咱们便如此前约定，在"
     translated: "#PlayerName#, I have prepared with Martial Pinnacle Lord as agreed. Let's proceed as we planned."
     qcReviewedText: "#PlayerName#, I have prepared with Martial Pinnacle Lord as agreed. Let's proceed as we planned.<b>Within the city of Jinyang </b>Meet up. Then go to Longquan Temple together to ask Master Baoguang about Zhao Yinzong's whereabouts."
-    qcTranslated: "#PlayerName#, I and Martial Pinnacle Lord are ready. Let's meet up in <b>Jinyang City</b> as agreed before. Then we'll go to Longquan Temple together to ask Master Baoguang about Zhao Yinzong's whereabouts."
+    qcTranslated: "#PlayerName#, I and Martial Pinnacle Lord are ready. Let's meet up <b>within the city of Jinyang</b> as previously agreed. Then we will go to Longquan Temple together to ask Abbot Baoguang about Zhao Yinzong's whereabouts."
     qcStatus: Corrected
-    qcQualityScore: 82
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "晋阳城内"
     translated: "Within the city of Jinyang"
@@ -557,10 +638,13 @@
   - text: "#PlayerName#，我在"
     translated: "#PlayerName#, I am"
     qcReviewedText: "#PlayerName#, I am <b>Wudang Sect Southern Branch </b>While on patrol, we suddenly came under attack by the Battle Deer Alliance and found it difficult to extricate ourselves.\nI hope you can send aid as soon as possible – I would be infinitely grateful!"
-    qcTranslated: "#PlayerName#, I was on patrol in the <b>Wudang Sect Southern Branch</b> area when we suddenly came under attack by the Battle Deer Alliance and found it difficult to extricate ourselves."
+    qcTranslated: "#PlayerName#, I am <b>Wudang Sect Southern Branch</b>. While on patrol, we suddenly came under attack by the Battle Deer Alliance and found it difficult to extricate ourselves."
     qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: HardToParseSeam
+    flaggedForQcReview: true
+    qcQualityScore: 0
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - subIndex: 1
     text: "武当派南方"
     translated: "Wudang Sect Southern Branch"
@@ -577,10 +661,13 @@
   - text: "#PlayerName#，我费了好一番口舌，终于从郭大侠处问得了金龙生的踪迹。"
     translated: "#PlayerName#, I had to plead my case for quite some time before finally getting the whereabouts of Jin Longsheng from Great Hero Guo."
     qcReviewedText: "#PlayerName#, I had to plead my case for quite some time before finally getting the whereabouts of Jin Longsheng from Great Hero Guo.\nCurrently,<b>Northern Youzhou </b>Search far and wide to find his trail, and I hope you can come to lend a hand. This way, we can clarify my position as the Blood Clothes Alliance Grand Leader."
-    qcTranslated: "#PlayerName#, I had to plead my case for quite some time before finally getting the whereabouts of Jin Longsheng from Great Hero Guo.\nCurrently, we are searching far and wide in <b>Northern Youzhou</b> for his trail, and I hope you can come to lend a hand so that we can clarify the identity of the Blood Clothes Alliance Grand Commander."
+    qcTranslated: "#PlayerName#, I had to plead my case for quite some time before finally getting the whereabouts of Jin Longsheng from Great Hero Guo.\nCurrently, we are searching far and wide in the <b>Northern Youzhou</b> area for his trail, and I hope you can come to lend a hand. This way, we can clarify the identity of the Blood Clothes Alliance Grand Leader."
     qcStatus: Corrected
-    qcQualityScore: 82
+    qcQualityScore: 95
     qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
+    - OtherNamedDefect
   - subIndex: 1
     text: "眼下正在"
     translated: "Currently,"
@@ -599,8 +686,10 @@
     qcReviewedText: "#PlayerName#, Wu Jueyi suddenly arrived with everyone to pay a visit.<b>Wudang </b>Mountain Gate. If you have some free time recently, we still hope you can come to assist us in keeping this person in check, to prevent any more disturbances."
     qcTranslated: "#PlayerName#, Wu Jueyi suddenly arrived with his followers to pay a visit to the <b>Wudang</b> Mountain Gate. If you have some free time recently, we still hope you can come to assist us in keeping this person in check, to prevent any more disturbances."
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "武当"
     translated: "Wudang"
@@ -614,10 +703,13 @@
   - text: "#PlayerName#，江陵失守之后，中原武林面对逐鹿盟大军已无险可守，岌岌可危。"
     translated: "#PlayerName#, after the fall of Jiangling, the Central Plain Wulin faced the Qulu Alliance army with no advantage, in dire straits."
     qcReviewedText: "#PlayerName#, after the fall of Jiangling, the Central Plain Wulin faced the Qulu Alliance army with no advantage, in dire straits.\nMaster has invited the leaders of various sects to <b>Wudang </b>The Purple Heaven Palace is convening a grand meeting, and I hope you will join us to discuss strategies."
-    qcTranslated: "#PlayerName#, after the fall of Jiangling, the Central Plain Wulin faced the Qulu Alliance army with no advantage, in dire straits.\nMaster has invited the Sect Leaders of various sects to <b>Wudang </b>The Purple Heaven Palace to convene a grand meeting, and I hope you will join us to discuss strategies."
+    qcTranslated: "#PlayerName#, after the fall of Jiangling, the Central Plain Wulin faced the Qulu Alliance army with no advantage, in dire straits. Master has invited the Sect Leaders of various sects to <b>Wudang</b>'s Purple Heaven Palace to convene a grand meeting, and I hope you will join us to discuss strategies."
     qcStatus: Corrected
-    qcQualityScore: 85
+    qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "师傅已邀请各派掌门于"
     translated: "Master has invited the leaders of various sects to"
@@ -634,9 +726,12 @@
   - text: "#PlayerName#，逐鹿盟将于阎罗殿总舵召开大会，传闻恶贼计心狂也于附近现身，不知又在策划什么阴谋诡计。"
     translated: "#PlayerName#, the Chase Deer Alliance will hold a conference at the main headquarters of the Yama Hall. There are rumors that the villain Ji Xinkuang has also appeared nearby, who knows what sinister plots he is planning next."
     qcReviewedText: "#PlayerName#, the Chase Deer Alliance will hold a conference at the main headquarters of the Yama Hall. There are rumors that the villain Ji Xinkuang has also appeared nearby, who knows what sinister plots he is planning next.\nYou, I, and Ji Xinkuang all share a deep‑seated grudge, so I hope you can come.<b>Yama Hall</b>, Help me take down this thief!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "#PlayerName#, the Chase Deer Alliance will hold a conference at the main headquarters of the Yama Hall. There are rumors that the villain Ji Xinkuang has also appeared nearby, who knows what sinister plots he is planning next.\nYou, I, and Ji Xinkuang all share a deep‑seated grudge, so I hope you can come to <b>Yama Hall</b> to help me take down this thief!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "你我与计心狂皆有血海深仇，还望你能来"
     translated: "You, I, and Ji Xinkuang all share a deep‑seated grudge, so I hope you can come."
@@ -653,10 +748,13 @@
   - text: "我父亲阎罗王临死前还有一遗愿，希望阎罗殿将侵占的佛山镇和清远乡归还给药王谷。"
     translated: "My father, King Yama, had one last wish before he died, hoping that Yama Hall would return the occupied Foshan Town and Qingyuan Township to Medicine King Valley."
     qcReviewedText: "My father, King Yama, had one last wish before he died, hoping that Yama Hall would return the occupied Foshan Town and Qingyuan Township to Medicine King Valley.\n#PlayerName#, if you can make it here <b>Foshan Town</b>, And it would be perfect if we could persuade the inhabitants of Yama Hall guarding this place!"
-    qcTranslated: "My father, King Yama, had one last wish before he died, hoping that Yama Hall would return the occupied Foshan Town and Qingyuan Township to Medicine King Valley.\n#PlayerName#, if you can come to <b>Foshan Town</b> and help us persuade the Yama Hall troops guarding this place, that would be even better!"
+    qcTranslated: "My father, King Yama, had one last wish before he died, hoping that Yama Hall would return the occupied Foshan Town and Qingyuan Township to Medicine King Valley.\n#PlayerName#, if you can come to <b>Foshan Town</b> and join us in persuading the Yama Hall troops stationed here, that would be even better!"
     qcStatus: Corrected
-    qcQualityScore: 82
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "#PlayerName#你若能来"
     translated: "#PlayerName#, if you can make it here"
@@ -673,10 +771,12 @@
   - text: "#PlayerName#，探子来报，逐鹿盟大军已经出发，不日便会抵达巴陵村。"
     translated: "#PlayerName#, scouts report that Zhuulu League's main force has set out and will soon arrive in Baling Village."
     qcReviewedText: "#PlayerName#, scouts report that Zhuulu League's main force has set out and will soon arrive in Baling Village.\nI have led the Wudang elite down the mountain to reinforce, so I hope #PlayerName# will head there as soon as possible.<b>Baling Village </b>Command defense"
-    qcTranslated: "#PlayerName#, scouts report that Zhuulu League's main force has set out and will soon arrive in Baling Village.\nI have led the Wudang elite down the mountain to reinforce, so I hope #PlayerName# will head to <b>Baling Village</b> as soon as possible to command the defense."
+    qcTranslated: "#PlayerName#, scouts report that Zhuulu League's main force has set out and will soon arrive in Baling Village.\nI have led the Wudang elite down the mountain to reinforce, so I hope #PlayerName# will head to <b>Baling Village</b> as soon as possible to oversee defense."
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "贫道已率武当精锐下山驰援，还望#PlayerName#尽快前往"
     translated: "I have led the Wudang elite down the mountain to reinforce, so I hope #PlayerName# will head there as soon as possible."
@@ -693,9 +793,12 @@
   - text: "#PlayerName#，武当、阎罗和神机三派精锐已准备完毕。"
     translated: "#PlayerName#, Wudang, Yanlu and Shengji's elite forces are ready."
     qcReviewedText: "#PlayerName#, Wudang, Yanlu and Shengji's elite forces are ready.\nI look forward to your prompt arrival with your followers.<b>Divine Mechanism Sect </b>Converge with us and march to battle, to besiege the Blood Robe Alliance's main hall in Yangzhou!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "#PlayerName#, Wudang, Yanlu and Shengji's elite forces are ready.\nI look forward to your prompt arrival with your followers at the <b>Divine Mechanism Sect</b> to converge with us and march to battle, to besiege the Blood Robe Alliance's main hall in Yangzhou!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "还望你尽快率众前来"
     translated: "I look forward to your prompt arrival with your followers."
@@ -712,10 +815,13 @@
   - text: "#PlayerName#，贫道与各派掌门准备召开会议，商议追捕思中澜，救援文馨之事。"
     translated: "#PlayerName#, I and the leaders of various factions are preparing to hold a meeting to discuss the pursuit of Si Zhonglan and the rescue of Wen Xin."
     qcReviewedText: "#PlayerName#, I and the leaders of various factions are preparing to hold a meeting to discuss the pursuit of Si Zhonglan and the rescue of Wen Xin.\nIf you can come <b>Wudang Sect </b>To plan and strategize together, that would be perfect."
-    qcTranslated: "#PlayerName#, I and the leaders of various factions are preparing to hold a meeting to discuss the pursuit of Si Zhonglan and the rescue of Wen Xin.\nIf you can come to the <b>Wudang Sect</b> to plan and strategize together, that would be perfect."
+    qcTranslated: "#PlayerName#, I and the leaders of various factions are preparing to hold a meeting to discuss the pursuit of Si Zhonglan and the rescue of Wen Xin.\nIf you can come to <b>Wudang Sect</b> to plan and strategize together, that would be perfect."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "若你能来"
     translated: "If you can come"
@@ -732,10 +838,12 @@
   - text: "#PlayerName#，贫道已与阎罗殿主武绝义相约于"
     translated: "#PlayerName#, I have made an appointment with Lord Wu Jueyi of Yama Hall."
     qcReviewedText: "#PlayerName#, I have made an appointment with Lord Wu Jueyi of Yama Hall.<b>Jiangling </b>The city is convening to discuss the plan to capture Ji Xinkuang. I hope you will come to join in planning this major strategy."
-    qcTranslated: "#PlayerName#, I have made an appointment with Lord Wu Jueyi of Yama Hall to meet within the city of <b>Jiangling</b> and discuss the plan to capture Ji Xinkuang. I hope you will come to join in planning this major strategy."
+    qcTranslated: "#PlayerName#, I have made an appointment with Lord Wu Jueyi of Yama Hall to convene within <b>Jiangling</b> city to discuss the plan to capture Ji Xinkuang. I hope you will come to join in planning this major strategy."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "江陵"
     translated: "Jiangling"
@@ -749,10 +857,13 @@
   - text: "#PlayerName#，近来有丐帮弟子在"
     translated: "#PlayerName#, lately there have been Beggar Sect disciples in"
     qcReviewedText: "#PlayerName#, lately there have been Beggar Sect disciples in <b>Within Chengdu City </b>Traced the whereabouts of Si Zhonglan\nThe hermit has led the investigation team to proceed with the pursuit and arrest. I hope you can come as soon as possible to lend a hand!"
-    qcTranslated: "#PlayerName#, lately there have been Beggar Sect disciples in <b>Within Chengdu City </b>who traced the whereabouts of Si Zhonglan. The hermit has led the investigation team to proceed with the pursuit and arrest. I hope you can come as soon as possible to lend a hand!"
+    qcTranslated: "#PlayerName#, recently, Beggar Sect disciples in <b>Chengdu City</b> discovered traces of Si Zhonglan.\nThe hermit has led the pursuit team to apprehend him. I hope you can come as soon as possible to lend a hand!"
     qcStatus: Corrected
-    qcQualityScore: 85
+    qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "成都城内"
     translated: "Within Chengdu City"
@@ -769,10 +880,13 @@
   - text: "#PlayerName#，逐鹿盟大军已逼近江陵，情势万分危急。"
     translated: "#PlayerName#, the Alliance Army has advanced close to Jiangling, the situation is extremely critical."
     qcReviewedText: "#PlayerName#, the Alliance Army has advanced close to Jiangling, the situation is extremely critical.\nThe Daoist and the core members of our sect were ambushed by the Golden Indestructible Sect outside Baling Village. We are temporarily unable to extricate ourselves; I hope you can send aid as soon as possible.<b>Jiangling</b>, We'll arrive soon!"
-    qcTranslated: "#PlayerName#, the Alliance Army has advanced close to Jiangling, the situation is extremely critical.\nThe Daoist and the core members of our sect were ambushed by the Golden Indestructible Sect outside Baling Village. We are temporarily unable to extricate ourselves; I hope you can go rescue <b>Jiangling</b> as soon as possible. We'll arrive soon!"
+    qcTranslated: "#PlayerName#, the Zhulu Alliance Army has advanced close to Jiangling, and the situation is extremely critical.\nThis humble Daoist and the elite forces of our sect were ambushed by the Golden Indestructible Sect outside Baling Village. We are temporarily unable to extricate ourselves; I hope you can go rescue <b>Jiangling</b> as soon as possible. We will arrive shortly!"
     qcStatus: Corrected
-    qcQualityScore: 90
+    qcQualityScore: 92
     qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
+    - HardToParseSeam
   - subIndex: 1
     text: "贫道与本门精锐在巴陵村外遭金刚宗袭扰，一时难以脱身，望你尽快前去救援"
     translated: "The Daoist and the core members of our sect were ambushed by the Golden Indestructible Sect outside Baling Village. We are temporarily unable to extricate ourselves; I hope you can send aid as soon as possible."
@@ -789,10 +903,13 @@
   - text: "#PlayerName#，阎罗王果真率领逐鹿盟大军近抵"
     translated: "#PlayerName#, King Yama truly led the Battle for the Swallow Alliance army near."
     qcReviewedText: "#PlayerName#, King Yama truly led the Battle for the Swallow Alliance army near.<b>Wudang </b>Shanyang, prepare to attack our sect's main den.\nNow, the outcome of life and death hangs in this single battle. If you can swiftly rally your forces to support us, Wudang Shangxia will surely be eternally grateful!"
-    qcTranslated: "#PlayerName#, King Yama truly led the Zhulu Alliance army near <b>Wudang</b> Mountain, preparing to attack our sect's main headquarters.\nNow, the outcome of life and death hangs in this single battle. If you can swiftly rally your forces to support us, all of Wudang will surely be eternally grateful!"
+    qcTranslated: "#PlayerName#, King Yama truly led the Zhulu Alliance army to the foot of <b>Wudang</b>, preparing to attack our sect's main headquarters."
     qcStatus: Corrected
-    qcQualityScore: 85
-    qcDefectCategory: GarbledNumber
+    flaggedForQcReview: true
+    qcQualityScore: 0
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - subIndex: 1
     text: "武当"
     translated: "Wudang"
@@ -809,10 +926,13 @@
   - text: "#PlayerName#想必已得知"
     translated: "#PlayerName# I presume you've already heard about this."
     qcReviewedText: "#PlayerName# I presume you've already heard about this.<b>Capital Grand Assembly </b>The message, I hope you will come as soon as possible.<b>Capital </b>Converge here and discuss major strategies with me, the Sect Leader, and Master Sima."
-    qcTranslated: "#PlayerName# I presume you've already heard about the <b>Capital Grand Assembly</b>. I hope you will come to the <b>Capital</b> as soon as possible to converge with me and Sect Leader Sima to discuss major strategies."
+    qcTranslated: "#PlayerName# I presume you've already heard the news of the <b>Capital Grand Assembly</b>. I hope you will come to the <b>Capital</b> as soon as possible to converge with me and Sect Leader Sima to discuss major strategies."
     qcStatus: Corrected
-    qcQualityScore: 85
+    qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "京城大会"
     translated: "Capital Grand Assembly"
@@ -832,10 +952,12 @@
   - text: "上次在成都未能捉住思中澜，实在可惜。此后我方小队继续一路追踪，终于将他堵截在大理城内。"
     translated: "Last time in Chengdu, we failed to catch Si Zhonglan, which was really a pity. Our squad continued the pursuit and finally cornered him in Dali."
     qcReviewedText: "Last time in Chengdu, we failed to catch Si Zhonglan, which was really a pity. Our squad continued the pursuit and finally cornered him in Dali.\nThis time, we must not let this evil rogue escape justice. I hope #PlayerName# can arrive as soon as possible.<b>Dali</b>, Arrest them and bring them in!"
-    qcTranslated: "Last time in Chengdu, we failed to catch Si Zhonglan, which was really a pity. Our squad continued the pursuit and finally cornered him in Dali.\nThis time, we must not let this evil rogue escape justice. I hope #PlayerName# can arrive as soon as possible in <b>Dali</b> to help us arrest him and bring him to justice!"
+    qcTranslated: "Last time in Chengdu, we failed to catch Si Zhonglan, which was really a pity. Our squad continued the pursuit and finally cornered him in Dali.\nThis time, we must not let this evil rogue escape justice. I hope #PlayerName# can arrive in <b>Dali</b> as soon as possible to help us arrest him and bring him to justice!"
     qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "这次定不能再让此恶贼逃离法网，还望#PlayerName#尽快赶来"
     translated: "This time, we must not let this evil rogue escape justice. I hope #PlayerName# can arrive as soon as possible."
@@ -856,6 +978,9 @@
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "剑川镇"
     translated: "Jianchuan Town"
@@ -869,10 +994,12 @@
   - text: "眼下思中澜已逃入西南密林之中，只剩下最后一站"
     translated: "Now, Si Zhonglan has fled into the southwestern dense forest, leaving only the final station."
     qcReviewedText: "Now, Si Zhonglan has fled into the southwestern dense forest, leaving only the final station.<b>Five Poisons Sect </b>Main base\nI hope, Commander #PlayerName#, that you lead the elite forces and hurry to the Five Poisons Sect to support us. Together, let's thwart Si Zhonglan's scheme. This monumental chase may soon reach its final showdown."
-    qcTranslated: "Now, Si Zhonglan has fled into the southwestern dense forest, leaving only the final station: the <b>Five Poisons Sect</b> Main base. I hope, Commander #PlayerName#, that you lead the elite forces and hurry to the Five Poisons Sect to support us. Together, let's thwart Si Zhonglan's scheme. This monumental chase may soon reach its final showdown."
+    qcTranslated: "Now, Si Zhonglan has fled into the southwestern dense forest, leaving only the final station: <b>Five Poisons Sect</b> Main base.\nI hope, Commander #PlayerName#, that you lead the elite forces and hurry to the Five Poisons Sect to support us. Together, let's thwart Si Zhonglan's scheme. This monumental chase may soon reach its final showdown."
     qcStatus: Corrected
-    qcQualityScore: 90
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "五毒教"
     translated: "Five Poisons Sect"
@@ -889,10 +1016,13 @@
   - text: "#$PlayerName#施主！我和清风在"
     translated: "#$PlayerName#! Benefactor! I and Qing Feng are"
     qcReviewedText: "#$PlayerName#! Benefactor! I and Qing Feng are <b>Western Hangzhou City </b>Having located a small band of bandit scouts, I hope you can join us so we can eradicate them with one swift strike!"
-    qcTranslated: "#$PlayerName#! Benefactor! I and Qing Feng have located a small band of bandit scouts <b>west of Hangzhou City</b>. I hope you can join us so we can eradicate them with one swift strike!"
+    qcTranslated: "#$PlayerName#! Benefactor! I and Qing Feng have <b>located a small band of bandit scouts west of Hangzhou City</b>. I hope you can join us so we can eradicate them with one swift strike!"
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "杭州城西方"
     translated: "Western Hangzhou City"
@@ -906,10 +1036,13 @@
   - text: "#PlayerName#，上官凤突然异动不断，很可能是找到了封桩宝库的重要线索！望你尽快赶来"
     translated: "#PlayerName#, Shangguan Feng suddenly started making frequent movements, which is very likely to be an important clue to the sealed treasure vault! I hope you can come as soon as possible!"
     qcReviewedText: "#PlayerName#, Shangguan Feng suddenly started making frequent movements, which is very likely to be an important clue to the sealed treasure vault! I hope you can come as soon as possible!<b>Xiangyuan Village</b>, Join me in treasure hunting"
-    qcTranslated: "#PlayerName#, Shangguan Feng has suddenly become restless, which is very likely a significant clue to the sealed treasure vault! I hope you can come to <b>Xiangyuan Village</b> as soon as possible to join me in seizing the treasure."
+    qcTranslated: "#PlayerName#, Shangguan Feng has suddenly become very active, which is very likely an important clue to the sealed treasure vault! I hope you can come to <b>Xiangyuan Village</b> as soon as possible and join me in seizing the treasure."
     qcStatus: Corrected
     qcQualityScore: 82
-    qcDefectCategory: OtherNamedDefect
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "襄垣村"
     translated: "Xiangyuan Village"
@@ -923,10 +1056,12 @@
   - text: "#PlayerName#，剩下三大杀手仍不死心，一直在"
     translated: "#PlayerName#, the three remaining killers are not giving up and continue to"
     qcReviewedText: "#PlayerName#, the three remaining killers are not giving up and continue to <b>Xiangyuan Village </b>Search for treasure\nWatching them dig around like aimless flies is rather amusing. If you have the time, you might want to come and see their foolish antics!"
-    qcTranslated: "#PlayerName#, the three remaining killers are not giving up and continue to search for treasure in <b>Xiangyuan Village</b>."
+    qcTranslated: "#PlayerName#, the three remaining killers are not giving up and continue to search for treasure in <b>Xiangyuan Village</b>.\nWatching them dig around like aimless flies is rather amusing. If you have the time, you might want to come and see their foolish antics!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "襄垣村"
     translated: "Xiangyuan Village"
@@ -943,10 +1078,12 @@
   - text: "#PlayerName#，我已在"
     translated: "#PlayerName#, I have already"
     qcReviewedText: "#PlayerName#, I have already <b>Xiangyuan Village </b>You have located Shangguan Feng and the Four Great Assassins. Hurry and join up with us to prevent them from beating us to the treasures in the Sealed Pile Vault!"
-    qcTranslated: "#PlayerName#, I have already located Shangguan Feng and the Four Great Assassins in <b>Xiangyuan Village</b>. Hurry and join up with us to prevent them from beating us to the treasures in the Sealed Pile Vault!"
+    qcTranslated: "#PlayerName#, I have already located the traces of Shangguan Feng and the Four Great Assassins within <b>Xiangyuan Village</b>. Hurry and join up with us to prevent them from beating us to the treasures in the Sealed Pile Vault!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "襄垣村"
     translated: "Xiangyuan Village"
@@ -962,8 +1099,11 @@
     qcReviewedText: "Recently, I received an odd invitation to some black market conference. It feels fishy, so I've asked #PlayerName# to come along.<b>Beggar Sect </b>Discuss strategies together"
     qcTranslated: "Recently, I received an odd invitation to some black market conference. It feels fishy, so I've asked #PlayerName# to come to the <b>Beggar Sect</b> to discuss strategies together."
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "丐帮"
     translated: "Beggar Sect"
@@ -977,10 +1117,13 @@
   - text: "近来有一恶徒闯入"
     translated: "Lately, a villain has intruded"
     qcReviewedText: "Lately, a villain has intruded <b>Leshan Town </b>Misbehaving like this, he's causing the entire village no peace. Please #PlayerName#, intervene and give him a lesson. I'd be very grateful!"
-    qcTranslated: "Lately, a villain has intruded into <b>Leshan Town</b> and been causing trouble, keeping the entire village from sleeping soundly. Please #PlayerName#, step in and give him a lesson. I'd be very grateful!"
+    qcTranslated: "Lately, a villain has intruded into <b>Leshan Town</b> and been causing trouble, leaving the entire village in chaos. Please, #PlayerName#, step in and teach this guy a lesson. I'd be very grateful!"
     qcStatus: Corrected
-    qcQualityScore: 82
+    qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "乐山镇"
     translated: "Leshan Town"
@@ -994,10 +1137,13 @@
   - text: "黑道大会即将在"
     translated: "The Black Society Conference is about to take place."
     qcReviewedText: "The Black Society Conference is about to take place.<b>Tengchong Prefecture </b>Convene, #PlayerName#, don't forget to join your fellow brothers to explore this den of dragons and tigers together."
-    qcTranslated: "The Black Society Conference is about to convene in <b>Tengchong Prefecture</b>. #PlayerName#, don't forget to join your fellow brothers to explore this den of dragons and tigers together."
+    qcTranslated: "The Black Society Conference is about to convene in <b>Tengchong Prefecture</b>. #PlayerName#, don't forget to come and join your fellow brothers so we can explore this den of dragons and tigers together."
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "腾冲府"
     translated: "Tengchong Prefecture"
@@ -1011,10 +1157,13 @@
   - text: "#PlayerName#，我近来也感染疫病，加上连日操劳，恐怕时日无多。还望你尽快带药王谷前往"
     translated: "#PlayerName#, lately I have also been afflicted with the plague. Coupled with the continuous strain of my duties, I fear my time is limited. I hope you will hurry and bring the Medicine King Valley's remedy."
     qcReviewedText: "#PlayerName#, lately I have also been afflicted with the plague. Coupled with the continuous strain of my duties, I fear my time is limited. I hope you will hurry and bring the Medicine King Valley's remedy.<b>Yangzhou city inside </b>Healing the sick, prevent the epidemic from spreading and causing suffering to the people. Crane thanks you for this!"
-    qcTranslated: "#PlayerName#, lately I have also been afflicted with the plague. Coupled with the continuous strain of my duties, I fear my time is limited. I hope you will hurry and bring the Medicine King Valley's remedy to <b>Yangzhou city</b> to heal the sick, prevent the epidemic from spreading and causing suffering to the people. Crane thanks you for this!"
+    qcTranslated: "#PlayerName#, lately I have also been afflicted with the plague. Coupled with the continuous strain of my duties, I fear my time is limited. I hope you will hurry and bring the Medicine King Valley to <b>Yangzhou city</b> to heal the sick, prevent the epidemic from spreading and causing suffering to the people. Yunhe thanks you for this!"
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "扬州城内"
     translated: "Yangzhou city inside"
@@ -1028,10 +1177,13 @@
   - text: "#PlayerName#，近来阮芷罹患疫病，卧床不起，"
     translated: "#PlayerName#, recently Ruan Zhi has fallen ill with an epidemic disease and has been bedridden."
     qcReviewedText: "#PlayerName#, recently Ruan Zhi has fallen ill with an epidemic disease and has been bedridden.<b>Yangzhou city inside </b>There are now too many infected, and it looks like I can't control the situation. I have no choice but to ask you for your help again!"
-    qcTranslated: "#PlayerName#, recently Ruan Zhi has fallen ill with an epidemic disease and has been bedridden. <b>Within Yangzhou city</b>, there are now too many infected, and it looks like I can't control the situation. I have no choice but to ask you for your help again!"
+    qcTranslated: "#PlayerName#, recently Ruan Zhi has fallen ill with an epidemic disease and has been bedridden. <b>Within Yangzhou city</b>, the number of infected is growing, and it looks like I can't control the situation. I have no choice but to ask you for your help again!"
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "扬州城内"
     translated: "Yangzhou city inside"
@@ -1045,10 +1197,12 @@
   - text: "#PlayerName#，难得的好消息！近来扬州疫病已彻底平息，师傅还把我晋升为亲传弟子了！"
     translated: "#PlayerName#, wonderful news! The plague in Yangzhou has finally been completely quelled, and my master has even promoted me to a direct disciple!"
     qcReviewedText: "#PlayerName#, wonderful news! The plague in Yangzhou has finally been completely quelled, and my master has even promoted me to a direct disciple!\nAdditionally, it's said that Lord Imperial Censor will also be present in person.<b>Yangzhou City</b>, Please come and receive your reward together"
-    qcTranslated: "#PlayerName#, wonderful news! The plague in Yangzhou has finally been completely quelled, and my master has even promoted me to a Direct Disciple!\nAdditionally, it's said that Lord Imperial Censor will also be present in person in <b>Yangzhou City</b>. Please come and receive your reward together"
+    qcTranslated: "#PlayerName#, wonderful news! The plague in Yangzhou has finally been completely quelled, and my master has even promoted me to a Direct Disciple!\nAdditionally, it's said that Lord Imperial Censor will also be present in person at <b>Yangzhou City</b>. Please come and receive your reward together"
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "另外听说，御史大人也会亲临"
     translated: "Additionally, it's said that Lord Imperial Censor will also be present in person."
@@ -1065,9 +1219,12 @@
   - text: "近来"
     translated: "Recently"
     qcReviewedText: "Recently <b>Yangzhou city inside </b>An epidemic is spreading, and despite our efforts to control it, we have been unable to stop it. Ruan Zhi and I are investigating the source of the infection, which seems to be linked to the Black Market's Five Ghosts, Chi Baicheng. We hope you will come, #PlayerName#, and join us in putting an end to his evil deeds!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "Recently, an epidemic has been rampant in <b>Yangzhou city</b>, and despite our efforts to control it, we have been unable to stop it. Ruan Zhi and I are investigating the source of the infection, which seems to be linked to the Black Market's Five Ghosts, Chi Baicheng. We hope you will come, #PlayerName#, and join us in putting an end to his evil deeds!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "扬州城内"
     translated: "Yangzhou city inside"
@@ -1081,10 +1238,13 @@
   - text: "#PlayerName#，我这段时间一直躲在"
     translated: "#PlayerName#, I've been hiding during this time"
     qcReviewedText: "#PlayerName#, I've been hiding during this time <b>Huairou Village West </b>Train diligently in martial arts. But lately, it seems that evil forces have found my whereabouts, and they might try to steal my divine techniques again. I hope you can come and lend me a hand!"
-    qcTranslated: "#PlayerName#, I've been hiding in <b>Huairou Village West</b> during this time, training diligently in martial arts. But lately, it seems that evil forces have found my whereabouts, and they might try to steal my divine techniques again. I hope you can come and lend me a hand!"
+    qcTranslated: "#PlayerName#, I've been hiding in <b>the west of Huairou Village</b> to train diligently in martial arts. But lately, it seems that evil forces have found my whereabouts, and they might try to steal my divine techniques again. I hope you can come and lend me a hand!"
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "怀柔村西方"
     translated: "Huairou Village West"
@@ -1098,10 +1258,13 @@
   - text: "#$PlayerName#掌门，阎罗殿主近日来竟亲自杀上"
     translated: "#$PlayerName#'S Sect Leader, the Lord of Yama Hall has actually personally come to attack recently."
     qcReviewedText: "#$PlayerName#'S Sect Leader, the Lord of Yama Hall has actually personally come to attack recently.<b>Emei </b>Shan demands a trial by combat to settle the matter. I wonder what deceit this person might have, so I hope you will come to aid us in case of unforeseen events!"
-    qcTranslated: "#$PlayerName#'S Sect Leader, the Lord of Yama Hall has actually personally come to attack <b>Emei</b> Mountain recently, demanding a trial by combat to settle the matter. I wonder what deceit this person might have, so I hope you will come to aid us in case of unforeseen events!"
+    qcTranslated: "#$PlayerName# Sect Leader, the Lord of Yama Hall has actually personally come to attack <b>Emei</b> Mountain recently, demanding a trial by combat to settle the matter. I wonder what deceit this person might have, so I hope you will come to aid us in case of unforeseen events!"
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "峨眉"
     translated: "Emei"
@@ -1117,8 +1280,10 @@
     qcReviewedText: "#PlayerName#，<b>Great Assembly at Jin Ding, Emei Mountain </b>We look forward to your attendance as a representative of the Xianxia Sect to discuss major matters!"
     qcTranslated: "#PlayerName#，<b>Great Assembly at Jin Ding, Emei Mountain</b> is about to convene as scheduled. We look forward to your attendance as a representative of the Xianxia Sect to discuss major matters!"
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "即将如约召开，还望你能代表仙霞派前来共商大计！"
     translated: "We look forward to your attendance as a representative of the Xianxia Sect to discuss major matters!"
@@ -1129,10 +1294,12 @@
   - text: "#PlayerName#，四大御史突然一起来到"
     translated: "#PlayerName#, the Four Grand Censors suddenly arrived together."
     qcReviewedText: "#PlayerName#, the Four Grand Censors suddenly arrived together.<b>Xianxia Sect </b>Hey, didn't you do something bad again?\nIf you don't want to get caught, don't come back during this time. Otherwise, you might end up in jail, and I'll have to bring you food."
-    qcTranslated: "#PlayerName#, the Four Grand Censors suddenly arrived together at <b>Xianxia Sect</b>. Hey, didn't you do something bad again?\nIf you don't want to get caught, don't come back during this time. Otherwise, you might end up in jail, and I'll have to bring you food."
+    qcTranslated: "#PlayerName#, the Four Grand Censors suddenly arrived together at <b>Xianxia Sect</b>. Hey, didn't you do something bad again?"
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "仙霞派"
     translated: "Xianxia Sect"
@@ -1165,10 +1332,12 @@
   - text: "杨思迟师兄许久未归，怕是在"
     translated: "Senior Brother Yang Sichi has been absent for a long time, likely still dealing with something."
     qcReviewedText: "Senior Brother Yang Sichi has been absent for a long time, likely still dealing with something.<b>Yunmeng Township's western side </b>Trouble again. #PlayerName#, go find him quickly!"
-    qcTranslated: "Senior Brother Yang Sichi has been absent for a long time, likely still dealing with something on <b>the western side of Yunmeng Township</b>. Trouble again. #PlayerName#, go find him quickly!"
+    qcTranslated: "Senior Brother Yang Sichi has been absent for a long time, likely still dealing with trouble on <b>the western side of Yunmeng Township</b>. #PlayerName#, go find him quickly!"
     qcStatus: Corrected
-    qcQualityScore: 90
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "云梦乡西面"
     translated: "Yunmeng Township's western side"
@@ -1182,9 +1351,12 @@
   - text: "京城"
     translated: "Capital"
     qcReviewedText: "<b>Capital </b>Rumors are spreading that Emperor Shizong Chai Rong's bloodline still exists and seems to be connected to Miss Jiang Wan! We hope #PlayerName# will come forward to clarify the situation before it's too late!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "<b>Capital</b>: Rumors are spreading that Emperor Shizong Chai Rong's bloodline still exists and seems to be connected to Miss Jiang Wan! We hope #PlayerName# will come forward to clarify the situation before it's too late!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "中流言四起，传闻周世宗柴荣血脉尚存人世，而且似乎与姜婉姑娘有关！还望#PlayerName#前来说明情况，以免为时过晚！"
     translated: "Rumors are spreading that Emperor Shizong Chai Rong's bloodline still exists and seems to be connected to Miss Jiang Wan! We hope #PlayerName# will come forward to clarify the situation before it's too late!"
@@ -1199,6 +1371,8 @@
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "西凉城中"
     translated: "Xiliang City"
@@ -1214,8 +1388,10 @@
     qcReviewedText: "#PlayerName#，<b>Capital </b>There have been frequent cases of weapons theft in the region, no doubt the Blood Robe Alliance is behind it. I hope you will come to investigate this case with us, so we do not let the villains' schemes succeed!"
     qcTranslated: "#PlayerName#，<b>Capital</b>, there have been frequent cases of weapons theft in the region, no doubt the Blood Robe Alliance is behind it. I hope you will come to investigate this case with us, so we do not let the villains' schemes succeed!"
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "中屡屡发生武器失窃案件，想来定是血衣盟所为。还望你前来一同查明此案，莫要让贼人奸计得逞！"
     translated: "There have been frequent cases of weapons theft in the region, no doubt the Blood Robe Alliance is behind it. I hope you will come to investigate this case with us, so we do not let the villains' schemes succeed!"
@@ -1226,10 +1402,13 @@
   - text: "京城"
     translated: "Capital"
     qcReviewedText: "#PlayerName#，<b>Capital </b>With anomalies occurring, I am unsure of the Blood Cloak Alliance's plots. I hope you will honor our previous agreement and assist us in uncovering the truth together."
-    qcTranslated: "#PlayerName#，<b>Capital </b>Anomalies have been occurring, and I am unsure of the Blood Cloak Alliance's plots. I hope you will honor our previous agreement and assist us in uncovering the truth together."
+    qcTranslated: "#PlayerName#，<b>Capital</b> has been rife with anomalies, and I am unsure of the Blood Cloak Alliance's plots. I hope you will honor our previous agreement and assist us in uncovering the truth together."
     qcStatus: Corrected
-    qcQualityScore: 85
+    qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "之中异变频发，不知血衣盟有何阴谋。还望你依照此前约定，来助我等一同查明真相。"
     translated: "With anomalies occurring, I am unsure of the Blood Cloak Alliance's plots. I hope you will honor our previous agreement and assist us in uncovering the truth together."
@@ -1240,10 +1419,12 @@
   - text: "#PlayerName#，当真是一波未平一波又起！一直被妥善保护的姜婉姑娘突然失踪，很可能是赵破虏在飞龙门内的心腹所为。"
     translated: "#PlayerName#, it really is one crisis after another! Jiang Wan, who had been well‑protected all along, has suddenly gone missing. It's very likely the work of Zhao Polu's trusted confidant within the Flying Dragon Gate."
     qcReviewedText: "#PlayerName#, it really is one crisis after another! Jiang Wan, who had been well‑protected all along, has suddenly gone missing. It's very likely the work of Zhao Polu's trusted confidant within the Flying Dragon Gate.\nI hope you will come as soon as possible.<b>Flying Dragon Gate</b>, Together, let's find out the whereabouts of Miss Jiang Wan!"
-    qcTranslated: "#PlayerName#, it really is one crisis after another! Jiang Wan, who had been well‑protected all along, has suddenly gone missing. It's very likely the work of Zhao Polu's trusted confidant within the Flying Dragon Gate.\\nI hope you will come to <b>Flying Dragon Gate</b> as soon as possible, so we can find out the whereabouts of Miss Jiang Wan together!"
+    qcTranslated: "#PlayerName#, it really is one crisis after another! Jiang Wan, who had been well‑protected all along, has suddenly gone missing. It's very likely the work of Zhao Polu's trusted confidant within the Flying Dragon Gate. I hope you will come to <b>Flying Dragon Gate</b> as soon as possible, so we can find out the whereabouts of Miss Jiang Wan together!"
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "还望你尽快来"
     translated: "I hope you will come as soon as possible."
@@ -1273,10 +1454,12 @@
   - text: "#PlayerName#，朝廷已同意掌门比武之事，场地也已准备妥当，望你尽快来"
     translated: "#PlayerName#, the court has agreed to the Sect Leader's competition, and the venue is already prepared. Please come as soon as possible."
     qcReviewedText: "#PlayerName#, the court has agreed to the Sect Leader's competition, and the venue is already prepared. Please come as soon as possible.<b>Capital </b>Participate in the trial"
-    qcTranslated: "#PlayerName#, the court has agreed to the Sect Leader's competition, and the venue is already prepared. Please come to <b>Capital</b> as soon as possible to participate in the trial."
+    qcTranslated: "#PlayerName#, the court has agreed to the Sect Leader's competition, and the venue is already prepared. Please come to the <b>Capital</b> as soon as possible to participate in the trial."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "京城"
     translated: "Capital"
@@ -1292,8 +1475,10 @@
     qcReviewedText: "#PlayerName#, the Emperor has issued an edict agreeing for your sect to take charge of the capital's defense. Please return swiftly.<b>Xianxia Sect </b>Head to the main base to receive the orders, then proceed to the capital as soon as possible to complete the handover ceremony.\nThere has been intelligence that the Flying Dragon Gate has been acting unusually lately. I hope you are well prepared to prevent any unforeseen incidents."
     qcTranslated: "#PlayerName#, the Emperor has issued an edict agreeing for your sect to take charge of the Capital's defense. Please return swiftly to the <b>Xianxia Sect</b> main base to receive the orders, then proceed to the Capital as soon as possible to complete the handover ceremony.\\nThere has been intelligence that the Flying Dragon Gate has been acting unusually lately. I hope you are well prepared to prevent any unforeseen incidents."
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "仙霞派"
     translated: "Xianxia Sect"
@@ -1310,10 +1495,13 @@
   - text: "#PlayerName#，眼下京城安定，时机已至。望你自"
     translated: "#PlayerName#, with the capital now at peace, the opportunity has arrived. I hope you will act soon."
     qcReviewedText: "#PlayerName#, with the capital now at peace, the opportunity has arrived. I hope you will act soon.<b>Capital </b>Assemble the disciples and depart, exterminate the Flying Dragon Gate, to permanently eradicate the threat."
-    qcTranslated: "#PlayerName#, with the capital now at peace, the opportunity has arrived. I hope you will act soon. <b>Capital</b> Assemble the disciples and depart, exterminate the Flying Dragon Gate, to permanently eradicate the threat."
+    qcTranslated: "#PlayerName#, with the capital now at peace, the opportunity has arrived. I hope you will gather your disciples from <b>the Capital</b> and depart as soon as possible to exterminate the Flying Dragon Gate, permanently eradicating the threat."
     qcStatus: Corrected
-    qcQualityScore: 85
+    qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "京城"
     translated: "Capital"
@@ -1340,10 +1528,13 @@
   - text: "老子虽没找到胞兄赵胤宗的线索，但却找到一个很可能密切相关之人，眼下正躲在"
     translated: "Although I haven't found any clues about my biological brother Zhao Yinzong, I have discovered someone who is very likely closely related to him. Right now, I am hiding here."
     qcReviewedText: "Although I haven't found any clues about my biological brother Zhao Yinzong, I have discovered someone who is very likely closely related to him. Right now, I am hiding here.<b>Shaolin Temple </b>In!\nOld Immortal Wen Yi, you should follow behind and catch up! Go meet this guy with me!"
-    qcTranslated: "Although I haven't found any clues about my biological brother Zhao Yinzong, I have discovered someone who is very likely closely related to him. Right now, he is hiding in the <b>Shaolin Temple</b>!\nI will go ahead first. You and Immortal Wen Yi should follow behind and catch up! Let's go meet this guy together!"
+    qcTranslated: "Although I haven't found any clues about my biological brother Zhao Yinzong, I have discovered someone who is very likely closely related to him. Right now, he is hiding inside the <b>Shaolin Temple</b>!\nI will go ahead first; you and Immortal Wen Yi should follow behind and catch up! Let's go meet this guy together!"
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "少林寺"
     translated: "Shaolin Temple"
@@ -1373,10 +1564,12 @@
   - text: "近日一路追捕，终于在"
     translated: "Recently, we've been on their tail, and finally caught up with them today."
     qcReviewedText: "Recently, we've been on their tail, and finally caught up with them today.<b>Northern Yangzhou </b>I caught up with Wang Lun's remnants. This person is cunning and deceitful; I fear there may be a trap. I hope #PlayerName# will come to support us so we can work together to eliminate this great threat."
-    qcTranslated: "Recently, we've been on their tail, and finally caught up with Wang Lun's remnants in <b>Northern Yangzhou</b>. This person is cunning and deceitful; I fear there may be a trap. I hope #PlayerName# will come to support us so we can work together to eliminate this great threat."
+    qcTranslated: "Recently, we've been on their tail, and finally caught up with them today in <b>Northern Yangzhou</b>. I caught up with Wang Lun's remnants. This person is cunning and deceitful; I fear there may be a trap. I hope #PlayerName# will come to support us so we can work together to eliminate this great threat."
     qcStatus: Corrected
-    qcQualityScore: 95
+    qcQualityScore: 90
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "扬州北方"
     translated: "Northern Yangzhou"
@@ -1390,10 +1583,13 @@
   - text: "#PlayerName#，我在"
     translated: "#PlayerName#, I am"
     qcReviewedText: "#PlayerName#, I am <b>Yingtian City </b>Seemingly targeted by a gang of villains with ill intentions. I hope you can come to rescue me as soon as possible; I would be infinitely grateful!"
-    qcTranslated: "#PlayerName#, I am <b>in Yingtian City</b> and have been targeted by a gang of villains with ill intentions. I hope you can come to rescue me as soon as possible; I would be infinitely grateful!"
+    qcTranslated: "#PlayerName#, I am <b>in Yingtian City</b> and have been targeted by a gang of villains who seem to be up to no good. Please come to my rescue as soon as possible; I would be infinitely grateful!"
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "应天城中"
     translated: "Yingtian City"
@@ -1409,8 +1605,10 @@
     qcReviewedText: "Big trouble! Serious trouble! Lord Censor truly intends to demote and investigate us three brothers! Hoping you, #PlayerName#, can come to help.<b>Capital</b>, Plead for your brothers and say a few kind words!"
     qcTranslated: "Big trouble! Serious trouble! Lord Censor truly intends to demote and investigate us three brothers! Hoping you, #PlayerName#, can come to <b>Capital</b> to help. Plead for your brothers and say a few kind words!"
     qcStatus: Corrected
-    qcQualityScore: 85
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "京城"
     translated: "Capital"
@@ -1424,10 +1622,13 @@
   - text: "我近日在应天城内寻欢作乐时，听说了一桩奇事"
     translated: "I heard a strange tale while enjoying myself in Yingtian City recently."
     qcReviewedText: "I heard a strange tale while enjoying myself in Yingtian City recently.：A few months ago, a fisherman pulled up a water monkey from the river. If #PlayerName# is interested, come and take a look.<b>City of Yingtian </b>Meet me!"
-    qcTranslated: "I heard a strange tale while enjoying myself in Yingtian City recently. A few months ago, a fisherman pulled up a water monkey from the river. If #PlayerName# is interested, come and take a look.<b>City of Yingtian </b>Meet me!"
+    qcTranslated: "I heard a strange tale while enjoying myself in Yingtian City recently: A few months ago, a fisherman pulled up a water monkey from the river. If #PlayerName# is interested, come to <b>Yingtian City</b> and meet me!"
     qcStatus: Corrected
-    qcQualityScore: 85
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "几个月前，有一渔民从江中网出了个“水猴子”。#PlayerName#若感兴趣，就来"
     translated: "A few months ago, a fisherman pulled up a water monkey from the river. If #PlayerName# is interested, come and take a look."
@@ -1444,10 +1645,12 @@
   - text: "#PlayerName#，我在卢玉麟身边潜伏多时，已深得其信任。近来此人异动不断，血衣盟可能正谋划一桩大事！还望你和郭兄尽快来"
     translated: "#PlayerName#, I have been undercover near Lu Yulin for a long time and have earned his trust. Lately, he has been acting strangely; the Blood Robe Alliance might be planning something big! I hope you and Brother Guo can come as soon as possible."
     qcReviewedText: "#PlayerName#, I have been undercover near Lu Yulin for a long time and have earned his trust. Lately, he has been acting strangely; the Blood Robe Alliance might be planning something big! I hope you and Brother Guo can come as soon as possible.<b>Changle Gang </b>Discuss strategies"
-    qcTranslated: "#PlayerName#, I have been undercover near Lu Yulin for a long time and have earned his trust. Lately, he has been acting strangely; the Blood Robe Alliance might be planning something big! I hope you and Brother Guo can come to <b>Changle Gang</b> as soon as possible to discuss strategies."
+    qcTranslated: "#PlayerName#, I have been undercover near Lu Yulin for a long time and have earned his trust. Lately, he has been acting strangely; the Blood Robe Alliance might be planning something big! I hope you and Brother Guo can come to <b>Changle Gang</b> as soon as possible to discuss strategies"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "长乐帮"
     translated: "Changle Gang"
@@ -1461,10 +1664,13 @@
   - text: "#PlayerName#，长乐帮近日会在"
     translated: "#PlayerName#, Changle Gang will be active recently"
     qcReviewedText: "#PlayerName#, Changle Gang will be active recently <b>Hangzhou City </b>A parade will take place inside. At that time, Lu Yulin will take the opportunity to strike and secretly harm Gang Leader Yue Wuji of Changle Gang. I hope you will lead the elite forces of #PlayerForceName# to come and stop his plot."
-    qcTranslated: "#PlayerName#, Changle Gang will hold a float parade in <b>Hangzhou City</b> recently. At that time, Lu Yulin will take the opportunity to strike and secretly harm Gang Leader Yue Wuji of Changle Gang. I hope you will lead the elite forces of #PlayerForceName# to come and stop his plot."
+    qcTranslated: "#PlayerName#, Changle Gang will hold a float parade in <b>Hangzhou City</b> soon. At that time, Lu Yulin will take the opportunity to strike and secretly harm Gang Leader Yue Wuji of Changle Gang. I hope you will lead the elite forces of #PlayerForceName# to come and stop his plot."
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "杭州城"
     translated: "Hangzhou City"
@@ -1478,10 +1684,13 @@
   - text: "#PlayerName#可有耳闻，"
     translated: "#PlayerName# must have heard of it"
     qcReviewedText: "#PlayerName# must have heard of it <b>Capital </b>A young heroes assembly is underway. Though my martial arts are ordinary, I still want to broaden my horizons. How about you, #PlayerName#, joining in to add some excitement?"
-    qcTranslated: "#PlayerName# must have heard of it. <b>Capital</b> is hosting a young heroes assembly. Though my martial arts are ordinary, I still want to broaden my horizons. How about you, #PlayerName#, joining in to add some excitement?"
+    qcTranslated: "#PlayerName# must have heard that a young heroes assembly is underway in the <b>Capital</b>. Though my martial arts are ordinary, I still want to broaden my horizons. How about you, #PlayerName#, joining in to add some excitement?"
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "京城"
     translated: "Capital"
@@ -1495,9 +1704,12 @@
   - text: "听说有个什么御史大人，要来嘉奖咱抓捕岳无畏之义举。#PlayerName#速来"
     translated: "I heard that a Lord Inspector is coming to commend us for capturing Yue Wuwei. Come quickly, #PlayerName#."
     qcReviewedText: "I heard that a Lord Inspector is coming to commend us for capturing Yue Wuwei. Come quickly, #PlayerName#.<b>Qingcheng Sect</b>, Collect your reward with your Brother!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "I heard that a Lord Inspector is coming to commend us for capturing Yue Wuwei. Come quickly, #PlayerName#, to the <b>Qingcheng Sect</b>, and collect your reward with your Brother!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "青城派"
     translated: "Qingcheng Sect"
@@ -1513,8 +1725,11 @@
     qcReviewedText: "I am preparing to report to Master about the Black Society Conference matter. May I have #PlayerName# come, please?<b>Qingcheng Sect </b>Testify for me to prevent the master from not believing."
     qcTranslated: "I am preparing to report to Master about the Black Society Conference matter. May I have #PlayerName# come to <b>Qingcheng Sect</b> to testify for me, so that Master will believe me?"
     qcStatus: Corrected
-    qcQualityScore: 88
-    qcDefectCategory: HardToParseSeam
+    flaggedForQcReview: true
+    qcQualityScore: 0
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - subIndex: 1
     text: "青城派"
     translated: "Qingcheng Sect"
@@ -1532,6 +1747,8 @@
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "成都"
     translated: "Chengdu"
@@ -1547,8 +1764,10 @@
     qcReviewedText: "#PlayerName#! I've heard the Palm Techniques of the Beggar Sect are incredibly fierce, the pinnacle of the Wulin. I'm preparing to go and learn from them. Let's meet up when the time comes.<b>Beggar Sect </b>Let's meet and broaden our horizons together!"
     qcTranslated: "#PlayerName#! I've heard the Palm Techniques of the Beggar Sect are incredibly fierce, the pinnacle of the Wulin. I'm preparing to go and learn from them. Let's meet up at the <b>Beggar Sect</b> when the time comes and broaden our horizons together!"
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "丐帮"
     translated: "Beggar Sect"
@@ -1562,10 +1781,12 @@
   - text: "#PlayerName#！听说少林功夫冠绝天下，乃佛门正宗，我准备前去讨教讨教。咱们到时候在"
     translated: "#PlayerName#! I've heard that Shaolin martial arts are supreme under heaven, the authentic school of Buddhism. I'm preparing to go and seek guidance. Let's meet up when the time comes."
     qcReviewedText: "#PlayerName#! I've heard that Shaolin martial arts are supreme under heaven, the authentic school of Buddhism. I'm preparing to go and seek guidance. Let's meet up when the time comes.<b>Shaolin Temple </b>Let's meet and broaden our horizons together!"
-    qcTranslated: "#PlayerName#! I've heard that Shaolin martial arts are supreme under heaven, the authentic school of Buddhism. I'm preparing to go and seek guidance. Let's meet up at <b>Shaolin Temple</b> when the time comes, and broaden our horizons together!"
+    qcTranslated: "#PlayerName#! I've heard that Shaolin martial arts are supreme under heaven, the authentic school of Buddhism. I'm preparing to go and seek guidance. Let's meet up at <b>Shaolin Temple</b> when the time comes to broaden our horizons together!"
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "少林寺"
     translated: "Shaolin Temple"
@@ -1579,10 +1800,13 @@
   - text: "#PlayerName#！听说有个叫"
     translated: "#PlayerName#! I heard there's someone named"
     qcReviewedText: "#PlayerName#! I heard there's someone named <b>Great Hidden Pavilion </b>From our sect, which dwells in seclusion amidst the mountains, comes much that is profound and hard to fathom. I'm prepared to go seek some teachings and insights; would you like to join me to broaden our horizons?"
-    qcTranslated: "#PlayerName#! I heard there's a sect called <b>Great Hidden Pavilion</b>, which dwells in seclusion amidst the mountains, profound and hard to fathom. I'm prepared to go seek some teachings and insights; would you like to join me to broaden our horizons?"
+    qcTranslated: "#PlayerName#! I heard there's a sect named <b>Great Hidden Pavilion</b>, which dwells in seclusion amidst the mountains, profound and hard to fathom. I'm prepared to go seek some teachings and insights; would you like to join me to broaden our horizons?"
     qcStatus: Corrected
     qcQualityScore: 92
-    qcDefectCategory: GarbledNumber
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "大隐阁"
     translated: "Great Hidden Pavilion"
@@ -1596,10 +1820,12 @@
   - text: "#PlayerName#！听说武当功夫精妙绝伦，乃道家正宗，我准备去讨教讨教。你要不要和我在"
     translated: "#PlayerName#!I've heard that Wudang kung fu is incredibly exquisite and the genuine article of Taoism. I'm planning to go and seek instruction. Would you like to join me in this quest?"
     qcReviewedText: "#PlayerName#!I've heard that Wudang kung fu is incredibly exquisite and the genuine article of Taoism. I'm planning to go and seek instruction. Would you like to join me in this quest?<b>Wudang Sect </b>Meet at the foot of the mountain and broaden our horizons together?"
-    qcTranslated: "#PlayerName#!I've heard that Wudang kung fu is incredibly exquisite and the genuine article of Taoism. I'm planning to go and seek instruction. Would you like to meet me at the foot of the <b>Wudang Sect</b> mountain and broaden our horizons together?"
+    qcTranslated: "#PlayerName#! I've heard that Wudang kung fu is incredibly exquisite and the genuine article of Taoism. I'm planning to go and seek instruction. Would you like to meet me at the foot of the <b>Wudang Sect</b> mountain and broaden our horizons together?"
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "武当派"
     translated: "Wudang Sect"
@@ -1615,8 +1841,11 @@
     qcReviewedText: "#PlayerName#! Master! Senior Brother and Sister took me to Dali, so finally no one is bothering me! I plan to sneak out for a few days of fun, but I'm unsure of the way. I hope you can come with me.<b>Emei Sect </b>Take me down the mountain!"
     qcTranslated: "#PlayerName#! Master took Senior Brother and Sister to Dali, so finally no one is bothering me! I plan to sneak out for a few days of fun, but I'm unsure of the way. I hope you can come to <b>Emei Sect</b> to take me down the mountain!"
     qcStatus: Corrected
-    qcQualityScore: 82
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "峨眉派"
     translated: "Emei Sect"
@@ -1630,10 +1859,12 @@
   - text: "阎罗王亲率一支精锐，企图偷袭我药王谷治下的"
     translated: "King Yama personally led an elite force to secretly attack the Medicine King Valley under my jurisdiction."
     qcReviewedText: "King Yama personally led an elite force to secretly attack the Medicine King Valley under my jurisdiction.<b>Foshan Town</b>. The situation is urgent; we hope #PlayerName# will lead your forces to come provide support as soon as possible!"
-    qcTranslated: "King Yama personally led an elite force to secretly attack <b>Foshan Town</b>, which is under the jurisdiction of my Medicine King Valley. The situation is urgent; we hope #PlayerName# will lead your forces to come provide support as soon as possible!"
+    qcTranslated: "King Yama personally led an elite force to secretly attack <b>Foshan Town</b>, which is under the jurisdiction of Medicine King Valley. The situation is urgent; we hope #PlayerName# will lead your forces to come provide support as soon as possible!"
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "佛山镇"
     translated: "Foshan Town"
@@ -1647,9 +1878,12 @@
   - text: "阎罗王夺取佛山镇后才过了十数日，便又率兵前来攻打"
     translated: "King Yama took Foshan Town only a dozen days later, and then led his troops to attack again."
     qcReviewedText: "King Yama took Foshan Town only a dozen days later, and then led his troops to attack again.<b>Qingyuan Township</b>。\nCurrently, the reinforcements from various sects in Central Plains are stalled in Baling Village, so they can only rely on #PlayerName# to intervene again!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "King Yama took Foshan Town, and only a dozen days later led his troops to attack <b>Qingyuan Township</b> again.\nCurrently, the reinforcements from various sects in Central Plains are stalled in Baling Village, so they can only rely on #PlayerName# to intervene again!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "清远乡"
     translated: "Qingyuan Township"
@@ -1665,8 +1899,11 @@
     qcReviewedText: "#PlayerName# Long time no see. If you have some free time recently, please come by.<b>Swordforging Manor </b>Pleased to meet you. I have a favor to ask."
     qcTranslated: "#PlayerName# Long time no see. If you have some free time recently, please come by <b>Swordforging Manor</b> for a chat. I have a favor to ask."
     qcStatus: Corrected
-    qcQualityScore: 85
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "铸剑山庄"
     translated: "Swordforging Manor"
@@ -1680,10 +1917,12 @@
   - text: "神兵修复已进入最后阶段，听闻有邪派人士想趁参加名剑大会之机出手抢夺。"
     translated: "The divine weapon's repair is entering its final stage, and there are rumors that some sect individuals plan to make a move to snatch it during the Famous Sword Conference."
     qcReviewedText: "The divine weapon's repair is entering its final stage, and there are rumors that some sect individuals plan to make a move to snatch it during the Famous Sword Conference.\nHope to see #PlayerName# here <b>Swordforging Manor </b>Guard, to ensure the smooth completion of the divine weapon."
-    qcTranslated: "The divine weapon's repair is entering its final stage, and there are rumors that some sect individuals plan to make a move to snatch it during the Famous Sword Conference.\\nHope to see #PlayerName# come to <b>Swordforging Manor</b> as Guard, to ensure the smooth completion of the divine weapon."
+    qcTranslated: "The divine weapon's repair is entering its final stage, and there are rumors that some sect individuals plan to make a move to snatch it during the Famous Sword Conference.\nHope to see #PlayerName# come to <b>Swordforging Manor</b> as Guard, to ensure the smooth completion of the divine weapon."
     qcStatus: Corrected
-    qcQualityScore: 82
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "还望#PlayerName#前来"
     translated: "Hope to see #PlayerName# here"
@@ -1700,9 +1939,12 @@
   - text: "我方联军在"
     translated: "Our allied forces are"
     qcReviewedText: "Our allied forces are <b>In Leshan Town </b>Ready and well‑rested, we are set to depart for Dali soon, to plan our next move.\nI hope #PlayerName# can bring the elite troops of #PlayerForceName# to aid us. I promise a great reward upon completion!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "Our allied forces, <b>in Leshan Town</b>, are ready and well‑rested; we are set to depart for Dali soon to plan our next move. I hope #PlayerName# can bring the elite troops of #PlayerForceName# to aid us. I promise a great reward upon completion!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "乐山镇内"
     translated: "In Leshan Town"
@@ -1719,10 +1961,13 @@
   - text: "老夫已于"
     translated: "Old Man I have already"
     qcReviewedText: "Old Man I have already <b>Yama Hall's northern area </b>One path has been cleared to the Gates of Hell. May #PlayerName# lead the finest of our sect to conquer this place as soon as possible!"
-    qcTranslated: "Old Man I have already <b>in the northern area of Yama Hall</b>, explored the path to the Gates of Hell. May #PlayerName# lead the finest of our sect to conquer this place as soon as possible!"
+    qcTranslated: "Old Man I have already <b>in the northern area of Yama Hall</b>, identified the path leading to the Gates of Hell. May #PlayerName# lead the finest of our sect to conquer this place as soon as possible!"
     qcStatus: Corrected
-    qcQualityScore: 85
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "阎罗殿北方"
     translated: "Yama Hall's northern area"
@@ -1738,8 +1983,11 @@
     qcReviewedText: "#PlayerName#, brothers have already located Murong Xingchen's den, which is right <b>Xiangyuan Village </b>A dilapidated house still hopes that #PlayerName# comes quickly to help capture the thief together."
     qcTranslated: "#PlayerName#, the three brothers have already located Murong Xingchen's den, which is in a dilapidated house in <b>Xiangyuan Village</b>. We still hope that #PlayerName# comes quickly to help capture the thief together."
     qcStatus: Corrected
-    qcQualityScore: 85
+    qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "襄垣村"
     translated: "Xiangyuan Village"
@@ -1755,8 +2003,10 @@
     qcReviewedText: "#PlayerName#, something's terribly wrong! Word got out somehow that the tomb of Inspector Dou is being explored, and now it's causing a stir all over town! Many Wulin figures have come to seek treasure!\nBring more people and come as soon as possible.<b>Zhuxian Town </b>Converge to avoid letting these guys get there first."
     qcTranslated: "#PlayerName#, something's terribly wrong! Word got out somehow that the tomb of Inspector Dou is being explored, and now it's causing a stir all over town! Many Wulin figures have come to seek treasure!\nBring more people and come as soon as possible to <b>Zhuxian Town</b> to converge, so we don't let these guys get there first."
     qcStatus: Corrected
-    qcQualityScore: 90
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "你多带些人手尽快来"
     translated: "Bring more people and come as soon as possible."
@@ -1777,6 +2027,8 @@
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "河内乡"
     translated: "Hanoi Township"
@@ -1793,10 +2045,13 @@
   - text: "兄弟三个押送黄河双煞到了"
     translated: "Brother three escorted the Twin Fiends of the Yellow River here."
     qcReviewedText: "Brother three escorted the Twin Fiends of the Yellow River here.<b>Capital's western side</b>, Seems the thief's accomplices have taken notice. Things are urgent, so please come quickly to lend a hand, #PlayerName#!"
-    qcTranslated: "The three brothers escorted the Twin Fiends of the Yellow River to <b>the west of the Capital</b>, but it seems the thief's accomplices have taken notice. Things are urgent, so please come quickly to lend a hand, #PlayerName#!"
+    qcTranslated: "The three brothers escorted the Twin Fiends of the Yellow River to <b>the west of the Capital</b>. It seems the thief's accomplices have taken notice. Things are urgent, so please come quickly to lend a hand, #PlayerName#!"
     qcStatus: Corrected
-    qcQualityScore: 82
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
+    - HardToParseSeam
   - subIndex: 1
     text: "京城西面"
     translated: "Capital's western side"
@@ -1812,8 +2067,11 @@
     qcReviewedText: "I've heard that the thief Murong Xingchen is causing trouble in our crew's territory. The three of us are already on high alert.<b>Capital </b>Set a heavenly net to lure her in. With your help, #PlayerName#, we can ensure it's foolproof."
     qcTranslated: "I've heard that the thief Murong Xingchen is causing trouble in our crew's territory. The three of us have already set a heavenly net in <b>Capital</b> to lure her in. With your help, #PlayerName#, we can ensure it's foolproof."
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "京城"
     translated: "Capital"
@@ -1827,9 +2085,12 @@
   - text: "我们兄弟仨已将贼人高首押送归案了，#PlayerName#速来"
     translated: "We three brothers have already apprehended the thief Gao Shou and brought him to justice, #PlayerName#, hurry over!"
     qcReviewedText: "We three brothers have already apprehended the thief Gao Shou and brought him to justice, #PlayerName#, hurry over!<b>Flying Dragon Gate </b>Let's receive the reward together!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "We three brothers have already apprehended the thief Gao Shou and brought him to justice, #PlayerName#, hurry over to <b>Flying Dragon Gate</b> to receive the reward together!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "飞龙门"
     translated: "Flying Dragon Gate"
@@ -1843,10 +2104,13 @@
   - text: "#PlayerName#，听闻王添翼兄弟已经杀上"
     translated: "#PlayerName#, I hear Brother Wang Tianyi has already attacked."
     qcReviewedText: "#PlayerName#, I hear Brother Wang Tianyi has already attacked.<b>Qingcheng Mountain</b>, Probably wants to die with that old villain, Zhou Mozhi, at the same time.\nXiang Wentian Brother and the others have already set off. I hope you will also bring some additional people and go with them to seek justice for him!"
-    qcTranslated: "#PlayerName#, I hear Brother Wang Tianyi has already attacked <b>Qingcheng Mountain</b>. He probably wants to die with that old villain, Zhou Mozhi, at the same time.\nXiang Wentian and the others have already set off. I hope you will also bring some additional people and go with them to seek justice for him!"
+    qcTranslated: "#PlayerName#, I hear Brother Wang Tianyi has already attacked <b>Qingcheng Mountain</b>. He probably wants to die with that old villain, Zhou Mozhi, at the same time.\nXiang Wentian and his men have already set off. I hope you will also bring some additional people and go with them to seek justice for him!"
     qcStatus: Corrected
-    qcQualityScore: 88
-    qcDefectCategory: HardToParseSeam
+    flaggedForQcReview: true
+    qcQualityScore: 0
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - subIndex: 1
     text: "青城山"
     translated: "Qingcheng Mountain"
@@ -1867,6 +2131,9 @@
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "当涂镇北方"
     translated: "Northern Dangtu Town"
@@ -1880,10 +2147,13 @@
   - text: "#PlayerName#，我爹在"
     translated: "#PlayerName#, my father is here"
     qcReviewedText: "#PlayerName#, my father is here <b>Qingyuan Township West </b>I'm about to catch up with the Black Path Five Ghosts. I hope you can come and join me to prevent Father from accidentally harming Brother Wang Tianyi."
-    qcTranslated: "#PlayerName#, my father is in <b>Qingyuan Township West</b> and is about to catch up with the Black Path Five Ghosts. I hope you can come and join me to prevent Father from accidentally harming Brother Wang Tianyi."
+    qcTranslated: "#PlayerName#, my father is in <b>the west of Qingyuan Township</b>, on the verge of catching up with the Black Path Five Ghosts. I hope you can come and join me to prevent Father from accidentally harming Brother Wang Tianyi."
     qcStatus: Corrected
-    qcQualityScore: 85
-    qcDefectCategory: GarbledNumber
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "清远乡西方"
     translated: "Qingyuan Township West"
@@ -1899,8 +2169,11 @@
     qcReviewedText: "#PlayerName#, we have been chasing the villain Lu Yulin all the way, and now he is here.<b>Northern Yingtian </b>One stopped it\nI look forward to your help in apprehending this person!"
     qcTranslated: "#PlayerName#, we have been chasing the villain Lu Yulin all the way, and now we have intercepted him in the <b>Northern Yingtian</b> area. I look forward to your help in apprehending this person!"
     qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: GarbledNumber
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "应天北方"
     translated: "Northern Yingtian"
@@ -1917,10 +2190,12 @@
   - text: "#PlayerName#，昔日山谷一战后我继续搜索，总算在"
     translated: "#PlayerName#, after the battle in the valley, I continued my search and finally managed to find"
     qcReviewedText: "#PlayerName#, after the battle in the valley, I continued my search and finally managed to find <b>Yuxi Village </b>I have located Wang Tianyi again. I hope you will come as soon as possible to persuade him to return to the right path with me!"
-    qcTranslated: "#PlayerName#, after the battle in the valley, I continued my search and finally managed to find traces of Wang Tianyi again in <b>Yuxi Village</b>. I hope you will come as soon as possible to persuade him to return to the right path with me!"
+    qcTranslated: "#PlayerName#, after the battle in the valley, I continued my search and finally managed to find <b>Yuxi Village</b>, where I have located Wang Tianyi again. I hope you will come as soon as possible to persuade him to return to the right path with me!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "玉溪村"
     translated: "Yuxi Village"
@@ -1936,8 +2211,10 @@
     qcReviewedText: "#PlayerName#, Brother Wang Tianyi is about to be exiled, let's go right away.<b>Chengdu </b>Converge and prepare for the great prison break!"
     qcTranslated: "#PlayerName#, Brother Wang Tianyi is about to be exiled, let's go right away to <b>Chengdu</b> to converge and prepare for the great prison break!"
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "成都"
     translated: "Chengdu"
@@ -1951,9 +2228,12 @@
   - text: "#PlayerName#，这些日子爹爹一直在追踪黑道五鬼，听说他们已逃到了"
     translated: "#PlayerName#, these days, Father has been tracking the Black Gang Five, and I've heard they've fled to"
     qcReviewedText: "#PlayerName#, these days, Father has been tracking the Black Gang Five, and I've heard they've fled to <b>Jingdezhen </b>Inside, I hope you hurry to stop Wang Tianyi; otherwise, he might be accidentally injured by my father!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "#PlayerName#, these days, Father has been tracking the Black Gang Five, and I've heard they've fled to <b>Jingdezhen</b>. I hope you hurry to stop Wang Tianyi; otherwise, he might be accidentally injured by my father!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "景德镇"
     translated: "Jingdezhen"
@@ -1967,10 +2247,13 @@
   - text: "#PlayerName#！最近听到风声，王添翼兄弟在"
     translated: "#PlayerName#! I've heard some rumors recently. Brother Wang Tianyi is in..."
     qcReviewedText: "#PlayerName#! I've heard some rumors recently. Brother Wang Tianyi is in...<b>Northern Dali </b>Blocked by the Tang Clan and Qingcheng Sect, we need to hurry and go rescue them."
-    qcTranslated: "#PlayerName#! I've heard some rumors recently. Brother Wang Tianyi was cornered by the Tang Clan and Qingcheng Sect in <b>Northern Dali</b>. We need to hurry and go rescue him."
+    qcTranslated: "#PlayerName#! I've heard some rumors recently. Brother Wang Tianyi has been cornered by the Tang Clan and Qingcheng Sect in <b>Northern Dali</b>. We need to hurry and go rescue him."
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "大理北方"
     translated: "Northern Dali"
@@ -1984,10 +2267,12 @@
   - text: "#PlayerName#！我刚听说王添翼兄弟被抓的消息，真是岂有此理！咱们赶快去"
     translated: "#PlayerName#! I just heard that Brother Wang Tianyi was arrested! How outrageous! Let's go there right away!"
     qcReviewedText: "#PlayerName#! I just heard that Brother Wang Tianyi was arrested! How outrageous! Let's go there right away!<b>Chengdu </b>Meet up, tell me exactly what's going on!"
-    qcTranslated: "#PlayerName#! I just heard that Brother Wang Tianyi was arrested! How outrageous! Let's head to <b>Chengdu</b> right away to meet up, and tell me exactly what's going on!"
+    qcTranslated: "#PlayerName#! I just heard that Brother Wang Tianyi was arrested! How outrageous! Let's head to <b>Chengdu</b> right away and meet up, tell me exactly what's going on!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "成都"
     translated: "Chengdu"
@@ -2001,10 +2286,12 @@
   - text: "#PlayerName#！我在"
     translated: "#PlayerName#! I am"
     qcReviewedText: "#PlayerName#! I am <b>Northern Hangzhou </b>I've found a lead on Laughing Demon's whereabouts. I hope you can come and help intercept him, and make sure to find out what his relationship is with Brother Wang Tianyi!"
-    qcTranslated: "#PlayerName#! I am <b>in Northern Hangzhou</b>. I've found a lead on Laughing Demon's whereabouts. I hope you can come and help intercept him, and make sure to find out what his relationship is with Brother Wang Tianyi!"
+    qcTranslated: "#PlayerName#! I have found a lead on the Laughing Demon in <b>Northern Hangzhou</b>. I hope you can come and help intercept him, and make sure to find out what his relationship is with Brother Wang Tianyi!"
     qcStatus: Corrected
-    qcQualityScore: 85
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "杭州北方"
     translated: "Northern Hangzhou"
@@ -2018,9 +2305,12 @@
   - text: "第二届泰岳大典"
     translated: "Second Taiyue Grand Festival"
     qcReviewedText: "<b>Second Taiyue Grand Festival </b>Already held, and it is said that all sect leaders will attend. #PlayerName#, you'd better come along to enjoy the spectacle!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "<b>The Second Taiyue Grand Ceremony</b> has already begun, and it is said that all Sect Leaders will attend. #PlayerName#, hurry over to see the spectacle!"
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "已经召开，听说各派掌门都会参与。#PlayerName#还不赶紧来一道瞧个热闹！"
     translated: "Already held, and it is said that all sect leaders will attend. #PlayerName#, you'd better come along to enjoy the spectacle!"
@@ -2031,10 +2321,13 @@
   - text: "上次被岳无畏侥幸逃脱，这次总算又在"
     translated: "Last time I narrowly escaped from Yue Wuwei, this time I've finally managed to catch up with him again."
     qcReviewedText: "Last time I narrowly escaped from Yue Wuwei, this time I've finally managed to catch up with him again.<b>Chengdu </b>Catch up to this scoundrel. I have a brilliant plan to catch him, but I need two helpers. I hope #PlayerName# and Brother Tianyi will come to assist me; with the three of us working together, we're sure to catch him!"
-    qcTranslated: "Last time I narrowly escaped from Yue Wuwei, this time I've finally managed to catch up with him again in <b>Chengdu</b>. I have a brilliant plan to catch him, but I need two helpers. I hope #PlayerName# and Brother Tianyi will come to assist me; with the three of us working together, we're sure to catch him!"
+    qcTranslated: "Last time Yue Wuwei narrowly escaped, this time I've finally managed to catch up with this scoundrel again in <b>Chengdu</b>. I have a brilliant plan to catch him, but I need two helpers. I hope #PlayerName# and Brother Tianyi will come to assist me; with the three of us working together, we're sure to catch him!"
     qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
+    - HardToParseSeam
   - subIndex: 1
     text: "成都"
     translated: "Chengdu"
@@ -2050,8 +2343,11 @@
     qcReviewedText: "I have been chasing the bandit Yue Wuwei all along; finally, I caught up to him at <b>Longxi County </b>Track down their whereabouts. Please come here, #PlayerName#, to help me catch the thieves!"
     qcTranslated: "I have been chasing the bandit Yue Wuwei all along; finally, I caught up to him at <b>Longxi County</b>. Please come here, #PlayerName#, to help me catch the thief!"
     qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: GarbledNumber
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "陇西县"
     translated: "Longxi County"
@@ -2065,10 +2361,13 @@
   - text: "我爹听闻黑道大会之事，准备近日在"
     translated: "My father heard about the organized crime conference and is preparing to attend in the near future."
     qcReviewedText: "My father heard about the organized crime conference and is preparing to attend in the near future.<b>Jiangling </b>Hold a grand conference to discuss strategies. Rest assured, champions will gather in great numbers, and the scene is bound to be spectacular! #PlayerName# must come to join the fun!"
-    qcTranslated: "My father heard about the organized crime conference and is preparing to hold a grand conference in <b>Jiangling</b> in the near future to discuss strategies. Rest assured, champions will gather in great numbers, and the scene is bound to be spectacular! #PlayerName# must come to join the fun!"
+    qcTranslated: "My father heard about the Black Sect Assembly and is preparing to hold a grand conference in <b>Jiangling</b> in the near future to discuss strategies. Rest assured, champions will gather in great numbers, and the scene is bound to be spectacular! #PlayerName# must come to join the fun!"
     qcStatus: Corrected
-    qcQualityScore: 90
+    qcQualityScore: 92
     qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
+    - HardToParseSeam
   - subIndex: 1
     text: "江陵"
     translated: "Jiangling"
@@ -2086,6 +2385,8 @@
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "峨眉派"
     translated: "Emei Sect"
@@ -2099,9 +2400,12 @@
   - text: "第三次泰岳大典"
     translated: "Third Tai Yue Grand Ceremony"
     qcReviewedText: "#PlayerName#，<b>Third Tai Yue Grand Ceremony </b>It will be held soon. We hope you and the various sect leaders will follow the plan. Once Jin Longsheng makes an appearance, we should strike simultaneously to take him down.\nThe rise and fall of the nation depends on this battle, and the safety of the Wulin is at stake as well. I hope you can bring some top‑notch warriors to aid us; it would be wise to prepare for any unforeseen circumstances!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "#PlayerName#，<b>Third Tai Yue Grand Ceremony </b>is about to be held. We hope you and the various Sect Leaders will follow the plan. Once Jin Longsheng makes an appearance, we should strike simultaneously to take him down.\nThe rise and fall of the nation depends on this battle, and the safety of the Wulin is at stake as well. I hope you can bring some top‑notch warriors to aid us; it would be wise to prepare for any unforeseen circumstances!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "即将召开。届时还望你与各派掌门依计行事，待金龙生一现身，便同时出手将他拿下。"
     translated: "It will be held soon. We hope you and the various sect leaders will follow the plan. Once Jin Longsheng makes an appearance, we should strike simultaneously to take him down."
@@ -2115,10 +2419,13 @@
   - text: "#PlayerName#，我与犬子已将恶贼凤南飞堵在"
     translated: "#PlayerName#, I and my son have already cornered the evil villain Feng Nanfei."
     qcReviewedText: "#PlayerName#, I and my son have already cornered the evil villain Feng Nanfei.<b>Lingtai Village </b>Inner, how could this person have invited several Blood Robe Alliance experts to oversee the situation? Please bring more people to assist; otherwise, this scoundrel might escape punishment again!"
-    qcTranslated: "#PlayerName#, I and my son have already cornered the evil villain Feng Nanfei inside <b>Lingtai Village</b>, but this person has invited several Blood Robe Alliance experts to oversee the situation. Please bring more people to assist; otherwise, this scoundrel might escape punishment again!"
+    qcTranslated: "#PlayerName#, I and my son have already cornered the evil villain Feng Nanfei inside <b>Lingtai Village</b>, but he has invited several Blood Robe Alliance experts to back him up. Please bring more people to assist; otherwise, this scoundrel might escape punishment again!"
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "灵台村"
     translated: "Lingtai Village"
@@ -2132,10 +2439,12 @@
   - text: "#PlayerName#，我将在"
     translated: "#PlayerName#, I will be"
     qcReviewedText: "#PlayerName#, I will be <b>Capital </b>Reward the Hero who apprehended Zeng Zhenhai; I hope you will find time to come and claim your reward. Please do not decline."
-    qcTranslated: "#PlayerName#, I will be <b>Capital </b>rewarding the Hero who apprehended Zeng Zhenhai; I hope you will find time to come and claim your reward. Please do not decline."
+    qcTranslated: "#PlayerName#, I will be <b>in the Capital</b> rewarding the Hero who apprehended Zeng Zhenhai; I hope you will find time to come and claim your reward. Please do not decline."
     qcStatus: Corrected
-    qcQualityScore: 85
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "京城"
     translated: "Capital"
@@ -2149,9 +2458,13 @@
   - text: "#PlayerName#，我已邀请少林、武当、峨眉、丐帮四大门派掌门会于"
     translated: "#PlayerName#, I have invited the Palm Leaders of the Shaolin, Wudang, Meizhou, and Beggar Sects to meet at"
     qcReviewedText: "#PlayerName#, I have invited the Palm Leaders of the Shaolin, Wudang, Meizhou, and Beggar Sects to meet at <b>Banqiao Town</b>。\nOstensibly to discuss the third Taiyue Grand Ceremony, it was actually to inform Jin Longsheng is the true Grand Commander of the Blood Robe League and to deploy a plan to arrest him at the meeting.\nI still hope you will come and share the full details of your previous investigation."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "#PlayerName#, I have invited the Sect Leaders of the Shaolin, Wudang, Emei, and Beggar Sects to meet at <b>Banqiao Town</b>.\nOstensibly to discuss the third Taiyue Grand Ceremony, it was actually to inform them that Jin Longsheng is the true Grand Commander of the Blood Robe League and to deploy a plan to arrest him at the meeting.\nI still hope you will come and share the full details of your previous investigation."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+    - DroppedContent
   - subIndex: 1
     text: "板桥镇"
     translated: "Banqiao Town"
@@ -2168,10 +2481,13 @@
   - text: "#PlayerName#，爹爹与我不日便会前往"
     translated: "#PlayerName#, Father and I won't be far away soon."
     qcReviewedText: "#PlayerName#, Father and I won't be far away soon.<b>Tang Clan</b>, Attend the alliance ceremony. If you and Guo Yongrui can come to cheer me on, that would be perfect!"
-    qcTranslated: "#PlayerName#, Father and I will soon head to the <b>Tang Clan</b> to hold the marriage alliance ceremony. If you and Guo Yongrui can come to cheer me on, that would be perfect!"
+    qcTranslated: "#PlayerName#, Father and I will soon head to <b>Tang Clan</b> to hold the alliance ceremony. If you and Guo Yongrui can come to cheer me on, that would be perfect!"
     qcStatus: Corrected
-    qcQualityScore: 90
-    qcDefectCategory: GarbledNumber
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "唐门"
     translated: "Tang Clan"
@@ -2193,10 +2509,13 @@
   - text: "#PlayerName#，唐逸影已经中计，如今亲率唐门精锐潜伏在"
     translated: "#PlayerName#, Tang Yiying has fallen for the trap, and now personally leads the Tang Clan's elite forces in hiding."
     qcReviewedText: "#PlayerName#, Tang Yiying has fallen for the trap, and now personally leads the Tang Clan's elite forces in hiding.<b>Xianxia Sect Southern Branch </b>One move. I still hope you carry out the plan as planned, from the inside and outside, to catch them off guard."
-    qcTranslated: "#PlayerName#, Tang Yiying has fallen for the trap, and now personally leads the Tang Clan's elite forces in hiding in the <b>area south of Xianxia Sect</b>. I still hope you carry out the plan as planned, from the inside and outside, to catch them off guard."
+    qcTranslated: "#PlayerName#, Tang Yiying has fallen for the trap, and now personally leads the Tang Clan's elite forces in hiding in the area south of <b>Xianxia Sect</b>. I still hope you carry out the plan as planned, coordinating from the inside and outside, to catch them off guard."
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "仙霞派南方"
     translated: "Xianxia Sect Southern Branch"
@@ -2210,9 +2529,12 @@
   - text: "#PlayerName#，我与吕舞阳兄弟一路追击，终于将曾镇海堵在了"
     translated: "#PlayerName#, I and Brother Lu Wuyang pursued him all the way and finally cornered Zeng Zhenhai."
     qcReviewedText: "#PlayerName#, I and Brother Lu Wuyang pursued him all the way and finally cornered Zeng Zhenhai.<b>Within Jiangling City</b>。\nI look forward to your swift arrival so we can apprehend this villain together!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "#PlayerName#, I and Brother Lu Wuyang pursued him all the way and finally cornered Zeng Zhenhai within <b>Jiangling City</b>."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "江陵城内"
     translated: "Within Jiangling City"
@@ -2226,10 +2548,13 @@
   - text: "#PlayerName#，我在"
     translated: "#PlayerName#, I am"
     qcReviewedText: "#PlayerName#, I am <b>Xiliang </b>They have gathered some leads in their pursuit of the notorious bandit responsible for the recent bloodshed in the city. We hope you can lend a hand to help catch this evil bandit and bring him to justice sooner."
-    qcTranslated: "#PlayerName#, I am <b>Xiliang</b> city, investigating the notorious bandit responsible for the recent bloodshed. I have gathered some leads. We hope you can lend a hand to help catch this evil bandit and bring him to justice sooner."
+    qcTranslated: "#PlayerName#, I am <b>Xiliang</b> investigating the notorious bandit responsible for the recent bloodshed in the city, and I have now gathered some leads. We hope you can lend a hand to help catch this evil bandit and bring him to justice sooner."
     qcStatus: Corrected
-    qcQualityScore: 65
-    qcDefectCategory: GarbledNumber
+    flaggedForQcReview: true
+    qcQualityScore: 0
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - subIndex: 1
     text: "西凉"
     translated: "Xiliang"
@@ -2243,9 +2568,13 @@
   - text: "#PlayerName#，飞凤钱庄的犯罪证据我已暗中收集完毕，同时布下天罗地网。"
     translated: "#PlayerName#, I have secretly gathered the evidence of crime at the Feifeng Bank, and simultaneously set a Heaven's Net in the sky."
     qcReviewedText: "#PlayerName#, I have secretly gathered the evidence of crime at the Feifeng Bank, and simultaneously set a Heaven's Net in the sky.\nI still look forward to your coming as we agreed beforehand.<b>Xiliang </b>Capture the evil bandit Feng Nanfei and seek justice for the people of Xiliang!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "#PlayerName#, I have secretly gathered the evidence of crime at the Feifeng Bank, and simultaneously set a Heaven's Net.\nI still look forward to your coming as we agreed beforehand to <b>Xiliang</b> to capture the evil bandit Feng Nanfei and seek justice for the people of Xiliang!"
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "还望你依此前约定，来"
     translated: "I still look forward to your coming as we agreed beforehand."
@@ -2262,12 +2591,12 @@
   - text: "昔日仙居客栈一战后，吕舞阳已逃至"
     translated: "After the battle at the Ancient Immortal Residence Inn, Lu Wuyang had already fled to"
     qcReviewedText: "After the battle at the Ancient Immortal Residence Inn, Lu Wuyang had already fled to <b>Southern Longxi County </b>In this area, they might want to meet up with Zeng Zhenhai and the Four Great Assassins.\nI hope #PlayerName# brings more people to help this time. We must capture them all."
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "After the battle at the Ancient Immortal Residence Inn, Lu Wuyang had already fled to <b>Southern Longxi County</b>. In this area, they might want to meet up with Zeng Zhenhai and the Four Great Assassins."
-    qcFailureReason: "#PlayerName#"
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "After the battle at the Ancient Immortal Residence Inn, Lu Wuyang had already fled to <b>Southern Longxi County </b>In this area, they might want to meet up with Zeng Zhenhai and the Four Great Assassins.\nI hope #PlayerName# brings more people to help this time. We must capture them all."
+    qcTranslated: "After the battle at the Ancient Immortal Residence Inn, Lu Wuyang had already fled to <b>Southern Longxi County</b>. In this area, they might want to meet up with Zeng Zhenhai and the Four Great Assassins.\\nI hope #PlayerName# brings more people to help this time. We must capture them all."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "陇西县南方"
     translated: "Southern Longxi County"
@@ -2296,6 +2625,8 @@
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "仙霞派内"
     translated: "Inside the Xianxia Sect"
@@ -2309,10 +2640,12 @@
   - text: "#PlayerName#，近来"
     translated: "#PlayerName#, lately"
     qcReviewedText: "#PlayerName#, lately <b>Iron Palm Gang Iron Mine </b>With the defenses weak, this is our perfect opportunity to take control. Please come as soon as possible to take command."
-    qcTranslated: "#PlayerName#, lately <b>Iron Palm Gang Iron Mine</b> has weak defenses, making this the perfect opportunity for us to seize it. Please come as soon as possible to take command."
+    qcTranslated: "#PlayerName#, lately <b>Iron Palm Gang Iron Mine</b>'s defenses are weak, making this our perfect opportunity to take control. Please come as soon as possible to take command."
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "铁掌帮铁矿"
     translated: "Iron Palm Gang Iron Mine"
@@ -2326,10 +2659,12 @@
   - text: "#PlayerName#，近来江湖风云突变，我有一计想与你和各位师兄妹探讨，还望你回"
     translated: "#PlayerName#, lately the Jianghu has seen sudden changes. I have a plan I would like to discuss with you and the other senior and junior brothers and sisters. I hope you can return."
     qcReviewedText: "#PlayerName#, lately the Jianghu has seen sudden changes. I have a plan I would like to discuss with you and the other senior and junior brothers and sisters. I hope you can return.<b>Xianxia Sect </b>Discuss this together"
-    qcTranslated: "#PlayerName#, lately the Jianghu has seen sudden changes. I have a plan I would like to discuss with you and the other senior and junior brothers and sisters. I hope you can return to <b>Xianxia Sect</b> to discuss this matter together."
+    qcTranslated: "#PlayerName#, lately the Jianghu has seen sudden changes. I have a plan I would like to discuss with you and the other senior and junior brothers and sisters. I hope you can return to <b>Xianxia Sect</b> to discuss this together"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "仙霞派"
     translated: "Xianxia Sect"
@@ -2388,10 +2723,12 @@
   - text: "大事不好！朝廷突然下令让我们捉拿赵破虏掌门！"
     translated: "Big trouble! The court suddenly ordered us to capture Zhao Polu, the Sect Leader!"
     qcReviewedText: "Big trouble! The court suddenly ordered us to capture Zhao Polu, the Sect Leader!\nI hope #PlayerName# can come as soon as possible.<b>Capital</b>, Advise everyone not to act rashly and wrongfully blame the good!"
-    qcTranslated: "Big trouble! The court suddenly ordered us to capture Zhao Polu, the Sect Leader!\nI hope #PlayerName# can come to <b>Capital</b> as soon as possible and advise everyone not to act rashly and wrongfully blame the good!"
+    qcTranslated: "Big trouble! The court suddenly ordered us to capture Zhao Polu, the Sect Leader!\nI hope #PlayerName# can come to <b>Capital</b> as soon as possible and advise everyone not to act rashly or wrongfully blame the good!"
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "还望#PlayerName#尽快赶来"
     translated: "I hope #PlayerName# can come as soon as possible."
@@ -2408,10 +2745,12 @@
   - text: "#PlayerName#，大事不妙！白云天姑娘状况恶化，眼看性命就要不保！"
     translated: "#PlayerName#, trouble ahead! Miss Bai Yuntian's condition is worsening; she may not make it!"
     qcReviewedText: "#PlayerName#, trouble ahead! Miss Bai Yuntian's condition is worsening; she may not make it!\nI have sent a message to Sect Leader Sima of Mount Emei via homing pigeon. I hope you can hurry over.<b>Five Poisons Sect</b>, Join us in devising a strategy"
-    qcTranslated: "#PlayerName#, trouble ahead! Miss Bai Yuntian's condition is worsening; she may not make it!\\nI have sent a message to Sect Leader Sima of Mount Emei via homing pigeon. I hope you can hurry over to the <b>Five Poisons Sect</b> and join us in devising a strategy"
+    qcTranslated: "#PlayerName#, trouble ahead! Miss Bai Yuntian's condition is worsening; she may not make it!\nI have sent a message to Sect Leader Sima of Mount Emei via homing pigeon. I hope you can hurry over to the <b>Five Poisons Sect</b> and join us in devising a strategy"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "我已飞鸽传书峨眉司马掌门，还望你尽快赶来"
     translated: "I have sent a message to Sect Leader Sima of Mount Emei via homing pigeon. I hope you can hurry over."
@@ -2428,9 +2767,12 @@
   - text: "小师妹突发高烧，卧病在床！#PlayerName#"
     translated: "The little junior sister suddenly developed a high fever and is bedridden! #PlayerName#"
     qcReviewedText: "The little junior sister suddenly developed a high fever and is bedridden! #PlayerName#<b>Speed back to the sect</b>, Let's think of a solution together!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "The little junior sister suddenly developed a high fever and is bedridden! #PlayerName#<b>Return to the sect immediately</b>, let's think of a solution together!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "速回门派"
     translated: "Speed back to the sect"

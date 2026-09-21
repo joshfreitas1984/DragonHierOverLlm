@@ -6,94 +6,106 @@
     qcReviewedText: "Huangfu Qingshan"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - split: 2
     text: "阎罗王"
     translated: "King Yama"
     qcReviewedText: "King Yama"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - split: 3
     text: "慕容星辰"
     translated: "Murong Xingchen"
     qcReviewedText: "Murong Xingchen"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - split: 4
     text: "道无名"
     translated: "Dao Wuming"
     qcReviewedText: "Dao Wuming"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - split: 5
     text: "夏天雄"
     translated: "Xia Tianxiong"
     qcReviewedText: "Xia Tianxiong"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - split: 6
     text: "武绝义"
     translated: "Wu Jueyi"
     qcReviewedText: "Wu Jueyi"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - split: 7
     text: "金龙生"
     translated: "Jin Longsheng"
     qcReviewedText: "Jin Longsheng"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - split: 8
     text: "白云天"
     translated: "Bai Yuntian"
     qcReviewedText: "Bai Yuntian"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - split: 9
     text: "思中澜"
     translated: "Si Zhonglan"
     qcReviewedText: "Si Zhonglan"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - split: 10
     text: "计心狂"
     translated: "Ji Xinkuang"
     qcReviewedText: "Ji Xinkuang"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - split: 11
     text: "郭淮"
     translated: "Guo Huai"
     qcReviewedText: "Guo Huai"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - split: 12
     text: "张文馨"
     translated: "Zhang Wenxin"
     qcReviewedText: "Zhang Wenxin"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "思考招式,......#PlayerName#......我此招使得......可有纰漏？,绝顶高手相争之时，唯一目的便是击败对方。\\n无欲无情，全心投入，专注于“杀”这一字便已足够。,#PlayerName#，你不会和那些无趣江湖人士一般，\\n成天只知道习武练功吧！,习武练功，何必拘泥于招式？\\n从心所欲，挥手成招，方为至高之境界。,#PlayerName#，老夫这铁掌帮武功，不知可在仙霞派之上？,老子所习招式，皆是逆势而动，倒转而行。\\n任你大罗金仙，也休想摸清老子的套路。,高手之争，非在一招一式之间，而在于运用之“人”身上。\\n只要时机得当，再弱的招式亦能威力倍增。,听师傅说，出招之法在于随心所欲，无拘无束。\\n若能一呼一吸，收发自然，便也算小半个高手了吧。,道无名阁主功力深不可测，我确实远远不及。\\n不过若论剑招之精妙，或许我能略胜一筹。,哼哼，见过我招式之人大多已经殒命，\\n#PlayerName#还是少好奇些为妙。,江湖偌大，在下远算不上天赋异禀。\\n但若论练功刻苦，恐怕无人能与我相提并论。,我道法修为尚浅，师傅总说我还不懂太极生两仪，两仪生四象，四象生八卦的道理。\\n我只见过母鸡生小鸡，却不知这太极生两仪究竟是怎么个“生”法。"
   splits:
   - text: "思考招式"
     translated: "Think of a technique"
     qcReviewedText: "Think of a technique"
-    qcTranslated: "Think of a move"
-    qcStatus: Corrected
-    qcQualityScore: 90
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 1
     text: "......#PlayerName#......我此招使得......可有纰漏？"
     translated: "......#PlayerName#......Have there been any flaws in my move?"
     qcReviewedText: "......#PlayerName#......Have there been any flaws in my move?"
-    qcTranslated: "......#PlayerName#......Did I make any mistakes in this move?"
-    qcStatus: Corrected
-    qcQualityScore: 75
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 2
     text: "绝顶高手相争之时，唯一目的便是击败对方。"
     translated: "When masters of top‑tier skill contend, their sole purpose is to defeat each other."
     qcReviewedText: "When masters of top‑tier skill contend, their sole purpose is to defeat each other.\\nWithout desire or emotion, fully immerse yourself. Focusing on the single word kill is enough."
-    qcTranslated: "When top‑tier masters contend, their sole purpose is to defeat each other.\\nDesireless and emotionless, fully immersed, focusing on the single word kill is enough."
-    qcStatus: Corrected
-    qcQualityScore: 88
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 2
     subIndex: 1
     text: "无欲无情，全心投入，专注于“杀”这一字便已足够。"
@@ -104,8 +116,10 @@
     qcReviewedText: "#PlayerName#, you won't be like those dull Jianghu folk.\\nDoes he only know how to practice martial arts and cultivation all day long!"
     qcTranslated: "#PlayerName#, you won't be like those dull Jianghu folk.\\nYou don't just know how to practice martial arts and cultivation all day long!"
     qcStatus: Corrected
-    qcQualityScore: 85
+    qcQualityScore: 95
     qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - split: 3
     subIndex: 1
     text: "成天只知道习武练功吧！"
@@ -114,9 +128,9 @@
     text: "习武练功，何必拘泥于招式？"
     translated: "Why stick to techniques in martial arts practice?"
     qcReviewedText: "Why stick to techniques in martial arts practice?\\nFree from constraint, gesturing creates technique‑truly the highest realm."
-    qcTranslated: "Why must martial arts practice be bound by specific moves?\\nActing according to your heart, where every gesture becomes a move, is the supreme realm."
-    qcStatus: Corrected
-    qcQualityScore: 82
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 4
     subIndex: 1
     text: "从心所欲，挥手成招，方为至高之境界。"
@@ -125,15 +139,16 @@
     text: "#PlayerName#，老夫这铁掌帮武功，不知可在仙霞派之上？"
     translated: "#PlayerName#, let me see if the Iron Palm Gang's martial arts is superior to the Xianxia Sect's."
     qcReviewedText: "#PlayerName#, let me see if the Iron Palm Gang's martial arts is superior to the Xianxia Sect's."
-    qcTranslated: "#PlayerName#, does my Iron Palm Gang's martial arts surpass that of the Xianxia Sect?"
-    qcStatus: Corrected
-    qcQualityScore: 90
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 6
     text: "老子所习招式，皆是逆势而动，倒转而行。"
     translated: "The techniques I practice all involve moving against the trend and acting in reverse."
     qcReviewedText: "The techniques I practice all involve moving against the trend and acting in reverse.\\nNo matter how powerful you are, you still can't figure out my tactics."
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 6
     subIndex: 1
     text: "任你大罗金仙，也休想摸清老子的套路。"
@@ -142,9 +157,9 @@
     text: "高手之争，非在一招一式之间，而在于运用之“人”身上。"
     translated: "The struggle between masters lies not in a single move or technique, but in the person who uses it."
     qcReviewedText: "The struggle between masters lies not in a single move or technique, but in the person who uses it.\\nGiven the right opportunity, even the weakest technique can become incredibly powerful."
-    qcTranslated: "The struggle between masters lies not in a single move or technique, but in the person who uses them.\\nGiven the right opportunity, even the weakest technique can have its power multiplied."
-    qcStatus: Corrected
-    qcQualityScore: 95
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 7
     subIndex: 1
     text: "只要时机得当，再弱的招式亦能威力倍增。"
@@ -153,9 +168,9 @@
     text: "听师傅说，出招之法在于随心所欲，无拘无束。"
     translated: "According to Master, the key to making a move lies in doing as one pleases without any restrictions."
     qcReviewedText: "According to Master, the key to making a move lies in doing as one pleases without any restrictions.\\nIf one can inhale and exhale naturally, sending and receiving with ease, one could be considered a minor master, right?"
-    qcTranslated: "According to Master, the key to making a move lies in doing as one pleases without any restrictions.\\nIf one can inhale and exhale naturally, sending and receiving with ease, one could be considered a minor master, right?"
-    qcStatus: Corrected
-    qcQualityScore: 90
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 8
     subIndex: 1
     text: "若能一呼一吸，收发自然，便也算小半个高手了吧。"
@@ -165,7 +180,8 @@
     translated: "The Dao Wuming Pavilion Master's strength is unfathomable, and I am indeed far from matching it."
     qcReviewedText: "The Dao Wuming Pavilion Master's strength is unfathomable, and I am indeed far from matching it.\\nBut if it comes to the elegance of sword techniques, perhaps I could edge out a bit ahead."
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 9
     subIndex: 1
     text: "不过若论剑招之精妙，或许我能略胜一筹。"
@@ -175,7 +191,8 @@
     translated: "Hmph. Most who have seen my techniques are already dead."
     qcReviewedText: "Hmph. Most who have seen my techniques are already dead.\\n#PlayerName# had better stay curious about less things."
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 10
     subIndex: 1
     text: "#PlayerName#还是少好奇些为妙。"
@@ -184,9 +201,9 @@
     text: "江湖偌大，在下远算不上天赋异禀。"
     translated: "The Jianghu is vast, and I far do not count as having exceptional talent."
     qcReviewedText: "The Jianghu is vast, and I far do not count as having exceptional talent.\\nBut if it comes to diligence in training, I daresay no one can match me."
-    qcTranslated: "The Jianghu is vast, and I am far from being exceptionally talented.\\nBut when it comes to diligence in training, I daresay no one can match me."
-    qcStatus: Corrected
-    qcQualityScore: 85
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 11
     subIndex: 1
     text: "但若论练功刻苦，恐怕无人能与我相提并论。"
@@ -195,9 +212,9 @@
     text: "我道法修为尚浅，师傅总说我还不懂太极生两仪，两仪生四象，四象生八卦的道理。"
     translated: "I am still shallow in my Daoist cultivation, and my master always says I don't understand the principle that Taiji gives rise to the Two Instruments, the Two Instruments give rise to the Four Symbols, and the Four Symbols give rise to Bagua."
     qcReviewedText: "I am still shallow in my Daoist cultivation, and my master always says I don't understand the principle that Taiji gives rise to the Two Instruments, the Two Instruments give rise to the Four Symbols, and the Four Symbols give rise to Bagua.\\nI have only seen hens lay chickens and know not how the Taiji gives birth to the Liyi in such a manner."
-    qcTranslated: "I am still shallow in my Daoist cultivation, and my master always says I don't understand the principle that Taiji gives rise to the Two Instruments, the Two Instruments give rise to the Four Symbols, and the Four Symbols give rise to Bagua.\\nI have only seen hens hatch chicks, yet I do not know how exactly the Taiji gives rise to the Liyi."
-    qcStatus: Corrected
-    qcQualityScore: 95
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 12
     subIndex: 1
     text: "我只见过母鸡生小鸡，却不知这太极生两仪究竟是怎么个“生”法。"
@@ -230,13 +247,14 @@
     qcReviewedText: "Martial insights"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - split: 1
     text: "当今世人......越醉心武道......"
     translated: "Contemporaries... the more immersed they are in martial arts..."
     qcReviewedText: "Contemporaries... the more immersed they are in martial arts...\\nWe who are doctors... find it even harder to be idle..."
-    qcTranslated: "The people of today... the more obsessed they are with martial arts...\\nThe harder it becomes for us healers to find a moment's rest..."
-    qcStatus: Corrected
-    qcQualityScore: 92
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 1
     subIndex: 1
     text: "我等医者......越难得空闲......"
@@ -245,9 +263,9 @@
     text: "当今武学，多拘泥于花哨招式与繁复心法。"
     translated: "Today's martial arts often focus on flashy techniques and complex heart methods."
     qcReviewedText: "Today's martial arts often focus on flashy techniques and complex heart methods.\\nYet only Kill reaches the pinnacle of martial arts."
-    qcTranslated: "Today's martial arts often dwell in flashy techniques and complex Heart Methods.\\nYet only the Kill is the supreme path of martial arts."
-    qcStatus: Corrected
-    qcQualityScore: 60
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 2
     subIndex: 1
     text: "然唯有“杀”者，才是武学至高之道。"
@@ -256,9 +274,9 @@
     text: "闯荡江湖，只要练好轻功就行。"
     translated: "Traverse the Jianghu, you just need to master the lightness."
     qcReviewedText: "Traverse the Jianghu, you just need to master the lightness.\\nWant to fight, go fight; want to leave, go leave‑aren't you invincible under heaven?"
-    qcTranslated: "To roam the Jianghu, you only need to master Qinggong.\\nWant to fight, then fight; want to leave, then leave. Aren't you invincible under heaven?"
-    qcStatus: Corrected
-    qcQualityScore: 82
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 3
     subIndex: 1
     text: "想打就打，想走就走，岂不是天下无敌？"
@@ -267,9 +285,9 @@
     text: "海纳百川，有容乃大。"
     translated: "A sea that embraces hundreds of rivers can be great."
     qcReviewedText: "A sea that embraces hundreds of rivers can be great.\\nThe way of martial arts lies in embracing and incorporating diverse techniques, achieving integration and mastery."
-    qcTranslated: "A sea that accepts hundreds of rivers is great.\\nThe way of martial arts lies in embracing and incorporating diverse techniques, achieving integration and mastery."
-    qcStatus: Corrected
-    qcQualityScore: 95
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 4
     subIndex: 1
     text: "习武之道，在于并包兼蓄，融会贯通。"
@@ -279,7 +297,8 @@
     translated: "Survival of the fittest, the victor is king."
     qcReviewedText: "Survival of the fittest, the victor is king.\\nThis is the natural law, and it is the true essence of martial ways."
     qcStatus: Passed
-    qcQualityScore: 98
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 5
     subIndex: 1
     text: "此乃自然之理，亦是武道之真谛。"
@@ -289,7 +308,8 @@
     translated: "The way of martial arts lies in breaking conventional norms and forging new paths."
     qcReviewedText: "The way of martial arts lies in breaking conventional norms and forging new paths.\\nIf every move and step were rigidly precise, it would be far too boring."
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 6
     subIndex: 1
     text: "若是一招一式，一板一眼，那可就太过无聊了。"
@@ -298,9 +318,9 @@
     text: "习武之道，玄妙无穷。"
     translated: "The way of martial arts is infinitely mysterious and profound."
     qcReviewedText: "The way of martial arts is infinitely mysterious and profound.\\nI could spend my entire life and still only catch a glimpse of it."
-    qcTranslated: "The way of martial arts is infinitely mysterious and profound.\\nEven if I spent my entire life, I would only catch a glimpse of a corner of it."
-    qcStatus: Corrected
-    qcQualityScore: 98
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 7
     subIndex: 1
     text: "老朽便是穷尽一生，也只得窥见一角而已。"
@@ -310,7 +330,8 @@
     translated: "I have lived in the mountains for so long that I only know some basic fighting skills."
     qcReviewedText: "I have lived in the mountains for so long that I only know some basic fighting skills.\\n#PlayerName#, if you have some free time, be sure to teach me a few more techniques."
     qcStatus: Passed
-    qcQualityScore: 98
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 8
     subIndex: 1
     text: "#PlayerName#若是得空，定要多教我两招。"
@@ -319,9 +340,9 @@
     text: "大隐阁武学本就奥妙无穷，星辰楼之中更藏有秘籍无数。"
     translated: "The martial arts of the Great Hidden Pavilion are already profound and infinite, and within the Star Tower, there are countless Secret Manuals."
     qcReviewedText: "The martial arts of the Great Hidden Pavilion are already profound and infinite, and within the Star Tower, there are countless Secret Manuals.\\nOnly a few people have had the chance to ascend to the rooftop throughout history and ancient times."
-    qcTranslated: "The martial arts of the Great Hidden Pavilion are already profound and inexhaustible, and within the Star Tower, there are countless Secret Manuals.\\nOnly a handful of people have managed to reach the top of the tower from ancient times to the present."
-    qcStatus: Corrected
-    qcQualityScore: 70
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 9
     subIndex: 1
     text: "能够登临楼顶之人，从古至今不过寥寥几人而已。"
@@ -330,9 +351,9 @@
     text: "好勇斗狠，以武相争，那便落了下乘。"
     translated: "Brave in battle and ruthless, resorting to force‑such is a poor choice."
     qcReviewedText: "Brave in battle and ruthless, resorting to force‑such is a poor choice.\\nUsing hidden weapons and poison is the best way to defeat an enemy without a bloody fight."
-    qcTranslated: "Bravery and ruthlessness in a fight, relying on martial force, is a low‑grade approach.\\nUsing hidden weapons and poison to harm the enemy, achieving victory without spilling blood, is the supreme method."
-    qcStatus: Corrected
-    qcQualityScore: 95
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 10
     subIndex: 1
     text: "以暗器毒药伤人，兵不血刃，才是上上之法。"
@@ -341,9 +362,9 @@
     text: "习武之路罕有捷径，唯稳扎稳打，日夜苦练一途，"
     translated: "The path of martial arts offers no shortcuts; one must steadily and tirelessly train day and night."
     qcReviewedText: "The path of martial arts offers no shortcuts; one must steadily and tirelessly train day and night.\\nOnly by mastering martial arts can one reach the realm of the unvanquished righteous."
-    qcTranslated: "The path of martial arts offers few shortcuts; only by training steadily and diligently, day and night, can one walk the righteous path of martial arts and attain the realm where the benevolent are invincible."
-    qcStatus: Corrected
-    qcQualityScore: 75
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 11
     subIndex: 1
     text: "方能踏上武学正道，抵达仁者无敌之境。"
@@ -352,9 +373,9 @@
     text: "太极神功乃武当武学之尊，在江湖中亦是久负盛名。"
     translated: "Taiji Divine Skill is the pride of Wudang martial arts and is widely renowned in the Jianghu."
     qcReviewedText: "Taiji Divine Skill is the pride of Wudang martial arts and is widely renowned in the Jianghu.\\nIt is said that great accomplished ones can move through stillness and soften to overcome hardness. Their power flows like the taiji circle, ever‑renewing and unending."
-    qcTranslated: "Taiji Divine Skill is the supreme achievement of Wudang martial arts and has long been renowned in the Jianghu.\\nIt is said that those who have mastered it can use stillness to control motion, and softness to overcome hardness. Their force circulates like the Taiji, unending and ever‑renewing."
-    qcStatus: Corrected
-    qcQualityScore: 92
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 12
     subIndex: 1
     text: "传说大成者可以静制动，以柔克刚，其劲力亦如太极圆转，生生不息。"
@@ -391,20 +412,24 @@
     qcReviewedText: "Leisure and entertainment"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - split: 1
     text: "......#PlayerName#......可遇到什么趣事......与我说说......"
     translated: "......#PlayerName#...... can have some fun experiences... tell me about them..."
     qcReviewedText: "......#PlayerName#...... can have some fun experiences... tell me about them..."
-    qcTranslated: "......#PlayerName#...... Did you run into any interesting things... Tell me about them..."
-    qcStatus: Corrected
-    qcQualityScore: 82
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 2
     text: "老夫的刀法，还有太多可精进之处。"
     translated: "My blade technique still has much room for improvement."
     qcReviewedText: "My blade technique still has much room for improvement.\\nTherefore, we must strive to learn diligently and practice hard every second."
-    qcTranslated: "My Blade Technique still has much room for improvement.\\nTherefore, I must seize every second to study diligently and practice hard."
+    qcTranslated: "My Blade Technique still has much room for improvement.\\nTherefore, I must strive to learn diligently and practice hard every second."
     qcStatus: Corrected
-    qcQualityScore: 75
+    qcQualityScore: 92
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - split: 2
     subIndex: 1
     text: "因此更当争分夺秒，勤学苦练才行。"
@@ -414,7 +439,7 @@
     translated: "This miss likes to sneak around and steal some nice things whenever I'm idle...."
     qcReviewedText: "This miss likes to sneak around and steal some nice things whenever I'm idle....\\n#PlayerName#, want to do it together?"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
   - split: 3
     subIndex: 1
@@ -424,9 +449,9 @@
     text: "读万卷书，行万里路，方为修行之道。"
     translated: "Read ten thousand books and travel ten thousand miles to truly master the way of cultivation."
     qcReviewedText: "Read ten thousand books and travel ten thousand miles to truly master the way of cultivation.\\n#PlayerName#, during your spare time, you should also read more classics and historical texts."
-    qcTranslated: "Read ten thousand books and travel ten thousand miles; only then can one truly master the way of cultivation.\\n#PlayerName#, during your spare time, you should also read more classics and historical texts."
-    qcStatus: Corrected
-    qcQualityScore: 95
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 4
     subIndex: 1
     text: "#PlayerName#闲暇之时，也当多读些经史典籍才是。"
@@ -435,23 +460,30 @@
     text: "若一事不能增进武艺或为本帮谋利，老夫便不会浪费时间。"
     translated: "If one thing does not improve my martial arts or benefit our faction, Old Man would not waste time on it."
     qcReviewedText: "If one thing does not improve my martial arts or benefit our faction, Old Man would not waste time on it."
-    qcTranslated: "If a matter does not advance my martial arts or benefit our sect, I will not waste my time on it."
+    qcTranslated: "If one thing does not improve my martial arts or benefit our faction, I would not waste time on it."
     qcStatus: Corrected
-    qcQualityScore: 78
+    qcQualityScore: 95
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - split: 6
     text: "大碗喝酒，快意恩仇，人生如此，夫复何求！"
     translated: "Drain the cup to the dregs, revel in revenge and righteousness, such is life; what more could one ask for?"
     qcReviewedText: "Drain the cup to the dregs, revel in revenge and righteousness, such is life; what more could one ask for?"
-    qcTranslated: "Quaff from a great bowl, act on honor and revenge, if life is such, what more could one ask for?"
-    qcStatus: Corrected
-    qcQualityScore: 90
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 7
     text: "但凡是这江湖之事，老朽皆算略有耳闻，"
     translated: "But regarding matters of the Jianghu, the old man has heard of them all."
     qcReviewedText: "But regarding matters of the Jianghu, the old man has heard of them all.\\nThat's how he earned the title Bai Xiao just now."
-    qcTranslated: "As for matters in the Jianghu, this old man has heard of them all,\\nwhich is how he earned the title Bai Xiao."
+    qcTranslated: "But when it comes to matters of the Jianghu, this old man has heard a little of them all.\\nThat is how he earned the title Bai Xiao."
     qcStatus: Corrected
-    qcQualityScore: 82
+    flaggedForQcReview: true
+    qcQualityScore: 0
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - split: 7
     subIndex: 1
     text: "因此方才得了这“百晓”的名号。"
@@ -460,9 +492,9 @@
     text: "在峨眉山上耍猴子，抓野兔，那可有趣的紧啊！"
     translated: "Playing with monkeys and catching wild rabbits on Mount Emei is really fun!"
     qcReviewedText: "Playing with monkeys and catching wild rabbits on Mount Emei is really fun!\\n#PlayerName# wants to try? Let's see who catches more!"
-    qcTranslated: "Playing with monkeys and catching wild rabbits on Mount Emei is so much fun!\\n#PlayerName#, want to give it a try? Let's see who can catch the most!"
-    qcStatus: Corrected
-    qcQualityScore: 90
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 8
     subIndex: 1
     text: "#PlayerName#想试试不？比比咱们谁抓得多！"
@@ -473,8 +505,10 @@
     qcReviewedText: "The core heart method of the Secret Canon of Guixu are known only by the Pavilion Master.\\nThis way, those without sufficient cultivation can avoid forcing themselves and going astray."
     qcTranslated: "The core Heart Method of the Secret Canon of Guixu is known only by the Pavilion Master.\\nThis way, those without sufficient cultivation can avoid forcing themselves to practice and going astray."
     qcStatus: Corrected
-    qcQualityScore: 85
+    qcQualityScore: 92
     qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - split: 9
     subIndex: 1
     text: "如此，方能避免修为不足之人强行修习，走火入魔。"
@@ -484,7 +518,7 @@
     translated: "After leaving the Five Poisons Sect, I have been searching for the ultimate toxic martial art in the entire world."
     qcReviewedText: "After leaving the Five Poisons Sect, I have been searching for the ultimate toxic martial art in the entire world.\\nBut I heard that there might be clues within the Dragon Descends into Seclusion Technique..."
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
   - split: 10
     subIndex: 1
@@ -495,7 +529,8 @@
     translated: "Guo Yongrui, my son, is inherently kind‑hearted, though he sometimes lacks worldly wisdom."
     qcReviewedText: "Guo Yongrui, my son, is inherently kind‑hearted, though he sometimes lacks worldly wisdom.\\nI hope you, #PlayerName#, can give him plenty of advice and prevent him from getting into any trouble."
     qcStatus: Passed
-    qcQualityScore: 98
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 11
     subIndex: 1
     text: "还望#PlayerName#多多提点，莫要让他闯下什么祸端。"
@@ -504,9 +539,9 @@
     text: "师傅总希望我日后能接掌武当派。"
     translated: "The master always hopes that one day I will take over the Wudang Sect."
     qcReviewedText: "The master always hopes that one day I will take over the Wudang Sect.\\nBut now, surrounding sects are eyeing with ambition, while wicked people roam the world.\\nSuch great responsibility, I fear I am utterly unworthy of bearing it."
-    qcTranslated: "The Master always hopes that one day I will take over the Wudang Sect.\\nBut now, surrounding sects are eyeing us with ambition, while wicked people roam the world.\\nSuch a great responsibility, I fear I am utterly unworthy of bearing it."
-    qcStatus: Corrected
-    qcQualityScore: 95
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 12
     subIndex: 1
     text: "可如今周遭门派虎视眈眈，奸邪之徒横行于世，"
@@ -541,20 +576,21 @@
     qcReviewedText: "Assess martial arts skill"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - split: 1
     text: "......对于习武之道......我不过一知半解而已......"
     translated: "...I only have a half‑understanding of the way of martial arts..."
     qcReviewedText: "...I only have a half‑understanding of the way of martial arts..."
-    qcTranslated: "...I know very little about the way of martial arts..."
-    qcStatus: Corrected
-    qcQualityScore: 75
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 2
     text: "#PlayerName#你这些招式看似精妙，"
     translated: "#PlayerName#, these moves of yours appear quite ingenious,"
     qcReviewedText: "#PlayerName#, these moves of yours appear quite ingenious,\\nBut methods that could truly be called lethal are few and far between."
-    qcTranslated: "#PlayerName#, these moves of yours appear quite ingenious,\\nbut few could truly be called methods of killing."
-    qcStatus: Corrected
-    qcQualityScore: 95
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 2
     subIndex: 1
     text: "但称得上杀人之法的，却是寥寥无几。"
@@ -563,9 +599,12 @@
     text: "#PlayerName#，你这身形笨重，步伐迟缓，"
     translated: "#PlayerName#, your movements are slow and cumbersome"
     qcReviewedText: "#PlayerName#, your movements are slow and cumbersome \\nOne needs to practice lightness more"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "#PlayerName#, your movements are slow and cumbersome \\nYou need to practice Lightness more"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - split: 3
     subIndex: 1
     text: "还得多练练轻功才行。"
@@ -574,9 +613,12 @@
     text: "#PlayerName#，老夫观你骨骼精奇，气运不凡。"
     translated: "#PlayerName#, Old Man I've noticed your bone structure is peculiar and extraordinary, and your life force isremarkable."
     qcReviewedText: "#PlayerName#, Old Man I've noticed your bone structure is peculiar and extraordinary, and your life force isremarkable.\\nIf one can bide their time and focus on cultivation, perhaps they might ultimately achieve great endeavors."
-    qcTranslated: "#PlayerName#, This old man sees that you have exquisite bones and extraordinary destiny.\\nIf you can keep a low profile and devote yourself to cultivation, you may eventually achieve great things."
+    qcTranslated: "#PlayerName#, this old man has observed that your bones are extraordinary and your fortune is remarkable.\\nIf you can conceal your light and nurture your obscurity, focusing on cultivation, perhaps you will ultimately achieve great deeds."
     qcStatus: Corrected
-    qcQualityScore: 75
+    qcQualityScore: 92
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - split: 4
     subIndex: 1
     text: "若能韬光养晦，潜心修炼，或许终能成就大业。"
@@ -585,9 +627,9 @@
     text: "#PlayerName#招式之中破绽颇多，"
     translated: "#PlayerName#'s techniques have many flaws"
     qcReviewedText: "#PlayerName#'s techniques have many flaws \\nIf we meet in battle someday, be sure to be more cautious."
-    qcTranslated: "#PlayerName#'s techniques have many flaws. \\nIf we meet in battle in the future, be sure to be more cautious."
-    qcStatus: Corrected
-    qcQualityScore: 85
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 5
     subIndex: 1
     text: "若是日后与我交手，可要多加小心了。"
@@ -596,9 +638,9 @@
     text: "#PlayerName#这身功夫循规蹈矩，实在无趣。"
     translated: "#PlayerName# this martial skill follows the rules too closely, truly uninteresting."
     qcReviewedText: "#PlayerName# this martial skill follows the rules too closely, truly uninteresting.\\nWait until I'm in a good mood; I'll show you a few moves some day!"
-    qcTranslated: "#PlayerName# your martial skills are too rigid and dull.\\nWait until I'm in a good mood, then I'll teach you a few moves!"
-    qcStatus: Corrected
-    qcQualityScore: 88
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 6
     subIndex: 1
     text: "等老子心情好，哪天指点你几招！"
@@ -607,16 +649,21 @@
     text: "#PlayerName#近来功力突飞猛进，老朽果然没看错人。"
     translated: "#PlayerName# has made remarkable progress in his cultivation lately. Old Man truly didn't make a wrong judgment on you."
     qcReviewedText: "#PlayerName# has made remarkable progress in his cultivation lately. Old Man truly didn't make a wrong judgment on you."
-    qcTranslated: "#PlayerName#'s recent progress has been extraordinary. I truly didn't choose the wrong person."
-    qcStatus: Corrected
-    qcQualityScore: 85
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 8
     text: "#PlayerName#和师傅老人家比，不知武功谁高谁低？"
     translated: "Compared to Master Senior Citizen, #PlayerName# doesn't know who has higher martial arts skills."
     qcReviewedText: "Compared to Master Senior Citizen, #PlayerName# doesn't know who has higher martial arts skills.\\n...I feel #PlayerName# should still be more powerful.\\nAfter all, Master has a full head of white hair; his old body probably can't withstand many punches."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "Compared to Master, #PlayerName# doesn't know who has higher martial arts skills.\\n...I feel #PlayerName# should still be more powerful.\\nAfter all, Master is an old man with a full beard of white hair; his frail body probably can't withstand many punches."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 0
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
+    - OtherNamedDefect
   - split: 8
     subIndex: 1
     text: "......感觉应该还是#PlayerName#厉害些。"
@@ -629,16 +676,19 @@
     text: "#PlayerName#武功不俗，确实算得上江湖中难得一见的青年才俊了。"
     translated: "#PlayerName#'s martial arts are not bad. You could indeed be considered a rare talent among the young men in the Jianghu."
     qcReviewedText: "#PlayerName#'s martial arts are not bad. You could indeed be considered a rare talent among the young men in the Jianghu."
-    qcTranslated: "#PlayerName#'s martial arts are not bad. You could indeed be considered a rare young talent in the Jianghu."
-    qcStatus: Corrected
-    qcQualityScore: 98
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 10
     text: "呵呵，#PlayerName#周身破绽颇多，"
     translated: "Haha, #PlayerName#, you have several weaknesses"
     qcReviewedText: "Haha, #PlayerName#, you have several weaknesses \\nWhen we face each other in battle someday... we will know."
-    qcTranslated: "Heh, #PlayerName#, you have many openings all over your body. \\nIf the day comes when our blades cross... you will know."
+    qcTranslated: "Haha, #PlayerName#, you have several weaknesses all over your body \\nWhen we face each other in battle someday... we will know."
     qcStatus: Corrected
-    qcQualityScore: 75
+    qcQualityScore: 92
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - split: 10
     subIndex: 1
     text: "万一哪天你我刀兵相向之时......自会知晓。"
@@ -647,10 +697,12 @@
     text: "#PlayerName#若在武学上有疑惑之处，大可来与我探讨。"
     translated: "#PlayerName#, if you have any doubts in martial arts, feel free to come and discuss with me."
     qcReviewedText: "#PlayerName#, if you have any doubts in martial arts, feel free to come and discuss with me.\\nHe will speak his mind fully and without reservation."
-    qcTranslated: "#PlayerName#, if you have any doubts in martial arts, feel free to come and discuss with me.\\nI will certainly share everything I know without reservation."
+    qcTranslated: "#PlayerName#, if you have any doubts in martial arts, feel free to come and discuss with me.\\nI will certainly speak my mind fully and without reservation."
     qcStatus: Corrected
-    qcQualityScore: 85
+    qcQualityScore: 95
     qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - split: 11
     subIndex: 1
     text: "某定当知无不言，言无不尽。"
@@ -659,9 +711,9 @@
     text: "#PlayerName#招式凌厉，然后劲不足。"
     translated: "#PlayerName#'s attacks were sharp and decisive, but then lacked power."
     qcReviewedText: "#PlayerName#'s attacks were sharp and decisive, but then lacked power.\\nWhile they can hide their sharpness and gather their energy, improving both internally and externally, they can advance to the next level."
-    qcTranslated: "#PlayerName#'s moves are sharp and aggressive, yet their power is lacking.\\nIf they can hide their edge and restrain their energy, cultivating both internal and external aspects, they will be able to reach a higher level."
-    qcStatus: Corrected
-    qcQualityScore: 75
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 12
     subIndex: 1
     text: "若能藏锋敛气，内外兼修，便能更上一层楼。"
@@ -690,29 +742,33 @@
   - text: "日常见面"
     translated: "Daily greeting"
     qcReviewedText: "Daily greeting"
-    qcTranslated: "Daily encounter"
-    qcStatus: Corrected
-    qcQualityScore: 95
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 1
     text: "......#PlayerName#......近来可有受伤......"
     translated: "......#PlayerName#...... Have you been injured lately..."
     qcReviewedText: "......#PlayerName#...... Have you been injured lately..."
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - split: 2
     text: "#PlayerName#，有何贵干？"
     translated: "What can I do for you, #PlayerName#?"
     qcReviewedText: "What can I do for you, #PlayerName#?"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - split: 3
     text: "#PlayerName#，最近可有得手什么好宝物？"
     translated: "#PlayerName#, have you come across any good treasures lately?"
     qcReviewedText: "#PlayerName#, have you come across any good treasures lately?\\n...What expression is that? I didn't mean to steal anything from you."
-    qcTranslated: "#PlayerName#, have you come across any good treasures lately?\\n...What expression is that? I, I didn't mean to steal anything from you."
+    qcTranslated: "#PlayerName#, have you come across any good treasures lately?\\n...What expression is that? I‑I didn't mean to steal anything from you."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: DroppedStutter
+    qcDefectCategories:
+    - DroppedStutter
   - split: 3
     subIndex: 1
     text: "......你这是什么表情，我、我可没想偷你东西。"
@@ -721,9 +777,9 @@
     text: "天地不仁，以万物为刍狗；圣人不仁，以百姓为刍狗。"
     translated: "Heaven and Earth are indifferent; they treat all things as straws in a ritual. Saints are also indifferent; they treat the people as straws in a ritual."
     qcReviewedText: "Heaven and Earth are indifferent; they treat all things as straws in a ritual. Saints are also indifferent; they treat the people as straws in a ritual.\\nEven I cannot calculate when this chaotic world will end..."
-    qcTranslated: "Heaven and Earth are indifferent, treating all things as ritual straw dogs. The sage is indifferent, treating the people as ritual straw dogs.\\nEven I cannot calculate when this chaotic world will end..."
-    qcStatus: Corrected
-    qcQualityScore: 95
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 4
     subIndex: 1
     text: "便是老夫也算不出，这乱世究竟何时终结......"
@@ -732,30 +788,33 @@
     text: "#PlayerName#前来寻我，想必是有事相求。"
     translated: "#PlayerName# came to find me, so there must be something you need."
     qcReviewedText: "#PlayerName# came to find me, so there must be something you need."
-    qcTranslated: "#PlayerName# has come to find me; surely, there is something you seek."
-    qcStatus: Corrected
-    qcQualityScore: 88
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 6
     text: "废话少说，#PlayerName#找老子所为何事？"
     translated: "Cut the crap, #PlayerName# wants something from me?"
     qcReviewedText: "Cut the crap, #PlayerName# wants something from me?"
-    qcTranslated: "Cut the crap, #PlayerName#. What do you want from me?"
-    qcStatus: Corrected
-    qcQualityScore: 70
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 7
     text: "呵呵呵呵，#PlayerName#今日前来拜访，老朽恐怕早已猜到了。"
     translated: "Haha, #PlayerName# came to visit today‑I suspect I would have guessed it even without your notice."
     qcReviewedText: "Haha, #PlayerName# came to visit today‑I suspect I would have guessed it even without your notice."
     qcTranslated: "Haha, #PlayerName# came to visit today‑I suspect I would have guessed it long ago."
     qcStatus: Corrected
-    qcQualityScore: 85
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - split: 8
     text: "这世间有比山上野果更好吃的东西？我可不信！"
     translated: "Is there anything better to eat than wild berries on the mountain? I don't believe it!"
     qcReviewedText: "Is there anything better to eat than wild berries on the mountain? I don't believe it!\\nUnless #PlayerName# brings something for me to try next time!"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - split: 8
     subIndex: 1
     text: "除非#PlayerName#下次带来给我尝尝！"
@@ -764,9 +823,9 @@
     text: "#PlayerName#今日看来颇有雅兴，"
     translated: "#PlayerName# seems to have quite the appetite for refined pursuits today."
     qcReviewedText: "#PlayerName# seems to have quite the appetite for refined pursuits today.\\nOtherwise, how would he suddenly remember to come find me?"
-    qcTranslated: "#PlayerName# seems to be in quite a refined mood today.\\nOtherwise, why would he suddenly think to come find me?"
-    qcStatus: Corrected
-    qcQualityScore: 98
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 9
     subIndex: 1
     text: "不然怎会突然想起前来寻我？"
@@ -776,13 +835,15 @@
     translated: "#PlayerName#, if you have something to ask for, you still need to offer the proper price in return."
     qcReviewedText: "#PlayerName#, if you have something to ask for, you still need to offer the proper price in return."
     qcStatus: Passed
-    qcQualityScore: 98
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 11
     text: "在下不才，蒙武林同道厚爱，得了这“中原大侠”的名号。"
     translated: "I am but an unworthy one, yet through the kindness of my Wulin peers, I have come to bear the title of Great Hero of Central Plains."
     qcReviewedText: "I am but an unworthy one, yet through the kindness of my Wulin peers, I have come to bear the title of Great Hero of Central Plains.\\nEvery time I think about it, I feel genuinely fearful and deeply ashamed."
     qcStatus: Passed
-    qcQualityScore: 96
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 11
     subIndex: 1
     text: "每每想来，只觉诚惶诚恐，羞愧莫名。"
@@ -791,9 +852,12 @@
     text: "#PlayerName#又见面了，看来你我也算缘分不浅。"
     translated: "#PlayerName# meets again, it seems we have some unspoken connection."
     qcReviewedText: "#PlayerName# meets again, it seems we have some unspoken connection."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "#PlayerName#, we meet again. It seems our fates are deeply intertwined."
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   templates:
   - split: 3
     template: "{0}\\n{1}"
@@ -811,13 +875,14 @@
     translated: "Poetry and verse"
     qcReviewedText: "Poetry and verse"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 1
     text: "古人医在心，心正药自真......今人医在手，手滥药不神。"
     translated: "Ancients healed with heart; when the heart is upright, medicine naturally works true... Moderns heal with hands; when hands are excessive, medicine fails to work wonders."
     qcReviewedText: "Ancients healed with heart; when the heart is upright, medicine naturally works true... Moderns heal with hands; when hands are excessive, medicine fails to work wonders.\\nI wish for the Heavens Furnace to grant me the body of Bianque... May there be fewer poor patients in this world."
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   - split: 1
     subIndex: 1
@@ -827,9 +892,9 @@
     text: "千古江山，英雄无觅孙仲谋处。"
     translated: "Time‑honored rivers and mountains; where can one find a hero like Sun Zhongmou?"
     qcReviewedText: "Time‑honored rivers and mountains; where can one find a hero like Sun Zhongmou?\\nStage of dancing and singing pavilions; the heroic deeds of the past are all swept away by rain and wind.\\nEvening sun shines on grass and trees, ordinary alleys where ancient heroes once lived.\\nBack in the day, golden spears and iron horses, swallowing miles upon miles with the might of tigers."
-    qcTranslated: "The rivers and mountains of a thousand ages; where can one find a hero like Sun Zhongmou?\\nDancing pavilions and singing stages; the glamour of the past has long been swept away by wind and rain.\\nSetting sun on grass and trees, ordinary lanes and alleys, where people say JINU once lived.\\nThink of those years: golden spears and iron horses, swallowing ten thousand miles with the might of a tiger."
-    qcStatus: Corrected
-    qcQualityScore: 75
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 2
     subIndex: 1
     text: "舞榭歌台，风流总被雨打风吹去。"
@@ -846,9 +911,9 @@
     text: "世人结交须黄金，黄金不多交不深。"
     translated: "People form friendships with gold, but if the gold is lacking, so too is the depth of the friendship."
     qcReviewedText: "People form friendships with gold, but if the gold is lacking, so too is the depth of the friendship.\\nThough we may temporarily make promises, ultimately their hearts remain strangers."
-    qcTranslated: "The world forms bonds with gold; without much gold, the bond runs shallow.\\nThough promises may be made for now, in the end, their hearts remain like passersby on the road."
-    qcStatus: Corrected
-    qcQualityScore: 90
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 3
     subIndex: 1
     text: "纵令然诺暂相许，终是悠悠行路心。"
@@ -858,7 +923,7 @@
     translated: "The Way that can be spoken is not the constant Way; the name that can be named is not the constant name."
     qcReviewedText: "The Way that can be spoken is not the constant Way; the name that can be named is not the constant name.\\nThe nameless is the beginning of heaven and earth; the named is the mother of all things.\\nThese two arise from the same source but are called by different names, both known as the Mystic, the Mystic within the Mystic, the gate of all mysteries."
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
     subIndex: 1
@@ -872,9 +937,9 @@
     text: "画虎画皮难画骨，知人知面不知心。"
     translated: "To paint a tiger is hard; it's even harder to capture its bones. To know a person is to know their face, but not their heart."
     qcReviewedText: "To paint a tiger is hard; it's even harder to capture its bones. To know a person is to know their face, but not their heart.\\nMuch wine and meat brings many brothers, yet in times of need, not a soul is seen?"
-    qcTranslated: "To paint a tiger, painting the skin is easy, but painting the bones is hard. To know a person, knowing the face is easy, but knowing the heart is hard.\\nWith wine and meat, many brothers appear; in times of need, not a single one is to be seen?"
-    qcStatus: Corrected
-    qcQualityScore: 90
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 5
     subIndex: 1
     text: "有酒有肉多兄弟，急难何曾见一人？"
@@ -884,7 +949,8 @@
     translated: "Betraying emotions and morals, acting with impunity"
     qcReviewedText: "Betraying emotions and morals, acting with impunity \\nAbove and below, none shall surpass me!"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 6
     subIndex: 1
     text: "天上地下，唯我独尊！"
@@ -893,9 +959,9 @@
     text: "唱彻阳关泪未干，功名馀事且加餐。浮天水送无穷树，带雨云埋一半山。"
     translated: "The melody of Yangguan lingers with unshed tears,   Achievements and honors are trivial; feast instead.   Endless trees drift past on waters spanning the sky,   Rain‑cloaked clouds obscure half the mountains."
     qcReviewedText: "The melody of Yangguan lingers with unshed tears,   Achievements and honors are trivial; feast instead.   Endless trees drift past on waters spanning the sky,   Rain‑cloaked clouds obscure half the mountains.\\nAncient sorrows span thousands of tales;   Only partings and reunions bring sighs and smiles. While the river may appear calm, true trials lie in the difficulties of human life, they say."
-    qcTranslated: "The Yangguan song ends, yet tears remain unshed;\\nFame is trivial, so eat your fill.\\nWater floats skyward, carrying endless trees;\\nRain‑laden clouds bury half the mountains.\\nAncient and modern sorrows, of a thousand kinds;\\nOnly partings and reunions bring joy and grief.\\nThe river's waves are not yet the worst;\\nTruly, the road through human life is hard."
-    qcStatus: Corrected
-    qcQualityScore: 75
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 7
     subIndex: 1
     text: "今古恨，几千般，只应离合是悲欢。江头未是风波恶，别有人间行路难。"
@@ -904,9 +970,9 @@
     text: "师傅老人家总喜欢念些诗词歌赋，什么之乎者也，着实拗口。"
     translated: "Master elderly folks often like reciting poems and verses, all those 'zhi hu zhe ye', are truly hard to pronounce."
     qcReviewedText: "Master elderly folks often like reciting poems and verses, all those 'zhi hu zhe ye', are truly hard to pronounce.\\nCan't we just talk nicely? #PlayerName#, you must be thinking the same way!"
-    qcTranslated: "Master, the old codger, always likes reciting poems and verses, all that 'zhi hu zhe ye' stuff, it's really hard to follow.\\nCan't we just speak normally? #PlayerName#, you must think so too!"
-    qcStatus: Corrected
-    qcQualityScore: 82
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 8
     subIndex: 1
     text: "好好说话不行吗？#PlayerName#你也是这么想的吧！"
@@ -915,9 +981,9 @@
     text: "一上高楼万里愁，蒹葭杨柳似汀洲。"
     translated: "Afar in the tall tower, ten thousand miles of sorrow;  The reeds and willows resemble islets near the shore."
     qcReviewedText: "Afar in the tall tower, ten thousand miles of sorrow;  The reeds and willows resemble islets near the shore.\\nThe clouds rise as the sun sets behind the pagoda, and the wind fills the tower as rain is on its way."
-    qcTranslated: "Ascending the high tower, a ten‑thousand‑mile sorrow; \\nReeds and willows resemble the islets of the shore.\\nRiver clouds rise as the sun sinks behind the pavilion, mountain rain is about to come, the wind fills the tower."
-    qcStatus: Corrected
-    qcQualityScore: 88
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 9
     subIndex: 1
     text: "溪云初起日沉阁，山雨欲来风满楼。"
@@ -926,10 +992,12 @@
     text: "兵者，诡道也。"
     translated: "A soldier fights not because he values his life but because he values victory."
     qcReviewedText: "A soldier fights not because he values his life but because he values victory.\\nBy being capable yet demonstrating incapability, by using something yet showing as if not using it, by drawing close yet appearing distant, and by being far away yet seeming near.\\nCatch them unprepared, strike when they least expect it. This is a victory in warfare, not to be prematurely disclosed."
-    qcTranslated: "A soldier fights not because he values his life but because he values victory.\\nWar is a matter of deception.\\nBy being capable yet demonstrating incapability, by using something yet showing as if not using it, by drawing close yet appearing distant, and by being far away yet seeming near.\\nCatch them unprepared, strike when they least expect it. This is a victory in warfare, not to be prematurely disclosed."
+    qcTranslated: "War is the way of deception.\\nTherefore, when able, show yourself unable; when using, show as if not using; when near, show as if far; when far, show as if near.\\nAttack where they are unprepared, appear where you are not expected. This is the victory of the military strategist, which cannot be communicated in advance."
     qcStatus: Corrected
-    qcQualityScore: 90
+    qcQualityScore: 92
     qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - split: 10
     subIndex: 1
     text: "故能而示之不能，用而示之不用，近而示之远，远而示之近。"
@@ -942,16 +1010,19 @@
     text: "士卒涂草莽，将军空尔为。乃知兵者是凶器，圣人不得已而用之。"
     translated: "Soldiers lie amidst the grass and weeds, while generals vainly lament. Thus I understand that war is a weapon of evil; sages employ it only out of necessity."
     qcReviewedText: "Soldiers lie amidst the grass and weeds, while generals vainly lament. Thus I understand that war is a weapon of evil; sages employ it only out of necessity."
-    qcTranslated: "Soldiers lie amidst the grass and weeds, while generals vainly lament. Thus I understand that war is a weapon of evil; sages employ it only out of necessity."
-    qcStatus: Corrected
-    qcQualityScore: 95
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 12
     text: "无声无象，全身空透，应物自然，西山悬磬。"
     translated: "Soundless and formless, fully permeating the body, adapting to things naturally, West Mountain Xuanying."
     qcReviewedText: "Soundless and formless, fully permeating the body, adapting to things naturally, West Mountain Xuanying.\\nTiger roars, ape cries, the water clears, and the river calms. All is in harmony, allowing one to fully experience and establish their essence."
-    qcTranslated: "Soundless and formless, the body is hollow and transparent, responding to things naturally, like the hanging stone of West Mountain.\\nTiger roars, ape cries, water clears, river calms; turning the seas and rivers upside down, exhausting one's nature and establishing one's fate."
+    qcTranslated: "Soundless and formless, the whole body hollow and transparent, responding to things naturally, like a chime hanging on West Mountain.\\nTiger roars, ape cries, the water clears, and the river calms. Turning the confluence upside down, overturning the sea, fully realizing one's nature and establishing one's destiny."
     qcStatus: Corrected
     qcQualityScore: 92
+    qcDefectCategory: LostIdiom
+    qcDefectCategories:
+    - LostIdiom
   - split: 12
     subIndex: 1
     text: "虎吼猿鸣，水清河静，翻汇倒海，尽性立命。"
@@ -984,23 +1055,23 @@
   - text: "为人处世"
     translated: "Mannerly behavior"
     qcReviewedText: "Mannerly behavior"
-    qcTranslated: "Conduct"
-    qcStatus: Corrected
-    qcQualityScore: 85
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 1
     text: "......能多愈几例顽疾......多救几条性命......此生便足矣......"
     translated: "....cure a few more stubborn diseases....save a few more lives....this life would be sufficient...."
     qcReviewedText: "....cure a few more stubborn diseases....save a few more lives....this life would be sufficient...."
-    qcTranslated: "....curing a few more stubborn ailments....saving a few more lives....would be enough for this life...."
-    qcStatus: Corrected
-    qcQualityScore: 85
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 2
     text: "吾生也有涯，而武道无涯。"
     translated: "Life is finite, but the martial way is endless."
     qcReviewedText: "Life is finite, but the martial way is endless.\\nTo pursue the infinite with finite means‑why not at all!"
-    qcTranslated: "My life has limits, but the martial way is boundless.\\nTo follow the boundless with the limited ‑ why not!"
-    qcStatus: Corrected
-    qcQualityScore: 75
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 2
     subIndex: 1
     text: "以有涯随无涯，又何尝不可！"
@@ -1009,9 +1080,9 @@
     text: "本姑娘所取的财物，大多来路不干净。"
     translated: "The goods I have acquired are mostly from dubious sources."
     qcReviewedText: "The goods I have acquired are mostly from dubious sources.\\nHow can such righteous acts of helping the poor at the expense of the rich be considered theft?"
-    qcTranslated: "Miss's acquired goods are mostly from dubious sources.\\nHow can such righteous acts of helping the poor at the expense of the rich be considered theft?"
-    qcStatus: Corrected
-    qcQualityScore: 90
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 3
     subIndex: 1
     text: "此等劫富济贫侠义之举，又怎能算是“偷”呢？"
@@ -1020,9 +1091,9 @@
     text: "祸兮福之所倚，福兮祸之所伏。"
     translated: "Misfortune may be an actual blessing in disguise, and a blessing may conceal a potential misfortune."
     qcReviewedText: "Misfortune may be an actual blessing in disguise, and a blessing may conceal a potential misfortune.\\nWhile living apart from the world, adhering to the way of maintaining balance, this is a long‑term strategy."
-    qcTranslated: "Misfortune may be an actual blessing in disguise, and a blessing may conceal a potential misfortune.\\nLiving apart from the world and adhering to the way of maintaining balance is the long‑term course."
-    qcStatus: Corrected
-    qcQualityScore: 90
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 4
     subIndex: 1
     text: "避世绝俗，秉持守中之道，方为长久之计。"
@@ -1033,12 +1104,14 @@
     qcReviewedText: "One day... I, Xia Tianxiong, will exterminate the Xianxia Sect and revive the Iron Palm Gang... to repay my master's kindness."
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - split: 6
     text: "人生在世，就是应当随心所欲，肆意妄为。"
     translated: "Life in the world is about living freely and doing as one pleases."
     qcReviewedText: "Life in the world is about living freely and doing as one pleases.\\nLiving so cautiously, isn't that just a wasted life!"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - split: 6
     subIndex: 1
     text: "事事都谨小慎微，岂不是白活一场！"
@@ -1047,9 +1120,12 @@
     text: "江湖中风浪变换，波云诡谲。"
     translated: "The winds and waves of the Jianghu shift unpredictably."
     qcReviewedText: "The winds and waves of the Jianghu shift unpredictably.\\nOnly by sitting on the fence and adapting to the wind can one remain invincible."
-    qcTranslated: "The winds and waves of the Jianghu shift and change, full of treachery.\\nOnly by watching from the shore and steering with the wind can one remain invincible."
+    qcTranslated: "The winds and waves of the Jianghu shift unpredictably.\\nOnly by watching from the shore and steering with the wind can one remain invincible."
     qcStatus: Corrected
-    qcQualityScore: 85
+    qcQualityScore: 92
+    qcDefectCategory: LostIdiom
+    qcDefectCategories:
+    - LostIdiom
   - split: 7
     subIndex: 1
     text: "唯有隔岸观火，见风使舵，方能立于不败之地。"
@@ -1059,7 +1135,8 @@
     translated: "Master always talks about the disputes between Buddhism, Daoism, and Confucianism, but I'm not sure what's so contentious about it."
     qcReviewedText: "Master always talks about the disputes between Buddhism, Daoism, and Confucianism, but I'm not sure what's so contentious about it.\\nWhy not set up a duel platform and let everyone have a competition?"
     qcStatus: Passed
-    qcQualityScore: 98
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 8
     subIndex: 1
     text: "大不了开个比武擂台，大家一较高下不就行了。"
@@ -1070,7 +1147,10 @@
     qcReviewedText: "People believe that upon entering the Jianghu, one can enjoy freedom and do as they please.\\nYet little does he know that in the Jianghu, cunning intrigues and treacherous hearts abound, no less than in the worldly realm."
     qcTranslated: "People believe that upon entering the Jianghu, one can enjoy freedom and do as they please.\\nYet little do they know that in the Jianghu, cunning intrigues and treacherous hearts abound, no less than in the worldly realm."
     qcStatus: Corrected
-    qcQualityScore: 85
+    qcQualityScore: 95
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - split: 9
     subIndex: 1
     text: "却不知这江湖中勾心斗角，人心险恶，比世间只多不少。"
@@ -1079,9 +1159,12 @@
     text: "窃钩者诛，窃国者侯。"
     translated: "He who steals a hook is put to death, he who steals a country becomes a lord."
     qcReviewedText: "He who steals a hook is put to death, he who steals a country becomes a lord.\\nWhat righteousness and morality, merely bother common people unnecessarily."
-    qcStatus: Passed
-    qcQualityScore: 90
-    qcDefectCategory: None
+    qcTranslated: "He who steals a hook is put to death, he who steals a country becomes a lord.\\nWhat righteousness and morality? Merely the self‑inflicted torment of the mediocre."
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: LostIdiom
+    qcDefectCategories:
+    - LostIdiom
   - split: 10
     subIndex: 1
     text: "什么仁义道德，不过是庸人自扰罢了。"
@@ -1090,9 +1173,9 @@
     text: "天地有正气，公道在人心。"
     translated: "Righteous energy fills the universe; justice lies in the hearts of men."
     qcReviewedText: "Righteous energy fills the universe; justice lies in the hearts of men.\\nI can earn the affection of Wulin only through the words chivalry and righteousness, Guo Huai."
-    qcTranslated: "Righteous energy fills the universe; justice lies in the hearts of men.\\nI, Guo Huai, can earn the affection of the Wulin community only through the two characters Chivalry and Righteousness."
-    qcStatus: Corrected
-    qcQualityScore: 75
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 11
     subIndex: 1
     text: "我郭淮能得武林众人厚爱，唯靠“侠义”二字而已。"
@@ -1101,9 +1184,9 @@
     text: "师傅和师叔为了武当派，日日殚精竭虑。"
     translated: "Master and Master Uncle daily exert themselves for the Wudang Sect."
     qcReviewedText: "Master and Master Uncle daily exert themselves for the Wudang Sect.\\nThough I am relatively new, I still wish to do what I can to alleviate their burdens."
-    qcTranslated: "Master and Master Uncle devote their days to the Wudang Sect, worrying ceaselessly.\\nThough my experience is still limited, I wish to do my best to share their burdens."
-    qcStatus: Corrected
-    qcQualityScore: 98
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 12
     subIndex: 1
     text: "我虽资历尚浅，却也想尽力为他们分忧。"
@@ -1136,21 +1219,28 @@
     qcReviewedText: "Treat friends"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - split: 1
     text: "......我久居深山幽谷之中......像#PlayerName#这样能说上两句话之人......亦是不多......"
     translated: "......I have dwelled in the deep mountains and valleys for so long......Few like #PlayerName# can speak more than a few words......"
     qcReviewedText: "......I have dwelled in the deep mountains and valleys for so long......Few like #PlayerName# can speak more than a few words......"
-    qcStatus: Passed
-    qcQualityScore: 95
-    qcDefectCategory: None
+    qcTranslated: "......I have dwelled in the deep mountains and valleys for so long......Few people like #PlayerName# with whom I can exchange a few words......"
+    qcStatus: Corrected
+    qcQualityScore: 82
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - split: 2
     text: "天下之间，太多蝇营狗苟之辈。"
     translated: "There are too many xingyinggouguo beggars in this world."
     qcReviewedText: "There are too many xingyinggouguo beggars in this world.\\nHow many devoted and like‑minded heroes can one encounter in a lifetime?"
-    qcTranslated: "There are too many sycophantic and petty people in this world.\\nHow many devoted and like‑minded heroes can one encounter in a lifetime?"
+    qcTranslated: "There are too many petty, scheming scoundrels in this world.\\nHow many devoted and like‑minded heroes can one encounter in a lifetime?"
     qcStatus: Corrected
-    qcQualityScore: 85
+    qcQualityScore: 90
     qcDefectCategory: UntranslatedPinyin
+    qcDefectCategories:
+    - UntranslatedPinyin
+    - LostIdiom
   - split: 2
     subIndex: 1
     text: "人生一世，又能遇上几个倾心相交的英雄豪杰？"
@@ -1159,9 +1249,9 @@
     text: "#PlayerName#放心，本姑娘一般不偷相熟之人的东西......"
     translated: "#PlayerName#, rest assured, I generally don't steal from people I know..."
     qcReviewedText: "#PlayerName#, rest assured, I generally don't steal from people I know...\\nUnless someone angers me!"
-    qcTranslated: "#PlayerName#, rest assured, I generally don't steal from people I know...\\nUnless someone angers me!"
-    qcStatus: Corrected
-    qcQualityScore: 90
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 3
     subIndex: 1
     text: "除非有人惹我不开心了！"
@@ -1172,6 +1262,7 @@
     qcReviewedText: "A gentleman's friendship is as tranquil as water.\\nA friendship based on shared ideals will only grow stronger over time."
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - split: 4
     subIndex: 1
     text: "志同道合之谊，方能历久弥坚。"
@@ -1180,9 +1271,9 @@
     text: "哼哼，#PlayerName#若能助铁掌帮一臂之力，"
     translated: "Hmph. If #PlayerName# can lend a hand to the Iron Palm Gang,"
     qcReviewedText: "Hmph. If #PlayerName# can lend a hand to the Iron Palm Gang,\\nI, Xia Tianxiong, would not wrong you either...."
-    qcTranslated: "Hmph. If #PlayerName# can lend a hand to the Iron Palm Gang,\\nI, Xia Tianxiong, shall not mistreat you..."
-    qcStatus: Corrected
-    qcQualityScore: 90
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 5
     subIndex: 1
     text: "我夏天雄自也不会亏待阁下......"
@@ -1191,9 +1282,9 @@
     text: "行走江湖，老子早已习惯了独来独往。"
     translated: "Traversing the Jianghu, I am accustomed to traveling alone."
     qcReviewedText: "Traversing the Jianghu, I am accustomed to traveling alone.\\nHuddling together for warmth is merely something ants do."
-    qcTranslated: "Wandering the Jianghu, I've long been accustomed to traveling alone.\\nHuddling for warmth is something only ants do."
-    qcStatus: Corrected
-    qcQualityScore: 75
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 6
     subIndex: 1
     text: "报团取暖，不过是蝼蚁所为。"
@@ -1202,9 +1293,9 @@
     text: "这些年来，老朽见过太多亲朋反目，手足相残之惨剧。"
     translated: "In all these years, I have witnessed too many tragedies of loved ones turning against each other and brothers tearing each other apart."
     qcReviewedText: "In all these years, I have witnessed too many tragedies of loved ones turning against each other and brothers tearing each other apart.\\nAs goes the saying, All comers to the world seek profit, and all goers from it seek profit, and so it is with these matters."
-    qcTranslated: "In all these years, I have witnessed too many tragedies of loved ones turning against each other and siblings tearing each other apart.\\nAs goes the saying, all that bustle about the world come for profit, and all that bustle about it go for profit; it is no different here."
-    qcStatus: Corrected
-    qcQualityScore: 95
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 7
     subIndex: 1
     text: "所谓天下熙熙皆为利来，天下攘攘皆为利往，莫不如是。"
@@ -1215,6 +1306,7 @@
     qcReviewedText: "My friends are mostly birds and beasts, mountain monkeys.\\n#PlayerName#, you're the first to take on a vaguely humanoid form... Is that how this idiom is supposed to be used?"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - split: 8
     subIndex: 1
     text: "#PlayerName#你算第一个初具人形的......这成语是这么用的吧？"
@@ -1223,9 +1315,9 @@
     text: "缘起相聚，缘散别离，江湖中人身若浮萍，"
     translated: "Fate brings us together, fate sends us apart; in the Jianghu, people's lives are like floating weeds."
     qcReviewedText: "Fate brings us together, fate sends us apart; in the Jianghu, people's lives are like floating weeds.\\n#PlayerName# is no different from me"
-    qcTranslated: "Fate brings us together, fate sends us apart; in the Jianghu, people's lives are like floating weeds.\\n#PlayerName# and I are no different."
-    qcStatus: Corrected
-    qcQualityScore: 98
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 9
     subIndex: 1
     text: "#PlayerName#与我也不过如是。"
@@ -1234,16 +1326,19 @@
     text: "#PlayerName#若能助一臂之力，我自然不会亏待于你。"
     translated: "#PlayerName#, if I can lend you a hand, I won't treat you shabbily."
     qcReviewedText: "#PlayerName#, if I can lend you a hand, I won't treat you shabbily."
-    qcTranslated: "#PlayerName#, if you can lend me a hand, I will certainly not treat you shabbily."
+    qcTranslated: "#PlayerName#, if you can lend me a hand, I will naturally not treat you shabbily."
     qcStatus: Corrected
-    qcQualityScore: 82
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 92
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - split: 11
     text: "兄弟义气，自当肝胆相照，一片赤诚。"
     translated: "Brotherly loyalty demands openness and sincerity, a heart as red as one's words."
     qcReviewedText: "Brotherly loyalty demands openness and sincerity, a heart as red as one's words.\\nI'm sure #PlayerName# thinks so too"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 11
     subIndex: 1
     text: "想必#PlayerName#也如此认为。"
@@ -1252,9 +1347,13 @@
     text: "只要我等名门大派秉公持正，携手并进，"
     translated: "As long as the prestigious sects uphold justice and advance together,"
     qcReviewedText: "As long as the prestigious sects uphold justice and advance together,\\nSo let us ensure that the Wulin is clear and upright, with a peaceful sea and clean rivers.\\nUnknown if #PlayerName# thinks so as well"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "As long as the prestigious sects uphold justice and advance together,\\nwe shall surely ensure that the Wulin is clear and upright, with a peaceful sea and clean rivers.\\nDo you not share this view, #PlayerName#?"
+    qcStatus: Corrected
+    qcQualityScore: 85
+    qcDefectCategory: LostIdiom
+    qcDefectCategories:
+    - LostIdiom
+    - DroppedContent
   - split: 12
     subIndex: 1
     text: "就定能使这天下武林风清气正，海晏河清。"
@@ -1289,30 +1388,33 @@
   - text: "对待仇敌"
     translated: "Deal with enemies"
     qcReviewedText: "Deal with enemies"
-    qcTranslated: "Deal with enemies"
-    qcStatus: Corrected
-    qcQualityScore: 90
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 1
     text: "......若深仇大恨之人罹患重病......又是否应当救其性命......"
     translated: "...If a person with a deep grudge suffers from a serious illness... should we save their life..."
     qcReviewedText: "...If a person with a deep grudge suffers from a serious illness... should we save their life..."
-    qcTranslated: "...If a person you hold a deep grudge against suffers from a serious illness... should you save their life..."
-    qcStatus: Corrected
-    qcQualityScore: 95
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 2
     text: "与老夫为敌之人，唯有赶尽杀绝一途而已。"
     translated: "Those who oppose me must be utterly exterminated."
     qcReviewedText: "Those who oppose me must be utterly exterminated."
-    qcTranslated: "Those who oppose this old man must be utterly exterminated."
-    qcStatus: Corrected
-    qcQualityScore: 90
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 3
     text: "哼，若是有人敢与我结仇，"
     translated: "Hmph, if anyone dares to make enemies with me,"
     qcReviewedText: "Hmph, if anyone dares to make enemies with me,\\nI have to steal all his underpants to vent my frustration."
-    qcTranslated: "Hmph, if anyone dares to make enemies with this Miss,\\nI must steal his pants to vent my frustration."
+    qcTranslated: "Hmph, if anyone dares to make enemies with me,\\nthis girl must steal all his underpants to vent my frustration."
     qcStatus: Corrected
-    qcQualityScore: 70
+    qcQualityScore: 92
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - split: 3
     subIndex: 1
     text: "本姑娘非得把他裤头子都偷过来，方能一解心头之恨。"
@@ -1321,9 +1423,12 @@
     text: "老夫平日隐居山林，鲜有好友，却也无甚仇敌。"
     translated: "I usually hide in the mountains and forests, rarely having friends but also few enemies."
     qcReviewedText: "I usually hide in the mountains and forests, rarely having friends but also few enemies.\\nSages have no self, spirits accomplish nothing, and sainst have no fame; thus it is."
-    qcTranslated: "I usually seclude myself in the mountains and forests, rarely having friends, but also no significant enemies.\\nTo the supreme person there is no self; the divine person has no merit; the sage has no name. It is simply thus."
+    qcTranslated: "I usually hide in the mountains and forests, rarely having friends but also few enemies.\\nSages have no self, spirits accomplish nothing, and sages have no fame; thus it is."
     qcStatus: Corrected
-    qcQualityScore: 82
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - split: 4
     subIndex: 1
     text: "至人无己，神人无功，圣人无名，如是而已。"
@@ -1332,9 +1437,12 @@
     text: "#PlayerName#若敢阻碍我铁掌帮行事，"
     translated: "#PlayerName#, if you dare obstruct the Iron Palm Gang's actions,..."
     qcReviewedText: "#PlayerName#, if you dare obstruct the Iron Palm Gang's actions,...\\nYou can't blame an old man for that."
-    qcTranslated: "#PlayerName#, if you dare obstruct the Iron Palm Gang's affairs,\\nthen don't blame this old man for being merciless."
+    qcTranslated: "#PlayerName#, if you dare obstruct the Iron Palm Gang's actions,\\nthen don't blame this old man for showing no mercy."
     qcStatus: Corrected
-    qcQualityScore: 85
+    qcQualityScore: 95
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - split: 5
     subIndex: 1
     text: "到时可休怪老夫不讲情面。"
@@ -1343,16 +1451,19 @@
     text: "何人敢与老子为敌，老子定会叫他后悔终生！"
     translated: "Who dares to oppose me, Old Man will make him regret for life!"
     qcReviewedText: "Who dares to oppose me, Old Man will make him regret for life!"
-    qcTranslated: "Who dares to oppose me? I will make him regret it for the rest of his life!"
-    qcStatus: Corrected
-    qcQualityScore: 85
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 7
     text: "明枪易躲，暗箭难防。"
     translated: "A arrow in the open is easy to dodge, but an ambush is hard to guard against."
     qcReviewedText: "A arrow in the open is easy to dodge, but an ambush is hard to guard against.\\n#PlayerName#, when traveling in the Jianghu, it's better to make fewer enemies."
-    qcTranslated: "An arrow in the open is easy to dodge, but an ambush is hard to guard against.\\n#PlayerName#, it is better to make fewer enemies when traveling in the Jianghu."
+    qcTranslated: "An open attack is easy to dodge, but a hidden arrow is hard to guard against.\\n#PlayerName#, when traveling in the Jianghu, it's better to make fewer enemies."
     qcStatus: Corrected
-    qcQualityScore: 82
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - split: 7
     subIndex: 1
     text: "#PlayerName#行走江湖之时，还是少结些仇家为妙。"
@@ -1361,9 +1472,12 @@
     text: "峨眉山中有个老猴王，天天撒泼捣乱，破坏田地，"
     translated: "In the midst of Mount Emei, there's an old monkey king who wreaks havoc every day, damaging farmland."
     qcReviewedText: "In the midst of Mount Emei, there's an old monkey king who wreaks havoc every day, damaging farmland.\\nTruly this Miss is my greatest enemy in a lifetime!"
-    qcStatus: Passed
+    qcTranslated: "In the midst of Mount Emei, there's an old monkey king who makes a scene and causes trouble every day, destroying farmland.\\nTruly he is this Miss's greatest enemy in a lifetime!"
+    qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: None
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - split: 8
     subIndex: 1
     text: "实在是本姑娘一生之大敌！"
@@ -1372,9 +1486,9 @@
     text: "恩怨如棋，不必争一时之得失......"
     translated: "Grudges are like chess; there's no need to fuss over temporary gains or losses..."
     qcReviewedText: "Grudges are like chess; there's no need to fuss over temporary gains or losses...\\nOnly by carefully planning and emerging victorious in the end can one truly be considered a winner."
-    qcTranslated: "Grudges are like chess; there's no need to fuss over temporary gains or losses...\\nOnly by carefully laying out the strategy and laughing to the end can one truly be considered a winner."
-    qcStatus: Corrected
-    qcQualityScore: 95
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 9
     subIndex: 1
     text: "唯有精心布局，笑到最后，方才称得上是赢家。"
@@ -1383,9 +1497,9 @@
     text: "睚眦之怨，亦当百倍奉还。"
     translated: "Grudges should be returned a hundredfold"
     qcReviewedText: "Grudges should be returned a hundredfold \\nIf not for that, how would others know that I, Ji Xinkuang, am not easily provoked?"
-    qcTranslated: "Even the smallest grudge should be repaid a hundredfold. \\nOtherwise, how would others know that Ji Xinkuang is not to be provoked?"
-    qcStatus: Corrected
-    qcQualityScore: 92
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 10
     subIndex: 1
     text: "若非如此，他人怎知我计心狂不好招惹？"
@@ -1394,9 +1508,9 @@
     text: "为一己私仇驱使，只会徒增无谓的杀戮。"
     translated: "Driven by personal vendetta, it can only lead to pointless slaughter."
     qcReviewedText: "Driven by personal vendetta, it can only lead to pointless slaughter.\\nTravelling through the Jianghu, one must prioritize justice and righteousness!"
-    qcTranslated: "Driven by personal vendetta, it can only lead to pointless slaughter.\\nWhen traveling in the Jianghu, one must prioritize justice and righteousness!"
-    qcStatus: Corrected
-    qcQualityScore: 88
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 11
     subIndex: 1
     text: "行走江湖，当以公道大义为重！"
@@ -1405,9 +1519,9 @@
     text: "自古正邪不两立，惩奸除恶，斩妖伏魔，"
     translated: "Right and wrong have never coexisted since ancient times. Prosecute evil, eliminate wrongdoing, slay demons, and subdue monsters."
     qcReviewedText: "Right and wrong have never coexisted since ancient times. Prosecute evil, eliminate wrongdoing, slay demons, and subdue monsters.\\nThis is the duty we Wudang practitioners should fulfill."
-    qcTranslated: "Right and wrong have never coexisted since ancient times. Prosecute evil, eliminate wrongdoing, slay demons, and subdue monsters.\\nThis is the duty we Wudang practitioners should fulfill."
-    qcStatus: Corrected
-    qcQualityScore: 95
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 12
     subIndex: 1
     text: "此乃我武当正道应尽之职责。"
@@ -1437,20 +1551,22 @@
     translated: "Rate the Jianghu"
     qcReviewedText: "Rate the Jianghu"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 1
     text: "......江湖纷乱......#PlayerName#多加小心......"
     translated: "...the Jianghu is in chaos... #PlayerName#, be careful..."
     qcReviewedText: "...the Jianghu is in chaos... #PlayerName#, be careful..."
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - split: 2
     text: "当今江湖，有太多欺世盗名，妄称侠义之辈。"
     translated: "In today's Jianghu, there are too many pretenders who claim to uphold chivalry."
     qcReviewedText: "In today's Jianghu, there are too many pretenders who claim to uphold chivalry.\\nOnly by slaying them all can Senior Achiever realize the domineering ambition to bring peace to the chaotic world."
-    qcTranslated: "In today's Jianghu, there are too many pretenders who claim to uphold chivalry.\\nOnly by slaying them all can this old man realize his domineering ambition to quell the chaotic world."
-    qcStatus: Corrected
-    qcQualityScore: 95
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 2
     subIndex: 1
     text: "唯有将他们斩杀干净，老夫荡平乱世的霸道才能实现。"
@@ -1459,10 +1575,12 @@
     text: "别看那些江湖大侠，一个个道貌岸然。"
     translated: "Don't look at those so‑called great heroes of the Jianghu; they all wear a mask of righteousness."
     qcReviewedText: "Don't look at those so‑called great heroes of the Jianghu; they all wear a mask of righteousness.\\nPrivate killings and arson aren't rare either; I'm much worse than this Miss.\\n.... #PlayerName#, you couldn't be one of them, right?"
-    qcTranslated: "Don't look at those so‑called Great Heroes of the Jianghu; they all wear a mask of righteousness.\\nThey've done no small amount of private killing and arson behind closed doors, much worse than this Miss.\\n.... #PlayerName#, you couldn't be one of them, right?"
+    qcTranslated: "Don't look at those so‑called Great Heroes of the Jianghu; they all wear a mask of righteousness.\\nThey've done no small amount of killing and arson in private, far worse than this Miss.\\n.... #PlayerName#, you couldn't be one of them, right?"
     qcStatus: Corrected
-    qcQualityScore: 82
+    qcQualityScore: 95
     qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - split: 3
     subIndex: 1
     text: "私底下杀人放火的事没少干，比本姑娘可坏多了。"
@@ -1475,9 +1593,9 @@
     text: "当今江湖英雄辈出，豪侠并起，此皆天下大乱所致。"
     translated: "Heroes and chivalrous gentlemen abound in the Jianghu today, all due to great turmoil ravaging the land."
     qcReviewedText: "Heroes and chivalrous gentlemen abound in the Jianghu today, all due to great turmoil ravaging the land.\\nA sage not dying means great thieves will never cease. Only the way of staying true to the middle can maintain the balance of the times."
-    qcTranslated: "Heroes and chivalrous gentlemen abound in the Jianghu today, all due to great turmoil ravaging the land.\\nAs long as sages do not die, great thieves will never cease. Only the Way of the Middle can maintain the balance of the times."
-    qcStatus: Corrected
-    qcQualityScore: 90
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 4
     subIndex: 1
     text: "圣人不死，大盗不止，唯有守中之道，方能维持时局平衡。"
@@ -1486,9 +1604,9 @@
     text: "什么名门正派，不过是些沽名钓誉之辈！"
     translated: "What noble and righteous sects, merely some people seeking fame and reputation!"
     qcReviewedText: "What noble and righteous sects, merely some people seeking fame and reputation!\\nMeans are irrelevant to the end goal‑such actions befit true men."
-    qcTranslated: "What noble sects, what righteous ways! They are merely pretenders seeking false fame!\\nTo do whatever it takes to achieve one's goal‑only this befits a true man of ambition."
-    qcStatus: Corrected
-    qcQualityScore: 75
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 5
     subIndex: 1
     text: "为达目的不择手段，如此方为大丈夫所为。"
@@ -1497,9 +1615,9 @@
     text: "当今江湖，不过一群虫豸杂碎！"
     translated: "Today's Jianghu is but a mix of various insects!"
     qcReviewedText: "Today's Jianghu is but a mix of various insects!\\nOnly a few people have caught my eye."
-    qcTranslated: "Today's Jianghu is nothing but a swarm of vermin and scum!\\nOnly a handful of people are worthy of my attention."
-    qcStatus: Corrected
-    qcQualityScore: 95
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 6
     subIndex: 1
     text: "能入老子法眼的，不过寥寥数人而已。"
@@ -1515,9 +1633,9 @@
     text: "什么是江湖？为啥要叫江湖？"
     translated: "What is the Jianghu? Why call it that?"
     qcReviewedText: "What is the Jianghu? Why call it that?\\nCould those Great Heroes have been reincarnated as fish and shrimp, liking swimming instead...."
-    qcTranslated: "What is the Jianghu? Why is it called that?\\nAre those Great Heroes reincarnated fish and shrimp, fond of swimming or what...."
-    qcStatus: Corrected
-    qcQualityScore: 75
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 8
     subIndex: 1
     text: "难道那些大侠都是鱼虾转世，喜欢游泳不成......"
@@ -1527,7 +1645,8 @@
     translated: "In the Jianghu, one's actions are not entirely in their own control."
     qcReviewedText: "In the Jianghu, one's actions are not entirely in their own control.\\n#PlayerName#, perhaps we might also come to the point where we draw our swords against each other."
     qcStatus: Passed
-    qcQualityScore: 98
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 9
     subIndex: 1
     text: "#PlayerName#，或许你我也会有拔剑相向的一天。"
@@ -1536,9 +1655,9 @@
     text: "循规蹈矩依正道而行者，不过棋子而已。"
     translated: "Those who follow the rules and walk the straight path are merely pieces on the board."
     qcReviewedText: "Those who follow the rules and walk the straight path are merely pieces on the board.\\nHaha, while I, Ji Xinkuang, only play the role of the chess player."
-    qcTranslated: "Those who follow the rules and walk the straight path are merely pieces on the board.\\nHaha, while I, Ji Xinkuang, choose to be the one who plays the game."
-    qcStatus: Corrected
-    qcQualityScore: 85
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 10
     subIndex: 1
     text: "呵呵，而我计心狂，只做那弈棋之人。"
@@ -1548,7 +1667,8 @@
     translated: "Ah, the villains and scoundrels in this Jianghu."
     qcReviewedText: "Ah, the villains and scoundrels in this Jianghu.\\nWhy can't we ever fully exterminate or exhaust them..."
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 11
     subIndex: 1
     text: "为何总是除之不尽，杀之不竭......"
@@ -1557,9 +1677,9 @@
     text: "师傅总说，这江湖中人亦正亦邪，黑白往往并不分明。"
     translated: "The master often says that in the Jianghu, people can be both upright and wicked, and good and evil are not always clear‑cut."
     qcReviewedText: "The master often says that in the Jianghu, people can be both upright and wicked, and good and evil are not always clear‑cut.\\nBut I think black is black and white is white. Isn't it clear to someone who isn't blind?"
-    qcTranslated: "Master often says that in the Jianghu, people are neither wholly good nor wholly evil, and the distinction between right and wrong is often blurred.\\nBut I think black is black and white is white. Unless one is blind, how could one fail to see?"
-    qcStatus: Corrected
-    qcQualityScore: 90
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 12
     subIndex: 1
     text: "我却觉得黑便是黑，白便是白，又不是瞎子，岂能看不出来？"

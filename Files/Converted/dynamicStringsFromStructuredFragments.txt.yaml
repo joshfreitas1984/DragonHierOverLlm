@@ -14,7 +14,7 @@
     translated: "Not watching the battle between other characters"
     qcReviewedText: "Not watching the battle between other characters"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "(观战)"
   splits:
@@ -32,7 +32,7 @@
     translated: "Other characters will ask if you want to watch when they are battling."
     qcReviewedText: "Other characters will ask if you want to watch when they are battling."
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "10000两"
   splits:
@@ -64,7 +64,7 @@
     translated: "10 days"
     qcReviewedText: "10 days"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "15天"
   splits:
@@ -88,7 +88,7 @@
     translated: "2000 liang"
     qcReviewedText: "2000 liang"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "5000两"
   splits:
@@ -96,7 +96,7 @@
     translated: "5000 liang"
     qcReviewedText: "5000 liang"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "500两"
   splits:
@@ -104,7 +104,7 @@
     translated: "500 liang"
     qcReviewedText: "500 liang"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "5天"
   splits:
@@ -120,7 +120,7 @@
     translated: "Chapter"
     qcReviewedText: "<color=#{1}>Chapter {0} Layer</color>"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "层"
@@ -133,7 +133,7 @@
     translated: "Scholarship"
     qcReviewedText: "Scholarship {2} Exclude"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "排除"
@@ -146,7 +146,7 @@
     translated: "Surrounding intelligence"
     qcReviewedText: "{0} Surrounding intelligence"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
   templates:
   - template: "⟦0⟧{0}"
@@ -156,7 +156,7 @@
     translated: "Banquet"
     qcReviewedText: "{0} Banquet({1} Day)"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "日"
@@ -182,7 +182,7 @@
     translated: "Education"
     qcReviewedText: "{0} Education"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
   templates:
   - template: "⟦0⟧{0}"
@@ -192,7 +192,7 @@
     translated: "With"
     qcReviewedText: "♦With {0} Civilize the bandits\n♦Gain reputation and {0} Training experience"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "教化贼人"
@@ -211,7 +211,7 @@
     translated: "Performance"
     qcReviewedText: "{0} Performance"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   templates:
   - template: "⟦0⟧{0}"
@@ -231,7 +231,7 @@
     translated: "Not a single one can answer..."
     qcReviewedText: "Not a single one can answer..."
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "一探究竟"
   splits:
@@ -239,7 +239,7 @@
     translated: "Get to the bottom of it"
     qcReviewedText: "Get to the bottom of it"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "一番感激"
   splits:
@@ -247,7 +247,7 @@
     translated: "Deepest gratitude"
     qcReviewedText: "Deepest gratitude"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "一言为定"
   splits:
@@ -255,7 +255,7 @@
     translated: "A word is as good as a vow."
     qcReviewedText: "A word is as good as a vow."
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "一较高下"
   splits:
@@ -263,7 +263,7 @@
     translated: "To test each other's skills"
     qcReviewedText: "To test each other's skills"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "万份感谢"
   splits:
@@ -271,7 +271,7 @@
     translated: "Thousands of thanks"
     qcReviewedText: "Thousands of thanks"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "不妨一看"
   splits:
@@ -279,7 +279,7 @@
     translated: "Why not take a look?"
     qcReviewedText: "Why not take a look?"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "不客气了"
   splits:
@@ -295,7 +295,7 @@
     translated: "You're welcome"
     qcReviewedText: "You're welcome"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "不感兴趣"
   splits:
@@ -311,7 +311,7 @@
     translated: "Overreach"
     qcReviewedText: "Overreach"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "不醉不归！"
   splits:
@@ -319,16 +319,19 @@
     translated: "Not drunk, not home!"
     qcReviewedText: "Not drunk, not home!"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "与{0}分享"
   splits:
   - text: "与"
     translated: "And"
     qcReviewedText: "And {0} Share"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "Share with {0}"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "分享"
     translated: "Share"
@@ -340,7 +343,7 @@
     translated: "Personal Gift"
     qcReviewedText: "Personal Gift"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "中级嘉奖"
   splits:
@@ -348,7 +351,7 @@
     translated: "Middle Award"
     qcReviewedText: "Middle Award"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "中额红包"
   splits:
@@ -356,7 +359,7 @@
     translated: "Middle‑sized red envelope"
     qcReviewedText: "Middle‑sized red envelope"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "中额赠礼"
   splits:
@@ -364,7 +367,7 @@
     translated: "Mid‑tier Gift"
     qcReviewedText: "Mid‑tier Gift"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "强盗头目&随机"
   splits:
@@ -385,7 +388,7 @@
     translated: "Event difficulty"
     qcReviewedText: "Event difficulty+0.5"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   templates:
   - template: "{0}+0.5"
@@ -416,7 +419,7 @@
     translated: "Event difficulty"
     qcReviewedText: "Event difficulty+1"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
   templates:
   - template: "{0}+1"
@@ -439,16 +442,19 @@
     translated: "Random 0.3"
     qcReviewedText: "Random 0.3"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "恶霸头目&随机"
   splits:
   - text: "恶霸头目"
     translated: "Bullseye Boss"
     qcReviewedText: "Bullseye Boss & Randomly"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "Bully Leader & Random"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "随机"
     translated: "Randomly"
@@ -536,7 +542,7 @@
     translated: "Random 0"
     qcReviewedText: "Random 0"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "马贼头目&随机"
   splits:
@@ -578,7 +584,7 @@
     translated: "Event difficulty"
     qcReviewedText: "Event difficulty+1.5"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
   templates:
   - template: "{0}+1.5"
@@ -587,16 +593,19 @@
   - text: "为其践行"
     translated: "To uphold it"
     qcReviewedText: "To uphold it"
-    qcStatus: Passed
+    qcTranslated: "To see it off"
+    qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: None
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
 - raw: "举手之劳"
   splits:
   - text: "举手之劳"
     translated: "A piece of cake"
     qcReviewedText: "A piece of cake"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "义不容辞"
   splits:
@@ -604,7 +613,7 @@
     translated: "Cannot shirk the duty"
     qcReviewedText: "Cannot shirk the duty"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "乖乖交钱"
   splits:
@@ -612,7 +621,7 @@
     translated: "Pay up willingly"
     qcReviewedText: "Pay up willingly"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "乘机开溜"
   splits:
@@ -620,7 +629,7 @@
     translated: "Grab the opportunity to slip away"
     qcReviewedText: "Grab the opportunity to slip away"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "乞讨"
   splits:
@@ -636,7 +645,7 @@
     translated: "Buy the treasure"
     qcReviewedText: "Buy the treasure"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "了解周遭情况"
   splits:
@@ -644,7 +653,7 @@
     translated: "Understand the surroundings"
     qcReviewedText: "Understand the surroundings"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "了解远处情况"
   splits:
@@ -652,7 +661,7 @@
     translated: "Understand the situation far away"
     qcReviewedText: "Understand the situation far away"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "二人平分"
   splits:
@@ -660,7 +669,7 @@
     translated: "They split it evenly"
     qcReviewedText: "They split it evenly"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "二位住手，要打就打我吧"
   splits:
@@ -675,9 +684,12 @@
   - text: "好友关系好感获取+10%，好感消耗"
     translated: "Friendship affinity gain +10%, affinity consumption"
     qcReviewedText: "♦Friendship affinity gain +10%, affinity consumption-10%\n♦To do evil to a friend, infamy x200%"
-    qcStatus: Passed
-    qcQualityScore: 90
-    qcDefectCategory: None
+    qcTranslated: "♦Friendship affinity gain +10%, affinity consumption ‑10%\n♦To do evil to a friend, Infamy x200%"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "对好友作恶，恶名"
     translated: "To do evil to a friend, infamy"
@@ -688,9 +700,12 @@
   - text: "亲密关系好感获取+20%，好感消耗"
     translated: "Intimate Relationship Goodwill Gain +20%, Goodwill Consumption"
     qcReviewedText: "♦Intimate Relationship Goodwill Gain +20%, Goodwill Consumption-20%\n♦To wrong friends and family, infamy x400%"
-    qcStatus: Passed
-    qcQualityScore: 85
-    qcDefectCategory: None
+    qcTranslated: "♦Intimate Relationship Goodwill Gain +20%, Goodwill Consumption ‑20%\n♦To wrong friends and family, Infamy x400%"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "对亲友作恶，恶名"
     translated: "To wrong friends and family, infamy"
@@ -702,7 +717,7 @@
     translated: "Discourse on Dao through Martial Arts"
     qcReviewedText: "Discourse on Dao through Martial Arts"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "以理说服"
   splits:
@@ -710,7 +725,7 @@
     translated: "Persuade with reason"
     qcReviewedText: "Persuade with reason"
     qcStatus: Passed
-    qcQualityScore: 80
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "伏地恳求"
   splits:
@@ -718,7 +733,7 @@
     translated: "Kneel humbly"
     qcReviewedText: "Kneel humbly"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "休养"
   splits:
@@ -726,7 +741,7 @@
     translated: "Recovery"
     qcReviewedText: "Recovery"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "传授"
   splits:
@@ -734,7 +749,7 @@
     translated: "Teach"
     qcReviewedText: "Teach"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦传授弟子武功无好感要求\n♦武功品级不能超过对方身份等级\n♦每月最多一次"
   splits:
@@ -742,7 +757,7 @@
     translated: "Teach disciples martial arts without any favor points requirement"
     qcReviewedText: "♦Teach disciples martial arts without any favor points requirement\n♦Combat skill grade cannot exceed the other party's status grade.\n♦At most once a month"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "武功品级不能超过对方身份等级"
@@ -758,7 +773,7 @@
     translated: "Potential to impart skills"
     qcReviewedText: "Potential to impart skills"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦你的潜力比对方高出越多，效果越好\n♦提升2点好感"
   splits:
@@ -766,7 +781,7 @@
     translated: "The greater the potential difference between you and the other person, the better the effect."
     qcReviewedText: "♦The greater the potential difference between you and the other person, the better the effect.\n♦Increase 2 points of favor"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "提升2点好感"
@@ -779,7 +794,7 @@
     translated: "Share skill and experience"
     qcReviewedText: "Share skill and experience"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦你的技艺比对方高出越多，效果越好\n♦提升2点好感"
   splits:
@@ -787,7 +802,7 @@
     translated: "The better the disparity in your skill compared to the opponent, the better the effect."
     qcReviewedText: "♦The better the disparity in your skill compared to the opponent, the better the effect.\n♦Increase 2 points of favor"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "提升2点好感"
@@ -800,7 +815,7 @@
     translated: "Teach this martial art"
     qcReviewedText: "Teach this martial art"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "传授此秘籍"
   splits:
@@ -808,7 +823,7 @@
     translated: "Teach this Secret Manual"
     qcReviewedText: "Teach this Secret Manual"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "传授武学"
   splits:
@@ -816,7 +831,7 @@
     translated: "Teach martial arts"
     qcReviewedText: "Teach martial arts"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦传授自己掌握的武学"
   splits:
@@ -824,7 +839,7 @@
     translated: "Teach the martial arts techniques he knows"
     qcReviewedText: "♦Teach the martial arts techniques he knows"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   templates:
   - template: "♦{0}"
@@ -834,16 +849,19 @@
     translated: "Bestow the secret manual"
     qcReviewedText: "Bestow the secret manual"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦传授背包/仓库/藏经阁内秘籍记载的武学"
   splits:
   - text: "传授背包"
     translated: "Backpack Training"
     qcReviewedText: "♦Backpack Training/Warehouse/The martial arts recorded in the Scripture Pavilion's Secret Manual"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "♦Teach martial arts recorded in the Secret Manuals within the Backpack/Warehouse/Scripture Pavilion"
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "仓库"
     translated: "Warehouse"
@@ -858,7 +876,7 @@
     translated: "Sell at a low price"
     qcReviewedText: "Sell at a low price({0} Taels)"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "两"
@@ -871,7 +889,7 @@
     translated: "Use the key"
     qcReviewedText: "Use the key"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "修习{0}口诀"
   splits:
@@ -879,7 +897,7 @@
     translated: "Practice"
     qcReviewedText: "Practice {0} Mnemonic"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "口诀"
@@ -892,7 +910,7 @@
     translated: "Practice"
     qcReviewedText: "Practice {0} Potential"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "潜力"
@@ -904,17 +922,16 @@
   - text: "修改本门弟子折扣"
     translated: "Modify discount for this disciple"
     qcReviewedText: "Modify discount for this disciple"
-    qcTranslated: "Modify discount for this sect's disciples"
-    qcStatus: Corrected
-    qcQualityScore: 90
-    qcDefectCategory: DroppedContent
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "修改非本门弟子折扣"
   splits:
   - text: "修改非本门弟子折扣"
     translated: "Modify discount for non‑disciples"
     qcReviewedText: "Modify discount for non‑disciples"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "修炼{0}"
   splits:
@@ -932,7 +949,7 @@
     translated: "Practice..."
     qcReviewedText: "Practice..."
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "停战{0}个月"
   splits:
@@ -953,7 +970,7 @@
     translated: "At least needs"
     qcReviewedText: "At least needs {2} Sect Favor\nConsume {3} Sect Favor"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "门派好感"
@@ -972,7 +989,7 @@
     translated: "Sufficient rest"
     qcReviewedText: "Sufficient rest"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "先生高义，万分感谢"
   splits:
@@ -980,7 +997,7 @@
     translated: "Sir, it is my honor, and I am deeply grateful."
     qcReviewedText: "Sir, it is my honor, and I am deeply grateful."
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "先追上我再说"
   splits:
@@ -988,7 +1005,7 @@
     translated: "Catch up with me first"
     qcReviewedText: "Catch up with me first"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "免费赠与"
   splits:
@@ -996,7 +1013,7 @@
     translated: "Free gift"
     qcReviewedText: "Free gift"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "免费赠送"
   splits:
@@ -1004,7 +1021,7 @@
     translated: "Free gift"
     qcReviewedText: "Free gift"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "兑换该武学"
   splits:
@@ -1012,7 +1029,7 @@
     translated: "Exchange this martial art skill"
     qcReviewedText: "Exchange this martial art skill"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "入朝主政"
   splits:
@@ -1020,7 +1037,7 @@
     translated: "Govern in the Capital"
     qcReviewedText: "Govern in the Capital"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "入朝掌兵"
   splits:
@@ -1028,23 +1045,26 @@
     translated: "Command the army upon entering the capital"
     qcReviewedText: "Command the army upon entering the capital"
     qcStatus: Passed
-    qcQualityScore: 80
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "入派"
   splits:
   - text: "入派"
     translated: "Join the Fated Ones"
     qcReviewedText: "Join the Fated Ones"
-    qcStatus: Passed
-    qcQualityScore: 85
-    qcDefectCategory: None
+    qcTranslated: "Join the Sect"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
 - raw: "♦邀请眷侣加入自己门派"
   splits:
   - text: "邀请眷侣加入自己门派"
     translated: "Invite couples to join your sect"
     qcReviewedText: "♦Invite couples to join your sect"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
   templates:
   - template: "♦{0}"
@@ -1053,17 +1073,16 @@
   - text: "入队"
     translated: "Join the queue"
     qcReviewedText: "Join the queue"
-    qcTranslated: "Join the party"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DomainTerm
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "♦邀请对方入队30天\n♦{0}{2}"
   splits:
   - text: "邀请对方入队30天"
     translated: "Invite the other party to join the queue for 30 days"
     qcReviewedText: "♦Invite the other party to join the queue for 30 days\n♦{0} {2}"
     qcStatus: Passed
-    qcQualityScore: 82
+    qcQualityScore: 100
     qcDefectCategory: None
   templates:
   - template: "♦{0}\n♦⟦0⟧⟦2⟧"
@@ -1072,9 +1091,8 @@
   - text: "内功"
     translated: "Neigong"
     qcReviewedText: "Neigong Breathing technique"
-    qcTranslated: "Neigong Breathing Technique"
-    qcStatus: Corrected
-    qcQualityScore: 95
+    qcStatus: Passed
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "吐纳法"
@@ -1097,7 +1115,7 @@
     translated: "March to battle!"
     qcReviewedText: "March to battle!"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "出手伤人"
   splits:
@@ -1105,7 +1123,7 @@
     translated: "Assault and battery"
     qcReviewedText: "Assault and battery"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦重伤对方\n♦增加10恶名"
   splits:
@@ -1113,7 +1131,7 @@
     translated: "Inflicted serious injuries on the opponent"
     qcReviewedText: "♦Inflicted serious injuries on the opponent\n♦Increase 10 Infamy"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "增加10恶名"
@@ -1126,7 +1144,7 @@
     translated: "Go ahead and do it"
     qcReviewedText: "Go ahead and do it"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "出手吧！"
   splits:
@@ -1134,7 +1152,7 @@
     translated: "Go for it!"
     qcReviewedText: "Go for it!"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "出手威逼"
   splits:
@@ -1142,7 +1160,7 @@
     translated: "Force with a show of strength"
     qcReviewedText: "Force with a show of strength"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "出手阻止"
   splits:
@@ -1150,7 +1168,7 @@
     translated: "Step in to stop"
     qcReviewedText: "Step in to stop"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "出钱了事"
   splits:
@@ -1158,7 +1176,7 @@
     translated: "It's better to just pay up"
     qcReviewedText: "It's better to just pay up"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "分手"
   splits:
@@ -1166,7 +1184,7 @@
     translated: "Breakup"
     qcReviewedText: "Breakup"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦结束情侣关系\n♦降低100点好感\n♦固定增加20恶名"
   splits:
@@ -1174,7 +1192,7 @@
     translated: "End the romantic relationship"
     qcReviewedText: "♦End the romantic relationship\n♦Decrease 100 points of goodwill\n♦Fixed increase Infamy by 20"
     qcStatus: Passed
-    qcQualityScore: 82
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "降低100点好感"
@@ -1189,17 +1207,19 @@
   - text: "分文不取"
     translated: "Not a cent for free"
     qcReviewedText: "Not a cent for free"
-    qcTranslated: "Not a single cent"
+    qcTranslated: "Not a cent taken"
     qcStatus: Corrected
-    qcQualityScore: 85
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
 - raw: "分而食之"
   splits:
   - text: "分而食之"
     translated: "Divide and conquer"
     qcReviewedText: "Divide and conquer"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "切磋出师"
   splits:
@@ -1207,7 +1227,7 @@
     translated: "Refine through sparring"
     qcReviewedText: "Refine through sparring"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "初级嘉奖"
   splits:
@@ -1215,7 +1235,7 @@
     translated: "Basic Award"
     qcReviewedText: "Basic Award"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "别生气啊"
   splits:
@@ -1223,7 +1243,7 @@
     translated: "Don't get upset"
     qcReviewedText: "Don't get upset"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "刷新展品"
   splits:
@@ -1231,7 +1251,7 @@
     translated: "Refresh exhibits"
     qcReviewedText: "Refresh exhibits"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "割据一方"
   splits:
@@ -1239,34 +1259,38 @@
     translated: "Govern a region"
     qcReviewedText: "Govern a region"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "劝入门派"
   splits:
   - text: "劝入门派"
     translated: "AdviseEntry"
     qcReviewedText: "AdviseEntry"
-    qcTranslated: "Advise Joining a Sect"
+    qcTranslated: "Advise Sect Entry"
     qcStatus: Corrected
-    qcQualityScore: 90
-    qcDefectCategory: UntranslatedPinyin
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
 - raw: "动之以理"
   splits:
   - text: "动之以理"
     translated: "Reason with them"
     qcReviewedText: "Reason with them"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "助{0}一臂之力"
   splits:
   - text: "助"
     translated: "Help"
     qcReviewedText: "Help {0} A helping hand"
-    qcTranslated: "Help {0} out"
+    qcTranslated: "Lend {0} a helping hand"
     qcStatus: Corrected
-    qcQualityScore: 85
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "一臂之力"
     translated: "A helping hand"
@@ -1278,7 +1302,7 @@
     translated: "Prison Break"
     qcReviewedText: "Prison Break"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦获取贼人身上一件物品\n♦增加少许恶名"
   splits:
@@ -1286,7 +1310,7 @@
     translated: "Retrieve an item from the bandit's body"
     qcReviewedText: "♦Retrieve an item from the bandit's body\n♦Increase some Infamy"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "增加少许恶名"
@@ -1299,7 +1323,7 @@
     translated: "Leave it to me"
     qcReviewedText: "Leave it to me"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "包扎"
   splits:
@@ -1307,7 +1331,7 @@
     translated: "Bandage"
     qcReviewedText: "Bandage"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "技能影响:"
   splits:
@@ -1333,7 +1357,7 @@
     translated: "Single guidance"
     qcReviewedText: "Single guidance"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "参赛"
   splits:
@@ -1341,7 +1365,7 @@
     translated: "To compete"
     qcReviewedText: "To compete"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "友善..."
   splits:
@@ -1357,7 +1381,7 @@
     translated: "Learned a lot"
     qcReviewedText: "Learned a lot"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "只是借你一看罢了"
   splits:
@@ -1365,7 +1389,7 @@
     translated: "Just a quick look, that's all"
     qcReviewedText: "Just a quick look, that's all"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "只管开口便是！"
   splits:
@@ -1373,7 +1397,7 @@
     translated: "Just speak up!"
     qcReviewedText: "Just speak up!"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "只管砸来便是！"
   splits:
@@ -1381,7 +1405,7 @@
     translated: "Just keep attacking!"
     qcReviewedText: "Just keep attacking!"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "只管考验便是！"
   splits:
@@ -1389,7 +1413,7 @@
     translated: "Just test me then!"
     qcReviewedText: "Just test me then!"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "只管走起便是！"
   splits:
@@ -1397,7 +1421,7 @@
     translated: "Just get moving!"
     qcReviewedText: "Just get moving!"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "只能出手了"
   splits:
@@ -1405,7 +1429,7 @@
     translated: "We had to act now"
     qcReviewedText: "We had to act now"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "只要一半价格"
   splits:
@@ -1413,7 +1437,7 @@
     translated: "As long as it's half the price"
     qcReviewedText: "As long as it's half the price"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "可惜可惜"
   splits:
@@ -1421,7 +1445,7 @@
     translated: "Pity pity"
     qcReviewedText: "Pity pity"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "同行"
   splits:
@@ -1429,7 +1453,7 @@
     translated: "Colleague"
     qcReviewedText: "Colleague"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦邀请眷侣加入队伍\n♦无好感消耗"
   splits:
@@ -1437,7 +1461,7 @@
     translated: "Invite the couple to join the team"
     qcReviewedText: "♦Invite the couple to join the team\n♦No affection points consumption"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "无好感消耗"
@@ -1450,7 +1474,7 @@
     translated: "See you later"
     qcReviewedText: "See you later"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "听我一言"
   splits:
@@ -1458,7 +1482,7 @@
     translated: "Hear me out"
     qcReviewedText: "Hear me out"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "告辞"
   splits:
@@ -1466,7 +1490,7 @@
     translated: "Goodbye"
     qcReviewedText: "Goodbye"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "告辞！"
   splits:
@@ -1474,7 +1498,7 @@
     translated: "Goodbye!"
     qcReviewedText: "Goodbye!"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "哼，还好我早有准备！"
   splits:
@@ -1482,7 +1506,7 @@
     translated: "Hmph, good thing I was prepared!"
     qcReviewedText: "Hmph, good thing I was prepared!"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "唔......"
   splits:
@@ -1498,7 +1522,7 @@
     translated: "Timidly"
     qcReviewedText: "Timidly"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦降低20好感\n♦若好感小于50会断绝情侣关系"
   splits:
@@ -1506,7 +1530,7 @@
     translated: "Reduce 20favor"
     qcReviewedText: "♦Reduce 20favor\n♦If affection is less than 50, the romantic relationship will be severed."
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "若好感小于50会断绝情侣关系"
@@ -1519,7 +1543,7 @@
     translated: "Reward"
     qcReviewedText: "Reward"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦以银两或珍宝嘉奖弟子\n♦提升弟子好感，忠诚和门派功绩\n♦每月最多一次"
   splits:
@@ -1527,7 +1551,7 @@
     translated: "Reward disciples with silver or precious treasures"
     qcReviewedText: "♦Reward disciples with silver or precious treasures\n♦Increase apprentice goodwill, loyalty, and sect merit points\n♦At most once a month"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "提升弟子好感，忠诚和门派功绩"
@@ -1543,7 +1567,7 @@
     translated: "Gathering around"
     qcReviewedText: "Gathering around"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "均价出售({0}两)"
   splits:
@@ -1551,7 +1575,7 @@
     translated: "Sell at average price"
     qcReviewedText: "Sell at average price({0} Taels)"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "两"
@@ -1564,7 +1588,7 @@
     translated: "Command from the rear"
     qcReviewedText: "Command from the rear"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "垫付一半欠款"
   splits:
@@ -1572,7 +1596,7 @@
     translated: "Pay half of the outstanding debt upfront"
     qcReviewedText: "Pay half of the outstanding debt upfront"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "垫付全部欠款"
   splits:
@@ -1580,7 +1604,7 @@
     translated: "Pay off all outstanding debts"
     qcReviewedText: "Pay off all outstanding debts"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "垫付欠款"
   splits:
@@ -1588,7 +1612,7 @@
     translated: "Advance payment for outstanding debt"
     qcReviewedText: "Advance payment for outstanding debt"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "多少给点吧"
   splits:
@@ -1596,7 +1620,7 @@
     translated: "How much should I give?"
     qcReviewedText: "How much should I give?"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "多谢"
   splits:
@@ -1612,7 +1636,7 @@
     translated: "Thank you, Great Hero"
     qcReviewedText: "Thank you, Great Hero"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "多谢捧场"
   splits:
@@ -1620,7 +1644,7 @@
     translated: "Thanks for coming"
     qcReviewedText: "Thanks for coming"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "大张旗鼓"
   splits:
@@ -1628,16 +1652,15 @@
     translated: "With great fanfare"
     qcReviewedText: "With great fanfare"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "迎战大量守卫\n获取高品质秘籍"
   splits:
   - text: "迎战大量守卫"
     translated: "Engage numerous defenders"
     qcReviewedText: "Engage numerous defenders\nAcquire high‑quality manuals"
-    qcTranslated: "Engage numerous defenders\nAcquire high‑quality Secret Manuals"
-    qcStatus: Corrected
-    qcQualityScore: 82
+    qcStatus: Passed
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "获取高品质秘籍"
@@ -1650,7 +1673,7 @@
     translated: "Boldly confess your feelings"
     qcReviewedText: "Boldly confess your feelings"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "大胆贼人！"
   splits:
@@ -1658,7 +1681,7 @@
     translated: "Bold thief!"
     qcReviewedText: "Bold thief!"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "大额红包"
   splits:
@@ -1666,7 +1689,7 @@
     translated: "Large red envelope"
     qcReviewedText: "Large red envelope"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "大额赠礼"
   splits:
@@ -1674,7 +1697,7 @@
     translated: "Generous gift"
     qcReviewedText: "Generous gift"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "天赐良机"
   splits:
@@ -1682,7 +1705,7 @@
     translated: "Heavenly opportunity"
     qcReviewedText: "Heavenly opportunity"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "好个强敌！"
   splits:
@@ -1690,7 +1713,7 @@
     translated: "Great adversary!"
     qcReviewedText: "Great adversary!"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "好险好险..."
   splits:
@@ -1698,7 +1721,7 @@
     translated: "What a close call..."
     qcReviewedText: "What a close call..."
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "好，一起上吧！"
   splits:
@@ -1706,7 +1729,7 @@
     translated: "Alright, let's go together!"
     qcReviewedText: "Alright, let's go together!"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "好，我们合力对敌！"
   splits:
@@ -1714,7 +1737,7 @@
     translated: "Okay, let's work together to fight the enemy!"
     qcReviewedText: "Okay, let's work together to fight the enemy!"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "好，我们合力除贼！"
   splits:
@@ -1722,7 +1745,7 @@
     translated: "Good, let's join forces to eliminate the bandits!"
     qcReviewedText: "Good, let's join forces to eliminate the bandits!"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "好，算我一个！"
   splits:
@@ -1738,7 +1761,7 @@
     translated: "So it is as it should be..."
     qcReviewedText: "So it is as it should be..."
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "委托？"
   splits:
@@ -1746,7 +1769,7 @@
     translated: "Commission?"
     qcReviewedText: "Commission?"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦完成对方委托提升好感"
   splits:
@@ -1754,7 +1777,7 @@
     translated: "Complete the commission to raise reputation"
     qcReviewedText: "♦Complete the commission to raise reputation"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   templates:
   - template: "♦{0}"
@@ -1764,7 +1787,7 @@
     translated: "Told with great detail"
     qcReviewedText: "Told with great detail"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "学习技艺潜力"
   splits:
@@ -1772,7 +1795,7 @@
     translated: "Potential to learn a skill"
     qcReviewedText: "Potential to learn a skill"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦对方潜力比你高出越多，效果越好\n♦消耗10点好感(师傅好感消耗减半)"
   splits:
@@ -1780,7 +1803,7 @@
     translated: "The greater the potential difference between your opponent and you, the better the effect."
     qcReviewedText: "♦The greater the potential difference between your opponent and you, the better the effect.\n♦Consume 10 points of favor(Master affection consumption reduced by half)"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "消耗10点好感"
@@ -1796,7 +1819,7 @@
     translated: "Skillcraft experience"
     qcReviewedText: "Skillcraft experience"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦对方技艺比你高出越多，效果越好\n♦消耗4点好感(师傅好感消耗减半)"
   splits:
@@ -1804,7 +1827,7 @@
     translated: "While their skill is better than yours, the effect is also enhanced."
     qcReviewedText: "♦While their skill is better than yours, the effect is also enhanced.\n♦Consume 4 points of goodwill(Master affection consumption reduced by half)"
     qcStatus: Passed
-    qcQualityScore: 82
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "消耗4点好感"
@@ -1820,7 +1843,7 @@
     translated: "Lackluster training"
     qcReviewedText: "Lackluster training"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "完全恢复"
   splits:
@@ -1836,7 +1859,7 @@
     translated: "Completed the patrol"
     qcReviewedText: "Completed the patrol"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "官员进贡"
   splits:
@@ -1844,7 +1867,7 @@
     translated: "Official tribute"
     qcReviewedText: "Official tribute"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "容我娓娓道来"
   splits:
@@ -1852,7 +1875,7 @@
     translated: "Allow me to tell you in detail"
     qcReviewedText: "Allow me to tell you in detail"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "对于{0}我有几分心得"
   splits:
@@ -1860,7 +1883,7 @@
     translated: "For"
     qcReviewedText: "For {0} I have a few insights into it"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "我有几分心得"
@@ -1873,7 +1896,7 @@
     translated: "Better safe than sorry"
     qcReviewedText: "Better safe than sorry"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "小贼休走！"
   splits:
@@ -1881,7 +1904,7 @@
     translated: "Thief, do not escape!"
     qcReviewedText: "Thief, do not escape!"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "小额红包"
   splits:
@@ -1889,7 +1912,7 @@
     translated: "Small red envelope"
     qcReviewedText: "Small red envelope"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "小额赠礼"
   splits:
@@ -1897,7 +1920,7 @@
     translated: "Small gift"
     qcReviewedText: "Small gift"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "就学这个！"
   splits:
@@ -1905,7 +1928,7 @@
     translated: "Study this!"
     qcReviewedText: "Study this!"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "尽绵薄之力"
   splits:
@@ -1913,7 +1936,7 @@
     translated: "Do my best"
     qcReviewedText: "Do my best"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "履约伤人"
   splits:
@@ -1921,7 +1944,7 @@
     translated: "Breaching the contract harmed someone"
     qcReviewedText: "Breaching the contract harmed someone"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "巨额红包"
   splits:
@@ -1929,7 +1952,7 @@
     translated: "Huge red envelope"
     qcReviewedText: "Huge red envelope"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "帮助五毒教"
   splits:
@@ -1945,7 +1968,7 @@
     translated: "Help the officials resist the rioters"
     qcReviewedText: "Help the officials resist the rioters"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "帮助暴民对抗官差"
   splits:
@@ -1953,7 +1976,7 @@
     translated: "Help the mob resist the officials"
     qcReviewedText: "Help the mob resist the officials"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "帮助茅山派"
   splits:
@@ -1969,7 +1992,7 @@
     translated: "Split the silver equally"
     qcReviewedText: "Split the silver equally"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "开个玩笑"
   splits:
@@ -1977,7 +2000,7 @@
     translated: "Just joking"
     qcReviewedText: "Just joking"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "开始修习"
   splits:
@@ -1985,7 +2008,7 @@
     translated: "Begin training"
     qcReviewedText: "Begin training"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "开始修炼"
   splits:
@@ -1993,7 +2016,7 @@
     translated: "Start cultivating"
     qcReviewedText: "Start cultivating"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "开始动工吧"
   splits:
@@ -2001,7 +2024,7 @@
     translated: "Let's get construction started"
     qcReviewedText: "Let's get construction started"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "开始对饮"
   splits:
@@ -2009,7 +2032,7 @@
     translated: "Begin to drink together"
     qcReviewedText: "Begin to drink together"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "开始探听"
   splits:
@@ -2017,7 +2040,7 @@
     translated: "Start gathering information"
     qcReviewedText: "Start gathering information"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "开始舌战"
   splits:
@@ -2025,7 +2048,7 @@
     translated: "Begin verbal sparring"
     qcReviewedText: "Begin verbal sparring"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "开始论战"
   splits:
@@ -2033,7 +2056,7 @@
     translated: "Start debating"
     qcReviewedText: "Start debating"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "开始遗忘"
   splits:
@@ -2041,7 +2064,7 @@
     translated: "Begin to forget"
     qcReviewedText: "Begin to forget"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "开席对饮"
   splits:
@@ -2049,7 +2072,7 @@
     translated: "Raise a glass to toast"
     qcReviewedText: "Raise a glass to toast"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "开战"
   splits:
@@ -2057,7 +2080,7 @@
     translated: "Start the battle"
     qcReviewedText: "Start the battle"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "开诊"
   splits:
@@ -2065,7 +2088,7 @@
     translated: "Start the clinic"
     qcReviewedText: "Start the clinic"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "开赌！"
   splits:
@@ -2073,7 +2096,7 @@
     translated: "Place the bets!"
     qcReviewedText: "Place the bets!"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "张口结舌"
   splits:
@@ -2081,7 +2104,7 @@
     translated: "Speechless"
     qcReviewedText: "Speechless"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "强行越狱"
   splits:
@@ -2089,7 +2112,7 @@
     translated: "Forcibly escape from prison"
     qcReviewedText: "Forcibly escape from prison"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "归还资源"
   splits:
@@ -2097,7 +2120,7 @@
     translated: "Return resources"
     qcReviewedText: "Return resources"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "征召"
   splits:
@@ -2105,7 +2128,7 @@
     translated: "Conscript"
     qcReviewedText: "Conscript"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦征召弟子入队\n♦无好感消耗"
   splits:
@@ -2113,7 +2136,7 @@
     translated: "Recruit disciples to join the team"
     qcReviewedText: "♦Recruit disciples to join the team\n♦No affection points consumption"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "无好感消耗"
@@ -2126,7 +2149,7 @@
     translated: "Resource taxation"
     qcReviewedText: "Resource taxation"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "征用"
   splits:
@@ -2142,7 +2165,7 @@
     translated: "Spend Sect Prestige to Mobilize Items"
     qcReviewedText: "♦Spend Sect Prestige to Mobilize Items\n♦Decrease apprentice's likeability and loyalty slightly\n♦At most once a month"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "降低弟子少许好感和忠诚"
@@ -2158,7 +2181,7 @@
     translated: "Patiently guide"
     qcReviewedText: "Patiently guide"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "花费三日"
   splits:
@@ -2166,7 +2189,7 @@
     translated: "Spending three days"
     qcReviewedText: "Spending three days"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "微额红包"
   splits:
@@ -2174,7 +2197,7 @@
     translated: "Tiny Red Envelope"
     qcReviewedText: "Tiny Red Envelope"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "恶贼住手！"
   splits:
@@ -2182,7 +2205,7 @@
     translated: "Bandit, stop!"
     qcReviewedText: "Bandit, stop!"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "恶贼受死！"
   splits:
@@ -2190,7 +2213,7 @@
     translated: "Bandit, die!"
     qcReviewedText: "Bandit, die!"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "悉心指点"
   splits:
@@ -2198,7 +2221,7 @@
     translated: "Patiently guiding"
     qcReviewedText: "Patiently guiding"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "悍然出手"
   splits:
@@ -2206,7 +2229,7 @@
     translated: "Brutally intervened"
     qcReviewedText: "Brutally intervened"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "情势所逼"
   splits:
@@ -2214,7 +2237,7 @@
     translated: "Forced by circumstances"
     qcReviewedText: "Forced by circumstances"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "惭愧惭愧"
   splits:
@@ -2222,7 +2245,7 @@
     translated: "Embarrassed embarrassed"
     qcReviewedText: "Embarrassed embarrassed"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "愿闻其详"
   splits:
@@ -2230,7 +2253,7 @@
     translated: "I would like to hear the details"
     qcReviewedText: "I would like to hear the details"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "慰问"
   splits:
@@ -2238,7 +2261,7 @@
     translated: "Comfort"
     qcReviewedText: "Comfort"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "慷慨相让"
   splits:
@@ -2246,7 +2269,7 @@
     translated: "Generously yield"
     qcReviewedText: "Generously yield"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "成为{0}门客"
   splits:
@@ -2254,7 +2277,7 @@
     translated: "Become"
     qcReviewedText: "Become {0} Retainer"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "门客"
@@ -2267,7 +2290,7 @@
     translated: "Successfully accomplished it"
     qcReviewedText: "Successfully accomplished it"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "我来助你！"
   splits:
@@ -2283,7 +2306,7 @@
     translated: "I'll lend a hand!"
     qcReviewedText: "I'll lend a hand!"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "我还有事"
   splits:
@@ -2291,7 +2314,7 @@
     translated: "I have more things to do"
     qcReviewedText: "I have more things to do"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "我这就走"
   splits:
@@ -2299,7 +2322,7 @@
     translated: "I'll be on my way now"
     qcReviewedText: "I'll be on my way now"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "所见略同"
   splits:
@@ -2307,7 +2330,7 @@
     translated: "We agree on this"
     qcReviewedText: "We agree on this"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "打开宝箱"
   splits:
@@ -2323,7 +2346,7 @@
     translated: "Excuse me"
     qcReviewedText: "Excuse me"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "扭头就跑"
   splits:
@@ -2331,7 +2354,7 @@
     translated: "Turn and run"
     qcReviewedText: "Turn and run"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "抄录功法"
   splits:
@@ -2339,7 +2362,7 @@
     translated: "Copy the cultivation technique"
     qcReviewedText: "Copy the cultivation technique"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "把地契拿来吧"
   splits:
@@ -2347,7 +2370,7 @@
     translated: "Bring me the deed to the land"
     qcReviewedText: "Bring me the deed to the land"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "抓捕归案"
   splits:
@@ -2355,7 +2378,7 @@
     translated: "Arrest and detain"
     qcReviewedText: "Arrest and detain"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦抢夺对方一件物品\n♦根据物品价值增加恶名"
   splits:
@@ -2363,7 +2386,7 @@
     translated: "Steal an item from the opponent"
     qcReviewedText: "♦Steal an item from the opponent\n♦According to the item's value, Infamy increases"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "根据物品价值增加恶名"
@@ -2376,7 +2399,7 @@
     translated: "Take about half of the opponent's silver coins"
     qcReviewedText: "♦Take about half of the opponent's silver coins\n♦Based on the amount taken, Infamy increases"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "根据抢夺数额增加恶名"
@@ -2397,7 +2420,7 @@
     translated: "Invite the other party to join your sect."
     qcReviewedText: "♦Invite the other party to join your sect."
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   templates:
   - template: "♦{0}"
@@ -2407,7 +2430,7 @@
     translated: "Recruit into the sect"
     qcReviewedText: "Recruit into the sect"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦将贼人招揽入派\n♦降低全门派好感和全弟子忠诚"
   splits:
@@ -2415,7 +2438,7 @@
     translated: "Attract the bandits into the sect"
     qcReviewedText: "♦Attract the bandits into the sect\n♦Reduce the Affection of all Sects and the Loyalty of all Disciples"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "降低全门派好感和全弟子忠诚"
@@ -2428,7 +2451,7 @@
     translated: "Join under"
     qcReviewedText: "Join under {0}"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   templates:
   - template: "{0}⟦0⟧"
@@ -2438,7 +2461,7 @@
     translated: "Become a disciple"
     qcReviewedText: "Become a disciple"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "拜谢离去"
   splits:
@@ -2446,7 +2469,7 @@
     translated: "Thank you and depart"
     qcReviewedText: "Thank you and depart"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "指点"
   splits:
@@ -2454,7 +2477,7 @@
     translated: "Guide"
     qcReviewedText: "Guide"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦指点弟子武功无好感要求\n♦每月最多三次"
   splits:
@@ -2462,7 +2485,7 @@
     translated: "Guide disciples in martial arts without requiring good will"
     qcReviewedText: "♦Guide disciples in martial arts without requiring good will\n♦No more than three times per month"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "每月最多三次"
@@ -2475,7 +2498,7 @@
     translated: "Retain"
     qcReviewedText: "Retain"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦延长入队时间30天\n♦{0}"
   splits:
@@ -2483,7 +2506,7 @@
     translated: "Extend queue time by 30 days"
     qcReviewedText: "♦Extend queue time by 30 days\n♦{0}"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   templates:
   - template: "♦{0}\n♦⟦0⟧"
@@ -2493,7 +2516,7 @@
     translated: "Arrest and bring to justice"
     qcReviewedText: "Arrest and bring to justice"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦将贼人捉拿归案\n♦获取对应悬赏和官府功绩"
   splits:
@@ -2501,7 +2524,7 @@
     translated: "Arrest the criminals and bring them to justice"
     qcReviewedText: "♦Arrest the criminals and bring them to justice\n♦Retrieve the corresponding bounty and official merit"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "获取对应悬赏和官府功绩"
@@ -2514,7 +2537,7 @@
     translated: "Donate"
     qcReviewedText: "Donate"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "捐纳100官府功绩"
   splits:
@@ -2522,7 +2545,7 @@
     translated: "Donate 100 official merit"
     qcReviewedText: "Donate 100 official merit"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "捐纳200官府功绩"
   splits:
@@ -2530,7 +2553,7 @@
     translated: "Donate 200 official merit"
     qcReviewedText: "Donate 200 official merit"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "捐纳50官府功绩"
   splits:
@@ -2538,7 +2561,7 @@
     translated: "Donate to 50 official merit"
     qcReviewedText: "Donate to 50 official merit"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "收集资源\n每月一次"
   splits:
@@ -2546,7 +2569,7 @@
     translated: "Collect resources"
     qcReviewedText: "Collect resources\nOnce a month"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "每月一次"
@@ -2567,7 +2590,7 @@
     translated: "Accept the apology"
     qcReviewedText: "Accept the apology"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "提升天赋"
   splits:
@@ -2575,7 +2598,7 @@
     translated: "Boost their talents"
     qcReviewedText: "Boost their talents"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "提取"
   splits:
@@ -2599,7 +2622,7 @@
     translated: "Hand in hand into seclusion"
     qcReviewedText: "Hand in hand into seclusion"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "撕毁盟约"
   splits:
@@ -2607,7 +2630,7 @@
     translated: "Rip the treaty to shreds"
     qcReviewedText: "Rip the treaty to shreds"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "门派好感-20\n休战3个月"
   splits:
@@ -2636,7 +2659,7 @@
     translated: "Accept the reward"
     qcReviewedText: "Accept the reward"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "收取罚金"
   splits:
@@ -2644,7 +2667,7 @@
     translated: "Collect the fine"
     qcReviewedText: "Collect the fine"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "收取赠礼"
   splits:
@@ -2652,7 +2675,7 @@
     translated: "Accept a gift"
     qcReviewedText: "Accept a gift"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "收徒"
   splits:
@@ -2660,7 +2683,7 @@
     translated: "Recruit apprentices"
     qcReviewedText: "Recruit apprentices"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "收集普通资源"
   splits:
@@ -2668,7 +2691,7 @@
     translated: "Gather common resources"
     qcReviewedText: "Gather common resources"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "放你一马"
   splits:
@@ -2691,17 +2714,19 @@
   - text: "敬酒不吃吃罚酒"
     translated: "Decline the offer but accept the punishment"
     qcReviewedText: "Decline the offer but accept the punishment"
-    qcTranslated: "Refuse the toast but drink the penalty"
+    qcTranslated: "Refuse the toast, drink the penalty"
     qcStatus: Corrected
-    qcQualityScore: 82
+    qcQualityScore: 92
     qcDefectCategory: LostIdiom
+    qcDefectCategories:
+    - LostIdiom
 - raw: "斗胆向两位一齐讨教"
   splits:
   - text: "斗胆向两位一齐讨教"
     translated: "Dare to seek advice from both of you together."
     qcReviewedText: "Dare to seek advice from both of you together."
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "斗胆挑战"
   splits:
@@ -2709,7 +2734,7 @@
     translated: "Dare to challenge"
     qcReviewedText: "Dare to challenge"
     qcStatus: Passed
-    qcQualityScore: 80
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "斗胆挑战！"
   splits:
@@ -2717,7 +2742,7 @@
     translated: "Dare to challenge!"
     qcReviewedText: "Dare to challenge!"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "斩草除根"
   splits:
@@ -2725,23 +2750,26 @@
     translated: "Root out the problem"
     qcReviewedText: "Root out the problem"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "断义"
   splits:
   - text: "断义"
     translated: "Cut Meaning"
     qcReviewedText: "Cut Meaning"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "Severing Bonds"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: LostIdiom
+    qcDefectCategories:
+    - LostIdiom
 - raw: "♦与对方断绝结义关系\n♦降低100点好感\n♦固定增加20恶名"
   splits:
   - text: "与对方断绝结义关系"
     translated: "Cut off sworn brotherhood ties with the other party"
     qcReviewedText: "♦Cut off sworn brotherhood ties with the other party\n♦Decrease 100 points of goodwill\n♦Fixed increase Infamy by 20"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "降低100点好感"
@@ -2757,7 +2785,7 @@
     translated: "Break off relations"
     qcReviewedText: "Break off relations"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦与对方断绝好友关系\n♦降低50点好感\n♦固定增加10恶名"
   splits:
@@ -2765,7 +2793,7 @@
     translated: "Cut off the friendship with the other person"
     qcReviewedText: "♦Cut off the friendship with the other person\n♦Decrease 50 points of favor\n♦Fixed increase 10 Infamy"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "降低50点好感"
@@ -2781,7 +2809,7 @@
     translated: "Inflict punishment"
     qcReviewedText: "Inflict punishment"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "施以重罚"
   splits:
@@ -2789,7 +2817,7 @@
     translated: "Mete out severe punishment"
     qcReviewedText: "Mete out severe punishment"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "施展内功抵御毒瘴"
   splits:
@@ -2797,7 +2825,7 @@
     translated: "Deploy internal skill to ward off poisonous miasma"
     qcReviewedText: "Deploy internal skill to ward off poisonous miasma"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "施展绝技挖掘遗迹"
   splits:
@@ -2821,7 +2849,7 @@
     translated: "Perform qinggong to climb the sheer cliff"
     qcReviewedText: "Perform qinggong to climb the sheer cliff"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "施舍银两"
   splits:
@@ -2829,7 +2857,7 @@
     translated: "Donate silver coins"
     qcReviewedText: "Donate silver coins"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "无意争夺，你们请便"
   splits:
@@ -2837,7 +2865,7 @@
     translated: "No need for contention, go ahead"
     qcReviewedText: "No need for contention, go ahead"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "无话可说"
   splits:
@@ -2845,7 +2873,7 @@
     translated: "No words to say"
     qcReviewedText: "No words to say"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "早该如此"
   splits:
@@ -2853,7 +2881,7 @@
     translated: "This should have happened earlier"
     qcReviewedText: "This should have happened earlier"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "是我唐突了"
   splits:
@@ -2861,7 +2889,7 @@
     translated: "I was presumptuous"
     qcReviewedText: "I was presumptuous"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "是我疏忽了"
   splits:
@@ -2869,7 +2897,7 @@
     translated: "I was careless"
     qcReviewedText: "I was careless"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "是我走眼了"
   splits:
@@ -2877,7 +2905,7 @@
     translated: "I must be seeing things"
     qcReviewedText: "I must be seeing things"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "晓之以情"
   splits:
@@ -2885,7 +2913,7 @@
     translated: "Reason with someone emotionally"
     qcReviewedText: "Reason with someone emotionally"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "暂不招新"
   splits:
@@ -2893,7 +2921,7 @@
     translated: "No new members are being recruited currently"
     qcReviewedText: "No new members are being recruited currently"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "暗中下毒"
   splits:
@@ -2901,7 +2929,7 @@
     translated: "Poisoning in secret"
     qcReviewedText: "Poisoning in secret"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "暗中逃跑"
   splits:
@@ -2909,7 +2937,7 @@
     translated: "Steal away in secret"
     qcReviewedText: "Steal away in secret"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "暴力破解"
   splits:
@@ -2917,7 +2945,7 @@
     translated: "Brute force attack"
     qcReviewedText: "Brute force attack"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "替民众补交一半税赋"
   splits:
@@ -2925,7 +2953,7 @@
     translated: "To pay half of the taxes on behalf of the citizens"
     qcReviewedText: "To pay half of the taxes on behalf of the citizens"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "替民众补交全部税赋"
   splits:
@@ -2933,7 +2961,7 @@
     translated: "Help the populace to make up all the taxes due"
     qcReviewedText: "Help the populace to make up all the taxes due"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "来战"
   splits:
@@ -2941,7 +2969,7 @@
     translated: "Come and fight"
     qcReviewedText: "Come and fight"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "来战！"
   splits:
@@ -2949,7 +2977,7 @@
     translated: "Come and fight!"
     qcReviewedText: "Come and fight!"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "查看功绩"
   splits:
@@ -2957,7 +2985,7 @@
     translated: "Check Achievements"
     qcReviewedText: "Check Achievements"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "欢迎之至"
   splits:
@@ -2965,7 +2993,7 @@
     translated: "Welcome most warmly"
     qcReviewedText: "Welcome most warmly"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "欣然同意"
   splits:
@@ -2973,7 +3001,7 @@
     translated: "Happily agreed"
     qcReviewedText: "Happily agreed"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "欣然收下"
   splits:
@@ -2981,7 +3009,7 @@
     translated: "Happily accepted"
     qcReviewedText: "Happily accepted"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "正有此意"
   splits:
@@ -2989,7 +3017,7 @@
     translated: "That's the idea"
     qcReviewedText: "That's the idea"
     qcStatus: Passed
-    qcQualityScore: 80
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "正面出手"
   splits:
@@ -2997,7 +3025,7 @@
     translated: "Take the initiative"
     qcReviewedText: "Take the initiative"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "此仇必报"
   splits:
@@ -3005,7 +3033,7 @@
     translated: "This grudge must be avenged"
     qcReviewedText: "This grudge must be avenged"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "武艺劝说"
   splits:
@@ -3013,7 +3041,7 @@
     translated: "Martial arts persuasion"
     qcReviewedText: "Martial arts persuasion"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "求医"
   splits:
@@ -3021,7 +3049,7 @@
     translated: "Seek medical help"
     qcReviewedText: "Seek medical help"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "求取材料"
   splits:
@@ -3029,7 +3057,7 @@
     translated: "Acquire materials"
     qcReviewedText: "Acquire materials"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "求取灵药"
   splits:
@@ -3037,7 +3065,7 @@
     translated: "Seek the elixir"
     qcReviewedText: "Seek the elixir"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "求取物品"
   splits:
@@ -3045,7 +3073,7 @@
     translated: "Retrieve the item"
     qcReviewedText: "Retrieve the item"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "求取美食"
   splits:
@@ -3053,7 +3081,7 @@
     translated: "Seeking delicious food"
     qcReviewedText: "Seeking delicious food"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "求取药引"
   splits:
@@ -3061,7 +3089,7 @@
     translated: "Seek the herb"
     qcReviewedText: "Seek the herb"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "求取装备"
   splits:
@@ -3069,7 +3097,7 @@
     translated: "Gear acquisition"
     qcReviewedText: "Gear acquisition"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "求取陨铁"
   splits:
@@ -3077,7 +3105,7 @@
     translated: "Retrieve meteoric iron"
     qcReviewedText: "Retrieve meteoric iron"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "求取食材"
   splits:
@@ -3085,7 +3113,7 @@
     translated: "Fetch the ingredients"
     qcReviewedText: "Fetch the ingredients"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "求情说理"
   splits:
@@ -3093,7 +3121,7 @@
     translated: "Plead and reason"
     qcReviewedText: "Plead and reason"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "江湖进贡"
   splits:
@@ -3101,7 +3129,7 @@
     translated: "Jianghu tribute"
     qcReviewedText: "Jianghu tribute"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "没错，只能得罪二位了！"
   splits:
@@ -3109,7 +3137,7 @@
     translated: "Alright, I can only offend the two of you!"
     qcReviewedText: "Alright, I can only offend the two of you!"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦治疗全伤势10点"
   splits:
@@ -3117,7 +3145,7 @@
     translated: "Heal all injuries 10 points"
     qcReviewedText: "♦Heal all injuries 10 points"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   templates:
   - template: "♦{0}"
@@ -3127,7 +3155,7 @@
     translated: "Tai Yue Grand Ceremony"
     qcReviewedText: "Tai Yue Grand Ceremony"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "洗耳恭听"
   splits:
@@ -3135,7 +3163,7 @@
     translated: "Listen attentively"
     qcReviewedText: "Listen attentively"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "溜之大吉"
   splits:
@@ -3143,7 +3171,7 @@
     translated: "Time to make myself scarce"
     qcReviewedText: "Time to make myself scarce"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "满意离去"
   splits:
@@ -3151,7 +3179,7 @@
     translated: "Leave satisfied"
     qcReviewedText: "Leave satisfied"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "满载而归"
   splits:
@@ -3159,7 +3187,7 @@
     translated: "Come back with a full load"
     qcReviewedText: "Come back with a full load"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "照单全收"
   splits:
@@ -3167,7 +3195,7 @@
     translated: "Accept without reservation"
     qcReviewedText: "Accept without reservation"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "物归原主"
   splits:
@@ -3175,7 +3203,7 @@
     translated: "Return to the original owner"
     qcReviewedText: "Return to the original owner"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "物色优良人手"
   splits:
@@ -3183,7 +3211,7 @@
     translated: "Hire skilled personnel"
     qcReviewedText: "Hire skilled personnel"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "物色优良人选"
   splits:
@@ -3191,7 +3219,7 @@
     translated: "Identify top candidates"
     qcReviewedText: "Identify top candidates"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "物色普通人手"
   splits:
@@ -3199,7 +3227,7 @@
     translated: "Hunt for ordinary people"
     qcReviewedText: "Hunt for ordinary people"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "物色普通人选"
   splits:
@@ -3207,7 +3235,7 @@
     translated: "Search for ordinary candidates"
     qcReviewedText: "Search for ordinary candidates"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "物色顶尖人手"
   splits:
@@ -3215,7 +3243,7 @@
     translated: "Hunt for top talent"
     qcReviewedText: "Hunt for top talent"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "物色顶尖人选"
   splits:
@@ -3223,7 +3251,7 @@
     translated: "Identify top candidates"
     qcReviewedText: "Identify top candidates"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "牺牲声望"
   splits:
@@ -3231,7 +3259,7 @@
     translated: "Sacrifice reputation"
     qcReviewedText: "Sacrifice reputation"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "狗官受死！"
   splits:
@@ -3239,23 +3267,26 @@
     translated: "Begone, traitorous official!"
     qcReviewedText: "Begone, traitorous official!"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "狡兔三窟"
   splits:
   - text: "狡兔三窟"
     translated: "A fox has three dens"
     qcReviewedText: "A fox has three dens"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "A cunning hare has three burrows"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: LostIdiom
+    qcDefectCategories:
+    - LostIdiom
 - raw: "独吞财宝"
   splits:
   - text: "独吞财宝"
     translated: "Swallowing the treasure whole"
     qcReviewedText: "Swallowing the treasure whole"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "狮子大开口"
   splits:
@@ -3264,15 +3295,17 @@
     qcReviewedText: "Open wide the lion's mouth"
     qcTranslated: "Asking for the moon"
     qcStatus: Corrected
-    qcQualityScore: 85
+    qcQualityScore: 95
     qcDefectCategory: LostIdiom
+    qcDefectCategories:
+    - LostIdiom
 - raw: "献上银两"
   splits:
   - text: "献上银两"
     translated: "Present some silver coins"
     qcReviewedText: "Present some silver coins"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "珍宝赠礼"
   splits:
@@ -3280,7 +3313,7 @@
     translated: "Treasure gift"
     qcReviewedText: "Treasure gift"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "甜言蜜语"
   splits:
@@ -3288,7 +3321,7 @@
     translated: "Sweet nothings"
     qcReviewedText: "Sweet nothings"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦与对方进行论战，失败降低25好感\n♦若好感小于50会断绝情侣关系"
   splits:
@@ -3296,7 +3329,7 @@
     translated: "Engage in a debate with the other party, failure reduces 25 good will."
     qcReviewedText: "♦Engage in a debate with the other party, failure reduces 25 good will.\n♦If affection is less than 50, the romantic relationship will be severed."
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "若好感小于50会断绝情侣关系"
@@ -3309,7 +3342,7 @@
     translated: "Mild punishment"
     qcReviewedText: "Mild punishment"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "略知一二"
   splits:
@@ -3317,7 +3350,7 @@
     translated: "Have a basic understanding"
     qcReviewedText: "Have a basic understanding"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "痛下狠手"
   splits:
@@ -3325,7 +3358,7 @@
     translated: "Strike hard"
     qcReviewedText: "Strike hard"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "看好了"
   splits:
@@ -3333,7 +3366,7 @@
     translated: "Look well"
     qcReviewedText: "Look well"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "看招！"
   splits:
@@ -3341,7 +3374,7 @@
     translated: "Here it comes!"
     qcReviewedText: "Here it comes!"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "真是倒霉"
   splits:
@@ -3349,7 +3382,7 @@
     translated: "Truly unlucky"
     qcReviewedText: "Truly unlucky"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "确认兑换"
   splits:
@@ -3357,7 +3390,7 @@
     translated: "Confirm exchange"
     qcReviewedText: "Confirm exchange"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "确认征用"
   splits:
@@ -3365,7 +3398,7 @@
     translated: "Confirm requisition"
     qcReviewedText: "Confirm requisition"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦赠礼或消耗好感降低对方忠诚\n♦对方忠诚低于好感度20%，便会加入你的门派"
   splits:
@@ -3394,7 +3427,7 @@
     translated: "Steal items"
     qcReviewedText: "Steal items"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "立志从商"
   splits:
@@ -3402,7 +3435,7 @@
     translated: "Determined to enter business"
     qcReviewedText: "Determined to enter business"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "笑纳了"
   splits:
@@ -3410,7 +3443,7 @@
     translated: "Accepted with pleasure"
     qcReviewedText: "Accepted with pleasure"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "算了，小命要紧"
   splits:
@@ -3418,7 +3451,7 @@
     translated: "Forget it, my life is more important"
     qcReviewedText: "Forget it, my life is more important"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "算你识相！"
   splits:
@@ -3426,7 +3459,7 @@
     translated: "You know when to stop!"
     qcReviewedText: "You know when to stop!"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦增加{1}恶名"
   splits:
@@ -3434,7 +3467,7 @@
     translated: "Increase"
     qcReviewedText: "♦Increase {1} Infamy"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "恶名"
@@ -3455,7 +3488,7 @@
     translated: "Roughly select"
     qcReviewedText: "Roughly select"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "精挑细选"
   splits:
@@ -3463,7 +3496,7 @@
     translated: "Carefully selected"
     qcReviewedText: "Carefully selected"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "糟糕，这下大意了！"
   splits:
@@ -3471,7 +3504,7 @@
     translated: "Oh no, I've been too careless this time!"
     qcReviewedText: "Oh no, I've been too careless this time!"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "终于开始了"
   splits:
@@ -3479,7 +3512,7 @@
     translated: "Finally, it's started"
     qcReviewedText: "Finally, it's started"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "结为同盟"
   splits:
@@ -3487,16 +3520,19 @@
     translated: "Form an alliance"
     qcReviewedText: "Form an alliance"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "需100门派好感\n结盟后永久停战且援军+1\n可进攻盟友的相邻区域\n好感低于80会自动断盟"
   splits:
   - text: "需100门派好感"
     translated: "Translate 100 Sect Favor"
     qcReviewedText: "Translate 100 Sect Favor\nAlliance established for permanent peace and reinforcements+1\nAdjacent areas that can be attacked by allies\nFavor below 80 will automatically cut the alliance."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "Requires 100 Sect Favor\nAlliance established for permanent peace and reinforcements+1\nCan attack adjacent areas of allies\nFavor below 80 will automatically cut the alliance."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "结盟后永久停战且援军"
     translated: "Alliance established for permanent peace and reinforcements"
@@ -3514,7 +3550,7 @@
     translated: "Get married"
     qcReviewedText: "Get married"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦举办婚宴正式结为夫妻{0}"
   splits:
@@ -3522,7 +3558,7 @@
     translated: "Have a wedding banquet to formally become husband and wife"
     qcReviewedText: "♦Have a wedding banquet to formally become husband and wife {0}"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   templates:
   - template: "♦{0}⟦0⟧"
@@ -3532,7 +3568,7 @@
     translated: "Buddy up"
     qcReviewedText: "Buddy up"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "给予嘉奖"
   splits:
@@ -3540,7 +3576,7 @@
     translated: "Give commendation"
     qcReviewedText: "Give commendation"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "给点医药费吧"
   splits:
@@ -3548,7 +3584,7 @@
     translated: "Can you give me some medical expenses?"
     qcReviewedText: "Can you give me some medical expenses?"
     qcStatus: Passed
-    qcQualityScore: 80
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "绝技 千斤坠"
   splits:
@@ -3577,7 +3613,7 @@
     translated: "Sever"
     qcReviewedText: "Sever"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦结束夫妻关系\n♦降低150点好感\n♦固定增加40恶名"
   splits:
@@ -3585,7 +3621,7 @@
     translated: "End the marital relationship"
     qcReviewedText: "♦End the marital relationship\n♦Decrease 150 points of favor\n♦Fixed increase Infamy by 40"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "降低150点好感"
@@ -3609,7 +3645,7 @@
     translated: "Pay the fine"
     qcReviewedText: "Pay the fine"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "罢了罢了"
   splits:
@@ -3617,7 +3653,7 @@
     translated: "Alright, alright"
     qcReviewedText: "Alright, alright"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "羞愧难当"
   splits:
@@ -3625,7 +3661,7 @@
     translated: "Ashen with shame"
     qcReviewedText: "Ashen with shame"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "背后偷袭"
   splits:
@@ -3641,7 +3677,7 @@
     translated: "Negative3"
     qcReviewedText: "0-Negative3"
     qcStatus: Passed
-    qcQualityScore: 80
+    qcQualityScore: 100
     qcDefectCategory: None
   templates:
   - template: "0-{0}"
@@ -3651,23 +3687,26 @@
     translated: "Leave it to me"
     qcReviewedText: "Leave it to me"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "自投罗网！"
   splits:
   - text: "自投罗网！"
     translated: "Self‑inflicted trap!"
     qcReviewedText: "Self‑inflicted trap!"
-    qcStatus: Passed
-    qcQualityScore: 85
-    qcDefectCategory: None
+    qcTranslated: "Walking right into the trap!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: LostIdiom
+    qcDefectCategories:
+    - LostIdiom
 - raw: "花言巧语"
   splits:
   - text: "花言巧语"
     translated: "Sweettalk"
     qcReviewedText: "Sweettalk"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "莫慌，我来助你！"
   splits:
@@ -3675,7 +3714,7 @@
     translated: "Don't panic, I'll help you!"
     qcReviewedText: "Don't panic, I'll help you!"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "获取药品"
   splits:
@@ -3683,7 +3722,7 @@
     translated: "Obtain medicine"
     qcReviewedText: "Obtain medicine"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦获取随机药品"
   splits:
@@ -3691,7 +3730,7 @@
     translated: "Get random medicine"
     qcReviewedText: "♦Get random medicine"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   templates:
   - template: "♦{0}"
@@ -3701,7 +3740,7 @@
     translated: "Require double the price"
     qcReviewedText: "Require double the price"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "解开手铐"
   splits:
@@ -3709,7 +3748,7 @@
     translated: "Unlock the handcuffs"
     qcReviewedText: "Unlock the handcuffs"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "解开脚镣"
   splits:
@@ -3725,7 +3764,7 @@
     translated: "Detoxify"
     qcReviewedText: "Detoxify"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "让渡功绩100点"
   splits:
@@ -3733,7 +3772,7 @@
     translated: "Transfer 100 points of merit"
     qcReviewedText: "Transfer 100 points of merit"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "让渡功绩200点"
   splits:
@@ -3741,7 +3780,7 @@
     translated: "Transfer 200 points of accomplishment"
     qcReviewedText: "Transfer 200 points of accomplishment"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "让渡功绩50点"
   splits:
@@ -3749,7 +3788,7 @@
     translated: "Transfer 50 merits points"
     qcReviewedText: "Transfer 50 merits points"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "讲经说法"
   splits:
@@ -3757,7 +3796,7 @@
     translated: "Teach and preach"
     qcReviewedText: "Teach and preach"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "论战劝解"
   splits:
@@ -3765,7 +3804,7 @@
     translated: "Argument Mediation"
     qcReviewedText: "Argument Mediation"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "诚心相求"
   splits:
@@ -3773,7 +3812,7 @@
     translated: "Honestly beseech"
     qcReviewedText: "Honestly beseech"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "诚恳道歉"
   splits:
@@ -3781,7 +3820,7 @@
     translated: "Humbly apologize"
     qcReviewedText: "Humbly apologize"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦降低15好感\n♦若好感小于50会断绝情侣关系"
   splits:
@@ -3789,7 +3828,7 @@
     translated: "Reduce 15's goodwill"
     qcReviewedText: "♦Reduce 15's goodwill\n♦If affection is less than 50, the romantic relationship will be severed."
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "若好感小于50会断绝情侣关系"
@@ -3802,7 +3841,7 @@
     translated: "A misunderstanding"
     qcReviewedText: "A misunderstanding"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "说干就干"
   splits:
@@ -3810,7 +3849,7 @@
     translated: "Get right to it"
     qcReviewedText: "Get right to it"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "说情道理"
   splits:
@@ -3818,7 +3857,7 @@
     translated: "Reason with someone"
     qcReviewedText: "Reason with someone"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "诶诶，别跑啊！"
   splits:
@@ -3826,7 +3865,7 @@
     translated: "Oh, don't run away!"
     qcReviewedText: "Oh, don't run away!"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "诶都别走啊！"
   splits:
@@ -3834,7 +3873,7 @@
     translated: "Hey, don't go yet!"
     qcReviewedText: "Hey, don't go yet!"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "请二位先选"
   splits:
@@ -3842,7 +3881,7 @@
     translated: "Please let the two of you choose first."
     qcReviewedText: "Please let the two of you choose first."
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "请听我一言"
   splits:
@@ -3858,7 +3897,7 @@
     translated: "Please instruct!"
     qcReviewedText: "Please instruct!"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "请教{0}潜力"
   splits:
@@ -3866,7 +3905,7 @@
     translated: "Consult"
     qcReviewedText: "Consult {0} Potential"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "潜力"
@@ -3879,7 +3918,7 @@
     translated: "Seeking Advice Skill"
     qcReviewedText: "Seeking Advice Skill"
     qcStatus: Passed
-    qcQualityScore: 82
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "请笑纳"
   splits:
@@ -3887,7 +3926,7 @@
     translated: "Please accept it with a smile"
     qcReviewedText: "Please accept it with a smile"
     qcStatus: Passed
-    qcQualityScore: 80
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "谁敢挡我！"
   splits:
@@ -3895,7 +3934,7 @@
     translated: "Who dares stop me!"
     qcReviewedText: "Who dares stop me!"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "调解说和"
   splits:
@@ -3903,7 +3942,7 @@
     translated: "Mediation and negotiation"
     qcReviewedText: "Mediation and negotiation"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "购买{0}木料"
   splits:
@@ -3937,7 +3976,7 @@
     translated: "Purchase"
     qcReviewedText: "Purchase {0} Food grain"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "粮食"
@@ -3963,7 +4002,7 @@
     translated: "Purchase inventory"
     qcReviewedText: "Purchase inventory"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "购买材料"
   splits:
@@ -3971,7 +4010,7 @@
     translated: "Purchase materials"
     qcReviewedText: "Purchase materials"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "购药"
   splits:
@@ -3979,7 +4018,7 @@
     translated: "Buy medicine"
     qcReviewedText: "Buy medicine"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦降低少量警觉度\n♦增加少量熟络度"
   splits:
@@ -3987,7 +4026,7 @@
     translated: "Lower alertness slightly"
     qcReviewedText: "♦Lower alertness slightly\n♦Increase a little familiarity"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "增加少量熟络度"
@@ -4008,7 +4047,7 @@
     translated: "Apologize and seek forgiveness"
     qcReviewedText: "Apologize and seek forgiveness"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "赠与{0}两"
   splits:
@@ -4016,7 +4055,7 @@
     translated: "Gift"
     qcReviewedText: "Gift {0} Taels"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "两"
@@ -4037,7 +4076,7 @@
     translated: "Lower 10's favor"
     qcReviewedText: "♦Lower 10's favor\n♦If affection is less than 50, the romantic relationship will be severed."
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "若好感小于50会断绝情侣关系"
@@ -4050,7 +4089,7 @@
     translated: "Gift of apology"
     qcReviewedText: "Gift of apology"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "走为上策"
   splits:
@@ -4058,7 +4097,7 @@
     translated: "Flight is the best strategy"
     qcReviewedText: "Flight is the best strategy"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "走好不送"
   splits:
@@ -4066,7 +4105,7 @@
     translated: "Walk well and goodbye"
     qcReviewedText: "Walk well and goodbye"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "赶尽杀绝"
   splits:
@@ -4074,16 +4113,19 @@
     translated: "Exterminate utterly"
     qcReviewedText: "Exterminate utterly"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦追杀成功后，夺取其所有物品装备\n♦与对方门派和亲友结仇\n♦根据对方身份等级增加大量恶名，每月最多1次"
   splits:
   - text: "追杀成功后，夺取其所有物品装备"
     translated: "After successfully tracking down the target, acquire all of their items and equipment."
     qcReviewedText: "♦After successfully tracking down the target, acquire all of their items and equipment.\n♦Clinch a grudge with the other sect and one's kin and friends\n♦Gain a significant amount of Infamy based on the other party's rank each month, with a maximum of 1 times."
-    qcStatus: Passed
-    qcQualityScore: 85
-    qcDefectCategory: None
+    qcTranslated: "♦After successfully tracking down the target, acquire all of their items and equipment.\n♦Clinch a grudge with the other party's Sect and their kin and friends\n♦Gain a significant amount of Infamy based on the other party's rank, up to 1 times per month"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - subIndex: 1
     text: "与对方门派和亲友结仇"
     translated: "Clinch a grudge with the other sect and one's kin and friends"
@@ -4098,7 +4140,7 @@
     translated: "High‑priced sale"
     qcReviewedText: "High‑priced sale({0} Taels)"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "两"
@@ -4111,7 +4153,7 @@
     translated: "Seeing injustice, one should naturally intervene to help."
     qcReviewedText: "Seeing injustice, one should naturally intervene to help."
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "转念一想"
   splits:
@@ -4119,7 +4161,7 @@
     translated: "Thought otherwise"
     qcReviewedText: "Thought otherwise"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "轻功 轻身术"
   splits:
@@ -4140,7 +4182,7 @@
     translated: "Qinggong catches up"
     qcReviewedText: "Qinggong catches up"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "轻功躲避"
   splits:
@@ -4148,7 +4190,7 @@
     translated: "Qinggong to dodge"
     qcReviewedText: "Qinggong to dodge"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "还是算了"
   splits:
@@ -4164,7 +4206,7 @@
     translated: "This... can only be for the best."
     qcReviewedText: "This... can only be for the best."
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "这些徒儿均已掌握"
   splits:
@@ -4172,7 +4214,7 @@
     translated: "These disciples have all mastered"
     qcReviewedText: "These disciples have all mastered"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "这有何难"
   splits:
@@ -4180,7 +4222,7 @@
     translated: "What's so difficult about that?"
     qcReviewedText: "What's so difficult about that?"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "进攻"
   splits:
@@ -4196,17 +4238,16 @@
     translated: "Continuous guidance"
     qcReviewedText: "Continuous guidance"
     qcStatus: Passed
-    qcQualityScore: 80
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦消耗剩余指点次数\n♦对方武学满级或超过你时自动停止"
   splits:
   - text: "消耗剩余指点次数"
     translated: "Consume remaining directional inputs"
     qcReviewedText: "♦Consume remaining directional inputs\n♦When the opponent's martial arts level is maxed out or exceeds yours, it will automatically stop."
-    qcTranslated: "♦Consume remaining point allocations\n♦When the opponent's martial arts level is maxed out or exceeds yours, it will automatically stop."
-    qcStatus: Corrected
-    qcQualityScore: 90
-    qcDefectCategory: DomainTerm
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "对方武学满级或超过你时自动停止"
     translated: "When the opponent's martial arts level is maxed out or exceeds yours, it will automatically stop."
@@ -4226,7 +4267,7 @@
     translated: "Inquiring about the person's retirement from the Jianghu"
     qcReviewedText: "♦Inquiring about the person's retirement from the Jianghu"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
   templates:
   - template: "♦{0}"
@@ -4236,7 +4277,7 @@
     translated: "Choose Disciple"
     qcReviewedText: "Choose Disciple"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "选择挖掘"
   splits:
@@ -4244,7 +4285,7 @@
     translated: "Choose mining"
     qcReviewedText: "Choose mining"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "选择秘籍"
   splits:
@@ -4252,7 +4293,7 @@
     translated: "Choose the Secret Manual"
     qcReviewedText: "Choose the Secret Manual"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "选贤举能"
   splits:
@@ -4260,7 +4301,7 @@
     translated: "Choose the worthy and capable"
     qcReviewedText: "Choose the worthy and capable"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "速战速决"
   splits:
@@ -4268,7 +4309,7 @@
     translated: "Quick victory"
     qcReviewedText: "Quick victory"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "迎战守卫\n获取中品质秘籍"
   splits:
@@ -4288,9 +4329,12 @@
   - text: "遗忘"
     translated: "Forget"
     qcReviewedText: "Forget“{0}”"
-    qcStatus: Passed
+    qcTranslated: "Forget {0}"
+    qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: None
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   templates:
   - template: "{0}“⟦0⟧”"
 - raw: "避人耳目"
@@ -4299,7 +4343,7 @@
     translated: "Out of earshot"
     qcReviewedText: "Out of earshot"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "避免战斗\n获取低品质秘籍"
   splits:
@@ -4307,7 +4351,7 @@
     translated: "Avoid battle"
     qcReviewedText: "Avoid battle\nAcquire a low‑quality Secret Manual"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "获取低品质秘籍"
@@ -4320,7 +4364,7 @@
     translated: "Let's begin then"
     qcReviewedText: "Let's begin then"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "那便来吧！"
   splits:
@@ -4328,7 +4372,7 @@
     translated: "Let's do it then!"
     qcReviewedText: "Let's do it then!"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "那只好硬闯了"
   splits:
@@ -4336,7 +4380,7 @@
     translated: "Well, we'll just have to force our way through."
     qcReviewedText: "Well, we'll just have to force our way through."
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "那我就买下了"
   splits:
@@ -4352,7 +4396,7 @@
     translated: "That is natural"
     qcReviewedText: "That is natural"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "采掘陨铁"
   splits:
@@ -4360,7 +4404,7 @@
     translated: "Mining meteoric iron"
     qcReviewedText: "Mining meteoric iron"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "采集{0}"
   splits:
@@ -4368,7 +4412,7 @@
     translated: "Gather"
     qcReviewedText: "Gather {0}"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   templates:
   - template: "{0}⟦0⟧"
@@ -4378,7 +4422,7 @@
     translated: "Identify Item"
     qcReviewedText: "Identify Item"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "针锋相对"
   splits:
@@ -4386,7 +4430,7 @@
     translated: "Direct confrontation"
     qcReviewedText: "Direct confrontation"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "银两利诱"
   splits:
@@ -4394,7 +4438,7 @@
     translated: "Silver temptation"
     qcReviewedText: "Silver temptation"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "门派亲善"
   splits:
@@ -4402,7 +4446,7 @@
     translated: "Sect friendliness"
     qcReviewedText: "Sect friendliness"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "门派盟约"
   splits:
@@ -4410,7 +4454,7 @@
     translated: "Sect Alliance"
     qcReviewedText: "Sect Alliance"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "门派羞辱"
   splits:
@@ -4418,7 +4462,7 @@
     translated: "Sect humiliation"
     qcReviewedText: "Sect humiliation"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "门派进贡"
   splits:
@@ -4426,7 +4470,7 @@
     translated: "Sect tribute"
     qcReviewedText: "Sect tribute"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "♦雇佣对方加入队伍15天\n♦根据对方战力消耗银钱"
   splits:
@@ -4447,7 +4491,7 @@
     translated: "Quietly wait"
     qcReviewedText: "Quietly wait"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "骇然出手"
   splits:
@@ -4463,7 +4507,7 @@
     translated: "Mighty one, I come to aid you!"
     qcReviewedText: "Mighty one, I come to aid you!"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "高价出售({0}两)"
   splits:
@@ -4471,7 +4515,7 @@
     translated: "Selling at a high price"
     qcReviewedText: "Selling at a high price({0} Taels)"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "两"
@@ -4484,7 +4528,7 @@
     translated: "High Commendation"
     qcReviewedText: "High Commendation"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "黄袍加身"
   splits:
@@ -4492,7 +4536,7 @@
     translated: "Donning the Yellow Robe"
     qcReviewedText: "Donning the Yellow Robe"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "默默看戏"
   splits:
@@ -4500,5 +4544,5 @@
     translated: "Watch silently"
     qcReviewedText: "Watch silently"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None

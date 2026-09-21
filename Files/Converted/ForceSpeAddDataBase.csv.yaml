@@ -5,24 +5,28 @@
     qcReviewedText: "Number"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - split: 2
     text: "描述"
     translated: "Description"
     qcReviewedText: "Description"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - split: 3
     text: "显示百分比"
     translated: "Show percentage"
     qcReviewedText: "Show percentage"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
   - split: 4
     text: "基础数值"
     translated: "Base values"
     qcReviewedText: "Base values"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "0,区域上限,区域上限,FALSE,1"
   splits:
   - split: 2
@@ -31,15 +35,16 @@
     qcReviewedText: "Area limit"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "1,弟子上限,弟子上限,FALSE,5"
   splits:
   - split: 2
     text: "弟子上限"
     translated: "Disciple Cap Limit"
     qcReviewedText: "Disciple Cap Limit"
-    qcTranslated: "Disciple Cap"
-    qcStatus: Corrected
-    qcQualityScore: 70
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "2,仓储容量,仓储容量,FALSE,1"
   splits:
   - split: 2
@@ -48,6 +53,7 @@
     qcReviewedText: "Storage capacity"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "3,弟子功绩,弟子功绩,TRUE,0.02"
   splits:
   - split: 2
@@ -56,6 +62,7 @@
     qcReviewedText: "Disciple's Achievements"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "4,科研效率,科研效率,TRUE,0.04"
   splits:
   - split: 2
@@ -64,6 +71,7 @@
     qcReviewedText: "Research efficiency"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "5,旅行速度,旅行速度,TRUE,0.01"
   splits:
   - split: 2
@@ -72,6 +80,7 @@
     qcReviewedText: "Travel speed"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "6,实战经验,实战经验,TRUE,0.01"
   splits:
   - split: 2
@@ -80,6 +89,7 @@
     qcReviewedText: "Combat experience"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "7,理论经验,理论经验,TRUE,0.01"
   splits:
   - split: 2
@@ -88,6 +98,7 @@
     qcReviewedText: "Theoretical experience"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "8,疗伤效率,疗伤效率,TRUE,0.01"
   splits:
   - split: 2
@@ -96,6 +107,7 @@
     qcReviewedText: "Healing efficiency"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "9,本地疗伤效率,本地疗伤效率,TRUE,0.05"
   splits:
   - split: 2
@@ -104,6 +116,7 @@
     qcReviewedText: "Local healing efficiency"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "10,恢复效率,恢复效率,TRUE,0.02"
   splits:
   - split: 2
@@ -112,6 +125,7 @@
     qcReviewedText: "Recovery efficiency"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "11,本地恢复效率,本地恢复效率,TRUE,0.1"
   splits:
   - split: 2
@@ -120,6 +134,7 @@
     qcReviewedText: "Local recovery efficiency"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "12,建造速度,建造速度,TRUE,0.02"
   splits:
   - split: 2
@@ -128,6 +143,7 @@
     qcReviewedText: "Construction speed"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "13,本地建造速度,本地建造速度,TRUE,0.1"
   splits:
   - split: 2
@@ -136,6 +152,7 @@
     qcReviewedText: "Local construction speed"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "14,资源点产量,资源点产量,TRUE,0.01"
   splits:
   - split: 2
@@ -144,6 +161,7 @@
     qcReviewedText: "Resource point production"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "15,本地资源点产量,本地资源点产量,TRUE,0.05"
   splits:
   - split: 2
@@ -152,6 +170,7 @@
     qcReviewedText: "Local resource point production"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "16,技艺经验,技艺经验,TRUE,0.01"
   splits:
   - split: 2
@@ -159,7 +178,8 @@
     translated: "Skill and experience"
     qcReviewedText: "Skill and experience"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "17,内功经验,内功经验,TRUE,0.02"
   splits:
   - split: 2
@@ -168,6 +188,7 @@
     qcReviewedText: "Neigong experience"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "18,轻功经验,轻功经验,TRUE,0.02"
   splits:
   - split: 2
@@ -176,6 +197,7 @@
     qcReviewedText: "Qinggong Experience"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "19,绝技经验,绝技经验,TRUE,0.02"
   splits:
   - split: 2
@@ -192,7 +214,8 @@
     translated: "Punching and palm striking experience"
     qcReviewedText: "Punching and palm striking experience"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "21,剑法经验,剑法经验,TRUE,0.02"
   splits:
   - split: 2
@@ -201,6 +224,7 @@
     qcReviewedText: "Swordsmanship Experience"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "22,刀法经验,刀法经验,TRUE,0.02"
   splits:
   - split: 2
@@ -209,6 +233,7 @@
     qcReviewedText: "Blade Technique Experience"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "23,长兵经验,长兵经验,TRUE,0.02"
   splits:
   - split: 2
@@ -217,6 +242,7 @@
     qcReviewedText: "Long weapon experience"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "24,奇门经验,奇门经验,TRUE,0.02"
   splits:
   - split: 2
@@ -224,7 +250,7 @@
     translated: "Qimen Experience"
     qcReviewedText: "Qimen Experience"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "25,射术经验,射术经验,TRUE,0.02"
   splits:
@@ -234,6 +260,7 @@
     qcReviewedText: "Archery experience"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "26,医术经验,医术经验,TRUE,0.02"
   splits:
   - split: 2
@@ -242,15 +269,16 @@
     qcReviewedText: "Medical experience"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "27,毒术经验,毒术经验,TRUE,0.02"
   splits:
   - split: 2
     text: "毒术经验"
     translated: "Poison technique experience"
     qcReviewedText: "Poison technique experience"
-    qcTranslated: "Poison Arts XP"
-    qcStatus: Corrected
-    qcQualityScore: 90
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "28,学识经验,学识经验,TRUE,0.02"
   splits:
   - split: 2
@@ -259,6 +287,7 @@
     qcReviewedText: "Scholarly experience"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "29,口才经验,口才经验,TRUE,0.02"
   splits:
   - split: 2
@@ -266,7 +295,8 @@
     translated: "Communication skills experience"
     qcReviewedText: "Communication skills experience"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "30,采伐经验,采伐经验,TRUE,0.02"
   splits:
   - split: 2
@@ -275,15 +305,16 @@
     qcReviewedText: "Resource Gathering Experience"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "31,木植经验,木植经验,TRUE,0.02"
   splits:
   - split: 2
     text: "木植经验"
     translated: "Tree planting experience"
     qcReviewedText: "Tree planting experience"
-    qcTranslated: "Woodcutting Experience"
-    qcStatus: Corrected
-    qcQualityScore: 95
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "32,锻造经验,锻造经验,TRUE,0.02"
   splits:
   - split: 2
@@ -292,6 +323,7 @@
     qcReviewedText: "Smithing experience"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "33,炼药经验,炼药经验,TRUE,0.02"
   splits:
   - split: 2
@@ -300,6 +332,7 @@
     qcReviewedText: "Alchemical experience"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "34,烹饪经验,烹饪经验,TRUE,0.02"
   splits:
   - split: 2
@@ -308,6 +341,7 @@
     qcReviewedText: "Cooking experience"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "35,全员力道,全员力道,FALSE,1"
   splits:
   - split: 2
@@ -316,15 +350,16 @@
     qcReviewedText: "All Strength"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "36,全员灵巧,全员灵巧,FALSE,1"
   splits:
   - split: 2
     text: "全员灵巧"
     translated: "All Agility"
     qcReviewedText: "All Agility"
-    qcTranslated: "All‑Agility"
-    qcStatus: Corrected
-    qcQualityScore: 95
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "37,全员智力,全员智力,FALSE,1"
   splits:
   - split: 2
@@ -332,7 +367,8 @@
     translated: "All Intellect"
     qcReviewedText: "All Intellect"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "38,全员意志,全员意志,FALSE,1"
   splits:
   - split: 2
@@ -340,16 +376,17 @@
     translated: "All Willpower"
     qcReviewedText: "All Willpower"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "39,全员体质,全员体质,FALSE,1"
   splits:
   - split: 2
     text: "全员体质"
     translated: "All Constitution"
     qcReviewedText: "All Constitution"
-    qcTranslated: "All Members' Constitution"
-    qcStatus: Corrected
-    qcQualityScore: 85
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "40,全员经脉,全员经脉,FALSE,1"
   splits:
   - split: 2
@@ -357,7 +394,8 @@
     translated: "All Meridians"
     qcReviewedText: "All Meridians"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "41,全员内功,全员内功,FALSE,1"
   splits:
   - split: 2
@@ -366,6 +404,7 @@
     qcReviewedText: "All Neigong"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "42,全员轻功,全员轻功,FALSE,1"
   splits:
   - split: 2
@@ -374,6 +413,7 @@
     qcReviewedText: "All Qinggong"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "43,全员绝技,全员绝技,FALSE,1"
   splits:
   - split: 2
@@ -391,33 +431,34 @@
     qcReviewedText: "All Fist and Palm"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "45,全员剑法,全员剑法,FALSE,1"
   splits:
   - split: 2
     text: "全员剑法"
     translated: "All Swordsmanship"
     qcReviewedText: "All Swordsmanship"
-    qcTranslated: "All Swordsmanship"
-    qcStatus: Corrected
-    qcQualityScore: 80
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "46,全员刀法,全员刀法,FALSE,1"
   splits:
   - split: 2
     text: "全员刀法"
     translated: "All Blade Arts"
     qcReviewedText: "All Blade Arts"
-    qcTranslated: "All Blade Art"
-    qcStatus: Corrected
-    qcQualityScore: 85
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "47,全员长兵,全员长兵,FALSE,1"
   splits:
   - split: 2
     text: "全员长兵"
     translated: "All long weapons"
     qcReviewedText: "All long weapons"
-    qcTranslated: "All Long weapons"
-    qcStatus: Corrected
-    qcQualityScore: 85
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "48,全员奇门,全员奇门,FALSE,1"
   splits:
   - split: 2
@@ -425,7 +466,8 @@
     translated: "All Qimen"
     qcReviewedText: "All Qimen"
     qcStatus: Passed
-    qcQualityScore: 90
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "49,全员射术,全员射术,FALSE,1"
   splits:
   - split: 2
@@ -434,15 +476,19 @@
     qcReviewedText: "All Archery"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "50,全员医术,全员医术,FALSE,1"
   splits:
   - split: 2
     text: "全员医术"
     translated: "All Medicine"
     qcReviewedText: "All Medicine"
-    qcTranslated: "All Medicine"
+    qcTranslated: "All‑Healing Arts"
     qcStatus: Corrected
     qcQualityScore: 85
+    qcDefectCategory: LostIdiom
+    qcDefectCategories:
+    - LostIdiom
 - raw: "51,全员毒术,全员毒术,FALSE,1"
   splits:
   - split: 2
@@ -451,6 +497,7 @@
     qcReviewedText: "All Poison Arts"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "52,全员学识,全员学识,FALSE,1"
   splits:
   - split: 2
@@ -459,15 +506,16 @@
     qcReviewedText: "All Knowledge"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "53,全员口才,全员口才,FALSE,1"
   splits:
   - split: 2
     text: "全员口才"
     translated: "All Eloquence"
     qcReviewedText: "All Eloquence"
-    qcTranslated: "All‑Member Eloquence"
-    qcStatus: Corrected
-    qcQualityScore: 90
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "54,全员采伐,全员采伐,FALSE,1"
   splits:
   - split: 2
@@ -476,6 +524,7 @@
     qcReviewedText: "All Resource Gathering"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "55,全员木植,全员木植,FALSE,1"
   splits:
   - split: 2
@@ -483,7 +532,8 @@
     translated: "All Planting"
     qcReviewedText: "All Planting"
     qcStatus: Passed
-    qcQualityScore: 85
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "56,全员锻造,全员锻造,FALSE,1"
   splits:
   - split: 2
@@ -491,7 +541,8 @@
     translated: "All Forging"
     qcReviewedText: "All Forging"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "57,全员炼药,全员炼药,FALSE,1"
   splits:
   - split: 2
@@ -500,15 +551,16 @@
     qcReviewedText: "All Alchemy"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "58,全员烹饪,全员烹饪,FALSE,1"
   splits:
   - split: 2
     text: "全员烹饪"
     translated: "All Cooking"
     qcReviewedText: "All Cooking"
-    qcTranslated: "All‑Player Cooking"
-    qcStatus: Corrected
-    qcQualityScore: 95
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "59,藏经容量,藏经容量,FALSE,5"
   splits:
   - split: 2
@@ -516,7 +568,7 @@
     translated: "Taoist Canon Capacity"
     qcReviewedText: "Taoist Canon Capacity"
     qcStatus: Passed
-    qcQualityScore: 95
+    qcQualityScore: 100
     qcDefectCategory: None
 - raw: "60,全域治安,全域治安,FALSE,1"
   splits:
@@ -526,6 +578,7 @@
     qcReviewedText: "Global law and order"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "61,全域民心,全域民心,FALSE,1"
   splits:
   - split: 2
@@ -534,6 +587,7 @@
     qcReviewedText: "Global public sentiment"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "62,全域防御,全域防御,FALSE,1"
   splits:
   - split: 2
@@ -542,6 +596,7 @@
     qcReviewedText: "Global Defense"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "63,全域人口,全域人口,FALSE,5"
   splits:
   - split: 2
@@ -550,12 +605,13 @@
     qcReviewedText: "Global population"
     qcStatus: Passed
     qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "64,城防耐久,城防耐久,TRUE,0.02"
   splits:
   - split: 2
     text: "城防耐久"
     translated: "City defense durability"
     qcReviewedText: "City defense durability"
-    qcTranslated: "City Defense Durability"
-    qcStatus: Corrected
-    qcQualityScore: 85
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
