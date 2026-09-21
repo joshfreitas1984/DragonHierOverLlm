@@ -6012,8 +6012,8 @@
   splits:
   - text: "新手推荐！"
     translated: "New Player Recommendation!"
-    qcReviewedText: "<b><color=teal>New Player Recommendation!\nSuitable for players seeking a relaxed experience </color></b>\nPlayer damage+10%/Injured-10%\nAll attributes/All skills+15\nPlayer experience/Reputation+80%\nDisciple Experience Points+40%\nNon‑disciple experience points-40%\n<color=green>Maximum potential points 10\nSpecial building cap 5</color>"
-    qcTranslated: "<b><color=teal>New Player Recommendation!\nSuitable for players seeking a relaxed experience </color></b>\nPlayer damage+10%/Damage taken‑10%\nAll attributes/All skills+15\nPlayer experience/Reputation+80%\nDisciples of this sect experience+40%\nNon‑disciples of this sect experience‑40%\n<color=green>Maximum potential points 10\nSpecial building cap 5</color>"
+    qcReviewedText: "<b><color=teal>New Player Recommendation!\nSuitable for players seeking a relaxed experience </color></b>\nPlayer damage+10%/Injured-10%\nAll attributes/All skills+15\nPlayer experience/Reputation+80%\nDisciple Experience Points+40%\nNon‑disciple experience points-40%\n<color=green>Maximum potential points 10\nSpecial Building Limit 5</color>"
+    qcTranslated: "<b><color=teal>New Player Recommendation!\nSuitable for players seeking a relaxed experience </color></b>\nPlayer damage+10%/Injured‑10%\nAll attributes/All skills+15\nPlayer experience/Reputation+80%\nDisciples of this sect experience+40%\nNon‑disciples of this sect experience‑40%\n<color=green>Maximum potential points 10\nSpecial Building Limit 5</color>"
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: DroppedContent
@@ -6052,15 +6052,15 @@
     translated: "Maximum potential points"
   - subIndex: 11
     text: "特殊建筑上限"
-    translated: "Special building cap"
+    translated: "Special Building Limit"
   templates:
   - template: "<b><color=teal>{0}\n{1}</color></b>\n{2}+10%/{3}-10%\n{4}/{5}+15\n{6}/{7}+80%\n{8}+40%\n{9}-40%\n<color=green>{10} 10\n{11} 5</color>"
 - raw: "<b><color=teal>新手推荐！\n适合寻求轻松体验的玩家</color></b>\n玩家伤害+20%/受伤-20%\n全属性/全技能+20\n玩家经验/声望+100%\n本门弟子经验+60%\n非本门弟子经验-60%\n<color=green>天赋数上限 9\n特殊建筑上限 5</color>"
   splits:
   - text: "新手推荐！"
     translated: "New Player Recommendation!"
-    qcReviewedText: "<b><color=teal>New Player Recommendation!\nSuitable for players seeking a relaxed experience </color></b>\nPlayer damage+20%/Injured-20%\nAll attributes/All skills+20\nPlayer experience/Reputation+100%\nDisciple Experience Points+60%\nNon‑disciple experience points-60%\n<color=green>Maximum potential points 9\nSpecial building cap 5</color>"
-    qcTranslated: "<b><color=teal>New Player Recommendation!\nSuitable for players seeking a relaxed experience </color></b>\nPlayer damage+20%/Injured‑20%\nAll attributes/All skills+20\nPlayer experience/Reputation+100%\nDisciples of this sect experience+60%\nNon‑disciples of this sect experience‑60%\n<color=green>Maximum potential points 9\nSpecial building cap 5</color>"
+    qcReviewedText: "<b><color=teal>New Player Recommendation!\nSuitable for players seeking a relaxed experience </color></b>\nPlayer damage+20%/Injured-20%\nAll attributes/All skills+20\nPlayer experience/Reputation+100%\nDisciple Experience Points+60%\nNon‑disciple experience points-60%\n<color=green>Maximum potential points 9\nSpecial Building Limit 5</color>"
+    qcTranslated: "<b><color=teal>New Player Recommendation!\nSuitable for players seeking a relaxed experience </color></b>\nPlayer damage+20%/Damage taken‑20%\nAll attributes/All skills+20\nPlayer experience/Reputation+100%\nDisciples of this sect experience+60%\nNon‑disciples of this sect experience‑60%\n<color=green>Maximum potential points 9\nSpecial Building Limit 5</color>"
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: DroppedContent
@@ -6099,20 +6099,20 @@
     translated: "Maximum potential points"
   - subIndex: 11
     text: "特殊建筑上限"
-    translated: "Special building cap"
+    translated: "Special Building Limit"
   templates:
   - template: "<b><color=teal>{0}\n{1}</color></b>\n{2}+20%/{3}-20%\n{4}/{5}+20\n{6}/{7}+100%\n{8}+60%\n{9}-60%\n<color=green>{10} 9\n{11} 5</color>"
 - raw: "<b><color=teal>适合了解游戏机制的玩家</color></b>\n全属性/全技能+10\n玩家经验/声望+60%\n本门弟子经验+20%\n非本门弟子经验-20%\n<color=green>天赋数上限 11\n特殊建筑上限 5</color>"
   splits:
   - text: "适合了解游戏机制的玩家"
     translated: "Suitable for players who understand the game mechanics"
-    qcReviewedText: "<b><color=teal>Suitable for players who understand the game mechanics </color></b>\nAll attributes/All skills+10\nPlayer experience/Reputation+60%\nDisciple Experience Points+20%\nNon‑disciple experience points-20%\n<color=green>Maximum potential points 11\nSpecial building cap 5</color>"
-    qcTranslated: "<b><color=teal>Suitable for players who understand the game mechanics </color></b>\nAll attributes/All skills+10\nPlayer experience/Reputation+60%\nDisciple Experience Points of this sect+20%\nNon‑disciple experience points of other sects‑20%\n<color=green>Maximum potential points 11\nSpecial building cap 5</color>"
+    qcReviewedText: "<b><color=teal>Suitable for players who understand the game mechanics </color></b>\nAll attributes/All skills+10\nPlayer experience/Reputation+60%\nDisciple Experience Points+20%\nNon‑disciple experience points-20%\n<color=green>Maximum potential points 11\nSpecial Building Limit 5</color>"
+    qcTranslated: "<b><color=teal>Suitable for players who understand the game mechanics </color></b>\nAll attributes/All skills+10\nPlayer experience/Reputation+60%\nDisciple Experience Points+20%\nNon‑disciple experience points‑20%\n<color=green>Maximum talent count 11\nSpecial Building Limit 5</color>"
     qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
-    - DroppedContent
+    - OtherNamedDefect
   - subIndex: 1
     text: "全属性"
     translated: "All attributes"
@@ -6136,20 +6136,17 @@
     translated: "Maximum potential points"
   - subIndex: 8
     text: "特殊建筑上限"
-    translated: "Special building cap"
+    translated: "Special Building Limit"
   templates:
   - template: "<b><color=teal>{0}</color></b>\n{1}/{2}+10\n{3}/{4}+60%\n{5}+20%\n{6}-20%\n<color=green>{7} 11\n{8} 5</color>"
 - raw: "<b><color=teal>适合仅体验剧情的玩家</color></b>\n<color=red>无法获得成就</color>\n玩家伤害+100%/受伤-50%\n全属性/全技能+20\n玩家经验/声望+100%\n本门弟子经验+60%\n非本门弟子经验-60%\n<color=red>天赋数上限 9\n特殊建筑上限 5</color>"
   splits:
   - text: "适合仅体验剧情的玩家"
     translated: "Suitable for players who want to experience the storyline only."
-    qcReviewedText: "<b><color=teal>Suitable for players who want to experience the storyline only.</color></b>\n<color=red>Cannot earn achievement </color>\nPlayer damage+100%/Injured-50%\nAll attributes/All skills+20\nPlayer experience/Reputation+100%\nDisciple Experience Points+60%\nNon‑disciple experience points-60%\n<color=red>Maximum potential points 9\nSpecial building cap 5</color>"
-    qcTranslated: "<b><color=teal>Suitable for players who want to experience the storyline only.</color></b>\n<color=red>Cannot earn achievements</color>\nPlayer damage+100%/Injured‑50%\nAll attributes/All skills+20\nPlayer experience/Reputation+100%\nDisciple Experience Points+60%\nNon‑disciple experience points‑60%\n<color=red>Maximum potential points 9\nSpecial building cap 5</color>"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    qcReviewedText: "<b><color=teal>Suitable for players who want to experience the storyline only.</color></b>\n<color=red>Cannot earn achievement </color>\nPlayer damage+100%/Injured-50%\nAll attributes/All skills+20\nPlayer experience/Reputation+100%\nDisciple Experience Points+60%\nNon‑disciple experience points-60%\n<color=red>Maximum potential points 9\nSpecial Building Limit 5</color>"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "无法获得成就"
     translated: "Cannot earn achievement"
@@ -6182,14 +6179,14 @@
     translated: "Maximum potential points"
   - subIndex: 11
     text: "特殊建筑上限"
-    translated: "Special building cap"
+    translated: "Special Building Limit"
   templates:
   - template: "<b><color=teal>{0}</color></b>\n<color=red>{1}</color>\n{2}+100%/{3}-50%\n{4}/{5}+20\n{6}/{7}+100%\n{8}+60%\n{9}-60%\n<color=red>{10} 9\n{11} 5</color>"
 - raw: "<b><color=teal>适合寻求挑战的玩家</color></b>\n全属性/全技能+4\n玩家经验/声望+20%\n非本门弟子经验+20%\n难度提升速度++\n<color=green>天赋数上限 13\n特殊建筑上限 6</color>"
   splits:
   - text: "适合寻求挑战的玩家"
     translated: "Suitable for players seeking a challenge"
-    qcReviewedText: "<b><color=teal>Suitable for players seeking a challenge </color></b>\nAll attributes/All skills+4\nPlayer experience/Reputation+20%\nNon‑disciple experience points+20%\nDifficulty increase speed++\n<color=green>Maximum potential points 13\nSpecial building cap 6</color>"
+    qcReviewedText: "<b><color=teal>Suitable for players seeking a challenge </color></b>\nAll attributes/All skills+4\nPlayer experience/Reputation+20%\nNon‑disciple experience points+20%\nDifficulty increase speed++\n<color=green>Maximum potential points 13\nSpecial Building Limit 6</color>"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -6216,14 +6213,14 @@
     translated: "Maximum potential points"
   - subIndex: 8
     text: "特殊建筑上限"
-    translated: "Special building cap"
+    translated: "Special Building Limit"
   templates:
   - template: "<b><color=teal>{0}</color></b>\n{1}/{2}+4\n{3}/{4}+20%\n{5}+20%\n{6}++\n<color=green>{7} 13\n{8} 6</color>"
 - raw: "<b><color=teal>适合寻求挑战的玩家</color></b>\n全属性/全技能+6\n玩家经验/声望+40%\n难度提升速度+\n<color=green>天赋数上限 12\n特殊建筑上限 6</color>"
   splits:
   - text: "适合寻求挑战的玩家"
     translated: "Suitable for players seeking a challenge"
-    qcReviewedText: "<b><color=teal>Suitable for players seeking a challenge </color></b>\nAll attributes/All skills+6\nPlayer experience/Reputation+40%\nDifficulty increase speed+\n<color=green>Maximum potential points 12\nSpecial building cap 6</color>"
+    qcReviewedText: "<b><color=teal>Suitable for players seeking a challenge </color></b>\nAll attributes/All skills+6\nPlayer experience/Reputation+40%\nDifficulty increase speed+\n<color=green>Maximum potential points 12\nSpecial Building Limit 6</color>"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -6247,14 +6244,14 @@
     translated: "Maximum potential points"
   - subIndex: 7
     text: "特殊建筑上限"
-    translated: "Special building cap"
+    translated: "Special Building Limit"
   templates:
   - template: "<b><color=teal>{0}</color></b>\n{1}/{2}+6\n{3}/{4}+40%\n{5}+\n<color=green>{6} 12\n{7} 6</color>"
 - raw: "<b><color=teal>适合寻求高难挑战的玩家</color></b>\n全属性/全技能+2\n非本门弟子经验+40%\n难度提升速度+++\n<color=green>天赋数上限 14\n特殊建筑上限 7</color>"
   splits:
   - text: "适合寻求高难挑战的玩家"
     translated: "Suitable for players seeking a challenging experience"
-    qcReviewedText: "<b><color=teal>Suitable for players seeking a challenging experience </color></b>\nAll attributes/All skills+2\nNon‑disciple experience points+40%\nDifficulty increase speed+++\n<color=green>Maximum potential points 14\nSpecial building cap 7</color>"
+    qcReviewedText: "<b><color=teal>Suitable for players seeking a challenging experience </color></b>\nAll attributes/All skills+2\nNon‑disciple experience points+40%\nDifficulty increase speed+++\n<color=green>Maximum potential points 14\nSpecial Building Limit 7</color>"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -6275,14 +6272,14 @@
     translated: "Maximum potential points"
   - subIndex: 6
     text: "特殊建筑上限"
-    translated: "Special building cap"
+    translated: "Special Building Limit"
   templates:
   - template: "<b><color=teal>{0}</color></b>\n{1}/{2}+2\n{3}+40%\n{4}+++\n<color=green>{5} 14\n{6} 7</color>"
 - raw: "<b><color=teal>适合寻求高难挑战的玩家</color></b>\n非本门弟子经验+60%\n难度提升速度++++\n<color=green>天赋数上限 15\n特殊建筑上限 7</color>"
   splits:
   - text: "适合寻求高难挑战的玩家"
     translated: "Suitable for players seeking a challenging experience"
-    qcReviewedText: "<b><color=teal>Suitable for players seeking a challenging experience </color></b>\nNon‑disciple experience points+60%\nDifficulty increase speed++++\n<color=green>Maximum potential points 15\nSpecial building cap 7</color>"
+    qcReviewedText: "<b><color=teal>Suitable for players seeking a challenging experience </color></b>\nNon‑disciple experience points+60%\nDifficulty increase speed++++\n<color=green>Maximum potential points 15\nSpecial Building Limit 7</color>"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -6297,7 +6294,7 @@
     translated: "Maximum potential points"
   - subIndex: 4
     text: "特殊建筑上限"
-    translated: "Special building cap"
+    translated: "Special Building Limit"
   templates:
   - template: "<b><color=teal>{0}</color></b>\n{1}+60%\n{2}++++\n<color=green>{3} 15\n{4} 7</color>"
 - raw: "<b><size=17>队伍人数 {0}</size></b>"
@@ -6821,13 +6818,13 @@
   splits:
   - text: "点潜力"
     translated: "Tap potential"
-    qcReviewedText: "<color=#D2691E>✦{0} Tap potential=1 point cap({1}/{0})</color>"
+    qcReviewedText: "<color=#D2691E>✦{0} Tap potential=1 point Maximum({1}/{0})</color>"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "1点上限"
-    translated: "1 point cap"
+    translated: "1 point Maximum"
   templates:
   - template: "<color=#D2691E>✦⟦0⟧{0}={1}(⟦1⟧/⟦0⟧)</color>"
 - raw: "<color=#D2691E>伤害"
@@ -10085,8 +10082,8 @@
 - raw: "{0}服食异草，生命上限增加{1}"
   splits:
   - text: "服食异草，生命上限增加"
-    translated: "Consume exotic grass; health points increase"
-    qcReviewedText: "{0} Consume exotic grass; health points increase {1}"
+    translated: "Eating the strange herb increases Health Max"
+    qcReviewedText: "{0} Eating the strange herb increases Health Max {1}"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -11627,13 +11624,13 @@
   splits:
   - text: "每一级别武功都有最佳修习数"
     translated: "Each martial arts skill has an optimal number of practice levels."
-    qcReviewedText: "♦Each martial arts skill has an optimal number of practice levels.\n♦After exceeding the cap, all experience for martial arts at this level will be reduced."
+    qcReviewedText: "♦Each martial arts skill has an optimal number of practice levels.\n♦After exceeding the limit, all experience gained for that level of martial arts will decrease."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "超出上限后，所有该级别武功获取的经验都会减少"
-    translated: "After exceeding the cap, all experience for martial arts at this level will be reduced."
+    translated: "After exceeding the limit, all experience gained for that level of martial arts will decrease."
   templates:
   - template: "♦{0}\n♦{1}"
 - raw: "♦每点减少0.5%{0}\n♦降低到零会<b>{1}</b>"
@@ -15502,16 +15499,16 @@
 - raw: "人口上限"
   splits:
   - text: "人口上限"
-    translated: "Population cap"
-    qcReviewedText: "Population cap"
+    translated: "Population limit"
+    qcReviewedText: "Population limit"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
 - raw: "人口上限+"
   splits:
   - text: "人口上限"
-    translated: "Population cap"
-    qcReviewedText: "Population cap+"
+    translated: "Population limit"
+    qcReviewedText: "Population limit+"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -18987,8 +18984,8 @@
 - raw: "内力上限"
   splits:
   - text: "内力上限"
-    translated: "Inner Power Cap"
-    qcReviewedText: "Inner Power Cap"
+    translated: "Inner Power Max"
+    qcReviewedText: "Inner Power Max"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -20038,8 +20035,8 @@
 - raw: "初始上限 {0}/5"
   splits:
   - text: "初始上限"
-    translated: "Initial cap"
-    qcReviewedText: "Initial cap {0}/5"
+    translated: "Initial Maximum Limit"
+    qcReviewedText: "Initial Maximum Limit {0}/5"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -37018,8 +37015,8 @@
   splits:
   - text: "当前藏宝阁物品价值容量为"
     translated: "Current treasure item value capacity is limited"
-    qcReviewedText: "Current treasure item value capacity is limited {0}/{1}，\nGreat Hero, which item would you like to duplicate in the Treasure Hall?\n(Completing 1 achievements increases the Treasure Hall value cap by 500.)"
-    qcTranslated: "Current treasure item value capacity is {0}/{1},\\nGreat Hero, which item would you like to duplicate in the Treasure Hall?\\n(Completing 1 achievements increases the Treasure Hall value cap by 500.)"
+    qcReviewedText: "Current treasure item value capacity is limited {0}/{1}，\nGreat Hero, which item would you like to duplicate in the Treasure Hall?\n(Each 1 earned increases the value limit of the Treasure Pavilion by 500.)"
+    qcTranslated: "Current treasure item value capacity is limited {0}/{1},\\nGreat Hero, which item would you like to duplicate in the Treasure Hall?\\n(Each 1 earned increases the value limit of the Treasure Hall by 500.)"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: OtherNamedDefect
@@ -37030,7 +37027,7 @@
     translated: "Great Hero, which item would you like to duplicate in the Treasure Hall?"
   - subIndex: 2
     text: "每达成1个成就可提升藏宝阁价值上限500"
-    translated: "Completing 1 achievements increases the Treasure Hall value cap by 500."
+    translated: "Each 1 earned increases the value limit of the Treasure Pavilion by 500."
   templates:
   - template: "{0}⟦0⟧/⟦1⟧，\n{1}\n({2})"
 - raw: "当前藏宝阁的物品价值容量为{0}/{1}，\n因此阁下只能复制价值在{2}以下的物品。"
@@ -44284,16 +44281,20 @@
   splits:
   - text: "是#PlayerName#啊！来的正巧，"
     translated: "It's you, #PlayerName#! You timed it just right!"
-    qcReviewedText: "It's you, #PlayerName#! You timed it just right!\nI just noticed a fertile valley filled with rare ingredients.\nI wonder if #PlayerName# knows how to pick them."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcReviewedText: "It's you, #PlayerName#! You timed it just right!\nI just noticed a fertile valley filled with rare ingredients.\nI wonder if #PlayerName# knows whether you know how to pick them."
+    qcTranslated: "It's you, #PlayerName#! You timed it just right! I just discovered a fertile valley where rare ingredients seem to grow. I wonder if #PlayerName# knows how to pick them?"
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
+    - OtherNamedDefect
   - subIndex: 1
     text: "我适才发现一处物产丰饶的峡谷，里面似乎生长有珍稀食材，"
     translated: "I just noticed a fertile valley filled with rare ingredients."
   - subIndex: 2
     text: "不知#PlayerName#是否知晓应当如何采摘？"
-    translated: "I wonder if #PlayerName# knows how to pick them."
+    translated: "I wonder if #PlayerName# knows whether you know how to pick them."
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "是#PlayerName#啊！来的正巧，\n我适才发现一处矿藏丰饶的山脉，里面似乎埋藏有珍稀材料，\n不知#PlayerName#是否知晓应当如何采伐？"
@@ -52084,8 +52085,8 @@
 - raw: "生命上限"
   splits:
   - text: "生命上限"
-    translated: "Health points"
-    qcReviewedText: "Health points"
+    translated: "Health Max"
+    qcReviewedText: "Health Max"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -59745,16 +59746,16 @@
 - raw: "角色获取的额外内力上限"
   splits:
   - text: "角色获取的额外内力上限"
-    translated: "Additional Inner Power cap the character can acquire"
-    qcReviewedText: "Additional Inner Power cap the character can acquire"
+    translated: "Additional Max Inner Power obtained"
+    qcReviewedText: "Additional Max Inner Power obtained"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
 - raw: "角色获取的额外生命上限"
   splits:
   - text: "角色获取的额外生命上限"
-    translated: "Additional health points the character obtains"
-    qcReviewedText: "Additional health points the character obtains"
+    translated: "Additional Max Health obtained"
+    qcReviewedText: "Additional Max Health obtained"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62795,7 +62796,7 @@
   - text: "这"
     translated: "This"
     qcReviewedText: "This {0} It is genuinely precious, and I am unwilling to offer it up.\nI hope #PlayerName# won't force someone to do something against their will.\n(Consume goodwill to requisition this item {1}, Exceeded max affinity)"
-    qcTranslated: "This {0} is genuinely precious, and I am unwilling to offer it up.\nI hope #PlayerName# won't force someone to do something against their will.\n(Requisitioning this item consumes {1} goodwill, exceeding the affinity cap)"
+    qcTranslated: "This {0} is genuinely precious, and I am unwilling to offer it up.\nI hope #PlayerName# won't force someone to do something against their will.\n(Requisitioning this item consumes {1} goodwill, exceeding the max affinity)"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -68742,8 +68743,8 @@
 - raw: "额外内力上限"
   splits:
   - text: "额外内力上限"
-    translated: "Additional Inner Power Cap"
-    qcReviewedText: "Additional Inner Power Cap"
+    translated: "Additional Inner Power Max"
+    qcReviewedText: "Additional Inner Power Max"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -68770,8 +68771,8 @@
 - raw: "额外生命上限"
   splits:
   - text: "额外生命上限"
-    translated: "Additional Health Points"
-    qcReviewedText: "Additional Health Points"
+    translated: "Additional Health Max"
+    qcReviewedText: "Additional Health Max"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

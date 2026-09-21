@@ -155,3 +155,9 @@
   result: "Tui'er"
 - raw: 婉儿
   result: "Wan'er"
+
+- raw: 上限
+  result: Max
+  allowalt:
+    - Maximum
+    - Limit

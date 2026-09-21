@@ -3,15 +3,15 @@
 # (translation-model comparison). The FIRST entry in this list is the main translator model
 # (see FanslationStudio.LlmKit's LlmHelpers.CalculateModelConfig).
 models:
-  - name: HyMT2-7B
-    modelPreset: HyMT2
-    modelPresetType: Standard
   - name: Qwen25-Standard
     modelPreset: Qwen25
     modelPresetType: Standard
     customPromptsPath:
     apiKeyPath:
     model: qwen2.5:14b-instruct
+  - name: HyMT2-7B
+    modelPreset: HyMT2
+    modelPresetType: Standard
   - name: Qwen25-StructuredText
     modelPreset: Qwen25
     modelPresetType: StructuredText

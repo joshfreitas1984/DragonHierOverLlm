@@ -6004,10 +6004,10 @@
 - raw: "生命上限20;内力上限20;内功4;智力4;经脉4"
   splits:
   - text: "生命上限20"
-    translated: "Health points 20"
+    translated: "Health Maximum 20"
   - subIndex: 1
     text: "内力上限20"
-    translated: "Inner Power Cap 20"
+    translated: "Inner Power Maximum 20"
   - subIndex: 2
     text: "内功4"
     translated: "Internal Skill 4"
@@ -6039,10 +6039,10 @@
 - raw: "生命上限10;内力上限30;灵巧4;意志4;经脉4"
   splits:
   - text: "生命上限10"
-    translated: "Health points 10"
+    translated: "Health Maximum 10"
   - subIndex: 1
     text: "内力上限30"
-    translated: "Inner Power Cap30"
+    translated: "Inner Power Maximum 30"
   - subIndex: 2
     text: "灵巧4"
     translated: "Agile 4"
@@ -6082,10 +6082,10 @@
 - raw: "生命上限30;内力上限10;力道4;体质4;经脉4"
   splits:
   - text: "生命上限30"
-    translated: "Health cap30"
+    translated: "Health Maximum 30"
   - subIndex: 1
     text: "内力上限10"
-    translated: "Inner Power Cap10"
+    translated: "Inner Power Maximum 10"
   - subIndex: 2
     text: "力道4"
     translated: "Strength 4"
@@ -6275,7 +6275,7 @@
 - raw: "生命上限8;体质4;经脉4"
   splits:
   - text: "生命上限8"
-    translated: "Health cap8"
+    translated: "Health Maximum 8"
   - subIndex: 1
     text: "体质4"
     translated: "4 physique"
@@ -7192,10 +7192,10 @@
 - raw: "生命上限40;内力上限40;内功6;力道6;命中0.06"
   splits:
   - text: "生命上限40"
-    translated: "Health cap40"
+    translated: "Health Maximum 40"
   - subIndex: 1
     text: "内力上限40"
-    translated: "Inner Power Cap 40"
+    translated: "Inner Power Maximum 40"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -7226,7 +7226,7 @@
 - raw: "内力上限80;内功6;经脉6;回内0.009"
   splits:
   - text: "内力上限80"
-    translated: "Inner Power Cap80"
+    translated: "Inner Power Maximum 80"
   - subIndex: 1
     text: "内功6"
     translated: "Internal Skill 6"
@@ -7266,10 +7266,10 @@
 - raw: "生命上限30;内力上限50;内功6;灵巧6;回血0.006"
   splits:
   - text: "生命上限30"
-    translated: "Health cap30"
+    translated: "Health Maximum 30"
   - subIndex: 1
     text: "内力上限50"
-    translated: "Inner Power Cap 50"
+    translated: "Inner Power Maximum 50"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -7301,10 +7301,10 @@
 - raw: "生命上限40;内力上限40;内功6;意志3;智力3;减伤3"
   splits:
   - text: "生命上限40"
-    translated: "Health cap40"
+    translated: "Health Maximum 40"
   - subIndex: 1
     text: "内力上限40"
-    translated: "Inner Power Cap 40"
+    translated: "Inner Power Maximum 40"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -7348,10 +7348,10 @@
 - raw: "生命上限20;内力上限60;内功6;力道3;意志3;伤害0.06"
   splits:
   - text: "生命上限20"
-    translated: "Health points 20"
+    translated: "Health Maximum 20"
   - subIndex: 1
     text: "内力上限60"
-    translated: "Inner Power Cap60"
+    translated: "Inner Power Maximum 60"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -7398,10 +7398,10 @@
 - raw: "生命上限60;内力上限20;内功6;体质6;外伤0.06"
   splits:
   - text: "生命上限60"
-    translated: "Health points 60"
+    translated: "Health Maximum 60"
   - subIndex: 1
     text: "内力上限20"
-    translated: "Inner Power Cap 20"
+    translated: "Inner Power Maximum 20"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -7433,7 +7433,7 @@
 - raw: "生命上限80;内功6;体质6;护甲3"
   splits:
   - text: "生命上限80"
-    translated: "Health cap80"
+    translated: "Health Max 80"
   - subIndex: 1
     text: "内功6"
     translated: "Internal Skill 6"
@@ -7474,10 +7474,10 @@
 - raw: "生命上限70;内力上限10;内功6;灵巧3;智力3;连击0.06"
   splits:
   - text: "生命上限70"
-    translated: "Health points70"
+    translated: "Health Maximum 70"
   - subIndex: 1
     text: "内力上限10"
-    translated: "Inner Power Cap10"
+    translated: "Inner Power Maximum 10"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -7512,10 +7512,10 @@
 - raw: "生命上限10;内力上限70;内功6;经脉6;速度0.06"
   splits:
   - text: "生命上限10"
-    translated: "Health points 10"
+    translated: "Health Maximum 10"
   - subIndex: 1
     text: "内力上限70"
-    translated: "Inner Power Cap70"
+    translated: "Inner Power Maximum 70"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -7559,7 +7559,7 @@
     translated: "Health max 50"
   - subIndex: 1
     text: "内力上限30"
-    translated: "Inner Power Cap30"
+    translated: "Inner Power Maximum 30"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -8245,7 +8245,7 @@
 - raw: "生命上限12;绝技6;体质6"
   splits:
   - text: "生命上限12"
-    translated: "HealthCap12"
+    translated: "Health Maximum 12"
   - subIndex: 1
     text: "绝技6"
     translated: "Special Technique 6"
@@ -10853,10 +10853,10 @@
 - raw: "生命上限100;内力上限20;内功6;力道6;体质6;护甲4"
   splits:
   - text: "生命上限100"
-    translated: "Health points 100"
+    translated: "Health Maximum 100"
   - subIndex: 1
     text: "内力上限20"
-    translated: "Inner Power Cap 20"
+    translated: "Inner Power Maximum 20"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -10903,10 +10903,10 @@
 - raw: "生命上限60;内力上限60;内功9;经脉9;回内0.012"
   splits:
   - text: "生命上限60"
-    translated: "Health points 60"
+    translated: "Health Maximum 60"
   - subIndex: 1
     text: "内力上限60"
-    translated: "Inner Power Cap60"
+    translated: "Inner Power Maximum 60"
   - subIndex: 2
     text: "内功9"
     translated: "Internal Skill 9"
@@ -10950,10 +10950,10 @@
 - raw: "生命上限30;内力上限90;内功9;意志9;命中0.08"
   splits:
   - text: "生命上限30"
-    translated: "Health cap30"
+    translated: "Health Maximum 30"
   - subIndex: 1
     text: "内力上限90"
-    translated: "Inner Power Cap 90"
+    translated: "Inner Power Maximum 90"
   - subIndex: 2
     text: "内功9"
     translated: "Internal Skill 9"
@@ -10997,10 +10997,10 @@
 - raw: "生命上限90;内力上限30;内功6;体质6;智力6;伤害0.06"
   splits:
   - text: "生命上限90"
-    translated: "Health points 90"
+    translated: "Health Max 90"
   - subIndex: 1
     text: "内力上限30"
-    translated: "Inner Power Cap30"
+    translated: "Inner Power Maximum 30"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -11047,10 +11047,10 @@
 - raw: "生命上限80;内力上限40;内功6;轻功6;灵巧6;速度0.08"
   splits:
   - text: "生命上限80"
-    translated: "Health cap80"
+    translated: "Health Max 80"
   - subIndex: 1
     text: "内力上限40"
-    translated: "Inner Power Cap 40"
+    translated: "Inner Power Maximum 40"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -11096,10 +11096,10 @@
 - raw: "生命上限20;内力上限130;内功10;经脉10"
   splits:
   - text: "生命上限20"
-    translated: "Health points 20"
+    translated: "Health Maximum 20"
   - subIndex: 1
     text: "内力上限130"
-    translated: "Inner Power Cap130"
+    translated: "Inner Power Maximum 130"
   - subIndex: 2
     text: "内功10"
     translated: "Internal Skill 10"
@@ -11137,10 +11137,10 @@
 - raw: "生命上限10;内力上限110;内功9;智力9;醒脑0.04;定神0.04"
   splits:
   - text: "生命上限10"
-    translated: "Health points 10"
+    translated: "Health Maximum 10"
   - subIndex: 1
     text: "内力上限110"
-    translated: "Inner Power Cap110"
+    translated: "Inner Power Maximum 110"
   - subIndex: 2
     text: "内功9"
     translated: "Internal Skill 9"
@@ -11184,10 +11184,10 @@
 - raw: "生命上限40;内力上限80;内功9;意志9;恢复0.04;回体1"
   splits:
   - text: "生命上限40"
-    translated: "Health cap40"
+    translated: "Health Maximum 40"
   - subIndex: 1
     text: "内力上限80"
-    translated: "Inner Power Cap80"
+    translated: "Inner Power Maximum 80"
   - subIndex: 2
     text: "内功9"
     translated: "Internal Skill 9"
@@ -11222,10 +11222,10 @@
 - raw: "生命上限70;内力上限40;内功9;力道9;回血0.008"
   splits:
   - text: "生命上限70"
-    translated: "Health points70"
+    translated: "Health Maximum 70"
   - subIndex: 1
     text: "内力上限40"
-    translated: "Inner Power Cap 40"
+    translated: "Inner Power Maximum 40"
   - subIndex: 2
     text: "内功9"
     translated: "Internal Skill 9"
@@ -11272,7 +11272,7 @@
     translated: "Health max 50"
   - subIndex: 1
     text: "内力上限70"
-    translated: "Inner Power Cap70"
+    translated: "Inner Power Maximum 70"
   - subIndex: 2
     text: "内功9"
     translated: "Internal Skill 9"
@@ -11966,7 +11966,7 @@
 - raw: "内力上限32;绝技6;意志6;经脉6"
   splits:
   - text: "内力上限32"
-    translated: "Inner Power Cap32"
+    translated: "Inner Power Maximum 32"
   - subIndex: 1
     text: "绝技6"
     translated: "Special Technique 6"
@@ -15595,10 +15595,10 @@
 - raw: "生命上限80;内力上限80;内功12;体质12;内伤0.05;调息0.05"
   splits:
   - text: "生命上限80"
-    translated: "Health cap80"
+    translated: "Health Max 80"
   - subIndex: 1
     text: "内力上限80"
-    translated: "Inner Power Cap80"
+    translated: "Inner Power Maximum 80"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -15648,10 +15648,10 @@
 - raw: "生命上限120;内力上限40;内功12;力道12;外伤0.1"
   splits:
   - text: "生命上限120"
-    translated: "Health cap120"
+    translated: "Health Max 120"
   - subIndex: 1
     text: "内力上限40"
-    translated: "Inner Power Cap 40"
+    translated: "Inner Power Maximum 40"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -15695,10 +15695,10 @@
 - raw: "生命上限100;内力上限60;内功12;意志12;回血0.01"
   splits:
   - text: "生命上限100"
-    translated: "Health points 100"
+    translated: "Health Maximum 100"
   - subIndex: 1
     text: "内力上限60"
-    translated: "Inner Power Cap60"
+    translated: "Inner Power Maximum 60"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -15745,10 +15745,10 @@
 - raw: "生命上限40;内力上限120;内功12;经脉12;回内0.015"
   splits:
   - text: "生命上限40"
-    translated: "Health cap40"
+    translated: "Health Maximum 40"
   - subIndex: 1
     text: "内力上限120"
-    translated: "Inner Power Cap120"
+    translated: "Inner Power Maximum 120"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -15792,10 +15792,10 @@
 - raw: "生命上限60;内力上限100;内功12;智力12;吸内0.2"
   splits:
   - text: "生命上限60"
-    translated: "Health points 60"
+    translated: "Health Maximum 60"
   - subIndex: 1
     text: "内力上限100"
-    translated: "Inner Power Cap100"
+    translated: "Inner Power Maximum 100"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -18321,10 +18321,10 @@
 - raw: "生命上限150;内力上限50;内功10;智力10;意志10;无敌0.03;回血0.006"
   splits:
   - text: "生命上限150"
-    translated: "Health points 150"
+    translated: "Health Maximum 150"
   - subIndex: 1
     text: "内力上限50"
-    translated: "Inner Power Cap 50"
+    translated: "Inner Power Maximum 50"
   - subIndex: 2
     text: "内功10"
     translated: "Internal Skill 10"
@@ -18377,10 +18377,10 @@
 - raw: "生命上限100;内力上限100;内功10;力道10;经脉10;护体真气0.12;恢复0.06"
   splits:
   - text: "生命上限100"
-    translated: "Health points 100"
+    translated: "Health Maximum 100"
   - subIndex: 1
     text: "内力上限100"
-    translated: "Inner Power Cap100"
+    translated: "Inner Power Maximum 100"
   - subIndex: 2
     text: "内功10"
     translated: "Internal Skill 10"
@@ -18439,7 +18439,7 @@
     translated: "Health max 50"
   - subIndex: 1
     text: "内力上限150"
-    translated: "Inner Power Cap150"
+    translated: "Inner Power Maximum 150"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -20007,10 +20007,10 @@
 - raw: "生命上限120;内力上限120;内功12;智力12;经脉12;内伤0.08;回内0.012"
   splits:
   - text: "生命上限120"
-    translated: "Health cap120"
+    translated: "Health Max 120"
   - subIndex: 1
     text: "内力上限120"
-    translated: "Inner Power Cap120"
+    translated: "Inner Power Maximum 120"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -20636,10 +20636,10 @@
 - raw: "生命上限30;内力上限10;内功4;意志4;混乱0.04"
   splits:
   - text: "生命上限30"
-    translated: "Health cap30"
+    translated: "Health Maximum 30"
   - subIndex: 1
     text: "内力上限10"
-    translated: "Inner Power Cap10"
+    translated: "Inner Power Maximum 10"
   - subIndex: 2
     text: "内功4"
     translated: "Internal Skill 4"
@@ -20801,10 +20801,10 @@
 - raw: "生命上限60;内力上限20;内功6;力道6;外伤0.06"
   splits:
   - text: "生命上限60"
-    translated: "Health points 60"
+    translated: "Health Maximum 60"
   - subIndex: 1
     text: "内力上限20"
-    translated: "Inner Power Cap 20"
+    translated: "Inner Power Maximum 20"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -21000,10 +21000,10 @@
 - raw: "生命上限90;内力上限30;内功9;体质9;虚弱0.08"
   splits:
   - text: "生命上限90"
-    translated: "Health points 90"
+    translated: "Health Max 90"
   - subIndex: 1
     text: "内力上限30"
-    translated: "Inner Power Cap30"
+    translated: "Inner Power Maximum 30"
   - subIndex: 2
     text: "内功9"
     translated: "Internal Skill 9"
@@ -21203,10 +21203,10 @@
 - raw: "生命上限100;内力上限60;内功12;体质12;昏沉0.1;负面抗性0.05"
   splits:
   - text: "生命上限100"
-    translated: "Health points 100"
+    translated: "Health Maximum 100"
   - subIndex: 1
     text: "内力上限60"
-    translated: "Inner Power Cap60"
+    translated: "Inner Power Maximum 60"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -21496,10 +21496,10 @@
 - raw: "生命上限140;内力上限60;内功10;意志10;体质10;虚弱0.04;混乱0.04;昏沉0.04;负面加成0.04"
   splits:
   - text: "生命上限140"
-    translated: "Health cap 140"
+    translated: "Health Maximum 140"
   - subIndex: 1
     text: "内力上限60"
-    translated: "Inner Power Cap60"
+    translated: "Inner Power Maximum 60"
   - subIndex: 2
     text: "内功10"
     translated: "Internal Skill 10"
@@ -21933,10 +21933,10 @@
 - raw: "生命上限10;内力上限10;内功6;力道6;射术威力0.04"
   splits:
   - text: "生命上限10"
-    translated: "Health points 10"
+    translated: "Health Maximum 10"
   - subIndex: 1
     text: "内力上限10"
-    translated: "Inner Power Cap10"
+    translated: "Inner Power Maximum 10"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -22148,10 +22148,10 @@
 - raw: "生命上限20;内力上限20;内功8;智力8;射术威力0.06"
   splits:
   - text: "生命上限20"
-    translated: "Health points 20"
+    translated: "Health Maximum 20"
   - subIndex: 1
     text: "内力上限20"
-    translated: "Inner Power Cap 20"
+    translated: "Inner Power Maximum 20"
   - subIndex: 2
     text: "内功8"
     translated: "Internal Skill 8"
@@ -22431,10 +22431,10 @@
 - raw: "生命上限40;内力上限40;内功12;灵巧12;鹰眼0.04;射术威力0.06"
   splits:
   - text: "生命上限40"
-    translated: "Health cap40"
+    translated: "Health Maximum 40"
   - subIndex: 1
     text: "内力上限40"
-    translated: "Inner Power Cap 40"
+    translated: "Inner Power Maximum 40"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -22745,7 +22745,7 @@
     translated: "Health max 50"
   - subIndex: 1
     text: "内力上限50"
-    translated: "Inner Power Cap 50"
+    translated: "Inner Power Maximum 50"
   - subIndex: 2
     text: "内功15"
     translated: "Internal Skill 15"
@@ -23558,10 +23558,10 @@
 - raw: "生命上限20;内力上限20;内功3;经脉3;医术2;毒术1;疗伤0.04;药性0.02"
   splits:
   - text: "生命上限20"
-    translated: "Health points 20"
+    translated: "Health Maximum 20"
   - subIndex: 1
     text: "内力上限20"
-    translated: "Inner Power Cap 20"
+    translated: "Inner Power Maximum 20"
   - subIndex: 2
     text: "内功3"
     translated: "Internal Skill 3"
@@ -23768,10 +23768,10 @@
 - raw: "生命上限40;内力上限40;内功4;经脉4;体质4;疗伤0.04;康复0.04"
   splits:
   - text: "生命上限40"
-    translated: "Health cap40"
+    translated: "Health Maximum 40"
   - subIndex: 1
     text: "内力上限40"
-    translated: "Inner Power Cap 40"
+    translated: "Inner Power Maximum 40"
   - subIndex: 2
     text: "内功4"
     translated: "Internal Skill 4"
@@ -24038,10 +24038,10 @@
 - raw: "生命上限60;内力上限60;内功6;经脉6;智力6;医术6;调息0.04;内伤0.04;药性0.04"
   splits:
   - text: "生命上限60"
-    translated: "Health points 60"
+    translated: "Health Maximum 60"
   - subIndex: 1
     text: "内力上限60"
-    translated: "Inner Power Cap60"
+    translated: "Inner Power Maximum 60"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -24349,10 +24349,10 @@
 - raw: "生命上限80;内力上限80;内功8;经脉8;医术8;毒术4;疗伤0.05;康复0.1;药性0.05"
   splits:
   - text: "生命上限80"
-    translated: "Health cap80"
+    translated: "Health Max 80"
   - subIndex: 1
     text: "内力上限80"
-    translated: "Inner Power Cap80"
+    translated: "Inner Power Maximum 80"
   - subIndex: 2
     text: "内功8"
     translated: "Internal Skill 8"
@@ -24706,10 +24706,10 @@
 - raw: "生命上限100;内力上限100;内功10;经脉10;医术10;毒术5;疗伤0.06;康复0.12;药性0.06"
   splits:
   - text: "生命上限100"
-    translated: "Health points 100"
+    translated: "Health Maximum 100"
   - subIndex: 1
     text: "内力上限100"
-    translated: "Inner Power Cap100"
+    translated: "Inner Power Maximum 100"
   - subIndex: 2
     text: "内功10"
     translated: "Internal Skill 10"
@@ -25027,10 +25027,10 @@
 - raw: "生命上限120;内力上限120;内功10;经脉10;智力10;医术10;毒术5;疗伤0.09;康复0.09;药性0.09"
   splits:
   - text: "生命上限120"
-    translated: "Health cap120"
+    translated: "Health Max 120"
   - subIndex: 1
     text: "内力上限120"
-    translated: "Inner Power Cap120"
+    translated: "Inner Power Maximum 120"
   - subIndex: 2
     text: "内功10"
     translated: "Internal Skill 10"
@@ -25145,10 +25145,10 @@
 - raw: "生命上限20;内力上限20;内功4;力道2;经脉2;卸力0.04"
   splits:
   - text: "生命上限20"
-    translated: "Health points 20"
+    translated: "Health Maximum 20"
   - subIndex: 1
     text: "内力上限20"
-    translated: "Inner Power Cap 20"
+    translated: "Inner Power Maximum 20"
   - subIndex: 2
     text: "内功4"
     translated: "Internal Skill 4"
@@ -25332,10 +25332,10 @@
 - raw: "生命上限40;内力上限40;内功6;经脉6;卸力0.03;拳掌威力0.03"
   splits:
   - text: "生命上限40"
-    translated: "Health cap40"
+    translated: "Health Maximum 40"
   - subIndex: 1
     text: "内力上限40"
-    translated: "Inner Power Cap 40"
+    translated: "Inner Power Maximum 40"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -25547,10 +25547,10 @@
 - raw: "生命上限60;内力上限60;内功9;经脉9;壮骨0.04;拳掌威力0.04"
   splits:
   - text: "生命上限60"
-    translated: "Health points 60"
+    translated: "Health Maximum 60"
   - subIndex: 1
     text: "内力上限60"
-    translated: "Inner Power Cap60"
+    translated: "Inner Power Maximum 60"
   - subIndex: 2
     text: "内功9"
     translated: "Internal Skill 9"
@@ -25806,10 +25806,10 @@
 - raw: "生命上限80;内力上限80;内功8;力道8;经脉8;眩晕0.04;铜皮0.04;拳掌威力0.04"
   splits:
   - text: "生命上限80"
-    translated: "Health cap80"
+    translated: "Health Max 80"
   - subIndex: 1
     text: "内力上限80"
-    translated: "Inner Power Cap80"
+    translated: "Inner Power Maximum 80"
   - subIndex: 2
     text: "内功8"
     translated: "Internal Skill 8"
@@ -26180,10 +26180,10 @@
 - raw: "生命上限100;内力上限100;内功15;经脉15;重碾0.05;眩晕0.05;拳掌威力0.05"
   splits:
   - text: "生命上限100"
-    translated: "Health points 100"
+    translated: "Health Maximum 100"
   - subIndex: 1
     text: "内力上限100"
-    translated: "Inner Power Cap100"
+    translated: "Inner Power Maximum 100"
   - subIndex: 2
     text: "内功15"
     translated: "Internal Skill 15"
@@ -26688,10 +26688,10 @@
 - raw: "生命上限30;内力上限10;内功4;力道4;长兵威力0.04"
   splits:
   - text: "生命上限30"
-    translated: "Health cap30"
+    translated: "Health Maximum 30"
   - subIndex: 1
     text: "内力上限10"
-    translated: "Inner Power Cap10"
+    translated: "Inner Power Maximum 10"
   - subIndex: 2
     text: "内功4"
     translated: "Internal Skill 4"
@@ -26865,10 +26865,10 @@
 - raw: "生命上限70;内力上限10;内功4;力道4;体质4;回血0.003;长兵威力0.03"
   splits:
   - text: "生命上限70"
-    translated: "Health points70"
+    translated: "Health Maximum 70"
   - subIndex: 1
     text: "内力上限10"
-    translated: "Inner Power Cap10"
+    translated: "Inner Power Maximum 10"
   - subIndex: 2
     text: "内功4"
     translated: "Internal Skill 4"
@@ -27082,10 +27082,10 @@
 - raw: "生命上限100;内力上限20;内功6;力道6;意志6;长兵威力0.08"
   splits:
   - text: "生命上限100"
-    translated: "Health points 100"
+    translated: "Health Maximum 100"
   - subIndex: 1
     text: "内力上限20"
-    translated: "Inner Power Cap 20"
+    translated: "Inner Power Maximum 20"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -27346,10 +27346,10 @@
 - raw: "生命上限140;内力上限30;内功8;力道8;体质8;外伤0.06;长兵威力0.06"
   splits:
   - text: "生命上限140"
-    translated: "Health cap 140"
+    translated: "Health Maximum 140"
   - subIndex: 1
     text: "内力上限30"
-    translated: "Inner Power Cap30"
+    translated: "Inner Power Maximum 30"
   - subIndex: 2
     text: "内功8"
     translated: "Internal Skill 8"
@@ -28156,10 +28156,10 @@
 - raw: "生命上限10;内力上限30;内功4;经脉4;雷电0.04;负面抗性0.02"
   splits:
   - text: "生命上限10"
-    translated: "Health points 10"
+    translated: "Health Maximum 10"
   - subIndex: 1
     text: "内力上限30"
-    translated: "Inner Power Cap30"
+    translated: "Inner Power Maximum 30"
   - subIndex: 2
     text: "内功4"
     translated: "Internal Skill 4"
@@ -28360,10 +28360,10 @@
 - raw: "生命上限20;内力上限60;内功6;经脉6;恢复0.03;康复0.06;负面抗性0.03"
   splits:
   - text: "生命上限20"
-    translated: "Health points 20"
+    translated: "Health Maximum 20"
   - subIndex: 1
     text: "内力上限60"
-    translated: "Inner Power Cap60"
+    translated: "Inner Power Maximum 60"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -28625,10 +28625,10 @@
 - raw: "生命上限20;内力上限100;内功9;经脉6;体质3;调息0.06;雷电0.06;药性0.04"
   splits:
   - text: "生命上限20"
-    translated: "Health points 20"
+    translated: "Health Maximum 20"
   - subIndex: 1
     text: "内力上限100"
-    translated: "Inner Power Cap100"
+    translated: "Inner Power Maximum 100"
   - subIndex: 2
     text: "内功9"
     translated: "Internal Skill 9"
@@ -28669,10 +28669,10 @@
 - raw: "生命上限60;内力上限60;内功9;意志6;经脉3;恢复0.08;负面抗性0.04"
   splits:
   - text: "生命上限60"
-    translated: "Health points 60"
+    translated: "Health Maximum 60"
   - subIndex: 1
     text: "内力上限60"
-    translated: "Inner Power Cap60"
+    translated: "Inner Power Maximum 60"
   - subIndex: 2
     text: "内功9"
     translated: "Internal Skill 9"
@@ -28931,10 +28931,10 @@
 - raw: "生命上限40;内力上限120;内功12;经脉6;智力6;调息0.04;恢复0.04;负面抗性0.02"
   splits:
   - text: "生命上限40"
-    translated: "Health cap40"
+    translated: "Health Maximum 40"
   - subIndex: 1
     text: "内力上限120"
-    translated: "Inner Power Cap120"
+    translated: "Inner Power Maximum 120"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -28984,10 +28984,10 @@
 - raw: "生命上限80;内力上限80;内功12;经脉12;内劲0.05;雷电0.05;药性0.05"
   splits:
   - text: "生命上限80"
-    translated: "Health cap80"
+    translated: "Health Max 80"
   - subIndex: 1
     text: "内力上限80"
-    translated: "Inner Power Cap80"
+    translated: "Inner Power Maximum 80"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -29313,7 +29313,7 @@
     translated: "Health max 50"
   - subIndex: 1
     text: "内力上限150"
-    translated: "Inner Power Cap150"
+    translated: "Inner Power Maximum 150"
   - subIndex: 2
     text: "内功15"
     translated: "Internal Skill 15"
@@ -29366,10 +29366,10 @@
 - raw: "生命上限90;内力上限110;内功10;经脉10;体质10;恢复0.06;雷电0.06;负面抗性0.03"
   splits:
   - text: "生命上限90"
-    translated: "Health points 90"
+    translated: "Health Max 90"
   - subIndex: 1
     text: "内力上限110"
-    translated: "Inner Power Cap110"
+    translated: "Inner Power Maximum 110"
   - subIndex: 2
     text: "内功10"
     translated: "Internal Skill 10"
@@ -29865,10 +29865,10 @@
 - raw: "生命上限30;内力上限10;内功4;力道4;装备强化0.08;装备负重2"
   splits:
   - text: "生命上限30"
-    translated: "Health cap30"
+    translated: "Health Maximum 30"
   - subIndex: 1
     text: "内力上限10"
-    translated: "Inner Power Cap10"
+    translated: "Inner Power Maximum 10"
   - subIndex: 2
     text: "内功4"
     translated: "Internal Skill 4"
@@ -30032,10 +30032,10 @@
 - raw: "生命上限60;内力上限20;内功6;力道6;装备强化0.06;坚毅0.03;装备负重3"
   splits:
   - text: "生命上限60"
-    translated: "Health points 60"
+    translated: "Health Maximum 60"
   - subIndex: 1
     text: "内力上限20"
-    translated: "Inner Power Cap 20"
+    translated: "Inner Power Maximum 20"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -30214,10 +30214,10 @@
 - raw: "生命上限90;内力上限30;内功9;力道9;横练0.04;装备强化0.08;装备负重4"
   splits:
   - text: "生命上限90"
-    translated: "Health points 90"
+    translated: "Health Max 90"
   - subIndex: 1
     text: "内力上限30"
-    translated: "Inner Power Cap30"
+    translated: "Inner Power Maximum 30"
   - subIndex: 2
     text: "内功9"
     translated: "Internal Skill 9"
@@ -30486,10 +30486,10 @@
 - raw: "生命上限120;内力上限40;内功12;力道12;坚毅0.04;横练0.04;装备强化0.1;装备负重5"
   splits:
   - text: "生命上限120"
-    translated: "Health cap120"
+    translated: "Health Max 120"
   - subIndex: 1
     text: "内力上限40"
-    translated: "Inner Power Cap 40"
+    translated: "Inner Power Maximum 40"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -31098,10 +31098,10 @@
 - raw: "生命上限10;内力上限20;内功2;经脉2;毒术6;毒素0.04;负面加成0.02"
   splits:
   - text: "生命上限10"
-    translated: "Health points 10"
+    translated: "Health Maximum 10"
   - subIndex: 1
     text: "内力上限20"
-    translated: "Inner Power Cap 20"
+    translated: "Inner Power Maximum 20"
   - subIndex: 2
     text: "内功2"
     translated: "Internal Skill 2"
@@ -31354,10 +31354,10 @@
 - raw: "生命上限20;内力上限40;内功6;经脉6;毒术3;毒素0.06;负面加成0.04"
   splits:
   - text: "生命上限20"
-    translated: "Health points 20"
+    translated: "Health Maximum 20"
   - subIndex: 1
     text: "内力上限40"
-    translated: "Inner Power Cap 40"
+    translated: "Inner Power Maximum 40"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -31656,10 +31656,10 @@
 - raw: "生命上限30;内力上限60;内功8;经脉8;毒术8;毒素0.08;负面加成0.02"
   splits:
   - text: "生命上限30"
-    translated: "Health cap30"
+    translated: "Health Maximum 30"
   - subIndex: 1
     text: "内力上限60"
-    translated: "Inner Power Cap60"
+    translated: "Inner Power Maximum 60"
   - subIndex: 2
     text: "内功8"
     translated: "Internal Skill 8"
@@ -32041,10 +32041,10 @@
 - raw: "生命上限20;内力上限100;内功12;经脉12;毒术4;毒素0.04;定身0.04;负面加成0.04"
   splits:
   - text: "生命上限20"
-    translated: "Health points 20"
+    translated: "Health Maximum 20"
   - subIndex: 1
     text: "内力上限100"
-    translated: "Inner Power Cap100"
+    translated: "Inner Power Maximum 100"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -32453,10 +32453,10 @@
 - raw: "生命上限80;内力上限80;内功15;经脉15;毒术10;毒素0.06;混乱0.04;负面加成0.03"
   splits:
   - text: "生命上限80"
-    translated: "Health cap80"
+    translated: "Health Max 80"
   - subIndex: 1
     text: "内力上限80"
-    translated: "Inner Power Cap80"
+    translated: "Inner Power Maximum 80"
   - subIndex: 2
     text: "内功15"
     translated: "Internal Skill 15"
@@ -33010,10 +33010,10 @@
 - raw: "生命上限30;内力上限10;内功3;体质3;经脉3;回血0.003"
   splits:
   - text: "生命上限30"
-    translated: "Health cap30"
+    translated: "Health Maximum 30"
   - subIndex: 1
     text: "内力上限10"
-    translated: "Inner Power Cap10"
+    translated: "Inner Power Maximum 10"
   - subIndex: 2
     text: "内功3"
     translated: "Internal Skill 3"
@@ -33201,7 +33201,7 @@
     translated: "Health max 50"
   - subIndex: 1
     text: "内力上限30"
-    translated: "Inner Power Cap30"
+    translated: "Inner Power Maximum 30"
   - subIndex: 2
     text: "内功4"
     translated: "Internal Skill 4"
@@ -33431,10 +33431,10 @@
 - raw: "生命上限80;内力上限40;内功6;体质6;经脉6;削内0.36;负面抗性-0.01"
   splits:
   - text: "生命上限80"
-    translated: "Health cap80"
+    translated: "Health Max 80"
   - subIndex: 1
     text: "内力上限40"
-    translated: "Inner Power Cap 40"
+    translated: "Inner Power Maximum 40"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -33721,10 +33721,10 @@
 - raw: "生命上限100;内力上限60;内功12;力道12;削内0.2;反伤削内0.2;疯魔0.04;负面抗性-0.02"
   splits:
   - text: "生命上限100"
-    translated: "Health points 100"
+    translated: "Health Maximum 100"
   - subIndex: 1
     text: "内力上限60"
-    translated: "Inner Power Cap60"
+    translated: "Inner Power Maximum 60"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -34044,10 +34044,10 @@
 - raw: "生命上限120;内力上限80;内功15;经脉15;内伤0.06;疯魔0.06;削内0.32;负面抗性-0.02"
   splits:
   - text: "生命上限120"
-    translated: "Health cap120"
+    translated: "Health Max 120"
   - subIndex: 1
     text: "内力上限80"
-    translated: "Inner Power Cap80"
+    translated: "Inner Power Maximum 80"
   - subIndex: 2
     text: "内功15"
     translated: "Internal Skill 15"
@@ -34394,10 +34394,10 @@
 - raw: "生命上限140;内力上限100;内功12;力道12;经脉12;内伤0.08;削内0.36;负面抗性-0.04"
   splits:
   - text: "生命上限140"
-    translated: "Health cap 140"
+    translated: "Health Maximum 140"
   - subIndex: 1
     text: "内力上限100"
-    translated: "Inner Power Cap100"
+    translated: "Inner Power Maximum 100"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -34586,10 +34586,10 @@
 - raw: "生命上限10;内力上限30;内功4;意志4;调息0.04;负面抗性0.02"
   splits:
   - text: "生命上限10"
-    translated: "Health points 10"
+    translated: "Health Maximum 10"
   - subIndex: 1
     text: "内力上限30"
-    translated: "Inner Power Cap30"
+    translated: "Inner Power Maximum 30"
   - subIndex: 2
     text: "内功4"
     translated: "Internal Skill 4"
@@ -34714,10 +34714,10 @@
 - raw: "生命上限20;内力上限60;内功6;意志6;醒脑0.06;负面抗性0.03"
   splits:
   - text: "生命上限20"
-    translated: "Health points 20"
+    translated: "Health Maximum 20"
   - subIndex: 1
     text: "内力上限60"
-    translated: "Inner Power Cap60"
+    translated: "Inner Power Maximum 60"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -34955,10 +34955,10 @@
 - raw: "生命上限30;内力上限90;内功9;意志9;醒脑0.03;无敌0.03;负面抗性0.03"
   splits:
   - text: "生命上限30"
-    translated: "Health cap30"
+    translated: "Health Maximum 30"
   - subIndex: 1
     text: "内力上限90"
-    translated: "Inner Power Cap 90"
+    translated: "Inner Power Maximum 90"
   - subIndex: 2
     text: "内功9"
     translated: "Internal Skill 9"
@@ -35258,10 +35258,10 @@
 - raw: "生命上限20;内力上限140;内功12;智力12;醒脑0.04;定神0.04;负面抗性0.04"
   splits:
   - text: "生命上限20"
-    translated: "Health points 20"
+    translated: "Health Maximum 20"
   - subIndex: 1
     text: "内力上限140"
-    translated: "Inner Power Cap140"
+    translated: "Inner Power Maximum 140"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -35655,10 +35655,10 @@
 - raw: "生命上限130;内力上限70;内功15;意志15;舒筋0.05;灼烧0.05;削内0.2"
   splits:
   - text: "生命上限130"
-    translated: "Health points 130"
+    translated: "Health Maximum 130"
   - subIndex: 1
     text: "内力上限70"
-    translated: "Inner Power Cap70"
+    translated: "Inner Power Maximum 70"
   - subIndex: 2
     text: "内功15"
     translated: "Internal Skill 15"
@@ -35696,10 +35696,10 @@
 - raw: "生命上限40;内力上限160;内功15;智力15;醒脑0.05;冰寒0.05;吸内0.1"
   splits:
   - text: "生命上限40"
-    translated: "Health cap40"
+    translated: "Health Maximum 40"
   - subIndex: 1
     text: "内力上限160"
-    translated: "Inner Power Cap160"
+    translated: "Inner Power Maximum 160"
   - subIndex: 2
     text: "内功15"
     translated: "Internal Skill 15"
@@ -36108,10 +36108,10 @@
 - raw: "生命上限20;内力上限220;内功12;智力12;经脉12;吸内0.18;反伤吸内0.12;护体真气0.06"
   splits:
   - text: "生命上限20"
-    translated: "Health points 20"
+    translated: "Health Maximum 20"
   - subIndex: 1
     text: "内力上限220"
-    translated: "Inner Power Cap220"
+    translated: "Inner Power Maximum 220"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -36267,10 +36267,10 @@
 - raw: "生命上限20;内力上限20;内功4;意志4;经脉4;坚毅0.02"
   splits:
   - text: "生命上限20"
-    translated: "Health points 20"
+    translated: "Health Maximum 20"
   - subIndex: 1
     text: "内力上限20"
-    translated: "Inner Power Cap 20"
+    translated: "Inner Power Maximum 20"
   - subIndex: 2
     text: "内功4"
     translated: "Internal Skill 4"
@@ -36448,10 +36448,10 @@
 - raw: "生命上限60;内力上限20;内功6;力道6;疗伤0.03;坚毅0.03"
   splits:
   - text: "生命上限60"
-    translated: "Health points 60"
+    translated: "Health Maximum 60"
   - subIndex: 1
     text: "内力上限20"
-    translated: "Inner Power Cap 20"
+    translated: "Inner Power Maximum 20"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -36717,10 +36717,10 @@
 - raw: "生命上限70;内力上限50;内功6;体质6;经脉6;疗伤0.04;霸体0.04"
   splits:
   - text: "生命上限70"
-    translated: "Health points70"
+    translated: "Health Maximum 70"
   - subIndex: 1
     text: "内力上限50"
-    translated: "Inner Power Cap 50"
+    translated: "Inner Power Maximum 50"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -37052,10 +37052,10 @@
 - raw: "生命上限100;内力上限60;内功12;力道12;眩晕0.05;阻滞0.05"
   splits:
   - text: "生命上限100"
-    translated: "Health points 100"
+    translated: "Health Maximum 100"
   - subIndex: 1
     text: "内力上限60"
-    translated: "Inner Power Cap60"
+    translated: "Inner Power Maximum 60"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -37090,10 +37090,10 @@
 - raw: "生命上限90;内力上限70;体质12;力道12;回血0.005;康复0.05"
   splits:
   - text: "生命上限90"
-    translated: "Health points 90"
+    translated: "Health Max 90"
   - subIndex: 1
     text: "内力上限70"
-    translated: "Inner Power Cap70"
+    translated: "Inner Power Maximum 70"
   - subIndex: 2
     text: "体质12"
     translated: "12 stamina"
@@ -37475,10 +37475,10 @@
 - raw: "生命上限100;内力上限100;内功15;力道15;霸体0.05;活血0.05;坚毅0.05"
   splits:
   - text: "生命上限100"
-    translated: "Health points 100"
+    translated: "Health Maximum 100"
   - subIndex: 1
     text: "内力上限100"
-    translated: "Inner Power Cap100"
+    translated: "Inner Power Maximum 100"
   - subIndex: 2
     text: "内功15"
     translated: "Internal Skill 15"
@@ -37985,10 +37985,10 @@
 - raw: "生命上限120;内力上限120;内功12;体质12;经脉12;无敌0.04;活血0.06;回血0.006"
   splits:
   - text: "生命上限120"
-    translated: "Health cap120"
+    translated: "Health Max 120"
   - subIndex: 1
     text: "内力上限120"
-    translated: "Inner Power Cap120"
+    translated: "Inner Power Maximum 120"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -38047,10 +38047,10 @@
 - raw: "生命上限160;内力上限80;内功12;力道12;经脉12;眩晕0.08;霸体0.06;壮骨0.06"
   splits:
   - text: "生命上限160"
-    translated: "Health 160"
+    translated: "Health Maximum 160"
   - subIndex: 1
     text: "内力上限80"
-    translated: "Inner Power Cap80"
+    translated: "Inner Power Maximum 80"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -38233,10 +38233,10 @@
 - raw: "生命上限10;内力上限30;内功4;灵巧4;经脉4;蓄力0.02"
   splits:
   - text: "生命上限10"
-    translated: "Health points 10"
+    translated: "Health Maximum 10"
   - subIndex: 1
     text: "内力上限30"
-    translated: "Inner Power Cap30"
+    translated: "Inner Power Maximum 30"
   - subIndex: 2
     text: "内功4"
     translated: "Internal Skill 4"
@@ -38398,10 +38398,10 @@
 - raw: "生命上限30;内力上限50;内功6;经脉6;调息0.06"
   splits:
   - text: "生命上限30"
-    translated: "Health cap30"
+    translated: "Health Maximum 30"
   - subIndex: 1
     text: "内力上限50"
-    translated: "Inner Power Cap 50"
+    translated: "Inner Power Maximum 50"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -38603,10 +38603,10 @@
 - raw: "生命上限30;内力上限90;内功9;经脉9;调息0.04;连绵0.04"
   splits:
   - text: "生命上限30"
-    translated: "Health cap30"
+    translated: "Health Maximum 30"
   - subIndex: 1
     text: "内力上限90"
-    translated: "Inner Power Cap 90"
+    translated: "Inner Power Maximum 90"
   - subIndex: 2
     text: "内功9"
     translated: "Internal Skill 9"
@@ -38644,7 +38644,7 @@
     translated: "Health max 50"
   - subIndex: 1
     text: "内力上限70"
-    translated: "Inner Power Cap70"
+    translated: "Inner Power Maximum 70"
   - subIndex: 2
     text: "智力9"
     translated: "9 Intelligence"
@@ -38932,7 +38932,7 @@
     translated: "Health max 50"
   - subIndex: 1
     text: "内力上限110"
-    translated: "Inner Power Cap110"
+    translated: "Inner Power Maximum 110"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -39224,10 +39224,10 @@
 - raw: "生命上限80;内力上限120;内功15;经脉15;反弹0.06"
   splits:
   - text: "生命上限80"
-    translated: "Health cap80"
+    translated: "Health Max 80"
   - subIndex: 1
     text: "内力上限120"
-    translated: "Inner Power Cap120"
+    translated: "Inner Power Maximum 120"
   - subIndex: 2
     text: "内功15"
     translated: "Internal Skill 15"
@@ -39564,10 +39564,10 @@
 - raw: "生命上限60;内力上限180;内功12;经脉12;智力12;内伤0.04;连绵0.04;反弹0.04"
   splits:
   - text: "生命上限60"
-    translated: "Health points 60"
+    translated: "Health Maximum 60"
   - subIndex: 1
     text: "内力上限180"
-    translated: "Inner Power Cap 180"
+    translated: "Inner Power Maximum 180"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -39750,10 +39750,10 @@
 - raw: "生命上限30;内力上限10;内功2;力道4;体质2;刀法威力0.04"
   splits:
   - text: "生命上限30"
-    translated: "Health cap30"
+    translated: "Health Maximum 30"
   - subIndex: 1
     text: "内力上限10"
-    translated: "Inner Power Cap10"
+    translated: "Inner Power Maximum 10"
   - subIndex: 2
     text: "内功2"
     translated: "Internal Skill 2"
@@ -39889,10 +39889,10 @@
 - raw: "生命上限70;内力上限10;力道3;体质3;横练0.02;刀法威力0.08;减伤3"
   splits:
   - text: "生命上限70"
-    translated: "Health points70"
+    translated: "Health Maximum 70"
   - subIndex: 1
     text: "内力上限10"
-    translated: "Inner Power Cap10"
+    translated: "Inner Power Maximum 10"
   - subIndex: 2
     text: "力道3"
     translated: "Strength 3"
@@ -40030,10 +40030,10 @@
 - raw: "生命上限100;内力上限20;内功4;力道4;意志4;刀法威力0.04;横练0.04;减伤4"
   splits:
   - text: "生命上限100"
-    translated: "Health points 100"
+    translated: "Health Maximum 100"
   - subIndex: 1
     text: "内力上限20"
-    translated: "Inner Power Cap 20"
+    translated: "Inner Power Maximum 20"
   - subIndex: 2
     text: "内功4"
     translated: "Internal Skill 4"
@@ -40276,10 +40276,10 @@
 - raw: "生命上限130;内力上限30;内功12;力道12;刀法威力0.06;不屈0.04"
   splits:
   - text: "生命上限130"
-    translated: "Health points 130"
+    translated: "Health Maximum 130"
   - subIndex: 1
     text: "内力上限30"
-    translated: "Inner Power Cap30"
+    translated: "Inner Power Maximum 30"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -40757,10 +40757,10 @@
 - raw: "生命上限10;内力上限30;内功4;经脉4;剑法威力0.04"
   splits:
   - text: "生命上限10"
-    translated: "Health points 10"
+    translated: "Health Maximum 10"
   - subIndex: 1
     text: "内力上限30"
-    translated: "Inner Power Cap30"
+    translated: "Inner Power Maximum 30"
   - subIndex: 2
     text: "内功4"
     translated: "Internal Skill 4"
@@ -40873,10 +40873,10 @@
 - raw: "生命上限20;内力上限60;内功6;经脉6;调息0.02;剑法威力0.04"
   splits:
   - text: "生命上限20"
-    translated: "Health points 20"
+    translated: "Health Maximum 20"
   - subIndex: 1
     text: "内力上限60"
-    translated: "Inner Power Cap60"
+    translated: "Inner Power Maximum 60"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -41034,10 +41034,10 @@
 - raw: "生命上限30;内力上限90;内功9;经脉9;调息0.06;剑法威力0.02"
   splits:
   - text: "生命上限30"
-    translated: "Health cap30"
+    translated: "Health Maximum 30"
   - subIndex: 1
     text: "内力上限90"
-    translated: "Inner Power Cap 90"
+    translated: "Inner Power Maximum 90"
   - subIndex: 2
     text: "内功9"
     translated: "Internal Skill 9"
@@ -41263,10 +41263,10 @@
 - raw: "生命上限60;内力上限100;内功12;经脉12;内伤0.05;剑法威力0.05"
   splits:
   - text: "生命上限60"
-    translated: "Health points 60"
+    translated: "Health Maximum 60"
   - subIndex: 1
     text: "内力上限100"
-    translated: "Inner Power Cap100"
+    translated: "Inner Power Maximum 100"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -41497,10 +41497,10 @@
 - raw: "生命上限30;内力上限170;内功15;经脉15;内伤0.06;剑法威力0.06"
   splits:
   - text: "生命上限30"
-    translated: "Health cap30"
+    translated: "Health Maximum 30"
   - subIndex: 1
     text: "内力上限170"
-    translated: "Inner Power Cap 170"
+    translated: "Inner Power Maximum 170"
   - subIndex: 2
     text: "内功15"
     translated: "Internal Skill 15"
@@ -41850,10 +41850,10 @@
 - raw: "生命上限40;内力上限200;内功18;经脉18;内伤0.06;轻灵0.06;通脉0.06"
   splits:
   - text: "生命上限40"
-    translated: "Health cap40"
+    translated: "Health Maximum 40"
   - subIndex: 1
     text: "内力上限200"
-    translated: "Inner Power Cap200"
+    translated: "Inner Power Maximum 200"
   - subIndex: 2
     text: "内功18"
     translated: "Internal Skill 18"
@@ -41977,10 +41977,10 @@
 - raw: "生命上限10;内力上限30;内功3;经脉3;反击0.06"
   splits:
   - text: "生命上限10"
-    translated: "Health points 10"
+    translated: "Health Maximum 10"
   - subIndex: 1
     text: "内力上限30"
-    translated: "Inner Power Cap30"
+    translated: "Inner Power Maximum 30"
   - subIndex: 2
     text: "内功3"
     translated: "Internal Skill 3"
@@ -42096,10 +42096,10 @@
 - raw: "生命上限30;内力上限50;内功6;经脉6;反击0.06"
   splits:
   - text: "生命上限30"
-    translated: "Health cap30"
+    translated: "Health Maximum 30"
   - subIndex: 1
     text: "内力上限50"
-    translated: "Inner Power Cap 50"
+    translated: "Inner Power Maximum 50"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -42133,7 +42133,7 @@
     translated: "Health max 50"
   - subIndex: 1
     text: "内力上限30"
-    translated: "Inner Power Cap30"
+    translated: "Inner Power Maximum 30"
   - subIndex: 2
     text: "内功4"
     translated: "Internal Skill 4"
@@ -42274,7 +42274,7 @@
     translated: "Health max 50"
   - subIndex: 1
     text: "内力上限70"
-    translated: "Inner Power Cap70"
+    translated: "Inner Power Maximum 70"
   - subIndex: 2
     text: "内功9"
     translated: "Internal Skill 9"
@@ -42486,10 +42486,10 @@
 - raw: "生命上限40;内力上限120;内功12;经脉12;恢复0.05;慧眼0.05"
   splits:
   - text: "生命上限40"
-    translated: "Health cap40"
+    translated: "Health Maximum 40"
   - subIndex: 1
     text: "内力上限120"
-    translated: "Inner Power Cap120"
+    translated: "Inner Power Maximum 120"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -42750,10 +42750,10 @@
 - raw: "生命上限60;内力上限110;内功8;智力8;体质8;经脉8;通脉0.06;慧眼0.06;自愈3"
   splits:
   - text: "生命上限60"
-    translated: "Health points 60"
+    translated: "Health Maximum 60"
   - subIndex: 1
     text: "内力上限110"
-    translated: "Inner Power Cap110"
+    translated: "Inner Power Maximum 110"
   - subIndex: 2
     text: "内功8"
     translated: "Internal Skill 8"
@@ -43020,10 +43020,10 @@
 - raw: "生命上限80;内力上限160;内功10;经脉10;灵巧10;智力10;通脉0.05;醒脑0.05;慧眼0.05;真伤0.05"
   splits:
   - text: "生命上限80"
-    translated: "Health cap80"
+    translated: "Health Max 80"
   - subIndex: 1
     text: "内力上限160"
-    translated: "Inner Power Cap160"
+    translated: "Inner Power Maximum 160"
   - subIndex: 2
     text: "内功10"
     translated: "Internal Skill 10"
@@ -43135,10 +43135,10 @@
 - raw: "生命上限30;内力上限10;内功3;灵巧3;体质3;奇门威力0.03"
   splits:
   - text: "生命上限30"
-    translated: "Health cap30"
+    translated: "Health Maximum 30"
   - subIndex: 1
     text: "内力上限10"
-    translated: "Inner Power Cap10"
+    translated: "Inner Power Maximum 10"
   - subIndex: 2
     text: "内功3"
     translated: "Internal Skill 3"
@@ -43281,10 +43281,10 @@
 - raw: "生命上限60;内力上限20;内功6;体质6;疗伤0.04;奇门威力0.02"
   splits:
   - text: "生命上限60"
-    translated: "Health points 60"
+    translated: "Health Maximum 60"
   - subIndex: 1
     text: "内力上限20"
-    translated: "Inner Power Cap 20"
+    translated: "Inner Power Maximum 20"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -43452,10 +43452,10 @@
 - raw: "生命上限90;内力上限30;内功8;体质8;奇门8;奇门威力0.08"
   splits:
   - text: "生命上限90"
-    translated: "Health points 90"
+    translated: "Health Max 90"
   - subIndex: 1
     text: "内力上限30"
-    translated: "Inner Power Cap30"
+    translated: "Inner Power Maximum 30"
   - subIndex: 2
     text: "内功8"
     translated: "Internal Skill 8"
@@ -43671,10 +43671,10 @@
 - raw: "生命上限110;内力上限50;内功12;体质12;疗伤0.05;斗转0.05"
   splits:
   - text: "生命上限110"
-    translated: "HealthCap110"
+    translated: "Health Maximum 110"
   - subIndex: 1
     text: "内力上限50"
-    translated: "Inner Power Cap 50"
+    translated: "Inner Power Maximum 50"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -43899,10 +43899,10 @@
 - raw: "生命上限110;内力上限90;内功15;体质15;斗转0.04;不屈0.04;调息0.04"
   splits:
   - text: "生命上限110"
-    translated: "HealthCap110"
+    translated: "Health Maximum 110"
   - subIndex: 1
     text: "内力上限90"
-    translated: "Inner Power Cap 90"
+    translated: "Inner Power Maximum 90"
   - subIndex: 2
     text: "内功15"
     translated: "Internal Skill 15"
@@ -44261,10 +44261,10 @@
 - raw: "生命上限20;内力上限20;内功4;意志4;失衡0.02;机关耐久0.04"
   splits:
   - text: "生命上限20"
-    translated: "Health points 20"
+    translated: "Health Maximum 20"
   - subIndex: 1
     text: "内力上限20"
-    translated: "Inner Power Cap 20"
+    translated: "Inner Power Maximum 20"
   - subIndex: 2
     text: "内功4"
     translated: "Internal Skill 4"
@@ -44420,10 +44420,10 @@
 - raw: "生命上限40;内力上限40;内功6;意志6;失衡0.03;机关耐久0.06"
   splits:
   - text: "生命上限40"
-    translated: "Health cap40"
+    translated: "Health Maximum 40"
   - subIndex: 1
     text: "内力上限40"
-    translated: "Inner Power Cap 40"
+    translated: "Inner Power Maximum 40"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -44584,10 +44584,10 @@
 - raw: "生命上限60;内力上限60;内功9;意志9;失衡0.04;机关耐久0.08"
   splits:
   - text: "生命上限60"
-    translated: "Health points 60"
+    translated: "Health Maximum 60"
   - subIndex: 1
     text: "内力上限60"
-    translated: "Inner Power Cap60"
+    translated: "Inner Power Maximum 60"
   - subIndex: 2
     text: "内功9"
     translated: "Internal Skill 9"
@@ -44787,10 +44787,10 @@
 - raw: "生命上限80;内力上限80;内功12;意志12;定神0.04;失衡0.04;机关耐久0.04"
   splits:
   - text: "生命上限80"
-    translated: "Health cap80"
+    translated: "Health Max 80"
   - subIndex: 1
     text: "内力上限80"
-    translated: "Inner Power Cap80"
+    translated: "Inner Power Maximum 80"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -45005,10 +45005,10 @@
 - raw: "生命上限100;内力上限100;内功10;智力10;意志10;弱点0.06;失衡0.06;机关耐久0.08"
   splits:
   - text: "生命上限100"
-    translated: "Health points 100"
+    translated: "Health Maximum 100"
   - subIndex: 1
     text: "内力上限100"
-    translated: "Inner Power Cap100"
+    translated: "Inner Power Maximum 100"
   - subIndex: 2
     text: "内功10"
     translated: "Internal Skill 10"
@@ -45339,10 +45339,10 @@
 - raw: "生命上限10;内力上限10;内功4;智力4;锻造4;灼烧0.04"
   splits:
   - text: "生命上限10"
-    translated: "Health points 10"
+    translated: "Health Maximum 10"
   - subIndex: 1
     text: "内力上限10"
-    translated: "Inner Power Cap10"
+    translated: "Inner Power Maximum 10"
   - subIndex: 2
     text: "内功4"
     translated: "Internal Skill 4"
@@ -45473,10 +45473,10 @@
 - raw: "生命上限30;内力上限30;内功6;意志6;锻造6;灼烧0.06"
   splits:
   - text: "生命上限30"
-    translated: "Health cap30"
+    translated: "Health Maximum 30"
   - subIndex: 1
     text: "内力上限30"
-    translated: "Inner Power Cap30"
+    translated: "Inner Power Maximum 30"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -45669,10 +45669,10 @@
 - raw: "生命上限30;内力上限30;内功9;意志9;锻造9;灼烧0.08"
   splits:
   - text: "生命上限30"
-    translated: "Health cap30"
+    translated: "Health Maximum 30"
   - subIndex: 1
     text: "内力上限30"
-    translated: "Inner Power Cap30"
+    translated: "Inner Power Maximum 30"
   - subIndex: 2
     text: "内功9"
     translated: "Internal Skill 9"
@@ -45891,10 +45891,10 @@
 - raw: "生命上限60;内力上限30;内功12;意志12;锻造12;灼烧0.05;动摇0.05"
   splits:
   - text: "生命上限60"
-    translated: "Health points 60"
+    translated: "Health Maximum 60"
   - subIndex: 1
     text: "内力上限30"
-    translated: "Inner Power Cap30"
+    translated: "Inner Power Maximum 30"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -46516,10 +46516,10 @@
 - raw: "生命上限30;内力上限10;内功3;力道3;回血0.004"
   splits:
   - text: "生命上限30"
-    translated: "Health cap30"
+    translated: "Health Maximum 30"
   - subIndex: 1
     text: "内力上限10"
-    translated: "Inner Power Cap10"
+    translated: "Inner Power Maximum 10"
   - subIndex: 2
     text: "内功3"
     translated: "Internal Skill 3"
@@ -46673,10 +46673,10 @@
 - raw: "生命上限60;内力上限20;内功6;力道6;外伤0.04;回血0.004"
   splits:
   - text: "生命上限60"
-    translated: "Health points 60"
+    translated: "Health Maximum 60"
   - subIndex: 1
     text: "内力上限20"
-    translated: "Inner Power Cap 20"
+    translated: "Inner Power Maximum 20"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -46869,10 +46869,10 @@
 - raw: "生命上限90;内力上限30;内功6;力道6;体质6;反弹0.02;坚毅0.04"
   splits:
   - text: "生命上限90"
-    translated: "Health points 90"
+    translated: "Health Max 90"
   - subIndex: 1
     text: "内力上限30"
-    translated: "Inner Power Cap30"
+    translated: "Inner Power Maximum 30"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -47126,10 +47126,10 @@
 - raw: "生命上限110;内力上限50;内功8;力道8;体质8;外伤0.05;反弹0.03"
   splits:
   - text: "生命上限110"
-    translated: "HealthCap110"
+    translated: "Health Maximum 110"
   - subIndex: 1
     text: "内力上限50"
-    translated: "Inner Power Cap 50"
+    translated: "Inner Power Maximum 50"
   - subIndex: 2
     text: "内功8"
     translated: "Internal Skill 8"
@@ -47427,10 +47427,10 @@
 - raw: "生命上限160;内力上限40;内功10;力道10;体质10;暴击0.06;无敌0.03"
   splits:
   - text: "生命上限160"
-    translated: "Health 160"
+    translated: "Health Maximum 160"
   - subIndex: 1
     text: "内力上限40"
-    translated: "Inner Power Cap 40"
+    translated: "Inner Power Maximum 40"
   - subIndex: 2
     text: "内功10"
     translated: "Internal Skill 10"
@@ -47697,10 +47697,10 @@
 - raw: "生命上限180;内力上限60;内功12;力道12;智力12;慧眼0.06;杀机0.06;无敌0.03"
   splits:
   - text: "生命上限180"
-    translated: "Health cap 180"
+    translated: "Health Max 180"
   - subIndex: 1
     text: "内力上限60"
-    translated: "Inner Power Cap60"
+    translated: "Inner Power Maximum 60"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -47883,10 +47883,10 @@
 - raw: "生命上限10;内力上限30;内功4;经脉4;冰寒0.04"
   splits:
   - text: "生命上限10"
-    translated: "Health points 10"
+    translated: "Health Maximum 10"
   - subIndex: 1
     text: "内力上限30"
-    translated: "Inner Power Cap30"
+    translated: "Inner Power Maximum 30"
   - subIndex: 2
     text: "内功4"
     translated: "Internal Skill 4"
@@ -48050,10 +48050,10 @@
 - raw: "生命上限30;内力上限50;内功6;经脉6;冰寒0.06;药性0.03"
   splits:
   - text: "生命上限30"
-    translated: "Health cap30"
+    translated: "Health Maximum 30"
   - subIndex: 1
     text: "内力上限50"
-    translated: "Inner Power Cap 50"
+    translated: "Inner Power Maximum 50"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -48229,10 +48229,10 @@
 - raw: "生命上限40;内力上限80;内功9;经脉9;冰寒0.04;恢复0.04;药性0.04"
   splits:
   - text: "生命上限40"
-    translated: "Health cap40"
+    translated: "Health Maximum 40"
   - subIndex: 1
     text: "内力上限80"
-    translated: "Inner Power Cap80"
+    translated: "Inner Power Maximum 80"
   - subIndex: 2
     text: "内功9"
     translated: "Internal Skill 9"
@@ -48450,10 +48450,10 @@
 - raw: "生命上限70;内力上限90;内功12;经脉12;恢复0.05;复生0.05;药性0.05"
   splits:
   - text: "生命上限70"
-    translated: "Health points70"
+    translated: "Health Maximum 70"
   - subIndex: 1
     text: "内力上限90"
-    translated: "Inner Power Cap 90"
+    translated: "Inner Power Maximum 90"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -48684,10 +48684,10 @@
 - raw: "生命上限70;内力上限130;内功15;经脉15;冰寒0.05;心胸点穴0.05;截脉0.05"
   splits:
   - text: "生命上限70"
-    translated: "Health points70"
+    translated: "Health Maximum 70"
   - subIndex: 1
     text: "内力上限130"
-    translated: "Inner Power Cap130"
+    translated: "Inner Power Maximum 130"
   - subIndex: 2
     text: "内功15"
     translated: "Internal Skill 15"
@@ -48918,10 +48918,10 @@
 - raw: "生命上限100;内力上限140;内功12;经脉12;力道12;复生0.12;恢复0.06;负面抗性0.06;药性0.06"
   splits:
   - text: "生命上限100"
-    translated: "Health points 100"
+    translated: "Health Maximum 100"
   - subIndex: 1
     text: "内力上限140"
-    translated: "Inner Power Cap140"
+    translated: "Inner Power Maximum 140"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -49169,10 +49169,10 @@
 - raw: "生命上限130;内力上限70;内功8;力道8;意志8;体质12;外伤0.05;横练0.05;霸体0.05"
   splits:
   - text: "生命上限130"
-    translated: "Health points 130"
+    translated: "Health Maximum 130"
   - subIndex: 1
     text: "内力上限70"
-    translated: "Inner Power Cap70"
+    translated: "Inner Power Maximum 70"
   - subIndex: 2
     text: "内功8"
     translated: "Internal Skill 8"
@@ -49231,10 +49231,10 @@
 - raw: "生命上限100;内力上限140;内功9;智力9;意志9;经脉9;毒术9;毒素0.06;混乱0.06;负面加成0.06"
   splits:
   - text: "生命上限100"
-    translated: "Health points 100"
+    translated: "Health Maximum 100"
   - subIndex: 1
     text: "内力上限140"
-    translated: "Inner Power Cap140"
+    translated: "Inner Power Maximum 140"
   - subIndex: 2
     text: "内功9"
     translated: "Internal Skill 9"
@@ -49305,10 +49305,10 @@
 - raw: "生命上限150;内力上限150;内功10;力道10;灵巧10;智力10;意志10;体质10;经脉10"
   splits:
   - text: "生命上限150"
-    translated: "Health points 150"
+    translated: "Health Maximum 150"
   - subIndex: 1
     text: "内力上限150"
-    translated: "Inner Power Cap150"
+    translated: "Inner Power Maximum 150"
   - subIndex: 2
     text: "内功10"
     translated: "Internal Skill 10"
@@ -49355,7 +49355,7 @@
 - raw: "内力上限40;内功4;体质4;减伤2"
   splits:
   - text: "内力上限40"
-    translated: "Inner Power Cap 40"
+    translated: "Inner Power Maximum 40"
   - subIndex: 1
     text: "内功4"
     translated: "Internal Skill 4"
@@ -49387,7 +49387,7 @@
 - raw: "生命上限40;内功4;绝技4;经脉4"
   splits:
   - text: "生命上限40"
-    translated: "Health cap40"
+    translated: "Health Maximum 40"
   - subIndex: 1
     text: "内功4"
     translated: "Internal Skill 4"
@@ -49774,10 +49774,10 @@
 - raw: "生命上限75;内力上限125;内功6;意志12;经脉12;内劲0.06;蓄力0.06"
   splits:
   - text: "生命上限75"
-    translated: "Health 75"
+    translated: "Health Maximum 75"
   - subIndex: 1
     text: "内力上限125"
-    translated: "Inner Power Cap 125"
+    translated: "Inner Power Maximum 125"
   - subIndex: 2
     text: "内功6"
     translated: "Internal Skill 6"
@@ -49833,10 +49833,10 @@
 - raw: "生命上限125;内力上限75;内功12;体质12;经脉6;霸体0.05;不屈0.05;坚毅0.05"
   splits:
   - text: "生命上限125"
-    translated: "Health points 125"
+    translated: "Health Maximum 125"
   - subIndex: 1
     text: "内力上限75"
-    translated: "Inner Power Cap 75"
+    translated: "Inner Power Maximum 75"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -50935,10 +50935,10 @@
 - raw: "生命上限100;内力上限140;内功16;力道10;经脉10;通脉0.06;雷电0.06;调息0.06"
   splits:
   - text: "生命上限100"
-    translated: "Health points 100"
+    translated: "Health Maximum 100"
   - subIndex: 1
     text: "内力上限140"
-    translated: "Inner Power Cap140"
+    translated: "Inner Power Maximum 140"
   - subIndex: 2
     text: "内功16"
     translated: "Internal Skill 16"
@@ -50997,10 +50997,10 @@
 - raw: "生命上限140;内力上限100;内功12;灵巧12;意志12;震脑0.06;乱神0.06;混乱0.06"
   splits:
   - text: "生命上限140"
-    translated: "Health cap 140"
+    translated: "Health Maximum 140"
   - subIndex: 1
     text: "内力上限100"
-    translated: "Inner Power Cap100"
+    translated: "Inner Power Maximum 100"
   - subIndex: 2
     text: "内功12"
     translated: "Internal Skill 12"
@@ -53720,12 +53720,14 @@
   - text: "-1"
     translated: "‑1"
     qcReviewedText: "‑1"
-    qcTranslated: "1"
-    qcStatus: Corrected
-    qcQualityScore: 100
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: FailedValidation
+    flaggedForQcReview: true
+    qcRejectedCorrection: "1"
+    qcFailureReason: "Missing a negative sign '-' before a number required by the source."
     qcDefectCategories:
-    - OtherNamedDefect
+    - Unknown
+    qcRuleCheckFailureCount: 4
+    qcRuleCheckFailureBaseline: "‑1"
 - raw: "平常/善良"
   splits:
   - text: "平常"

@@ -130,10 +130,13 @@
   splits:
   - text: "中毒"
     translated: "Poisoned"
-    qcReviewedText: "<b>Poisoned</b>\\n‑0.5% All Attributes\\n‑0.25% Health Maximum\\n‑0.25% Inner Power Cap\\n‑0.25% Max Stamina"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcReviewedText: "<b>Poisoned</b>\\n‑0.5% All Attributes\\n‑0.25% Health Maximum\\n‑0.25% Inner Power Maximum\\n‑0.25% Max Stamina"
+    qcTranslated: "<b>Poisoned</b>\\n‑0.5% All Attributes\\n‑0.25% Max Health\\n‑0.25% Max Inner Power\\n‑0.25% Max Stamina"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "-0.5%全属性"
     translated: "‑0.5% All Attributes"
@@ -142,7 +145,7 @@
     translated: "‑0.25% Health Maximum"
   - subIndex: 3
     text: "-0.25%内力上限"
-    translated: "‑0.25% Inner Power Cap"
+    translated: "‑0.25% Inner Power Maximum"
   - subIndex: 4
     text: "-0.25%体力上限"
     translated: "‑0.25% Max Stamina"
@@ -152,8 +155,8 @@
   splits:
   - text: "体质"
     translated: "Physique"
-    qcReviewedText: "<b>Physique</b>\\n+1 Health Points\\n+0.5% Suppression\\n+0.5% injury resistance"
-    qcTranslated: "<b>Physique</b>\\n+1 Health\\n+0.5% Suppression\\n+0.5% injury resistance"
+    qcReviewedText: "<b>Physique</b>\\n+1Max Health\\n+0.5% Suppression\\n+0.5% injury resistance"
+    qcTranslated: "<b>Physique</b>\\n+1Max Health\\n+0.5% Suppression\\n+0.5% Injury Resistance"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: OtherNamedDefect
@@ -161,7 +164,7 @@
     - OtherNamedDefect
   - subIndex: 1
     text: "+1生命上限"
-    translated: "+1 Health Points"
+    translated: "+1Max Health"
   - subIndex: 2
     text: "+0.5%压制"
     translated: "+0.5% Suppression"
@@ -174,19 +177,21 @@
   splits:
   - text: "内伤"
     translated: "Internal Injury"
-    qcReviewedText: "<b>Internal Injury</b>\\n‑0.5% All Attributes\\n‑0.5% Inner Power Cap\\n‑0.5% Maximum Stamina Capacity"
-    qcTranslated: "<b>Internal Injury</b>\\n0.5% All Attributes\\n0.5% Inner Power Cap\\n0.5% Maximum Stamina Capacity"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
+    qcReviewedText: "<b>Internal Injury</b>\\n‑0.5% All Attributes\\n‑0.5% Inner Power Maximum\\n‑0.5% Maximum Stamina Capacity"
+    qcStatus: FailedValidation
+    flaggedForQcReview: true
+    qcRejectedCorrection: "<b>Internal Injury</b>\\n0.5% All Attributes\\n0.5% Inner Power Maximum\\n0.5% Maximum Stamina Capacity"
+    qcFailureReason: "Missing a negative sign '-' before a number required by the source."
     qcDefectCategories:
-    - OtherNamedDefect
+    - Unknown
+    qcRuleCheckFailureCount: 4
+    qcRuleCheckFailureBaseline: "<b>Internal Injury</b>\\n‑0.5% All Attributes\\n‑0.5% Inner Power Maximum\\n‑0.5% Maximum Stamina Capacity"
   - subIndex: 1
     text: "-0.5%全属性"
     translated: "‑0.5% All Attributes"
   - subIndex: 2
     text: "-0.5%内力上限"
-    translated: "‑0.5% Inner Power Cap"
+    translated: "‑0.5% Inner Power Maximum"
   - subIndex: 3
     text: "-0.5%体力上限"
     translated: "‑0.5% Maximum Stamina Capacity"
@@ -196,13 +201,13 @@
   splits:
   - text: "内功"
     translated: "Neigong"
-    qcReviewedText: "<b>Neigong</b>\\n+1% Inner Power Cap"
+    qcReviewedText: "<b>Neigong</b>\\n+1% Inner Power Maximum"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "+1%内力上限"
-    translated: "+1% Inner Power Cap"
+    translated: "+1% Inner Power Maximum"
   templates:
   - template: "<b>{0}</b>\\n{1}"
 - raw: "<b>刀法</b>\\n提升刀法伤害\\n降低受到的刀法伤害"
@@ -524,16 +529,13 @@
   splits:
   - text: "经脉"
     translated: "Meridian"
-    qcReviewedText: "<b>Meridian</b>\\n+2 Inner Power Cap\\n+0.5 consecutive hits\\n+0.5% recovery efficiency"
-    qcTranslated: "<b>Meridian</b>\\n+2 Inner Power Cap\\n+0.5% consecutive hits\\n+0.5% recovery efficiency"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    qcReviewedText: "<b>Meridian</b>\\n+2 Inner Power Max\\n+0.5 consecutive hits\\n+0.5% recovery efficiency"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "+2内力上限"
-    translated: "+2 Inner Power Cap"
+    translated: "+2 Inner Power Max"
   - subIndex: 2
     text: "+0.5%连击"
     translated: "+0.5 consecutive hits"
@@ -913,13 +915,14 @@
   - text: "每级对"
     translated: "Level up by"
     qcReviewedText: "♦Level up by AI Sect influence is generated：\\n‑Speed up construction：Monthly production limit+, Construction consumes ‑5% resources, construction speed+5%\\n‑Speed up research and development：Research consumption ‑5%, research speed+5%\\n‑Speed up disciples' advancement：Promotion Frequency +5%, Promotion Consumption ‑5%, Promotion Martial Arts Level+, Recruitment costs ‑5% consumed, monthly salary costs consumed-2.5%"
-    qcTranslated: "♦Each level affects the AI Sect:\\n‑Accelerate construction: Monthly construction count+, construction cost 5%, construction speed +5%\\n‑Accelerate research: Research cost 5%, research speed +5%\\n‑Accelerate disciple promotion: Promotion frequency +5%, promotion cost 5%, promotion martial arts level+, recruitment cost 5%, monthly stipend cost ‑2.5%"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
+    qcStatus: FailedValidation
+    flaggedForQcReview: true
+    qcRejectedCorrection: "♦Each level affects the AI Sect:\\n—Accelerate construction: Monthly construction count+, construction cost 5%, construction speed +5%\\n—Accelerate research: Research cost 5%, research speed +5%\\n—Accelerate disciple promotion: Promotion frequency +5%, promotion cost 5%, promotion martial arts level+, recruitment cost 5%, monthly stipend cost -2.5%"
+    qcFailureReason: "Missing a negative sign '-' before a number required by the source."
     qcDefectCategories:
-    - HardToParseSeam
-    - OtherNamedDefect
+    - Unknown
+    qcRuleCheckFailureCount: 4
+    qcRuleCheckFailureBaseline: "♦Level up by AI Sect influence is generated：\\n‑Speed up construction：Monthly production limit+, Construction consumes ‑5% resources, construction speed+5%\\n‑Speed up research and development：Research consumption ‑5%, research speed+5%\\n‑Speed up disciples' advancement：Promotion Frequency +5%, Promotion Consumption ‑5%, Promotion Martial Arts Level+, Recruitment costs ‑5% consumed, monthly salary costs consumed-2.5%"
   - subIndex: 1
     text: "门派产生影响"
     translated: "Sect influence is generated"
@@ -1178,15 +1181,15 @@
   splits:
   - text: "自定义选项会在"
     translated: "Custom options will be available in"
-    qcReviewedText: "♦Custom options will be available in <b>Based on the selected difficulty </b>Have an impact\\n♦Overall balance is being adjusted/More difficult/Difficulty/Achievements can only be obtained in extremely difficult situations\\n♦Every 10 points increase Skill Cap by +1.\\n♦I recommend understanding the game mechanics before adjusting the custom options."
-    qcTranslated: "♦Custom options will have an impact <b>based on the selected difficulty</b>\\n♦The overall level achievement can only be obtained when the balance is set to Normal/Hard/Very Hard/Extreme\\n♦Every 10 points of difficulty increases the talent cap by +1.\\n♦It is recommended to understand the game mechanics before adjusting the custom options"
+    qcReviewedText: "♦Custom options will be available in <b>Based on the selected difficulty </b>Have an impact\\n♦Overall balance is being adjusted/More difficult/Difficulty/Achievements can only be obtained in extremely difficult situations\\n♦Every 10 points increase the difficulty +1 talent number limit.\\n♦I recommend understanding the game mechanics before adjusting the custom options."
+    qcTranslated: "♦Custom options will have an impact <b>based on the selected difficulty</b>\\n♦The overall rank can only be achieved in Balanced/More Difficult/Difficult/Extremely Difficult modes\\n♦Every 10 points of difficulty increases the talent limit by +1\\n♦It is recommended to understand the game mechanics before adjusting custom options"
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
     qcDefectCategories:
     - HardToParseSeam
-    - GarbledNumber
     - DroppedContent
+    - GarbledNumber
   - subIndex: 1
     text: "所选难度基础上"
     translated: "Based on the selected difficulty"
@@ -1207,7 +1210,7 @@
     translated: "Achievements can only be obtained in extremely difficult situations"
   - subIndex: 7
     text: "每10点难度+1天赋数上限"
-    translated: "Every 10 points increase Skill Cap by +1."
+    translated: "Every 10 points increase the difficulty +1 talent number limit."
   - subIndex: 8
     text: "建议了解游戏机制后再调整自定义选项"
     translated: "I recommend understanding the game mechanics before adjusting the custom options."
@@ -1300,25 +1303,26 @@
   splits:
   - text: "鼠标悬停在图标上，可查看属性具体效果"
     translated: "Hovering the mouse over the icon allows you to view the specific effects of the properties."
-    qcReviewedText: "♦Hovering the mouse over the icon allows you to view the specific effects of the properties.\\n♦Limit>At 70, increasing the cap by 1 points requires consuming 2 potential.\\n♦Limit>At 80, increasing the cap by 1 points requires consuming 3 potential."
-    qcTranslated: "♦Hovering the mouse over the icon allows you to view the specific effects of the properties.\\n♦When Limit > 70, increasing the cap by 1 points requires consuming 2 potential.\\n♦When Limit > 80, increasing the cap by 1 points requires consuming 3 potential."
+    qcReviewedText: "♦Hovering the mouse over the icon allows you to view the specific effects of the properties.\\n♦Limit>At 70 time, each increase of 1 point in the Maximum requires consuming 2 potential.\\n♦Limit>At 80 time, each increase of 1 point in the Maximum requires consuming 3 potential."
+    qcTranslated: "♦Hovering the mouse over the icon allows you to view the specific effects of the properties.\\n♦When Limit > 70, each increase of 1 point in the Maximum requires consuming 2 potential.\\n♦When Limit > 80, each increase of 1 point in the Maximum requires consuming 3 potential."
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
+    qcDefectCategory: GarbledNumber
     qcDefectCategories:
+    - GarbledNumber
     - HardToParseSeam
   - subIndex: 1
     text: "上限"
     translated: "Limit"
   - subIndex: 2
     text: "70时，每提升1点上限需消耗2潜力"
-    translated: "At 70, increasing the cap by 1 points requires consuming 2 potential."
+    translated: "At 70 time, each increase of 1 point in the Maximum requires consuming 2 potential."
   - subIndex: 3
     text: "上限"
     translated: "Limit"
   - subIndex: 4
     text: "80时，每提升1点上限需消耗3潜力"
-    translated: "At 80, increasing the cap by 1 points requires consuming 3 potential."
+    translated: "At 80 time, each increase of 1 point in the Maximum requires consuming 3 potential."
   templates:
   - template: "♦{0}\\n♦{1}>{2}\\n♦{3}>{4}"
 - raw: "1. 本游戏是一款武侠题材的开放世界游戏，适用于16周岁及以上的用户，建议未成年人在家长监护下使用游戏产品。\\n\\n2. 本游戏画面为水墨风格，清新淡雅，弘扬我国美学文化。讲述了主角行侠仗义，惩奸除恶，帮助自己的门派发扬光大，造福百姓的故事。游戏中的背景皆为架空，不会与现实混淆。游戏中的玩法多为动脑的策略玩法，没有激烈刺激的战斗画面。游戏内所有内容都遵循相关法律法规。\\n\\n3. 本游戏中有用户实名认证系统，认证为未成年人的用户将接受以下管理：\\n<color=#BC1717>  〇 未满8周岁的用户不能付费购买游戏；8周岁以上的未满16周岁的未成年人用户，不得单次消费超过50元人民币，每月充值消费累计不得超过200元人民币；16周岁以上的未成年人用户，单次消费不得超过100元人民币，每月充值消费累计不得超过400元人民币。\\n  〇 本游戏仅可在周五、周六、周日和法定节假日每日20时至21时向未成年人提供1小时网络游戏服务，其他时间均不以任何形式向未成年人提供网络游戏服务。</color>\\n\\n4. 本游戏以策略玩法为主，玩家可以通过游戏内提供的资源和线索，结合自身长处变得更强，有益于玩家享受游戏乐趣，放松身心。游戏过程中，通过丰富的游戏内容，玩法和剧情等，让玩家身临其境，体会到现实生活中不一样的乐趣。帮助玩家在享受游戏乐趣进行放松与休息后，更好地投入现实中的工作与学习中。\\n"
@@ -1703,10 +1707,13 @@
   splits:
   - text: "中毒"
     translated: "Poisoned"
-    qcReviewedText: "Poisoned\\n‑0.5% All Attributes\\n‑0.25% Health Maximum\\n‑0.25% Inner Power Cap\\n‑0.25% Max Stamina"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcReviewedText: "Poisoned\\n‑0.5% All Attributes\\n‑0.25% Health Maximum\\n‑0.25% Inner Power Maximum\\n‑0.25% Max Stamina"
+    qcTranslated: "Poisoned\\n‑0.5% All Attributes\\n‑0.25% Max Health\\n‑0.25% Max Inner Power\\n‑0.25% Max Stamina"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "-0.5%全属性"
     translated: "‑0.5% All Attributes"
@@ -1715,7 +1722,7 @@
     translated: "‑0.25% Health Maximum"
   - subIndex: 3
     text: "-0.25%内力上限"
-    translated: "‑0.25% Inner Power Cap"
+    translated: "‑0.25% Inner Power Maximum"
   - subIndex: 4
     text: "-0.25%体力上限"
     translated: "‑0.25% Max Stamina"
@@ -2806,7 +2813,7 @@
   splits:
   - text: "内伤"
     translated: "Internal Injury"
-    qcReviewedText: "Internal Injury\\n‑0.5% All Attributes\\n‑0.5% Inner Power Cap\\n‑0.25% Max Stamina"
+    qcReviewedText: "Internal Injury\\n‑0.5% All Attributes\\n‑0.5% Inner Power Maximum\\n‑0.25% Max Stamina"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2815,7 +2822,7 @@
     translated: "‑0.5% All Attributes"
   - subIndex: 2
     text: "-0.5%内力上限"
-    translated: "‑0.5% Inner Power Cap"
+    translated: "‑0.5% Inner Power Maximum"
   - subIndex: 3
     text: "-0.25%体力上限"
     translated: "‑0.25% Max Stamina"
@@ -3986,8 +3993,8 @@
 - raw: "基础生命上限 200"
   splits:
   - text: "基础生命上限"
-    translated: "Base Health Cap"
-    qcReviewedText: "Base Health Cap 200"
+    translated: "Base Health Max"
+    qcReviewedText: "Base Health Max 200"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

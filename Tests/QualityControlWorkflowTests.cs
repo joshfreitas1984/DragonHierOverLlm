@@ -188,6 +188,21 @@ public class QualityControlWorkflowTests
         await QualityReviewWorkflow.ResetTagSeamAffectedQcState(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
     }
 
+    // Run this ONCE after adding the negative-sign check to TranslationWorkflow.EvaluateRules'
+    // validation gate: before that check existed, a QC correction on a stat/buff tooltip could drop
+    // the leading "-" off a negative percentage ("-0.5%全属性" -> "0.5% All Attributes") and still
+    // sail through as an accepted Corrected column, since nothing validated a negative number's sign
+    // survived the rewrite - see the /investigate-qc-issue writeup for the dumpedPrefabText "内伤"
+    // debuff tooltip that surfaced this (Files/Converted/dumpedPrefabText.txt.yaml). Scans every
+    // already-Corrected column's QcTranslated against its reconstructed SOURCE and resets any match
+    // back to NotReviewed for a fresh review under the new gate, regardless of its old score - same
+    // shape as "Reset Tag-Seam-Affected"/"Reset Stutter-Affected" above, no LLM call of its own.
+    [Fact(DisplayName = "Reset Negative-Sign-Affected Quality Review State")]
+    public async Task ResetNegativeSignAffectedQcState()
+    {
+        await QualityReviewWorkflow.ResetNegativeSignAffectedQcState(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit);
+    }
+
     // Dedicated single-row QC sample: forces a fresh QualityReviewWorkflow review of exactly ONE
     // known PlotData.csv row (the master's "别慌..." collapse line, split 10 - see
     // Files/Converted/PlotData.csv.yaml) instead of a random sampleSize=N slice

@@ -11,13 +11,13 @@
     translated: "Health"
   - split: 5
     text: "生命上限"
-    translated: "Health points"
+    translated: "Health Max"
   - split: 6
     text: "内力"
     translated: "Inner Power"
   - split: 7
     text: "内力上限"
-    translated: "Inner Power Cap"
+    translated: "Inner Power Max"
   - split: 8
     text: "体力"
     translated: "Stamina"

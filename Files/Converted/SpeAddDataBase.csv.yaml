@@ -261,9 +261,9 @@
     qcDefectCategory: None
   - split: 10
     text: "+1生命上限"
-    translated: "+1 Health Points"
-    qcReviewedText: "+1 Health Points\\n+0.5% Suppression\\n+0.5% injury resistance"
-    qcTranslated: "+1 Health\\n+0.5% Suppression\\n+0.5% injury resistance"
+    translated: "+1Health Max"
+    qcReviewedText: "+1Health Max\\n+0.5% Suppression\\n+0.5% injury resistance"
+    qcTranslated: "+1Health Max\\n+0.5% Suppression\\n+0.5% Injury Resistance"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: OtherNamedDefect
@@ -298,9 +298,9 @@
     qcDefectCategory: None
   - split: 10
     text: "+2内力上限"
-    translated: "+2 Inner Power Cap"
-    qcReviewedText: "+2 Inner Power Cap\\n+0.5 consecutive hits\\n+0.5% recovery efficiency"
-    qcTranslated: "+2 Inner Power Cap\\n+0.5% consecutive hits\\n+0.5% recovery efficiency"
+    translated: "+2 Inner Power Max"
+    qcReviewedText: "+2 Inner Power Max\\n+0.5 consecutive hits\\n+0.5% recovery efficiency"
+    qcTranslated: "+2 Inner Power Max\\n+0.5% consecutive hits\\n+0.5% recovery efficiency"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: OtherNamedDefect
@@ -335,8 +335,8 @@
     qcDefectCategory: None
   - split: 10
     text: "+1%内力上限"
-    translated: "+1% Inner Power Cap"
-    qcReviewedText: "+1% Inner Power Cap"
+    translated: "+1% Inner Power Maximum"
+    qcReviewedText: "+1% Inner Power Maximum"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1632,8 +1632,8 @@
     qcDefectCategory: None
   - split: 10
     text: "生命上限"
-    translated: "Health points"
-    qcReviewedText: "Health points"
+    translated: "Health Max"
+    qcReviewedText: "Health Max"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1678,8 +1678,8 @@
     qcDefectCategory: None
   - split: 10
     text: "内力上限"
-    translated: "Inner Power Cap"
-    qcReviewedText: "Inner Power Cap"
+    translated: "Inner Power Max"
+    qcReviewedText: "Inner Power Max"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

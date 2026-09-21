@@ -79,13 +79,14 @@
     text: "痛饮"
     translated: "Drunken revelry"
     qcReviewedText: "<b>Drunken revelry</b>：Consume fine wine to gain corresponding long‑term benefits. Drinking with others does not require goodwill, but drinking consumes ‑20% of the internal resource, and drinking increases goodwill.+20%。\\n<b>Bold bet</b>：You can gamble anytime to gain extra goodwill, with the number of monthly gambling sessions and bet amounts doubling.\\n<b>Gold dust</b>：Rewards from the Treasure House can be exchanged for high‑quality treasures from the Sect."
-    qcTranslated: "<b>Drunken revelry</b>: Consume fine wine to gain corresponding long‑term benefits. Drinking with others does not require goodwill, but drinking consumes 20% of the internal resource, and drinking increases goodwill by +20%.\\n<b>Bold bet</b>: You can gamble anytime to gain extra goodwill, with the number of monthly gambling sessions and bet amounts doubling.\\n<b>Gold dust</b>: In the Gold Dust Treasury, you can exchange Sect merit for high‑quality treasures."
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: GarbledNumber
+    qcStatus: FailedValidation
+    flaggedForQcReview: true
+    qcRejectedCorrection: "<b>Drunken revelry</b>: Consume fine wine to gain corresponding long‑term benefits. Drinking with others does not require goodwill, but drinking consumes 20% of the internal resource, and drinking increases goodwill by +20%.\\n<b>Bold bet</b>: You can gamble anytime to gain extra goodwill, with the number of monthly gambling sessions and bet amounts doubling.\\n<b>Gold dust</b>: In the Gold Dust Treasury, you can exchange Sect merit for high‑quality treasures."
+    qcFailureReason: "Missing a negative sign '-' before a number required by the source."
     qcDefectCategories:
-    - GarbledNumber
-    - DroppedContent
+    - Unknown
+    qcRuleCheckFailureCount: 4
+    qcRuleCheckFailureBaseline: "<b>Drunken revelry</b>：Consume fine wine to gain corresponding long‑term benefits. Drinking with others does not require goodwill, but drinking consumes ‑20% of the internal resource, and drinking increases goodwill.+20%。\\n<b>Bold bet</b>：You can gamble anytime to gain extra goodwill, with the number of monthly gambling sessions and bet amounts doubling.\\n<b>Gold dust</b>：Rewards from the Treasure House can be exchanged for high‑quality treasures from the Sect."
   - split: 15
     subIndex: 1
     text: "消耗美酒获取对应长效加成。与他人对饮无好感要求，对饮耗内-20%，对饮好感"
@@ -115,12 +116,14 @@
     text: "暗器"
     translated: "Hidden Weapon"
     qcReviewedText: "<b>Hidden Weapon</b>：Study the art of archery in the dark room to enhance the power of shooting.\\n<b>Assassin</b>：In the dark room, you can accept hitman orders. Your infamy for attacking others and using brutal force is ‑60%. If you are caught by the officials, you can use qinggong to evade."
-    qcTranslated: "<b>Hidden Weapon</b>: Study the art of archery in the dark room to enhance the power of shooting.\\n<b>Assassin</b>: In the dark room, you can accept hitman orders. Your infamy for attacking others and using brutal force is 60%. If you are caught by the officials, you can use Qinggong to evade."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: FailedValidation
+    flaggedForQcReview: true
+    qcRejectedCorrection: "<b>Hidden Weapon</b>: Study the art of archery in the dark room to enhance the power of shooting.\\n<b>Assassin</b>: In the dark room, you can accept hitman orders. Your infamy for attacking others and using brutal force is 60%. If you are caught by the officials, you can use Qinggong to evade."
+    qcFailureReason: "Missing a negative sign '-' before a number required by the source."
     qcDefectCategories:
-    - OtherNamedDefect
+    - Unknown
+    qcRuleCheckFailureCount: 4
+    qcRuleCheckFailureBaseline: "<b>Hidden Weapon</b>：Study the art of archery in the dark room to enhance the power of shooting.\\n<b>Assassin</b>：In the dark room, you can accept hitman orders. Your infamy for attacking others and using brutal force is ‑60%. If you are caught by the officials, you can use qinggong to evade."
   - split: 15
     subIndex: 1
     text: "暗室研究射术兵器，提升射术威力。"
@@ -334,13 +337,14 @@
     text: "试炼"
     translated: "Trial"
     qcReviewedText: "<b>Trial</b>：Tackle the Gate of Despair, they faced increasing challenges and gained progressively enhanced abilities.\\n<b>Domineering</b>：Infamy for stealing from others and shops: ‑40%. You can use a Special Technique to force your way out when caught by the authorities."
-    qcTranslated: "<b>Trial</b>: Challenge the Gate of Despair trials with increasing difficulty to gain progressively enhanced talent effects.\\n<b>Domineering</b>: Infamy for seizing items from others and shops: 40%. You can use a Special Technique to force your way out when caught by the authorities."
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: OtherNamedDefect
+    qcStatus: FailedValidation
+    flaggedForQcReview: true
+    qcRejectedCorrection: "<b>Trial</b>: Challenge the Gate of Despair trials with increasing difficulty to gain progressively enhanced talent effects.\\n<b>Domineering</b>: Infamy for seizing items from others and shops: 40%. You can use a Special Technique to force your way out when caught by the authorities."
+    qcFailureReason: "Missing a negative sign '-' before a number required by the source."
     qcDefectCategories:
-    - OtherNamedDefect
-    - DroppedContent
+    - Unknown
+    qcRuleCheckFailureCount: 4
+    qcRuleCheckFailureBaseline: "<b>Trial</b>：Tackle the Gate of Despair, they faced increasing challenges and gained progressively enhanced abilities.\\n<b>Domineering</b>：Infamy for stealing from others and shops: ‑40%. You can use a Special Technique to force your way out when caught by the authorities."
   - split: 15
     subIndex: 1
     text: "挑战难度不断提升的鬼门关试炼，获取逐渐增强的天赋效果。"
@@ -658,13 +662,13 @@
   - split: 15
     text: "玄冰"
     translated: "Xuanbing"
-    qcReviewedText: "<b>Xuanbing</b>：Condense cosmic ice to enhance the Tianshan Sect's martial arts and icy martial techniques.\\n<b>Icicles</b>：Gain one Ice and Cold Martial Art upon leveling fully, with additional boosts of 2 based on the martial art's quality./4/6/8/10/12 points of Inner Power cap"
-    qcTranslated: "<b>Xuanbing</b>: Condense cosmic ice to enhance the Tianshan Sect's martial arts and icy martial techniques.\\n<b>Icicles</b>: For each Ice and Cold Martial Art that reaches full level, gain an additional 2/4/6/8/10/12 points of Inner Power cap based on its quality."
+    qcReviewedText: "<b>Xuanbing</b>：Condense cosmic ice to enhance the Tianshan Sect's martial arts and icy martial techniques.\\n<b>Icicles</b>：Gain one Ice and Cold Martial Art upon leveling fully, with additional boosts of 2 based on the martial art's quality./4/6/8/10/12 points of Inner Power Maximum"
+    qcTranslated: "<b>Xuanbing</b>: Condense cosmic ice to enhance the Tianshan Sect's martial arts and icy martial techniques.\\n<b>Icicles</b>: For each Ice and Cold Martial Art fully leveled, gain an additional 2/4/6/8/10/12 points of Inner Power Maximum based on the martial art's quality."
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
+    qcDefectCategory: GarbledNumber
     qcDefectCategories:
-    - HardToParseSeam
+    - GarbledNumber
     - OtherNamedDefect
   - split: 15
     subIndex: 1
@@ -681,7 +685,7 @@
   - split: 15
     subIndex: 4
     text: "12点内力上限。"
-    translated: "12 points of Inner Power cap"
+    translated: "12 points of Inner Power Maximum"
   templates:
   - split: 15
     template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}/4/6/8/10/{4}"
