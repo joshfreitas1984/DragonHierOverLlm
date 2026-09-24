@@ -95,6 +95,34 @@ public class MainPlugin : BasePlugin
     // but silently do nothing.
     internal static ConfigEntry<bool> FixNoCostChoiceClickEnabled;
 
+    // On by default - see PlotSaveResyncPatches for the full rationale:
+    // PlotData.Clone/SinglePlotData.Clone bakes plotText (and choice button text) as literal
+    // strings into a save file the moment a "special" (spePlot) world-event plot is triggered, so
+    // an already-triggered quest keeps showing whatever translation existed at trigger time
+    // forever after - re-translating and repackaging PlotData.csv never reaches it, even across a
+    // full game relaunch. When true, PlotSaveResyncPatches overwrites a whole PlotData's plotText
+    // lines and each line's choiceText/describe from the live PlotDataBase (matched by plotID +
+    // position, guarded against plotID/choice reuse/repurposing) right before the conversation
+    // starts, self-healing existing saves as they're next displayed.
+    internal static ConfigEntry<bool> ResyncStalePlotTextFromSaveEnabled;
+
+    // Cached copy - see BindCachedBool/ResidualCjkDebugEnabledCached above.
+    internal static bool ResyncStalePlotTextFromSaveEnabledCached;
+
+    // On by default - see HorseMountedIconPatches for the full rationale:
+    // HorseIconController.Update() builds the currently-ridden horse's bigmap icon key as
+    // `targetHorseData.name + "大"` directly, bypassing ItemData.GetItemIconName()/ItemIconPatches
+    // entirely, so once the horse's name is translated to English this "IconAtlas" lookup never
+    // resolves and the mounted-horse icon goes missing (confirmed live to be worse than a simple
+    // reverse-translate can fix: the game's own String.Concat call also gets the literal "大" suffix
+    // independently translated). When true, the icon is instead resolved by looking up the horse's
+    // itemID in the live GameDataController.Instance.horseDataBase and using that template's raw
+    // name directly, then set explicitly - no reverse-translation involved.
+    internal static ConfigEntry<bool> ResyncMountedHorseIconEnabled;
+
+    // Cached copy - see BindCachedBool/ResidualCjkDebugEnabledCached above.
+    internal static bool ResyncMountedHorseIconEnabledCached;
+
     // Off by default (dicey/unverified) - a "recollection" dialogue template (e.g.
     // "#TargetInteractName#将此前{0}之遭遇向你娓娓道来......") can embed another already-formatted
     // template's output (a plot-event/world-news sentence, e.g. "{0}在{1}遭逢{5}奇遇...") as its own
@@ -244,6 +272,20 @@ public class MainPlugin : BasePlugin
             "FixNoCostChoiceClick",
             true,
             "When true, PlotInteractController's dialogue choice buttons that have no cost resource (e.g. the 夺取物件/RobHeroItemChoose choices, and the resource-point-attack 开战/坐镇指挥 choices) actually fire their callFuc instead of silently doing nothing, working around a gap in the base game where the dispatch is only reached when choiceData.costResource is non-null. Turn off if a future game patch fixes this at the source. See PlotInteractControllerPatches.");
+
+        ResyncStalePlotTextFromSaveEnabled = BindCachedBool(
+            "Game Bugfixes",
+            "ResyncStalePlotTextFromSave",
+            true,
+            "When true, a whole PlotData's plotText lines AND their SinglePlotChoiceData.choiceText/describe fields are resynced from the live PlotDataBase (matched by plotID + position, guarded against plotID/choice reuse) immediately before the conversation starts, so a corrected translation self-heals an existing save's already-triggered spePlot dialogue instead of it staying frozen at whatever text was baked in when the quest was originally triggered. See PlotSaveResyncPatches and docs/investigations/plugin/save-embedded-plot-text-investigation.md.",
+            v => ResyncStalePlotTextFromSaveEnabledCached = v);
+
+        ResyncMountedHorseIconEnabled = BindCachedBool(
+            "Game Bugfixes",
+            "ResyncMountedHorseIcon",
+            true,
+            "When true, the currently-equipped/ridden horse's bigmap quick-travel icon is resolved by looking up its itemID in the live horseDataBase and using that template's raw Chinese name directly, instead of relying on the (sometimes already-translated, sometimes save-baked) targetHorseData.name field, so the icon resolves instead of going missing once the horse's name has been translated to English. See HorseMountedIconPatches.",
+            v => ResyncMountedHorseIconEnabledCached = v);
 
         ClampPlotTextWidthEnabled = BindCachedBool(
             "Game Bugfixes",
@@ -415,6 +457,32 @@ public class MainPlugin : BasePlugin
         catch (Exception ex)
         {
             Logger.LogError($"Failed to patch PlotTextSizePatches: {ex}");
+        }
+
+        // Wrapped separately - also binds against PlotController.ShowPlot's real interop
+        // signature (see PlotTextSizePatches above), so a binding failure here must not take down
+        // every patch above it either. Must patch AFTER DynamicStringPatches.PatchAll() and after
+        // GameDataController has had a chance to populate PlotDataBase - see PlotSaveResyncPatches.
+        try
+        {
+            Harmony.CreateAndPatchAll(typeof(PlotSaveResyncPatches));
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError($"Failed to patch PlotSaveResyncPatches: {ex}");
+        }
+
+        // Wrapped separately - binds against HorseIconController.Update's real interop signature,
+        // not yet verified live against this build's actual interop metadata; a binding failure here
+        // must not take down every patch above it.
+        try
+        {
+            Harmony.CreateAndPatchAll(typeof(HorseMountedIconPatches));
+            Logger.LogInfo("[HorseMountedIconPatches] Patched HorseIconController.Update.");
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError($"Failed to patch HorseMountedIconPatches: {ex}");
         }
 
         Logger.LogWarning($"Plugin {MyPluginInfo.PLUGIN_GUID} should be patched!");

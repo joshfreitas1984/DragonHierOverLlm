@@ -83,24 +83,55 @@ data bypasses `PlotDataBase` entirely from the moment of cloning onward.
 
 ## Fix: `PlotSaveResyncPatches`
 
-`DragonHeirPlugin/PlotSaveResyncPatches.cs` patches `PlotController.ShowSinglePlot` with a
-`HarmonyPrefix` that, immediately before display:
+Two earlier approaches were tried and abandoned before landing on the working one - kept here as a
+trap for the next person tempted to reach for either:
 
-1. Finds `targetPlot`'s index within `__instance.nowPlot.plotDatas`.
-2. Looks up the *live* `GameDataController.Instance.PlotDataBase[nowPlot.plotID]` and takes the
-   `SinglePlotData` at the same index.
-3. Validates identity before trusting it - compares `sourceName`/`targetName`/`plotSource`/
-   `plotTarget` between the saved snapshot and the live row. If a `plotID` was ever reused/
-   repurposed for a different quest upstream, this mismatch is detected and the resync is skipped
-   (falls back to leaving the saved text as-is) rather than risking a substitution of an unrelated
-   line's text under a coincidentally-matching index.
-4. If validation passes and the live `plotText` differs from the saved one, overwrites
-   `targetPlot.plotText` in place.
+1. **Patch `ShowSinglePlot`, find the index via `nowPlot.plotDatas.IndexOf(targetPlot)`.** Broken:
+   `PlotController.GoNextPlot()` (`Converter/output/_NoNamespace/PlotController.cs:3619`) does
+   `nowPlot.plotDatas.RemoveAt(0)` before showing each subsequent line, so the list shrinks by one
+   every line and the line currently being shown is *always* at position 0 of what remains -
+   `IndexOf` returned 0 for every line, not just the first.
+2. **Patch `ShowSinglePlot`, track a per-`nowPlot`-instance "lines shown so far" counter in a
+   `ConditionalWeakTable<PlotData, ...>`.** Also broken live, and for a more fundamental reason:
+   this relies on the *same* managed `PlotData` wrapper object being handed back across multiple
+   separate Harmony invocations, but Il2CppInterop does not guarantee stable managed-wrapper
+   identity for the same underlying native object across separate marshalling calls. In practice
+   the `ConditionalWeakTable` saw what looked like a "new" key almost every time, so the counter
+   never accumulated - every single line logged "index 0" again, indistinguishable from approach 1
+   failing (this is why it looked like "the fix didn't work at all" rather than "worked partway").
 
-Because `targetPlot` is the exact object instance embedded in the save's `WorldData` graph, this
-overwrite also gets written back into the save file on the next autosave - so affected saves
-self-heal permanently the first time each stale line is redisplayed, not just for that one
-session. Config toggle: `Game Bugfixes.ResyncStalePlotTextFromSave` (on by default).
+**What actually works**: patch `PlotController.ShowPlot(PlotData targetPlot)` instead of
+`ShowSinglePlot`, and resync the *whole* `plotDatas` list in one pass, in a single Harmony
+invocation, before any line has been shown or removed. This needs no cross-call state at all -
+everything happens inside one call, using only the `targetPlot` parameter handed to that call:
+
+1. Looks up the *live* `GameDataController.Instance.PlotDataBase[targetPlot.plotID]`.
+2. Only proceeds if `livePlot.plotDatas.Count == targetPlot.plotDatas.Count` - a count mismatch
+   means the saved/queued list has drifted from the live table's shape (lines added/removed
+   upstream since this instance was cloned), so position-based matching can no longer be trusted
+   at all and the whole conversation is skipped.
+3. Otherwise walks both lists in lockstep by position. For each pair, validates identity first -
+   compares `sourceName`/`targetName`/`plotSource`/`plotTarget` between the saved and live
+   `SinglePlotData` at that position. If a `plotID` was ever reused/repurposed for a different
+   quest upstream, this mismatch is detected per-line and just that line is skipped (leaving its
+   saved text as-is) rather than risking a substitution of an unrelated line's text.
+4. If validation passes and the live `plotText` differs from the saved one, overwrites the saved
+   `SinglePlotData.plotText` in place.
+5. Also resyncs each line's `choices` (`SinglePlotChoiceData.choiceText`/`describe` - the dialogue
+   choice buttons) the same way, nested one level deeper: same reasoning (frozen into the save by
+   the same `PlotData.Clone()` graph, same untouched-list timing since `choices` isn't subject to
+   the `GoNextPlot`/`RemoveAt` trap - only `plotDatas` itself gets popped), same
+   count-match-then-per-entry-identity-guard shape, but anchored on `callFuc`/`callParam` instead
+   of speaker names, since `SinglePlotChoiceData` has no `sourceName`/`targetName` fields -
+   `callFuc`/`callParam` are the raw, never-translated CSV-sourced function hookup/parameter
+   strings, so they're a stable "is this still the same choice" signal instead.
+
+Because `targetPlot` (and each `SinglePlotData`/`SinglePlotChoiceData` inside it) is the exact
+object instance embedded
+in the save's `WorldData` graph, these overwrites also get written back into the save file on the
+next autosave - so affected saves self-heal permanently the first time the conversation is next
+opened, not just for that one session. Config toggle:
+`Game Bugfixes.ResyncStalePlotTextFromSave` (on by default).
 
 ## Survey: other save-embedded categories with the same pattern (2026-09-24)
 
@@ -171,7 +202,9 @@ keys, which is exactly the trap a reflection/diff-based "generic" fix would fall
 | Category (live table) | Field | Risk | Why |
 |---|---|---|---|
 | `PlotData`/`SinglePlotData` | `plotText` | Safe (fixed) | Static, CSV-sourced. Resynced with an identity guard in `PlotSaveResyncPatches`. |
-| `ItemData` (weapon/armor/helmet/shoes/med/food/horse) | `name`, `checkName`, `describe` | Needs verification | Confirmed baked-stale live (`"name":"大马"` found raw in a save). Unverified whether players can rename items/horses - if so, `name` doubles as a mutable player field and a blind resync would erase it. |
+| `SinglePlotData.choices` (`SinglePlotChoiceData`) | `choiceText`, `describe` | Safe (fixed) | Same clone-into-save pattern, nested one level deeper. Resynced in `PlotSaveResyncPatches.ResyncChoices`, identity-guarded on `callFuc`/`callParam` (never-translated CSV function hookup fields) instead of speaker names. |
+| `SinglePlotChoiceData` | `callFuc`, `callParam`, `requirements`, `relations`, `costResource`, `inited`, `inheritMissionRequirement`, `autoChangeCostByDifficulty`, `destroyEvent`, `playerInteractionTimeNeed` | Never touch | Logic/requirement/cost state, not translation output. `callFuc`/`callParam` are deliberately used as the identity anchor precisely because they're never translated. |
+| `ItemData` (weapon/armor/helmet/shoes/med/food/horse) | `name`, `checkName`, `describe` | Needs verification | Confirmed baked-stale live, and confirmed inconsistent per-instance (2026-09-24): the SAME horse ID (e.g. `HorseData.csv` id 22 `枣红马`) appears as both raw `"name":"枣红马"` (34 instances) AND already-baked `"name":"Chestnut horse"` (45 instances) across different `ItemData` clones in one save - exactly the `.Clone()`-freeze pattern, just non-deterministic per instance depending on whether that specific clone was ever displayed/translated yet. Unverified whether players can rename items/horses - if so, `name` doubles as a mutable player field and a blind resync would erase it. |
 | `ItemData` | `itemID` used as a resync key | Unsafe as-is | Confirmed collision in a real save - two different items both had `"itemID":0`. Identity must come from `type`+`subType`(+more), not `itemID` alone. |
 | `ItemData` | `value`, `itemLv`, `rareLv`, `weight`, `poisonNum`, `poisonNumDetected`, `isNew`, `setName` | Never touch | Per-instance rolled/numeric state. |
 | `ItemData.horseData` (`HorseData`) | `speed`, `power`, `sprint`, `resist`, `*Add`, `nowPower`, `favorRate`, `sprintTimeLeft/Cd`, `equiped` | Never touch | Per-instance horse stat rolls, all numeric. |
@@ -184,7 +217,7 @@ keys, which is exactly the trap a reflection/diff-based "generic" fix would fall
 | `ForceData` | `forceName` | High risk - do not touch without confirming first | This genre commonly lets the player found/rename their own force/sect. If true here, a blind resync would silently erase that customization on next autosave. |
 | `ForceData` | `forceStyle`, `color` | Not a translation target | Style/hex-color config keys. |
 | `ForceData` | everything else (population, resources, favor, tech, salary) | Never touch | Simulation/progress state. |
-| `KungfuSkillData`/summon skills | `name`, `describe` | Needs verification | Likely safe (CSV-templated, not usually player-renamed) but not confirmed live. |
+| `KungfuSkillData`/summon skills | `name`, `describe` | Not affected by this bug (confirmed 2026-09-24) | `KungfuSkillData` instances are never cloned into the save at all - confirmed by grepping all four `SaveSlot*/{Save,Hero,TempHero}` files for fields unique to the class (`manaCost`, `baseDamage`, `summonSkill`, `weaponName`, `targetType`, etc.): zero hits anywhere. Skills are referenced only by `skillID` int (e.g. `"bookData":{"skillID":100}`, `HeroData.kungfuSkillFocus:[0,4]`), so `name`/`describe` must already be resolved live from `kungfuSkillDataBase` at display time - the correct, non-frozen pattern. No fix needed; no patch written. |
 | `KungfuSkillData` | `weaponName`, `animationName` | Not a translation target | Internal asset/animation identifiers. |
 | `KungfuSkillData` | everything else (damage/mana/range) | Never touch | Combat balance stats. |
 | `ResourcePointData` | `resourcePointName`, `resourcePointFullName` | Needs verification | Same shape as `areaName`/`innName`, not confirmed live. |
@@ -218,6 +251,71 @@ extending `PlotSaveResyncPatches`'s approach to any of them, still need to:
 - Decide whether a single generalized helper (live-table lookup + identity guard, parameterized by
   table/id-getter/field-list) is worth building once several of these are confirmed, versus
   continuing with per-category patches like `PlotSaveResyncPatches`.
+
+### KungfuSkillData investigation (2026-09-24): not every `Clone()`-capable class is actually cloned into the save
+
+Before assuming any `Dictionary<int, X>` live table has the same bug as `PlotData`, confirm the
+class's *own* fields actually show up in the save JSON - don't just check that a name/describe
+field with the right ID is present nearby, since IDs get referenced (not embedded) constantly
+without the containing object ever being cloned. For `KungfuSkillData` specifically:
+
+- `bookData:{"skillID":100}` (an `ItemData.bookData` wrapper) and `HeroData.kungfuSkillFocus:[0,4]`
+  are plain int/array *references* to a skill, not embedded `KungfuSkillData` objects - don't
+  mistake "a skillID appears near a name/describe string" for the class being cloned; that
+  name/describe usually belongs to the wrapping `ItemData` (the book item), not the skill itself.
+- The decisive check is grepping for fields that only exist on the suspect class and nowhere else
+  (`manaCost`, `baseDamage`, `summonSkill`, `targetType`, `weaponName` for `KungfuSkillData`) across
+  every save file (`Save`, `Hero`, `TempHero` - not just `Save`) and every slot. Zero hits across
+  four independent slots is strong evidence the class is genuinely never cloned, not just that this
+  particular save happened not to trigger it.
+- Found in passing, out of this pass's scope: `HeroData.goodKungfuSkillName` is a separate
+  `List<string>` field that DOES bake in skill names verbatim and DOES stay raw/untranslated
+  (`"goodKungfuSkillName":["无影乱剑"]`) - a real bug, but a different mechanism/field than
+  `KungfuSkillData.name`, not yet investigated (call site, whether it's ever re-derived, whether a
+  "good skill" designation can change over a hero's life). Worth a dedicated pass with its own
+  step-1-style live confirmation before assuming it fits the same resync-from-live-table fix shape.
+
+### Horse/item sprite lookup investigation (2026-09-24): a related but distinct bug class - translated text used as an atlas key, not baked into the save
+
+Prompted by a report that horse and item sprites sometimes go missing. This turned out to be a
+*different* mechanism than the `.Clone()`-freeze bug above (though it interacts with it - see the
+gap noted at the end), specific to how the game builds `TextureController.LoadAtlasSprite`'s
+`spriteName` argument for a handful of UI elements: the atlas is keyed on each row's **original
+raw Chinese** name, but the display code hands it whatever's currently in `ItemData.name`, which
+`DynamicStringPatches`/the CSV-column translation pipeline has usually already translated to
+English by the time it's read - so the atlas lookup fails to resolve.
+
+Two confirmed root causes, both fixed this pass:
+
+1. **`HorseIconController.Update()`** (`Converter/output/_NoNamespace/HorseIconController.cs:
+   ~574`) builds the bigmap "currently-ridden horse" icon key as `targetHorseData.name + "大"`
+   directly - bypassing `ItemData.GetItemIconName()`/`ItemIconPatches` entirely (confirmed via
+   `grep` to be the only non-numeric atlas-key builder in the whole decompiled codebase besides
+   `GetItemIconName()`). Fixed in `DragonHeirPlugin/HorseMountedIconPatches.cs`: prefixes
+   `LoadAtlasSprite` and reverse-translates the name portion before the "大" suffix, for the
+   `"IconAtlas"` atlas specifically. Config toggle: `Game Bugfixes.ResyncMountedHorseIcon` (on by
+   default).
+2. **A genuine translation-dictionary collision**: `HorseData.csv` rows 22 (`枣红马`) and 27
+   (`黄骠马`) - two distinct horses - were both translated to `"Chestnut horse"` in
+   `dynamicStringsFromColumns.txt.yaml`. `DynamicStringPatches._reverseDictionary` is a first-wins
+   `Result -> Raw` map (`DynamicStringPatches.cs:559-560`), so `ItemIconPatches`' reverse lookup for
+   whichever horse lost the race got the *other* horse's raw name back, breaking its icon. Checked
+   Food (36 names) and Med (36 names) columns too - zero collisions there, so this was an isolated
+   pair, not a systemic gap in `ItemIconPatches`' approach. Fixed by retranslating `黄骠马` to
+   `"Palomino horse"` in both `Files/Converted/dynamicStringsFromColumns.txt.yaml` and the deployed
+   `Files/Mod/dynamicStringsFromColumns.txt.yaml`.
+
+**Known gap, deliberately not fixed this pass**: both fixes above are correct for translations
+computed from now on, but they do NOT retroactively heal an `ItemData` instance whose `name` was
+*already* baked into an existing save as the old, colliding `"Chestnut horse"` text - confirmed
+live (see the updated `ItemData` risk-table row above) that both horse IDs 22 and 27 already have
+baked `"name":"Chestnut horse"` clones sitting in real saves, alongside other still-raw clones of
+the same IDs. For those already-baked instances, the dictionary fix makes `ReverseTranslate`
+*deterministic* (always resolves to `枣红马`) instead of an arbitrary coin-flip, which does not make
+an already-wrong case worse, but doesn't fix an already-wrong `黄骠马` instance either. Retroactively
+healing this needs the `ItemData`-name/describe resync patch already flagged as blocked in the risk
+table above (on solving the confirmed `itemID` collision/identity problem first) - out of scope for
+this pass; left as a pointer for whoever picks up the `ItemData` row next.
 
 ## Notes for fixing OTHER save-embedded content
 

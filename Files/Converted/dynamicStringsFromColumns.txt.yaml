@@ -2922,9 +2922,9 @@
 - raw: "白义马"
   splits:
   - text: "白义马"
-    translated: "White Meaning Horse"
-    qcReviewedText: "White Meaning Horse"
-    qcTranslated: "Bai Yi Ma"
+    translated: "Baiyi Horse"
+    qcReviewedText: "Baiyi Horse"
+    qcTranslated: "Baiyi Horse"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
@@ -2950,8 +2950,8 @@
 - raw: "黄骠马"
   splits:
   - text: "黄骠马"
-    translated: "Chestnut horse"
-    qcReviewedText: "Chestnut horse"
+    translated: "Yellow Dapple Horse"
+    qcReviewedText: "Yellow Dapple Horse"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2989,8 +2989,8 @@
 - raw: "纤离马"
   splits:
   - text: "纤离马"
-    translated: "Xianli Ma"
-    qcReviewedText: "Xianli Ma"
+    translated: "Xianli Horse"
+    qcReviewedText: "Xianli Horse"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3024,15 +3024,11 @@
 - raw: "拳毛驹"
   splits:
   - text: "拳毛驹"
-    translated: "Foal with mane"
-    qcReviewedText: "Foal with mane"
-    qcTranslated: "Quanmao Ju"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: UntranslatedPinyin
-    qcDefectCategories:
-    - UntranslatedPinyin
+    translated: "Curly-Coated Colt"
+    qcReviewedText: "Curly-Coated Colt"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "斑豹马"
   splits:
   - text: "斑豹马"

@@ -139,6 +139,13 @@ internal static class HeroNamePatches
     private static string TranslateNamePart(string input) =>
         _namePartDictionary.TryGetValue(input, out var translated) ? translated : input;
 
+    // HeroName spacing/casing (see HeroNamePostfix below) can leave a stray leading space on the
+    // given-name-only fragment GetHeroName derives natively via String.Replace(fullName,
+    // familyName, "") once a hero's full name is already "Family Given" instead of "FamilyGiven" -
+    // trim before dictionary lookup/return so that space never leaks into a displayed relation
+    // title (e.g. the bare-given-name "former lover" case) for an already-translated hero.
+    private static string TranslateNamePartTrimmed(string input) => TranslateNamePart(input.Trim());
+
     // Standalone full-string returns from GetHeroName - never concatenated with a name.
     private static readonly Dictionary<string, string> StandaloneTitles = new()
     {
@@ -180,6 +187,65 @@ internal static class HeroNamePatches
         ("掌门", "Sect Leader's"),
         ("义", "Sworn"),
     };
+
+    /// <summary>
+    /// HeroData.HeroName(bool) is the getter every hero's own displayed name (including the
+    /// player's - see GlobalData's "#$PlayerName#" substitution and ~90 UI call sites) reads from
+    /// this.heroName. Both the player's name (StartMenuController.ResetPlayerName/
+    /// SetFliteredPlayerName - Converter/output/_NoNamespace/StartMenuController.cs:2005,2112) and
+    /// randomly generated hero names (GameDataController.GenerateRandomHeroName - GameDataController.cs:7715)
+    /// concatenate family+given with a bare String.Concat, no space, natively - and NameData.csv's
+    /// translated surname/given-name parts inherit that missing separator once translated.
+    ///
+    /// Deliberately a display-time Postfix here rather than a patch at either generation site: the
+    /// underlying this.heroName/heroFamilyName fields are left untouched (see
+    /// docs/investigations/plugin/save-embedded-plot-text-investigation.md-style save/identity
+    /// concerns - PlotInteractControllerPatches.GetHero_Prefix already has to reverse-translate a
+    /// display name back to raw Chinese to look a hero up by name, so mutating the stored field
+    /// risks breaking that class of lookup). This only reformats what HeroName() *returns*.
+    ///
+    /// Deliberately does NOT touch a still-untranslated (raw Chinese) name - old saves with a hero
+    /// generated before NameData.csv was translated keep showing raw Chinese here unchanged; fixing
+    /// that is separate, not-yet-implemented work (see
+    /// docs/investigations/plugin/hero-name-spacing-and-translation-plan.md).
+    /// </summary>
+    [HarmonyPatch(typeof(HeroData), nameof(HeroData.HeroName), new[] { typeof(bool) })]
+    [HarmonyPostfix]
+    public static void HeroNamePostfix(HeroData __instance, bool useSetName, ref string __result)
+    {
+        try
+        {
+            if (string.IsNullOrEmpty(__result)) return;
+
+            // A player-set custom nickname (HeroSearchController.EditHeroName) is rich text
+            // ("<i>Nickname</i>"), not a family+given generated name - leave it untouched.
+            if (useSetName && __instance.HaveSetName()) return;
+
+            __result = InsertFamilyGivenSpace(__instance, __result);
+        }
+        catch (Exception ex)
+        {
+            MainPlugin.Logger.LogError($"Error in HeroName spacing postfix: {ex}");
+        }
+    }
+
+    private static string InsertFamilyGivenSpace(HeroData hero, string fullName)
+    {
+        var familyName = hero.HeroFamilyName();
+        if (string.IsNullOrEmpty(familyName) || !fullName.StartsWith(familyName, StringComparison.Ordinal))
+            return fullName;
+
+        var givenName = fullName.Substring(familyName.Length);
+        if (givenName.Length == 0 || givenName[0] == ' ') return fullName; // no given name, or already spaced
+
+        // Only reformat already-translated (Latin) names - a raw Chinese family/given name is left
+        // exactly as-is (see this method's caller's doc comment).
+        if (DynamicStringPatches.ContainsCjk(familyName) || DynamicStringPatches.ContainsCjk(givenName))
+            return fullName;
+
+        var properGivenName = char.ToUpperInvariant(givenName[0]) + givenName.Substring(1).ToLower();
+        return $"{familyName} {properGivenName}";
+    }
 
     [HarmonyPatch(typeof(GameController), nameof(GameController.GetHeroName), new[] { typeof(int), typeof(int) })]
     [HarmonyPostfix]
@@ -232,7 +298,7 @@ internal static class HeroNamePatches
             const string childSuffix = "儿";
             if (result.Length > childSuffix.Length && result.EndsWith(childSuffix, StringComparison.Ordinal))
             {
-                result = TranslateNamePart(result.Substring(0, result.Length - childSuffix.Length));
+                result = TranslateNamePartTrimmed(result.Substring(0, result.Length - childSuffix.Length));
                 return;
             }
 
@@ -242,7 +308,7 @@ internal static class HeroNamePatches
             // to be extracted as their own standalone raw candidates (see
             // Tests/DynamicStringSources.cs's DynamicStringNamePartColumnSources) rather than only the
             // whole "Family.Given" compound, since HeroData strips the "." separator at load time.
-            result = TranslateNamePart(result);
+            result = TranslateNamePartTrimmed(result);
         }
         catch (Exception ex)
         {
