@@ -67,7 +67,7 @@ public class TranslationWorkflowTests
     {
         var badStrings = new List<string>
         {
-            "九死一生",
+            "黄泉",
         };
 
         await TranslationWorkflow.SetSplitAsInvalid(GameFileHandling.WorkingDirectory,

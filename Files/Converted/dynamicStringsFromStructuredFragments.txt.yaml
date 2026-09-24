@@ -3153,6 +3153,10 @@
   splits:
   - text: "泰岳大典"
     translated: "Mount Tai Grand Assembly"
+    qcReviewedText: "Mount Tai Grand Assembly"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "洗耳恭听"
   splits:
   - text: "洗耳恭听"

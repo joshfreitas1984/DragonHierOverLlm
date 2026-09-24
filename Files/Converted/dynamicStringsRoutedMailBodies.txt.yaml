@@ -164,6 +164,13 @@
   splits:
   - text: "#$PlayerName#掌门，邪派联军在蛰伏数月后，突然向"
     translated: "Sect Leader #$PlayerName#, the Unorthodox Sect coalition, after lying low for months, suddenly attacked \\n"
+    qcReviewedText: "Sect Leader #$PlayerName#, the Unorthodox Sect coalition, after lying low for months, suddenly attacked \\n<b>Dali </b>Initiate the attack! The situation is urgent. We look to you to lead the elite disciples of the Xianxia Sect to come and support us as per the agreement of the Golden Summit Conference!"
+    qcTranslated: "Sect Leader #$PlayerName#, the Unorthodox Sect coalition, after lying low for months, suddenly launched an attack on \\n<b>Dali </b>! The situation is urgent. We look to you to lead the elite disciples of the Xianxia Sect to come and support us as per the agreement of the Golden Summit Conference!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
   - subIndex: 1
     text: "大理"
     translated: "Dali"
@@ -199,6 +206,14 @@
   splits:
   - text: "#PlayerName#，邪派联军再度兵临城下，如今"
     translated: "#PlayerName#, the Unorthodox Sect coalition has once again laid siege to the city. Now,"
+    qcReviewedText: "#PlayerName#, the Unorthodox Sect coalition has once again laid siege to the city. Now,<b>Dali </b>Already perilous, like eggs balanced on a pile. Yet for the safety of the Central Plains Wulin, though hope is faint, this old man will lead all the Meishan disciples in one final stand.\n#PlayerName# if you can bring #PlayerForceName# to lend your last bit of support, I would be immensely grateful."
+    qcTranslated: "#PlayerName#, the Unorthodox Sect coalition has once again laid siege to the city. Now, <b>Dali</b> is perilous, like eggs balanced on a pile. Yet for the safety of the Central Plains Wulin, though hope is faint, this old man will lead all the Meishan disciples in one final stand.\\n#PlayerName#, if you can bring #PlayerForceName# to lend your last bit of support, I would be immensely grateful."
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "大理"
     translated: "Dali"
@@ -460,6 +475,14 @@
   splits:
   - text: "近来七大恶人之一雨人屠现身"
     translated: "Recently, Yu Rentu, one of the Seven Great Villains, has appeared."
+    qcReviewedText: "Recently, Yu Rentu, one of the Seven Great Villains, has appeared.<b>Jiangling Eastern</b>, This person's martial arts is powerful, extremely vicious, and dangerous. To prevent the local civilians from suffering, I will go to confront them first. I hope the Xianxia Sect disciples can arrive quickly to support me!"
+    qcTranslated: "Recently, Yu Rentu, one of the Seven Great Villains, has appeared in <b>Eastern Jiangling</b>. This person's martial arts is powerful, extremely vicious, and dangerous. To prevent the local civilians from suffering, I will go to confront them first. I hope the Xianxia Sect disciples can arrive quickly to support me!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "江陵东方"
     translated: "Jiangling Eastern"
@@ -1072,14 +1095,14 @@
 - raw: "最近收到一封奇怪请柬，邀我参加什么黑道大会。感觉事有蹊跷，还请#PlayerName#来<b>丐帮</b>一同商议对策。"
   splits:
   - text: "最近收到一封奇怪请柬，邀我参加什么黑道大会。感觉事有蹊跷，还请#PlayerName#来"
-    translated: "Recently, I received an odd invitation to some black market conference. It feels fishy, so I've asked #PlayerName# to come along."
-    qcReviewedText: "Recently, I received an odd invitation to some black market conference. It feels fishy, so I've asked #PlayerName# to come along.<b>Beggar Sect </b>Discuss strategies together"
-    qcTranslated: "Recently, I received an odd invitation to some black market conference. It feels fishy, so I've asked #PlayerName# to come to the <b>Beggar Sect</b> to discuss strategies together."
+    translated: "I recently received a strange invitation to attend some kind of Underworld conference. Something feels off about it; I could use your help, #PlayerName#."
+    qcReviewedText: "I recently received a strange invitation to attend some kind of Underworld conference. Something feels off about it; I could use your help, #PlayerName#.<b>Beggar Sect </b>Discuss strategies together"
+    qcTranslated: "I recently received a strange invitation to attend some kind of Underworld conference. Something feels off about it; please come to the <b>Beggar Sect</b> with #PlayerName# to discuss strategies together."
     qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
+    flaggedForQcReview: true
+    qcQualityScore: 0
+    qcDefectCategory: DroppedContent
     qcDefectCategories:
-    - HardToParseSeam
     - DroppedContent
   - subIndex: 1
     text: "丐帮"
@@ -1112,9 +1135,9 @@
 - raw: "黑道大会即将在<b>腾冲府</b>召开，#PlayerName#别忘了前来与兄弟几个汇合，咱们一道探探这龙潭虎穴。"
   splits:
   - text: "黑道大会即将在"
-    translated: "The Black Society Conference is about to take place."
-    qcReviewedText: "The Black Society Conference is about to take place.<b>Tengchong Prefecture </b>Convene, #PlayerName#, don't forget to join your fellow brothers to explore this den of dragons and tigers together."
-    qcTranslated: "The Black Society Conference is about to convene in <b>Tengchong Prefecture</b>. #PlayerName#, don't forget to come and join your fellow brothers so we can explore this den of dragons and tigers together."
+    translated: "The Underworld Conference is about to begin at"
+    qcReviewedText: "The Underworld Conference is about to begin at <b>Tengchong Prefecture </b>Convene, #PlayerName#, don't forget to join your fellow brothers to explore this den of dragons and tigers together."
+    qcTranslated: "The Underworld Conference is about to convene at <b>Tengchong Prefecture</b>. #PlayerName#, don't forget to come join your fellow brothers so we can explore this den of dragons and tigers together."
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
@@ -1195,8 +1218,8 @@
   splits:
   - text: "近来"
     translated: "Recently"
-    qcReviewedText: "Recently <b>Yangzhou city inside </b>An epidemic is spreading, and despite our efforts to control it, we have been unable to stop it. Ruan Zhi and I are investigating the source of the infection, which seems to be linked to the Black Market's Five Ghosts, Chi Baicheng. We hope you will come, #PlayerName#, and join us in putting an end to his evil deeds!"
-    qcTranslated: "Recently, an epidemic has been rampant in <b>Yangzhou city</b>, and despite our efforts to control it, we have been unable to stop it. Ruan Zhi and I are investigating the source of the infection, which seems to be linked to the Black Market's Five Ghosts, Chi Baicheng. We hope you will come, #PlayerName#, and join us in putting an end to his evil deeds!"
+    qcReviewedText: "Recently <b>Yangzhou city inside </b>An epidemic is rampant and spreading despite our efforts to stop it. Ruan Zhi and I are investigating the source of the infection, which seems to be linked to Chi Baicheng of the Underworld Five Ghosts. We hope you will come, #PlayerName#, and join us in putting an end to his wicked deeds!"
+    qcTranslated: "Recently, an epidemic has been rampant in <b>Yangzhou city</b>, spreading despite our efforts to stop it. Ruan Zhi and I are investigating the source of the infection, which seems to be linked to Chi Baicheng of the Underworld Five Ghosts. We hope you will come, #PlayerName#, and join us in putting an end to his wicked deeds!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -1207,7 +1230,7 @@
     translated: "Yangzhou city inside"
   - subIndex: 2
     text: "疫病横行，屡治不止，我与阮芷正在追查传染源头，似乎与黑道五鬼迟百城有关。还望#PlayerName#前来，同我等一道阻止其恶行！"
-    translated: "An epidemic is spreading, and despite our efforts to control it, we have been unable to stop it. Ruan Zhi and I are investigating the source of the infection, which seems to be linked to the Black Market's Five Ghosts, Chi Baicheng. We hope you will come, #PlayerName#, and join us in putting an end to his evil deeds!"
+    translated: "An epidemic is rampant and spreading despite our efforts to stop it. Ruan Zhi and I are investigating the source of the infection, which seems to be linked to Chi Baicheng of the Underworld Five Ghosts. We hope you will come, #PlayerName#, and join us in putting an end to his wicked deeds!"
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "#PlayerName#，我这段时间一直躲在<b>怀柔村西方</b>苦练武艺。但近来似乎有邪道寻得我行踪，只怕又要来抢夺神功。还望你能前来助我一臂之力！"
@@ -1698,15 +1721,15 @@
 - raw: "我准备向师傅禀报黑道大会之事，还请#PlayerName#来<b>青城派</b>替我做证，以免师傅不信。"
   splits:
   - text: "我准备向师傅禀报黑道大会之事，还请#PlayerName#来"
-    translated: "I am preparing to report to Master about the Black Society Conference matter. May I have #PlayerName# come, please?"
-    qcReviewedText: "I am preparing to report to Master about the Black Society Conference matter. May I have #PlayerName# come, please?<b>Qingcheng Sect </b>Testify for me to prevent the master from not believing."
-    qcTranslated: "I am preparing to report to Master about the Black Society Conference matter. May I have #PlayerName# come to <b>Qingcheng Sect</b> to testify for me, so that Master will believe me?"
+    translated: "I am ready to report to Master about the Underworld Convention. Please come, #PlayerName#."
+    qcReviewedText: "I am ready to report to Master about the Underworld Convention. Please come, #PlayerName#.<b>Qingcheng Sect </b>Testify for me to prevent the master from not believing."
+    qcTranslated: "I am ready to report to Master about the Underworld Convention. Please come to <b>Qingcheng Sect</b>, #PlayerName#, and testify for me so that Master will believe me."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
     qcDefectCategories:
-    - DroppedContent
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "青城派"
     translated: "Qingcheng Sect"
@@ -1893,6 +1916,13 @@
   splits:
   - text: "神兵修复已进入最后阶段，听闻有邪派人士想趁参加名剑大会之机出手抢夺。"
     translated: "The repair of the divine weapon is now in its final stage, but there are reports that Unorthodox Sect members intend to seize it during the prestigious Sword Conference."
+    qcReviewedText: "The repair of the divine weapon is now in its final stage, but there are reports that Unorthodox Sect members intend to seize it during the prestigious Sword Conference.\nHope to see #PlayerName# here <b>Swordforging Manor </b>Guard, to ensure the smooth completion of the divine weapon."
+    qcTranslated: "The repair of the divine weapon is now in its final stage, but there are reports that Unorthodox Sect members intend to seize it during the prestigious Sword Conference.\nHope to see #PlayerName# come to <b>Swordforging Manor</b> as Guard, to ensure the smooth completion of the divine weapon."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "还望#PlayerName#前来"
     translated: "Hope to see #PlayerName# here"
@@ -2116,8 +2146,8 @@
   splits:
   - text: "#PlayerName#，我爹在"
     translated: "#PlayerName#, my father is here"
-    qcReviewedText: "#PlayerName#, my father is here <b>Qingyuan Township West </b>I'm about to catch up with the Black Path Five Ghosts. I hope you can come and join me to prevent Father from accidentally harming Brother Wang Tianyi."
-    qcTranslated: "#PlayerName#, my father is in <b>the west of Qingyuan Township</b>, on the verge of catching up with the Black Path Five Ghosts. I hope you can come and join me to prevent Father from accidentally harming Brother Wang Tianyi."
+    qcReviewedText: "#PlayerName#, my father is here <b>Qingyuan Township West </b>I'm about to catch up with the Underworld Five Ghosts. I hope you can join me and help prevent Father from accidentally harming Brother Wang Tianyi."
+    qcTranslated: "#PlayerName#, my father is in <b>Qingyuan Township West</b> and is about to catch up with the Underworld Five Ghosts. I hope you can join me and help prevent Father from accidentally harming Brother Wang Tianyi."
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
@@ -2129,7 +2159,7 @@
     translated: "Qingyuan Township West"
   - subIndex: 2
     text: "眼看就要追上黑道五鬼。还望你前来与我汇合，定要阻止爹爹误伤王添翼兄弟。"
-    translated: "I'm about to catch up with the Black Path Five Ghosts. I hope you can come and join me to prevent Father from accidentally harming Brother Wang Tianyi."
+    translated: "I'm about to catch up with the Underworld Five Ghosts. I hope you can join me and help prevent Father from accidentally harming Brother Wang Tianyi."
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "#PlayerName#，我等一路追捕恶贼卢玉麟，如今已在<b>应天北方</b>一带将其截住。\n望你前来助我们一臂之力，联手将此人捉拿归案！"
@@ -2196,14 +2226,14 @@
 - raw: "#PlayerName#，这些日子爹爹一直在追踪黑道五鬼，听说他们已逃到了<b>景德镇</b>内，还望你赶快去截住王添翼，免得他被我爹爹误伤！"
   splits:
   - text: "#PlayerName#，这些日子爹爹一直在追踪黑道五鬼，听说他们已逃到了"
-    translated: "#PlayerName#, these days, Father has been tracking the Black Gang Five, and I've heard they've fled to"
-    qcReviewedText: "#PlayerName#, these days, Father has been tracking the Black Gang Five, and I've heard they've fled to <b>Jingdezhen </b>Inside, I hope you hurry to stop Wang Tianyi; otherwise, he might be accidentally injured by my father!"
-    qcTranslated: "#PlayerName#, these days, Father has been tracking the Black Gang Five, and I've heard they've fled to <b>Jingdezhen</b>. I hope you hurry to stop Wang Tianyi; otherwise, he might be accidentally injured by my father!"
+    translated: "#PlayerName#, these days Father has been tracking the Underworld Five Ghosts; I heard they have already fled to"
+    qcReviewedText: "#PlayerName#, these days Father has been tracking the Underworld Five Ghosts; I heard they have already fled to <b>Jingdezhen </b>Inside, I hope you hurry to stop Wang Tianyi; otherwise, he might be accidentally injured by my father!"
+    qcTranslated: "#PlayerName#, these days Father has been tracking the Underworld Five Ghosts; I heard they have already fled to <b>Jingdezhen</b>. Please hurry to stop Wang Tianyi, so that he is not accidentally injured by my father!"
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
+    qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
-    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "景德镇"
     translated: "Jingdezhen"
@@ -2274,6 +2304,13 @@
   splits:
   - text: "第二届泰岳大典"
     translated: "Second Mount Tai Grand Assembly"
+    qcReviewedText: "<b>Second Mount Tai Grand Assembly </b>Already held, and it is said that all sect leaders will attend. #PlayerName#, you'd better come along to enjoy the spectacle!"
+    qcTranslated: "<b>The Second Mount Tai Grand Assembly</b> has already begun, and it is said that all Sect Leaders will attend. #PlayerName#, you'd better come along to enjoy the spectacle!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "已经召开，听说各派掌门都会参与。#PlayerName#还不赶紧来一道瞧个热闹！"
     translated: "Already held, and it is said that all sect leaders will attend. #PlayerName#, you'd better come along to enjoy the spectacle!"
@@ -2322,15 +2359,15 @@
 - raw: "我爹听闻黑道大会之事，准备近日在<b>江陵</b>举办大会商讨对策。届时必定群雄云集，盛况空前，#PlayerName#定要前来凑凑热闹！"
   splits:
   - text: "我爹听闻黑道大会之事，准备近日在"
-    translated: "My father heard about the organized crime conference and is preparing to attend in the near future."
-    qcReviewedText: "My father heard about the organized crime conference and is preparing to attend in the near future.<b>Jiangling </b>Hold a grand conference to discuss strategies. Rest assured, champions will gather in great numbers, and the scene is bound to be spectacular! #PlayerName# must come to join the fun!"
-    qcTranslated: "My father heard about the Black Sect Assembly and is preparing to hold a grand conference in <b>Jiangling</b> in the near future to discuss strategies. Rest assured, champions will gather in great numbers, and the scene is bound to be spectacular! #PlayerName# must come to join the fun!"
+    translated: "My father heard about the Underworld conference and is preparing for it within the coming days."
+    qcReviewedText: "My father heard about the Underworld conference and is preparing for it within the coming days.<b>Jiangling </b>Hold a grand conference to discuss strategies. Rest assured, champions will gather in great numbers, and the scene is bound to be spectacular! #PlayerName# must come to join the fun!"
+    qcTranslated: "My father heard about the Underworld conference and is preparing to hold a grand conference in <b>Jiangling</b> within the coming days to discuss strategies. Rest assured, champions will gather in great numbers, and the scene is bound to be spectacular! #PlayerName# must come to join the fun!"
     qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
     qcDefectCategories:
-    - DroppedContent
     - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "江陵"
     translated: "Jiangling"
@@ -2362,6 +2399,13 @@
   splits:
   - text: "第三次泰岳大典"
     translated: "The Third Mount Tai Grand Assembly"
+    qcReviewedText: "#PlayerName#，<b>The Third Mount Tai Grand Assembly </b>It will be held soon. We hope you and the various sect leaders will follow the plan. Once Jin Longsheng makes an appearance, we should strike simultaneously to take him down.\nThe rise and fall of the nation depends on this battle, and the safety of the Wulin is at stake as well. I hope you can bring some top‑notch warriors to aid us; it would be wise to prepare for any unforeseen circumstances!"
+    qcTranslated: "#PlayerName#，<b>The Third Mount Tai Grand Assembly</b> will be held soon. We hope you and the various Sect Leaders will follow the plan. Once Jin Longsheng makes an appearance, we should strike simultaneously to take him down.\nThe rise and fall of the nation depends on this battle, and the safety of the Wulin is at stake as well. I hope you can bring some top‑notch warriors to aid us; it would be wise to prepare for any unforeseen circumstances!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "即将召开。届时还望你与各派掌门依计行事，待金龙生一现身，便同时出手将他拿下。"
     translated: "It will be held soon. We hope you and the various sect leaders will follow the plan. Once Jin Longsheng makes an appearance, we should strike simultaneously to take him down."
@@ -2413,6 +2457,14 @@
   splits:
   - text: "#PlayerName#，我已邀请少林、武当、峨眉、丐帮四大门派掌门会于"
     translated: "#PlayerName#, I have invited the Palm Leaders of the Shaolin, Wudang, Meizhou, and Beggar Sects to meet at"
+    qcReviewedText: "#PlayerName#, I have invited the Palm Leaders of the Shaolin, Wudang, Meizhou, and Beggar Sects to meet at <b>Banqiao Town</b>。\nOn the surface, it was to discuss the details of the third Mount Tai Grand Assembly, but in reality, it was to reveal to Jin Longsheng that he is the true leader of the Blood Robe Alliance, and to plan the strategy for capturing him at the assembly.\nI still hope you will come and share the full details of your previous investigation."
+    qcTranslated: "#PlayerName#, I have invited the Sect Leaders of the Shaolin, Wudang, Emei, and Beggar Sects to meet at <b>Banqiao Town</b>.\nOn the surface, it was to discuss the details of the third Mount Tai Grand Assembly, but in reality, it was to reveal that Jin Longsheng is the true leader of the Blood Robe Alliance, and to plan the strategy for capturing him at the assembly.\nI still hope you will come and share the full details of your previous investigation."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
+    - OtherNamedDefect
   - subIndex: 1
     text: "板桥镇"
     translated: "Banqiao Town"

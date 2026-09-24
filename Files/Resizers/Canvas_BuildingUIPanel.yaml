@@ -1,3 +1,7 @@
+- path: Canvas/BuildingUIPanel/BuildingUI/Describe
+  sampleText: The hall at the center of the sect is one of its most important structures, where the Sect Leader often handles affairs, holds meetings, and receives guests.
+  idealFontSize: 16.0
+  allowWordWrap: true
 - path: Canvas/BuildingUIPanel/BuildingUI/ExtraButtonGrid/UpgradeButton/Text
   sampleText: Upgrade
   idealFontSize: 16.0

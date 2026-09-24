@@ -1,3 +1,10 @@
+- path: Canvas/MissionPanel/MissionUI/ForceMission/Text
+  sampleText: >-
+    Sect quest
+
+    Reduce Public sentiment in Leshan Town by 15 points.  (0/15)
+  idealFontSize: 10.0
+  allowWordWrap: true
 - path: Canvas/MissionPanel/MissionUI/MissionScrollView/Viewport/Content/MissionIconPrefab(Clone)/Title
   sampleText: Just starting out(Xianxia Sect Temple Scriptures Pavilion)
   idealFontSize: 12.0
@@ -7,3 +14,10 @@
   allowWordWrap: true
   allowAutoSizing: true
   adjustWidth: -50.0
+- path: Canvas/MissionPanel/MissionUI/WorldEventScrollView/Viewport/Content/WorldEventIconPrefab(Clone)/Title
+  sampleText: Immortal Wood Miraculous Fruit(Maoshan Sect North Direction)
+  idealFontSize: 12.0
+  alignment: Left
+  allowWordWrap: true
+  adjustX: 20.0
+  adjustWidth: -45.0

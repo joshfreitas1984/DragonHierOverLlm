@@ -206,26 +206,50 @@
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#为朝廷殚精竭虑，其勋阶也节节高升，"
     translated: "#PlayerForceDescribe# #$PlayerName# devoted himself to the court, and his rank steadily rose due to his efforts."
+    qcReviewedText: "#PlayerForceDescribe# #$PlayerName# devoted himself to the court, and his rank steadily rose due to his efforts."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "#PlayerForceDescribe##$PlayerName#为朝廷鞠躬尽瘁，其官职也节节高升。"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#为朝廷鞠躬尽瘁，其官职也节节高升。"
     translated: "#PlayerForceDescribe# #$PlayerName# served the court with utmost dedication, and his official rank rose step by step."
+    qcReviewedText: "#PlayerForceDescribe# #$PlayerName# served the court with utmost dedication, and his official rank rose step by step."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "#PlayerForceDescribe##$PlayerName#及其附庸、盟友，一路高歌猛进，攻城略地，"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#及其附庸、盟友，一路高歌猛进，攻城略地，"
     translated: "#PlayerForceDescribe# #$PlayerName# and their vassals, allies, have been advancing triumphantly, conquering cities and territories,"
+    qcReviewedText: "#PlayerForceDescribe# #$PlayerName# and their vassals, allies, have been advancing triumphantly, conquering cities and territories,"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "#PlayerForceDescribe##$PlayerName#及其附庸、盟友，一路高歌猛进，攻城略地。"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#及其附庸、盟友，一路高歌猛进，攻城略地。"
     translated: "#PlayerForceDescribe# #$PlayerName# and his vassals, allies, have been advancing triumphantly, conquering cities and territories."
+    qcReviewedText: "#PlayerForceDescribe# #$PlayerName# and his vassals, allies, have been advancing triumphantly, conquering cities and territories."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "#PlayerForceDescribe##$PlayerName#在江湖中历经无数风浪，"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#在江湖中历经无数风浪，"
     translated: "#PlayerForceDescribe# #$PlayerName# has weathered countless storms in the Jianghu."
+    qcReviewedText: "#PlayerForceDescribe# #$PlayerName# has weathered countless storms in the Jianghu."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "#PlayerForceDescribe##$PlayerName#在第三次泰岳大典，\\n以一手出神入化之武艺，力克众位掌门高手。"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#在第三次泰岳大典，"
     translated: "#PlayerForceDescribe# #$PlayerName# at the Third Mount Tai Grand Assembly,"
+    qcReviewedText: "#PlayerForceDescribe# #$PlayerName# at the Third Mount Tai Grand Assembly,\\nWith mastery of miraculous martial arts, he defeated numerous Sect Leaders and experts."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "以一手出神入化之武艺，力克众位掌门高手。"
     translated: "With mastery of miraculous martial arts, he defeated numerous Sect Leaders and experts."
@@ -235,6 +259,10 @@
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#在第三次泰岳大典，"
     translated: "#PlayerForceDescribe# #$PlayerName# at the Third Mount Tai Grand Assembly,"
+    qcReviewedText: "#PlayerForceDescribe# #$PlayerName# at the Third Mount Tai Grand Assembly,\\nDefeated by the hands of various Sect Leaders."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "惜败于各大掌门之手。"
     translated: "Defeated by the hands of various Sect Leaders."
@@ -244,18 +272,34 @@
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#携手五位眷侣，"
     translated: "#PlayerForceDescribe# #$PlayerName# teamed up with five partners,"
+    qcReviewedText: "#PlayerForceDescribe# #$PlayerName# teamed up with five partners,"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "#PlayerForceDescribe##$PlayerName#犯下了滔天罪行，江湖中人人得而诛之。"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#犯下了滔天罪行，江湖中人人得而诛之。"
     translated: "#PlayerForceDescribe# #$PlayerName# committed heinous crimes, and every person in the Jianghu deserves to punish him."
+    qcReviewedText: "#PlayerForceDescribe# #$PlayerName# committed heinous crimes, and every person in the Jianghu deserves to punish him."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "#PlayerForceDescribe##$PlayerName#自继任#PlayerForceName#掌门之位后，"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#自继任#PlayerForceName#掌门之位后，"
     translated: "#PlayerForceDescribe# #$PlayerName# took over as the Sect Leader of #PlayerForceName# after succeeding to the position."
+    qcReviewedText: "#PlayerForceDescribe# #$PlayerName# took over as the Sect Leader of #PlayerForceName# after succeeding to the position."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "#PlayerForceDescribe##$PlayerName#通过夜以继日的苦心经营，"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#通过夜以继日的苦心经营，"
     translated: "#PlayerForceDescribe# #$PlayerName# through nights and days of diligent management,"
+    qcReviewedText: "#PlayerForceDescribe# #$PlayerName# through nights and days of diligent management,"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "#PlayerForceName#一年一度的门派比武大会正在举行，各路弟子纷纷前往欲一展身手"
   splits:
   - text: "#PlayerForceName#一年一度的门派比武大会正在举行，各路弟子纷纷前往欲一展身手"
@@ -1724,6 +1768,13 @@
   splits:
   - text: "#$PlayerName#掌门，邪派联军在蛰伏数月后，突然向"
     translated: "Sect Leader #$PlayerName#, the Unorthodox Sect coalition, after lying low for months, suddenly attacked \\n"
+    qcReviewedText: "Sect Leader #$PlayerName#, the Unorthodox Sect coalition, after lying low for months, suddenly attacked \\n<b>Dali </b>Initiate the attack! The situation is urgent. We look to you to lead the elite disciples of the Xianxia Sect to come and support us as per the agreement of the Golden Summit Conference!"
+    qcTranslated: "Sect Leader #$PlayerName#, the Unorthodox Sect coalition, after lying low for months, suddenly launched an attack on \\n<b>Dali </b>! The situation is urgent. We look to you to lead the elite disciples of the Xianxia Sect to come and support us as per the agreement of the Golden Summit Conference!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
   - subIndex: 1
     text: "大理"
     translated: "Dali"
@@ -1759,6 +1810,14 @@
   splits:
   - text: "#PlayerName#，邪派联军再度兵临城下，如今"
     translated: "#PlayerName#, the Unorthodox Sect coalition has once again laid siege to the city. Now,"
+    qcReviewedText: "#PlayerName#, the Unorthodox Sect coalition has once again laid siege to the city. Now,<b>Dali </b>Already perilous, like eggs balanced on a pile. Yet for the safety of the Central Plains Wulin, though hope is faint, this old man will lead all the Meishan disciples in one final stand.\\n#PlayerName# if you can bring #PlayerForceName# to lend your last bit of support, I would be immensely grateful."
+    qcTranslated: "#PlayerName#, the Unorthodox Sect coalition has once again laid siege to the city. Now, <b>Dali</b> is perilous, like eggs balanced on a pile. Yet for the safety of the Central Plains Wulin, though hope is faint, this old man will lead all the Meishan disciples in one final stand.\\n#PlayerName#, if you can bring #PlayerForceName# to lend your last bit of support, I would be immensely grateful."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "大理"
     translated: "Dali"
@@ -2020,6 +2079,14 @@
   splits:
   - text: "近来七大恶人之一雨人屠现身"
     translated: "Recently, Yu Rentu, one of the Seven Great Villains, has appeared."
+    qcReviewedText: "Recently, Yu Rentu, one of the Seven Great Villains, has appeared.<b>Jiangling Eastern</b>, This person's martial arts is powerful, extremely vicious, and dangerous. To prevent the local civilians from suffering, I will go to confront them first. I hope the Xianxia Sect disciples can arrive quickly to support me!"
+    qcTranslated: "Recently, Yu Rentu, one of the Seven Great Villains, has appeared in <b>Eastern Jiangling</b>. This person's martial arts is powerful, extremely vicious, and dangerous. To prevent the local civilians from suffering, I will go to confront them first. I hope the Xianxia Sect disciples can arrive quickly to support me!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "江陵东方"
     translated: "Jiangling Eastern"
@@ -2634,14 +2701,14 @@
 - raw: "最近收到一封奇怪请柬，邀我参加什么黑道大会。感觉事有蹊跷，还请#PlayerName#来<b>丐帮</b>一同商议对策。"
   splits:
   - text: "最近收到一封奇怪请柬，邀我参加什么黑道大会。感觉事有蹊跷，还请#PlayerName#来"
-    translated: "Recently, I received an odd invitation to some black market conference. It feels fishy, so I've asked #PlayerName# to come along."
-    qcReviewedText: "Recently, I received an odd invitation to some black market conference. It feels fishy, so I've asked #PlayerName# to come along.<b>Beggar Sect </b>Discuss strategies together"
-    qcTranslated: "Recently, I received an odd invitation to some black market conference. It feels fishy, so I've asked #PlayerName# to come to the <b>Beggar Sect</b> to discuss strategies together."
+    translated: "I recently received a strange invitation to attend some kind of Underworld conference. Something feels off about it; I could use your help, #PlayerName#."
+    qcReviewedText: "I recently received a strange invitation to attend some kind of Underworld conference. Something feels off about it; I could use your help, #PlayerName#.<b>Beggar Sect </b>Discuss strategies together"
+    qcTranslated: "I recently received a strange invitation to attend some kind of Underworld conference. Something feels off about it; please come to the <b>Beggar Sect</b> with #PlayerName# to discuss strategies together."
     qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
+    flaggedForQcReview: true
+    qcQualityScore: 0
+    qcDefectCategory: DroppedContent
     qcDefectCategories:
-    - HardToParseSeam
     - DroppedContent
   - subIndex: 1
     text: "丐帮"
@@ -2674,9 +2741,9 @@
 - raw: "黑道大会即将在<b>腾冲府</b>召开，#PlayerName#别忘了前来与兄弟几个汇合，咱们一道探探这龙潭虎穴。"
   splits:
   - text: "黑道大会即将在"
-    translated: "The Black Society Conference is about to take place."
-    qcReviewedText: "The Black Society Conference is about to take place.<b>Tengchong Prefecture </b>Convene, #PlayerName#, don't forget to join your fellow brothers to explore this den of dragons and tigers together."
-    qcTranslated: "The Black Society Conference is about to convene in <b>Tengchong Prefecture</b>. #PlayerName#, don't forget to come and join your fellow brothers so we can explore this den of dragons and tigers together."
+    translated: "The Underworld Conference is about to begin at"
+    qcReviewedText: "The Underworld Conference is about to begin at <b>Tengchong Prefecture </b>Convene, #PlayerName#, don't forget to join your fellow brothers to explore this den of dragons and tigers together."
+    qcTranslated: "The Underworld Conference is about to convene at <b>Tengchong Prefecture</b>. #PlayerName#, don't forget to come join your fellow brothers so we can explore this den of dragons and tigers together."
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
@@ -2757,8 +2824,8 @@
   splits:
   - text: "近来"
     translated: "Recently"
-    qcReviewedText: "Recently <b>Yangzhou city inside </b>An epidemic is rampant and spreading despite our efforts to stop it. Ruan Zhi and I are investigating the source of the infection, which seems to be linked to the Black Market's Five Ghosts, Chi Baicheng. We hope you will come, #PlayerName#, and join us in putting an end to his wicked deeds!"
-    qcTranslated: "Recently, <b>inside Yangzhou city</b>, an epidemic is rampant and spreading despite our efforts to stop it. Ruan Zhi and I are investigating the source of the infection, which seems to be linked to the Black Market's Five Ghosts, Chi Baicheng. We hope you will come, #PlayerName#, and join us in putting an end to his wicked deeds!"
+    qcReviewedText: "Recently <b>Yangzhou city inside </b>An epidemic is rampant and spreading despite our efforts to stop it. Ruan Zhi and I are investigating the source of the infection, which seems to be linked to Chi Baicheng of the Underworld Five Ghosts. We hope you will come, #PlayerName#, and join us in putting an end to his wicked deeds!"
+    qcTranslated: "Recently, an epidemic has been rampant in <b>Yangzhou city</b>, spreading despite our efforts to stop it. Ruan Zhi and I are investigating the source of the infection, which seems to be linked to Chi Baicheng of the Underworld Five Ghosts. We hope you will come, #PlayerName#, and join us in putting an end to his wicked deeds!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -2769,7 +2836,7 @@
     translated: "Yangzhou city inside"
   - subIndex: 2
     text: "疫病横行，屡治不止，我与阮芷正在追查传染源头，似乎与黑道五鬼迟百城有关。还望#PlayerName#前来，同我等一道阻止其恶行！"
-    translated: "An epidemic is rampant and spreading despite our efforts to stop it. Ruan Zhi and I are investigating the source of the infection, which seems to be linked to the Black Market's Five Ghosts, Chi Baicheng. We hope you will come, #PlayerName#, and join us in putting an end to his wicked deeds!"
+    translated: "An epidemic is rampant and spreading despite our efforts to stop it. Ruan Zhi and I are investigating the source of the infection, which seems to be linked to Chi Baicheng of the Underworld Five Ghosts. We hope you will come, #PlayerName#, and join us in putting an end to his wicked deeds!"
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "#PlayerName#，我这段时间一直躲在<b>怀柔村西方</b>苦练武艺。但近来似乎有邪道寻得我行踪，只怕又要来抢夺神功。还望你能前来助我一臂之力！"
@@ -3260,15 +3327,15 @@
 - raw: "我准备向师傅禀报黑道大会之事，还请#PlayerName#来<b>青城派</b>替我做证，以免师傅不信。"
   splits:
   - text: "我准备向师傅禀报黑道大会之事，还请#PlayerName#来"
-    translated: "I am preparing to report to Master about the Black Society Conference matter. May I have #PlayerName# come, please?"
-    qcReviewedText: "I am preparing to report to Master about the Black Society Conference matter. May I have #PlayerName# come, please?<b>Qingcheng Sect </b>Testify for me to prevent the master from not believing."
-    qcTranslated: "I am preparing to report to Master about the Black Society Conference matter. May I have #PlayerName# come to <b>Qingcheng Sect</b> to testify for me, so that Master will believe me?"
+    translated: "I am ready to report to Master about the Underworld Convention. Please come, #PlayerName#."
+    qcReviewedText: "I am ready to report to Master about the Underworld Convention. Please come, #PlayerName#.<b>Qingcheng Sect </b>Testify for me to prevent the master from not believing."
+    qcTranslated: "I am ready to report to Master about the Underworld Convention. Please come to <b>Qingcheng Sect</b>, #PlayerName#, and testify for me so that Master will believe me."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
     qcDefectCategories:
-    - DroppedContent
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "青城派"
     translated: "Qingcheng Sect"
@@ -3454,6 +3521,14 @@
   splits:
   - text: "神兵修复已进入最后阶段，听闻有邪派人士想趁参加名剑大会之机出手抢夺。"
     translated: "The repair of the divine weapon is now in its final stage, but there are reports that Unorthodox Sect members intend to seize it during the prestigious Sword Conference."
+    qcReviewedText: "The repair of the divine weapon is now in its final stage, but there are reports that Unorthodox Sect members intend to seize it during the prestigious Sword Conference.\\nHope to see #PlayerName# here <b>Swordforging Manor </b>Guard, to ensure the smooth completion of the divine weapon."
+    qcTranslated: "The repair of the divine weapon is now in its final stage, but there are reports that Unorthodox Sect members intend to seize it during the prestigious Sword Conference.\\nHope to see #PlayerName# come to <b>Swordforging Manor</b> as Guard, to ensure the smooth completion of the divine weapon."
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "还望#PlayerName#前来"
     translated: "Hope to see #PlayerName# here"
@@ -3677,8 +3752,8 @@
   splits:
   - text: "#PlayerName#，我爹在"
     translated: "#PlayerName#, my father is here"
-    qcReviewedText: "#PlayerName#, my father is here <b>Qingyuan Township West </b>I'm about to catch up with the Black Path Five Ghosts. I hope you can come and join me to prevent Father from accidentally harming Brother Wang Tianyi."
-    qcTranslated: "#PlayerName#, my father is in <b>the west of Qingyuan Township</b>, on the verge of catching up with the Black Path Five Ghosts. I hope you can come and join me to prevent Father from accidentally harming Brother Wang Tianyi."
+    qcReviewedText: "#PlayerName#, my father is here <b>Qingyuan Township West </b>I'm about to catch up with the Underworld Five Ghosts. I hope you can join me and help prevent Father from accidentally harming Brother Wang Tianyi."
+    qcTranslated: "#PlayerName#, my father is in <b>Qingyuan Township West</b> and is about to catch up with the Underworld Five Ghosts. I hope you can join me and help prevent Father from accidentally harming Brother Wang Tianyi."
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
@@ -3690,7 +3765,7 @@
     translated: "Qingyuan Township West"
   - subIndex: 2
     text: "眼看就要追上黑道五鬼。还望你前来与我汇合，定要阻止爹爹误伤王添翼兄弟。"
-    translated: "I'm about to catch up with the Black Path Five Ghosts. I hope you can come and join me to prevent Father from accidentally harming Brother Wang Tianyi."
+    translated: "I'm about to catch up with the Underworld Five Ghosts. I hope you can join me and help prevent Father from accidentally harming Brother Wang Tianyi."
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "#PlayerName#，我等一路追捕恶贼卢玉麟，如今已在<b>应天北方</b>一带将其截住。\\n望你前来助我们一臂之力，联手将此人捉拿归案！"
@@ -3757,14 +3832,14 @@
 - raw: "#PlayerName#，这些日子爹爹一直在追踪黑道五鬼，听说他们已逃到了<b>景德镇</b>内，还望你赶快去截住王添翼，免得他被我爹爹误伤！"
   splits:
   - text: "#PlayerName#，这些日子爹爹一直在追踪黑道五鬼，听说他们已逃到了"
-    translated: "#PlayerName#, these days, Father has been tracking the Black Gang Five, and I've heard they've fled to"
-    qcReviewedText: "#PlayerName#, these days, Father has been tracking the Black Gang Five, and I've heard they've fled to <b>Jingdezhen </b>Inside, I hope you hurry to stop Wang Tianyi; otherwise, he might be accidentally injured by my father!"
-    qcTranslated: "#PlayerName#, these days, Father has been tracking the Black Gang Five, and I've heard they've fled to <b>Jingdezhen</b>. I hope you hurry to stop Wang Tianyi; otherwise, he might be accidentally injured by my father!"
+    translated: "#PlayerName#, these days Father has been tracking the Underworld Five Ghosts; I heard they have already fled to"
+    qcReviewedText: "#PlayerName#, these days Father has been tracking the Underworld Five Ghosts; I heard they have already fled to <b>Jingdezhen </b>Inside, I hope you hurry to stop Wang Tianyi; otherwise, he might be accidentally injured by my father!"
+    qcTranslated: "#PlayerName#, these days Father has been tracking the Underworld Five Ghosts; I heard they have already fled to <b>Jingdezhen</b>. Please hurry to stop Wang Tianyi, so that he is not accidentally injured by my father!"
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
+    qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
-    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "景德镇"
     translated: "Jingdezhen"
@@ -3835,6 +3910,13 @@
   splits:
   - text: "第二届泰岳大典"
     translated: "Second Mount Tai Grand Assembly"
+    qcReviewedText: "<b>Second Mount Tai Grand Assembly </b>Already held, and it is said that all sect leaders will attend. #PlayerName#, you'd better come along to enjoy the spectacle!"
+    qcTranslated: "<b>The Second Mount Tai Grand Assembly</b> has already begun, and it is said that all Sect Leaders will attend. #PlayerName#, you'd better come along to enjoy the spectacle!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "已经召开，听说各派掌门都会参与。#PlayerName#还不赶紧来一道瞧个热闹！"
     translated: "Already held, and it is said that all sect leaders will attend. #PlayerName#, you'd better come along to enjoy the spectacle!"
@@ -3883,15 +3965,15 @@
 - raw: "我爹听闻黑道大会之事，准备近日在<b>江陵</b>举办大会商讨对策。届时必定群雄云集，盛况空前，#PlayerName#定要前来凑凑热闹！"
   splits:
   - text: "我爹听闻黑道大会之事，准备近日在"
-    translated: "My father heard about the organized crime conference and is preparing to attend in the near future."
-    qcReviewedText: "My father heard about the organized crime conference and is preparing to attend in the near future.<b>Jiangling </b>Hold a grand conference to discuss strategies. Rest assured, champions will gather in great numbers, and the scene is bound to be spectacular! #PlayerName# must come to join the fun!"
-    qcTranslated: "My father heard about the Black Sect Assembly and is preparing to hold a grand conference in <b>Jiangling</b> in the near future to discuss strategies. Rest assured, champions will gather in great numbers, and the scene is bound to be spectacular! #PlayerName# must come to join the fun!"
+    translated: "My father heard about the Underworld conference and is preparing for it within the coming days."
+    qcReviewedText: "My father heard about the Underworld conference and is preparing for it within the coming days.<b>Jiangling </b>Hold a grand conference to discuss strategies. Rest assured, champions will gather in great numbers, and the scene is bound to be spectacular! #PlayerName# must come to join the fun!"
+    qcTranslated: "My father heard about the Underworld conference and is preparing to hold a grand conference in <b>Jiangling</b> within the coming days to discuss strategies. Rest assured, champions will gather in great numbers, and the scene is bound to be spectacular! #PlayerName# must come to join the fun!"
     qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
     qcDefectCategories:
-    - DroppedContent
     - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "江陵"
     translated: "Jiangling"
@@ -3923,6 +4005,13 @@
   splits:
   - text: "第三次泰岳大典"
     translated: "The Third Mount Tai Grand Assembly"
+    qcReviewedText: "#PlayerName#，<b>The Third Mount Tai Grand Assembly </b>It will be held soon. We hope you and the various sect leaders will follow the plan. Once Jin Longsheng makes an appearance, we should strike simultaneously to take him down.\\nThe rise and fall of the nation depends on this battle, and the safety of the Wulin is at stake as well. I hope you can bring some top‑notch warriors to aid us; it would be wise to prepare for any unforeseen circumstances!"
+    qcTranslated: "#PlayerName#，<b>The Third Mount Tai Grand Assembly</b> will be held soon. We hope you and the various sect leaders will follow the plan. Once Jin Longsheng makes an appearance, we should strike simultaneously to take him down.\\nThe rise and fall of the nation depends on this battle, and the safety of the Wulin is at stake as well. I hope you can bring some top‑notch warriors to aid us; it would be wise to prepare for any unforeseen circumstances!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "即将召开。届时还望你与各派掌门依计行事，待金龙生一现身，便同时出手将他拿下。"
     translated: "It will be held soon. We hope you and the various sect leaders will follow the plan. Once Jin Longsheng makes an appearance, we should strike simultaneously to take him down."
@@ -3974,6 +4063,13 @@
   splits:
   - text: "#PlayerName#，我已邀请少林、武当、峨眉、丐帮四大门派掌门会于"
     translated: "#PlayerName#, I have invited the Palm Leaders of the Shaolin, Wudang, Meizhou, and Beggar Sects to meet at"
+    qcReviewedText: "#PlayerName#, I have invited the Palm Leaders of the Shaolin, Wudang, Meizhou, and Beggar Sects to meet at <b>Banqiao Town</b>。\\nOn the surface, it was to discuss the details of the third Mount Tai Grand Assembly, but in reality, it was to reveal to Jin Longsheng that he is the true leader of the Blood Robe Alliance, and to plan the strategy for capturing him at the assembly.\\nI still hope you will come and share the full details of your previous investigation."
+    qcTranslated: "#PlayerName#, I have invited the Sect Leaders of the Shaolin, Wudang, Emei, and Beggar Sects to meet at <b>Banqiao Town</b>.\\nOn the surface, it was to discuss the details of the third Mount Tai Grand Assembly, but in reality, it was to reveal to Jin Longsheng that he is the true leader of the Blood Robe Alliance, and to plan the strategy for capturing him at the assembly.\\nI still hope you will come and share the full details of your previous investigation."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "板桥镇"
     translated: "Banqiao Town"
@@ -6931,6 +7027,13 @@
   splits:
   - text: "传闻七大恶人之一雨人屠现身"
     translated: "It's said that Yu Rentu, one of the Seven Great Villains, has appeared."
+    qcReviewedText: "It's said that Yu Rentu, one of the Seven Great Villains, has appeared.<b>#PosText#</b>, There will likely be another bloodshed here"
+    qcTranslated: "It's said that Yu Rentu, one of the Seven Great Villains, has appeared in <b>#PosText#</b>, and there will likely be another bloodshed here."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "，想必此地又将掀起一阵腥风血雨。"
     translated: ", There will likely be another bloodshed here"
@@ -6989,24 +7092,25 @@
   splits:
   - text: "传闻中原大侠郭淮一路追缉，终于在"
     translated: "It is said that the Great Hero Guo Huai tracked the culprit all the way from the Central Plains and finally caught up with him,"
-    qcReviewedText: "It is said that the Great Hero Guo Huai tracked the culprit all the way from the Central Plains and finally caught up with him,<b>#PosText#</b>We've found the trail of the Five Evils of the Black Society nearby."
-    qcTranslated: "It is said that the Great Hero Guo Huai tracked the culprit all the way from the Central Plains and finally caught up with him, finding the trail of the Five Evils of the Black Society near <b>#PosText#</b>."
+    qcReviewedText: "It is said that the Great Hero Guo Huai tracked the culprit all the way from the Central Plains and finally caught up with him,<b>#PosText#</b>Nearby, I found traces of the Underworld Five Ghosts."
+    qcTranslated: "It is said that the Great Hero Guo Huai tracked the culprit all the way from the Central Plains and finally caught up with him, finding traces of the Underworld Five Ghosts near <b>#PosText#</b>."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
     qcDefectCategories:
     - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "附近寻得了黑道五鬼的踪迹。"
-    translated: "We've found the trail of the Five Evils of the Black Society nearby."
+    translated: "Nearby, I found traces of the Underworld Five Ghosts."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻中原小侠郭勇锐一路追击，在<b>#PosText#</b>截住了黑道五鬼的去路。"
   splits:
   - text: "传闻中原小侠郭勇锐一路追击，在"
     translated: "It's said that Guo Yongrui, the young hero from Central Plains, pursued relentlessly."
-    qcReviewedText: "It's said that Guo Yongrui, the young hero from Central Plains, pursued relentlessly.<b>#PosText#</b>Blocked the Five Ghosts of the Black Society from their path."
-    qcTranslated: "It's said that Guo Yongrui, the young hero from Central Plains, pursued relentlessly and blocked the Five Ghosts of the Black Society from their path at <b>#PosText#</b>."
+    qcReviewedText: "It's said that Guo Yongrui, the young hero from Central Plains, pursued relentlessly.<b>#PosText#</b>Blocked the Underworld Five Ghosts' path"
+    qcTranslated: "It's said that Guo Yongrui, the young hero from Central Plains, pursued relentlessly and blocked the Underworld Five Ghosts' path at <b>#PosText#</b>."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -7014,15 +7118,15 @@
     - HardToParseSeam
   - subIndex: 1
     text: "截住了黑道五鬼的去路。"
-    translated: "Blocked the Five Ghosts of the Black Society from their path."
+    translated: "Blocked the Underworld Five Ghosts' path"
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻中原小侠郭勇锐一路追踪黑道五鬼岳无畏，如今到了<b>#PosText#</b>附近。"
   splits:
   - text: "传闻中原小侠郭勇锐一路追踪黑道五鬼岳无畏，如今到了"
-    translated: "It is said that Young Hero Guo Yongrui has been chasing the Black Path Five Ghosts' Yue Wuwei all the way here."
-    qcReviewedText: "It is said that Young Hero Guo Yongrui has been chasing the Black Path Five Ghosts' Yue Wuwei all the way here.<b>#PosText#</b>Nearby"
-    qcTranslated: "It is said that Young Hero Guo Yongrui has been chasing the Black Path Five Ghosts' Yue Wuwei all the way to near <b>#PosText#</b>."
+    translated: "It is said that Young Hero Guo Yongrui has been chasing the Underworld Five Ghosts Yue Wuwei all the way here."
+    qcReviewedText: "It is said that Young Hero Guo Yongrui has been chasing the Underworld Five Ghosts Yue Wuwei all the way here.<b>#PosText#</b>Nearby"
+    qcTranslated: "It is said that Young Hero Guo Yongrui has been chasing the Underworld Five Ghosts Yue Wuwei all the way to near <b>#PosText#</b>."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -7162,6 +7266,13 @@
   splits:
   - text: "传闻几名武林人士聚于"
     translated: "Rumors have it that several Wulin figures have gathered."
+    qcReviewedText: "Rumors have it that several Wulin figures have gathered.<b>#PosText#</b>At the foot of Mount Tai, someone wanted to emulate Zhao Dianjian and hold a Mount Tai Grand Assembly, which became the laughingstock of the Jianghu for a time."
+    qcTranslated: "Rumors have it that several Wulin figures have gathered at <b>#PosText#</b>the foot of Mount Tai, wanting to emulate Zhao Dianjian and hold a Mount Tai Grand Assembly, which became the laughingstock of the Jianghu for a time."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "泰山脚下，欲效仿赵点检举办“泰岳巨典”，江湖中一时引为笑谈。"
     translated: "At the foot of Mount Tai, someone wanted to emulate Zhao Dianjian and hold a Mount Tai Grand Assembly, which became the laughingstock of the Jianghu for a time."
@@ -7235,6 +7346,10 @@
   splits:
   - text: "传闻因#PlayerForceDescribe##$PlayerName#于小诸葛叛乱中护驾有功，当今圣上已特许其入宫查案。"
     translated: "Rumors have it that #PlayerForceDescribe# #$PlayerName# earned special permission from the current emperor to investigate cases in the palace for his heroic protection of the emperor during the Xiao Zhu Ge Rebellion."
+    qcReviewedText: "Rumors have it that #PlayerForceDescribe# #$PlayerName# earned special permission from the current emperor to investigate cases in the palace for his heroic protection of the emperor during the Xiao Zhu Ge Rebellion."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "传闻在#PosText#一带有铁掌帮弟子行凶作恶，颇为嚣张。"
   splits:
   - text: "传闻在#PosText#一带有铁掌帮弟子行凶作恶，颇为嚣张。"
@@ -7470,6 +7585,13 @@
   splits:
   - text: "传闻峨嵋派"
     translated: "Legend has it that the Emei school"
+    qcReviewedText: "Legend has it that the Emei school <b>Dali </b>The branch headquarters is under attack by the Unorthodox Sect, and it is in grave danger. Sect Leader Sima Deyuan has already sent out urgent appeal letters to the leaders of various orthodox sects in Central Plains."
+    qcTranslated: "Legend has it that the Emei school's <b>Dali</b> branch headquarters is under attack by the Unorthodox Sect, and it is in grave danger. Sect Leader Sima Deyuan has already sent out urgent appeal letters to the leaders of various orthodox sects in Central Plains."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "大理"
     translated: "Dali"
@@ -7490,6 +7612,13 @@
   splits:
   - text: "传闻峨眉掌门白眉真人为抵御阎罗殿等邪派之威胁，邀请中原正道群雄在"
     translated: "It is said that Sect Leader Bai Mei Immortal of Mount Emei invited the righteous heroes of Central Plains to gather in order to defend against the threats posed by the Yama Hall and other Unorthodox Sects."
+    qcReviewedText: "It is said that Sect Leader Bai Mei Immortal of Mount Emei invited the righteous heroes of Central Plains to gather in order to defend against the threats posed by the Yama Hall and other Unorthodox Sects.<b>Emei </b>A grand conference is held at the Golden Summit to discuss strategies against the enemy."
+    qcTranslated: "It is said that Sect Leader Bai Mei Immortal of Mount Emei invited the righteous heroes of Central Plains to gather at the Golden Summit of <b>Emei</b> in order to defend against the threats posed by the Yama Hall and other Unorthodox Sects. A grand conference is held there to discuss strategies against the enemy."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "峨眉"
     translated: "Emei"
@@ -7570,8 +7699,8 @@
 - raw: "传闻有神秘人广发请柬欲召开黑道大会，乐山大患戴壮似乎也在受邀者之列。"
   splits:
   - text: "传闻有神秘人广发请柬欲召开黑道大会，乐山大患戴壮似乎也在受邀者之列。"
-    translated: "Rumors circulated about a mysterious figure sending out invitations to hold a mafia conference. Leshan's major threat, Dai Zhuang, seems to be among the invitees."
-    qcReviewedText: "Rumors circulated about a mysterious figure sending out invitations to hold a mafia conference. Leshan's major threat, Dai Zhuang, seems to be among the invitees."
+    translated: "There are rumors of a mysterious person widely sending out invitations to convene an Underworld conference, and Dai Zhuang, one of Leshan's greatest threats, seems to be among the invitees."
+    qcReviewedText: "There are rumors of a mysterious person widely sending out invitations to convene an Underworld conference, and Dai Zhuang, one of Leshan's greatest threats, seems to be among the invitees."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -7792,14 +7921,15 @@
 - raw: "传闻江湖侠士已将黑道五鬼之一高首捉拿归案，御史大人将在<b>飞龙门内</b>予以嘉奖。"
   splits:
   - text: "传闻江湖侠士已将黑道五鬼之一高首捉拿归案，御史大人将在"
-    translated: "It's rumored that a Hero from the Jianghu has already apprehended one of the Five Ghosts of the underworld, Gao Shou. The Lord of the Imperial Censorate will be"
-    qcReviewedText: "It's rumored that a Hero from the Jianghu has already apprehended one of the Five Ghosts of the underworld, Gao Shou. The Lord of the Imperial Censorate will be <b>Inside the Flying Dragon Gate </b>Commendation granted"
-    qcTranslated: "It's rumored that a Hero from the Jianghu has already apprehended one of the Five Ghosts of the underworld, Gao Shou. The Lord of the Imperial Censorate will grant commendation <b>Inside the Flying Dragon Gate</b>."
+    translated: "It is said that a hero of Jianghu has already captured Gao Shou, one of the Underworld Five Ghosts, and Lord Inspector will be present at..."
+    qcReviewedText: "It is said that a hero of Jianghu has already captured Gao Shou, one of the Underworld Five Ghosts, and Lord Inspector will be present at...<b>Inside the Flying Dragon Gate </b>Commendation granted"
+    qcTranslated: "It is said that a Hero of Jianghu has already captured Gao Shou, one of the Underworld Five Ghosts, and Lord Inspector will grant commendation at <b>Inside the Flying Dragon Gate</b>."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
     qcDefectCategories:
     - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "飞龙门内"
     translated: "Inside the Flying Dragon Gate"
@@ -8026,6 +8156,13 @@
   splits:
   - text: "传闻邪派联军休整完毕，再次兵临"
     translated: "It is said that the Unorthodox Sect coalition has finished its rest and is advancing once more."
+    qcReviewedText: "It is said that the Unorthodox Sect coalition has finished its rest and is advancing once more.<b>Dali City </b>Down below. This time, all the elite forces have been deployed, and it seems they are determined to conquer this place."
+    qcTranslated: "It is said that the Unorthodox Sect coalition has finished its rest and is advancing once more, pressing down on <b>Dali City</b>. This time, all the elite forces have been deployed, and it seems they are determined to conquer this place."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "大理城"
     translated: "Dali City"
@@ -8038,6 +8175,13 @@
   splits:
   - text: "传闻邪派联军在击败聚义门之后挥师北上，眼下驻扎在"
     translated: "It is said that after the Unorthodox Sect coalition defeated the Righteous Alliance Gate, they marched north and are now stationed there."
+    qcReviewedText: "It is said that after the Unorthodox Sect coalition defeated the Righteous Alliance Gate, they marched north and are now stationed there.<b>#PosText#</b>Nearby"
+    qcTranslated: "It is said that after the Unorthodox Sect coalition defeated the Righteous Alliance Gate, they marched north and are now stationed near <b>#PosText#</b>."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "附近。"
     translated: "Nearby"
@@ -8158,6 +8302,13 @@
   splits:
   - text: "传闻阎罗殿等邪派联军已兵临"
     translated: "It is said that the coalition of Unorthodox Sects like Yama Hall has already arrived at the gates."
+    qcReviewedText: "It is said that the coalition of Unorthodox Sects like Yama Hall has already arrived at the gates.<b>#PosText#</b>Below the city, they prepared to strike at this southwest sect first, to set the stage and demonstrate their power for future campaigns into Central Plains."
+    qcTranslated: "It is said that the coalition of Unorthodox Sects like Yama Hall has already arrived at the gates of <b>#PosText#</b> City, preparing to strike at this southwest sect first, to set the stage and demonstrate their power for future campaigns into Central Plains."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "城下，准备先拿这西南小派开刀，为日后大举进军中原祭旗立威。"
     translated: "Below the city, they prepared to strike at this southwest sect first, to set the stage and demonstrate their power for future campaigns into Central Plains."
@@ -8294,9 +8445,9 @@
 - raw: "传闻黑道五鬼之一的高首被三名捕快追捕，如今逃到了<b>#PosText#</b>附近躲藏。"
   splits:
   - text: "传闻黑道五鬼之一的高首被三名捕快追捕，如今逃到了"
-    translated: "Rumors say that one of the Five Ghosts of the underworld, Gao Shou, is being chased by three constables and has now fled to"
-    qcReviewedText: "Rumors say that one of the Five Ghosts of the underworld, Gao Shou, is being chased by three constables and has now fled to<b>#PosText#</b>Hide nearby"
-    qcTranslated: "Rumors say that one of the Five Ghosts of the underworld, Gao Shou, is being chased by three constables and has now fled to hide nearby <b>#PosText#</b>."
+    translated: "It is said that Gao Shou, one of the Underworld Five Ghosts, is being pursued by three law enforcement officers and has now fled to"
+    qcReviewedText: "It is said that Gao Shou, one of the Underworld Five Ghosts, is being pursued by three law enforcement officers and has now fled to<b>#PosText#</b>Hide nearby"
+    qcTranslated: "It is said that Gao Shou, one of the Underworld Five Ghosts, is being pursued by three law enforcement officers and has now fled to hide nearby <b>#PosText#</b>."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -8310,11 +8461,11 @@
 - raw: "传闻黑道五鬼在<b>#PosText#</b>招摇撞骗，惹是生非，引得当地骚动不断。"
   splits:
   - text: "传闻黑道五鬼在"
-    translated: "Rumors say the Five Ghosts of the underworld are"
-    qcReviewedText: "Rumors say the Five Ghosts of the underworld are<b>#PosText#</b>Proclaiming falsehoods and causing trouble, they stirred up constant unrest in the area."
-    qcTranslated: "Rumors say the Five Ghosts of the underworld are<b>#PosText#</b>proclaiming falsehoods and causing trouble, stirring up constant unrest in the area."
+    translated: "It's said that the Underworld Five Ghosts are here."
+    qcReviewedText: "It's said that the Underworld Five Ghosts are here.<b>#PosText#</b>Proclaiming falsehoods and causing trouble, they stirred up constant unrest in the area."
+    qcTranslated: "It's said that the Underworld Five Ghosts are <b>#PosText#</b>proclaiming falsehoods and causing trouble, stirring up constant unrest in the area."
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
     qcDefectCategories:
     - HardToParseSeam
@@ -8326,9 +8477,9 @@
 - raw: "传闻黑道五鬼迟百城在<b>#PosText#</b>一带啸聚山林，买马招兵，似乎在谋划什么大计。"
   splits:
   - text: "传闻黑道五鬼迟百城在"
-    translated: "It's said that Black Path Ghost Number Five, Chi Baicheng, is here."
-    qcReviewedText: "It's said that Black Path Ghost Number Five, Chi Baicheng, is here.<b>#PosText#</b>One day, he gathered in the mountains and forests, buying horses and recruiting soldiers, as if plotting some great scheme."
-    qcTranslated: "It's said that Black Path Ghost Number Five, Chi Baicheng, is gathering in the mountains and forests around <b>#PosText#</b>, buying horses and recruiting soldiers, as if plotting some great scheme."
+    translated: "It's said that Chi Baicheng of the Underworld Five Ghosts is here."
+    qcReviewedText: "It's said that Chi Baicheng of the Underworld Five Ghosts is here.<b>#PosText#</b>One day, he gathered in the mountains and forests, buying horses and recruiting soldiers, as if plotting some great scheme."
+    qcTranslated: "It's said that Chi Baicheng of the Underworld Five Ghosts is in the <b>#PosText#</b> area, gathering in the mountains and forests, buying horses and recruiting soldiers, as if plotting some great scheme."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -11572,9 +11723,9 @@
 - raw: "听说黑道五鬼施展计策，竟成功逃脱郭大侠的追捕。但中原小侠郭勇锐仍未放弃，一路跟踪到了<b>#PosText#</b>附近。"
   splits:
   - text: "听说黑道五鬼施展计策，竟成功逃脱郭大侠的追捕。但中原小侠郭勇锐仍未放弃，一路跟踪到了"
-    translated: "I heard that the Five Demons of the underworld successfully escaped from the pursuit of Great Hero Guo. But Little Hero Guo Yongrui hasn't given up yet and has been following them all the way."
-    qcReviewedText: "I heard that the Five Demons of the underworld successfully escaped from the pursuit of Great Hero Guo. But Little Hero Guo Yongrui hasn't given up yet and has been following them all the way.<b>#PosText#</b>Nearby"
-    qcTranslated: "I heard that the Five Demons of the underworld successfully escaped from the pursuit of Great Hero Guo. But Little Hero Guo Yongrui hasn't given up yet and has been following them all the way to the vicinity of <b>#PosText#</b>."
+    translated: "It turns out that the Underworld Five Ghosts managed to escape from Great Hero Guo's pursuit by using a clever scheme. However, Young Hero Guo Yongrui has not given up and has been following them all the way."
+    qcReviewedText: "It turns out that the Underworld Five Ghosts managed to escape from Great Hero Guo's pursuit by using a clever scheme. However, Young Hero Guo Yongrui has not given up and has been following them all the way.<b>#PosText#</b>Nearby"
+    qcTranslated: "It turns out that the Underworld Five Ghosts managed to escape from Great Hero Guo's pursuit by using a clever scheme. However, Young Hero Guo Yongrui has not given up and has been following them all the way to the vicinity of <b>#PosText#</b>."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -11644,6 +11795,13 @@
   splits:
   - text: "听闻中原大侠郭淮近日邀请各大门派掌门会于泰山脚下"
     translated: "I heard that the Great Hero Guo Huai recently invited the leaders of various sects to meet at the foot of Mount Tai."
+    qcReviewedText: "I heard that the Great Hero Guo Huai recently invited the leaders of various sects to meet at the foot of Mount Tai.<b>#PosText#</b>, Discuss the arrangements for the third Mount Tai Grand Assembly."
+    qcTranslated: "I heard that the Great Hero Guo Huai recently invited the leaders of various sects to meet at the foot of Mount Tai<b>#PosText#</b> to discuss the arrangements for the third Mount Tai Grand Assembly."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "，共商第三次泰岳大典举办事宜。"
     translated: ", Discuss the arrangements for the third Mount Tai Grand Assembly."
@@ -11910,9 +12068,9 @@
 - raw: "听闻青城弟子王添翼与几名侠士在黑道大会大闹一场。眼下此人已赶回<b>青城派</b>，欲向掌门禀报此事。"
   splits:
   - text: "听闻青城弟子王添翼与几名侠士在黑道大会大闹一场。眼下此人已赶回"
-    translated: "I heard that Qingcheng disciple Wang Tianyi caused quite a commotion with several martial heroes at the Black Society Conference. This person has now returned."
-    qcReviewedText: "I heard that Qingcheng disciple Wang Tianyi caused quite a commotion with several martial heroes at the Black Society Conference. This person has now returned.<b>Qingcheng Sect</b>, Want to report this matter to the Sect Leader."
-    qcTranslated: "I heard that Qingcheng disciple Wang Tianyi caused quite a commotion with several martial heroes at the Black Society Conference. This person has now returned to <b>Qingcheng Sect</b>, wanting to report this matter to the Sect Leader."
+    translated: "I hear that Qingcheng disciple Wang Tianyi and several Heroes caused a disturbance at the Underworld Conference. He has already returned now."
+    qcReviewedText: "I hear that Qingcheng disciple Wang Tianyi and several Heroes caused a disturbance at the Underworld Conference. He has already returned now.<b>Qingcheng Sect</b>, Want to report this matter to the Sect Leader."
+    qcTranslated: "I hear that Qingcheng disciple Wang Tianyi and several Heroes caused a disturbance at the Underworld Conference. He has already rushed back to <b>Qingcheng Sect</b>, wanting to report this matter to the Sect Leader."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -11946,14 +12104,14 @@
 - raw: "听闻黑道五鬼抢夺花石纲不成，被中原大侠郭淮一路追杀，逃窜到了<b>#PosText#</b>附近。"
   splits:
   - text: "听闻黑道五鬼抢夺花石纲不成，被中原大侠郭淮一路追杀，逃窜到了"
-    translated: "It's said that the Black Path Five Ghosts, failing to seize the Flower and Stone Convoy, were pursued and hunted down by the Central Plains Great Hero Guo Huai, fleeing to"
-    qcReviewedText: "It's said that the Black Path Five Ghosts, failing to seize the Flower and Stone Convoy, were pursued and hunted down by the Central Plains Great Hero Guo Huai, fleeing to<b>#PosText#</b>Nearby"
-    qcTranslated: "It's said that the Black Path Five Ghosts, failing to seize the Flower and Stone Convoy, were pursued and hunted down by the Central Plains Great Hero Guo Huai, fleeing to <b>#PosText#</b> nearby."
+    translated: "It was heard that the Underworld Five Ghosts failed to seize the Flower and Stone Convoy and were pursued by Great Hero Guo Huai, fleeing to this place."
+    qcReviewedText: "It was heard that the Underworld Five Ghosts failed to seize the Flower and Stone Convoy and were pursued by Great Hero Guo Huai, fleeing to this place.<b>#PosText#</b>Nearby"
+    qcTranslated: "It was heard that the Underworld Five Ghosts failed to seize the Flower and Stone Convoy and were pursued by Great Hero Guo Huai, fleeing to the vicinity of <b>#PosText#</b>."
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
+    qcDefectCategory: HardToParseSeam
     qcDefectCategories:
-    - OtherNamedDefect
+    - HardToParseSeam
   - subIndex: 1
     text: "附近。"
     translated: "Nearby"
@@ -11962,9 +12120,9 @@
 - raw: "听闻黑道大会于腾冲结盟的消息，中原大侠郭淮向天下广发英雄帖，号召正派人士于<b>#PosText#</b>召开侠义大会，共商应对之策。"
   splits:
   - text: "听闻黑道大会于腾冲结盟的消息，中原大侠郭淮向天下广发英雄帖，号召正派人士于"
-    translated: "Upon hearing the news of the Black Society Grand Alliance convening in Tengchong, the Great Hero Guo Huai issued a widely circulated hero's notice to the Central Plains, calling on righteous individuals to gather."
-    qcReviewedText: "Upon hearing the news of the Black Society Grand Alliance convening in Tengchong, the Great Hero Guo Huai issued a widely circulated hero's notice to the Central Plains, calling on righteous individuals to gather.<b>#PosText#</b>Hold a righteous assembly to discuss strategies"
-    qcTranslated: "Upon hearing the news of the Black Society Grand Alliance convening in Tengchong, the Great Hero Guo Huai issued a widely circulated hero's notice to the Central Plains, calling on righteous individuals to gather at <b>#PosText#</b> to hold a righteous assembly and discuss strategies."
+    translated: "Upon hearing the news of the Underworld conference forming an alliance in Tengchong, Great Hero Guo Huai issued a broad invitation to righteous individuals across the land, calling for them to assemble at"
+    qcReviewedText: "Upon hearing the news of the Underworld conference forming an alliance in Tengchong, Great Hero Guo Huai issued a broad invitation to righteous individuals across the land, calling for them to assemble at<b>#PosText#</b>Hold a righteous assembly to discuss strategies"
+    qcTranslated: "Upon hearing the news of the Underworld conference forming an alliance in Tengchong, Great Hero Guo Huai issued a broad invitation to righteous individuals across the land, calling for them to assemble at <b>#PosText#</b> to hold a righteous assembly and discuss strategies."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -13376,15 +13534,14 @@
 - raw: "大批强盗土匪和黑道人士在<b>杭州</b>一带聚集，想来有什么大事即将发生。"
   splits:
   - text: "大批强盗土匪和黑道人士在"
-    translated: "A large group of bandits, thugs, and criminal elements gathered in the valley."
-    qcReviewedText: "A large group of bandits, thugs, and criminal elements gathered in the valley.<b>Hangzhou </b>With one place gathering, it seems something significant is about to happen."
-    qcTranslated: "A large group of bandits, thugs, and criminal elements gathered in the <b>Hangzhou</b> area. With one place gathering, it seems something significant is about to happen."
+    translated: "A large number of bandits, outlaws, and Underworld figures are present."
+    qcReviewedText: "A large number of bandits, outlaws, and Underworld figures are present.<b>Hangzhou </b>With one place gathering, it seems something significant is about to happen."
+    qcTranslated: "A large number of bandits, outlaws, and Underworld figures are gathering in the <b>Hangzhou</b> area. It seems something significant is about to happen."
     qcStatus: Corrected
-    qcQualityScore: 85
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
     qcDefectCategories:
     - HardToParseSeam
-    - OtherNamedDefect
   - subIndex: 1
     text: "杭州"
     translated: "Hangzhou"
@@ -16484,9 +16641,9 @@
 - raw: "据说黑道五鬼在<b>#PosText#</b>城内抢夺丹方和药材，惹出了不小的骚乱。"
   splits:
   - text: "据说黑道五鬼在"
-    translated: "They say the Five Ghosts of the underworld are"
-    qcReviewedText: "They say the Five Ghosts of the underworld are<b>#PosText#</b>There was significant chaos caused by the theft of elixir formulas and herbs within the city."
-    qcTranslated: "They say the Five Ghosts of the underworld are robbing <b>#PosText#</b> city of elixir formulas and herbs, causing significant chaos."
+    translated: "It is said that the Underworld Five Ghosts are at"
+    qcReviewedText: "It is said that the Underworld Five Ghosts are at<b>#PosText#</b>There was significant chaos caused by the theft of elixir formulas and herbs within the city."
+    qcTranslated: "It is said that the Underworld Five Ghosts are in <b>#PosText#</b> city, where they stole elixir formulas and herbs, causing significant chaos."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -17103,6 +17260,13 @@
   splits:
   - text: "是#PlayerName#啊，来的正好。"
     translated: "It's #PlayerName#. You couldn't have come at a better time."
+    qcReviewedText: "It's #PlayerName#. You couldn't have come at a better time.\\nThis is #PlotTargetInteractDescribe1# #PlotTargetInteractName1#, also one of my good friends.\\nJust happen to know someone I could recommend to you."
+    qcTranslated: "It's #PlayerName#. You couldn't have come at a better time.\\nThis is #PlotTargetInteractDescribe1# #PlotTargetInteractName1#, also one of my good friends.\\nI happen to be able to introduce them to you."
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - subIndex: 1
     text: "这位是#PlotTargetInteractDescribe1##PlotTargetInteractName1#，也是我的好友，"
     translated: "This is #PlotTargetInteractDescribe1# #PlotTargetInteractName1#, also one of my good friends."
@@ -17777,6 +17941,13 @@
   splits:
   - text: "此后，#$PlayerName#便效仿都点检赵胤宗，"
     translated: "After that, #$PlayerName# emulated Zhao Yinzong, the Capital Inspector."
+    qcReviewedText: "After that, #$PlayerName# emulated Zhao Yinzong, the Capital Inspector.\\nAt the Jade Emperor Peak of Mount Tai, the Mount Tai Grand Assembly will be held to declare the unification of Wulin."
+    qcTranslated: "After that, #$PlayerName# emulated Zhao Yinzong, the Capital Inspector,\\nand held the Mount Tai Grand Assembly at the Jade Emperor Peak of Mount Tai to declare the unification of Wulin."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - subIndex: 1
     text: "于泰山玉皇顶召开泰岳大典，宣告武林一统。"
     translated: "At the Jade Emperor Peak of Mount Tai, the Mount Tai Grand Assembly will be held to declare the unification of Wulin."
@@ -17786,6 +17957,13 @@
   splits:
   - text: "此后，#$PlayerName#效仿都点检赵胤宗，于泰山玉皇顶召开泰岳大典，"
     translated: "After that, #$PlayerName# emulated Zhao Yinzong and held the Mount Tai Grand Assembly on the Jade Emperor Peak of Mount Tai."
+    qcReviewedText: "After that, #$PlayerName# emulated Zhao Yinzong and held the Mount Tai Grand Assembly on the Jade Emperor Peak of Mount Tai.\\nAnd seize this opportunity to don the yellow robe and ascend the throne to proclaim himself emperor."
+    qcTranslated: "After that, #$PlayerName# emulated Zhao Yinzong and held the Mount Tai Grand Assembly on the Jade Emperor Peak of Mount Tai.\\nHe seized this opportunity to don the yellow robe and ascend the throne to proclaim himself emperor."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "并借此时机黄袍加身，登基称帝。"
     translated: "And seize this opportunity to don the yellow robe and ascend the throne to proclaim himself emperor."
@@ -18960,10 +19138,18 @@
   splits:
   - text: "泰岳奇闻"
     translated: "Mount Tai Strange Stories"
+    qcReviewedText: "Mount Tai Strange Stories"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "泰岳巨典"
   splits:
   - text: "泰岳巨典"
     translated: "Mount Tai Grand Assembly"
+    qcReviewedText: "Mount Tai Grand Assembly"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "流言蜚语"
   splits:
   - text: "流言蜚语"
@@ -19676,6 +19862,14 @@
   splits:
   - text: "真是不知死活，抢劫抢到我#SourceForceDescribe##$SourceInteractName#的头上来了？"
     translated: "Really risking death, did you come to rob me, #SourceForceDescribe# #$SourceInteractName#?"
+    qcReviewedText: "Really risking death, did you come to rob me, #SourceForceDescribe# #$SourceInteractName#?\\nNow go down and behave, or I'll let you off!"
+    qcTranslated: "You truly don't know your own death, coming to rob me, #SourceForceDescribe# #$SourceInteractName#?\\nNow back off and behave, or I'll let you off!"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 55
+    qcDefectCategory: LostIdiom
+    qcDefectCategories:
+    - LostIdiom
   - subIndex: 1
     text: "现在乖乖退下，我便放你们一马！"
     translated: "Now go down and behave, or I'll let you off!"
@@ -19685,6 +19879,10 @@
   splits:
   - text: "真是不知死活，采花采到我#SourceForceDescribe##$SourceInteractName#的头上来了？"
     translated: "Isn't it just asking for it? Did they dare to come and pick flowers on top of #SourceForceDescribe# #$SourceInteractName#?"
+    qcReviewedText: "Isn't it just asking for it? Did they dare to come and pick flowers on top of #SourceForceDescribe# #$SourceInteractName#?\\nNow scram and I might spare you!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "现在乖乖滚开，我便放你们一马！"
     translated: "Now scram and I might spare you!"
@@ -20307,10 +20505,21 @@
   splits:
   - text: "第三次泰岳大典"
     translated: "The Third Mount Tai Grand Assembly"
+    qcReviewedText: "The Third Mount Tai Grand Assembly"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "第三次泰岳大典即将于泰山玉皇顶召开。当世顶尖高手已云集<b>#PosText#</b>，准备以武论道，一较高下，争夺天下第一这一无上荣耀。"
   splits:
   - text: "第三次泰岳大典即将于泰山玉皇顶召开。当世顶尖高手已云集"
     translated: "The third Mount Tai Grand Assembly is about to take place on Mount Tai's Jade Emperor Peak. The world's top martial arts masters have already gathered."
+    qcReviewedText: "The third Mount Tai Grand Assembly is about to take place on Mount Tai's Jade Emperor Peak. The world's top martial arts masters have already gathered.<b>#PosText#</b>, Prepare to debate the way through martial arts, to test our skills and vie for the supreme honor of being the number one under heaven."
+    qcTranslated: "The third Mount Tai Grand Assembly is about to take place on Mount Tai's Jade Emperor Peak. The world's top martial arts masters have already gathered at <b>#PosText#</b>, preparing to debate the way through martial arts, to test our skills and vie for the supreme honor of being the number one under heaven."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "，准备以武论道，一较高下，争夺天下第一这一无上荣耀。"
     translated: ", Prepare to debate the way through martial arts, to test our skills and vie for the supreme honor of being the number one under heaven."
@@ -20320,6 +20529,13 @@
   splits:
   - text: "第三次泰岳大典即将于泰山玉皇顶召开。当世顶尖高手已云集"
     translated: "The third Mount Tai Grand Assembly is about to take place on Mount Tai's Jade Emperor Peak. The world's top martial arts masters have already gathered."
+    qcReviewedText: "The third Mount Tai Grand Assembly is about to take place on Mount Tai's Jade Emperor Peak. The world's top martial arts masters have already gathered.<b>#PosText#</b>, Prepare to settle this through combat, to test our skills, and to compete for the Guichan Technique and the title of Supreme Champion under the heavens."
+    qcTranslated: "The third Mount Tai Grand Assembly is about to take place on Mount Tai's Jade Emperor Peak. The world's top martial arts masters have already gathered at <b>#PosText#</b>, preparing to settle this through combat, to test our skills, and to compete for the Guichan Technique and the title of Supreme Champion under the heavens."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "，准备以武论道，一较高下，争夺归藏功以及天下第一这一无上荣耀。"
     translated: ", Prepare to settle this through combat, to test our skills, and to compete for the Guichan Technique and the title of Supreme Champion under the heavens."
@@ -20329,10 +20545,21 @@
   splits:
   - text: "第二届泰岳大典"
     translated: "The Second Mount Tai Grand Assembly"
+    qcReviewedText: "The Second Mount Tai Grand Assembly"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "第二届泰岳大典于泰山玉皇顶正式召开，各大掌门云集<b>#PosText#</b>，共同商议龙胤归藏功之归属。"
   splits:
   - text: "第二届泰岳大典于泰山玉皇顶正式召开，各大掌门云集"
     translated: "The second Mount Tai Grand Assembly was officially held on Mount Tai's Jade Emperor Peak, with sect leaders gathering from all over."
+    qcReviewedText: "The second Mount Tai Grand Assembly was officially held on Mount Tai's Jade Emperor Peak, with sect leaders gathering from all over.<b>#PosText#</b>, Discuss together the disposition of the Dragon Descends into Seclusion Technique."
+    qcTranslated: "The second Mount Tai Grand Assembly was officially held on Mount Tai's Jade Emperor Peak, with sect leaders gathering from all over<b>#PosText#</b> to discuss the disposition of the Dragon Descends into Seclusion Technique."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "，共同商议龙胤归藏功之归属。"
     translated: ", Discuss together the disposition of the Dragon Descends into Seclusion Technique."
@@ -22148,6 +22375,14 @@
   splits:
   - text: "赵胤宗的龙胤归藏功重现江湖，各大门派决定于"
     translated: "Zhao Yinzong's Dragon Descends into Seclusion Technique has returned to Jianghu, and the major sects have decided to gather at"
+    qcReviewedText: "Zhao Yinzong's Dragon Descends into Seclusion Technique has returned to Jianghu, and the major sects have decided to gather at <b>A month later </b>Hold the second Mount Tai Grand Assembly on Mount Tai to decide the ownership of the divine technique.\\nMany Wulin practitioners have gone there in advance.<b>#PosText#</b>, To catch a glimpse of this unprecedented grand festival."
+    qcTranslated: "Zhao Yinzong's Dragon Descends into Seclusion Technique has returned to Jianghu, and the major sects have decided to hold the second Mount Tai Grand Assembly on Mount Tai <b>one month later</b> to decide the ownership of the divine technique.\\nMany Wulin practitioners have gone there in advance to <b>#PosText#</b>, eager to catch a glimpse of this unprecedented grand festival."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "一个月后"
     translated: "A month later"
@@ -22361,8 +22596,8 @@
   splits:
   - text: "边陲小镇"
     translated: "Border town"
-    qcReviewedText: "Border town <b>Tengchong Prefecture </b>Recently, several fierce and menacing individuals have arrived. Word has it that remnants of the Black Society's Five Ghosts are convening to discuss major plans."
-    qcTranslated: "In the border town <b>Tengchong Prefecture</b>, several fierce and menacing individuals have arrived recently. Word has it that remnants of the Black Society's Five Ghosts are convening to discuss major plans."
+    qcReviewedText: "Border town <b>Tengchong Prefecture </b>Recently, a few menacing individuals have arrived. They are said to be remnants of the Underworld Five Ghosts gathering here to discuss their plans."
+    qcTranslated: "In the border town of <b>Tengchong Prefecture</b>, a few menacing individuals have arrived recently. They are said to be remnants of the Underworld Five Ghosts gathering here to discuss their plans."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -22373,7 +22608,7 @@
     translated: "Tengchong Prefecture"
   - subIndex: 2
     text: "中，近日来了几名凶神恶煞之人。听说是黑道五鬼残党要在此集会商议大计。"
-    translated: "Recently, several fierce and menacing individuals have arrived. Word has it that remnants of the Black Society's Five Ghosts are convening to discuss major plans."
+    translated: "Recently, a few menacing individuals have arrived. They are said to be remnants of the Underworld Five Ghosts gathering here to discuss their plans."
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "巡查巴陵"
@@ -22463,7 +22698,11 @@
 - raw: "近日腾冲府有许多邪派人士现身，似乎和传说中的黑道大会有关。"
   splits:
   - text: "近日腾冲府有许多邪派人士现身，似乎和传说中的黑道大会有关。"
-    translated: "Recently, there have been many Unorthodox Sect members appearing in Tengchong Prefecture, seemingly related to the rumored Black Market gathering."
+    translated: "Recently, there have been many Unorthodox Sect members appearing in Tengchong Prefecture, seemingly related to the rumored Underworld gathering."
+    qcReviewedText: "Recently, there have been many Unorthodox Sect members appearing in Tengchong Prefecture, seemingly related to the rumored Underworld gathering."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "近日这伙人又作案多起，若是能以此为线索找到他们，\\n将其一网打尽，岂不是一桩天大的好事。"
   splits:
   - text: "近日这伙人又作案多起，若是能以此为线索找到他们，"
@@ -24259,6 +24498,10 @@
   splits:
   - text: "镖师弟兄们莫慌，我与#SourceForceName##$PlayerName#前来支援！"
     translated: "Martial Artist brothers, do not panic, I and #SourceForceName# #$PlayerName# come to support!"
+    qcReviewedText: "Martial Artist brothers, do not panic, I and #SourceForceName# #$PlayerName# come to support!\\nWork together, and we can repel these bandits!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "大家齐心协力，定能击退这群贼人！"
     translated: "Work together, and we can repel these bandits!"
@@ -25108,8 +25351,8 @@
 - raw: "黑道大会"
   splits:
   - text: "黑道大会"
-    translated: "Underground Organization Convention"
-    qcReviewedText: "Underground Organization Convention"
+    translated: "Underworld Convention"
+    qcReviewedText: "Underworld Convention"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

@@ -1,0 +1,25 @@
+- path: Canvas/ContributionExchangePanel/ClothList/Cloth*/Text
+  sampleText: >-
+    Thunderclap Hall
+
+    Initiate Disciple Fire-borne cloth
+  idealFontSize: 14.0
+  allowWordWrap: true
+  allowAutoSizing: false
+  adjustWidth: 40.0
+- path: Canvas/ContributionExchangePanel/ExchangeNeeds/*/Describe
+  sampleText: '100 Raise reputation '
+  idealFontSize: 12.0
+  allowWordWrap: true
+  adjustX: 40.0
+  adjustWidth: 60.0
+- path: Canvas/ContributionExchangePanel/ExchangeNeeds/*/Name
+  sampleText: Ultimate Martial arts
+  idealFontSize: 14.0
+  allowWordWrap: true
+  adjustWidth: -30.0
+- path: Canvas/ContributionExchangePanel/ExchangeSkillList/Viewport/Content/SkillIcon(Clone)/UnlockButton/Cost
+  sampleText: ' Achievements 400'
+  idealFontSize: 11.0
+  allowWordWrap: true
+  adjustWidth: -30.0

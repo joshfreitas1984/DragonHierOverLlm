@@ -158,6 +158,54 @@ internal static class MissionPatches
         return __exception;
     }
 
+    // missionHideTargetPlaceString is a pre-baked "AreaName + BuildingName" compound (e.g.
+    // "青城派祠堂") stored directly on the MissionData instance - unlike GetMissionTargetDescribe/
+    // GetTriggerTargetDescribe (patched above), it is never recomputed through those methods, so it
+    // was reaching MissionIconController's Title and GetMissionBaseDescribe's text completely
+    // unpatched, then getting corrupted by the shared generic Concat/Format pipeline the first time
+    // it was displayed (see docs/investigations/plugin/mission-icon-title-compound-name-corruption.md,
+    // "Actual conclusion"). Translating it here, in place, with the same strict left-to-right
+    // TranslateCompoundName used for the bare-compound-name fallback above, resolves both pieces
+    // (area name, building name) before they are ever concatenated/Formatted downstream, and the
+    // in-place write memoizes the result so this only needs to run once per mission instance.
+    [HarmonyPatch(typeof(MissionData), nameof(MissionData.GetMissionBaseDescribe), new[] { typeof(bool) })]
+    [HarmonyPrefix]
+    private static void GetMissionBaseDescribePrefix(MissionData __instance)
+    {
+        try
+        {
+            TranslateHiddenTargetPlaceString(__instance);
+        }
+        catch (Exception ex)
+        {
+            MainPlugin.Logger.LogError($"[MissionPatches] GetMissionBaseDescribe prefix failed: {ex}");
+        }
+    }
+
+    [HarmonyPatch(typeof(MissionIconController), "Update")]
+    [HarmonyPrefix]
+    private static void MissionIconControllerUpdatePrefix(MissionIconController __instance)
+    {
+        try
+        {
+            TranslateHiddenTargetPlaceString(__instance?.missionData);
+        }
+        catch (Exception ex)
+        {
+            MainPlugin.Logger.LogError($"[MissionPatches] MissionIconController.Update prefix failed: {ex}");
+        }
+    }
+
+    private static void TranslateHiddenTargetPlaceString(MissionData missionData)
+    {
+        if (missionData == null || !missionData.missionHideTargetPlace) return;
+
+        var value = missionData.missionHideTargetPlaceString;
+        if (string.IsNullOrEmpty(value) || !DynamicStringPatches.ContainsCjk(value)) return;
+
+        missionData.missionHideTargetPlaceString = DynamicStringPatches.TranslateCompoundName(value);
+    }
+
     private static void TranslateObjective(ref string result)
     {
         if (string.IsNullOrEmpty(result)) return;

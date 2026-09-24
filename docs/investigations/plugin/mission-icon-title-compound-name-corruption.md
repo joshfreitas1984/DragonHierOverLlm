@@ -195,6 +195,44 @@ confirm the fix, not retested against the one from this report.
   renders its title/description cleanly. The originally-reported mission instance itself cannot be fixed by
   any code change - see "Actual conclusion" above.
 
+## Fix, round 4 - the actual unpatched carrier: `missionHideTargetPlaceString`
+
+Round 3's "actual conclusion" was right that no live translation-pipeline fix could repair the one
+already-generated mission from the original report, but a fresh report of the identical corruption
+(`青城派祠堂` → `Qingcheng Se?t祠?`) on a newly-generated mission showed the underlying gap was still
+live, not just stale save state.
+
+`MissionData.missionHideTargetPlaceString` (`Converter/output/_NoNamespace/MissionData.cs:67`) is a
+second, separate carrier of an "AreaName + BuildingName" compound - distinct from
+`GetMissionTargetDescribe`/`GetTriggerTargetDescribe` (which round 3 already patches). It is read
+directly, as a plain field with no method call in between, at two call sites:
+
+- `MissionData.GetMissionBaseDescribe(bool)` (`MissionData.cs:462`) - used whenever
+  `missionHideTargetPlace` is true, instead of calling `GetTriggerTargetDescribe`.
+- `MissionIconController.Update()` (`MissionIconController.cs:101`) - same condition, used to build
+  the mission icon's `Title`.
+
+Neither of these reads ever passed through `MissionPatches.TranslateObjective`/
+`TranslateCompoundName`, because there was no Harmony patch on either method at all - the field was
+completely unpatched. It reached the shared `String.Format`/`String.Concat` → `LTLocalization.SetText`
+pipeline as raw, untranslated CJK, where the generic corruption-prone pass (the same one
+`TranslateCompoundName` was built to avoid, per round 3) translated it once and the game's own field
+then held the corrupted result from then on - the same "translated once, stuck forever" symptom as
+round 1-3, just via a carrier those rounds hadn't found yet.
+
+Fix: added `MissionPatches.GetMissionBaseDescribePrefix`/`MissionIconControllerUpdatePrefix`
+(Harmony prefixes on both methods above) that translate `missionData.missionHideTargetPlaceString`
+in place with `TranslateCompoundName` before the original method body runs, whenever
+`missionHideTargetPlace` is true and the field still contains CJK. Writing the translated value back
+into the field both fixes the immediate read and memoizes the result (translation only runs once per
+mission instance, same as the existing dictionary/pipeline caches).
+
+The `missionHideTargetPlaceString` field is written at mission-generation time via an unnamed
+IL2CPP offset write (no named assignment site found in the `_NoNamespace` decompile - see
+`GameController.GenerateBountyMission`/`PlotController.GetTreasureMapMission` as the likely
+generation-time callers), so patching the two read sites above is the only reachable place to fix
+this from the plugin; the write site itself cannot be Harmony-patched.
+
 ## Related code and references
 
 - [MissionPatches.cs](../../../DragonHeirPlugin/MissionPatches.cs)

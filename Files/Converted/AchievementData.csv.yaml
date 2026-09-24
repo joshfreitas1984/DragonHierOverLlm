@@ -694,6 +694,10 @@
   - split: 5
     text: "第三次泰岳大典胜出后选择归隐"
     translated: "Choosing to retire after winning the third Mount Tai Grand Assembly"
+    qcReviewedText: "Choosing to retire after winning the third Mount Tai Grand Assembly"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "29,归隐田园,达成归隐田园结局,bool,1,第三次泰岳大典失败后选择归隐"
   splits:
   - split: 1
@@ -713,6 +717,10 @@
   - split: 5
     text: "第三次泰岳大典失败后选择归隐"
     translated: "Choosing to retreat into seclusion after the third failure of the Mount Tai Grand Assembly"
+    qcReviewedText: "Choosing to retreat into seclusion after the third failure of the Mount Tai Grand Assembly"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "30,豪商巨贾,达成豪商巨贾结局,bool,1,达到50万银钱后进入门派/自宅"
   splits:
   - split: 1

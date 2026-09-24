@@ -53,6 +53,22 @@
   sampleText: Workshop
   idealFontSize: 14.0
   allowWordWrap: true
+- path: Canvas/AreaUIPanel/BuildingQuickButtonPanel/BuildQuickButtonGrid/0007/LvBack/Lv
+  sampleText: 3
+  idealFontSize: 16.0
+  allowWordWrap: true
+- path: Canvas/AreaUIPanel/BuildingQuickButtonPanel/BuildQuickButtonGrid/0007/Text
+  sampleText: Healing Room
+  idealFontSize: 14.0
+  allowWordWrap: true
+- path: Canvas/AreaUIPanel/BuildingQuickButtonPanel/BuildQuickButtonGrid/0008/LvBack/Lv
+  sampleText: 3
+  idealFontSize: 16.0
+  allowWordWrap: true
+- path: Canvas/AreaUIPanel/BuildingQuickButtonPanel/BuildQuickButtonGrid/0008/Text
+  sampleText: Dormitory
+  idealFontSize: 14.0
+  allowWordWrap: true
 - path: Canvas/AreaUIPanel/BuildingQuickButtonPanel/BuildTitle/Text
   sampleText: Building
   idealFontSize: 25.0

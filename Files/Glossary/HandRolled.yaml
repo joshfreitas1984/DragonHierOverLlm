@@ -72,8 +72,10 @@
   result: Phoenix Beauty
 - raw: 七大恶
   result: Seven Great Villains
-# - raw: 黑道
-#   result: Underworld
+- raw: 黑道
+  result: Underworld
+- raw: 黑道五鬼
+  result: Underworld Five Ghosts
 - raw: 雨兄
   result: Brother Yu
 - raw: 计兄

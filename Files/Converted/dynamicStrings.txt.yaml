@@ -4220,6 +4220,13 @@
   splits:
   - text: "此次特地前来拜访#SourceForceDescribe##$SourceInteractName#"
     translated: "This time, I specially came to visit #SourceForceDescribe# #$SourceInteractName#."
+    qcReviewedText: "#TargetForceDescribe##$TargetInteractName#，\nThis time, I specially came to visit #SourceForceDescribe# #$SourceInteractName#."
+    qcTranslated: "#TargetForceDescribe# #$TargetInteractName#,\nThis time, I specially came to visit #SourceForceDescribe# #$SourceInteractName#."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   templates:
   - template: "#TargetForceDescribe##$TargetInteractName#，\n{0}"
 - raw: "#TargetForceName#事务繁忙，我也有多时没有这样闲逛过街市了。\n人生苦短，去日苦多，不知#SourceInteractName#是否也有同感？"
@@ -9366,6 +9373,10 @@
   splits:
   - text: "天"
     translated: "Sky"
+    qcReviewedText: "{0} Sky"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   templates:
   - template: "⟦0⟧{0}"
 - raw: "{0}天赋变化：{1}"
@@ -14731,6 +14742,13 @@
   splits:
   - text: "久闻#PlayerForceDescribe##$PlayerName#大名，今日一见果真名不虚传。"
     translated: "I've heard much about #PlayerForceDescribe# #$PlayerName#, and indeed, you do not disappoint."
+    qcReviewedText: "I've heard much about #PlayerForceDescribe# #$PlayerName#, and indeed, you do not disappoint.\n#TargetForceDescribe#, please look after #$TargetInteractName#"
+    qcTranslated: "I've long heard of the great name of #PlayerForceDescribe# #$PlayerName#, and indeed, you do not disappoint upon meeting you today.\nI am #TargetForceDescribe# #$TargetInteractName#, please look after me."
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - subIndex: 1
     text: "在下#TargetForceDescribe##$TargetInteractName#，还请关照。"
     translated: "#TargetForceDescribe#, please look after #$TargetInteractName#"
@@ -20036,6 +20054,10 @@
   splits:
   - text: "初次见面，在下#TargetForceDescribe##$TargetInteractName#。"
     translated: "Nice to meet you. I am #TargetForceDescribe# #$TargetInteractName#."
+    qcReviewedText: "Nice to meet you. I am #TargetForceDescribe# #$TargetInteractName#.\nYour Excellency is no doubt the #PlayerForceDescribe# #$PlayerName# who has been making quite a name for oneself recently. Indeed, I can see why."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "阁下想必就是近来颇有名气的#PlayerForceDescribe##$PlayerName#，真是百闻不如一见啊。"
     translated: "Your Excellency is no doubt the #PlayerForceDescribe# #$PlayerName# who has been making quite a name for oneself recently. Indeed, I can see why."
@@ -20075,6 +20097,10 @@
   splits:
   - text: "别吵吵，我正在泰岳大典施展拳脚，大杀四方，"
     translated: "Shh, I'm busy laying waste to all with my martial arts at the Mount Tai Grand Assembly."
+    qcReviewedText: "Shh, I'm busy laying waste to all with my martial arts at the Mount Tai Grand Assembly.\nAbout to beat the various sects into submission... Unexpectedly, you ruined my plans!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "眼看就要将各大门派打个落花流水......没想到被你搅了好事！"
     translated: "About to beat the various sects into submission... Unexpectedly, you ruined my plans!"
@@ -21492,6 +21518,10 @@
   splits:
   - text: "原来是#PlayerForceDescribe##$PlayerName#，失敬失敬。"
     translated: "Originally, it's #PlayerForceDescribe# #$PlayerName#. Pleased to meet you."
+    qcReviewedText: "Originally, it's #PlayerForceDescribe# #$PlayerName#. Pleased to meet you.\nThe locals are tough and bandits roam freely, so the brothers must be more cautious.\n#SourceInteractName# Brother, please be extra careful"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "此地民风剽悍，强盗横行，弟兄们不得不谨慎些。"
     translated: "The locals are tough and bandits roam freely, so the brothers must be more cautious."
@@ -24969,6 +24999,10 @@
   splits:
   - text: "哈哈，是我胜了。"
     translated: "Ha ha, I won"
+    qcReviewedText: "Ha ha, I won\nFrom today on, I, #$SourceInteractName#, will be the leader of the Seven Great Villains!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "从今天起，我#$SourceInteractName#便是七大恶人之首！"
     translated: "From today on, I, #$SourceInteractName#, will be the leader of the Seven Great Villains!"
@@ -28776,6 +28810,10 @@
   splits:
   - text: "在下#TargetForceDescribe##$TargetInteractName#，"
     translated: "I am #TargetForceDescribe# #$TargetInteractName#"
+    qcReviewedText: "I am #TargetForceDescribe# #$TargetInteractName#\nThis time, I specially came to visit #SourceForceDescribe# #$SourceInteractName#."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "此次特地前来拜访#SourceForceDescribe##$SourceInteractName#"
     translated: "This time, I specially came to visit #SourceForceDescribe# #$SourceInteractName#."
@@ -37596,6 +37634,10 @@
   splits:
   - text: "忽听得一声暴喝响起，震得整个会场阵阵颤动！"
     translated: "Suddenly, a roar echoed through the room, causing the entire hall to tremble!"
+    qcReviewedText: "Suddenly, a roar echoed through the room, causing the entire hall to tremble!\nA burly man descended from the sky, none other than Wu Jueyi, the long‑missing leader of the Seven Great Villains!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "只见一身形魁梧的男子从天而降，赫然竟是失踪已久的七大恶人之首，武绝义！"
     translated: "A burly man descended from the sky, none other than Wu Jueyi, the long‑missing leader of the Seven Great Villains!"
@@ -39368,6 +39410,10 @@
   splits:
   - text: "我早就知道你们不会服气，来来来，一起来！"
     translated: "I knew you wouldn't give up so easily. Come on, let's do this together!"
+    qcReviewedText: "I knew you wouldn't give up so easily. Come on, let's do this together!\nLet you see the power of the leader of the Seven Great Villains!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "让你们见识见识七大恶人之首的实力！"
     translated: "Let you see the power of the leader of the Seven Great Villains!"
@@ -41007,6 +41053,10 @@
   splits:
   - text: "承让承让，看来此次泰岳大典，是我#$SourceInteractName#拔得头筹。"
     translated: "I yield, I yield. It seems that this Mount Tai Grand Assembly is mine, #$SourceInteractName#, for the top prize."
+    qcReviewedText: "I yield, I yield. It seems that this Mount Tai Grand Assembly is mine, #$SourceInteractName#, for the top prize.\nFrom today on, the Dragon Descends into Seclusion Technique belongs to me, #SourceForceName#!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "从今天起，这龙胤归藏功便归我#SourceForceName#所有！"
     translated: "From today on, the Dragon Descends into Seclusion Technique belongs to me, #SourceForceName#!"
@@ -43798,6 +43848,10 @@
   splits:
   - text: "既然完成了赵点检未竟之事业，或许没必要再赶尽杀绝，徒兴兵祸了。"
     translated: "Since completing Zhao Dianjian's unfinished business, perhaps there's no need to push for total annihilation and cause more military disasters."
+    qcReviewedText: "Since completing Zhao Dianjian's unfinished business, perhaps there's no need to push for total annihilation and cause more military disasters.\n<color=red>Choosing the Mount Tai Grand Assembly will trigger the ending and unlock the corresponding achievement.\nYou can continue playing and trigger other endings thereafter.</color>"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "选择泰岳大典将会触发结局并解锁对应成就"
     translated: "Choosing the Mount Tai Grand Assembly will trigger the ending and unlock the corresponding achievement."
@@ -44166,6 +44220,13 @@
   splits:
   - text: "是#PlayerForceDescribe##$PlayerName#啊，"
     translated: "It's #PlayerForceDescribe# #$PlayerName#"
+    qcReviewedText: "It's #PlayerForceDescribe# #$PlayerName#\nThis time {0} Come to visit me {1}, Unknown {3}？"
+    qcTranslated: "It's #PlayerForceDescribe# #$PlayerName#. This time {0} came to visit me {1}, but I don't know {3}?"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "此次"
     translated: "This time"
@@ -48391,6 +48452,10 @@
   splits:
   - text: "武绝义你好大的口气！"
     translated: "Wu Jueyi, you've got quite the bold claim!"
+    qcReviewedText: "Wu Jueyi, you've got quite the bold claim!\nLet this year's Mount Tai Grand Assembly champion come and meet you!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "就让我这本届泰岳大典擂主，前来会会你！"
     translated: "Let this year's Mount Tai Grand Assembly champion come and meet you!"
@@ -48400,6 +48465,10 @@
   splits:
   - text: "武绝义！昔日仙居客栈一战，你落败而逃，之后便销声匿迹。"
     translated: "Wu Jueyi! In the battle at the Immortal Residence Inn long ago, you fled in defeat and have since disappeared from sight."
+    qcReviewedText: "Wu Jueyi! In the battle at the Immortal Residence Inn long ago, you fled in defeat and have since disappeared from sight.\nI thought you had repented and turned over a new leaf, but it seems you are still obstinate.\nDaring to come to the Mount Tai Grand Assembly to compete for the Dragon Descends into Seclusion Technique is truly reckless!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "我本以为你已洗心革面，改过自新，没想到你竟执迷不悟，"
     translated: "I thought you had repented and turned over a new leaf, but it seems you are still obstinate."
@@ -51498,6 +51567,10 @@
   splits:
   - text: "玉观音"
     translated: "Yu Guanyin"
+    qcReviewedText: "Yu Guanyin"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "王伦"
   splits:
   - text: "王伦"
@@ -53100,6 +53173,13 @@
   splits:
   - text: "看来第三次泰岳大典这“天下第一”的名号，被我#$SourceInteractName#夺得了。"
     translated: "'#$SourceInteractName#' has been claimed the title of Number One in the World at the third Mount Tai Grand Assembly."
+    qcReviewedText: "'#$SourceInteractName#' has been claimed the title of Number One in the World at the third Mount Tai Grand Assembly.\nFrom today on, these three incomplete versions of the Huizang Skill should belong to #SourceForceName#!"
+    qcTranslated: "It seems I, #$SourceInteractName#, have claimed the title of Number One in the World at the third Mount Tai Grand Assembly.\nFrom today on, these three incomplete versions of the Huizang Skill should belong to #SourceForceName#!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - subIndex: 1
     text: "从今天起，这三份归藏功残本也当归我#SourceForceName#所有！"
     translated: "From today on, these three incomplete versions of the Huizang Skill should belong to #SourceForceName#!"
@@ -57033,6 +57113,10 @@
   splits:
   - text: "胜负已分，夺冠者乃是...#SourceForceDescribe##$SourceInteractName#！"
     translated: "The winner is...#SourceForceDescribe# #$SourceInteractName#!"
+    qcReviewedText: "The winner is...#SourceForceDescribe# #$SourceInteractName#!\nA capable general assists a wise ruler, a fine horse befits a hero.\nAccording to the competition agreement, this #PlotInteractItemName# now belongs to you!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "自古以来良将辅明主，宝马配英雄，"
     translated: "A capable general assists a wise ruler, a fine horse befits a hero."
@@ -66835,6 +66919,10 @@
   splits:
   - text: "阁下便是#PlayerForceDescribe##$PlayerName#？果真是自古英雄出少年。"
     translated: "You are indeed #PlayerForceDescribe# #$PlayerName#. Truly, history shows that heroes emerge in their youth."
+    qcReviewedText: "You are indeed #PlayerForceDescribe# #$PlayerName#. Truly, history shows that heroes emerge in their youth.\nI am #TargetForceDescribe# #$TargetInteractName#. Nice to meet you."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "吾乃#TargetForceDescribe##$TargetInteractName#，幸会幸会。"
     translated: "I am #TargetForceDescribe# #$TargetInteractName#. Nice to meet you."
@@ -67907,6 +67995,10 @@
   splits:
   - text: "雨人屠"
     translated: "Yu Rentu"
+    qcReviewedText: "Yu Rentu"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "雪儿你放心！我不会被这奸人的妖言所蛊惑的！\n#PlayerName#，雪儿如此冰清玉洁之女子，怎么可能会骗人？"
   splits:
   - text: "雪儿你放心！我不会被这奸人的妖言所蛊惑的！"
@@ -69302,7 +69394,11 @@
 - raw: "黄泉"
   splits:
   - text: "黄泉"
-    translated: "Huang Quan"
+    translated: "Yellow Springs"
+    qcReviewedText: "Yellow Springs"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "黄牛帮"
   splits:
   - text: "黄牛帮"
@@ -69336,19 +69432,22 @@
 - raw: "黑道精锐"
   splits:
   - text: "黑道精锐"
-    translated: "Top Mob Talent"
-    qcReviewedText: "Top Mob Talent"
+    translated: "Underworld elite"
+    qcReviewedText: "Underworld elite"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
 - raw: "黑道高人"
   splits:
   - text: "黑道高人"
-    translated: "Martial Arts Sage"
-    qcReviewedText: "Martial Arts Sage"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Underworld expert expert"
+    qcReviewedText: "Underworld expert expert"
+    qcTranslated: "Underworld expert"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
 - raw: "黑风头目"
   splits:
   - text: "黑风头目"

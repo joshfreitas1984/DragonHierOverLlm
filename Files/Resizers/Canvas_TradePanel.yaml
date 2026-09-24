@@ -1,0 +1,5 @@
+- path: Canvas/TradePanel/RightList/ItemListScrollView/Viewport/Content/*/Name
+  sampleText: Common Short knife
+  idealFontSize: 11.0
+  allowWordWrap: true
+  adjustY: 10.0
