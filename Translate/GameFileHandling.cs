@@ -50,6 +50,12 @@ namespace Tests
         private static readonly Regex BraceWrappedPlaceholderTokenRegex =
             new(@"\{(#\$?[A-Za-z0-9_]+#)\}", RegexOptions.Compiled);
 
+        // Repairs two placeholder tokens the LLM ran together with no separating space (e.g.
+        // "#PlayerForceDescribe##$PlayerName#"). The lookahead leaves the second token untouched so
+        // a run of three or more adjacent tokens gets a space inserted at every boundary.
+        private static readonly Regex AdjacentPlaceholderTokensRegex =
+            new(@"(#\$?[A-Za-z0-9_]+#)(?=#\$?[A-Za-z0-9_]+#)", RegexOptions.Compiled);
+
         private static string RepairKnownLlmQuirks(string raw, string llmResult)
         {
             if (string.IsNullOrEmpty(llmResult))
@@ -84,6 +90,8 @@ namespace Tests
             // shape the very first replace above targets - re-running it here cleans up any such
             // case the restore loop just (re)introduced.
             llmResult = BraceWrappedPlaceholderTokenRegex.Replace(llmResult, "$1");
+
+            llmResult = AdjacentPlaceholderTokensRegex.Replace(llmResult, "$1 ");
 
             return llmResult;
         }

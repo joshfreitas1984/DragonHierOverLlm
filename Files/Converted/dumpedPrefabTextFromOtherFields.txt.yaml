@@ -205,51 +205,27 @@
 - raw: "#PlayerForceDescribe##$PlayerName#为朝廷殚精竭虑，其勋阶也节节高升，"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#为朝廷殚精竭虑，其勋阶也节节高升，"
-    translated: "#PlayerForceDescribe##$PlayerName# devoted himself to the court, and his rank steadily rose due to his efforts."
-    qcReviewedText: "#PlayerForceDescribe##$PlayerName# devoted himself to the court, and his rank steadily rose due to his efforts."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "#PlayerForceDescribe# #$PlayerName# devoted himself to the court, and his rank steadily rose due to his efforts."
 - raw: "#PlayerForceDescribe##$PlayerName#为朝廷鞠躬尽瘁，其官职也节节高升。"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#为朝廷鞠躬尽瘁，其官职也节节高升。"
-    translated: "#PlayerForceDescribe##$PlayerName# served the court with utmost dedication, and his official rank rose step by step."
-    qcReviewedText: "#PlayerForceDescribe##$PlayerName# served the court with utmost dedication, and his official rank rose step by step."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "#PlayerForceDescribe# #$PlayerName# served the court with utmost dedication, and his official rank rose step by step."
 - raw: "#PlayerForceDescribe##$PlayerName#及其附庸、盟友，一路高歌猛进，攻城略地，"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#及其附庸、盟友，一路高歌猛进，攻城略地，"
-    translated: "#PlayerForceDescribe##$PlayerName# and their vassals, allies, have been advancing triumphantly, conquering cities and territories,"
-    qcReviewedText: "#PlayerForceDescribe##$PlayerName# and their vassals, allies, have been advancing triumphantly, conquering cities and territories,"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "#PlayerForceDescribe# #$PlayerName# and their vassals, allies, have been advancing triumphantly, conquering cities and territories,"
 - raw: "#PlayerForceDescribe##$PlayerName#及其附庸、盟友，一路高歌猛进，攻城略地。"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#及其附庸、盟友，一路高歌猛进，攻城略地。"
-    translated: "#PlayerForceDescribe##$PlayerName# and his vassals, allies, have been advancing triumphantly, conquering cities and territories."
-    qcReviewedText: "#PlayerForceDescribe##$PlayerName# and his vassals, allies, have been advancing triumphantly, conquering cities and territories."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "#PlayerForceDescribe# #$PlayerName# and his vassals, allies, have been advancing triumphantly, conquering cities and territories."
 - raw: "#PlayerForceDescribe##$PlayerName#在江湖中历经无数风浪，"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#在江湖中历经无数风浪，"
-    translated: "#PlayerForceDescribe##$PlayerName# has weathered countless storms in the Jianghu."
-    qcReviewedText: "#PlayerForceDescribe##$PlayerName# has weathered countless storms in the Jianghu."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "#PlayerForceDescribe# #$PlayerName# has weathered countless storms in the Jianghu."
 - raw: "#PlayerForceDescribe##$PlayerName#在第三次泰岳大典，\\n以一手出神入化之武艺，力克众位掌门高手。"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#在第三次泰岳大典，"
-    translated: "#PlayerForceDescribe##$PlayerName# at the Third Taiyue Ceremony,"
-    qcReviewedText: "#PlayerForceDescribe##$PlayerName# at the Third Taiyue Ceremony,\\nWith mastery of miraculous martial arts, he defeated numerous Sect Leaders and experts."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "#PlayerForceDescribe# #$PlayerName# at the Third Mount Tai Grand Assembly,"
   - subIndex: 1
     text: "以一手出神入化之武艺，力克众位掌门高手。"
     translated: "With mastery of miraculous martial arts, he defeated numerous Sect Leaders and experts."
@@ -258,11 +234,7 @@
 - raw: "#PlayerForceDescribe##$PlayerName#在第三次泰岳大典，\\n惜败于各大掌门之手。"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#在第三次泰岳大典，"
-    translated: "#PlayerForceDescribe##$PlayerName# at the Third Taiyue Ceremony,"
-    qcReviewedText: "#PlayerForceDescribe##$PlayerName# at the Third Taiyue Ceremony,\\nDefeated by the hands of various Sect Leaders."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "#PlayerForceDescribe# #$PlayerName# at the Third Mount Tai Grand Assembly,"
   - subIndex: 1
     text: "惜败于各大掌门之手。"
     translated: "Defeated by the hands of various Sect Leaders."
@@ -271,35 +243,19 @@
 - raw: "#PlayerForceDescribe##$PlayerName#携手五位眷侣，"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#携手五位眷侣，"
-    translated: "#PlayerForceDescribe##$PlayerName# teamed up with five partners,"
-    qcReviewedText: "#PlayerForceDescribe##$PlayerName# teamed up with five partners,"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "#PlayerForceDescribe# #$PlayerName# teamed up with five partners,"
 - raw: "#PlayerForceDescribe##$PlayerName#犯下了滔天罪行，江湖中人人得而诛之。"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#犯下了滔天罪行，江湖中人人得而诛之。"
-    translated: "#PlayerForceDescribe##$PlayerName# committed heinous crimes, and every person in the Jianghu deserves to punish him."
-    qcReviewedText: "#PlayerForceDescribe##$PlayerName# committed heinous crimes, and every person in the Jianghu deserves to punish him."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "#PlayerForceDescribe# #$PlayerName# committed heinous crimes, and every person in the Jianghu deserves to punish him."
 - raw: "#PlayerForceDescribe##$PlayerName#自继任#PlayerForceName#掌门之位后，"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#自继任#PlayerForceName#掌门之位后，"
-    translated: "#PlayerForceDescribe##$PlayerName# took over as the Sect Leader of #PlayerForceName# after succeeding to the position."
-    qcReviewedText: "#PlayerForceDescribe##$PlayerName# took over as the Sect Leader of #PlayerForceName# after succeeding to the position."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "#PlayerForceDescribe# #$PlayerName# took over as the Sect Leader of #PlayerForceName# after succeeding to the position."
 - raw: "#PlayerForceDescribe##$PlayerName#通过夜以继日的苦心经营，"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#通过夜以继日的苦心经营，"
-    translated: "#PlayerForceDescribe##$PlayerName# through nights and days of diligent management,"
-    qcReviewedText: "#PlayerForceDescribe##$PlayerName# through nights and days of diligent management,"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "#PlayerForceDescribe# #$PlayerName# through nights and days of diligent management,"
 - raw: "#PlayerForceName#一年一度的门派比武大会正在举行，各路弟子纷纷前往欲一展身手"
   splits:
   - text: "#PlayerForceName#一年一度的门派比武大会正在举行，各路弟子纷纷前往欲一展身手"
@@ -1767,15 +1723,7 @@
 - raw: "#$PlayerName#掌门，邪派联军在蛰伏数月后，突然向<b>大理</b>发起进攻！事态紧急，还望您依照金顶大会之约定，率领仙霞派精锐弟子尽快前来支援！"
   splits:
   - text: "#$PlayerName#掌门，邪派联军在蛰伏数月后，突然向"
-    translated: "#$PlayerName#, Sect Leader of the Cultivated Community, the Xie Pai Lian Jun, which had lain low for several months, suddenly launched an attack against"
-    qcReviewedText: "#$PlayerName#, Sect Leader of the Cultivated Community, the Xie Pai Lian Jun, which had lain low for several months, suddenly launched an attack against <b>Dali </b>Initiate the attack! The situation is urgent. We look to you to lead the elite disciples of the Xianxia Sect to come and support us as per the agreement of the Golden Summit Conference!"
-    qcTranslated: "#$PlayerName#, Sect Leader, the Xie Pai Lian Jun, which had lain low for several months, suddenly launched an attack against <b>Dali</b>! The situation is urgent. We look to you to lead the elite disciples of the Xianxia Sect to come and support us as per the agreement of the Golden Summit Conference!"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: GarbledNumber
-    qcDefectCategories:
-    - GarbledNumber
-    - HardToParseSeam
+    translated: "Sect Leader #$PlayerName#, the Unorthodox Sect coalition, after lying low for months, suddenly attacked \\n"
   - subIndex: 1
     text: "大理"
     translated: "Dali"
@@ -1810,14 +1758,7 @@
 - raw: "#PlayerName#，邪派联军再度兵临城下，如今<b>大理</b>已危如累卵。然为了中原武林之安危，尽管希望渺茫，老朽仍将率峨眉全体弟子做最后一搏。\\n#PlayerName#若能率#PlayerForceName#前来助最后一臂之力，必当感激不尽。"
   splits:
   - text: "#PlayerName#，邪派联军再度兵临城下，如今"
-    translated: "#PlayerName#, the evil sect alliance has besieged the city once again. Now"
-    qcReviewedText: "#PlayerName#, the evil sect alliance has besieged the city once again. Now <b>Dali </b>Already perilous, like eggs balanced on a pile. Yet for the safety of the Central Plains Wulin, though hope is faint, this old man will lead all the Meishan disciples in one final stand.\\n#PlayerName# if you can bring #PlayerForceName# to lend your last bit of support, I would be immensely grateful."
-    qcTranslated: "#PlayerName#, the evil sect alliance has besieged the city once again. Now <b>Dali</b> is already perilous, like eggs balanced on a pile. Yet for the safety of the Central Plains Wulin, though hope is faint, this old man will lead all the Meishan disciples in one final stand.\\n#PlayerName# if you can bring #PlayerForceName# to lend your last bit of support, I would be immensely grateful."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "#PlayerName#, the Unorthodox Sect coalition has once again laid siege to the city. Now,"
   - subIndex: 1
     text: "大理"
     translated: "Dali"
@@ -2078,14 +2019,7 @@
 - raw: "近来七大恶人之一雨人屠现身<b>江陵东方</b>，此人武功高强，穷凶极恶，为免当地百姓受戮，为师先去抵挡，还望仙霞派弟子速速前来支援！"
   splits:
   - text: "近来七大恶人之一雨人屠现身"
-    translated: "Recently, one of the Seven Evil Men, Yuren Tu, has reappeared."
-    qcReviewedText: "Recently, one of the Seven Evil Men, Yuren Tu, has reappeared.<b>Jiangling Eastern</b>, This person's martial arts is powerful, extremely vicious, and dangerous. To prevent the local civilians from suffering, I will go to confront them first. I hope the Xianxia Sect disciples can arrive quickly to support me!"
-    qcTranslated: "Recently, one of the Seven Evil Men, Yuren Tu, has reappeared in <b>Eastern Jiangling</b>. This person's martial arts is powerful, extremely vicious, and dangerous. To prevent the local civilians from suffering, I will go to confront them first. I hope the Xianxia Sect disciples can arrive quickly to support me!"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
+    translated: "Recently, Yu Rentu, one of the Seven Great Villains, has appeared."
   - subIndex: 1
     text: "江陵东方"
     translated: "Jiangling Eastern"
@@ -3519,15 +3453,7 @@
 - raw: "神兵修复已进入最后阶段，听闻有邪派人士想趁参加名剑大会之机出手抢夺。\\n还望#PlayerName#前来<b>铸剑山庄</b>护卫，以保神兵顺利铸成。"
   splits:
   - text: "神兵修复已进入最后阶段，听闻有邪派人士想趁参加名剑大会之机出手抢夺。"
-    translated: "The divine weapon's repair is entering its final stage, and there are rumors that some sect individuals plan to make a move to snatch it during the Famous Sword Conference."
-    qcReviewedText: "The divine weapon's repair is entering its final stage, and there are rumors that some sect individuals plan to make a move to snatch it during the Famous Sword Conference.\\nHope to see #PlayerName# here <b>Swordforging Manor </b>Guard, to ensure the smooth completion of the divine weapon."
-    qcTranslated: "The divine weapon's repair is entering its final stage, and there are rumors that some sect individuals plan to make a move to snatch it during the Famous Sword Conference.\\nHope to see #PlayerName# come to <b>Swordforging Manor</b> as Guard, to ensure the smooth completion of the divine weapon."
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
-    - OtherNamedDefect
+    translated: "The repair of the divine weapon is now in its final stage, but there are reports that Unorthodox Sect members intend to seize it during the prestigious Sword Conference."
   - subIndex: 1
     text: "还望#PlayerName#前来"
     translated: "Hope to see #PlayerName# here"
@@ -3908,14 +3834,7 @@
 - raw: "<b>第二届泰岳大典</b>已经召开，听说各派掌门都会参与。#PlayerName#还不赶紧来一道瞧个热闹！"
   splits:
   - text: "第二届泰岳大典"
-    translated: "Second Taiyue Grand Festival"
-    qcReviewedText: "<b>Second Taiyue Grand Festival </b>Already held, and it is said that all sect leaders will attend. #PlayerName#, you'd better come along to enjoy the spectacle!"
-    qcTranslated: "<b>The Second Taiyue Grand Ceremony</b> has already begun, and it is said that all Sect Leaders will attend. #PlayerName#, hurry over to see the spectacle!"
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Second Mount Tai Grand Assembly"
   - subIndex: 1
     text: "已经召开，听说各派掌门都会参与。#PlayerName#还不赶紧来一道瞧个热闹！"
     translated: "Already held, and it is said that all sect leaders will attend. #PlayerName#, you'd better come along to enjoy the spectacle!"
@@ -4003,14 +3922,7 @@
 - raw: "#PlayerName#，<b>第三次泰岳大典</b>即将召开。届时还望你与各派掌门依计行事，待金龙生一现身，便同时出手将他拿下。\\n天下兴亡，武林安危皆在此一战，还望你多带些高手前来助阵，以免不测！"
   splits:
   - text: "第三次泰岳大典"
-    translated: "Third Tai Yue Grand Ceremony"
-    qcReviewedText: "#PlayerName#，<b>Third Tai Yue Grand Ceremony </b>It will be held soon. We hope you and the various sect leaders will follow the plan. Once Jin Longsheng makes an appearance, we should strike simultaneously to take him down.\\nThe rise and fall of the nation depends on this battle, and the safety of the Wulin is at stake as well. I hope you can bring some top‑notch warriors to aid us; it would be wise to prepare for any unforeseen circumstances!"
-    qcTranslated: "#PlayerName#，<b>Third Tai Yue Grand Ceremony </b>It will be held soon. We hope you and the various Sect Leaders will follow the plan. Once Jin Longsheng makes an appearance, we should strike simultaneously to take him down.\\nThe rise and fall of the nation depends on this battle, and the safety of the Wulin is at stake as well. I hope you can bring some top‑notch warriors to aid us; it would be wise to prepare for any unforeseen circumstances!"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "The Third Mount Tai Grand Assembly"
   - subIndex: 1
     text: "即将召开。届时还望你与各派掌门依计行事，待金龙生一现身，便同时出手将他拿下。"
     translated: "It will be held soon. We hope you and the various sect leaders will follow the plan. Once Jin Longsheng makes an appearance, we should strike simultaneously to take him down."
@@ -4062,19 +3974,12 @@
   splits:
   - text: "#PlayerName#，我已邀请少林、武当、峨眉、丐帮四大门派掌门会于"
     translated: "#PlayerName#, I have invited the Palm Leaders of the Shaolin, Wudang, Meizhou, and Beggar Sects to meet at"
-    qcReviewedText: "#PlayerName#, I have invited the Palm Leaders of the Shaolin, Wudang, Meizhou, and Beggar Sects to meet at <b>Banqiao Town</b>。\\nOstensibly to discuss the third Taiyue Grand Ceremony, it was actually to inform Jin Longsheng is the true Grand Commander of the Blood Robe League and to deploy a plan to arrest him at the meeting.\\nI still hope you will come and share the full details of your previous investigation."
-    qcTranslated: "#PlayerName#, I have invited the Sect Leaders of the Shaolin, Wudang, Meizhou, and Beggar Sects to meet at <b>Banqiao Town</b>.\\nOstensibly to discuss the third Taiyue Grand Ceremony, it was actually to inform Jin Longsheng is the true Grand Commander of the Blood Robe League and to deploy a plan to arrest him at the meeting.\\nI still hope you will come and share the full details of your previous investigation."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - subIndex: 1
     text: "板桥镇"
     translated: "Banqiao Town"
   - subIndex: 2
     text: "表面上为共商第三次泰岳大典事宜，实则是为告知金龙生就是血衣盟大统领之真相，并部署会上抓捕此人之计策。"
-    translated: "Ostensibly to discuss the third Taiyue Grand Ceremony, it was actually to inform Jin Longsheng is the true Grand Commander of the Blood Robe League and to deploy a plan to arrest him at the meeting."
+    translated: "On the surface, it was to discuss the details of the third Mount Tai Grand Assembly, but in reality, it was to reveal to Jin Longsheng that he is the true leader of the Blood Robe Alliance, and to plan the strategy for capturing him at the assembly."
   - subIndex: 3
     text: "还请你届时定要前来参加，并将此前调查之来龙去脉尽数道明。"
     translated: "I still hope you will come and share the full details of your previous investigation."
@@ -7025,14 +6930,7 @@
 - raw: "传闻七大恶人之一雨人屠现身<b>#PosText#</b>，想必此地又将掀起一阵腥风血雨。"
   splits:
   - text: "传闻七大恶人之一雨人屠现身"
-    translated: "It's said that one of the Seven Evil Men, Rainbutcher, has appeared."
-    qcReviewedText: "It's said that one of the Seven Evil Men, Rainbutcher, has appeared.<b>#PosText#</b>, There will likely be another bloodshed here"
-    qcTranslated: "It's said that one of the Seven Evil Men, Rainbutcher, has appeared <b>#PosText#</b>, and there will likely be another bloodshed here."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
+    translated: "It's said that Yu Rentu, one of the Seven Great Villains, has appeared."
   - subIndex: 1
     text: "，想必此地又将掀起一阵腥风血雨。"
     translated: ", There will likely be another bloodshed here"
@@ -7264,16 +7162,9 @@
   splits:
   - text: "传闻几名武林人士聚于"
     translated: "Rumors have it that several Wulin figures have gathered."
-    qcReviewedText: "Rumors have it that several Wulin figures have gathered.<b>#PosText#</b>At the foot of Mount Tai, wishing to emulate Zhao Dijian in hosting the Taiyue Megafest, it became the talk of the Jianghu for a time."
-    qcTranslated: "Rumors have it that several Wulin figures have gathered at the foot of <b>#PosText#</b>Mount Tai, wishing to emulate Zhao Dijian in hosting the Taiyue Megafest, which became the talk of the Jianghu for a time."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "泰山脚下，欲效仿赵点检举办“泰岳巨典”，江湖中一时引为笑谈。"
-    translated: "At the foot of Mount Tai, wishing to emulate Zhao Dijian in hosting the Taiyue Megafest, it became the talk of the Jianghu for a time."
+    translated: "At the foot of Mount Tai, someone wanted to emulate Zhao Dianjian and hold a Mount Tai Grand Assembly, which became the laughingstock of the Jianghu for a time."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻几大杀手近来一直在<b>#PosText#</b>四处挖掘，无人知晓他们究竟在找什么东西。"
@@ -7343,11 +7234,7 @@
 - raw: "传闻因#PlayerForceDescribe##$PlayerName#于小诸葛叛乱中护驾有功，当今圣上已特许其入宫查案。"
   splits:
   - text: "传闻因#PlayerForceDescribe##$PlayerName#于小诸葛叛乱中护驾有功，当今圣上已特许其入宫查案。"
-    translated: "Rumors have it that #PlayerForceDescribe##$PlayerName# earned special permission from the current emperor to investigate cases in the palace for his heroic protection of the emperor during the Xiao Zhu Ge Rebellion."
-    qcReviewedText: "Rumors have it that #PlayerForceDescribe##$PlayerName# earned special permission from the current emperor to investigate cases in the palace for his heroic protection of the emperor during the Xiao Zhu Ge Rebellion."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Rumors have it that #PlayerForceDescribe# #$PlayerName# earned special permission from the current emperor to investigate cases in the palace for his heroic protection of the emperor during the Xiao Zhu Ge Rebellion."
 - raw: "传闻在#PosText#一带有铁掌帮弟子行凶作恶，颇为嚣张。"
   splits:
   - text: "传闻在#PosText#一带有铁掌帮弟子行凶作恶，颇为嚣张。"
@@ -7583,20 +7470,12 @@
   splits:
   - text: "传闻峨嵋派"
     translated: "Legend has it that the Emei school"
-    qcReviewedText: "Legend has it that the Emei school <b>Dali </b>The main sect is under urgent attack by evil factions and is in grave danger. Sect Leader Sima Deyuan has sent out an urgent distress signal to the leaders of various sects in Central Plains."
-    qcTranslated: "Legend has it that the Emei school's <b>Dali</b> branch is under urgent attack by evil factions and is in grave danger. Sect Leader Sima Deyuan has sent out an urgent distress signal to the leaders of various sects in Central Plains."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
-    - DroppedContent
   - subIndex: 1
     text: "大理"
     translated: "Dali"
   - subIndex: 2
     text: "分舵遭到邪派围攻，危在旦夕。掌门司马德源已向中原各派掌门发出紧急求援信。"
-    translated: "The main sect is under urgent attack by evil factions and is in grave danger. Sect Leader Sima Deyuan has sent out an urgent distress signal to the leaders of various sects in Central Plains."
+    translated: "The branch headquarters is under attack by the Unorthodox Sect, and it is in grave danger. Sect Leader Sima Deyuan has already sent out urgent appeal letters to the leaders of various orthodox sects in Central Plains."
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "传闻峨眉掌门司马德源和武当掌门张青蓬同时现身#PosText#，准备共商三派会盟之事。"
@@ -7610,14 +7489,7 @@
 - raw: "传闻峨眉掌门白眉真人为抵御阎罗殿等邪派之威胁，邀请中原正道群雄在<b>峨眉</b>金顶召开大会，共商对敌之策。"
   splits:
   - text: "传闻峨眉掌门白眉真人为抵御阎罗殿等邪派之威胁，邀请中原正道群雄在"
-    translated: "It is said that Sect Leader Bai Meishen Immortal of Mount Emei invited the heroes of Central Plains to gather in order to resist the threats from Yama Hall and other evil sects."
-    qcReviewedText: "It is said that Sect Leader Bai Meishen Immortal of Mount Emei invited the heroes of Central Plains to gather in order to resist the threats from Yama Hall and other evil sects.<b>Emei </b>A grand conference is held at the Golden Summit to discuss strategies against the enemy."
-    qcTranslated: "It is said that Sect Leader Bai Meishen Immortal of Mount Emei invited the heroes of Central Plains to gather at the <b>Emei</b> Golden Summit to discuss strategies against the threats from Yama Hall and other evil sects."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
+    translated: "It is said that Sect Leader Bai Mei Immortal of Mount Emei invited the righteous heroes of Central Plains to gather in order to defend against the threats posed by the Yama Hall and other Unorthodox Sects."
   - subIndex: 1
     text: "峨眉"
     translated: "Emei"
@@ -8153,15 +8025,7 @@
 - raw: "传闻邪派联军休整完毕，再次兵临<b>大理城</b>下。此番来势汹汹，精锐尽出，看来誓要攻克此地。"
   splits:
   - text: "传闻邪派联军休整完毕，再次兵临"
-    translated: "Rumors suggest that the Evil Sect Coalition has completed its rest and is preparing to advance again."
-    qcReviewedText: "Rumors suggest that the Evil Sect Coalition has completed its rest and is preparing to advance again.<b>Dali City </b>Down below. This time, all the elite forces have been deployed, and it seems they are determined to conquer this place."
-    qcTranslated: "Rumors suggest that the Evil Sect Coalition has completed its rest and is preparing to advance again, bringing their troops to the gates of <b>Dali City</b>. This time, all the elite forces have been deployed, and it seems they are determined to conquer this place."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
-    - DroppedContent
+    translated: "It is said that the Unorthodox Sect coalition has finished its rest and is advancing once more."
   - subIndex: 1
     text: "大理城"
     translated: "Dali City"
@@ -8173,14 +8037,7 @@
 - raw: "传闻邪派联军在击败聚义门之后挥师北上，眼下驻扎在<b>#PosText#</b>附近。"
   splits:
   - text: "传闻邪派联军在击败聚义门之后挥师北上，眼下驻扎在"
-    translated: "The Following faction alliance is said to have marched north after defeating the Righteous Alliance Gate, and is currently stationed in"
-    qcReviewedText: "The Following faction alliance is said to have marched north after defeating the Righteous Alliance Gate, and is currently stationed in<b>#PosText#</b>Nearby"
-    qcTranslated: "The Heretical Faction alliance is said to have marched north after defeating the Righteous Alliance Gate, and is currently stationed near <b>#PosText#</b>."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "It is said that after the Unorthodox Sect coalition defeated the Righteous Alliance Gate, they marched north and are now stationed there."
   - subIndex: 1
     text: "附近。"
     translated: "Nearby"
@@ -8300,14 +8157,7 @@
 - raw: "传闻阎罗殿等邪派联军已兵临<b>#PosText#</b>城下，准备先拿这西南小派开刀，为日后大举进军中原祭旗立威。"
   splits:
   - text: "传闻阎罗殿等邪派联军已兵临"
-    translated: "Rumors have it that the forces of the Evil Realms have advanced to the gates of Yama Hall."
-    qcReviewedText: "Rumors have it that the forces of the Evil Realms have advanced to the gates of Yama Hall.<b>#PosText#</b>Below the city, they prepared to strike at this southwest sect first, to set the stage and demonstrate their power for future campaigns into Central Plains."
-    qcTranslated: "Rumors have it that the forces of the Evil Realms, including Yama Hall, have advanced to the gates of <b>#PosText#</b> city, preparing to strike at this southwest sect first to set the stage and demonstrate their power for future campaigns into Central Plains."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
+    translated: "It is said that the coalition of Unorthodox Sects like Yama Hall has already arrived at the gates."
   - subIndex: 1
     text: "城下，准备先拿这西南小派开刀，为日后大举进军中原祭旗立威。"
     translated: "Below the city, they prepared to strike at this southwest sect first, to set the stage and demonstrate their power for future campaigns into Central Plains."
@@ -11794,16 +11644,9 @@
   splits:
   - text: "听闻中原大侠郭淮近日邀请各大门派掌门会于泰山脚下"
     translated: "I heard that the Great Hero Guo Huai recently invited the leaders of various sects to meet at the foot of Mount Tai."
-    qcReviewedText: "I heard that the Great Hero Guo Huai recently invited the leaders of various sects to meet at the foot of Mount Tai.<b>#PosText#</b>, Discuss the details for holding the third Taiye Grand Ceremony."
-    qcTranslated: "I heard that the Great Hero Guo Huai recently invited the leaders of various sects to meet at the foot of Mount Tai<b>#PosText#</b> to discuss the details for holding the third Taiye Grand Ceremony."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "，共商第三次泰岳大典举办事宜。"
-    translated: ", Discuss the details for holding the third Taiye Grand Ceremony."
+    translated: ", Discuss the arrangements for the third Mount Tai Grand Assembly."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "听闻峨眉掌门司马德源突然星夜兼程赶往<b>#PosText#</b>，不知有何大事发生。"
@@ -17260,16 +17103,9 @@
   splits:
   - text: "是#PlayerName#啊，来的正好。"
     translated: "It's #PlayerName#. You couldn't have come at a better time."
-    qcReviewedText: "It's #PlayerName#. You couldn't have come at a better time.\\nThis is #PlotTargetInteractDescribe1##PlotTargetInteractName1#, also one of my good friends.\\nJust happen to know someone I could recommend to you."
-    qcTranslated: "It's #PlayerName#. You couldn't have come at a better time.\\nThis is #PlotTargetInteractDescribe1##PlotTargetInteractName1#, also one of my good friends.\\nI just happen to be able to introduce them to you."
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
   - subIndex: 1
     text: "这位是#PlotTargetInteractDescribe1##PlotTargetInteractName1#，也是我的好友，"
-    translated: "This is #PlotTargetInteractDescribe1##PlotTargetInteractName1#, also one of my good friends."
+    translated: "This is #PlotTargetInteractDescribe1# #PlotTargetInteractName1#, also one of my good friends."
   - subIndex: 2
     text: "正巧替你引荐引荐。"
     translated: "Just happen to know someone I could recommend to you."
@@ -17941,29 +17777,15 @@
   splits:
   - text: "此后，#$PlayerName#便效仿都点检赵胤宗，"
     translated: "After that, #$PlayerName# emulated Zhao Yinzong, the Capital Inspector."
-    qcReviewedText: "After that, #$PlayerName# emulated Zhao Yinzong, the Capital Inspector.\\nHold the Great Ceremony of Taiye on Tai'an Yuhuadong to declare the unification of the Wulin."
-    qcTranslated: "After that, #$PlayerName# emulated Zhao Yinzong, the Capital Inspector.\\nHe held the Great Ceremony of Taiye on Tai'an Yuhuadong to declare the unification of the Wulin."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
   - subIndex: 1
     text: "于泰山玉皇顶召开泰岳大典，宣告武林一统。"
-    translated: "Hold the Great Ceremony of Taiye on Tai'an Yuhuadong to declare the unification of the Wulin."
+    translated: "At the Jade Emperor Peak of Mount Tai, the Mount Tai Grand Assembly will be held to declare the unification of Wulin."
   templates:
   - template: "{0}\\n{1}"
 - raw: "此后，#$PlayerName#效仿都点检赵胤宗，于泰山玉皇顶召开泰岳大典，\\n并借此时机黄袍加身，登基称帝。"
   splits:
   - text: "此后，#$PlayerName#效仿都点检赵胤宗，于泰山玉皇顶召开泰岳大典，"
-    translated: "After that, #$PlayerName# emulated Zhao Yinzong and held the Taiyue Grand Ceremony on the Jade Emperor Peak of Mount Tai."
-    qcReviewedText: "After that, #$PlayerName# emulated Zhao Yinzong and held the Taiyue Grand Ceremony on the Jade Emperor Peak of Mount Tai.\\nAnd seize this opportunity to don the yellow robe and ascend the throne to proclaim himself emperor."
-    qcTranslated: "After that, #$PlayerName# emulated Zhao Yinzong and held the Taiyue Grand Ceremony on the Jade Emperor Peak of Mount Tai.\\nHe seized this opportunity to don the yellow robe and ascend the throne to proclaim himself emperor."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
+    translated: "After that, #$PlayerName# emulated Zhao Yinzong and held the Mount Tai Grand Assembly on the Jade Emperor Peak of Mount Tai."
   - subIndex: 1
     text: "并借此时机黄袍加身，登基称帝。"
     translated: "And seize this opportunity to don the yellow robe and ascend the throne to proclaim himself emperor."
@@ -19137,22 +18959,11 @@
 - raw: "泰岳奇闻"
   splits:
   - text: "泰岳奇闻"
-    translated: "They Yue Jiwen"
-    qcReviewedText: "They Yue Jiwen"
-    qcTranslated: "Strange Tales of Mount Tai"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: UntranslatedPinyin
-    qcDefectCategories:
-    - UntranslatedPinyin
+    translated: "Mount Tai Strange Stories"
 - raw: "泰岳巨典"
   splits:
   - text: "泰岳巨典"
-    translated: "Mount Tai Giant Codex"
-    qcReviewedText: "Mount Tai Giant Codex"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Mount Tai Grand Assembly"
 - raw: "流言蜚语"
   splits:
   - text: "流言蜚语"
@@ -19864,14 +19675,7 @@
 - raw: "真是不知死活，抢劫抢到我#SourceForceDescribe##$SourceInteractName#的头上来了？\\n现在乖乖退下，我便放你们一马！"
   splits:
   - text: "真是不知死活，抢劫抢到我#SourceForceDescribe##$SourceInteractName#的头上来了？"
-    translated: "Really risking death, did you come to rob me, #SourceForceDescribe##$SourceInteractName#?"
-    qcReviewedText: "Really risking death, did you come to rob me, #SourceForceDescribe##$SourceInteractName#?\\nNow go down and behave, or I'll let you off!"
-    qcTranslated: "You truly have no sense of your own mortality, coming to rob me, #SourceForceDescribe##$SourceInteractName#?\\nNow back off and behave, or I'll let you off!"
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: LostIdiom
-    qcDefectCategories:
-    - LostIdiom
+    translated: "Really risking death, did you come to rob me, #SourceForceDescribe# #$SourceInteractName#?"
   - subIndex: 1
     text: "现在乖乖退下，我便放你们一马！"
     translated: "Now go down and behave, or I'll let you off!"
@@ -19880,11 +19684,7 @@
 - raw: "真是不知死活，采花采到我#SourceForceDescribe##$SourceInteractName#的头上来了？\\n现在乖乖滚开，我便放你们一马！"
   splits:
   - text: "真是不知死活，采花采到我#SourceForceDescribe##$SourceInteractName#的头上来了？"
-    translated: "Isn't it just asking for it? Did they dare to come and pick flowers on top of #SourceForceDescribe##$SourceInteractName#?"
-    qcReviewedText: "Isn't it just asking for it? Did they dare to come and pick flowers on top of #SourceForceDescribe##$SourceInteractName#?\\nNow scram and I might spare you!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Isn't it just asking for it? Did they dare to come and pick flowers on top of #SourceForceDescribe# #$SourceInteractName#?"
   - subIndex: 1
     text: "现在乖乖滚开，我便放你们一马！"
     translated: "Now scram and I might spare you!"
@@ -20506,22 +20306,11 @@
 - raw: "第三次泰岳大典"
   splits:
   - text: "第三次泰岳大典"
-    translated: "Third Tai Yue Grand Ceremony"
-    qcReviewedText: "Third Tai Yue Grand Ceremony"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The Third Mount Tai Grand Assembly"
 - raw: "第三次泰岳大典即将于泰山玉皇顶召开。当世顶尖高手已云集<b>#PosText#</b>，准备以武论道，一较高下，争夺天下第一这一无上荣耀。"
   splits:
   - text: "第三次泰岳大典即将于泰山玉皇顶召开。当世顶尖高手已云集"
-    translated: "The Third Taiye Grand Ceremony is about to be held on Jade Emperor Peak of Mount Tai. The top masters of the contemporary world have already gathered there."
-    qcReviewedText: "The Third Taiye Grand Ceremony is about to be held on Jade Emperor Peak of Mount Tai. The top masters of the contemporary world have already gathered there.<b>#PosText#</b>, Prepare to debate the way through martial arts, to test our skills and vie for the supreme honor of being the number one under heaven."
-    qcTranslated: "The Third Taiye Grand Ceremony is about to be held on Jade Emperor Peak of Mount Tai. The top masters of the contemporary world have already gathered at <b>#PosText#</b>, preparing to debate the way through martial arts, to test their skills and vie for the supreme honor of being the number one under heaven."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
+    translated: "The third Mount Tai Grand Assembly is about to take place on Mount Tai's Jade Emperor Peak. The world's top martial arts masters have already gathered."
   - subIndex: 1
     text: "，准备以武论道，一较高下，争夺天下第一这一无上荣耀。"
     translated: ", Prepare to debate the way through martial arts, to test our skills and vie for the supreme honor of being the number one under heaven."
@@ -20530,14 +20319,7 @@
 - raw: "第三次泰岳大典即将于泰山玉皇顶召开。当世顶尖高手已云集<b>#PosText#</b>，准备以武论道，一较高下，争夺归藏功以及天下第一这一无上荣耀。"
   splits:
   - text: "第三次泰岳大典即将于泰山玉皇顶召开。当世顶尖高手已云集"
-    translated: "The Third Taiye Grand Ceremony is about to be held on Jade Emperor Peak of Mount Tai. The top masters of the contemporary world have already gathered there."
-    qcReviewedText: "The Third Taiye Grand Ceremony is about to be held on Jade Emperor Peak of Mount Tai. The top masters of the contemporary world have already gathered there.<b>#PosText#</b>, Prepare to settle this through combat, to test our skills, and to compete for the Guichan Technique and the title of Supreme Champion under the heavens."
-    qcTranslated: "The Third Taiye Grand Ceremony is about to be held on Jade Emperor Peak of Mount Tai. The top masters of the contemporary world have already gathered at <b>#PosText#</b>, preparing to settle this through combat, to test their skills, and to compete for the Guichan Technique and the title of Supreme Champion under the heavens."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
+    translated: "The third Mount Tai Grand Assembly is about to take place on Mount Tai's Jade Emperor Peak. The world's top martial arts masters have already gathered."
   - subIndex: 1
     text: "，准备以武论道，一较高下，争夺归藏功以及天下第一这一无上荣耀。"
     translated: ", Prepare to settle this through combat, to test our skills, and to compete for the Guichan Technique and the title of Supreme Champion under the heavens."
@@ -20546,22 +20328,11 @@
 - raw: "第二届泰岳大典"
   splits:
   - text: "第二届泰岳大典"
-    translated: "Second Taiyue Grand Festival"
-    qcReviewedText: "Second Taiyue Grand Festival"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The Second Mount Tai Grand Assembly"
 - raw: "第二届泰岳大典于泰山玉皇顶正式召开，各大掌门云集<b>#PosText#</b>，共同商议龙胤归藏功之归属。"
   splits:
   - text: "第二届泰岳大典于泰山玉皇顶正式召开，各大掌门云集"
-    translated: "The Second Taiyue Grand Ceremony officially convened on Jade Emperor Peak of Mount Tai, with various sect leaders gathering."
-    qcReviewedText: "The Second Taiyue Grand Ceremony officially convened on Jade Emperor Peak of Mount Tai, with various sect leaders gathering.<b>#PosText#</b>, Discuss together the disposition of the Dragon Descends into Seclusion Technique."
-    qcTranslated: "The Second Taiyue Grand Ceremony officially convened on Jade Emperor Peak of Mount Tai, with various sect leaders gathering <b>#PosText#</b> to discuss the disposition of the Dragon Descends into Seclusion Technique."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
+    translated: "The second Mount Tai Grand Assembly was officially held on Mount Tai's Jade Emperor Peak, with sect leaders gathering from all over."
   - subIndex: 1
     text: "，共同商议龙胤归藏功之归属。"
     translated: ", Discuss together the disposition of the Dragon Descends into Seclusion Technique."
@@ -22377,20 +22148,12 @@
   splits:
   - text: "赵胤宗的龙胤归藏功重现江湖，各大门派决定于"
     translated: "Zhao Yinzong's Dragon Descends into Seclusion Technique has returned to Jianghu, and the major sects have decided to gather at"
-    qcReviewedText: "Zhao Yinzong's Dragon Descends into Seclusion Technique has returned to Jianghu, and the major sects have decided to gather at <b>A month later </b>Host the Second Taiyue Great Ceremony on Mount Tai to determine the ownership of the divine arts.\\nMany Wulin practitioners have gone there in advance.<b>#PosText#</b>, To catch a glimpse of this unprecedented grand festival."
-    qcTranslated: "Zhao Yinzong's Dragon Descends into Seclusion Technique has returned to Jianghu, and the major sects have decided to hold the Second Taiyue Great Ceremony on Mount Tai <b>one month later</b> to determine the ownership of the divine arts.\\nMany Wulin practitioners have gone to <b>#PosText#</b> in advance to catch a glimpse of this unprecedented grand festival."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
-    - OtherNamedDefect
   - subIndex: 1
     text: "一个月后"
     translated: "A month later"
   - subIndex: 2
     text: "在泰山举办第二届泰岳大典，商定神功归属。"
-    translated: "Host the Second Taiyue Great Ceremony on Mount Tai to determine the ownership of the divine arts."
+    translated: "Hold the second Mount Tai Grand Assembly on Mount Tai to decide the ownership of the divine technique."
   - subIndex: 3
     text: "许多武林人士已提前前往"
     translated: "Many Wulin practitioners have gone there in advance."
@@ -22700,11 +22463,7 @@
 - raw: "近日腾冲府有许多邪派人士现身，似乎和传说中的黑道大会有关。"
   splits:
   - text: "近日腾冲府有许多邪派人士现身，似乎和传说中的黑道大会有关。"
-    translated: "Recently, many evil practitioners have appeared in Tengchong Prefecture, seemingly related to the rumored Black Market Conference."
-    qcReviewedText: "Recently, many evil practitioners have appeared in Tengchong Prefecture, seemingly related to the rumored Black Market Conference."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Recently, there have been many Unorthodox Sect members appearing in Tengchong Prefecture, seemingly related to the rumored Black Market gathering."
 - raw: "近日这伙人又作案多起，若是能以此为线索找到他们，\\n将其一网打尽，岂不是一桩天大的好事。"
   splits:
   - text: "近日这伙人又作案多起，若是能以此为线索找到他们，"
@@ -24499,11 +24258,7 @@
 - raw: "镖师弟兄们莫慌，我与#SourceForceName##$PlayerName#前来支援！\\n大家齐心协力，定能击退这群贼人！"
   splits:
   - text: "镖师弟兄们莫慌，我与#SourceForceName##$PlayerName#前来支援！"
-    translated: "Martial Artist brothers, do not panic, I and #SourceForceName##$PlayerName# come to support!"
-    qcReviewedText: "Martial Artist brothers, do not panic, I and #SourceForceName##$PlayerName# come to support!\\nWork together, and we can repel these bandits!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Martial Artist brothers, do not panic, I and #SourceForceName# #$PlayerName# come to support!"
   - subIndex: 1
     text: "大家齐心协力，定能击退这群贼人！"
     translated: "Work together, and we can repel these bandits!"

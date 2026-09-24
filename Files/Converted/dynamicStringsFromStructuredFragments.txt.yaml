@@ -3152,11 +3152,7 @@
 - raw: "泰岳大典"
   splits:
   - text: "泰岳大典"
-    translated: "Tai Yue Grand Ceremony"
-    qcReviewedText: "Tai Yue Grand Ceremony"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Mount Tai Grand Assembly"
 - raw: "洗耳恭听"
   splits:
   - text: "洗耳恭听"

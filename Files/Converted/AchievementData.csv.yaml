@@ -693,11 +693,7 @@
     qcDefectCategory: None
   - split: 5
     text: "第三次泰岳大典胜出后选择归隐"
-    translated: "After winning the Third Taiyue Grand Ceremony, choose to seclude oneself."
-    qcReviewedText: "After winning the Third Taiyue Grand Ceremony, choose to seclude oneself."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Choosing to retire after winning the third Mount Tai Grand Assembly"
 - raw: "29,归隐田园,达成归隐田园结局,bool,1,第三次泰岳大典失败后选择归隐"
   splits:
   - split: 1
@@ -716,11 +712,7 @@
     qcDefectCategory: None
   - split: 5
     text: "第三次泰岳大典失败后选择归隐"
-    translated: "After the failure of the Third Taiye Great Ceremony, choosing to seclude oneself."
-    qcReviewedText: "After the failure of the Third Taiye Great Ceremony, choosing to seclude oneself."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Choosing to retreat into seclusion after the third failure of the Mount Tai Grand Assembly"
 - raw: "30,豪商巨贾,达成豪商巨贾结局,bool,1,达到50万银钱后进入门派/自宅"
   splits:
   - split: 1

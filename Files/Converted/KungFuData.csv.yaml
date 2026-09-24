@@ -2397,11 +2397,7 @@
   splits:
   - split: 4
     text: "阴险剧毒之暗器，中此砂者痛苦万分，如坠黄泉九幽，求生不得，求死不能"
-    translated: "Treacherous poison hidden weapons strike with excruciating pain, making the victim feel as if they are descending into the ninth level of hell, unable to die yet tormented beyond survival."
-    qcReviewedText: "Treacherous poison hidden weapons strike with excruciating pain, making the victim feel as if they are descending into the ninth level of hell, unable to die yet tormented beyond survival."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A treacherous and venomous hidden weapon; those struck by its sand suffer immensely, as if plummeting into the depths of Huang Quan. They cannot live, nor can they die."
 - raw: "252,内功,4,六言真经,极为高深的佛门心法，其言甚简却涵摄诸多法门之精义，对于修行者心智神识均大有裨益,,1.1,内功潜力2;内功1;智力1,生命上限150;内力上限50;内功10;智力10;意志10;无敌0.03;回血0.006,,内功65;智力40;意志30,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -3557,11 +3553,7 @@
   splits:
   - split: 4
     text: "专攻人体周身紧要死穴的狠毒指法，中招者五内翻滚，经脉逆行，如坠九幽黄泉"
-    translated: "Fierce finger techniques targeting vital dead points throughout the body cause internal turmoil, reverse circulation of meridians, and feel like descending into the nine hells."
-    qcReviewedText: "Fierce finger techniques targeting vital dead points throughout the body cause internal turmoil, reverse circulation of meridians, and feel like descending into the nine hells."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A vicious finger technique that targets critical acupoints throughout the body. Those struck will experience their internal organs churning, their meridians flowing in reverse, as if plummeting into the depths of Huang Quan."
 - raw: "376,拳掌,3,药王毒手,药王谷虽治病救人之所，其用毒亦是一绝。此手法将毒物暗藏掌心随招式拍出，所中之处立时腐化溃烂，痛苦难忍,14,0.9,毒术潜力1;拳掌1;智力1,,智力3;拳掌1;毒术3,拳掌40;智力30;毒术25,\"2,1,2\",\"7,0,0\",毒素0.08;疗伤0.08,17,2,0,胸12;手8,胸6;手8,,,skill0_1,,毒素-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -9266,11 +9258,7 @@
   splits:
   - split: 4
     text: "在天山峰顶极寒之地修炼而成的内功心法，被此内劲击中者，冰肌蚀骨，血脉凝固，可谓一只脚已踏入黄泉幽冥之中"
-    translated: "Neigong and Heart Method cultivated in the extreme cold at the peak of Tianshan Mountain, those struck by this inner power experience icy flesh and bones, congealed blood vessels, and a foot already stepping into the underworld."
-    qcReviewedText: "Neigong and Heart Method cultivated in the extreme cold at the peak of Tianshan Mountain, those struck by this inner power experience icy flesh and bones, congealed blood vessels, and a foot already stepping into the underworld."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The Internal Skill Heart Method cultivated in the bitterly cold peak of Tianshan. Those struck by this inner force will suffer frozen flesh and bones, congealed blood and veins‑it is as if one foot has already stepped into the underworld of Huang Quan."
 - raw: "984,轻功,4,瑶池漫步,于天山瑶池上漫步之法，看似闲庭信步，优雅惬意，实则每一脚都踩在薄如蝉翼的薄冰之上，其中巧劲之把控可谓精妙绝伦，分毫不差,,1.2,轻功潜力2;轻功1;灵巧1,轻功15;灵巧15;轻灵0.06;负面抗性0.06,,轻功65;灵巧55,,,,0,19,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4

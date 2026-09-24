@@ -4219,14 +4219,7 @@
 - raw: "#TargetForceDescribe##$TargetInteractName#，\n此次特地前来拜访#SourceForceDescribe##$SourceInteractName#"
   splits:
   - text: "此次特地前来拜访#SourceForceDescribe##$SourceInteractName#"
-    translated: "This time, I specially came to visit #SourceForceDescribe##$SourceInteractName#."
-    qcReviewedText: "#TargetForceDescribe##$TargetInteractName#，\nThis time, I specially came to visit #SourceForceDescribe##$SourceInteractName#."
-    qcTranslated: "#TargetForceDescribe##$TargetInteractName#,\nThis time, I have come specifically to visit #SourceForceDescribe##$SourceInteractName#."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "This time, I specially came to visit #SourceForceDescribe# #$SourceInteractName#."
   templates:
   - template: "#TargetForceDescribe##$TargetInteractName#，\n{0}"
 - raw: "#TargetForceName#事务繁忙，我也有多时没有这样闲逛过街市了。\n人生苦短，去日苦多，不知#SourceInteractName#是否也有同感？"
@@ -9372,11 +9365,7 @@
 - raw: "{0}天"
   splits:
   - text: "天"
-    translated: "Days"
-    qcReviewedText: "{0} Days"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Sky"
   templates:
   - template: "⟦0⟧{0}"
 - raw: "{0}天赋变化：{1}"
@@ -14741,14 +14730,7 @@
 - raw: "久闻#PlayerForceDescribe##$PlayerName#大名，今日一见果真名不虚传。\n在下#TargetForceDescribe##$TargetInteractName#，还请关照。"
   splits:
   - text: "久闻#PlayerForceDescribe##$PlayerName#大名，今日一见果真名不虚传。"
-    translated: "I've heard much about #PlayerForceDescribe##$PlayerName#, and indeed, you do not disappoint."
-    qcReviewedText: "I've heard much about #PlayerForceDescribe##$PlayerName#, and indeed, you do not disappoint.\n#TargetForceDescribe#, please look after #$TargetInteractName#"
-    qcTranslated: "I've long heard of the great name of #PlayerForceDescribe##$PlayerName#, and indeed, you do not disappoint upon meeting you today.\nI am #TargetForceDescribe##$TargetInteractName#, please look after me."
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    translated: "I've heard much about #PlayerForceDescribe# #$PlayerName#, and indeed, you do not disappoint."
   - subIndex: 1
     text: "在下#TargetForceDescribe##$TargetInteractName#，还请关照。"
     translated: "#TargetForceDescribe#, please look after #$TargetInteractName#"
@@ -20053,11 +20035,7 @@
 - raw: "初次见面，在下#TargetForceDescribe##$TargetInteractName#。\n阁下想必就是近来颇有名气的#PlayerForceDescribe##$PlayerName#，真是百闻不如一见啊。"
   splits:
   - text: "初次见面，在下#TargetForceDescribe##$TargetInteractName#。"
-    translated: "Nice to meet you. I am #TargetForceDescribe##$TargetInteractName#."
-    qcReviewedText: "Nice to meet you. I am #TargetForceDescribe##$TargetInteractName#.\nYour Excellency is no doubt the #PlayerForceDescribe# #$PlayerName# who has been making quite a name for oneself recently. Indeed, I can see why."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Nice to meet you. I am #TargetForceDescribe# #$TargetInteractName#."
   - subIndex: 1
     text: "阁下想必就是近来颇有名气的#PlayerForceDescribe##$PlayerName#，真是百闻不如一见啊。"
     translated: "Your Excellency is no doubt the #PlayerForceDescribe# #$PlayerName# who has been making quite a name for oneself recently. Indeed, I can see why."
@@ -20096,11 +20074,7 @@
 - raw: "别吵吵，我正在泰岳大典施展拳脚，大杀四方，\n眼看就要将各大门派打个落花流水......没想到被你搅了好事！"
   splits:
   - text: "别吵吵，我正在泰岳大典施展拳脚，大杀四方，"
-    translated: "Shhh, I'm in the Taiyue Grand Ceremony, showing my skills and wreaking havoc all over the place."
-    qcReviewedText: "Shhh, I'm in the Taiyue Grand Ceremony, showing my skills and wreaking havoc all over the place.\nAbout to beat the various sects into submission... Unexpectedly, you ruined my plans!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Shh, I'm busy laying waste to all with my martial arts at the Mount Tai Grand Assembly."
   - subIndex: 1
     text: "眼看就要将各大门派打个落花流水......没想到被你搅了好事！"
     translated: "About to beat the various sects into submission... Unexpectedly, you ruined my plans!"
@@ -21517,11 +21491,7 @@
 - raw: "原来是#PlayerForceDescribe##$PlayerName#，失敬失敬。\n此地民风剽悍，强盗横行，弟兄们不得不谨慎些。\n#SourceInteractName#兄也请多加小心。"
   splits:
   - text: "原来是#PlayerForceDescribe##$PlayerName#，失敬失敬。"
-    translated: "Originally, it's #PlayerForceDescribe##$PlayerName#. Pleased to meet you."
-    qcReviewedText: "Originally, it's #PlayerForceDescribe##$PlayerName#. Pleased to meet you.\nThe locals are tough and bandits roam freely, so the brothers must be more cautious.\n#SourceInteractName# Brother, please be extra careful"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Originally, it's #PlayerForceDescribe# #$PlayerName#. Pleased to meet you."
   - subIndex: 1
     text: "此地民风剽悍，强盗横行，弟兄们不得不谨慎些。"
     translated: "The locals are tough and bandits roam freely, so the brothers must be more cautious."
@@ -24999,13 +24969,9 @@
   splits:
   - text: "哈哈，是我胜了。"
     translated: "Ha ha, I won"
-    qcReviewedText: "Ha ha, I won\nFrom today, I, #$SourceInteractName#, am the Leader of the Seven Evil Men!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "从今天起，我#$SourceInteractName#便是七大恶人之首！"
-    translated: "From today, I, #$SourceInteractName#, am the Leader of the Seven Evil Men!"
+    translated: "From today on, I, #$SourceInteractName#, will be the leader of the Seven Great Villains!"
   templates:
   - template: "{0}\n{1}"
 - raw: "哈哈，猜中了猜中了！\n今日得见两位高手过招，着实令我眼界大开。"
@@ -28810,13 +28776,9 @@
   splits:
   - text: "在下#TargetForceDescribe##$TargetInteractName#，"
     translated: "I am #TargetForceDescribe# #$TargetInteractName#"
-    qcReviewedText: "I am #TargetForceDescribe# #$TargetInteractName#\nThis time, I specially came to visit #SourceForceDescribe##$SourceInteractName#."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "此次特地前来拜访#SourceForceDescribe##$SourceInteractName#"
-    translated: "This time, I specially came to visit #SourceForceDescribe##$SourceInteractName#."
+    translated: "This time, I specially came to visit #SourceForceDescribe# #$SourceInteractName#."
   templates:
   - template: "{0}\n{1}"
 - raw: "在下使命在身，迫不得已，只好得罪了！"
@@ -30876,7 +30838,7 @@
 - raw: "天;SureBuildingWork;"
   splits:
   - text: "天"
-    translated: "Day"
+    translated: "Sky"
   templates:
   - template: "{0};SureBuildingWork;"
 - raw: "天下大势：{4}{0}门派 {1}攻击资源{4}门派 {2}攻击城镇{4}门派 {3}攻击京城/总舵"
@@ -36344,7 +36306,7 @@
     - DomainTerm
   - subIndex: 1
     text: "天"
-    translated: "Day"
+    translated: "Sky"
   templates:
   - template: "{0} (⟦0⟧{1})\n⟦1⟧"
 - raw: "开"
@@ -37634,13 +37596,9 @@
   splits:
   - text: "忽听得一声暴喝响起，震得整个会场阵阵颤动！"
     translated: "Suddenly, a roar echoed through the room, causing the entire hall to tremble!"
-    qcReviewedText: "Suddenly, a roar echoed through the room, causing the entire hall to tremble!\nOnly to see a tall and sturdy man descend from the sky, none other than the head of the Seven Evil People, Wu Jueyi, who had been missing for so long!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "只见一身形魁梧的男子从天而降，赫然竟是失踪已久的七大恶人之首，武绝义！"
-    translated: "Only to see a tall and sturdy man descend from the sky, none other than the head of the Seven Evil People, Wu Jueyi, who had been missing for so long!"
+    translated: "A burly man descended from the sky, none other than Wu Jueyi, the long‑missing leader of the Seven Great Villains!"
   templates:
   - template: "{0}\n{1}"
 - raw: "忽然间一阵劲风卷起，你赶忙回头一挡，格开了来袭兵刃。\n原来一名江洋大盗已经跟随多时，眼见你们即将入城，\n再也按捺不住，果断冲杀过来！"
@@ -39410,13 +39368,9 @@
   splits:
   - text: "我早就知道你们不会服气，来来来，一起来！"
     translated: "I knew you wouldn't give up so easily. Come on, let's do this together!"
-    qcReviewedText: "I knew you wouldn't give up so easily. Come on, let's do this together!\nLet me show you the power of the Chief of the Seven Evil Men!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "让你们见识见识七大恶人之首的实力！"
-    translated: "Let me show you the power of the Chief of the Seven Evil Men!"
+    translated: "Let you see the power of the leader of the Seven Great Villains!"
   templates:
   - template: "{0}\n{1}"
 - raw: "我明白了;HeroBookInteract"
@@ -41052,14 +41006,7 @@
 - raw: "承让承让，看来此次泰岳大典，是我#$SourceInteractName#拔得头筹。\n从今天起，这龙胤归藏功便归我#SourceForceName#所有！"
   splits:
   - text: "承让承让，看来此次泰岳大典，是我#$SourceInteractName#拔得头筹。"
-    translated: "Cheng rang, cheng rang. It seems that this time at Taiyue's grand ceremony, I #$SourceInteractName# came out on top."
-    qcReviewedText: "Cheng rang, cheng rang. It seems that this time at Taiyue's grand ceremony, I #$SourceInteractName# came out on top.\nFrom today on, the Dragon Descends into Seclusion Technique belongs to me, #SourceForceName#!"
-    qcTranslated: "You're too kind, you're too kind. It seems that this time at Taiyue's grand ceremony, I #$SourceInteractName# came out on top.\nFrom today on, the Dragon Descends into Seclusion Technique belongs to me, #SourceForceName#!"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: UntranslatedPinyin
-    qcDefectCategories:
-    - UntranslatedPinyin
+    translated: "I yield, I yield. It seems that this Mount Tai Grand Assembly is mine, #$SourceInteractName#, for the top prize."
   - subIndex: 1
     text: "从今天起，这龙胤归藏功便归我#SourceForceName#所有！"
     translated: "From today on, the Dragon Descends into Seclusion Technique belongs to me, #SourceForceName#!"
@@ -43851,13 +43798,9 @@
   splits:
   - text: "既然完成了赵点检未竟之事业，或许没必要再赶尽杀绝，徒兴兵祸了。"
     translated: "Since completing Zhao Dianjian's unfinished business, perhaps there's no need to push for total annihilation and cause more military disasters."
-    qcReviewedText: "Since completing Zhao Dianjian's unfinished business, perhaps there's no need to push for total annihilation and cause more military disasters.\n<color=red>Choosing the Taiyue Grand Ceremony will trigger the ending and unlock the corresponding achievement.\nYou can continue playing and trigger other endings thereafter.</color>"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "选择泰岳大典将会触发结局并解锁对应成就"
-    translated: "Choosing the Taiyue Grand Ceremony will trigger the ending and unlock the corresponding achievement."
+    translated: "Choosing the Mount Tai Grand Assembly will trigger the ending and unlock the corresponding achievement."
   - subIndex: 2
     text: "此后仍可继续游戏并触发其他结局"
     translated: "You can continue playing and trigger other endings thereafter."
@@ -44222,15 +44165,7 @@
 - raw: "是#PlayerForceDescribe##$PlayerName#啊，\n此次{0}前来拜访我{1}，不知{3}？"
   splits:
   - text: "是#PlayerForceDescribe##$PlayerName#啊，"
-    translated: "It's #PlayerForceDescribe##$PlayerName#"
-    qcReviewedText: "It's #PlayerForceDescribe##$PlayerName#\nThis time {0} Come to visit me {1}, Unknown {3}？"
-    qcTranslated: "It's #PlayerForceDescribe##$PlayerName#. This time {0} came to visit me {1}, but I don't know {3}?"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
-    - OtherNamedDefect
+    translated: "It's #PlayerForceDescribe# #$PlayerName#"
   - subIndex: 1
     text: "此次"
     translated: "This time"
@@ -48456,32 +48391,21 @@
   splits:
   - text: "武绝义你好大的口气！"
     translated: "Wu Jueyi, you've got quite the bold claim!"
-    qcReviewedText: "Wu Jueyi, you've got quite the bold claim!\nLet me, this current Taiyue Great Festival Martial Arts Champion, show them my skills!"
-    qcTranslated: "Wu Jueyi, you've got quite the bold claim! Let me, this current Taiyue Great Festival Martial Arts Champion, come and face you!"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
   - subIndex: 1
     text: "就让我这本届泰岳大典擂主，前来会会你！"
-    translated: "Let me, this current Taiyue Great Festival Martial Arts Champion, show them my skills!"
+    translated: "Let this year's Mount Tai Grand Assembly champion come and meet you!"
   templates:
   - template: "{0}\n{1}"
 - raw: "武绝义！昔日仙居客栈一战，你落败而逃，之后便销声匿迹。\n我本以为你已洗心革面，改过自新，没想到你竟执迷不悟，\n还敢来泰岳大典争夺龙胤归藏功，实在是胆大包天了！"
   splits:
   - text: "武绝义！昔日仙居客栈一战，你落败而逃，之后便销声匿迹。"
     translated: "Wu Jueyi! In the battle at the Immortal Residence Inn long ago, you fled in defeat and have since disappeared from sight."
-    qcReviewedText: "Wu Jueyi! In the battle at the Immortal Residence Inn long ago, you fled in defeat and have since disappeared from sight.\nI thought you had repented and turned over a new leaf, but it seems you are still obstinate.\nDaring to come to the Taiyue Grand Ceremony to compete for the Dragon Descends into Seclusion Technique is truly outrageous!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "我本以为你已洗心革面，改过自新，没想到你竟执迷不悟，"
     translated: "I thought you had repented and turned over a new leaf, but it seems you are still obstinate."
   - subIndex: 2
     text: "还敢来泰岳大典争夺龙胤归藏功，实在是胆大包天了！"
-    translated: "Daring to come to the Taiyue Grand Ceremony to compete for the Dragon Descends into Seclusion Technique is truly outrageous!"
+    translated: "Daring to come to the Mount Tai Grand Assembly to compete for the Dragon Descends into Seclusion Technique is truly reckless!"
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "武者"
@@ -50189,7 +50113,7 @@
 - raw: "泰岳大典;PlotStartGameResult;7"
   splits:
   - text: "泰岳大典"
-    translated: "Tai Yue Grand Ceremony"
+    translated: "Mount Tai Grand Assembly"
   templates:
   - template: "{0};PlotStartGameResult;7"
 - raw: "洗耳恭听;StudyLivingSkillWithNPCSure;"
@@ -51573,11 +51497,7 @@
 - raw: "玉观音"
   splits:
   - text: "玉观音"
-    translated: "Buddha of Jade"
-    qcReviewedText: "Buddha of Jade"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Yu Guanyin"
 - raw: "王伦"
   splits:
   - text: "王伦"
@@ -53179,11 +53099,7 @@
 - raw: "看来第三次泰岳大典这“天下第一”的名号，被我#$SourceInteractName#夺得了。\n从今天起，这三份归藏功残本也当归我#SourceForceName#所有！"
   splits:
   - text: "看来第三次泰岳大典这“天下第一”的名号，被我#$SourceInteractName#夺得了。"
-    translated: "It seems that the title of Top Under Heaven for the third Taiyue Grand Ceremony has been won by me #$SourceInteractName#."
-    qcReviewedText: "It seems that the title of Top Under Heaven for the third Taiyue Grand Ceremony has been won by me #$SourceInteractName#.\nFrom today on, these three incomplete versions of the Huizang Skill should belong to #SourceForceName#!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "'#$SourceInteractName#' has been claimed the title of Number One in the World at the third Mount Tai Grand Assembly."
   - subIndex: 1
     text: "从今天起，这三份归藏功残本也当归我#SourceForceName#所有！"
     translated: "From today on, these three incomplete versions of the Huizang Skill should belong to #SourceForceName#!"
@@ -57116,11 +57032,7 @@
 - raw: "胜负已分，夺冠者乃是...#SourceForceDescribe##$SourceInteractName#！\n自古以来良将辅明主，宝马配英雄，\n依比赛约定，这匹#PlotInteractItemName#便归你所有！"
   splits:
   - text: "胜负已分，夺冠者乃是...#SourceForceDescribe##$SourceInteractName#！"
-    translated: "The winner is...#SourceForceDescribe##$SourceInteractName#!"
-    qcReviewedText: "The winner is...#SourceForceDescribe##$SourceInteractName#!\nA capable general assists a wise ruler, a fine horse befits a hero.\nAccording to the competition agreement, this #PlotInteractItemName# now belongs to you!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The winner is...#SourceForceDescribe# #$SourceInteractName#!"
   - subIndex: 1
     text: "自古以来良将辅明主，宝马配英雄，"
     translated: "A capable general assists a wise ruler, a fine horse befits a hero."
@@ -66922,14 +66834,10 @@
 - raw: "阁下便是#PlayerForceDescribe##$PlayerName#？果真是自古英雄出少年。\n吾乃#TargetForceDescribe##$TargetInteractName#，幸会幸会。"
   splits:
   - text: "阁下便是#PlayerForceDescribe##$PlayerName#？果真是自古英雄出少年。"
-    translated: "You are indeed #PlayerForceDescribe##$PlayerName#. Truly, history shows that heroes emerge in their youth."
-    qcReviewedText: "You are indeed #PlayerForceDescribe##$PlayerName#. Truly, history shows that heroes emerge in their youth.\nI am #TargetForceDescribe##$TargetInteractName#. Nice to meet you."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "You are indeed #PlayerForceDescribe# #$PlayerName#. Truly, history shows that heroes emerge in their youth."
   - subIndex: 1
     text: "吾乃#TargetForceDescribe##$TargetInteractName#，幸会幸会。"
-    translated: "I am #TargetForceDescribe##$TargetInteractName#. Nice to meet you."
+    translated: "I am #TargetForceDescribe# #$TargetInteractName#. Nice to meet you."
   templates:
   - template: "{0}\n{1}"
 - raw: "阁下功夫高强，与冠军不逞多让，只可惜棋差一着，令人扼腕。"
@@ -67998,11 +67906,7 @@
 - raw: "雨人屠"
   splits:
   - text: "雨人屠"
-    translated: "Rainfall Executioner"
-    qcReviewedText: "Rainfall Executioner"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Yu Rentu"
 - raw: "雪儿你放心！我不会被这奸人的妖言所蛊惑的！\n#PlayerName#，雪儿如此冰清玉洁之女子，怎么可能会骗人？"
   splits:
   - text: "雪儿你放心！我不会被这奸人的妖言所蛊惑的！"
@@ -69398,11 +69302,7 @@
 - raw: "黄泉"
   splits:
   - text: "黄泉"
-    translated: "Yellow Springs"
-    qcReviewedText: "Yellow Springs"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Huang Quan"
 - raw: "黄牛帮"
   splits:
   - text: "黄牛帮"

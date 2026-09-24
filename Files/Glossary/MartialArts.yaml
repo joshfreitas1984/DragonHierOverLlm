@@ -249,6 +249,9 @@
   badtrans: true
   only:
     - dynamicStringsFromColumns.txt
+- raw: 九幽黄泉指
+  result: Nine Netherworld Yellow Springs Finger
+  badtrans: true
 
 #############################################################
 # Generated:
@@ -1295,9 +1298,6 @@
 #   badtrans: true
 # - raw: 移花接木
 #   result: Planting a seed out of season
-#   badtrans: true
-# - raw: 九幽黄泉指
-#   result: Netherworld Yellow Springs Point
 #   badtrans: true
 # - raw: 药王毒手
 #   result: Poison‑Finger Medicrowad

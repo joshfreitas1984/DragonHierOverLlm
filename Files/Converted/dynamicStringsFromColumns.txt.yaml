@@ -24497,11 +24497,9 @@
 - raw: "九幽黄泉指"
   splits:
   - text: "九幽黄泉指"
-    translated: "Netherworld Yellow Springs Point"
-    qcReviewedText: "Netherworld Yellow Springs Point"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Nine Netherworlds Huang Quan finger"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Nine Netherworld Yellow Springs Finger,九幽黄泉指,"
 - raw: "拳掌潜力1;拳掌1;经脉1"
   splits:
   - text: "拳掌潜力1"

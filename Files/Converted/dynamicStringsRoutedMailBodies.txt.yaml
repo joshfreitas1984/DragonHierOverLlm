@@ -163,15 +163,7 @@
 - raw: "#$PlayerName#掌门，邪派联军在蛰伏数月后，突然向<b>大理</b>发起进攻！事态紧急，还望您依照金顶大会之约定，率领仙霞派精锐弟子尽快前来支援！"
   splits:
   - text: "#$PlayerName#掌门，邪派联军在蛰伏数月后，突然向"
-    translated: "#$PlayerName#, Sect Leader of the Cultivated Community, the Xie Pai Lian Jun, which had lain low for several months, suddenly launched an attack against"
-    qcReviewedText: "#$PlayerName#, Sect Leader of the Cultivated Community, the Xie Pai Lian Jun, which had lain low for several months, suddenly launched an attack against <b>Dali </b>Initiate the attack! The situation is urgent. We look to you to lead the elite disciples of the Xianxia Sect to come and support us as per the agreement of the Golden Summit Conference!"
-    qcTranslated: "#$PlayerName#, Sect Leader, the Xie Pai Lian Jun, which had lain low for several months, suddenly launched an attack against <b>Dali</b>! The situation is urgent. We look to you to lead the elite disciples of the Xianxia Sect to come and support us as per the agreement of the Golden Summit Conference!"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: GarbledNumber
-    qcDefectCategories:
-    - GarbledNumber
-    - HardToParseSeam
+    translated: "Sect Leader #$PlayerName#, the Unorthodox Sect coalition, after lying low for months, suddenly attacked \\n"
   - subIndex: 1
     text: "大理"
     translated: "Dali"
@@ -206,15 +198,7 @@
 - raw: "#PlayerName#，邪派联军再度兵临城下，如今<b>大理</b>已危如累卵。然为了中原武林之安危，尽管希望渺茫，老朽仍将率峨眉全体弟子做最后一搏。\n#PlayerName#若能率#PlayerForceName#前来助最后一臂之力，必当感激不尽。"
   splits:
   - text: "#PlayerName#，邪派联军再度兵临城下，如今"
-    translated: "#PlayerName#, the evil sect alliance has besieged the city once again. Now"
-    qcReviewedText: "#PlayerName#, the evil sect alliance has besieged the city once again. Now <b>Dali </b>Already perilous, like eggs balanced on a pile. Yet for the safety of the Central Plains Wulin, though hope is faint, this old man will lead all the Meishan disciples in one final stand.\n#PlayerName# if you can bring #PlayerForceName# to lend your last bit of support, I would be immensely grateful."
-    qcTranslated: "#PlayerName#, the evil sect alliance has besieged the city once again. Now <b>Dali</b> is perilous, like eggs balanced on a pile. Yet for the safety of the Central Plains Wulin, though hope is faint, this old man will lead all the Meishan disciples in one final stand.\\n#PlayerName#, if you can bring #PlayerForceName# to lend your last bit of support, I would be immensely grateful."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
-    - OtherNamedDefect
+    translated: "#PlayerName#, the Unorthodox Sect coalition has once again laid siege to the city. Now,"
   - subIndex: 1
     text: "大理"
     translated: "Dali"
@@ -475,14 +459,7 @@
 - raw: "近来七大恶人之一雨人屠现身<b>江陵东方</b>，此人武功高强，穷凶极恶，为免当地百姓受戮，为师先去抵挡，还望仙霞派弟子速速前来支援！"
   splits:
   - text: "近来七大恶人之一雨人屠现身"
-    translated: "Recently, one of the Seven Evil Men, Yuren Tu, has reappeared."
-    qcReviewedText: "Recently, one of the Seven Evil Men, Yuren Tu, has reappeared.<b>Jiangling Eastern</b>, This person's martial arts is powerful, extremely vicious, and dangerous. To prevent the local civilians from suffering, I will go to confront them first. I hope the Xianxia Sect disciples can arrive quickly to support me!"
-    qcTranslated: "Recently, one of the Seven Evil Men, Yuren Tu, has reappeared in <b>Eastern Jiangling</b>. This person's martial arts is powerful, extremely vicious, and dangerous. To prevent the local civilians from suffering, I will go to confront them first. I hope the Xianxia Sect disciples can arrive quickly to support me!"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
+    translated: "Recently, Yu Rentu, one of the Seven Great Villains, has appeared."
   - subIndex: 1
     text: "江陵东方"
     translated: "Jiangling Eastern"
@@ -1915,14 +1892,7 @@
 - raw: "神兵修复已进入最后阶段，听闻有邪派人士想趁参加名剑大会之机出手抢夺。\n还望#PlayerName#前来<b>铸剑山庄</b>护卫，以保神兵顺利铸成。"
   splits:
   - text: "神兵修复已进入最后阶段，听闻有邪派人士想趁参加名剑大会之机出手抢夺。"
-    translated: "The divine weapon's repair is entering its final stage, and there are rumors that some sect individuals plan to make a move to snatch it during the Famous Sword Conference."
-    qcReviewedText: "The divine weapon's repair is entering its final stage, and there are rumors that some sect individuals plan to make a move to snatch it during the Famous Sword Conference.\nHope to see #PlayerName# here <b>Swordforging Manor </b>Guard, to ensure the smooth completion of the divine weapon."
-    qcTranslated: "The divine weapon's repair is entering its final stage, and there are rumors that some sect individuals plan to make a move to snatch it during the Famous Sword Conference.\nHope to see #PlayerName# come to <b>Swordforging Manor</b> as Guard, to ensure the smooth completion of the divine weapon."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
+    translated: "The repair of the divine weapon is now in its final stage, but there are reports that Unorthodox Sect members intend to seize it during the prestigious Sword Conference."
   - subIndex: 1
     text: "还望#PlayerName#前来"
     translated: "Hope to see #PlayerName# here"
@@ -2303,14 +2273,7 @@
 - raw: "<b>第二届泰岳大典</b>已经召开，听说各派掌门都会参与。#PlayerName#还不赶紧来一道瞧个热闹！"
   splits:
   - text: "第二届泰岳大典"
-    translated: "Second Taiyue Grand Festival"
-    qcReviewedText: "<b>Second Taiyue Grand Festival </b>Already held, and it is said that all sect leaders will attend. #PlayerName#, you'd better come along to enjoy the spectacle!"
-    qcTranslated: "<b>The Second Taiyue Grand Ceremony</b> has already begun, and it is said that all Sect Leaders will attend. #PlayerName#, hurry over to see the spectacle!"
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Second Mount Tai Grand Assembly"
   - subIndex: 1
     text: "已经召开，听说各派掌门都会参与。#PlayerName#还不赶紧来一道瞧个热闹！"
     translated: "Already held, and it is said that all sect leaders will attend. #PlayerName#, you'd better come along to enjoy the spectacle!"
@@ -2398,14 +2361,7 @@
 - raw: "#PlayerName#，<b>第三次泰岳大典</b>即将召开。届时还望你与各派掌门依计行事，待金龙生一现身，便同时出手将他拿下。\n天下兴亡，武林安危皆在此一战，还望你多带些高手前来助阵，以免不测！"
   splits:
   - text: "第三次泰岳大典"
-    translated: "Third Tai Yue Grand Ceremony"
-    qcReviewedText: "#PlayerName#，<b>Third Tai Yue Grand Ceremony </b>It will be held soon. We hope you and the various sect leaders will follow the plan. Once Jin Longsheng makes an appearance, we should strike simultaneously to take him down.\nThe rise and fall of the nation depends on this battle, and the safety of the Wulin is at stake as well. I hope you can bring some top‑notch warriors to aid us; it would be wise to prepare for any unforeseen circumstances!"
-    qcTranslated: "#PlayerName#，<b>Third Tai Yue Grand Ceremony </b>is about to be held. We hope you and the various Sect Leaders will follow the plan. Once Jin Longsheng makes an appearance, we should strike simultaneously to take him down.\nThe rise and fall of the nation depends on this battle, and the safety of the Wulin is at stake as well. I hope you can bring some top‑notch warriors to aid us; it would be wise to prepare for any unforeseen circumstances!"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
+    translated: "The Third Mount Tai Grand Assembly"
   - subIndex: 1
     text: "即将召开。届时还望你与各派掌门依计行事，待金龙生一现身，便同时出手将他拿下。"
     translated: "It will be held soon. We hope you and the various sect leaders will follow the plan. Once Jin Longsheng makes an appearance, we should strike simultaneously to take him down."
@@ -2457,20 +2413,12 @@
   splits:
   - text: "#PlayerName#，我已邀请少林、武当、峨眉、丐帮四大门派掌门会于"
     translated: "#PlayerName#, I have invited the Palm Leaders of the Shaolin, Wudang, Meizhou, and Beggar Sects to meet at"
-    qcReviewedText: "#PlayerName#, I have invited the Palm Leaders of the Shaolin, Wudang, Meizhou, and Beggar Sects to meet at <b>Banqiao Town</b>。\nOstensibly to discuss the third Taiyue Grand Ceremony, it was actually to inform Jin Longsheng is the true Grand Commander of the Blood Robe League and to deploy a plan to arrest him at the meeting.\nI still hope you will come and share the full details of your previous investigation."
-    qcTranslated: "#PlayerName#, I have invited the Sect Leaders of the Shaolin, Wudang, Emei, and Beggar Sects to meet at <b>Banqiao Town</b>.\nOstensibly to discuss the third Taiyue Grand Ceremony, it was actually to inform them that Jin Longsheng is the true Grand Commander of the Blood Robe League and to deploy a plan to arrest him at the meeting.\nI still hope you will come and share the full details of your previous investigation."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
-    - DroppedContent
   - subIndex: 1
     text: "板桥镇"
     translated: "Banqiao Town"
   - subIndex: 2
     text: "表面上为共商第三次泰岳大典事宜，实则是为告知金龙生就是血衣盟大统领之真相，并部署会上抓捕此人之计策。"
-    translated: "Ostensibly to discuss the third Taiyue Grand Ceremony, it was actually to inform Jin Longsheng is the true Grand Commander of the Blood Robe League and to deploy a plan to arrest him at the meeting."
+    translated: "On the surface, it was to discuss the details of the third Mount Tai Grand Assembly, but in reality, it was to reveal to Jin Longsheng that he is the true leader of the Blood Robe Alliance, and to plan the strategy for capturing him at the assembly."
   - subIndex: 3
     text: "还请你届时定要前来参加，并将此前调查之来龙去脉尽数道明。"
     translated: "I still hope you will come and share the full details of your previous investigation."

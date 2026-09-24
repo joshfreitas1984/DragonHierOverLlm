@@ -160,6 +160,10 @@
   result: Wu Jueyi
 - raw: 黄泉
   result: Huang Quan
+  allowalt: 
+    - Yellow Springs Finger # From the martial art
+  exclude:
+    - dynamicStringsPoetry.txt
 - raw: 玉观音
   result: Yu Guanyin
 - raw: 雨人屠
