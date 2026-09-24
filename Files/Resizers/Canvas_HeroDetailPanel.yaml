@@ -22,6 +22,10 @@
   idealFontSize: 14.0
   allowWordWrap: true
   adjustWidth: 20.0
+- path: Canvas/HeroDetailPanel/Item/ItemListScrollView/Viewport/Content/*/Name
+  sampleText: High-quality Heavy boots
+  idealFontSize: 11.0
+  allowWordWrap: true
 - path: Canvas/HeroDetailPanel/Item/ItemTabGrid/*/Label
   sampleText: Equipment
   idealFontSize: 12.0

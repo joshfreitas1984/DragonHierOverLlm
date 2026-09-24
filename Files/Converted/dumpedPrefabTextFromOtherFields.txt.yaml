@@ -11331,8 +11331,8 @@
 - raw: "同门争斗"
   splits:
   - text: "同门争斗"
-    translated: "Intramural Contests"
-    qcReviewedText: "Intramural Contests"
+    translated: "Fellow disciples' contest"
+    qcReviewedText: "Fellow disciples' contest"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -11379,8 +11379,8 @@
 - raw: "同门论战"
   splits:
   - text: "同门论战"
-    translated: "Intra‑Doctrinal Debates"
-    qcReviewedText: "Intra‑Doctrinal Debates"
+    translated: "Disciples' Debate"
+    qcReviewedText: "Disciples' Debate"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

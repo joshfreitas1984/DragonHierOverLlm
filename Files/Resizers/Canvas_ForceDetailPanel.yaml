@@ -12,3 +12,8 @@
   adjustX: 50.0
   adjustY: -72.0
   adjustWidth: 80.0
+- path: Canvas/ForceDetailPanel/ForceDetailRoot/ForceList/Viewport/Content/*/Name
+  sampleText: Medicine King Valley
+  idealFontSize: 16.0
+  allowWordWrap: true
+  adjustWidth: -100.0

@@ -158,6 +158,15 @@ internal static class DynamicStringPatches
             }
             return result;
         }
+
+        public void Clear()
+        {
+            lock (_lock)
+            {
+                _map.Clear();
+                _order.Clear();
+            }
+        }
     }
 
     // Shared by GenericPostfix and ApplyToComponentText's full-pipeline branch - both run the
@@ -176,6 +185,20 @@ internal static class DynamicStringPatches
     // its own cache rather than sharing _genericPipelineMemoCache. Left at the original bounds -
     // no evidence yet that String.Format's inputs share the same long-finished-text reuse pattern.
     private static readonly MemoCache _formatPipelineMemoCache = new(maxEntries: 2000, maxInputLength: 500);
+
+    // Debug-only escape hatch (see MainPlugin.ClearTranslationCachesHotkey): once a raw string has
+    // been translated once, every later occurrence just replays the memoized/per-component-cached
+    // result without ever re-entering ApplyTemplates/ApplyDictionary - including a bad translation
+    // computed before a pipeline fix was deployed. Clearing all three caches forces the next
+    // redisplay of any currently-visible text to recompute from scratch, so a live repro doesn't
+    // need a full game restart to pick up a code change.
+    internal static void ClearTranslationCaches()
+    {
+        _genericPipelineMemoCache.Clear();
+        _formatPipelineMemoCache.Clear();
+        _componentTextCache.Clear();
+        MainPlugin.Logger?.LogInfo("[DynamicStringPatches] Translation caches cleared.");
+    }
 
     // Compiled once per loaded _templateDictionary entry - see CompiledTemplate for what each
     // field means. Applied by ApplyTemplates against Concat/Format results and sink-level
@@ -825,6 +848,21 @@ internal static class DynamicStringPatches
         }
     }
 
+    // Diagnostic for the "Qingcheng Se?t祠?"-style corruption (see
+    // docs/investigations/plugin/mission-icon-title-compound-name-corruption.md): a literal '?'
+    // appearing in `after` that wasn't already in `before` is never a legitimate translation -
+    // neither ApplyTemplatesSinglePass nor ApplyDictionary ever intentionally emit '?'. Logging
+    // only on that specific signal (rather than every template/dictionary hit) keeps this from
+    // spamming residualCjkDebug.log while still naming the exact template/entry responsible the
+    // next time this class of corruption reproduces.
+    private static void LogUnexpectedQuestionMark(string stage, string before, string after)
+    {
+        if (!MainPlugin.ResidualCjkDebugEnabledCached) return;
+        if (before == null || after == null) return;
+        if (after.Contains('?') && !before.Contains('?'))
+            LogMissionDebug(stage, before, after);
+    }
+
     // Manual type check (per the confirmed-safe pattern in dragonheirplugin.instructions.md) over
     // the concrete component types ApplyToComponentText's sink patches actually cover - never a
     // generic Cast<T>()/TryCast<T>() over `instance`. Walks the transform.parent chain via plain,
@@ -876,6 +914,47 @@ internal static class DynamicStringPatches
             || (path.Contains("PlotPanel") && path.Contains("RecordScrollView"));
     }
 
+    // MeetingController builds a Force's short "current mission" name (shown e.g. in
+    // Canvas/PopInfoPanel/QuickDetail/HeroDetail/Back/Text) by concatenating a hardcoded verb
+    // literal with a dynamic resource name at runtime via String.Concat("获取", resourceName) -
+    // see Converter/output/_NoNamespace/MeetingController.cs:1638, fed into MissionData.SetForceMission
+    // at :1653. The resulting compound (e.g. "获取矿石") never appears as a whole line anywhere in
+    // Files/Raw/Dumped, so it has no dictionary entry of its own - it needs an explicit entry here
+    // regardless of how ApplyDictionary/ReplaceWithWordBoundarySpacing handles short entries.
+    //
+    // A Harmony prefix on SetForceMission was tried first (translate at the point the compound is
+    // assembled) but does nothing for a Force whose mission was already active in a save made
+    // before this fix existed - MissionData.name is restored directly from save data on load, so
+    // SetForceMission is never called again for it (confirmed live: no GetMissionTargetDescribe/
+    // GetMissionDescribe log entries near the ApplyToComponentText hit for this panel, meaning
+    // nothing else re-derives the name either). RunGenericPipeline runs on every render regardless
+    // of how/when the field was populated, so fixing it here is the only approach that also covers
+    // missions that were already in progress before the fix shipped.
+    //
+    // Files/Raw/Dumped is regenerated from a fresh game export every pipeline run
+    // (GameFileHandlingBase.MergeFilesIntoTranslatedAsync in FanslationStudio.LlmKit writes
+    // Converted back from the fresh export set), so a manually-added "获取矿石" dictionary entry
+    // would just be dropped on the next re-run - there's no supported way to persist a synthetic,
+    // non-dumped entry through that pipeline, hence the explicit table here instead.
+    //
+    // Exact 4-character literal replacement, not a prefix+lookup split: none of these ever occur
+    // as a substring of a longer already-correct dictionary entry (e.g. "获取门派矿石", translated
+    // separately as "Acquire Sect Ore" - "获取" there is followed by "门派", not "矿石", so it never
+    // matches any of these), so a plain literal Replace can't collide with anything the ordinary
+    // template/dictionary pass already handles correctly. Scoped to the "获取"+resource shape
+    // actually confirmed by decompiled source and the reported bug; MeetingController.cs also
+    // concatenates "提升"/"降低" with a dynamic name elsewhere (:1764, :2945), but that name's
+    // domain (skill/hero names, not a fixed resource list) isn't confirmed, so it's left alone
+    // pending an actual report.
+    private static readonly (string Raw, string Result)[] ForceMissionResourceCompounds =
+    [
+        ("获取矿石", "Obtain Mineral"),
+        ("获取木料", "Obtain Wood"),
+        ("获取粮食", "Obtain Food grain"),
+        ("获取药材", "Obtain Herbs"),
+        ("获取银钱", "Obtain Money"),
+    ];
+
     // Shared by GenericPostfix, ApplyToComponentText and InfoListPatches' InfoTextList.Add
     // source-level prefixes - the one place templates+dictionary actually get applied to a raw
     // string. Internal (not private) so InfoListPatches.cs can reuse it.
@@ -904,6 +983,10 @@ internal static class DynamicStringPatches
         return _genericPipelineMemoCache.GetOrCompute(input, s =>
         {
             var r = s;
+            foreach (var (raw, result) in ForceMissionResourceCompounds)
+                if (r.Contains(raw, StringComparison.Ordinal))
+                    r = r.Replace(raw, result, StringComparison.Ordinal);
+
             if (preferLogNarrativeTemplates && _logNarrativeCompiledTemplates.Count > 0)
                 r = ApplyTemplates(r, _logNarrativeCompiledTemplates);
             else if (_compiledTemplates.Count > 0)
@@ -1423,6 +1506,9 @@ internal static class DynamicStringPatches
                     $"[DynamicStringPatches] Template replace timed out (>{TemplateRegexTimeout.TotalMilliseconds}ms), skipping: '{template.RawPreview}'");
                 continue;
             }
+            LogUnexpectedQuestionMark(
+                $"ApplyTemplatesSinglePass introduced '?' (template='{template.RawPreview}')",
+                beforeThisTemplate, result);
             presentChars = null; // result changed - rebuild lazily for the next template
         }
         return result;
@@ -1431,10 +1517,40 @@ internal static class DynamicStringPatches
     // Returns true if any of the template's BlockingRawEntries occurs in `text` at a position
     // overlapping this specific regex match's span - see CompiledTemplate.BlockingRawEntries for
     // the full "经验{0}%" vs "非本门弟子经验" motivating case.
+    //
+    // A blocking-entry occurrence that extends OUTSIDE the match (idx < matchStart or
+    // entryEnd > matchEnd) always blocks - that part is definitely not explained by this
+    // template's own structure. Within the match, literal text is always safe (it's fixed,
+    // pre-translated Result text matched via exact Regex.Escape - never ambiguous), and a capture
+    // group's raw inserted value is safe PROVIDED its own FULL content (not just the overlapping
+    // slice) is tileable by the bare dictionary (IsFullyCoveredByDictionary) - RunGenericPipeline
+    // always runs ApplyDictionary again on the template's own output afterward (ApplyTemplates then
+    // ApplyDictionary, unconditionally), so a captured group's raw text gets a second chance at
+    // translation regardless of whether the template fires; the only real risk is some CJK
+    // character in that group with NO dictionary coverage at all, which the tiling check catches.
+    // So: an occurrence only blocks if it overlaps a capture group whose full content fails tiling.
+    //
+    // Reproduced live 2026-09-22 across three PopInfoPanel reports, each catching a different shape
+    // of "safe" overlap that a narrower rule missed:
+    //  - "锻造经验" = [#EffectSkill#'s own captured value "锻造"] + [this template's own literal
+    //    "经验"] - fully explained by one group + the adjacent literal, group content "锻造" tileable.
+    //  - "技艺经验" = a PARTIAL prefix of #EffectForceSpeAdd#'s captured "技艺经验/科研效率" - fully
+    //    inside one group, that group's full content tileable.
+    //  - "毒术经验" = the TAIL "毒术" of #EffectSkill#'s captured "医术/毒术" + the literal "经验" -
+    //    straddles from mid-group into the adjacent literal (not aligned to the group's own start),
+    //    which an earlier two-tier (aligned-OR-fully-within-one-group) version still blocked on;
+    //    the unified "does it overlap any non-tileable group" rule handles this uniformly.
+    // Verified via Verify/TemplateBlockingRepro.RunExpRateBlockingPositiveControl that this still
+    // blocks the ORIGINAL bug #3 case ("经验{0}%" over-matching into "经验倍率＋0%"'s uncovered
+    // "倍率"), with no change to the "本战功绩"/"天下大势" pre-existing regression scenarios.
     private static bool OverlapsBlockingEntry(string text, Match match, List<string> blockingRawEntries)
     {
         var matchStart = match.Index;
         var matchEnd = match.Index + match.Length;
+
+        List<(int Start, int End)> groupSpans = null;
+        Dictionary<(int, int), bool> coverageCache = null;
+
         foreach (var raw in blockingRawEntries)
         {
             var idx = text.IndexOf(raw, StringComparison.Ordinal);
@@ -1442,11 +1558,66 @@ internal static class DynamicStringPatches
             {
                 var entryEnd = idx + raw.Length;
                 if (idx < matchEnd && entryEnd > matchStart)
-                    return true;
+                {
+                    var fullyWithinMatch = idx >= matchStart && entryEnd <= matchEnd;
+                    if (!fullyWithinMatch) return true;
+
+                    if (groupSpans == null)
+                    {
+                        groupSpans = new List<(int, int)>();
+                        foreach (Group g in match.Groups)
+                        {
+                            if (!g.Success || g.Name == "0") continue;
+                            groupSpans.Add((g.Index, g.Index + g.Length));
+                        }
+                    }
+
+                    coverageCache ??= new Dictionary<(int, int), bool>();
+                    foreach (var (gStart, gEnd) in groupSpans)
+                    {
+                        var overlapsGroup = idx < gEnd && entryEnd > gStart;
+                        if (!overlapsGroup) continue;
+
+                        var key = (gStart, gEnd);
+                        if (!coverageCache.TryGetValue(key, out var covered))
+                        {
+                            covered = IsFullyCoveredByDictionary(text.Substring(gStart, gEnd - gStart));
+                            coverageCache[key] = covered;
+                        }
+                        if (!covered) return true;
+                    }
+                }
                 idx = text.IndexOf(raw, idx + 1, StringComparison.Ordinal);
             }
         }
         return false;
+    }
+
+    private static bool IsCjkCharSingle(char c) => (c >= '一' && c <= '鿿') || (c >= '　' && c <= '〿');
+
+    // Greedily tiles `run` left-to-right using `_dictionary` (already sorted longest-Raw-first by
+    // LoadDictionary) - true only if every CJK character in `run` is covered by some back-to-back
+    // bare dictionary entry (non-CJK characters, e.g. digits/color-tag punctuation, always pass).
+    private static bool IsFullyCoveredByDictionary(string run)
+    {
+        var pos = 0;
+        while (pos < run.Length)
+        {
+            if (!IsCjkCharSingle(run[pos])) { pos++; continue; }
+            var matched = false;
+            foreach (var e in _dictionary)
+            {
+                if (string.IsNullOrEmpty(e.Raw)) continue;
+                if (pos + e.Raw.Length <= run.Length && string.CompareOrdinal(run, pos, e.Raw, 0, e.Raw.Length) == 0)
+                {
+                    pos += e.Raw.Length;
+                    matched = true;
+                    break;
+                }
+            }
+            if (!matched) return false;
+        }
+        return true;
     }
 
     // Public entry point for other patch classes (e.g. HeroNamePatches) that need to translate a
@@ -1454,6 +1625,73 @@ internal static class DynamicStringPatches
     // concatenation - using this same loaded substring dictionary, outside of the
     // Concat/Format/text-setter hooks this class patches itself.
     public static string TranslateFragment(string input) => ApplyDictionary(input, _dictionaryByFirstChar);
+
+    // Strict left-to-right, longest-match-AT-POSITION translation for short, structurally-anchored
+    // compound strings (e.g. AreaName+BuildingName mission target names - see
+    // MissionPatches.TranslateObjective and
+    // docs/investigations/plugin/mission-icon-title-compound-name-corruption.md). Unlike
+    // ApplyDictionary/TranslateFragment (which matches a raw entry ANYWHERE in the string,
+    // longest-entry-first, independent of scan position), this only ever matches an entry that
+    // starts EXACTLY at the current position, then advances past whatever it consumed before
+    // trying again. Cross-word partial matches are structurally impossible here - "时" can never
+    // be pulled out of "同时" while skipping "同", because "同" is resolved (or left as a single
+    // raw character) before the scan ever reaches "时". Falls back to emitting one untranslated
+    // character at a time when nothing matches at the current position, so an unknown compound
+    // surfaces as readable raw Chinese (a prompt to add a proper whole-entry) rather than
+    // half-translated garbage. Deliberately does not run templates or the general free-substring
+    // pass - callers use this specifically to avoid the shared substring-matching pipeline's
+    // collision risk for this narrow input shape (proper-noun/place-name compounds, not sentences).
+    internal static string TranslateCompoundName(string input)
+    {
+        if (string.IsNullOrEmpty(input)) return input;
+
+        var sb = new System.Text.StringBuilder(input.Length);
+        var pos = 0;
+        while (pos < input.Length)
+        {
+            var entry = FindLongestDictionaryMatchAt(input, pos);
+            if (entry != null)
+            {
+                var prevChar = EffectiveTrailingCharInBuilder(sb);
+                if (prevChar.HasValue && entry.ReplacementLeadChar.HasValue
+                    && char.IsLetterOrDigit(prevChar.Value) && char.IsLetterOrDigit(entry.ReplacementLeadChar.Value))
+                {
+                    sb.Append(' ');
+                }
+
+                sb.Append(entry.Result ?? string.Empty);
+                pos += entry.Raw.Length;
+
+                var nextChar = pos < input.Length ? EffectiveLeadingCharAt(input, pos) : null;
+                if (entry.ReplacementTrailChar.HasValue && nextChar.HasValue
+                    && char.IsLetterOrDigit(entry.ReplacementTrailChar.Value) && char.IsLetterOrDigit(nextChar.Value))
+                {
+                    sb.Append(' ');
+                }
+                continue;
+            }
+
+            sb.Append(input[pos]);
+            pos++;
+        }
+        return sb.ToString();
+    }
+
+    // Buckets are already longest-Raw-first (see BuildFirstCharIndex) - the first entry whose Raw
+    // is an exact prefix of input starting at `pos` is therefore already the longest match.
+    private static DictionaryEntry FindLongestDictionaryMatchAt(string input, int pos)
+    {
+        if (!_dictionaryByFirstChar.TryGetValue(input[pos], out var bucket)) return null;
+
+        foreach (var entry in bucket)
+        {
+            if (string.IsNullOrEmpty(entry.Raw)) continue;
+            if (pos + entry.Raw.Length > input.Length) continue;
+            if (string.CompareOrdinal(input, pos, entry.Raw, 0, entry.Raw.Length) == 0)
+                return entry;
+        }
+        return null;
+    }
 
     // Public entry point for patch classes that need to undo this dictionary's substring replace -
     // see _reverseDictionary's comment and ItemIconPatches.GetItemIconName_Postfix for the
@@ -1514,7 +1752,12 @@ internal static class DynamicStringPatches
             var entry = candidates[i];
             if (result.Contains(entry.Raw))
             {
-                result = ReplaceWithWordBoundarySpacing(result, entry);
+                var beforeThisEntry = result;
+                var replaced = ReplaceWithWordBoundarySpacing(result, entry);
+                result = replaced;
+                LogUnexpectedQuestionMark(
+                    $"ApplyDictionary introduced '?' (raw='{entry.Raw}', translated='{entry.Result}')",
+                    beforeThisEntry, result);
                 candidates = null; // result changed - rebuild lazily on next use
                 i = 0;
                 continue;
@@ -1627,6 +1870,16 @@ internal static class DynamicStringPatches
         return k < j && char.IsLetter(s[k]) ? j : -1;
     }
 
+    // NOTE: this used to guard short entries (<=2 chars) from matching while still touching a CJK
+    // ideograph on either side, to avoid pulling a fragment like "时"->"Time" out of the middle of
+    // an unrelated compound like "同时" (see
+    // docs/investigations/plugin/mission-icon-title-compound-name-corruption.md for the original
+    // "同 Time"/"治 Bottom" corruption this was fixing). Reverted at Josh's request - it was
+    // causing other issues (short entries that previously translated fine mid-compound were being
+    // left raw instead). If that corruption resurfaces, the fix belongs at the specific compound's
+    // call site (see MissionPatches.TranslateObjective/TranslateCompoundName, or the explicit
+    // ForceMissionResourceCompounds table above RunGenericPipeline) rather than a blanket guard
+    // here.
     private static string ReplaceWithWordBoundarySpacing(string input, DictionaryEntry entry)
     {
         var raw = entry.Raw;

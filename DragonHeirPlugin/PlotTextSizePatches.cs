@@ -155,6 +155,24 @@ internal static class PlotTextSizePatches
 
         if (MainPlugin.ForceTestPlotTextHotkey != null)
             RunHotkeyCheck();
+
+        if (MainPlugin.ClearTranslationCachesHotkey != null)
+            RunClearTranslationCachesHotkeyCheck();
+    }
+
+    private static void RunClearTranslationCachesHotkeyCheck()
+    {
+        if (MainPlugin.ClearTranslationCachesHotkey == null) return;
+
+        try
+        {
+            if (!MainPlugin.ClearTranslationCachesHotkey.Value.IsDown()) return;
+            DynamicStringPatches.ClearTranslationCaches();
+        }
+        catch (Exception ex)
+        {
+            MainPlugin.Logger?.LogError($"PlotTextSizePatches: ClearTranslationCachesHotkey check failed: {ex}");
+        }
     }
 
     private static void RunHotkeyCheck()

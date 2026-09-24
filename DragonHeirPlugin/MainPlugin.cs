@@ -156,6 +156,24 @@ public class MainPlugin : BasePlugin
     // PlotTextSizePatches.
     internal static ConfigEntry<KeyboardShortcut> ForceTestPlotTextHotkey;
 
+    // Off by default (Empty shortcut = never triggers) - DynamicStringPatches' translation
+    // results are memoized per exact raw-text input (_genericPipelineMemoCache/
+    // _formatPipelineMemoCache), and ApplyToComponentText additionally caches the last-seen
+    // raw/translated pair per component (_componentTextCache). Once a bad translation is cached
+    // for a given raw string, every later occurrence of that exact string just replays the cached
+    // result without ever re-running the pipeline, so a fix to the pipeline itself has no visible
+    // effect in-game until that stale entry is evicted or the game is restarted. This hotkey clears
+    // all three caches on demand so a live repro can be forced to recompute immediately, without a
+    // full restart, while investigating a translation-corruption report.
+    //
+    // NOTE: this only clears DynamicStringPatches' own in-memory caches - it does nothing for text
+    // that was computed once and stored on a game object/save field rather than re-derived from
+    // Chinese on every redisplay (confirmed to be the case for a mission's target-location text -
+    // see docs/investigations/plugin/mission-icon-title-compound-name-corruption.md). If clearing
+    // these caches doesn't change a stuck corrupted string, that's evidence the text is baked into
+    // game/save state rather than memoized, not that this hotkey failed.
+    internal static ConfigEntry<KeyboardShortcut> ClearTranslationCachesHotkey;
+
     public override void Load()
     {
         Logger = base.Log;
@@ -257,6 +275,12 @@ public class MainPlugin : BasePlugin
             "ForceTestPlotTextHotkey",
             KeyboardShortcut.Empty,
             "When set (e.g. F8), forces a long test string into the currently cached PlotText component so PlotTextMaxWidth/word-wrap behavior can be verified visually without finding a sufficiently long real dialogue. Requires a plot dialogue to have already been opened once this session. See docs/plottextsizepatches-agent-reference.md.");
+
+        ClearTranslationCachesHotkey = Config.Bind(
+            "Debug",
+            "ClearTranslationCachesHotkey",
+            KeyboardShortcut.Empty,
+            "When set (e.g. F9), clears DynamicStringPatches' translation memo caches (generic pipeline, format pipeline, per-component text cache) so the next redisplay of any currently-visible text recomputes its translation from scratch instead of replaying a cached result. Use while investigating a translation-corruption report to force a live repro to recompute immediately without restarting the game.");
 
         // Register codepage 936 (GBK) support - .NET Core only ships Unicode encodings by
         // default. Some game TextAssets (e.g. SpeHeroFaceData) are GBK-encoded rather than

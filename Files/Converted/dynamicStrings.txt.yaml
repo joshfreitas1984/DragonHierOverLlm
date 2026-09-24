@@ -9372,8 +9372,8 @@
 - raw: "{0}天"
   splits:
   - text: "天"
-    translated: "Sky"
-    qcReviewedText: "{0} Sky"
+    translated: "Days"
+    qcReviewedText: "{0} Days"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -23088,32 +23088,32 @@
 - raw: "同门争斗"
   splits:
   - text: "同门争斗"
-    translated: "Intramural Contests"
-    qcReviewedText: "Intramural Contests"
+    translated: "Fellow Disciples Conflict"
+    qcReviewedText: "Fellow Disciples Conflict"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
 - raw: "同门切磋"
   splits:
   - text: "同门切磋"
-    translated: "Fellow disciples' friendly exchange"
-    qcReviewedText: "Fellow disciples' friendly exchange"
+    translated: "Fellow disciples friendly exchange"
+    qcReviewedText: "Fellow disciples friendly exchange"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
 - raw: "同门求助"
   splits:
   - text: "同门求助"
-    translated: "Fellow Disciple, please help"
-    qcReviewedText: "Fellow Disciple, please help"
+    translated: "Fellow Disciple's Plea for Help"
+    qcReviewedText: "Fellow Disciple's Plea for Help"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
 - raw: "同门论战"
   splits:
   - text: "同门论战"
-    translated: "Intra‑Doctrinal Debates"
-    qcReviewedText: "Intra‑Doctrinal Debates"
+    translated: "Fellow disciples Debates"
+    qcReviewedText: "Fellow disciples Debates"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -30868,15 +30868,15 @@
 - raw: "天"
   splits:
   - text: "天"
-    translated: "Sky"
-    qcReviewedText: "Sky"
+    translated: "Day"
+    qcReviewedText: "Day"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
 - raw: "天;SureBuildingWork;"
   splits:
   - text: "天"
-    translated: "Sky"
+    translated: "Day"
   templates:
   - template: "{0};SureBuildingWork;"
 - raw: "天下大势：{4}{0}门派 {1}攻击资源{4}门派 {2}攻击城镇{4}门派 {3}攻击京城/总舵"
@@ -36344,7 +36344,7 @@
     - DomainTerm
   - subIndex: 1
     text: "天"
-    translated: "Sky"
+    translated: "Day"
   templates:
   - template: "{0} (⟦0⟧{1})\n⟦1⟧"
 - raw: "开"
@@ -45172,7 +45172,7 @@
   - text: "木植"
     translated: "Forest Plant"
     qcReviewedText: "Forest Plant"
-    qcTranslated: "Muzhi"
+    qcTranslated: "Forestry"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: OtherNamedDefect
@@ -49547,9 +49547,9 @@
 - raw: "池泽"
   splits:
   - text: "池泽"
-    translated: "Cishai"
-    qcReviewedText: "Cishai"
-    qcTranslated: "Ikezawa"
+    translated: "Marshland"
+    qcReviewedText: "Marshland"
+    qcTranslated: "Marshland"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: OtherNamedDefect
@@ -53635,8 +53635,8 @@
 - raw: "着！"
   splits:
   - text: "着！"
-    translated: "Pong!"
-    qcReviewedText: "Pong!"
+    translated: "Take that!"
+    qcReviewedText: "Take that!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

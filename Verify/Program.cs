@@ -349,6 +349,11 @@ class Program
 
         VerifyRepro.TemplateBlockingRepro.Run(@"G:\DragonHierOverLlm\Files\Mod");
         VerifyRepro.TemplateBlockingRepro.RunWorldSituationRepro(@"G:\DragonHierOverLlm\Files\Mod");
+        VerifyRepro.TemplateBlockingRepro.RunForceJobDescribeRepro(@"G:\DragonHierOverLlm\Files\Mod");
+        VerifyRepro.TemplateBlockingRepro.RunAntiqueIdentifyRepro(@"G:\DragonHierOverLlm\Files\Mod");
+        VerifyRepro.TemplateBlockingRepro.RunSectJobDescribeRepro(@"G:\DragonHierOverLlm\Files\Mod");
+        VerifyRepro.TemplateBlockingRepro.RunMedicalSectJobDescribeRepro(@"G:\DragonHierOverLlm\Files\Mod");
+        VerifyRepro.TemplateBlockingRepro.RunExpRateBlockingPositiveControl();
     }
 }
 

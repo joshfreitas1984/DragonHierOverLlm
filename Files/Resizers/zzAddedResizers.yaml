@@ -1,1 +1,58 @@
-[]
+- path: Canvas/AreaUIPanel/BuildingQuickButtonPanel/BuildQuickButtonGrid/0008/LvBack/Lv
+  sampleText: "3"
+  idealFontSize: 16.0
+  allowWordWrap: true
+- path: Canvas/AreaUIPanel/BuildingQuickButtonPanel/BuildQuickButtonGrid/0008/Text
+  sampleText: Dormitory
+  idealFontSize: 14.0
+  allowWordWrap: true
+- path: Canvas/AreaUIPanel/BuildingQuickButtonPanel/BuildQuickButtonGrid/0007/LvBack/Lv
+  sampleText: "3"
+  idealFontSize: 16.0
+  allowWordWrap: true
+- path: Canvas/AreaUIPanel/BuildingQuickButtonPanel/BuildQuickButtonGrid/0007/Text
+  sampleText: Healing Room
+  idealFontSize: 14.0
+  allowWordWrap: true
+- path: Canvas/ContributionExchangePanel/ExchangeNeeds/*/Name
+  sampleText: Ultimate Martial arts
+  idealFontSize: 14.0
+  allowWordWrap: true
+  adjustWidth: -30.0
+- path: Canvas/ContributionExchangePanel/ExchangeNeeds/*/Describe
+  sampleText: '100 Raise reputation '
+  idealFontSize: 12.0
+  allowWordWrap: true
+  adjustX: 40.0
+  adjustWidth: 60.0
+- path: Canvas/BuildingUIPanel/BuildingUI/Describe
+  sampleText: The hall at the center of the sect is one of its most important structures, where the Sect Leader often handles affairs, holds meetings, and receives guests.
+  idealFontSize: 16.0
+  allowWordWrap: true
+- path: Canvas/ContributionExchangePanel/ClothList/Cloth*/Text
+  sampleText: "Thunderclap Hall\nInitiate Disciple Fire-borne cloth"
+  idealFontSize: 14.0
+  allowWordWrap: true
+  allowAutoSizing: false
+  adjustWidth: 40.0
+- path: Canvas/ContributionExchangePanel/ExchangeSkillList/Viewport/Content/SkillIcon(Clone)/UnlockButton/Cost
+  sampleText: ' Achievements 400'
+  idealFontSize: 11.0
+  allowWordWrap: true
+  adjustWidth: -30.0
+- path: Canvas/MissionPanel/MissionUI/WorldEventScrollView/Viewport/Content/WorldEventIconPrefab(Clone)/Title
+  sampleText: Immortal Wood Miraculous Fruit(Maoshan Sect North Direction)
+  idealFontSize: 12.0
+  alignment: Left
+  allowWordWrap: true
+  adjustX: 20.0
+  adjustWidth: -45.0
+- path: Canvas/TradePanel/RightList/ItemListScrollView/Viewport/Content/*/Name
+  sampleText: Common Short knife
+  idealFontSize: 11.0
+  allowWordWrap: true
+  adjustY: 10.0
+- path: Canvas/MissionPanel/MissionUI/ForceMission/Text
+  sampleText: "Sect quest\nReduce Public sentiment in Leshan Town by 15 points.  (0/15)"
+  idealFontSize: 10.0
+  allowWordWrap: true

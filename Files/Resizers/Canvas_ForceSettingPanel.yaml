@@ -1,0 +1,12 @@
+- path: Canvas/ForceSettingPanel/BranchJobList/ScrollView/Viewport/Content/BranchLeaderSettingTab(Clone)/*/*Text
+  sampleText: Resource threshold
+  idealFontSize: 12.0
+  allowWordWrap: true
+  adjustHeight: 20.0
+- path: Canvas/ForceSettingPanel/MainJobList/*/Text
+  sampleText: Left Guardian
+  idealFontSize: 14.0
+  alignment: Right
+  allowWordWrap: true
+  adjustX: -20.0
+  adjustWidth: 50.0

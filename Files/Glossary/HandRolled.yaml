@@ -64,7 +64,28 @@
   result: Sect Leader Jiang
 - raw: 沈退
   result: "Shen Tui"
+- raw: 曲姑娘
+  result: Miss Qu
+- raw: 铁金刚
+  result: Iron Vajra
+- raw: 赛凤凰
+  result: Phoenix Beauty
+- raw: 七大恶
+  result: Seven Great Villains
+# - raw: 黑道
+#   result: Underworld
+- raw: 雨兄
+  result: Brother Yu
+- raw: 计兄
+  result: Brother Ji
 
+# These should go in glossary
+- raw: 泰岳巨典
+  result: Mount Tai Grand Assembly
+- raw: 泰岳
+  result: Mount Tai
+- raw: 邪派
+  result: Unorthodox Sect
 
 - raw: 采薇
   result: "Caiwei"

@@ -158,12 +158,12 @@
   result: Mo Tiansang
 - raw: 武绝义
   result: Wu Jueyi
-# - raw: 黄泉
-#   result: Yellow Springs
-# - raw: 玉观音
-#   result: Buddha of Jade
-# - raw: 雨人屠
-#   result: Rainfall Executioner
+- raw: 黄泉
+  result: Huang Quan
+- raw: 玉观音
+  result: Yu Guanyin
+- raw: 雨人屠
+  result: Yu Rentu
 - raw: 上官凤
   result: Shangguan Feng
 - raw: 计心狂

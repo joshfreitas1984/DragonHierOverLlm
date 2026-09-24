@@ -93,10 +93,19 @@ internal static class MissionPatches
 
     [HarmonyPatch(typeof(MissionData), nameof(MissionData.GetMissionTargetDescribe), new[] { typeof(bool) })]
     [HarmonyPostfix]
-    private static void GetMissionTargetDescribePostfix(ref string __result)
+    private static void GetMissionTargetDescribePostfix(bool showFinishRate, ref string __result)
     {
         try
         {
+            // Diagnostic (see mission-icon-title-compound-name-corruption.md "round 4"): confirm
+            // this method is actually the source of a reported corrupted compound before assuming
+            // TranslateObjective ran on it. _suppressGenericTranslation is already true here (set
+            // by the prefix), so this is safe from the GenericPostfix BCL-recursion issue.
+            if (MainPlugin.ResidualCjkDebugEnabledCached)
+                DynamicStringPatches.LogMissionDebug(
+                    $"GetMissionTargetDescribe raw result (showFinishRate={showFinishRate})",
+                    __result, __result);
+
             TranslateObjective(ref __result);
         }
         catch (Exception ex)
@@ -123,10 +132,16 @@ internal static class MissionPatches
 
     [HarmonyPatch(typeof(MissionData), nameof(MissionData.GetTriggerTargetDescribe), new[] { typeof(int), typeof(bool) })]
     [HarmonyPostfix]
-    private static void GetTriggerTargetDescribePostfix(ref string __result)
+    private static void GetTriggerTargetDescribePostfix(int targetID, bool unclear, ref string __result)
     {
         try
         {
+            // Diagnostic: see GetMissionTargetDescribePostfix's matching comment.
+            if (MainPlugin.ResidualCjkDebugEnabledCached)
+                DynamicStringPatches.LogMissionDebug(
+                    $"GetTriggerTargetDescribe raw result (targetID={targetID}, unclear={unclear})",
+                    __result, __result);
+
             TranslateObjective(ref __result);
         }
         catch (Exception ex)
@@ -147,12 +162,14 @@ internal static class MissionPatches
     {
         if (string.IsNullOrEmpty(result)) return;
 
-        //MainPlugin.Logger.LogWarning($"[MissionPatches] Translating objective: {result}");
+        var inputForDiagnostic = result;
 
         result = result.Replace("任务对象已死亡", "The mission target has died.", StringComparison.Ordinal);
 
+        var beforeNaturalPatterns = result;
         foreach (var (pattern, replacement) in NaturalObjectivePatterns)
             result = pattern.Replace(result, replacement);
+        var matchedNaturalPattern = result != beforeNaturalPatterns;
 
         //MainPlugin.Logger.LogWarning($"[MissionPatches] After natural patterns: {result}");
 
@@ -162,11 +179,37 @@ internal static class MissionPatches
         DynamicStringPatches._inFormatConcatPatch = true;
         try
         {
-            result = DynamicStringPatches.RunGenericPipeline(result);
+            // GetTriggerTargetDescribe/GetMissionTargetDescribe don't only return objective
+            // sentences - some branches (used by MissionIconController's Title, e.g.
+            // "AreaName" + "BuildingName") return a bare compound name with no verb, which none
+            // of NaturalObjectivePatterns matches. That shape has no sentence structure for
+            // RunGenericPipeline's templates to use, and even its plain dictionary pass
+            // (TranslateFragment/ApplyDictionary) matches a raw entry ANYWHERE in the string,
+            // independent of position - which let a short fragment (e.g. a single-character
+            // dictionary entry) get pulled out of the middle of an unrelated compound and produce
+            // corruption such as "Qingcheng Se?t祠?" from "青城派祠堂" (see
+            // docs/investigations/plugin/mission-icon-title-compound-name-corruption.md). Once no
+            // natural pattern matched, resolve any residual CJK with TranslateCompoundName instead
+            // - a strict left-to-right, match-at-current-position-only translator that structurally
+            // cannot produce that kind of cross-word corruption, so the result is fully resolved
+            // (or safely left as readable raw Chinese) here, before it ever reaches the shared
+            // dynamicStrings pipeline (GenericPostfix/ApplyToComponentText) downstream.
+            result = matchedNaturalPattern
+                ? DynamicStringPatches.RunGenericPipeline(result)
+                : DynamicStringPatches.TranslateCompoundName(result);
         }
         finally
         {
             DynamicStringPatches._inFormatConcatPatch = wasInFormatConcatPatch;
         }
+
+        // Diagnostic: confirms TranslateObjective actually ran on a given raw string and shows
+        // exactly what it produced (matchedNaturalPattern picks RunGenericPipeline vs
+        // TranslateCompoundName) - lets a corrupted report be checked against this method's own
+        // output instead of assuming it ran at all. See mission-icon-title-compound-name-corruption.md.
+        if (MainPlugin.ResidualCjkDebugEnabledCached)
+            DynamicStringPatches.LogMissionDebug(
+                $"MissionPatches.TranslateObjective (changed={inputForDiagnostic != result})",
+                inputForDiagnostic, result);
     }
 }
