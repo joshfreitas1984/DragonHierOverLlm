@@ -284,7 +284,7 @@ public class MainPlugin : BasePlugin
             "Game Bugfixes",
             "ResyncMountedHorseIcon",
             true,
-            "When true, the currently-equipped/ridden horse's bigmap quick-travel icon is resolved by looking up its itemID in the live horseDataBase and using that template's raw Chinese name directly, instead of relying on the (sometimes already-translated, sometimes save-baked) targetHorseData.name field, so the icon resolves instead of going missing once the horse's name has been translated to English. See HorseMountedIconPatches.",
+            "When true, the currently-equipped/ridden horse's bigmap quick-travel icon is resolved by looking up its itemID in a raw-name table read directly from the deployed HorseData.csv, instead of relying on the (already-translated in memory, and sometimes save-baked) targetHorseData.name field, so the icon resolves instead of going missing once the horse's name has been translated to English. See HorseMountedIconPatches.",
             v => ResyncMountedHorseIconEnabledCached = v);
 
         ClampPlotTextWidthEnabled = BindCachedBool(
@@ -477,8 +477,8 @@ public class MainPlugin : BasePlugin
         // must not take down every patch above it.
         try
         {
+            HorseMountedIconPatches.LoadRawHorseNames();
             Harmony.CreateAndPatchAll(typeof(HorseMountedIconPatches));
-            Logger.LogInfo("[HorseMountedIconPatches] Patched HorseIconController.Update.");
         }
         catch (Exception ex)
         {

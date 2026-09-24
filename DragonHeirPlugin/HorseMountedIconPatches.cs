@@ -1,4 +1,8 @@
 using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 using System.Text;
 using HarmonyLib;
 using UnityEngine.UI;
@@ -33,30 +37,82 @@ namespace EnglishPatch;
 ///    horse item (confirmed live: every type-6/subType-0 itemID in a real save maps to exactly one
 ///    breed across 3749 instances checked - the only itemID collision found was itemID 0 shared by
 ///    *saddle* items, which use different, non-breed-specific numbering and are never
-///    `targetHorseData` here). `GameDataController.Instance.horseDataBase` is keyed by that exact
-///    same id (confirmed in `GameDataController.LoadHorseData`, which parses `HorseData.csv` column
-///    0 straight into each template's `itemID`). Looking the live template up by `itemID` instead of
-///    trusting `targetHorseData.name` also means this self-heals a save whose `name` field is already
-///    baked stale (see the investigation doc) - `itemID` is a plain int, never subject to the
-///    translation-freeze bug that can affect `name`/`describe` text fields.
-/// 2. `DynamicStringPatches.ReverseTranslate` recovers the original raw Chinese name from the live
-///    template's already-English `.name` (the same exact-match dictionary lookup `ItemIconPatches`
-///    uses, and safe here for the same reason: the "枣红马"/"黄骠马" collision that could have made
-///    this ambiguous was fixed at its source in `dynamicStringsFromColumns.txt.yaml`, not worked
-///    around here). The recovered raw name and the "大" suffix are then joined with `StringBuilder`,
-///    NOT `string.Concat`/`+`/interpolation - `StringBuilder.Append`/`ToString` are untouched by
+///    `targetHorseData` here).
+/// 2. Ground-truth raw name, not reverse-translation: rather than reverse-translating the
+///    already-English live template name (which would depend on the translation dictionary having
+///    no collisions - real risk, see the "枣红马"/"黄骠马" case fixed separately in
+///    dynamicStringsFromColumns.txt.yaml), this patch reads `HorseData.csv` (the exact same file
+///    `Resources.Load("GameData/HorseData", ...)` serves to the game, deployed at
+///    `<plugin>/resources/GameData/HorseData.csv`) directly, once, at plugin load, into a small
+///    `id -> rawName` table. Confirmed live that the DEPLOYED csv's name column (column 1) is left
+///    as raw Chinese - translation only ever happens via the separate runtime dictionary mechanism,
+///    never by pre-translating the packaged CSV - so this table is completely independent of
+///    whatever the live in-memory translation state is or how the dictionary evolves later.
+/// 3. The recovered raw name and the "大" suffix are joined with `StringBuilder`, NOT
+///    `string.Concat`/`+`/interpolation - `StringBuilder.Append`/`ToString` are untouched by
 ///    DynamicStringPatches' patch list, so this is the one construction path that survives with the
 ///    literal "大" suffix intact instead of being independently re-translated.
+///
+/// Looking the live template up by `itemID` instead of trusting `targetHorseData.name` also means
+/// this self-heals a save whose `name` field is already baked stale (see the investigation doc) -
+/// `itemID` is a plain int, never subject to the translation-freeze bug that can affect
+/// `name`/`describe` text fields.
 /// </summary>
 internal static class HorseMountedIconPatches
 {
     private const string MountedSuffix = "大";
     private const string TargetAtlas = "IconAtlas";
+    private const string HorseDataFileName = "HorseData.csv";
 
-    // TEMPORARY diagnostic state - remove alongside the logging below once the missing-icon report
-    // (2026-09-24) is confirmed fixed. Throttles the trace log to once per distinct equipped horse
-    // (Update() runs every frame) instead of spamming every frame.
-    private static int _lastLoggedItemId = int.MinValue;
+    private static readonly Dictionary<int, string> _rawNamesByItemId = new();
+
+    /// <summary>Loads HorseData.csv's id -> raw-Chinese-name mapping (if present). Safe to call even
+    /// if missing - lookups then just find nothing and this patch's postfix no-ops. Call once from
+    /// MainPlugin.Load(), before HorseIconController.Update ever runs.</summary>
+    public static void LoadRawHorseNames()
+    {
+        try
+        {
+            var pluginDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? ".";
+            var resourcesDir = Path.Combine(pluginDir, "resources");
+
+            var path = Directory.Exists(resourcesDir)
+                ? Directory.GetFiles(resourcesDir, HorseDataFileName, SearchOption.AllDirectories).FirstOrDefault()
+                : null;
+
+            if (path == null)
+            {
+                MainPlugin.Logger?.LogWarning($"[HorseMountedIconPatches] '{HorseDataFileName}' not found under '{resourcesDir}' - mounted-horse icon fix will no-op.");
+                return;
+            }
+
+            var lines = File.ReadAllLines(path, Encoding.UTF8);
+            // Row 0 is the header ("ID,名称,Description,..."); every id/name pair is a plain
+            // Chinese breed name with no embedded commas/quotes (verified against every row in the
+            // deployed file), so a plain first-two-columns split is safe without a full CSV parser.
+            for (var i = 1; i < lines.Length; i++)
+            {
+                var line = lines[i];
+                if (string.IsNullOrWhiteSpace(line)) continue;
+
+                var firstComma = line.IndexOf(',');
+                if (firstComma < 0) continue;
+                var secondComma = line.IndexOf(',', firstComma + 1);
+                if (secondComma < 0) continue;
+
+                var idText = line.Substring(0, firstComma);
+                var name = line.Substring(firstComma + 1, secondComma - firstComma - 1);
+                if (int.TryParse(idText, out var id) && !string.IsNullOrEmpty(name))
+                    _rawNamesByItemId[id] = name;
+            }
+
+            MainPlugin.Logger?.LogInfo($"[HorseMountedIconPatches] Loaded {_rawNamesByItemId.Count} raw horse name(s) from '{HorseDataFileName}'.");
+        }
+        catch (Exception ex)
+        {
+            MainPlugin.Logger?.LogError($"[HorseMountedIconPatches] Failed to load '{HorseDataFileName}': {ex}");
+        }
+    }
 
     [HarmonyPatch(typeof(HorseIconController), nameof(HorseIconController.Update))]
     [HarmonyPostfix]
@@ -68,68 +124,28 @@ internal static class HorseMountedIconPatches
         {
             var horse = __instance?.targetHorseData;
             if (horse == null) return;
+            if (__instance.horseIcon == null) return;
 
-            var trace = horse.itemID != _lastLoggedItemId;
-            if (trace) _lastLoggedItemId = horse.itemID;
-
-            if (__instance.horseIcon == null)
-            {
-                if (trace) MainPlugin.Logger?.LogInfo($"[HorseMountedIconPatches] itemID={horse.itemID}: horseIcon GameObject is null - bailing.");
+            if (!_rawNamesByItemId.TryGetValue(horse.itemID, out var rawName) || string.IsNullOrEmpty(rawName))
                 return;
-            }
-
-            var dataController = GameDataController.Instance;
-            if (dataController?.horseDataBase == null)
-            {
-                if (trace) MainPlugin.Logger?.LogInfo($"[HorseMountedIconPatches] itemID={horse.itemID}: GameDataController.Instance or horseDataBase is null - bailing.");
-                return;
-            }
-
-            if (!dataController.horseDataBase.TryGetValue(horse.itemID, out var liveTemplate) || liveTemplate == null)
-            {
-                if (trace) MainPlugin.Logger?.LogInfo($"[HorseMountedIconPatches] itemID={horse.itemID}: no horseDataBase entry for this itemID - bailing.");
-                return;
-            }
-
-            if (string.IsNullOrEmpty(liveTemplate.name))
-            {
-                if (trace) MainPlugin.Logger?.LogInfo($"[HorseMountedIconPatches] itemID={horse.itemID}: live template's name is empty - bailing.");
-                return;
-            }
 
             var textureController = TextureController.Instance;
-            if (textureController == null)
-            {
-                if (trace) MainPlugin.Logger?.LogInfo($"[HorseMountedIconPatches] itemID={horse.itemID}: TextureController.Instance is null - bailing.");
-                return;
-            }
+            if (textureController == null) return;
 
-            // liveTemplate.name is already English (see class remarks) - recover the raw Chinese
-            // name via the same exact-match dictionary ItemIconPatches uses, then join with the
-            // "大" suffix via StringBuilder so the suffix itself doesn't get independently
-            // retranslated the way plain string concatenation did (see class remarks, point 2).
-            var rawName = DynamicStringPatches.ReverseTranslate(liveTemplate.name);
+            // Joined via StringBuilder, NOT string.Concat/interpolation/+ - see class remarks,
+            // point 2/3, for why plain concatenation gets the "大" suffix independently retranslated.
             var spriteNameBuilder = new StringBuilder();
             spriteNameBuilder.Append(rawName);
             spriteNameBuilder.Append(MountedSuffix);
             var spriteName = spriteNameBuilder.ToString();
 
             var sprite = textureController.LoadAtlasSprite(TargetAtlas, spriteName);
-            if (trace)
-                MainPlugin.Logger?.LogInfo(
-                    $"[HorseMountedIconPatches] itemID={horse.itemID}: liveTemplate.name='{liveTemplate.name}', " +
-                    $"rawName='{rawName}', spriteKey='{spriteName}', LoadAtlasSprite -> {(sprite == null ? "NULL" : "found")}");
             if (sprite == null) return;
 
             var image = __instance.horseIcon.GetComponent<Image>();
-            if (image == null)
-            {
-                if (trace) MainPlugin.Logger?.LogInfo($"[HorseMountedIconPatches] itemID={horse.itemID}: horseIcon has no Image component - bailing.");
-                return;
-            }
+            if (image == null) return;
 
             image.sprite = sprite;
-            if (trace) MainPlugin.Logger?.LogInfo($"[HorseMountedIconPatches] itemID={horse.itemID}: sprite set successfully.");
         }
         catch (Exception ex)
         {
