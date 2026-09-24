@@ -47,6 +47,7 @@ root `docs/` taxonomy.
 - [ResourceIo CSV merge abandoned](investigations/plugin/resourceio-csv-merge-abandoned.md)
 - [ResetFaceSetting crash investigation](investigations/plugin/resetfacesetting-crash-investigation.md)
 - [RobHeroItemChoose GetHero fix](investigations/plugin/robheroitemchoose-getherofix.md)
+- [Save files embed already-resolved plot dialogue text](investigations/plugin/save-embedded-plot-text-investigation.md)
 - [PlotText width overflow investigation](investigations/plugin/plottext-width-overflow-investigation.md)
 - [Performance optimization pass](investigations/plugin/performance-optimization-pass-2026-09-13.md)
 - [Record-log translation naturalness](investigations/plugin/recordlog-translation-naturalness.md)
