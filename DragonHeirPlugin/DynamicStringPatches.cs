@@ -24,6 +24,20 @@ internal static class DynamicStringPatches
     // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
     private const string PrefabTextFilePattern = "dumpedPrefabText*.txt.yaml";
 
+    // heroFullNames.txt.yaml (SpeHeroData's dot-stripped family+given compound, e.g. "雷冠群" ->
+    // "Lei Guanqun") is deliberately excluded from DictionaryFilePattern's glob and loaded here
+    // instead, same merge-if-absent treatment as PrefabTextFilePattern above. Unlike
+    // heroNameParts.txt/forceNameParts.txt (bare 1-2 character fragments - too easy to
+    // accidentally match as a substring of unrelated text, so those stay HeroNamePatches-private
+    // exact-match dictionaries), these are whole 3+ character compound names, which don't carry
+    // that collision risk - see investigation 2026-09-24 (雷冠群 displaying as "雷 Crown 群" because
+    // this file's whole-name entry was never in scope for ApplyToComponentText's generic pipeline,
+    // which instead fell back to dumpedPrefabText.txt.yaml's unrelated single-character "冠" ->
+    // "Crown" entry). Still loaded separately (not renamed into the dynamicStrings* glob) so
+    // HeroNamePatches keeps its own private copy for GetHeroName's relationship-title lookup and
+    // PlotInteractControllerPatches' reverse lookup.
+    private const string HeroFullNameFileName = "heroFullNames.txt.yaml";
+
     private static List<DictionaryEntry> _dictionary = new();
 
     // Perf: entries bucketed by Raw[0] so ApplyDictionary only ever considers entries that can
@@ -244,8 +258,10 @@ internal static class DynamicStringPatches
     // several templates in one ApplyTemplatesSinglePass call (each getting its own budget), and a
     // template that legitimately needs this long to match live text has never been observed -
     // every confirmed slow case was a template failing to match at all after exhausting
-    // backtracking, not a real match that took a while to find.
-    private static readonly TimeSpan TemplateRegexTimeout = TimeSpan.FromMilliseconds(25);
+    // backtracking, not a real match that took a while to find. Backed by
+    // MainPlugin.TemplateRegexTimeoutMs - baked into each compiled template's Regex at PatchAll
+    // time, so a live config edit only takes effect after the next reload/PatchAll.
+    private static TimeSpan TemplateRegexTimeout => TimeSpan.FromMilliseconds(MainPlugin.TemplateRegexTimeoutMs.Value);
 
     // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
     private sealed class CompiledTemplate
@@ -723,6 +739,46 @@ internal static class DynamicStringPatches
                     $"[DynamicStringPatches] Merged {mergedFromPrefabText} additional fragment(s) from '{PrefabTextFilePattern}'.");
             }
 
+            // heroFullNames.txt.yaml - see HeroFullNameFileName's doc comment above. Merged the
+            // same way as PrefabTextFilePattern (skip any Raw already present, whole-string \n
+            // unescape, IsTemplate recheck) rather than trusting it can't collide with anything.
+            var mergedFromHeroFullNames = 0;
+            var heroFullNamesPath = FindResourceFiles(HeroFullNameFileName).FirstOrDefault();
+            if (heroFullNamesPath != null)
+            {
+                try
+                {
+                    var yaml = File.ReadAllText(heroFullNamesPath);
+                    var fileEntries = deserializer.Deserialize<List<DictionaryEntry>>(yaml);
+                    if (fileEntries != null)
+                    {
+                        foreach (var entry in fileEntries)
+                        {
+                            if (string.IsNullOrEmpty(entry.Raw) || !existingRaw.Add(entry.Raw))
+                                continue;
+
+                            entry.Raw = entry.Raw.Replace("\\n", "\n");
+                            if (entry.Result != null)
+                                entry.Result = entry.Result.Replace("\\n", "\n");
+
+                            entry.IsTemplate = PlaceholderOrTokenRegex.IsMatch(entry.Raw);
+                            entries.Add(entry);
+                            mergedFromHeroFullNames++;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MainPlugin.Logger.LogError($"[DynamicStringPatches] Failed to load '{heroFullNamesPath}': {ex}");
+                }
+            }
+
+            if (mergedFromHeroFullNames > 0)
+            {
+                MainPlugin.Logger.LogInfo(
+                    $"[DynamicStringPatches] Merged {mergedFromHeroFullNames} additional fragment(s) from '{HeroFullNameFileName}'.");
+            }
+
             // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
             var existingRawForLabels = new HashSet<string>(entries.Select(e => e.Raw).Where(r => !string.IsNullOrEmpty(r)));
             var labelEntries = new List<DictionaryEntry>();
@@ -1001,7 +1057,27 @@ internal static class DynamicStringPatches
     // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
     private static void GenericPostfix(ref string __result)
     {
-        if (string.IsNullOrEmpty(__result) || _inFormatConcatPatch || _suppressGenericTranslation) return;
+        if (string.IsNullOrEmpty(__result) || _inFormatConcatPatch) return;
+
+        // Diagnostic only (see mission-icon-title-compound-name-corruption.md "round 8"):
+        // MissionPatches.GetTriggerTargetDescribePrefix/GetMissionTargetDescribePrefix set
+        // _suppressGenericTranslation for the whole duration of the original method body, which
+        // means ANY String.Concat/Format call made INSIDE that body (e.g. concatenating an
+        // AreaData/AreaBuildingData name pair) is invisible here - not just untranslated, but
+        // never logged either, since the early-return below used to happen before this point. That
+        // is a total blind spot on exactly the code path suspected of producing the "?huxian
+        // Town客?"-style corruption BEFORE MissionPatches.TranslateObjective/TranslateCompoundName
+        // ever runs on the method's __result. Logging here (without touching __result or running
+        // the pipeline) lets us see every Concat/Format call that happens while suppressed, so we
+        // can tell whether the corruption is a real managed String.Concat/Format call we've simply
+        // never been able to see, versus genuinely native code with no such call at all.
+        if (_suppressGenericTranslation)
+        {
+            if (MainPlugin.ResidualCjkDebugEnabledCached && ContainsCjk(__result))
+                LogMissionDebug("GenericPostfix (suppressed - not translated, diagnostic only)", __result, __result);
+            return;
+        }
+
         if (_compiledTemplates.Count == 0 && _dictionary.Count == 0) return;
         if (!ContainsCjk(__result)) return;
 

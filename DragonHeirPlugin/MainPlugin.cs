@@ -137,6 +137,13 @@ public class MainPlugin : BasePlugin
     // Cached copy - see BindCachedBool/ResidualCjkDebugEnabledCached above.
     internal static bool MultiPassTemplateApplicationEnabledCached;
 
+    // Bounds a single compiled template's Pattern/PermissivePattern IsMatch/Replace attempt - see
+    // DynamicStringPatches.TemplateRegexTimeout for the full rationale (confirmed 200ms-2.8s
+    // catastrophic-backtracking spikes via perfStats.log). Baked into each compiled template's
+    // Regex at PatchAll time, so a live edit only takes effect after the next reload/PatchAll, not
+    // for templates already compiled.
+    internal static ConfigEntry<int> TemplateRegexTimeoutMs;
+
     // Off by default until verified live - baked into each compiled template at PatchAll time
     // (requires a restart to take effect, unlike most other toggles here), so a merged
     // adjacent-placeholder run's capture excludes sentence-terminal punctuation (。！？…/ASCII
@@ -238,6 +245,15 @@ public class MainPlugin : BasePlugin
             "SentenceBoundaryAwareTemplateCapture",
             true,
             "When true, a merged adjacent-placeholder template run can no longer capture across sentence-terminal punctuation (。！？…/ASCII '.'/newline), preventing an unanchored template match from locking onto an earlier unrelated sentence that happens to share the template's leading literal character. Off by default until verified live - requires a game restart to take effect since templates are compiled once at startup. See DynamicStringPatches.BuildCompiledTemplate.");
+
+        // Not cached - baked into each compiled template's Regex at PatchAll time (load-time only,
+        // never read on the per-call hot path), same as SentenceBoundaryAwareTemplateCaptureEnabled
+        // above.
+        TemplateRegexTimeoutMs = Config.Bind(
+            "Performance",
+            "TemplateRegexTimeoutMs",
+            25,
+            "Milliseconds a single compiled template's Pattern/PermissivePattern IsMatch/Replace attempt is allowed to run before Regex aborts it as a timeout. Deliberately small - every confirmed slow case (200ms-2.8s spikes via perfStats.log) was a template failing to match at all after exhausting backtracking, not a real match that took a while to find. Requires a game restart to take effect since templates are compiled once at startup. See DynamicStringPatches.BuildCompiledTemplate.");
 
         AppendOnlySuffixTranslationEnabled = BindCachedBool(
             "Performance",
@@ -438,7 +454,11 @@ public class MainPlugin : BasePlugin
 
         // Must patch AFTER DynamicStringPatches.PatchAll() - ItemIconPatches.
         // GetItemIconName_Postfix calls DynamicStringPatches.ReverseTranslate, which reads the
-        // reverse dictionary that PatchAll() populates.
+        // reverse dictionary that PatchAll() populates. It also calls
+        // HorseMountedIconPatches.TryGetRawName for the horse-icon branch - patch registration
+        // order doesn't matter for that (Harmony.CreateAndPatchAll here only registers the patch;
+        // HorseMountedIconPatches.LoadRawHorseNames() below just needs to have run by the time
+        // gameplay actually calls GetItemIconName, which it does, since both happen during Load()).
         Harmony.CreateAndPatchAll(typeof(ItemIconPatches));
 
         // Wrapped separately - binds directly against PlotController's real interop methods

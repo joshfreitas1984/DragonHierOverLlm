@@ -62968,8 +62968,8 @@
 - raw: "别派委托"
   splits:
   - text: "别派委托"
-    translated: "Don't assign commissions"
-    qcReviewedText: "Don't assign commissions"
+    translated: "Other Faction Commissions"
+    qcReviewedText: "Other Faction Commissions"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

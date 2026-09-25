@@ -167,8 +167,17 @@ namespace Tests
             // whole-name counterpart to heroNameParts.txt above, used by DragonHeirPlugin's
             // PlotInteractControllerPatches.GetHero_Prefix to reverse-translate an already-
             // translated hero display name back to the raw name WorldData.GetHero looks records
-            // up by. Same dedicated-file/QC-disabled treatment as heroNameParts.txt/
-            // forceNameParts.txt above and for the same reason.
+            // up by, and by HeroNamePatches.Translate for GetHeroName's relationship-title lookup.
+            // Still a DEDICATED file (not named "dynamicStrings*") so HeroNamePatches keeps its own
+            // private forward/reverse copies, but - unlike heroNameParts.txt/forceNameParts.txt's
+            // bare 1-2 character fragments, which risk matching as a substring of unrelated text -
+            // these are whole 3+ character compound names, so DynamicStringPatches also merges this
+            // file's entries directly into its generic substring dictionary (see
+            // DynamicStringPatches.HeroFullNameFileName) so a raw hero name displayed through the
+            // ordinary UI text pipeline (not routed through HeroNamePatches at all, e.g.
+            // HeroData.HeroName()'s roster/scroll-view display) gets a correct whole-name match
+            // instead of falling back to an unrelated single-character dictionary entry. See
+            // investigation 2026-09-24 (雷冠群 displaying as "雷 Crown 群").
             new() {Path = "heroFullNames.txt", PackageOutput = true, TextFileType = TextFileType.DynamicStringsIL2CPP, EnableQualityReview = false },
         ];
     }

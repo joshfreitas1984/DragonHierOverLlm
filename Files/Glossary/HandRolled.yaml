@@ -181,6 +181,13 @@
 - raw: 婉儿
   result: "Wan'er"
 
+- raw: 水姑娘
+  result: Miss Shui
+- raw: 水女侠
+  result: Heroine Shui
+- raw: 女侠
+  result: Heroine
+
 - raw: 上限
   result: Max
   allowalt:

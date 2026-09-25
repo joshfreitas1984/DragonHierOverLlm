@@ -233,6 +233,136 @@ IL2CPP offset write (no named assignment site found in the `_NoNamespace` decomp
 generation-time callers), so patching the two read sites above is the only reachable place to fix
 this from the plugin; the write site itself cannot be Harmony-patched.
 
+## Round 5 - reverted: source-getter patches caused an unrelated IL2CPP interop crash
+
+Attempted to translate `AreaName`/`BuildingName` at their source (`AreaData.GetAreaName()`/
+`AreaBuildingData.Name(bool)`) via Harmony postfixes, on the theory both getters are display-only.
+That theory was about who reads the *return value* - it missed a separate, unrelated risk: patching
+an IL2CPP method forces IL2CppInterop to route every call to it (including calls that only ever
+happened natively, never crossing into managed code) through a managed trampoline, which has to
+marshal the native IL2CPP string into a managed `System.String`. That marshaling itself threw for
+some `AreaData` instance (very likely one with no name set - a placeholder/internal area never
+meant to be displayed), spamming `ArgumentOutOfRangeException: Length cannot be less than zero`
+from `Il2CppInterop.Runtime.IL2CPP.Il2CppStringToManaged`, confirmed live. This has nothing to do
+with whether the return value is display vs. lookup - it's a crash in the interop layer itself,
+present the moment the method is patched at all. `AreaBuildingData.Name(bool)` carries the identical
+risk (same IL2CPP-native-getter shape) even though it hadn't been observed crashing yet, so it was
+reverted too rather than waiting to find out. Both patches were removed; `TranslateHiddenTargetPlaceString`
+(round 4's fix) was instrumented with `LogMissionDebug` instead, to observe what it actually sees on
+each call without touching the source getters.
+
+## Round 6 - WRONG, retracted: "pre-existing save state" theory
+
+Initially, grepping `residualCjkDebug.log` for a fresh report of this corruption (`?huxian Town客?`)
+showed every log entry for the string with identical `before`/`after`, including the
+`GetTriggerTargetDescribe raw result` diagnostic (the game's own native `__result`, captured *before
+any plugin code touches it*) already showing the corrupted string at its very first appearance in the
+log (`20:04:43.906`). That was read as "the corruption predates this session - stored save state,
+same as the original report's conclusion above."
+
+**Retracted**: confirmed with the user that this exact mission was picked up freshly *during this same
+session* (session start `16:54:37`, first read at `20:04:43` - not a reloaded old save). The "raw
+result already corrupted" observation is real, but it means the corruption happens natively, live,
+during mission generation this session - not that it's stale save state. See round 7.
+
+## Round 7 - confirmed: native, non-managed corruption, not attributable to any C#/Harmony pipeline code
+
+Re-examined with the correct premise (live corruption, not stale save). Identified the compound as
+`朱仙镇` (`AreaData.csv` row 61, id 61) + `客栈` (`BuildingData.csv` row 17, id 17):
+
+- `朱仙镇` → `Zhuxian Town` matches `?huxian Town` exactly except for the leading character.
+- `客栈` → `Inn` (a clean whole-entry dictionary translation) never applies; instead the corrupted
+  string has `客` (raw, untranslated) followed by `?`.
+
+**Byte-level confirmed** (`xxd` on the log file): both `?` characters are literal ASCII `0x3F`, not a
+mis-decoded multi-byte character or a full-width `？` (U+FF1F) being correctly Latinized - the
+`LogUnexpectedQuestionMark` diagnostic (built to catch exactly this signature from
+`ApplyTemplatesSinglePass`/`ApplyDictionary`) exists specifically to flag this, but every one of its
+449 hits in this session's log is a false positive (a legitimate `？` → `?` punctuation translation);
+grepping for this string, or for the raw `朱仙镇`/`客栈` substrings, anywhere in that diagnostic output
+returns nothing.
+
+Ruled out the managed translation pipeline entirely:
+
+1. `TranslateHiddenTargetPlaceString`/`TranslateCompoundName` (round 4's read-site patch) sees this
+   string already corrupted and is a no-op on it (`before == after` every time) - not the source.
+2. Grepped the *entire* log for the raw Chinese substrings `朱仙镇` and `客栈`/`Zhuxian`+`客栈`
+   adjacent together: zero hits. If the compound were built via a `+`/`String.Concat` call in
+   managed/AOT'd game code, `GenericPostfix` (which patches every non-generic public static
+   `string.Concat`/`Format` overload, confirmed via `PatchAll`'s reflection loop, and logs
+   unconditionally via `LogResidualCjkDebug` whenever its input contains CJK - which `"Zhuxian
+   Town客栈"` would, since `客栈` is still CJK) would have logged it, corrupted or not. It never did.
+
+Conclusion: `missionHideTargetPlaceString` is built by native, non-managed code with no reachable
+Harmony hook (matching round 4's "unnamed IL2CPP offset write" finding) - genuinely below the
+interop boundary our patches operate at, not a `System.String.Concat`/`Format` call our `GenericPostfix`
+would ever see.
+
+**Leading hypothesis**: a length assumption baked into that native code. `AreaData.csv`'s `Name`
+column is packaged fully pre-translated (`TextFileConfiguration.cs`'s `AreaData.csv` entry translates
+column 1) - so `AreaData.GetAreaName()` now returns long English text (`"Zhuxian Town"`, 12 chars)
+where the native code was presumably only ever exercised against short raw Chinese place names (`"朱仙镇"`,
+3 chars) - a roughly 4x length increase. `BuildingData.csv`'s `Name` column, by contrast, is
+deliberately *not* translated at packaging time (`SkipColumns` covers it), so `AreaBuildingData.Name(bool)`
+still returns short raw Chinese (`"客栈"`, 2 chars) unchanged. Confirmed both source CSVs are clean in
+the deployed `resources/GameData/` folder (no corruption at the data-file level) - whatever mangles it
+happens purely at runtime, in native code, and losing exactly one character at each edge of the
+resulting compound (replaced with a literal `?` sentinel) is consistent with a native buffer/length
+calculation that was sized for two short CJK strings and now receives one string ~4x longer than
+expected.
+
+**Why this can't be safely re-diagnosed by patching the source getters again**: round 5 already showed
+that Harmony-patching `AreaData.GetAreaName()`/`AreaBuildingData.Name(bool)` - even just to observe,
+without modifying `__result` - forces every call through an IL2CPP interop marshaling trampoline that
+throws for at least one placeholder/no-name `AreaData` instance, and that crash happens in the
+marshaling itself before any postfix body runs, so wrapping the postfix in try/catch would not help.
+Re-adding either patch (even read-only) reintroduces that crash risk.
+
+**Not fixable by any pipeline code we control** (this is a native/game-internal bug, most likely
+newly exposed rather than newly introduced by shipping much-longer pre-translated `AreaData.csv` names
+into a native code path never tested against strings that long). Options going forward, none attempted
+yet:
+- Stop packaging `AreaData.csv`'s `Name` column pre-translated (match `BuildingData.csv`'s
+  raw-Chinese approach) and translate area names only through the already-safe runtime paths (dynamic
+  string dictionary/templates) instead - but `AreaData.csv`'s Name is very likely relied on
+  successfully elsewhere (world map, fast travel, location labels) with no reported issues, so this
+  would need to be scoped carefully, not applied blindly.
+- A narrow, cosmetic mitigation in `TranslateHiddenTargetPlaceString`: detect this specific corruption
+  signature (a leading/trailing stray `?` around recognizable dictionary fragments) and repair it for
+  display using the dictionary (e.g. suffix-match `"huxian Town"` back to the one dictionary entry
+  ending that way) - a band-aid on the symptom, not the native root cause.
+
+## Round 8 - found the real blind spot: `_suppressGenericTranslation` hides managed code from us, not just from translation
+
+Round 7 argued the corruption must be native/non-managed because no log entry anywhere shows
+`GenericPostfix` processing the clean pre-corruption compound. That argument is invalid: **the
+absence of that log entry doesn't mean the event didn't happen - it could mean the event happened but
+was silenced.**
+
+`MissionPatches.GetTriggerTargetDescribePrefix`/`GetMissionTargetDescribePrefix` set
+`DynamicStringPatches._suppressGenericTranslation = true` for the *entire duration* of the original
+method body (restored by a matching `HarmonyFinalizer`). `GenericPostfix`'s old guard
+(`if (... || _suppressGenericTranslation) return;`) returned **before** ever calling
+`LogResidualCjkDebug`, so any `String.Concat`/`String.Format` call made *inside*
+`GetTriggerTargetDescribe`/`GetMissionTargetDescribe`'s own method body - e.g. a native/AOT'd
+`AreaData.GetAreaName() + AreaBuildingData.Name(bool)` concatenation, if that's really how the
+compound is assembled - is not just left untranslated (intentional), it is **completely invisible to
+our diagnostics** (unintentional blind spot). This is exactly the code path under suspicion: the
+`GetTriggerTargetDescribe raw result`/`GetMissionTargetDescribe raw result` diagnostics already show
+the corruption present in `__result` the instant the method returns, i.e. before
+`TranslateObjective`/`TranslateCompoundName` ever run on it - so whatever produces it runs earlier,
+inside that same suppressed method body, exactly where we had zero visibility.
+
+Fix: split "should translate" from "should log" in `GenericPostfix` (`DynamicStringPatches.cs`). When
+`_suppressGenericTranslation` is true, it now logs the untouched `__result` (stage
+`"GenericPostfix (suppressed - not translated, diagnostic only)"`) whenever it contains CJK, instead
+of returning silently - translation behavior is unchanged (still fully suppressed), this only restores
+visibility. Deployed for the next play session; **not yet confirmed** - need a fresh
+`missionHideTargetPlace` mission (ideally targeting a building in an area whose name is long once
+translated, like `朱仙镇`/Zhuxian Town) to see whether a `GenericPostfix (suppressed...)` entry fires
+for this compound and what it actually contains, before or in place of round 7's "native code"
+hypothesis.
+
 ## Related code and references
 
 - [MissionPatches.cs](../../../DragonHeirPlugin/MissionPatches.cs)

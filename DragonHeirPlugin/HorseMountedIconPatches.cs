@@ -66,6 +66,15 @@ internal static class HorseMountedIconPatches
 
     private static readonly Dictionary<int, string> _rawNamesByItemId = new();
 
+    /// <summary>Deterministic itemID -&gt; raw-Chinese-name lookup, loaded straight from
+    /// HorseData.csv - see class remarks for why this is preferred over
+    /// DynamicStringPatches.ReverseTranslate for horse breed names (that dictionary has a confirmed
+    /// collision risk, e.g. 枣红马/黄骠马 both resolving to "Chestnut horse"). Shared with
+    /// ItemIconPatches so the stable/inventory-list horse icon uses the same collision-free lookup
+    /// as this class's mounted bigmap icon fix.</summary>
+    public static bool TryGetRawName(int itemId, out string rawName) =>
+        _rawNamesByItemId.TryGetValue(itemId, out rawName);
+
     /// <summary>Loads HorseData.csv's id -> raw-Chinese-name mapping (if present). Safe to call even
     /// if missing - lookups then just find nothing and this patch's postfix no-ops. Call once from
     /// MainPlugin.Load(), before HorseIconController.Update ever runs.</summary>

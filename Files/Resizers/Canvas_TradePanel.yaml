@@ -1,3 +1,11 @@
+- path: Canvas/TradePanel/LeftList/ItemListScrollView/Viewport/Content/*/Name
+  sampleText: Heart Method of Vajra Mind
+  idealFontSize: 11.0
+  allowWordWrap: true
+- path: Canvas/TradePanel/LeftOutList/ItemListScrollView/Viewport/Content/*/Name
+  sampleText: Essential Sword Controlling Technique
+  idealFontSize: 11.0
+  allowWordWrap: true
 - path: Canvas/TradePanel/RightList/ItemListScrollView/Viewport/Content/*/Name
   sampleText: Common Short knife
   idealFontSize: 11.0

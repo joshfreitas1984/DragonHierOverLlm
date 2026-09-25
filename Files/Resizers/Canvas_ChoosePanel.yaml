@@ -20,6 +20,15 @@
   allowWordWrap: true
   adjustX: -2.0
   adjustWidth: 10.0
+- path: Canvas/ChoosePanel/ChoosePanelRoot/ChooseItemList/SkillFlitter/SkillTypeFlitter/*/Label
+  sampleText: Special Technique
+  idealFontSize: 12.0
+  allowWordWrap: true
+  adjustWidth: 30.0
+- path: Canvas/ChoosePanel/ChoosePanelRoot/ChooseItemList/Viewport/Content/*/Name
+  sampleText: White Horse Suspended Hoof
+  idealFontSize: 11.0
+  allowWordWrap: true
 - path: Canvas/ChoosePanel/ChoosePanelRoot/LvFlitterAllOff/Text
   sampleText: Shut down all rooms
   idealFontSize: 10.0

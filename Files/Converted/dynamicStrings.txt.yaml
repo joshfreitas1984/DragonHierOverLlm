@@ -5353,7 +5353,7 @@
     - GarbledNumber
   - subIndex: 1
     text: "天"
-    translated: "Sky"
+    translated: "Days"
   templates:
   - template: "({0}⟦0⟧{1})"
 - raw: "(当前处在城镇内，行凶恶名x200%)"
@@ -9372,8 +9372,8 @@
 - raw: "{0}天"
   splits:
   - text: "天"
-    translated: "Sky"
-    qcReviewedText: "{0} Sky"
+    translated: "Days"
+    qcReviewedText: "{0} Days"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -20413,7 +20413,7 @@
   splits:
   - text: "剩余"
     translated: "Remaining"
-    qcReviewedText: "Remaining {0} Sky"
+    qcReviewedText: "Remaining {0} Days"
     qcTranslated: "Remaining {0} Days"
     qcStatus: Corrected
     qcQualityScore: 100
@@ -20422,7 +20422,7 @@
     - OtherNamedDefect
   - subIndex: 1
     text: "天"
-    translated: "Sky"
+    translated: "Days"
   templates:
   - template: "{0}⟦0⟧{1}"
 - raw: "剩余大小武林门派畏惧我#PlayerForceName#之声势，人人自危。\n刚刚已组建联盟，准备合力抗击本门之攻势。"
@@ -21228,7 +21228,7 @@
   splits:
   - text: "升级中"
     translated: "Upgrading..."
-    qcReviewedText: "Upgrading...\nRemaining {0} Sky"
+    qcReviewedText: "Upgrading...\nRemaining {0} Days"
     qcTranslated: "Upgrading...\nRemaining {0} Days"
     qcStatus: Corrected
     qcQualityScore: 100
@@ -21240,7 +21240,7 @@
     translated: "Remaining"
   - subIndex: 2
     text: "天"
-    translated: "Sky"
+    translated: "Days"
   templates:
   - template: "{0}\n{1}⟦0⟧{2}"
 - raw: "升级功绩{0}/{1}"
@@ -30876,7 +30876,7 @@
 - raw: "天;SureBuildingWork;"
   splits:
   - text: "天"
-    translated: "Sky"
+    translated: "Days"
   templates:
   - template: "{0};SureBuildingWork;"
 - raw: "天下大势：{4}{0}门派 {1}攻击资源{4}门派 {2}攻击城镇{4}门派 {3}攻击京城/总舵"
@@ -36335,7 +36335,7 @@
   splits:
   - text: "建造消耗"
     translated: "Construction cost"
-    qcReviewedText: "Construction cost ({0} Sky)\n{1}"
+    qcReviewedText: "Construction cost ({0} Days)\n{1}"
     qcTranslated: "Construction cost ({0} days)\n{1}"
     qcStatus: Corrected
     qcQualityScore: 95
@@ -36344,7 +36344,7 @@
     - DomainTerm
   - subIndex: 1
     text: "天"
-    translated: "Sky"
+    translated: "Days"
   templates:
   - template: "{0} (⟦0⟧{1})\n⟦1⟧"
 - raw: "开"
@@ -42611,7 +42611,7 @@
   splits:
   - text: "撤除职位"
     translated: "Remove position"
-    qcReviewedText: "Remove position\nCooling {0} Sky"
+    qcReviewedText: "Remove position\nCooling {0} Days"
     qcTranslated: "Remove position\nCooldown {0} days"
     qcStatus: Corrected
     qcQualityScore: 95
@@ -42623,7 +42623,7 @@
     translated: "Cooling"
   - subIndex: 2
     text: "天"
-    translated: "Sky"
+    translated: "Days"
   templates:
   - template: "{0}\n{1}⟦0⟧{2}"
 - raw: "操控他人"
@@ -50343,7 +50343,7 @@
   splits:
   - text: "消耗"
     translated: "Consume"
-    qcReviewedText: "Consume ({0} Sky)\n{1}"
+    qcReviewedText: "Consume ({0} Days)\n{1}"
     qcTranslated: "Consume ({0} Days)\n{1}"
     qcStatus: Corrected
     qcQualityScore: 100
@@ -50352,7 +50352,7 @@
     - OtherNamedDefect
   - subIndex: 1
     text: "天"
-    translated: "Sky"
+    translated: "Days"
   templates:
   - template: "{0} (⟦0⟧{1})\n⟦1⟧"
 - raw: "消耗{0}武器\n研究获取经验"
@@ -50456,7 +50456,7 @@
   splits:
   - text: "消耗时间"
     translated: "Spend time"
-    qcReviewedText: "Spend time：{0} Sky"
+    qcReviewedText: "Spend time：{0} Days"
     qcTranslated: "Time consumed: {0} days"
     qcStatus: Corrected
     qcQualityScore: 100
@@ -50465,7 +50465,7 @@
     - OtherNamedDefect
   - subIndex: 1
     text: "天"
-    translated: "Sky"
+    translated: "Days"
   templates:
   - template: "{0}：⟦0⟧{1}"
 - raw: "消耗耐心"
@@ -53969,7 +53969,7 @@
   splits:
   - text: "确认消耗"
     translated: "Confirm consumption"
-    qcReviewedText: "Confirm consumption {1} Sky {4} Practice {0}？{3} {2}"
+    qcReviewedText: "Confirm consumption {1} Days {4} Practice {0}？{3} {2}"
     qcTranslated: "Confirm consuming {1} days of {4} practice {0}?{3} {2}"
     qcStatus: Corrected
     qcQualityScore: 95
@@ -53979,7 +53979,7 @@
     - OtherNamedDefect
   - subIndex: 1
     text: "天"
-    translated: "Sky"
+    translated: "Days"
   - subIndex: 2
     text: "练习"
     translated: "Practice"
@@ -54232,7 +54232,7 @@
   splits:
   - text: "确认阅读"
     translated: "Confirm read"
-    qcReviewedText: "Confirm read《{0} {1}》？\n(Consume {2} Sky {3}){4}"
+    qcReviewedText: "Confirm read《{0} {1}》？\n(Consume {2} Days {3}){4}"
     qcTranslated: "Confirm reading《{0} {1}》?\n(Consume {2} days {3}){4}"
     qcStatus: Corrected
     qcQualityScore: 95
@@ -54244,7 +54244,7 @@
     translated: "Consume"
   - subIndex: 2
     text: "天"
-    translated: "Sky"
+    translated: "Days"
   templates:
   - template: "{0}《⟦0⟧⟦1⟧》？\n({1}⟦2⟧{2}⟦3⟧)⟦4⟧"
 - raw: "碎石"
@@ -67669,7 +67669,7 @@
   splits:
   - text: "限时"
     translated: "Limited Time"
-    qcReviewedText: "Limited Time {0} Sky"
+    qcReviewedText: "Limited Time {0} Days"
     qcTranslated: "Limited Time {0} Days"
     qcStatus: Corrected
     qcQualityScore: 100
@@ -67678,7 +67678,7 @@
     - GarbledNumber
   - subIndex: 1
     text: "天"
-    translated: "Sky"
+    translated: "Days"
   templates:
   - template: "{0}⟦0⟧{1}"
 - raw: "陨铁"

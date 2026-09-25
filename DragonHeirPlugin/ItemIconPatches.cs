@@ -31,6 +31,17 @@ namespace EnglishPatch;
 /// dictionary in the first place, so this postfix is a no-op for them (ReverseTranslate returns
 /// the input unchanged when there's no exact dictionary match).
 ///
+/// Horse (type 6) is special-cased further: `DynamicStringPatches.ReverseTranslate`'s dictionary
+/// has a confirmed collision for horse breed names (HorseData.csv rows 22 `枣红马`/27 `黄骠马` both
+/// translated to `"Chestnut horse"` at one point - see
+/// docs/investigations/plugin/save-embedded-plot-text-investigation.md's icon-lookup section), so a
+/// reverse lookup on the translated text alone can resolve to the WRONG breed's icon. Horses don't
+/// have this ambiguity by itemID (confirmed live: every type-6/subType-0 itemID maps to exactly one
+/// breed), so this postfix prefers `HorseMountedIconPatches.TryGetRawName` - the same
+/// itemID-keyed, collision-free table read straight from HorseData.csv that the mounted bigmap icon
+/// fix uses - falling back to `ReverseTranslate` only if that table has no entry (e.g. HorseData.csv
+/// wasn't found under `resources/`).
+///
 /// IL2CPP interop safety: `ItemData`/`ItemType` are plain interop wrapper/enum types accessed via
 /// ordinary field reads (no generic Cast&lt;T&gt;/TryCast&lt;T&gt; calls) - matches the
 /// confirmed-safe patterns in dragonheirplugin.instructions.md.
@@ -48,9 +59,16 @@ internal static class ItemIconPatches
         // display name as the icon key - see class remarks. Every other type's key is already
         // numeric/id-based and must be left untouched.
         var type = (int)__instance.type;
-        var isNameBasedIconType = type == 1 || type == 2 || (type == 6 && __instance.subType != 1);
+        var isHorse = type == 6 && __instance.subType != 1;
+        var isNameBasedIconType = type == 1 || type == 2 || isHorse;
         if (!isNameBasedIconType)
             return;
+
+        if (isHorse && HorseMountedIconPatches.TryGetRawName(__instance.itemID, out var rawName) && !string.IsNullOrEmpty(rawName))
+        {
+            __result = rawName;
+            return;
+        }
 
         __result = DynamicStringPatches.ReverseTranslate(__result);
     }

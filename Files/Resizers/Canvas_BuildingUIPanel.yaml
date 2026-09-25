@@ -1,3 +1,7 @@
+- path: Canvas/BuildingUIPanel/BuildingUI/BuildingButtonScrollView/Viewport/Content/BuildingInteractButton(Clone)/Text
+  sampleText: Enhance punching and palm potential
+  idealFontSize: 20.0
+  allowWordWrap: true
 - path: Canvas/BuildingUIPanel/BuildingUI/Describe
   sampleText: The hall at the center of the sect is one of its most important structures, where the Sect Leader often handles affairs, holds meetings, and receives guests.
   idealFontSize: 16.0

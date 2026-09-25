@@ -158,6 +158,25 @@ internal static class MissionPatches
         return __exception;
     }
 
+    // Round 5 - REVERTED. Attempted to translate AreaName/BuildingName at their source
+    // (AreaData.GetAreaName()/AreaBuildingData.Name(bool)) via Harmony postfixes, on the theory that
+    // both getters were display-only. That theory was about who reads the *return value* - it missed
+    // a separate, unrelated risk: patching an IL2CPP method forces IL2CppInterop to route every call
+    // to it (including calls that only ever happened natively, never crossing into managed code)
+    // through a managed trampoline, which has to marshal the native IL2CPP string into a managed
+    // System.String. That marshaling itself threw for some AreaData instance (very likely one with
+    // no name set - a placeholder/internal area never meant to be displayed), spamming
+    // "ArgumentOutOfRangeException: Length cannot be less than zero" from
+    // Il2CppInterop.Runtime.IL2CPP.Il2CppStringToManaged, confirmed live. This has nothing to do with
+    // whether the return value is used for display vs. lookup - it's a crash in the interop layer
+    // itself, present the moment the method is patched at all, independent of what the postfix body
+    // does. AreaBuildingData.Name(bool) carries the identical risk (same IL2CPP-native-getter shape)
+    // even though it hadn't been observed crashing yet, so it was reverted too rather than waiting to
+    // find out. All decompiled "call sites" surveyed before this patch was added are themselves
+    // native IL2CPP code (Converter/output is a decompile, not real managed C#), so "N call sites
+    // found" never actually established whether this method was previously reached from managed code
+    // at all - it doesn't answer the question that matters for this risk.
+    //
     // missionHideTargetPlaceString is a pre-baked "AreaName + BuildingName" compound (e.g.
     // "青城派祠堂") stored directly on the MissionData instance - unlike GetMissionTargetDescribe/
     // GetTriggerTargetDescribe (patched above), it is never recomputed through those methods, so it
@@ -198,12 +217,35 @@ internal static class MissionPatches
 
     private static void TranslateHiddenTargetPlaceString(MissionData missionData)
     {
-        if (missionData == null || !missionData.missionHideTargetPlace) return;
+        if (missionData == null) return;
+
+        if (!missionData.missionHideTargetPlace)
+        {
+            if (MainPlugin.ResidualCjkDebugEnabledCached)
+                DynamicStringPatches.LogMissionDebug(
+                    "TranslateHiddenTargetPlaceString (skipped: missionHideTargetPlace=false)",
+                    missionData.missionHideTargetPlaceString, missionData.missionHideTargetPlaceString);
+            return;
+        }
 
         var value = missionData.missionHideTargetPlaceString;
-        if (string.IsNullOrEmpty(value) || !DynamicStringPatches.ContainsCjk(value)) return;
+        if (string.IsNullOrEmpty(value) || !DynamicStringPatches.ContainsCjk(value))
+        {
+            if (MainPlugin.ResidualCjkDebugEnabledCached)
+                DynamicStringPatches.LogMissionDebug(
+                    "TranslateHiddenTargetPlaceString (skipped: empty or already no-CJK - " +
+                    "NOTE: this does not distinguish 'we already translated it safely' from " +
+                    "'something else already translated/corrupted it before we got here')",
+                    value, value);
+            return;
+        }
 
-        missionData.missionHideTargetPlaceString = DynamicStringPatches.TranslateCompoundName(value);
+        var translated = DynamicStringPatches.TranslateCompoundName(value);
+        missionData.missionHideTargetPlaceString = translated;
+
+        if (MainPlugin.ResidualCjkDebugEnabledCached)
+            DynamicStringPatches.LogMissionDebug(
+                "TranslateHiddenTargetPlaceString", value, translated);
     }
 
     private static void TranslateObjective(ref string result)

@@ -52,6 +52,7 @@ internal static class PlotSaveResyncPatches
 
         try
         {
+            if (targetPlot.plotID == 0) return;
             var dataController = GameDataController.Instance;
             if (dataController?.PlotDataBase == null) return;
             if (!dataController.PlotDataBase.TryGetValue(targetPlot.plotID, out var livePlot)) return;
