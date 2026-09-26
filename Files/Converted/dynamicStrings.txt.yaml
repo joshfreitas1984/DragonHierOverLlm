@@ -13663,9 +13663,7 @@
 - raw: "中原大侠郭淮之子郭勇锐初入江湖，就在乐山镇击败了黄河双煞，一时声名鹊起。江湖中人誉为“中原小侠”，真是虎父无犬子啊。"
   splits:
   - text: "中原大侠郭淮之子郭勇锐初入江湖，就在乐山镇击败了黄河双煞，一时声名鹊起。江湖中人誉为“中原小侠”，真是虎父无犬子啊。"
-    translated: "Guo Huai's son, Guo Yongrui, a newcomer to Jianghu, defeated the Yellow River Twin Fiends in Leshan Town and quickly rose to fame. He was hailed as the Young Hero of the Central Plains, truly living up to the saying that a brave father has no cowardly sons."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Great Hero of the Central Plains,中原大侠,"
+    translated: "The son of Great Hero Guo Huai, Guo Yongrui, rose to fame in Jianghu by defeating the Yellow River Twin Fiends in Leshan Town upon his initial entry. He was hailed as a Young Hero of the Central Plains, truly living up to the saying that a brave father has no cowardly son."
 - raw: "中品"
   splits:
   - text: "中品"
@@ -17108,9 +17106,7 @@
 - raw: "传闻中原大侠郭淮之子郭勇锐一招便击毙了黄河双煞，一时声名显赫。江湖中人无不刮目相看，真是虎父无犬子啊。"
   splits:
   - text: "传闻中原大侠郭淮之子郭勇锐一招便击毙了黄河双煞，一时声名显赫。江湖中人无不刮目相看，真是虎父无犬子啊。"
-    translated: "It is said that Guo Huai's son, Guo Yongrui, killed the Yellow River Twin Fiends with a single move, gaining instant fame. People in Jianghu could not help but take notice; truly, the son does not disappoint the father."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Great Hero,大侠,Great Hero of the Central Plains,中原大侠,"
+    translated: "It is said that the son of Great Hero Guo Huai, Guo Yongrui, killed the Yellow River Twin Fiends with a single move, gaining instant fame. Everyone in Jianghu took notice; truly, a mighty father has no weak son."
 - raw: "传闻在{2}，一位名为{0}的{1}正式踏入武林，欲大展一番拳脚。"
   splits:
   - text: "传闻在"
@@ -39561,9 +39557,7 @@
 - raw: "我江湖百晓虽说武功不算登峰造极，但凭着这英雄谱，却知晓天下各大高手的武功路数。\n加上时常在脑海中演练，他们的一招一式以及破解之法，\n皆可用言语手势模拟，近乎分毫不差。"
   splits:
   - text: "我江湖百晓虽说武功不算登峰造极，但凭着这英雄谱，却知晓天下各大高手的武功路数。"
-    translated: "Although my knowledge of martial arts in the Jianghu isn't at the pinnacle, with this Book of Heroes, I know the styles of all the great masters across the land."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "All Knowing of the Jianghu,江湖百晓,"
+    translated: "Although my Jianghu Oracle skills aren't at the pinnacle, I know the martial arts styles of all the great masters across the land thanks to this Book of Heroes."
   - subIndex: 1
     text: "加上时常在脑海中演练，他们的一招一式以及破解之法，"
     translated: "By frequently rehearsing in their minds, they mastered every move and counterstrategy."
@@ -56631,7 +56625,7 @@
     translated: "After exhausting all my efforts and meticulously searching through the Heroic Register, I still cannot find any martial arts moves that could defeat #PlayerName#."
   - subIndex: 1
     text: "这“江湖百晓”的称号，如今看来实在受之有愧！"
-    translated: "This title of All Knowing of the Jianghu now seems undeserved!"
+    translated: "This title of Jianghu Oracle truly feels undeserved now!"
   templates:
   - template: "{0}\n{1}"
 - raw: "老夫这英雄谱上，不仅记载了群雄排行座次，\n这江湖中何时何地有何奇闻异事发生，也是一一俱全。\n#PlayerName#若想了解某一城市，连同周边区域事件之情报，只管来找老夫购买便可。"

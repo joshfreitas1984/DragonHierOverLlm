@@ -7760,7 +7760,7 @@
     translated: "Beggar Sect"
   - subIndex: 2
     text: "共商大计，意图寻找江湖百晓金龙生之下落。"
-    translated: "Discussing strategies to find the whereabouts of Jin Longsheng, the All Knowing of the Jianghu."
+    translated: "Discussing strategies to find the whereabouts of Jianghu Oracle Jin Longsheng."
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "传闻武当副掌门张文馨于<b>#PosText#</b>一带遭逐鹿盟大军袭击，眼下生死未卜。"
@@ -7803,9 +7803,7 @@
 - raw: "传闻武当副掌门张文馨已得知江湖百晓金龙生的下落，眼下正在<b>#PosText#</b>一带搜寻此人。"
   splits:
   - text: "传闻武当副掌门张文馨已得知江湖百晓金龙生的下落，眼下正在"
-    translated: "It is said that Deputy Sect Leader Zhang Wenxin has learned of All Knowing Jin Longsheng's whereabouts and is currently..."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Wudang,武當,Jianghu,江湖,"
+    translated: "It is said that Wudang Deputy Sect Leader Zhang Wenxin has learned of Jianghu Oracle Jin Longsheng's whereabouts and is currently"
   - subIndex: 1
     text: "一带搜寻此人。"
     translated: "Search far and wide for this person"
@@ -14663,8 +14661,6 @@
   splits:
   - text: "峨眉掌门白眉真人已率派内精锐前去防守大理，江湖传闻"
     translated: "Immortal Whitebrow, the Sect Leader of Mount Emei, has already led the elite forces within the sect to defend Dali, according to rumors in Jianghu."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Sect Leader Immortal Whitebrow,掌门白眉真人,"
   - subIndex: 1
     text: "峨眉"
     translated: "Emei"
@@ -18680,7 +18676,7 @@
 - raw: "江湖百晓"
   splits:
   - text: "江湖百晓"
-    translated: "All Knowing of the Jianghu"
+    translated: "Jianghu Oracle"
 - raw: "江湖风传还有一批黑风寨残党藏身于<b>江陵南方</b>，听说已有仙霞派义士前去捉拿。"
   splits:
   - text: "江湖风传还有一批黑风寨残党藏身于"

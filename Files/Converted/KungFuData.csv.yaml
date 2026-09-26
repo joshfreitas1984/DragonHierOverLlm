@@ -5663,8 +5663,6 @@
   - split: 4
     text: "专攻气脉要穴之阴狠刀法，可引异种真气侵入敌方丹田，消融内息，阻滞经脉，使其如销魂蚀骨般无力再战"
     translated: "Specializing in a ruthless blade technique targeting vital points of the opponent's energy pathways can draw in alien True Qi to invade their dantian, dissolve their Inner Qi, obstruct their meridians, leaving them powerless and soul‑stealing bone eroded."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Soul Stealing Bone Eroder,销魂蚀骨,"
 - raw: "602,拳掌,4,神倒鬼跌拳,阎罗王自蒙古摔跤术中悟出，以怪力攻敌下盘使其失去重心的拳法，高手相争之时若一方跌倒在地，无异于落入任人鱼肉之境地,22,0.9,体质潜力2;拳掌1;力道1,,力道3;拳掌3;内力0.2,拳掌55;力道40,\"0,1,2\",\"0,0,0\",失衡0.12;动摇0.04,26,8,0,足18;腹4,足10;腹6,,,skill0_0,,升龙斩-Target-Grid-Happen;气流-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 4

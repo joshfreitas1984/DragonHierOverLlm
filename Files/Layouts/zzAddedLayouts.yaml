@@ -13,6 +13,15 @@
 - path: Canvas/BuildingUIPanel/BuildingUI/LevelBack
   offsetPosition: [0.0, 20.0]
   rotationZ: 90.0
+- path: Canvas/AreaUIPanel/BuildingIconPanel/AreaBuildingUI(Clone)
+  enabled: false
 - path: Canvas/AreaUIPanel/BuildingIconPanel/AreaBuildingUI(Clone)/Back
   rotationZ: 90.0
   counterRotateChildren: true
+  contentSizeFitterHorizontal: MinSize
+  contentSizeFitterVertical: MinSize
+  layoutGroupChildControlWidth: true
+  layoutGroupChildControlHeight: false
+  layoutGroupChildForceExpandWidth: true
+- path: Canvas/AreaUIPanel/BuildingIconPanel/AreaBuildingUI(Clone)/BuildingLv
+  offsetPosition: [16.0, 16.0]

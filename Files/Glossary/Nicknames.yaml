@@ -11,8 +11,8 @@
 - raw: 玉面医仙
   result: Jade Faced Divine Healer
   allowalt: 
-    - Jade-Faced Divine Healer
-    - Jade-Faced Divine Healer
+    - Jade-Faced Divine Healer    
+    - Jade‑Faced Divine Healer
 - raw: 穿林妙手
   result: Forest Piercing Master Hand
 - raw: 铁碗残拳
@@ -34,8 +34,8 @@
 - raw: 销魂蚀骨
   result: Soul Stealing Bone Eroder
   allowalt: 
-    - soul-stealing bone eroder
-    - soul‑stealing bone eroder
+    - soul-stealing bone erode
+    - soul‑stealing bone erode
 - raw: 毒手琴心
   result: Poison Hand and Qin Heart
 - raw: 黑爪
@@ -161,6 +161,7 @@
   result: Invincible Divine Fist
 - raw: 富可敌国
   result: Wealthier than a Kingdom's riches
+  badtrans: false
 - raw: 智计无双
   result: Peerless Strategist
   badtrans: false
@@ -199,9 +200,7 @@
   allowalt: 
     - Jade‑Faced Judge
 - raw: 江湖百晓
-  result: All Knowing of the Jianghu
-  allowalt:
-    - All knowing
+  result: Jianghu Oracle
 - raw: 侠盗四奇
   result: Four Extraordinary Chivalrous Thieves
 - raw: 小霹雳
@@ -220,8 +219,10 @@
   result: Victory Through the Unexpected
 - raw: 百步穿针
   result: Threading a Needle from a Hundred Paces
+  badtrans: false
 - raw: 百骰百胜
   result: A Hundred Rolls with a Hundred Wins
+  badtrans: false
 - raw: 滚地雷
   result: Rolling Thunder
 - raw: 白衣秀士
