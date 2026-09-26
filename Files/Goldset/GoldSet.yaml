@@ -2743,4 +2743,40 @@ correctionSamples:
     dropped-second-#PlayerName#-occurrence failure shape as bdbe7026ca751cf2 - not a duplicate (a
     different source row, different surrounding dialogue), but evidence this is a repeatable pattern
     in production's correction generation, not a one-off fluke.
+- sampleId: 8a1f6e0c9d723bb4
+  sampleKind: split
+  source: "大！当！家！放我顾师弟走，饶你不死。"
+  currentTranslation: "Great Master, if you let my junior disciple go, I beg you not to kill me."
+  label: Defect
+  defectCategories:
+  - mistranslation
+  proposedCorrection: "Great Master, if you let my junior disciple go, I beg you to spare my life."
+  correctionSafety: harmful
+  provenance: >-
+    Real production pair mined from Files/Converted/PlotData.csv.yaml (raw row starting
+    "274,魏胥华,熊百胜,左,..."; qcQualityScore: 92, qcStatus: Corrected, qcDefectCategory:
+    DroppedContent as of the current production run).
+  reviewNote: >-
+    "大当家" (spaced out for shouted emphasis as "大！当！家！") is a direct address to a bandit/gang
+    boss ("Boss!"), not a title implying "Great Master." The real defect is agency reversal in
+    "饶你不死" ("I'll spare you [from] not dying" - the speaker offering the boss mercy, as a
+    counter-threat/bargain, in exchange for releasing their junior brother). Both
+    currentTranslation and proposedCorrection invert this into the speaker begging for their OWN
+    life ("I beg you not to kill me" / "I beg you to spare my life"), which flips who holds
+    leverage - the line reads as a captive pleading instead of someone bargaining from strength.
+    qcDefectCategory: DroppedContent does not describe this failure shape (nothing is omitted; the
+    whole clause's meaning is reversed) - production's QcDefectCategory enum has no dedicated
+    category for a full meaning-reversal, so even a correctly self-aware model has nowhere safe to
+    put it: the only other plausible bucket, OtherNamedDefect, is ALSO on autoAcceptDefectCategories
+    (Files/Config.yaml). In this specific case the category never even mattered:
+    QualityReviewHelpers.PassesQcScoreGate returns true purely because qcQualityScore (92) already
+    clears minAcceptableScore (60), before the category is ever consulted - so the real failure is
+    verification call 4 (BaseQualityReviewVerificationPrompt.txt's GetVerificationVerdictAsync)
+    confidently scoring a still agency-reversed correction 92/100. That prompt's only two mechanical
+    fidelity checks are placeholder-token preservation and proper-name-exists-in-SOURCE; it has no
+    check for whether a correction preserves who is doing what to whom. This is the same
+    "verification prompt misses a real defect" failure mode as bdbe7026ca751cf2 and
+    cf820a4e96a6c41f, just for a semantic/agency reversal instead of a dropped placeholder - and
+    unlike those two, even a low score here wouldn't have been enough, since both categories a model
+    could plausibly reach for are auto-accept-listed.
 

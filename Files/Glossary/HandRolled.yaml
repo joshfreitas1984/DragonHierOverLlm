@@ -165,6 +165,12 @@
   allowalt: 
     - countless cups without getting drunk
 
+- raw: 上限
+  result: Max
+  allowalt:
+    - Maximum
+    - Limit
+
 - raw: 奇门
   result: Qimen
   allowalt:
@@ -187,9 +193,11 @@
   result: Heroine Shui
 - raw: 女侠
   result: Heroine
-
-- raw: 上限
-  result: Max
+- raw: 皇甫掌门
+  result: Sect Leader Huangfu
   allowalt:
-    - Maximum
-    - Limit
+    - Master Huangfu
+- raw: 皇甫兄
+  result: Brother Huangfu
+- raw: 医侠
+  result: Healer

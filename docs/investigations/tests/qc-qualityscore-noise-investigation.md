@@ -301,3 +301,43 @@ instance in ~40 `DomainTerm` samples, not a repeated pattern, but a reminder tha
 verification reduces this failure mode, it doesn't eliminate it — `autoAcceptDefectCategories`
 membership should keep depending on a category's *aggregate* precision, not an assumption that
 verification makes every individual correction safe.
+
+## Meaning-reversal miss and new `MeaningReversal` category (2026-09-26)
+
+A user-reported line (`Files/Converted/PlotData.csv.yaml`, raw row `274,魏胥华,熊百胜,左,...`,
+source `大！当！家！放我顾师弟走，饶你不死。`) surfaced a failure shape none of the categories above
+actually cover. SOURCE has the speaker offering the boss mercy as a counter-threat/bargain ("Boss!
+Let my junior brother go, and I'll spare your life") in exchange for releasing their junior brother.
+Both the pre-QC `translated` and the QC `qcTranslated` invert this into the speaker begging for
+their *own* life ("I beg you not to kill me" / "I beg you to spare my life") — every word has a
+plausible-looking rendering, but who is granting mercy to whom is backwards. The QC pass filed this
+as `DroppedContent` (wrong — nothing is omitted) and verification call 2 (`GetVerificationVerdictAsync`)
+scored the still-broken correction 92/100, well above `minAcceptableScore` (60), so `PassesQcScoreGate`
+shipped it on score alone, before `autoAcceptDefectCategories` was ever consulted.
+
+Two compounding gaps, not one:
+
+1. **No prompt check for this failure shape.** `BaseQualityReviewVerificationPrompt.txt`'s only two
+   mechanical fidelity checks are placeholder-token preservation and proper-name-exists-in-SOURCE
+   (checks 2a/2b) — nothing checks whether a correction preserves *who is doing what to whom*.
+   Detection's `BaseQualityReviewPrompt.txt` has one generic "meaning mismatch" line but no worked
+   example for agency/direction reversal, unlike the omitted-subject-inheritance case which got one
+   baked into all 5 model families' prompts.
+2. **No safe category even if flagged correctly.** Had this scored low, the only two categories a
+   model would plausibly reach for — `DroppedContent` and `OtherNamedDefect` — are *both* on
+   `autoAcceptDefectCategories`, so it would have shipped anyway regardless of score.
+
+**Fix applied**: added `QcDefectCategory.MeaningReversal` (`FanslationStudio.LlmKit`'s
+`Support/QcDefectCategory.cs` + `QcDefectCategoryTokens.cs`), deliberately never added to
+`autoAcceptDefectCategories` regardless of future sample precision (see
+`../../FanslationStudio.LlmKit/docs/features/translation-pipeline/quality-review-pass.md`'s "DEFECT
+categories and per-category policy" section for why this one category is a deliberate exception to
+the usual precision-sampling loop). Prompt files across all 5 model families updated with an
+explicit agency/direction-fidelity check and a worked example using this exact case. Added as a
+gold-set regression case: `Files/Goldset/GoldSet.yaml`'s `correctionSamples[]` entry
+`8a1f6e0c9d723bb4`, source pinned in `Files/Config.yaml`'s `translationAssessment.pinnedSampleSources`
+so it's retested on every future assessment run.
+
+**Also found in passing**: this doc's own "Two-stage DEFECT verification" section (LlmKit's
+`quality-review-pass.md`) described the feature as gated by a `twoStageVerificationEnabled` flag that
+no longer exists in code — it's unconditional now. Flagged inline there rather than rewritten here.

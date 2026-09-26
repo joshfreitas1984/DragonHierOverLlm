@@ -1,0 +1,10 @@
+- path: Canvas/BookStorePanel/Grid/*/Label
+  sampleText: Secret Martial arts
+  idealFontSize: 18.0
+  allowWordWrap: true
+  adjustWidth: -40.0
+- path: Canvas/BookStorePanel/Title
+  sampleText: Read the library
+  idealFontSize: 40.0
+  allowWordWrap: true
+  adjustWidth: 200.0

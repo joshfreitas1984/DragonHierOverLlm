@@ -5344,13 +5344,6 @@
   splits:
   - text: "当前剩余停战期"
     translated: "Remaining truce period"
-    qcReviewedText: "(Remaining truce period {0} Sky)"
-    qcTranslated: "(Remaining truce period {0} days)"
-    qcStatus: Corrected
-    qcQualityScore: 100
-    qcDefectCategory: GarbledNumber
-    qcDefectCategories:
-    - GarbledNumber
   - subIndex: 1
     text: "天"
     translated: "Days"
@@ -50327,16 +50320,9 @@
   splits:
   - text: "消耗"
     translated: "Consume"
-    qcReviewedText: "Consume ({0} Sky)"
-    qcTranslated: "Consume ({0} Days)"
-    qcStatus: Corrected
-    qcQualityScore: 100
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - subIndex: 1
     text: "天"
-    translated: "Sky"
+    translated: "Days"
   templates:
   - template: "{0} (⟦0⟧{1})"
 - raw: "消耗 ({0}天)\n{1}"

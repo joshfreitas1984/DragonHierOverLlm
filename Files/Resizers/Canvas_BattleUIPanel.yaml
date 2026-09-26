@@ -2,6 +2,22 @@
   sampleText: Zhang Qingpeng
   idealFontSize: 12.0
   allowWordWrap: false
+- path: Canvas/BattleUIPanel/BattleAIMenu/BattleAIMenuRoot/BattleAIScrollView/Viewport/Content/BattleAISettingPrefab(Clone)/AttackTabGrid/*/Label
+  sampleText: Training sessions
+  idealFontSize: 12.0
+  allowWordWrap: true
+  adjustY: 1.0
+  adjustHeight: 20.0
+- path: Canvas/BattleUIPanel/BattleAIMenu/BattleAIMenuRoot/BattleAIScrollView/Viewport/Content/BattleAISettingPrefab(Clone)/MoveTabGrid/*/Label
+  sampleText: Be cautious
+  idealFontSize: 12.0
+  allowWordWrap: true
+  adjustY: 1.0
+  adjustHeight: 20.0
+- path: Canvas/BattleUIPanel/BattleAIMenu/BattleAIMenuRoot/Decoration/UseCureTitle
+  sampleText: Use controlled breathing
+  idealFontSize: 17.0
+  allowWordWrap: true
 - path: Canvas/BattleUIPanel/BattleEndUI/BaseSkillGrid/SkillExpShowPrefab(Clone)/Name
   sampleText: Wall Crawling Skill
   idealFontSize: 13.0

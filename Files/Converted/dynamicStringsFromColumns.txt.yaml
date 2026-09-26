@@ -3024,11 +3024,7 @@
 - raw: "拳毛驹"
   splits:
   - text: "拳毛驹"
-    translated: "Curly-Coated Colt"
-    qcReviewedText: "Curly-Coated Colt"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Curly‑Coated Colt"
 - raw: "斑豹马"
   splits:
   - text: "斑豹马"

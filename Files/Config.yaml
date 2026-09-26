@@ -107,6 +107,7 @@ translationAssessment:
     - "呵呵，这牵丝蛊既是五毒教不传之秘，\\n那给思阁主下蛊之人，还能有谁？"
     - "没想到反倒害了她，导致她命悬一线，功力丧尽。\\n白云子此番遭逢大难，皆因峨眉派保护不力，老朽心中实在过意不去。"
     - "咳咳咳，这......\\n我要去扬州游玩几日，正好路过此地罢了。"
+    - "大！当！家！放我顾师弟走，饶你不死。"
 qualityEvaluatorAssessment:
   enabled: true
   # See docs/investigations/tests/qc-evaluator-model-selection.md for the full model/quant/prompt

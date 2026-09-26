@@ -22,6 +22,12 @@ public class GlossaryCreationTests
     }
 
     [Fact]
+    public async Task GetNicknames()
+    {
+        await GenerateGlossaryFromDumpedRaw("SpeHeroData.csv", 15, "Nicknames");
+    }
+
+    [Fact]
     public async Task GetLoveInterest()
     {
         await GenerateGlossaryFromIndex("LoveableSpeHero.csv", 0, "LoveInterest");
@@ -129,6 +135,95 @@ public class GlossaryCreationTests
 
                 await Task.CompletedTask;
             });
+
+        FileHelper.WriteAllLinesWithRetry($"{workingDirectory}/TestResults/GlossaryExport/Export{name}.yaml", glossary);
+    }
+
+    /// <summary>
+    /// Like <see cref="GenerateGlossaryFromIndex"/>, but indexes into the raw CSV row instead of
+    /// <see cref="TranslationLine.Splits"/>. Use this when the column you want is one of the
+    /// TextFileConfiguration.cs SkipColumns entries for this file - those columns never get a
+    /// TranslationSplit (and never get translated), so line.Splits[index] either throws or points
+    /// at the wrong (post-skip, renumbered) field. Re-parsing line.Raw with
+    /// CompoundFieldSplitter.ParseCsvRow recovers the true raw column position regardless of what
+    /// was skipped.
+    /// </summary>
+    private static async Task GenerateGlossaryFromRawIndex(string path, int rawIndex, string name)
+    {
+        var workingDirectory = GameFileHandling.WorkingDirectory;
+        var config = ConfigurationExtensions.GetConfiguration(workingDirectory);
+
+        var glossary = new List<string>();
+        var items = new List<string>();
+
+        await FileIteration.IterateTranslatedFilesAsync(workingDirectory,
+            TextFileConfiguration.TextFilesToSplit,
+            async (outputFile, textFileToTranslate, fileLines) =>
+            {
+                if (textFileToTranslate.Path != path)
+                    return;
+
+                foreach (var line in fileLines)
+                {
+                    var rawFields = CompoundFieldSplitter.ParseCsvRow(line.Raw);
+                    if (rawIndex >= rawFields.Length)
+                        continue;
+
+                    var raw = rawFields[rawIndex];
+                    if (items.Contains(raw))
+                        continue;
+
+                    items.Add(raw);
+
+                    var translated = line.Splits.FirstOrDefault(s => s.Split == rawIndex)?.Translated ?? raw;
+
+                    glossary.Add($"- raw: {raw}");
+                    glossary.Add($"  result: {translated}");
+                    glossary.Add($"  badtrans: true");
+                }
+
+                await Task.CompletedTask;
+            });
+
+        FileHelper.WriteAllLinesWithRetry($"{workingDirectory}/TestResults/GlossaryExport/Export{name}.yaml", glossary);
+    }
+
+    /// <summary>
+    /// Like <see cref="GenerateGlossaryFromRawIndex"/>, but for a file that isn't in
+    /// TextFileConfiguration.TextFilesToSplit at all (e.g. commented out) - there's no Converted or
+    /// even a fresh Raw/Export yaml to read, since both are only written for entries
+    /// FileIteration's callers actually iterate. The one thing that always exists regardless of
+    /// config is the plain CSV dump at Raw/Dumped/GameData/{path} (see
+    /// CsvGameDataWorkflow.ExportToCustomFormat, which reads that same file when a file IS
+    /// enabled). This reads it directly and parses rows with CompoundFieldSplitter.ParseCsvRow, so
+    /// it works even for a file with zero pipeline processing. There's no translation to report -
+    /// result is just the raw text, ready to be filled in/reviewed by hand.
+    /// </summary>
+    private static async Task GenerateGlossaryFromDumpedRaw(string path, int rawIndex, string name)
+    {
+        var workingDirectory = GameFileHandling.WorkingDirectory;
+
+        var glossary = new List<string>();
+        var items = new List<string>();
+
+        var dumpedPath = $"{workingDirectory}/Raw/Dumped/GameData/{path}";
+        var lines = await File.ReadAllLinesAsync(dumpedPath);
+
+        foreach (var line in lines)
+        {
+            var rawFields = CompoundFieldSplitter.ParseCsvRow(line);
+            if (rawIndex >= rawFields.Length)
+                continue;
+
+            var raw = rawFields[rawIndex];
+            if (string.IsNullOrEmpty(raw) || items.Contains(raw))
+                continue;
+
+            items.Add(raw);
+
+            glossary.Add($"- raw: {raw}");
+            glossary.Add($"  result: ");
+        }
 
         FileHelper.WriteAllLinesWithRetry($"{workingDirectory}/TestResults/GlossaryExport/Export{name}.yaml", glossary);
     }

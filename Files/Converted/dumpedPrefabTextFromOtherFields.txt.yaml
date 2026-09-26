@@ -6611,16 +6611,9 @@
   splits:
   - text: "传闻"
     translated: "Rumor"
-    qcReviewedText: "Rumor<b>#PosText#</b>Inside, a famous martial artist was surrounded by vicious attackers and was in grave danger."
-    qcTranslated: "Rumor has it that inside <b>#PosText#</b>, a famous martial artist was surrounded by vicious attackers and was in grave danger."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "内有名女侠遭恶徒围攻，危在旦夕。"
-    translated: "Inside, a famous martial artist was surrounded by vicious attackers and was in grave danger."
+    translated: "A renowned heroine inside is under attack by villains and is in grave danger."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻<b>#PosText#</b>内有奸商招摇撞骗，近来已有不少人上当。"
@@ -11940,14 +11933,7 @@
 - raw: "听闻武当张文馨与医侠皇甫斌一道前往<b>#PosText#</b>，以阎罗王遗命之名，要求阎罗殿归还此前本属药王谷治下的佛山镇和清远乡。"
   splits:
   - text: "听闻武当张文馨与医侠皇甫斌一道前往"
-    translated: "I heard that Wudang Zhang Wenxin and Medical Hero Huangfu Bin are heading together."
-    qcReviewedText: "I heard that Wudang Zhang Wenxin and Medical Hero Huangfu Bin are heading together.<b>#PosText#</b>, By the decree of King Yama, I demand that Yama Hall return Foshan Town and Qingyuan Township, which previously belonged to Medicine King Valley."
-    qcTranslated: "I heard that Wudang Zhang Wenxin and Medical Hero Huangfu Bin are heading together to <b>#PosText#</b> to demand, by the decree of King Yama, that Yama Hall return Foshan Town and Qingyuan Township, which previously belonged to Medicine King Valley."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
+    translated: "It was heard that Zhang Wenxin of Wudang and Healer Huangfu Bin set out together."
   - subIndex: 1
     text: "，以阎罗王遗命之名，要求阎罗殿归还此前本属药王谷治下的佛山镇和清远乡。"
     translated: ", By the decree of King Yama, I demand that Yama Hall return Foshan Town and Qingyuan Township, which previously belonged to Medicine King Valley."
@@ -23390,11 +23376,7 @@
 - raw: "这几名强盗把女侠给团团围住，应当如何是好？"
   splits:
   - text: "这几名强盗把女侠给团团围住，应当如何是好？"
-    translated: "What should be done as these robbers have surrounded the female hero?"
-    qcReviewedText: "What should be done as these robbers have surrounded the female hero?"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "These bandits have surrounded the Heroine. What should we do?"
 - raw: "这处地点，正好位于#NextMissionTargetPlace#内。\\n不知少侠可有什么头绪？"
   splits:
   - text: "这处地点，正好位于#NextMissionTargetPlace#内。"
