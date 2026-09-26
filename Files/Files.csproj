@@ -18,7 +18,6 @@
   <ItemGroup>
     <Folder Include="Converted\" />
     <Folder Include="Mod\" />
-    <Folder Include="Layouts\" />
     <Folder Include="Sprites\" />
     <Folder Include="Raw\Dumped\DynamicStrings\" />
     <Folder Include="Raw\Dumped\PrefabText\" />

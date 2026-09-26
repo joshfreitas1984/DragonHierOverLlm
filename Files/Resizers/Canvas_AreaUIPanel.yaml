@@ -11,8 +11,12 @@
   idealFontSize: 20.0
   allowWordWrap: true
   adjustWidth: 50.0
+- path: Canvas/AreaUIPanel/BuildingIconPanel/AreaBuildingUI(Clone)/Back/BuildingName
+  sampleText: Main Hall
+  idealFontSize: 14.0
+  allowWordWrap: false
 - path: Canvas/AreaUIPanel/BuildingIconPanel/AreaBuildingUI(Clone)/BuildingLv
-  sampleText: "0"
+  sampleText: 0
   idealFontSize: 11.0
   allowWordWrap: false
 - path: Canvas/AreaUIPanel/BuildingQuickButtonPanel/AreaEventQuickButtonGrid/AreaEventQuickButtonPrefab(Clone)/Text

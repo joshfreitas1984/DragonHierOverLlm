@@ -14,6 +14,31 @@ public class TextResizerTests
         var resizersFolder = Path.GetFullPath($"{workingDirectory}/Resizers");
         var sourceFiles = new[] { "Defaults.yaml", "zzAddedResizers.yaml" };
 
+        SplitEditorFiles(resizersFolder, sourceFiles);
+    }
+
+    [Fact]
+    public static void MoveSpritesIntoPathBasedFiles()
+    {
+        var workingDirectory = GameFileHandling.WorkingDirectory;
+        var resizersFolder = Path.GetFullPath($"{workingDirectory}/Sprites");
+        var sourceFiles = new[] { "Defaults.yaml", "zzAddedSprites.yaml" };
+
+        SplitEditorFiles(resizersFolder, sourceFiles);
+    }
+
+    [Fact]
+    public static void MoveLayoutsIntoPathBasedFiles()
+    {
+        var workingDirectory = GameFileHandling.WorkingDirectory;
+        var resizersFolder = Path.GetFullPath($"{workingDirectory}/Layouts");
+        var sourceFiles = new[] { "Defaults.yaml", "zzAddedLayouts.yaml" };
+
+        SplitEditorFiles(resizersFolder, sourceFiles);
+    }
+
+    private static void SplitEditorFiles(string resizersFolder, string[] sourceFiles)
+    {
         var deserializer = YamlHelper.CreateDeserializer();
         var serializer = YamlHelper.CreateSerializer();
 
@@ -22,6 +47,9 @@ public class TextResizerTests
         foreach (var sourceFile in sourceFiles)
         {
             var sourcePath = Path.Combine(resizersFolder, sourceFile);
+            if (!File.Exists(sourcePath))
+                continue;
+
             var entries = deserializer.Deserialize<List<Dictionary<string, object>>>(File.ReadAllText(sourcePath))
                 ?? [];
 

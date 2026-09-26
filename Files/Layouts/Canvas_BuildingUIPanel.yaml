@@ -1,0 +1,5 @@
+- path: Canvas/BuildingUIPanel/BuildingUI/LevelBack
+  offsetPosition:
+  - 0.0
+  - 20.0
+  rotationZ: 90.0

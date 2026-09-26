@@ -1,0 +1,8 @@
+- path: /Content/*/HeroForceIcon
+  offsetPosition:
+  - 3.0
+  - 91.0
+- path: /Content/*/NameBack
+  sizeDelta:
+  - 1.0
+  - 1.0

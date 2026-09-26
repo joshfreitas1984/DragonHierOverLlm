@@ -1,0 +1,12 @@
+- path: Canvas/BigMapUIPanel/AreaUIPanel/BigMapAreaUI(Clone)/AreaUI/AreaName
+  localPosition:
+  - 50.0
+  - 4.0
+  - 0.0
+  rotationZ: 90.0
+- path: Canvas/BigMapUIPanel/AreaUIPanel/BigMapAreaUI(Clone)/AreaUI/AreaName/Label
+  localPosition:
+  - 0.0
+  - -10.0
+  - 0.0
+  rotationZ: 270.0

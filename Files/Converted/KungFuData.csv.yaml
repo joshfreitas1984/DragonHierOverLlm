@@ -3964,6 +3964,10 @@
   - split: 4
     text: "传说阴间鬼差黑白无常使一对杀威棍，专行赏善罚恶、勾人魂魄之事，阴狠诡谲，险招频出，稍有不慎便会命丧棍下"
     translated: "Legend has it that the yin realm's ghost enforcers, the Black and White Impermanence, wield a pair of menacing staffs, meting out rewards for virtue and punishments for vice. They are ruthless and cunning, often employing dangerous tactics; one momentary lapse could mean death by staff."
+    qcReviewedText: "Legend has it that the yin realm's ghost enforcers, the Black and White Impermanence, wield a pair of menacing staffs, meting out rewards for virtue and punishments for vice. They are ruthless and cunning, often employing dangerous tactics; one momentary lapse could mean death by staff."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "419,拳掌,5,降龙掌法,丐帮最强掌法，动作简单无奇但却威力无穷，盖因此掌法将人体之力道与内劲之运用发挥到了极致，因此每击均有排山倒海之力，可以不变应万变矣,26,0.9,拳掌潜力1;力道潜力2;经脉2,,力道2;经脉2;拳掌3;内力0.4,拳掌70;力道70;经脉60,\"4,0,0\",\"5,1,3\",内伤0.06;断骨0.06;眩晕0.06;击退1,32,3,0,心8;腹10;胸12,心4;腹4;胸4,,,skill0_1,,龙腾全屏-Self-Grid-Start;龙腾爆-Target-Grid-Start;碎地-Target-Grid-Happen,拳,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -5663,6 +5667,13 @@
   - split: 4
     text: "专攻气脉要穴之阴狠刀法，可引异种真气侵入敌方丹田，消融内息，阻滞经脉，使其如销魂蚀骨般无力再战"
     translated: "Specializing in a ruthless blade technique targeting vital points of the opponent's energy pathways can draw in alien True Qi to invade their dantian, dissolve their Inner Qi, obstruct their meridians, leaving them powerless and soul‑stealing bone eroded."
+    qcReviewedText: "Specializing in a ruthless blade technique targeting vital points of the opponent's energy pathways can draw in alien True Qi to invade their dantian, dissolve their Inner Qi, obstruct their meridians, leaving them powerless and soul‑stealing bone eroded."
+    qcTranslated: "Specializing in a ruthless Blade Technique targeting vital points of the opponent's energy pathways can draw in alien True Qi to invade their dantian, dissolve their Inner Qi, obstruct their meridians, leaving them powerless as if soul‑stealing bone eroded."
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: UnnaturalPhrasing
+    qcDefectCategories:
+    - UnnaturalPhrasing
 - raw: "602,拳掌,4,神倒鬼跌拳,阎罗王自蒙古摔跤术中悟出，以怪力攻敌下盘使其失去重心的拳法，高手相争之时若一方跌倒在地，无异于落入任人鱼肉之境地,22,0.9,体质潜力2;拳掌1;力道1,,力道3;拳掌3;内力0.2,拳掌55;力道40,\"0,1,2\",\"0,0,0\",失衡0.12;动摇0.04,26,8,0,足18;腹4,足10;腹6,,,skill0_0,,升龙斩-Target-Grid-Happen;气流-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 4

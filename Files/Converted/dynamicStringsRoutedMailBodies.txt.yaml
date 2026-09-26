@@ -595,6 +595,14 @@
   splits:
   - text: "#PlayerName#，在丐帮弟子帮助之下，我已将那侠盗四奇的下落查的七七八八了。"
     translated: "#PlayerName#, with the help of Beggars' Sect disciples, I have already uncovered the whereabouts of the Four Extraordinary Chivalrous Thieves pretty much in full."
+    qcReviewedText: "#PlayerName#, with the help of Beggars' Sect disciples, I have already uncovered the whereabouts of the Four Extraordinary Chivalrous Thieves pretty much in full.\nI hope you can come <b>Capital </b>Help me out and join me in paying a visit to these four hermits."
+    qcTranslated: "#PlayerName#, with the help of Beggars' Sect disciples, I have already uncovered the whereabouts of the Four Extraordinary Chivalrous Thieves pretty much in full. I hope you can come to <b>Capital</b> to lend a hand and join me in paying a visit to these four hermits."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "还望你能来"
     translated: "I hope you can come"
@@ -1520,6 +1528,14 @@
   splits:
   - text: "老子虽没找到胞兄赵胤宗的线索，但却找到一个很可能密切相关之人，眼下正躲在"
     translated: "Although I haven't found any clues about my biological brother Zhao Yinzong, I have discovered someone who is very likely closely related to him. Right now, I am hiding here."
+    qcReviewedText: "Although I haven't found any clues about my biological brother Zhao Yinzong, I have discovered someone who is very likely closely related to him. Right now, I am hiding here.<b>Shaolin Temple </b>In!\nI'll take the lead, and you and Immortal Wenyi follow behind to deal with this guy together!"
+    qcTranslated: "Although I haven't found any clues about my biological brother Zhao Yinzong, I have discovered someone who is very likely closely related to him. Right now, he is hiding inside the <b>Shaolin Temple</b>!\nI'll take the lead, and you and Immortal Wenyi follow behind to deal with this guy together!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "少林寺"
     translated: "Shaolin Temple"
@@ -2029,6 +2045,14 @@
   splits:
   - text: "兄弟三个押送黄河双煞到了"
     translated: "The three brothers escorted the Yellow River Twin Fiends to their destination."
+    qcReviewedText: "The three brothers escorted the Yellow River Twin Fiends to their destination.<b>Capital's western side</b>, Seems the thief's accomplices have taken notice. Things are urgent, so please come quickly to lend a hand, #PlayerName#!"
+    qcTranslated: "The three brothers escorted the Yellow River Twin Fiends to <b>the west of the Capital</b>, but it seems they've been marked by the thieves' accomplices. Things are urgent, so please come quickly to lend a hand, #PlayerName#!"
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "京城西面"
     translated: "Capital's western side"

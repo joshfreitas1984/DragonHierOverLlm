@@ -2200,6 +2200,14 @@
   splits:
   - text: "#PlayerName#，在丐帮弟子帮助之下，我已将那侠盗四奇的下落查的七七八八了。"
     translated: "#PlayerName#, with the help of Beggars' Sect disciples, I have already uncovered the whereabouts of the Four Extraordinary Chivalrous Thieves pretty much in full."
+    qcReviewedText: "#PlayerName#, with the help of Beggars' Sect disciples, I have already uncovered the whereabouts of the Four Extraordinary Chivalrous Thieves pretty much in full.\\nI hope you can come <b>Capital </b>Help me out and join me in paying a visit to these four hermits."
+    qcTranslated: "#PlayerName#, with the help of Beggars' Sect disciples, I have already uncovered the whereabouts of the Four Extraordinary Chivalrous Thieves pretty much in full.\\nI hope you can come to <b>Capital</b> to lend a hand and join me in paying a visit to these four hermits."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "还望你能来"
     translated: "I hope you can come"
@@ -3126,6 +3134,14 @@
   splits:
   - text: "老子虽没找到胞兄赵胤宗的线索，但却找到一个很可能密切相关之人，眼下正躲在"
     translated: "Although I haven't found any clues about my biological brother Zhao Yinzong, I have discovered someone who is very likely closely related to him. Right now, I am hiding here."
+    qcReviewedText: "Although I haven't found any clues about my biological brother Zhao Yinzong, I have discovered someone who is very likely closely related to him. Right now, I am hiding here.<b>Shaolin Temple </b>In!\\nI'll take the lead, and you and Immortal Wenyi follow behind to deal with this guy together!"
+    qcTranslated: "Although I haven't found any clues about my biological brother Zhao Yinzong, I have discovered someone who is very likely closely related to him. Right now, he is hiding inside the <b>Shaolin Temple</b>!\\nI'll take the lead, and you and Immortal Wenyi follow behind to deal with this guy together!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "少林寺"
     translated: "Shaolin Temple"
@@ -3636,6 +3652,14 @@
   splits:
   - text: "兄弟三个押送黄河双煞到了"
     translated: "The three brothers escorted the Yellow River Twin Fiends to their destination."
+    qcReviewedText: "The three brothers escorted the Yellow River Twin Fiends to their destination.<b>Capital's western side</b>, Seems the thief's accomplices have taken notice. Things are urgent, so please come quickly to lend a hand, #PlayerName#!"
+    qcTranslated: "The three brothers escorted the Yellow River Twin Fiends to <b>the west of the Capital</b>, but it seems they've been marked by the thieves' accomplices. Things are urgent, so please come quickly to lend a hand, #PlayerName#!"
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "京城西面"
     translated: "Capital's western side"
@@ -6588,6 +6612,13 @@
   splits:
   - text: "传闻"
     translated: "Rumor"
+    qcReviewedText: "Rumor<b>#PosText#</b>A renowned heroine inside is under attack by villains and is in grave danger."
+    qcTranslated: "Rumor has it that a renowned Heroine inside <b>#PosText#</b> is under attack by villains and is in grave danger."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "内有名女侠遭恶徒围攻，危在旦夕。"
     translated: "A renowned heroine inside is under attack by villains and is in grave danger."
@@ -6727,6 +6758,13 @@
   splits:
   - text: "传闻"
     translated: "Rumor"
+    qcReviewedText: "Rumor<b>#PosText#</b>There's a hero who goes by the name A Hundred Rolls with a Hundred Wins, and he has won a lot of money in the casino."
+    qcTranslated: "Rumor has it that <b>#PosText#</b> there's a hero who goes by the name A Hundred Rolls with a Hundred Wins, and he has won a lot of money in the casino."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "有一侠士号称“百骰百胜”，在赌场中赢了不少钱财。"
     translated: "There's a hero who goes by the name A Hundred Rolls with a Hundred Wins, and he has won a lot of money in the casino."
@@ -7055,6 +7093,14 @@
   splits:
   - text: "传闻中原大侠郭淮一路追缉，终于在"
     translated: "It is said that Great Hero Guo Huai has been pursuing them all the way and finally arrived at"
+    qcReviewedText: "It is said that Great Hero Guo Huai has been pursuing them all the way and finally arrived at<b>#PosText#</b>Nearby, I found traces of the Underworld Five Ghosts."
+    qcTranslated: "It is said that Great Hero Guo Huai has been pursuing them all the way and finally found traces of the Underworld Five Ghosts near <b>#PosText#</b>."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "附近寻得了黑道五鬼的踪迹。"
     translated: "Nearby, I found traces of the Underworld Five Ghosts."
@@ -7189,6 +7235,13 @@
   splits:
   - text: "传闻侠义七子之首项问天正在"
     translated: "It is said that the leader of the Seven Virtuous Heroes, Xiang Wentian, is currently"
+    qcReviewedText: "It is said that the leader of the Seven Virtuous Heroes, Xiang Wentian, is currently<b>#PosText#</b>Track down the whereabouts of a notorious thief."
+    qcTranslated: "It is said that the leader of the Seven Virtuous Heroes, Xiang Wentian, is currently<b>#PosText#</b> tracking down the whereabouts of a notorious thief."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "追查一名江洋大盗之下落。"
     translated: "Track down the whereabouts of a notorious thief."
@@ -7198,6 +7251,13 @@
   splits:
   - text: "传闻侠义七子之首项问天眼下正在"
     translated: "It's said that Xiang Wentian, the leader of the Seven Virtuous Heroes, is currently there."
+    qcReviewedText: "It's said that Xiang Wentian, the leader of the Seven Virtuous Heroes, is currently there.<b>#PosText#</b>Within the city, investigating a bloodshed case from many years ago."
+    qcTranslated: "It's said that Xiang Wentian, the leader of the Seven Virtuous Heroes, is currently in <b>#PosText#</b> City, investigating a bloodshed case from many years ago."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "城内，追查一桩多年之前的血案。"
     translated: "Within the city, investigating a bloodshed case from many years ago."
@@ -7384,6 +7444,13 @@
   splits:
   - text: "传闻在"
     translated: "Rumors say that"
+    qcReviewedText: "Rumors say that<b>#PosText#</b>In the city, the Hero known as A Hundred Rolls with a Hundred Wins was surrounded by his enemies, his life hanging in the balance."
+    qcTranslated: "Rumors say that in <b>#PosText#</b> city, the Hero known as A Hundred Rolls with a Hundred Wins was surrounded by his enemies, his life hanging in the balance."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "城中，号称“百骰百胜”的侠士被仇家团团围住，生命危在旦夕。"
     translated: "In the city, the Hero known as A Hundred Rolls with a Hundred Wins was surrounded by his enemies, his life hanging in the balance."
@@ -7546,6 +7613,13 @@
   splits:
   - text: "传闻峨眉掌门白眉真人为抵御阎罗殿等邪派之威胁，邀请中原正道群雄在"
     translated: "It is said that Sect Leader Immortal Whitebrow of Mount Emei invited the righteous heroes of Central Plains to gather in order to defend against the threats posed by the Unorthodox Sects such as Yama Hall."
+    qcReviewedText: "It is said that Sect Leader Immortal Whitebrow of Mount Emei invited the righteous heroes of Central Plains to gather in order to defend against the threats posed by the Unorthodox Sects such as Yama Hall.<b>Emei </b>A grand conference is held at the Golden Summit to discuss strategies against the enemy."
+    qcTranslated: "It is said that Sect Leader Immortal Whitebrow of Mount Emei invited the righteous heroes of Central Plains to gather in order to defend against the threats posed by the Unorthodox Sects such as Yama Hall. A grand conference is held at <b>Emei</b>'s Golden Summit to discuss strategies against the enemy."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "峨眉"
     translated: "Emei"
@@ -7627,6 +7701,10 @@
   splits:
   - text: "传闻有神秘人广发请柬欲召开黑道大会，乐山大患戴壮似乎也在受邀者之列。"
     translated: "It is said that a mysterious person has sent out numerous invitations to convene an Underworld conference, and Dai Zhuang, the Bane of Leshan, seems to be among the invitees."
+    qcReviewedText: "It is said that a mysterious person has sent out numerous invitations to convene an Underworld conference, and Dai Zhuang, the Bane of Leshan, seems to be among the invitees."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "传闻朝廷召集各派掌门，在<b>京城</b>举办大会，商讨京城防务之归属问题。"
   splits:
   - text: "传闻朝廷召集各派掌门，在"
@@ -7755,6 +7833,13 @@
   splits:
   - text: "传闻武当副掌门张文馨与中原大侠郭淮在"
     translated: "It is said that Deputy Sect Leader Zhang Wenxin of Wudang and Great Hero of the Central Plains Guo Huai were in"
+    qcReviewedText: "It is said that Deputy Sect Leader Zhang Wenxin of Wudang and Great Hero of the Central Plains Guo Huai were in <b>Beggar Sect </b>Discussing strategies to find the whereabouts of Jianghu Oracle Jin Longsheng."
+    qcTranslated: "It is said that Deputy Sect Leader Zhang Wenxin of Wudang and Great Hero of the Central Plains Guo Huai were at the <b>Beggar Sect</b> discussing strategies to find the whereabouts of Jianghu Oracle Jin Longsheng."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "丐帮"
     translated: "Beggar Sect"
@@ -7804,6 +7889,14 @@
   splits:
   - text: "传闻武当副掌门张文馨已得知江湖百晓金龙生的下落，眼下正在"
     translated: "It is said that Wudang Deputy Sect Leader Zhang Wenxin has learned of Jianghu Oracle Jin Longsheng's whereabouts and is currently"
+    qcReviewedText: "It is said that Wudang Deputy Sect Leader Zhang Wenxin has learned of Jianghu Oracle Jin Longsheng's whereabouts and is currently<b>#PosText#</b>Search far and wide for this person"
+    qcTranslated: "It is said that Wudang Deputy Sect Leader Zhang Wenxin has learned of Jianghu Oracle Jin Longsheng's whereabouts and is currently searching far and wide for this person in the <b>#PosText#</b> area."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "一带搜寻此人。"
     translated: "Search far and wide for this person"
@@ -7849,6 +7942,14 @@
   splits:
   - text: "传闻玉面判官殷雨霏一路追捕梁山大当家王伦，终于在"
     translated: "It is said that Jade‑Faced Judge Yin Yufei pursued Wang Lun, the leader of Liangshan, all the way to"
+    qcReviewedText: "It is said that Jade‑Faced Judge Yin Yufei pursued Wang Lun, the leader of Liangshan, all the way to<b>#PosText#</b>Catch up with its remnants"
+    qcTranslated: "It is said that Jade‑Faced Judge Yin Yufei pursued Wang Lun, the leader of Liangshan, all the way to <b>#PosText#</b>, where she finally caught up with his remnants."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "追上其残党。"
     translated: "Catch up with its remnants"
@@ -7923,6 +8024,10 @@
   splits:
   - text: "传闻近日上官凤与麾下四大杀手一齐现身"
     translated: "It is said that recently, Shangguan Feng appeared together with his Four Great Assassins."
+    qcReviewedText: "It is said that recently, Shangguan Feng appeared together with his Four Great Assassins.<b>#PosText#</b>, I wonder what great plan he is plotting again."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "，不知又在谋划什么大计。"
     translated: ", I wonder what great plan he is plotting again."
@@ -8267,6 +8372,13 @@
   splits:
   - text: "传闻飞凤钱庄庄主凤南飞在"
     translated: "Whispers circulated about Manor Master Feng Nanfei of the Flying Phoenix Bank."
+    qcReviewedText: "Whispers circulated about Manor Master Feng Nanfei of the Flying Phoenix Bank.<b>#PosText#</b>Set up a banquet and invite Xiang Wentian, the leader of the Seven Virtuous Heroes, to discuss important matters."
+    qcTranslated: "Whispers circulated about Manor Master Feng Nanfei of the Flying Phoenix Bank, who set up a banquet in <b>#PosText#</b> to invite Xiang Wentian, the leader of the Seven Virtuous Heroes, to discuss important matters."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "设下宴席，邀请侠义七子之首项问天共商大事。"
     translated: "Set up a banquet and invite Xiang Wentian, the leader of the Seven Virtuous Heroes, to discuss important matters."
@@ -8292,6 +8404,13 @@
   splits:
   - text: "传闻黄河双煞在"
     translated: "It's said that the Yellow River Twin Fiends are in the area."
+    qcReviewedText: "It's said that the Yellow River Twin Fiends are in the area.<b>#PosText#</b>Rampaging and causing trouble, heroes have already received warrants to apprehend them in the Jianghu."
+    qcTranslated: "It's said that the Yellow River Twin Fiends are rampaging and causing trouble in <b>#PosText#</b>. Heroes have already received Jianghu warrants to apprehend them."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "四处劫掠，为非作歹，已有侠士领受江湖追缉令前往抓捕。"
     translated: "Rampaging and causing trouble, heroes have already received warrants to apprehend them in the Jianghu."
@@ -8301,12 +8420,26 @@
   splits:
   - text: "传闻黄河双煞此前被侠士擒获，现下已押送到了"
     translated: "It's said that the Yellow River Twin Fiends were previously captured by a Hero and are now being escorted to..."
+    qcReviewedText: "It's said that the Yellow River Twin Fiends were previously captured by a Hero and are now being escorted to...<b>#PosText#</b>。"
+    qcTranslated: "It's said that the Yellow River Twin Fiends were previously captured by a Hero and are now being escorted to <b>#PosText#</b>."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   templates:
   - template: "{0}<b>#PosText#</b>。"
 - raw: "传闻黄河双煞被众多武林侠士追捕，只得一路逃到了<b>#PosText#</b>。"
   splits:
   - text: "传闻黄河双煞被众多武林侠士追捕，只得一路逃到了"
     translated: "It is said that the Yellow River Twin Fiends were pursued by many Wulin heroes and fled all the way to"
+    qcReviewedText: "It is said that the Yellow River Twin Fiends were pursued by many Wulin heroes and fled all the way to<b>#PosText#</b>。"
+    qcTranslated: "It is said that the Yellow River Twin Fiends were pursued by many Wulin Heroes and fled all the way to<b>#PosText#</b>."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   templates:
   - template: "{0}<b>#PosText#</b>。"
 - raw: "传闻黑道五鬼之一的高首被三名捕快追捕，如今逃到了<b>#PosText#</b>附近躲藏。"
@@ -9021,6 +9154,10 @@
   splits:
   - text: "侠盗四奇"
     translated: "Four Extraordinary Chivalrous Thieves"
+    qcReviewedText: "Four Extraordinary Chivalrous Thieves"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "侧击背击"
   splits:
   - text: "侧击背击"
@@ -11506,6 +11643,14 @@
   splits:
   - text: "听说中原大侠郭淮将在"
     translated: "It's said that Great Hero Guo Huai of the Central Plains will be at"
+    qcReviewedText: "It's said that Great Hero Guo Huai of the Central Plains will be at<b>#PosText#</b>Reward the Hero who captured Zeng Zhenhai, and continue to investigate the decades‑old mass murder case."
+    qcTranslated: "It's said that Great Hero Guo Huai of the Central Plains will be at <b>#PosText#</b> to reward the Hero who captured Zeng Zhenhai, and continue to investigate the decades‑old mass murder case."
+    qcStatus: Corrected
+    qcQualityScore: 90
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "嘉奖抓捕曾镇海之侠士，同时继续追查多年前一桩灭门血案。"
     translated: "Reward the Hero who captured Zeng Zhenhai, and continue to investigate the decades‑old mass murder case."
@@ -11650,6 +11795,13 @@
   splits:
   - text: "听闻中原大侠郭淮近日邀请各大门派掌门会于泰山脚下"
     translated: "I hear that Great Hero Guo Huai of the Central Plains recently invited the Sect Leaders of major sects to gather at the foot of Mount Tai."
+    qcReviewedText: "I hear that Great Hero Guo Huai of the Central Plains recently invited the Sect Leaders of major sects to gather at the foot of Mount Tai.<b>#PosText#</b>, Discuss the arrangements for the third Mount Tai Grand Assembly."
+    qcTranslated: "I hear that Great Hero Guo Huai of the Central Plains recently invited the Sect Leaders of major sects to gather at the foot of Mount Tai<b>#PosText#</b> to discuss the arrangements for the third Mount Tai Grand Assembly."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "，共商第三次泰岳大典举办事宜。"
     translated: ", Discuss the arrangements for the third Mount Tai Grand Assembly."
@@ -11789,6 +11941,14 @@
   splits:
   - text: "听闻武当张文馨与医侠皇甫斌一道前往"
     translated: "It was heard that Zhang Wenxin of Wudang and Healer Huangfu Bin set out together."
+    qcReviewedText: "It was heard that Zhang Wenxin of Wudang and Healer Huangfu Bin set out together.<b>#PosText#</b>, By the decree of King Yama, I demand that Yama Hall return Foshan Town and Qingyuan Township, which previously belonged to Medicine King Valley."
+    qcTranslated: "It was heard that Zhang Wenxin of Wudang and Healer Huangfu Bin set out together for <b>#PosText#</b>, demanding, by the decree of King Yama, that Yama Hall return Foshan Town and Qingyuan Township, which previously belonged to Medicine King Valley."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "，以阎罗王遗命之名，要求阎罗殿归还此前本属药王谷治下的佛山镇和清远乡。"
     translated: ", By the decree of King Yama, I demand that Yama Hall return Foshan Town and Qingyuan Township, which previously belonged to Medicine King Valley."
@@ -11946,6 +12106,13 @@
   splits:
   - text: "听闻黑道五鬼抢夺花石纲不成，被中原大侠郭淮一路追杀，逃窜到了"
     translated: "It's said that the Underworld Five Ghosts failed to steal the Flower and Stone Convoy and were chased down by Great Hero Guo Huai, fleeing to"
+    qcReviewedText: "It's said that the Underworld Five Ghosts failed to steal the Flower and Stone Convoy and were chased down by Great Hero Guo Huai, fleeing to<b>#PosText#</b>Nearby"
+    qcTranslated: "It's said that the Underworld Five Ghosts failed to steal the Flower and Stone Convoy and were chased down by Great Hero Guo Huai, fleeing to<b>#PosText#</b> nearby."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "附近。"
     translated: "Nearby"
@@ -11955,6 +12122,14 @@
   splits:
   - text: "听闻黑道大会于腾冲结盟的消息，中原大侠郭淮向天下广发英雄帖，号召正派人士于"
     translated: "Upon hearing news of the underworld conference forming an alliance in Tengchong, Great Hero Guo Huai issued a broad invitation to heroes across the land, calling for upright individuals to gather at"
+    qcReviewedText: "Upon hearing news of the underworld conference forming an alliance in Tengchong, Great Hero Guo Huai issued a broad invitation to heroes across the land, calling for upright individuals to gather at<b>#PosText#</b>Hold a righteous assembly to discuss strategies"
+    qcTranslated: "Upon hearing news of the underworld conference forming an alliance in Tengchong, Great Hero Guo Huai issued a broad invitation to heroes across the land, calling for upright individuals to gather at <b>#PosText#</b> to hold a righteous assembly and discuss strategies."
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "召开侠义大会，共商应对之策。"
     translated: "Hold a righteous assembly to discuss strategies"
@@ -14661,6 +14836,13 @@
   splits:
   - text: "峨眉掌门白眉真人已率派内精锐前去防守大理，江湖传闻"
     translated: "Immortal Whitebrow, the Sect Leader of Mount Emei, has already led the elite forces within the sect to defend Dali, according to rumors in Jianghu."
+    qcReviewedText: "Immortal Whitebrow, the Sect Leader of Mount Emei, has already led the elite forces within the sect to defend Dali, according to rumors in Jianghu.<b>Emei </b>There's a little girl in the clan who often tries to sneak down the mountain."
+    qcTranslated: "Immortal Whitebrow, the Sect Leader of Mount Emei, has already led the elite forces within the sect to defend Dali. Rumors in Jianghu say <b>Emei</b> has a little girl who often tries to sneak down the mountain."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "峨眉"
     translated: "Emei"
@@ -16700,6 +16882,10 @@
   splits:
   - text: "摘月偷星"
     translated: "Plucker of Moons and Thief of Stars"
+    qcReviewedText: "Plucker of Moons and Thief of Stars"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "撤回大理"
   splits:
   - text: "撤回大理"
@@ -17500,6 +17686,10 @@
   splits:
   - text: "杀人无形"
     translated: "Killer Without a Trace"
+    qcReviewedText: "Killer Without a Trace"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "杀手订单"
   splits:
   - text: "杀手订单"
@@ -18677,6 +18867,10 @@
   splits:
   - text: "江湖百晓"
     translated: "Jianghu Oracle"
+    qcReviewedText: "Jianghu Oracle"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "江湖风传还有一批黑风寨残党藏身于<b>江陵南方</b>，听说已有仙霞派义士前去捉拿。"
   splits:
   - text: "江湖风传还有一批黑风寨残党藏身于"
@@ -22681,6 +22875,13 @@
   splits:
   - text: "近来扬州出现了不明疫病，侠义七子李云鹤在"
     translated: "Recently, an unknown epidemic has appeared in Yangzhou. Li Yunhe of the Seven Virtuous Heroes is in..."
+    qcReviewedText: "Recently, an unknown epidemic has appeared in Yangzhou. Li Yunhe of the Seven Virtuous Heroes is in...<b>#PosText#</b>One went to gather medicinal herbs needed for treatment."
+    qcTranslated: "Recently, an unknown epidemic has appeared in Yangzhou. Li Yunhe of the Seven Virtuous Heroes is gathering medicinal herbs needed for treatment in the <b>#PosText#</b> area."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "一带搜集治病所需之药材。"
     translated: "One went to gather medicinal herbs needed for treatment."
@@ -23191,6 +23392,10 @@
   splits:
   - text: "这几名强盗把女侠给团团围住，应当如何是好？"
     translated: "These bandits have surrounded the Heroine. What should we do?"
+    qcReviewedText: "These bandits have surrounded the Heroine. What should we do?"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "这处地点，正好位于#NextMissionTargetPlace#内。\\n不知少侠可有什么头绪？"
   splits:
   - text: "这处地点，正好位于#NextMissionTargetPlace#内。"
@@ -23757,6 +23962,14 @@
   splits:
   - text: "逐渐成为了最为德高望重，一言九鼎的武林巨擘，"
     translated: "Gradually became the most virtuous and esteemed, a word as good as gold, Wulin giant."
+    qcReviewedText: "Gradually became the most virtuous and esteemed, a word as good as gold, Wulin giant.\\nFor all renowned scholars of future generations to admire."
+    qcTranslated: "Gradually became the most Virtuous and Esteemed, whose word carried the weight of nine cauldrons, Wulin giant.\\nFor all renowned scholars of future generations to admire."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 0
+    qcDefectCategory: LostIdiom
+    qcDefectCategories:
+    - LostIdiom
   - subIndex: 1
     text: "供后世所有名人雅士瞻仰。"
     translated: "For all renowned scholars of future generations to admire."
@@ -25128,6 +25341,10 @@
   splits:
   - text: "黄河双煞"
     translated: "Yellow River Twin Fiends"
+    qcReviewedText: "Yellow River Twin Fiends"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "黄鹤之盟"
   splits:
   - text: "黄鹤之盟"

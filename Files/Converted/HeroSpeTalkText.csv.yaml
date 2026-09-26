@@ -840,6 +840,10 @@
   - split: 11
     text: "在下不才，蒙武林同道厚爱，得了这“中原大侠”的名号。"
     translated: "I am but a humble one, yet my fellow Wulin brothers and sisters have bestowed upon me the title of Great Hero of the Central Plains."
+    qcReviewedText: "I am but a humble one, yet my fellow Wulin brothers and sisters have bestowed upon me the title of Great Hero of the Central Plains.\\nEvery time I think about it, I feel genuinely fearful and deeply ashamed."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 11
     subIndex: 1
     text: "每每想来，只觉诚惶诚恐，羞愧莫名。"
@@ -943,6 +947,10 @@
   - split: 6
     text: "绝情断义，横行无忌。"
     translated: "Heartless and ruthless, acting with impunity"
+    qcReviewedText: "Heartless and ruthless, acting with impunity \\nAbove and below, none shall surpass me!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 6
     subIndex: 1
     text: "天上地下，唯我独尊！"
@@ -1617,6 +1625,10 @@
   - split: 7
     text: "最难测算是人心，便是老朽这“江湖百晓”，怕也难解其分毫。"
     translated: "The human heart is hardest to measure; even an old hand like this 'Jianghu Oracle' would likely struggle to understand it in the slightest."
+    qcReviewedText: "The human heart is hardest to measure; even an old hand like this 'Jianghu Oracle' would likely struggle to understand it in the slightest."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 8
     text: "什么是江湖？为啥要叫江湖？"
     translated: "What is the Jianghu? Why call it that?"

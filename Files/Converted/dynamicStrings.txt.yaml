@@ -687,6 +687,10 @@
   splits:
   - text: "#PlayerName#乐善好施，侠义心肠果然名不虚传。"
     translated: "#PlayerName#, Benevolent Benefactor, your chivalrous heart is indeed as renowned as they say."
+    qcReviewedText: "#PlayerName#, Benevolent Benefactor, your chivalrous heart is indeed as renowned as they say.\nI will surely cherish this friendship"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "此番情谊我一定铭记于心。"
     translated: "I will surely cherish this friendship"
@@ -4268,6 +4272,10 @@
   splits:
   - text: "#TargetInteractName#乐善好施，侠义心肠果然名不虚传。"
     translated: "#TargetInteractName#, Benevolent Benefactor, your chivalrous reputation is indeed well‑deserved."
+    qcReviewedText: "#TargetInteractName#, Benevolent Benefactor, your chivalrous reputation is indeed well‑deserved.\nI shall surely cherish this friendship in my heart."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "此番情谊我自会铭记于心。"
     translated: "I shall surely cherish this friendship in my heart."
@@ -4632,6 +4640,10 @@
   splits:
   - text: "#TargetInteractName#德高望重，武功卓绝，令人深感钦佩。"
     translated: "#TargetInteractName#, virtuous and esteemed, with extraordinary martial arts skills, is truly awe‑inspiring."
+    qcReviewedText: "#TargetInteractName#, virtuous and esteemed, with extraordinary martial arts skills, is truly awe‑inspiring.\nI wish to formally take you, #TargetInteractName#, as my teacher. May I know your opinion on this?"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "我今日欲正式拜#TargetInteractName#为师，不知意下如何？"
     translated: "I wish to formally take you, #TargetInteractName#, as my teacher. May I know your opinion on this?"
@@ -5332,6 +5344,10 @@
   splits:
   - text: "当前剩余停战期"
     translated: "Remaining truce period"
+    qcReviewedText: "(Remaining truce period {0} Days)"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "天"
     translated: "Days"
@@ -13664,6 +13680,10 @@
   splits:
   - text: "中原大侠郭淮之子郭勇锐初入江湖，就在乐山镇击败了黄河双煞，一时声名鹊起。江湖中人誉为“中原小侠”，真是虎父无犬子啊。"
     translated: "The son of Great Hero Guo Huai, Guo Yongrui, rose to fame in Jianghu by defeating the Yellow River Twin Fiends in Leshan Town upon his initial entry. He was hailed as a Young Hero of the Central Plains, truly living up to the saying that a brave father has no cowardly son."
+    qcReviewedText: "The son of Great Hero Guo Huai, Guo Yongrui, rose to fame in Jianghu by defeating the Yellow River Twin Fiends in Leshan Town upon his initial entry. He was hailed as a Young Hero of the Central Plains, truly living up to the saying that a brave father has no cowardly son."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "中品"
   splits:
   - text: "中品"
@@ -17107,6 +17127,10 @@
   splits:
   - text: "传闻中原大侠郭淮之子郭勇锐一招便击毙了黄河双煞，一时声名显赫。江湖中人无不刮目相看，真是虎父无犬子啊。"
     translated: "It is said that the son of Great Hero Guo Huai, Guo Yongrui, killed the Yellow River Twin Fiends with a single move, gaining instant fame. Everyone in Jianghu took notice; truly, a mighty father has no weak son."
+    qcReviewedText: "It is said that the son of Great Hero Guo Huai, Guo Yongrui, killed the Yellow River Twin Fiends with a single move, gaining instant fame. Everyone in Jianghu took notice; truly, a mighty father has no weak son."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "传闻在{2}，一位名为{0}的{1}正式踏入武林，欲大展一番拳脚。"
   splits:
   - text: "传闻在"
@@ -17889,6 +17913,10 @@
   splits:
   - text: "侠义七子"
     translated: "Seven Virtuous Heroes"
+    qcReviewedText: "Seven Virtuous Heroes"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "侠士"
   splits:
   - text: "侠士"
@@ -24890,6 +24918,13 @@
   splits:
   - text: "哈哈，您老人家一向乐善好施，慷慨大方，江湖中谁人不知谁人不晓，"
     translated: "Haha, venerable sir, you have always been a Benevolent Benefactor, generous and magnanimous; who in the Jianghu does not know of this?"
+    qcReviewedText: "Haha, venerable sir, you have always been a Benevolent Benefactor, generous and magnanimous; who in the Jianghu does not know of this?\nDuring the Spring Festival, he would naturally show even greater care for his apprentice and give a big red envelope as a sign of encouragement."
+    qcTranslated: "Haha, venerable sir, you have always been a Benevolent Benefactor, generous and magnanimous; who in the Jianghu does not know of this? During the Spring Festival, you would naturally show even greater care for your apprentice and give a big red envelope as a sign of encouragement."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
+    qcDefectCategories:
+    - MeaningReversal
   - subIndex: 1
     text: "这大过年的，自然也会对徒儿倍加关爱，包一个大红包以示鼓励。"
     translated: "During the Spring Festival, he would naturally show even greater care for his apprentice and give a big red envelope as a sign of encouragement."
@@ -39558,6 +39593,14 @@
   splits:
   - text: "我江湖百晓虽说武功不算登峰造极，但凭着这英雄谱，却知晓天下各大高手的武功路数。"
     translated: "Although my Jianghu Oracle skills aren't at the pinnacle, I know the martial arts styles of all the great masters across the land thanks to this Book of Heroes."
+    qcReviewedText: "Although my Jianghu Oracle skills aren't at the pinnacle, I know the martial arts styles of all the great masters across the land thanks to this Book of Heroes.\nBy frequently rehearsing in their minds, they mastered every move and counterstrategy.\nAll could mimic it with words and gestures, almost to the letter."
+    qcTranslated: "Although my Jianghu Oracle skills aren't at the pinnacle, I know the martial arts styles of all the great masters across the land thanks to this Book of Heroes.\nBy frequently rehearsing in my mind, I have mastered every move and counterstrategy.\nI can mimic them with words and gestures, almost to the letter."
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: MeaningReversal
+    qcDefectCategories:
+    - MeaningReversal
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "加上时常在脑海中演练，他们的一招一式以及破解之法，"
     translated: "By frequently rehearsing in their minds, they mastered every move and counterstrategy."
@@ -50281,6 +50324,10 @@
   splits:
   - text: "消耗"
     translated: "Consume"
+    qcReviewedText: "Consume ({0} Days)"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "天"
     translated: "Days"
@@ -54548,6 +54595,10 @@
   splits:
   - text: "称得上是德高望重，人人敬仰之名门大派"
     translated: "Worthy of being virtuous and esteemed, a prestigious and revered martial arts sect"
+    qcReviewedText: "Worthy of being virtuous and esteemed, a prestigious and revered martial arts sect"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "称霸"
   splits:
   - text: "称霸"
@@ -56623,6 +56674,10 @@
   splits:
   - text: "老夫绞尽脑汁，苦心搜罗这英雄谱，仍找不出能击败#PlayerName#的武功招式。"
     translated: "After exhausting all my efforts and meticulously searching through the Heroic Register, I still cannot find any martial arts moves that could defeat #PlayerName#."
+    qcReviewedText: "After exhausting all my efforts and meticulously searching through the Heroic Register, I still cannot find any martial arts moves that could defeat #PlayerName#.\nThis title of Jianghu Oracle truly feels undeserved now!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "这“江湖百晓”的称号，如今看来实在受之有愧！"
     translated: "This title of Jianghu Oracle truly feels undeserved now!"
