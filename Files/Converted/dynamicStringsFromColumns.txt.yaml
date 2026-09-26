@@ -21834,11 +21834,7 @@
 - raw: "净乐琉璃刀"
   splits:
   - text: "净乐琉璃刀"
-    translated: "Pure Joy Crystal Blade"
-    qcReviewedText: "Pure Joy Crystal Blade"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Pure Joy Glaze Blade"
 - raw: "意志潜力2;力道潜力1;刀法潜力1"
   splits:
   - text: "意志潜力2"
@@ -26438,11 +26434,7 @@
 - raw: "黑白无常棍"
   splits:
   - text: "黑白无常棍"
-    translated: "Black and White Officials' Staffs"
-    qcReviewedText: "Black and White Officials' Staffs"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Black and White Impermanence Staff"
 - raw: "力道潜力2;长兵1;力道1"
   splits:
   - text: "力道潜力2"
@@ -33488,11 +33480,7 @@
 - raw: "鬼见愁"
   splits:
   - text: "鬼见愁"
-    translated: "Devil's Shoal"
-    qcReviewedText: "Devil's Shoal"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Ghost's Bane"
 - raw: "绝技6;力道6;体质6;霸体0.08"
   splits:
   - text: "绝技6"
@@ -47728,11 +47716,7 @@
 - raw: "龙象护法功"
   splits:
   - text: "龙象护法功"
-    translated: "Dragon Elephant Guarding Method"
-    qcReviewedText: "Dragon Elephant Guarding Method"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Dragon Elephant Guardian Technique"
 - raw: "绝技潜力1;力道潜力2;绝技1;体质1"
   splits:
   - text: "绝技潜力1"
@@ -54349,11 +54333,7 @@
 - raw: "净乐琉璃"
   splits:
   - text: "净乐琉璃"
-    translated: "Jingle Luliu"
-    qcReviewedText: "Jingle Luliu"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Pure Joy Glaze"
 - raw: "师傅:10"
   splits:
   - text: "师傅"
@@ -54409,11 +54389,7 @@
 - raw: "铁算盘"
   splits:
   - text: "铁算盘"
-    translated: "Iron calculator"
-    qcReviewedText: "Iron calculator"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Iron Abacus"
 - raw: "唐.逸影"
   splits:
   - text: "唐.逸影"
@@ -54478,11 +54454,7 @@
 - raw: "九天鬼手"
   splits:
   - text: "九天鬼手"
-    translated: "Nine Heaven Ghost Hand"
-    qcReviewedText: "Nine Heaven Ghost Hand"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Nine Heavens Ghost Hand"
 - raw: "亲属:14/15"
   splits:
   - text: "亲属"
@@ -54580,11 +54552,7 @@
 - raw: "杀人无形"
   splits:
   - text: "杀人无形"
-    translated: "Invisible killer"
-    qcReviewedText: "Invisible killer"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Killer Without a Trace"
 - raw: "皇甫.青衫"
   splits:
   - text: "皇甫.青衫"
@@ -54652,11 +54620,7 @@
 - raw: "玉面医仙"
   splits:
   - text: "玉面医仙"
-    translated: "Face of Jade Medical Immortal"
-    qcReviewedText: "Face of Jade Medical Immortal"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Jade Faced Divine Healer"
 - raw: "亲属:17"
   splits:
   - text: "亲属"
@@ -54708,11 +54672,7 @@
 - raw: "穿林妙手"
   splits:
   - text: "穿林妙手"
-    translated: "Mystic Hand Through the Woods"
-    qcReviewedText: "Mystic Hand Through the Woods"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Forest Piercing Master Hand"
 - raw: "朱.断岳"
   splits:
   - text: "朱.断岳"
@@ -54767,11 +54727,7 @@
 - raw: "铁碗残拳"
   splits:
   - text: "铁碗残拳"
-    translated: "Iron Bowl Fists"
-    qcReviewedText: "Iron Bowl Fists"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Iron Bowl Broken Fist"
 - raw: "结义:19"
   splits:
   - text: "结义"
@@ -54833,11 +54789,7 @@
 - raw: "大醉侠"
   splits:
   - text: "大醉侠"
-    translated: "Drunk Hero"
-    qcReviewedText: "Drunk Hero"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Great Drunken Hero"
 - raw: "赵.破虏"
   splits:
   - text: "赵.破虏"
@@ -54889,11 +54841,7 @@
 - raw: "潜龙勿用"
   splits:
   - text: "潜龙勿用"
-    translated: "Do Not Stifle the Ascending Dragon"
-    qcReviewedText: "Do Not Stifle the Ascending Dragon"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Hidden Dragon"
 - raw: "诸葛.伶"
   splits:
   - text: "诸葛.伶"
@@ -54942,14 +54890,7 @@
 - raw: "小卧龙"
   splits:
   - text: "小卧龙"
-    translated: "Young Dragon‑Origin"
-    qcReviewedText: "Young Dragon‑Origin"
-    qcTranslated: "Young Wolong"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Little Hidden Dragon"
 - raw: "南宫.瑶"
   splits:
   - text: "南宫.瑶"
@@ -55025,11 +54966,7 @@
 - raw: "洞真法师"
   splits:
   - text: "洞真法师"
-    translated: "True Void Monk"
-    qcReviewedText: "True Void Monk"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Master Dongzhen"
 - raw: "欧.长兵"
   splits:
   - text: "欧.长兵"
@@ -55081,11 +55018,7 @@
 - raw: "铸铁仙翁"
   splits:
   - text: "铸铁仙翁"
-    translated: "Cast‑iron Sage"
-    qcReviewedText: "Cast‑iron Sage"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Iron Forging Immortal Elder"
 - raw: "祖.心炎"
   splits:
   - text: "祖.心炎"
@@ -55124,11 +55057,7 @@
 - raw: "百炼神剑"
   splits:
   - text: "百炼神剑"
-    translated: "Celestial Sword Refined a Hundred Times"
-    qcReviewedText: "Celestial Sword Refined a Hundred Times"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Hundred Forged Divine Sword"
 - raw: "龙.凤娥"
   splits:
   - text: "龙.凤娥"
@@ -55180,11 +55109,7 @@
 - raw: "销魂蚀骨"
   splits:
   - text: "销魂蚀骨"
-    translated: "Heart‑stirring and bone‑quaking"
-    qcReviewedText: "Heart‑stirring and bone‑quaking"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Soul Stealing Bone Eroder"
 - raw: "亲属:27"
   splits:
   - text: "亲属"
@@ -55233,11 +55158,7 @@
 - raw: "毒手琴心"
   splits:
   - text: "毒手琴心"
-    translated: "Poison‑Finger Harp Soul"
-    qcReviewedText: "Poison‑Finger Harp Soul"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Poison Hand and Qin Heart"
 - raw: "石.崇虎"
   splits:
   - text: "石.崇虎"
@@ -55351,11 +55272,7 @@
 - raw: "十殿冥主"
   splits:
   - text: "十殿冥主"
-    translated: "Ten Lords of the Netherworld"
-    qcReviewedText: "Ten Lords of the Netherworld"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Lord of the Ten Halls of Hell"
 - raw: "仇人:36/39/42/120"
   splits:
   - text: "仇人"
@@ -55417,11 +55334,7 @@
 - raw: "阴冥诡士"
   splits:
   - text: "阴冥诡士"
-    translated: "Shadowcraft Master"
-    qcReviewedText: "Shadowcraft Master"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Shadowy Trickster"
 - raw: "孟.婆娑"
   splits:
   - text: "孟.婆娑"
@@ -55460,11 +55373,7 @@
 - raw: "空谷幽兰"
   splits:
   - text: "空谷幽兰"
-    translated: "Gorge‑Dwelling Orchid"
-    qcReviewedText: "Gorge‑Dwelling Orchid"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Orchid of the Empty Valley"
 - raw: "常.无黑"
   splits:
   - text: "常.无黑"
@@ -55494,11 +55403,7 @@
 - raw: "黑白无常"
   splits:
   - text: "黑白无常"
-    translated: "Black and White Officials"
-    qcReviewedText: "Black and White Officials"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Black and White Impermanence"
 - raw: "结义:33"
   splits:
   - text: "结义"
@@ -55675,11 +55580,7 @@
 - raw: "无双国士"
   splits:
   - text: "无双国士"
-    translated: "Unmatched National Scholar"
-    qcReviewedText: "Unmatched National Scholar"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Peerless Statesman"
 - raw: "朋友:37"
   splits:
   - text: "朋友"
@@ -55728,11 +55629,7 @@
 - raw: "天剑客"
   splits:
   - text: "天剑客"
-    translated: "Heavenly Swordmaster"
-    qcReviewedText: "Heavenly Swordmaster"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Heavenly Swordsman"
 - raw: "姬.清梵"
   splits:
   - text: "姬.清梵"
@@ -55771,11 +55668,7 @@
 - raw: "霓裳仙子"
   splits:
   - text: "霓裳仙子"
-    translated: "Fairy Nishang"
-    qcReviewedText: "Fairy Nishang"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Fairy of the Rainbow Skirt"
 - raw: "空闻.大师"
   splits:
   - text: "空闻.大师"
@@ -55830,11 +55723,7 @@
 - raw: "德高望重"
   splits:
   - text: "德高望重"
-    translated: "Well‑respected"
-    qcReviewedText: "Well‑respected"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Virtuous and Esteemed"
 - raw: "空见.大师"
   splits:
   - text: "空见.大师"
@@ -55876,11 +55765,7 @@
 - raw: "金身罗汉"
   splits:
   - text: "金身罗汉"
-    translated: "Golden Body Arhat"
-    qcReviewedText: "Golden Body Arhat"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Golden Bodied Arhat"
 - raw: "如是.大师"
   splits:
   - text: "如是.大师"
@@ -55922,11 +55807,7 @@
 - raw: "佛痴"
   splits:
   - text: "佛痴"
-    translated: "Buddhist Obsessed"
-    qcReviewedText: "Buddhist Obsessed"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Buddha Devotee"
 - raw: "张.青蓬"
   splits:
   - text: "张.青蓬"
@@ -56050,11 +55931,7 @@
 - raw: "文逸真人"
   splits:
   - text: "文逸真人"
-    translated: "Immortal Wen Yi"
-    qcReviewedText: "Immortal Wen Yi"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Immortal Wenyi"
 - raw: "宋.廉庭"
   splits:
   - text: "宋.廉庭"
@@ -56096,11 +55973,7 @@
 - raw: "清虚真人"
   splits:
   - text: "清虚真人"
-    translated: "Immortal Qingqi"
-    qcReviewedText: "Immortal Qingqi"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Immortal Qingxu"
 - raw: "项.元霸"
   splits:
   - text: "项.元霸"
@@ -56152,11 +56025,7 @@
 - raw: "力大无穷"
   splits:
   - text: "力大无穷"
-    translated: "Unlimited strength"
-    qcReviewedText: "Unlimited strength"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Strength Without Equal"
 - raw: "宇文.极"
   splits:
   - text: "宇文.极"
@@ -56192,14 +56061,7 @@
 - raw: "算无遗策"
   splits:
   - text: "算无遗策"
-    translated: "Calculating without omission"
-    qcReviewedText: "Calculating without omission"
-    qcTranslated: "A flawless strategist"
-    qcStatus: Corrected
-    qcQualityScore: 85
-    qcDefectCategory: LostIdiom
-    qcDefectCategories:
-    - LostIdiom
+    translated: "Mastermind Without Equal"
 - raw: "吕.寻峰"
   splits:
   - text: "吕.寻峰"
@@ -56251,11 +56113,7 @@
 - raw: "都灵子"
   splits:
   - text: "都灵子"
-    translated: "Tulingsi"
-    qcReviewedText: "Tulingsi"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Dulingzi"
 - raw: "庄.晓梦"
   splits:
   - text: "庄.晓梦"
@@ -56307,11 +56165,7 @@
 - raw: "云鹏子"
   splits:
   - text: "云鹏子"
-    translated: "Yun Pengzi"
-    qcReviewedText: "Yun Pengzi"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Yunpengzi"
 - raw: "司马.德源"
   splits:
   - text: "司马.德源"
@@ -56350,11 +56204,7 @@
 - raw: "白眉真人"
   splits:
   - text: "白眉真人"
-    translated: "Immortal White Eyebrow"
-    qcReviewedText: "Immortal White Eyebrow"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Immortal Whitebrow"
 - raw: "李.潇湘"
   splits:
   - text: "李.潇湘"
@@ -56390,11 +56240,7 @@
 - raw: "潇湘真人"
   splits:
   - text: "潇湘真人"
-    translated: "Xiaoxiang Immortal"
-    qcReviewedText: "Xiaoxiang Immortal"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Immortal Xiaoxiang"
 - raw: "白.云天"
   splits:
   - text: "白.云天"
@@ -56436,14 +56282,7 @@
 - raw: "白云子"
   splits:
   - text: "白云子"
-    translated: "White Cloud Apprentice"
-    qcReviewedText: "White Cloud Apprentice"
-    qcTranslated: "White Cloud Master"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Baiyunzi"
 - raw: "曲.自封"
   splits:
   - text: "曲.自封"
@@ -56492,14 +56331,7 @@
 - raw: "紫髯道人"
   splits:
   - text: "紫髯道人"
-    translated: "Bearded Daoist"
-    qcReviewedText: "Bearded Daoist"
-    qcTranslated: "Purple‑Bearded Daoist"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Purple Bearded Daoist"
 - raw: "闻.惊鸿"
   splits:
   - text: "闻.惊鸿"
@@ -56535,11 +56367,7 @@
 - raw: "绝情道人"
   splits:
   - text: "绝情道人"
-    translated: "Discordia Daoist"
-    qcReviewedText: "Discordia Daoist"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Heartless Daoist"
 - raw: "墨.璇玑"
   splits:
   - text: "墨.璇玑"
@@ -56656,11 +56484,7 @@
 - raw: "病鲁班"
   splits:
   - text: "病鲁班"
-    translated: "Clever Lu Ban"
-    qcReviewedText: "Clever Lu Ban"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Sick Lu Ban"
 - raw: "雷.震天"
   splits:
   - text: "雷.震天"
@@ -56712,11 +56536,7 @@
 - raw: "掣地霹雳"
   splits:
   - text: "掣地霹雳"
-    translated: "Earthshaking Thunderbolt"
-    qcReviewedText: "Earthshaking Thunderbolt"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Earth Shaking Thunderbolt"
 - raw: "亲属:57/58/151"
   splits:
   - text: "亲属"
@@ -56778,11 +56598,7 @@
 - raw: "烁金枪"
   splits:
   - text: "烁金枪"
-    translated: "Blazing Spear"
-    qcReviewedText: "Blazing Spear"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Glittering Gold Spear"
 - raw: "亲属:58/151"
   splits:
   - text: "亲属"
@@ -56831,11 +56647,7 @@
 - raw: "燎原火凤"
   splits:
   - text: "燎原火凤"
-    translated: "Blazing Phoenix"
-    qcReviewedText: "Blazing Phoenix"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Flame Phoenix"
 - raw: "亲属:151"
   splits:
   - text: "亲属"
@@ -56924,11 +56736,7 @@
 - raw: "灵童转世"
   splits:
   - text: "灵童转世"
-    translated: "Reincarnation of a Child Prodigy"
-    qcReviewedText: "Reincarnation of a Child Prodigy"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Reincarnated Divine Child"
 - raw: "真言.法王"
   splits:
   - text: "真言.法王"
@@ -56977,11 +56785,7 @@
 - raw: "慧眼明王"
   splits:
   - text: "慧眼明王"
-    translated: "Bright Eye King"
-    qcReviewedText: "Bright Eye King"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Wisdom Eyed Ming King"
 - raw: "凌.北渊"
   splits:
   - text: "凌.北渊"
@@ -57060,11 +56864,7 @@
 - raw: "雪山飞鸿"
   splits:
   - text: "雪山飞鸿"
-    translated: "Snow Mountain Flying Eagle"
-    qcReviewedText: "Snow Mountain Flying Eagle"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Snow Mountain Flying Swan"
 - raw: "江.映寒"
   splits:
   - text: "江.映寒"
@@ -57097,11 +56897,7 @@
 - raw: "冷月寒江"
   splits:
   - text: "冷月寒江"
-    translated: "Cold Moon, Frozen River"
-    qcReviewedText: "Cold Moon, Frozen River"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Cold Moon and Frozen River"
 - raw: "夏.天雄"
   splits:
   - text: "夏.天雄"
@@ -57154,11 +56950,7 @@
 - raw: "铁掌双雄"
   splits:
   - text: "铁掌双雄"
-    translated: "Dual Iron Palm Experts"
-    qcReviewedText: "Dual Iron Palm Experts"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Twin Heroes of the Iron Palms"
 - raw: "韩.嵩"
   splits:
   - text: "韩.嵩"
@@ -57205,11 +56997,7 @@
 - raw: "铁掌四杰"
   splits:
   - text: "铁掌四杰"
-    translated: "Four Palm Masters"
-    qcReviewedText: "Four Palm Masters"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Four Heroes of the Iron Palms"
 - raw: "吕.子芳"
   splits:
   - text: "吕.子芳"
@@ -57481,11 +57269,7 @@
 - raw: "绝情断义"
   splits:
   - text: "绝情断义"
-    translated: "Cut Off Emotions and Loyalties"
-    qcReviewedText: "Cut Off Emotions and Loyalties"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Heartless and Ruthless"
 - raw: "黄.泉"
   splits:
   - text: "黄.泉"
@@ -57561,11 +57345,7 @@
 - raw: "骷髅红粉"
   splits:
   - text: "骷髅红粉"
-    translated: "Skull Red Powder"
-    qcReviewedText: "Skull Red Powder"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Skull and Beauty"
 - raw: "雨.人屠"
   splits:
   - text: "雨.人屠"
@@ -57601,11 +57381,7 @@
 - raw: "雨夜狂屠"
   splits:
   - text: "雨夜狂屠"
-    translated: "Night Rain Slaughterfest"
-    qcReviewedText: "Night Rain Slaughterfest"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Mad Butcher of the Rainy Night"
 - raw: "上官.凤"
   splits:
   - text: "上官.凤"
@@ -57649,11 +57425,7 @@
 - raw: "刺骨冰寒"
   splits:
   - text: "刺骨冰寒"
-    translated: "Bone‑chilling cold"
-    qcReviewedText: "Bone‑chilling cold"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Bone Piercing Chill"
 - raw: "计.心狂"
   splits:
   - text: "计.心狂"
@@ -57692,11 +57464,7 @@
 - raw: "诡计毒谋"
   splits:
   - text: "诡计毒谋"
-    translated: "Deceitful schemes"
-    qcReviewedText: "Deceitful schemes"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Cunning Schemer"
 - raw: "慕容.星辰"
   splits:
   - text: "慕容.星辰"
@@ -57735,11 +57503,7 @@
 - raw: "摘月偷星"
   splits:
   - text: "摘月偷星"
-    translated: "Pluck Moon, Steal Stars"
-    qcReviewedText: "Pluck Moon, Steal Stars"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Plucker of Moons and Thief of Stars"
 - raw: "幽.冥"
   splits:
   - text: "幽.冥"
@@ -57769,11 +57533,7 @@
 - raw: "四大杀手"
   splits:
   - text: "四大杀手"
-    translated: "Four Assassins"
-    qcReviewedText: "Four Assassins"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Four Great Assassins"
 - raw: "魅.影"
   splits:
   - text: "魅.影"
@@ -57911,14 +57671,7 @@
 - raw: "拘魂鬼"
   splits:
   - text: "拘魂鬼"
-    translated: "SoulCatcher"
-    qcReviewedText: "SoulCatcher"
-    qcTranslated: "Soul‑Binding Ghost"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Soul Seizing Ghost"
 - raw: "费.彬"
   splits:
   - text: "费.彬"
@@ -57948,11 +57701,7 @@
 - raw: "痨病鬼"
   splits:
   - text: "痨病鬼"
-    translated: "Tubercular ghost"
-    qcReviewedText: "Tubercular ghost"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Consumptive Ghost"
 - raw: "岳.无畏"
   splits:
   - text: "岳.无畏"
@@ -57984,11 +57733,7 @@
 - raw: "山魈鬼"
   splits:
   - text: "山魈鬼"
-    translated: "Yamony Ghost"
-    qcReviewedText: "Yamony Ghost"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Mountain Demon"
 - raw: "高.首"
   splits:
   - text: "高.首"
@@ -58012,11 +57757,7 @@
 - raw: "魍魉鬼"
   splits:
   - text: "魍魉鬼"
-    translated: "Goblin demon"
-    qcReviewedText: "Goblin demon"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Phantom Ghost"
 - raw: "王.彪"
   splits:
   - text: "王.彪"
@@ -58040,11 +57781,7 @@
 - raw: "黄河双煞"
   splits:
   - text: "黄河双煞"
-    translated: "Yellow River Dual Fiends"
-    qcReviewedText: "Yellow River Dual Fiends"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Yellow River Twin Fiends"
 - raw: "结义:97;师傅:73"
   splits:
   - text: "结义"
@@ -58110,11 +57847,7 @@
 - raw: "乐善好施"
   splits:
   - text: "乐善好施"
-    translated: "Charitable"
-    qcReviewedText: "Charitable"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Benevolent Benefactor"
 - raw: "裘.龙"
   splits:
   - text: "裘.龙"
@@ -58138,11 +57871,7 @@
 - raw: "入林龙"
   splits:
   - text: "入林龙"
-    translated: "Dragon Enters the Forest"
-    qcReviewedText: "Dragon Enters the Forest"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Forest Entering Dragon"
 - raw: "张.成化"
   splits:
   - text: "张.成化"
@@ -58166,11 +57895,7 @@
 - raw: "化虎成龙"
   splits:
   - text: "化虎成龙"
-    translated: "Transform into a tiger and become a dragon"
-    qcReviewedText: "Transform into a tiger and become a dragon"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Tiger Transformed into a Dragon"
 - raw: "曾.镇海"
   splits:
   - text: "曾.镇海"
@@ -58194,11 +57919,7 @@
 - raw: "翻江镇海"
   splits:
   - text: "翻江镇海"
-    translated: "Turn the River and Calm the Sea"
-    qcReviewedText: "Turn the River and Calm the Sea"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Overturning Rivers Calming Seas"
 - raw: "宋.明公"
   splits:
   - text: "宋.明公"
@@ -58225,11 +57946,7 @@
 - raw: "及时雨"
   splits:
   - text: "及时雨"
-    translated: "Rainmaker"
-    qcReviewedText: "Rainmaker"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Timely Rain"
 - raw: "戴.壮"
   splits:
   - text: "戴.壮"
@@ -58256,11 +57973,7 @@
 - raw: "乐山大患"
   splits:
   - text: "乐山大患"
-    translated: "Leshan great calamity"
-    qcReviewedText: "Leshan great calamity"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Bane of Leshan"
 - raw: "马.应龙"
   splits:
   - text: "马.应龙"
@@ -58284,11 +57997,7 @@
 - raw: "西北四骏"
   splits:
   - text: "西北四骏"
-    translated: "Four Great Horses of the Northwest"
-    qcReviewedText: "Four Great Horses of the Northwest"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Four Steeds of the Northwest"
 - raw: "亲属:105/106/107"
   splits:
   - text: "亲属"
@@ -58408,11 +58117,7 @@
 - raw: "神拳无敌"
   splits:
   - text: "神拳无敌"
-    translated: "Invincible Fist"
-    qcReviewedText: "Invincible Fist"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Invincible Divine Fist"
 - raw: "结义:109/110"
   splits:
   - text: "结义"
@@ -58449,11 +58154,7 @@
 - raw: "富可敌国"
   splits:
   - text: "富可敌国"
-    translated: "Rich enough to rival a nation"
-    qcReviewedText: "Rich enough to rival a nation"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Wealthier than a Kingdom's riches"
 - raw: "结义:110"
   splits:
   - text: "结义"
@@ -58490,11 +58191,7 @@
 - raw: "智计无双"
   splits:
   - text: "智计无双"
-    translated: "Ingenious beyond compare"
-    qcReviewedText: "Ingenious beyond compare"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Peerless Strategist"
 - raw: "熊.百胜"
   splits:
   - text: "熊.百胜"
@@ -58524,11 +58221,7 @@
 - raw: "黑风寨大当家"
   splits:
   - text: "黑风寨大当家"
-    translated: "Black Wind Stronghold's top boss"
-    qcReviewedText: "Black Wind Stronghold's top boss"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "First Boss of Black Wind Stronghold"
 - raw: "朱.全"
   splits:
   - text: "朱.全"
@@ -58549,11 +58242,7 @@
 - raw: "黑风寨二当家"
   splits:
   - text: "黑风寨二当家"
-    translated: "Black Wind Stronghold's Second Boss"
-    qcReviewedText: "Black Wind Stronghold's Second Boss"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Second Boss of Black Wind Stronghold"
 - raw: "严.达开"
   splits:
   - text: "严.达开"
@@ -58574,11 +58263,7 @@
 - raw: "黑风寨三当家"
   splits:
   - text: "黑风寨三当家"
-    translated: "Black Wind Stronghold's third leader"
-    qcReviewedText: "Black Wind Stronghold's third leader"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Third Boss of Black Wind Stronghold"
 - raw: "冯.虎"
   splits:
   - text: "冯.虎"
@@ -58733,11 +58418,7 @@
 - raw: "大隐琴侠"
   splits:
   - text: "大隐琴侠"
-    translated: "Great Hidden Harp"
-    qcReviewedText: "Great Hidden Harp"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Great Hermit Qin Hero"
 - raw: "孟.经世"
   splits:
   - text: "孟.经世"
@@ -58786,14 +58467,7 @@
 - raw: "霸刀狂侠"
   splits:
   - text: "霸刀狂侠"
-    translated: "Frenzied Blade"
-    qcReviewedText: "Frenzied Blade"
-    qcTranslated: "Tyrant Blade Mad Hero"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    translated: "Mad Hero of the Tyrant Blade"
 - raw: "郭.淮"
   splits:
   - text: "郭.淮"
@@ -58851,11 +58525,7 @@
 - raw: "中原大侠"
   splits:
   - text: "中原大侠"
-    translated: "Great Hero of Central Plains"
-    qcReviewedText: "Great Hero of Central Plains"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Great Hero of the Central Plains"
 - raw: "吕.天行"
   splits:
   - text: "吕.天行"
@@ -58904,11 +58574,7 @@
 - raw: "蓬莱奇侠"
   splits:
   - text: "蓬莱奇侠"
-    translated: "Penglai Strange Hero"
-    qcReviewedText: "Penglai Strange Hero"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Strange Hero of Penglai"
 - raw: "何.足道"
   splits:
   - text: "何.足道"
@@ -58944,11 +58610,7 @@
 - raw: "茅山道侠"
   splits:
   - text: "茅山道侠"
-    translated: "Moshan Daoist Hero"
-    qcReviewedText: "Moshan Daoist Hero"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Daoist Hero of Maoshan"
 - raw: "楚.风疾"
   splits:
   - text: "楚.风疾"
@@ -58981,11 +58643,7 @@
 - raw: "敕封御史之风"
   splits:
   - text: "敕封御史之风"
-    translated: "Imperial Censor Wind"
-    qcReviewedText: "Imperial Censor Wind"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Wind of the Imperial Censor"
 - raw: "结义:124/125/126"
   splits:
   - text: "结义"
@@ -59031,11 +58689,7 @@
 - raw: "敕封御史之林"
   splits:
   - text: "敕封御史之林"
-    translated: "Imperial Censor Lin"
-    qcReviewedText: "Imperial Censor Lin"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Forest of the Imperial Censor"
 - raw: "结义:125/126"
   splits:
   - text: "结义"
@@ -59078,11 +58732,7 @@
 - raw: "敕封御史之火"
   splits:
   - text: "敕封御史之火"
-    translated: "Imperial Censor's Flame"
-    qcReviewedText: "Imperial Censor's Flame"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Fire of the Imperial Censor"
 - raw: "结义:126"
   splits:
   - text: "结义"
@@ -59125,11 +58775,7 @@
 - raw: "敕封御史之山"
   splits:
   - text: "敕封御史之山"
-    translated: "Vice‑Adjudicator Mountain"
-    qcReviewedText: "Vice‑Adjudicator Mountain"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Mountain of the Imperial Censor"
 - raw: "项.问天"
   splits:
   - text: "项.问天"
@@ -59443,11 +59089,7 @@
 - raw: "玉面判官"
   splits:
   - text: "玉面判官"
-    translated: "Face of Jade Official"
-    qcReviewedText: "Face of Jade Official"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Jade Faced Judge"
 - raw: "师傅:124"
   splits:
   - text: "师傅"
@@ -59549,11 +59191,7 @@
 - raw: "江湖百晓"
   splits:
   - text: "江湖百晓"
-    translated: "Jianghu Bai Xiao"
-    qcReviewedText: "Jianghu Bai Xiao"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "All Knowing of the Jianghu"
 - raw: "天.残"
   splits:
   - text: "天.残"
@@ -59614,11 +59252,7 @@
 - raw: "侠盗四奇"
   splits:
   - text: "侠盗四奇"
-    translated: "Four Legendary Thieves"
-    qcReviewedText: "Four Legendary Thieves"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Four Extraordinary Chivalrous Thieves"
 - raw: "地.缺"
   splits:
   - text: "地.缺"
@@ -60237,11 +59871,7 @@
 - raw: "侠盗四丑"
   splits:
   - text: "侠盗四丑"
-    translated: "Thief Quartet"
-    qcReviewedText: "Thief Quartet"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Four Ugly Chivalrous Thieves"
 - raw: "中年地.缺"
   splits:
   - text: "中年地.缺"
@@ -60417,11 +60047,7 @@
 - raw: "拳佛"
   splits:
   - text: "拳佛"
-    translated: "Punch Buddha"
-    qcReviewedText: "Punch Buddha"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Fist Buddha"
 - raw: "陆.沉舟"
   splits:
   - text: "陆.沉舟"
@@ -60433,11 +60059,7 @@
 - raw: "陆地剑仙"
   splits:
   - text: "陆地剑仙"
-    translated: "Land Sword Immortal"
-    qcReviewedText: "Land Sword Immortal"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Sword Immortal of the Mortal Realm"
 - raw: "王.霸"
   splits:
   - text: "王.霸"
@@ -60449,11 +60071,7 @@
 - raw: "横刀灭九州"
   splits:
   - text: "横刀灭九州"
-    translated: "Slash to Annihilate Nine Provinces"
-    qcReviewedText: "Slash to Annihilate Nine Provinces"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Blade That Conquers the Nine Provinces"
 - raw: "龙.灭"
   splits:
   - text: "龙.灭"
@@ -60465,11 +60083,7 @@
 - raw: "铁枪破宇宙"
   splits:
   - text: "铁枪破宇宙"
-    translated: "Spear Through the Universe"
-    qcReviewedText: "Spear Through the Universe"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Iron Spear That Shatters the Universe"
 - raw: "罗.八怪"
   splits:
   - text: "罗.八怪"
@@ -60481,11 +60095,7 @@
 - raw: "出奇必胜"
   splits:
   - text: "出奇必胜"
-    translated: "Surprise attacks always win"
-    qcReviewedText: "Surprise attacks always win"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Victory Through the Unexpected"
 - raw: "菲.燕子"
   splits:
   - text: "菲.燕子"
@@ -60497,11 +60107,7 @@
 - raw: "百步穿针"
   splits:
   - text: "百步穿针"
-    translated: "Hundred‑step needle‑threading"
-    qcReviewedText: "Hundred‑step needle‑threading"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Threading a Needle from a Hundred Paces"
 - raw: "叶.寒"
   splits:
   - text: "叶.寒"
@@ -60528,11 +60134,7 @@
 - raw: "百骰百胜"
   splits:
   - text: "百骰百胜"
-    translated: "Hundred Dice, Hundred Wins"
-    qcReviewedText: "Hundred Dice, Hundred Wins"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A Hundred Rolls with a Hundred Wins"
 - raw: "李.天临"
   splits:
   - text: "李.天临"
@@ -60576,11 +60178,7 @@
 - raw: "滚地雷"
   splits:
   - text: "滚地雷"
-    translated: "Tumble mine"
-    qcReviewedText: "Tumble mine"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Rolling Thunder"
 - raw: "王.伦"
   splits:
   - text: "王.伦"
@@ -60601,11 +60199,7 @@
 - raw: "白衣秀士"
   splits:
   - text: "白衣秀士"
-    translated: "White‑robed Gentleman"
-    qcReviewedText: "White‑robed Gentleman"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "White Robed Scholar"
 - raw: "急速0.06;击退1"
   splits:
   - text: "急速0.06"

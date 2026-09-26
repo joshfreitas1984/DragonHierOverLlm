@@ -222,11 +222,7 @@
     qcDefectCategory: None
   - split: 9
     text: "依我所见，武学的精要之处在于算无遗策，克敌机先"
-    translated: "In my view, the essence of martial arts lies in devising strategies without fail and gaining the upper hand before the enemy."
-    qcReviewedText: "In my view, the essence of martial arts lies in devising strategies without fail and gaining the upper hand before the enemy."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "In my view, the essence of martial arts lies in being a mastermind without equal, always outmaneuvering the enemy."
   - split: 10
     text: "依我所见，武学的精要之处在于破除陈规，剑走偏锋"
     translated: "In my opinion, the essence of martial arts lies in breaking conventional rules and taking an unconventional approach with the sword."

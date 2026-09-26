@@ -686,11 +686,7 @@
 - raw: "#PlayerName#乐善好施，侠义心肠果然名不虚传。\n此番情谊我一定铭记于心。"
   splits:
   - text: "#PlayerName#乐善好施，侠义心肠果然名不虚传。"
-    translated: "#PlayerName# is truly a man of benevolence and chivalry, as his reputation suggests."
-    qcReviewedText: "#PlayerName# is truly a man of benevolence and chivalry, as his reputation suggests.\nI will surely cherish this friendship"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "#PlayerName#, Benevolent Benefactor, your chivalrous heart is indeed as renowned as they say."
   - subIndex: 1
     text: "此番情谊我一定铭记于心。"
     translated: "I will surely cherish this friendship"
@@ -4271,11 +4267,7 @@
 - raw: "#TargetInteractName#乐善好施，侠义心肠果然名不虚传。\n此番情谊我自会铭记于心。"
   splits:
   - text: "#TargetInteractName#乐善好施，侠义心肠果然名不虚传。"
-    translated: "#TargetInteractName# is indeed as generous and righteous as his reputation suggests."
-    qcReviewedText: "#TargetInteractName# is indeed as generous and righteous as his reputation suggests.\nI shall surely cherish this friendship in my heart."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "#TargetInteractName#, Benevolent Benefactor, your chivalrous reputation is indeed well‑deserved."
   - subIndex: 1
     text: "此番情谊我自会铭记于心。"
     translated: "I shall surely cherish this friendship in my heart."
@@ -4639,11 +4631,7 @@
 - raw: "#TargetInteractName#德高望重，武功卓绝，令人深感钦佩。\n我今日欲正式拜#TargetInteractName#为师，不知意下如何？"
   splits:
   - text: "#TargetInteractName#德高望重，武功卓绝，令人深感钦佩。"
-    translated: "#TargetInteractName# is highly revered for his great virtue and remarkable martial arts skills."
-    qcReviewedText: "#TargetInteractName# is highly revered for his great virtue and remarkable martial arts skills.\nI wish to formally take you, #TargetInteractName#, as my teacher. May I know your opinion on this?"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "#TargetInteractName#, virtuous and esteemed, with extraordinary martial arts skills, is truly awe‑inspiring."
   - subIndex: 1
     text: "我今日欲正式拜#TargetInteractName#为师，不知意下如何？"
     translated: "I wish to formally take you, #TargetInteractName#, as my teacher. May I know your opinion on this?"
@@ -13675,11 +13663,9 @@
 - raw: "中原大侠郭淮之子郭勇锐初入江湖，就在乐山镇击败了黄河双煞，一时声名鹊起。江湖中人誉为“中原小侠”，真是虎父无犬子啊。"
   splits:
   - text: "中原大侠郭淮之子郭勇锐初入江湖，就在乐山镇击败了黄河双煞，一时声名鹊起。江湖中人誉为“中原小侠”，真是虎父无犬子啊。"
-    translated: "The son of Great Hero Guo Huai, Guo Yongrui, made a name for himself in the Jianghu after defeating the Yellow River Double Shadows in Leshan Town upon his initial entry into the Jianghu. Renowned as the Youthful Hero of Central Plains, it truly says that a tiger father has no dog sons."
-    qcReviewedText: "The son of Great Hero Guo Huai, Guo Yongrui, made a name for himself in the Jianghu after defeating the Yellow River Double Shadows in Leshan Town upon his initial entry into the Jianghu. Renowned as the Youthful Hero of Central Plains, it truly says that a tiger father has no dog sons."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Guo Huai's son, Guo Yongrui, a newcomer to Jianghu, defeated the Yellow River Twin Fiends in Leshan Town and quickly rose to fame. He was hailed as the Young Hero of the Central Plains, truly living up to the saying that a brave father has no cowardly sons."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Great Hero of the Central Plains,中原大侠,"
 - raw: "中品"
   splits:
   - text: "中品"
@@ -17122,11 +17108,9 @@
 - raw: "传闻中原大侠郭淮之子郭勇锐一招便击毙了黄河双煞，一时声名显赫。江湖中人无不刮目相看，真是虎父无犬子啊。"
   splits:
   - text: "传闻中原大侠郭淮之子郭勇锐一招便击毙了黄河双煞，一时声名显赫。江湖中人无不刮目相看，真是虎父无犬子啊。"
-    translated: "According to rumor, the son of Central Plain's Great Hero Guo Huai, Guo Yongrui, killed the Double Fiends of the Yellow River with a single move, and his fame spread far and wide. The people in the Jianghu could not help but look at him with new eyes‑truly, a tiger father has no dog sons."
-    qcReviewedText: "According to rumor, the son of Central Plain's Great Hero Guo Huai, Guo Yongrui, killed the Double Fiends of the Yellow River with a single move, and his fame spread far and wide. The people in the Jianghu could not help but look at him with new eyes‑truly, a tiger father has no dog sons."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "It is said that Guo Huai's son, Guo Yongrui, killed the Yellow River Twin Fiends with a single move, gaining instant fame. People in Jianghu could not help but take notice; truly, the son does not disappoint the father."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Great Hero,大侠,Great Hero of the Central Plains,中原大侠,"
 - raw: "传闻在{2}，一位名为{0}的{1}正式踏入武林，欲大展一番拳脚。"
   splits:
   - text: "传闻在"
@@ -17908,11 +17892,7 @@
 - raw: "侠义七子"
   splits:
   - text: "侠义七子"
-    translated: "Seven Righteous Ones"
-    qcReviewedText: "Seven Righteous Ones"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Seven Virtuous Heroes"
 - raw: "侠士"
   splits:
   - text: "侠士"
@@ -24913,15 +24893,7 @@
 - raw: "哈哈，您老人家一向乐善好施，慷慨大方，江湖中谁人不知谁人不晓，\n这大过年的，自然也会对徒儿倍加关爱，包一个大红包以示鼓励。"
   splits:
   - text: "哈哈，您老人家一向乐善好施，慷慨大方，江湖中谁人不知谁人不晓，"
-    translated: "Ha ha, your honor has always been generous and kind‑hearted. Who in the Jianghu doesn't know of it?"
-    qcReviewedText: "Ha ha, your honor has always been generous and kind‑hearted. Who in the Jianghu doesn't know of it?\nDuring the Spring Festival, he would naturally show even greater care for his apprentice and give a big red envelope as a sign of encouragement."
-    qcTranslated: "Ha ha, your honor has always been generous and kind‑hearted. Who in the Jianghu doesn't know of it? During the Spring Festival, he would naturally show even greater care for his apprentice and give a big red envelope as a sign of encouragement."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    translated: "Haha, venerable sir, you have always been a Benevolent Benefactor, generous and magnanimous; who in the Jianghu does not know of this?"
   - subIndex: 1
     text: "这大过年的，自然也会对徒儿倍加关爱，包一个大红包以示鼓励。"
     translated: "During the Spring Festival, he would naturally show even greater care for his apprentice and give a big red envelope as a sign of encouragement."
@@ -39589,14 +39561,9 @@
 - raw: "我江湖百晓虽说武功不算登峰造极，但凭着这英雄谱，却知晓天下各大高手的武功路数。\n加上时常在脑海中演练，他们的一招一式以及破解之法，\n皆可用言语手势模拟，近乎分毫不差。"
   splits:
   - text: "我江湖百晓虽说武功不算登峰造极，但凭着这英雄谱，却知晓天下各大高手的武功路数。"
-    translated: "I, Jianghu Baxiao, though my martial arts may not be at the pinnacle, I know the techniques of the world's top masters through the Heroic Register."
-    qcReviewedText: "I, Jianghu Baxiao, though my martial arts may not be at the pinnacle, I know the techniques of the world's top masters through the Heroic Register.\nBy frequently rehearsing in their minds, they mastered every move and counterstrategy.\nAll could mimic it with words and gestures, almost to the letter."
-    qcTranslated: "I, Jianghu Baxiao, though my martial arts may not be at the pinnacle, I know the techniques of the world's top masters through the Heroic Register. By frequently rehearsing in my mind, their every move and counterstrategy can be mimicked with words and gestures, almost to the letter."
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    translated: "Although my knowledge of martial arts in the Jianghu isn't at the pinnacle, with this Book of Heroes, I know the styles of all the great masters across the land."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "All Knowing of the Jianghu,江湖百晓,"
   - subIndex: 1
     text: "加上时常在脑海中演练，他们的一招一式以及破解之法，"
     translated: "By frequently rehearsing in their minds, they mastered every move and counterstrategy."
@@ -54586,11 +54553,7 @@
 - raw: "称得上是德高望重，人人敬仰之名门大派"
   splits:
   - text: "称得上是德高望重，人人敬仰之名门大派"
-    translated: "Deserves the respect and admiration of a prestigious and eminent family or sect"
-    qcReviewedText: "Deserves the respect and admiration of a prestigious and eminent family or sect"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Worthy of being virtuous and esteemed, a prestigious and revered martial arts sect"
 - raw: "称霸"
   splits:
   - text: "称霸"
@@ -56666,13 +56629,9 @@
   splits:
   - text: "老夫绞尽脑汁，苦心搜罗这英雄谱，仍找不出能击败#PlayerName#的武功招式。"
     translated: "After exhausting all my efforts and meticulously searching through the Heroic Register, I still cannot find any martial arts moves that could defeat #PlayerName#."
-    qcReviewedText: "After exhausting all my efforts and meticulously searching through the Heroic Register, I still cannot find any martial arts moves that could defeat #PlayerName#.\nThe title Jianghu Baixiao now seems truly undeserved!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "这“江湖百晓”的称号，如今看来实在受之有愧！"
-    translated: "The title Jianghu Baixiao now seems truly undeserved!"
+    translated: "This title of All Knowing of the Jianghu now seems undeserved!"
   templates:
   - template: "{0}\n{1}"
 - raw: "老夫这英雄谱上，不仅记载了群雄排行座次，\n这江湖中何时何地有何奇闻异事发生，也是一一俱全。\n#PlayerName#若想了解某一城市，连同周边区域事件之情报，只管来找老夫购买便可。"

@@ -10,6 +10,9 @@
   result: Killer Without a Trace
 - raw: 玉面医仙
   result: Jade Faced Divine Healer
+  allowalt: 
+    - Jade-Faced Divine Healer
+    - Jade-Faced Divine Healer
 - raw: 穿林妙手
   result: Forest Piercing Master Hand
 - raw: 铁碗残拳
@@ -30,6 +33,9 @@
   result: Hundred Forged Divine Sword
 - raw: 销魂蚀骨
   result: Soul Stealing Bone Eroder
+  allowalt: 
+    - soul-stealing bone eroder
+    - soul‑stealing bone eroder
 - raw: 毒手琴心
   result: Poison Hand and Qin Heart
 - raw: 黑爪
@@ -50,32 +56,36 @@
   result: Fairy of the Rainbow Skirt
 - raw: 德高望重
   result: Virtuous and Esteemed
+  badtrans: false
 - raw: 金身罗汉
   result: Golden Bodied Arhat
 - raw: 佛痴
   result: Buddha Devotee
 - raw: 无为真人
-  result: Daoist Master Wuwei
+  result: Immortal Wuwei
 - raw: 文逸真人
-  result: Daoist Master Wenyi
+  result: Immortal Wenyi
 - raw: 清虚真人
-  result: Daoist Master Qingxu
+  result: Immortal Qingxu
 - raw: 力大无穷
   result: Strength Without Equal
 - raw: 算无遗策
   result: Mastermind Without Equal
 - raw: 都灵子
-  result: Daoist Dulingzi
+  result: Dulingzi
 - raw: 云鹏子
-  result: Daoist Yunpengzi
+  result: Yunpengzi
 - raw: 白眉真人
-  result: Daoist Whitebrow
+  result: Immortal Whitebrow
 - raw: 潇湘真人
-  result: Daoist Xiaoxiang
+  result: Immortal Xiaoxiang
 - raw: 白云子
-  result: Daoist Baiyunzi
+  result: Baiyunzi
 - raw: 紫髯道人
   result: Purple Bearded Daoist
+  allowalt:
+    - Purple‑Bearded Daoist
+    - Purple-Bearded Daoist
 - raw: 绝情道人
   result: Heartless Daoist
 - raw: 天工巧匠
@@ -113,11 +123,11 @@
 - raw: 雨夜狂屠
   result: Mad Butcher of the Rainy Night
 - raw: 刺骨冰寒
-  result: Bone-Piercing Chill
+  result: Bone Piercing Chill
 - raw: 诡计毒谋
   result: Cunning Schemer
 - raw: 摘月偷星
-  result: Plucker of Moons, Thief of Stars
+  result: Plucker of Moons and Thief of Stars
 - raw: 四大杀手
   result: Four Great Assassins
 - raw: 刀劳鬼
@@ -125,7 +135,7 @@
 - raw: 拘魂鬼
   result: Soul Seizing Ghost
 - raw: 痨病鬼
-  result: Consumption Ghost
+  result: Consumptive Ghost
 - raw: 山魈鬼
   result: Mountain Demon
 - raw: 魍魉鬼
@@ -134,10 +144,11 @@
   result: Yellow River Twin Fiends 
 - raw: 乐善好施
   result: Benevolent Benefactor
+  badtrans: false
 - raw: 入林龙
   result: Forest Entering Dragon
 - raw: 化虎成龙
-  result: From Tiger to Dragon
+  result: Tiger Transformed into a Dragon
 - raw: 翻江镇海
   result: Overturning Rivers Calming Seas
 - raw: 及时雨
@@ -149,9 +160,10 @@
 - raw: 神拳无敌
   result: Invincible Divine Fist
 - raw: 富可敌国
-  result: Richer Than a Kingdom
+  result: Wealthier than a Kingdom's riches
 - raw: 智计无双
   result: Peerless Strategist
+  badtrans: false
 - raw: 黑风寨大当家
   result: First Boss of Black Wind Stronghold
 - raw: 黑风寨二当家
@@ -166,6 +178,8 @@
   result: Mad Hero of the Tyrant Blade
 - raw: 中原大侠
   result: Great Hero of the Central Plains
+  allowalt: 
+    - Great Hero
 - raw: 蓬莱奇侠
   result: Strange Hero of Penglai
 - raw: 茅山道侠
@@ -179,11 +193,15 @@
 - raw: 敕封御史之山
   result: Mountain of the Imperial Censor
 - raw: 侠义七子
-  result: Seven Sons of Chivalry
+  result: Seven Virtuous Heroes
 - raw: 玉面判官
   result: Jade Faced Judge
+  allowalt: 
+    - Jade‑Faced Judge
 - raw: 江湖百晓
   result: All Knowing of the Jianghu
+  allowalt:
+    - All knowing
 - raw: 侠盗四奇
   result: Four Extraordinary Chivalrous Thieves
 - raw: 小霹雳

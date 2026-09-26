@@ -56,6 +56,45 @@ additionalSourceAssessments:
     placeholders (#Token# and the game's ⟦n⟧ bracket style) in a single line, since the gold set
     previously had only one such example. Items sourced from this batch set
     sampleRun: ConvertedCorpus-20260920-mining below.
+- name: ConvertedCorpus-20260926-unnatural-phrasing-mining
+  path: Files/Converted
+  sampleFingerprint: n/a - not a TranslationAssessmentWorkflow run
+  sampleSize: n/a
+  sampleSeed: n/a
+  selection: >-
+    8 detection items hand-mined directly from Files/Converted to test the new UNNATURAL_PHRASING
+    DEFECT category (added alongside this batch - see QcDefectCategory.cs, the shared
+    BaseQualityReviewPrompt.txt, and docs/investigations/tests/qc-qualityscore-noise-investigation.md
+    for the reported line that motivated it). 3 Defect/unnatural-phrasing items (the reported
+    "角色获取的额外内力上限" line itself, its immediate sibling "角色获取的额外生命上限", and a
+    structurally distinct "初始获得随机秘籍" example) plus 5 clean Pass baselines deliberately drawn
+    from the same terse UI/stat-label register the HARD_TO_PARSE_SEAM carve-out already protects,
+    to directly test false-positive risk on exactly that register. A ~10-item smoke test, not a
+    hand-validated precision sample - the category starts outside autoAcceptDefectCategories and
+    stays there until a real corpus-volume validation pass is run as follow-up work. Items sourced
+    from this batch set sampleRun: ConvertedCorpus-20260926-unnatural-phrasing-mining below.
+- name: FlaggedQueue-20260926-mining
+  path: Files/Converted
+  sampleFingerprint: n/a - not a TranslationAssessmentWorkflow run
+  sampleSize: n/a
+  sampleSeed: n/a
+  selection: >-
+    8 detection items hand-mined from the corpus's existing flaggedForQcReview: true queue (376
+    items across the corpus as of this mining pass), 2 each from 4 of the gold set's thinnest
+    established categories (LostIdiom, DroppedStutter, GarbledNumber, UntranslatedPinyin), chosen
+    for being unambiguous single-defect examples where production's own qcDefectCategory call was
+    independently re-confirmed correct on inspection (as opposed to the many flagged rows spanning
+    multi-part templated cells where the visible defect and the flagged qcDefectCategory did not
+    obviously line up without deeper digging). The two items mined as UntranslatedPinyin surfaced a
+    real category-definition gap: every UntranslatedPinyin-flagged row actually found in this pass
+    was the mirror-image direction of that category's literal definition (a term that should stay
+    Pinyin got mistranslated into an English gloss, not a term left in Pinyin that should have been
+    translated). Fixed the same day this was found - BaseQualityReviewPrompt.txt's
+    UNTRANSLATED_PINYIN/OTHER_NAMED_DEFECT bullets and QcDefectCategory.cs's doc comments now state
+    explicitly that this reverse direction is OTHER_NAMED_DEFECT, not UNTRANSLATED_PINYIN - so these
+    two items (4de67554e9244783/7a9b4022c55d8896) are labeled mistranslation in this gold set,
+    matching the corrected category boundary rather than production's original (pre-fix) label.
+    Items sourced from this batch set sampleRun: FlaggedQueue-20260926-mining below.
 models:
 - Qwen25-Standard
 - HyMT2-7B
@@ -2593,6 +2632,391 @@ items:
     on that row). Mined per the user's request to fill out the gold set's thinnest
     categories (terminology, garbled-number, fluency, untranslated-pinyin, prompt-leak) -
     see docs/plans/qc-evaluator-comparison.md's Eighteenth round entry.
+- sampleId: 9dec1ed4eb41f979
+  sampleKind: split
+  source: "角色获取的额外内力上限"
+  candidates:
+    ProductionTranslation: "Additional Max Inner Power obtained"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - unnatural-phrasing
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260926-unnatural-phrasing-mining
+  reviewNote: >-
+    The reported "really broken" translation that motivated adding UNNATURAL_PHRASING as a new
+    QC DEFECT category (see docs/investigations/tests/qc-qualityscore-noise-investigation.md).
+    Meaning is fully accurate - source is a noun phrase meaning "the additional Max Inner Power
+    the character obtains" - but the rendering keeps SOURCE's word order literally, trailing the
+    modified noun with "obtained" instead of using a natural stat-label construction such as
+    "Bonus Max Inner Power Gained" or "Max Inner Power Increased". None of the other 8 DEFECT
+    categories cover this: nothing is garbled, dropped, mistranslated, or a parse-seam issue -
+    it is a whole-phrase construction problem, which is why it always passed at 100/None before
+    this category existed.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: 6fabe83c13c37c90
+  sampleKind: split
+  source: "角色获取的额外生命上限"
+  candidates:
+    ProductionTranslation: "Additional Max Health obtained"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - unnatural-phrasing
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260926-unnatural-phrasing-mining
+  reviewNote: >-
+    Short UI/stat-label string, the immediate sibling raw entry to 9dec1ed4eb41f979 in the same
+    source file (same "角色获取的额外X上限" template, X = health instead of inner power) -
+    confirms the literal source-order "Additional Max <Stat> obtained" construction is a
+    systemic phrasing pattern from whatever produced these labels, not a one-off. Deliberately
+    included as a second, terse example of the exact stat-label register
+    HARD_TO_PARSE_SEAM's "terse list-style register is normal" carve-out protects, to test
+    whether UNNATURAL_PHRASING can tell "reads mechanically" apart from "is just short."
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: 1c5c927965f822f1
+  sampleKind: split
+  source: "初始获得随机秘籍"
+  candidates:
+    ProductionTranslation: "Initial random Secret Manual obtained"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - unnatural-phrasing
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260926-unnatural-phrasing-mining
+  reviewNote: >-
+    Source literally reads "initially obtain random Secret Manual" (an achievement/reward-line
+    description). The translation keeps SOURCE's word order verbatim - adjective-noun-participle
+    stacked with no article or natural verb placement - instead of a natural rendering like
+    "Randomly Obtain a Secret Manual at Start" or "Starting Secret Manual (Random)". Meaning is
+    intact; only the construction is mechanically literal, a different concrete shape from the
+    two "Additional Max X obtained" items above (verb-first noun phrase rather than a trailing
+    participle after a compound stat name), for construction diversity within this category.
+  provenance: >-
+    Real production translation mined from Files/Converted/dumpedPrefabText.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: 8afb4a77f378b261
+  sampleKind: split
+  source: "获得世外高人指点"
+  candidates:
+    ProductionTranslation: "Receive guidance from a hermit master"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260926-unnatural-phrasing-mining
+  reviewNote: >-
+    Clean baseline: short achievement/log-line string rendered as natural, idiomatic English
+    despite being terse. Included to test whether UNNATURAL_PHRASING over-fires on short strings
+    merely for being short, rather than for actually reading as machine-translated.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: 61d7173e8e2b0e2e
+  sampleKind: split
+  source: "获得物品"
+  candidates:
+    ProductionTranslation: "Obtain items"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260926-unnatural-phrasing-mining
+  reviewNote: >-
+    Clean baseline: a 2-word UI button/section-header label, terse verb-object construction that
+    is completely normal English for this register (compare a real menu button reading "Obtain
+    items"). Deliberately as short as the register gets, to stress-test the false-positive risk
+    on ultra-terse UI text.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: 8041053a1e858fe2
+  sampleKind: split
+  source: "已获得初始天赋点"
+  candidates:
+    ProductionTranslation: "Gained initial talent points"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260926-unnatural-phrasing-mining
+  reviewNote: >-
+    Clean baseline: terse stat/log-line label, same general shape as the two Defect "Additional
+    Max X obtained" items above (short noun phrase plus a past-participle verb about acquiring
+    something) but reading as natural English rather than mechanically literal - "Gained initial
+    talent points" puts the participle first, matching normal English stat-log phrasing, unlike
+    the Defect items' source-order noun-then-participle construction. Directly tests whether the
+    category can tell this apart from the two Defect siblings instead of pattern-matching on
+    "short label ending in a past participle about acquiring something."
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: e579426ff458e88f
+  sampleKind: split
+  source: "100%探索奖励"
+  candidates:
+    ProductionTranslation: "100% Exploration Reward"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260926-unnatural-phrasing-mining
+  reviewNote: >-
+    Clean baseline: terse percentage-prefixed UI stat/reward label, the normal terse
+    enumerated/list-style register the HARD_TO_PARSE_SEAM carve-out already protects. Included
+    for file-type/register diversity against the other baselines above.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: c9e5951c32e5533a
+  sampleKind: split
+  source: "增加获取的经验"
+  candidates:
+    ProductionTranslation: "Increase experience gained"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260926-unnatural-phrasing-mining
+  reviewNote: >-
+    Clean baseline: verb-first skill/effect-description label ("increase experience gained" is
+    normal terse game-effect phrasing, the same register as "Increase Max HP"). Included to test
+    whether a verb-first effect label gets wrongly flagged just for being a bare imperative
+    fragment rather than a full sentence.
+  provenance: >-
+    Real production translation mined from Files/Converted/SpeAddDataBase.csv.yaml (pre-QC
+    'translated' field, independent of any qcStatus/qcQualityScore already recorded on
+    that row); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: 4cd6e8932e30cd7d
+  sampleKind: fullCell
+  source: "嗯，万一让他们走脱了，打草惊蛇可就不妙。\\n不过咱们三人，一人对付一个，应该也绰绰有余。"
+  candidates:
+    ProductionTranslation: "Well, if they escape, we might scare the grass and alert them.\\nBut with the three of us, one against each, we should be able to handle it easily."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - lost-idiom
+      correctionSafety: safe
+  sampleRun: FlaggedQueue-20260926-mining
+  reviewNote: >-
+    "打草惊蛇" is a well-known four-character idiom ("beat the grass, startle the snake") meaning
+    to act rashly and alert one's target/enemy by carelessness - it does not literally involve
+    grass or snakes as a real-world action. The translation renders it word-for-word as "scare the
+    grass and alert them", losing the idiom's actual meaning and image (the "snake" disappears
+    entirely, replaced by a vague "them") in favor of a literal gloss that reads as nonsensical in
+    English. Mined from the corpus's own flaggedForQcReview queue (already qcDefectCategory:
+    LostIdiom in production) and independently confirmed as a genuine defect.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml's
+    flaggedForQcReview: true queue (pre-QC 'translated'/qcReviewedText field, independent of
+    qcTranslated's own proposed correction quality); ProductionTranslation is a single-candidate
+    label, not a specific configured model name, since Files/Converted has no per-row model
+    attribution.
+- sampleId: f131f0c63ec43e9a
+  sampleKind: split
+  source: "看来从小就是个烂杆儿，老子今天非要给你点颜色看看不可！"
+  candidates:
+    ProductionTranslation: "Seems like you've always been a troublemaker. Today, I'm going to show you what color you are!"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - lost-idiom
+      correctionSafety: safe
+  sampleRun: FlaggedQueue-20260926-mining
+  reviewNote: >-
+    "给你点颜色看看" is a common idiom meaning "to teach someone a lesson" / "to show someone what
+    happens when they cross you" - it does not literally refer to color. The translation renders
+    it as a literal gloss, "show you what color you are", which reads as nonsensical in English and
+    completely loses the threat's actual meaning. Mined from the corpus's own flaggedForQcReview
+    queue (already qcDefectCategory: LostIdiom in production) and independently confirmed as a
+    genuine defect.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml's
+    flaggedForQcReview: true queue (pre-QC 'translated' field, independent of qcTranslated's own
+    proposed correction quality); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: 923b0aad05cb8cd1
+  sampleKind: fullCell
+  source: "你你你...你们是不是没长眼？没看见我们官兵正在押运税银吗？\\n快快让开去路，饶饶饶你们惊驾之罪......"
+  candidates:
+    ProductionTranslation: "You... didn't you notice? We are escorting the tax silver, haven't you seen it?\\nQuickly make way, or I shall forgive you for your intrusion..."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - dropped-stutter
+      correctionSafety: safe
+  sampleRun: FlaggedQueue-20260926-mining
+  reviewNote: >-
+    Two stammers in the source, both dropped entirely: "你你你" (three-fold repeat of "you") before
+    the first sentence, and "饶饶饶" (three-fold repeat of "spare/forgive") before the second -
+    neither survives in the translation in any form (hyphenated or fully repeated). Mined from the
+    corpus's own flaggedForQcReview queue (already qcDefectCategory: DroppedStutter in production)
+    and independently confirmed as a genuine defect - a clean double-instance example of the
+    category within one cell.
+  provenance: >-
+    Real production translation mined from Files/Converted/dumpedPrefabTextFromOtherFields.txt.yaml's
+    flaggedForQcReview: true queue (pre-QC 'translated'/qcReviewedText field, independent of
+    qcTranslated's own proposed correction quality); ProductionTranslation is a single-candidate
+    label, not a specific configured model name, since Files/Converted has no per-row model
+    attribution.
+- sampleId: 15ac58a94b242aea
+  sampleKind: fullCell
+  source: "大、大叔，你怎么吐血了......这饭菜有这么难吃么？\\n你要实在不想吃，就留给我好了。"
+  candidates:
+    ProductionTranslation: "Uncle, why are you coughing up blood... Is the food really that bad?\\nYou can keep it if you really don't want to eat it."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - dropped-stutter
+      correctionSafety: safe
+  sampleRun: FlaggedQueue-20260926-mining
+  reviewNote: >-
+    Source stammers on "大、大叔" ("U-uncle") but the translation renders a clean "Uncle" with no
+    stammer in any form. The second sentence has no stammer and is translated cleanly, isolating
+    the defect to the dropped stammer alone. Mined from the corpus's own flaggedForQcReview queue
+    (already qcDefectCategory: DroppedStutter in production) and independently confirmed as a
+    genuine defect.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml's
+    flaggedForQcReview: true queue (pre-QC 'translated'/qcReviewedText field, independent of
+    qcTranslated's own proposed correction quality); ProductionTranslation is a single-candidate
+    label, not a specific configured model name, since Files/Converted has no per-row model
+    attribution.
+- sampleId: 9db5dc00fd337348
+  sampleKind: split
+  source: "7月初7传说是牛郎织女鹊桥相会之日，因此也是探访心仪之人的浪漫节日。各大城镇也会举办穿针乞巧，拜祭织女等活动以示庆祝。"
+  candidates:
+    ProductionTranslation: "7 April 7 is traditionally said to be the day when the Cowherd and Weaver Girl meet on the Magpie Bridge, making it also a romantic festival to visit one's beloved. Major towns hold events such as the Thread‑Piercing Festival and worship ceremonies to honor the Weaver Girl in celebration."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - garbled-number
+      correctionSafety: safe
+  sampleRun: FlaggedQueue-20260926-mining
+  reviewNote: >-
+    Source "7月初7" means "the 7th day of the 7th lunar month" (the Qixi festival date, analogous
+    to "7/7"). The translation renders it as "7 April 7", inserting a nonsensical month name
+    between the two 7s that appears nowhere in SOURCE - a garbled/fabricated number-adjacent token,
+    not a translation choice. Mined from the corpus's own flaggedForQcReview queue (already
+    qcDefectCategory: GarbledNumber in production) and independently confirmed as a genuine defect.
+  provenance: >-
+    Real production translation mined from Files/Converted/dumpedPrefabTextFromOtherFields.txt.yaml's
+    flaggedForQcReview: true queue (pre-QC 'translated' field, independent of qcTranslated's own
+    proposed correction quality); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: f507c19377c8b4f0
+  sampleKind: fullCell
+  source: "哼哼，你们这些武功低微之人，\n即便来上百十个也不是我#$SourceInteractName#的对手！"
+  candidates:
+    ProductionTranslation: "Hmph, you lowly martial artists,\nEven a hundred or a thousand wouldn't be your match, #$SourceInteractName#!"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - garbled-number
+      correctionSafety: safe
+  sampleRun: FlaggedQueue-20260926-mining
+  reviewNote: >-
+    Source "百十个" means "about a hundred" (an approximation, "百十" = "a hundred or so") - the
+    translation invents "or a thousand" out of nowhere, an order-of-magnitude number fabrication
+    not present in SOURCE. Note this source embeds a REAL newline character (not the literal "\n"
+    token) per the file's own convention - reproducing it as a real newline in the translation is
+    correct, not itself a defect; only the invented "a thousand" is. Mined from the corpus's own
+    flaggedForQcReview queue (already qcDefectCategory: GarbledNumber in production) and
+    independently confirmed as a genuine defect.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml's
+    flaggedForQcReview: true queue (pre-QC 'translated'/qcReviewedText field, independent of
+    qcTranslated's own proposed correction quality); ProductionTranslation is a single-candidate
+    label, not a specific configured model name, since Files/Converted has no per-row model
+    attribution.
+- sampleId: 4de67554e9244783
+  sampleKind: split
+  source: "合谷"
+  candidates:
+    ProductionTranslation: "Hand Yangmingoins"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - mistranslation
+      correctionSafety: safe
+  sampleRun: FlaggedQueue-20260926-mining
+  reviewNote: >-
+    "合谷" (Hegu) is a real acupoint name that this corpus's convention keeps as Pinyin (see
+    qcTranslated: "Hegu", and compare the corpus's other acupoint entries like "承泣" -> "Chengqi",
+    already Passed as correctly kept in Pinyin). This translation instead invents a garbled English
+    gloss, "Hand Yangmingoins" (a corrupted echo of the "Hand Yangming" meridian name with a
+    nonsensical "oins" tacked on) that isn't even coherent English, let alone a correct rendering.
+    Labeled mistranslation/OTHER_NAMED_DEFECT here (not untranslated-pinyin) per the prompt fix that
+    followed this batch's mining: production's own QC had labeled this UntranslatedPinyin, but that
+    category is one direction only (Pinyin left where a translation was needed); the reverse - a
+    term convention keeps in Pinyin instead mistranslated into a gloss - now explicitly routes to
+    OTHER_NAMED_DEFECT (BaseQualityReviewPrompt.txt, QcDefectCategory.cs doc comment).
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml's
+    flaggedForQcReview: true queue (pre-QC 'translated' field, independent of qcTranslated's own
+    proposed correction quality); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: 7a9b4022c55d8896
+  sampleKind: split
+  source: "江十二"
+  candidates:
+    ProductionTranslation: "River Twelve"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - mistranslation
+      correctionSafety: safe
+  sampleRun: FlaggedQueue-20260926-mining
+  reviewNote: >-
+    "江十二" is a person's name (Jiang Shier - literally "Jiang" surname + "Twelve", a common
+    naming convention for a twelfth-born child), not a descriptive title. The translation renders
+    it as a literal descriptive gloss, "River Twelve" (translating the surname "江"/"river" too),
+    instead of transliterating it as a name - a proper name replaced with a descriptive English
+    gloss instead of being transliterated. Labeled mistranslation/OTHER_NAMED_DEFECT here (not
+    untranslated-pinyin) per the same prompt fix noted on 4de67554e9244783 above - production's own
+    QC had called this UntranslatedPinyin, but that category is one direction only (Pinyin left
+    where a translation was needed), and the reverse now explicitly routes to OTHER_NAMED_DEFECT.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml's
+    flaggedForQcReview: true queue (pre-QC 'translated' field, independent of qcTranslated's own
+    proposed correction quality); ProductionTranslation is a single-candidate label, not a specific
+    configured model name, since Files/Converted has no per-row model attribution.
 correctionSamples:
 - sampleId: 5b03cbee1d695c74
   sampleKind: fullCell

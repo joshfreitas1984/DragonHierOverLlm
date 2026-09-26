@@ -839,11 +839,7 @@
     qcDefectCategory: None
   - split: 11
     text: "在下不才，蒙武林同道厚爱，得了这“中原大侠”的名号。"
-    translated: "I am but an unworthy one, yet through the kindness of my Wulin peers, I have come to bear the title of Great Hero of Central Plains."
-    qcReviewedText: "I am but an unworthy one, yet through the kindness of my Wulin peers, I have come to bear the title of Great Hero of Central Plains.\\nEvery time I think about it, I feel genuinely fearful and deeply ashamed."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "I am but a humble one, yet my fellow Wulin brothers and sisters have bestowed upon me the title of Great Hero of the Central Plains."
   - split: 11
     subIndex: 1
     text: "每每想来，只觉诚惶诚恐，羞愧莫名。"
@@ -946,11 +942,7 @@
     translated: "Much wine and meat brings many brothers, yet in times of need, not a soul is seen?"
   - split: 6
     text: "绝情断义，横行无忌。"
-    translated: "Betraying emotions and morals, acting with impunity"
-    qcReviewedText: "Betraying emotions and morals, acting with impunity \\nAbove and below, none shall surpass me!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Heartless and ruthless, acting with impunity"
   - split: 6
     subIndex: 1
     text: "天上地下，唯我独尊！"
@@ -1624,11 +1616,7 @@
     translated: "Only a few people have caught my eye."
   - split: 7
     text: "最难测算是人心，便是老朽这“江湖百晓”，怕也难解其分毫。"
-    translated: "The hardest thing to measure is the heart, and even with my Hundred Witty Masters of Jianghu, it might be difficult to fathom its depths."
-    qcReviewedText: "The hardest thing to measure is the heart, and even with my Hundred Witty Masters of Jianghu, it might be difficult to fathom its depths."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The human heart is hardest to measure; even someone as knowledgeable as myself, the All Knowing of the Jianghu, \\nprobably also finds it difficult to interpret its slightest nuances."
   - split: 8
     text: "什么是江湖？为啥要叫江湖？"
     translated: "What is the Jianghu? Why call it that?"
