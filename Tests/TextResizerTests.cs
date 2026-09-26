@@ -60,6 +60,7 @@ public class TextResizerTests
             FileHelper.WriteAllTextWithRetry(outputPath, serializer.Serialize(merged));
         }
     }
+
     [Fact] // Can only be run when VS is running in admin
     public void CreateSymlinkToResizer()
     {
@@ -68,7 +69,33 @@ public class TextResizerTests
         var inputFolder = $"{workingDirectory}/Resizers";
         inputFolder = Path.GetFullPath(inputFolder);
         var outputFolder = $@"{GameFileHandling.GameFolder}\BepInEx\resizers";
+        SymlinkFolder(inputFolder, outputFolder);
+    }
 
+    [Fact] // Can only be run when VS is running in admin
+    public void CreateSymlinkToSprites()
+    {
+        var workingDirectory = GameFileHandling.WorkingDirectory;
+
+        var inputFolder = $"{workingDirectory}/Sprites";
+        inputFolder = Path.GetFullPath(inputFolder);
+        var outputFolder = $@"{GameFileHandling.GameFolder}\BepInEx\sprites2";
+        SymlinkFolder(inputFolder, outputFolder);
+    }
+
+    [Fact] // Can only be run when VS is running in admin
+    public void CreateSymlinkToLayouts()
+    {
+        var workingDirectory = GameFileHandling.WorkingDirectory;
+
+        var inputFolder = $"{workingDirectory}/Layouts";
+        inputFolder = Path.GetFullPath(inputFolder);
+        var outputFolder = $@"{GameFileHandling.GameFolder}\BepInEx\layouts";
+        SymlinkFolder(inputFolder, outputFolder);
+    }
+    
+    private static void SymlinkFolder(string inputFolder, string outputFolder)
+    {
         if (Directory.Exists(outputFolder))
         {
             Console.WriteLine("Output folder already exists. Deleting it...");

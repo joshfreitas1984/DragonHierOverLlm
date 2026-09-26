@@ -153,6 +153,104 @@ cost" below for why that matters.
   glossary-resync backstop, `TranslateLinesBruteForce`/`RunBruteForce`, independent of the QC LLM's
   own labeling skill - not yet run, declined by the user).
 
+## Prompt revisions after model selection (2026-09-26)
+
+Two later detection-prompt changes had been validated only against the raw `Comparison.yaml`
+aggregate, which includes the out-of-scope separator rows. They were re-measured like-for-like:
+- the morning "mass prompt tidy" (`7a70a37`), which added `MEANING_REVERSAL`;
+- the `UNNATURAL_PHRASING` + pinyin-direction change (`45014ec`).
+
+**Method.** Each prompt version was run on the current 214-pair gold set with
+`qualityReview.detectionTemperature: 0`, so every run is deterministic. Two back-to-back identical
+runs gave 0 label changes. Runs were scored with `Scripts/qc_compare_runs.py --heldout-rev 25d1dab`.
+"Held-out" means the 198 pairs whose labels predate these prompt changes, which is the fair
+regression check. "New" means the 16 pairs added alongside the `UNNATURAL_PHRASING` work.
+
+| Prompt | Held-out recall | Held-out precision | Held-out FP | New recall |
+|---|---|---|---|---|
+| P1 `476cef1` (twenty-first-round prompt) | 0.841 (58/69) | 0.935 | 4 | 0.727 (8/11) |
+| P2 `7a70a37` (+ `MEANING_REVERSAL`) | 0.826 (57/69) | 0.905 | 6 | 0.727 (8/11) |
+| P3 `45014ec` (+ `UNNATURAL_PHRASING`) | 0.826 (57/69) | 0.877 | 8 | 1.000 (11/11) |
+| P5 (superseded by P7 below) | 0.812 (56/69) | 0.918 | 5 | 1.000 (11/11) |
+
+**The regressions were real.** P2 and P3 each added false positives on the held-out set. The new
+category's wins on the 16 new pairs came from examples written alongside the prompt change, so they
+aren't independent evidence.
+
+**P5 changes, each aimed at one diagnosed false-positive mode:**
+- `MEANING_REVERSAL` now requires naming both parties and how their roles swapped. A barked order or
+  taunt at one's own men, with a different tone or word choice, had been flagged as a reversal.
+- A transliterated name with an English title (白云子 as "Master Baiyun") is explicitly correct. P3's
+  "should have stayed in Pinyin" wording had started flagging it as a gloss.
+- A narrow `DO NOT flag` carve-out covers emphatic particles (给我/好你个/啊/呢/吧). A first,
+  broader wording (P4) made the model shy of `DROPPED_CONTENT` in general, and it missed a dropped
+  `;GiveNpcAskItem` segment, so P5 states that the carve-out covers only particles.
+
+**Stopped at P5: the noise floor was reached.** P4 and P5 score identically, and each further edit
+swapped one borderline case for another. For example, P5 lost `b9d957093153803a`, a 姜婉 → "he"
+pronoun error that every prompt had only ever caught under the wrong category. Remaining held-out
+gaps against P1:
+- `8c1504d4fd25c3fa` (蜈蚣 "centipede" rendered as "Scorpion") has been missed since P2.
+- `b9d957093153803a`, above.
+- `aab16c938a1c887d` (杀鸡儆猴) is a new `LOST_IDIOM` false positive.
+
+**Gold-set label corrections (applied the same day).** Re-checking the disputed rows against the
+Chinese turned up two wrong labels:
+- `769a819fd026698a` `Corrected` is now a **Defect** (`fluency`). It was mined as a pronoun-only
+  fix and labeled Pass for that reason, but its English is still broken: "Seeing ... injuries
+  severe" has no main clause, and "in her mouth" is a word-for-word rendering of 口中.
+- `e6ea2511cf64db7a` `HyMT2-7B` is now a **Defect** (`mistranslation`). 薄暮空潭曲 is half a line
+  of Wang Wei's 过香积寺, where 曲 means the *bend* of the pool. So "Melody by the Dusk-Lit Pond" is
+  the mistranslation, and Qwen25's "...Empty Pool Curve" (curve = bend) stays Pass.
+- Two review notes were corrected: `b9d957093153803a` (its 她 refers to the other girl, not to
+  姜婉) and `8c1504d4fd25c3fa` (a garbled character).
+
+**Concrete-noun blind spot (P6 and P7).** `8c1504d4fd25c3fa` (三尸蜈蚣爪, "Scorpion" for
+centipede) turned out to be shipping in the mod with `qcStatus: Passed`. A scan of short
+martial-arts names in `Files/Converted` found the same class repeatedly passed by QC:
+- a concrete noun swapped for a different one (蜈蚣 as "Earthworm");
+- one dropped (千蛛万毒手 with no spiders, 引蛇术 as "Lure Technique");
+- one invented (灵蛇拳 as "Dragon Serpent Fist").
+
+A glossary entry was deliberately **not** added. It would fix one line and hide the QC gap, and the
+evaluator injects glossary matches into gold-set prompts, so it would also hand the model the
+answer.
+
+Instead, 11 items went into the gold set (`sampleRun: ConvertedCorpus-20260926-concrete-noun-mining`)
+*before* the prompt change, and the current prompt was baselined on them. That gave 7 Defect
+items, 玉蜂针 as an Original/Corrected pair, and 4 Pass controls using the same creatures. The
+current prompt caught **1 of the 8** concrete-noun defects.
+
+The fix was a rule that every concrete thing in a skill/item/weapon name must appear in TRANSLATION
+as that same thing: swaps and inventions are `DOMAIN_TERM`, drops are `DROPPED_CONTENT`. Its
+examples are deliberately not gold-set items.
+- **P6** (the rule alone) reached 4/8, but reintroduced the "Master Baiyun" false positive and
+  passed a blatant prompt leak (`c61cdad79df4c969`, "No valid alternatives existed; output only the
+  properly translated English text."). The prompt never had an explicit leaked-instructions rule;
+  the model had been catching leaks only incidentally, under `OTHER_NAMED_DEFECT`.
+- **P7** (current) scopes the rule to skill/item/weapon names and adds an explicit
+  leaked-translator-output rule.
+
+Scored against the corrected gold set (`qc_compare_runs.py` rescored every run against current
+labels):
+
+| Prompt | Held-out recall | Held-out precision | Held-out FP | Concrete-noun defects caught |
+|---|---|---|---|---|
+| P1 `476cef1` | 0.817 (58/71) | 0.935 | 4 | not run |
+| P3 `45014ec` (committed) | 0.817 (58/71) | 0.892 | 7 | not run |
+| P5 | 0.803 (57/71) | 0.934 | 4 | 1/8 |
+| **P7 (current)** | **0.817 (58/71)** | **0.935** | **4** | **4/8** |
+
+P7 ties the twenty-first-round prompt exactly on the held-out set, keeps `UNNATURAL_PHRASING`, and
+catches half the concrete-noun class, with all 4 Pass controls still passing. Still missed:
+- 引蛇术 ("Lure Technique", snake dropped);
+- 指虎 ("Monkey glove" for a knuckle-duster);
+- 灵蛇拳 (invented "Dragon");
+- 青蜂钉 ("Poison" for the colour 青).
+
+Its one held-out loss against P5 is `06d3cc1dfc09653f` ("Deadly intent: 0.1", a colon inserted
+where SOURCE has none).
+
 ## Process variants: doubled detection and doubled verification (rounds 10-13)
 
 The five-call design (`GetLlmVerdictAsync`) runs detection twice (calls 1+2, merged permissively -

@@ -3,20 +3,14 @@
   idealFontSize: 12.0
   alignment: Center
   allowWordWrap: true
-  adjustX: 46.0
+  adjustX: 44.0
   adjustY: -72.0
-  adjustWidth: 60.0
+  adjustWidth: 86.0
 - path: Canvas/AreaUIPanel/AreaUIBelow/AreaTitle/Text
   sampleText: Baling Village
   idealFontSize: 20.0
   allowWordWrap: true
   adjustWidth: 50.0
-- path: Canvas/AreaUIPanel/BuildingIconPanel/AreaBuildingUI(Clone)/Back/BuildingName
-  sampleText: Sentinel
-  idealFontSize: 14.0
-  allowWordWrap: false
-  allowAutoSizing: false
-  adjustWidth: 100.0
 - path: Canvas/AreaUIPanel/BuildingIconPanel/AreaBuildingUI(Clone)/BuildingLv
   sampleText: "0"
   idealFontSize: 11.0

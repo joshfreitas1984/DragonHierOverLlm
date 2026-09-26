@@ -95,6 +95,22 @@ additionalSourceAssessments:
     two items (4de67554e9244783/7a9b4022c55d8896) are labeled mistranslation in this gold set,
     matching the corrected category boundary rather than production's original (pre-fix) label.
     Items sourced from this batch set sampleRun: FlaggedQueue-20260926-mining below.
+- name: ConvertedCorpus-20260926-concrete-noun-mining
+  path: Files/Converted
+  sampleFingerprint: n/a - not a TranslationAssessmentWorkflow run
+  sampleSeed: n/a
+  sampleSize: n/a
+  selection: >-
+    11 short martial-arts skill/item/weapon names hand-mined from
+    Files/Converted/dynamicStringsFromColumns.txt.yaml after 三尸蜈蚣爪 (8c1504d4fd25c3fa, Scorpion for
+    centipede) was found shipping with qcStatus Passed. A scan for creature characters whose English
+    rendering lacked the matching creature word found a real QC blind spot - a concrete noun in a name
+    swapped for a different one (蜈蚣 as Earthworm), dropped (千蛛万毒手 with no spiders) or invented (灵蛇 as
+    Dragon Serpent) - which QC passed in almost every case. 7 Defect items plus 4 Pass controls using
+    the same creatures (蝎尾鞭, 银蛇枪法, 蛇鹤八打, 灵蛇杖法) so the evaluator is tested on distinguishing right from
+    wrong, not on reacting to any creature word. Added BEFORE the prompt fix meant to address them, so
+    the current prompt is baselined on them first. Borderline cases deliberately left out: 鱼肠剑法 (fish
+    dropped from a famous sword name) and 控鹤功 (Featherfall Technique, crane dropped).
 models:
 - Qwen25-Standard
 - HyMT2-7B
@@ -507,9 +523,10 @@ items:
       defectCategories: []
       correctionSafety: unnecessary
     HyMT2-7B:
-      label: Pass
-      defectCategories: []
-      correctionSafety: unnecessary
+      label: Defect
+      defectCategories:
+      - mistranslation
+      correctionSafety: safe
     HyMT2-30B-A3B:
       label: Pass
       defectCategories: []
@@ -518,7 +535,15 @@ items:
       label: Pass
       defectCategories: []
       correctionSafety: unnecessary
-  reviewNote: A short poem/song title with no single correct English rendering - all four candidates preserve the same core imagery (dusk/twilight, an empty pool, a melody/curve) without contradicting each other or the source, so all are judged Pass despite the wide wording spread. A second known-good baseline, this time driven by legitimate creative license rather than unanimous agreement.
+  reviewNote: >-
+    Relabeled 2026-09-26. This is the first half of a line from Wang Wei's poem 过香积寺 (the full
+    couplet 薄暮空潭曲，安禅制毒龙 is in dynamicStringsPoetry.txt), where 曲 means the bend/winding
+    edge of the pool, not a melody - roughly "At dusk, by the bend of the empty pool". The original
+    note treated "a melody/curve" as interchangeable, which is wrong. Qwen25 "Dusk Over the Empty Pool
+    Curve" has the right meaning (curve = bend), though "Pool Curve" is awkward - Pass. HyMT2-7B
+    "Melody by the Dusk-Lit Pond" mistranslates 曲 as a melody - Defect. The two HyMT2-30B
+    "Twilight over the Empty Pool" renderings drop the bend but keep the core image, which is
+    acceptable license for a poem line - Pass.
 - sampleId: a486eb46b7b9f0b6
   sampleKind: split
   sampleRun: ModelAssessment-20260919-larger-run
@@ -1809,9 +1834,11 @@ items:
       correctionSafety: unnecessary
   sampleRun: ConvertedCorpus-20260920-pronoun-mining
   reviewNote: >-
-    Jiang Wan (姜婉) is an established female character - the source's own first clause uses 她/her
-    for her twice. The pre-correction text switches her own subject pronoun to "he" mid-sentence
-    for no reason; the correction fixes it to "she".
+    Jiang Wan (姜婉) is an established female character - elsewhere the game calls her 师姐 (senior
+    sister) and a former princess, and refers to her as 她. The 她 in this source line refers to the
+    other girl (那姑娘), not to Jiang Wan (corrected 2026-09-26; the original note said the source
+    used 她 for Jiang Wan). The pre-correction text makes Jiang Wan "he" for no reason; the
+    correction fixes it to "she".
   provenance: >-
     Real production pair mined from Files/Converted/PlotData.csv.yaml (qcStatus: Corrected)
     - Original is the pre-QC 'translated' field (the pronoun defect as it originally
@@ -1937,14 +1964,20 @@ items:
       - pronoun-attribution
       correctionSafety: safe
     Corrected:
-      label: Pass
-      defectCategories: []
-      correctionSafety: unnecessary
+      label: Defect
+      defectCategories:
+      - fluency
+      correctionSafety: safe
   sampleRun: ConvertedCorpus-20260920-pronoun-mining
   reviewNote: >-
     小姑娘 (young girl) is explicitly female and already correctly rendered "her" earlier in the very
     same sentence ("her consciousness") - the second clause about the same person's mouth switches
-    to "his".
+    to "his". Relabeled 2026-09-26: the Corrected candidate fixes only the pronoun and was originally
+    labeled Pass for that reason, but its English is still broken - "Seeing ... injuries severe"
+    has no main clause, the second line has no subject, and "in her mouth" is a word-for-word
+    rendering of 口中. So Corrected is a fluency Defect too. A correct rendering would be "The young
+    girl was badly hurt, her consciousness already slipping away,
+    yet she kept crying out for her mother and father."
   provenance: >-
     Real production pair mined from Files/Converted/PlotData.csv.yaml (qcStatus: Corrected)
     - Original is the pre-QC 'translated' field (the pronoun defect as it originally
@@ -2226,7 +2259,7 @@ items:
       correctionSafety: safe
   sampleRun: ConvertedCorpus-20260920-category-mining
   reviewNote: >-
-    蜡蝣 means centipede, not scorpion - a small but mechanically verifiable wrong-animal domain-term
+    蜈蚣 means centipede, not scorpion - a small but mechanically verifiable wrong-animal domain-term
     substitution in a martial-arts move name.
   provenance: >-
     Real production translation mined from Files/Converted/dynamicStringsFromColumns.txt.yaml (pre-QC
@@ -3017,6 +3050,222 @@ items:
     flaggedForQcReview: true queue (pre-QC 'translated' field, independent of qcTranslated's own
     proposed correction quality); ProductionTranslation is a single-candidate label, not a specific
     configured model name, since Files/Converted has no per-row model attribution.
+- sampleId: b8637442332ded66
+  sampleKind: split
+  source: "蜈蚣遁地术"
+  candidates:
+    ProductionTranslation: "Earthworm Diving Technique"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - terminology
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260926-concrete-noun-mining
+  reviewNote: >-
+    蜈蚣 means centipede, not earthworm - the concrete creature the move is named after is swapped for a
+    different one, and 遁地 (escaping/burrowing into the earth) is also rendered as "Diving". Correct:
+    "Centipede Earth-Burrowing Technique". Same wrong-creature class as 8c1504d4fd25c3fa (三尸蜈蚣爪 rendered
+    with Scorpion).
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsFromColumns.txt.yaml (pre-QC
+    'translated' field, independent of the qcStatus already recorded on that row - QC Passed every
+    Defect item here except 玉蜂针, which QC corrected).
+- sampleId: 39eca45fde12a37b
+  sampleKind: split
+  source: "千蛛万毒手"
+  candidates:
+    ProductionTranslation: "Ten Thousand Poison Hands"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - dropped-content
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260926-concrete-noun-mining
+  reviewNote: >-
+    千蛛 (a thousand spiders) is dropped entirely, leaving only 万毒 (myriad poisons) - the creature that
+    defines the technique is missing. Correct: "Thousand-Spider Myriad-Poison Hand". A
+    plausible-sounding name that silently drops one of the concrete things SOURCE names.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsFromColumns.txt.yaml (pre-QC
+    'translated' field, independent of the qcStatus already recorded on that row - QC Passed every
+    Defect item here except 玉蜂针, which QC corrected).
+- sampleId: 89b3a96638c000c3
+  sampleKind: split
+  source: "引蛇术"
+  candidates:
+    ProductionTranslation: "Lure Technique"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - dropped-content
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260926-concrete-noun-mining
+  reviewNote: >-
+    蛇 (snake) is dropped - 引蛇术 is specifically a snake-luring technique; "Lure Technique" loses what is
+    being lured. Correct: "Snake-Luring Technique".
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsFromColumns.txt.yaml (pre-QC
+    'translated' field, independent of the qcStatus already recorded on that row - QC Passed every
+    Defect item here except 玉蜂针, which QC corrected).
+- sampleId: 5a78f7f0d4ed4b18
+  sampleKind: split
+  source: "指虎"
+  candidates:
+    ProductionTranslation: "Monkey glove"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - terminology
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260926-concrete-noun-mining
+  reviewNote: >-
+    指虎 is the knuckle-duster/brass-knuckles weapon (literally "finger tiger"); "Monkey glove" invents a
+    different creature and a different object. Correct: "Knuckle-duster" (or a literal "Tiger Claws"
+    style rendering). Wrong-referent terminology in an item/weapon name.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsFromColumns.txt.yaml (pre-QC
+    'translated' field, independent of the qcStatus already recorded on that row - QC Passed every
+    Defect item here except 玉蜂针, which QC corrected).
+- sampleId: 3066a9b144759890
+  sampleKind: split
+  source: "玉蜂针"
+  candidates:
+    Original: "Silkworm Needle"
+    Corrected: "Jade Bee Needle"
+  labels:
+    Original:
+      label: Defect
+      defectCategories:
+      - terminology
+      correctionSafety: safe
+    Corrected:
+      label: Pass
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260926-concrete-noun-mining
+  reviewNote: >-
+    蜂 means bee; the original "Silkworm Needle" swaps in a different creature and drops 玉 (jade).
+    Production QC caught this one and corrected it to "Jade Bee Needle", which is correct - so this item
+    pairs the wrong-creature Defect with its matched correct Pass, like the pronoun-mining items. Note
+    the same string in KungFuData2.csv.yaml still shows the uncorrected text.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsFromColumns.txt.yaml (pre-QC
+    'translated' field, independent of the qcStatus already recorded on that row - QC Passed every
+    Defect item here except 玉蜂针, which QC corrected).
+- sampleId: f3a44547224aec88
+  sampleKind: split
+  source: "灵蛇拳"
+  candidates:
+    ProductionTranslation: "Dragon Serpent Fist"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - terminology
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260926-concrete-noun-mining
+  reviewNote: >-
+    灵 means spirit/nimble (灵蛇 is the "spirit snake"/"nimble serpent"), not dragon - the translation
+    invents a dragon that SOURCE never names. Correct: "Spirit Serpent Fist" (or "Nimble Snake Fist").
+    Shows the class is not only swapped creatures: any concrete noun appearing in TRANSLATION must be
+    backed by SOURCE.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsFromColumns.txt.yaml (pre-QC
+    'translated' field, independent of the qcStatus already recorded on that row - QC Passed every
+    Defect item here except 玉蜂针, which QC corrected).
+- sampleId: a374601ef2bbc3a6
+  sampleKind: split
+  source: "青蜂钉"
+  candidates:
+    ProductionTranslation: "Poison Bee Pin"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - mistranslation
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20260926-concrete-noun-mining
+  reviewNote: >-
+    青 is a colour (blue-green/azure), not poison - "Poison Bee Pin" replaces the colour attribute with a
+    different, invented one. Correct: "Azure Bee Nail"/"Green Bee Pin". Minor but mechanically
+    verifiable wrong-attribute substitution in a hidden-weapon name.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsFromColumns.txt.yaml (pre-QC
+    'translated' field, independent of the qcStatus already recorded on that row - QC Passed every
+    Defect item here except 玉蜂针, which QC corrected).
+- sampleId: 7a5935995c149ae6
+  sampleKind: split
+  source: "蝎尾鞭"
+  candidates:
+    ProductionTranslation: "Scorpion Tail Whip"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260926-concrete-noun-mining
+  reviewNote: >-
+    Pass control for the wrong-creature class: 蝎 scorpion, 尾 tail, 鞭 whip - every concrete noun present
+    and correct. Should NOT be flagged; paired against 三尸蜈蚣爪 (where "Scorpion" is the wrong creature) to
+    check the evaluator actually checks the creature rather than reacting to any creature word.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsFromColumns.txt.yaml (pre-QC
+    'translated' field, independent of the qcStatus already recorded on that row - QC Passed every
+    Defect item here except 玉蜂针, which QC corrected).
+- sampleId: 01c8397423098bc4
+  sampleKind: split
+  source: "银蛇枪法"
+  candidates:
+    ProductionTranslation: "Silver Snake Spear Technique"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260926-concrete-noun-mining
+  reviewNote: >-
+    Pass control: 银 silver, 蛇 snake, 枪法 spear technique - complete and correct. Paired against 引蛇术
+    (snake dropped) and 灵蛇拳 (dragon invented).
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsFromColumns.txt.yaml (pre-QC
+    'translated' field, independent of the qcStatus already recorded on that row - QC Passed every
+    Defect item here except 玉蜂针, which QC corrected).
+- sampleId: 9a442fdaa7a6f23e
+  sampleKind: split
+  source: "蛇鹤八打"
+  candidates:
+    ProductionTranslation: "Eight Strikes of Snake and Crane"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260926-concrete-noun-mining
+  reviewNote: >-
+    Pass control: 蛇 snake, 鹤 crane, 八打 eight strikes - both creatures kept and correct, English word
+    order freely rearranged, which is legitimate wording freedom for a name and not a defect.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsFromColumns.txt.yaml (pre-QC
+    'translated' field, independent of the qcStatus already recorded on that row - QC Passed every
+    Defect item here except 玉蜂针, which QC corrected).
+- sampleId: c63368697d334806
+  sampleKind: split
+  source: "灵蛇杖法"
+  candidates:
+    ProductionTranslation: "Staff Technique of the Agile Serpent"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20260926-concrete-noun-mining
+  reviewNote: >-
+    Pass control: 灵蛇 rendered as "Agile Serpent" is a correct reading of 灵 (contrast 灵蛇拳 where 灵 became
+    an invented "Dragon"), 杖法 staff technique. Same 灵蛇 compound, correct rendering - the direct control
+    for 灵蛇拳.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsFromColumns.txt.yaml (pre-QC
+    'translated' field, independent of the qcStatus already recorded on that row - QC Passed every
+    Defect item here except 玉蜂针, which QC corrected).
 correctionSamples:
 - sampleId: 5b03cbee1d695c74
   sampleKind: fullCell

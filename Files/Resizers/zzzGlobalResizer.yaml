@@ -1,3 +1,2 @@
-# Default Global Resizer should be last
-- fontPercentage: 0.8
-  path: /*
+- path: /*
+  fontPercentage: 0.800000012

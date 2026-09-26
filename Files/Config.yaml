@@ -73,6 +73,9 @@ qualityReview:
   # docs/investigations/tests/qc-evaluator-model-selection.md's "Process variants" section. Revert
   # to true (or remove this line) if speed stops being the priority.
   doubledDetectionEnabled: false
+  # Detection-only temperature (corrections keep Qwen38's 0.15): makes QC verdicts and gold-set
+  # runs repeatable - at 0.15 the identical request was seen to return NONE then DROPPED_CONTENT.
+  detectionTemperature: 0
 translationAssessment:
   enabled: true
   modelNames:
@@ -108,6 +111,13 @@ translationAssessment:
     - "没想到反倒害了她，导致她命悬一线，功力丧尽。\\n白云子此番遭逢大难，皆因峨眉派保护不力，老朽心中实在过意不去。"
     - "咳咳咳，这......\\n我要去扬州游玩几日，正好路过此地罢了。"
     - "大！当！家！放我顾师弟走，饶你不死。"
+    - "蜈蚣遁地术"
+    - "千蛛万毒手"
+    - "引蛇术"
+    - "指虎"
+    - "玉蜂针"
+    - "灵蛇拳"
+    - "青蜂钉"
 qualityEvaluatorAssessment:
   enabled: true
   # See docs/investigations/tests/qc-evaluator-model-selection.md for the full model/quant/prompt
