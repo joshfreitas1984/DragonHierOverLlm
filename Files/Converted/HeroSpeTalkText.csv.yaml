@@ -477,13 +477,12 @@
     text: "但凡是这江湖之事，老朽皆算略有耳闻，"
     translated: "But regarding matters of the Jianghu, the old man has heard of them all."
     qcReviewedText: "But regarding matters of the Jianghu, the old man has heard of them all.\\nThat's how he earned the title Bai Xiao just now."
-    qcTranslated: "But when it comes to matters of the Jianghu, this old man has heard a little of them all.\\nThat is how he earned the title Bai Xiao."
+    qcTranslated: "But regarding matters of the Jianghu, the old man has heard of them all.\\nThat's how he earned the title Bai Xiao."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - DroppedContent
+    - MeaningReversal
   - split: 7
     subIndex: 1
     text: "因此方才得了这“百晓”的名号。"
@@ -656,14 +655,13 @@
     text: "#PlayerName#和师傅老人家比，不知武功谁高谁低？"
     translated: "Compared to Master Senior Citizen, #PlayerName# doesn't know who has higher martial arts skills."
     qcReviewedText: "Compared to Master Senior Citizen, #PlayerName# doesn't know who has higher martial arts skills.\\n...I feel #PlayerName# should still be more powerful.\\nAfter all, Master has a full head of white hair; his old body probably can't withstand many punches."
-    qcTranslated: "Compared to Master, #PlayerName# doesn't know who has higher martial arts skills.\\n...I feel #PlayerName# should still be more powerful.\\nAfter all, Master is an old man with a full beard of white hair; his frail body probably can't withstand many punches."
+    qcTranslated: "Compared to Master Senior Citizen, it's hard to tell who has higher martial arts skills.\\n...I feel #PlayerName# should still be more powerful.\\nAfter all, Master has a full head of white hair; his old body probably can't withstand many punches."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 92
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
+    - MeaningReversal
     - DroppedContent
-    - OtherNamedDefect
   - split: 8
     subIndex: 1
     text: "......感觉应该还是#PlayerName#厉害些。"

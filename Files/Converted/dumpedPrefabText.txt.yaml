@@ -4005,7 +4005,7 @@
   - text: "增加潜力"
     translated: "Increase potential"
     qcReviewedText: "Increase potential \\nPress and hold the left button shift Add 1 point to 5"
-    qcTranslated: "Increase potential \\nPress and hold the left Shift key to add 1 points"
+    qcTranslated: "Increase Potential\\nHold Left Shift to add 1 points"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
@@ -9448,13 +9448,12 @@
   - text: "购"
     translated: "Buy"
     qcReviewedText: "Buy \\nBuy"
-    qcTranslated: "Buy"
+    qcTranslated: "Buy\\nBuy"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
     qcDefectCategories:
-    - DroppedContent
+    - GarbledNumber
   - subIndex: 1
     text: "买"
     translated: "Buy"
@@ -10685,13 +10684,12 @@
   - text: "饰"
     translated: "Acted"
     qcReviewedText: "Acted \\nTasting"
-    qcTranslated: "Accessory"
+    qcTranslated: "Accessory\\nTasting"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: DomainTerm
     qcDefectCategories:
-    - DroppedContent
+    - DomainTerm
   - subIndex: 1
     text: "品"
     translated: "Tasting"

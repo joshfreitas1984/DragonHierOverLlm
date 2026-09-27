@@ -639,12 +639,12 @@
   - text: "#PlayerName#，我在"
     translated: "#PlayerName#, I am"
     qcReviewedText: "#PlayerName#, I am <b>Wudang Sect Southern Branch </b>While on patrol, we suddenly came under attack by the Battle Deer Alliance and found it difficult to extricate ourselves.\nI hope you can send aid as soon as possible – I would be infinitely grateful!"
-    qcTranslated: "#PlayerName#, I am <b>Wudang Sect Southern Branch</b>. While on patrol, we suddenly came under attack by the Battle Deer Alliance and found it difficult to extricate ourselves."
+    qcTranslated: "#PlayerName#, I was <b>patrolling the southern region of the Wudang Sect</b> when we suddenly came under attack by the Battle Deer Alliance and found it difficult to extricate ourselves.\nI hope you can send aid as soon as possible – I would be infinitely grateful!"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
     qcDefectCategories:
+    - HardToParseSeam
     - DroppedContent
   - subIndex: 1
     text: "武当派南方"
@@ -908,8 +908,9 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcDefectCategory: GarbledNumber
     qcDefectCategories:
+    - GarbledNumber
     - DroppedContent
   - subIndex: 1
     text: "武当"
@@ -1102,9 +1103,9 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - DroppedContent
+    - MeaningReversal
   - subIndex: 1
     text: "丐帮"
     translated: "Beggar Sect"
@@ -2107,11 +2108,10 @@
     qcReviewedText: "#PlayerName#, I hear Brother Wang Tianyi has already attacked.<b>Qingcheng Mountain</b>, Probably wants to die with that old villain, Zhou Mozhi, at the same time.\nXiang Wentian Brother and the others have already set off. I hope you will also bring some additional people and go with them to seek justice for him!"
     qcTranslated: "#PlayerName#, I hear Brother Wang Tianyi has already attacked <b>Qingcheng Mountain</b>. He probably wants to die with that old villain, Zhou Mozhi, at the same time.\nXiang Wentian and his men have already set off. I hope you will also bring some additional people and go with them to seek justice for him!"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
     qcDefectCategories:
-    - DroppedContent
+    - HardToParseSeam
   - subIndex: 1
     text: "青城山"
     translated: "Qingcheng Mountain"
@@ -2549,7 +2549,7 @@
   - text: "#PlayerName#，我在"
     translated: "#PlayerName#, I am"
     qcReviewedText: "#PlayerName#, I am <b>Xiliang </b>They have gathered some leads in their pursuit of the notorious bandit responsible for the recent bloodshed in the city. We hope you can lend a hand to help catch this evil bandit and bring him to justice sooner."
-    qcTranslated: "#PlayerName#, I am <b>Xiliang</b> investigating the notorious bandit responsible for the recent bloodshed in the city, and I have now gathered some leads. We hope you can lend a hand to help catch this evil bandit and bring him to justice sooner."
+    qcTranslated: "#PlayerName#, I am <b>Xiliang</b> investigating the notorious bandit responsible for the recent bloodshed in the city, and I have now gathered some leads. I hope you can lend a hand to help catch this evil bandit and bring him to justice sooner."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0

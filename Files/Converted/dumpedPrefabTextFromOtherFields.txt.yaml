@@ -1234,13 +1234,12 @@
   - text: "与对方进行切磋比试"
     translated: "Spar with the opponent"
     qcReviewedText: "♦Spar with the opponent\\n♦Win +2 favor, lose ‑2 favor+1"
-    qcTranslated: "♦Spar with the opponent\\n♦Win to gain +2 favor, lose to lose 2 favor"
+    qcTranslated: "♦Spar with the opponent\\n♦Win +2 favor, lose 2 favor"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
     qcDefectCategories:
-    - DroppedContent
+    - GarbledNumber
   - subIndex: 1
     text: "获胜好感+2，落败好感"
     translated: "Win +2 favor, lose ‑2 favor"
@@ -1597,10 +1596,9 @@
   - text: "7月初7传说是牛郎织女鹊桥相会之日，因此也是探访心仪之人的浪漫节日。各大城镇也会举办穿针乞巧，拜祭织女等活动以示庆祝。"
     translated: "7 April 7 is traditionally said to be the day when the Cowherd and Weaver Girl meet on the Magpie Bridge, making it also a romantic festival to visit one's beloved. Major towns hold events such as the Thread‑Piercing Festival and worship ceremonies to honor the Weaver Girl in celebration."
     qcReviewedText: "7 April 7 is traditionally said to be the day when the Cowherd and Weaver Girl meet on the Magpie Bridge, making it also a romantic festival to visit one's beloved. Major towns hold events such as the Thread‑Piercing Festival and worship ceremonies to honor the Weaver Girl in celebration."
-    qcTranslated: "7 April 7 is traditionally said to be the day when the Cowherd and Weaver Girl meet on the Magpie Bridge, making it also a romantic festival to visit one's beloved. Major towns hold events such as thread‑piercing and worshipping the Weaver Girl in celebration."
+    qcTranslated: "7 7 is traditionally said to be the day when the Cowherd and Weaver Girl meet on the Magpie Bridge, making it also a romantic festival to visit one's beloved. Major towns hold events such as thread‑piercing and worshipping the Weaver Girl in celebration."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
+    qcQualityScore: 95
     qcDefectCategory: GarbledNumber
     qcDefectCategories:
     - GarbledNumber
@@ -2708,9 +2706,9 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - DroppedContent
+    - MeaningReversal
   - subIndex: 1
     text: "丐帮"
     translated: "Beggar Sect"
@@ -4154,7 +4152,7 @@
   - text: "#PlayerName#，我在"
     translated: "#PlayerName#, I am"
     qcReviewedText: "#PlayerName#, I am <b>Xiliang </b>They have gathered some leads in their pursuit of the notorious bandit responsible for the recent bloodshed in the city. We hope you can lend a hand to help catch this evil bandit and bring him to justice sooner."
-    qcTranslated: "#PlayerName#, I am <b>Xiliang</b> investigating the notorious bandit responsible for the recent bloodshed in the city, and I have now gathered some leads. We hope you can lend a hand to help catch this evil bandit and bring him to justice sooner."
+    qcTranslated: "#PlayerName#, I am <b>Xiliang</b> investigating the notorious bandit responsible for the recent bloodshed in the city, and I have now gathered some leads. I hope you can lend a hand to help catch this evil bandit and bring him to justice sooner."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
@@ -6696,8 +6694,7 @@
     qcReviewedText: "Rumor<b>#PosText#</b>Two martial artists in the city were sparring and debating, evaluating the heroes of the land."
     qcTranslated: "Rumor has it that <b>#PosText#</b>Two Heroes in the city were sparring and debating, evaluating the heroes of the land."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
+    qcQualityScore: 90
     qcDefectCategory: DroppedContent
     qcDefectCategories:
     - DroppedContent
@@ -8708,13 +8705,12 @@
   - text: "你你你...你们是不是没长眼？没看见我们官兵正在押运税银吗？"
     translated: "You... didn't you notice? We are escorting the tax silver, haven't you seen it?"
     qcReviewedText: "You... didn't you notice? We are escorting the tax silver, haven't you seen it?\\nQuickly make way, or I shall forgive you for your intrusion..."
-    qcTranslated: "You, you, you... don't you have eyes? Didn't you see our officers and soldiers escorting the tax silver?\\nQuickly make way, or I shall forgive you for your crime of startling the imperial carriage..."
+    qcTranslated: "You... didn't you notice? We are escorting the tax silver, haven't you seen it?\\nQuickly make way, or I shall punish you for your intrusion..."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedStutter
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - DroppedStutter
+    - MeaningReversal
   - subIndex: 1
     text: "快快让开去路，饶饶饶你们惊驾之罪......"
     translated: "Quickly make way, or I shall forgive you for your intrusion..."
@@ -11534,7 +11530,7 @@
   - text: "听爹爹说，"
     translated: "Listen to Father say,"
     qcReviewedText: "Listen to Father say,<b>A month later, the capital city </b>A competition will be held <b>Youth Hero Conference</b>, By then, it will surely be a grand spectacle with the whole town in the streets. As one of the top young heroes, #PlayerName#, I can't miss it!"
-    qcTranslated: "Listen to Father say,<b>A month later, the Capital</b> will hold a <b>Youth Hero Conference</b>, By then, it will surely be a grand spectacle with the whole town in the streets. As one of the top young heroes, #PlayerName#, I can't miss it!"
+    qcTranslated: "Father told me that <b>a month from now, in the Capital</b>, a <b>Young Heroes' Tournament</b> will be held. By then, it will surely be a grand spectacle with the whole town in the streets. As one of the top young heroes, #PlayerName# and I can't miss it!"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
@@ -18994,13 +18990,13 @@
   - text: "沈退师兄近来鬼鬼祟祟，不知在"
     translated: "Senior Brother Shen Tui has been acting suspiciously lately, and I can't help but feel they have something up their sleeve."
     qcReviewedText: "Senior Brother Shen Tui has been acting suspiciously lately, and I can't help but feel they have something up their sleeve.<b>#PosText#</b>What are you up to"
-    qcTranslated: "Senior Brother Shen Tui has been acting suspiciously lately, and I can't help but feel they have something up their sleeve. <b>#PosText#</b> What are you up to"
+    qcTranslated: "Senior Brother Shen Tui has been acting suspiciously lately, and I can't help but feel they have something up their sleeve. <b>#PosText#</b>"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 55
-    qcDefectCategory: HardToParseSeam
+    qcQualityScore: 0
+    qcDefectCategory: DroppedContent
     qcDefectCategories:
-    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "搞些什么东西。"
     translated: "What are you up to"
@@ -19864,13 +19860,12 @@
   - text: "真是不知死活，抢劫抢到我#SourceForceDescribe##$SourceInteractName#的头上来了？"
     translated: "Really risking death, did you come to rob me, #SourceForceDescribe# #$SourceInteractName#?"
     qcReviewedText: "Really risking death, did you come to rob me, #SourceForceDescribe# #$SourceInteractName#?\\nNow go down and behave, or I'll let you off!"
-    qcTranslated: "You truly don't know your own death, coming to rob me, #SourceForceDescribe# #$SourceInteractName#?\\nNow back off and behave, or I'll let you off!"
+    qcTranslated: "Truly without a care for your own lives, did you come to rob me, #SourceForceDescribe# #$SourceInteractName#?\\nNow back off and behave, or I'll spare you!"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 55
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - LostIdiom
+    - MeaningReversal
   - subIndex: 1
     text: "现在乖乖退下，我便放你们一马！"
     translated: "Now go down and behave, or I'll let you off!"
@@ -20530,6 +20525,13 @@
   splits:
   - text: "第三次泰岳大典即将于泰山玉皇顶召开。当世顶尖高手已云集"
     translated: "The third Mount Tai Grand Assembly is about to take place on Mount Tai's Jade Emperor Peak. The world's top martial arts masters have already gathered."
+    qcReviewedText: "The third Mount Tai Grand Assembly is about to take place on Mount Tai's Jade Emperor Peak. The world's top martial arts masters have already gathered.<b>#PosText#</b>, Prepare to settle this with martial arts, competing for supremacy, and vying for the Secluded Return Skill as well as the supreme honor of being the number one in the world."
+    qcTranslated: "The third Mount Tai Grand Assembly is about to take place on Mount Tai's Jade Emperor Peak. The world's top martial arts masters have already gathered at <b>#PosText#</b>, preparing to settle this with martial arts, competing for supremacy, and vying for the Secluded Return Skill as well as the supreme honor of being the number one in the world."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "，准备以武论道，一较高下，争夺归藏功以及天下第一这一无上荣耀。"
     translated: ", Prepare to settle this with martial arts, competing for supremacy, and vying for the Secluded Return Skill as well as the supreme honor of being the number one in the world."
@@ -20547,6 +20549,14 @@
   splits:
   - text: "第二届泰岳大典于泰山玉皇顶正式召开，各大掌门云集"
     translated: "The second Mount Tai Grand Assembly was officially held on Mount Tai's Jade Emperor Peak, with sect leaders gathering from all over."
+    qcReviewedText: "The second Mount Tai Grand Assembly was officially held on Mount Tai's Jade Emperor Peak, with sect leaders gathering from all over.<b>#PosText#</b>, Discuss together the disposition of the Dragonheir Secluded Return Skill."
+    qcTranslated: "The second Mount Tai Grand Assembly was officially held on Mount Tai's Jade Emperor Peak, with sect leaders gathering from all over<b>#PosText#</b> to discuss the disposition of the Dragonheir Secluded Return Skill."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "，共同商议龙胤归藏功之归属。"
     translated: ", Discuss together the disposition of the Dragonheir Secluded Return Skill."
@@ -22362,6 +22372,13 @@
   splits:
   - text: "赵胤宗的龙胤归藏功重现江湖，各大门派决定于"
     translated: "Zhao Yinzong's Dragonheir Secluded Return Skill has returned to Jianghu, and the major sects have decided to..."
+    qcReviewedText: "Zhao Yinzong's Dragonheir Secluded Return Skill has returned to Jianghu, and the major sects have decided to...<b>A month later </b>Hold the second Mount Tai Grand Assembly on Mount Tai to decide the ownership of the divine technique.\\nMany Wulin practitioners have gone there in advance.<b>#PosText#</b>, To catch a glimpse of this unprecedented grand festival."
+    qcTranslated: "Zhao Yinzong's Dragonheir Secluded Return Skill has returned to Jianghu, and the major sects have decided to hold the second Mount Tai Grand Assembly on Mount Tai <b>a month later</b> to decide the ownership of the divine technique.\\nMany Wulin practitioners have gone there in advance <b>#PosText#</b>, to catch a glimpse of this unprecedented grand festival."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "一个月后"
     translated: "A month later"
@@ -24729,11 +24746,10 @@
     qcReviewedText: "King Yama led his elite troops to Foshan Town for a brief respite before immediately setting out, advancing with lightning speed towards<b>#PosText#</b>Attack"
     qcTranslated: "King Yama led his elite troops to Foshan Town for a brief respite before immediately setting out, advancing with lightning speed towards <b>#PosText#</b>."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
     qcDefectCategories:
-    - DroppedContent
+    - HardToParseSeam
   - subIndex: 1
     text: "攻来。"
     translated: "Attack"

@@ -2924,13 +2924,9 @@
   - text: "白义马"
     translated: "Baiyi Horse"
     qcReviewedText: "Baiyi Horse"
-    qcTranslated: "Baiyi Horse"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: UntranslatedPinyin
-    qcDefectCategories:
-    - UntranslatedPinyin
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "青骓马"
   splits:
   - text: "青骓马"
@@ -3479,13 +3475,12 @@
   - text: "气冲斗牛"
     translated: "Boast to the stars"
     qcReviewedText: "Boast to the stars"
-    qcTranslated: "Qi surges to the Dipper and Ox"
+    qcTranslated: "My qi soars to the Dipper and Ox"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: UntranslatedPinyin
+    qcQualityScore: 95
+    qcDefectCategory: LostIdiom
     qcDefectCategories:
-    - UntranslatedPinyin
+    - LostIdiom
 - raw: "刀锋"
   splits:
   - text: "刀锋"
@@ -30155,11 +30150,10 @@
     qcReviewedText: "Sword Technique of Victory Evil"
     qcTranslated: "Victory Evil Sword Technique"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 55
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 90
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - LostIdiom
+    - UnnaturalPhrasing
 - raw: "剑法4;内力0.1"
   splits:
   - text: "剑法4"
@@ -30643,11 +30637,10 @@
     qcReviewedText: "Dryad Sword"
     qcTranslated: "Gan Jiang Mo Ye Sword"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: UntranslatedPinyin
+    qcQualityScore: 95
+    qcDefectCategory: DomainTerm
     qcDefectCategories:
-    - UntranslatedPinyin
+    - DomainTerm
 - raw: "力道潜力1;灵巧潜力1"
   splits:
   - text: "力道潜力1"
@@ -37074,6 +37067,10 @@
   splits:
   - text: "少林归藏功"
     translated: "Shaolin Secluded Return Skill"
+    qcReviewedText: "Shaolin Secluded Return Skill"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "力道潜力1;体质潜力1"
   splits:
   - text: "力道潜力1"
@@ -38630,6 +38627,10 @@
   splits:
   - text: "武当归藏功"
     translated: "Wudang Secluded Return Skill"
+    qcReviewedText: "Wudang Secluded Return Skill"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "生命上限50;内力上限70;智力9;经脉9;不屈0.04;通脉0.04"
   splits:
   - text: "生命上限50"
@@ -42107,6 +42108,10 @@
   splits:
   - text: "峨眉归藏功"
     translated: "Emei Secluded Return Skill"
+    qcReviewedText: "Emei Secluded Return Skill"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "灵巧潜力1"
   splits:
   - text: "灵巧潜力1"
@@ -49150,6 +49155,10 @@
   splits:
   - text: "绝义归藏功"
     translated: "Righteous Severance Secluded Return Skill"
+    qcReviewedText: "Righteous Severance Secluded Return Skill"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "生命上限130;内力上限70;内功8;力道8;意志8;体质12;外伤0.05;横练0.05;霸体0.05"
   splits:
   - text: "生命上限130"
@@ -49196,6 +49205,10 @@
   splits:
   - text: "心狂归藏功"
     translated: "Heart's Madness Secluded Return Skill"
+    qcReviewedText: "Heart's Madness Secluded Return Skill"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "智力潜力2;意志潜力1;经脉潜力1"
   splits:
   - text: "智力潜力2"
@@ -49257,6 +49270,10 @@
   splits:
   - text: "龙胤归藏功"
     translated: "Dragonheir Secluded Return Skill"
+    qcReviewedText: "Dragonheir Secluded Return Skill"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "力道潜力1;灵巧潜力1;智力潜力1;意志潜力1;体质潜力1;经脉潜力1"
   splits:
   - text: "力道潜力1"

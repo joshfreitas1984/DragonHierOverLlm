@@ -208,13 +208,13 @@
     text: "枪术"
     translated: "Gun combat"
     qcReviewedText: "<b>Gun combat</b>：Study the long weapon at the racetrack to enhance its power.\\n<b>Horsemanship</b>：Horse taming speed +20%, sprint taming cost ‑20%. Every 1% taming increases the horse's stats by 0.2% fully."
-    qcTranslated: "<b>Spear technique</b>: Study long weapons at the racetrack to enhance their power.\\n<b>Horsemanship</b>: Horse taming speed +20%, sprint taming cost ‑20%. Every 1% taming increases the horse's stats by 0.2% fully."
+    qcTranslated: "<b>Spear technique</b>: Study Long weapons at the racetrack to enhance their power.\\n<b>Horsemanship</b>: Horse taming speed +20%, sprint taming cost ‑20%. Every 1% taming increases all of the horse's stats by 0.2%."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 92
+    qcDefectCategory: DomainTerm
     qcDefectCategories:
-    - OtherNamedDefect
+    - DomainTerm
+    - UnnaturalPhrasing
   - split: 15
     subIndex: 1
     text: "赛马场研究长兵兵器，提升长兵威力。"

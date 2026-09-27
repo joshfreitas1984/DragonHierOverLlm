@@ -136,14 +136,13 @@
   - text: "放在藏经阁内的秘籍会根据品质，"
     translated: "Placed in the Scripture Pavilion, the manuals will be ranked according to their quality,"
     qcReviewedText: "Placed in the Scripture Pavilion, the manuals will be ranked according to their quality,\\nIncrease the speed at which all sects practice this martial art."
-    qcTranslated: "Placed in the Scripture Pavilion, the manuals will be ranked according to their quality,\\nincreasing the speed at which all Sects practice this martial art."
+    qcTranslated: "Placed in the Scripture Pavilion, the manuals will be ranked according to their quality,\\nincreasing the speed at which all members of the Sect practice this martial art."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 15
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 0
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - DroppedContent
-    - HardToParseSeam
+    - MeaningReversal
   - subIndex: 1
     text: "提升全门派修习该武学的速度。"
     translated: "Increase the speed at which all sects practice this martial art."

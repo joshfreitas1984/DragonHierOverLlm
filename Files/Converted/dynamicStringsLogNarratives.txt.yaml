@@ -365,13 +365,13 @@
   - text: "在"
     translated: "In"
     qcReviewedText: "{0} In {1} And {2} They got along wonderfully, as if old friends reunited, and became close friends."
-    qcTranslated: "{0} and {1} and {2} talked with great joy, hit it off at first sight, and became close friends."
+    qcTranslated: "{0} and {1} conversed with {2} in great joy, feeling like old friends at first sight, and became close confidants."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - DroppedContent
+    - MeaningReversal
   - subIndex: 1
     text: "与"
     translated: "And"

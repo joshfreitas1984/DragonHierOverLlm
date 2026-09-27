@@ -3077,13 +3077,9 @@
     text: "为江湖人士所不齿之刀法，需将兵刀藏于袖中，待敌人近前，突然出手，以偷袭取胜"
     translated: "A Blade Art Disdained by Jianghu Foes‑The martial artist must conceal the weapon in their sleeve, waiting until the enemy is close before making a sudden attack to gain an advantage through ambush."
     qcReviewedText: "A Blade Art Disdained by Jianghu Foes‑The martial artist must conceal the weapon in their sleeve, waiting until the enemy is close before making a sudden attack to gain an advantage through ambush."
-    qcTranslated: "A Blade Art Disdained by Jianghu Foes‑The martial artist must conceal the blade in their sleeve, waiting until the enemy is close before making a sudden attack to gain an advantage through ambush."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "326,内功,1,七窍玲珑功,唐门着重锻炼七窍五感之内功心法，需得日夜苦练方能成玲珑之功,,1,内功1;灵巧1,生命上限20;内力上限20;内功8;智力8;射术威力0.06,,内功10;智力10;射术10,,,,0,1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -6340,6 +6336,10 @@
   - split: 4
     text: "少林所夺得的龙胤归藏功一部分，融入佛法后对修习者身形气力增益更甚，足见少林兼容并蓄之神髓"
     translated: "Part of the Dragonheir Secluded Return Skill that Shaolin acquired enhances the practitioner's physique and strength even more when combined with Buddhist teachings, clearly demonstrating Shaolin's profound ability to integrate diverse practices."
+    qcReviewedText: "Part of the Dragonheir Secluded Return Skill that Shaolin acquired enhances the practitioner's physique and strength even more when combined with Buddhist teachings, clearly demonstrating Shaolin's profound ability to integrate diverse practices."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "673,轻功,3,一苇渡江,传说达摩祖师曾借一芦苇漂渡长江，此功法虽已失传大半，但修习者仍可脚踩整捆芦苇漂行于水面数个时辰不沉,,1.1,轻功潜力1;轻功1;经脉1,轻功12;经脉12;轻灵0.05;速度0.05,,轻功45;经脉35,,,,0,10,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -6678,6 +6678,10 @@
   - split: 4
     text: "武当所夺得的龙胤归藏功一部分，虽说只得其总纲，融入道法后却已能大大提升修习者的经脉潜力"
     translated: "A portion of the Dragonheir Secluded Return Skill, which Wudang obtained, though it only has its overall framework, can greatly enhance a practitioner's meridian potential when integrated into their Daoist practices."
+    qcReviewedText: "A portion of the Dragonheir Secluded Return Skill, which Wudang obtained, though it only has its overall framework, can greatly enhance a practitioner's meridian potential when integrated into their Daoist practices."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "709,轻功,2,四象疑步,以四象代表四个方位移动之法，其中循环变化纷繁往复，每一步皆顺应卦象，不通易经之人难免疑惑万分,,1.1,轻功2;智力1,轻功8;灵巧8;疲劳0.04;反击0.06,,轻功25;智力30,,,,0,11,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -7166,13 +7170,13 @@
     text: "霸刀门主虽资质愚钝但天生神力，因此刀招极为简朴，却能将人体力道发挥至极限，一刀之下，便有轰天裂地，劈山断海之威"
     translated: "Although the Tyrant Blade Sect Lord has mediocre innate talent, he possesses a born strength. Thus, his sword techniques are extremely simple, yet they can fully unleash the user's stamina. With just one slash, it can create a thunderous and earth‑shattering force, splitting mountains and severing seas."
     qcReviewedText: "Although the Tyrant Blade Sect Lord has mediocre innate talent, he possesses a born strength. Thus, his sword techniques are extremely simple, yet they can fully unleash the user's stamina. With just one slash, it can create a thunderous and earth‑shattering force, splitting mountains and severing seas."
-    qcTranslated: "Although the Tyrant Blade Sect Lord has mediocre innate talent, he possesses a born strength. Thus, his blade techniques are extremely simple, yet they can fully unleash the user's Strength. With just one slash, it can create a thunderous and earth‑shattering force, splitting mountains and severing seas."
+    qcTranslated: "Although the Tyrant Blade Sect Lord has mediocre innate talent, he possesses a born Strength. Thus, his blade techniques are extremely simple, yet they can fully unleash the user's Strength. With just one slash, it can create a thunderous and earth‑shattering force, splitting mountains and severing seas."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 92
+    qcDefectCategory: DomainTerm
     qcDefectCategories:
-    - DroppedContent
+    - DomainTerm
+    - UnnaturalPhrasing
 - raw: "761,内功,0,抱元诀,蓬莱派入门心法，有屏息凝神，保养元气之功效，修道练剑之人多有修习,,1,内功1,生命上限10;内力上限30;内功4;经脉4;剑法威力0.04,,内功5;经脉5,,,,0,13,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -7487,10 +7491,9 @@
     text: "神妙非凡，玄机莫测，与凡间剑法有云泥之别，传说乃火龙真人所授仙法，吕祖有诗赞曰"
     translated: "Mysterious and unparalleled, its intricacies unfathomable, differing like the gap between heaven and earth from ordinary sword arts. Legends say it is a celestial technique taught by the Immortal of the Fire Dragon. Lu Zhen praised it in a poem:"
     qcReviewedText: "Mysterious and unparalleled, its intricacies unfathomable, differing like the gap between heaven and earth from ordinary sword arts. Legends say it is a celestial technique taught by the Immortal of the Fire Dragon. Lu Zhen praised it in a poem:：Brow furrowed in a threatening manner, leaping into the sky with a bound. Upon his back, a scabbard holds a three‑foot sword, ready to demonstrate justice to those who wrong the heavens."
-    qcTranslated: "Mysterious and unparalleled, its intricacies unfathomable, differing like the gap between heaven and earth from ordinary Sword Arts. Legends say it is a celestial technique taught by the Immortal of the Fire Dragon. Lu Zhen praised it in a poem:：Brow furrowed in a threatening manner, leaping into the sky with a bound. Upon his back, a scabbard holds a three‑foot sword, ready to demonstrate justice to those who wrong the heavens."
+    qcTranslated: "Mysterious and unparalleled, its intricacies unfathomable, differing like the gap between heaven and earth from ordinary Sword Art. Legends say it is a celestial technique taught by the Immortal of the Fire Dragon. Lu Zhen praised it in a poem:：Brow furrowed in a threatening manner, leaping into the sky with a bound. Upon his back, a scabbard holds a three‑foot sword, ready to demonstrate justice to those who wrong the heavens."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
+    qcQualityScore: 95
     qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
     - OtherNamedDefect
@@ -7543,13 +7546,12 @@
     text: "灵巧协调之拳法，其三十六式变化多端，连环紧扣，擅长封禁敌手，避实打虚"
     translated: "Agile Coordination Fist Technique, with its 36 variations, changes endlessly and tightly. It excels in sealing off an opponent's movements, avoiding their strengths to strike at their weaknesses."
     qcReviewedText: "Agile Coordination Fist Technique, with its 36 variations, changes endlessly and tightly. It excels in sealing off an opponent's movements, avoiding their strengths to strike at their weaknesses."
-    qcTranslated: "Agile Coordination Fist Technique, with its thirty‑six forms shifting endlessly and interlocking tightly. It excels in sealing off an opponent's movements, avoiding their strengths to strike at their weaknesses."
+    qcTranslated: "Agile Coordination Fist Technique, with its thirty‑six variations, changes endlessly and tightly. It excels in sealing off an opponent's movements, avoiding their strengths to strike at their weaknesses."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
     qcDefectCategories:
-    - OtherNamedDefect
+    - GarbledNumber
 - raw: "799,剑法,0,静心剑法,此剑法暗含修道之理，需平心静气方能发挥威力，修习者越是急于求成，越是难以精进,10,0.9,剑法1,,灵巧1;剑法2;内力0.2,剑法5,\"4,0,0\",\"4,1,2\",调息0.04,5,14,0,心14,心11,,,skill1_0,,十字斩-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -7576,6 +7578,10 @@
   - split: 4
     text: "峨眉所夺得的龙胤归藏功一部分，因内容较少而融入了大量峨眉心法，可以提升修习者的行动之灵巧"
     translated: "Part of the Dragonheir Secluded Return Skill that Mount Emei obtained, due to its limited content, was integrated with a large amount of Mount Emei's Heart Method, enhancing the agility of those who practice it."
+    qcReviewedText: "Part of the Dragonheir Secluded Return Skill that Mount Emei obtained, due to its limited content, was integrated with a large amount of Mount Emei's Heart Method, enhancing the agility of those who practice it."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "802,轻功,1,峨眉虎步功,模仿老虎神态之步法，亦步亦趋，不疾不徐，耽耽虎视，顾盼生威，对于腰腿部劳损亦有保健功效,,0.9,轻功1;灵巧1,轻功4;力道4;灵巧4;舒筋0.06,,轻功15;灵巧10,,,,0,14,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -9347,11 +9353,19 @@
   - split: 4
     text: "武绝义所夺得的龙胤归藏功一部分，融入了飞龙门心法后，变为一门可大大提升修为者力道和体魄，颇为霸道强悍的功法"
     translated: "Part of the Dragonheir Secluded Return Skill that Wu Jueyi obtained, when integrated into the Flying Dragon Gate's Heart Method, becomes a powerful and formidable technique that greatly enhances a practitioner's strength and resilience."
+    qcReviewedText: "Part of the Dragonheir Secluded Return Skill that Wu Jueyi obtained, when integrated into the Flying Dragon Gate's Heart Method, becomes a powerful and formidable technique that greatly enhances a practitioner's strength and resilience."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "994,内功,5,心狂归藏功,计心狂所夺得的龙胤归藏功一部分，最为完整但也最为艰深。计心狂苦心参悟并融入五毒心法，最终成为一门阴狠毒辣，怪异莫测的恐怖功法,,2.5,智力潜力2;意志潜力1;经脉潜力1,生命上限100;内力上限140;内功9;智力9;意志9;经脉9;毒术9;毒素0.06;混乱0.06;负面加成0.06,,内功75;智力80;经脉70,,,,0,-1,0,,,,,,,,,Same,FALSE,0,1"
   splits:
   - split: 4
     text: "计心狂所夺得的龙胤归藏功一部分，最为完整但也最为艰深。计心狂苦心参悟并融入五毒心法，最终成为一门阴狠毒辣，怪异莫测的恐怖功法"
     translated: "The portion of the Dragonheir Secluded Return Skill that Ji Xinkuang obtained is the most complete but also the most challenging. After painstakingly studying and integrating it into the Five Poisons Heart Method, he ultimately created a terrifying martial art that is vicious and unpredictable."
+    qcReviewedText: "The portion of the Dragonheir Secluded Return Skill that Ji Xinkuang obtained is the most complete but also the most challenging. After painstakingly studying and integrating it into the Five Poisons Heart Method, he ultimately created a terrifying martial art that is vicious and unpredictable."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "995,内功,5,龙胤归藏功,赵胤宗所创，玄妙无比，威力无穷，可将修习者的体魄经脉发挥至天人境界，从而获得经天纬地之能，号称当世第一内功。,,3,力道潜力1;灵巧潜力1;智力潜力1;意志潜力1;体质潜力1;经脉潜力1,生命上限150;内力上限150;内功10;力道10;灵巧10;智力10;意志10;体质10;经脉10,,内功90;智力70;经脉80,,,,0,-1,0,,,,,,,,,Same,FALSE,0,1"
   splits:
   - split: 4
@@ -9559,10 +9573,9 @@
     text: "世外高人于泰山之巅观日出，见云雾翻涌如海，腾涌而上所领悟的步法。功成者可踏云而上，步步高升直至凌空数十丈"
     translated: "A hermit on the summit of Mount Tai watches the sunrise, seeing the swirling clouds like a sea, ascending with the surging mist‑the stepping technique he gains from this. Those whose cultivation is complete can tread upon the clouds, rising step by step until they soar dozens of zhang into the air."
     qcReviewedText: "A hermit on the summit of Mount Tai watches the sunrise, seeing the swirling clouds like a sea, ascending with the surging mist‑the stepping technique he gains from this. Those whose cultivation is complete can tread upon the clouds, rising step by step until they soar dozens of zhang into the air."
-    qcTranslated: "A hermit on the summit of Mount Tai watches the sunrise, seeing the swirling clouds like a sea, ascending with the surging mist‑the stepping technique he gains from this. Those whose cultivation is complete can tread upon the clouds, rising step by step until they soar dozens of zhang into the air."
+    qcTranslated: "A hermit on the summit of Mount Tai watches the sunrise, seeing the swirling clouds like a sea surging upward‑the stepping technique he gains from this. Those whose cultivation is complete can tread upon the clouds, rising step by step until they soar dozens of zhang into the air."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 55
+    qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
     qcDefectCategories:
     - HardToParseSeam

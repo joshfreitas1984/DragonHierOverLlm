@@ -2815,13 +2815,9 @@
   - text: "#PlayerName#真是贵人多忘事呐，你本月才刚刚传授过我武功，还需积累一些新的心得才是"
     translated: "#PlayerName# truly fits the saying that wealthy people have poor memories. You just taught me martial arts skills this month, and I still need to accumulate some new insights."
     qcReviewedText: "#PlayerName# truly fits the saying that wealthy people have poor memories. You just taught me martial arts skills this month, and I still need to accumulate some new insights."
-    qcTranslated: "#PlayerName# truly fits the saying that wealthy people have poor memories. You just taught me martial arts skills this month, and I still need to accumulate some new insights before I can master them."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 55
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "#PlayerName#真是贵人多忘事呐，我们本月才刚刚切磋过，还需积累一些新的心得才是。"
   splits:
   - text: "#PlayerName#真是贵人多忘事呐，我们本月才刚刚切磋过，还需积累一些新的心得才是。"
@@ -3255,13 +3251,12 @@
   - text: "#PlayerName#这个月没有空闲吗？可不要借口偷懒哦。"
     translated: "#PlayerName# is free this month, right? Don't use that as an excuse to slack off."
     qcReviewedText: "#PlayerName# is free this month, right? Don't use that as an excuse to slack off."
-    qcTranslated: "#PlayerName# isn't free this month, is he? Don't use that as an excuse to slack off."
+    qcTranslated: "#PlayerName# aren't you free this month? Don't use that as an excuse to slack off."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 92
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - OtherNamedDefect
+    - MeaningReversal
 - raw: "#PlayerName#这药怎么味道有些刺鼻......\n（神情有些疑惑，服下丹药）"
   splits:
   - text: "#PlayerName#这药怎么味道有些刺鼻......"
@@ -3301,13 +3296,12 @@
   - text: "#PlayerName#适才练习中有些错漏之处，我来给你演示演示好了。"
     translated: "#PlayerName# there were some mistakes in your practice just now, so let me show you how to do it properly."
     qcReviewedText: "#PlayerName# there were some mistakes in your practice just now, so let me show you how to do it properly.\n(Other person {0} Click {1} Skill, experience gains increased {2}%)"
-    qcTranslated: "#PlayerName# there were some mistakes in your practice just now, so let me show you how to do it properly.\n(Other person {0} Click {1} Skill, experience gains increased by {2}%)"
+    qcTranslated: "#PlayerName# there were a few mistakes in your practice just now, so let me demonstrate it for you.\n(Other person {0} Click {1} Skill, experience gains increased {2}%)"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: HardToParseSeam
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - HardToParseSeam
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "对方"
     translated: "Other person"
@@ -4404,7 +4398,7 @@
   - text: "#TargetInteractName#你为本门尽忠职守，可谓功勋卓著，"
     translated: "#TargetInteractName#, you have faithfully served this sect, and your achievements are commendable."
     qcReviewedText: "#TargetInteractName#, you have faithfully served this sect, and your achievements are commendable.\nThis Sect Master always promotes based on talent and administers rewards and punishments clearly. Today, I specially promote you to be the Senior Disciple of this Sect.{0}。"
-    qcTranslated: "#TargetInteractName#, you have faithfully served this sect, and your achievements are commendable. This Sect Master always promotes based on talent and administers rewards and punishments clearly. Today, I specially promote you to be the {0} of this Sect."
+    qcTranslated: "#TargetInteractName#, you have faithfully served this sect, and your achievements are commendable. This Sect Master always promotes based on talent and administers rewards and punishments clearly. Today, I specially promote you to be the {0} of this Sect.{0}"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
@@ -5075,7 +5069,7 @@
   - text: "#TargetInteractName#这招"
     translated: "#TargetInteractName# used this technique"
     qcReviewedText: "#TargetInteractName# used this technique {0} Though he had practiced extensively, there were still many flaws in his technique.\n(The very first instruction...)"
-    qcTranslated: "#TargetInteractName# has practiced this technique {0} quite proficiently, but there are still many flaws."
+    qcTranslated: "#TargetInteractName# used this technique {0}. Though he had practiced extensively, there were still many flaws in his technique.\n(The very first instruction...)"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
@@ -5358,13 +5352,13 @@
   - text: "当前处在城镇内，行凶恶名"
     translated: "Current infamy persists within the town, where the murder occurred."
     qcReviewedText: "(Current infamy persists within the town, where the murder occurred.x200%)"
-    qcTranslated: "(Currently within the town, Infamy x200%)"
+    qcTranslated: "(Currently within the town, infamy for the crime x200%)"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 92
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - DroppedContent
+    - MeaningReversal
+    - UnnaturalPhrasing
   templates:
   - template: "({0}x200%)"
 - raw: "(当前处在城镇周边，行凶恶名x150%)"
@@ -9204,13 +9198,13 @@
   - text: "在"
     translated: "In"
     qcReviewedText: "{0} In {1} Looking high and far, Zhong gained an understanding of the surrounding information."
-    qcTranslated: "{0} In {1}, looking high and far, Zhong gained an understanding of the surrounding area."
+    qcTranslated: "{0} In {1}, looking high and far, gained an understanding of the surrounding information."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
-    qcDefectCategory: OtherNamedDefect
+    qcDefectCategory: DroppedContent
     qcDefectCategories:
-    - OtherNamedDefect
+    - DroppedContent
   - subIndex: 1
     text: "中登高远望，了解了周边信息"
     translated: "Looking high and far, Zhong gained an understanding of the surrounding information."
@@ -13661,10 +13655,9 @@
   - text: "个十百千万亿兆京垓秭穰沟涧正载极"
     translated: "Units_of_quantity"
     qcReviewedText: "Units_of_quantity"
-    qcTranslated: "Units of quantity"
+    qcTranslated: "Ones, tens, hundreds, thousands, ten‑thousands, hundred‑millions, trillions, quadrillions, quintillions, sextillions, septillions, octillions, nonillions, decillions"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
+    qcQualityScore: 95
     qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
     - OtherNamedDefect
@@ -15838,13 +15831,12 @@
   - text: "今天，我#$TargetInteractName#就正式拜#PlayerName#为师，"
     translated: "Today, I formally take you, #$TargetInteractName#, as my master, #PlayerName#."
     qcReviewedText: "Today, I formally take you, #$TargetInteractName#, as my master, #PlayerName#.\nI look forward to Master's future guidance!"
-    qcTranslated: "Today, I formally take #PlayerName# as my master, #$TargetInteractName#. I look forward to Master's future guidance!"
+    qcTranslated: "Today, I formally take #PlayerName# as my master, #$TargetInteractName#.\nI look forward to Master's future guidance!"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - DroppedContent
+    - MeaningReversal
   - subIndex: 1
     text: "还望师傅日后多多提点弟子！"
     translated: "I look forward to Master's future guidance!"
@@ -17317,9 +17309,9 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
-    qcDefectCategory: OtherNamedDefect
+    qcDefectCategory: UntranslatedPinyin
     qcDefectCategories:
-    - OtherNamedDefect
+    - UntranslatedPinyin
 - raw: "何足道"
   splits:
   - text: "何足道"
@@ -22710,13 +22702,12 @@
   - text: "可恶！！！......三十六计走为上！"
     translated: "Frustrating... Fleeing is the wisest move!"
     qcReviewedText: "Frustrating... Fleeing is the wisest move!\nThe favors you've done for me today will be repaid in full someday, #$TargetInteractName#."
-    qcTranslated: "Damn!!!......Fleeing is the wisest move!\nThe favors you've done for me today will be repaid in full someday, #$TargetInteractName#."
+    qcTranslated: "Frustrating... Fleeing is the wisest move!\nThe wrongs you've done to me today will be repaid in full someday, #$TargetInteractName#."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - DroppedContent
+    - MeaningReversal
   - subIndex: 1
     text: "今日之事，我#$TargetInteractName#总有一天会加倍奉还。"
     translated: "The favors you've done for me today will be repaid in full someday, #$TargetInteractName#."
@@ -23247,10 +23238,10 @@
   - text: "向"
     translated: "Towards"
     qcReviewedText: "Towards {0} Teach {1} Door martial arts"
-    qcTranslated: "Teach {0} the {1} martial arts"
+    qcTranslated: "Teach {0} {1} martial arts"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 55
+    qcQualityScore: 0
     qcDefectCategory: DroppedContent
     qcDefectCategories:
     - DroppedContent
@@ -24794,12 +24785,12 @@
   - text: "哈哈，不怕#PlayerName#笑话，我对这"
     translated: "Haha, don't worry about #PlayerName#'s joke; I'm not afraid of that."
     qcReviewedText: "Haha, don't worry about #PlayerName#'s joke; I'm not afraid of that.{0} I have long admired martial arts, but have struggled to obtain them.\nNot long ago, I had just scouted the route and was preparing to sneak into the Scripture Pavilion to enjoy the view.\nDon't know if you're willing to lend a hand to #PlayerName#?"
-    qcTranslated: "Haha, don't worry about #PlayerName#'s joke; I'm not afraid of that. I have long admired the {0} martial arts, but have struggled to obtain them. Not long ago, I had just scouted the route and was preparing to sneak into the Scripture Pavilion to enjoy the view. Don't know if #PlayerName# is willing to lend a hand?"
+    qcTranslated: "Haha, don't worry about #PlayerName#'s mockery; I've long admired the {0} martial arts but have struggled to obtain them.\nNot long ago, I had just scouted the route and was preparing to sneak into the Scripture Pavilion to feast my eyes on them.\nDon't know if #PlayerName# is willing to lend a hand?"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 92
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
+    - MeaningReversal
     - DroppedContent
   - subIndex: 1
     text: "武学心仪已久，苦求不得。"
@@ -26325,13 +26316,12 @@
   - text: "哼哼，你们这些武功低微之人，"
     translated: "Hmph, you lowly martial artists,"
     qcReviewedText: "Hmph, you lowly martial artists,\nEven a hundred or a thousand wouldn't be your match, #$SourceInteractName#!"
-    qcTranslated: "Hmph, you lowly martial artists,\nEven a hundred or a thousand of you wouldn't be my match, #$SourceInteractName#!"
+    qcTranslated: "Hmph, you lowly martial artists, even a hundred or a thousand of you wouldn't be my match, #$SourceInteractName#!"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: GarbledNumber
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - GarbledNumber
+    - MeaningReversal
   - subIndex: 1
     text: "即便来上百十个也不是我#$SourceInteractName#的对手！"
     translated: "Even a hundred or a thousand wouldn't be your match, #$SourceInteractName#!"
@@ -32230,13 +32220,13 @@
   - text: "如今本门占领"
     translated: "Now our sect has taken control of"
     qcReviewedText: "Now our sect has taken control of/Vassal/All allied regions total {0}, already controls much of the nation's territory {1}%。\nRemaining monthly battle engagements {2}/{3}, Should we initiate an attack on the surrounding areas?"
-    qcTranslated: "Now our sect has taken control of/Vassal/All allied regions total {0}, already controls {1}% of the realm's territory.\nRemaining monthly battle engagements {2}/{3}, Should we initiate an attack on the surrounding areas?"
+    qcTranslated: "Our sect now controls {0} Occupied/Vassal/Allied regions in total, holding {1}% of the realm.\nRemaining monthly expeditions: {2}/{3}. Shall we launch an offensive against the surrounding areas?"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
-    - DroppedContent
+    - OtherNamedDefect
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "附庸"
     translated: "Vassal"
@@ -32894,7 +32884,7 @@
     qcTranslated: "Study {0} {1} martial arts"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 45
+    qcQualityScore: 0
     qcDefectCategory: DroppedContent
     qcDefectCategories:
     - DroppedContent
@@ -37490,7 +37480,7 @@
   - text: "志室"
     translated: "Zhi Room"
     qcReviewedText: "Zhi Room"
-    qcTranslated: "Zhi Shi"
+    qcTranslated: "Zhishi"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
@@ -41050,6 +41040,10 @@
   splits:
   - text: "承让承让，看来此次泰岳大典，是我#$SourceInteractName#拔得头筹。"
     translated: "I yield, I yield. It seems that this Mount Tai Grand Assembly is mine, #$SourceInteractName#, for the top prize."
+    qcReviewedText: "I yield, I yield. It seems that this Mount Tai Grand Assembly is mine, #$SourceInteractName#, for the top prize.\nFrom today on, this Dragonheir Secluded Return Skill belongs to me, #SourceForceName#!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "从今天起，这龙胤归藏功便归我#SourceForceName#所有！"
     translated: "From today on, this Dragonheir Secluded Return Skill belongs to me, #SourceForceName#!"
@@ -42795,13 +42789,13 @@
   - text: "攻击时与对方"
     translated: "Attack when the opponent"
     qcReviewedText: "Attack when the opponent <b>Counterattack </b>Compare\nTrigger reduces opponent's action bar to half"
-    qcTranslated: "Attack when the opponent <b>Counterattack</b> Compare\\nTrigger reduces opponent's action bar to half"
+    qcTranslated: "Compare with the opponent's <b>Counterattack</b> when attacking\\nTrigger reduces opponent's action bar to half"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 55
+    qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
     qcDefectCategories:
     - HardToParseSeam
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "反击"
     translated: "Counterattack"
@@ -45844,13 +45838,12 @@
   - text: "本月已挑战过"
     translated: "Challenges for this month have already been completed."
     qcReviewedText: "Challenges for this month have already been completed.{0} Warehouse\nIt must wait for the right opportunity"
-    qcTranslated: "You have already challenged {0}'s warehouse this month.\\nIt must wait for the right opportunity"
+    qcTranslated: "Challenges for {0}'s warehouse have already been completed this month. It must wait for the right opportunity"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
     qcDefectCategories:
-    - DroppedContent
+    - HardToParseSeam
   - subIndex: 1
     text: "之仓库。"
     translated: "Warehouse"
@@ -48458,6 +48451,10 @@
   splits:
   - text: "武绝义！昔日仙居客栈一战，你落败而逃，之后便销声匿迹。"
     translated: "Wu Jueyi! In the battle at the Immortal Residence Inn long ago, you fled in defeat and have since disappeared from sight."
+    qcReviewedText: "Wu Jueyi! In the battle at the Immortal Residence Inn long ago, you fled in defeat and have since disappeared from sight.\nI thought you had repented and turned over a new leaf, but it seems you are still obstinate.\nDaring to come to the Mount Tai Grand Assembly to compete for the Dragonheir Secluded Return Skill is truly reckless!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "我本以为你已洗心革面，改过自新，没想到你竟执迷不悟，"
     translated: "I thought you had repented and turned over a new leaf, but it seems you are still obstinate."
@@ -53159,6 +53156,13 @@
   splits:
   - text: "看来第三次泰岳大典这“天下第一”的名号，被我#$SourceInteractName#夺得了。"
     translated: "'#$SourceInteractName#' has been claimed the title of Number One in the World at the third Mount Tai Grand Assembly."
+    qcReviewedText: "'#$SourceInteractName#' has been claimed the title of Number One in the World at the third Mount Tai Grand Assembly.\nFrom today on, these three incomplete copies of the Secluded Return Skill shall also belong to me, #SourceForceName#!"
+    qcTranslated: "It seems I, #$SourceInteractName#, have claimed the title of Number One in the World at the third Mount Tai Grand Assembly.\nFrom today on, these three incomplete copies of the Secluded Return Skill shall also belong to me, #SourceForceName#!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
+    qcDefectCategories:
+    - MeaningReversal
   - subIndex: 1
     text: "从今天起，这三份归藏功残本也当归我#SourceForceName#所有！"
     translated: "From today on, these three incomplete copies of the Secluded Return Skill shall also belong to me, #SourceForceName#!"
@@ -53190,10 +53194,9 @@
   - text: "看来，上个月还是"
     translated: "It seems that last month was still"
     qcReviewedText: "It seems that last month was still {0} Whose achievements are the most fruitful\n{1}, You did a great job\nThis is a reward, take it"
-    qcTranslated: "It seems that last month was still {0} Whose achievements are the most fruitful\\n{1}, You did a great job\\nThis is a reward, take it"
+    qcTranslated: "It seems that last month, {0}'s achievements were the most fruitful.\\n{1}, you did a great job.\\nThis is a reward, take it."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
     qcDefectCategories:
     - HardToParseSeam
@@ -57410,10 +57413,10 @@
   - text: "自古便是长江后浪推前浪，江山代有才人出，"
     translated: "As it has been said, new waves always push the old ones in the Yangtze River; talent emerges in every generation."
     qcReviewedText: "As it has been said, new waves always push the old ones in the Yangtze River; talent emerges in every generation.\nYou're saying this a bit clinging to the old ways and unable to adapt."
-    qcTranslated: "As it has been said, new waves always push the old ones in the Yangtze River; talent emerges in every generation.\\nYou're saying this a bit clinging to the old ways and unable to adapt."
+    qcTranslated: "As it has been said, new waves always push the old ones in the Yangtze River; talent emerges in every generation. You're saying this a bit clinging to the old ways and unable to adapt."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 0
+    qcQualityScore: 20
     qcDefectCategory: LostIdiom
     qcDefectCategories:
     - LostIdiom
@@ -57833,13 +57836,13 @@
   - text: "若#PlayerName#能正式向我赔礼谢罪，同时布告天下武林同道的话......"
     translated: "If #PlayerName# can formally apologize to me and announce it to the Wulin community..."
     qcReviewedText: "If #PlayerName# can formally apologize to me and announce it to the Wulin community...\nNature might still win back some of my affection."
-    qcTranslated: "If #PlayerName# can formally apologize to me and announce it to the Wulin community...\nNaturally, I might still win back some of my affection."
+    qcTranslated: "If #PlayerName# can formally apologize to me and announce it to the Wulin community...\nI might still be able to win back some of my affection."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - DroppedContent
+    - MeaningReversal
   - subIndex: 1
     text: "自然也能挽回一些本人的心意"
     translated: "Nature might still win back some of my affection."
@@ -58101,13 +58104,14 @@
   - text: "若能在"
     translated: "If I could only"
     qcReviewedText: "If I could only {0} In front of me {1}。\nShould {2} {0} What is the relationship with the He Pai?"
-    qcTranslated: "If I could only {1} before {0}.\nShould {2} {0} What is the relationship between {0} and the He Pai?"
+    qcTranslated: "If I could only {0} before {1}.\nShould {2} {0} What is the relationship between {0} and the He Sect?"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
     qcDefectCategory: DroppedContent
     qcDefectCategories:
     - DroppedContent
+    - GarbledNumber
   - subIndex: 1
     text: "面前"
     translated: "In front of me"
@@ -60866,10 +60870,9 @@
   - text: "贫道一路云游至此，盘缠已经捉襟见肘，"
     translated: "I have been wandering here and there, and my funds are now running low."
     qcReviewedText: "I have been wandering here and there, and my funds are now running low.\nI wonder if Young Hero could spare some silver to make a good karma?"
-    qcTranslated: "I have been wandering here and there, and my funds are now running low. I wonder if Young Hero could spare some silver to make a good karma?"
+    qcTranslated: "I have been wandering the world on cloud, and my funds are now running low. I wonder if Young Hero could spare some silver to make a good karma?"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
+    qcQualityScore: 85
     qcDefectCategory: DroppedContent
     qcDefectCategories:
     - DroppedContent
@@ -65247,13 +65250,13 @@
   - text: "那就决定了，请各位弟子分头前往"
     translated: "So it is decided. Please go to your respective destinations, disciples."
     qcReviewedText: "So it is decided. Please go to your respective destinations, disciples.{0}, Converging, I will lead the assault and ensure we secure a decisive victory.{1} Seize control of this area!"
-    qcTranslated: "So it is decided. Please go to your respective destinations, disciples. {0}, once we converge, I will lead the assault and ensure we secure a decisive victory. {1} Seize control of this area!"
+    qcTranslated: "So it is decided. Please go to your respective destinations, disciples. {0}, once we converge, I will lead the assault and ensure we seize this place from {1} in one decisive strike!"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 55
-    qcDefectCategory: HardToParseSeam
+    qcQualityScore: 0
+    qcDefectCategory: DroppedContent
     qcDefectCategories:
-    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "，汇合后由我带领出击，定要一举从"
     translated: ", Converging, I will lead the assault and ensure we secure a decisive victory."
@@ -65645,6 +65648,10 @@
   splits:
   - text: "郭大侠，各位掌门，好久不见！"
     translated: "Great Hero, Sect Leaders, it's been a long time!"
+    qcReviewedText: "Great Hero, Sect Leaders, it's been a long time!\nMy Heavenly Cycle Reversal Technique is now complete, and I have returned today to reclaim the Dragonheir Secluded Return Skill from all of you!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "我的逆转周天大法已经功成，今日特地回来，从各位手中取走这龙胤归藏功！"
     translated: "My Heavenly Cycle Reversal Technique is now complete, and I have returned today to reclaim the Dragonheir Secluded Return Skill from all of you!"
@@ -68721,13 +68728,12 @@
   - text: "额外生命"
     translated: "Additional Health"
     qcReviewedText: "Additional Health>{0} Time\nImprovement effect-90%"
-    qcTranslated: "Additional Health>{0}\\nImprovement effect‑90%"
+    qcTranslated: "Additional Health>{0}\nImprovement effect‑90%"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - DroppedContent
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "时"
     translated: "Time"
@@ -69503,13 +69509,12 @@
   - text: "鼎盛"
     translated: "Prime Zukunft"
     qcReviewedText: "Prime Zukunft"
-    qcTranslated: "Prime"
+    qcTranslated: "Zenith"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
-    - DroppedContent
+    - OtherNamedDefect
 - raw: "鼻"
   splits:
   - text: "鼻"
