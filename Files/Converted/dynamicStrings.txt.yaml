@@ -41050,13 +41050,9 @@
   splits:
   - text: "承让承让，看来此次泰岳大典，是我#$SourceInteractName#拔得头筹。"
     translated: "I yield, I yield. It seems that this Mount Tai Grand Assembly is mine, #$SourceInteractName#, for the top prize."
-    qcReviewedText: "I yield, I yield. It seems that this Mount Tai Grand Assembly is mine, #$SourceInteractName#, for the top prize.\nFrom today on, the Dragon Descends into Seclusion Technique belongs to me, #SourceForceName#!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "从今天起，这龙胤归藏功便归我#SourceForceName#所有！"
-    translated: "From today on, the Dragon Descends into Seclusion Technique belongs to me, #SourceForceName#!"
+    translated: "From today on, this Dragonheir Secluded Return Skill belongs to me, #SourceForceName#!"
   templates:
   - template: "{0}\n{1}"
 - raw: "技不如人"
@@ -48462,16 +48458,12 @@
   splits:
   - text: "武绝义！昔日仙居客栈一战，你落败而逃，之后便销声匿迹。"
     translated: "Wu Jueyi! In the battle at the Immortal Residence Inn long ago, you fled in defeat and have since disappeared from sight."
-    qcReviewedText: "Wu Jueyi! In the battle at the Immortal Residence Inn long ago, you fled in defeat and have since disappeared from sight.\nI thought you had repented and turned over a new leaf, but it seems you are still obstinate.\nDaring to come to the Mount Tai Grand Assembly to compete for the Dragon Descends into Seclusion Technique is truly reckless!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "我本以为你已洗心革面，改过自新，没想到你竟执迷不悟，"
     translated: "I thought you had repented and turned over a new leaf, but it seems you are still obstinate."
   - subIndex: 2
     text: "还敢来泰岳大典争夺龙胤归藏功，实在是胆大包天了！"
-    translated: "Daring to come to the Mount Tai Grand Assembly to compete for the Dragon Descends into Seclusion Technique is truly reckless!"
+    translated: "Daring to come to the Mount Tai Grand Assembly to compete for the Dragonheir Secluded Return Skill is truly reckless!"
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "武者"
@@ -53167,16 +53159,9 @@
   splits:
   - text: "看来第三次泰岳大典这“天下第一”的名号，被我#$SourceInteractName#夺得了。"
     translated: "'#$SourceInteractName#' has been claimed the title of Number One in the World at the third Mount Tai Grand Assembly."
-    qcReviewedText: "'#$SourceInteractName#' has been claimed the title of Number One in the World at the third Mount Tai Grand Assembly.\nFrom today on, these three incomplete versions of the Huizang Skill should belong to #SourceForceName#!"
-    qcTranslated: "It seems I, #$SourceInteractName#, have claimed the title of Number One in the World at the third Mount Tai Grand Assembly.\nFrom today on, these three incomplete versions of the Huizang Skill should belong to #SourceForceName#!"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
   - subIndex: 1
     text: "从今天起，这三份归藏功残本也当归我#SourceForceName#所有！"
-    translated: "From today on, these three incomplete versions of the Huizang Skill should belong to #SourceForceName#!"
+    translated: "From today on, these three incomplete copies of the Secluded Return Skill shall also belong to me, #SourceForceName#!"
   templates:
   - template: "{0}\n{1}"
 - raw: "看来近日需偃居蛰伏一阵，以免引起江湖公愤才是。\n(本月无法再行凶杀人)"
@@ -65660,16 +65645,9 @@
   splits:
   - text: "郭大侠，各位掌门，好久不见！"
     translated: "Great Hero, Sect Leaders, it's been a long time!"
-    qcReviewedText: "Great Hero, Sect Leaders, it's been a long time!\nI have mastered the Heavenly Cycle Reversal Technique and have returned today to reclaim the Dragon Descends into Seclusion Technique from all of you!"
-    qcTranslated: "Great Hero Guo, Sect Leaders, it's been a long time!\nI have mastered the Heavenly Cycle Reversal Technique and have returned today to reclaim the Dragon Descends into Seclusion Technique from all of you!"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
   - subIndex: 1
     text: "我的逆转周天大法已经功成，今日特地回来，从各位手中取走这龙胤归藏功！"
-    translated: "I have mastered the Heavenly Cycle Reversal Technique and have returned today to reclaim the Dragon Descends into Seclusion Technique from all of you!"
+    translated: "My Heavenly Cycle Reversal Technique is now complete, and I have returned today to reclaim the Dragonheir Secluded Return Skill from all of you!"
   templates:
   - template: "{0}\n{1}"
 - raw: "郭淮"

@@ -516,14 +516,14 @@
   - split: 10
     text: "叛出五毒教后，我便一直在寻找天下至毒之法门。"
     translated: "After leaving the Five Poisons Sect, I have been searching for the ultimate toxic martial art in the entire world."
-    qcReviewedText: "After leaving the Five Poisons Sect, I have been searching for the ultimate toxic martial art in the entire world.\\nBut I heard that there might be clues within the Dragon Descends into Seclusion Technique..."
+    qcReviewedText: "After leaving the Five Poisons Sect, I have been searching for the ultimate toxic martial art in the entire world.\\nBut I heard that within this Dragonheir Secluded Return Skill, there might be a clue..."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 10
     subIndex: 1
     text: "却听闻这龙胤归藏功中，或许会有线索......"
-    translated: "But I heard that there might be clues within the Dragon Descends into Seclusion Technique..."
+    translated: "But I heard that within this Dragonheir Secluded Return Skill, there might be a clue..."
   - split: 11
     text: "犬子郭勇锐生性纯良，奈何有些不谙世事。"
     translated: "Guo Yongrui, my son, is inherently kind‑hearted, though he sometimes lacks worldly wisdom."

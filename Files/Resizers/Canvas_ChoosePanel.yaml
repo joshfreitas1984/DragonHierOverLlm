@@ -3,28 +3,12 @@
   idealFontSize: 10.0
   allowWordWrap: true
   adjustWidth: 10.0
-- path: Canvas/ChoosePanel/ChoosePanelRoot/ChooseItemList/ItemFlitter/ItemLvFlitter/*/Label
-  sampleText: Cheap
-  idealFontSize: 10.0
-  allowWordWrap: true
-  adjustWidth: 10.0
 - path: Canvas/ChoosePanel/ChoosePanelRoot/ChooseItemList/ItemFlitter/ItemTypeFlitter/*/Label
   sampleText: Secret Manual
   idealFontSize: 10.0
   allowWordWrap: true
   adjustX: -2.0
   adjustWidth: 10.0
-- path: Canvas/ChoosePanel/ChoosePanelRoot/ChooseItemList/ItemFlitter/ItemTypeFlitter/*/Label
-  sampleText: Secret Manual
-  idealFontSize: 10.0
-  allowWordWrap: true
-  adjustX: -2.0
-  adjustWidth: 10.0
-- path: Canvas/ChoosePanel/ChoosePanelRoot/ChooseItemList/SkillFlitter/SkillTypeFlitter/*/Label
-  sampleText: Special Technique
-  idealFontSize: 12.0
-  allowWordWrap: true
-  adjustWidth: 30.0
 - path: Canvas/ChoosePanel/ChoosePanelRoot/ChooseItemList/Viewport/Content/*/Name
   sampleText: White Horse Suspended Hoof
   idealFontSize: 11.0

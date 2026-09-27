@@ -216,9 +216,27 @@
 - raw: 飞沙走石
   result: Flying Sand and Rolling Stones
   badtrans: true
+
+- raw: 归藏功
+  result: Secluded Return Skill
 - raw: 龙胤归藏功
-  result: Dragon Descends into Seclusion Technique
+  result: Dragonheir Secluded Return Skill
   badtrans: true
+- raw: 少林归藏功
+  result: Shaolin Secluded Return Skill
+  badtrans: true
+- raw: 武当归藏功
+  result: Wudang Secluded Return Skill
+  badtrans: true
+- raw: 峨眉归藏功
+  result: Emei Secluded Return Skill
+  badtrans: true
+- raw: 绝义归藏功
+  result: Righteous Severance Secluded Return Skill
+  badtrans: true
+- raw: 心狂归藏功
+  result: Heart's Madness Secluded Return Skill
+
 - raw: 当头棒喝
   result: Thunderous Awakening
   badtrans: true
@@ -273,7 +291,6 @@
 # - raw: 禁军拳术
 #   result: Forbidden Army Combat Technique
 #   badtrans: true
-
 # - raw: 木剑式
 #   result: Wooden Sword Style
 #   badtrans: true
@@ -2118,9 +2135,6 @@
 # - raw: 袈裟伏魔功
 #   result: Robe Suppression Evil Skill
 #   badtrans: true
-# - raw: 少林归藏功
-#   result: Shaolin Guizang Gong
-#   badtrans: true
 # - raw: 一苇渡江
 #   result: Crossing the river on a single reed
 #   badtrans: true
@@ -2219,9 +2233,6 @@
 #   badtrans: true
 # - raw: 元始周天功
 #   result: Primordial Thousand Heaven Technique
-#   badtrans: true
-# - raw: 武当归藏功
-#   result: Wudang Guichuan Skill
 #   badtrans: true
 # - raw: 四象疑步
 #   result: Four Symbols Doubtful Steps
@@ -2483,9 +2494,6 @@
 #   badtrans: true
 # - raw: 临济十二庄
 #   result: Linji Twelve Villages
-#   badtrans: true
-# - raw: 峨眉归藏功
-#   result: Emei Guizang Skill
 #   badtrans: true
 # - raw: 峨眉虎步功
 #   result: Emei Tiger Step Skill
@@ -3035,12 +3043,6 @@
 #   badtrans: true
 # - raw: 白虹贯日掌
 #   result: Sun‑Piercing White Ribbon Palm
-#   badtrans: true
-# - raw: 绝义归藏功
-#   result: Absolute Righteousness and Hidden Power
-#   badtrans: true
-# - raw: 心狂归藏功
-#   result: Calm the Wild Heart Technique
 #   badtrans: true
 # - raw: 八段锦
 #   result: Eight Section Silk Ribbon Exercise

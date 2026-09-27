@@ -20530,16 +20530,9 @@
   splits:
   - text: "第三次泰岳大典即将于泰山玉皇顶召开。当世顶尖高手已云集"
     translated: "The third Mount Tai Grand Assembly is about to take place on Mount Tai's Jade Emperor Peak. The world's top martial arts masters have already gathered."
-    qcReviewedText: "The third Mount Tai Grand Assembly is about to take place on Mount Tai's Jade Emperor Peak. The world's top martial arts masters have already gathered.<b>#PosText#</b>, Prepare to settle this through combat, to test our skills, and to compete for the Guichan Technique and the title of Supreme Champion under the heavens."
-    qcTranslated: "The third Mount Tai Grand Assembly is about to take place on Mount Tai's Jade Emperor Peak. The world's top martial arts masters have already gathered at <b>#PosText#</b>, preparing to settle this through combat, to test our skills, and to compete for the Guichan Technique and the title of Supreme Champion under the heavens."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "，准备以武论道，一较高下，争夺归藏功以及天下第一这一无上荣耀。"
-    translated: ", Prepare to settle this through combat, to test our skills, and to compete for the Guichan Technique and the title of Supreme Champion under the heavens."
+    translated: ", Prepare to settle this with martial arts, competing for supremacy, and vying for the Secluded Return Skill as well as the supreme honor of being the number one in the world."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "第二届泰岳大典"
@@ -20554,16 +20547,9 @@
   splits:
   - text: "第二届泰岳大典于泰山玉皇顶正式召开，各大掌门云集"
     translated: "The second Mount Tai Grand Assembly was officially held on Mount Tai's Jade Emperor Peak, with sect leaders gathering from all over."
-    qcReviewedText: "The second Mount Tai Grand Assembly was officially held on Mount Tai's Jade Emperor Peak, with sect leaders gathering from all over.<b>#PosText#</b>, Discuss together the disposition of the Dragon Descends into Seclusion Technique."
-    qcTranslated: "The second Mount Tai Grand Assembly was officially held on Mount Tai's Jade Emperor Peak, with sect leaders gathering from all over<b>#PosText#</b> to discuss the disposition of the Dragon Descends into Seclusion Technique."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "，共同商议龙胤归藏功之归属。"
-    translated: ", Discuss together the disposition of the Dragon Descends into Seclusion Technique."
+    translated: ", Discuss together the disposition of the Dragonheir Secluded Return Skill."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "算了，随便逛逛便好"
@@ -22375,15 +22361,7 @@
 - raw: "赵胤宗的龙胤归藏功重现江湖，各大门派决定于<b>一个月后</b>在泰山举办第二届泰岳大典，商定神功归属。\\n许多武林人士已提前前往<b>#PosText#</b>，欲一睹这场空前绝后之盛会。"
   splits:
   - text: "赵胤宗的龙胤归藏功重现江湖，各大门派决定于"
-    translated: "Zhao Yinzong's Dragon Descends into Seclusion Technique has returned to Jianghu, and the major sects have decided to gather at"
-    qcReviewedText: "Zhao Yinzong's Dragon Descends into Seclusion Technique has returned to Jianghu, and the major sects have decided to gather at <b>A month later </b>Hold the second Mount Tai Grand Assembly on Mount Tai to decide the ownership of the divine technique.\\nMany Wulin practitioners have gone there in advance.<b>#PosText#</b>, To catch a glimpse of this unprecedented grand festival."
-    qcTranslated: "Zhao Yinzong's Dragon Descends into Seclusion Technique has returned to Jianghu, and the major sects have decided to hold the second Mount Tai Grand Assembly on Mount Tai <b>one month later</b> to decide the ownership of the divine technique.\\nMany Wulin practitioners have gone there in advance to <b>#PosText#</b>, eager to catch a glimpse of this unprecedented grand festival."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
-    - OtherNamedDefect
+    translated: "Zhao Yinzong's Dragonheir Secluded Return Skill has returned to Jianghu, and the major sects have decided to..."
   - subIndex: 1
     text: "一个月后"
     translated: "A month later"

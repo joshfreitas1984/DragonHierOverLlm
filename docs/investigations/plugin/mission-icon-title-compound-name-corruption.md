@@ -1,5 +1,10 @@
 # Mission icon Title compound name corruption (2026-09-22)
 
+> **Resolved in round 10 (2026-09-27).** The `?` characters were never corruption. They are the
+> game's own treasure-map riddle masking (`GetTriggerTargetDescribe(unclear: true)`). The fix
+> forces `unclear = false`. Rounds 1-9 below are kept for history, but their "corruption" framing
+> (and round 7's "native corruption" conclusion) is wrong - read round 10 first.
+
 ## Symptom
 
 ```
@@ -362,6 +367,100 @@ visibility. Deployed for the next play session; **not yet confirmed** - need a f
 translated, like `朱仙镇`/Zhuxian Town) to see whether a `GenericPostfix (suppressed...)` entry fires
 for this compound and what it actually contains, before or in place of round 7's "native code"
 hypothesis.
+
+## Round 9 - round 8 instrumented the wrong suppression window, so its silence proves nothing
+
+Round 8 shipped and was genuinely deployed this session (confirmed: the deployed DLL's string
+table contains the `"GenericPostfix (suppressed - not translated, diagnostic only)"` literal), but
+a full session of play produced zero hits for it in `residualCjkDebug.log`, and a fresh
+`missionHideTargetPlace` corruption (`?ingtai Village岗?`) still occurred. That is not evidence the
+corruption is native - round 8's premise doesn't apply to this carrier at all.
+
+`DynamicStringPatches._suppressGenericTranslation` is set `true` only inside
+`MissionPatches.GetMissionTargetDescribePrefix`/`GetTriggerTargetDescribePrefix` (and one unrelated
+case in `WorldEventPatches.cs`) - see the four assignment sites, all in those two files. Neither of
+those methods is on the code path that touches `missionHideTargetPlaceString`. Per round 4, when
+`missionHideTargetPlace` is true, `GetMissionBaseDescribe` and `MissionIconController.Update` read
+the field directly and never call `GetTriggerTargetDescribe`/`GetMissionTargetDescribe` at all. The
+prefixes that do run for this carrier - `GetMissionBaseDescribePrefix`/
+`MissionIconControllerUpdatePrefix`, which call `TranslateHiddenTargetPlaceString` - never touch
+`_suppressGenericTranslation`. So round 8's added visibility inside the suppression window could only
+ever have caught corruption from the bare-compound-name path rounds 1-3 already fixed (`TranslateObjective`'s
+fallback), not from `missionHideTargetPlaceString`. Its silence this session is expected either way and
+carries no information about this bug.
+
+Net effect: round 7's conclusion (no reachable managed `String.Concat`/`Format` call builds this
+compound anywhere in the log; corruption already present in `missionHideTargetPlaceString` the first
+time our own read-site patch sees it) is unrefuted and still the leading account. Round 8 was a dead
+end caused by patching the wrong method's suppression, not a failed test of round 7's hypothesis.
+
+**Real next diagnostic step (not yet attempted)**: get visibility on `missionHideTargetPlaceString`
+at the moment it's first populated, not just at first read. The field itself has no reachable named
+setter (round 4), but the suspected generation-time callers - `GameController.GenerateBountyMission`/
+`PlotController.GetTreasureMapMission` - are ordinary methods we could Harmony-postfix to log
+`missionData.missionHideTargetPlaceString` (and, separately, `AreaData.GetAreaName()`/
+`AreaBuildingData.Name(bool)`'s values if obtainable some other way) immediately after generation
+completes, before `TranslateHiddenTargetPlaceString` ever runs. This is a different risk profile than
+round 5's reverted patch: round 5 crashed because patching a getter called from many places (including
+native-only call sites never meant to cross into managed code) forced every one of those calls through
+an IL2CPP marshaling trampoline, and marshaling itself threw for at least one placeholder instance.
+Patching a mission-generation entry point is not obviously safe from the same risk (it may also be an
+IL2CPP-native method with untested call patterns) and should be validated cautiously - watch for the
+same `Il2CppStringToManaged`/`ArgumentOutOfRangeException` signature immediately after deploying,
+and revert immediately if it appears, rather than assuming this method is exempt just because it
+"looks like" ordinary game logic rather than a getter.
+
+## Round 10 - resolved: the `?` is the game's deliberate riddle masking, not corruption
+
+The round 9 `GenerateBountyMission` postfix fired once and logged an **empty**
+`missionHideTargetPlaceString`. The same tick, `GetTriggerTargetDescribe` (round 8 logging) logged
+its raw native result, before any of our translation code had run on it:
+
+```
+GenerateBountyMission(7-arg) raw missionHideTargetPlaceString immediately after generation
+  before: (empty)
+GetTriggerTargetDescribe raw result (targetID=0, unclear=True)
+  before: M?tuo County客?
+```
+
+Decompiled `MissionData.GetTriggerTargetDescribe` (`Converter/output/_NoNamespace/MissionData.cs:1086-1106`,
+`:1176-1187`), when `unclear` is true:
+
+- **Area name:** `GlobalData.StringReplace(areaName, RandomRange(0, areaName.Length), '?')` replaces
+  one random character with `?` (char 63).
+- **Building name:** keeps one random character and replaces every other one with `?`, then
+  concatenates it onto the area name.
+
+This is the treasure-map clue: `墨脱县客栈` becomes something like `墨?县客?`. We translate `AreaData`
+names at the source, so the game masks the English name instead (`M?tuo County`), which looks like
+corruption. The building name is still Chinese at that point, so it arrives as `客?`, which no
+dictionary lookup can match. The earlier reports (`Qingcheng Se?t祠?`, `?ingtai Village岗?`) have
+exactly the same shape: one `?` in the area name and every building character but one masked.
+
+The only `unclear: true` caller is `GameController.GetFullMission`
+(`Converter/output/_NoNamespace/GameController.cs:35379-35381`). It runs after `GenerateBountyMission`
+and stores the result into `missionHideTargetPlaceString` when `missionHideTargetPlace` is set. That
+is why the round 9 postfix saw the field empty, and why the string is baked into save data rather
+than recomputed.
+
+Round 7's "native corruption" conclusion was a misreading: the `?` does come from native code, but
+from deliberate masking, not memory or encoding damage.
+
+**Fix (masking dropped entirely):**
+
+- `MissionPatches.GetTriggerTargetDescribePrefix` now takes `ref bool unclear` and sets it to
+  `false`, so the game always takes its unmasked branch. The existing postfix then translates the
+  full area + building name as normal.
+- `TranslateHiddenTargetPlaceString` repairs missions already created with a masked
+  `missionHideTargetPlaceString` (existing saves). If the stored value contains `?`, it rebuilds it
+  with `GetTriggerTargetDescribe(0, false)` and writes the result back.
+- The round 9 `GenerateBountyMission` postfixes were removed. They answered their question and
+  carried the round 5 IL2CPP-trampoline risk for no remaining benefit.
+
+**Verify:** get a new treasure map. The mission title/objective should read e.g. `Motuo County Inn`
+with no `?`. An existing masked treasure-map mission should also display unmasked after the icon
+next updates. Watch `residualCjkDebug.log` for
+`TranslateHiddenTargetPlaceString (rebuilt masked place name)`.
 
 ## Related code and references
 

@@ -1,1 +1,5 @@
-[]
+- path: Canvas/ChoosePanel/ChoosePanelRoot/ChooseItemList/*/Label
+  sampleText: Special Technique
+  idealFontSize: 10.0
+  allowWordWrap: true
+  adjustWidth: 15.0

@@ -122,10 +122,18 @@ internal static class MissionPatches
         return __exception;
     }
 
+    // unclear=true makes the game mask the place name as a treasure-map riddle: one random char of
+    // the area name and all but one char of the building name are replaced with '?' (char 63, via
+    // GlobalData.StringReplace). That works for "墨脱县客栈" -> "墨?县客?", but once the area name is
+    // English it just looks like corruption ("M?tuo County客?") and the masked building name can no
+    // longer be translated. Masking is dropped entirely: force the unmasked branch. The only
+    // unclear=true caller is GameController.GetFullMission, which bakes the result into
+    // missionHideTargetPlaceString - see mission-icon-title-compound-name-corruption.md round 10.
     [HarmonyPatch(typeof(MissionData), nameof(MissionData.GetTriggerTargetDescribe), new[] { typeof(int), typeof(bool) })]
     [HarmonyPrefix]
-    private static void GetTriggerTargetDescribePrefix()
+    private static void GetTriggerTargetDescribePrefix(ref bool unclear)
     {
+        unclear = false;
         _previousGenericTranslationSuppression = DynamicStringPatches._suppressGenericTranslation;
         DynamicStringPatches._suppressGenericTranslation = true;
     }
@@ -178,12 +186,12 @@ internal static class MissionPatches
     // at all - it doesn't answer the question that matters for this risk.
     //
     // missionHideTargetPlaceString is a pre-baked "AreaName + BuildingName" compound (e.g.
-    // "青城派祠堂") stored directly on the MissionData instance - unlike GetMissionTargetDescribe/
-    // GetTriggerTargetDescribe (patched above), it is never recomputed through those methods, so it
-    // was reaching MissionIconController's Title and GetMissionBaseDescribe's text completely
-    // unpatched, then getting corrupted by the shared generic Concat/Format pipeline the first time
-    // it was displayed (see docs/investigations/plugin/mission-icon-title-compound-name-corruption.md,
-    // "Actual conclusion"). Translating it here, in place, with the same strict left-to-right
+    // "青城派祠堂") stored directly on the MissionData instance. GameController.GetFullMission bakes
+    // it once from GetTriggerTargetDescribe(0, unclear: true) at mission creation; after that it is
+    // read directly by MissionIconController's Title and GetMissionBaseDescribe and never recomputed.
+    // Its '?' characters were the game's own riddle masking, not corruption (round 10 of
+    // docs/investigations/plugin/mission-icon-title-compound-name-corruption.md).
+    // Translating it here, in place, with the same strict left-to-right
     // TranslateCompoundName used for the bare-compound-name fallback above, resolves both pieces
     // (area name, building name) before they are ever concatenated/Formatted downstream, and the
     // in-place write memoizes the result so this only needs to run once per mission instance.
@@ -229,6 +237,22 @@ internal static class MissionPatches
         }
 
         var value = missionData.missionHideTargetPlaceString;
+
+        // Missions created before GetTriggerTargetDescribePrefix forced unclear=false (e.g. from an
+        // existing save) still carry the game's '?'-masked place name. Rebuild it unmasked - the
+        // call goes through the patched GetTriggerTargetDescribe, so it comes back translated.
+        if (!string.IsNullOrEmpty(value) && value.Contains('?'))
+        {
+            var rebuilt = missionData.GetTriggerTargetDescribe(0, false);
+            if (!string.IsNullOrEmpty(rebuilt) && !rebuilt.Contains('?'))
+            {
+                missionData.missionHideTargetPlaceString = rebuilt;
+                if (MainPlugin.ResidualCjkDebugEnabledCached)
+                    DynamicStringPatches.LogMissionDebug(
+                        "TranslateHiddenTargetPlaceString (rebuilt masked place name)", value, rebuilt);
+                value = rebuilt;
+            }
+        }
         if (string.IsNullOrEmpty(value) || !DynamicStringPatches.ContainsCjk(value))
         {
             if (MainPlugin.ResidualCjkDebugEnabledCached)

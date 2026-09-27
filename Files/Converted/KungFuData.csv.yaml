@@ -6339,11 +6339,7 @@
   splits:
   - split: 4
     text: "少林所夺得的龙胤归藏功一部分，融入佛法后对修习者身形气力增益更甚，足见少林兼容并蓄之神髓"
-    translated: "A portion of the Dragon Descends into Seclusion Technique, which Shaolin obtained, provides even greater enhancement to the practitioner's physique and strength when combined with Buddhist teachings, clearly demonstrating Shaolin's spirit of inclusiveness and synthesis."
-    qcReviewedText: "A portion of the Dragon Descends into Seclusion Technique, which Shaolin obtained, provides even greater enhancement to the practitioner's physique and strength when combined with Buddhist teachings, clearly demonstrating Shaolin's spirit of inclusiveness and synthesis."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Part of the Dragonheir Secluded Return Skill that Shaolin acquired enhances the practitioner's physique and strength even more when combined with Buddhist teachings, clearly demonstrating Shaolin's profound ability to integrate diverse practices."
 - raw: "673,轻功,3,一苇渡江,传说达摩祖师曾借一芦苇漂渡长江，此功法虽已失传大半，但修习者仍可脚踩整捆芦苇漂行于水面数个时辰不沉,,1.1,轻功潜力1;轻功1;经脉1,轻功12;经脉12;轻灵0.05;速度0.05,,轻功45;经脉35,,,,0,10,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -6681,11 +6677,7 @@
   splits:
   - split: 4
     text: "武当所夺得的龙胤归藏功一部分，虽说只得其总纲，融入道法后却已能大大提升修习者的经脉潜力"
-    translated: "Although it is just the general outline of the Dragon Descends into Seclusion Technique, which Wudang obtained, when integrated into their daoist practices, it greatly enhances the potential of the practitioners' meridians."
-    qcReviewedText: "Although it is just the general outline of the Dragon Descends into Seclusion Technique, which Wudang obtained, when integrated into their daoist practices, it greatly enhances the potential of the practitioners' meridians."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A portion of the Dragonheir Secluded Return Skill, which Wudang obtained, though it only has its overall framework, can greatly enhance a practitioner's meridian potential when integrated into their Daoist practices."
 - raw: "709,轻功,2,四象疑步,以四象代表四个方位移动之法，其中循环变化纷繁往复，每一步皆顺应卦象，不通易经之人难免疑惑万分,,1.1,轻功2;智力1,轻功8;灵巧8;疲劳0.04;反击0.06,,轻功25;智力30,,,,0,11,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -7583,11 +7575,7 @@
   splits:
   - split: 4
     text: "峨眉所夺得的龙胤归藏功一部分，因内容较少而融入了大量峨眉心法，可以提升修习者的行动之灵巧"
-    translated: "A portion of the Dragon Descends into Seclusion Technique, which the Emei sect acquired, contains a significant amount of Emei Heart Method due to its brief content, enhancing the agility of those who practice it."
-    qcReviewedText: "A portion of the Dragon Descends into Seclusion Technique, which the Emei sect acquired, contains a significant amount of Emei Heart Method due to its brief content, enhancing the agility of those who practice it."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Part of the Dragonheir Secluded Return Skill that Mount Emei obtained, due to its limited content, was integrated with a large amount of Mount Emei's Heart Method, enhancing the agility of those who practice it."
 - raw: "802,轻功,1,峨眉虎步功,模仿老虎神态之步法，亦步亦趋，不疾不徐，耽耽虎视，顾盼生威，对于腰腿部劳损亦有保健功效,,0.9,轻功1;灵巧1,轻功4;力道4;灵巧4;舒筋0.06,,轻功15;灵巧10,,,,0,14,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -9358,20 +9346,12 @@
   splits:
   - split: 4
     text: "武绝义所夺得的龙胤归藏功一部分，融入了飞龙门心法后，变为一门可大大提升修为者力道和体魄，颇为霸道强悍的功法"
-    translated: "The part of the Dragon Descends into Seclusion Technique that Wu Jueyi obtained, when integrated into the Flying Dragon Gate's Heart Method, becomes a formidable technique that greatly enhances a practitioner's strength and resilience."
-    qcReviewedText: "The part of the Dragon Descends into Seclusion Technique that Wu Jueyi obtained, when integrated into the Flying Dragon Gate's Heart Method, becomes a formidable technique that greatly enhances a practitioner's strength and resilience."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Part of the Dragonheir Secluded Return Skill that Wu Jueyi obtained, when integrated into the Flying Dragon Gate's Heart Method, becomes a powerful and formidable technique that greatly enhances a practitioner's strength and resilience."
 - raw: "994,内功,5,心狂归藏功,计心狂所夺得的龙胤归藏功一部分，最为完整但也最为艰深。计心狂苦心参悟并融入五毒心法，最终成为一门阴狠毒辣，怪异莫测的恐怖功法,,2.5,智力潜力2;意志潜力1;经脉潜力1,生命上限100;内力上限140;内功9;智力9;意志9;经脉9;毒术9;毒素0.06;混乱0.06;负面加成0.06,,内功75;智力80;经脉70,,,,0,-1,0,,,,,,,,,Same,FALSE,0,1"
   splits:
   - split: 4
     text: "计心狂所夺得的龙胤归藏功一部分，最为完整但也最为艰深。计心狂苦心参悟并融入五毒心法，最终成为一门阴狠毒辣，怪异莫测的恐怖功法"
-    translated: "The part of the Dragon Descends into Seclusion Technique that Ji Xinkuang obtained is the most complete but also the most challenging. After diligently studying and incorporating it into the Five Poisons Heart Method, he ultimately developed a terrifying technique that is cruel, vicious, and unpredictable."
-    qcReviewedText: "The part of the Dragon Descends into Seclusion Technique that Ji Xinkuang obtained is the most complete but also the most challenging. After diligently studying and incorporating it into the Five Poisons Heart Method, he ultimately developed a terrifying technique that is cruel, vicious, and unpredictable."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The portion of the Dragonheir Secluded Return Skill that Ji Xinkuang obtained is the most complete but also the most challenging. After painstakingly studying and integrating it into the Five Poisons Heart Method, he ultimately created a terrifying martial art that is vicious and unpredictable."
 - raw: "995,内功,5,龙胤归藏功,赵胤宗所创，玄妙无比，威力无穷，可将修习者的体魄经脉发挥至天人境界，从而获得经天纬地之能，号称当世第一内功。,,3,力道潜力1;灵巧潜力1;智力潜力1;意志潜力1;体质潜力1;经脉潜力1,生命上限150;内力上限150;内功10;力道10;灵巧10;智力10;意志10;体质10;经脉10,,内功90;智力70;经脉80,,,,0,-1,0,,,,,,,,,Same,FALSE,0,1"
   splits:
   - split: 4

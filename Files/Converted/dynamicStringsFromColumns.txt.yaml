@@ -37073,11 +37073,7 @@
 - raw: "少林归藏功"
   splits:
   - text: "少林归藏功"
-    translated: "Shaolin Guizang Gong"
-    qcReviewedText: "Shaolin Guizang Gong"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Shaolin Secluded Return Skill"
 - raw: "力道潜力1;体质潜力1"
   splits:
   - text: "力道潜力1"
@@ -38633,11 +38629,7 @@
 - raw: "武当归藏功"
   splits:
   - text: "武当归藏功"
-    translated: "Wudang Guichuan Skill"
-    qcReviewedText: "Wudang Guichuan Skill"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Wudang Secluded Return Skill"
 - raw: "生命上限50;内力上限70;智力9;经脉9;不屈0.04;通脉0.04"
   splits:
   - text: "生命上限50"
@@ -42114,11 +42106,7 @@
 - raw: "峨眉归藏功"
   splits:
   - text: "峨眉归藏功"
-    translated: "Emei Guizang Skill"
-    qcReviewedText: "Emei Guizang Skill"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Emei Secluded Return Skill"
 - raw: "灵巧潜力1"
   splits:
   - text: "灵巧潜力1"
@@ -49161,11 +49149,7 @@
 - raw: "绝义归藏功"
   splits:
   - text: "绝义归藏功"
-    translated: "Absolute Righteousness and Hidden Power"
-    qcReviewedText: "Absolute Righteousness and Hidden Power"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Righteous Severance Secluded Return Skill"
 - raw: "生命上限130;内力上限70;内功8;力道8;意志8;体质12;外伤0.05;横练0.05;霸体0.05"
   splits:
   - text: "生命上限130"
@@ -49211,11 +49195,7 @@
 - raw: "心狂归藏功"
   splits:
   - text: "心狂归藏功"
-    translated: "Calm the Wild Heart Technique"
-    qcReviewedText: "Calm the Wild Heart Technique"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Heart's Madness Secluded Return Skill"
 - raw: "智力潜力2;意志潜力1;经脉潜力1"
   splits:
   - text: "智力潜力2"
@@ -49276,11 +49256,7 @@
 - raw: "龙胤归藏功"
   splits:
   - text: "龙胤归藏功"
-    translated: "Dragon Descends into Seclusion Technique"
-    qcReviewedText: "Dragon Descends into Seclusion Technique"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Dragonheir Secluded Return Skill"
 - raw: "力道潜力1;灵巧潜力1;智力潜力1;意志潜力1;体质潜力1;经脉潜力1"
   splits:
   - text: "力道潜力1"
