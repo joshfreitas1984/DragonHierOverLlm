@@ -1,89 +1,93 @@
 // ============================================================
 // Type  : UIDragObject
-// Token : 0x200003F
+// Token : 0x2000040
 // ============================================================
 
 public class UIDragObject
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000124
+    // Token: 0x4000140
     public Transform target;
 
-    // Token: 0x4000125
+    // Token: 0x4000141
     public UIPanel panelRegion;
 
-    // Token: 0x4000126
+    // Token: 0x4000142
     public Vector3 scrollMomentum;
 
-    // Token: 0x4000127
+    // Token: 0x4000143
     public bool restrictWithinPanel;
 
-    // Token: 0x4000128
+    // Token: 0x4000144
     public UIRect contentRect;
 
-    // Token: 0x4000129
+    // Token: 0x4000145
     public DragEffect dragEffect;
 
-    // Token: 0x400012A
+    // Token: 0x4000146
     public float momentumAmount;
 
-    // Token: 0x400012B
+    // Token: 0x4000147
     protected Vector3 scale;
 
-    // Token: 0x400012C
+    // Token: 0x4000148
     private float scrollWheelFactor;
 
-    // Token: 0x400012D
+    // Token: 0x4000149
     private Plane mPlane;
 
-    // Token: 0x400012E
+    // Token: 0x400014A
     private Vector3 mTargetPos;
 
-    // Token: 0x400012F
+    // Token: 0x400014B
     private Vector3 mLastPos;
 
-    // Token: 0x4000130
+    // Token: 0x400014C
     private Vector3 mMomentum;
 
-    // Token: 0x4000131
+    // Token: 0x400014D
     private Vector3 mScroll;
 
-    // Token: 0x4000132
+    // Token: 0x400014E
     private Bounds mBounds;
 
-    // Token: 0x4000133
+    // Token: 0x400014F
     private int mTouchID;
 
-    // Token: 0x4000134
+    // Token: 0x4000150
     private bool mStarted;
 
-    // Token: 0x4000135
+    // Token: 0x4000151
     private bool mPressed;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000116
-    // RVA   : 0x13DA450   Offset: 0x13D8C50   Length: 0x13
+    // Token : 0x600012E
+    // RVA   : 0x12B6950   Offset: 0x12B5D50   Length: 0x13
     public Vector3 get_dragMovement()
     {
-        uint uVar1;
+        uint64 * FUN_1812b6950(uint64 *this,int64 param_2)
+        {
+        uint32 uVar1;
         uVar1 = *(uint32 *)(param_2 + 80);
         *this = *(uint64 *)(param_2 + 72);
         *(uint32 *)(this + 1) = uVar1;
         return this;
     }
 
-    // Token : 0x6000117
-    // RVA   : 0x13DA470   Offset: 0x13D8C70   Length: 0x10
+    // Token : 0x600012F
+    // RVA   : 0x12B6970   Offset: 0x12B5D70   Length: 0x10
     public void set_dragMovement(Vector3 value)
     {
-        uint uVar1;
+        void FUN_1812b6970(int64 this,uint64 *value)
+        {
+        uint32 uVar1;
         uVar1 = *(uint32 *)(value + 1);
         this.scale = *value;
         *(uint32 *)(this + 80) = uVar1;
     }
 
-    // Token : 0x6000118
-    // RVA   : 0x13D99A0   Offset: 0x13D81A0   Length: 0x1EF
+    // Token : 0x6000130
+    // RVA   : 0x12B5EA0   Offset: 0x12B52A0   Length: 0x1EF
     private void OnEnable()
     {
         float fVar1;
@@ -107,8 +111,8 @@ public class UIDragObject
           uVar4 = this.target;
           cVar3 = Object.op_Inequality(uVar4,0,0);
           if ((cVar3) && (cVar3 = Application.get_isPlaying(0), cVar3)) {
-            if (this.target == null) goto LAB_1813d9b8a;
-            uVar4 = Component.GetComponent(this.target,DAT_181d6e7c0);
+            if (this.target == null) goto LAB_1812b608a;
+            uVar4 = Component.GetComponent(this.target,DAT_181d97060);
             cVar3 = Object.op_Inequality(uVar4,0,0);
             if (cVar3) {
               this.contentRect = uVar4;
@@ -122,7 +126,7 @@ public class UIDragObject
         }
         else {
           if (this.target == null) {
-        LAB_1813d9b8a:
+        LAB_1812b608a:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -133,15 +137,17 @@ public class UIDragObject
         *(uint32 *)(this + 112) = uVar2;
     }
 
-    // Token : 0x6000119
-    // RVA   : 0x13D92A0   Offset: 0x13D7AA0   Length: 0x8
+    // Token : 0x6000131
+    // RVA   : 0x12B57A0   Offset: 0x12B4BA0   Length: 0x8
     private void OnDisable()
     {
+        void FUN_1812b57a0(int64 this)
+        {
         this.mStarted = 0;
     }
 
-    // Token : 0x600011A
-    // RVA   : 0x13D89B0   Offset: 0x13D71B0   Length: 0x115
+    // Token : 0x6000132
+    // RVA   : 0x12B4EB0   Offset: 0x12B42B0   Length: 0x115
     private void FindPanel()
     {
         bool cVar1;
@@ -153,16 +159,16 @@ public class UIDragObject
           if (this.target != null) {
             lVar2 = Component.get_transform(this.target,0);
             if (lVar2 != null) {
-              uVar3 = FUN_180da0f00(lVar2,0);
+              uVar3 = FUN_180da9a20(lVar2,0);
               uVar3 = UIPanel.Find(uVar3,0);
-              goto LAB_1813d8a6e;
+              goto LAB_1812b4f6e;
             }
           }
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         uVar3 = 0;
-        LAB_1813d8a6e:
+        LAB_1812b4f6e:
         this.panelRegion = uVar3;
         uVar3 = this.panelRegion;
         cVar1 = Object.op_Equality(uVar3,0,0);
@@ -171,8 +177,8 @@ public class UIDragObject
         }
     }
 
-    // Token : 0x600011B
-    // RVA   : 0x13DA100   Offset: 0x13D8900   Length: 0x297
+    // Token : 0x6000133
+    // RVA   : 0x12B6600   Offset: 0x12B5A00   Length: 0x297
     private void UpdateBounds()
     {
         long lVar1;
@@ -296,11 +302,11 @@ public class UIDragObject
         }
     }
 
-    // Token : 0x600011C
-    // RVA   : 0x13D9B90   Offset: 0x13D8390   Length: 0x44F
+    // Token : 0x6000134
+    // RVA   : 0x12B6090   Offset: 0x12B5490   Length: 0x44F
     private void OnPress(bool pressed)
     {
-        var pUICamera = *(int64*)(UICamera_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181daf678 + 184);
         int iVar1;
         ulong uVar2;
         bool cVar3;
@@ -315,8 +321,8 @@ public class UIDragObject
         ulong uStack_30;
         ulong local_28;
         ulong uStack_20;
-        if (UICamera.currentTouchID != -2) {
-          if ((UICamera.currentTouchID != -3) &&
+        if (*(int *)(pStatics + 212) != -2) {
+          if ((*(int *)(pStatics + 212) != -3) &&
              (((fVar7 = (float)Time.get_timeScale(0), 0.01 <= fVar7 || (fVar7 == 0.0)) &&
               (cVar3 = Behaviour.get_enabled(this,0), cVar3)))) {
             uVar4 = Component.get_gameObject(this,0);
@@ -328,10 +334,10 @@ public class UIDragObject
                 if (!pressed) {
                   if (this.mPressed) {
                     iVar1 = this.mTouchID;
-                    if (((iVar1 == UICamera.currentTouchID) &&
+                    if (((iVar1 == *(int *)(pStatics + 212)) &&
                         (this.mPressed = 0, this.restrictWithinPanel)) &&
                        (this.dragEffect == 2)) {
-                      if (this.panelRegion == null) goto LAB_1813d9fda;
+                      if (this.panelRegion == null) goto LAB_1812b64da;
                       cVar3 = UIPanel.ConstrainTargetToBounds
                                         (this.panelRegion,this.target,
                                          this + 152,0,0);
@@ -343,7 +349,7 @@ public class UIDragObject
                 }
                 else if (!this.mPressed) {
                   this.mTouchID =
-                       UICamera.currentTouchID;
+                       *(uint32 *)(pStatics + 212);
                   this.mStarted = 0x100;
                   UIDragObject.CancelMovement(this,0);
                   if (this.restrictWithinPanel) {
@@ -357,13 +363,13 @@ public class UIDragObject
                     }
                   }
                   UIDragObject.CancelSpring(this,0);
-                  lVar5 = UICamera.currentCamera;
+                  lVar5 = *(int64 *)(pStatics + 192);
                   if (lVar5 != null) {
                     lVar5 = Component.get_transform(lVar5,0);
                     uVar4 = this.panelRegion;
                     cVar3 = Object.op_Inequality(uVar4,0,0);
                     if (cVar3) {
-                      if (this.panelRegion == null) goto LAB_1813d9fda;
+                      if (this.panelRegion == null) goto LAB_1812b64da;
                       lVar5 = UIRect.get_cachedTransform(this.panelRegion,0);
                     }
                     if (lVar5 != null) {
@@ -378,8 +384,8 @@ public class UIDragObject
                       puVar6 = (uint64 *)Quaternion.op_Multiply(&local_48,&local_28,&local_58,0);
                       local_48 = *puVar6;
                       local_40 = *(uint32 *)(puVar6 + 1);
-                      local_50 = *(uint32 *)(pUICamera + 108);
-                      local_58 = UICamera.lastWorldPosition;
+                      local_50 = *(uint32 *)(pStatics + 108);
+                      local_58 = *(uint64 *)(pStatics + 100);
                       local_38 = 0;
                       uStack_30 = 0;
                       Plane.ctor(&local_38,&local_48,&local_58,0);
@@ -388,7 +394,7 @@ public class UIDragObject
                       return;
                     }
                   }
-        LAB_1813d9fda:
+        LAB_1812b64da:
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
@@ -398,10 +404,11 @@ public class UIDragObject
         }
     }
 
-    // Token : 0x600011D
-    // RVA   : 0x13D92B0   Offset: 0x13D7AB0   Length: 0x6E0
+    // Token : 0x6000135
+    // RVA   : 0x12B57B0   Offset: 0x12B4BB0   Length: 0x6E0
     private void OnDrag(Vector2 delta)
     {
+        var pStatics = *(int64*)(DAT_181daf678 + 184);
         int iVar1;
         long lVar2;
         long lVar3;
@@ -434,7 +441,7 @@ public class UIDragObject
         uint64 local_88;
         if (this.mPressed) {
           iVar1 = this.mTouchID;
-          if ((iVar1 == UICamera.currentTouchID) &&
+          if ((iVar1 == *(int *)(pStatics + 212)) &&
              (cVar4 = Behaviour.get_enabled(this,0), cVar4)) {
             uVar5 = Component.get_gameObject(this,0);
             cVar4 = NGUITools.GetActive(uVar5,0);
@@ -442,15 +449,15 @@ public class UIDragObject
               uVar5 = this.target;
               cVar4 = Object.op_Inequality(uVar5,0,0);
               if (cVar4) {
-                lVar2 = UICamera.currentTouch;
+                lVar2 = *(int64 *)(pStatics + 224);
                 fVar8 = local_e0;
                 if (lVar2 != null) {
-                  lVar2.clickNotification = 2;
-                  lVar2 = UICamera.currentTouch;
-                  lVar3 = UICamera.currentCamera;
+                  *(uint32 *)(lVar2 + 112) = 2;
+                  lVar2 = *(int64 *)(pStatics + 224);
+                  lVar3 = *(int64 *)(pStatics + 192);
                   if ((lVar2 != null) && (lVar3 != null)) {
                     local_e0 = 0.0;
-                    local_e8 = lVar2.pos;
+                    local_e8 = *(uint64 *)(lVar2 + 20);
                     puVar6 = (uint32 *)Camera.ScreenPointToRay(&local_b8,lVar3,&local_e8,0);
                     local_b8 = *puVar6;
                     uStack_b4 = puVar6[1];
@@ -486,7 +493,7 @@ public class UIDragObject
                     }
                     if ((fVar13 != 0.0) || (fVar12 != 0.0)) {
                       fVar8 = local_e0;
-                      if (this.target == null) goto LAB_1813d998b;
+                      if (this.target == null) goto LAB_1812b5e8b;
                       local_e8 = CONCAT44(fVar12,fVar13);
                       local_e0 = local_f0;
                       puVar7 = (uint64 *)
@@ -500,7 +507,7 @@ public class UIDragObject
                       local_e0 = local_d0 * *(float *)(puVar7 + 1);
                       local_e8 = local_d8;
                       fVar8 = local_d0;
-                      if (this.target == null) goto LAB_1813d998b;
+                      if (this.target == null) goto LAB_1812b5e8b;
                       local_e8 = local_f8;
                       puVar7 = (uint64 *)
                                Transform.TransformDirection
@@ -572,7 +579,7 @@ public class UIDragObject
                     }
                   }
                 }
-        LAB_1813d998b:
+        LAB_1812b5e8b:
                 local_e0 = fVar8;
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
@@ -582,8 +589,8 @@ public class UIDragObject
         }
     }
 
-    // Token : 0x600011E
-    // RVA   : 0x13D8E20   Offset: 0x13D7620   Length: 0x479
+    // Token : 0x6000136
+    // RVA   : 0x12B5320   Offset: 0x12B4720   Length: 0x479
     private void Move(Vector3 worldDelta)
     {
         float fVar1;
@@ -632,7 +639,7 @@ public class UIDragObject
             Transform.set_position(lVar5,&local_c8,0);
             return;
           }
-          goto LAB_1813d9294;
+          goto LAB_1812b5794;
         }
         local_c8 = this.mTargetPos;
         local_b8 = *worldDelta;
@@ -644,31 +651,31 @@ public class UIDragObject
                       (float)local_b8 + (float)local_c8);
         *(float *)(this + 112) = local_b0;
         local_a8 = local_b8;
-        if (lVar5 == null) goto LAB_1813d9294;
-        lVar5 = FUN_180da0f00(lVar5,0);
-        if (this.target == null) goto LAB_1813d9294;
-        lVar6 = Component.GetComponent(this.target,DAT_181d6c840);
+        if (lVar5 == null) goto LAB_1812b5794;
+        lVar5 = FUN_180da9a20(lVar5,0);
+        if (this.target == null) goto LAB_1812b5794;
+        lVar6 = Component.GetComponent(this.target,DAT_181d950e0);
         cVar3 = Object.op_Inequality(lVar5,0,0);
         if (!cVar3) {
           cVar3 = Object.op_Inequality(lVar6,0,0);
           if (!cVar3) {
-            if (this.target == null) goto LAB_1813d9294;
+            if (this.target == null) goto LAB_1812b5794;
             local_c8 = this.mTargetPos;
             local_c0 = *(float *)(this + 112);
             Transform.set_position(this.target,&local_c8,0);
           }
           else {
-            if (lVar6 == null) goto LAB_1813d9294;
+            if (lVar6 == null) goto LAB_1812b5794;
             uVar8 = (uint32)this.mTargetPos;
             uVar9 = (uint32)((uint64)this.mTargetPos >> 32);
             local_c0 = *(float *)(this + 112);
-        LAB_1813d9213:
+        LAB_1812b5713:
             local_c8 = CONCAT44(uVar9,uVar8);
             Rigidbody.set_position(lVar6,&local_c8,0);
           }
         }
         else {
-          if (lVar5 == null) goto LAB_1813d9294;
+          if (lVar5 == null) goto LAB_1812b5794;
           puVar4 = (uint64 *)Transform.get_worldToLocalMatrix(local_58,lVar5,0);
           local_98 = *puVar4;
           uStack_90 = puVar4[1];
@@ -701,32 +708,32 @@ public class UIDragObject
             local_c8 = local_a8;
             local_c0 = fVar1;
             puVar4 = (uint64 *)Matrix4x4.MultiplyPoint3x4(&local_b8,&local_98,&local_c8,0);
-            if (lVar6 == null) goto LAB_1813d9294;
+            if (lVar6 == null) goto LAB_1812b5794;
             uVar8 = (uint32)*puVar4;
             uVar9 = (uint32)((uint64)*puVar4 >> 32);
             local_c0 = *(float *)(puVar4 + 1);
-            goto LAB_1813d9213;
+            goto LAB_1812b5713;
           }
-          if (this.target == null) goto LAB_1813d9294;
+          if (this.target == null) goto LAB_1812b5794;
           local_c8 = local_a8;
           local_c0 = fVar1;
           Transform.set_localPosition(this.target,&local_c8,0);
         }
         if (this.panelRegion == null) {
-        LAB_1813d9294:
+        LAB_1812b5794:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        plVar7 = (int64 *)Component.GetComponent(this.panelRegion,DAT_181d6e540);
+        plVar7 = (int64 *)Component.GetComponent(this.panelRegion,DAT_181d96de0);
         cVar3 = Object.op_Inequality(plVar7,0,0);
         if (cVar3) {
-          if (plVar7 == (int64 *)0) goto LAB_1813d9294;
+          if (plVar7 == (int64 *)0) goto LAB_1812b5794;
           (**(code **)(*plVar7 + 0x1b8))(plVar7,1,*(uint64 *)(*plVar7 + 0x1c0));
         }
     }
 
-    // Token : 0x600011F
-    // RVA   : 0x13D8AD0   Offset: 0x13D72D0   Length: 0x348
+    // Token : 0x6000137
+    // RVA   : 0x12B4FD0   Offset: 0x12B43D0   Length: 0x348
     private void LateUpdate()
     {
         uint uVar2;
@@ -812,8 +819,8 @@ public class UIDragObject
         }
     }
 
-    // Token : 0x6000120
-    // RVA   : 0x13D8750   Offset: 0x13D6F50   Length: 0x1BC
+    // Token : 0x6000138
+    // RVA   : 0x12B4C50   Offset: 0x12B4050   Length: 0x1BC
     public void CancelMovement()
     {
         uint uVar1;
@@ -827,13 +834,13 @@ public class UIDragObject
         uVar2 = this.target;
         cVar3 = Object.op_Inequality(uVar2,0,0);
         if (cVar3) {
-          if (this.target == null) goto LAB_1813d8907;
+          if (this.target == null) goto LAB_1812b4e07;
           Transform.get_localPosition(&local_18,this.target,0);
           iVar4 = Mathf.RoundToInt();
           iVar5 = Mathf.RoundToInt();
           local_28 = CONCAT44((float)iVar5,(float)iVar4);
           iVar4 = Mathf.RoundToInt();
-          if (this.target == null) goto LAB_1813d8907;
+          if (this.target == null) goto LAB_1812b4e07;
           local_18 = local_28;
           local_10 = (float)iVar4;
           Transform.set_localPosition(this.target,&local_18,0);
@@ -845,7 +852,7 @@ public class UIDragObject
         }
         else {
           if (this.target == null) {
-        LAB_1813d8907:
+        LAB_1812b4e07:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -862,14 +869,14 @@ public class UIDragObject
         *(uint32 *)(this + 148) = *(uint32 *)(puVar6 + 1);
     }
 
-    // Token : 0x6000121
-    // RVA   : 0x13D8910   Offset: 0x13D7110   Length: 0x9A
+    // Token : 0x6000139
+    // RVA   : 0x12B4E10   Offset: 0x12B4210   Length: 0x9A
     public void CancelSpring()
     {
         long lVar1;
         bool cVar2;
         if (this.target != null) {
-          lVar1 = Component.GetComponent(this.target,DAT_181d6d4c0);
+          lVar1 = Component.GetComponent(this.target,DAT_181d95d60);
           cVar2 = Object.op_Inequality(lVar1,0,0);
           if (!cVar2) {
             return;
@@ -881,8 +888,8 @@ public class UIDragObject
         }
     }
 
-    // Token : 0x6000122
-    // RVA   : 0x13D9FE0   Offset: 0x13D87E0   Length: 0x117
+    // Token : 0x600013A
+    // RVA   : 0x12B64E0   Offset: 0x12B58E0   Length: 0x117
     private void OnScroll(float delta)
     {
         bool cVar1;
@@ -904,8 +911,8 @@ public class UIDragObject
         }
     }
 
-    // Token : 0x6000123
-    // RVA   : 0x13DA3A0   Offset: 0x13D8BA0   Length: 0xA6
+    // Token : 0x600013B
+    // RVA   : 0x12B68A0   Offset: 0x12B5CA0   Length: 0xA6
     public void /*ctor*/()
     {
         byte[] local_18 = new byte[8];

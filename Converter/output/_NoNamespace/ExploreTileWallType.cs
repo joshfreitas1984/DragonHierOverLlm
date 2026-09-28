@@ -1,21 +1,21 @@
 // ============================================================
 // Type  : ExploreTileWallType
-// Token : 0x200026D
+// Token : 0x2000273
 // ============================================================
 
 public class ExploreTileWallType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001310
+    // Token: 0x40013B3
     public int value__;
 
-    // Token: 0x4001311
+    // Token: 0x40013B4
     public const ExploreTileWallType None;
 
-    // Token: 0x4001312
+    // Token: 0x40013B5
     public const ExploreTileWallType Wall;
 
-    // Token: 0x4001313
+    // Token: 0x40013B6
     public const ExploreTileWallType Door;
 
 }

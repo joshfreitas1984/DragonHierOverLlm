@@ -1,13 +1,13 @@
 // ============================================================
 // Type  : GetKeyStateFunc
-// Token : 0x20000DC
+// Token : 0x20000DD
 // ============================================================
 
 public class GetKeyStateFunc
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000726
-    // RVA   : 0x210320   Offset: 0x20EB20   Length: 0x6A
+    // Token : 0x600073E
+    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
@@ -25,8 +25,8 @@ public class GetKeyStateFunc
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x6000727
-    // RVA   : 0xB05FE0   Offset: 0xB047E0   Length: 0x2E3
+    // Token : 0x600073F
+    // RVA   : 0x8E5500   Offset: 0x8E4900   Length: 0x2E3
     public virtual bool Invoke(KeyCode key)
     {
         long lVar1;
@@ -68,7 +68,7 @@ public class GetKeyStateFunc
           if (!cVar5) {
             if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                 ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0)) {
-              if (*(char *)(lVar1 + 74) != false) goto LAB_180b06282;
+              if (*(char *)(lVar1 + 74) != false) goto LAB_1808e57a2;
               uVar6 = (*pcVar2)(&stack0x00000000,lVar1);
             }
             else {
@@ -96,7 +96,7 @@ public class GetKeyStateFunc
                                        *(int *)(*(int64 *)(lVar7 + 176) + 8 + (uint64)uVar10 * 16
                                                )) * 16 + 0x138 + lVar7);
                         uVar6 = (*(code *)*puVar8)(plVar3,uVar4,puVar8[1]);
-                        goto LAB_180b0628e;
+                        goto LAB_1808e57ae;
                       }
                       uVar10 = uVar10 + 1;
                     } while (uVar10 < *(uint16 *)(lVar7 + 0x12a));
@@ -127,13 +127,13 @@ public class GetKeyStateFunc
                                 (int)((uint32)*(uint16 *)(lVar1 + 72) +
                                      *(int *)(*(int64 *)(lVar7 + 176) + 8 + (uint64)uVar10 * 16))
                                 * 16 + 0x138 + lVar7;
-                        goto LAB_180b06146;
+                        goto LAB_1808e5666;
                       }
                       uVar10 = uVar10 + 1;
                     } while (uVar10 < *(uint16 *)(lVar7 + 0x12a));
                   }
                   lVar7 = FUN_1800914f0(plVar3,*(int64 *)(lVar1 + 24),*(uint16 *)(lVar1 + 72));
-        LAB_180b06146:
+        LAB_1808e5666:
                   puVar8 = (uint64 *)il2cpp_internal(*(uint64 *)(lVar7 + 8),lVar1);
                   uVar6 = (*(code *)*puVar8)(plVar3,uVar4,puVar8);
                 }
@@ -144,10 +144,10 @@ public class GetKeyStateFunc
             uVar6 = (*pcVar2)(local_res10,lVar1);
           }
           else {
-        LAB_180b06282:
+        LAB_1808e57a2:
             uVar6 = (*pcVar2)(plVar3,local_res10,lVar1);
           }
-        LAB_180b0628e:
+        LAB_1808e57ae:
           uVar11 = uVar11 + 1;
           if (uVar13 <= uVar11) {
             return uVar6;
@@ -155,8 +155,8 @@ public class GetKeyStateFunc
         } while( true );
     }
 
-    // Token : 0x6000728
-    // RVA   : 0xB05F60   Offset: 0xB04760   Length: 0x7A
+    // Token : 0x6000740
+    // RVA   : 0x8E5480   Offset: 0x8E4880   Length: 0x7A
     public virtual IAsyncResult BeginInvoke(KeyCode key, AsyncCallback callback, object object)
     {
         void GetKeyStateFunc.BeginInvoke
@@ -167,12 +167,12 @@ public class GetKeyStateFunc
         uint64 local_10;
         local_res10[0] = key;
         local_10 = 0;
-        local_18 = il2cpp_value_box(DAT_181d5f0f8,local_res10);
+        local_18 = il2cpp_value_box(DAT_181d84298,local_res10);
         il2cpp_internal(this,&local_18,callback,object);
     }
 
-    // Token : 0x6000729
-    // RVA   : 0x28D420   Offset: 0x28BC20   Length: 0x28
+    // Token : 0x6000741
+    // RVA   : 0x28D420   Offset: 0x28C820   Length: 0x28
     public virtual bool EndInvoke(IAsyncResult result)
     {
         long lVar1;

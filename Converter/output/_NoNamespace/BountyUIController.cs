@@ -1,48 +1,48 @@
 // ============================================================
 // Type  : BountyUIController
-// Token : 0x200019D
+// Token : 0x20001A3
 // ============================================================
 
 public class BountyUIController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000AE9
+    // Token: 0x4000B75
     public GameObject bountyUIPanel;
 
-    // Token: 0x4000AEA
+    // Token: 0x4000B76
     public GameObject bountyGrid;
 
-    // Token: 0x4000AEB
+    // Token: 0x4000B77
     public GameObject bountyIconPrefab;
 
-    // Token: 0x4000AEC
+    // Token: 0x4000B78
     public AreaBuildingData targetBuildingData;
 
-    // Token: 0x4000AED
+    // Token: 0x4000B79
     private GameObject newObj;
 
-    // Token: 0x4000AEE
+    // Token: 0x4000B7A
     private static BountyUIController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000D43
-    // RVA   : 0xCE6670   Offset: 0xCE4E70   Length: 0x36
+    // Token : 0x6000D77
+    // RVA   : 0xC8C850   Offset: 0xC8BC50   Length: 0x36
     public static BountyUIController get_Instance()
     {
-        return **(uint64 **)(DAT_181d8def8 + 184);
+        return **(uint64 **)(DAT_181db30a0 + 184);
     }
 
-    // Token : 0x6000D44
-    // RVA   : 0xCE5AC0   Offset: 0xCE42C0   Length: 0x43
+    // Token : 0x6000D78
+    // RVA   : 0xC8BC40   Offset: 0xC8B040   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181d8def8 + 184);
+        puVar1 = *(uint64 **)(DAT_181db30a0 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
-    // Token : 0x6000D45
-    // RVA   : 0xCE64B0   Offset: 0xCE4CB0   Length: 0x6E
+    // Token : 0x6000D79
+    // RVA   : 0xC8C660   Offset: 0xC8BA60   Length: 0x6E
     public void HideBountyUI()
     {
         ulong uVar1;
@@ -54,8 +54,8 @@ public class BountyUIController
         }
     }
 
-    // Token : 0x6000D46
-    // RVA   : 0xCE6520   Offset: 0xCE4D20   Length: 0x148
+    // Token : 0x6000D7A
+    // RVA   : 0xC8C6D0   Offset: 0xC8BAD0   Length: 0x175
     public void ShowBountyUI(AreaBuildingData _targetBuildingData, string _title)
     {
         long lVar1;
@@ -68,11 +68,11 @@ public class BountyUIController
             if (lVar1 != null) {
               lVar1 = Transform.Find(lVar1,"Title",0);
               if (lVar1 != null) {
-                uVar2 = Component.GetComponent(lVar1,DAT_181d6d8c0);
+                uVar2 = Component.GetComponent(lVar1,DAT_181d96160);
                 LTLocalization.SetText(uVar2,_title,0);
                 plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/OpenBook",0);
                 plVar4 = (int64 *)0;
-                if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181d8a228)) {
+                if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {
                   plVar4 = plVar3;
                 }
                 NGUITools.PlaySound(plVar4,0);
@@ -84,55 +84,57 @@ public class BountyUIController
         }
     }
 
-    // Token : 0x6000D47
-    // RVA   : 0xCE6060   Offset: 0xCE4860   Length: 0x440
+    // Token : 0x6000D7B
+    // RVA   : 0xC8C210   Offset: 0xC8B610   Length: 0x445
     public void FreshBounty()
     {
         ulong uVar1;
-        ulong uVar2;
-        long lVar3;
+        bool cVar2;
+        ulong uVar3;
         long lVar4;
-        int iVar5;
-        uVar2 = this.bountyGrid;
-        GlobalData.DeleteAllChild(uVar2,0);
-        lVar3 = this.targetBuildingData;
-        iVar5 = 0;
-        if (lVar3 != null) {
-          while (lVar3.missionDatas != null) {
-            if (*(int *)(lVar3.missionDatas + 24) <= iVar5) {
+        long lVar5;
+        int iVar6;
+        uVar3 = this.bountyGrid;
+        GlobalData.DeleteAllChild(uVar3,0);
+        lVar4 = this.targetBuildingData;
+        iVar6 = 0;
+        if (lVar4 != null) {
+          while (lVar4.missionDatas != null) {
+            if (*(int *)(lVar4.missionDatas + 24) <= iVar6) {
               if ((((this.bountyUIPanel == null) ||
-                   (lVar3 = GameObject.get_transform(this.bountyUIPanel,0)) == null) ||
-                  (lVar3 = Transform.Find(lVar3,"Grid",0)) == null) ||
-                 (lVar3 = Component.GetComponent(lVar3,DAT_181d6e0c0)) == null) break;
-              UIGrid.set_repositionNow(lVar3,1,0);
+                   (lVar4 = GameObject.get_transform(this.bountyUIPanel,0)) == null) ||
+                  (lVar4 = Transform.Find(lVar4,"Grid",0)) == null) ||
+                 (lVar4 = Component.GetComponent(lVar4,DAT_181d96960)) == null) break;
+              UIGrid.set_repositionNow(lVar4,1,0);
               BountyUIController.FreshBountyNum(this,0);
               if (this.targetBuildingData == null) break;
               if (this.targetBuildingData.buildingID == null) {
-                lVar3 = FUN_18046c0a0(0);
-                if (((lVar3 == null) || (lVar3.destroyTimeLeft == null)) ||
-                   (lVar3 = WorldData.Player(lVar3.destroyTimeLeft,0)) == null) break;
-                if (-1 < *(int *)(lVar3 + 0x380)) {
-                  lVar3 = FUN_18046c0a0(0);
-                  if (((lVar3 == null) || (lVar3.destroyTimeLeft == null)) ||
-                     (lVar3 = WorldData.Player(lVar3.destroyTimeLeft,0)) == null) break;
-                  iVar5 = *(int *)(lVar3 + 0x380);
+                lVar4 = FUN_18046c0a0(0);
+                if (((lVar4 == null) || (lVar4.destroyTimeLeft == null)) ||
+                   (lVar4 = WorldData.Player(lVar4.destroyTimeLeft,0)) == null) break;
+                cVar2 = HeroData.HaveServantForce(lVar4,0);
+                if (cVar2) {
+                  lVar4 = FUN_18046c0a0(0);
+                  if (((lVar4 == null) || (lVar4.destroyTimeLeft == null)) ||
+                     (lVar4 = WorldData.Player(lVar4.destroyTimeLeft,0)) == null) break;
+                  iVar6 = *(int *)(lVar4 + 0x380);
                   if ((this.targetBuildingData == null) ||
-                     (lVar3 = AreaBuildingData.GetArea(this.targetBuildingData,0)) == null)
+                     (lVar4 = AreaBuildingData.GetArea(this.targetBuildingData,0)) == null)
                   break;
-                  if (iVar5 == *(int *)(lVar3 + 112)) {
+                  if (iVar6 == *(int *)(lVar4 + 112)) {
                     if (((this.bountyUIPanel != null) &&
-                        (lVar3 = GameObject.get_transform(this.bountyUIPanel,0)) != null)
-                       && ((lVar3 = Transform.Find(lVar3,"FreshButton",0), lVar3 != null &&
-                           (lVar3 = Component.get_gameObject(lVar3,0)) != null))) {
-                      GameObject.SetActive(lVar3,1,0);
+                        (lVar4 = GameObject.get_transform(this.bountyUIPanel,0)) != null)
+                       && ((lVar4 = Transform.Find(lVar4,"FreshButton",0), lVar4 != null &&
+                           (lVar4 = Component.get_gameObject(lVar4,0)) != null))) {
+                      GameObject.SetActive(lVar4,1,0);
                       if (((this.bountyUIPanel != null) &&
-                          (lVar3 = GameObject.get_transform(this.bountyUIPanel,0)) != null
-                          ) && (lVar3 = Transform.Find(lVar3,"FreshButton",0)) != null) {
-                        lVar3 = Component.GetComponent(lVar3,DAT_181d6af40);
-                        lVar4 = FUN_18046c0a0(0);
-                        if (((lVar4 != null) && (*(int64 *)(lVar4 + 32) != 0)) && (lVar3 != null)) {
+                          (lVar4 = GameObject.get_transform(this.bountyUIPanel,0)) != null
+                          ) && (lVar4 = Transform.Find(lVar4,"FreshButton",0)) != null) {
+                        lVar4 = Component.GetComponent(lVar4,DAT_181d93760);
+                        lVar5 = FUN_18046c0a0(0);
+                        if (((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) && (lVar4 != null)) {
                           Selectable.set_interactable
-                                    (lVar3,*(int *)(*(int64 *)(lVar4 + 32) + 0x150) < 1,0);
+                                    (lVar4,*(int *)(*(int64 *)(lVar5 + 32) + 0x150) < 1,0);
                           return;
                         }
                       }
@@ -142,35 +144,36 @@ public class BountyUIController
                 }
               }
               if ((((this.bountyUIPanel != null) &&
-                   (lVar3 = GameObject.get_transform(this.bountyUIPanel,0)) != null) &&
-                  (lVar3 = Transform.Find(lVar3,"FreshButton",0)) != null) &&
-                 (lVar3 = Component.get_gameObject(lVar3,0)) != null) {
-                GameObject.SetActive(lVar3,0,0);
+                   (lVar4 = GameObject.get_transform(this.bountyUIPanel,0)) != null) &&
+                  (lVar4 = Transform.Find(lVar4,"FreshButton",0)) != null) &&
+                 (lVar4 = Component.get_gameObject(lVar4,0)) != null) {
+                GameObject.SetActive(lVar4,0,0);
                 return;
               }
               break;
             }
-            uVar2 = this.bountyGrid;
+            uVar3 = this.bountyGrid;
             uVar1 = this.bountyIconPrefab;
-            uVar2 = GlobalData.AddChild(uVar2,uVar1,0);
-            this.newObj = uVar2;
+            uVar3 = GlobalData.AddChild(uVar3,uVar1,0);
+            this.newObj = uVar3;
             if (this.newObj == null) break;
-            lVar3 = GameObject.GetComponent(this.newObj,DAT_181d9ea20);
+            lVar4 = GameObject.GetComponent(this.newObj,DAT_181dc77c0);
             if (((this.targetBuildingData == null) ||
-                (lVar4 = this.targetBuildingData.missionDatas) == null) ||
-               (uVar2 = FUN_180002f80(lVar4,iVar5), lVar3 == null)) break;
-            lVar3.buildTimeLeft = uVar2;
-            lVar3 = this.targetBuildingData;
-            iVar5 = iVar5 + 1;
-            if (lVar3 == null) break;
+                (lVar5 = this.targetBuildingData.missionDatas) == null) ||
+               (uVar3 = FUN_180002f80(lVar5,iVar6), lVar4 == null)) break;
+            lVar4.buildTimeLeft = uVar3;
+            lVar4 = this.targetBuildingData;
+            iVar6 = iVar6 + 1;
+            if (lVar4 == null) break;
           }
         }
     }
 
-    // Token : 0x6000D48
-    // RVA   : 0xCE5CB0   Offset: 0xCE44B0   Length: 0x3AE
+    // Token : 0x6000D7C
+    // RVA   : 0xC8BE30   Offset: 0xC8B230   Length: 0x3DB
     public void FreshBountyNum()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         int iVar2;
         long lVar3;
@@ -187,17 +190,15 @@ public class BountyUIController
           if (lVar3 != null) {
             lVar3 = Transform.Find(lVar3,"BountyNum",0);
             if (lVar3 != null) {
-              uVar4 = Component.GetComponent(lVar3,DAT_181d6d8c0);
-              if ((GameController._instance != null) &&
-                 (lVar3 = GameController._instance.worldData,
-                 lVar3 != null)) {
+              uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+              if ((*pStatics != 0) &&
+                 (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
                 lVar3 = WorldData.Player(lVar3,0);
                 if (lVar3 != null) {
                   local_res8[0] = HeroData.GetBountyMissionNum(lVar3,0);
                   uVar5 = Int32.ToString(local_res8,0);
-                  if ((GameController._instance != null) &&
-                     (lVar3 = GameController._instance.worldData,
-                     lVar3 != null)) {
+                  if ((*pStatics != 0) &&
+                     (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
                     lVar3 = WorldData.Player(lVar3,0);
                     if (lVar3 != null) {
                       local_res8[0] = HeroData.GetMaxBountyMissionNum(lVar3,0);
@@ -209,17 +210,15 @@ public class BountyUIController
                         if (lVar3 != null) {
                           lVar3 = Transform.Find(lVar3,"BountyNum",0);
                           if (lVar3 != null) {
-                            plVar7 = (int64 *)Component.GetComponent(lVar3,DAT_181d6d8c0);
-                            if ((GameController._instance != null) &&
-                               (lVar3 = *(int64 *)
-                                         (GameController._instance + 32),
+                            plVar7 = (int64 *)Component.GetComponent(lVar3,DAT_181d96160);
+                            if ((*pStatics != 0) &&
+                               (lVar3 = *(int64 *)(*pStatics + 32),
                                lVar3 != null)) {
                               lVar3 = WorldData.Player(lVar3,0);
                               if (lVar3 != null) {
                                 iVar1 = HeroData.GetBountyMissionNum(lVar3,0);
-                                if ((GameController._instance != null) &&
-                                   (lVar3 = *(int64 *)
-                                             (GameController._instance + 32),
+                                if ((*pStatics != 0) &&
+                                   (lVar3 = *(int64 *)(*pStatics + 32),
                                    lVar3 != null)) {
                                   lVar3 = WorldData.Player(lVar3,0);
                                   if (lVar3 != null) {
@@ -255,24 +254,23 @@ public class BountyUIController
         }
     }
 
-    // Token : 0x6000D49
-    // RVA   : 0xCE5B10   Offset: 0xCE4310   Length: 0x198
+    // Token : 0x6000D7D
+    // RVA   : 0xC8BC90   Offset: 0xC8B090   Length: 0x198
     public void FreshBountyButtonClicked()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar2;
-        if (GameController._instance != null) {
+        if (*pStatics != 0) {
           GameController.ManageBuildingBounty
-                    (GameController._instance,this.targetBuildingData,1,0
-                    );
-          if ((GameController._instance != null) &&
-             (lVar2 = GameController._instance.worldData) != null
-             ) {
+                    (*pStatics,this.targetBuildingData,1,0);
+          if ((*pStatics != 0) &&
+             (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
             piVar1 = (int *)(lVar2 + 0x150);
             *piVar1 = *piVar1 + 1;
             BountyUIController.FreshBounty(this,0);
             plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/OpenBook",0);
             plVar4 = (int64 *)0;
-            if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181d8a228)) {
+            if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {
               plVar4 = plVar3;
             }
             NGUITools.PlaySound(plVar4,0);
@@ -281,8 +279,8 @@ public class BountyUIController
         }
     }
 
-    // Token : 0x6000D4A
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x6000D7E
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

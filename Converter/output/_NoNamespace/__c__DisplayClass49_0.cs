@@ -1,24 +1,24 @@
 // ============================================================
 // Type  : <>c__DisplayClass49_0
-// Token : 0x20002BF
+// Token : 0x20002C5
 // ============================================================
 
 public class <>c__DisplayClass49_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400165C
+    // Token: 0x4001710
     public GameObject target;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001775
-    // RVA   : 0x210B70   Offset: 0x20F370   Length: 0x7
+    // Token : 0x60017B9
+    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);
     }
 
-    // Token : 0x6001776
-    // RVA   : 0x8D7460   Offset: 0x8D5C60   Length: 0x20
+    // Token : 0x60017BA
+    // RVA   : 0x939950   Offset: 0x938D50   Length: 0x20
     internal void <UnshowEquipIcon>b__0()
     {
         if (this.target != null) {

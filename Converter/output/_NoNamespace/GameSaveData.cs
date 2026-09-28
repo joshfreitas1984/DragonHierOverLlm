@@ -1,44 +1,44 @@
 // ============================================================
 // Type  : GameSaveData
-// Token : 0x20001BE
+// Token : 0x20001C4
 // ============================================================
 
 public class GameSaveData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000BB6
+    // Token: 0x4000C43
     public string key;
 
-    // Token: 0x4000BB7
+    // Token: 0x4000C44
     public bool worldDataFinished;
 
-    // Token: 0x4000BB8
+    // Token: 0x4000C45
     public bool heroListFinished;
 
-    // Token: 0x4000BB9
+    // Token: 0x4000C46
     public bool tempHeroListFinished;
 
-    // Token: 0x4000BBA
+    // Token: 0x4000C47
     public WorldData WorldData;
 
-    // Token: 0x4000BBB
+    // Token: 0x4000C48
     public List<HeroData> HeroList;
 
-    // Token: 0x4000BBC
+    // Token: 0x4000C49
     public List<HeroData> TempHeroList;
 
-    // Token: 0x4000BBD
+    // Token: 0x4000C4A
     public float saveTimeCount;
 
-    // Token: 0x4000BBE
+    // Token: 0x4000C4B
     public bool saveFailed;
 
-    // Token: 0x4000BBF
+    // Token: 0x4000C4C
     public bool loading;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000E60
-    // RVA   : 0xA2DF10   Offset: 0xA2C710   Length: 0x14
+    // Token : 0x6000E95
+    // RVA   : 0xA5CB90   Offset: 0xA5BF90   Length: 0x14
     public bool CheckAllFinished()
     {
         ulong in_RAX;
@@ -48,8 +48,8 @@ public class GameSaveData
         return in_RAX & 0xffffffffffffff00;
     }
 
-    // Token : 0x6000E61
-    // RVA   : 0xA2DF30   Offset: 0xA2C730   Length: 0x19
+    // Token : 0x6000E96
+    // RVA   : 0xA5CBB0   Offset: 0xA5BFB0   Length: 0x19
     public void SetAllUnfinish(bool _loading)
     {
         this.loading = _loading;
@@ -59,8 +59,8 @@ public class GameSaveData
         this.saveFailed = 0;
     }
 
-    // Token : 0x6000E62
-    // RVA   : 0xA2DF50   Offset: 0xA2C750   Length: 0x16
+    // Token : 0x6000E97
+    // RVA   : 0xA5CBD0   Offset: 0xA5BFD0   Length: 0x16
     public void SetSaveFailed()
     {
         this.saveTimeCount = 0;
@@ -69,8 +69,8 @@ public class GameSaveData
         this.saveFailed = 1;
     }
 
-    // Token : 0x6000E63
-    // RVA   : 0xA2DF70   Offset: 0xA2C770   Length: 0x11
+    // Token : 0x6000E98
+    // RVA   : 0xA5CBF0   Offset: 0xA5BFF0   Length: 0x11
     public void /*ctor*/()
     {
         this.worldDataFinished = 0x101;

@@ -1,18 +1,18 @@
 // ============================================================
 // Type  : VertexAnim
-// Token : 0x200040C
+// Token : 0x2000413
 // ============================================================
 
 public class VertexAnim
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001F05
+    // Token: 0x400200F
     public float angleRange;
 
-    // Token: 0x4001F06
+    // Token: 0x4002010
     public float angle;
 
-    // Token: 0x4001F07
+    // Token: 0x4002011
     public float speed;
 
 }

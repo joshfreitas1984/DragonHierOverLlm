@@ -1,21 +1,21 @@
 // ============================================================
 // Type  : AchDataType
-// Token : 0x20001B7
+// Token : 0x20001BD
 // ============================================================
 
 public class AchDataType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000B87
+    // Token: 0x4000C14
     public int value__;
 
-    // Token: 0x4000B88
+    // Token: 0x4000C15
     public const AchDataType _float;
 
-    // Token: 0x4000B89
+    // Token: 0x4000C16
     public const AchDataType _int;
 
-    // Token: 0x4000B8A
+    // Token: 0x4000C17
     public const AchDataType _bool;
 
 }

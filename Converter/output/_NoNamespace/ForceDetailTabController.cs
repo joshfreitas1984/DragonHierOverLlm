@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : ForceDetailTabController
-// Token : 0x2000284
+// Token : 0x200028A
 // ============================================================
 
 public class ForceDetailTabController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40013C2
+    // Token: 0x4001473
     public int forceID;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600146B
-    // RVA   : 0xBB3680   Offset: 0xBB1E80   Length: 0x50
+    // Token : 0x60014AF
+    // RVA   : 0xB3C300   Offset: 0xB3B700   Length: 0x50
     public void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181da29a0 + 184);
+        var pStatics = *(int64*)(DAT_181dc7d00 + 184);
         if (*pStatics != 0) {
           ForceDetailController.ShowForceDetail
                     (*pStatics,this.forceID,0);
@@ -22,8 +22,8 @@ public class ForceDetailTabController
         }
     }
 
-    // Token : 0x600146C
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x60014B0
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

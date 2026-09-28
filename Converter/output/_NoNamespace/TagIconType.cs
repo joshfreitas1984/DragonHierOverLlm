@@ -1,24 +1,24 @@
 // ============================================================
 // Type  : TagIconType
-// Token : 0x20002CF
+// Token : 0x20002D5
 // ============================================================
 
 public class TagIconType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40016A4
+    // Token: 0x4001758
     public int value__;
 
-    // Token: 0x40016A5
+    // Token: 0x4001759
     public const TagIconType Show;
 
-    // Token: 0x40016A6
+    // Token: 0x400175A
     public const TagIconType Get;
 
-    // Token: 0x40016A7
+    // Token: 0x400175B
     public const TagIconType StartChoose;
 
-    // Token: 0x40016A8
+    // Token: 0x400175C
     public const TagIconType StartUnchoose;
 
 }

@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : UIEquipmentSlot
-// Token : 0x2000006
+// Token : 0x2000007
 // ============================================================
 
 public class UIEquipmentSlot
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400000E
+    // Token: 0x400002A
     public InvEquipment equipment;
 
-    // Token: 0x400000F
+    // Token: 0x400002B
     public Slot slot;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000010
-    // RVA   : 0x10E6640   Offset: 0x10E4E40   Length: 0x8C
+    // Token : 0x6000028
+    // RVA   : 0x12BCFA0   Offset: 0x12BC3A0   Length: 0x8C
     protected override InvGameItem get_observedItem()
     {
         bool cVar1;
@@ -33,8 +33,8 @@ public class UIEquipmentSlot
         return 0;
     }
 
-    // Token : 0x6000011
-    // RVA   : 0x10E6540   Offset: 0x10E4D40   Length: 0xA2
+    // Token : 0x6000029
+    // RVA   : 0x12BCEE0   Offset: 0x12BC2E0   Length: 0xA2
     protected override InvGameItem Replace(InvGameItem item)
     {
         bool cVar1;
@@ -53,12 +53,13 @@ public class UIEquipmentSlot
         return item;
     }
 
-    // Token : 0x6000012
-    // RVA   : 0x10E65F0   Offset: 0x10E4DF0   Length: 0x47
+    // Token : 0x600002A
+    // RVA   : 0x12BCF90   Offset: 0x12BC390   Length: 0x7
     public void /*ctor*/()
     {
-        *(uint64 *)(this + 80) = "";
-        FUN_18044ef50(this,0);
+        void FUN_1812bcf90(uint64 this)
+        {
+        UIItemSlot.ctor(this,0);
     }
 
 }

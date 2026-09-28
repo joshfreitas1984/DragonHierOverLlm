@@ -1,45 +1,45 @@
 // ============================================================
 // Type  : PlotTriggerType
-// Token : 0x2000202
+// Token : 0x2000208
 // ============================================================
 
 public class PlotTriggerType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000E16
+    // Token: 0x4000EA6
     public int value__;
 
-    // Token: 0x4000E17
+    // Token: 0x4000EA7
     public const PlotTriggerType None;
 
-    // Token: 0x4000E18
+    // Token: 0x4000EA8
     public const PlotTriggerType BigMapRandomEvent;
 
-    // Token: 0x4000E19
+    // Token: 0x4000EA9
     public const PlotTriggerType AreaRandomEvent;
 
-    // Token: 0x4000E1A
+    // Token: 0x4000EAA
     public const PlotTriggerType EnterArea;
 
-    // Token: 0x4000E1B
+    // Token: 0x4000EAB
     public const PlotTriggerType EnterBuilding;
 
-    // Token: 0x4000E1C
+    // Token: 0x4000EAC
     public const PlotTriggerType InteractHero;
 
-    // Token: 0x4000E1D
+    // Token: 0x4000EAD
     public const PlotTriggerType FinishReadBook;
 
-    // Token: 0x4000E1E
+    // Token: 0x4000EAE
     public const PlotTriggerType FinishStudySkill;
 
-    // Token: 0x4000E1F
+    // Token: 0x4000EAF
     public const PlotTriggerType StayInArea;
 
-    // Token: 0x4000E20
+    // Token: 0x4000EB0
     public const PlotTriggerType EnterInn;
 
-    // Token: 0x4000E21
+    // Token: 0x4000EB1
     public const PlotTriggerType ResourcePointEvent;
 
 }

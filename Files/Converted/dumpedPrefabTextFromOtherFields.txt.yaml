@@ -612,8 +612,8 @@
 - raw: "#PlayerName#还记得上次云梦乡，土地公传我拳法救我一命之事吗？我想带些贡品去祭拜他老人家，#PlayerName#要不要一道瞧瞧？"
   splits:
   - text: "#PlayerName#还记得上次云梦乡，土地公传我拳法救我一命之事吗？我想带些贡品去祭拜他老人家，#PlayerName#要不要一道瞧瞧？"
-    translated: "#PlayerName#, do you remember the time when the Land God from Yunmeng Township taught me martial arts and saved my life? I want to take some offerings to pay my respects to the old man. Would you like to go along and take a look?"
-    qcReviewedText: "#PlayerName#, do you remember the time when the Land God from Yunmeng Township taught me martial arts and saved my life? I want to take some offerings to pay my respects to the old man. Would you like to go along and take a look?"
+    translated: "Do you remember how the Earth God at Yunmeng Township taught me boxing skills and saved my life last time? I want to take some offerings to pay respects to him. Would you like to come along, #PlayerName#?"
+    qcReviewedText: "Do you remember how the Earth God at Yunmeng Township taught me boxing skills and saved my life last time? I want to take some offerings to pay respects to him. Would you like to come along, #PlayerName#?"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -20111,8 +20111,8 @@
 - raw: "祭拜土地公"
   splits:
   - text: "祭拜土地公"
-    translated: "Worship the god of soil"
-    qcReviewedText: "Worship the god of soil"
+    translated: "Worship the Earth God"
+    qcReviewedText: "Worship the Earth God"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

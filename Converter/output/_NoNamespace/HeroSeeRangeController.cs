@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : HeroSeeRangeController
-// Token : 0x20002CE
+// Token : 0x20002D4
 // ============================================================
 
 public class HeroSeeRangeController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40016A1
+    // Token: 0x4001755
     public BigmapNpcController targetHero;
 
-    // Token: 0x40016A2
+    // Token: 0x4001756
     public SpriteRenderer seeSprite;
 
-    // Token: 0x40016A3
+    // Token: 0x4001757
     public SpriteRenderer seeRangeSprite;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60017C6
-    // RVA   : 0xB397F0   Offset: 0xB37FF0   Length: 0x166
+    // Token : 0x600180A
+    // RVA   : 0xAFA750   Offset: 0xAF9B50   Length: 0x166
     private void Update()
     {
         bool cVar1;
@@ -72,8 +72,8 @@ public class HeroSeeRangeController
         }
     }
 
-    // Token : 0x60017C7
-    // RVA   : 0xB397B0   Offset: 0xB37FB0   Length: 0x39
+    // Token : 0x600180B
+    // RVA   : 0xAFA710   Offset: 0xAF9B10   Length: 0x39
     public void OnTriggerStay(Collider other)
     {
         long lVar1;
@@ -88,8 +88,8 @@ public class HeroSeeRangeController
         }
     }
 
-    // Token : 0x60017C8
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x600180C
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

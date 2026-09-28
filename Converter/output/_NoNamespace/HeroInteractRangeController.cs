@@ -1,17 +1,17 @@
 // ============================================================
 // Type  : HeroInteractRangeController
-// Token : 0x20002C7
+// Token : 0x20002CD
 // ============================================================
 
 public class HeroInteractRangeController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001681
+    // Token: 0x4001735
     public BigmapNpcController targetHero;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600179B
-    // RVA   : 0xB35C50   Offset: 0xB34450   Length: 0x39
+    // Token : 0x60017DF
+    // RVA   : 0xAF6AE0   Offset: 0xAF5EE0   Length: 0x39
     public void OnTriggerStay(Collider other)
     {
         long lVar1;
@@ -26,8 +26,8 @@ public class HeroInteractRangeController
         }
     }
 
-    // Token : 0x600179C
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x60017E0
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

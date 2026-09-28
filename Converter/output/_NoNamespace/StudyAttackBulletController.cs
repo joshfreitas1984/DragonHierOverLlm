@@ -1,29 +1,29 @@
 // ============================================================
 // Type  : StudyAttackBulletController
-// Token : 0x200036E
+// Token : 0x2000375
 // ============================================================
 
 public class StudyAttackBulletController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001B52
+    // Token: 0x4001C53
     public float loseHpRate;
 
-    // Token: 0x4001B53
+    // Token: 0x4001C54
     public float speedRate;
 
-    // Token: 0x4001B54
+    // Token: 0x4001C55
     public float spinTime;
 
-    // Token: 0x4001B55
+    // Token: 0x4001C56
     public bool faceTarget;
 
-    // Token: 0x4001B56
+    // Token: 0x4001C57
     public string speEffect;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600218A
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x600220B
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

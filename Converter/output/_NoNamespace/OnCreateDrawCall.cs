@@ -1,13 +1,13 @@
 // ============================================================
 // Type  : OnCreateDrawCall
-// Token : 0x200009C
+// Token : 0x200009D
 // ============================================================
 
 public class OnCreateDrawCall
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600049D
-    // RVA   : 0x210320   Offset: 0x20EB20   Length: 0x6A
+    // Token : 0x60004B5
+    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
@@ -25,8 +25,8 @@ public class OnCreateDrawCall
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x600049E
-    // RVA   : 0x2BD600   Offset: 0x2BBE00   Length: 0x49A
+    // Token : 0x60004B6
+    // RVA   : 0x2BD600   Offset: 0x2BCA00   Length: 0x49A
     public virtual void Invoke(UIDrawCall dc, MeshFilter filter, MeshRenderer ren)
     {
         void OnCreateDrawCall.Invoke
@@ -217,8 +217,8 @@ public class OnCreateDrawCall
         } while( true );
     }
 
-    // Token : 0x600049F
-    // RVA   : 0x2BD5C0   Offset: 0x2BBDC0   Length: 0x35
+    // Token : 0x60004B7
+    // RVA   : 0x2BD5C0   Offset: 0x2BC9C0   Length: 0x35
     public virtual IAsyncResult BeginInvoke(UIDrawCall dc, MeshFilter filter, MeshRenderer ren, AsyncCallback callback, object object)
     {
         void OnCreateDrawCall.BeginInvoke
@@ -236,8 +236,8 @@ public class OnCreateDrawCall
         il2cpp_internal(this,&local_28,callback,object);
     }
 
-    // Token : 0x60004A0
-    // RVA   : 0x210040   Offset: 0x20E840   Length: 0xA
+    // Token : 0x60004B8
+    // RVA   : 0x210040   Offset: 0x20F440   Length: 0xA
     public virtual void EndInvoke(IAsyncResult result)
     {
         il2cpp_internal(result,0);

@@ -1,61 +1,62 @@
 // ============================================================
 // Type  : ObstacleData
-// Token : 0x2000185
+// Token : 0x200018B
 // ============================================================
 
 public class ObstacleData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000A38
+    // Token: 0x4000ABE
     public ObstacleType obstalceType;
 
-    // Token: 0x4000A39
+    // Token: 0x4000ABF
     public int obstacleID;
 
-    // Token: 0x4000A3A
+    // Token: 0x4000AC0
     public string obstacleName;
 
-    // Token: 0x4000A3B
+    // Token: 0x4000AC1
     public int obstacleSpriteID;
 
-    // Token: 0x4000A3C
+    // Token: 0x4000AC2
     public float obstacleHp;
 
-    // Token: 0x4000A3D
+    // Token: 0x4000AC3
     public float obstacleMaxHp;
 
-    // Token: 0x4000A3E
+    // Token: 0x4000AC4
     public int teamID;
 
-    // Token: 0x4000A3F
+    // Token: 0x4000AC5
     public bool bigObstacle;
 
-    // Token: 0x4000A40
+    // Token: 0x4000AC6
     public List<GridUnitData> targetGridUnit;
 
-    // Token: 0x4000A41
+    // Token: 0x4000AC7
     public bool needRefreshOcclusion;
 
-    // Token: 0x4000A42
+    // Token: 0x4000AC8
     public bool occlusionState;
 
-    // Token: 0x4000A43
+    // Token: 0x4000AC9
     public bool explodeObstacle;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000C7B
-    // RVA   : 0x46E750   Offset: 0x46CF50   Length: 0x173
+    // Token : 0x6000CAA
+    // RVA   : 0xB90920   Offset: 0xB8FD20   Length: 0x173
     public ObstacleDataBase GetObstacleDataBase()
     {
+        var pStatics = *(int64*)(DAT_181db0248 + 184);
         uint uVar1;
         long lVar2;
         if (!this.explodeObstacle) {
-          lVar2 = PlotController.StopWarCostFavor;
+          lVar2 = *(int64 *)(pStatics + 80);
           if (lVar2 == null) throw; // [null/range check failed]
           lVar2 = *(int64 *)(lVar2 + 600);
         }
         else {
-          lVar2 = PlotController.StopWarCostFavor;
+          lVar2 = *(int64 *)(pStatics + 80);
           if (lVar2 == null) throw; // [null/range check failed]
           lVar2 = *(int64 *)(lVar2 + 0x260);
         }
@@ -68,8 +69,8 @@ public class ObstacleData
         }
     }
 
-    // Token : 0x6000C7C
-    // RVA   : 0x46E5E0   Offset: 0x46CDE0   Length: 0x146
+    // Token : 0x6000CAB
+    // RVA   : 0xB907B0   Offset: 0xB8FBB0   Length: 0x146
     public GridUnitData GetBaseGridUnitData()
     {
         int iVar1;
@@ -109,7 +110,7 @@ public class ObstacleData
               if ((lVar4 == null) || (lVar3 == null)) break;
               if (*(int *)(lVar4 + 36) + iVar1 < *(int *)(lVar3 + 40) + *(int *)(lVar3 + 36)) {
                 if (this.targetGridUnit == null) break;
-                lVar3 = FUN_180002f80(this.targetGridUnit,uVar5,DAT_181d63bf8);
+                lVar3 = FUN_180002f80(this.targetGridUnit,uVar5,DAT_181d8b398);
               }
               lVar4 = this.targetGridUnit;
               uVar5 = uVar5 + 1;
@@ -120,8 +121,8 @@ public class ObstacleData
         }
     }
 
-    // Token : 0x6000C7D
-    // RVA   : 0x46E730   Offset: 0x46CF30   Length: 0x18
+    // Token : 0x6000CAC
+    // RVA   : 0xB90900   Offset: 0xB8FD00   Length: 0x18
     public float GetExtraExplodeRate()
     {
         if (this.bigObstacle) {
@@ -130,8 +131,8 @@ public class ObstacleData
         return 0x3f800000;
     }
 
-    // Token : 0x6000C7E
-    // RVA   : 0x46E8D0   Offset: 0x46D0D0   Length: 0xE7
+    // Token : 0x6000CAD
+    // RVA   : 0xB90AA0   Offset: 0xB8FEA0   Length: 0xE7
     public void /*ctor*/(ObstacleType _obstalceType, int _obstacleID, string _name, int _obstacleSpriteID, float _hp, float _maxhp, int _teamID, bool _bigObstacle, bool _explodeObstacle)
     {
                              uint32 _obstacleSpriteID,uint32 _hp,uint32 _maxhp,uint32 _teamID,
@@ -148,15 +149,15 @@ public class ObstacleData
         this.bigObstacle = _bigObstacle;
         this.obstacleHp = _hp;
         this.obstacleMaxHp = _maxhp;
-        uVar1 = il2cpp_internal(DAT_181d6e630);
-        FUN_180f58a90(uVar1,DAT_181d63678);
+        uVar1 = il2cpp_internal(DAT_181d932d0);
+        FUN_18132faf0(uVar1,DAT_181d8ae18);
         this.targetGridUnit = uVar1;
         this.explodeObstacle = _explodeObstacle;
         this.needRefreshOcclusion = 1;
     }
 
-    // Token : 0x6000C7F
-    // RVA   : 0x46E460   Offset: 0x46CC60   Length: 0x175
+    // Token : 0x6000CAE
+    // RVA   : 0xB90630   Offset: 0xB8FA30   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -167,13 +168,13 @@ public class ObstacleData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -185,7 +186,7 @@ public class ObstacleData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d53c70,plVar1);
+            FUN_180002970(0,DAT_181d78da0,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

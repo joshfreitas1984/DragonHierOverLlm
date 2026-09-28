@@ -1,43 +1,43 @@
 // ============================================================
 // Type  : ResourcePointTypeData
-// Token : 0x20001EE
+// Token : 0x20001F4
 // ============================================================
 
 public class ResourcePointTypeData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000D61
+    // Token: 0x4000DEF
     public int resourcePointTypeID;
 
-    // Token: 0x4000D62
+    // Token: 0x4000DF0
     public string resourcePointTypeName;
 
-    // Token: 0x4000D63
+    // Token: 0x4000DF1
     public List<float> changeResource;
 
-    // Token: 0x4000D64
+    // Token: 0x4000DF2
     public ForceSpeAddData resourceSpeAddData;
 
-    // Token: 0x4000D65
+    // Token: 0x4000DF3
     public HeroSpeAddData defenceSpeAddData;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000F5E
-    // RVA   : 0xC66110   Offset: 0xC64910   Length: 0x164
+    // Token : 0x6000F93
+    // RVA   : 0xD179F0   Offset: 0xD16DF0   Length: 0x164
     public void /*ctor*/()
     {
         long lVar1;
         ulong uVar2;
         ZhSegment.Initialize(this,0);
-        lVar1 = il2cpp_internal(DAT_181d721b0);
-        FUN_180f58a90(lVar1,DAT_181d79358);
+        lVar1 = il2cpp_internal(DAT_181d96ed0);
+        FUN_18132faf0(lVar1,DAT_181da0cf8);
         if (lVar1 != null) {
-          FUN_181805690(lVar1,0,DAT_181d79458);
-          FUN_181805690(lVar1,0,DAT_181d79458);
-          FUN_181805690(lVar1,0,DAT_181d79458);
-          FUN_181805690(lVar1,0,DAT_181d79458);
-          FUN_181805690(lVar1,0,DAT_181d79458);
-          FUN_181805690(lVar1,0,DAT_181d79458);
+          FUN_18181de10(lVar1,0,DAT_181da0df8);
+          FUN_18181de10(lVar1,0,DAT_181da0df8);
+          FUN_18181de10(lVar1,0,DAT_181da0df8);
+          FUN_18181de10(lVar1,0,DAT_181da0df8);
+          FUN_18181de10(lVar1,0,DAT_181da0df8);
+          FUN_18181de10(lVar1,0,DAT_181da0df8);
           this.changeResource = lVar1;
           this.resourceSpeAddData = new ForceSpeAddData(0);
           this.defenceSpeAddData = new HeroSpeAddData(0);
@@ -45,8 +45,8 @@ public class ResourcePointTypeData
         }
     }
 
-    // Token : 0x6000F5F
-    // RVA   : 0xC65F90   Offset: 0xC64790   Length: 0x175
+    // Token : 0x6000F94
+    // RVA   : 0xD17870   Offset: 0xD16C70   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -57,13 +57,13 @@ public class ResourcePointTypeData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -75,7 +75,7 @@ public class ResourcePointTypeData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d53c70,plVar1);
+            FUN_180002970(0,DAT_181d78da0,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

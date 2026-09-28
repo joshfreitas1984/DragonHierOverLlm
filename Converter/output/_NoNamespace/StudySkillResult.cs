@@ -1,21 +1,21 @@
 // ============================================================
 // Type  : StudySkillResult
-// Token : 0x2000385
+// Token : 0x200038C
 // ============================================================
 
 public class StudySkillResult
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001C0F
+    // Token: 0x4001D14
     public int value__;
 
-    // Token: 0x4001C10
+    // Token: 0x4001D15
     public const StudySkillResult Fail;
 
-    // Token: 0x4001C11
+    // Token: 0x4001D16
     public const StudySkillResult Stop;
 
-    // Token: 0x4001C12
+    // Token: 0x4001D17
     public const StudySkillResult Finished;
 
 }

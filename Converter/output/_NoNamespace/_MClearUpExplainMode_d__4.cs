@@ -1,49 +1,49 @@
 // ============================================================
 // Type  : <MClearUpExplainMode>d__4
-// Token : 0x2000394
+// Token : 0x200039B
 // ============================================================
 
 public class <MClearUpExplainMode>d__4
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001C69
+    // Token: 0x4001D6E
     private int <>1__state;
 
-    // Token: 0x4001C6A
+    // Token: 0x4001D6F
     private object <>2__current;
 
-    // Token: 0x4001C6B
+    // Token: 0x4001D70
     public Text _component;
 
-    // Token: 0x4001C6C
+    // Token: 0x4001D71
     public string _text;
 
-    // Token: 0x4001C6D
+    // Token: 0x4001D72
     public TextFit <>4__this;
 
-    // Token: 0x4001C6E
+    // Token: 0x4001D73
     private StringBuilder <MExplainText>5__2;
 
-    // Token: 0x4001C6F
+    // Token: 0x4001D74
     private int <i>5__3;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002267
-    // RVA   : 0x219070   Offset: 0x217870   Length: 0x24
+    // Token : 0x60022E9
+    // RVA   : 0x219070   Offset: 0x218470   Length: 0x24
     public void /*ctor*/(int <>1__state)
     {
         ZhSegment.Initialize(this,0);
         this.<>1__state = <>1__state;
     }
 
-    // Token : 0x6002268
-    // RVA   : 0x245810   Offset: 0x244010   Length: 0x3
+    // Token : 0x60022EA
+    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
     private virtual void System.IDisposable.Dispose()
     {
     }
 
-    // Token : 0x6002269
-    // RVA   : 0xB128F0   Offset: 0xB110F0   Length: 0x529
+    // Token : 0x60022EB
+    // RVA   : 0x8EFF10   Offset: 0x8EF310   Length: 0x529
     private virtual bool MoveNext()
     {
         long lVar1;
@@ -103,7 +103,7 @@ public class <MClearUpExplainMode>d__4
             iVar13 = this.<i>5__3;
           }
           while (plVar14 = (int64 *)(lVar1 + 0x118), *plVar14 != 0) {
-            iVar5 = FUN_180002970(0,DAT_181d67240);
+            iVar5 = FUN_180002970(0,DAT_181d8bde0);
             if (iVar5 <= iVar13) {
               plVar14 = this.<MExplainText>5__2;
               plVar2 = this._component;
@@ -122,27 +122,27 @@ public class <MClearUpExplainMode>d__4
             uVar12 = 0;
             if (*(uint16 *)(lVar6 + 0x12a) != 0) {
               do {
-                if (*(int64 *)(*(int64 *)(lVar6 + 176) + (uint64)uVar12 * 16) == DAT_181d6a338
+                if (*(int64 *)(*(int64 *)(lVar6 + 176) + (uint64)uVar12 * 16) == DAT_181d8eee0
                    ) {
                   puVar8 = (uint64 *)
                            ((int64)*(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar12 * 16)
                             * 16 + 0x138 + lVar6);
-                  goto LAB_180b12b19;
+                  goto LAB_1808f0139;
                 }
                 uVar12 = uVar12 + 1;
               } while (uVar12 < *(uint16 *)(lVar6 + 0x12a));
             }
-            puVar8 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d6a338,0);
-        LAB_180b12b19:
+            puVar8 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d8eee0,0);
+        LAB_1808f0139:
             piVar9 = (int *)(*(code *)*puVar8)(local_38,plVar2,uVar4,puVar8[1]);
             iVar13 = *piVar9;
             if (this.<MExplainText>5__2 == 0) break;
-            iVar5 = FUN_18123bdd0(this.<MExplainText>5__2,0);
+            iVar5 = FUN_181259800(this.<MExplainText>5__2,0);
             if (iVar13 < iVar5) {
               lVar6 = this.<MExplainText>5__2;
               if ((*plVar14 == 0) ||
                  (puVar10 = (uint32 *)
-                            FUN_18014aa70(local_28,0,DAT_181d6a338,*plVar14,
+                            FUN_1801335b0(local_28,0,DAT_181d8eee0,*plVar14,
                                           this.<i>5__3), lVar6 == null)) break;
               local_res8[0] = StringBuilder.get_Chars(lVar6,*puVar10,0);
               uVar11 = Char.ToString(local_res8,0);
@@ -150,11 +150,11 @@ public class <MClearUpExplainMode>d__4
               cVar3 = Regex.IsMatch(uVar11,uVar7,0);
               if (cVar3) {
                 if (*plVar14 != 0) {
-                  piVar9 = (int *)FUN_18014aa70(local_28,0,DAT_181d6a338,*plVar14,
+                  piVar9 = (int *)FUN_1801335b0(local_28,0,DAT_181d8eee0,*plVar14,
                                                 this.<i>5__3);
                   iVar13 = *piVar9 + -1;
                   iVar5 = iVar13;
-                  goto joined_r0x000180b12c33;
+                  goto joined_r0x0001808f0253;
                 }
                 break;
               }
@@ -164,18 +164,18 @@ public class <MClearUpExplainMode>d__4
           }
         }
         throw; // [null/range check failed]
-        joined_r0x000180b12c33:
-        if (iVar5 < 1) goto LAB_180b12cb0;
+        joined_r0x0001808f0253:
+        if (iVar5 < 1) goto LAB_1808f02d0;
         if (this.<MExplainText>5__2 == 0) throw; // [null/range check failed]
         local_res8[0] = StringBuilder.get_Chars(this.<MExplainText>5__2,iVar5,0);
         uVar11 = Char.ToString(local_res8,0);
         uVar7 = *(uint64 *)(lVar1 + 0x108);
         cVar3 = Regex.IsMatch(uVar11,uVar7);
-        if (!cVar3) goto LAB_180b12cb0;
+        if (!cVar3) goto LAB_1808f02d0;
         iVar13 = iVar13 + -1;
         iVar5 = iVar5 + -1;
-        goto joined_r0x000180b12c33;
-        LAB_180b12cb0:
+        goto joined_r0x0001808f0253;
+        LAB_1808f02d0:
         if (this.<MExplainText>5__2 != 0) {
           StringBuilder.Insert(this.<MExplainText>5__2,iVar13,"\n",0);
           plVar14 = this.<MExplainText>5__2;
@@ -192,27 +192,27 @@ public class <MClearUpExplainMode>d__4
         }
     }
 
-    // Token : 0x600226A
-    // RVA   : 0x20F140   Offset: 0x20D940   Length: 0x5
+    // Token : 0x60022EC
+    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
     private virtual object System.Collections.Generic.IEnumerator<System.object>.get_Current()
     {
         return this.<>2__current;
     }
 
-    // Token : 0x600226B
-    // RVA   : 0xB12E20   Offset: 0xB11620   Length: 0x3E
+    // Token : 0x60022ED
+    // RVA   : 0x8F0440   Offset: 0x8EF840   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d682e8);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d8ce68);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181db61e0);
     }
 
-    // Token : 0x600226C
-    // RVA   : 0x20F140   Offset: 0x20D940   Length: 0x5
+    // Token : 0x60022EE
+    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
     private virtual object System.Collections.IEnumerator.get_Current()
     {
         return this.<>2__current;

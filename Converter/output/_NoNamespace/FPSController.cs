@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : FPSController
-// Token : 0x2000120
+// Token : 0x2000121
 // ============================================================
 
 public class FPSController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000710
+    // Token: 0x400072C
     public Animator CamAnimator;
 
-    // Token: 0x4000711
+    // Token: 0x400072D
     public Animator WeaponAnimator;
 
-    // Token: 0x4000712
+    // Token: 0x400072E
     public float moveSpeed;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000993
-    // RVA   : 0xBA1070   Offset: 0xB9F870   Length: 0x1ED
+    // Token : 0x60009AB
+    // RVA   : 0xB29960   Offset: 0xB28D60   Length: 0x1ED
     private void Update()
     {
         float fVar1;
@@ -80,8 +80,8 @@ public class FPSController
         }
     }
 
-    // Token : 0x6000994
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x60009AC
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

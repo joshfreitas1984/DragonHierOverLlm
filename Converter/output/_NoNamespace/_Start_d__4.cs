@@ -1,43 +1,43 @@
 // ============================================================
 // Type  : <Start>d__4
-// Token : 0x2000401
+// Token : 0x2000408
 // ============================================================
 
 public class <Start>d__4
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001EC0
+    // Token: 0x4001FCA
     private int <>1__state;
 
-    // Token: 0x4001EC1
+    // Token: 0x4001FCB
     private object <>2__current;
 
-    // Token: 0x4001EC2
+    // Token: 0x4001FCC
     public TeleType <>4__this;
 
-    // Token: 0x4001EC3
+    // Token: 0x4001FCD
     private int <totalVisibleCharacters>5__2;
 
-    // Token: 0x4001EC4
+    // Token: 0x4001FCE
     private int <counter>5__3;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600246E
-    // RVA   : 0x219070   Offset: 0x217870   Length: 0x24
+    // Token : 0x60024F1
+    // RVA   : 0x219070   Offset: 0x218470   Length: 0x24
     public void /*ctor*/(int <>1__state)
     {
         ZhSegment.Initialize(this,0);
         this.<>1__state = <>1__state;
     }
 
-    // Token : 0x600246F
-    // RVA   : 0x245810   Offset: 0x244010   Length: 0x3
+    // Token : 0x60024F2
+    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
     private virtual void System.IDisposable.Dispose()
     {
     }
 
-    // Token : 0x6002470
-    // RVA   : 0xB14AC0   Offset: 0xB132C0   Length: 0x29D
+    // Token : 0x60024F3
+    // RVA   : 0x8F4BB0   Offset: 0x8F3FB0   Length: 0x29D
     private virtual bool MoveNext()
     {
         int iVar1;
@@ -87,7 +87,7 @@ public class <Start>d__4
           }
           if (iVar1 == 3) {
             this.<>1__state = 0xffffffff;
-            goto LAB_180b14cc1;
+            goto LAB_1808f4db1;
           }
           if (iVar1 != 4) {
             return false;
@@ -105,7 +105,7 @@ public class <Start>d__4
             this.<>1__state = 1;
             return true;
           }
-        LAB_180b14cc1:
+        LAB_1808f4db1:
           this.<counter>5__3 = this.<counter>5__3 + 1;
           uVar6 = new WaitForSeconds(0x3d4ccccd,0);
           this.<>2__current = uVar6;
@@ -114,27 +114,27 @@ public class <Start>d__4
         }
     }
 
-    // Token : 0x6002471
-    // RVA   : 0x20F140   Offset: 0x20D940   Length: 0x5
+    // Token : 0x60024F4
+    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
     private virtual object System.Collections.Generic.IEnumerator<System.object>.get_Current()
     {
         return this.<>2__current;
     }
 
-    // Token : 0x6002472
-    // RVA   : 0xB14D60   Offset: 0xB13560   Length: 0x3E
+    // Token : 0x60024F5
+    // RVA   : 0x8F4E50   Offset: 0x8F4250   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d682e8);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d8cc50);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181db5fc0);
     }
 
-    // Token : 0x6002473
-    // RVA   : 0x20F140   Offset: 0x20D940   Length: 0x5
+    // Token : 0x60024F6
+    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
     private virtual object System.Collections.IEnumerator.get_Current()
     {
         return this.<>2__current;

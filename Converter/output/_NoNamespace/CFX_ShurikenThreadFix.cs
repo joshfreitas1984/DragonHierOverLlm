@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : CFX_ShurikenThreadFix
-// Token : 0x20003BD
+// Token : 0x20003C4
 // ============================================================
 
 public class CFX_ShurikenThreadFix
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001D3F
+    // Token: 0x4001E49
     private ParticleSystem[] systems;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600236F
-    // RVA   : 0xBD59E0   Offset: 0xBD41E0   Length: 0xC4
+    // Token : 0x60023F2
+    // RVA   : 0xB80270   Offset: 0xB7F670   Length: 0xC4
     private void OnEnable()
     {
         long lVar1;
         ulong uVar2;
         uint uVar3;
-        uVar2 = FUN_180956bf0(this,DAT_181d6fd40);
+        uVar2 = FUN_1809674e0(this,DAT_181d98660);
         this.systems = uVar2;
         lVar1 = this.systems;
         uVar3 = 0;
@@ -39,8 +39,8 @@ public class CFX_ShurikenThreadFix
         }
     }
 
-    // Token : 0x6002370
-    // RVA   : 0xBD5AB0   Offset: 0xBD42B0   Length: 0x6C
+    // Token : 0x60023F3
+    // RVA   : 0xB80340   Offset: 0xB7F740   Length: 0x6C
     private IEnumerator WaitFrame()
     {
         long lVar1;
@@ -51,8 +51,8 @@ public class CFX_ShurikenThreadFix
         }
     }
 
-    // Token : 0x6002371
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x60023F4
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

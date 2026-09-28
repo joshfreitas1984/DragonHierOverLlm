@@ -1,64 +1,68 @@
 // ============================================================
 // Type  : FightResultContributionController
-// Token : 0x200027D
+// Token : 0x2000283
 // ============================================================
 
 public class FightResultContributionController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001394
+    // Token: 0x4001445
     public GameObject fightResultContributionPanel;
 
-    // Token: 0x4001395
+    // Token: 0x4001446
     public GameObject figthResultContributionHeroList;
 
-    // Token: 0x4001396
+    // Token: 0x4001447
     public GameObject figthResultContributionHeroPrefab;
 
-    // Token: 0x4001397
+    // Token: 0x4001448
     public GameObject fightResultButton;
 
-    // Token: 0x4001398
+    // Token: 0x4001449
     public List<HeroData> targetHeroList;
 
-    // Token: 0x4001399
+    // Token: 0x400144A
     private static List<int> RankExtraContribution;
 
-    // Token: 0x400139A
+    // Token: 0x400144B
     private GameObject temp;
 
-    // Token: 0x400139B
+    // Token: 0x400144C
     private static FightResultContributionController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001440
-    // RVA   : 0xBA5660   Offset: 0xBA3E60   Length: 0x58
+    // Token : 0x6001484
+    // RVA   : 0xB2E060   Offset: 0xB2D460   Length: 0x58
     public static FightResultContributionController get_Instance()
     {
-        return PlotController.LeftFaceHideOffset;
+        return *(uint64 *)(*(int64 *)(DAT_181dc6f30 + 184) + 8);
     }
 
-    // Token : 0x6001441
-    // RVA   : 0xBA4DC0   Offset: 0xBA35C0   Length: 0x11E
+    // Token : 0x6001485
+    // RVA   : 0xB2D7C0   Offset: 0xB2CBC0   Length: 0x11E
     private void Awake()
     {
+        var pStatics = *(int64*)(DAT_181dc6f30 + 184);
         bool cVar1;
         ulong uVar2;
-        uVar2 = PlotController.LeftFaceHideOffset;
+        uVar2 = *(uint64 *)(pStatics + 8);
         cVar1 = Object.op_Equality(uVar2,0,0);
         if (!cVar1) {
           uVar2 = Component.get_gameObject(this,0);
           Object.Destroy(uVar2,0);
           return;
         }
-        PlotController.LeftFaceHideOffset = this;
+        puVar3 = (uint64 *)(pStatics + 8);
+        *puVar3 = this;
+        il2cpp_internal(puVar3,this);
     }
 
-    // Token : 0x6001442
-    // RVA   : 0xBA4FB0   Offset: 0xBA37B0   Length: 0x546
+    // Token : 0x6001486
+    // RVA   : 0xB2D9B0   Offset: 0xB2CDB0   Length: 0x546
     public void ShowFightResultContribution(List<HeroData> _targetHeroList)
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics_6f30 = *(int64*)(DAT_181dc6f30 + 184);
+        var pStatics_7158 = *(int64*)(DAT_181d77158 + 184);
         void FightResultContributionController.ShowFightResultContribution
                      (int64 this,uint64 _targetHeroList)
         {
@@ -77,14 +81,16 @@ public class FightResultContributionController
         local_res8[0] = 0;
         il2cpp_internal(this + 56,_targetHeroList);
         lVar5 = this.targetHeroList;
-        lVar3 = FightResultContributionController._instance;
+        lVar3 = *(int64 *)(pStatics_7158 + 8);
         if (lVar3 == null) {
-          uVar4 = FightResultContributionController.RankExtraContribution;
-          var lVar3 = new OnTooltipCB(uVar4,DAT_181d7a908,DAT_181d85f18);
-          FightResultContributionController._instance = lVar3;
+          uVar4 = **(uint64 **)(DAT_181d77158 + 184);
+          var lVar3 = new OnTooltipCB(uVar4,DAT_181da3788,DAT_181dab2b8);
+          plVar8 = (int64 *)(pStatics_7158 + 8);
+          *plVar8 = lVar3;
+          il2cpp_internal(plVar8,lVar3);
         }
         if (lVar5 != null) {
-          List_1.Sort(lVar5,lVar3,DAT_181d64278);
+          List_1.Sort(lVar5,lVar3,DAT_181d8ba18);
           lVar5 = this.targetHeroList;
           plVar8 = plVar9;
           if (lVar5 != null) {
@@ -94,34 +100,32 @@ public class FightResultContributionController
               uVar4 = GlobalData.AddChild(uVar4,uVar6,0);
               this.temp = uVar4;
               if (this.temp == null) throw; // [null/range check failed]
-              lVar5 = GameObject.GetComponent(this.temp,DAT_181d9f658);
+              lVar5 = GameObject.GetComponent(this.temp,DAT_181d71600);
               if ((this.targetHeroList == null) ||
                  (uVar4 = FUN_180002f80(this.targetHeroList,plVar8), lVar5 == null))
               throw; // [null/range check failed]
               lVar5.Count = uVar4;
               if (this.temp == null) throw; // [null/range check failed]
-              lVar5 = GameObject.GetComponent(this.temp,DAT_181d9f658);
-              if (PlotController._instance == null) throw; // [null/range check failed]
+              lVar5 = GameObject.GetComponent(this.temp,DAT_181d71600);
+              if (*pStatics_6f30 == 0) throw; // [null/range check failed]
               uVar4 = "";
-              if (iVar7 < PlotController._instance.plotHappen) {
-                uVar4 = *(uint64 *)(pPlotController + 0x260);
-                if (PlotController._instance == null) throw; // [null/range check failed]
-                local_res8[0] =
-                     FUN_1800d6750(PlotController._instance,plVar8,DAT_181d68270)
-                ;
+              if (iVar7 < *(int *)(*pStatics_6f30 + 24)) {
+                uVar4 = *(uint64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x268);
+                if (*pStatics_6f30 == 0) throw; // [null/range check failed]
+                local_res8[0] = FUN_1800d6760(*pStatics_6f30,plVar8,DAT_181d8fa18);
                 uVar6 = Int32.ToString(local_res8,"+0;-0;0",0);
                 uVar4 = String.Concat(uVar4,uVar6,"</color>",0);
               }
               if (lVar5 == null) throw; // [null/range check failed]
               FightResultContributionHeroController.Init(lVar5,uVar4);
-              if (PlotController._instance == null) throw; // [null/range check failed]
-              if (iVar7 < PlotController._instance.plotHappen) {
+              if (*pStatics_6f30 == 0) throw; // [null/range check failed]
+              if (iVar7 < *(int *)(*pStatics_6f30 + 24)) {
                 if ((this.targetHeroList == null) ||
-                   (lVar5 = FUN_180002f80(this.targetHeroList,plVar8,DAT_181d643f8)) == null
+                   (lVar5 = FUN_180002f80(this.targetHeroList,plVar8,DAT_181d8bb98)) == null
                    ) throw; // [null/range check failed]
                 fVar1 = *(float *)(lVar5 + 176);
-                if (PlotController._instance == null) throw; // [null/range check failed]
-                iVar2 = FUN_1800d6750(PlotController._instance,plVar8);
+                if (*pStatics_6f30 == 0) throw; // [null/range check failed]
+                iVar2 = FUN_1800d6760(*pStatics_6f30,plVar8);
                 *(float *)(lVar5 + 176) = (float)iVar2 + fVar1;
               }
               lVar5 = this.targetHeroList;
@@ -133,7 +137,7 @@ public class FightResultContributionController
               if (this.fightResultButton != null) {
                 GameObject.SetActive(this.fightResultButton,1,0);
                 plVar8 = (int64 *)Resources.Load("Sound/SoundEffect/人群欢呼",0);
-                if ((plVar8 != (int64 *)0) && (*plVar8 == DAT_181d8a228)) {
+                if ((plVar8 != (int64 *)0) && (*plVar8 == DAT_181daf348)) {
                   plVar9 = plVar8;
                 }
                 NGUITools.PlaySound(plVar9,0);
@@ -144,22 +148,23 @@ public class FightResultContributionController
         }
     }
 
-    // Token : 0x6001443
-    // RVA   : 0xBA4EE0   Offset: 0xBA36E0   Length: 0xC8
+    // Token : 0x6001487
+    // RVA   : 0xB2D8E0   Offset: 0xB2CCE0   Length: 0xC9
     public void FightResultButtonClicked()
     {
+        long lVar1;
         if (this.fightResultButton != null) {
           GameObject.SetActive(this.fightResultButton,0,0);
-          if (PlotController._instance != null) {
-            PlotController.StartFightResultContributionPlot
-                      (PlotController._instance,0);
+          lVar1 = *(int64 *)(*(int64 *)(DAT_181d91b88 + 184) + 24);
+          if (lVar1 != null) {
+            PlotController.StartFightResultContributionPlot(lVar1,0);
             return;
           }
         }
     }
 
-    // Token : 0x6001444
-    // RVA   : 0xBA5500   Offset: 0xBA3D00   Length: 0x8A
+    // Token : 0x6001488
+    // RVA   : 0xB2DF00   Offset: 0xB2D300   Length: 0x8A
     public void UnshowFightResultContribution()
     {
         ulong uVar1;
@@ -172,25 +177,25 @@ public class FightResultContributionController
         }
     }
 
-    // Token : 0x6001445
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x6001489
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);
     }
 
-    // Token : 0x6001446
-    // RVA   : 0xBA5590   Offset: 0xBA3D90   Length: 0xC8
+    // Token : 0x600148A
+    // RVA   : 0xB2DF90   Offset: 0xB2D390   Length: 0xC8
     private static void /*cctor*/()
     {
         long lVar2;
-        lVar2 = il2cpp_internal(DAT_181d6f030);
-        FUN_180f58a90(lVar2,DAT_181d678f8);
+        lVar2 = il2cpp_internal(DAT_181d93cd0);
+        FUN_18132faf0(lVar2,DAT_181d8f098);
         if (lVar2 != null) {
-          FUN_181814fa0(lVar2,100,DAT_181d67a78);
-          FUN_181814fa0(lVar2,50,DAT_181d67a78);
-          FUN_181814fa0(lVar2,20,DAT_181d67a78);
-          plVar1 = *(int64 **)(PlotController_StaticsPtr + 184);
+          FUN_18182a0b0(lVar2,100,DAT_181d8f218);
+          FUN_18182a0b0(lVar2,50,DAT_181d8f218);
+          FUN_18182a0b0(lVar2,20,DAT_181d8f218);
+          plVar1 = *(int64 **)(DAT_181dc6f30 + 184);
           *plVar1 = lVar2;
           il2cpp_internal(plVar1,lVar2);
           return;

@@ -1,26 +1,26 @@
 // ============================================================
 // Type  : HeroLittleTalkUIController
-// Token : 0x20002CC
+// Token : 0x20002D2
 // ============================================================
 
 public class HeroLittleTalkUIController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001691
+    // Token: 0x4001745
     public GameObject followTarget;
 
-    // Token: 0x4001692
+    // Token: 0x4001746
     public Vector3 offSet;
 
-    // Token: 0x4001693
+    // Token: 0x4001747
     public TalkTextPosType posType;
 
-    // Token: 0x4001694
+    // Token: 0x4001748
     public float lifeTime;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60017B0
-    // RVA   : 0xB36D40   Offset: 0xB35540   Length: 0x4CB
+    // Token : 0x60017F4
+    // RVA   : 0xAF7C00   Offset: 0xAF7000   Length: 0x4CB
     private void Update()
     {
         int iVar1;
@@ -57,8 +57,8 @@ public class HeroLittleTalkUIController
             local_c0 = *(float *)(puVar6 + 1);
             local_c8 = *puVar6;
             uVar5 = ShortcutExtensions.DOScale(uVar5,&local_c8,0x3e19999a,0);
-            uVar7 = new OnTooltipCB(this,DAT_181d50410,0);
-            TweenSettingsExtensions.OnComplete(uVar5,uVar7,DAT_181d96ee8);
+            uVar7 = new OnTooltipCB(this,DAT_181d79030,0);
+            TweenSettingsExtensions.OnComplete(uVar5,uVar7,DAT_181dc01d0);
           }
         }
         uVar5 = this.followTarget;
@@ -108,16 +108,16 @@ public class HeroLittleTalkUIController
                       fVar16 = *pfVar10 * 0.5;
                       lVar9 = Component.get_transform(this,0);
                       if (((lVar9 != null) && (lVar9 = Transform.Find(lVar9,"Back",0)) != null)
-                         && (lVar9 = Component.GetComponent(lVar9,DAT_181d6c740)) != null) {
+                         && (lVar9 = Component.GetComponent(lVar9,DAT_181d94f60)) != null) {
                         puVar11 = (uint32 *)RectTransform.get_rect(local_98,lVar9,0);
                         local_88 = *puVar11;
                         uStack_84 = puVar11[1];
                         uStack_80 = puVar11[2];
                         uStack_7c = puVar11[3];
-                        fVar13 = (float)FUN_180d90480(&local_88,0);
+                        fVar13 = (float)FUN_180d98fa0(&local_88,0);
                         lVar9 = Component.get_transform(this,0);
                         if (((lVar9 != null) && (lVar9 = Transform.Find(lVar9,"Back",0)) != null)
-                           && (lVar9 = Component.GetComponent(lVar9,DAT_181d6c740)) != null) {
+                           && (lVar9 = Component.GetComponent(lVar9,DAT_181d94f60)) != null) {
                           puVar11 = (uint32 *)RectTransform.get_rect(local_98,lVar9,0);
                           local_88 = *puVar11;
                           uStack_84 = puVar11[1];
@@ -151,16 +151,18 @@ public class HeroLittleTalkUIController
         }
     }
 
-    // Token : 0x60017B1
-    // RVA   : 0xB37210   Offset: 0xB35A10   Length: 0xE
+    // Token : 0x60017F5
+    // RVA   : 0xAF80D0   Offset: 0xAF74D0   Length: 0xE
     public void /*ctor*/()
     {
+        void FUN_180af80d0(int64 this)
+        {
         this.lifeTime = 0xbf800000;
         FUN_18044ef50(this,0);
     }
 
-    // Token : 0x60017B2
-    // RVA   : 0xB36CE0   Offset: 0xB354E0   Length: 0x5F
+    // Token : 0x60017F6
+    // RVA   : 0xAF7BA0   Offset: 0xAF6FA0   Length: 0x5F
     private void <Update>b__4_0()
     {
         ulong uVar1;

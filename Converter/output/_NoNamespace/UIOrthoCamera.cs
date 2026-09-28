@@ -1,24 +1,24 @@
 // ============================================================
 // Type  : UIOrthoCamera
-// Token : 0x2000102
+// Token : 0x2000103
 // ============================================================
 
 public class UIOrthoCamera
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000652
+    // Token: 0x400066E
     private Camera mCam;
 
-    // Token: 0x4000653
+    // Token: 0x400066F
     private Transform mTrans;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000874
-    // RVA   : 0x156FF00   Offset: 0x156E700   Length: 0x83
+    // Token : 0x600088C
+    // RVA   : 0x11964F0   Offset: 0x11958F0   Length: 0x83
     private void Start()
     {
         ulong uVar1;
-        uVar1 = Component.GetComponent(this,DAT_181d6afc0);
+        uVar1 = Component.GetComponent(this,DAT_181d937e0);
         this.mCam = uVar1;
         uVar1 = Component.get_transform(this,0);
         this.mTrans = uVar1;
@@ -28,8 +28,8 @@ public class UIOrthoCamera
         }
     }
 
-    // Token : 0x6000875
-    // RVA   : 0x156FF90   Offset: 0x156E790   Length: 0x132
+    // Token : 0x600088D
+    // RVA   : 0x1196580   Offset: 0x1195980   Length: 0x132
     private void Update()
     {
         long lVar2;
@@ -71,8 +71,8 @@ public class UIOrthoCamera
         }
     }
 
-    // Token : 0x6000876
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x600088E
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : TankAlwaysForward
-// Token : 0x2000126
+// Token : 0x2000127
 // ============================================================
 
 public class TankAlwaysForward
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000729
+    // Token: 0x4000745
     public Material TrailMaterial;
 
-    // Token: 0x400072A
+    // Token: 0x4000746
     public float Speed;
 
-    // Token: 0x400072B
+    // Token: 0x4000747
     public float TrailSpeed;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60009A4
-    // RVA   : 0xABCD90   Offset: 0xABB590   Length: 0x17E
+    // Token : 0x60009BC
+    // RVA   : 0xA9C470   Offset: 0xA9B870   Length: 0x17E
     private void FixedUpdate()
     {
         float fVar1;
@@ -74,8 +74,8 @@ public class TankAlwaysForward
         local_40 = fVar1;
     }
 
-    // Token : 0x60009A5
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x60009BD
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

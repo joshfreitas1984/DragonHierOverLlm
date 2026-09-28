@@ -1,32 +1,32 @@
 // ============================================================
 // Type  : TankWeaponController
-// Token : 0x200012B
+// Token : 0x200012C
 // ============================================================
 
 public class TankWeaponController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000741
+    // Token: 0x400075D
     public TankProjectile ProjectilePrefab;
 
-    // Token: 0x4000742
+    // Token: 0x400075E
     public Transform Nozzle;
 
-    // Token: 0x4000743
+    // Token: 0x400075F
     private Animation _animation;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60009B2
-    // RVA   : 0xABDA70   Offset: 0xABC270   Length: 0x48
+    // Token : 0x60009CA
+    // RVA   : 0xA9D150   Offset: 0xA9C550   Length: 0x48
     private void Awake()
     {
         ulong uVar1;
-        uVar1 = Component.GetComponent(this,DAT_181d6a940);
+        uVar1 = Component.GetComponent(this,DAT_181d93168);
         this._animation = uVar1;
     }
 
-    // Token : 0x60009B3
-    // RVA   : 0xABDAC0   Offset: 0xABC2C0   Length: 0x12B
+    // Token : 0x60009CB
+    // RVA   : 0xA9D1A0   Offset: 0xA9C5A0   Length: 0x12B
     private void Update()
     {
         ulong uVar1;
@@ -55,7 +55,7 @@ public class TankWeaponController
                 uStack_30 = puVar5[1];
                 local_48 = uVar1;
                 local_40 = uVar2;
-                Object.Instantiate(uVar3,&local_48,&local_38,DAT_181d6a178);
+                Object.Instantiate(uVar3,&local_48,&local_38,DAT_181d92e98);
                 return;
               }
             }
@@ -63,8 +63,8 @@ public class TankWeaponController
         }
     }
 
-    // Token : 0x60009B4
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x60009CC
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

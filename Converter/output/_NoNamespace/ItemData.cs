@@ -1,74 +1,74 @@
 // ============================================================
 // Type  : ItemData
-// Token : 0x2000237
+// Token : 0x200023D
 // ============================================================
 
 public class ItemData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001146
+    // Token: 0x40011E9
     public int itemID;
 
-    // Token: 0x4001147
+    // Token: 0x40011EA
     public ItemType type;
 
-    // Token: 0x4001148
+    // Token: 0x40011EB
     public int subType;
 
-    // Token: 0x4001149
+    // Token: 0x40011EC
     public string name;
 
-    // Token: 0x400114A
+    // Token: 0x40011ED
     public string checkName;
 
-    // Token: 0x400114B
+    // Token: 0x40011EE
     public string describe;
 
-    // Token: 0x400114C
+    // Token: 0x40011EF
     public int value;
 
-    // Token: 0x400114D
+    // Token: 0x40011F0
     public int itemLv;
 
-    // Token: 0x400114E
+    // Token: 0x40011F1
     public int rareLv;
 
-    // Token: 0x400114F
+    // Token: 0x40011F2
     public float weight;
 
-    // Token: 0x4001150
+    // Token: 0x40011F3
     public bool isNew;
 
-    // Token: 0x4001151
+    // Token: 0x40011F4
     public float poisonNum;
 
-    // Token: 0x4001152
+    // Token: 0x40011F5
     public bool poisonNumDetected;
 
-    // Token: 0x4001153
+    // Token: 0x40011F6
     public string setName;
 
-    // Token: 0x4001154
+    // Token: 0x40011F7
     public EquipmentData equipmentData;
 
-    // Token: 0x4001155
+    // Token: 0x40011F8
     public MedFoodData medFoodData;
 
-    // Token: 0x4001156
+    // Token: 0x40011F9
     public BookData bookData;
 
-    // Token: 0x4001157
+    // Token: 0x40011FA
     public TreasureData treasureData;
 
-    // Token: 0x4001158
+    // Token: 0x40011FB
     public MaterialData materialData;
 
-    // Token: 0x4001159
+    // Token: 0x40011FC
     public HorseData horseData;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001286
-    // RVA   : 0xB768D0   Offset: 0xB750D0   Length: 0x174
+    // Token : 0x60012C7
+    // RVA   : 0xCA0830   Offset: 0xC9FC30   Length: 0x174
     public void /*ctor*/(ItemType _type)
     {
         ulong uVar1;
@@ -102,15 +102,15 @@ public class ItemData
           puVar2 = &this.horseData;
           break;
         default:
-          goto switchD_180b76966_default;
+          goto switchD_180ca08c6_default;
         }
         this.horseData = uVar1;
         il2cpp_internal(puVar2,uVar1);
-        switchD_180b76966_default:
+        switchD_180ca08c6_default:
     }
 
-    // Token : 0x6001287
-    // RVA   : 0xB73E10   Offset: 0xB72610   Length: 0x30
+    // Token : 0x60012C8
+    // RVA   : 0xC9DD70   Offset: 0xC9D170   Length: 0x30
     public float GetHorseMaxWeightAdd()
     {
         if (this.subType != null) {
@@ -118,17 +118,17 @@ public class ItemData
         }
     }
 
-    // Token : 0x6001288
-    // RVA   : 0xB74F40   Offset: 0xB73740   Length: 0x22
+    // Token : 0x60012C9
+    // RVA   : 0xC9EEA0   Offset: 0xC9E2A0   Length: 0x22
     public int GetWeaponResearchExp()
     {
         float fVar1;
-        fVar1 = (float)FUN_1801f7f00(0x40000000);
+        fVar1 = (float)FUN_1801f8ab0(0x40000000);
         return (int)fVar1;
     }
 
-    // Token : 0x6001289
-    // RVA   : 0xB74F70   Offset: 0xB73770   Length: 0x2A8
+    // Token : 0x60012CA
+    // RVA   : 0xC9EED0   Offset: 0xC9E2D0   Length: 0x2A8
     public bool IsHeroEquip(HeroData targetHero)
     {
         int iVar1;
@@ -149,12 +149,12 @@ public class ItemData
                      (lVar4 = *(int64 *)(*(int64 *)(targetHero + 0x1f8) + 32)) != null)) {
                 uVar2 = *(uint32 *)(lVar4 + 24);
                 uVar3 = (uint64)uVar2;
-                if ((int)uVar2 <= (int)uVar5) goto LAB_180b751f7;
+                if ((int)uVar2 <= (int)uVar5) goto LAB_180c9f157;
                 if (uVar2 <= uVar5) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 lVar4 = *(int64 *)(lVar4 + 16);
-                if (*(int64 *)(lVar6 + lVar4) == this) goto LAB_180b751c0;
+                if (*(int64 *)(lVar6 + lVar4) == this) goto LAB_180c9f120;
                 uVar5 = uVar5 + 1;
                 lVar6 = lVar6 + 8;
               }
@@ -168,12 +168,12 @@ public class ItemData
                      (lVar4 = *(int64 *)(*(int64 *)(targetHero + 0x1f8) + 56)) != null)) {
                 uVar2 = *(uint32 *)(lVar4 + 24);
                 uVar3 = (uint64)uVar2;
-                if ((int)uVar2 <= (int)uVar5) goto LAB_180b751f7;
+                if ((int)uVar2 <= (int)uVar5) goto LAB_180c9f157;
                 if (uVar2 <= uVar5) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 lVar4 = *(int64 *)(lVar4 + 16);
-                if (*(int64 *)(lVar6 + lVar4) == this) goto LAB_180b751c0;
+                if (*(int64 *)(lVar6 + lVar4) == this) goto LAB_180c9f120;
                 uVar5 = uVar5 + 1;
                 lVar6 = lVar6 + 8;
               }
@@ -187,12 +187,12 @@ public class ItemData
                      (lVar4 = *(int64 *)(*(int64 *)(targetHero + 0x1f8) + 80)) != null)) {
                 uVar2 = *(uint32 *)(lVar4 + 24);
                 uVar3 = (uint64)uVar2;
-                if ((int)uVar2 <= (int)uVar5) goto LAB_180b751f7;
+                if ((int)uVar2 <= (int)uVar5) goto LAB_180c9f157;
                 if (uVar2 <= uVar5) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 lVar4 = *(int64 *)(lVar4 + 16);
-                if (*(int64 *)(lVar6 + lVar4) == this) goto LAB_180b751c0;
+                if (*(int64 *)(lVar6 + lVar4) == this) goto LAB_180c9f120;
                 uVar5 = uVar5 + 1;
                 lVar6 = lVar6 + 8;
               }
@@ -206,19 +206,19 @@ public class ItemData
                      (lVar4 = *(int64 *)(*(int64 *)(targetHero + 0x1f8) + 104)) != null)) {
                 uVar2 = *(uint32 *)(lVar4 + 24);
                 uVar3 = (uint64)uVar2;
-                if ((int)uVar2 <= (int)uVar5) goto LAB_180b751f7;
+                if ((int)uVar2 <= (int)uVar5) goto LAB_180c9f157;
                 if (uVar2 <= uVar5) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 lVar4 = *(int64 *)(lVar4 + 16);
-                if (*(int64 *)(lVar6 + lVar4) == this) goto LAB_180b751c0;
+                if (*(int64 *)(lVar6 + lVar4) == this) goto LAB_180c9f120;
                 uVar5 = uVar5 + 1;
                 lVar6 = lVar6 + 8;
               }
             }
           }
           else {
-            if (iVar1 != 4) goto LAB_180b751f7;
+            if (iVar1 != 4) goto LAB_180c9f157;
             uVar5 = 0;
             if (targetHero != null) {
               lVar6 = 32;
@@ -226,13 +226,13 @@ public class ItemData
                      (lVar4 = *(int64 *)(*(int64 *)(targetHero + 0x1f8) + 128)) != null)) {
                 uVar2 = *(uint32 *)(lVar4 + 24);
                 uVar3 = (uint64)uVar2;
-                if ((int)uVar2 <= (int)uVar5) goto LAB_180b751f7;
+                if ((int)uVar2 <= (int)uVar5) goto LAB_180c9f157;
                 if (uVar2 <= uVar5) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 lVar4 = *(int64 *)(lVar4 + 16);
                 if (*(int64 *)(lVar6 + lVar4) == this) {
-        LAB_180b751c0:
+        LAB_180c9f120:
                   return CONCAT71((int7)((uint64)lVar4 >> 8),1);
                 }
                 uVar5 = uVar5 + 1;
@@ -243,7 +243,7 @@ public class ItemData
         }
         else {
           if (uVar5 != 6) {
-        LAB_180b751f7:
+        LAB_180c9f157:
             return uVar3 & 0xffffffffffffff00;
           }
           uVar5 = this.subType;
@@ -254,7 +254,7 @@ public class ItemData
             }
           }
           else {
-            if (uVar5 != 1) goto LAB_180b751f7;
+            if (uVar5 != 1) goto LAB_180c9f157;
             if (targetHero != null) {
               return (uint64)(*(int64 *)(targetHero + 0x218) == this);
             }
@@ -262,11 +262,11 @@ public class ItemData
         }
     }
 
-    // Token : 0x600128A
-    // RVA   : 0xB73EA0   Offset: 0xB726A0   Length: 0x660
+    // Token : 0x60012CB
+    // RVA   : 0xC9DE00   Offset: 0xC9D200   Length: 0x660
     public string GetItemIconName()
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d73d40 + 184);
         bool cVar1;
         long lVar3;
         ulong uVar4;
@@ -285,9 +285,9 @@ public class ItemData
         case 0:
           local_res8[0] = this.subType;
           if (local_res8[0] == 0) {
-            plVar2 = (int64 *)FUN_1800d60b0(DAT_181d7f180,4);
+            plVar2 = (int64 *)FUN_1800d60b0(DAT_181da4120,4);
             local_res18[0] = this.subType;
-            lVar6 = il2cpp_value_box(DAT_181d5b2f8,local_res18);
+            lVar6 = il2cpp_value_box(DAT_181d80418,local_res18);
             if (plVar2 != (int64 *)0) {
               if ((lVar6 != null) &&
                  (lVar3 = il2cpp_internal(lVar6,*(uint64 *)(*plVar2 + 64))) == null) {
@@ -304,7 +304,7 @@ public class ItemData
               il2cpp_internal(plVar2 + 4,lVar6);
               if (this.equipmentData != null) {
                 local_res20[0] = this.equipmentData.littleType;
-                lVar6 = il2cpp_value_box(DAT_181d5b2f8,local_res20);
+                lVar6 = il2cpp_value_box(DAT_181d80418,local_res20);
                 if ((lVar6 != null) &&
                    (lVar3 = il2cpp_internal(lVar6,*(uint64 *)(*plVar2 + 64))) == null) {
                   uVar8 = il2cpp_internal();
@@ -320,7 +320,7 @@ public class ItemData
                 il2cpp_internal(plVar2 + 5,lVar6);
                 if (this.equipmentData != null) {
                   local_38 = this.equipmentData.attriType;
-                  lVar6 = il2cpp_value_box(DAT_181d5b2f8,&local_38);
+                  lVar6 = il2cpp_value_box(DAT_181d80418,&local_38);
                   if ((lVar6 != null) &&
                      (lVar3 = il2cpp_internal(lVar6,*(uint64 *)(*plVar2 + 64))) == null) {
                     uVar8 = il2cpp_internal();
@@ -335,7 +335,7 @@ public class ItemData
                   plVar2[6] = lVar6;
                   il2cpp_internal(plVar2 + 6,lVar6);
                   local_34[0] = this.itemLv;
-                  lVar6 = il2cpp_value_box(DAT_181d5b2f8,local_34);
+                  lVar6 = il2cpp_value_box(DAT_181d80418,local_34);
                   if ((lVar6 != null) &&
                      (lVar3 = il2cpp_internal(lVar6,*(uint64 *)(*plVar2 + 64))) == null) {
                     uVar8 = il2cpp_internal();
@@ -359,15 +359,15 @@ public class ItemData
           }
           if (local_res8[0] - 1U < 4) {
             local_res18[0] = local_res8[0];
-            uVar8 = il2cpp_value_box(DAT_181d5b2f8,local_res18);
+            uVar8 = il2cpp_value_box(DAT_181d80418,local_res18);
             if (this.equipmentData == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             local_res20[0] = this.equipmentData.littleType;
-            uVar7 = il2cpp_value_box(DAT_181d5b2f8,local_res20);
+            uVar7 = il2cpp_value_box(DAT_181d80418,local_res20);
             local_34[0] = this.itemLv;
-            uVar4 = il2cpp_value_box(DAT_181d5b2f8,local_34);
+            uVar4 = il2cpp_value_box(DAT_181d80418,local_34);
             uVar8 = String.Format("{0}_{1}_{2}",uVar8,uVar7,uVar4,0);
           }
           break;
@@ -375,20 +375,20 @@ public class ItemData
           if ((this.bookData != null) &&
              (lVar6 = BookData.DataBase(this.bookData,0)) != null) {
             local_res18[0] = *(int *)(lVar6 + 24);
-            uVar8 = il2cpp_value_box(DAT_181d5b2f8,local_res18);
+            uVar8 = il2cpp_value_box(DAT_181d80418,local_res18);
             if ((this.bookData != null) &&
                (lVar6 = BookData.DataBase(this.bookData,0), uVar7 = "book_{0}_{1}",
                lVar6 != null)) {
-              if (*(int *)(lVar6 + 24) < 0) {
+              if (*(int *)(lVar6 + 24) == -1) {
                 if ((this.bookData == null) ||
                    (lVar6 = BookData.DataBase(this.bookData,0)) == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
                 local_res20[0] = *(uint32 *)(lVar6 + 48);
-                uVar4 = il2cpp_value_box(DAT_181d5b2f8,local_res20);
+                uVar4 = il2cpp_value_box(DAT_181d80418,local_res20);
                 local_34[0] = (int)((float)this.itemLv * 0.5);
-                uVar5 = il2cpp_value_box(DAT_181d5b2f8,local_34);
+                uVar5 = il2cpp_value_box(DAT_181d80418,local_34);
                 uVar4 = String.Format("{0}_{1}",uVar4,uVar5,0);
               }
               else {
@@ -402,31 +402,31 @@ public class ItemData
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         case 4:
-          if (PlotController._instance == 2) {
-            lVar6 = *(int64 *)(pPlotController + 0x510);
+          if (**(int **)(DAT_181d73d40 + 184) == 2) {
+            lVar6 = *(int64 *)(pStatics + 0x518);
             if ((lVar6 == null) ||
-               (lVar6 = FUN_180127f50(lVar6,(int64)this.subType,
+               (lVar6 = FUN_180127f90(lVar6,(int64)this.subType,
                                       (int64)this.itemLv), lVar6 == null))
-            goto LAB_180b744f9;
+            goto LAB_180c9e459;
             cVar1 = String.Contains(lVar6,"呕血谱",0);
             if (cVar1) {
               return "玄玄谱";
             }
           }
           local_res18[0] = this.subType;
-          uVar8 = il2cpp_value_box(DAT_181d5b2f8,local_res18);
+          uVar8 = il2cpp_value_box(DAT_181d80418,local_res18);
           local_res20[0] = this.itemLv;
-          uVar7 = il2cpp_value_box(DAT_181d5b2f8,local_res20);
+          uVar7 = il2cpp_value_box(DAT_181d80418,local_res20);
           uVar8 = String.Format("珍宝{0}_{1}",uVar8,uVar7,0);
           break;
         case 5:
-          lVar6 = *(int64 *)(pPlotController + 0x530);
+          lVar6 = *(int64 *)(pStatics + 0x538);
           if (lVar6 == null) {
-        LAB_180b744f9:
+        LAB_180c9e459:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          uVar8 = FUN_180002f80(lVar6,this.subType,DAT_181d7c9c0);
+          uVar8 = FUN_180002f80(lVar6,this.subType,DAT_181da4358);
           uVar7 = Int32.ToString(this + 60,0);
           uVar8 = String.Concat(uVar8,"_",uVar7,0);
           break;
@@ -443,8 +443,8 @@ public class ItemData
         return uVar8;
     }
 
-    // Token : 0x600128B
-    // RVA   : 0xB731B0   Offset: 0xB719B0   Length: 0x15C
+    // Token : 0x60012CC
+    // RVA   : 0xC9D110   Offset: 0xC9C510   Length: 0x15C
     public void AutoManageEquipPoison(int heroLv)
     {
         long lVar1;
@@ -477,30 +477,31 @@ public class ItemData
         }
     }
 
-    // Token : 0x600128C
-    // RVA   : 0xB73990   Offset: 0xB72190   Length: 0x117
+    // Token : 0x60012CD
+    // RVA   : 0xC9D8F0   Offset: 0xC9CCF0   Length: 0x117
     public bool DetectPoisonNum()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         if (this.poisonNumDetected) {
           return true;
         }
-        if ((((GameController._instance != null) &&
-             (lVar1 = GameController._instance.worldData) != null
-             ) && (lVar1 = WorldData.Player(lVar1,0)) != null) &&
-           (lVar1 = lVar1.showRoomChangeFame) != null) {
-          if (lVar1.cityAreaID < 2) {
+        if ((((*pStatics != 0) &&
+             (lVar1 = *(int64 *)(*pStatics + 32)) != null) &&
+            (lVar1 = WorldData.Player(lVar1,0)) != null) &&
+           (lVar1 = *(int64 *)(lVar1 + 0x168)) != null) {
+          if (*(uint32 *)(lVar1 + 24) < 2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          if (this.poisonNum <= *(float *)(lVar1.chapter + 36)) {
+          if (this.poisonNum <= *(float *)(*(int64 *)(lVar1 + 16) + 36)) {
             return true;
           }
           return false;
         }
     }
 
-    // Token : 0x600128D
-    // RVA   : 0xB74520   Offset: 0xB72D20   Length: 0xC4
+    // Token : 0x60012CE
+    // RVA   : 0xC9E480   Offset: 0xC9D880   Length: 0xC4
     public string GetItemSoundName()
     {
         int iVar1;
@@ -524,7 +525,7 @@ public class ItemData
           }
           break;
         case 3:
-        switchD_180b745eb_caseD_3:
+        switchD_180c9e54b_caseD_3:
           return "OpenBook";
         case 4:
           switch(this.subType) {
@@ -542,7 +543,7 @@ public class ItemData
             return "Rock";
           case 8:
           case 9:
-            goto switchD_180b745eb_caseD_3;
+            goto switchD_180c9e54b_caseD_3;
           }
           break;
         case 5:
@@ -577,8 +578,8 @@ public class ItemData
         return 0;
     }
 
-    // Token : 0x600128E
-    // RVA   : 0xB75740   Offset: 0xB73F40   Length: 0x2A4
+    // Token : 0x60012CF
+    // RVA   : 0xC9F6A0   Offset: 0xC9EAA0   Length: 0x2A4
     public void PlayItemSound()
     {
         int iVar1;
@@ -598,16 +599,16 @@ public class ItemData
           iVar1 = this.subType;
           plVar2 = "Wine";
           if (iVar1 == 0) break;
-          goto joined_r0x000180b7597a;
+          goto joined_r0x000180c9f8da;
         case 3:
-        switchD_180b75849_caseD_3:
+        switchD_180c9f7a9_caseD_3:
           plVar4 = "OpenBook";
           break;
         case 4:
           switch(this.subType) {
           case 0:
           case 4:
-        switchD_180b758b9_caseD_0:
+        switchD_180c9f819_caseD_0:
             plVar4 = "Wood";
             break;
           case 1:
@@ -620,23 +621,23 @@ public class ItemData
             break;
           case 6:
           case 7:
-        switchD_180b758b9_caseD_6:
+        switchD_180c9f819_caseD_6:
             plVar4 = "Rock";
             break;
           case 8:
           case 9:
-            goto switchD_180b75849_caseD_3;
+            goto switchD_180c9f7a9_caseD_3;
           default:
-            goto switchD_180b75849_default;
+            goto switchD_180c9f7a9_default;
           }
           break;
         case 5:
           iVar1 = this.subType;
-          if (iVar1 == 0) goto switchD_180b758b9_caseD_0;
-          if (iVar1 == 1) goto switchD_180b758b9_caseD_6;
+          if (iVar1 == 0) goto switchD_180c9f819_caseD_0;
+          if (iVar1 == 1) goto switchD_180c9f819_caseD_6;
           if (iVar1 != 2) {
             if ((iVar1 == 3) || (iVar1 == 4)) break;
-            goto switchD_180b75849_default;
+            goto switchD_180c9f7a9_default;
           }
         case 1:
           plVar4 = "Med";
@@ -650,29 +651,29 @@ public class ItemData
             plVar4 = (int64 *)String.Concat("Horse/Horse",uVar3,0);
             break;
           }
-        joined_r0x000180b7597a:
+        joined_r0x000180c9f8da:
           plVar4 = plVar2;
           if (iVar1 != 1) {
-        switchD_180b75849_default:
+        switchD_180c9f7a9_default:
             plVar4 = plVar5;
           }
           break;
         default:
-          goto switchD_180b75849_default;
+          goto switchD_180c9f7a9_default;
         }
         uVar3 = String.Concat("Sound/SoundEffect/",plVar4,0);
         plVar4 = (int64 *)Resources.Load(uVar3,0);
-        if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181d8a228)) {
+        if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
           plVar5 = plVar4;
         }
         NGUITools.PlaySound(plVar5,0);
     }
 
-    // Token : 0x600128F
-    // RVA   : 0xB74780   Offset: 0xB72F80   Length: 0x80
+    // Token : 0x60012D0
+    // RVA   : 0xC9E6E0   Offset: 0xC9DAE0   Length: 0x80
     public string GetItemTypeDescribe(bool italic)
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d73d40 + 184);
         long lVar1;
         ulong uVar2;
         ulong uVar3;
@@ -685,8 +686,8 @@ public class ItemData
         case 2:
         case 5:
         case 6:
-          lVar1 = *(int64 *)(pPlotController + 0x4e8);
-          if (lVar1 == null) goto LAB_180b74a27;
+          lVar1 = *(int64 *)(pStatics + 0x4f0);
+          if (lVar1 == null) goto LAB_180c9e987;
           uVar4 = this.itemLv;
           if (*(uint32 *)(lVar1 + 24) <= uVar4) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -696,30 +697,30 @@ public class ItemData
                             (this.type,this.subType,0);
           uVar2 = String.Concat(uVar2,uVar3,0);
           uVar2 = GlobalData.GenerateRareLvColorText(uVar2,this.itemLv,0);
-          lVar1 = *(int64 *)(pPlotController + 0x500);
+          lVar1 = *(int64 *)(pStatics + 0x508);
           break;
         case 3:
           if ((this.bookData == null) ||
              (lVar1 = BookData.DataBase(this.bookData,0)) == null)
-          goto LAB_180b74a27;
+          goto LAB_180c9e987;
           uVar2 = KungfuSkillData.TypeDescribe(lVar1,0);
-          lVar1 = *(int64 *)(pPlotController + 0x4f8);
+          lVar1 = *(int64 *)(pStatics + 0x500);
           break;
         case 4:
-          lVar1 = *(int64 *)(pPlotController + 0x4e8);
-          if (lVar1 == null) goto LAB_180b74a27;
-          uVar2 = FUN_180002f80(lVar1,this.itemLv,DAT_181d7c9c0);
+          lVar1 = *(int64 *)(pStatics + 0x4f0);
+          if (lVar1 == null) goto LAB_180c9e987;
+          uVar2 = FUN_180002f80(lVar1,this.itemLv,DAT_181da4358);
           uVar3 = GlobalData.GetItemTypeString
                             (this.type,this.subType,0);
           uVar2 = String.Concat(uVar2,uVar3,0);
           uVar2 = GlobalData.GenerateRareLvColorText(uVar2,this.itemLv,0);
         default:
-          goto switchD_180b74807_default;
+          goto switchD_180c9e767_default;
         }
         uVar4 = this.rareLv;
         lVar5 = (int64)(int)uVar4;
         if (lVar1 == null) {
-        LAB_180b74a27:
+        LAB_180c9e987:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -730,15 +731,15 @@ public class ItemData
         uVar3 = GlobalData.GenerateRareLvColorText
                           (*(uint64 *)(*(int64 *)(lVar1 + 16) + 32 + lVar5 * 8),uVar4,0);
         uVar2 = String.Concat(uVar2,uVar3,0);
-        switchD_180b74807_default:
+        switchD_180c9e767_default:
         if (italic) {
           uVar2 = String.Format("<i>{0}</i>",uVar2,0);
         }
         return uVar2;
     }
 
-    // Token : 0x6001290
-    // RVA   : 0xB73C40   Offset: 0xB72440   Length: 0xAF
+    // Token : 0x60012D1
+    // RVA   : 0xC9DBA0   Offset: 0xC9CFA0   Length: 0xAF
     public string GetBookRareLvName()
     {
         long lVar1;
@@ -746,7 +747,7 @@ public class ItemData
         long lVar3;
         uVar2 = this.rareLv;
         lVar3 = (int64)(int)uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x4f8);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x500);
         if (lVar1 != null) {
           if (*(uint32 *)(lVar1 + 24) <= uVar2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0,uVar2);
@@ -758,15 +759,15 @@ public class ItemData
         }
     }
 
-    // Token : 0x6001291
-    // RVA   : 0xB73310   Offset: 0xB71B10   Length: 0xD
+    // Token : 0x60012D2
+    // RVA   : 0xC9D270   Offset: 0xC9C670   Length: 0xD
     public float BadFame(float rate)
     {
         return (float)this.value * rate;
     }
 
-    // Token : 0x6001292
-    // RVA   : 0xB74BC0   Offset: 0xB733C0   Length: 0x30
+    // Token : 0x60012D3
+    // RVA   : 0xC9EB20   Offset: 0xC9DF20   Length: 0x30
     public float GetShowRoomFameChange(float rate)
     {
         if (this.type == 4) {
@@ -775,8 +776,8 @@ public class ItemData
         return (float)this.value * 0.0025 * rate;
     }
 
-    // Token : 0x6001293
-    // RVA   : 0xB73AB0   Offset: 0xB722B0   Length: 0x47
+    // Token : 0x60012D4
+    // RVA   : 0xC9DA10   Offset: 0xC9CE10   Length: 0x47
     public bool Equiped()
     {
         uint uVar1;
@@ -786,7 +787,7 @@ public class ItemData
         if (uVar1 == 0) {
           uVar2 = this.equipmentData;
           if (uVar2 == 0) {
-        LAB_180b73af2:
+        LAB_180c9da52:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -798,28 +799,28 @@ public class ItemData
           if (this.horseData != null) {
             return (uint64)this.horseData.equiped;
           }
-          goto LAB_180b73af2;
+          goto LAB_180c9da52;
         }
         return uVar2 & 0xffffffffffffff00;
     }
 
-    // Token : 0x6001294
-    // RVA   : 0xB75D80   Offset: 0xB74580   Length: 0x115
+    // Token : 0x60012D5
+    // RVA   : 0xC9FCE0   Offset: 0xC9F0E0   Length: 0x115
     public ItemData SetMaterialData(int _subType, int _itemLv, int _rareLv)
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d73d40 + 184);
         long lVar1;
         ulong uVar2;
         this.subType = _subType;
         this.itemLv = _itemLv;
         this.rareLv = _rareLv;
-        lVar1 = *(int64 *)(pPlotController + 0x4e8);
+        lVar1 = *(int64 *)(pStatics + 0x4f0);
         if (lVar1 != null) {
           if (*(uint32 *)(lVar1 + 24) <= _itemLv) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           uVar2 = lVar1[_itemLv];
-          lVar1 = *(int64 *)(pPlotController + 0x530);
+          lVar1 = *(int64 *)(pStatics + 0x538);
           if (lVar1 != null) {
             if (*(uint32 *)(lVar1 + 24) <= _subType) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -834,8 +835,8 @@ public class ItemData
         }
     }
 
-    // Token : 0x6001295
-    // RVA   : 0xB74A50   Offset: 0xB73250   Length: 0x5A
+    // Token : 0x60012D6
+    // RVA   : 0xC9E9B0   Offset: 0xC9DDB0   Length: 0x5A
     public float GetMaterialExtraCraftRate()
     {
         float fVar1;
@@ -850,15 +851,15 @@ public class ItemData
         return (float)this.rareLv * fVar2 + fVar1;
     }
 
-    // Token : 0x6001296
-    // RVA   : 0xB75C70   Offset: 0xB74470   Length: 0x102
+    // Token : 0x60012D7
+    // RVA   : 0xC9FBD0   Offset: 0xC9EFD0   Length: 0x102
     public ItemData SetBookData(int _skillID, int _rareLv)
     {
         uint uVar1;
         long lVar2;
         if (this.bookData != null) {
           this.bookData.skillID = _skillID;
-          lVar2 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x4f8);
+          lVar2 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x500);
           if (lVar2 != null) {
             uVar1 = Mathf.Clamp(_rareLv,0,*(int *)(lVar2 + 24) + -1,0);
             this.rareLv = uVar1;
@@ -880,8 +881,8 @@ public class ItemData
         }
     }
 
-    // Token : 0x6001297
-    // RVA   : 0xB75EA0   Offset: 0xB746A0   Length: 0x752
+    // Token : 0x60012D8
+    // RVA   : 0xC9FE00   Offset: 0xC9F200   Length: 0x752
     public ItemData SetTreasureData(int _subType, int _itemLv, int _rareLv)
     {
         float fVar1;
@@ -898,7 +899,7 @@ public class ItemData
         uVar3 = Mathf.Clamp(_itemLv,0,5);
         this.itemLv = uVar3;
         this.subType = _subType;
-        lVar8 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x510);
+        lVar8 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x518);
         if (lVar8 != null) {
           if (*lVar8.fullIdentified <= _subType) {
             uVar9 = il2cpp_internal();
@@ -919,29 +920,29 @@ public class ItemData
           iVar5 = Mathf.Min(20,uVar4);
           uVar4 = Mathf.RoundToInt((float)iVar5 * 0.25,0);
           this.rareLv = uVar4;
-          lVar8 = il2cpp_internal(DAT_181d6f030);
-          FUN_180f58a90(lVar8,DAT_181d678f8);
+          lVar8 = il2cpp_internal(DAT_181d93cd0);
+          FUN_18132faf0(lVar8,DAT_181d8f098);
           if (lVar8 != null) {
-            FUN_181814fa0(lVar8,0,DAT_181d67a78);
-            FUN_181814fa0(lVar8,1,DAT_181d67a78);
-            FUN_181814fa0(lVar8,2,DAT_181d67a78);
-            FUN_181814fa0(lVar8,3,DAT_181d67a78);
+            FUN_18182a0b0(lVar8,0,DAT_181d8f218);
+            FUN_18182a0b0(lVar8,1,DAT_181d8f218);
+            FUN_18182a0b0(lVar8,2,DAT_181d8f218);
+            FUN_18182a0b0(lVar8,3,DAT_181d8f218);
             for (; 0 < iVar5; iVar5 = iVar5 + -1) {
               uVar4 = lVar8.treasureLv;
               uVar4 = GlobalData.RandomRange(0,uVar4,0,0);
               if (this.treasureData == null) throw; // [null/range check failed]
               lVar2 = this.treasureData.treasureLv;
-              uVar6 = FUN_1800d6750(lVar8,uVar4,DAT_181d68270);
+              uVar6 = FUN_1800d6760(lVar8,uVar4,DAT_181d8fa18);
               if (lVar2 == null) throw; // [null/range check failed]
-              iVar7 = FUN_1800d6750(lVar2,uVar6,DAT_181d68270);
-              FUN_18181e970(lVar2,uVar6,iVar7 + 1);
+              iVar7 = FUN_1800d6760(lVar2,uVar6,DAT_181d8fa18);
+              FUN_181833d40(lVar2,uVar6,iVar7 + 1);
               if (this.treasureData == null) throw; // [null/range check failed]
               lVar2 = this.treasureData.treasureLv;
-              uVar6 = FUN_1800d6750(lVar8,uVar4,DAT_181d68270);
+              uVar6 = FUN_1800d6760(lVar8,uVar4,DAT_181d8fa18);
               if (lVar2 == null) throw; // [null/range check failed]
-              iVar7 = FUN_1800d6750(lVar2,uVar6);
+              iVar7 = FUN_1800d6760(lVar2,uVar6);
               if (4 < iVar7) {
-                FUN_18180c7d0(lVar8,uVar4);
+                FUN_1817eed70(lVar8,uVar4);
               }
             }
             lVar8 = this.treasureData;
@@ -954,7 +955,7 @@ public class ItemData
               lVar8 = lVar8.identifyDifficulty;
               GlobalData.RandomRange(10,26,0);
               if (lVar8 == null) throw; // [null/range check failed]
-              FUN_181814d10(lVar8,uVar10);
+              FUN_181829d40(lVar8,uVar10);
               lVar8 = this.treasureData;
               uVar10 = (uint64)((int)uVar10 + 1);
             }
@@ -967,7 +968,7 @@ public class ItemData
               }
               fVar1 = lVar8.fullIdentified[uVar3];
               iVar5 = GlobalData.RandomRange(0,5,0);
-              FUN_181814d10(lVar8,uVar3,(float)(this.itemLv + iVar5) + fVar1,DAT_181d79758);
+              FUN_181829d40(lVar8,uVar3,(float)(this.itemLv + iVar5) + fVar1,DAT_181da10f8);
               if ((this.treasureData != null) &&
                  (lVar8 = this.treasureData.identifyDifficulty) != null) {
                 uVar3 = GlobalData.RandomRange(0,lVar8.treasureLv,0,0);
@@ -978,18 +979,18 @@ public class ItemData
                   }
                   GlobalData.RandomRange(0,5,0);
                   Mathf.Max();
-                  FUN_181814d10(lVar8,uVar3);
-                  lVar8 = il2cpp_internal(DAT_181d6f030);
-                  FUN_180f58a90(lVar8,DAT_181d678f8);
+                  FUN_181829d40(lVar8,uVar3);
+                  lVar8 = il2cpp_internal(DAT_181d93cd0);
+                  FUN_18132faf0(lVar8,DAT_181d8f098);
                   if (lVar8 != null) {
-                    FUN_181814fa0(lVar8,0,DAT_181d67a78);
-                    FUN_181814fa0(lVar8,1,DAT_181d67a78);
-                    FUN_181814fa0(lVar8,2,DAT_181d67a78);
-                    FUN_181814fa0(lVar8,3,DAT_181d67a78);
+                    FUN_18182a0b0(lVar8,0,DAT_181d8f218);
+                    FUN_18182a0b0(lVar8,1,DAT_181d8f218);
+                    FUN_18182a0b0(lVar8,2,DAT_181d8f218);
+                    FUN_18182a0b0(lVar8,3,DAT_181d8f218);
                     iVar5 = GlobalData.RandomRange(~this.rareLv,3,0);
                     uVar10 = uVar11;
-                    if (iVar5 < 1) goto LAB_180b764ed;
-                    goto LAB_180b76460;
+                    if (iVar5 < 1) goto LAB_180ca044d;
+                    goto LAB_180ca03c0;
                   }
                 }
               }
@@ -998,20 +999,20 @@ public class ItemData
         }
         throw; // [null/range check failed]
         while( true ) {
-          FUN_181814bb0(lVar2,uVar4,1);
-          FUN_181801c10(lVar8,uVar4);
+          FUN_1817f42f0(lVar2,uVar4,1);
+          FUN_1817eee00(lVar8,uVar4);
           uVar3 = (int)uVar10 + 1;
           uVar10 = (uint64)uVar3;
           if (iVar5 <= (int)uVar3) break;
-        LAB_180b76460:
+        LAB_180ca03c0:
           uVar4 = lVar8.treasureLv;
           uVar4 = GlobalData.RandomRange(0,uVar4,0,0);
-          uVar4 = FUN_1800d6750(lVar8,uVar4,DAT_181d68270);
+          uVar4 = FUN_1800d6760(lVar8,uVar4,DAT_181d8fa18);
           if ((this.treasureData == null) ||
              (lVar2 = this.treasureData.identified) == null)
           throw; // [null/range check failed]
         }
-        LAB_180b764ed:
+        LAB_180ca044d:
         lVar8 = this.treasureData;
         uVar10 = uVar11;
         if (lVar8 != null) {
@@ -1028,7 +1029,7 @@ public class ItemData
             if (*(char *)(*(int64 *)(lVar2 + 16) + 32 + uVar10) == false) {
               if ((this.treasureData == null) ||
                  (lVar2 = this.treasureData.identifyDifficulty) == null) break;
-              FUN_1800d6780(lVar2,uVar11,DAT_181d796d8);
+              FUN_1800d6790(lVar2,uVar11,DAT_181da1078);
             }
             uVar4 = Mathf.Max();
             lVar8.identifyKnowledgeNeed = uVar4;
@@ -1040,8 +1041,8 @@ public class ItemData
         }
     }
 
-    // Token : 0x6001298
-    // RVA   : 0xB75A30   Offset: 0xB74230   Length: 0x233
+    // Token : 0x60012D9
+    // RVA   : 0xC9F990   Offset: 0xC9ED90   Length: 0x233
     public void RecountRareLv()
     {
         int iVar1;
@@ -1052,16 +1053,16 @@ public class ItemData
         if (this.type == null) {
           if (this.equipmentData == null) throw; // [null/range check failed]
           lVar3 = this.equipmentData.extraAddData;
-        LAB_180b75ac3:
+        LAB_180c9fa23:
           if (lVar3 == null) throw; // [null/range check failed]
           fVar4 = (float)HeroSpeAddData.GetValue(lVar3,0);
         }
         else if (this.type == 5) {
           if (this.materialData == null) throw; // [null/range check failed]
           lVar3 = this.materialData.extraAddData;
-          goto LAB_180b75ac3;
+          goto LAB_180c9fa23;
         }
-        lVar3 = GameController.lockObj;
+        lVar3 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
         if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 56)) != null) {
           iVar1 = *(int *)(lVar3 + 24);
           while( true ) {
@@ -1072,7 +1073,7 @@ public class ItemData
             lVar3 = FUN_18046c100(0);
             if ((((lVar3 == null) || (*(int64 *)(lVar3 + 56) == 0)) ||
                 (lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 56),this.itemLv,
-                                       DAT_181d76758), lVar3 == null)) ||
+                                       DAT_181d9e108), lVar3 == null)) ||
                (lVar3 = *(int64 *)(lVar3 + 48)) == null) break;
             if (*(int *)(lVar3 + 24) == 0) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1080,7 +1081,7 @@ public class ItemData
             iVar2 = *(int *)(*(int64 *)(lVar3 + 16) + 32);
             lVar3 = FUN_18046c100(0);
             if (((lVar3 == null) || (*(int64 *)(lVar3 + 56) == 0)) ||
-               ((lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 56),iVar1,DAT_181d76758), lVar3 == null ||
+               ((lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 56),iVar1,DAT_181d9e108), lVar3 == null ||
                 (lVar3 = *(int64 *)(lVar3 + 48)) == null))) break;
             if (*(int *)(lVar3 + 24) == 0) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1093,8 +1094,8 @@ public class ItemData
         }
     }
 
-    // Token : 0x6001299
-    // RVA   : 0xB734A0   Offset: 0xB71CA0   Length: 0x4CC
+    // Token : 0x60012DA
+    // RVA   : 0xC9D400   Offset: 0xC9C800   Length: 0x4CC
     public float CountValueAndWeight()
     {
         int iVar1;
@@ -1108,7 +1109,7 @@ public class ItemData
         case 0:
           if ((this.equipmentData == null) ||
              (lVar3 = this.equipmentData.extraAddData) == null)
-          goto LAB_180b73965;
+          goto LAB_180c9d8c5;
           HeroSpeAddData.GetValue(lVar3,0);
           if (this.subType == null) {
             fVar6 = 200.0;
@@ -1116,64 +1117,64 @@ public class ItemData
           else {
             fVar6 = 100.0;
           }
-          fVar4 = (float)FUN_1801f7f00();
+          fVar4 = (float)FUN_1801f8ab0();
           fVar7 = 1.0;
           fVar5 = (float)Mathf.Max();
           lVar3 = this.equipmentData;
-          if (lVar3 == null) goto LAB_180b73965;
+          if (lVar3 == null) goto LAB_180c9d8c5;
           uVar2 = Mathf.RoundToInt(((float)lVar3.enhanceLv * 0.2 + 1.0) * fVar4 * fVar6 * fVar5 *
                                     ((float)lVar3.speEnhanceLv * 0.1 + 1.0),0);
           this.value = uVar2;
-          lVar3 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x5d0);
-          if (lVar3 == null) goto LAB_180b73965;
-          fVar4 = (float)FUN_1800d6780(lVar3,this.subType,DAT_181d796d8);
+          lVar3 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x5d8);
+          if (lVar3 == null) goto LAB_180c9d8c5;
+          fVar4 = (float)FUN_1800d6790(lVar3,this.subType,DAT_181da1078);
           iVar1 = this.itemLv;
           lVar3 = this.equipmentData;
           if ((this.subType & 0xfffffffb) == 0) {
-            if (lVar3 == null) goto LAB_180b73965;
+            if (lVar3 == null) goto LAB_180c9d8c5;
           }
           else {
-            if (lVar3 == null) goto LAB_180b73965;
+            if (lVar3 == null) goto LAB_180c9d8c5;
             fVar7 = (float)lVar3.littleType * 0.1 + 0.5;
           }
-          fVar6 = (float)FUN_1801f7f00();
+          fVar6 = (float)FUN_1801f8ab0();
           fVar6 = fVar6 * (float)(iVar1 + 1) * fVar4 * fVar7;
-          goto LAB_180b7393c;
+          goto LAB_180c9d89c;
         case 1:
           lVar3 = FUN_18046c100(0);
-          if (lVar3 == null) goto LAB_180b73965;
+          if (lVar3 == null) goto LAB_180c9d8c5;
           lVar3 = *(int64 *)(lVar3 + 0x110);
-          goto LAB_180b736ec;
+          goto LAB_180c9d64c;
         case 2:
           lVar3 = FUN_18046c100(0);
-          if (lVar3 == null) goto LAB_180b73965;
+          if (lVar3 == null) goto LAB_180c9d8c5;
           lVar3 = *(int64 *)(lVar3 + 0x118);
-        LAB_180b736ec:
+        LAB_180c9d64c:
           if ((lVar3 == null) ||
-             (lVar3 = FUN_1817cc780(lVar3,this.itemID,DAT_181d96a40)) == null) {
-        LAB_180b73965:
+             (lVar3 = FUN_1817d9e10(lVar3,this.itemID,DAT_181dbc1c0)) == null) {
+        LAB_180c9d8c5:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          if (this.medFoodData == null) goto LAB_180b73965;
+          if (this.medFoodData == null) goto LAB_180c9d8c5;
           uVar2 = Mathf.RoundToInt(((float)this.rareLv * 0.2 + 1.0) *
                                     (float)lVar3.animName *
                                     ((float)this.medFoodData.enhanceLv * 0.2 + 1.0),0)
           ;
           this.value = uVar2;
           fVar6 = (float)(int)((float)this.itemLv * 0.5 + 1.0);
-          goto LAB_180b7393c;
+          goto LAB_180c9d89c;
         case 3:
-          FUN_1801f7f00();
-          goto LAB_180b737e1;
+          FUN_1801f8ab0();
+          goto LAB_180c9d741;
         case 4:
           uVar2 = ItemData.GetTreasureValue(this,0,0);
           this.value = uVar2;
           iVar1 = this.itemLv * 2 + 2;
           break;
         case 5:
-          FUN_1801f7f00();
-        LAB_180b737e1:
+          FUN_1801f8ab0();
+        LAB_180c9d741:
           uVar2 = Mathf.RoundToInt();
           this.value = uVar2;
           iVar1 = this.itemLv + 1;
@@ -1182,12 +1183,12 @@ public class ItemData
           if (this.subType == null) {
             lVar3 = FUN_18046c100(0);
             if (((lVar3 == null) || (*(int64 *)(lVar3 + 0x120) == 0)) ||
-               (lVar3 = FUN_1817cc780(*(int64 *)(lVar3 + 0x120),this.itemID,
-                                      DAT_181d96a40), lVar3 == null)) goto LAB_180b73965;
+               (lVar3 = FUN_1817d9e10(*(int64 *)(lVar3 + 0x120),this.itemID,
+                                      DAT_181dbc1c0), lVar3 == null)) goto LAB_180c9d8c5;
             fVar6 = (float)lVar3.animName;
           }
           else {
-            fVar6 = (float)FUN_1801f7f00();
+            fVar6 = (float)FUN_1801f8ab0();
             fVar6 = fVar6 * 100.0;
           }
           uVar2 = Mathf.RoundToInt(((float)this.rareLv * 0.2 + 1.0) * fVar6,0);
@@ -1200,16 +1201,16 @@ public class ItemData
           }
           break;
         default:
-          goto switchD_180b7351d_default;
+          goto switchD_180c9d47d_default;
         }
         fVar6 = (float)iVar1;
-        LAB_180b7393c:
+        LAB_180c9d89c:
         this.weight = fVar6;
-        switchD_180b7351d_default:
+        switchD_180c9d47d_default:
     }
 
-    // Token : 0x600129A
-    // RVA   : 0xB74D30   Offset: 0xB73530   Length: 0x201
+    // Token : 0x60012DB
+    // RVA   : 0xC9EC90   Offset: 0xC9E090   Length: 0x201
     public int GetTreasureValue(bool guess)
     {
         int iVar1;
@@ -1231,7 +1232,7 @@ public class ItemData
           while (lVar2.treasureLv != null) {
             uVar4 = (uint32)uVar6;
             if (*(int *)(lVar2.treasureLv + 24) <= (int)uVar4) {
-              auVar8._0_8_ = FUN_1801f7f00();
+              auVar8._0_8_ = FUN_1801f8ab0();
               auVar8._8_8_ = extraout_XMM0_Qb;
               auVar9._4_12_ = auVar8._4_12_;
               auVar9._0_4_ = (float)auVar8._0_8_ * 100.0 * fVar10;
@@ -1249,7 +1250,7 @@ public class ItemData
               else {
                 if ((this.treasureData == null) ||
                    (lVar2 = this.treasureData.playerGuessTreasureLv) == null) break;
-                uVar3 = FUN_180002f80(lVar2,uVar6,DAT_181d51688);
+                uVar3 = FUN_180002f80(lVar2,uVar6,DAT_181d789a8);
                 fVar7 = (float)GlobalData.ListAverage(uVar3,0);
                 fVar7 = fVar7 * 0.1;
               }
@@ -1257,7 +1258,7 @@ public class ItemData
             else {
               if ((this.treasureData == null) ||
                  (lVar2 = this.treasureData.treasureLv) == null) break;
-              iVar1 = FUN_1800d6750(lVar2,uVar6,DAT_181d68270);
+              iVar1 = FUN_1800d6760(lVar2,uVar6,DAT_181d8fa18);
               fVar7 = (float)iVar1 * 0.1;
             }
             lVar2 = this.treasureData;
@@ -1269,8 +1270,8 @@ public class ItemData
         }
     }
 
-    // Token : 0x600129B
-    // RVA   : 0xB74BF0   Offset: 0xB733F0   Length: 0x139
+    // Token : 0x60012DC
+    // RVA   : 0xC9EB50   Offset: 0xC9DF50   Length: 0x139
     public int GetTreasureRealValue()
     {
         long lVar2;
@@ -1288,7 +1289,7 @@ public class ItemData
           lVar4 = 32;
           while (lVar3.treasureLv != null) {
             if (*(int *)(lVar3.treasureLv + 24) <= (int)uVar5) {
-              auVar6._0_8_ = FUN_1801f7f00();
+              auVar6._0_8_ = FUN_1801f8ab0();
               auVar6._8_8_ = extraout_XMM0_Qb;
               auVar7._4_12_ = auVar6._4_12_;
               auVar7._0_4_ = (float)auVar6._0_8_ * 100.0 * fVar8;
@@ -1309,18 +1310,18 @@ public class ItemData
         }
     }
 
-    // Token : 0x600129C
-    // RVA   : 0xB73CF0   Offset: 0xB724F0   Length: 0xFA
+    // Token : 0x60012DD
+    // RVA   : 0xC9DC50   Offset: 0xC9D050   Length: 0xFA
     public int GetContributionCost(int heroID)
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         ulong uVar2;
-        if ((GameController._instance != null) &&
-           (lVar1 = GameController._instance.worldData) != null)
-        {
+        if ((*pStatics != 0) &&
+           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
           lVar1 = WorldData.GetHero(lVar1,heroID,0);
           if (lVar1 != null) {
-            if (lVar1.hour) {
+            if (*(char *)(lVar1 + 180) != false) {
               return 0;
             }
             uVar2 = Mathf.RoundToInt((float)this.value * 0.1,0);
@@ -1329,51 +1330,51 @@ public class ItemData
         }
     }
 
-    // Token : 0x600129D
-    // RVA   : 0xB73DF0   Offset: 0xB725F0   Length: 0x17
+    // Token : 0x60012DE
+    // RVA   : 0xC9DD50   Offset: 0xC9D150   Length: 0x17
     public int GetGovernContributionCost()
     {
         Mathf.RoundToInt((float)this.value * 0.1,0);
     }
 
-    // Token : 0x600129E
-    // RVA   : 0xB74AB0   Offset: 0xB732B0   Length: 0x107
+    // Token : 0x60012DF
+    // RVA   : 0xC9EA10   Offset: 0xC9DE10   Length: 0x107
     public int GetReadBookContributionCost(int heroID)
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         ulong uVar2;
         float fVar3;
-        if ((GameController._instance != null) &&
-           (lVar1 = GameController._instance.worldData) != null)
-        {
+        if ((*pStatics != 0) &&
+           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
           lVar1 = WorldData.GetHero(lVar1,heroID,0);
           if (lVar1 != null) {
-            if (lVar1.hour) {
+            if (*(char *)(lVar1 + 180) != false) {
               return 0;
             }
-            fVar3 = (float)FUN_1801f7f00(0x40000000);
+            fVar3 = (float)FUN_1801f8ab0(0x40000000);
             uVar2 = Mathf.RoundToInt(fVar3 * 20.0,0);
             return uVar2;
           }
         }
     }
 
-    // Token : 0x600129F
-    // RVA   : 0xB73E40   Offset: 0xB72640   Length: 0x25
+    // Token : 0x60012E0
+    // RVA   : 0xC9DDA0   Offset: 0xC9D1A0   Length: 0x25
     public float GetHorseSeeRange()
     {
         return (float)this.rareLv * 0.02 + (float)this.itemLv * 0.1;
     }
 
-    // Token : 0x60012A0
-    // RVA   : 0xB73E70   Offset: 0xB72670   Length: 0x25
+    // Token : 0x60012E1
+    // RVA   : 0xC9DDD0   Offset: 0xC9D1D0   Length: 0x25
     public float GetHorseStepAddRate()
     {
         return (float)this.rareLv * 0.01 + (float)this.itemLv * 0.05;
     }
 
-    // Token : 0x60012A1
-    // RVA   : 0xB76600   Offset: 0xB74E00   Length: 0xC3
+    // Token : 0x60012E2
+    // RVA   : 0xCA0560   Offset: 0xC9F960   Length: 0xC3
     public static bool TryIdentifyOneResult(float identifyKnowledge, float identifyDifficulty)
     {
         double dVar1;
@@ -1390,8 +1391,8 @@ public class ItemData
         return dVar1 <= (double)fVar2;
     }
 
-    // Token : 0x60012A2
-    // RVA   : 0xB766D0   Offset: 0xB74ED0   Length: 0x1FD
+    // Token : 0x60012E3
+    // RVA   : 0xCA0630   Offset: 0xC9FA30   Length: 0x1FD
     public float TryIdentify(float identifyKnowledge)
     {
         bool cVar2;
@@ -1426,18 +1427,18 @@ public class ItemData
               if (*(char *)(lVar3.fullIdentified + 32 + uVar5) == false) {
                 if ((this.treasureData == null) ||
                    (lVar3 = this.treasureData.identifyDifficulty) == null) break;
-                FUN_1800d6780(lVar3,uVar6,DAT_181d796d8);
+                FUN_1800d6790(lVar3,uVar6,DAT_181da1078);
                 cVar2 = ItemData.TryIdentifyOneResult();
                 if (cVar2) {
                   bVar1 = true;
                   if ((this.treasureData == null) ||
                      (lVar3 = this.treasureData.identified) == null) break;
-                  FUN_181814bb0(lVar3,uVar6,1,DAT_181d58f90);
+                  FUN_1817f42f0(lVar3,uVar6,1,DAT_181d80720);
                 }
               }
               if ((this.treasureData == null) ||
                  (lVar3 = this.treasureData.identified) == null) break;
-              cVar2 = FUN_180132d10(lVar3,uVar6,DAT_181d58f10);
+              cVar2 = FUN_180133a50(lVar3,uVar6,DAT_181d806a0);
               if (!cVar2) {
                 if (this.treasureData == null) break;
                 this.treasureData.fullIdentified = 0;
@@ -1451,8 +1452,8 @@ public class ItemData
         }
     }
 
-    // Token : 0x60012A3
-    // RVA   : 0xB73B00   Offset: 0xB72300   Length: 0x134
+    // Token : 0x60012E4
+    // RVA   : 0xC9DA60   Offset: 0xC9CE60   Length: 0x134
     public float FullIdentify()
     {
         long lVar1;
@@ -1476,7 +1477,7 @@ public class ItemData
             if (*(char *)(lVar1.fullIdentified + 32 + lVar2) == false) {
               if ((this.treasureData == null) ||
                  (lVar1 = this.treasureData.identified) == null) break;
-              FUN_181814bb0(lVar1,uVar3,1,DAT_181d58f90);
+              FUN_1817f42f0(lVar1,uVar3,1,DAT_181d80720);
             }
             lVar1 = this.treasureData;
             uVar3 = uVar3 + 1;
@@ -1486,8 +1487,8 @@ public class ItemData
         }
     }
 
-    // Token : 0x60012A4
-    // RVA   : 0xB75220   Offset: 0xB73A20   Length: 0x3E2
+    // Token : 0x60012E5
+    // RVA   : 0xC9F180   Offset: 0xC9E580   Length: 0x3E2
     public void ManagePlayerGuessTreasureLv(float playerKnowledgeLv)
     {
         long lVar1;
@@ -1501,8 +1502,8 @@ public class ItemData
         long lVar9;
         int iVar10;
         float fVar11;
-        lVar5 = il2cpp_internal(DAT_181d6f030);
-        FUN_180f58a90(lVar5);
+        lVar5 = il2cpp_internal(DAT_181d93cd0);
+        FUN_18132faf0(lVar5);
         lVar6 = this.treasureData;
         uVar8 = 0;
         if (lVar6 != null) {
@@ -1534,37 +1535,37 @@ public class ItemData
             while( true ) {
               if (((this.treasureData == null) ||
                   (lVar6 = this.treasureData.playerGuessTreasureLv) == null) ||
-                 (lVar6 = FUN_180002f80(lVar6,uVar8,DAT_181d51688)) == null) throw; // [null/range check failed]
+                 (lVar6 = FUN_180002f80(lVar6,uVar8,DAT_181d789a8)) == null) throw; // [null/range check failed]
               if (lVar6.treasureLv <= iVar10) break;
               if (lVar5 == null) throw; // [null/range check failed]
-              FUN_180f56130(lVar5,DAT_181d67b78);
+              FUN_1812f9a10(lVar5,DAT_181d8f318);
               iVar7 = 0;
               while( true ) {
                 if (((this.treasureData == null) ||
                     (lVar6 = this.treasureData.playerGuessTreasureLv) == null) ||
-                   (lVar6 = FUN_180002f80(lVar6,uVar8,DAT_181d51688)) == null) throw; // [null/range check failed]
+                   (lVar6 = FUN_180002f80(lVar6,uVar8,DAT_181d789a8)) == null) throw; // [null/range check failed]
                 lVar1 = this.treasureData;
                 if (lVar6.treasureLv <= iVar7) break;
                 if (((lVar1 == null) || (lVar1.playerGuessTreasureLv == null)) ||
-                   (lVar6 = FUN_180002f80(lVar1.playerGuessTreasureLv,uVar8,DAT_181d51688)) == null)
+                   (lVar6 = FUN_180002f80(lVar1.playerGuessTreasureLv,uVar8,DAT_181d789a8)) == null)
                 throw; // [null/range check failed]
-                iVar2 = FUN_1800d6750(lVar6,iVar7,DAT_181d68270);
+                iVar2 = FUN_1800d6760(lVar6,iVar7,DAT_181d8fa18);
                 if ((this.treasureData == null) ||
                    (lVar6 = this.treasureData.treasureLv) == null)
                 throw; // [null/range check failed]
-                iVar3 = FUN_1800d6750(lVar6,uVar8,DAT_181d68270);
+                iVar3 = FUN_1800d6760(lVar6,uVar8,DAT_181d8fa18);
                 if (iVar2 != iVar3) {
-                  FUN_181814fa0(lVar5,iVar7,DAT_181d67a78);
+                  FUN_18182a0b0(lVar5,iVar7,DAT_181d8f218);
                 }
                 iVar7 = iVar7 + 1;
               }
               if ((lVar1 == null) || (lVar1.playerGuessTreasureLv == null)) throw; // [null/range check failed]
-              lVar6 = FUN_180002f80(lVar1.playerGuessTreasureLv,uVar8,DAT_181d51688);
+              lVar6 = FUN_180002f80(lVar1.playerGuessTreasureLv,uVar8,DAT_181d789a8);
               uVar4 = *(uint32 *)(lVar5 + 24);
               uVar4 = GlobalData.RandomRange(0,uVar4,0,0);
-              uVar4 = FUN_1800d6750(lVar5,uVar4,DAT_181d68270);
+              uVar4 = FUN_1800d6760(lVar5,uVar4,DAT_181d8fa18);
               if (lVar6 == null) throw; // [null/range check failed]
-              FUN_18180c7d0(lVar6,uVar4,DAT_181d67f70);
+              FUN_1817eed70(lVar6,uVar4,DAT_181d8f718);
             }
             lVar6 = this.treasureData;
             uVar8 = uVar8 + 1;
@@ -1574,35 +1575,35 @@ public class ItemData
         }
     }
 
-    // Token : 0x60012A5
-    // RVA   : 0xB75610   Offset: 0xB73E10   Length: 0x12F
+    // Token : 0x60012E6
+    // RVA   : 0xC9F570   Offset: 0xC9E970   Length: 0x12F
     public string Name(bool colored)
     {
         uint uVar1;
         bool cVar2;
         ulong uVar3;
-        if (PlotController._instance == 2) {
-        LAB_180b756aa:
-          cVar2 = FUN_180d6ca90(this.checkName,0);
+        if (**(int **)(DAT_181d73d40 + 184) == 2) {
+        LAB_180c9f60a:
+          cVar2 = FUN_180d755b0(this.checkName,0);
           if (!cVar2) {
             cVar2 = String.op_Inequality(this.checkName,"无",0);
             if (cVar2) {
               uVar3 = this.checkName;
-              goto LAB_180b756ef;
+              goto LAB_180c9f64f;
             }
           }
         }
         else {
-          if (*(char *)(*(int64 *)(PlotController_StaticsPtr + 184) + 4) != false) goto LAB_180b756aa;
+          if (*(char *)(*(int64 *)(DAT_181d73d40 + 184) + 4) != false) goto LAB_180c9f60a;
         }
-        cVar2 = FUN_180d6ca90(this.setName,0);
+        cVar2 = FUN_180d755b0(this.setName,0);
         if (!cVar2) {
           uVar3 = this.setName;
         }
         else {
           uVar3 = this.name;
         }
-        LAB_180b756ef:
+        LAB_180c9f64f:
         if (colored) {
           uVar1 = this.itemLv;
           uVar3 = GlobalData.GenerateRareLvColorText(uVar3,uVar1,0);
@@ -1611,8 +1612,8 @@ public class ItemData
         return uVar3;
     }
 
-    // Token : 0x60012A6
-    // RVA   : 0xB73320   Offset: 0xB71B20   Length: 0x175
+    // Token : 0x60012E7
+    // RVA   : 0xC9D280   Offset: 0xC9C680   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -1623,13 +1624,13 @@ public class ItemData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -1641,7 +1642,7 @@ public class ItemData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d53c70,plVar1);
+            FUN_180002970(0,DAT_181d78da0,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

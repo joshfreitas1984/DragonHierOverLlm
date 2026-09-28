@@ -1,13 +1,13 @@
 // ============================================================
 // Type  : OnRenderCallback
-// Token : 0x200009B
+// Token : 0x200009C
 // ============================================================
 
 public class OnRenderCallback
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000499
-    // RVA   : 0x210320   Offset: 0x20EB20   Length: 0x6A
+    // Token : 0x60004B1
+    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
@@ -25,8 +25,8 @@ public class OnRenderCallback
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x600049A
-    // RVA   : 0x31A640   Offset: 0x318E40   Length: 0x36A
+    // Token : 0x60004B2
+    // RVA   : 0x31A640   Offset: 0x319A40   Length: 0x36A
     public virtual void Invoke(Material mat)
     {
         long lVar1;
@@ -179,8 +179,8 @@ public class OnRenderCallback
         } while( true );
     }
 
-    // Token : 0x600049B
-    // RVA   : 0x216660   Offset: 0x214E60   Length: 0x21
+    // Token : 0x60004B3
+    // RVA   : 0x216660   Offset: 0x215A60   Length: 0x21
     public virtual IAsyncResult BeginInvoke(Material mat, AsyncCallback callback, object object)
     {
         ulong local_18;
@@ -190,8 +190,8 @@ public class OnRenderCallback
         il2cpp_internal(this,&local_18);
     }
 
-    // Token : 0x600049C
-    // RVA   : 0x210040   Offset: 0x20E840   Length: 0xA
+    // Token : 0x60004B4
+    // RVA   : 0x210040   Offset: 0x20F440   Length: 0xA
     public virtual void EndInvoke(IAsyncResult result)
     {
         il2cpp_internal(result,0);

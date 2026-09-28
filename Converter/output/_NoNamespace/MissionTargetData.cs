@@ -1,65 +1,65 @@
 // ============================================================
 // Type  : MissionTargetData
-// Token : 0x2000246
+// Token : 0x200024C
 // ============================================================
 
 public class MissionTargetData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40011BF
+    // Token: 0x4001262
     public string describe;
 
-    // Token: 0x40011C0
+    // Token: 0x4001263
     public int missionEventDataSaveRecord;
 
-    // Token: 0x40011C1
+    // Token: 0x4001264
     public EventData missionEventData;
 
-    // Token: 0x40011C2
+    // Token: 0x4001265
     public MissionTriggerType missionTriggerType;
 
-    // Token: 0x40011C3
+    // Token: 0x4001266
     public MissionTargetAreaTypeLimit missionTargetAreaTypeLimit;
 
-    // Token: 0x40011C4
+    // Token: 0x4001267
     public string tirggerTargetID;
 
-    // Token: 0x40011C5
+    // Token: 0x4001268
     public List<MissionNeedData> missionNeedDatas;
 
-    // Token: 0x40011C6
+    // Token: 0x4001269
     public List<ChoiceRequirementType> missionRequirementTypeList;
 
-    // Token: 0x40011C7
+    // Token: 0x400126A
     public ChoiceRequirementType missionRequirementType;
 
-    // Token: 0x40011C8
+    // Token: 0x400126B
     public float missionRequirementNum;
 
-    // Token: 0x40011C9
+    // Token: 0x400126C
     public int missionTargetFinishCallPlotID;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60012C9
-    // RVA   : 0xAF0360   Offset: 0xAEEB60   Length: 0xD4
+    // Token : 0x600130A
+    // RVA   : 0xE6A2B0   Offset: 0xE696B0   Length: 0xD4
     public void /*ctor*/()
     {
         long lVar1;
         ulong uVar2;
         this.missionTargetFinishCallPlotID = 0xffffffff;
         ZhSegment.Initialize(this,0);
-        lVar1 = il2cpp_internal(DAT_181d6ff30);
-        FUN_180f58a90(lVar1,DAT_181d6d568);
+        lVar1 = il2cpp_internal(DAT_181d94bd0);
+        FUN_18132faf0(lVar1,DAT_181d94d08);
         uVar2 = new ZhSegment(0);
         if (lVar1 != null) {
-          FUN_181827900(lVar1,uVar2,DAT_181d6d5e8);
+          FUN_18181e0a0(lVar1,uVar2,DAT_181d94d88);
           this.missionNeedDatas = lVar1;
           return;
         }
     }
 
-    // Token : 0x60012CA
-    // RVA   : 0xAF0220   Offset: 0xAEEA20   Length: 0x139
+    // Token : 0x600130B
+    // RVA   : 0xE6A170   Offset: 0xE69570   Length: 0x139
     public bool MissionNumMeetRequire()
     {
         float fVar1;
@@ -84,11 +84,11 @@ public class MissionTargetData
               return false;
             }
             if ((this.missionNeedDatas == null) ||
-               (lVar2 = FUN_180002f80(this.missionNeedDatas,uVar3,DAT_181d6d6e8)) == null)
+               (lVar2 = FUN_180002f80(this.missionNeedDatas,uVar3,DAT_181d94e88)) == null)
             break;
             fVar1 = *(float *)(lVar2 + 36);
             if ((this.missionNeedDatas == null) ||
-               (lVar2 = FUN_180002f80(this.missionNeedDatas,uVar3,DAT_181d6d6e8)) == null)
+               (lVar2 = FUN_180002f80(this.missionNeedDatas,uVar3,DAT_181d94e88)) == null)
             break;
             if (fVar1 < *(float *)(lVar2 + 40)) {
               return false;
@@ -101,8 +101,8 @@ public class MissionTargetData
         }
     }
 
-    // Token : 0x60012CB
-    // RVA   : 0xAF00A0   Offset: 0xAEE8A0   Length: 0x175
+    // Token : 0x600130C
+    // RVA   : 0xE69FF0   Offset: 0xE693F0   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -113,13 +113,13 @@ public class MissionTargetData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -131,7 +131,7 @@ public class MissionTargetData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d53c70,plVar1);
+            FUN_180002970(0,DAT_181d78da0,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

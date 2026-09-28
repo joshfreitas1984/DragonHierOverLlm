@@ -1,39 +1,40 @@
 // ============================================================
 // Type  : TextReplaceData
-// Token : 0x20002F1
+// Token : 0x20002F8
 // ============================================================
 
 public class TextReplaceData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40017A2
+    // Token: 0x400188D
     public static string[][] ForceReplaceTexts;
 
-    // Token: 0x40017A3
+    // Token: 0x400188E
     public static string[][] ReplaceTexts;
 
-    // Token: 0x40017A4
+    // Token: 0x400188F
     public static string[][] MustReplaceTexts;
 
-    // Token: 0x40017A5
+    // Token: 0x4001890
     public static string[][] SpecialReplaceTexts;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001866
-    // RVA   : 0x210B70   Offset: 0x20F370   Length: 0x7
+    // Token : 0x60018BC
+    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);
     }
 
-    // Token : 0x6001867
-    // RVA   : 0xAC1950   Offset: 0xAC0150   Length: 0x3A70
+    // Token : 0x60018BD
+    // RVA   : 0xAA1030   Offset: 0xAA0430   Length: 0x3A70
     private static void /*cctor*/()
     {
+        var pStatics = *(int64*)(DAT_181dab190 + 184);
         long lVar3;
         ulong uVar4;
-        plVar1 = (int64 *)FUN_1800d60b0(DAT_181d7b320,2);
-        plVar2 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,2);
+        plVar1 = (int64 *)FUN_1800d60b0(DAT_181da0140,2);
+        plVar2 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,2);
         if (plVar2 != (int64 *)0) {
           if (("恶名" != 0) &&
              (lVar3 = il2cpp_internal("恶名",*(uint64 *)(*plVar2 + 64))) == null) {
@@ -77,7 +78,7 @@ public class TextReplaceData
             }
             plVar1[4] = (int64)plVar2;
             il2cpp_internal(plVar1 + 4,plVar2);
-            plVar2 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,2);
+            plVar2 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,2);
             if (plVar2 != (int64 *)0) {
               if (("行凶" != 0) &&
                  (lVar3 = il2cpp_internal("行凶",*(uint64 *)(*plVar2 + 64))) == null)
@@ -122,11 +123,11 @@ public class TextReplaceData
               }
               plVar1[5] = (int64)plVar2;
               il2cpp_internal(plVar1 + 5,plVar2);
-              puVar5 = *(uint64 **)(TextReplaceData_StaticsPtr + 184);
+              puVar5 = *(uint64 **)(DAT_181dab190 + 184);
               *puVar5 = plVar1;
               il2cpp_internal(puVar5,plVar1);
-              plVar1 = (int64 *)FUN_1800d60b0(DAT_181d7b320,39);
-              plVar2 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,2);
+              plVar1 = (int64 *)FUN_1800d60b0(DAT_181da0140,39);
+              plVar2 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,2);
               if (plVar2 != (int64 *)0) {
                 if (("继续坐牢" != 0) &&
                    (lVar3 = il2cpp_internal("继续坐牢",*(uint64 *)(*plVar2 + 64)), lVar3 == null
@@ -172,7 +173,7 @@ public class TextReplaceData
                   }
                   plVar1[4] = (int64)plVar2;
                   il2cpp_internal(plVar1 + 4,plVar2);
-                  plVar2 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,2);
+                  plVar2 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,2);
                   if (plVar2 != (int64 *)0) {
                     if (("盗窃藏书" != 0) &&
                        (lVar3 = il2cpp_internal("盗窃藏书",*(uint64 *)(*plVar2 + 64)),
@@ -217,7 +218,7 @@ public class TextReplaceData
                     }
                     plVar1[5] = (int64)plVar2;
                     il2cpp_internal(plVar1 + 5,plVar2);
-                    plVar2 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,2);
+                    plVar2 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,2);
                     if (plVar2 != (int64 *)0) {
                       if (("偷窃藏经阁内藏书" != 0) &&
                          (lVar3 = il2cpp_internal("偷窃藏经阁内藏书",*(uint64 *)(*plVar2 + 64)),
@@ -262,7 +263,7 @@ public class TextReplaceData
                       }
                       plVar1[6] = (int64)plVar2;
                       il2cpp_internal(plVar1 + 6,plVar2);
-                      plVar2 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,2);
+                      plVar2 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,2);
                       if (plVar2 != (int64 *)0) {
                         if (("盗窃库存" != 0) &&
                            (lVar3 = il2cpp_internal("盗窃库存",*(uint64 *)(*plVar2 + 64)),
@@ -307,7 +308,7 @@ public class TextReplaceData
                         }
                         plVar1[7] = (int64)plVar2;
                         il2cpp_internal(plVar1 + 7,plVar2);
-                        plVar2 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,2);
+                        plVar2 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,2);
                         if (plVar2 != (int64 *)0) {
                           if (("偷窃门派仓库内物品" != 0) &&
                              (lVar3 = il2cpp_internal("偷窃门派仓库内物品",*(uint64 *)(*plVar2 + 64)),
@@ -352,7 +353,7 @@ public class TextReplaceData
                           }
                           plVar1[8] = (int64)plVar2;
                           il2cpp_internal(plVar1 + 8,plVar2);
-                          plVar2 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,2);
+                          plVar2 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,2);
                           if (plVar2 != (int64 *)0) {
                             if (("贿赂狱卒" != 0) &&
                                (lVar3 = il2cpp_internal("贿赂狱卒",*(uint64 *)(*plVar2 + 64))
@@ -397,7 +398,7 @@ public class TextReplaceData
                             }
                             plVar1[9] = (int64)plVar2;
                             il2cpp_internal(plVar1 + 9,plVar2);
-                            plVar2 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,2);
+                            plVar2 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,2);
                             if (plVar2 != (int64 *)0) {
                               if (("拦路抢劫" != 0) &&
                                  (lVar3 = il2cpp_internal("拦路抢劫",
@@ -444,7 +445,7 @@ public class TextReplaceData
                               }
                               plVar1[10] = (int64)plVar2;
                               il2cpp_internal(plVar1 + 10,plVar2);
-                              plVar2 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,2);
+                              plVar2 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,2);
                               if (plVar2 != (int64 *)0) {
                                 if (("越狱" != 0) &&
                                    (lVar3 = il2cpp_internal("越狱",
@@ -491,7 +492,7 @@ public class TextReplaceData
                                 }
                                 plVar1[11] = (int64)plVar2;
                                 il2cpp_internal(plVar1 + 11,plVar2);
-                                plVar2 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,2);
+                                plVar2 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,2);
                                 if (plVar2 != (int64 *)0) {
                                   if (("畅饮" != 0) &&
                                      (lVar3 = il2cpp_internal("畅饮",
@@ -538,7 +539,7 @@ public class TextReplaceData
                                   }
                                   plVar1[12] = (int64)plVar2;
                                   il2cpp_internal(plVar1 + 12,plVar2);
-                                  plVar2 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,2);
+                                  plVar2 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,2);
                                   if (plVar2 != (int64 *)0) {
                                     if (("小酌" != 0) &&
                                        (lVar3 = il2cpp_internal("小酌",
@@ -585,7 +586,7 @@ public class TextReplaceData
                                     }
                                     plVar1[13] = (int64)plVar2;
                                     il2cpp_internal(plVar1 + 13,plVar2);
-                                    plVar2 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,2);
+                                    plVar2 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,2);
                                     if (plVar2 != (int64 *)0) {
                                       if (("把酒言欢" != 0) &&
                                          (lVar3 = il2cpp_internal("把酒言欢",
@@ -632,7 +633,7 @@ public class TextReplaceData
                                       }
                                       plVar1[14] = (int64)plVar2;
                                       il2cpp_internal(plVar1 + 14,plVar2);
-                                      plVar2 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,2);
+                                      plVar2 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,2);
                                       if (plVar2 != (int64 *)0) {
                                         if (("美酒" != 0) &&
                                            (lVar3 = il2cpp_internal("美酒",
@@ -680,7 +681,7 @@ public class TextReplaceData
                                         }
                                         plVar1[15] = (int64)plVar2;
                                         il2cpp_internal(plVar1 + 15,plVar2);
-                                        plVar2 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,2);
+                                        plVar2 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,2);
                                         if (plVar2 != (int64 *)0) {
                                           if (("酒泉" != 0) &&
                                              (lVar3 = il2cpp_internal("酒泉",
@@ -728,7 +729,7 @@ public class TextReplaceData
                                           }
                                           plVar1[16] = (int64)plVar2;
                                           il2cpp_internal(plVar1 + 16,plVar2);
-                                          plVar2 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,2);
+                                          plVar2 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,2);
                                           if (plVar2 != (int64 *)0) {
                                             if (("拼酒" != 0) &&
                                                (lVar3 = il2cpp_internal("拼酒",
@@ -778,7 +779,7 @@ public class TextReplaceData
                                             }
                                             plVar1[17] = (int64)plVar2;
                                             il2cpp_internal(plVar1 + 17,plVar2);
-                                            plVar2 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,2);
+                                            plVar2 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,2);
                                             if (plVar2 != (int64 *)0) {
                                               if (("薄酒" != 0) &&
                                                  (lVar3 = il2cpp_internal("薄酒",
@@ -828,7 +829,7 @@ public class TextReplaceData
                                               }
                                               plVar1[18] = (int64)plVar2;
                                               il2cpp_internal(plVar1 + 18,plVar2);
-                                              plVar2 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,2);
+                                              plVar2 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,2);
                                               if (plVar2 != (int64 *)0) {
                                                 if (("痛饮" != 0) &&
                                                    (lVar3 = il2cpp_internal("痛饮",
@@ -878,7 +879,7 @@ public class TextReplaceData
                                                 }
                                                 plVar1[19] = (int64)plVar2;
                                                 il2cpp_internal(plVar1 + 19,plVar2);
-                                                plVar2 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,2);
+                                                plVar2 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,2);
                                                 if (plVar2 != (int64 *)0) {
                                                   if (("共饮" != 0) &&
                                                      (lVar3 = il2cpp_internal("共饮",
@@ -928,7 +929,7 @@ public class TextReplaceData
                                                   }
                                                   plVar1[20] = (int64)plVar2;
                                                   il2cpp_internal(plVar1 + 20,plVar2);
-                                                  plVar2 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,2);
+                                                  plVar2 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,2);
                                                   if (plVar2 != (int64 *)0) {
                                                     if (("浊酒" != 0) &&
                                                        (lVar3 = il2cpp_internal("浊酒",
@@ -978,7 +979,7 @@ public class TextReplaceData
                                                     }
                                                     plVar1[21] = (int64)plVar2;
                                                     il2cpp_internal(plVar1 + 21,plVar2);
-                                                    plVar2 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,2);
+                                                    plVar2 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,2);
                                                     if (plVar2 != (int64 *)0) {
                                                       if (("勒索财物" != 0) &&
                                                          (lVar3 = il2cpp_internal("勒索财物",
@@ -1029,7 +1030,7 @@ public class TextReplaceData
                                                       }
                                                       plVar1[22] = (int64)plVar2;
                                                       il2cpp_internal(plVar1 + 22,plVar2);
-                                                      plVar2 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,2);
+                                                      plVar2 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,2);
                                                       if (plVar2 != (int64 *)0) {
                                                         if (("勒索" != 0) &&
                                                            (lVar3 = il2cpp_internal("勒索",
@@ -1081,7 +1082,7 @@ public class TextReplaceData
                                                         plVar1[23] = (int64)plVar2;
                                                         il2cpp_internal(plVar1 + 23,plVar2);
                                                         plVar2 = (int64 *)
-                                                                 FUN_1800d60b0(DAT_181d80cc0,2);
+                                                                 FUN_1800d60b0(DAT_181da5ce0,2);
                                                         if (plVar2 != (int64 *)0) {
                                                           if (("不醉不归" != 0) &&
                                                              (lVar3 = il2cpp_internal("不醉不归",
@@ -1135,7 +1136,7 @@ public class TextReplaceData
                                                         plVar1[24] = (int64)plVar2;
                                                         il2cpp_internal(plVar1 + 24,plVar2);
                                                         plVar2 = (int64 *)
-                                                                 FUN_1800d60b0(DAT_181d80cc0,2);
+                                                                 FUN_1800d60b0(DAT_181da5ce0,2);
                                                         if (plVar2 != (int64 *)0) {
                                                           if (("对饮" != 0) &&
                                                              (lVar3 = il2cpp_internal("对饮",
@@ -1189,7 +1190,7 @@ public class TextReplaceData
                                                         plVar1[25] = (int64)plVar2;
                                                         il2cpp_internal(plVar1 + 25,plVar2);
                                                         plVar2 = (int64 *)
-                                                                 FUN_1800d60b0(DAT_181d80cc0,2);
+                                                                 FUN_1800d60b0(DAT_181da5ce0,2);
                                                         if (plVar2 != (int64 *)0) {
                                                           if (("行凶作恶" != 0) &&
                                                              (lVar3 = il2cpp_internal("行凶作恶",
@@ -1243,7 +1244,7 @@ public class TextReplaceData
                                                         plVar1[26] = (int64)plVar2;
                                                         il2cpp_internal(plVar1 + 26,plVar2);
                                                         plVar2 = (int64 *)
-                                                                 FUN_1800d60b0(DAT_181d80cc0,2);
+                                                                 FUN_1800d60b0(DAT_181da5ce0,2);
                                                         if (plVar2 != (int64 *)0) {
                                                           if (("敌对" != 0) &&
                                                              (lVar3 = il2cpp_internal("敌对",
@@ -1297,7 +1298,7 @@ public class TextReplaceData
                                                         plVar1[27] = (int64)plVar2;
                                                         il2cpp_internal(plVar1 + 27,plVar2);
                                                         plVar2 = (int64 *)
-                                                                 FUN_1800d60b0(DAT_181d80cc0,2);
+                                                                 FUN_1800d60b0(DAT_181da5ce0,2);
                                                         if (plVar2 != (int64 *)0) {
                                                           if (("羞辱" != 0) &&
                                                              (lVar3 = il2cpp_internal("羞辱",
@@ -1351,7 +1352,7 @@ public class TextReplaceData
                                                         plVar1[28] = (int64)plVar2;
                                                         il2cpp_internal(plVar1 + 28,plVar2);
                                                         plVar2 = (int64 *)
-                                                                 FUN_1800d60b0(DAT_181d80cc0,2);
+                                                                 FUN_1800d60b0(DAT_181da5ce0,2);
                                                         if (plVar2 != (int64 *)0) {
                                                           if (("抢夺对方" != 0) &&
                                                              (lVar3 = il2cpp_internal("抢夺对方",
@@ -1405,7 +1406,7 @@ public class TextReplaceData
                                                         plVar1[29] = (int64)plVar2;
                                                         il2cpp_internal(plVar1 + 29,plVar2);
                                                         plVar2 = (int64 *)
-                                                                 FUN_1800d60b0(DAT_181d80cc0,2);
+                                                                 FUN_1800d60b0(DAT_181da5ce0,2);
                                                         if (plVar2 != (int64 *)0) {
                                                           if (("抢夺银两" != 0) &&
                                                              (lVar3 = il2cpp_internal("抢夺银两",
@@ -1459,7 +1460,7 @@ public class TextReplaceData
                                                         plVar1[30] = (int64)plVar2;
                                                         il2cpp_internal(plVar1 + 30,plVar2);
                                                         plVar2 = (int64 *)
-                                                                 FUN_1800d60b0(DAT_181d80cc0,2);
+                                                                 FUN_1800d60b0(DAT_181da5ce0,2);
                                                         if (plVar2 != (int64 *)0) {
                                                           if (("抢夺财物" != 0) &&
                                                              (lVar3 = il2cpp_internal("抢夺财物",
@@ -1513,7 +1514,7 @@ public class TextReplaceData
                                                         plVar1[31] = (int64)plVar2;
                                                         il2cpp_internal(plVar1 + 31,plVar2);
                                                         plVar2 = (int64 *)
-                                                                 FUN_1800d60b0(DAT_181d80cc0,2);
+                                                                 FUN_1800d60b0(DAT_181da5ce0,2);
                                                         if (plVar2 != (int64 *)0) {
                                                           if (("偷窃对方" != 0) &&
                                                              (lVar3 = il2cpp_internal("偷窃对方",
@@ -1567,7 +1568,7 @@ public class TextReplaceData
                                                         plVar1[32] = (int64)plVar2;
                                                         il2cpp_internal(plVar1 + 32,plVar2);
                                                         plVar2 = (int64 *)
-                                                                 FUN_1800d60b0(DAT_181d80cc0,2);
+                                                                 FUN_1800d60b0(DAT_181da5ce0,2);
                                                         if (plVar2 != (int64 *)0) {
                                                           if (("偷师对方" != 0) &&
                                                              (lVar3 = il2cpp_internal("偷师对方",
@@ -1621,7 +1622,7 @@ public class TextReplaceData
                                                         plVar1[33] = (int64)plVar2;
                                                         il2cpp_internal(plVar1 + 33,plVar2);
                                                         plVar2 = (int64 *)
-                                                                 FUN_1800d60b0(DAT_181d80cc0,2);
+                                                                 FUN_1800d60b0(DAT_181da5ce0,2);
                                                         if (plVar2 != (int64 *)0) {
                                                           if (("抢夺" != 0) &&
                                                              (lVar3 = il2cpp_internal("抢夺",
@@ -1675,7 +1676,7 @@ public class TextReplaceData
                                                         plVar1[34] = (int64)plVar2;
                                                         il2cpp_internal(plVar1 + 34,plVar2);
                                                         plVar2 = (int64 *)
-                                                                 FUN_1800d60b0(DAT_181d80cc0,2);
+                                                                 FUN_1800d60b0(DAT_181da5ce0,2);
                                                         if (plVar2 != (int64 *)0) {
                                                           if (("偷窃" != 0) &&
                                                              (lVar3 = il2cpp_internal("偷窃",
@@ -1729,7 +1730,7 @@ public class TextReplaceData
                                                         plVar1[35] = (int64)plVar2;
                                                         il2cpp_internal(plVar1 + 35,plVar2);
                                                         plVar2 = (int64 *)
-                                                                 FUN_1800d60b0(DAT_181d80cc0,2);
+                                                                 FUN_1800d60b0(DAT_181da5ce0,2);
                                                         if (plVar2 != (int64 *)0) {
                                                           if (("偷师" != 0) &&
                                                              (lVar3 = il2cpp_internal("偷师",
@@ -1783,7 +1784,7 @@ public class TextReplaceData
                                                         plVar1[36] = (int64)plVar2;
                                                         il2cpp_internal(plVar1 + 36,plVar2);
                                                         plVar2 = (int64 *)
-                                                                 FUN_1800d60b0(DAT_181d80cc0,2);
+                                                                 FUN_1800d60b0(DAT_181da5ce0,2);
                                                         if (plVar2 != (int64 *)0) {
                                                           if (("袭击" != 0) &&
                                                              (lVar3 = il2cpp_internal("袭击",
@@ -1837,7 +1838,7 @@ public class TextReplaceData
                                                         plVar1[37] = (int64)plVar2;
                                                         il2cpp_internal(plVar1 + 37,plVar2);
                                                         plVar2 = (int64 *)
-                                                                 FUN_1800d60b0(DAT_181d80cc0,2);
+                                                                 FUN_1800d60b0(DAT_181da5ce0,2);
                                                         if (plVar2 != (int64 *)0) {
                                                           if (("窃取" != 0) &&
                                                              (lVar3 = il2cpp_internal("窃取",
@@ -1891,7 +1892,7 @@ public class TextReplaceData
                                                         plVar1[38] = (int64)plVar2;
                                                         il2cpp_internal(plVar1 + 38,plVar2);
                                                         plVar2 = (int64 *)
-                                                                 FUN_1800d60b0(DAT_181d80cc0,2);
+                                                                 FUN_1800d60b0(DAT_181da5ce0,2);
                                                         if (plVar2 != (int64 *)0) {
                                                           if (("被通缉" != 0) &&
                                                              (lVar3 = il2cpp_internal("被通缉",
@@ -1945,7 +1946,7 @@ public class TextReplaceData
                                                         plVar1[39] = (int64)plVar2;
                                                         il2cpp_internal(plVar1 + 39,plVar2);
                                                         plVar2 = (int64 *)
-                                                                 FUN_1800d60b0(DAT_181d80cc0,2);
+                                                                 FUN_1800d60b0(DAT_181da5ce0,2);
                                                         if (plVar2 != (int64 *)0) {
                                                           if (("监牢" != 0) &&
                                                              (lVar3 = il2cpp_internal("监牢",
@@ -1999,7 +2000,7 @@ public class TextReplaceData
                                                         plVar1[40] = (int64)plVar2;
                                                         il2cpp_internal(plVar1 + 40,plVar2);
                                                         plVar2 = (int64 *)
-                                                                 FUN_1800d60b0(DAT_181d80cc0,2);
+                                                                 FUN_1800d60b0(DAT_181da5ce0,2);
                                                         if (plVar2 != (int64 *)0) {
                                                           if (("监狱" != 0) &&
                                                              (lVar3 = il2cpp_internal("监狱",
@@ -2053,7 +2054,7 @@ public class TextReplaceData
                                                         plVar1[41] = (int64)plVar2;
                                                         il2cpp_internal(plVar1 + 41,plVar2);
                                                         plVar2 = (int64 *)
-                                                                 FUN_1800d60b0(DAT_181d80cc0,2);
+                                                                 FUN_1800d60b0(DAT_181da5ce0,2);
                                                         if (plVar2 != (int64 *)0) {
                                                           if (("狱卒" != 0) &&
                                                              (lVar3 = il2cpp_internal("狱卒",
@@ -2107,15 +2108,14 @@ public class TextReplaceData
                                                         plVar1[42] = (int64)plVar2;
                                                         il2cpp_internal(plVar1 + 42,plVar2);
                                                         puVar5 = (uint64 *)
-                                                                 (*(int64 *)
-                                                                   (TextReplaceData_StaticsPtr + 184) + 8
-                                                                 );
+                                                                 (pStatics + 8)
+                                                        ;
                                                         *puVar5 = plVar1;
                                                         il2cpp_internal(puVar5,plVar1);
                                                         plVar1 = (int64 *)
-                                                                 FUN_1800d60b0(DAT_181d7b320,1);
+                                                                 FUN_1800d60b0(DAT_181da0140,1);
                                                         plVar2 = (int64 *)
-                                                                 FUN_1800d60b0(DAT_181d80cc0,2);
+                                                                 FUN_1800d60b0(DAT_181da5ce0,2);
                                                         if (plVar2 != (int64 *)0) {
                                                           if (("动词" != 0) &&
                                                              (lVar3 = il2cpp_internal("动词",
@@ -2169,15 +2169,14 @@ public class TextReplaceData
                                                         plVar1[4] = (int64)plVar2;
                                                         il2cpp_internal(plVar1 + 4,plVar2);
                                                         puVar5 = (uint64 *)
-                                                                 (*(int64 *)
-                                                                   (TextReplaceData_StaticsPtr + 184) +
+                                                                 (pStatics +
                                                                  16);
                                                         *puVar5 = plVar1;
                                                         il2cpp_internal(puVar5,plVar1);
                                                         plVar1 = (int64 *)
-                                                                 FUN_1800d60b0(DAT_181d7b320,2);
+                                                                 FUN_1800d60b0(DAT_181da0140,2);
                                                         plVar2 = (int64 *)
-                                                                 FUN_1800d60b0(DAT_181d80cc0,2);
+                                                                 FUN_1800d60b0(DAT_181da5ce0,2);
                                                         if (plVar2 != (int64 *)0) {
                                                           if (("\"" != 0) &&
                                                              (lVar3 = il2cpp_internal("\"",
@@ -2231,7 +2230,7 @@ public class TextReplaceData
                                                         plVar1[4] = (int64)plVar2;
                                                         il2cpp_internal(plVar1 + 4,plVar2);
                                                         plVar2 = (int64 *)
-                                                                 FUN_1800d60b0(DAT_181d80cc0,2);
+                                                                 FUN_1800d60b0(DAT_181da5ce0,2);
                                                         if (plVar2 != (int64 *)0) {
                                                           if (("#英文双引号#" != 0) &&
                                                              (lVar3 = il2cpp_internal("#英文双引号#",
@@ -2281,8 +2280,7 @@ public class TextReplaceData
                                                           plVar1[5] = (int64)plVar2;
                                                           il2cpp_internal(plVar1 + 5,plVar2);
                                                           puVar5 = (uint64 *)
-                                                                   (*(int64 *)
-                                                                     (TextReplaceData_StaticsPtr + 184) +
+                                                                   (pStatics +
                                                                    24);
                                                           *puVar5 = plVar1;
                                                           il2cpp_internal(puVar5,plVar1);

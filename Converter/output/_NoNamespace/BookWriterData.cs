@@ -1,38 +1,38 @@
 // ============================================================
 // Type  : BookWriterData
-// Token : 0x2000208
+// Token : 0x200020E
 // ============================================================
 
 public class BookWriterData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000E4E
+    // Token: 0x4000EDE
     public int lv;
 
-    // Token: 0x4000E4F
+    // Token: 0x4000EDF
     public BookWriterType bookWriterType;
 
-    // Token: 0x4000E50
+    // Token: 0x4000EE0
     public int bookWriterHeroID;
 
-    // Token: 0x4000E51
+    // Token: 0x4000EE1
     public ItemData targetBookData;
 
-    // Token: 0x4000E52
+    // Token: 0x4000EE2
     public ItemData combineBookData;
 
-    // Token: 0x4000E53
+    // Token: 0x4000EE3
     public KungfuSkillLvData targetSkillData;
 
-    // Token: 0x4000E54
+    // Token: 0x4000EE4
     public bool workStarted;
 
-    // Token: 0x4000E55
+    // Token: 0x4000EE5
     public float workPercent;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000FBF
-    // RVA   : 0xCDFAE0   Offset: 0xCDE2E0   Length: 0x63
+    // Token : 0x6000FF7
+    // RVA   : 0xC85A40   Offset: 0xC84E40   Length: 0x63
     public void Reset()
     {
         long lVar1;
@@ -51,21 +51,21 @@ public class BookWriterData
         this.workPercent = 0;
     }
 
-    // Token : 0x6000FC0
-    // RVA   : 0xCDF020   Offset: 0xCDD820   Length: 0xBE
+    // Token : 0x6000FF8
+    // RVA   : 0xC84F80   Offset: 0xC84380   Length: 0xBE
     public HeroData GetBookWriterHero()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
-        if ((GameController._instance != null) &&
-           (lVar1 = GameController._instance.worldData) != null)
-        {
+        if ((*pStatics != 0) &&
+           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
           WorldData.GetHero(lVar1,this.bookWriterHeroID,0);
           return;
         }
     }
 
-    // Token : 0x6000FC1
-    // RVA   : 0xCDF760   Offset: 0xCDDF60   Length: 0x144
+    // Token : 0x6000FF9
+    // RVA   : 0xC856C0   Offset: 0xC84AC0   Length: 0x144
     public ItemData GetWorkResult()
     {
         int iVar1;
@@ -105,10 +105,12 @@ public class BookWriterData
         }
     }
 
-    // Token : 0x6000FC2
-    // RVA   : 0xCDEFC0   Offset: 0xCDD7C0   Length: 0x26
+    // Token : 0x6000FFA
+    // RVA   : 0xC84F20   Offset: 0xC84320   Length: 0x26
     public bool BookSelectFinished()
     {
+        bool FUN_180c84f20(int64 this)
+        {
         int iVar1;
         iVar1 = this.bookWriterType;
         if ((iVar1 != 0) && (iVar1 != 1)) {
@@ -120,13 +122,15 @@ public class BookWriterData
         return this.targetBookData != null;
     }
 
-    // Token : 0x6000FC3
-    // RVA   : 0xCDEFF0   Offset: 0xCDD7F0   Length: 0x2F
+    // Token : 0x6000FFB
+    // RVA   : 0xC84F50   Offset: 0xC84350   Length: 0x2F
     public bool CanStartWork()
     {
+        uint8 FUN_180c84f50(int64 this)
+        {
         int iVar1;
-        long lVar2;
-        byte uVar3;
+        int64 lVar2;
+        uint8 uVar3;
         iVar1 = this.bookWriterType;
         if ((iVar1 == 0) || (iVar1 == 1)) {
           lVar2 = this.targetBookData;
@@ -144,27 +148,27 @@ public class BookWriterData
         return false;
     }
 
-    // Token : 0x6000FC4
-    // RVA   : 0xCDF9F0   Offset: 0xCDE1F0   Length: 0xE8
+    // Token : 0x6000FFC
+    // RVA   : 0xC85950   Offset: 0xC84D50   Length: 0xE8
     public bool HaveMoney()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         int iVar2;
         long lVar3;
-        if ((GameController._instance != null) &&
-           (lVar3 = GameController._instance.worldData) != null)
-        {
+        if ((*pStatics != 0) &&
+           (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
           lVar3 = WorldData.Player(lVar3,0);
-          if ((lVar3 != null) && (lVar3.speBookStorageSpeAdd != null)) {
-            iVar1 = *(int *)(lVar3.speBookStorageSpeAdd + 24);
+          if ((lVar3 != null) && (*(int64 *)(lVar3 + 0x220) != 0)) {
+            iVar1 = *(int *)(*(int64 *)(lVar3 + 0x220) + 24);
             iVar2 = BookWriterData.GetMoneyCost(this,0);
             return iVar2 <= iVar1;
           }
         }
     }
 
-    // Token : 0x6000FC5
-    // RVA   : 0xCDF3A0   Offset: 0xCDDBA0   Length: 0x121
+    // Token : 0x6000FFD
+    // RVA   : 0xC85300   Offset: 0xC84700   Length: 0x121
     public int GetMoneyCost()
     {
         int iVar1;
@@ -175,13 +179,13 @@ public class BookWriterData
         iVar3 = 0;
         if (iVar1 == 0) {
           lVar2 = this.targetBookData;
-          if (lVar2 == null) goto LAB_180cdf4bc;
+          if (lVar2 == null) goto LAB_180c8541c;
           iVar3 = (lVar2.itemLv + 1 + lVar2.rareLv) * 500;
         }
         else if (iVar1 == 1) {
           lVar2 = this.targetBookData;
-          if (lVar2 == null) goto LAB_180cdf4bc;
-          fVar4 = (float)FUN_1801f7f00(0x40000000);
+          if (lVar2 == null) goto LAB_180c8541c;
+          fVar4 = (float)FUN_1801f8ab0(0x40000000);
           iVar3 = Mathf.RoundToInt((1.0 - (float)lVar2.rareLv * 0.05) *
                                     (float)((int)fVar4 * 500),0);
         }
@@ -189,23 +193,23 @@ public class BookWriterData
           if (this.targetSkillData != null) {
             lVar2 = KungfuSkillLvData.DataBase(this.targetSkillData,0);
             if (lVar2 != null) {
-              fVar4 = (float)FUN_1801f7f00(0x40000000);
+              fVar4 = (float)FUN_1801f8ab0(0x40000000);
               iVar3 = (int)fVar4 * 500;
-              goto LAB_180cdf480;
+              goto LAB_180c853e0;
             }
           }
-        LAB_180cdf4bc:
+        LAB_180c8541c:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        LAB_180cdf480:
+        LAB_180c853e0:
         BookWriterData.GetSkillChangeRate(this,0);
         fVar4 = (float)Mathf.Min(0x3fa00000);
         Mathf.RoundToInt((float)iVar3 / fVar4,0);
     }
 
-    // Token : 0x6000FC6
-    // RVA   : 0xCDF730   Offset: 0xCDDF30   Length: 0x25
+    // Token : 0x6000FFE
+    // RVA   : 0xC85690   Offset: 0xC84A90   Length: 0x25
     public int GetTotalTimeCost()
     {
         float fVar1;
@@ -213,8 +217,8 @@ public class BookWriterData
         Mathf.CeilToInt(1.0 / fVar1,0);
     }
 
-    // Token : 0x6000FC7
-    // RVA   : 0xCDF6E0   Offset: 0xCDDEE0   Length: 0x43
+    // Token : 0x6000FFF
+    // RVA   : 0xC85640   Offset: 0xC84A40   Length: 0x43
     public int GetTargetSkillType()
     {
         long lVar1;
@@ -236,8 +240,8 @@ public class BookWriterData
         }
     }
 
-    // Token : 0x6000FC8
-    // RVA   : 0xCDF4D0   Offset: 0xCDDCD0   Length: 0x209
+    // Token : 0x6001000
+    // RVA   : 0xC85430   Offset: 0xC84830   Length: 0x209
     public float GetSkillChangeRate()
     {
         int iVar1;
@@ -252,7 +256,7 @@ public class BookWriterData
         }
         else {
           lVar3 = BookWriterData.GetBookWriterHero(this,0);
-          if ((lVar3 == null) || (lVar3 = *(int64 *)(lVar3 + 0x168)) == null) goto LAB_180cdf6d4;
+          if ((lVar3 == null) || (lVar3 = *(int64 *)(lVar3 + 0x168)) == null) goto LAB_180c85634;
           if (*(uint32 *)(lVar3 + 24) < 3) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -267,21 +271,21 @@ public class BookWriterData
         }
         if (this.bookWriterHeroID != -1) {
           lVar3 = BookWriterData.GetBookWriterHero(this,0);
-          if (lVar3 == null) goto LAB_180cdf6d4;
+          if (lVar3 == null) goto LAB_180c85634;
           lVar3 = *(int64 *)(lVar3 + 0x150);
           if (this.targetBookData == null) {
-            if (this.targetSkillData == null) goto LAB_180cdf6d4;
+            if (this.targetSkillData == null) goto LAB_180c85634;
             uVar2 = KungfuSkillLvData.Type(this.targetSkillData,0);
           }
           else {
             lVar4 = this.targetBookData.bookData;
-            if (lVar4 == null) goto LAB_180cdf6d4;
+            if (lVar4 == null) goto LAB_180c85634;
             lVar4 = BookData.DataBase(lVar4,0);
-            if (lVar4 == null) goto LAB_180cdf6d4;
+            if (lVar4 == null) goto LAB_180c85634;
             uVar2 = *(uint32 *)(lVar4 + 48);
           }
           if (lVar3 == null) {
-        LAB_180cdf6d4:
+        LAB_180c85634:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -300,8 +304,8 @@ public class BookWriterData
         Mathf.Max();
     }
 
-    // Token : 0x6000FC9
-    // RVA   : 0xCDF0E0   Offset: 0xCDD8E0   Length: 0x123
+    // Token : 0x6001001
+    // RVA   : 0xC85040   Offset: 0xC84440   Length: 0x123
     public float GetEachDayWorkPercent()
     {
         int iVar1;
@@ -314,13 +318,13 @@ public class BookWriterData
         fVar5 = 0.0;
         if (iVar1 == 0) {
           lVar2 = this.targetBookData;
-          if (lVar2 == null) goto LAB_180cdf1fe;
+          if (lVar2 == null) goto LAB_180c8515e;
           fVar5 = (float)(lVar2.itemLv + 1 + lVar2.rareLv);
           fVar5 = 1.0 / (fVar5 + fVar5);
         }
         else if (iVar1 == 1) {
           lVar2 = this.targetBookData;
-          if (lVar2 == null) goto LAB_180cdf1fe;
+          if (lVar2 == null) goto LAB_180c8515e;
           fVar5 = 1.0 / ((1.0 - (float)lVar2.rareLv * 0.1) *
                         (float)(lVar2.itemLv + 1) * 5.0);
         }
@@ -330,14 +334,14 @@ public class BookWriterData
             if ((lVar2 != null) && (this.targetSkillData != null)) {
               fVar5 = 1.0 / ((1.0 - (float)this.targetSkillData.lv * 0.05) *
                             (float)(*(int *)(lVar2 + 52) + 1) * 10.0);
-              goto LAB_180cdf1e5;
+              goto LAB_180c85145;
             }
           }
-        LAB_180cdf1fe:
+        LAB_180c8515e:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        LAB_180cdf1e5:
+        LAB_180c85145:
         auVar3._0_8_ = BookWriterData.GetSkillChangeRate(this,0);
         auVar3._8_8_ = extraout_XMM0_Qb;
         auVar4._4_12_ = auVar3._4_12_;
@@ -345,8 +349,8 @@ public class BookWriterData
         return auVar4._0_8_;
     }
 
-    // Token : 0x6000FCA
-    // RVA   : 0xCDF8B0   Offset: 0xCDE0B0   Length: 0x132
+    // Token : 0x6001002
+    // RVA   : 0xC85810   Offset: 0xC84C10   Length: 0x132
     public bool HaveEnoughSkill()
     {
         float fVar1;
@@ -358,7 +362,7 @@ public class BookWriterData
           return true;
         }
         lVar5 = BookWriterData.GetBookWriterHero(this,0);
-        if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 0x168)) == null) goto LAB_180cdf9dd;
+        if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 0x168)) == null) goto LAB_180c8593d;
         if (*(uint32 *)(lVar5 + 24) < 3) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
@@ -366,21 +370,21 @@ public class BookWriterData
         iVar3 = BookWriterData.GetMinSkillLv(this,0);
         if ((float)iVar3 <= fVar1) {
           lVar5 = BookWriterData.GetBookWriterHero(this,0);
-          if (lVar5 == null) goto LAB_180cdf9dd;
+          if (lVar5 == null) goto LAB_180c8593d;
           lVar5 = *(int64 *)(lVar5 + 0x150);
           if (this.targetBookData == null) {
-            if (this.targetSkillData == null) goto LAB_180cdf9dd;
+            if (this.targetSkillData == null) goto LAB_180c8593d;
             uVar4 = KungfuSkillLvData.Type(this.targetSkillData,0);
           }
           else {
             lVar6 = this.targetBookData.bookData;
-            if (lVar6 == null) goto LAB_180cdf9dd;
+            if (lVar6 == null) goto LAB_180c8593d;
             lVar6 = BookData.DataBase(lVar6,0);
-            if (lVar6 == null) goto LAB_180cdf9dd;
+            if (lVar6 == null) goto LAB_180c8593d;
             uVar4 = *(uint32 *)(lVar6 + 48);
           }
           if (lVar5 == null) {
-        LAB_180cdf9dd:
+        LAB_180c8593d:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -397,10 +401,11 @@ public class BookWriterData
         return bVar2;
     }
 
-    // Token : 0x6000FCB
-    // RVA   : 0xCDF210   Offset: 0xCDDA10   Length: 0x181
+    // Token : 0x6001003
+    // RVA   : 0xC85170   Offset: 0xC84570   Length: 0x181
     public int GetMinSkillLv()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         bool cVar2;
         long lVar3;
@@ -424,9 +429,8 @@ public class BookWriterData
           if (lVar3 == null) throw; // [null/range check failed]
           iVar4 = (*(int *)(lVar3 + 52) + 1) * 15;
         }
-        if ((GameController._instance != null) &&
-           (lVar3 = GameController._instance.worldData) != null)
-        {
+        if ((*pStatics != 0) &&
+           (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
           lVar3 = WorldData.Player(lVar3,0);
           if (lVar3 != null) {
             cVar2 = HeroData.HaveForceFunction(lVar3,9);
@@ -442,8 +446,8 @@ public class BookWriterData
         }
     }
 
-    // Token : 0x6000FCC
-    // RVA   : 0xCDFB50   Offset: 0xCDE350   Length: 0xE
+    // Token : 0x6001004
+    // RVA   : 0xC85AB0   Offset: 0xC84EB0   Length: 0xE
     public void /*ctor*/()
     {
         this.bookWriterHeroID = 0xffffffff;

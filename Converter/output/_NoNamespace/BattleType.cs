@@ -1,21 +1,21 @@
 // ============================================================
 // Type  : BattleType
-// Token : 0x200014F
+// Token : 0x2000153
 // ============================================================
 
 public class BattleType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000865
+    // Token: 0x400088C
     public int value__;
 
-    // Token: 0x4000866
+    // Token: 0x400088D
     public const BattleType StudyFight;
 
-    // Token: 0x4000867
+    // Token: 0x400088E
     public const BattleType HardFight;
 
-    // Token: 0x4000868
+    // Token: 0x400088F
     public const BattleType DeathFight;
 
 }

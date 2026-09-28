@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : ExampleDragDropItem
-// Token : 0x2000017
+// Token : 0x2000018
 // ============================================================
 
 public class ExampleDragDropItem
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400006F
+    // Token: 0x400008B
     public GameObject prefab;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000053
-    // RVA   : 0x938AF0   Offset: 0x9372F0   Length: 0x337
+    // Token : 0x600006B
+    // RVA   : 0x9485B0   Offset: 0x9479B0   Length: 0x337
     protected override void OnDragDropRelease(GameObject surface)
     {
-        var pUICamera = *(int64*)(UICamera_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181daf678 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
@@ -31,14 +31,14 @@ public class ExampleDragDropItem
         uint8 local_28 [32];
         cVar1 = Object.op_Inequality(surface,0,0);
         if (!cVar1) {
-        LAB_180938df6:
+        LAB_1809488b6:
           UIDragDropItem.OnDragDropRelease(this,surface,0);
           return;
         }
         if (surface != null) {
-          lVar2 = GameObject.GetComponent(surface,DAT_181d9f548);
+          lVar2 = GameObject.GetComponent(surface,DAT_181dc8370);
           cVar1 = Object.op_Inequality(lVar2,0,0);
-          if (!cVar1) goto LAB_180938df6;
+          if (!cVar1) goto LAB_1809488b6;
           if (lVar2 != null) {
             uVar3 = Component.get_gameObject(lVar2,0);
             uVar9 = this.prefab;
@@ -53,13 +53,13 @@ public class ExampleDragDropItem
                 Transform.set_localScale(lVar5,&local_48,0);
                 lVar4 = GameObject.get_transform(lVar4,0);
                 if (lVar4 != null) {
-                  local_48 = UICamera.lastWorldPosition;
+                  local_48 = *(uint64 *)(pStatics + 100);
                   uStack_40 = CONCAT44(uStack_40._4_4_,
-                                       *(uint32 *)(pUICamera + 108));
+                                       *(uint32 *)(pStatics + 108));
                   Transform.set_position(lVar4,&local_48,0);
                   if (*(char *)(lVar2 + 24) != false) {
                     puVar7 = (uint64 *)
-                             FUN_18045e080(&local_38,pUICamera + 136,0);
+                             FUN_18045e080(&local_38,pStatics + 136,0);
                     local_48 = *puVar7;
                     uStack_40 = CONCAT44(uStack_40._4_4_,*(uint32 *)(puVar7 + 1));
                     puVar7 = (uint64 *)Quaternion.LookRotation(&local_38,&local_48,0);
@@ -89,8 +89,8 @@ public class ExampleDragDropItem
         }
     }
 
-    // Token : 0x6000054
-    // RVA   : 0x938E30   Offset: 0x937630   Length: 0x52
+    // Token : 0x600006C
+    // RVA   : 0x9488F0   Offset: 0x947CF0   Length: 0x52
     public void /*ctor*/()
     {
         UIDragDropItem.ctor(this,0);

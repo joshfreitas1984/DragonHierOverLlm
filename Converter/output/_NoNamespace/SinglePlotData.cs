@@ -1,53 +1,53 @@
 // ============================================================
 // Type  : SinglePlotData
-// Token : 0x2000314
+// Token : 0x200031B
 // ============================================================
 
 public class SinglePlotData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400189B
+    // Token: 0x400198C
     public string plotText;
 
-    // Token: 0x400189C
+    // Token: 0x400198D
     public HeroFaceHightLightType heroFaceHightLightType;
 
-    // Token: 0x400189D
+    // Token: 0x400198E
     public PlotTargetHeroType plotSource;
 
-    // Token: 0x400189E
+    // Token: 0x400198F
     public string sourceName;
 
-    // Token: 0x400189F
+    // Token: 0x4001990
     public PlotTargetHeroType plotTarget;
 
-    // Token: 0x40018A0
+    // Token: 0x4001991
     public string targetName;
 
-    // Token: 0x40018A1
+    // Token: 0x4001992
     public List<SinglePlotChoiceData> choices;
 
-    // Token: 0x40018A2
+    // Token: 0x4001993
     public string clickCallFuc;
 
-    // Token: 0x40018A3
+    // Token: 0x4001994
     public bool noAutoJump;
 
-    // Token: 0x40018A4
+    // Token: 0x4001995
     public string backPic;
 
-    // Token: 0x40018A5
+    // Token: 0x4001996
     public string backBgm;
 
-    // Token: 0x40018A6
+    // Token: 0x4001997
     public string soundEffect;
 
-    // Token: 0x40018A7
+    // Token: 0x4001998
     public bool plotShock;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001959
-    // RVA   : 0x970480   Offset: 0x96EC80   Length: 0xF8
+    // Token : 0x60019B8
+    // RVA   : 0x982F90   Offset: 0x982390   Length: 0xF8
     public void SetChoiceDataTexts(List<string> choiceDataTexts)
     {
         long lVar1;
@@ -68,14 +68,14 @@ public class SinglePlotData
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            FUN_181827900(lVar1,uVar3);
+            FUN_18181e0a0(lVar1,uVar3);
             lVar5 = lVar5 + 8;
           }
         }
     }
 
-    // Token : 0x600195A
-    // RVA   : 0x970580   Offset: 0x96ED80   Length: 0x84
+    // Token : 0x60019B9
+    // RVA   : 0x983090   Offset: 0x982490   Length: 0x84
     public void /*ctor*/()
     {
         void SinglePlotData.ctor
@@ -87,8 +87,8 @@ public class SinglePlotData
         uint64 uVar1;
         this.plotSource = 1;
         this.plotTarget = 1;
-        uVar1 = il2cpp_internal(DAT_181d72230);
-        FUN_180f58a90(uVar1,DAT_181d797d8);
+        uVar1 = il2cpp_internal(DAT_181d96f50);
+        FUN_18132faf0(uVar1,DAT_181da1178);
         this.choices = uVar1;
         ZhSegment.Initialize(this,0);
         this.plotText = param_2;
@@ -106,8 +106,8 @@ public class SinglePlotData
         this.plotShock = param_14;
     }
 
-    // Token : 0x600195B
-    // RVA   : 0x970960   Offset: 0x96F160   Length: 0xD4
+    // Token : 0x60019BA
+    // RVA   : 0x983470   Offset: 0x982870   Length: 0xD4
     public void /*ctor*/(string targetPlotText, List<string> choiceDataTexts)
     {
         void SinglePlotData.ctor
@@ -119,8 +119,8 @@ public class SinglePlotData
         uint64 uVar1;
         this.plotSource = 1;
         this.plotTarget = 1;
-        uVar1 = il2cpp_internal(DAT_181d72230);
-        FUN_180f58a90(uVar1,DAT_181d797d8);
+        uVar1 = il2cpp_internal(DAT_181d96f50);
+        FUN_18132faf0(uVar1,DAT_181da1178);
         this.choices = uVar1;
         ZhSegment.Initialize(this,0);
         this.plotText = targetPlotText;
@@ -138,8 +138,8 @@ public class SinglePlotData
         this.plotShock = param_14;
     }
 
-    // Token : 0x600195C
-    // RVA   : 0x970770   Offset: 0x96EF70   Length: 0xD6
+    // Token : 0x60019BB
+    // RVA   : 0x983280   Offset: 0x982680   Length: 0xD6
     public void /*ctor*/(string targetPlotText, List<string> choiceDataTexts, HeroFaceHightLightType hightLightType)
     {
         void SinglePlotData.ctor
@@ -151,8 +151,8 @@ public class SinglePlotData
         uint64 uVar1;
         this.plotSource = 1;
         this.plotTarget = 1;
-        uVar1 = il2cpp_internal(DAT_181d72230);
-        FUN_180f58a90(uVar1,DAT_181d797d8);
+        uVar1 = il2cpp_internal(DAT_181d96f50);
+        FUN_18132faf0(uVar1,DAT_181da1178);
         this.choices = uVar1;
         ZhSegment.Initialize(this,0);
         this.plotText = targetPlotText;
@@ -170,8 +170,8 @@ public class SinglePlotData
         this.plotShock = param_14;
     }
 
-    // Token : 0x600195D
-    // RVA   : 0x970A40   Offset: 0x96F240   Length: 0xDF
+    // Token : 0x60019BC
+    // RVA   : 0x983550   Offset: 0x982950   Length: 0xDF
     public void /*ctor*/(string targetPlotText, List<string> choiceDataTexts, PlotTargetHeroType targetHeroType)
     {
         void SinglePlotData.ctor
@@ -183,8 +183,8 @@ public class SinglePlotData
         uint64 uVar1;
         this.plotSource = 1;
         this.plotTarget = 1;
-        uVar1 = il2cpp_internal(DAT_181d72230);
-        FUN_180f58a90(uVar1,DAT_181d797d8);
+        uVar1 = il2cpp_internal(DAT_181d96f50);
+        FUN_18132faf0(uVar1,DAT_181da1178);
         this.choices = uVar1;
         ZhSegment.Initialize(this,0);
         this.plotText = targetPlotText;
@@ -202,8 +202,8 @@ public class SinglePlotData
         this.plotShock = param_14;
     }
 
-    // Token : 0x600195E
-    // RVA   : 0x970B20   Offset: 0x96F320   Length: 0xDE
+    // Token : 0x60019BD
+    // RVA   : 0x983630   Offset: 0x982A30   Length: 0xDE
     public void /*ctor*/(string targetPlotText, List<string> choiceDataTexts, PlotTargetHeroType targetHeroType, string targetHeroName)
     {
         void SinglePlotData.ctor
@@ -215,8 +215,8 @@ public class SinglePlotData
         uint64 uVar1;
         this.plotSource = 1;
         this.plotTarget = 1;
-        uVar1 = il2cpp_internal(DAT_181d72230);
-        FUN_180f58a90(uVar1,DAT_181d797d8);
+        uVar1 = il2cpp_internal(DAT_181d96f50);
+        FUN_18132faf0(uVar1,DAT_181da1178);
         this.choices = uVar1;
         ZhSegment.Initialize(this,0);
         this.plotText = targetPlotText;
@@ -234,8 +234,8 @@ public class SinglePlotData
         this.plotShock = param_14;
     }
 
-    // Token : 0x600195F
-    // RVA   : 0x970850   Offset: 0x96F050   Length: 0x10E
+    // Token : 0x60019BE
+    // RVA   : 0x983360   Offset: 0x982760   Length: 0x10E
     public void /*ctor*/(string targetPlotText, List<string> choiceDataTexts, PlotTargetHeroType targetHeroType, string targetHeroName, PlotTargetHeroType sourceHeroType, string sourceHeroName, HeroFaceHightLightType hightLightType, string _soundEffect)
     {
         void SinglePlotData.ctor
@@ -247,8 +247,8 @@ public class SinglePlotData
         uint64 uVar1;
         this.plotSource = 1;
         this.plotTarget = 1;
-        uVar1 = il2cpp_internal(DAT_181d72230);
-        FUN_180f58a90(uVar1,DAT_181d797d8);
+        uVar1 = il2cpp_internal(DAT_181d96f50);
+        FUN_18132faf0(uVar1,DAT_181da1178);
         this.choices = uVar1;
         ZhSegment.Initialize(this,0);
         this.plotText = targetPlotText;
@@ -266,8 +266,8 @@ public class SinglePlotData
         this.plotShock = param_14;
     }
 
-    // Token : 0x6001960
-    // RVA   : 0x970610   Offset: 0x96EE10   Length: 0x15E
+    // Token : 0x60019BF
+    // RVA   : 0x983120   Offset: 0x982520   Length: 0x15E
     public void /*ctor*/(string targetPlotText, List<string> choiceDataTexts, PlotTargetHeroType targetHeroType, string targetHeroName, PlotTargetHeroType sourceHeroType, string sourceHeroName, HeroFaceHightLightType hightLightType, string _clickCallFuc, bool _noAutoJump, string _backPic, string _backBgm, string _soundEffect, bool _plotShock)
     {
         void SinglePlotData.ctor
@@ -279,8 +279,8 @@ public class SinglePlotData
         uint64 uVar1;
         this.plotSource = 1;
         this.plotTarget = 1;
-        uVar1 = il2cpp_internal(DAT_181d72230);
-        FUN_180f58a90(uVar1,DAT_181d797d8);
+        uVar1 = il2cpp_internal(DAT_181d96f50);
+        FUN_18132faf0(uVar1,DAT_181da1178);
         this.choices = uVar1;
         ZhSegment.Initialize(this,0);
         this.plotText = targetPlotText;
@@ -298,8 +298,8 @@ public class SinglePlotData
         this.plotShock = _plotShock;
     }
 
-    // Token : 0x6001961
-    // RVA   : 0x970300   Offset: 0x96EB00   Length: 0x175
+    // Token : 0x60019C0
+    // RVA   : 0x982E10   Offset: 0x982210   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -310,13 +310,13 @@ public class SinglePlotData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -328,7 +328,7 @@ public class SinglePlotData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d53c70,plVar1);
+            FUN_180002970(0,DAT_181d78da0,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

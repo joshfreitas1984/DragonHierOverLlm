@@ -1,28 +1,28 @@
 // ============================================================
 // Type  : ZhSegment
-// Token : 0x200042B
+// Token : 0x2000432
 // ============================================================
 
 public class ZhSegment
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001FB7
+    // Token: 0x40020C1
     public static Func<string, IEnumerable<string>> Segment;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60025A4
-    // RVA   : 0x245810   Offset: 0x244010   Length: 0x3
+    // Token : 0x6002627
+    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
     public static void Initialize(string jiebaResourceDirectory)
     {
     }
 
-    // Token : 0x60025A5
-    // RVA   : 0xB1A870   Offset: 0xB19070   Length: 0xA3
+    // Token : 0x6002628
+    // RVA   : 0x18468B0   Offset: 0x1845CB0   Length: 0xA3
     private static IEnumerable<string> SegmentByJieba(string text)
     {
         long lVar2;
         ulong uVar3;
-        plVar1 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,1);
+        plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
         if (plVar1 == (int64 *)0) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
@@ -43,13 +43,13 @@ public class ZhSegment
         uVar3 = il2cpp_internal();
     }
 
-    // Token : 0x60025A6
-    // RVA   : 0xB1A920   Offset: 0xB19120   Length: 0x8B
+    // Token : 0x6002629
+    // RVA   : 0x1846960   Offset: 0x1845D60   Length: 0x8B
     private static void /*cctor*/()
     {
         ulong uVar2;
-        uVar2 = new OnTooltipCB(0,DAT_181d90fb0,DAT_181d8bb30);
-        puVar1 = *(uint64 **)(DAT_181d6c588 + 184);
+        uVar2 = new OnTooltipCB(0,DAT_181dba320,DAT_181db28b0);
+        puVar1 = *(uint64 **)(DAT_181d91930 + 184);
         *puVar1 = uVar2;
         il2cpp_internal(puVar1,uVar2);
     }

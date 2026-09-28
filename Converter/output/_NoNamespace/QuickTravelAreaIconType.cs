@@ -1,30 +1,30 @@
 // ============================================================
 // Type  : QuickTravelAreaIconType
-// Token : 0x2000326
+// Token : 0x200032D
 // ============================================================
 
 public class QuickTravelAreaIconType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001979
+    // Token: 0x4001A70
     public int value__;
 
-    // Token: 0x400197A
+    // Token: 0x4001A71
     public const QuickTravelAreaIconType Show;
 
-    // Token: 0x400197B
+    // Token: 0x4001A72
     public const QuickTravelAreaIconType CityQuickTravel;
 
-    // Token: 0x400197C
+    // Token: 0x4001A73
     public const QuickTravelAreaIconType BigMapMove;
 
-    // Token: 0x400197D
+    // Token: 0x4001A74
     public const QuickTravelAreaIconType ChooseAttackArea;
 
-    // Token: 0x400197E
+    // Token: 0x4001A75
     public const QuickTravelAreaIconType ChooseAddAreaStateFocusArea;
 
-    // Token: 0x400197F
+    // Token: 0x4001A76
     public const QuickTravelAreaIconType ChooseReduceAreaStateFocusArea;
 
 }

@@ -1,50 +1,50 @@
 // ============================================================
 // Type  : ReadBookTextTypeData
-// Token : 0x2000330
+// Token : 0x2000337
 // ============================================================
 
 public class ReadBookTextTypeData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40019C5
+    // Token: 0x4001ABC
     public string showName;
 
-    // Token: 0x40019C6
+    // Token: 0x4001ABD
     public string fullName;
 
-    // Token: 0x40019C7
+    // Token: 0x4001ABE
     public string describe;
 
-    // Token: 0x40019C8
+    // Token: 0x4001ABF
     public bool simpleText;
 
-    // Token: 0x40019C9
+    // Token: 0x4001AC0
     public bool negative;
 
-    // Token: 0x40019CA
+    // Token: 0x4001AC1
     public int minBookItemLv;
 
-    // Token: 0x40019CB
+    // Token: 0x4001AC2
     public float exp;
 
-    // Token: 0x40019CC
+    // Token: 0x4001AC3
     public float expRate;
 
-    // Token: 0x40019CD
+    // Token: 0x4001AC4
     public int patient;
 
-    // Token: 0x40019CE
+    // Token: 0x4001AC5
     public int costPatient;
 
-    // Token: 0x40019CF
+    // Token: 0x4001AC6
     public float numPercent;
 
-    // Token: 0x40019D0
+    // Token: 0x4001AC7
     public float textReadedNumChangePercent;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001FDC
-    // RVA   : 0xC605D0   Offset: 0xC5EDD0   Length: 0x1A8
+    // Token : 0x600205C
+    // RVA   : 0xD11770   Offset: 0xD10B70   Length: 0x1A8
     public string GetDescribe()
     {
         bool cVar1;
@@ -69,7 +69,7 @@ public class ReadBookTextTypeData
           uVar3 = String.Concat(uVar3,"\n经验 ",uVar2,0);
         }
         if (this.costPatient != null) {
-          cVar1 = FUN_1816fd990(uVar3,"",0);
+          cVar1 = FUN_18171e540(uVar3,"",0);
           uVar2 = "\n";
           if (cVar1) {
             uVar2 = "";
@@ -81,11 +81,11 @@ public class ReadBookTextTypeData
         return uVar3;
     }
 
-    // Token : 0x6001FDD
-    // RVA   : 0xC60810   Offset: 0xC5F010   Length: 0x112
+    // Token : 0x600205D
+    // RVA   : 0xD119B0   Offset: 0xD10DB0   Length: 0x112
     public float GetExp()
     {
-        var pStatics = *(int64*)(DAT_181d74a60 + 184);
+        var pStatics = *(int64*)(DAT_181d99c80 + 184);
         float fVar1;
         ulong uVar2;
         if (this.exp == null.0) {
@@ -106,11 +106,11 @@ public class ReadBookTextTypeData
         return uVar2;
     }
 
-    // Token : 0x6001FDE
-    // RVA   : 0xC60780   Offset: 0xC5EF80   Length: 0x84
+    // Token : 0x600205E
+    // RVA   : 0xD11920   Offset: 0xD10D20   Length: 0x84
     public float GetExpRate()
     {
-        var pStatics = *(int64*)(DAT_181d74a60 + 184);
+        var pStatics = *(int64*)(DAT_181d99c80 + 184);
         float fVar1;
         float fVar2;
         fVar1 = this.expRate;
@@ -122,8 +122,8 @@ public class ReadBookTextTypeData
         }
     }
 
-    // Token : 0x6001FDF
-    // RVA   : 0xC60450   Offset: 0xC5EC50   Length: 0x175
+    // Token : 0x600205F
+    // RVA   : 0xD115F0   Offset: 0xD109F0   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -134,13 +134,13 @@ public class ReadBookTextTypeData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -152,7 +152,7 @@ public class ReadBookTextTypeData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d53c70,plVar1);
+            FUN_180002970(0,DAT_181d78da0,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return
@@ -160,10 +160,12 @@ public class ReadBookTextTypeData
         }
     }
 
-    // Token : 0x6001FE0
-    // RVA   : 0xC60930   Offset: 0xC5F130   Length: 0xE
+    // Token : 0x6002060
+    // RVA   : 0xD11AD0   Offset: 0xD10ED0   Length: 0xE
     public void /*ctor*/()
     {
+        void FUN_180d11ad0(int64 this)
+        {
         this.expRate = 0x3f800000;
         ZhSegment.Initialize(this,0);
     }

@@ -1,27 +1,27 @@
 // ============================================================
 // Type  : HighLightRenderType
-// Token : 0x200017D
+// Token : 0x2000182
 // ============================================================
 
 public class HighLightRenderType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40009E7
+    // Token: 0x4000A67
     public int value__;
 
-    // Token: 0x40009E8
+    // Token: 0x4000A68
     public const HighLightRenderType None;
 
-    // Token: 0x40009E9
+    // Token: 0x4000A69
     public const HighLightRenderType Hover;
 
-    // Token: 0x40009EA
+    // Token: 0x4000A6A
     public const HighLightRenderType ChooseAttack;
 
-    // Token: 0x40009EB
+    // Token: 0x4000A6B
     public const HighLightRenderType ChooseCure;
 
-    // Token: 0x40009EC
+    // Token: 0x4000A6C
     public const HighLightRenderType Path;
 
 }

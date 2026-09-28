@@ -1,32 +1,32 @@
 // ============================================================
 // Type  : BuildQuickButtonController
-// Token : 0x20001A8
+// Token : 0x20001AE
 // ============================================================
 
 public class BuildQuickButtonController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000B29
+    // Token: 0x4000BB5
     public AreaBuildingData targetBuildingData;
 
-    // Token: 0x4000B2A
+    // Token: 0x4000BB6
     public Image missionTarget;
 
-    // Token: 0x4000B2B
+    // Token: 0x4000BB7
     private bool onHover;
 
-    // Token: 0x4000B2C
+    // Token: 0x4000BB8
     private float hoverTime;
 
-    // Token: 0x4000B2D
+    // Token: 0x4000BB9
     private float refreshTime;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000D94
-    // RVA   : 0xBB5A60   Offset: 0xBB4260   Length: 0x26B
+    // Token : 0x6000DC8
+    // RVA   : 0xB5F5F0   Offset: 0xB5E9F0   Length: 0x26B
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d86270 + 184);
+        var pStatics = *(int64*)(DAT_181dab490 + 184);
         long lVar2;
         ulong uVar3;
         float fVar5;
@@ -43,32 +43,32 @@ public class BuildQuickButtonController
           if (fVar6 <= 0.0) {
             lVar2 = this.targetBuildingData;
             this.refreshTime = 0x3e4ccccd;
-            if (lVar2 == null) goto LAB_180bb5cc6;
+            if (lVar2 == null) goto LAB_180b5f856;
             plVar4 = this.missionTarget;
             if (lVar2.plotNumCount < 1) {
               if (lVar2.missionNumCount < 1) {
-                puVar1 = (uint32 *)FUN_180d904c0(&local_28,0);
+                puVar1 = (uint32 *)FUN_180d98fe0(&local_28,0);
               }
               else {
-                lVar2 = FUN_18046c6c0(0);
+                lVar2 = FUN_18046c680(0);
                 if ((lVar2 == null) ||
                    (uVar3 = TextureController.LoadAtlasSprite(lVar2,"UIAtlas","任务目标",0),
-                   plVar4 == (int64 *)0)) goto LAB_180bb5cc6;
+                   plVar4 == (int64 *)0)) goto LAB_180b5f856;
                 Image.set_sprite(plVar4,uVar3,0);
                 plVar4 = this.missionTarget;
-                puVar1 = (uint32 *)FUN_181098a50(&local_28,0);
+                puVar1 = (uint32 *)FUN_1810d3570(&local_28,0);
               }
             }
             else {
               if ((*pStatics == 0) ||
                  (uVar3 = TextureController.LoadAtlasSprite
                                     (*pStatics,"UIAtlas","问号",0),
-                 plVar4 == (int64 *)0)) goto LAB_180bb5cc6;
+                 plVar4 == (int64 *)0)) goto LAB_180b5f856;
               Image.set_sprite(plVar4,uVar3,0);
               plVar4 = this.missionTarget;
               puVar1 = (uint32 *)Color.get_yellow(&local_28,0);
             }
-            if (plVar4 == (int64 *)0) goto LAB_180bb5cc6;
+            if (plVar4 == (int64 *)0) goto LAB_180b5f856;
             local_28 = *puVar1;
             uStack_24 = puVar1[1];
             uStack_20 = puVar1[2];
@@ -85,15 +85,14 @@ public class BuildQuickButtonController
               uVar3 = BuildQuickButtonController.BuildingObj(this,0);
               if (lVar2 != null) {
                 AreaController.FocusOnTarget
-                          (lVar2,uVar3,
-                           *(uint32 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 20),0);
+                          (lVar2,uVar3,*(uint32 *)(*(int64 *)(DAT_181dac758 + 184) + 20),0);
                 lVar2 = BuildQuickButtonController.BuildingObj(this,0);
-                if ((lVar2 != null) && (lVar2 = GameObject.GetComponent(lVar2,DAT_181d9e2b0)) != null) {
+                if ((lVar2 != null) && (lVar2 = GameObject.GetComponent(lVar2,DAT_181dc7050)) != null) {
                   lVar2.enemyMonth = 1;
                   return;
                 }
               }
-        LAB_180bb5cc6:
+        LAB_180b5f856:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -101,8 +100,8 @@ public class BuildQuickButtonController
         }
     }
 
-    // Token : 0x6000D95
-    // RVA   : 0xBB5190   Offset: 0xBB3990   Length: 0x239
+    // Token : 0x6000DC9
+    // RVA   : 0xB5ECF0   Offset: 0xB5E0F0   Length: 0x239
     public void OnClick()
     {
         ulong uVar1;
@@ -111,12 +110,12 @@ public class BuildQuickButtonController
         ulong local_28;
         uint local_20;
         byte[] local_18 = new byte[16];
-        lVar3 = AreaBuildController._instance;
+        lVar3 = *(int64 *)(*(int64 *)(DAT_181dac458 + 184) + 16);
         if (lVar3 != null) {
-          if (lVar3.buildMode) {
+          if (*(char *)(lVar3 + 48) != false) {
             plVar2 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
             plVar6 = (int64 *)0;
-            if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181d8a228)) {
+            if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf348)) {
               plVar6 = plVar2;
             }
             NGUITools.PlaySound(plVar6,0);
@@ -149,17 +148,19 @@ public class BuildQuickButtonController
         }
     }
 
-    // Token : 0x6000D96
-    // RVA   : 0xBB53D0   Offset: 0xBB3BD0   Length: 0xC
+    // Token : 0x6000DCA
+    // RVA   : 0xB5EF30   Offset: 0xB5E330   Length: 0xC
     public void OnPointerEnter()
     {
+        void FUN_180b5ef30(int64 this)
+        {
         if (this.targetBuildingData != null) {
           this.onHover = 1;
         }
     }
 
-    // Token : 0x6000D97
-    // RVA   : 0xBB53E0   Offset: 0xBB3BE0   Length: 0x69
+    // Token : 0x6000DCB
+    // RVA   : 0xB5EF40   Offset: 0xB5E340   Length: 0x69
     public void OnPointerExit()
     {
         long lVar1;
@@ -169,29 +170,28 @@ public class BuildQuickButtonController
         this.onHover = 0;
         this.hoverTime = 0;
         lVar1 = BuildQuickButtonController.BuildingObj(this,0);
-        if ((lVar1 != null) && (lVar1 = GameObject.GetComponent(lVar1,DAT_181d9e2b0)) != null) {
+        if ((lVar1 != null) && (lVar1 = GameObject.GetComponent(lVar1,DAT_181dc7050)) != null) {
           *(uint8 *)(lVar1 + 80) = 0;
           return;
         }
     }
 
-    // Token : 0x6000D98
-    // RVA   : 0xBB50D0   Offset: 0xBB38D0   Length: 0xB7
+    // Token : 0x6000DCC
+    // RVA   : 0xB5EC30   Offset: 0xB5E030   Length: 0xB7
     public GameObject BuildingObj()
     {
         long lVar1;
-        lVar1 = PlotController.LaBaFestivelResultTalkText;
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac758 + 184) + 56);
         if (lVar1 != null) {
           AreaController.GetBuildingObj(lVar1,this.targetBuildingData,0);
           return;
         }
     }
 
-    // Token : 0x6000D99
-    // RVA   : 0xBB5450   Offset: 0xBB3C50   Length: 0x60E
+    // Token : 0x6000DCD
+    // RVA   : 0xB5EFB0   Offset: 0xB5E3B0   Length: 0x63C
     public void RefreshBuildingChoiceInfo()
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         uint uVar2;
         bool cVar3;
         byte uVar4;
@@ -204,7 +204,7 @@ public class BuildQuickButtonController
         long lVar11;
         uint[] local_res18 = new uint[2];
         ulong local_res20;
-        lVar5 = Component.GetComponent(this,DAT_181d6ccc0);
+        lVar5 = Component.GetComponent(this,DAT_181d95560);
         if (lVar5 != null) {
           lVar5.buildTimeLeft = "";
           if (this.targetBuildingData == null) {
@@ -213,7 +213,7 @@ public class BuildQuickButtonController
           lVar5 = Component.get_transform(this,0);
           if (((lVar5 != null) && (lVar5 = Transform.Find(lVar5,"LvBack",0)) != null) &&
              (lVar5 = Transform.Find(lVar5,"Lv",0)) != null) {
-            uVar6 = Component.GetComponent(lVar5,DAT_181d6d8c0);
+            uVar6 = Component.GetComponent(lVar5,DAT_181d96160);
             if (this.targetBuildingData != null) {
               uVar2 = this.targetBuildingData.lv;
               uVar7 = GlobalData.GetNumText(uVar2,0);
@@ -221,17 +221,17 @@ public class BuildQuickButtonController
               if (this.targetBuildingData != null) {
                 cVar3 = AreaBuildingData.BuildingAvailable(this.targetBuildingData,0);
                 if (!cVar3) {
-                  lVar5 = Component.GetComponent(this,DAT_181d6ccc0);
-                  uVar6 = *(uint64 *)(pPlotController + 0x2c8);
+                  lVar5 = Component.GetComponent(this,DAT_181d95560);
+                  uVar6 = *(uint64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x2d0);
                   if (this.targetBuildingData == null) {
-        LAB_180bb5a59:
+        LAB_180b5f5e7:
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
                   local_res18[0] = this.targetBuildingData.enemyMonth;
-                  uVar7 = il2cpp_value_box(DAT_181d5b2f8,local_res18);
+                  uVar7 = il2cpp_value_box(DAT_181d80418,local_res18);
                   uVar6 = String.Format("{0}禁用{1}个月</color>",uVar6,uVar7,0);
-                  if (lVar5 == null) goto LAB_180bb5a59;
+                  if (lVar5 == null) goto LAB_180b5f5e7;
                   lVar5.buildTimeLeft = uVar6;
                 }
                 lVar5 = this.targetBuildingData;
@@ -249,11 +249,10 @@ public class BuildQuickButtonController
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
                     }
                     lVar5 = *(int64 *)(lVar11 + lVar5.buildingID);
-                    if (PlotController._instance == 2) {
-                      if ((lVar5 == null) ||
-                         (*(int64 *)(pPlotController + 16) == 0))
-                      throw; // [null/range check failed]
-                      cVar3 = FUN_1818279a0();
+                    if (**(int **)(DAT_181d73d40 + 184) == 2) {
+                      if ((lVar5 == null) || (*(int64 *)(*(int64 *)(DAT_181db4008 + 184) + 16) == 0)
+                         ) throw; // [null/range check failed]
+                      cVar3 = FUN_18181e400();
                       if (!(!cVar3))
                       {
                         }
@@ -265,12 +264,12 @@ public class BuildQuickButtonController
                       uVar7 = this.targetBuildingData;
                       cVar3 = GameController.MeetCondition(uVar6,uVar4,uVar7,0);
                       if (cVar3) {
-                        lVar8 = Component.GetComponent(this,DAT_181d6ccc0);
+                        lVar8 = Component.GetComponent(this,DAT_181d95560);
                         if (lVar8 == null) throw; // [null/range check failed]
                         uVar6 = lVar8.buildTimeLeft;
-                        lVar8 = Component.GetComponent(this,DAT_181d6ccc0);
+                        lVar8 = Component.GetComponent(this,DAT_181d95560);
                         if (lVar8 == null) throw; // [null/range check failed]
-                        cVar3 = FUN_1816fd990(lVar8.buildTimeLeft,"",0);
+                        cVar3 = FUN_18171e540(lVar8.buildTimeLeft,"",0);
                         uVar7 = "\n";
                         if (cVar3) {
                           uVar7 = "";
@@ -279,8 +278,8 @@ public class BuildQuickButtonController
                         uVar4 = lVar5.destroyTimeLeft;
                         uVar9 = lVar5.missionDatas;
                         local_res18[0] = CONCAT31(local_res18[0]._1_3_,uVar4);
-                        if (((*(byte *)(GameController_StaticsPtr + 0x133) & 4) != 0) &&
-                           (*(int *)(GameController_StaticsPtr + 224) == 0)) {
+                        if (((*(byte *)(DAT_181d72cc8 + 0x133) & 4) != 0) &&
+                           (*(int *)(DAT_181d72cc8 + 224) == 0)) {
                           il2cpp_runtime_class_init();
                           uVar4 = (uint8)local_res18[0];
                         }
@@ -304,7 +303,7 @@ public class BuildQuickButtonController
                   }
                   if ((lVar8 != null) && (lVar5 = AreaBuildingData.DataBase(lVar8,0)) != null) {
                     if (*(char *)(lVar5 + 160) != false) {
-                      lVar5 = Component.GetComponent(this,DAT_181d6ccc0);
+                      lVar5 = Component.GetComponent(this,DAT_181d95560);
                       if (lVar5 == null) throw; // [null/range check failed]
                       uVar6 = String.Concat(lVar5.buildTimeLeft,"\n♦ 盗窃",0);
                       lVar5.buildTimeLeft = uVar6;
@@ -315,7 +314,7 @@ public class BuildQuickButtonController
                       if (*(char *)(lVar5 + 161) == false) {
                         return;
                       }
-                      lVar5 = Component.GetComponent(this,DAT_181d6ccc0);
+                      lVar5 = Component.GetComponent(this,DAT_181d95560);
                       if (lVar5 != null) {
                         uVar6 = String.Concat(lVar5.buildTimeLeft,"\n♦ 抢劫",0);
                         lVar5.buildTimeLeft = uVar6;
@@ -330,10 +329,12 @@ public class BuildQuickButtonController
         }
     }
 
-    // Token : 0x6000D9A
-    // RVA   : 0x7ECFE0   Offset: 0x7EB7E0   Length: 0xE
+    // Token : 0x6000DCE
+    // RVA   : 0x7EAE90   Offset: 0x7EA290   Length: 0xE
     public void /*ctor*/()
     {
+        void FUN_1807eae90(int64 this)
+        {
         this.refreshTime = 0x3e4ccccd;
         FUN_18044ef50(this,0);
     }

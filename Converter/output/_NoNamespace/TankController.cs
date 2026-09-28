@@ -1,59 +1,59 @@
 // ============================================================
 // Type  : TankController
-// Token : 0x2000127
+// Token : 0x2000128
 // ============================================================
 
 public class TankController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400072C
+    // Token: 0x4000748
     public float TrailMaterialOffsetSpeed;
 
-    // Token: 0x400072D
+    // Token: 0x4000749
     public float MoveSpeed;
 
-    // Token: 0x400072E
+    // Token: 0x400074A
     public float MoveFriction;
 
-    // Token: 0x400072F
+    // Token: 0x400074B
     public float MoveAcceleration;
 
-    // Token: 0x4000730
+    // Token: 0x400074C
     public float RotateSpeed;
 
-    // Token: 0x4000731
+    // Token: 0x400074D
     public float RotateFriction;
 
-    // Token: 0x4000732
+    // Token: 0x400074E
     public float RotateAcceleration;
 
-    // Token: 0x4000733
+    // Token: 0x400074F
     public Material TrailMaterial;
 
-    // Token: 0x4000734
+    // Token: 0x4000750
     public Animator Animator;
 
-    // Token: 0x4000735
+    // Token: 0x4000751
     public List<Trail> TankTrackTrails;
 
-    // Token: 0x4000736
+    // Token: 0x4000752
     public TankWeaponController WeaponController;
 
-    // Token: 0x4000737
+    // Token: 0x4000753
     private float _moveSpeed;
 
-    // Token: 0x4000738
+    // Token: 0x4000754
     private float _rotateSpeed;
 
-    // Token: 0x4000739
+    // Token: 0x4000755
     public bool InControl;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60009A6
-    // RVA   : 0xABCF10   Offset: 0xABB710   Length: 0x709
+    // Token : 0x60009BE
+    // RVA   : 0xA9C5F0   Offset: 0xA9B9F0   Length: 0x709
     private void Update()
     {
-        var pTankController = *(int64*)(TankController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d8b138 + 184);
         ulong uVar1;
         ulong uVar2;
         bool cVar3;
@@ -153,27 +153,27 @@ public class TankController
         }
         lVar6 = this.TankTrackTrails;
         if (0.0 < ABS(this._moveSpeed)) {
-          lVar5 = *(int64 *)(pTankController + 8);
+          lVar5 = *(int64 *)(pStatics + 8);
           if (lVar5 == null) {
-            uVar1 = **(uint64 **)(TankController_StaticsPtr + 184);
-            lVar5 = new OnTooltipCB(uVar1,DAT_181d8c710,DAT_181d73308);
-            plVar8 = (int64 *)(pTankController + 8);
-            goto LAB_180abd347;
+            uVar1 = **(uint64 **)(DAT_181d8b138 + 184);
+            lVar5 = new OnTooltipCB(uVar1,DAT_181db5a80,DAT_181d986a8);
+            plVar8 = (int64 *)(pStatics + 8);
+            goto LAB_180a9ca27;
           }
         }
         else {
-          lVar5 = *(int64 *)(pTankController + 16);
+          lVar5 = *(int64 *)(pStatics + 16);
           if (lVar5 == null) {
-            uVar1 = **(uint64 **)(TankController_StaticsPtr + 184);
-            lVar5 = new OnTooltipCB(uVar1,DAT_181d8c790,DAT_181d73308);
-            plVar8 = (int64 *)(pTankController + 16);
-        LAB_180abd347:
+            uVar1 = **(uint64 **)(DAT_181d8b138 + 184);
+            lVar5 = new OnTooltipCB(uVar1,DAT_181db5b00,DAT_181d986a8);
+            plVar8 = (int64 *)(pStatics + 16);
+        LAB_180a9ca27:
             *plVar8 = lVar5;
             il2cpp_internal(plVar8,lVar5);
           }
         }
         if (lVar6 != null) {
-          FUN_181827e60(lVar6,lVar5,DAT_181d80178);
+          FUN_18181f150(lVar6,lVar5,DAT_181da7b18);
           lVar6 = Component.get_transform(this,0);
           if (lVar6 != null) {
             puVar7 = (uint64 *)Transform.get_position(local_78,lVar6,0);
@@ -243,8 +243,8 @@ public class TankController
         }
     }
 
-    // Token : 0x60009A7
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x60009BF
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

@@ -1,27 +1,27 @@
 // ============================================================
 // Type  : <>c__DisplayClass8_0
-// Token : 0x200047B
+// Token : 0x2000482
 // ============================================================
 
 public class <>c__DisplayClass8_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002035
+    // Token: 0x400213F
     public Material target;
 
-    // Token: 0x4002036
+    // Token: 0x4002140
     public int propertyID;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60026D4
-    // RVA   : 0x210B70   Offset: 0x20F370   Length: 0x7
+    // Token : 0x6002757
+    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);
     }
 
-    // Token : 0x60026D5
-    // RVA   : 0x8D7D00   Offset: 0x8D6500   Length: 0x24
+    // Token : 0x6002758
+    // RVA   : 0x93A1F0   Offset: 0x9395F0   Length: 0x24
     internal Vector2 <DOOffset>b__0()
     {
         if (this.target != null) {
@@ -30,12 +30,12 @@ public class <>c__DisplayClass8_0
         }
     }
 
-    // Token : 0x60026D6
-    // RVA   : 0x8D7D30   Offset: 0x8D6530   Length: 0x27
+    // Token : 0x6002759
+    // RVA   : 0x93A220   Offset: 0x939620   Length: 0x27
     internal void <DOOffset>b__1(Vector2 x)
     {
         if (this.target != null) {
-          FUN_1810a77d0(this.target,this.propertyID,x,0);
+          FUN_1810e22f0(this.target,this.propertyID,x,0);
           return;
         }
     }

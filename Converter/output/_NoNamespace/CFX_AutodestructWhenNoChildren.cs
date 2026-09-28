@@ -1,13 +1,13 @@
 // ============================================================
 // Type  : CFX_AutodestructWhenNoChildren
-// Token : 0x20003BB
+// Token : 0x20003C2
 // ============================================================
 
 public class CFX_AutodestructWhenNoChildren
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002369
-    // RVA   : 0xBD38C0   Offset: 0xBD20C0   Length: 0x87
+    // Token : 0x60023EC
+    // RVA   : 0xB7E150   Offset: 0xB7D550   Length: 0x87
     private void Update()
     {
         ulong uVar1;
@@ -25,8 +25,8 @@ public class CFX_AutodestructWhenNoChildren
         }
     }
 
-    // Token : 0x600236A
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x60023ED
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

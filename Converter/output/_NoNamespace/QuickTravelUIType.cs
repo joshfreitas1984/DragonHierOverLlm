@@ -1,30 +1,30 @@
 // ============================================================
 // Type  : QuickTravelUIType
-// Token : 0x200032B
+// Token : 0x2000332
 // ============================================================
 
 public class QuickTravelUIType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400198C
+    // Token: 0x4001A83
     public int value__;
 
-    // Token: 0x400198D
+    // Token: 0x4001A84
     public const QuickTravelUIType Show;
 
-    // Token: 0x400198E
+    // Token: 0x4001A85
     public const QuickTravelUIType CityQuickTravel;
 
-    // Token: 0x400198F
+    // Token: 0x4001A86
     public const QuickTravelUIType BigMapMove;
 
-    // Token: 0x4001990
+    // Token: 0x4001A87
     public const QuickTravelUIType ChooseAttackArea;
 
-    // Token: 0x4001991
+    // Token: 0x4001A88
     public const QuickTravelUIType ChooseAddAreaStateFocusArea;
 
-    // Token: 0x4001992
+    // Token: 0x4001A89
     public const QuickTravelUIType ChooseReduceAreaStateFocusArea;
 
 }

@@ -1,113 +1,113 @@
 // ============================================================
 // Type  : HeroDetailController
-// Token : 0x20002BB
+// Token : 0x20002C1
 // ============================================================
 
 public class HeroDetailController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400163B
+    // Token: 0x40016EF
     public SkillListType nowSkillListType;
 
-    // Token: 0x400163C
+    // Token: 0x40016F0
     public GameObject heroDetailPanel;
 
-    // Token: 0x400163D
+    // Token: 0x40016F1
     public GameObject heroDetailTabPrefab;
 
-    // Token: 0x400163E
+    // Token: 0x40016F2
     public GameObject heroBaseFightDataPrefab;
 
-    // Token: 0x400163F
+    // Token: 0x40016F3
     public GameObject heroExtraFightDataPrefab;
 
-    // Token: 0x4001640
+    // Token: 0x40016F4
     public GameObject forceContributionInfoPrefab;
 
-    // Token: 0x4001641
+    // Token: 0x40016F5
     public ItemListController itemListController;
 
-    // Token: 0x4001642
+    // Token: 0x40016F6
     public GameObject skillGrid;
 
-    // Token: 0x4001643
+    // Token: 0x40016F7
     public HeroData mainShowHero;
 
-    // Token: 0x4001644
+    // Token: 0x40016F8
     public HeroData nowShowHero;
 
-    // Token: 0x4001645
+    // Token: 0x40016F9
     private int originSkinID;
 
-    // Token: 0x4001646
+    // Token: 0x40016FA
     private int originSkinLV;
 
-    // Token: 0x4001647
+    // Token: 0x40016FB
     private GameObject temp;
 
-    // Token: 0x4001648
+    // Token: 0x40016FC
     private bool init;
 
-    // Token: 0x4001649
+    // Token: 0x40016FD
     public Dropdown skillSortTypeDropDown;
 
-    // Token: 0x400164A
+    // Token: 0x40016FE
     public SkillSortType skillSortType;
 
-    // Token: 0x400164B
+    // Token: 0x40016FF
     public bool reverseOrder;
 
-    // Token: 0x400164C
+    // Token: 0x4001700
     public bool itemSpeControlable;
 
-    // Token: 0x400164D
+    // Token: 0x4001701
     private static HeroDetailController _instance;
 
-    // Token: 0x400164E
+    // Token: 0x4001702
     private bool sortTypeLoaded;
 
-    // Token: 0x400164F
+    // Token: 0x4001703
     public GameObject clothGrid;
 
-    // Token: 0x4001650
+    // Token: 0x4001704
     public GameObject clothChoicePrefab;
 
-    // Token: 0x4001651
+    // Token: 0x4001705
     private bool clothListInited;
 
-    // Token: 0x4001652
+    // Token: 0x4001706
     private int tempSkinID;
 
-    // Token: 0x4001653
+    // Token: 0x4001707
     private int tempSkinLv;
 
-    // Token: 0x4001654
+    // Token: 0x4001708
     private int tempHairID;
 
-    // Token: 0x4001655
+    // Token: 0x4001709
     private int tempBeardID;
 
-    // Token: 0x4001656
+    // Token: 0x400170A
     private int tempOtherID;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600172D
-    // RVA   : 0xEC5BD0   Offset: 0xEC43D0   Length: 0x36
+    // Token : 0x6001771
+    // RVA   : 0xE20DC0   Offset: 0xE201C0   Length: 0x36
     public static HeroDetailController get_Instance()
     {
-        return **(uint64 **)(DAT_181d50f00 + 184);
+        return **(uint64 **)(DAT_181d75f40 + 184);
     }
 
-    // Token : 0x600172E
-    // RVA   : 0xEB0670   Offset: 0xEAEE70   Length: 0xB6
+    // Token : 0x6001772
+    // RVA   : 0xE0B2E0   Offset: 0xE0A6E0   Length: 0xB6
     private void Awake()
     {
         ulong uVar1;
         bool cVar3;
-        uVar1 = **(uint64 **)(DAT_181d50f00 + 184);
+        uVar1 = **(uint64 **)(DAT_181d75f40 + 184);
         cVar3 = Object.op_Equality(uVar1,0,0);
         if (cVar3) {
-          plVar2 = *(int64 **)(DAT_181d50f00 + 184);
+          plVar2 = *(int64 **)(DAT_181d75f40 + 184);
           *plVar2 = this;
           il2cpp_internal(plVar2,this);
         }
@@ -115,21 +115,21 @@ public class HeroDetailController
         this.nowShowHero = 0;
     }
 
-    // Token : 0x600172F
-    // RVA   : 0xEC48D0   Offset: 0xEC30D0   Length: 0x158
+    // Token : 0x6001773
+    // RVA   : 0xE1FAB0   Offset: 0xE1EEB0   Length: 0x158
     private void Start()
     {
         bool cVar1;
         long lVar2;
         ulong uVar3;
-        if (PlotController._instance == 1) {
+        if (**(int **)(DAT_181d73d40 + 184) == 1) {
           cVar1 = RailManager.get_Initialized(0);
           if (!cVar1) {
             Debug.LogError("Rail sdk is not initialized!",0);
             return;
           }
           lVar2 = RailCallBackHelper.get_Instance(0);
-          uVar3 = new OnTooltipCB(this,DAT_181d50290,0);
+          uVar3 = new OnTooltipCB(this,DAT_181d78eb0,0);
           if (lVar2 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
@@ -138,11 +138,13 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001730
-    // RVA   : 0xEC5990   Offset: 0xEC4190   Length: 0x1D
+    // Token : 0x6001774
+    // RVA   : 0xE20B80   Offset: 0xE1FF80   Length: 0x1D
     private void Update()
     {
-        long lVar1;
+        void FUN_180e20b80(int64 this)
+        {
+        int64 lVar1;
         lVar1 = this.nowShowHero;
         if ((lVar1 != null) && (lVar1.heroDetailDirty)) {
           HeroData.CheckHeroDetailDirty(lVar1,0,0);
@@ -150,8 +152,8 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001731
-    // RVA   : 0xEC3A40   Offset: 0xEC2240   Length: 0xF8
+    // Token : 0x6001775
+    // RVA   : 0xE1EC20   Offset: 0xE1E020   Length: 0xF8
     public void SetHeroDetail(int id)
     {
         if ((id != null) && (id != this.mainShowHero)) {
@@ -161,8 +163,8 @@ public class HeroDetailController
         HeroDetailController.UnshowHeroDetail(this,0);
     }
 
-    // Token : 0x6001732
-    // RVA   : 0xEC3B40   Offset: 0xEC2340   Length: 0x1D
+    // Token : 0x6001776
+    // RVA   : 0xE1ED20   Offset: 0xE1E120   Length: 0x1D
     public void SetHeroDetail(HeroData targetHero)
     {
         if ((targetHero != null) && (targetHero != this.mainShowHero)) {
@@ -172,8 +174,8 @@ public class HeroDetailController
         HeroDetailController.UnshowHeroDetail(this,0);
     }
 
-    // Token : 0x6001733
-    // RVA   : 0xEC5780   Offset: 0xEC3F80   Length: 0x20F
+    // Token : 0x6001777
+    // RVA   : 0xE20970   Offset: 0xE1FD70   Length: 0x20F
     public void UnshowHeroDetail()
     {
         long lVar2;
@@ -184,7 +186,7 @@ public class HeroDetailController
         uint local_10;
         plVar1 = (int64 *)Resources.Load("Sound/SoundEffect/PaperQuick",0);
         plVar5 = (int64 *)0;
-        if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181d8a228)) {
+        if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf348)) {
           plVar5 = plVar1;
         }
         NGUITools.PlaySound(plVar5,0);
@@ -195,18 +197,18 @@ public class HeroDetailController
           if (lVar2 != null) {
             lVar2 = Transform.Find(lVar2,"BlackBackground",0);
             if (lVar2 != null) {
-              uVar3 = Component.GetComponent(lVar2,DAT_181d6bc40);
+              uVar3 = Component.GetComponent(lVar2,DAT_181d94460);
               uVar3 = DOTweenModuleUI.DOFade(uVar3,0,0x3e4ccccd,0);
-              uVar3 = TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181d98958);
-              TweenSettingsExtensions.SetEase(uVar3,9,DAT_181d97a00);
+              uVar3 = TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1c20);
+              TweenSettingsExtensions.SetEase(uVar3,9,DAT_181dc0ce8);
               if (this.heroDetailPanel != null) {
                 uVar3 = GameObject.get_transform(this.heroDetailPanel,0);
                 local_18 = 0;
                 local_14 = 0x3f800000;
                 local_10 = 0x3f800000;
                 uVar3 = ShortcutExtensions.DOScale(uVar3,&local_18,0x3e4ccccd,0);
-                uVar4 = new OnTooltipCB(this,DAT_181d50210,0);
-                TweenSettingsExtensions.OnComplete(uVar3,uVar4,DAT_181d96ee8);
+                uVar4 = new OnTooltipCB(this,DAT_181d78e30,0);
+                TweenSettingsExtensions.OnComplete(uVar3,uVar4,DAT_181dc01d0);
                 return;
               }
             }
@@ -214,10 +216,11 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001734
-    // RVA   : 0xEBA120   Offset: 0xEB8920   Length: 0x55E
+    // Token : 0x6001778
+    // RVA   : 0xE15140   Offset: 0xE14540   Length: 0x55E
     public void LoadSortTypeFromWorldData()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         long lVar2;
         int iVar3;
@@ -232,19 +235,19 @@ public class HeroDetailController
         this.sortTypeLoaded = 1;
         if (this.itemListController != null) {
           lVar2 = this.itemListController.sortTypeDropDown;
-          if (((GameController._instance != null) &&
-              (lVar1 = GameController._instance.worldData, lVar1 != null
-              )) && (lVar2 != null)) {
-            Dropdown.set_value(lVar2,lVar1.itemSortType,0);
+          if (((*pStatics != 0) &&
+              (lVar1 = *(int64 *)(*pStatics + 32)) != null) &&
+             (lVar2 != null)) {
+            Dropdown.set_value(lVar2,*(uint32 *)(lVar1 + 0x250),0);
             lVar2 = this.itemListController;
-            if (((GameController._instance != null) &&
-                (lVar1 = GameController._instance.worldData,
-                lVar1 != null)) && (lVar2 != null)) {
-              lVar2.reverseOrder = lVar1.itemReverseOrder;
+            if (((*pStatics != 0) &&
+                (lVar1 = *(int64 *)(*pStatics + 32)) != null) &&
+               (lVar2 != null)) {
+              lVar2.reverseOrder = *(uint8 *)(lVar1 + 0x254);
               if ((((this.itemListController != null) &&
                    (lVar2 = this.itemListController.sortTypeDropDown) != null) &&
                   (lVar2 = Component.get_transform(lVar2,0)) != null) &&
-                 ((lVar2 = FUN_180da0f00(lVar2,0), lVar2 != null &&
+                 ((lVar2 = FUN_180da9a20(lVar2,0), lVar2 != null &&
                   (lVar2 = Transform.Find(lVar2,"ReverseType",0)) != null))) {
                 lVar2 = Transform.Find(lVar2,"Icon",0);
                 if (this.itemListController != null) {
@@ -261,9 +264,9 @@ public class HeroDetailController
                     if (((this.itemListController != null) &&
                         (lVar2 = this.itemListController.sortTypeDropDown) != null) &&
                        ((lVar2 = Component.get_transform(lVar2,0), lVar2 != null &&
-                        ((lVar2 = FUN_180da0f00(lVar2,0), lVar2 != null &&
+                        ((lVar2 = FUN_180da9a20(lVar2,0), lVar2 != null &&
                          (lVar2 = Transform.Find(lVar2,"ReverseType",0)) != null))))) {
-                      lVar2 = Component.GetComponent(lVar2,DAT_181d6ccc0);
+                      lVar2 = Component.GetComponent(lVar2,DAT_181d95560);
                       if (this.itemListController != null) {
                         uVar4 = "升序";
                         if (this.itemListController.reverseOrder) {
@@ -272,19 +275,17 @@ public class HeroDetailController
                         if (lVar2 != null) {
                           lVar2.itemGrid = uVar4;
                           lVar2 = this.skillSortTypeDropDown;
-                          if (((GameController._instance != null) &&
-                              (lVar1 = *(int64 *)
-                                        (GameController._instance + 32),
+                          if (((*pStatics != 0) &&
+                              (lVar1 = *(int64 *)(*pStatics + 32),
                               lVar1 != null)) && (lVar2 != null)) {
-                            Dropdown.set_value(lVar2,lVar1.skillSortType,0);
-                            if ((GameController._instance != null) &&
-                               (lVar2 = *(int64 *)
-                                         (GameController._instance + 32),
+                            Dropdown.set_value(lVar2,*(uint32 *)(lVar1 + 600),0);
+                            if ((*pStatics != 0) &&
+                               (lVar2 = *(int64 *)(*pStatics + 32),
                                lVar2 != null)) {
                               this.reverseOrder = *(uint8 *)(lVar2 + 0x25c);
                               if ((this.skillSortTypeDropDown != null) &&
                                  (((lVar2 = Component.get_transform(this.skillSortTypeDropDown,0),
-                                   lVar2 != null && (lVar2 = FUN_180da0f00(lVar2,0)) != null) &&
+                                   lVar2 != null && (lVar2 = FUN_180da9a20(lVar2,0)) != null) &&
                                   (lVar2 = Transform.Find(lVar2,"ReverseType",0)) != null))) {
                                 lVar2 = Transform.Find(lVar2,"Icon",0);
                                 if (!this.reverseOrder) {
@@ -298,9 +299,9 @@ public class HeroDetailController
                                   if (((this.skillSortTypeDropDown != null) &&
                                       (lVar2 = Component.get_transform(this.skillSortTypeDropDown,0),
                                       lVar2 != null)) &&
-                                     ((lVar2 = FUN_180da0f00(lVar2,0), lVar2 != null &&
+                                     ((lVar2 = FUN_180da9a20(lVar2,0), lVar2 != null &&
                                       (lVar2 = Transform.Find(lVar2,"ReverseType",0)) != null))) {
-                                    lVar2 = Component.GetComponent(lVar2,DAT_181d6ccc0);
+                                    lVar2 = Component.GetComponent(lVar2,DAT_181d95560);
                                     uVar4 = "升序";
                                     if (this.reverseOrder) {
                                       uVar4 = "降序";
@@ -325,11 +326,11 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001735
-    // RVA   : 0xEC4430   Offset: 0xEC2C30   Length: 0x330
+    // Token : 0x6001779
+    // RVA   : 0xE1F610   Offset: 0xE1EA10   Length: 0x3D1
     public void ShowHeroDetail(HeroData targetHero, bool _itemSpeControlable)
     {
-        var pStatics = *(int64*)(DAT_181d65970 + 184);
+        var pStatics = *(int64*)(DAT_181d8ab90 + 184);
         long lVar1;
         long lVar2;
         ulong uVar5;
@@ -363,8 +364,8 @@ public class HeroDetailController
                 if ((this.heroDetailPanel != null) &&
                    ((lVar2 = GameObject.get_transform(this.heroDetailPanel,0), lVar2 != null &&
                     (lVar2 = Transform.Find(lVar2,"BlackBackground",0)) != null))) {
-                  plVar3 = (int64 *)Component.GetComponent(lVar2,DAT_181d6bc40);
-                  puVar4 = (uint32 *)FUN_180d904c0(&local_18,0);
+                  plVar3 = (int64 *)Component.GetComponent(lVar2,DAT_181d94460);
+                  puVar4 = (uint32 *)FUN_180d98fe0(&local_18,0);
                   if (plVar3 != (int64 *)0) {
                     local_18 = *puVar4;
                     uStack_14 = puVar4[1];
@@ -374,19 +375,19 @@ public class HeroDetailController
                     if (((this.heroDetailPanel != null) &&
                         (lVar2 = GameObject.get_transform(this.heroDetailPanel,0)) != null)
                        && (lVar2 = Transform.Find(lVar2,"BlackBackground",0)) != null) {
-                      uVar5 = Component.GetComponent(lVar2,DAT_181d6bc40);
+                      uVar5 = Component.GetComponent(lVar2,DAT_181d94460);
                       uVar5 = DOTweenModuleUI.DOFade(uVar5,0x3f000000,0x3e800000,0);
-                      uVar5 = TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181d98958);
-                      TweenSettingsExtensions.SetEase(uVar5,8,DAT_181d97a00);
+                      uVar5 = TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1c20);
+                      TweenSettingsExtensions.SetEase(uVar5,8,DAT_181dc0ce8);
                       if (this.heroDetailPanel != null) {
                         uVar5 = GameObject.get_transform(this.heroDetailPanel,0);
                         uVar5 = ShortcutExtensions.DOScale(uVar5,0x3f800000,0x3e800000,0);
-                        uVar5 = TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181d98af0);
-                        uVar6 = new OnTooltipCB(lVar1,DAT_181d7c7f8,0);
-                        TweenSettingsExtensions.OnComplete(uVar5,uVar6,DAT_181d96ee8);
+                        uVar5 = TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1db0);
+                        uVar6 = new OnTooltipCB(lVar1,DAT_181da5648,0);
+                        TweenSettingsExtensions.OnComplete(uVar5,uVar6,DAT_181dc01d0);
                         plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/Paper",0);
                         plVar7 = (int64 *)0;
-                        if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181d8a228)) {
+                        if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {
                           plVar7 = plVar3;
                         }
                         NGUITools.PlaySound(plVar7,0);
@@ -401,27 +402,26 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001736
-    // RVA   : 0xEB9580   Offset: 0xEB7D80   Length: 0x935
+    // Token : 0x600177A
+    // RVA   : 0xE145D0   Offset: 0xE139D0   Length: 0x902
     private void Init()
     {
-        var pStatics_6270 = *(int64*)(DAT_181d86270 + 184);
-        var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
+        var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
+        var pStatics_b490 = *(int64*)(DAT_181dab490 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
         ulong uVar4;
         long lVar6;
-        long lVar7;
-        int iVar8;
-        int[] local_res8 = new int[2];
+        int iVar7;
+        int[] local_res8 = new int[4];
         int[] local_res18 = new int[4];
         ulong local_60;
         ulong uStack_58;
         long local_50;
         byte[] local_48 = new byte[16];
         long local_38;
-        iVar8 = 0;
+        iVar7 = 0;
         local_res18[0] = 0;
         local_60 = 0;
         uStack_58 = 0;
@@ -437,8 +437,8 @@ public class HeroDetailController
           uVar3 = String.Concat("EquipSlot",uVar3);
           if ((lVar2 == null) || (lVar2 = Transform.Find(lVar2,uVar3,0)) == null) throw; // [null/range check failed]
           uVar3 = Component.get_gameObject(lVar2,0);
-          if (*pStatics_e188 == 0) throw; // [null/range check failed]
-          uVar4 = *(uint64 *)(*pStatics_e188 + 160);
+          if (*pStatics_2ee8 == 0) throw; // [null/range check failed]
+          uVar4 = *(uint64 *)(*pStatics_2ee8 + 160);
           uVar3 = GlobalData.AddChild(uVar3,uVar4);
           this.temp = uVar3;
           if ((this.temp == null) ||
@@ -448,7 +448,7 @@ public class HeroDetailController
         } while (local_res8[0] < 8);
         while( true ) {
           lVar2 = this.heroDetailPanel;
-          if (*(int *)(*(int64 *)(PlotController_StaticsPtr + 184) + 140) + 3 <= iVar8) break;
+          if (*(int *)(*(int64 *)(DAT_181d73d40 + 184) + 140) + 3 <= iVar7) break;
           if ((lVar2 == null) || (lVar2 = GameObject.get_transform(lVar2,0)) == null)
           throw; // [null/range check failed]
           lVar2 = Transform.Find(lVar2,"Skill");
@@ -456,15 +456,15 @@ public class HeroDetailController
           uVar3 = String.Concat("SkillSlot",uVar3);
           if ((lVar2 == null) || (lVar2 = Transform.Find(lVar2,uVar3)) == null) throw; // [null/range check failed]
           uVar3 = Component.get_gameObject(lVar2,0);
-          if (*pStatics_e188 == 0) throw; // [null/range check failed]
-          uVar4 = *(uint64 *)(*pStatics_e188 + 168);
+          if (*pStatics_2ee8 == 0) throw; // [null/range check failed]
+          uVar4 = *(uint64 *)(*pStatics_2ee8 + 168);
           uVar3 = GlobalData.AddChild(uVar3,uVar4);
           this.temp = uVar3;
           if ((this.temp == null) ||
              (Object.set_name(), this.temp == null)) throw; // [null/range check failed]
           GameObject.SetActive();
-          iVar8 = local_res18[0] + 1;
-          local_res18[0] = iVar8;
+          iVar7 = local_res18[0] + 1;
+          local_res18[0] = iVar7;
         }
         if ((((lVar2 != null) && (lVar2 = GameObject.get_transform(lVar2,0)) != null) &&
             (lVar2 = Transform.Find(lVar2,"ForceContribution",0)) != null) &&
@@ -479,28 +479,28 @@ public class HeroDetailController
             if (((this.temp != null) &&
                 (lVar2 = GameObject.get_transform(this.temp,0)) != null) &&
                (lVar2 = Transform.Find(lVar2,"ForceIcon",0)) != null) {
-              lVar2 = Component.GetComponent(lVar2,DAT_181d6bc40);
-              if ((*pStatics_6270 != 0) &&
+              lVar2 = Component.GetComponent(lVar2,DAT_181d94460);
+              if ((*pStatics_b490 != 0) &&
                  (uVar3 = TextureController.LoadAtlasSprite
-                                    (*pStatics_6270,"UIAtlas","官府功绩",0),
+                                    (*pStatics_b490,"UIAtlas","官府功绩",0),
                  lVar2 != null)) {
                 Image.set_sprite(lVar2,uVar3,0);
                 if ((this.temp != null) &&
                    (((lVar2 = GameObject.get_transform(this.temp,0), lVar2 != null &&
                      (lVar2 = Transform.Find(lVar2,"ForceName",0)) != null) &&
-                    (plVar5 = (int64 *)Component.GetComponent(lVar2,DAT_181d6d8c0),
+                    (plVar5 = (int64 *)Component.GetComponent(lVar2,DAT_181d96160),
                     plVar5 != (int64 *)0)))) {
                   (**(code **)(*plVar5 + 0x5e8))(plVar5,"官府",*(uint64 *)(*plVar5 + 0x5f0));
                   lVar2 = FUN_18046c0a0(0);
                   if (((lVar2 != null) && (*(int64 *)(lVar2 + 32) != 0)) &&
                      (lVar2 = *(int64 *)(*(int64 *)(lVar2 + 32) + 72)) != null) {
-                    FUN_1817ff240(local_48,lVar2,DAT_181d60878);
+                    FUN_1817eb420(local_48,lVar2,DAT_181d88020);
                     local_50 = local_38;
                     while( true ) {
-                      cVar1 = FUN_180d197a0(&local_60,DAT_181d66148);
+                      cVar1 = FUN_180c74f00(&local_60,DAT_181d8c5e8);
                       lVar2 = local_50;
                       if (!cVar1) {
-                        ZhSegment.Initialize(&local_60,DAT_181d660c8);
+                        ZhSegment.Initialize(&local_60,DAT_181d8c568);
                         return;
                       }
                       if (this.heroDetailPanel == null) {
@@ -542,10 +542,7 @@ public class HeroDetailController
                         FUN_1800d6620();
                       }
                       Object.set_name(lVar6,uVar3,0);
-                      if (this.temp == null) {
-                          // WARNING: Subroutine does not return
-                        FUN_1800d6620();
-                      }
+                      if (this.temp == null) break;
                       lVar6 = GameObject.get_transform(this.temp,0);
                       if (lVar6 == null) {
                           // WARNING: Subroutine does not return
@@ -556,14 +553,8 @@ public class HeroDetailController
                           // WARNING: Subroutine does not return
                         FUN_1800d6620();
                       }
-                      lVar6 = Component.GetComponent(lVar6,DAT_181d6bc40);
-                      lVar7 = FUN_18046c6c0(0);
-                      uVar3 = GlobalData.GetForceIconName(*(uint32 *)(lVar2 + 16),0);
-                      if (lVar7 == null) {
-                          // WARNING: Subroutine does not return
-                        FUN_1800d6620();
-                      }
-                      uVar3 = TextureController.LoadAtlasSprite(lVar7,"UIAtlas",uVar3,0);
+                      lVar6 = Component.GetComponent(lVar6,DAT_181d94460);
+                      uVar3 = ForceData.GetForceIcon(lVar2,0);
                       if (lVar6 == null) {
                           // WARNING: Subroutine does not return
                         FUN_1800d6620();
@@ -583,12 +574,16 @@ public class HeroDetailController
                           // WARNING: Subroutine does not return
                         FUN_1800d6620();
                       }
-                      plVar5 = (int64 *)Component.GetComponent(lVar6,DAT_181d6d8c0);
-                      if (plVar5 == (int64 *)0) break;
-                      (**(code **)(*plVar5 + 0x5e8))(plVar5,*(uint64 *)(lVar2 + 24));
+                      plVar5 = (int64 *)Component.GetComponent(lVar6,DAT_181d96160);
+                      uVar3 = ForceData.GetForceName(lVar2,1,0);
+                      if (plVar5 == (int64 *)0) {
+                          // WARNING: Subroutine does not return
+                        FUN_1800d6620();
+                      }
+                      (**(code **)(*plVar5 + 0x5e8))(plVar5,uVar3);
                     }
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620(0);
+                    FUN_1800d6620();
                   }
                 }
               }
@@ -597,8 +592,8 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001737
-    // RVA   : 0xEB2140   Offset: 0xEB0940   Length: 0x1D7
+    // Token : 0x600177B
+    // RVA   : 0xE0CE00   Offset: 0xE0C200   Length: 0x1D7
     public void FreshHeroDetail(bool resetPos)
     {
         long lVar1;
@@ -628,7 +623,7 @@ public class HeroDetailController
               lVar3 = lVar3.summonControlable;
               if (((this.mainShowHero == null) ||
                   (lVar1 = this.mainShowHero.teamMates) == null) ||
-                 (uVar2 = FUN_1800d6750(lVar1,iVar5,DAT_181d68270), lVar3 == null)) break;
+                 (uVar2 = FUN_1800d6760(lVar1,iVar5,DAT_181d8fa18), lVar3 == null)) break;
               uVar4 = WorldData.GetHero(lVar3,uVar2,0);
               HeroDetailController.CreateHeroDetailTab(this,uVar4,0);
               lVar3 = this.mainShowHero;
@@ -639,8 +634,8 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001738
-    // RVA   : 0xEBA680   Offset: 0xEB8E80   Length: 0x37
+    // Token : 0x600177C
+    // RVA   : 0xE156A0   Offset: 0xE14AA0   Length: 0x37
     public bool NowShowHeroItemControlable()
     {
         bool cVar1;
@@ -655,8 +650,8 @@ public class HeroDetailController
         return this.itemSpeControlable;
     }
 
-    // Token : 0x6001739
-    // RVA   : 0xEB1170   Offset: 0xEAF970   Length: 0x193
+    // Token : 0x600177D
+    // RVA   : 0xE0BDE0   Offset: 0xE0B1E0   Length: 0x1C4
     public void CreateHeroDetailTab(HeroData targetHero)
     {
         long lVar1;
@@ -676,12 +671,12 @@ public class HeroDetailController
                 if (lVar1 != null) {
                   lVar1 = Transform.Find(lVar1,"Label",0);
                   if (lVar1 != null) {
-                    uVar3 = Component.GetComponent(lVar1,DAT_181d6d8c0);
+                    uVar3 = Component.GetComponent(lVar1,DAT_181d96160);
                     if (targetHero != null) {
                       uVar2 = HeroData.HeroName(targetHero,0,0);
                       LTLocalization.SetText(uVar3,uVar2,0);
                       if (this.temp != null) {
-                        lVar1 = GameObject.GetComponent(this.temp,DAT_181d9fa10);
+                        lVar1 = GameObject.GetComponent(this.temp,DAT_181d71a40);
                         if (lVar1 != null) {
                           *(int64 *)(lVar1 + 24) = targetHero;
                           return;
@@ -696,8 +691,8 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x600173A
-    // RVA   : 0xEBE810   Offset: 0xEBD010   Length: 0x87
+    // Token : 0x600177E
+    // RVA   : 0xE198C0   Offset: 0xE18CC0   Length: 0x87
     public void RefreshHeroSkeleton()
     {
         long lVar1;
@@ -716,12 +711,12 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x600173B
-    // RVA   : 0xEB2320   Offset: 0xEB0B20   Length: 0x2264
+    // Token : 0x600177F
+    // RVA   : 0xE0CFE0   Offset: 0xE0C3E0   Length: 0x7381
     public void FreshNowHeroDetail(HeroData targetHero, bool resetPos)
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
-        var pStatics = *(int64*)(DAT_181d4e188 + 184);
+        var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
+        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
         uint uVar1;
         uint uVar2;
         bool cVar3;
@@ -803,40 +798,40 @@ public class HeroDetailController
         this.nowShowHero = targetHero;
         if (((this.heroDetailPanel == null) ||
             (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-           (lVar11 = Transform.Find(lVar11,"ItemUncontrolableUI",0)) == null) goto LAB_180eb931a;
+           (lVar11 = Transform.Find(lVar11,"ItemUncontrolableUI",0)) == null) goto LAB_180e1435c;
         lVar11 = Component.get_gameObject(lVar11,0);
-        if (this.nowShowHero == null) goto LAB_180eb931a;
+        if (this.nowShowHero == null) goto LAB_180e1435c;
         cVar3 = HeroData.ItemControlable(this.nowShowHero,0);
         cVar4 = true;
         if (!cVar3) {
           cVar4 = this.itemSpeControlable;
         }
-        if (lVar11 == null) goto LAB_180eb931a;
+        if (lVar11 == null) goto LAB_180e1435c;
         GameObject.SetActive(lVar11,!cVar4,0);
         HeroDetailController.RefreshHeroSkeleton(this,0);
         if (((this.heroDetailPanel == null) ||
             (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-           (lVar11 = Transform.Find(lVar11,"TeamMateNum",0)) == null) goto LAB_180eb931a;
-        uVar12 = Component.GetComponent(lVar11,DAT_181d6d8c0);
+           (lVar11 = Transform.Find(lVar11,"TeamMateNum",0)) == null) goto LAB_180e1435c;
+        uVar12 = Component.GetComponent(lVar11,DAT_181d96160);
         lVar11 = this.mainShowHero;
-        if (lVar11 == null) goto LAB_180eb931a;
+        if (lVar11 == null) goto LAB_180e1435c;
         lVar15 = "";
         if (lVar11.heroID == null) {
-          if (lVar11.teamMates == null) goto LAB_180eb931a;
+          if (lVar11.teamMates == null) goto LAB_180e1435c;
           local_e0[0] = *(uint32 *)(lVar11.teamMates + 24);
-          uVar13 = il2cpp_value_box(DAT_181d5b2f8,local_e0);
-          if (this.mainShowHero == null) goto LAB_180eb931a;
+          uVar13 = il2cpp_value_box(DAT_181d80418,local_e0);
+          if (this.mainShowHero == null) goto LAB_180e1435c;
           local_124 = HeroData.GetMaxStudent(this.mainShowHero,0);
-          uVar14 = il2cpp_value_box(DAT_181d5b2f8,&local_124);
+          uVar14 = il2cpp_value_box(DAT_181d80418,&local_124);
           lVar15 = String.Format("队友 {0}/{1}",uVar13,uVar14,0);
         }
         LTLocalization.SetText(uVar12,lVar15,0);
         if (((this.heroDetailPanel == null) ||
             (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-           (lVar11 = Transform.Find(lVar11,"TeamMateNum",0)) == null) goto LAB_180eb931a;
-        plVar16 = (int64 *)Component.GetComponent(lVar11,DAT_181d6d8c0);
+           (lVar11 = Transform.Find(lVar11,"TeamMateNum",0)) == null) goto LAB_180e1435c;
+        plVar16 = (int64 *)Component.GetComponent(lVar11,DAT_181d96160);
         lVar11 = this.mainShowHero;
-        if ((lVar11 == null) || (lVar11.teamMates == null)) goto LAB_180eb931a;
+        if ((lVar11 == null) || (lVar11.teamMates == null)) goto LAB_180e1435c;
         iVar9 = *(int *)(lVar11.teamMates + 24);
         iVar8 = HeroData.GetMaxStudent(lVar11,0);
         if (iVar9 < iVar8) {
@@ -845,33 +840,34 @@ public class HeroDetailController
           lVar15 = plVar17[1];
         }
         else {
-          lVar11 = *(int64 *)(pPlotController + 0x2e8);
-          lVar15 = *(int64 *)(pPlotController + 0x2f0);
+          lVar11 = *(int64 *)(pStatics_3d40 + 0x2f0);
+          lVar15 = *(int64 *)(pStatics_3d40 + 0x2f8);
         }
-        if (plVar16 == (int64 *)0) goto LAB_180eb931a;
+        if (plVar16 == (int64 *)0) goto LAB_180e1435c;
         local_148 = lVar11;
         lStack_140 = lVar15;
         (**(code **)(*plVar16 + 0x2a8))(plVar16,&local_148,*(uint64 *)(*plVar16 + 0x2b0));
         if (((this.heroDetailPanel == null) ||
             (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-           (lVar11 = Transform.Find(lVar11,"NickName",0)) == null) goto LAB_180eb931a;
-        uVar12 = Component.GetComponent(lVar11,DAT_181d6d8c0);
-        if (this.nowShowHero == null) goto LAB_180eb931a;
-        LTLocalization.SetText(uVar12,this.nowShowHero.heroNickName,0);
+           (lVar11 = Transform.Find(lVar11,"NickName",0)) == null) goto LAB_180e1435c;
+        uVar12 = Component.GetComponent(lVar11,DAT_181d96160);
+        if (this.nowShowHero == null) goto LAB_180e1435c;
+        uVar13 = this.nowShowHero.heroNickName;
+        LTLocalization.SetText(uVar12,uVar13,0);
         if (((this.heroDetailPanel == null) ||
             (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-           (lVar11 = Transform.Find(lVar11,"SpeHero",0)) == null) goto LAB_180eb931a;
-        uVar12 = Component.GetComponent(lVar11,DAT_181d6d8c0);
-        if (this.nowShowHero == null) goto LAB_180eb931a;
+           (lVar11 = Transform.Find(lVar11,"SpeHero",0)) == null) goto LAB_180e1435c;
+        uVar12 = Component.GetComponent(lVar11,DAT_181d96160);
+        if (this.nowShowHero == null) goto LAB_180e1435c;
         lVar11 = "";
         if (this.nowShowHero.heroID != null) {
-          plVar16 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,5);
-          if (this.nowShowHero == null) goto LAB_180eb931a;
+          plVar16 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,5);
+          if (this.nowShowHero == null) goto LAB_180e1435c;
           lVar11 = "普通角色";
           if (this.nowShowHero.speHero) {
             lVar11 = "特殊角色";
           }
-          if (plVar16 == (int64 *)0) goto LAB_180eb931a;
+          if (plVar16 == (int64 *)0) goto LAB_180e1435c;
           if ((lVar11 != null) &&
              (lVar15 = il2cpp_internal(lVar11,*(uint64 *)(*plVar16 + 64))) == null) {
             uVar12 = il2cpp_internal();
@@ -900,7 +896,7 @@ public class HeroDetailController
           }
           plVar16[5] = "\n";
           il2cpp_internal(plVar16 + 5,lVar11);
-          if (this.nowShowHero == null) goto LAB_180eb931a;
+          if (this.nowShowHero == null) goto LAB_180e1435c;
           lVar11 = "不可招募";
           if (this.nowShowHero.recruitAble) {
             lVar11 = "可招募";
@@ -933,7 +929,7 @@ public class HeroDetailController
           }
           plVar16[7] = "\n";
           il2cpp_internal(plVar16 + 7,lVar11);
-          if (this.nowShowHero == null) goto LAB_180eb931a;
+          if (this.nowShowHero == null) goto LAB_180e1435c;
           lVar11 = "不可亲密";
           if (this.nowShowHero.loveAble) {
             lVar11 = "可亲密";
@@ -956,65 +952,67 @@ public class HeroDetailController
         LTLocalization.SetText(uVar12,lVar11,0);
         if ((this.heroDetailPanel == null) ||
            (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null)
-        goto LAB_180eb931a;
+        goto LAB_180e1435c;
         lVar11 = Transform.Find(lVar11,"LoveableLock",0);
         lVar15 = FUN_18046c0a0(0);
-        if ((lVar15 == null) || (lVar15.itemListInteractType == null)) goto LAB_180eb931a;
+        if ((lVar15 == null) || (lVar15.itemListInteractType == null)) goto LAB_180e1435c;
         if (*(int *)(lVar15.itemListInteractType + 156) == 0) {
           lVar15 = this.nowShowHero;
-          if (lVar15 == null) goto LAB_180eb931a;
-          if ((!lVar15.reverseOrder) || (*(char *)(lVar15 + 95) != false))
-          goto LAB_180eb3101;
+          if (lVar15 == null) goto LAB_180e1435c;
+          if ((*(char *)(lVar15 + 92) == false) || (*(char *)(lVar15 + 95) != false))
+          goto LAB_180e0de33;
           lVar15 = FUN_18046c100(0);
-          if (lVar15 == null) goto LAB_180eb931a;
+          if (lVar15 == null) goto LAB_180e1435c;
           if ((this.nowShowHero == null) || (*(int64 *)(lVar15 + 0x1d8) == 0))
-          goto LAB_180eb931a;
-          cVar4 = FUN_1818279a0(*(int64 *)(lVar15 + 0x1d8),
-                                this.nowShowHero.heroName,DAT_181d7c4d0);
-          if (!cVar4) goto LAB_180eb3101;
+          goto LAB_180e1435c;
+          cVar4 = FUN_18181e400(*(int64 *)(lVar15 + 0x1d8),
+                                this.nowShowHero.heroName,DAT_181da3e58);
+          if (!cVar4) goto LAB_180e0de33;
           plVar16 = (int64 *)Vector3.get_one(local_d8,0);
         }
         else {
-        LAB_180eb3101:
+        LAB_180e0de33:
           plVar16 = (int64 *)Vector3.get_zero(local_c8,0);
         }
-        if (lVar11 == null) goto LAB_180eb931a;
+        if (lVar11 == null) goto LAB_180e1435c;
         lStack_140 = CONCAT44(lStack_140._4_4_,(int)plVar16[1]);
         local_148 = *plVar16;
         Transform.set_localScale(lVar11,&local_148,0);
         lVar11 = FUN_18046c0a0(0);
-        if ((lVar11 == null) || (lVar11.summonControlable == null)) goto LAB_180eb931a;
+        if ((lVar11 == null) || (lVar11.summonControlable == null)) goto LAB_180e1435c;
         if (*(int *)(lVar11.summonControlable + 156) == 1) {
           lVar11 = this.nowShowHero;
-          if (lVar11 == null) goto LAB_180eb931a;
-          if (((!lVar11.speHero) || (-1 < lVar11.belongForceID)) ||
-             (lVar11.recruitAble)) goto LAB_180eb3701;
-          if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0) &&
-             (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
-            il2cpp_runtime_class_init(PlotController_StaticsPtr);
+          if (lVar11 == null) goto LAB_180e1435c;
+          if ((!lVar11.speHero) || (cVar4 = HeroData.HaveForce(lVar11,0), cVar4)
+             ) goto LAB_180e0e44c;
+          lVar11 = this.nowShowHero;
+          if (lVar11 == null) goto LAB_180e1435c;
+          if (lVar11.recruitAble) goto LAB_180e0e44c;
+          if (((*(byte *)(DAT_181d73d40 + 0x133) & 4) != 0) && (*(int *)(DAT_181d73d40 + 224) == 0)) {
+            il2cpp_runtime_class_init(DAT_181d73d40);
             lVar11 = this.nowShowHero;
           }
-          lVar15 = *(int64 *)(pPlotController + 0x198);
-          if ((lVar11 == null) || (lVar15 == null)) goto LAB_180eb931a;
-          cVar4 = FUN_1818279a0(lVar15,lVar11.heroName,DAT_181d7c4d0);
-          if (cVar4) goto LAB_180eb3701;
+          lVar15 = *(int64 *)(pStatics_3d40 + 0x198);
+          if ((lVar11 == null) || (lVar15 == null)) goto LAB_180e1435c;
+          cVar4 = FUN_18181e400(lVar15,lVar11.heroName,DAT_181da3e58);
+          if (cVar4) goto LAB_180e0e44c;
           if ((this.heroDetailPanel == null) ||
              (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null)
-          goto LAB_180eb931a;
+          goto LAB_180e1435c;
           lVar11 = Transform.Find(lVar11,"RecruitLock",0);
           plVar16 = (int64 *)Vector3.get_one(local_b8,0);
-          if (lVar11 == null) goto LAB_180eb931a;
+          if (lVar11 == null) goto LAB_180e1435c;
           local_148 = *plVar16;
           lStack_140 = CONCAT44(lStack_140._4_4_,(int)plVar16[1]);
           Transform.set_localScale(lVar11,&local_148,0);
           if (((this.heroDetailPanel == null) ||
               (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-             (lVar11 = Transform.Find(lVar11,"RecruitLock",0)) == null) goto LAB_180eb931a;
-          local_148 = Component.GetComponent(lVar11,DAT_181d6ccc0);
-          plVar16 = (int64 *)FUN_1800d60b0(DAT_181d7f180,5);
+             (lVar11 = Transform.Find(lVar11,"RecruitLock",0)) == null) goto LAB_180e1435c;
+          local_148 = Component.GetComponent(lVar11,DAT_181d95560);
+          plVar16 = (int64 *)FUN_1800d60b0(DAT_181da4120,5);
           if ((this.nowShowHero == null) ||
              (lVar11 = HeroData.GetHeroForceLvDescribeSimplify(this.nowShowHero,0),
-             plVar16 == (int64 *)0)) goto LAB_180eb931a;
+             plVar16 == (int64 *)0)) goto LAB_180e1435c;
           if ((lVar11 != null) &&
              (lVar15 = il2cpp_internal(lVar11,*(uint64 *)(*plVar16 + 64))) == null) {
             uVar12 = il2cpp_internal();
@@ -1022,9 +1020,9 @@ public class HeroDetailController
             FUN_1800d65f0(uVar12,0);
           }
           FUN_180002fd0(plVar16,0,lVar11);
-          if (this.nowShowHero == null) goto LAB_180eb931a;
+          if (this.nowShowHero == null) goto LAB_180e1435c;
           local_120 = HeroData.GetRecruitUnlockCost(this.nowShowHero,0);
-          lVar11 = il2cpp_value_box(DAT_181d5b2f8,&local_120);
+          lVar11 = il2cpp_value_box(DAT_181d80418,&local_120);
           if ((lVar11 != null) &&
              (lVar15 = il2cpp_internal(lVar11,*(uint64 *)(*plVar16 + 64))) == null) {
             uVar12 = il2cpp_internal();
@@ -1032,7 +1030,7 @@ public class HeroDetailController
             FUN_1800d65f0(uVar12,0);
           }
           FUN_180002fd0(plVar16,1,lVar11);
-          if (this.nowShowHero == null) goto LAB_180eb931a;
+          if (this.nowShowHero == null) goto LAB_180e1435c;
           local_res8[0] = (float)HeroData.GetRecruitUnlockRate(this.nowShowHero,0);
           local_res8[0] = local_res8[0] * 100.0;
           lVar11 = Single.ToString(local_res8,"f0",0);
@@ -1045,13 +1043,15 @@ public class HeroDetailController
           FUN_180002fd0(plVar16,2,lVar11);
           lVar11 = FUN_18046c0a0(0);
           if (((lVar11 == null) || (lVar11.summonControlable == null)) ||
-             (lVar11 = WorldData.Player(lVar11.summonControlable,0), uVar12 = "{3}点击解锁{4}招募\n消耗{1}点门派威望({2}%)\n<color=grey>每解锁一名{0}角色招募，解锁{0}所需门派威望+10%</color>",
-             lVar11 == null)) goto LAB_180eb931a;
-          if (lVar11.belongForceID < 0) {
-        LAB_180eb34a2:
-            lVar11 = *(int64 *)(pPlotController + 0x3d0);
-            if (lVar11 == null) goto LAB_180eb931a;
-            uVar13 = FUN_180002f80(lVar11,5,DAT_181d7c9c0);
+             (lVar11 = WorldData.Player(lVar11.summonControlable,0)) == null)
+          goto LAB_180e1435c;
+          cVar4 = HeroData.HaveForce(lVar11,0);
+          uVar12 = "{3}点击解锁{4}招募\n消耗{1}点门派威望({2}%)\n<color=grey>每解锁一名{0}角色招募，解锁{0}所需门派威望+10%</color>";
+          if (!cVar4) {
+        LAB_180e0e1e8:
+            lVar11 = *(int64 *)(pStatics_3d40 + 0x3d8);
+            if (lVar11 == null) goto LAB_180e1435c;
+            uVar13 = FUN_180002f80(lVar11,5,DAT_181da4358);
             uVar13 = GlobalData.GenerateRareLvColorText(uVar13,5);
             lVar15 = String.Format("需要 {0}\n",uVar13,0);
           }
@@ -1059,9 +1059,9 @@ public class HeroDetailController
             lVar11 = FUN_18046c0a0(0);
             if (((lVar11 == null) || (lVar11.summonControlable == null)) ||
                (lVar11 = WorldData.Player(lVar11.summonControlable,0)) == null)
-            goto LAB_180eb931a;
+            goto LAB_180e1435c;
             lVar15 = "";
-            if (lVar11.heroForceLv < 5) goto LAB_180eb34a2;
+            if (lVar11.heroForceLv < 5) goto LAB_180e0e1e8;
           }
           if ((lVar15 != null) &&
              (lVar11 = il2cpp_internal(lVar15,*(uint64 *)(*plVar16 + 64))) == null) {
@@ -1071,12 +1071,11 @@ public class HeroDetailController
           }
           FUN_180002fd0(plVar16,3,lVar15);
           lVar11 = this.nowShowHero;
-          if (lVar11 == null) goto LAB_180eb931a;
+          if (lVar11 == null) goto LAB_180e1435c;
           uVar13 = lVar11.heroName;
           uVar10 = lVar11.heroForceLv;
           local_130 = CONCAT44(local_130._4_4_,uVar10);
-          if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0) &&
-             (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
+          if (((*(byte *)(DAT_181d73d40 + 0x133) & 4) != 0) && (*(int *)(DAT_181d73d40 + 224) == 0)) {
             il2cpp_runtime_class_init();
             uVar10 = (uint32)local_130;
           }
@@ -1089,35 +1088,36 @@ public class HeroDetailController
           }
           FUN_180002fd0(plVar16,4,lVar11);
           uVar12 = String.Format(uVar12,plVar16,0);
-          if (local_148 == 0) goto LAB_180eb931a;
+          if (local_148 == 0) goto LAB_180e1435c;
           *(uint64 *)(local_148 + 24) = uVar12;
           if (((this.heroDetailPanel == null) ||
               (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-             (lVar11 = Transform.Find(lVar11,"RecruitLock",0)) == null) goto LAB_180eb931a;
-          lVar11 = Component.GetComponent(lVar11,DAT_181d6af40);
+             (lVar11 = Transform.Find(lVar11,"RecruitLock",0)) == null) goto LAB_180e1435c;
+          lVar11 = Component.GetComponent(lVar11,DAT_181d93760);
           lVar15 = FUN_18046c0a0(0);
-          if ((lVar15 == null) || (lVar15.itemListInteractType == null)) goto LAB_180eb931a;
-          lVar15 = WorldData.Player(lVar15.itemListInteractType,0);
-          if (lVar15 == null) goto LAB_180eb931a;
+          if (((lVar15 == null) || (lVar15.itemListInteractType == null)) ||
+             (lVar15 = WorldData.Player(lVar15.itemListInteractType,0)) == null)
+          goto LAB_180e1435c;
+          cVar4 = HeroData.HaveForce(lVar15,0);
           bVar25 = (bool)cVar7;
-          if (-1 < *(int *)(lVar15 + 132)) {
+          if (cVar4) {
             lVar15 = FUN_18046c0a0(0);
-            if ((lVar15 == null) || (lVar15.itemListInteractType == null)) goto LAB_180eb931a;
+            if ((lVar15 == null) || (lVar15.itemListInteractType == null)) goto LAB_180e1435c;
             lVar15 = WorldData.Player(lVar15.itemListInteractType,0);
-            if (lVar15 == null) goto LAB_180eb931a;
-            bVar25 = 4 < *(int *)(lVar15 + 184);
+            if (lVar15 == null) goto LAB_180e1435c;
+            bVar25 = 4 < lVar15.lastMinIndex;
           }
-          if (lVar11 == null) goto LAB_180eb931a;
+          if (lVar11 == null) goto LAB_180e1435c;
           Selectable.set_interactable(lVar11,bVar25,0);
         }
         else {
-        LAB_180eb3701:
+        LAB_180e0e44c:
           if ((this.heroDetailPanel == null) ||
              (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null)
-          goto LAB_180eb931a;
+          goto LAB_180e1435c;
           lVar11 = Transform.Find(lVar11,"RecruitLock",0);
           plVar16 = (int64 *)Vector3.get_zero(local_a8,0);
-          if (lVar11 == null) goto LAB_180eb931a;
+          if (lVar11 == null) goto LAB_180e1435c;
           local_148 = *plVar16;
           lStack_140 = CONCAT44(lStack_140._4_4_,(int)plVar16[1]);
           Transform.set_localScale(lVar11,&local_148,0);
@@ -1125,25 +1125,28 @@ public class HeroDetailController
         if (((this.heroDetailPanel != null) &&
             (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) != null) &&
            (lVar11 = Transform.Find(lVar11,"Force",0)) != null) {
-          uVar12 = Component.GetComponent(lVar11,DAT_181d6d8c0);
+          uVar12 = Component.GetComponent(lVar11,DAT_181d96160);
           if (this.nowShowHero != null) {
             uVar13 = HeroData.GetHeroForceLvDescribe(this.nowShowHero,1,0);
             LTLocalization.SetText(uVar12,uVar13,0);
             if (((this.heroDetailPanel != null) &&
                 (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) != null) &&
                (lVar11 = Transform.Find(lVar11,"Force",0)) != null) {
-              lVar15 = Component.GetComponent(lVar11,DAT_181d6ccc0);
-              uVar12 = "月俸 {0}\n人口 {1}";
+              lVar15 = Component.GetComponent(lVar11,DAT_181d95560);
               lVar11 = this.nowShowHero;
               if (lVar11 != null) {
                 lVar18 = "";
-                if ((!lVar11.outsideForce) && (-1 < lVar11.belongForceID)) {
+                if ((!lVar11.outsideForce) &&
+                   (cVar4 = HeroData.HaveForce(lVar11,0), uVar12 = "月俸 {0}\n人口 {1}", lVar18 = "",
+                   cVar4)) {
+                  lVar11 = this.nowShowHero;
+                  if (lVar11 == null) goto LAB_180e1435c;
                   uVar13 = "-";
                   if (!lVar11.isLeader) {
                     uVar13 = Int32.ToString(lVar11 + 0x1f0,0);
                     lVar11 = this.nowShowHero;
                   }
-                  if (lVar11 == null) goto LAB_180eb931a;
+                  if (lVar11 == null) goto LAB_180e1435c;
                   uVar14 = "-";
                   if (!lVar11.isLeader) {
                     uVar14 = Int32.ToString(lVar11 + 500,0);
@@ -1155,45 +1158,46 @@ public class HeroDetailController
                   if (((this.heroDetailPanel != null) &&
                       (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) != null)
                      && (lVar11 = Transform.Find(lVar11,"ForceJob",0)) != null) {
-                    uVar12 = Component.GetComponent(lVar11,DAT_181d6d8c0);
+                    uVar12 = Component.GetComponent(lVar11,DAT_181d96160);
                     lVar11 = this.nowShowHero;
                     if (lVar11 != null) {
                       if (lVar11.forceJobType == -1) {
                         lVar15 = "";
                         if (lVar11.branchLeaderAreaID != -1) {
                           lVar11 = FUN_18046c0a0(0);
-                          if (lVar11 == null) goto LAB_180eb931a;
+                          if (lVar11 == null) goto LAB_180e1435c;
                           if (((this.nowShowHero == null) || (lVar11.summonControlable == null)
                               ) || (lVar11 = WorldData.GetArea(lVar11.summonControlable,
                                                                 *(uint32 *)
                                                                  (this.nowShowHero + 156),0)
-                                   , lVar11 == null)) goto LAB_180eb931a;
-                          lVar15 = String.Concat(lVar11.summonLv,"舵主",0);
+                                   , lVar11 == null)) goto LAB_180e1435c;
+                          uVar13 = AreaData.GetAreaName(lVar11,0);
+                          lVar15 = String.Concat(uVar13,"舵主",0);
                         }
                       }
                       else {
                         lVar11 = FUN_18046c100(0);
-                        if (lVar11 == null) goto LAB_180eb931a;
+                        if (lVar11 == null) goto LAB_180e1435c;
                         lVar11 = lVar11.hide;
-                        if (this.nowShowHero == null) goto LAB_180eb931a;
+                        if (this.nowShowHero == null) goto LAB_180e1435c;
                         uVar22 = this.nowShowHero.forceJobType;
-                        if (lVar11 == null) goto LAB_180eb931a;
+                        if (lVar11 == null) goto LAB_180e1435c;
                         if (lVar11.summonLv <= uVar22) {
                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
                         }
                         lVar11 = *(int64 *)
                                   (lVar11.isSummon + 32 + (int64)(int)uVar22 * 8);
-                        if (lVar11 == null) goto LAB_180eb931a;
+                        if (lVar11 == null) goto LAB_180e1435c;
                         lVar11 = lVar11.summonLv;
-                        if (this.nowShowHero == null) goto LAB_180eb931a;
+                        if (this.nowShowHero == null) goto LAB_180e1435c;
                         uVar22 = this.nowShowHero.forceJobID;
-                        if (lVar11 == null) goto LAB_180eb931a;
+                        if (lVar11 == null) goto LAB_180e1435c;
                         if (lVar11.summonLv <= uVar22) {
                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
                         }
                         lVar11 = *(int64 *)
                                   (lVar11.isSummon + 32 + (int64)(int)uVar22 * 8);
-                        if (lVar11 == null) goto LAB_180eb931a;
+                        if (lVar11 == null) goto LAB_180e1435c;
                         lVar15 = lVar11.isSummon;
                       }
                       LTLocalization.SetText(uVar12,lVar15,0);
@@ -1201,7 +1205,7 @@ public class HeroDetailController
                           (lVar11 = GameObject.get_transform(this.heroDetailPanel,0),
                           lVar11 != null)) && (lVar11 = Transform.Find(lVar11,"Name",0)) != null
                          ) {
-                        uVar12 = Component.GetComponent(lVar11,DAT_181d6d8c0);
+                        uVar12 = Component.GetComponent(lVar11,DAT_181d96160);
                         if (this.nowShowHero != null) {
                           uVar13 = HeroData.HeroName(this.nowShowHero,1,0);
                           LTLocalization.SetText(uVar12,uVar13,0);
@@ -1212,7 +1216,7 @@ public class HeroDetailController
                                    (lVar11 = GameObject.get_transform(lVar11,0)) == null) ||
                                   (lVar11 = Transform.Find(lVar11,"Hornor",0)) == null) ||
                                  (lVar11 = Component.get_gameObject(lVar11,0)) == null)
-                              goto LAB_180eb931a;
+                              goto LAB_180e1435c;
                               cVar4 = GameObject.get_activeSelf(lVar11,0);
                               if (cVar4) {
                                 if (((this.heroDetailPanel == null) ||
@@ -1220,25 +1224,25 @@ public class HeroDetailController
                                     lVar11 == null)) ||
                                    ((lVar11 = Transform.Find(lVar11,"Hornor",0), lVar11 == null ||
                                     (lVar11 = Component.get_gameObject(lVar11,0)) == null)))
-                                goto LAB_180eb931a;
+                                goto LAB_180e1435c;
                                 GameObject.SetActive(lVar11,0,0);
                               }
                             }
                             else {
-                              if (((lVar11 == null) ||
-                                  (lVar11 = GameObject.get_transform(lVar11,0)) == null) ||
-                                 ((lVar11 = Transform.Find(lVar11,"Hornor",0), lVar11 == null ||
-                                  (lVar11 = Component.get_gameObject(lVar11,0)) == null)))
-                              goto LAB_180eb931a;
+                              if ((((lVar11 == null) ||
+                                   (lVar11 = GameObject.get_transform(lVar11,0)) == null) ||
+                                  (lVar11 = Transform.Find(lVar11,"Hornor",0)) == null) ||
+                                 (lVar11 = Component.get_gameObject(lVar11,0)) == null)
+                              goto LAB_180e1435c;
                               cVar4 = GameObject.get_activeSelf(lVar11,0);
                               if (!cVar4) {
                                 if (((this.heroDetailPanel == null) ||
                                     (lVar11 = GameObject.get_transform(this.heroDetailPanel,0),
                                     lVar11 == null)) ||
                                    (lVar11 = Transform.Find(lVar11,"Hornor",0)) == null)
-                                goto LAB_180eb931a;
+                                goto LAB_180e1435c;
                                 lVar11 = Component.get_gameObject(lVar11,0);
-                                if (lVar11 == null) goto LAB_180eb931a;
+                                if (lVar11 == null) goto LAB_180e1435c;
                                 GameObject.SetActive(lVar11,1,0);
                               }
                               if (((this.heroDetailPanel == null) ||
@@ -1246,12 +1250,11 @@ public class HeroDetailController
                                   lVar11 == null)) ||
                                  ((lVar11 = Transform.Find(lVar11,"Hornor",0), lVar11 == null ||
                                   (lVar11 = Transform.Find(lVar11,"HornorLv",0)) == null)))
-                              goto LAB_180eb931a;
-                              uVar12 = Component.GetComponent(lVar11,DAT_181d6d8c0);
+                              goto LAB_180e1435c;
+                              uVar12 = Component.GetComponent(lVar11,DAT_181d96160);
                               uVar22 = *(uint32 *)(targetHero + 0x1bc);
-                              lVar11 = *(int64 *)
-                                        (pPlotController + 1000);
-                              if (lVar11 == null) goto LAB_180eb931a;
+                              lVar11 = *(int64 *)(pStatics_3d40 + 0x3f0);
+                              if (lVar11 == null) goto LAB_180e1435c;
                               if (lVar11.summonLv <= uVar22) {
                                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
                               }
@@ -1265,23 +1268,23 @@ public class HeroDetailController
                                    lVar11 == null)) ||
                                   (lVar11 = Transform.Find(lVar11,"Hornor",0)) == null) ||
                                  (lVar11 = Transform.Find(lVar11,"HornorLv",0)) == null)
-                              goto LAB_180eb931a;
-                              plVar16 = (int64 *)Component.GetComponent(lVar11,DAT_181d6d8c0);
+                              goto LAB_180e1435c;
+                              plVar16 = (int64 *)Component.GetComponent(lVar11,DAT_181d96160);
                               lVar11 = FUN_18046c100(0);
-                              if (lVar11 == null) goto LAB_180eb931a;
+                              if (lVar11 == null) goto LAB_180e1435c;
                               lVar11 = lVar11.dailyAIManaged;
                               lVar15 = FUN_18046c100(0);
                               if ((lVar15 == null) || (lVar15.showAllButton == null))
-                              goto LAB_180eb931a;
+                              goto LAB_180e1435c;
                               uVar22 = Mathf.Min(*(int *)(lVar15.showAllButton + 24) + -1,
                                                   (int)((float)*(int *)(targetHero + 0x1bc) * 0.5),0);
-                              if (lVar11 == null) goto LAB_180eb931a;
+                              if (lVar11 == null) goto LAB_180e1435c;
                               if (lVar11.summonLv <= uVar22) {
                                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
                               }
                               lVar11 = *(int64 *)
                                         (lVar11.isSummon + 32 + (int64)(int)uVar22 * 8);
-                              if ((lVar11 == null) || (plVar16 == (int64 *)0)) goto LAB_180eb931a;
+                              if ((lVar11 == null) || (plVar16 == (int64 *)0)) goto LAB_180e1435c;
                               local_148 = lVar11.summonLv;
                               lStack_140 = lVar11.summonControlable;
                               (**(code **)(*plVar16 + 0x2a8))
@@ -1291,22 +1294,21 @@ public class HeroDetailController
                                    lVar11 == null ||
                                    (lVar11 = Transform.Find(lVar11,"Hornor",0)) == null) ||
                                   (lVar11 = Transform.Find(lVar11,"Back",0)) == null)))
-                              goto LAB_180eb931a;
-                              local_148 = Component.GetComponent(lVar11,DAT_181d6ccc0);
-                              plVar16 = (int64 *)FUN_1800d60b0(DAT_181d7f180,4);
+                              goto LAB_180e1435c;
+                              local_148 = Component.GetComponent(lVar11,DAT_181d95560);
+                              plVar16 = (int64 *)FUN_1800d60b0(DAT_181da4120,4);
                               uVar12 = "{1}\n好感加成{2}%\n恶名减少{3}%\n{0}";
-                              lVar11 = *(int64 *)
-                                        (pPlotController + 1000);
-                              if (lVar11 == null) goto LAB_180eb931a;
+                              lVar11 = *(int64 *)(pStatics_3d40 + 0x3f0);
+                              if (lVar11 == null) goto LAB_180e1435c;
                               lVar15 = "登峰造极";
                               if (*(int *)(targetHero + 0x1bc) < lVar11.summonLv + -1) {
                                 local_11c = (int)*(float *)(targetHero + 0x1b4);
-                                uVar13 = il2cpp_value_box(DAT_181d5b2f8,&local_11c);
+                                uVar13 = il2cpp_value_box(DAT_181d80418,&local_11c);
                                 local_118 = HeroData.GetHornorUpgradeCost(targetHero,0);
-                                uVar14 = il2cpp_value_box(DAT_181d7d0b8,&local_118);
+                                uVar14 = il2cpp_value_box(DAT_181da22d8,&local_118);
                                 lVar15 = String.Format("升级功绩{0}/{1}",uVar13,uVar14,0);
                               }
-                              if (plVar16 == (int64 *)0) goto LAB_180eb931a;
+                              if (plVar16 == (int64 *)0) goto LAB_180e1435c;
                               if ((lVar15 != null) &&
                                  (lVar11 = il2cpp_internal(lVar15,*(uint64 *)(*plVar16 + 64)),
                                  lVar11 == null)) {
@@ -1321,11 +1323,10 @@ public class HeroDetailController
                               }
                               plVar16[4] = lVar15;
                               il2cpp_internal(plVar16 + 4,lVar15);
-                              lVar11 = *(int64 *)
-                                        (pPlotController + 0x3f0);
+                              lVar11 = *(int64 *)(pStatics_3d40 + 0x3f8);
                               uVar22 = *(uint32 *)(targetHero + 0x1bc);
                               local_130 = CONCAT44(local_130._4_4_,uVar22);
-                              if (lVar11 == null) goto LAB_180eb931a;
+                              if (lVar11 == null) goto LAB_180e1435c;
                               if (lVar11.summonLv <= uVar22) {
                                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
                                 uVar22 = (uint32)local_130;
@@ -1381,7 +1382,7 @@ public class HeroDetailController
                               plVar16[7] = lVar11;
                               il2cpp_internal(plVar16 + 7,lVar11);
                               uVar12 = String.Format(uVar12,plVar16,0);
-                              if (local_148 == 0) goto LAB_180eb931a;
+                              if (local_148 == 0) goto LAB_180e1435c;
                               *(uint64 *)(local_148 + 24) = uVar12;
                             }
                             lVar11 = this.heroDetailPanel;
@@ -1390,7 +1391,7 @@ public class HeroDetailController
                                    (lVar11 = GameObject.get_transform(lVar11,0)) == null) ||
                                   (lVar11 = Transform.Find(lVar11,"Gov",0)) == null) ||
                                  (lVar11 = Component.get_gameObject(lVar11,0)) == null)
-                              goto LAB_180eb931a;
+                              goto LAB_180e1435c;
                               cVar4 = GameObject.get_activeSelf(lVar11,0);
                               if (cVar4) {
                                 if (((this.heroDetailPanel == null) ||
@@ -1398,7 +1399,7 @@ public class HeroDetailController
                                     lVar11 == null)) ||
                                    ((lVar11 = Transform.Find(lVar11,"Gov",0), lVar11 == null ||
                                     (lVar11 = Component.get_gameObject(lVar11,0)) == null)))
-                                goto LAB_180eb931a;
+                                goto LAB_180e1435c;
                                 GameObject.SetActive(lVar11,0,0);
                               }
                             }
@@ -1407,16 +1408,16 @@ public class HeroDetailController
                                   (lVar11 = GameObject.get_transform(lVar11,0)) == null) ||
                                  ((lVar11 = Transform.Find(lVar11,"Gov",0), lVar11 == null ||
                                   (lVar11 = Component.get_gameObject(lVar11,0)) == null)))
-                              goto LAB_180eb931a;
+                              goto LAB_180e1435c;
                               cVar4 = GameObject.get_activeSelf(lVar11,0);
                               if (!cVar4) {
                                 if (((this.heroDetailPanel == null) ||
                                     (lVar11 = GameObject.get_transform(this.heroDetailPanel,0),
                                     lVar11 == null)) ||
                                    (lVar11 = Transform.Find(lVar11,"Gov",0)) == null)
-                                goto LAB_180eb931a;
+                                goto LAB_180e1435c;
                                 lVar11 = Component.get_gameObject(lVar11,0);
-                                if (lVar11 == null) goto LAB_180eb931a;
+                                if (lVar11 == null) goto LAB_180e1435c;
                                 GameObject.SetActive(lVar11,1,0);
                               }
                               if (((this.heroDetailPanel == null) ||
@@ -1424,12 +1425,11 @@ public class HeroDetailController
                                   lVar11 == null)) ||
                                  ((lVar11 = Transform.Find(lVar11,"Gov",0), lVar11 == null ||
                                   (lVar11 = Transform.Find(lVar11,"GovLv",0)) == null)))
-                              goto LAB_180eb931a;
-                              uVar12 = Component.GetComponent(lVar11,DAT_181d6d8c0);
+                              goto LAB_180e1435c;
+                              uVar12 = Component.GetComponent(lVar11,DAT_181d96160);
                               uVar22 = *(uint32 *)(targetHero + 0x1b0);
-                              lVar11 = *(int64 *)
-                                        (pPlotController + 0x3e0);
-                              if (lVar11 == null) goto LAB_180eb931a;
+                              lVar11 = *(int64 *)(pStatics_3d40 + 1000);
+                              if (lVar11 == null) goto LAB_180e1435c;
                               if (lVar11.summonLv <= uVar22) {
                                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
                               }
@@ -1443,23 +1443,23 @@ public class HeroDetailController
                                    lVar11 == null)) ||
                                   (lVar11 = Transform.Find(lVar11,"Gov",0)) == null) ||
                                  (lVar11 = Transform.Find(lVar11,"GovLv",0)) == null)
-                              goto LAB_180eb931a;
-                              plVar16 = (int64 *)Component.GetComponent(lVar11,DAT_181d6d8c0);
+                              goto LAB_180e1435c;
+                              plVar16 = (int64 *)Component.GetComponent(lVar11,DAT_181d96160);
                               lVar11 = FUN_18046c100(0);
-                              if (lVar11 == null) goto LAB_180eb931a;
+                              if (lVar11 == null) goto LAB_180e1435c;
                               lVar11 = lVar11.dailyAIManaged;
                               lVar15 = FUN_18046c100(0);
                               if ((lVar15 == null) || (lVar15.showAllButton == null))
-                              goto LAB_180eb931a;
+                              goto LAB_180e1435c;
                               uVar22 = Mathf.Min(*(int *)(lVar15.showAllButton + 24) + -1,
                                                   (int)((float)*(int *)(targetHero + 0x1b0) * 0.5),0);
-                              if (lVar11 == null) goto LAB_180eb931a;
+                              if (lVar11 == null) goto LAB_180e1435c;
                               if (lVar11.summonLv <= uVar22) {
                                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
                               }
                               lVar11 = *(int64 *)
                                         (lVar11.isSummon + 32 + (int64)(int)uVar22 * 8);
-                              if ((lVar11 == null) || (plVar16 == (int64 *)0)) goto LAB_180eb931a;
+                              if ((lVar11 == null) || (plVar16 == (int64 *)0)) goto LAB_180e1435c;
                               local_148 = lVar11.summonLv;
                               lStack_140 = lVar11.summonControlable;
                               (**(code **)(*plVar16 + 0x2a8))
@@ -1469,22 +1469,21 @@ public class HeroDetailController
                                    lVar11 == null ||
                                    (lVar11 = Transform.Find(lVar11,"Gov",0)) == null) ||
                                   (lVar11 = Transform.Find(lVar11,"Back",0)) == null)))
-                              goto LAB_180eb931a;
-                              local_148 = Component.GetComponent(lVar11,DAT_181d6ccc0);
-                              plVar16 = (int64 *)FUN_1800d60b0(DAT_181d7f180,4);
+                              goto LAB_180e1435c;
+                              local_148 = Component.GetComponent(lVar11,DAT_181d95560);
+                              plVar16 = (int64 *)FUN_1800d60b0(DAT_181da4120,4);
                               uVar12 = "{1}\n声望加成{2}%\n恶名减少{3}%\n{0}";
-                              lVar11 = *(int64 *)
-                                        (pPlotController + 0x3e0);
-                              if (lVar11 == null) goto LAB_180eb931a;
+                              lVar11 = *(int64 *)(pStatics_3d40 + 1000);
+                              if (lVar11 == null) goto LAB_180e1435c;
                               lVar15 = "登峰造极";
                               if (*(int *)(targetHero + 0x1b0) < lVar11.summonLv + -1) {
                                 local_114 = (int)*(float *)(targetHero + 0x1b4);
-                                uVar13 = il2cpp_value_box(DAT_181d5b2f8,&local_114);
+                                uVar13 = il2cpp_value_box(DAT_181d80418,&local_114);
                                 local_110 = HeroData.GetGovernUpgradeCost(targetHero,0);
-                                uVar14 = il2cpp_value_box(DAT_181d7d0b8,&local_110);
+                                uVar14 = il2cpp_value_box(DAT_181da22d8,&local_110);
                                 lVar15 = String.Format("升级功绩{0}/{1}",uVar13,uVar14,0);
                               }
-                              if (plVar16 == (int64 *)0) goto LAB_180eb931a;
+                              if (plVar16 == (int64 *)0) goto LAB_180e1435c;
                               if ((lVar15 != null) &&
                                  (lVar11 = il2cpp_internal(lVar15,*(uint64 *)(*plVar16 + 64)),
                                  lVar11 == null)) {
@@ -1499,11 +1498,10 @@ public class HeroDetailController
                               }
                               plVar16[4] = lVar15;
                               il2cpp_internal(plVar16 + 4,lVar15);
-                              lVar11 = *(int64 *)
-                                        (pPlotController + 0x3f0);
+                              lVar11 = *(int64 *)(pStatics_3d40 + 0x3f8);
                               uVar22 = *(uint32 *)(targetHero + 0x1b0);
                               local_130 = CONCAT44(local_130._4_4_,uVar22);
-                              if (lVar11 == null) goto LAB_180eb931a;
+                              if (lVar11 == null) goto LAB_180e1435c;
                               if (lVar11.summonLv <= uVar22) {
                                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
                                 uVar22 = (uint32)local_130;
@@ -1559,16 +1557,16 @@ public class HeroDetailController
                               plVar16[7] = lVar11;
                               il2cpp_internal(plVar16 + 7,lVar11);
                               uVar12 = String.Format(uVar12,plVar16,0);
-                              if (local_148 == 0) goto LAB_180eb931a;
+                              if (local_148 == 0) goto LAB_180e1435c;
                               *(uint64 *)(local_148 + 24) = uVar12;
                             }
                             if (((this.heroDetailPanel != null) &&
                                 (lVar11 = GameObject.get_transform(this.heroDetailPanel,0),
                                 lVar11 != null)) &&
                                (lVar11 = Transform.Find(lVar11,"FightScore",0)) != null) {
-                              uVar12 = Component.GetComponent(lVar11,DAT_181d6d8c0);
+                              uVar12 = Component.GetComponent(lVar11,DAT_181d96160);
                               if (this.nowShowHero != null) {
-                                uVar13 = Single.ToString(this.nowShowHero + 0x38c,
+                                uVar13 = Single.ToString(this.nowShowHero + 0x3d4,
                                                           "f0",0);
                                 LTLocalization.SetText(uVar12,uVar13,0);
                                 if ((((this.heroDetailPanel != null) &&
@@ -1576,7 +1574,7 @@ public class HeroDetailController
                                      lVar11 != null)) &&
                                     (lVar11 = Transform.Find(lVar11,"Fame",0)) != null) &&
                                    (lVar11 = Transform.Find(lVar11,"Label",0)) != null) {
-                                  uVar12 = Component.GetComponent(lVar11,DAT_181d6d8c0);
+                                  uVar12 = Component.GetComponent(lVar11,DAT_181d96160);
                                   if (this.nowShowHero != null) {
                                     uVar13 = Single.ToString(this.nowShowHero + 0x1c4,
                                                               "f0",0);
@@ -1588,7 +1586,7 @@ public class HeroDetailController
                                                lVar11 != null &&
                                                (lVar11 = Transform.Find(lVar11,"Label",0),
                                                lVar11 != null)))) {
-                                      uVar12 = Component.GetComponent(lVar11,DAT_181d6d8c0);
+                                      uVar12 = Component.GetComponent(lVar11,DAT_181d96160);
                                       if (this.nowShowHero != null) {
                                         uVar13 = Single.ToString(this.nowShowHero + 0x1c8,
                                                                   "f0",0);
@@ -1600,16 +1598,16 @@ public class HeroDetailController
                                            ((lVar11 = Transform.Find(lVar11,"BadFame",0), lVar11 != null
                                             && (lVar11 = Transform.Find(lVar11,"Bounty",0),
                                                lVar11 != null)))) {
-                                          uVar12 = Component.GetComponent(lVar11,DAT_181d6d8c0);
+                                          uVar12 = Component.GetComponent(lVar11,DAT_181d96160);
                                           if (this.nowShowHero != null) {
                                             iVar9 = HeroData.GetBountyPirce
                                                               (this.nowShowHero,0);
                                             lVar11 = "";
                                             if (0 < iVar9) {
-                                              if (this.nowShowHero == null) goto LAB_180eb931a;
+                                              if (this.nowShowHero == null) goto LAB_180e1435c;
                                               local_10c = HeroData.GetBountyPirce
                                                                     (this.nowShowHero,0);
-                                              uVar13 = il2cpp_value_box(DAT_181d5b2f8,&local_10c);
+                                              uVar13 = il2cpp_value_box(DAT_181d80418,&local_10c);
                                               lVar11 = String.Format("悬赏{0}两",uVar13,0);
                                             }
                                             LTLocalization.SetText(uVar12,lVar11,0);
@@ -1621,7 +1619,7 @@ public class HeroDetailController
                                                 lVar11 != null)) &&
                                                (lVar11 = Transform.Find(lVar11,"Label",0),
                                                lVar11 != null)) {
-                                              uVar12 = Component.GetComponent(lVar11,DAT_181d6d8c0);
+                                              uVar12 = Component.GetComponent(lVar11,DAT_181d96160);
                                               if ((this.nowShowHero != null) &&
                                                  (lVar11 = *(int64 *)
                                                             (this.nowShowHero + 0x220),
@@ -1635,10 +1633,10 @@ public class HeroDetailController
                                                   if (!cVar4) {
                                                     if ((lVar11 == null) ||
                                                        (lVar11 = GameObject.get_transform(lVar11,0),
-                                                       lVar11 == null)) goto LAB_180eb931a;
+                                                       lVar11 == null)) goto LAB_180e1435c;
                                                     lVar11 = Transform.Find(lVar11,"Loyal",0);
                                                     plVar16 = (int64 *)Vector3.get_one(local_98,0);
-                                                    if (lVar11 == null) goto LAB_180eb931a;
+                                                    if (lVar11 == null) goto LAB_180e1435c;
                                                     local_148 = *plVar16;
                                                     lStack_140 = CONCAT44(lStack_140._4_4_,(int)plVar16[1]
                                                                          );
@@ -1651,17 +1649,17 @@ public class HeroDetailController
                                                         (lVar11 = Transform.Find(lVar11,"Loyal",0),
                                                         lVar11 == null)) ||
                                                        (lVar11 = Transform.Find(lVar11,"Label",0),
-                                                       lVar11 == null)) goto LAB_180eb931a;
-                                                    uVar12 = Component.GetComponent(lVar11,DAT_181d6d8c0)
+                                                       lVar11 == null)) goto LAB_180e1435c;
+                                                    uVar12 = Component.GetComponent(lVar11,DAT_181d96160)
                                                     ;
                                                     if (this.nowShowHero == null)
-                                                    goto LAB_180eb931a;
+                                                    goto LAB_180e1435c;
                                                     uVar13 = Single.ToString(*(int64 *)
                                                                                (this + 96) + 0x1cc,
                                                                               "f0",0);
                                                     LTLocalization.SetText(uVar12,uVar13,0);
                                                     if (this.nowShowHero == null)
-                                                    goto LAB_180eb931a;
+                                                    goto LAB_180e1435c;
                                                     fVar26 = (float)HeroData.GetBetrayForceRate
                                                                               (*(int64 *)
                                                                                 (this + 96),0);
@@ -1670,12 +1668,12 @@ public class HeroDetailController
                                                                             (this.heroDetailPanel
                                                                              ,0), lVar11 == null)) ||
                                                        (lVar11 = Transform.Find(lVar11,"Loyal",0),
-                                                       lVar11 == null)) goto LAB_180eb931a;
-                                                    lVar11 = Component.GetComponent(lVar11,DAT_181d6ccc0)
+                                                       lVar11 == null)) goto LAB_180e1435c;
+                                                    lVar11 = Component.GetComponent(lVar11,DAT_181d95560)
                                                     ;
-                                                    uVar12 = "忠诚\n♦影响弟子工作效率，如习武练功/资源采集/物品制造等。\n♦每月自动向50点靠拢，可通过嘉奖/门派宴会快速提升。{0}";
+                                                    uVar12 = "忠诚\n♦影响弟子工作效率，如习武练功/资源采集/物品制造。\n♦每月自动向50点靠拢，可通过嘉奖/门派宴会提升。{0}";
                                                     if (this.nowShowHero == null)
-                                                    goto LAB_180eb931a;
+                                                    goto LAB_180e1435c;
                                                     uVar13 = "\n♦特殊角色不会叛离门派。";
                                                     if (this.nowShowHero.speHero ==
                                                         false) {
@@ -1684,55 +1682,46 @@ public class HeroDetailController
                                                                                    "f0",0);
                                                       uVar13 = "\n♦忠诚小于50时，每月有概率叛离门派。\n{1}每月叛离概率:{0}%</color>";
                                                       if (this.nowShowHero == null)
-                                                      goto LAB_180eb931a;
+                                                      goto LAB_180e1435c;
                                                       if (*(float *)(this.nowShowHero + 0x1cc
                                                                     ) < 50.0) {
                                                         if (fVar26 <= 0.05) {
-                                                          if (((*(byte *)(PlotController_StaticsPtr +
-                                                                         0x133) & 4) != 0) &&
-                                                             (*(int *)(PlotController_StaticsPtr + 224)
-                                                              == 0)) {
+                                                          if (((*(byte *)(DAT_181d73d40 + 0x133) & 4) != 0
+                                                              ) && (*(int *)(DAT_181d73d40 + 224) == 0))
+                                                          {
                                                             il2cpp_runtime_class_init
-                                                                      (PlotController_StaticsPtr,local_130
-                                                                      );
+                                                                      (DAT_181d73d40,local_130);
                                                           }
                                                           uVar14 = *(uint64 *)
-                                                                    (*(int64 *)
-                                                                      (PlotController_StaticsPtr + 184) +
-                                                                    0x230);
+                                                                    (pStatics_3d40 +
+                                                                    0x238);
                                                         }
                                                         else {
-                                                          if (((*(byte *)(PlotController_StaticsPtr +
-                                                                         0x133) & 4) != 0) &&
-                                                             (*(int *)(PlotController_StaticsPtr + 224)
-                                                              == 0)) {
+                                                          if (((*(byte *)(DAT_181d73d40 + 0x133) & 4) != 0
+                                                              ) && (*(int *)(DAT_181d73d40 + 224) == 0))
+                                                          {
                                                             il2cpp_runtime_class_init
-                                                                      (PlotController_StaticsPtr,local_130
-                                                                      );
+                                                                      (DAT_181d73d40,local_130);
                                                           }
                                                           uVar14 = *(uint64 *)
-                                                                    (*(int64 *)
-                                                                      (PlotController_StaticsPtr + 184) +
-                                                                    0x2c8);
+                                                                    (pStatics_3d40 +
+                                                                    0x2d0);
                                                         }
                                                       }
                                                       else {
-                                                        if (((*(byte *)(PlotController_StaticsPtr + 0x133)
-                                                             & 4) != 0) &&
-                                                           (*(int *)(PlotController_StaticsPtr + 224) ==
-                                                            0)) {
+                                                        if (((*(byte *)(DAT_181d73d40 + 0x133) & 4) != 0)
+                                                           && (*(int *)(DAT_181d73d40 + 224) == 0)) {
                                                           il2cpp_runtime_class_init
-                                                                    (PlotController_StaticsPtr,local_130);
+                                                                    (DAT_181d73d40,local_130);
                                                         }
                                                         uVar14 = *(uint64 *)
-                                                                  (*(int64 *)
-                                                                    (PlotController_StaticsPtr + 184) +
-                                                                  0x260);
+                                                                  (pStatics_3d40 +
+                                                                  0x268);
                                                       }
                                                       uVar13 = String.Format(uVar13,local_130,uVar14,0);
                                                     }
                                                     uVar12 = String.Format(uVar12,uVar13,0);
-                                                    if (lVar11 == null) goto LAB_180eb931a;
+                                                    if (lVar11 == null) goto LAB_180e1435c;
                                                     lVar11.summonLv = uVar12;
                                                     il2cpp_internal((uint64 *)(lVar11 + 24),
                                                                         uVar12);
@@ -1740,10 +1729,10 @@ public class HeroDetailController
                                                   else {
                                                     if ((lVar11 == null) ||
                                                        (lVar11 = GameObject.get_transform(lVar11,0),
-                                                       lVar11 == null)) goto LAB_180eb931a;
+                                                       lVar11 == null)) goto LAB_180e1435c;
                                                     lVar11 = Transform.Find(lVar11,"Loyal",0);
                                                     plVar16 = (int64 *)Vector3.get_zero(local_88,0);
-                                                    if (lVar11 == null) goto LAB_180eb931a;
+                                                    if (lVar11 == null) goto LAB_180e1435c;
                                                     local_148 = *plVar16;
                                                     lStack_140 = CONCAT44(lStack_140._4_4_,(int)plVar16[1]
                                                                          );
@@ -1774,10 +1763,10 @@ public class HeroDetailController
                                                                                       ,0), lVar11 == null ||
                                                             (lVar11 = Transform.Find(lVar11,"LogTab"
                                                                                       ,0), lVar11 == null))))
-                                                        goto LAB_180eb931a;
+                                                        goto LAB_180e1435c;
                                                         lVar11 = Component.get_gameObject(lVar11,0);
                                                         if ((this.nowShowHero == null) ||
-                                                           (lVar11 == null)) goto LAB_180eb931a;
+                                                           (lVar11 == null)) goto LAB_180e1435c;
                                                         GameObject.SetActive
                                                                   (lVar11,*(int *)(*(int64 *)
                                                                                     (this + 96) +
@@ -1790,8 +1779,8 @@ public class HeroDetailController
                                                              (lVar11 = Transform.Find(lVar11,
                                                         "InfoTabs",0), lVar11 == null)) ||
                                                         (lVar11 = Component.GetComponent
-                                                                            (lVar11,DAT_181d6e0c0),
-                                                        lVar11 == null)))) goto LAB_180eb931a;
+                                                                            (lVar11,DAT_181d96960),
+                                                        lVar11 == null)))) goto LAB_180e1435c;
                                                         UIGrid.set_repositionNow(lVar11,1,0);
                                                       }
                                                       if (((this.heroDetailPanel != null) &&
@@ -1804,11 +1793,11 @@ public class HeroDetailController
                                                           ((lVar11 = Transform.Find(lVar11,"LogTab",
                                                                                      0), lVar11 != null &&
                                                            (lVar11 = Component.GetComponent
-                                                                               (lVar11,DAT_181d6da40),
+                                                                               (lVar11,DAT_181d962e0),
                                                            lVar11 != null)))))) {
                                                         if (lVar11.goodKungfuSkillName) {
                                                           if (this.nowShowHero == null)
-                                                          goto LAB_180eb931a;
+                                                          goto LAB_180e1435c;
                                                           if (*(int *)(this.nowShowHero +
                                                                       88) == 0) {
                                                             if ((((this.heroDetailPanel == null) ||
@@ -1821,8 +1810,8 @@ public class HeroDetailController
                                                         ((lVar11 = Transform.Find(lVar11,"BaseInfoTab",0)
                                                          , lVar11 == null ||
                                                          (lVar11 = Component.GetComponent
-                                                                             (lVar11,DAT_181d6da40),
-                                                         lVar11 == null)))) goto LAB_180eb931a;
+                                                                             (lVar11,DAT_181d962e0),
+                                                         lVar11 == null)))) goto LAB_180e1435c;
                                                         Toggle.set_isOn(lVar11,1,0);
                                                         if ((((this.heroDetailPanel == null) ||
                                                              ((lVar11 = GameObject.get_transform
@@ -1834,8 +1823,8 @@ public class HeroDetailController
                                                         (lVar11 = Transform.Find(lVar11,"LogTab",0),
                                                         lVar11 == null)) ||
                                                         (lVar11 = Component.GetComponent
-                                                                            (lVar11,DAT_181d6da40),
-                                                        lVar11 == null)) goto LAB_180eb931a;
+                                                                            (lVar11,DAT_181d962e0),
+                                                        lVar11 == null)) goto LAB_180e1435c;
                                                         Toggle.set_isOn(lVar11,0,0);
                                                         }
                                                         }
@@ -1863,10 +1852,10 @@ public class HeroDetailController
                                                                  ((lVar11 = Transform.Find(lVar11,
                                                         "InfoTabs",0), lVar11 == null ||
                                                         (lVar11 = Transform.Find(lVar11,"ForceContributionTab",0),
-                                                        lVar11 == null)))) goto LAB_180eb931a;
+                                                        lVar11 == null)))) goto LAB_180e1435c;
                                                         lVar11 = Component.get_gameObject(lVar11,0);
                                                         if ((this.nowShowHero == null) ||
-                                                           (lVar11 == null)) goto LAB_180eb931a;
+                                                           (lVar11 == null)) goto LAB_180e1435c;
                                                         GameObject.SetActive
                                                                   (lVar11,*(int *)(*(int64 *)
                                                                                     (this + 96) +
@@ -1879,8 +1868,8 @@ public class HeroDetailController
                                                              (lVar11 = Transform.Find(lVar11,
                                                         "InfoTabs",0), lVar11 == null)) ||
                                                         (lVar11 = Component.GetComponent
-                                                                            (lVar11,DAT_181d6e0c0),
-                                                        lVar11 == null)))) goto LAB_180eb931a;
+                                                                            (lVar11,DAT_181d96960),
+                                                        lVar11 == null)))) goto LAB_180e1435c;
                                                         UIGrid.set_repositionNow(lVar11,1,0);
                                                         }
                                                         if (((this.heroDetailPanel != null) &&
@@ -1893,11 +1882,11 @@ public class HeroDetailController
                                                             ((lVar11 = Transform.Find(lVar11,
                                                         "ForceContributionTab",0), lVar11 != null &&
                                                         (lVar11 = Component.GetComponent
-                                                                            (lVar11,DAT_181d6da40),
+                                                                            (lVar11,DAT_181d962e0),
                                                         lVar11 != null)))))) {
                                                           if (lVar11.goodKungfuSkillName) {
                                                             if (this.nowShowHero == null)
-                                                            goto LAB_180eb931a;
+                                                            goto LAB_180e1435c;
                                                             if (*(int *)(this.nowShowHero +
                                                                         88) != 0) {
                                                               if ((((this.heroDetailPanel == null)
@@ -1911,8 +1900,8 @@ public class HeroDetailController
                                                         ((lVar11 = Transform.Find(lVar11,"BaseInfoTab",0)
                                                          , lVar11 == null ||
                                                          (lVar11 = Component.GetComponent
-                                                                             (lVar11,DAT_181d6da40),
-                                                         lVar11 == null)))) goto LAB_180eb931a;
+                                                                             (lVar11,DAT_181d962e0),
+                                                         lVar11 == null)))) goto LAB_180e1435c;
                                                         Toggle.set_isOn(lVar11,1,0);
                                                         if (((this.heroDetailPanel == null) ||
                                                             ((lVar11 = GameObject.get_transform
@@ -1924,8 +1913,8 @@ public class HeroDetailController
                                                         ((lVar11 = Transform.Find(lVar11,"ForceContributionTab",0)
                                                          , lVar11 == null ||
                                                          (lVar11 = Component.GetComponent
-                                                                             (lVar11,DAT_181d6da40),
-                                                         lVar11 == null)))) goto LAB_180eb931a;
+                                                                             (lVar11,DAT_181d962e0),
+                                                         lVar11 == null)))) goto LAB_180e1435c;
                                                         Toggle.set_isOn(lVar11,0,0);
                                                         }
                                                         }
@@ -1946,7 +1935,7 @@ public class HeroDetailController
                                                            && (lVar11 = Transform.Find(lVar11,
                                                         "Sex",0), lVar11 != null)) {
                                                           uVar12 = Component.GetComponent
-                                                                             (lVar11,DAT_181d6d8c0);
+                                                                             (lVar11,DAT_181d96160);
                                                           if (this.nowShowHero != null) {
                                                             uVar13 = "女";
                                                             if (*(char *)(this.nowShowHero +
@@ -1966,14 +1955,8 @@ public class HeroDetailController
                                                         ((lVar11 = Transform.Find(lVar11,"GoodEvil",0)
                                                          , lVar11 != null &&
                                                          (uVar12 = Component.GetComponent
-                                                                             (lVar11,DAT_181d6d8c0),
+                                                                             (lVar11,DAT_181d96160),
                                                          this.nowShowHero != null)))))) {
-                                                          if (((*(byte *)(PlotController_StaticsPtr +
-                                                                         0x133) & 4) != 0) &&
-                                                             (*(int *)(PlotController_StaticsPtr + 224)
-                                                              == 0)) {
-                                                            il2cpp_runtime_class_init();
-                                                          }
                                                           uVar13 = GlobalData.GetChaosText();
                                                           if (this.nowShowHero != null) {
                                                             uVar14 = GlobalData.GetEvilText
@@ -1993,12 +1976,11 @@ public class HeroDetailController
                                                         (lVar11 = Transform.Find(lVar11,"Nature",0),
                                                         lVar11 != null)) {
                                                           uVar12 = Component.GetComponent
-                                                                             (lVar11,DAT_181d6d8c0);
+                                                                             (lVar11,DAT_181d96160);
                                                           lVar11 = this.nowShowHero;
                                                           lVar15 = *(int64 *)
-                                                                    (*(int64 *)
-                                                                      (PlotController_StaticsPtr + 184) +
-                                                                    0x5a0);
+                                                                    (pStatics_3d40 +
+                                                                    0x5a8);
                                                           if (lVar11 != null) {
                                                             uVar22 = lVar11.nature;
                                                             if (lVar15 != null) {
@@ -2035,7 +2017,7 @@ public class HeroDetailController
                                                         (lVar11 = Transform.Find(lVar11,"Hobby",0),
                                                         lVar11 != null)))) {
                                                           uVar12 = Component.GetComponent
-                                                                             (lVar11,DAT_181d6d8c0);
+                                                                             (lVar11,DAT_181d96160);
                                                           lVar11 = this.nowShowHero;
                                                           if (lVar11 != null) {
                                                             lVar15 = "";
@@ -2050,19 +2032,19 @@ public class HeroDetailController
                                                               lVar11 = this.heroDetailPanel;
                                                               if (*(int *)(this.nowShowHero +
                                                                           88) == 0) {
-                                                                if (((lVar11 != null) &&
-                                                                    (lVar11 = GameObject.get_transform
-                                                                                        (lVar11,0),
-                                                                    lVar11 != null)) &&
-                                                                   ((lVar11 = Transform.Find(lVar11,
-                                                        "BaseInfo",0), lVar11 != null &&
+                                                                if ((((lVar11 != null) &&
+                                                                     (lVar11 = GameObject.get_transform
+                                                                                         (lVar11,0),
+                                                                     lVar11 != null)) &&
+                                                                    (lVar11 = Transform.Find(lVar11,
+                                                        "BaseInfo",0), lVar11 != null)) &&
                                                         (lVar11 = Transform.Find(lVar11,"SkillFocus",0),
-                                                        lVar11 != null)))) {
+                                                        lVar11 != null)) {
                                                           uVar12 = Component.GetComponent
-                                                                             (lVar11,DAT_181d6d8c0);
+                                                                             (lVar11,DAT_181d96160);
                                                           LTLocalization.SetText(uVar12,"",0);
                                                           lVar11 = this.nowShowHero;
-        LAB_180eb5be7:
+        LAB_180e10b39:
                                                           if ((this.heroDetailPanel != null) &&
                                                              (lVar15 = GameObject.get_transform
                                                                                  (*(int64 *)
@@ -2088,15 +2070,15 @@ public class HeroDetailController
                                                         lVar11 != null)) {
                                                           HeroData.SetHpBar(lVar11,uVar12,0);
                                                           lVar11 = this.nowShowHero;
-                                                          if ((((this.heroDetailPanel != null) &&
-                                                               (lVar15 = GameObject.get_transform
-                                                                                   (*(int64 *)
-                                                                                     (this + 32),0),
-                                                               lVar15 != null)) &&
-                                                              (lVar15 = Transform.Find(lVar15,
-                                                        "Mp",0), lVar15 != null)) &&
+                                                          if (((this.heroDetailPanel != null) &&
+                                                              (lVar15 = GameObject.get_transform
+                                                                                  (*(int64 *)
+                                                                                    (this + 32),0),
+                                                              lVar15 != null)) &&
+                                                             ((lVar15 = Transform.Find(lVar15,
+                                                        "Mp",0), lVar15 != null &&
                                                         (uVar12 = Component.get_gameObject(lVar15,0),
-                                                        lVar11 != null)) {
+                                                        lVar11 != null)))) {
                                                           HeroData.SetMpBar(lVar11,uVar12,0);
                                                           lVar11 = this.nowShowHero;
                                                           if (((this.heroDetailPanel != null) &&
@@ -2117,7 +2099,7 @@ public class HeroDetailController
                                                              (lVar11 = Transform.Find(lVar11,
                                                         "Poison",0), lVar11 != null)) {
                                                           uVar12 = Component.GetComponent
-                                                                             (lVar11,DAT_181d6d8c0);
+                                                                             (lVar11,DAT_181d96160);
                                                           if (this.nowShowHero != null) {
                                                             local_14c = Mathf.CeilToInt(*(int64 *)
                                                                                           (this + 96)
@@ -2133,7 +2115,7 @@ public class HeroDetailController
                                                                (lVar11 = Transform.Find(lVar11,
                                                         "InternalInjury",0), lVar11 != null)) {
                                                           uVar12 = Component.GetComponent
-                                                                             (lVar11,DAT_181d6d8c0);
+                                                                             (lVar11,DAT_181d96160);
                                                           if (this.nowShowHero != null) {
                                                             local_14c = Mathf.CeilToInt(*(int64 *)
                                                                                           (this + 96)
@@ -2149,7 +2131,7 @@ public class HeroDetailController
                                                                (lVar11 = Transform.Find(lVar11,
                                                         "ExternalInjury",0), lVar11 != null)) {
                                                           uVar12 = Component.GetComponent
-                                                                             (lVar11,DAT_181d6d8c0);
+                                                                             (lVar11,DAT_181d96160);
                                                           if (this.nowShowHero != null) {
                                                             local_14c = Mathf.CeilToInt(*(int64 *)
                                                                                           (this + 96)
@@ -2157,17 +2139,17 @@ public class HeroDetailController
                                                             uVar13 = Int32.ToString(&local_14c,
                                                                                      "f0",0);
                                                             LTLocalization.SetText(uVar12,uVar13,0);
-                                                            if ((((this.heroDetailPanel != null) &&
-                                                                 (lVar11 = GameObject.get_transform
-                                                                                     (*(int64 *)
-                                                                                       (this + 32),0)
-                                                                 , lVar11 != null)) &&
-                                                                (lVar11 = Transform.Find(lVar11,
-                                                        "Item",0), lVar11 != null)) &&
+                                                            if (((this.heroDetailPanel != null) &&
+                                                                (lVar11 = GameObject.get_transform
+                                                                                    (*(int64 *)
+                                                                                      (this + 32),0),
+                                                                lVar11 != null)) &&
+                                                               ((lVar11 = Transform.Find(lVar11,
+                                                        "Item",0), lVar11 != null &&
                                                         (lVar11 = Transform.Find(lVar11,"Weight",0),
-                                                        lVar11 != null)) {
+                                                        lVar11 != null)))) {
                                                           uVar12 = Component.GetComponent
-                                                                             (lVar11,DAT_181d6d8c0);
+                                                                             (lVar11,DAT_181d96160);
                                                           lVar11 = *(int64 *)(targetHero + 0x220);
                                                           if (lVar11 != null) {
                                                             fVar26 = lVar11.summonMoveRange;
@@ -2177,27 +2159,24 @@ public class HeroDetailController
                                                               uVar13 = "{2}{0}/{1}</color>";
                                                             }
                                                             local_108 = (int)fVar26;
-                                                            local_148 = il2cpp_value_box(DAT_181d5b2f8,
+                                                            local_148 = il2cpp_value_box(DAT_181d80418,
                                                                                          &local_108);
                                                             if (*(int64 *)(targetHero + 0x220) != 0) {
                                                               local_104 = (int)*(float *)(*(int64 *)
                                                                                            (targetHero +
                                                                                            0x220) + 32);
-                                                              uVar14 = il2cpp_value_box(DAT_181d5b2f8,
+                                                              uVar14 = il2cpp_value_box(DAT_181d80418,
                                                                                         &local_104);
-                                                              if (((*(byte *)(PlotController_StaticsPtr +
-                                                                             0x133) & 4) != 0) &&
-                                                                 (*(int *)(PlotController_StaticsPtr +
-                                                                          224) == 0)) {
-                                                                il2cpp_runtime_class_init
-                                                                          (PlotController_StaticsPtr);
+                                                              if (((*(byte *)(DAT_181d73d40 + 0x133) & 4)
+                                                                   != 0) &&
+                                                                 (*(int *)(DAT_181d73d40 + 224) == 0)) {
+                                                                il2cpp_runtime_class_init(DAT_181d73d40);
                                                               }
                                                               uVar30 = 0;
                                                               uVar13 = String.Format(uVar13,local_148,
                                                                                       uVar14,*(uint64
                                                                                                *)(*(
-                                                        int64 *)(PlotController_StaticsPtr + 184) +
-                                                        0x2c8),0);
+                                                        int64 *)(DAT_181d73d40 + 184) + 0x2d0),0);
                                                         LTLocalization.SetText(uVar12,uVar13,0);
                                                         local_154 = 0;
                                                         lVar11 = this.nowShowHero;
@@ -2210,7 +2189,7 @@ public class HeroDetailController
                                                                         24) <= (int)local_154) {
                                                               local_res10[0] = 0;
                                                               lVar11 = this.nowShowHero;
-                                                              if (lVar11 != null) goto LAB_180eb63f0;
+                                                              if (lVar11 != null) goto LAB_180e11390;
                                                               break;
                                                             }
                                                             if (((this.heroDetailPanel == null) ||
@@ -2274,32 +2253,19 @@ public class HeroDetailController
                                                                                      0), lVar11 == null))
                                                         break;
                                                         lVar11 = Component.GetComponent
-                                                                           (lVar11,DAT_181d6ccc0);
-                                                        if (((*(byte *)(PlotController_StaticsPtr + 0x133)
-                                                             & 4) != 0) &&
-                                                           (*(int *)(PlotController_StaticsPtr + 224) ==
-                                                            0)) {
-                                                          il2cpp_runtime_class_init();
-                                                        }
+                                                                           (lVar11,DAT_181d95560);
                                                         lVar15 = *(int64 *)
-                                                                  (*(int64 *)
-                                                                    (PlotController_StaticsPtr + 184) +
-                                                                  0x490);
+                                                                  (pStatics_3d40 +
+                                                                  0x498);
                                                         if (lVar15 == null) break;
                                                         local_148 = FUN_180002f80(lVar15,local_154,
-                                                                                  DAT_181d7c9c0);
-                                                        if (((*(byte *)(GameController_StaticsPtr + 0x133)
-                                                             & 4) != 0) &&
-                                                           (*(int *)(GameController_StaticsPtr + 224) ==
-                                                            0)) {
-                                                          il2cpp_runtime_class_init();
-                                                        }
+                                                                                  DAT_181da4358);
                                                         lVar15 = FUN_18046c100(0);
                                                         if (((lVar15 == null) ||
-                                                            (*(int64 *)(lVar15 + 144) == 0)) ||
+                                                            (lVar15.paddingLeft == null)) ||
                                                            (lVar15 = FUN_180002f80(*(int64 *)
                                                                                     (lVar15 + 144),
-                                                                                   local_154,DAT_181d64878
+                                                                                   local_154,DAT_181d8c018
                                                                                   ), lVar15 == null)) break;
                                                         uVar12 = lVar15.itemGrid;
                                                         if (this.nowShowHero == null) break;
@@ -2310,21 +2276,21 @@ public class HeroDetailController
                                                         uVar13 = "<b>{0}</b>\n{1}{2}";
                                                         lVar15 = "";
                                                         if ((float)*(int *)(*(int64 *)
-                                                                             (PlotController_StaticsPtr +
-                                                                             184) + 252) <= fVar26) {
+                                                                             (DAT_181d73d40 + 184) + 252
+                                                                           ) <= fVar26) {
                                                           if (this.nowShowHero == null) break;
                                                           local_100 = HeroData.GetUpgradeNeedMaxAttri
                                                                                 (*(int64 *)
                                                                                   (this + 96),
                                                                                  local_154,0);
-                                                          uVar14 = il2cpp_value_box(DAT_181d5b2f8,
+                                                          uVar14 = il2cpp_value_box(DAT_181d80418,
                                                                                     &local_100);
                                                           if (this.nowShowHero == null) break;
                                                           local_fc = HeroData.GetUpgradeLeftMaxAttri
                                                                                (*(int64 *)
                                                                                  (this + 96),
                                                                                 local_154,0);
-                                                          uVar30 = il2cpp_value_box(DAT_181d5b2f8,
+                                                          uVar30 = il2cpp_value_box(DAT_181d80418,
                                                                                     &local_fc);
                                                           lVar15 = String.Format("\n<color=#D2691E>✦{0}点潜力=1点上限({1}/{0})</color>",uVar14,
                                                                                   uVar30,0);
@@ -2357,16 +2323,16 @@ public class HeroDetailController
                                                         }
                                                         }
                                                         }
-                                                        else if ((((lVar11 != null) &&
-                                                                  (lVar11 = GameObject.get_transform
-                                                                                      (lVar11,0),
-                                                                  lVar11 != null)) &&
-                                                                 (lVar11 = Transform.Find(lVar11,
-                                                        "BaseInfo",0), lVar11 != null)) &&
+                                                        else if (((lVar11 != null) &&
+                                                                 (lVar11 = GameObject.get_transform
+                                                                                     (lVar11,0),
+                                                                 lVar11 != null)) &&
+                                                                ((lVar11 = Transform.Find(lVar11,
+                                                        "BaseInfo",0), lVar11 != null &&
                                                         (lVar11 = Transform.Find(lVar11,"SkillFocus",0),
-                                                        lVar11 != null)) {
+                                                        lVar11 != null)))) {
                                                           uVar12 = Component.GetComponent
-                                                                             (lVar11,DAT_181d6d8c0);
+                                                                             (lVar11,DAT_181d96160);
                                                           LTLocalization.SetText(uVar12,"专长 ",0);
                                                           lVar11 = this.nowShowHero;
                                                           uVar22 = uVar24;
@@ -2375,34 +2341,34 @@ public class HeroDetailController
                                                               lVar15 = this.heroDetailPanel;
                                                               if (*(int *)(lVar11.kungfuSkillFocus +
                                                                           24) <= (int)uVar22) {
-                                                                if (((lVar15 == null) ||
-                                                                    (lVar11 = GameObject.get_transform
-                                                                                        (lVar15,0),
-                                                                    lVar11 == null)) ||
-                                                                   ((lVar11 = Transform.Find(lVar11,
-                                                        "BaseInfo",0), lVar11 == null ||
+                                                                if ((((lVar15 == null) ||
+                                                                     (lVar11 = GameObject.get_transform
+                                                                                         (lVar15,0),
+                                                                     lVar11 == null)) ||
+                                                                    (lVar11 = Transform.Find(lVar11,
+                                                        "BaseInfo",0), lVar11 == null)) ||
                                                         (lVar11 = Transform.Find(lVar11,"SkillFocus",0),
-                                                        lVar11 == null)))) break;
+                                                        lVar11 == null)) break;
                                                         uVar12 = Component.GetComponent
-                                                                           (lVar11,DAT_181d6d8c0);
+                                                                           (lVar11,DAT_181d96160);
                                                         lVar11 = this.nowShowHero;
                                                         if ((lVar11 == null) ||
                                                            (lVar11.kungfuSkillFocus == null)) break;
                                                         if (*(int *)(lVar11.kungfuSkillFocus + 24)
                                                             < 1) {
-        LAB_180eb5a00:
+        LAB_180e108f4:
                                                           lVar15 = "";
                                                         }
                                                         else {
                                                           if (lVar11.livingSkillFocus == null) break;
                                                           lVar15 = "/";
                                                           if (*(int *)(lVar11.livingSkillFocus +
-                                                                      24) < 1) goto LAB_180eb5a00;
+                                                                      24) < 1) goto LAB_180e108f4;
                                                         }
                                                         LTLocalization.AddText(uVar12,lVar15,0);
                                                         lVar11 = this.nowShowHero;
                                                         uVar22 = uVar24;
-                                                        if (lVar11 != null) goto LAB_180eb5a30;
+                                                        if (lVar11 != null) goto LAB_180e10940;
                                                         break;
                                                         }
                                                         if (((lVar15 == null) ||
@@ -2414,30 +2380,22 @@ public class HeroDetailController
                                                                                       ,0), lVar11 == null))))
                                                         break;
                                                         local_148 = Component.GetComponent
-                                                                              (lVar11,DAT_181d6d8c0);
+                                                                              (lVar11,DAT_181d96160);
                                                         lVar11 = "/";
                                                         if (uVar22 == 0) {
                                                           lVar11 = "";
                                                         }
-                                                        if (((*(byte *)(PlotController_StaticsPtr + 0x133)
-                                                             & 4) != 0) &&
-                                                           (*(int *)(PlotController_StaticsPtr + 224) ==
-                                                            0)) {
-                                                          il2cpp_runtime_class_init
-                                                                    (PlotController_StaticsPtr);
-                                                        }
                                                         lVar15 = *(int64 *)
-                                                                  (*(int64 *)
-                                                                    (PlotController_StaticsPtr + 184) +
-                                                                  0x498);
+                                                                  (pStatics_3d40 +
+                                                                  0x4a0);
                                                         if (((this.nowShowHero == null) ||
                                                             (lVar18 = *(int64 *)
                                                                        (this.nowShowHero +
                                                                        0x108), lVar18 == null)) ||
-                                                           (uVar10 = FUN_1800d6750(lVar18,uVar22,
-                                                                                   DAT_181d68270),
+                                                           (uVar10 = FUN_1800d6760(lVar18,uVar22,
+                                                                                   DAT_181d8fa18),
                                                            lVar15 == null)) break;
-                                                        uVar12 = FUN_180002f80(lVar15,uVar10,DAT_181d7c9c0
+                                                        uVar12 = FUN_180002f80(lVar15,uVar10,DAT_181da4358
                                                                               );
                                                         uVar12 = String.Concat(lVar11,uVar12,0);
                                                         LTLocalization.AddText(local_148,uVar12,0);
@@ -2486,53 +2444,53 @@ public class HeroDetailController
             }
           }
         }
-        LAB_180eb931a:
+        LAB_180e1435c:
                           // WARNING: Subroutine does not return
         FUN_1800d6620();
-        LAB_180eb5a30:
-        if (lVar11.livingSkillFocus == null) goto LAB_180eb931a;
-        if (*(int *)(lVar11.livingSkillFocus + 24) <= (int)uVar22) goto LAB_180eb5be7;
+        LAB_180e10940:
+        if (lVar11.livingSkillFocus == null) goto LAB_180e1435c;
+        if (*(int *)(lVar11.livingSkillFocus + 24) <= (int)uVar22) goto LAB_180e10b39;
         if (((this.heroDetailPanel == null) ||
             (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
            ((lVar11 = Transform.Find(lVar11,"BaseInfo",0), lVar11 == null ||
-            (lVar11 = Transform.Find(lVar11,"SkillFocus",0)) == null))) goto LAB_180eb931a;
-        local_148 = Component.GetComponent(lVar11,DAT_181d6d8c0);
+            (lVar11 = Transform.Find(lVar11,"SkillFocus",0)) == null))) goto LAB_180e1435c;
+        local_148 = Component.GetComponent(lVar11,DAT_181d96160);
         lVar11 = "/";
         if (uVar22 == 0) {
           lVar11 = "";
         }
-        lVar15 = *(int64 *)(pPlotController + 0x4a8);
+        lVar15 = *(int64 *)(pStatics_3d40 + 0x4b0);
         if (((this.nowShowHero == null) ||
             (lVar18 = this.nowShowHero.livingSkillFocus) == null) ||
-           (uVar10 = FUN_1800d6750(lVar18,uVar22,DAT_181d68270), lVar15 == null)) goto LAB_180eb931a;
+           (uVar10 = FUN_1800d6760(lVar18,uVar22,DAT_181d8fa18), lVar15 == null)) goto LAB_180e1435c;
         uVar12 = FUN_180002f80(lVar15,uVar10);
         uVar12 = String.Concat(lVar11,uVar12);
         LTLocalization.AddText(local_148,uVar12);
         lVar11 = this.nowShowHero;
         uVar22 = uVar22 + 1;
-        if (lVar11 == null) goto LAB_180eb931a;
-        goto LAB_180eb5a30;
-        LAB_180eb63f0:
+        if (lVar11 == null) goto LAB_180e1435c;
+        goto LAB_180e10940;
+        LAB_180e11390:
         uVar10 = (uint32)((uint64)uVar30 >> 32);
-        if (lVar11.baseFightSkill == null) goto LAB_180eb931a;
+        if (lVar11.baseFightSkill == null) goto LAB_180e1435c;
         if (*(int *)(lVar11.baseFightSkill + 24) <= (int)local_res10[0]) {
           local_158 = 0;
           lVar11 = this.nowShowHero;
-          if (lVar11 != null) goto LAB_180eb6920;
-          goto LAB_180eb931a;
+          if (lVar11 != null) goto LAB_180e118c0;
+          goto LAB_180e1435c;
         }
         if (((this.heroDetailPanel == null) ||
             (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-           (lVar11 = Transform.Find(lVar11,"Attri",0)) == null) goto LAB_180eb931a;
+           (lVar11 = Transform.Find(lVar11,"Attri",0)) == null) goto LAB_180e1435c;
         lVar11 = Transform.Find(lVar11,"FightSkills",0);
         uVar12 = Int32.ToString(local_res10,0);
-        if (lVar11 == null) goto LAB_180eb931a;
+        if (lVar11 == null) goto LAB_180e1435c;
         uVar12 = Transform.Find(lVar11,uVar12,0);
         lVar11 = this.nowShowHero;
-        if (lVar11 == null) goto LAB_180eb931a;
+        if (lVar11 == null) goto LAB_180e1435c;
         lVar15 = lVar11.totalFightSkill;
         uVar20 = (uint64)(int)local_res10[0];
-        if (lVar15 == null) goto LAB_180eb931a;
+        if (lVar15 == null) goto LAB_180e1435c;
         uVar21 = uVar20;
         if (lVar15.itemGrid <= local_res10[0]) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -2540,112 +2498,112 @@ public class HeroDetailController
           uVar21 = (uint64)local_res10[0];
         }
         uVar1 = *(uint32 *)(*(int64 *)(lVar15 + 16) + 32 + uVar20 * 4);
-        if (lVar11 == null) goto LAB_180eb931a;
+        if (lVar11 == null) goto LAB_180e1435c;
         lVar15 = lVar11.baseFightSkill;
         uVar22 = (uint32)uVar21;
-        if (lVar15 == null) goto LAB_180eb931a;
+        if (lVar15 == null) goto LAB_180e1435c;
         if (lVar15.itemGrid <= uVar22) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
           lVar11 = this.nowShowHero;
           uVar21 = (uint64)local_res10[0];
         }
         uVar2 = lVar15[uVar22];
-        if (lVar11 == null) goto LAB_180eb931a;
+        if (lVar11 == null) goto LAB_180e1435c;
         uVar27 = HeroData.GetMaxFightSkill(lVar11,uVar21,0);
         uVar30 = CONCAT44(uVar10,uVar27);
         HeroDetailController.SetAttriDetail(this,uVar12,uVar1,uVar2,uVar30,0);
         if (((this.heroDetailPanel == null) ||
             (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-           (lVar11 = Transform.Find(lVar11,"Attri",0)) == null) goto LAB_180eb931a;
+           (lVar11 = Transform.Find(lVar11,"Attri",0)) == null) goto LAB_180e1435c;
         lVar11 = Transform.Find(lVar11,"FightSkills",0);
         uVar12 = Int32.ToString(local_res10,0);
         if (((lVar11 == null) || (lVar11 = Transform.Find(lVar11,uVar12,0)) == null) ||
-           (lVar11 = Transform.Find(lVar11,"Icon",0)) == null) goto LAB_180eb931a;
-        lVar11 = Component.GetComponent(lVar11,DAT_181d6ccc0);
-        lVar15 = FUN_1800d60b0(DAT_181d7f180,4);
-        lVar18 = *(int64 *)(pPlotController + 0x498);
-        if ((lVar18 == null) || (uVar12 = FUN_180002f80(lVar18,local_res10[0],DAT_181d7c9c0), lVar15 == null))
-        goto LAB_180eb931a;
+           (lVar11 = Transform.Find(lVar11,"Icon",0)) == null) goto LAB_180e1435c;
+        lVar11 = Component.GetComponent(lVar11,DAT_181d95560);
+        lVar15 = FUN_1800d60b0(DAT_181da4120,4);
+        lVar18 = *(int64 *)(pStatics_3d40 + 0x4a0);
+        if ((lVar18 == null) || (uVar12 = FUN_180002f80(lVar18,local_res10[0],DAT_181da4358), lVar15 == null))
+        goto LAB_180e1435c;
         FUN_180002070(lVar15,uVar12);
         FUN_180002fd0(lVar15,0,uVar12);
         lVar18 = FUN_18046c100(0);
         if (((lVar18 == null) || (*(int64 *)(lVar18 + 144) == 0)) ||
-           (lVar18 = FUN_180002f80(*(int64 *)(lVar18 + 144),local_res10[0] + 6,DAT_181d64878),
-           lVar18 == null)) goto LAB_180eb931a;
+           (lVar18 = FUN_180002f80(*(int64 *)(lVar18 + 144),local_res10[0] + 6,DAT_181d8c018),
+           lVar18 == null)) goto LAB_180e1435c;
         uVar12 = *(uint64 *)(lVar18 + 24);
         FUN_180002070(lVar15,uVar12);
         FUN_180002fd0(lVar15,1,uVar12);
-        if (this.nowShowHero == null) goto LAB_180eb931a;
+        if (this.nowShowHero == null) goto LAB_180e1435c;
         fVar26 = (float)HeroData.GetMaxFightSkill(this.nowShowHero,local_res10[0],0);
         uVar12 = "<b>{0}</b>\n{1}{3}{2}";
-        if ((float)*(int *)(pPlotController + 0x104) <= fVar26) {
-          if (this.nowShowHero == null) goto LAB_180eb931a;
+        if ((float)*(int *)(pStatics_3d40 + 0x104) <= fVar26) {
+          if (this.nowShowHero == null) goto LAB_180e1435c;
           local_f8 = HeroData.GetUpgradeNeedMaxFightSkill(this.nowShowHero,local_res10[0],0)
           ;
-          uVar13 = il2cpp_value_box(DAT_181d5b2f8,&local_f8);
-          if (this.nowShowHero == null) goto LAB_180eb931a;
+          uVar13 = il2cpp_value_box(DAT_181d80418,&local_f8);
+          if (this.nowShowHero == null) goto LAB_180e1435c;
           local_f4 = HeroData.GetUpgradeLeftMaxFightSkill(this.nowShowHero,local_res10[0],0)
           ;
-          uVar14 = il2cpp_value_box(DAT_181d5b2f8,&local_f4);
+          uVar14 = il2cpp_value_box(DAT_181d80418,&local_f4);
           lVar18 = String.Format("\n<color=#D2691E>✦{0}点潜力=1点上限({1}/{0})</color>",uVar13,uVar14,0);
         }
         else {
-          if (this.nowShowHero == null) goto LAB_180eb931a;
+          if (this.nowShowHero == null) goto LAB_180e1435c;
           lVar18 = "";
           if (this.nowShowHero.heroID == null) {
-            lVar18 = *(int64 *)(pPlotController + 0x4a0);
-            if (lVar18 == null) goto LAB_180eb931a;
-            uVar13 = FUN_180002f80(lVar18,local_res10[0],DAT_181d7c9c0);
+            lVar18 = *(int64 *)(pStatics_3d40 + 0x4a8);
+            if (lVar18 == null) goto LAB_180e1435c;
+            uVar13 = FUN_180002f80(lVar18,local_res10[0],DAT_181da4358);
             lVar18 = String.Format("\n<color=grey><i>♦{0}</i></color>",uVar13,0);
           }
         }
         FUN_180002070(lVar15,lVar18);
         FUN_180002fd0(lVar15,2,lVar18);
-        if (this.nowShowHero == null) goto LAB_180eb931a;
+        if (this.nowShowHero == null) goto LAB_180e1435c;
         lVar18 = "";
         if (this.nowShowHero.heroID == null) {
-          lVar18 = *(int64 *)(pPlotController + 0x498);
-          if (lVar18 == null) goto LAB_180eb931a;
-          uVar13 = FUN_180002f80(lVar18,local_res10[0],DAT_181d7c9c0);
+          lVar18 = *(int64 *)(pStatics_3d40 + 0x4a0);
+          if (lVar18 == null) goto LAB_180e1435c;
+          uVar13 = FUN_180002f80(lVar18,local_res10[0],DAT_181da4358);
           lVar18 = String.Format("\n提升队友{0}战斗经验",uVar13,0);
         }
         FUN_180002070(lVar15,lVar18);
         FUN_180002fd0(lVar15,3);
         uVar12 = String.Format(uVar12,lVar15);
-        if (lVar11 == null) goto LAB_180eb931a;
+        if (lVar11 == null) goto LAB_180e1435c;
         lVar11.summonLv = uVar12;
         local_res10[0] = local_res10[0] + 1;
         lVar11 = this.nowShowHero;
-        if (lVar11 == null) goto LAB_180eb931a;
-        goto LAB_180eb63f0;
-        LAB_180eb6920:
+        if (lVar11 == null) goto LAB_180e1435c;
+        goto LAB_180e11390;
+        LAB_180e118c0:
         uVar10 = (uint32)((uint64)uVar30 >> 32);
-        if (lVar11.baseLivingSkill == null) goto LAB_180eb931a;
+        if (lVar11.baseLivingSkill == null) goto LAB_180e1435c;
         if (*(int *)(lVar11.baseLivingSkill + 24) <= (int)local_158) {
           HeroDetailController.RefreshFightData(this,0);
-          lVar11 = *(int64 *)(pPlotController + 0x498);
+          lVar11 = *(int64 *)(pStatics_3d40 + 0x4a0);
           if (lVar11 != null) {
-            uVar12 = FUN_1800d60b0(DAT_181d7e600,lVar11.summonLv);
-            lVar15 = il2cpp_internal(DAT_181d6f030);
-            FUN_18182e120(lVar15,uVar12,DAT_181d67978);
+            uVar12 = FUN_1800d60b0(DAT_181da35a0,lVar11.summonLv);
+            lVar15 = il2cpp_internal(DAT_181d93cd0);
+            FUN_1818399e0(lVar15,uVar12,DAT_181d8f118);
             lVar11 = this.nowShowHero;
             uVar22 = uVar24;
-            if (lVar11 != null) goto LAB_180eb6ee0;
+            if (lVar11 != null) goto LAB_180e11e80;
           }
-          goto LAB_180eb931a;
+          goto LAB_180e1435c;
         }
         if (((this.heroDetailPanel == null) ||
             (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-           (lVar11 = Transform.Find(lVar11,"Attri",0)) == null) goto LAB_180eb931a;
+           (lVar11 = Transform.Find(lVar11,"Attri",0)) == null) goto LAB_180e1435c;
         lVar11 = Transform.Find(lVar11,"LivingSkills",0);
         uVar12 = Int32.ToString(&local_158,0);
-        if (lVar11 == null) goto LAB_180eb931a;
+        if (lVar11 == null) goto LAB_180e1435c;
         uVar12 = Transform.Find(lVar11,uVar12,0);
         lVar11 = this.nowShowHero;
-        if (lVar11 == null) goto LAB_180eb931a;
+        if (lVar11 == null) goto LAB_180e1435c;
         lVar15 = lVar11.totalLivingSkill;
         uVar20 = (uint64)(int)local_158;
-        if (lVar15 == null) goto LAB_180eb931a;
+        if (lVar15 == null) goto LAB_180e1435c;
         uVar21 = uVar20;
         if (lVar15.itemGrid <= local_158) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -2653,47 +2611,47 @@ public class HeroDetailController
           uVar21 = (uint64)local_158;
         }
         uVar1 = *(uint32 *)(*(int64 *)(lVar15 + 16) + 32 + uVar20 * 4);
-        if (lVar11 == null) goto LAB_180eb931a;
+        if (lVar11 == null) goto LAB_180e1435c;
         lVar15 = lVar11.baseLivingSkill;
         uVar22 = (uint32)uVar21;
-        if (lVar15 == null) goto LAB_180eb931a;
+        if (lVar15 == null) goto LAB_180e1435c;
         if (lVar15.itemGrid <= uVar22) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
           lVar11 = this.nowShowHero;
           uVar21 = (uint64)local_158;
         }
         uVar2 = lVar15[uVar22];
-        if (lVar11 == null) goto LAB_180eb931a;
+        if (lVar11 == null) goto LAB_180e1435c;
         uVar27 = HeroData.GetMaxLivingSkill(lVar11,uVar21,0);
         uVar30 = CONCAT44(uVar10,uVar27);
         HeroDetailController.SetAttriDetail(this,uVar12,uVar1,uVar2,uVar30,0);
         if (((this.heroDetailPanel == null) ||
             (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-           (lVar11 = Transform.Find(lVar11,"Attri",0)) == null) goto LAB_180eb931a;
+           (lVar11 = Transform.Find(lVar11,"Attri",0)) == null) goto LAB_180e1435c;
         lVar11 = Transform.Find(lVar11,"LivingSkills",0);
         uVar12 = Int32.ToString(&local_158,0);
         if (((lVar11 == null) || (lVar11 = Transform.Find(lVar11,uVar12,0)) == null) ||
-           (lVar11 = Transform.Find(lVar11,"Icon",0)) == null) goto LAB_180eb931a;
-        lVar11 = Component.GetComponent(lVar11,DAT_181d6ccc0);
-        lVar15 = FUN_1800d60b0(DAT_181d7f180,4);
-        lVar18 = *(int64 *)(pPlotController + 0x4a8);
-        if ((lVar18 == null) || (uVar12 = FUN_180002f80(lVar18,local_158,DAT_181d7c9c0), lVar15 == null))
-        goto LAB_180eb931a;
+           (lVar11 = Transform.Find(lVar11,"Icon",0)) == null) goto LAB_180e1435c;
+        lVar11 = Component.GetComponent(lVar11,DAT_181d95560);
+        lVar15 = FUN_1800d60b0(DAT_181da4120,4);
+        lVar18 = *(int64 *)(pStatics_3d40 + 0x4b0);
+        if ((lVar18 == null) || (uVar12 = FUN_180002f80(lVar18,local_158,DAT_181da4358), lVar15 == null))
+        goto LAB_180e1435c;
         FUN_180002070(lVar15,uVar12);
         FUN_180002fd0(lVar15,0,uVar12);
         if ((this.nowShowHero == null) ||
            (lVar18 = this.nowShowHero.baseLivingSkill) == null)
-        goto LAB_180eb931a;
-        fVar26 = (float)FUN_1800d6780(lVar18,local_158,DAT_181d796d8);
+        goto LAB_180e1435c;
+        fVar26 = (float)FUN_1800d6790(lVar18,local_158,DAT_181da1078);
         uVar12 = "<b>{0}</b>   [{1}]\n{2}{3}";
         lVar18 = "登峰造极";
-        if (fVar26 < (float)*(int *)(pPlotController + 0x108)) {
+        if (fVar26 < (float)*(int *)(pStatics_3d40 + 0x108)) {
           if ((this.nowShowHero == null) ||
              (lVar18 = this.nowShowHero.expLivingSkill) == null)
-          goto LAB_180eb931a;
-          local_res8[0] = (float)FUN_1800d6780(lVar18,local_158,DAT_181d796d8);
+          goto LAB_180e1435c;
+          local_res8[0] = (float)FUN_1800d6790(lVar18,local_158,DAT_181da1078);
           uVar13 = Single.ToString(local_res8,"f0",0);
-          if (this.nowShowHero == null) goto LAB_180eb931a;
+          if (this.nowShowHero == null) goto LAB_180e1435c;
           local_res8[0] = (float)HeroData.GetLivingSkillExpMax(this.nowShowHero,local_158,0)
           ;
           uVar14 = Single.ToString(local_res8,"f0",0);
@@ -2703,169 +2661,169 @@ public class HeroDetailController
         FUN_180002fd0(lVar15,1,lVar18);
         lVar18 = FUN_18046c100(0);
         if (((lVar18 == null) || (*(int64 *)(lVar18 + 144) == 0)) ||
-           (lVar18 = FUN_180002f80(*(int64 *)(lVar18 + 144),local_158 + 24,DAT_181d64878),
-           lVar18 == null)) goto LAB_180eb931a;
+           (lVar18 = FUN_180002f80(*(int64 *)(lVar18 + 144),local_158 + 24,DAT_181d8c018),
+           lVar18 == null)) goto LAB_180e1435c;
         uVar13 = *(uint64 *)(lVar18 + 24);
         FUN_180002070(lVar15,uVar13);
         FUN_180002fd0(lVar15,2,uVar13);
-        if (this.nowShowHero == null) goto LAB_180eb931a;
+        if (this.nowShowHero == null) goto LAB_180e1435c;
         fVar26 = (float)HeroData.GetMaxLivingSkill(this.nowShowHero,local_158,0);
         lVar18 = "";
-        if (fVar26 < (float)*(int *)(pPlotController + 0x108)) {
-          if (this.nowShowHero == null) goto LAB_180eb931a;
+        if (fVar26 < (float)*(int *)(pStatics_3d40 + 0x108)) {
+          if (this.nowShowHero == null) goto LAB_180e1435c;
           if (this.nowShowHero.heroID == null) {
-            lVar18 = *(int64 *)(pPlotController + 0x4b0);
-            if (lVar18 == null) goto LAB_180eb931a;
-            uVar13 = FUN_180002f80(lVar18,local_158,DAT_181d7c9c0);
+            lVar18 = *(int64 *)(pStatics_3d40 + 0x4b8);
+            if (lVar18 == null) goto LAB_180e1435c;
+            uVar13 = FUN_180002f80(lVar18,local_158,DAT_181da4358);
             lVar18 = String.Format("\n<color=grey><i>♦{0}</i></color>",uVar13,0);
           }
         }
         FUN_180002070(lVar15,lVar18);
         FUN_180002fd0(lVar15,3);
         uVar12 = String.Format(uVar12,lVar15);
-        if (lVar11 == null) goto LAB_180eb931a;
+        if (lVar11 == null) goto LAB_180e1435c;
         lVar11.summonLv = uVar12;
         local_158 = local_158 + 1;
         lVar11 = this.nowShowHero;
-        if (lVar11 == null) goto LAB_180eb931a;
-        goto LAB_180eb6920;
-        LAB_180eb6ee0:
-        if (lVar11.kungfuSkills == null) goto LAB_180eb931a;
+        if (lVar11 == null) goto LAB_180e1435c;
+        goto LAB_180e118c0;
+        LAB_180e11e80:
+        if (lVar11.kungfuSkills == null) goto LAB_180e1435c;
         uVar23 = uVar24;
-        if (*(int *)(lVar11.kungfuSkills + 24) <= (int)uVar22) goto LAB_180eb6fa5;
-        if ((lVar11 = lVar11?.kungfuSkills) == null) goto LAB_180eb931a;
+        if (*(int *)(lVar11.kungfuSkills + 24) <= (int)uVar22) goto LAB_180e11f45;
+        if ((lVar11 = lVar11?.kungfuSkills) == null) goto LAB_180e1435c;
         if (lVar11.summonLv <= uVar22) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         lVar11 = lVar11.isSummon[uVar22];
         if ((lVar11 == null) || (lVar11 = KungfuSkillLvData.DataBase(lVar11,0)) == null)
-        goto LAB_180eb931a;
+        goto LAB_180e1435c;
         local_14c = lVar11.interestingStar;
         uVar20 = (uint64)(int)local_14c;
-        if (lVar15 == null) goto LAB_180eb931a;
+        if (lVar15 == null) goto LAB_180e1435c;
         uVar21 = uVar20;
         if (lVar15.itemGrid <= local_14c) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
           uVar21 = (uint64)local_14c;
         }
         local_128 = *(int *)(*(int64 *)(lVar15 + 16) + 32 + uVar20 * 4);
-        FUN_18181e970(lVar15,uVar21,local_128 + 1,DAT_181d68370);
+        FUN_181833d40(lVar15,uVar21,local_128 + 1,DAT_181d8fb18);
         lVar11 = this.nowShowHero;
         uVar22 = uVar22 + 1;
-        if (lVar11 == null) goto LAB_180eb931a;
-        goto LAB_180eb6ee0;
-        LAB_180eb6fa5:
+        if (lVar11 == null) goto LAB_180e1435c;
+        goto LAB_180e11e80;
+        LAB_180e11f45:
         local_138[0] = uVar23;
-        lVar11 = *(int64 *)(pPlotController + 0x498);
-        if (lVar11 == null) goto LAB_180eb931a;
+        lVar11 = *(int64 *)(pStatics_3d40 + 0x4a0);
+        if (lVar11 == null) goto LAB_180e1435c;
         lVar18 = this.heroDetailPanel;
         if (lVar11.summonLv <= (int)uVar23) {
           if (((lVar18 == null) || (lVar11 = GameObject.get_transform(lVar18,0)) == null) ||
-             (lVar11 = Transform.Find(lVar11,"ChangeClothButton",0)) == null) goto LAB_180eb931a;
-          lVar11 = Component.GetComponent(lVar11,DAT_181d6af40);
-          if (this.nowShowHero == null) goto LAB_180eb931a;
+             (lVar11 = Transform.Find(lVar11,"ChangeClothButton",0)) == null) goto LAB_180e1435c;
+          lVar11 = Component.GetComponent(lVar11,DAT_181d93760);
+          if (this.nowShowHero == null) goto LAB_180e1435c;
           cVar4 = HeroData.ItemControlable(this.nowShowHero,0);
           if ((cVar4) || (bVar5 = bVar25, this.itemSpeControlable)) {
-            if (this.nowShowHero == null) goto LAB_180eb931a;
+            if (this.nowShowHero == null) goto LAB_180e1435c;
             bVar5 = this.nowShowHero.changeSkinCd < 1;
           }
-          if (lVar11 == null) goto LAB_180eb931a;
+          if (lVar11 == null) goto LAB_180e1435c;
           Selectable.set_interactable(lVar11,bVar5,0);
           if (((this.heroDetailPanel == null) ||
               (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-             (lVar11 = Transform.Find(lVar11,"ChangeClothButton",0)) == null) goto LAB_180eb931a;
-          lVar11 = Component.GetComponent(lVar11,DAT_181d6ccc0);
+             (lVar11 = Transform.Find(lVar11,"ChangeClothButton",0)) == null) goto LAB_180e1435c;
+          lVar11 = Component.GetComponent(lVar11,DAT_181d95560);
           lVar15 = FUN_18046c100(0);
-          if ((this.nowShowHero == null) || (lVar15 == null)) goto LAB_180eb931a;
+          if ((this.nowShowHero == null) || (lVar15 == null)) goto LAB_180e1435c;
           lVar15 = GameDataController.FindSkinDataBase
                              (lVar15,this.nowShowHero.skinID,0);
-          if ((this.nowShowHero == null) || (lVar15 == null)) goto LAB_180eb931a;
+          if ((this.nowShowHero == null) || (lVar15 == null)) goto LAB_180e1435c;
           uVar20 = 0;
           uVar12 = SkinDataBase.GetSkinFullName
                              (lVar15,this.nowShowHero.skinLv,0,1,0);
           lVar15 = FUN_18046c100(0);
-          if ((this.nowShowHero == null) || (lVar15 == null)) goto LAB_180eb931a;
+          if ((this.nowShowHero == null) || (lVar15 == null)) goto LAB_180e1435c;
           lVar15 = GameDataController.FindSkinDataBase
                              (lVar15,this.nowShowHero.skinID,0);
           if ((this.nowShowHero == null) ||
              ((lVar15 == null ||
               (lVar15 = SkinDataBase.GetSkinSpeAdd
                                   (lVar15,this.nowShowHero.skinLv,0),
-              lVar15 == null)))) goto LAB_180eb931a;
+              lVar15 == null)))) goto LAB_180e1435c;
           uVar13 = HeroSpeAddData.GetDescribe(lVar15,1,1,1,uVar20 & 0xffffffffffffff00,0);
           lVar15 = "\n";
-          if (this.nowShowHero == null) goto LAB_180eb931a;
+          if (this.nowShowHero == null) goto LAB_180e1435c;
           iVar9 = this.nowShowHero.changeSkinCd;
           lVar18 = "";
           if (0 < iVar9) {
             local_f0 = iVar9;
-            uVar14 = il2cpp_value_box(DAT_181d5b2f8,&local_f0);
+            uVar14 = il2cpp_value_box(DAT_181d80418,&local_f0);
             lVar18 = String.Format("\n<i>换装冷却 {0}日</i>",uVar14,0);
           }
           uVar12 = String.Concat(uVar12,lVar15,uVar13,lVar18,0);
-          if (lVar11 == null) goto LAB_180eb931a;
+          if (lVar11 == null) goto LAB_180e1435c;
           lVar11.summonLv = uVar12;
           if ((((this.heroDetailPanel == null) ||
                (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
               (lVar11 = Transform.Find(lVar11,"Item",0)) == null) ||
              ((lVar11 = Transform.Find(lVar11,"DiscardButton",0), lVar11 == null ||
-              (lVar11 = Component.get_gameObject(lVar11,0)) == null))) goto LAB_180eb931a;
+              (lVar11 = Component.get_gameObject(lVar11,0)) == null))) goto LAB_180e1435c;
           cVar4 = GameObject.get_activeSelf(lVar11,0);
-          if (this.nowShowHero == null) goto LAB_180eb931a;
+          if (this.nowShowHero == null) goto LAB_180e1435c;
           cVar3 = HeroData.ItemExchangeable(this.nowShowHero,0);
           if (cVar4 != cVar3) {
             if (((this.heroDetailPanel == null) ||
                 (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
                ((lVar11 = Transform.Find(lVar11,"Item",0), lVar11 == null ||
-                (lVar11 = Transform.Find(lVar11,"DiscardButton",0)) == null))) goto LAB_180eb931a;
+                (lVar11 = Transform.Find(lVar11,"DiscardButton",0)) == null))) goto LAB_180e1435c;
             lVar11 = Component.get_gameObject(lVar11,0);
             if ((this.nowShowHero == null) ||
                (uVar6 = HeroData.ItemExchangeable(this.nowShowHero,0), lVar11 == null))
-            goto LAB_180eb931a;
+            goto LAB_180e1435c;
             GameObject.SetActive(lVar11,uVar6,0);
           }
           uVar6 = local_res18;
           HeroDetailController.RefreshEquipList(this,local_res18,0);
           lVar11 = this.nowShowHero;
           lVar15 = this.itemListController;
-          if (lVar11 == null) goto LAB_180eb931a;
+          if (lVar11 == null) goto LAB_180e1435c;
           uVar12 = lVar11.itemListData;
           cVar4 = HeroData.ItemControlable(lVar11,0);
           bVar5 = bVar25;
           if ((!cVar4) && (!this.itemSpeControlable)) {
             bVar5 = true;
           }
-          if (lVar15 == null) goto LAB_180eb931a;
+          if (lVar15 == null) goto LAB_180e1435c;
           ItemListController.RefreshItemList(lVar15,uVar12,bVar5,uVar6,0);
           lVar11 = this.nowShowHero;
-          if (lVar11 == null) goto LAB_180eb931a;
+          if (lVar11 == null) goto LAB_180e1435c;
           uVar22 = uVar24;
           if ((lVar11.heroID != null) && (lVar11.speHero)) {
             lVar11 = FUN_18046c100(0);
-            if (lVar11 == null) goto LAB_180eb931a;
+            if (lVar11 == null) goto LAB_180e1435c;
             if ((this.nowShowHero == null) || (lVar11.hobby == null))
-            goto LAB_180eb931a;
-            cVar4 = FUN_1808ab750(lVar11.hobby,
-                                  this.nowShowHero.heroName,DAT_181da33f8);
+            goto LAB_180e1435c;
+            cVar4 = FUN_1808ab490(lVar11.hobby,
+                                  this.nowShowHero.heroName,DAT_181d72b90);
             if (cVar4) {
               if (((this.heroDetailPanel == null) ||
                   (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
                  ((lVar11 = Transform.Find(lVar11,"UseSpeSkeleton",0), lVar11 == null ||
-                  (lVar11 = Component.get_gameObject(lVar11,0)) == null))) goto LAB_180eb931a;
+                  (lVar11 = Component.get_gameObject(lVar11,0)) == null))) goto LAB_180e1435c;
               cVar4 = GameObject.get_activeSelf(lVar11,0);
               if (!cVar4) {
                 if (((this.heroDetailPanel == null) ||
                     (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-                   (lVar11 = Transform.Find(lVar11,"UseSpeSkeleton",0)) == null) goto LAB_180eb931a;
+                   (lVar11 = Transform.Find(lVar11,"UseSpeSkeleton",0)) == null) goto LAB_180e1435c;
                 lVar11 = Component.get_gameObject(lVar11,0);
-                if (lVar11 == null) goto LAB_180eb931a;
+                if (lVar11 == null) goto LAB_180e1435c;
                 GameObject.SetActive(lVar11,1,0);
               }
               if (((this.heroDetailPanel != null) &&
                   (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) != null) &&
                  (lVar11 = Transform.Find(lVar11,"UseSpeSkeleton",0)) != null) {
-                lVar11 = Component.GetComponent(lVar11,DAT_181d6da40);
-                lVar15 = GameController.difficultyExtraPoint;
+                lVar11 = Component.GetComponent(lVar11,DAT_181d962e0);
+                lVar15 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 8);
                 if (lVar15 != null) {
                   lVar15 = *(int64 *)(lVar15 + 16);
                   if (((this.nowShowHero != null) &&
@@ -2873,11 +2831,11 @@ public class HeroDetailController
                                                "hideSpeSkeleton",0), lVar15 != null)) &&
                      (iVar9 = PlayerPrefDictionary.GetInt(lVar15,uVar12,0), lVar11 != null)) {
                     Toggle.set_isOn(lVar11,iVar9 == 0,0);
-                    goto LAB_180eb779f;
+                    goto LAB_180e12760;
                   }
                 }
               }
-              goto LAB_180eb931a;
+              goto LAB_180e1435c;
             }
           }
           if ((((this.heroDetailPanel != null) &&
@@ -2885,26 +2843,26 @@ public class HeroDetailController
               (lVar11 = Transform.Find(lVar11,"UseSpeSkeleton",0)) != null) &&
              (lVar11 = Component.get_gameObject(lVar11,0)) != null) {
             cVar4 = GameObject.get_activeSelf(lVar11,0);
-            if (!cVar4) goto LAB_180eb779f;
+            if (!cVar4) goto LAB_180e12760;
             if (((this.heroDetailPanel != null) &&
                 (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) != null) &&
                ((lVar11 = Transform.Find(lVar11,"UseSpeSkeleton",0), lVar11 != null &&
                 (lVar11 = Component.get_gameObject(lVar11,0)) != null))) {
               GameObject.SetActive(lVar11,0,0);
-              goto LAB_180eb779f;
+              goto LAB_180e12760;
             }
           }
-          goto LAB_180eb931a;
+          goto LAB_180e1435c;
         }
         if (((lVar18 == null) || (lVar11 = GameObject.get_transform(lVar18,0)) == null) ||
-           (lVar11 = Transform.Find(lVar11,"Skill")) == null) goto LAB_180eb931a;
+           (lVar11 = Transform.Find(lVar11,"Skill")) == null) goto LAB_180e1435c;
         lVar11 = Transform.Find(lVar11,"SkillTabGrid");
         uVar12 = Int32.ToString(local_138,0);
         if (((lVar11 == null) || (lVar11 = Transform.Find(lVar11,uVar12)) == null) ||
-           (lVar11 = Transform.Find(lVar11,"Num")) == null) goto LAB_180eb931a;
-        uVar12 = Component.GetComponent(lVar11,DAT_181d6d8c0);
+           (lVar11 = Transform.Find(lVar11,"Num")) == null) goto LAB_180e1435c;
+        uVar12 = Component.GetComponent(lVar11,DAT_181d96160);
         lVar11 = (int64)(int)local_138[0];
-        if (lVar15 == null) goto LAB_180eb931a;
+        if (lVar15 == null) goto LAB_180e1435c;
         if (lVar15.itemGrid <= local_138[0]) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
@@ -2912,12 +2870,12 @@ public class HeroDetailController
         uVar13 = Int32.ToString(&local_128,0);
         LTLocalization.SetText(uVar12,uVar13);
         uVar23 = local_138[0] + 1;
-        goto LAB_180eb6fa5;
-        LAB_180eb779f:
+        goto LAB_180e11f45;
+        LAB_180e12760:
         local_150 = uVar22;
         uVar6 = local_res18;
-        lVar11 = *(int64 *)(pPlotController + 0x4f0);
-        if (lVar11 == null) goto LAB_180eb931a;
+        lVar11 = *(int64 *)(pStatics_3d40 + 0x4f8);
+        if (lVar11 == null) goto LAB_180e1435c;
         if (lVar11.summonLv <= (int)uVar22) {
           HeroDetailController.RefreshSkillEquipList(this,local_res18,0);
           HeroDetailController.RefreshSkillList(this,uVar6,0);
@@ -2927,7 +2885,7 @@ public class HeroDetailController
               (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) != null) &&
              ((lVar11 = Transform.Find(lVar11,"TagPointBack",0), lVar11 != null &&
               (lVar11 = Transform.Find(lVar11,"TagPoint",0)) != null))) {
-            uVar12 = Component.GetComponent(lVar11,DAT_181d6d8c0);
+            uVar12 = Component.GetComponent(lVar11,DAT_181d96160);
             if (this.nowShowHero != null) {
               lVar15 = Single.ToString(this.nowShowHero + 0x364,"0.##",0);
               lVar11 = "";
@@ -2943,32 +2901,32 @@ public class HeroDetailController
                 uVar12 = Component.get_gameObject(lVar11,0);
                 GlobalData.DeleteAllChild(uVar12,0);
                 lVar11 = this.nowShowHero;
-                if (lVar11 != null) goto LAB_180eb7cf0;
+                if (lVar11 != null) goto LAB_180e12cf0;
               }
             }
           }
-          goto LAB_180eb931a;
+          goto LAB_180e1435c;
         }
         if (((this.heroDetailPanel == null) ||
             (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-           (lVar11 = Transform.Find(lVar11,"Skill",0)) == null) goto LAB_180eb931a;
+           (lVar11 = Transform.Find(lVar11,"Skill",0)) == null) goto LAB_180e1435c;
         lVar11 = Transform.Find(lVar11,"SkillNumText",0);
         uVar12 = Int32.ToString(&local_150,0);
-        if ((lVar11 == null) || (lVar11 = Transform.Find(lVar11,uVar12,0)) == null) goto LAB_180eb931a;
-        uVar12 = Component.GetComponent(lVar11,DAT_181d6d8c0);
-        lVar11 = *(int64 *)(pPlotController + 0x4f0);
-        if (lVar11 == null) goto LAB_180eb931a;
-        uVar13 = FUN_180002f80(lVar11,local_150,DAT_181d7c9c0);
+        if ((lVar11 == null) || (lVar11 = Transform.Find(lVar11,uVar12,0)) == null) goto LAB_180e1435c;
+        uVar12 = Component.GetComponent(lVar11,DAT_181d96160);
+        lVar11 = *(int64 *)(pStatics_3d40 + 0x4f8);
+        if (lVar11 == null) goto LAB_180e1435c;
+        uVar13 = FUN_180002f80(lVar11,local_150,DAT_181da4358);
         if ((this.nowShowHero == null) ||
-           (lVar11 = this.nowShowHero.skillCount) == null) goto LAB_180eb931a;
-        local_ec = FUN_1800d6750(lVar11,local_150,DAT_181d68270);
-        uVar14 = il2cpp_value_box(DAT_181d5b2f8,&local_ec);
-        if (this.nowShowHero == null) goto LAB_180eb931a;
+           (lVar11 = this.nowShowHero.skillCount) == null) goto LAB_180e1435c;
+        local_ec = FUN_1800d6760(lVar11,local_150,DAT_181d8fa18);
+        uVar14 = il2cpp_value_box(DAT_181d80418,&local_ec);
+        if (this.nowShowHero == null) goto LAB_180e1435c;
         fVar26 = (float)HeroData.GetMaxSkillNum(this.nowShowHero,local_150,0);
         uVar30 = "{0}武功 {1}/{2}";
         uVar19 = "∞";
         if (fVar26 < 99.0) {
-          if (this.nowShowHero == null) goto LAB_180eb931a;
+          if (this.nowShowHero == null) goto LAB_180e1435c;
           local_res8[0] = (float)HeroData.GetMaxSkillNum(this.nowShowHero,local_150,0);
           uVar19 = Single.ToString(local_res8,0);
         }
@@ -2978,350 +2936,350 @@ public class HeroDetailController
         LTLocalization.SetText(uVar12,uVar13,0);
         if (((this.heroDetailPanel == null) ||
             (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-           (lVar11 = Transform.Find(lVar11,"Skill",0)) == null) goto LAB_180eb931a;
+           (lVar11 = Transform.Find(lVar11,"Skill",0)) == null) goto LAB_180e1435c;
         lVar11 = Transform.Find(lVar11,"SkillNumText",0);
         uVar12 = Int32.ToString(&local_150,0);
-        if ((lVar11 == null) || (lVar11 = Transform.Find(lVar11,uVar12,0)) == null) goto LAB_180eb931a;
-        lVar15 = Component.GetComponent(lVar11,DAT_181d6ccc0);
-        lVar11 = *(int64 *)(pPlotController + 0x4f0);
-        if (lVar11 == null) goto LAB_180eb931a;
-        uVar12 = FUN_180002f80(lVar11,local_150,DAT_181d7c9c0);
-        if (this.nowShowHero == null) goto LAB_180eb931a;
+        if ((lVar11 == null) || (lVar11 = Transform.Find(lVar11,uVar12,0)) == null) goto LAB_180e1435c;
+        lVar15 = Component.GetComponent(lVar11,DAT_181d95560);
+        lVar11 = *(int64 *)(pStatics_3d40 + 0x4f8);
+        if (lVar11 == null) goto LAB_180e1435c;
+        uVar12 = FUN_180002f80(lVar11,local_150,DAT_181da4358);
+        if (this.nowShowHero == null) goto LAB_180e1435c;
         auVar28._0_8_ = HeroData.GetSkillRareLvExpRate(this.nowShowHero,local_150,0);
         auVar28._8_8_ = extraout_XMM0_Qb;
         auVar29._4_12_ = auVar28._4_12_;
         auVar29._0_4_ = (float)auVar28._0_8_ * 100.0;
         local_e8 = Mathf.RoundToInt(auVar29._0_8_,0);
-        uVar13 = il2cpp_value_box(DAT_181d5b2f8,&local_e8);
+        uVar13 = il2cpp_value_box(DAT_181d80418,&local_e8);
         uVar12 = String.Format("{0}武功经验获取 <b>{1}%</b>",uVar12,uVar13,0);
         uVar12 = GlobalData.GenerateRareLvColorText(uVar12,local_150);
         uVar12 = String.Concat(uVar12,"\n♦每一级别武功都有最佳修习数\n♦超出上限后，所有该级别武功获取的经验都会减少");
-        if (lVar15 == null) goto LAB_180eb931a;
+        if (lVar15 == null) goto LAB_180e1435c;
         lVar15.itemGrid = uVar12;
         uVar22 = local_150 + 1;
-        goto LAB_180eb779f;
-        LAB_180eb7cf0:
-        if (lVar11.heroTagData == null) goto LAB_180eb931a;
+        goto LAB_180e12760;
+        LAB_180e12cf0:
+        if (lVar11.heroTagData == null) goto LAB_180e1435c;
         if (*(int *)(lVar11.heroTagData + 24) <= (int)uVar24) {
-          if (this.mainShowHero == null) goto LAB_180eb931a;
+          if (this.mainShowHero == null) goto LAB_180e1435c;
           if (this.mainShowHero.heroID == null) {
             lVar11 = FUN_18046c0a0(0);
             if ((((lVar11 == null) || (lVar11.summonControlable == null)) ||
                 (lVar11 = WorldData.Player(lVar11.summonControlable,0)) == null) ||
-               (lVar11.teamMates == null)) goto LAB_180eb931a;
-            if (*(int *)(lVar11.teamMates + 24) < 1) goto LAB_180eb800d;
+               (lVar11.teamMates == null)) goto LAB_180e1435c;
+            if (*(int *)(lVar11.teamMates + 24) < 1) goto LAB_180e1300d;
             if ((((this.heroDetailPanel == null) ||
                  (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
                 (lVar11 = Transform.Find(lVar11,"AllLeaveTeamButton",0)) == null) ||
-               (lVar11 = Component.get_gameObject(lVar11,0)) == null) goto LAB_180eb931a;
+               (lVar11 = Component.get_gameObject(lVar11,0)) == null) goto LAB_180e1435c;
             cVar4 = GameObject.get_activeSelf(lVar11,0);
             if (!cVar4) {
               if (((this.heroDetailPanel == null) ||
                   (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-                 (lVar11 = Transform.Find(lVar11,"AllLeaveTeamButton",0)) == null) goto LAB_180eb931a;
+                 (lVar11 = Transform.Find(lVar11,"AllLeaveTeamButton",0)) == null) goto LAB_180e1435c;
               lVar11 = Component.get_gameObject(lVar11,0);
-              if (lVar11 == null) goto LAB_180eb931a;
+              if (lVar11 == null) goto LAB_180e1435c;
               GameObject.SetActive(lVar11,1,0);
             }
             if (((this.heroDetailPanel == null) ||
                 (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-               (lVar11 = Transform.Find(lVar11,"AllLeaveTeamButton",0)) == null) goto LAB_180eb931a;
-            lVar11 = Component.GetComponent(lVar11,DAT_181d6af40);
+               (lVar11 = Transform.Find(lVar11,"AllLeaveTeamButton",0)) == null) goto LAB_180e1435c;
+            lVar11 = Component.GetComponent(lVar11,DAT_181d93760);
             lVar15 = FUN_18046bb80(0);
-            if (lVar15 == null) goto LAB_180eb931a;
+            if (lVar15 == null) goto LAB_180e1435c;
             if (lVar15.forceItemListType == null) {
-              lVar15 = FUN_18046c440(0);
-              if (lVar15 == null) goto LAB_180eb931a;
+              lVar15 = FUN_18046c400(0);
+              if (lVar15 == null) goto LAB_180e1435c;
               bVar25 = !lVar15.itemGrid;
             }
-            if (lVar11 == null) goto LAB_180eb931a;
+            if (lVar11 == null) goto LAB_180e1435c;
             Selectable.set_interactable(lVar11,bVar25,0);
           }
           else {
-        LAB_180eb800d:
+        LAB_180e1300d:
             if (((this.heroDetailPanel == null) ||
                 (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
                ((lVar11 = Transform.Find(lVar11,"AllLeaveTeamButton",0), lVar11 == null ||
-                (lVar11 = Component.get_gameObject(lVar11,0)) == null))) goto LAB_180eb931a;
+                (lVar11 = Component.get_gameObject(lVar11,0)) == null))) goto LAB_180e1435c;
             cVar4 = GameObject.get_activeSelf(lVar11,0);
             if (cVar4) {
               if (((this.heroDetailPanel == null) ||
                   (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
                  ((lVar11 = Transform.Find(lVar11,"AllLeaveTeamButton",0), lVar11 == null ||
-                  (lVar11 = Component.get_gameObject(lVar11,0)) == null))) goto LAB_180eb931a;
+                  (lVar11 = Component.get_gameObject(lVar11,0)) == null))) goto LAB_180e1435c;
               GameObject.SetActive(lVar11,0,0);
             }
           }
-          if (this.mainShowHero == null) goto LAB_180eb931a;
+          if (this.mainShowHero == null) goto LAB_180e1435c;
           if (this.mainShowHero.heroID == null) {
             lVar11 = this.nowShowHero;
-            if (lVar11 == null) goto LAB_180eb931a;
-            if ((lVar11.heroID == null) || (lVar11.teamLeader != null)) goto LAB_180eb86ae;
+            if (lVar11 == null) goto LAB_180e1435c;
+            if ((lVar11.heroID == null) || (lVar11.teamLeader != null)) goto LAB_180e136ae;
             if ((((this.heroDetailPanel == null) ||
                  (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
                 (lVar11 = Transform.Find(lVar11,"ExchangeTeamButton",0)) == null) ||
-               (lVar11 = Component.get_gameObject(lVar11,0)) == null) goto LAB_180eb931a;
+               (lVar11 = Component.get_gameObject(lVar11,0)) == null) goto LAB_180e1435c;
             cVar4 = GameObject.get_activeSelf(lVar11,0);
             if (!cVar4) {
               if (((this.heroDetailPanel == null) ||
                   (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-                 (lVar11 = Transform.Find(lVar11,"ExchangeTeamButton",0)) == null) goto LAB_180eb931a;
+                 (lVar11 = Transform.Find(lVar11,"ExchangeTeamButton",0)) == null) goto LAB_180e1435c;
               lVar11 = Component.get_gameObject(lVar11,0);
-              if (lVar11 == null) goto LAB_180eb931a;
+              if (lVar11 == null) goto LAB_180e1435c;
               GameObject.SetActive(lVar11,1,0);
             }
             if (((this.heroDetailPanel == null) ||
                 (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-               (lVar11 = Transform.Find(lVar11,"ExchangeTeamButton",0)) == null) goto LAB_180eb931a;
-            lVar11 = Component.GetComponent(lVar11,DAT_181d6ccc0);
-            if (this.nowShowHero == null) goto LAB_180eb931a;
+               (lVar11 = Transform.Find(lVar11,"ExchangeTeamButton",0)) == null) goto LAB_180e1435c;
+            lVar11 = Component.GetComponent(lVar11,DAT_181d95560);
+            if (this.nowShowHero == null) goto LAB_180e1435c;
             cVar4 = HeroData.ItemExchangeable(this.nowShowHero,0);
             uVar12 = "给予";
             if (cVar4) {
               uVar12 = "交换";
             }
-            if (lVar11 == null) goto LAB_180eb931a;
+            if (lVar11 == null) goto LAB_180e1435c;
             lVar11.summonLv = uVar12;
             if ((((this.heroDetailPanel == null) ||
                  (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
                 (lVar11 = Transform.Find(lVar11,"LeaveTeamButton",0)) == null) ||
-               (lVar11 = Component.get_gameObject(lVar11,0)) == null) goto LAB_180eb931a;
+               (lVar11 = Component.get_gameObject(lVar11,0)) == null) goto LAB_180e1435c;
             cVar4 = GameObject.get_activeSelf(lVar11,0);
             if (!cVar4) {
               if (((this.heroDetailPanel == null) ||
                   (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-                 (lVar11 = Transform.Find(lVar11,"LeaveTeamButton",0)) == null) goto LAB_180eb931a;
+                 (lVar11 = Transform.Find(lVar11,"LeaveTeamButton",0)) == null) goto LAB_180e1435c;
               lVar11 = Component.get_gameObject(lVar11,0);
-              if (lVar11 == null) goto LAB_180eb931a;
+              if (lVar11 == null) goto LAB_180e1435c;
               GameObject.SetActive(lVar11,1,0);
             }
             if (((this.heroDetailPanel == null) ||
                 (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
                ((lVar11 = Transform.Find(lVar11,"TalkButton",0), lVar11 == null ||
-                (lVar11 = Component.get_gameObject(lVar11,0)) == null))) goto LAB_180eb931a;
+                (lVar11 = Component.get_gameObject(lVar11,0)) == null))) goto LAB_180e1435c;
             cVar4 = GameObject.get_activeSelf(lVar11,0);
             if (!cVar4) {
               if (((this.heroDetailPanel == null) ||
                   (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-                 (lVar11 = Transform.Find(lVar11,"TalkButton",0)) == null) goto LAB_180eb931a;
+                 (lVar11 = Transform.Find(lVar11,"TalkButton",0)) == null) goto LAB_180e1435c;
               lVar11 = Component.get_gameObject(lVar11,0);
-              if (lVar11 == null) goto LAB_180eb931a;
+              if (lVar11 == null) goto LAB_180e1435c;
               GameObject.SetActive(lVar11,1,0);
             }
             lVar11 = FUN_18046bb80(0);
-            if (lVar11 == null) goto LAB_180eb931a;
+            if (lVar11 == null) goto LAB_180e1435c;
             if (*(int *)(lVar11 + 36) == 0) {
-              lVar11 = FUN_18046c440(0);
-              if (lVar11 == null) goto LAB_180eb931a;
-              if (lVar11.summonLv) goto LAB_180eb8592;
+              lVar11 = FUN_18046c400(0);
+              if (lVar11 == null) goto LAB_180e1435c;
+              if (lVar11.summonLv) goto LAB_180e13592;
               if ((((this.heroDetailPanel == null) ||
                    (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
                   (lVar11 = Transform.Find(lVar11,"ExchangeTeamButton",0)) == null) ||
-                 (lVar11 = Component.GetComponent(lVar11,DAT_181d6af40)) == null)
-              goto LAB_180eb931a;
+                 (lVar11 = Component.GetComponent(lVar11,DAT_181d93760)) == null)
+              goto LAB_180e1435c;
               Selectable.set_interactable(lVar11,1,0);
               if (((this.heroDetailPanel == null) ||
                   (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-                 (lVar11 = Transform.Find(lVar11,"LeaveTeamButton",0)) == null) goto LAB_180eb931a;
-              lVar11 = Component.GetComponent(lVar11,DAT_181d6af40);
-              if (this.nowShowHero == null) goto LAB_180eb931a;
+                 (lVar11 = Transform.Find(lVar11,"LeaveTeamButton",0)) == null) goto LAB_180e1435c;
+              lVar11 = Component.GetComponent(lVar11,DAT_181d93760);
+              if (this.nowShowHero == null) goto LAB_180e1435c;
               cVar4 = HeroData.MissionKeepInTeam(this.nowShowHero,0);
-              if (lVar11 == null) goto LAB_180eb931a;
+              if (lVar11 == null) goto LAB_180e1435c;
               Selectable.set_interactable(lVar11,!cVar4,0);
               if (((this.heroDetailPanel == null) ||
                   (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-                 (lVar11 = Transform.Find(lVar11,"TalkButton",0)) == null) goto LAB_180eb931a;
-              lVar11 = Component.GetComponent(lVar11,DAT_181d6af40);
-              if (this.nowShowHero == null) goto LAB_180eb931a;
+                 (lVar11 = Transform.Find(lVar11,"TalkButton",0)) == null) goto LAB_180e1435c;
+              lVar11 = Component.GetComponent(lVar11,DAT_181d93760);
+              if (this.nowShowHero == null) goto LAB_180e1435c;
               if (!this.nowShowHero.isTempHero) {
                 lVar15 = FUN_18046c0a0(0);
-                if (lVar15 == null) goto LAB_180eb931a;
+                if (lVar15 == null) goto LAB_180e1435c;
                 cVar7 = GameController.CanSaveLoad(lVar15,0,0);
               }
-              if (lVar11 == null) goto LAB_180eb931a;
+              if (lVar11 == null) goto LAB_180e1435c;
               Selectable.set_interactable(lVar11,cVar7,0);
             }
             else {
-        LAB_180eb8592:
+        LAB_180e13592:
               if ((((this.heroDetailPanel == null) ||
                    (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
                   (lVar11 = Transform.Find(lVar11,"ExchangeTeamButton",0)) == null) ||
-                 (lVar11 = Component.GetComponent(lVar11,DAT_181d6af40)) == null)
-              goto LAB_180eb931a;
+                 (lVar11 = Component.GetComponent(lVar11,DAT_181d93760)) == null)
+              goto LAB_180e1435c;
               Selectable.set_interactable(lVar11,0,0);
               if (((this.heroDetailPanel == null) ||
                   (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
                  ((lVar11 = Transform.Find(lVar11,"LeaveTeamButton",0), lVar11 == null ||
-                  (lVar11 = Component.GetComponent(lVar11,DAT_181d6af40)) == null)))
-              goto LAB_180eb931a;
+                  (lVar11 = Component.GetComponent(lVar11,DAT_181d93760)) == null)))
+              goto LAB_180e1435c;
               Selectable.set_interactable(lVar11,0,0);
               if (((this.heroDetailPanel == null) ||
                   (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
                  ((lVar11 = Transform.Find(lVar11,"TalkButton",0), lVar11 == null ||
-                  (lVar11 = Component.GetComponent(lVar11,DAT_181d6af40)) == null)))
-              goto LAB_180eb931a;
+                  (lVar11 = Component.GetComponent(lVar11,DAT_181d93760)) == null)))
+              goto LAB_180e1435c;
               Selectable.set_interactable(lVar11,0,0);
             }
           }
           else {
-        LAB_180eb86ae:
+        LAB_180e136ae:
             if ((this.heroDetailPanel == null) ||
                (((lVar11 = GameObject.get_transform(this.heroDetailPanel,0), lVar11 == null ||
                  (lVar11 = Transform.Find(lVar11,"ExchangeTeamButton",0)) == null) ||
-                (lVar11 = Component.get_gameObject(lVar11,0)) == null))) goto LAB_180eb931a;
+                (lVar11 = Component.get_gameObject(lVar11,0)) == null))) goto LAB_180e1435c;
             cVar7 = GameObject.get_activeSelf(lVar11,0);
             if (cVar7) {
               if (((this.heroDetailPanel == null) ||
                   (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
                  ((lVar11 = Transform.Find(lVar11,"ExchangeTeamButton",0), lVar11 == null ||
-                  (lVar11 = Component.get_gameObject(lVar11,0)) == null))) goto LAB_180eb931a;
+                  (lVar11 = Component.get_gameObject(lVar11,0)) == null))) goto LAB_180e1435c;
               GameObject.SetActive(lVar11,0,0);
             }
             if (((this.heroDetailPanel == null) ||
                 (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
                ((lVar11 = Transform.Find(lVar11,"LeaveTeamButton",0), lVar11 == null ||
-                (lVar11 = Component.get_gameObject(lVar11,0)) == null))) goto LAB_180eb931a;
+                (lVar11 = Component.get_gameObject(lVar11,0)) == null))) goto LAB_180e1435c;
             cVar7 = GameObject.get_activeSelf(lVar11,0);
             if (cVar7) {
               if ((((this.heroDetailPanel == null) ||
                    (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
                   (lVar11 = Transform.Find(lVar11,"LeaveTeamButton",0)) == null) ||
-                 (lVar11 = Component.get_gameObject(lVar11,0)) == null) goto LAB_180eb931a;
+                 (lVar11 = Component.get_gameObject(lVar11,0)) == null) goto LAB_180e1435c;
               GameObject.SetActive(lVar11,0,0);
             }
             if (((this.heroDetailPanel == null) ||
                 (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
                ((lVar11 = Transform.Find(lVar11,"TalkButton",0), lVar11 == null ||
-                (lVar11 = Component.get_gameObject(lVar11,0)) == null))) goto LAB_180eb931a;
+                (lVar11 = Component.get_gameObject(lVar11,0)) == null))) goto LAB_180e1435c;
             cVar7 = GameObject.get_activeSelf(lVar11,0);
             if (cVar7) {
               if (((this.heroDetailPanel == null) ||
                   (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
                  ((lVar11 = Transform.Find(lVar11,"TalkButton",0), lVar11 == null ||
-                  (lVar11 = Component.get_gameObject(lVar11,0)) == null))) goto LAB_180eb931a;
+                  (lVar11 = Component.get_gameObject(lVar11,0)) == null))) goto LAB_180e1435c;
               GameObject.SetActive(lVar11,0,0);
             }
           }
           if (((this.heroDetailPanel == null) ||
               (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-             (lVar11 = Transform.Find(lVar11,"TeamMateTimeLeft",0)) == null) goto LAB_180eb931a;
-          uVar12 = Component.GetComponent(lVar11,DAT_181d6d8c0);
-          if (this.nowShowHero == null) goto LAB_180eb931a;
+             (lVar11 = Transform.Find(lVar11,"TeamMateTimeLeft",0)) == null) goto LAB_180e1435c;
+          uVar12 = Component.GetComponent(lVar11,DAT_181d96160);
+          if (this.nowShowHero == null) goto LAB_180e1435c;
           iVar9 = this.nowShowHero.autoLeaveTeamDay;
           lVar11 = "";
           if (-1 < iVar9) {
             local_e4 = iVar9;
-            uVar13 = il2cpp_value_box(DAT_181d5b2f8,&local_e4);
+            uVar13 = il2cpp_value_box(DAT_181d80418,&local_e4);
             lVar11 = String.Format("离队时间\n{0}日",uVar13,0);
           }
           LTLocalization.SetText(uVar12,lVar11,0);
-          if (((((this.heroDetailPanel == null) ||
-                (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-               ((lVar11 = Transform.Find(lVar11,"Log",0), lVar11 == null ||
-                ((lVar11 = Transform.Find(lVar11,"LogListScrollView",0), lVar11 == null ||
-                 (lVar11 = Transform.Find(lVar11,"Viewport",0)) == null))))) ||
-              (lVar11 = Transform.Find(lVar11,"Content",0)) == null) ||
-             (lVar11 = Transform.Find(lVar11,"Text",0)) == null) goto LAB_180eb931a;
-          uVar12 = Component.GetComponent(lVar11,DAT_181d6d8c0);
+          if (((this.heroDetailPanel == null) ||
+              (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
+             ((lVar11 = Transform.Find(lVar11,"Log",0), lVar11 == null ||
+              ((((lVar11 = Transform.Find(lVar11,"LogListScrollView",0), lVar11 == null ||
+                 (lVar11 = Transform.Find(lVar11,"Viewport",0)) == null) ||
+                (lVar11 = Transform.Find(lVar11,"Content",0)) == null) ||
+               (lVar11 = Transform.Find(lVar11,"Text",0)) == null))))) goto LAB_180e1435c;
+          uVar12 = Component.GetComponent(lVar11,DAT_181d96160);
           lVar11 = this.nowShowHero;
-          if (lVar11 == null) goto LAB_180eb931a;
+          if (lVar11 == null) goto LAB_180e1435c;
           lVar15 = "";
           if (lVar11.heroID != null) {
             lVar15 = HeroData.GetRecordLog(lVar11,0);
           }
           LTLocalization.SetText(uVar12,lVar15,0);
-          if (this.nowShowHero == null) goto LAB_180eb931a;
+          if (this.nowShowHero == null) goto LAB_180e1435c;
           cVar7 = HeroData.ItemLockable(this.nowShowHero,0);
           lVar11 = this.heroDetailPanel;
           if (!cVar7) {
             if ((((lVar11 == null) || (lVar11 = GameObject.get_transform(lVar11,0)) == null) ||
                 (lVar11 = Transform.Find(lVar11,"Item",0)) == null) ||
                ((lVar11 = Transform.Find(lVar11,"EquipLock",0), lVar11 == null ||
-                (lVar11 = Component.get_gameObject(lVar11,0)) == null))) goto LAB_180eb931a;
+                (lVar11 = Component.get_gameObject(lVar11,0)) == null))) goto LAB_180e1435c;
             cVar7 = GameObject.get_activeSelf(lVar11,0);
             if (cVar7) {
               if (((this.heroDetailPanel == null) ||
                   (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
                  ((lVar11 = Transform.Find(lVar11,"Item",0), lVar11 == null ||
                   ((lVar11 = Transform.Find(lVar11,"EquipLock",0), lVar11 == null ||
-                   (lVar11 = Component.get_gameObject(lVar11,0)) == null))))) goto LAB_180eb931a;
+                   (lVar11 = Component.get_gameObject(lVar11,0)) == null))))) goto LAB_180e1435c;
               GameObject.SetActive(lVar11,0,0);
             }
             if ((((this.heroDetailPanel == null) ||
                  (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
                 (lVar11 = Transform.Find(lVar11,"Skill",0)) == null) ||
                ((lVar11 = Transform.Find(lVar11,"SkillLock",0), lVar11 == null ||
-                (lVar11 = Component.get_gameObject(lVar11,0)) == null))) goto LAB_180eb931a;
+                (lVar11 = Component.get_gameObject(lVar11,0)) == null))) goto LAB_180e1435c;
             cVar7 = GameObject.get_activeSelf(lVar11,0);
             if (cVar7) {
               if (((this.heroDetailPanel == null) ||
                   (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
                  ((lVar11 = Transform.Find(lVar11,"Skill",0), lVar11 == null ||
                   ((lVar11 = Transform.Find(lVar11,"SkillLock",0), lVar11 == null ||
-                   (lVar11 = Component.get_gameObject(lVar11,0)) == null))))) goto LAB_180eb931a;
+                   (lVar11 = Component.get_gameObject(lVar11,0)) == null))))) goto LAB_180e1435c;
               GameObject.SetActive(lVar11,0,0);
             }
           }
           else {
-            if ((((lVar11 == null) || (lVar11 = GameObject.get_transform(lVar11,0)) == null) ||
-                (lVar11 = Transform.Find(lVar11,"Item",0)) == null) ||
-               ((lVar11 = Transform.Find(lVar11,"EquipLock",0), lVar11 == null ||
-                (lVar11 = Component.get_gameObject(lVar11,0)) == null))) goto LAB_180eb931a;
-            cVar7 = GameObject.get_activeSelf(lVar11,0);
-            if (!cVar7) {
-              if (((this.heroDetailPanel == null) ||
-                  (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-                 ((lVar11 = Transform.Find(lVar11,"Item",0), lVar11 == null ||
-                  (lVar11 = Transform.Find(lVar11,"EquipLock",0)) == null))) goto LAB_180eb931a;
-              lVar11 = Component.get_gameObject(lVar11,0);
-              if (lVar11 == null) goto LAB_180eb931a;
-              GameObject.SetActive(lVar11,1,0);
-            }
-            if ((((this.heroDetailPanel == null) ||
-                 (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-                (lVar11 = Transform.Find(lVar11,"Item",0)) == null) ||
-               (lVar11 = Transform.Find(lVar11,"EquipLock",0)) == null) goto LAB_180eb931a;
-            lVar11 = Component.GetComponent(lVar11,DAT_181d6da40);
-            if ((this.nowShowHero == null) || (lVar11 == null)) goto LAB_180eb931a;
-            Toggle.set_isOn(lVar11,this.nowShowHero.equipLock,0);
-            if ((((this.heroDetailPanel == null) ||
-                 ((lVar11 = GameObject.get_transform(this.heroDetailPanel,0), lVar11 == null ||
-                  (lVar11 = Transform.Find(lVar11,"Skill",0)) == null))) ||
-                (lVar11 = Transform.Find(lVar11,"SkillLock",0)) == null) ||
-               (lVar11 = Component.get_gameObject(lVar11,0)) == null) goto LAB_180eb931a;
+            if (((lVar11 == null) || (lVar11 = GameObject.get_transform(lVar11,0)) == null) ||
+               ((lVar11 = Transform.Find(lVar11,"Item",0), lVar11 == null ||
+                ((lVar11 = Transform.Find(lVar11,"EquipLock",0), lVar11 == null ||
+                 (lVar11 = Component.get_gameObject(lVar11,0)) == null))))) goto LAB_180e1435c;
             cVar7 = GameObject.get_activeSelf(lVar11,0);
             if (!cVar7) {
               if ((((this.heroDetailPanel == null) ||
                    (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-                  (lVar11 = Transform.Find(lVar11,"Skill",0)) == null) ||
-                 (lVar11 = Transform.Find(lVar11,"SkillLock",0)) == null) goto LAB_180eb931a;
+                  (lVar11 = Transform.Find(lVar11,"Item",0)) == null) ||
+                 (lVar11 = Transform.Find(lVar11,"EquipLock",0)) == null) goto LAB_180e1435c;
               lVar11 = Component.get_gameObject(lVar11,0);
-              if (lVar11 == null) goto LAB_180eb931a;
+              if (lVar11 == null) goto LAB_180e1435c;
+              GameObject.SetActive(lVar11,1,0);
+            }
+            if (((this.heroDetailPanel == null) ||
+                (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
+               ((lVar11 = Transform.Find(lVar11,"Item",0), lVar11 == null ||
+                (lVar11 = Transform.Find(lVar11,"EquipLock",0)) == null))) goto LAB_180e1435c;
+            lVar11 = Component.GetComponent(lVar11,DAT_181d962e0);
+            if ((this.nowShowHero == null) || (lVar11 == null)) goto LAB_180e1435c;
+            Toggle.set_isOn(lVar11,this.nowShowHero.equipLock,0);
+            if (((this.heroDetailPanel == null) ||
+                (((lVar11 = GameObject.get_transform(this.heroDetailPanel,0), lVar11 == null ||
+                  (lVar11 = Transform.Find(lVar11,"Skill",0)) == null) ||
+                 (lVar11 = Transform.Find(lVar11,"SkillLock",0)) == null))) ||
+               (lVar11 = Component.get_gameObject(lVar11,0)) == null) goto LAB_180e1435c;
+            cVar7 = GameObject.get_activeSelf(lVar11,0);
+            if (!cVar7) {
+              if (((this.heroDetailPanel == null) ||
+                  (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
+                 ((lVar11 = Transform.Find(lVar11,"Skill",0), lVar11 == null ||
+                  (lVar11 = Transform.Find(lVar11,"SkillLock",0)) == null))) goto LAB_180e1435c;
+              lVar11 = Component.get_gameObject(lVar11,0);
+              if (lVar11 == null) goto LAB_180e1435c;
               GameObject.SetActive(lVar11,1,0);
             }
             if (((this.heroDetailPanel == null) ||
                 (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
                ((lVar11 = Transform.Find(lVar11,"Skill",0), lVar11 == null ||
-                (lVar11 = Transform.Find(lVar11,"SkillLock",0)) == null))) goto LAB_180eb931a;
-            lVar11 = Component.GetComponent(lVar11,DAT_181d6da40);
-            if ((this.nowShowHero == null) || (lVar11 == null)) goto LAB_180eb931a;
+                (lVar11 = Transform.Find(lVar11,"SkillLock",0)) == null))) goto LAB_180e1435c;
+            lVar11 = Component.GetComponent(lVar11,DAT_181d962e0);
+            if ((this.nowShowHero == null) || (lVar11 == null)) goto LAB_180e1435c;
             Toggle.set_isOn(lVar11,this.nowShowHero.skillLock,0);
           }
           if ((((this.heroDetailPanel == null) ||
                (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
               (lVar11 = Transform.Find(lVar11,"SetNameButton",0)) == null) ||
-             (lVar11 = Component.get_gameObject(lVar11,0)) == null) goto LAB_180eb931a;
+             (lVar11 = Component.get_gameObject(lVar11,0)) == null) goto LAB_180e1435c;
           cVar7 = GameObject.get_activeSelf(lVar11,0);
-          if (this.nowShowHero == null) goto LAB_180eb931a;
+          if (this.nowShowHero == null) goto LAB_180e1435c;
           cVar4 = HeroData.CanSetName(this.nowShowHero,0);
           if (cVar7 != cVar4) {
             if (((this.heroDetailPanel == null) ||
                 (lVar11 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-               (lVar11 = Transform.Find(lVar11,"SetNameButton",0)) == null) goto LAB_180eb931a;
+               (lVar11 = Transform.Find(lVar11,"SetNameButton",0)) == null) goto LAB_180e1435c;
             lVar11 = Component.get_gameObject(lVar11,0);
             if ((this.nowShowHero == null) ||
                (uVar6 = HeroData.CanSetName(this.nowShowHero,0), lVar11 == null))
-            goto LAB_180eb931a;
+            goto LAB_180e1435c;
             GameObject.SetActive(lVar11,uVar6,0);
           }
           if (((this.heroDetailPanel != null) &&
@@ -3336,39 +3294,39 @@ public class HeroDetailController
               lVar11 = new WarpText_d__8(0,0);
               if (lVar11 != null) {
                 lVar11.summonControlable = uVar12;
-                FUN_180d837c0(this,lVar11,0);
+                FUN_180d8c2e0(this,lVar11,0);
                 return;
               }
             }
           }
-          goto LAB_180eb931a;
+          goto LAB_180e1435c;
         }
-        if (*pStatics == 0) goto LAB_180eb931a;
-        uVar13 = *(uint64 *)(*pStatics + 200);
+        if (*pStatics_2ee8 == 0) goto LAB_180e1435c;
+        uVar13 = *(uint64 *)(*pStatics_2ee8 + 200);
         lVar11 = GlobalData.AddChild(uVar12,uVar13,0);
-        if (lVar11 == null) goto LAB_180eb931a;
-        lVar15 = GameObject.GetComponent(lVar11,DAT_181d9fcb8);
+        if (lVar11 == null) goto LAB_180e1435c;
+        lVar15 = GameObject.GetComponent(lVar11,DAT_181d71ce8);
         if (((this.nowShowHero == null) ||
             (lVar18 = this.nowShowHero.heroTagData) == null) ||
-           (uVar13 = FUN_180002f80(lVar18,uVar24), lVar15 == null)) goto LAB_180eb931a;
+           (uVar13 = FUN_180002f80(lVar18,uVar24), lVar15 == null)) goto LAB_180e1435c;
         lVar15.itemListInteractType = uVar13;
-        lVar11 = GameObject.GetComponent(lVar11,DAT_181d9fcb8);
-        if (lVar11 == null) goto LAB_180eb931a;
+        lVar11 = GameObject.GetComponent(lVar11,DAT_181d71ce8);
+        if (lVar11 == null) goto LAB_180e1435c;
         uVar24 = uVar24 + 1;
         lVar11.summonSourceHero = 1;
         lVar11 = this.nowShowHero;
-        if (lVar11 == null) goto LAB_180eb931a;
-        goto LAB_180eb7cf0;
+        if (lVar11 == null) goto LAB_180e1435c;
+        goto LAB_180e12cf0;
     }
 
-    // Token : 0x600173C
-    // RVA   : 0xEC59B0   Offset: 0xEC41B0   Length: 0x1C3
+    // Token : 0x6001780
+    // RVA   : 0xE20BA0   Offset: 0xE1FFA0   Length: 0x1C3
     public void UseSpeSkeletonButtonClicked()
     {
         long lVar1;
         ulong uVar2;
         long lVar3;
-        lVar1 = GameController.difficultyExtraPoint;
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 8);
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 16);
           if (this.nowShowHero != null) {
@@ -3378,13 +3336,13 @@ public class HeroDetailController
               if (lVar3 != null) {
                 lVar3 = Transform.Find(lVar3,"UseSpeSkeleton",0);
                 if (lVar3 != null) {
-                  lVar3 = Component.GetComponent(lVar3,DAT_181d6da40);
+                  lVar3 = Component.GetComponent(lVar3,DAT_181d962e0);
                   if ((lVar3 != null) && (lVar1 != null)) {
                     PlayerPrefDictionary.SetKey(lVar1,uVar2,*(char *)(lVar3 + 0x118) == false,0);
                     HeroDetailController.RefreshHeroSkeleton(this,0);
                     plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/Paper",0);
                     plVar5 = (int64 *)0;
-                    if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181d8a228)) {
+                    if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
                       plVar5 = plVar4;
                     }
                     NGUITools.PlaySound(plVar5,0);
@@ -3397,11 +3355,11 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x600173D
-    // RVA   : 0xEC2FC0   Offset: 0xEC17C0   Length: 0x75D
+    // Token : 0x6001781
+    // RVA   : 0xE1E110   Offset: 0xE1D510   Length: 0x7ED
     public void SetAttriDetail(Transform parent, float totalNum, float baseNum, float maxNum)
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d73d40 + 184);
         void HeroDetailController.SetAttriDetail
                      (uint64 this,int64 parent,float totalNum,float baseNum,float maxNum)
         {
@@ -3423,35 +3381,35 @@ public class HeroDetailController
         local_res20[0] = baseNum;
         local_res10[0] = 0.0;
         if ((parent != null) && (lVar3 = Transform.Find(parent,"BarBack",0)) != null) {
-          lVar3 = Component.GetComponent(lVar3,DAT_181d6c740);
-          fVar9 = (float)FUN_1810a8ba0();
+          lVar3 = Component.GetComponent(lVar3,DAT_181d94f60);
+          fVar9 = (float)FUN_1810e36c0();
           lVar4 = Transform.Find(parent,"BarBack",0);
-          if ((lVar4 != null) && (lVar4 = Component.GetComponent(lVar4,DAT_181d6c740)) != null) {
+          if ((lVar4 != null) && (lVar4 = Component.GetComponent(lVar4,DAT_181d94f60)) != null) {
             local_58 = RectTransform.get_sizeDelta(lVar4,0);
             if (lVar3 != null) {
               RectTransform.set_sizeDelta(lVar3,fVar9 * 1.5,0);
               lVar3 = Transform.Find(parent,"Bar",0);
               if (lVar3 != null) {
-                lVar3 = Component.GetComponent(lVar3,DAT_181d6c740);
-                if ((((float)*(int *)(pPlotController + 248) < maxNum)
-                    && ((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0)) &&
-                   (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
-                  il2cpp_runtime_class_init(PlotController_StaticsPtr);
+                lVar3 = Component.GetComponent(lVar3,DAT_181d94f60);
+                if ((((float)*(int *)(pStatics + 248) < maxNum) &&
+                    ((*(byte *)(DAT_181d73d40 + 0x133) & 4) != 0)) &&
+                   (*(int *)(DAT_181d73d40 + 224) == 0)) {
+                  il2cpp_runtime_class_init(DAT_181d73d40);
                 }
-                fVar9 = (float)FUN_1810a8ba0();
+                fVar9 = (float)FUN_1810e36c0();
                 lVar4 = Transform.Find(parent,"Bar",0);
-                if ((lVar4 != null) && (lVar4 = Component.GetComponent(lVar4,DAT_181d6c740)) != null) {
+                if ((lVar4 != null) && (lVar4 = Component.GetComponent(lVar4,DAT_181d94f60)) != null) {
                   local_58 = RectTransform.get_sizeDelta(lVar4,0);
                   if (lVar3 != null) {
                     RectTransform.set_sizeDelta(lVar3,fVar9 * 1.5,0);
                     lVar3 = Transform.Find(parent,"Total",0);
                     if (lVar3 != null) {
-                      uVar5 = Component.GetComponent(lVar3,DAT_181d6d8c0);
+                      uVar5 = Component.GetComponent(lVar3,DAT_181d96160);
                       uVar6 = Single.ToString(local_res18,"f0",0);
                       LTLocalization.SetText(uVar5,uVar6,0);
                       lVar3 = Transform.Find(parent,"Num",0);
                       if (lVar3 != null) {
-                        uVar5 = Component.GetComponent(lVar3,DAT_181d6d8c0);
+                        uVar5 = Component.GetComponent(lVar3,DAT_181d96160);
                         uVar6 = Single.ToString(local_res20,"f0",0);
                         uVar7 = Single.ToString(&maxNum,"f0",0);
                         uVar6 = String.Concat(uVar6,"/",uVar7,0);
@@ -3459,30 +3417,26 @@ public class HeroDetailController
                         if (local_res18[0] == local_res20[0]) {
                           lVar3 = Transform.Find(parent,"SpeAdd",0);
                           if (lVar3 == null) throw; // [null/range check failed]
-                          uVar5 = Component.GetComponent(lVar3,DAT_181d6d8c0);
+                          uVar5 = Component.GetComponent(lVar3,DAT_181d96160);
                           LTLocalization.SetText(uVar5,"",0);
                         }
                         else {
                           lVar3 = Transform.Find(parent,"SpeAdd",0);
                           if (lVar3 == null) throw; // [null/range check failed]
-                          uVar5 = Component.GetComponent(lVar3,DAT_181d6d8c0);
+                          uVar5 = Component.GetComponent(lVar3,DAT_181d96160);
                           local_res10[0] = local_res18[0] - local_res20[0];
                           uVar6 = Single.ToString(local_res10,"+0;-0;",0);
                           LTLocalization.SetText(uVar5,uVar6,0);
                           lVar3 = Transform.Find(parent,"SpeAdd",0);
                           if (lVar3 == null) throw; // [null/range check failed]
-                          plVar8 = (int64 *)Component.GetComponent(lVar3,DAT_181d6d8c0);
+                          plVar8 = (int64 *)Component.GetComponent(lVar3,DAT_181d96160);
                           if (local_res18[0] - local_res20[0] < 0.0) {
-                            uVar5 = *(uint64 *)
-                                     (pPlotController + 0x2f8);
-                            uVar6 = *(uint64 *)
-                                     (pPlotController + 0x300);
+                            uVar5 = *(uint64 *)(pStatics + 0x300);
+                            uVar6 = *(uint64 *)(pStatics + 0x308);
                           }
                           else {
-                            uVar5 = *(uint64 *)
-                                     (pPlotController + 0x290);
-                            uVar6 = *(uint64 *)
-                                     (pPlotController + 0x298);
+                            uVar5 = *(uint64 *)(pStatics + 0x298);
+                            uVar6 = *(uint64 *)(pStatics + 0x2a0);
                           }
                           if (plVar8 == (int64 *)0) throw; // [null/range check failed]
                           local_58 = uVar5;
@@ -3492,23 +3446,20 @@ public class HeroDetailController
                         }
                         lVar3 = Transform.Find(parent,"Lv",0);
                         if (lVar3 != null) {
-                          uVar5 = Component.GetComponent(lVar3,DAT_181d6d8c0);
-                          lVar3 = *(int64 *)(pPlotController + 0x558);
-                          uVar1 = GlobalData.GetAttriLv
-                                            (pPlotController,0);
+                          uVar5 = Component.GetComponent(lVar3,DAT_181d96160);
+                          lVar3 = *(int64 *)(pStatics + 0x560);
+                          uVar1 = GlobalData.GetAttriLv(pStatics,0);
                           if (lVar3 != null) {
                             if (*(uint32 *)(lVar3 + 24) <= uVar1) {
                               ThrowHelper.ThrowArgumentOutOfRangeException(0);
                             }
-                            LTLocalization.SetText
-                                      (uVar5,*(uint64 *)
-                                              (*(int64 *)(lVar3 + 16) + 32 +
-                                              (int64)(int)uVar1 * 8),0);
+                            uVar6 = *(uint64 *)
+                                     (*(int64 *)(lVar3 + 16) + 32 + (int64)(int)uVar1 * 8);
+                            LTLocalization.SetText(uVar5,uVar6,0);
                             lVar3 = Transform.Find(parent,"Lv",0);
                             if (lVar3 != null) {
-                              plVar8 = (int64 *)Component.GetComponent(lVar3,DAT_181d6d8c0);
-                              lVar3 = *(int64 *)
-                                       (*(int64 *)(GameController_StaticsPtr + 184) + 32);
+                              plVar8 = (int64 *)Component.GetComponent(lVar3,DAT_181d96160);
+                              lVar3 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
                               if (lVar3 != null) {
                                 lVar3 = *(int64 *)(lVar3 + 56);
                                 uVar2 = GlobalData.GetAttriLv();
@@ -3542,11 +3493,11 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x600173E
-    // RVA   : 0xEBE8A0   Offset: 0xEBD0A0   Length: 0x1C1
+    // Token : 0x6001782
+    // RVA   : 0xE19950   Offset: 0xE18D50   Length: 0x1C1
     public void RefreshHeroTagList(GameObject targetTagGrid)
     {
-        var pStatics = *(int64*)(DAT_181d4e188 + 184);
+        var pStatics = *(int64*)(DAT_181d72ee8 + 184);
         long lVar1;
         long lVar2;
         long lVar3;
@@ -3564,12 +3515,12 @@ public class HeroDetailController
             uVar4 = *(uint64 *)(*pStatics + 200);
             lVar2 = GlobalData.AddChild(targetTagGrid,uVar4,0);
             if (lVar2 == null) break;
-            lVar3 = GameObject.GetComponent(lVar2,DAT_181d9fcb8);
+            lVar3 = GameObject.GetComponent(lVar2,DAT_181d71ce8);
             if (((this.nowShowHero == null) ||
                 (lVar1 = this.nowShowHero.heroTagData) == null) ||
                (uVar4 = FUN_180002f80(lVar1,iVar5), lVar3 == null)) break;
             *(uint64 *)(lVar3 + 32) = uVar4;
-            lVar2 = GameObject.GetComponent(lVar2,DAT_181d9fcb8);
+            lVar2 = GameObject.GetComponent(lVar2,DAT_181d71ce8);
             if (lVar2 == null) break;
             iVar5 = iVar5 + 1;
             lVar2.summonSourceHero = 1;
@@ -3579,11 +3530,11 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x600173F
-    // RVA   : 0xEBABC0   Offset: 0xEB93C0   Length: 0x80D
+    // Token : 0x6001783
+    // RVA   : 0xE15BE0   Offset: 0xE14FE0   Length: 0x83E
     public static void RefreshBuffGrid(GameObject targetBuffGrid, HeroData targetHero)
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d73d40 + 184);
         ulong uVar1;
         bool cVar2;
         long lVar3;
@@ -3611,7 +3562,7 @@ public class HeroDetailController
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        FUN_181808140(&local_68,lVar3,DAT_181d67cf8);
+        FUN_1817eb460(&local_68,lVar3,DAT_181d8f498);
         local_80 = local_68;
         uStack_7c = uStack_64;
         uStack_78 = uStack_60;
@@ -3620,10 +3571,10 @@ public class HeroDetailController
         while( true ) {
           do {
             do {
-              cVar2 = FUN_180d19a30(&local_80,DAT_181d675c8);
+              cVar2 = FUN_180c75190(&local_80,DAT_181d8da68);
               uVar1 = local_70;
               if (!cVar2) {
-                ZhSegment.Initialize(&local_80,DAT_181d67548);
+                ZhSegment.Initialize(&local_80,DAT_181d8d9e8);
                 return;
               }
               lVar3 = FUN_18046c100(0);
@@ -3635,7 +3586,7 @@ public class HeroDetailController
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 144),uVar1 & 0xffffffff,DAT_181d64878);
+              lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 144),uVar1 & 0xffffffff,DAT_181d8c018);
               if (lVar3 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
@@ -3668,8 +3619,8 @@ public class HeroDetailController
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          uVar5 = Component.GetComponent(lVar4,DAT_181d6d8c0);
-          plVar6 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,5);
+          uVar5 = Component.GetComponent(lVar4,DAT_181d96160);
+          plVar6 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,5);
           lVar4 = FUN_18046c100(0);
           if (lVar4 == null) {
                           // WARNING: Subroutine does not return
@@ -3679,13 +3630,13 @@ public class HeroDetailController
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 144),uVar1 & 0xffffffff,DAT_181d64878);
+          lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 144),uVar1 & 0xffffffff,DAT_181d8c018);
           if (lVar4 == null) break;
           if (*(char *)(lVar4 + 64) == false) {
-            lVar4 = *(int64 *)(pPlotController + 0x2c8);
+            lVar4 = *(int64 *)(pStatics + 0x2d0);
           }
           else {
-            lVar4 = *(int64 *)(pPlotController + 0x260);
+            lVar4 = *(int64 *)(pStatics + 0x268);
           }
           if (plVar6 == (int64 *)0) {
                           // WARNING: Subroutine does not return
@@ -3707,7 +3658,7 @@ public class HeroDetailController
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 144),uVar1 & 0xffffffff,DAT_181d64878);
+          lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 144),uVar1 & 0xffffffff,DAT_181d8c018);
           if (lVar4 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
@@ -3756,7 +3707,7 @@ public class HeroDetailController
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 144),uVar1 & 0xffffffff,DAT_181d64878);
+            lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 144),uVar1 & 0xffffffff,DAT_181d8c018);
             if (lVar4 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -3796,7 +3747,7 @@ public class HeroDetailController
           il2cpp_internal(plVar6 + 8,lVar4);
           uVar9 = String.Concat(plVar6,0);
           LTLocalization.SetText(uVar5,uVar9,0);
-          lVar3 = GameObject.GetComponent(lVar3,DAT_181da12b0);
+          lVar3 = GameObject.GetComponent(lVar3,DAT_181d73448);
           lVar4 = FUN_18046c100(0);
           if (lVar4 == null) {
                           // WARNING: Subroutine does not return
@@ -3806,7 +3757,7 @@ public class HeroDetailController
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 144),uVar1 & 0xffffffff,DAT_181d64878);
+          lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 144),uVar1 & 0xffffffff,DAT_181d8c018);
           if (lVar4 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
@@ -3819,8 +3770,8 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001740
-    // RVA   : 0xEBAB50   Offset: 0xEB9350   Length: 0x6C
+    // Token : 0x6001784
+    // RVA   : 0xE15B70   Offset: 0xE14F70   Length: 0x6C
     public static IEnumerator RefreshBuffGridPos(GameObject targetBuffGrid)
     {
         long lVar1;
@@ -3831,126 +3782,127 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001741
-    // RVA   : 0xEBEBD0   Offset: 0xEBD3D0   Length: 0x1360
+    // Token : 0x6001785
+    // RVA   : 0xE19C80   Offset: 0xE19080   Length: 0x1404
     public void RefreshLifeList(bool resetPos)
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d73d40 + 184);
         long lVar1;
-        long lVar2;
-        ulong uVar3;
+        bool cVar2;
+        long lVar3;
         ulong uVar4;
         ulong uVar5;
-        long lVar6;
-        uint uVar7;
-        long lVar8;
-        uint uVar9;
+        ulong uVar6;
+        long lVar7;
+        uint uVar8;
+        long lVar9;
+        uint uVar10;
         uint[] local_res8 = new uint[2];
         uint[] local_res20 = new uint[2];
         if ((((this.heroDetailPanel != null) &&
-             (lVar2 = GameObject.get_transform(this.heroDetailPanel,0)) != null) &&
-            (lVar2 = Transform.Find(lVar2,"Life",0)) != null) &&
-           ((lVar2 = Transform.Find(lVar2,"Teacher",0), lVar2 != null &&
-            (lVar2 = Transform.Find(lVar2,"Content",0)) != null))) {
-          uVar3 = Component.get_gameObject(lVar2,0);
-          GlobalData.DeleteAllChild(uVar3,0);
+             (lVar3 = GameObject.get_transform(this.heroDetailPanel,0)) != null) &&
+            (lVar3 = Transform.Find(lVar3,"Life",0)) != null) &&
+           ((lVar3 = Transform.Find(lVar3,"Teacher",0), lVar3 != null &&
+            (lVar3 = Transform.Find(lVar3,"Content",0)) != null))) {
+          uVar4 = Component.get_gameObject(lVar3,0);
+          GlobalData.DeleteAllChild(uVar4,0);
           if (((this.heroDetailPanel != null) &&
-              (lVar2 = GameObject.get_transform(this.heroDetailPanel,0)) != null) &&
-             ((lVar2 = Transform.Find(lVar2,"Life",0), lVar2 != null &&
-              ((lVar2 = Transform.Find(lVar2,"Teacher",0), lVar2 != null &&
-               (lVar2 = Transform.Find(lVar2,"Content",0)) != null))))) {
-            uVar3 = Component.get_gameObject(lVar2,0);
+              (lVar3 = GameObject.get_transform(this.heroDetailPanel,0)) != null) &&
+             ((lVar3 = Transform.Find(lVar3,"Life",0), lVar3 != null &&
+              ((lVar3 = Transform.Find(lVar3,"Teacher",0), lVar3 != null &&
+               (lVar3 = Transform.Find(lVar3,"Content",0)) != null))))) {
+            uVar4 = Component.get_gameObject(lVar3,0);
             if (this.nowShowHero != null) {
               HeroDetailController.CreateLifeHeroIcon
-                        (this,uVar3,this.nowShowHero.Teacher,0);
+                        (this,uVar4,this.nowShowHero.Teacher,0);
               if ((((this.heroDetailPanel != null) &&
-                   (lVar2 = GameObject.get_transform(this.heroDetailPanel,0)) != null) &&
-                  (lVar2 = Transform.Find(lVar2,"Life",0)) != null) &&
-                 ((lVar2 = Transform.Find(lVar2,"Student",0), lVar2 != null &&
-                  (lVar2 = Transform.Find(lVar2,"Num",0)) != null))) {
-                uVar3 = Component.GetComponent(lVar2,DAT_181d6d8c0);
-                lVar2 = this.nowShowHero;
-                if (lVar2 != null) {
-                  uVar4 = "";
-                  if (lVar2.belongForceID < 0) {
-                    if (lVar2.Students == 0) {
-        LAB_180ebff13:
+                   (lVar3 = GameObject.get_transform(this.heroDetailPanel,0)) != null) &&
+                  (lVar3 = Transform.Find(lVar3,"Life",0)) != null) &&
+                 ((lVar3 = Transform.Find(lVar3,"Student",0), lVar3 != null &&
+                  (lVar3 = Transform.Find(lVar3,"Num",0)) != null))) {
+                uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                if (this.nowShowHero != null) {
+                  cVar2 = HeroData.HaveForce(this.nowShowHero,0);
+                  uVar5 = "";
+                  if (!cVar2) {
+                    if ((this.nowShowHero == null) ||
+                       (lVar3 = this.nowShowHero.Students) == null) {
+        LAB_180e1b067:
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    local_res8[0] = *(uint32 *)(lVar2.Students + 24);
-                    uVar4 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
-                    if (this.nowShowHero == null) goto LAB_180ebff13;
+                    local_res8[0] = lVar3.summonLv;
+                    uVar5 = il2cpp_value_box(DAT_181d80418,local_res8);
+                    if (this.nowShowHero == null) goto LAB_180e1b067;
                     local_res20[0] = HeroData.GetMaxStudent(this.nowShowHero,0);
-                    uVar5 = il2cpp_value_box(DAT_181d5b2f8,local_res20);
-                    uVar4 = String.Format("{0}/{1}",uVar4,uVar5,0);
+                    uVar6 = il2cpp_value_box(DAT_181d80418,local_res20);
+                    uVar5 = String.Format("{0}/{1}",uVar5,uVar6,0);
                   }
-                  LTLocalization.SetText(uVar3,uVar4,0);
-                  if (((this.heroDetailPanel != null) &&
-                      (lVar2 = GameObject.get_transform(this.heroDetailPanel,0)) != null) &&
-                     ((lVar2 = Transform.Find(lVar2,"Life",0), lVar2 != null &&
-                      (((lVar2 = Transform.Find(lVar2,"Student",0), lVar2 != null &&
-                        (lVar2 = Transform.Find(lVar2,"Viewport",0)) != null) &&
-                       (lVar2 = Transform.Find(lVar2,"Content",0)) != null))))) {
-                    uVar3 = Component.get_gameObject(lVar2,0);
-                    GlobalData.DeleteAllChild(uVar3,0);
-                    lVar2 = this.nowShowHero;
-                    uVar9 = 0;
-                    uVar7 = 0;
-                    if (lVar2 != null) {
-                      lVar8 = 32;
-                      while (lVar2.Students != 0) {
-                        lVar6 = this.heroDetailPanel;
-                        if (*(int *)(lVar2.Students + 24) <= (int)uVar7) {
-                          if (((lVar6 != null) && (lVar2 = GameObject.get_transform(lVar6,0)) != null)
-                             && ((lVar2 = Transform.Find(lVar2,"Life",0), lVar2 != null &&
-                                 ((lVar2 = Transform.Find(lVar2,"Lover",0), lVar2 != null &&
-                                  (lVar2 = Transform.Find(lVar2,"Content",0)) != null))))) {
-                            uVar3 = Component.get_gameObject(lVar2,0);
-                            GlobalData.DeleteAllChild(uVar3,0);
-                            if ((((this.heroDetailPanel != null) &&
-                                 (lVar2 = GameObject.get_transform(this.heroDetailPanel,0),
-                                 lVar2 != null)) &&
-                                (lVar2 = Transform.Find(lVar2,"Life",0)) != null) &&
-                               ((lVar2 = Transform.Find(lVar2,"Lover",0), lVar2 != null &&
-                                (lVar2 = Transform.Find(lVar2,"Content",0)) != null))) {
-                              uVar3 = Component.get_gameObject(lVar2,0);
+                  LTLocalization.SetText(uVar4,uVar5,0);
+                  if ((((this.heroDetailPanel != null) &&
+                       (lVar3 = GameObject.get_transform(this.heroDetailPanel,0)) != null)
+                      && (lVar3 = Transform.Find(lVar3,"Life",0)) != null) &&
+                     (((lVar3 = Transform.Find(lVar3,"Student",0), lVar3 != null &&
+                       (lVar3 = Transform.Find(lVar3,"Viewport",0)) != null) &&
+                      (lVar3 = Transform.Find(lVar3,"Content",0)) != null))) {
+                    uVar4 = Component.get_gameObject(lVar3,0);
+                    GlobalData.DeleteAllChild(uVar4,0);
+                    lVar3 = this.nowShowHero;
+                    uVar10 = 0;
+                    uVar8 = 0;
+                    if (lVar3 != null) {
+                      lVar9 = 32;
+                      while (lVar3.Students != 0) {
+                        lVar7 = this.heroDetailPanel;
+                        if (*(int *)(lVar3.Students + 24) <= (int)uVar8) {
+                          if ((((lVar7 != null) && (lVar3 = GameObject.get_transform(lVar7,0)) != null)
+                              && (lVar3 = Transform.Find(lVar3,"Life",0)) != null) &&
+                             ((lVar3 = Transform.Find(lVar3,"Lover",0), lVar3 != null &&
+                              (lVar3 = Transform.Find(lVar3,"Content",0)) != null))) {
+                            uVar4 = Component.get_gameObject(lVar3,0);
+                            GlobalData.DeleteAllChild(uVar4,0);
+                            if (((this.heroDetailPanel != null) &&
+                                (lVar3 = GameObject.get_transform(this.heroDetailPanel,0),
+                                lVar3 != null)) &&
+                               ((lVar3 = Transform.Find(lVar3,"Life",0), lVar3 != null &&
+                                ((lVar3 = Transform.Find(lVar3,"Lover",0), lVar3 != null &&
+                                 (lVar3 = Transform.Find(lVar3,"Content",0)) != null))))) {
+                              uVar4 = Component.get_gameObject(lVar3,0);
                               if (this.nowShowHero != null) {
                                 HeroDetailController.CreateLifeHeroIcon
-                                          (this,uVar3,
+                                          (this,uVar4,
                                            this.nowShowHero.Lover,0);
-                                if (((this.heroDetailPanel != null) &&
-                                    (lVar2 = GameObject.get_transform(this.heroDetailPanel,0),
-                                    lVar2 != null)) &&
-                                   ((lVar2 = Transform.Find(lVar2,"Life",0), lVar2 != null &&
-                                    ((lVar2 = Transform.Find(lVar2,"Prelover",0), lVar2 != null &&
-                                     (lVar2 = Transform.Find(lVar2,"Num",0)) != null))))) {
-                                  uVar3 = Component.GetComponent(lVar2,DAT_181d6d8c0);
+                                if ((((this.heroDetailPanel != null) &&
+                                     (lVar3 = GameObject.get_transform(this.heroDetailPanel,0),
+                                     lVar3 != null)) &&
+                                    (lVar3 = Transform.Find(lVar3,"Life",0)) != null) &&
+                                   ((lVar3 = Transform.Find(lVar3,"Prelover",0), lVar3 != null &&
+                                    (lVar3 = Transform.Find(lVar3,"Num",0)) != null))) {
+                                  uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
                                   if ((this.nowShowHero != null) &&
-                                     (lVar2 = this.nowShowHero.PreLovers,
-                                     lVar2 != null)) {
-                                    local_res8[0] = lVar2.summonLv;
-                                    uVar4 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
+                                     (lVar3 = this.nowShowHero.PreLovers,
+                                     lVar3 != null)) {
+                                    local_res8[0] = lVar3.summonLv;
+                                    uVar5 = il2cpp_value_box(DAT_181d80418,local_res8);
                                     local_res20[0] =
-                                         *(uint32 *)
-                                          (pPlotController + 148);
-                                    uVar5 = il2cpp_value_box(DAT_181d5b2f8,local_res20);
-                                    uVar4 = String.Format("{0}/{1}",uVar4,uVar5,0);
-                                    LTLocalization.SetText(uVar3,uVar4,0);
+                                         *(uint32 *)(pStatics + 148);
+                                    uVar6 = il2cpp_value_box(DAT_181d80418,local_res20);
+                                    uVar5 = String.Format("{0}/{1}",uVar5,uVar6,0);
+                                    LTLocalization.SetText(uVar4,uVar5,0);
                                     if ((((this.heroDetailPanel != null) &&
-                                         (lVar2 = GameObject.get_transform
-                                                            (this.heroDetailPanel,0), lVar2 != null)
-                                         ) && (lVar2 = Transform.Find(lVar2,"Life",0)) != null
-                                        ) && (((lVar2 = Transform.Find(lVar2,"Prelover",0), lVar2 != null
-                                               && (lVar2 = Transform.Find(lVar2,"Viewport",0),
-                                                  lVar2 != null)) &&
-                                              (lVar2 = Transform.Find(lVar2,"Content",0)) != null
+                                         (lVar3 = GameObject.get_transform
+                                                            (this.heroDetailPanel,0), lVar3 != null)
+                                         ) && (lVar3 = Transform.Find(lVar3,"Life",0)) != null
+                                        ) && (((lVar3 = Transform.Find(lVar3,"Prelover",0), lVar3 != null
+                                               && (lVar3 = Transform.Find(lVar3,"Viewport",0),
+                                                  lVar3 != null)) &&
+                                              (lVar3 = Transform.Find(lVar3,"Content",0)) != null
                                               ))) {
-                                      uVar3 = Component.get_gameObject(lVar2,0);
-                                      GlobalData.DeleteAllChild(uVar3,0);
-                                      lVar2 = this.nowShowHero;
-                                      uVar7 = 0;
-                                      if (lVar2 != null) goto LAB_180ebf430;
+                                      uVar4 = Component.get_gameObject(lVar3,0);
+                                      GlobalData.DeleteAllChild(uVar4,0);
+                                      lVar3 = this.nowShowHero;
+                                      uVar8 = 0;
+                                      if (lVar3 != null) goto LAB_180e1a540;
                                       break;
                                     }
                                   }
@@ -3961,22 +3913,22 @@ public class HeroDetailController
                           // WARNING: Subroutine does not return
                           FUN_1800d6620();
                         }
-                        if (((((lVar6 == null) || (lVar2 = GameObject.get_transform(lVar6,0)) == null)
-                             || (lVar2 = Transform.Find(lVar2,"Life",0)) == null) ||
-                            ((lVar2 = Transform.Find(lVar2,"Student",0), lVar2 == null ||
-                             (lVar2 = Transform.Find(lVar2,"Viewport",0)) == null))) ||
-                           (lVar2 = Transform.Find(lVar2,"Content",0)) == null) break;
-                        uVar3 = Component.get_gameObject(lVar2,0);
+                        if (((((lVar7 == null) || (lVar3 = GameObject.get_transform(lVar7,0)) == null)
+                             || (lVar3 = Transform.Find(lVar3,"Life",0)) == null) ||
+                            ((lVar3 = Transform.Find(lVar3,"Student",0), lVar3 == null ||
+                             (lVar3 = Transform.Find(lVar3,"Viewport",0)) == null))) ||
+                           (lVar3 = Transform.Find(lVar3,"Content",0)) == null) break;
+                        uVar4 = Component.get_gameObject(lVar3,0);
                         if ((this.nowShowHero == null) ||
-                           (lVar2 = this.nowShowHero.Students) == null)
+                           (lVar3 = this.nowShowHero.Students) == null)
                         break;
-                        if (lVar2.summonLv <= uVar7) {
+                        if (lVar3.summonLv <= uVar8) {
                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
                         }
-                        HeroDetailController.CreateLifeHeroIcon(this,uVar3);
-                        lVar2 = this.nowShowHero;
-                        uVar7 = uVar7 + 1;
-                        if (lVar2 == null) break;
+                        HeroDetailController.CreateLifeHeroIcon(this,uVar4);
+                        lVar3 = this.nowShowHero;
+                        uVar8 = uVar8 + 1;
+                        if (lVar3 == null) break;
                       }
                     }
                   }
@@ -3985,231 +3937,232 @@ public class HeroDetailController
             }
           }
         }
-        LAB_180ebff19:
+        LAB_180e1b06d:
                           // WARNING: Subroutine does not return
         FUN_1800d6620();
-        LAB_180ebf430:
-        if (lVar2.PreLovers == null) goto LAB_180ebff19;
-        lVar6 = this.heroDetailPanel;
-        if (*(int *)(lVar2.PreLovers + 24) <= (int)uVar7) {
-          if (((lVar6 != null) && (lVar2 = GameObject.get_transform(lVar6,0)) != null) &&
-             ((lVar2 = Transform.Find(lVar2,"Life",0), lVar2 != null &&
-              ((lVar2 = Transform.Find(lVar2,"Brother",0), lVar2 != null &&
-               (lVar2 = Transform.Find(lVar2,"Num",0)) != null))))) {
-            uVar3 = Component.GetComponent(lVar2,DAT_181d6d8c0);
+        LAB_180e1a540:
+        if (lVar3.PreLovers == null) goto LAB_180e1b06d;
+        lVar7 = this.heroDetailPanel;
+        if (*(int *)(lVar3.PreLovers + 24) <= (int)uVar8) {
+          if (((lVar7 != null) && (lVar3 = GameObject.get_transform(lVar7,0)) != null) &&
+             ((lVar3 = Transform.Find(lVar3,"Life",0), lVar3 != null &&
+              ((lVar3 = Transform.Find(lVar3,"Brother",0), lVar3 != null &&
+               (lVar3 = Transform.Find(lVar3,"Num",0)) != null))))) {
+            uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
             if ((this.nowShowHero != null) &&
-               (lVar2 = this.nowShowHero.Brothers) != null) {
-              local_res8[0] = lVar2.summonLv;
-              uVar4 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
-              local_res20[0] = *(uint32 *)(pPlotController + 152);
-              uVar5 = il2cpp_value_box(DAT_181d5b2f8,local_res20);
-              uVar4 = String.Format("{0}/{1}",uVar4,uVar5,0);
-              LTLocalization.SetText(uVar3,uVar4,0);
-              if ((((this.heroDetailPanel != null) &&
-                   (lVar2 = GameObject.get_transform(this.heroDetailPanel,0)) != null) &&
-                  (lVar2 = Transform.Find(lVar2,"Life",0)) != null) &&
-                 (((lVar2 = Transform.Find(lVar2,"Brother",0), lVar2 != null &&
-                   (lVar2 = Transform.Find(lVar2,"Viewport",0)) != null) &&
-                  (lVar2 = Transform.Find(lVar2,"Content",0)) != null))) {
-                uVar3 = Component.get_gameObject(lVar2,0);
-                GlobalData.DeleteAllChild(uVar3,0);
-                lVar2 = this.nowShowHero;
-                uVar7 = 0;
-                if (lVar2 != null) goto LAB_180ebf710;
-                goto LAB_180ebff19;
-              }
-            }
-          }
-                          // WARNING: Subroutine does not return
-          FUN_1800d6620();
-        }
-        if ((((lVar6 == null) || (lVar2 = GameObject.get_transform(lVar6,0)) == null) ||
-            (lVar2 = Transform.Find(lVar2,"Life",0)) == null) ||
-           (((lVar2 = Transform.Find(lVar2,"Prelover",0), lVar2 == null ||
-             (lVar2 = Transform.Find(lVar2,"Viewport",0)) == null) ||
-            (lVar2 = Transform.Find(lVar2,"Content",0)) == null))) goto LAB_180ebff19;
-        uVar3 = Component.get_gameObject(lVar2,0);
-        if ((this.nowShowHero == null) ||
-           (lVar2 = this.nowShowHero.PreLovers) == null) goto LAB_180ebff19;
-        if (lVar2.summonLv <= uVar7) {
-          ThrowHelper.ThrowArgumentOutOfRangeException(0);
-        }
-        HeroDetailController.CreateLifeHeroIcon(this,uVar3);
-        lVar2 = this.nowShowHero;
-        uVar7 = uVar7 + 1;
-        if (lVar2 == null) goto LAB_180ebff19;
-        goto LAB_180ebf430;
-        LAB_180ebf710:
-        if (lVar2.Brothers == null) goto LAB_180ebff19;
-        lVar6 = this.heroDetailPanel;
-        if (*(int *)(lVar2.Brothers + 24) <= (int)uVar7) {
-          if (((lVar6 != null) && (lVar2 = GameObject.get_transform(lVar6,0)) != null) &&
-             ((lVar2 = Transform.Find(lVar2,"Life",0), lVar2 != null &&
-              ((lVar2 = Transform.Find(lVar2,"Friend",0), lVar2 != null &&
-               (lVar2 = Transform.Find(lVar2,"Num",0)) != null))))) {
-            uVar3 = Component.GetComponent(lVar2,DAT_181d6d8c0);
-            if ((this.nowShowHero != null) &&
-               (lVar2 = this.nowShowHero.Friends) != null) {
-              local_res8[0] = lVar2.summonLv;
-              uVar4 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
-              local_res20[0] = *(uint32 *)(pPlotController + 144);
-              uVar5 = il2cpp_value_box(DAT_181d5b2f8,local_res20);
-              uVar4 = String.Format("{0}/{1}",uVar4,uVar5,0);
-              LTLocalization.SetText(uVar3,uVar4,0);
+               (lVar3 = this.nowShowHero.Brothers) != null) {
+              local_res8[0] = lVar3.summonLv;
+              uVar5 = il2cpp_value_box(DAT_181d80418,local_res8);
+              local_res20[0] = *(uint32 *)(pStatics + 152);
+              uVar6 = il2cpp_value_box(DAT_181d80418,local_res20);
+              uVar5 = String.Format("{0}/{1}",uVar5,uVar6,0);
+              LTLocalization.SetText(uVar4,uVar5,0);
               if (((((this.heroDetailPanel != null) &&
-                    (lVar2 = GameObject.get_transform(this.heroDetailPanel,0)) != null) &&
-                   (lVar2 = Transform.Find(lVar2,"Life",0)) != null) &&
-                  ((lVar2 = Transform.Find(lVar2,"Friend",0), lVar2 != null &&
-                   (lVar2 = Transform.Find(lVar2,"Viewport",0)) != null))) &&
-                 (lVar2 = Transform.Find(lVar2,"Content",0)) != null) {
-                uVar3 = Component.get_gameObject(lVar2,0);
-                GlobalData.DeleteAllChild(uVar3,0);
-                lVar2 = this.nowShowHero;
-                uVar7 = 0;
-                if (lVar2 != null) {
-                  lVar6 = 32;
-                  goto LAB_180ebf9f0;
-                }
-                goto LAB_180ebff19;
+                    (lVar3 = GameObject.get_transform(this.heroDetailPanel,0)) != null) &&
+                   (lVar3 = Transform.Find(lVar3,"Life",0)) != null) &&
+                  ((lVar3 = Transform.Find(lVar3,"Brother",0), lVar3 != null &&
+                   (lVar3 = Transform.Find(lVar3,"Viewport",0)) != null))) &&
+                 (lVar3 = Transform.Find(lVar3,"Content",0)) != null) {
+                uVar4 = Component.get_gameObject(lVar3,0);
+                GlobalData.DeleteAllChild(uVar4,0);
+                lVar3 = this.nowShowHero;
+                uVar8 = 0;
+                if (lVar3 != null) goto LAB_180e1a840;
+                goto LAB_180e1b06d;
               }
             }
           }
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        if (((((lVar6 == null) || (lVar2 = GameObject.get_transform(lVar6,0)) == null) ||
-             (lVar2 = Transform.Find(lVar2,"Life",0)) == null) ||
-            ((lVar2 = Transform.Find(lVar2,"Brother",0), lVar2 == null ||
-             (lVar2 = Transform.Find(lVar2,"Viewport",0)) == null))) ||
-           (lVar2 = Transform.Find(lVar2,"Content",0)) == null) goto LAB_180ebff19;
-        uVar3 = Component.get_gameObject(lVar2,0);
+        if ((((lVar7 == null) || (lVar3 = GameObject.get_transform(lVar7,0)) == null) ||
+            (lVar3 = Transform.Find(lVar3,"Life",0)) == null) ||
+           (((lVar3 = Transform.Find(lVar3,"Prelover",0), lVar3 == null ||
+             (lVar3 = Transform.Find(lVar3,"Viewport",0)) == null) ||
+            (lVar3 = Transform.Find(lVar3,"Content",0)) == null))) goto LAB_180e1b06d;
+        uVar4 = Component.get_gameObject(lVar3,0);
         if ((this.nowShowHero == null) ||
-           (lVar2 = this.nowShowHero.Brothers) == null) goto LAB_180ebff19;
-        if (lVar2.summonLv <= uVar7) {
+           (lVar3 = this.nowShowHero.PreLovers) == null) goto LAB_180e1b06d;
+        if (lVar3.summonLv <= uVar8) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
-        HeroDetailController.CreateLifeHeroIcon(this,uVar3);
-        lVar2 = this.nowShowHero;
-        uVar7 = uVar7 + 1;
-        if (lVar2 == null) goto LAB_180ebff19;
-        goto LAB_180ebf710;
-        LAB_180ebf9f0:
-        if (lVar2.Friends == null) goto LAB_180ebff19;
-        lVar1 = this.heroDetailPanel;
-        if (*(int *)(lVar2.Friends + 24) <= (int)uVar7) {
-          if (((lVar1 != null) && (lVar2 = GameObject.get_transform(lVar1,0)) != null) &&
-             ((lVar2 = Transform.Find(lVar2,"Life",0), lVar2 != null &&
-              (((lVar2 = Transform.Find(lVar2,"Hater",0), lVar2 != null &&
-                (lVar2 = Transform.Find(lVar2,"Viewport",0)) != null) &&
-               (lVar2 = Transform.Find(lVar2,"Content",0)) != null))))) {
-            uVar3 = Component.get_gameObject(lVar2,0);
-            GlobalData.DeleteAllChild(uVar3,0);
-            lVar2 = this.nowShowHero;
-            if (lVar2 != null) goto LAB_180ebfbd0;
+        HeroDetailController.CreateLifeHeroIcon(this,uVar4);
+        lVar3 = this.nowShowHero;
+        uVar8 = uVar8 + 1;
+        if (lVar3 == null) goto LAB_180e1b06d;
+        goto LAB_180e1a540;
+        LAB_180e1a840:
+        if (lVar3.Brothers == null) goto LAB_180e1b06d;
+        lVar7 = this.heroDetailPanel;
+        if (*(int *)(lVar3.Brothers + 24) <= (int)uVar8) {
+          if (((lVar7 != null) && (lVar3 = GameObject.get_transform(lVar7,0)) != null) &&
+             ((lVar3 = Transform.Find(lVar3,"Life",0), lVar3 != null &&
+              ((lVar3 = Transform.Find(lVar3,"Friend",0), lVar3 != null &&
+               (lVar3 = Transform.Find(lVar3,"Num",0)) != null))))) {
+            uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+            if ((this.nowShowHero != null) &&
+               (lVar3 = this.nowShowHero.Friends) != null) {
+              local_res8[0] = lVar3.summonLv;
+              uVar5 = il2cpp_value_box(DAT_181d80418,local_res8);
+              local_res20[0] = *(uint32 *)(pStatics + 144);
+              uVar6 = il2cpp_value_box(DAT_181d80418,local_res20);
+              uVar5 = String.Format("{0}/{1}",uVar5,uVar6,0);
+              LTLocalization.SetText(uVar4,uVar5,0);
+              if ((((this.heroDetailPanel != null) &&
+                   (lVar3 = GameObject.get_transform(this.heroDetailPanel,0)) != null) &&
+                  (lVar3 = Transform.Find(lVar3,"Life",0)) != null) &&
+                 (((lVar3 = Transform.Find(lVar3,"Friend",0), lVar3 != null &&
+                   (lVar3 = Transform.Find(lVar3,"Viewport",0)) != null) &&
+                  (lVar3 = Transform.Find(lVar3,"Content",0)) != null))) {
+                uVar4 = Component.get_gameObject(lVar3,0);
+                GlobalData.DeleteAllChild(uVar4,0);
+                lVar3 = this.nowShowHero;
+                uVar8 = 0;
+                if (lVar3 != null) {
+                  lVar7 = 32;
+                  goto LAB_180e1ab40;
+                }
+                goto LAB_180e1b06d;
+              }
+            }
           }
-          goto LAB_180ebff19;
+                          // WARNING: Subroutine does not return
+          FUN_1800d6620();
         }
-        if ((((lVar1 == null) || (lVar2 = GameObject.get_transform(lVar1,0)) == null) ||
-            (lVar2 = Transform.Find(lVar2,"Life",0)) == null) ||
-           (((lVar2 = Transform.Find(lVar2,"Friend",0), lVar2 == null ||
-             (lVar2 = Transform.Find(lVar2,"Viewport",0)) == null) ||
-            (lVar2 = Transform.Find(lVar2,"Content",0)) == null))) goto LAB_180ebff19;
-        uVar3 = Component.get_gameObject(lVar2,0);
+        if (((((lVar7 == null) || (lVar3 = GameObject.get_transform(lVar7,0)) == null) ||
+             (lVar3 = Transform.Find(lVar3,"Life",0)) == null) ||
+            ((lVar3 = Transform.Find(lVar3,"Brother",0), lVar3 == null ||
+             (lVar3 = Transform.Find(lVar3,"Viewport",0)) == null))) ||
+           (lVar3 = Transform.Find(lVar3,"Content",0)) == null) goto LAB_180e1b06d;
+        uVar4 = Component.get_gameObject(lVar3,0);
         if ((this.nowShowHero == null) ||
-           (lVar2 = this.nowShowHero.Friends) == null) goto LAB_180ebff19;
-        if (lVar2.summonLv <= uVar7) {
+           (lVar3 = this.nowShowHero.Brothers) == null) goto LAB_180e1b06d;
+        if (lVar3.summonLv <= uVar8) {
+          ThrowHelper.ThrowArgumentOutOfRangeException(0);
+        }
+        HeroDetailController.CreateLifeHeroIcon(this,uVar4);
+        lVar3 = this.nowShowHero;
+        uVar8 = uVar8 + 1;
+        if (lVar3 == null) goto LAB_180e1b06d;
+        goto LAB_180e1a840;
+        LAB_180e1ab40:
+        if (lVar3.Friends == null) goto LAB_180e1b06d;
+        lVar1 = this.heroDetailPanel;
+        if (*(int *)(lVar3.Friends + 24) <= (int)uVar8) {
+          if (((lVar1 != null) && (lVar3 = GameObject.get_transform(lVar1,0)) != null) &&
+             ((lVar3 = Transform.Find(lVar3,"Life",0), lVar3 != null &&
+              (((lVar3 = Transform.Find(lVar3,"Hater",0), lVar3 != null &&
+                (lVar3 = Transform.Find(lVar3,"Viewport",0)) != null) &&
+               (lVar3 = Transform.Find(lVar3,"Content",0)) != null))))) {
+            uVar4 = Component.get_gameObject(lVar3,0);
+            GlobalData.DeleteAllChild(uVar4,0);
+            lVar3 = this.nowShowHero;
+            if (lVar3 != null) goto LAB_180e1ad20;
+          }
+          goto LAB_180e1b06d;
+        }
+        if ((((lVar1 == null) || (lVar3 = GameObject.get_transform(lVar1,0)) == null) ||
+            (lVar3 = Transform.Find(lVar3,"Life",0)) == null) ||
+           (((lVar3 = Transform.Find(lVar3,"Friend",0), lVar3 == null ||
+             (lVar3 = Transform.Find(lVar3,"Viewport",0)) == null) ||
+            (lVar3 = Transform.Find(lVar3,"Content",0)) == null))) goto LAB_180e1b06d;
+        uVar4 = Component.get_gameObject(lVar3,0);
+        if ((this.nowShowHero == null) ||
+           (lVar3 = this.nowShowHero.Friends) == null) goto LAB_180e1b06d;
+        if (lVar3.summonLv <= uVar8) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         HeroDetailController.CreateLifeHeroIcon
-                  (this,uVar3,*(uint32 *)(lVar2.isSummon + lVar6),0);
-        lVar2 = this.nowShowHero;
-        uVar7 = uVar7 + 1;
-        lVar6 = lVar6 + 4;
-        if (lVar2 == null) goto LAB_180ebff19;
-        goto LAB_180ebf9f0;
-        LAB_180ebfbd0:
-        if (lVar2.Haters == null) goto LAB_180ebff19;
-        if (*(int *)(lVar2.Haters + 24) <= (int)uVar9) {
+                  (this,uVar4,*(uint32 *)(lVar3.isSummon + lVar7),0);
+        lVar3 = this.nowShowHero;
+        uVar8 = uVar8 + 1;
+        lVar7 = lVar7 + 4;
+        if (lVar3 == null) goto LAB_180e1b06d;
+        goto LAB_180e1ab40;
+        LAB_180e1ad20:
+        if (lVar3.Haters == null) goto LAB_180e1b06d;
+        if (*(int *)(lVar3.Haters + 24) <= (int)uVar10) {
           if (resetPos) {
             if (((this.heroDetailPanel == null) ||
-                (lVar2 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-               ((lVar2 = Transform.Find(lVar2,"Life",0), lVar2 == null ||
-                (((lVar2 = Transform.Find(lVar2,"Student",0), lVar2 == null ||
-                  (lVar2 = Component.GetComponent(lVar2,DAT_181d6c940)) == null) ||
-                 (lVar2.heroAIData == null)))))) goto LAB_180ebff19;
-            Scrollbar.set_value(lVar2.heroAIData,0x3f800000,0);
+                (lVar3 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
+               ((lVar3 = Transform.Find(lVar3,"Life",0), lVar3 == null ||
+                (((lVar3 = Transform.Find(lVar3,"Student",0), lVar3 == null ||
+                  (lVar3 = Component.GetComponent(lVar3,DAT_181d951e0)) == null) ||
+                 (lVar3.heroAIData == null)))))) goto LAB_180e1b06d;
+            Scrollbar.set_value(lVar3.heroAIData,0x3f800000,0);
             if (((this.heroDetailPanel == null) ||
-                (lVar2 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-               ((lVar2 = Transform.Find(lVar2,"Life",0), lVar2 == null ||
-                (((lVar2 = Transform.Find(lVar2,"Brother",0), lVar2 == null ||
-                  (lVar2 = Component.GetComponent(lVar2,DAT_181d6c940)) == null) ||
-                 (lVar2.heroAIData == null)))))) goto LAB_180ebff19;
-            Scrollbar.set_value(lVar2.heroAIData,0x3f800000,0);
+                (lVar3 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
+               ((lVar3 = Transform.Find(lVar3,"Life",0), lVar3 == null ||
+                (((lVar3 = Transform.Find(lVar3,"Brother",0), lVar3 == null ||
+                  (lVar3 = Component.GetComponent(lVar3,DAT_181d951e0)) == null) ||
+                 (lVar3.heroAIData == null)))))) goto LAB_180e1b06d;
+            Scrollbar.set_value(lVar3.heroAIData,0x3f800000,0);
             if (((((this.heroDetailPanel == null) ||
-                  (lVar2 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-                 (lVar2 = Transform.Find(lVar2,"Life",0)) == null) ||
-                ((lVar2 = Transform.Find(lVar2,"Friend",0), lVar2 == null ||
-                 (lVar2 = Component.GetComponent(lVar2,DAT_181d6c940)) == null))) ||
-               (lVar2.heroAIData == null)) goto LAB_180ebff19;
-            Scrollbar.set_value(lVar2.heroAIData,0x3f800000,0);
+                  (lVar3 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
+                 (lVar3 = Transform.Find(lVar3,"Life",0)) == null) ||
+                ((lVar3 = Transform.Find(lVar3,"Friend",0), lVar3 == null ||
+                 (lVar3 = Component.GetComponent(lVar3,DAT_181d951e0)) == null))) ||
+               (lVar3.heroAIData == null)) goto LAB_180e1b06d;
+            Scrollbar.set_value(lVar3.heroAIData,0x3f800000,0);
             if (((this.heroDetailPanel == null) ||
-                (lVar2 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-               ((lVar2 = Transform.Find(lVar2,"Life",0), lVar2 == null ||
-                (((lVar2 = Transform.Find(lVar2,"Hater",0), lVar2 == null ||
-                  (lVar2 = Component.GetComponent(lVar2,DAT_181d6c940)) == null) ||
-                 (lVar2.heroAIData == null)))))) goto LAB_180ebff19;
-            Scrollbar.set_value(lVar2.heroAIData,0x3f800000,0);
+                (lVar3 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
+               ((lVar3 = Transform.Find(lVar3,"Life",0), lVar3 == null ||
+                (((lVar3 = Transform.Find(lVar3,"Hater",0), lVar3 == null ||
+                  (lVar3 = Component.GetComponent(lVar3,DAT_181d951e0)) == null) ||
+                 (lVar3.heroAIData == null)))))) goto LAB_180e1b06d;
+            Scrollbar.set_value(lVar3.heroAIData,0x3f800000,0);
           }
           return;
         }
         if (((this.heroDetailPanel == null) ||
-            (lVar2 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
-           (((lVar2 = Transform.Find(lVar2,"Life",0), lVar2 == null ||
-             ((lVar2 = Transform.Find(lVar2,"Hater",0), lVar2 == null ||
-              (lVar2 = Transform.Find(lVar2,"Viewport",0)) == null))) ||
-            (lVar2 = Transform.Find(lVar2,"Content",0)) == null))) goto LAB_180ebff19;
-        uVar3 = Component.get_gameObject(lVar2,0);
+            (lVar3 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
+           (((lVar3 = Transform.Find(lVar3,"Life",0), lVar3 == null ||
+             ((lVar3 = Transform.Find(lVar3,"Hater",0), lVar3 == null ||
+              (lVar3 = Transform.Find(lVar3,"Viewport",0)) == null))) ||
+            (lVar3 = Transform.Find(lVar3,"Content",0)) == null))) goto LAB_180e1b06d;
+        uVar4 = Component.get_gameObject(lVar3,0);
         if ((this.nowShowHero == null) ||
-           (lVar2 = this.nowShowHero.Haters) == null) goto LAB_180ebff19;
-        if (lVar2.summonLv <= uVar9) {
+           (lVar3 = this.nowShowHero.Haters) == null) goto LAB_180e1b06d;
+        if (lVar3.summonLv <= uVar10) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         HeroDetailController.CreateLifeHeroIcon
-                  (this,uVar3,*(uint32 *)(lVar2.isSummon + lVar8),0);
-        lVar2 = this.nowShowHero;
-        uVar9 = uVar9 + 1;
-        lVar8 = lVar8 + 4;
-        if (lVar2 == null) goto LAB_180ebff19;
-        goto LAB_180ebfbd0;
+                  (this,uVar4,*(uint32 *)(lVar3.isSummon + lVar9),0);
+        lVar3 = this.nowShowHero;
+        uVar10 = uVar10 + 1;
+        lVar9 = lVar9 + 4;
+        if (lVar3 == null) goto LAB_180e1b06d;
+        goto LAB_180e1ad20;
     }
 
-    // Token : 0x6001742
-    // RVA   : 0xEB1310   Offset: 0xEAFB10   Length: 0x1F4
+    // Token : 0x6001786
+    // RVA   : 0xE0BFB0   Offset: 0xE0B3B0   Length: 0x1F4
     public void CreateLifeHeroIcon(GameObject targetObj, int heroID)
     {
-        var pStatics = *(int64*)(DAT_181d4e188 + 184);
+        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
+        var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
         long lVar1;
         ulong uVar2;
         long lVar3;
         if (heroID == -1) {
           return;
         }
-        if (*pStatics != 0) {
-          uVar2 = *(uint64 *)(*pStatics + 144);
+        if (*pStatics_2ee8 != 0) {
+          uVar2 = *(uint64 *)(*pStatics_2ee8 + 144);
           uVar2 = GlobalData.AddChild(targetObj,uVar2,0);
           this.temp = uVar2;
           if (this.temp != null) {
-            lVar3 = GameObject.GetComponent(this.temp,DAT_181d9fb20);
-            if (((GameController._instance != null) &&
-                (lVar1 = GameController._instance.worldData,
-                lVar1 != null)) && (uVar2 = WorldData.GetHero(lVar1,heroID,0), lVar3 != null)) {
+            lVar3 = GameObject.GetComponent(this.temp,DAT_181d71b50);
+            if (((*pStatics_2cc8 != 0) &&
+                (lVar1 = *(int64 *)(*pStatics_2cc8 + 32)) != null) &&
+               (uVar2 = WorldData.GetHero(lVar1,heroID,0), lVar3 != null)) {
               *(uint64 *)(lVar3 + 32) = uVar2;
               if ((this.temp != null) &&
-                 (lVar3 = GameObject.GetComponent(this.temp,DAT_181d9fb20),
+                 (lVar3 = GameObject.GetComponent(this.temp,DAT_181d71b50),
                  lVar3 != null)) {
                 *(uint32 *)(lVar3 + 24) = 0;
                 if ((this.temp != null) &&
-                   (lVar3 = GameObject.GetComponent(this.temp,DAT_181d9fb20),
+                   (lVar3 = GameObject.GetComponent(this.temp,DAT_181d71b50),
                    lVar3 != null)) {
                   HeroIconController.AutoSetName(lVar3,0);
                   return;
@@ -4220,10 +4173,11 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001743
-    // RVA   : 0xEBE240   Offset: 0xEBCA40   Length: 0x5C3
+    // Token : 0x6001787
+    // RVA   : 0xE192F0   Offset: 0xE186F0   Length: 0x5C3
     public void RefreshForceContributionInfoData()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar4;
@@ -4261,27 +4215,26 @@ public class HeroDetailController
                   if (lVar2 != null) {
                     lVar2 = Transform.Find(lVar2,"Num",0);
                     if (lVar2 != null) {
-                      plVar3 = (int64 *)Component.GetComponent(lVar2,DAT_181d6d8c0);
+                      plVar3 = (int64 *)Component.GetComponent(lVar2,DAT_181d96160);
                       if (this.nowShowHero != null) {
                         local_res8[0] = (int)this.nowShowHero.governContribution;
                         uVar4 = Int32.ToString(local_res8,0);
                         if (plVar3 != (int64 *)0) {
                           (**(code **)(*plVar3 + 0x5e8))(plVar3,uVar4,*(uint64 *)(*plVar3 + 0x5f0));
-                          if (((GameController._instance != null) &&
-                              (lVar2 = *(int64 *)
-                                        (GameController._instance + 32),
+                          if (((*pStatics != 0) &&
+                              (lVar2 = *(int64 *)(*pStatics + 32),
                               lVar2 != null)) && (lVar2 = *(int64 *)(lVar2 + 72)) != null) {
-                            FUN_1817ff240(&local_48,lVar2,DAT_181d60878);
+                            FUN_1817eb420(&local_48,lVar2,DAT_181d88020);
                             local_30 = local_48;
                             uStack_2c = uStack_44;
                             uStack_28 = uStack_40;
                             uStack_24 = uStack_3c;
                             local_20 = local_38;
                             while( true ) {
-                              cVar1 = FUN_180d197a0(&local_30,DAT_181d66148);
+                              cVar1 = FUN_180c74f00(&local_30,DAT_181d8c5e8);
                               lVar2 = local_20;
                               if (!cVar1) {
-                                ZhSegment.Initialize(&local_30,DAT_181d660c8);
+                                ZhSegment.Initialize(&local_30,DAT_181d8c568);
                                 return;
                               }
                               if (this.heroDetailPanel == null) {
@@ -4323,7 +4276,7 @@ public class HeroDetailController
                           // WARNING: Subroutine does not return
                                 FUN_1800d6620();
                               }
-                              plVar3 = (int64 *)Component.GetComponent(lVar5,DAT_181d6d8c0);
+                              plVar3 = (int64 *)Component.GetComponent(lVar5,DAT_181d96160);
                               lVar5 = this.nowShowHero;
                               if (lVar5 == null) {
                           // WARNING: Subroutine does not return
@@ -4375,18 +4328,18 @@ public class HeroDetailController
                           // WARNING: Subroutine does not return
                                 FUN_1800d6620();
                               }
-                              plVar3 = (int64 *)Component.GetComponent(lVar5,DAT_181d6d8c0);
+                              plVar3 = (int64 *)Component.GetComponent(lVar5,DAT_181d96160);
                               if (this.nowShowHero == null) {
                           // WARNING: Subroutine does not return
                                 FUN_1800d6620();
                               }
                               if (this.nowShowHero.belongForceID == *(int *)(lVar2 + 16)
                                  ) {
-                                lVar2 = *(int64 *)(PlotController_StaticsPtr + 184);
-                                uVar8 = *(uint32 *)(lVar2 + 0x290);
-                                uVar9 = *(uint32 *)(lVar2 + 0x294);
-                                uVar10 = *(uint32 *)(lVar2 + 0x298);
-                                uVar11 = *(uint32 *)(lVar2 + 0x29c);
+                                lVar2 = *(int64 *)(DAT_181d73d40 + 184);
+                                uVar8 = *(uint32 *)(lVar2 + 0x298);
+                                uVar9 = *(uint32 *)(lVar2 + 0x29c);
+                                uVar10 = *(uint32 *)(lVar2 + 0x2a0);
+                                uVar11 = *(uint32 *)(lVar2 + 0x2a4);
                               }
                               else {
                                 puVar6 = (uint32 *)Color.get_black(&local_48,0);
@@ -4419,11 +4372,11 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001744
-    // RVA   : 0xEBD2A0   Offset: 0xEBBAA0   Length: 0xF9C
+    // Token : 0x6001788
+    // RVA   : 0xE18320   Offset: 0xE17720   Length: 0xFCD
     public void RefreshFightData()
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d73d40 + 184);
         ulong uVar1;
         ulong uVar2;
         bool cVar3;
@@ -4465,11 +4418,11 @@ public class HeroDetailController
           iVar11 = iVar12;
           if (iVar4 == 0) {
             while( true ) {
-              uVar7 = DAT_181d95510;
+              uVar7 = DAT_181db9db8;
               uVar7 = Type.GetTypeFromHandle(uVar7,0);
               lVar6 = Enum.GetNames(uVar7,0);
               if (lVar6 == null) break;
-              if (*(int *)(lVar6 + 24) <= iVar5) goto LAB_180ebd641;
+              if (*(int *)(lVar6 + 24) <= iVar5) goto LAB_180e186d1;
               if ((((this.heroDetailPanel == null) ||
                    (lVar6 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
                   (lVar6 = Transform.Find(lVar6,"DetailInfo",0)) == null) ||
@@ -4487,8 +4440,8 @@ public class HeroDetailController
             }
           }
           else {
-        LAB_180ebd641:
-            uVar7 = DAT_181d95510;
+        LAB_180e186d1:
+            uVar7 = DAT_181db9db8;
             uVar7 = Type.GetTypeFromHandle(uVar7,0);
             lVar6 = Enum.GetNames(uVar7,0);
             if (lVar6 == null) throw; // [null/range check failed]
@@ -4503,25 +4456,25 @@ public class HeroDetailController
               uVar7 = Component.get_gameObject(lVar6,0);
               this.temp = uVar7;
               if (this.temp == null) throw; // [null/range check failed]
-              lVar6 = GameObject.GetComponent(this.temp,DAT_181d9f900);
+              lVar6 = GameObject.GetComponent(this.temp,DAT_181d71930);
               if (lVar6 == null) throw; // [null/range check failed]
               *(uint64 *)(lVar6 + 32) = this.nowShowHero;
               if ((this.temp == null) || (lVar6 = GameObject.GetComponent()) == null
                  ) throw; // [null/range check failed]
               HeroBaseFightDataController.RefreshData(lVar6);
               iVar11 = iVar11 + 1;
-              goto LAB_180ebd641;
+              goto LAB_180e186d1;
             }
             local_res20 = 0;
             if ((((this.nowShowHero == null) ||
                  (lVar6 = this.nowShowHero.totalAddData) == null) ||
                 (lVar6 = *(int64 *)(lVar6 + 16)) == null) ||
-               (lVar6 = Dictionary_2.get_Keys(lVar6,DAT_181d98b10)) == null) throw; // [null/range check failed]
-            FUN_180ed4d30(&local_78,lVar6,DAT_181d9c570);
+               (lVar6 = Dictionary_2.get_Keys(lVar6,DAT_181dbe4b8)) == null) throw; // [null/range check failed]
+            FUN_180ecbf30(&local_78,lVar6,DAT_181dc36f0);
             local_90 = CONCAT44(uStack_74,local_78);
             uStack_88 = CONCAT44(uStack_6c,uStack_70);
             local_80 = local_68;
-            while (cVar3 = FUN_1811d8280(&local_90,DAT_181d74c38), uVar2 = local_80, cVar3) {
+            while (cVar3 = FUN_1811c4f60(&local_90,DAT_181d9b258), uVar2 = local_80, cVar3) {
               if (((int)local_80 - 0xfU < 9) || (77 < (int)local_80)) {
                 if (this.heroDetailPanel == null) {
                           // WARNING: Subroutine does not return
@@ -4641,7 +4594,7 @@ public class HeroDetailController
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                uVar7 = Component.GetComponent(lVar6,DAT_181d6d8c0);
+                uVar7 = Component.GetComponent(lVar6,DAT_181d96160);
                 if (this.nowShowHero == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
@@ -4656,14 +4609,14 @@ public class HeroDetailController
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                fVar13 = (float)FUN_1817cc640(lVar6,uVar2 & 0xffffffff,DAT_181d98a88);
+                fVar13 = (float)FUN_1817d9cd0(lVar6,uVar2 & 0xffffffff,DAT_181dbe430);
                 if (fVar13 <= 0.0) {
-                  uVar8 = *(uint64 *)(pPlotController + 0x2c8);
+                  uVar8 = *(uint64 *)(pStatics + 0x2d0);
                 }
                 else {
-                  uVar8 = *(uint64 *)(pPlotController + 0x260);
+                  uVar8 = *(uint64 *)(pStatics + 0x268);
                 }
-                lVar6 = GameController.lockObj;
+                lVar6 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
                 if (lVar6 == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
@@ -4673,7 +4626,7 @@ public class HeroDetailController
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                lVar6 = FUN_180002f80(lVar6,uVar2 & 0xffffffff,DAT_181d64878);
+                lVar6 = FUN_180002f80(lVar6,uVar2 & 0xffffffff,DAT_181d8c018);
                 if (lVar6 == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
@@ -4688,7 +4641,7 @@ public class HeroDetailController
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                lVar6 = FUN_180002f80(*(int64 *)(lVar6 + 144),uVar2 & 0xffffffff,DAT_181d64878);
+                lVar6 = FUN_180002f80(*(int64 *)(lVar6 + 144),uVar2 & 0xffffffff,DAT_181d8c018);
                 if (lVar6 == null) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
@@ -4708,7 +4661,7 @@ public class HeroDetailController
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  local_res18[0] = (float)FUN_1817cc640(lVar6,uVar2 & 0xffffffff,DAT_181d98a88);
+                  local_res18[0] = (float)FUN_1817d9cd0(lVar6,uVar2 & 0xffffffff,DAT_181dbe430);
                   uVar9 = Single.ToString(local_res18,"+0.##;-0.##;0",0);
                 }
                 else {
@@ -4725,7 +4678,7 @@ public class HeroDetailController
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  local_res18[0] = (float)FUN_1817cc640(lVar6,uVar2 & 0xffffffff,DAT_181d98a88);
+                  local_res18[0] = (float)FUN_1817d9cd0(lVar6,uVar2 & 0xffffffff,DAT_181dbe430);
                   local_res18[0] = local_res18[0] * 100.0;
                   uVar9 = Single.ToString(local_res18,"+0.##;-0.##;0",0);
                   uVar9 = String.Concat(uVar9,"%",0);
@@ -4752,7 +4705,7 @@ public class HeroDetailController
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  lVar6 = GameObject.GetComponent(lVar10,DAT_181da12b0);
+                  lVar6 = GameObject.GetComponent(lVar10,DAT_181d73448);
                   if (lVar6 == null) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
@@ -4766,7 +4719,7 @@ public class HeroDetailController
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  lVar6 = GameObject.GetComponent(lVar10,DAT_181da12b0);
+                  lVar6 = GameObject.GetComponent(lVar10,DAT_181d73448);
                   lVar10 = FUN_18046c100(0);
                   if (lVar10 == null) {
                           // WARNING: Subroutine does not return
@@ -4795,8 +4748,8 @@ public class HeroDetailController
             aiStack_ac[1] = 0x414;
             iVar5 = aiStack_ac[2] + 1;
             aiStack_ac[2] = iVar5;
-            ZhSegment.Initialize(&local_90,DAT_181d74bb8);
-            if ((iVar5 != 0) && (aiStack_ac[iVar5] == 0x414)) goto LAB_180ebe093;
+            ZhSegment.Initialize(&local_90,DAT_181d9b1d8);
+            if ((iVar5 != 0) && (aiStack_ac[iVar5] == 0x414)) goto LAB_180e19144;
             while ((((this.heroDetailPanel != null &&
                      ((lVar6 = GameObject.get_transform(this.heroDetailPanel,0), lVar6 != null &&
                       (lVar6 = Transform.Find(lVar6,"DetailInfo",0)) != null))) &&
@@ -4813,7 +4766,7 @@ public class HeroDetailController
                     (lVar6 = Transform.GetChild(lVar6,iVar5 + -1)) == null))))))) break;
               uVar7 = Component.get_gameObject(lVar6,0);
               Object.DestroyImmediate(uVar7,0);
-        LAB_180ebe093:
+        LAB_180e19144:
               if (((((this.heroDetailPanel == null) ||
                     (lVar6 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
                    (lVar6 = Transform.Find(lVar6,"DetailInfo",0)) == null) ||
@@ -4829,8 +4782,8 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001745
-    // RVA   : 0xEBFF40   Offset: 0xEBE740   Length: 0x208B
+    // Token : 0x6001789
+    // RVA   : 0xE1B090   Offset: 0xE1A490   Length: 0x208B
     public void RefreshSkillEquipList(bool resetPos)
     {
         float fVar1;
@@ -4852,7 +4805,7 @@ public class HeroDetailController
         iVar10 = 0;
         local_res8[0] = 0;
         fVar1 = local_60;
-        if (this.nowShowHero == null) goto LAB_180ec1fc6;
+        if (this.nowShowHero == null) goto LAB_180e1d116;
         lVar4 = this.heroDetailPanel;
         if (this.nowShowHero.internalSkill == null) {
           if (((((lVar4 == null) ||
@@ -4861,7 +4814,7 @@ public class HeroDetailController
               ((lVar4 = Transform.Find(lVar4,"SkillSlot0",0), fVar1 = local_60, lVar4 == null ||
                (lVar4 = Transform.Find(lVar4,"NowEquipment",0), fVar1 = local_60) == null))) ||
              (lVar4 = Component.get_gameObject(lVar4,0), fVar1 = local_60) == null)
-          goto LAB_180ec1fc6;
+          goto LAB_180e1d116;
           cVar2 = GameObject.get_activeSelf(lVar4,0);
           if (cVar2) {
             fVar1 = local_60;
@@ -4871,7 +4824,7 @@ public class HeroDetailController
                ((lVar4 = Transform.Find(lVar4,"Skill",0), fVar1 = local_60, lVar4 == null ||
                 ((lVar4 = Transform.Find(lVar4,"SkillSlot0",0), fVar1 = local_60, lVar4 == null ||
                  (lVar4 = Transform.Find(lVar4,"NowEquipment",0), fVar1 = local_60) == null)))))
-            goto LAB_180ec1fc6;
+            goto LAB_180e1d116;
             uVar5 = Component.get_gameObject(lVar4,0);
             HeroDetailController.UnshowEquipIcon(this,uVar5,resetPos,0);
           }
@@ -4883,7 +4836,7 @@ public class HeroDetailController
               ((lVar4 = Transform.Find(lVar4,"SkillSlot0",0), fVar1 = local_60, lVar4 == null ||
                (lVar4 = Transform.Find(lVar4,"NowEquipment",0), fVar1 = local_60) == null))) ||
              (lVar4 = Component.get_gameObject(lVar4,0), fVar1 = local_60) == null)
-          goto LAB_180ec1fc6;
+          goto LAB_180e1d116;
           cVar2 = GameObject.get_activeSelf(lVar4,0);
           if (!cVar2) {
             fVar1 = local_60;
@@ -4893,7 +4846,7 @@ public class HeroDetailController
                ((lVar4 = Transform.Find(lVar4,"Skill",0), fVar1 = local_60, lVar4 == null ||
                 ((lVar4 = Transform.Find(lVar4,"SkillSlot0",0), fVar1 = local_60, lVar4 == null ||
                  (lVar4 = Transform.Find(lVar4,"NowEquipment",0), fVar1 = local_60) == null)))))
-            goto LAB_180ec1fc6;
+            goto LAB_180e1d116;
             uVar5 = Component.get_gameObject(lVar4,0);
             HeroDetailController.ShowEquipIcon(this,uVar5,resetPos,0);
           }
@@ -4903,14 +4856,14 @@ public class HeroDetailController
                lVar4 == null)) ||
               (lVar4 = Transform.Find(lVar4,"Skill",0), fVar1 = local_60) == null) ||
              (lVar4 = Transform.Find(lVar4,"SkillSlot0",0), fVar1 = local_60) == null)
-          goto LAB_180ec1fc6;
+          goto LAB_180e1d116;
           lVar4 = Transform.Find(lVar4,"NowEquipment",0);
           puVar6 = (uint64 *)Vector3.get_one(&local_48,0);
           local_68 = *puVar6;
           local_60 = *(float *)(puVar6 + 1) * 1.2;
           local_78 = CONCAT44((float)((uint64)local_68 >> 32) * 1.2,(float)local_68 * 1.2);
           fVar1 = *(float *)(puVar6 + 1);
-          if (lVar4 == null) goto LAB_180ec1fc6;
+          if (lVar4 == null) goto LAB_180e1d116;
           local_68 = local_78;
           Transform.set_localScale(lVar4,&local_68,0);
           fVar1 = local_60;
@@ -4920,10 +4873,10 @@ public class HeroDetailController
              ((lVar4 = Transform.Find(lVar4,"Skill",0), fVar1 = local_60, lVar4 == null ||
               ((lVar4 = Transform.Find(lVar4,"SkillSlot0",0), fVar1 = local_60, lVar4 == null ||
                (lVar4 = Transform.Find(lVar4,"NowEquipment",0), fVar1 = local_60) == null)))))
-          goto LAB_180ec1fc6;
-          lVar4 = Component.GetComponent(lVar4,DAT_181d6d240);
+          goto LAB_180e1d116;
+          lVar4 = Component.GetComponent(lVar4,DAT_181d95ae0);
           fVar1 = local_60;
-          if ((this.nowShowHero == null) || (lVar4 == null)) goto LAB_180ec1fc6;
+          if ((this.nowShowHero == null) || (lVar4 == null)) goto LAB_180e1d116;
           lVar4.summonControlable = this.nowShowHero.internalSkill;
           fVar1 = local_60;
           if ((((this.heroDetailPanel == null) ||
@@ -4932,8 +4885,8 @@ public class HeroDetailController
               (lVar4 = Transform.Find(lVar4,"Skill",0), fVar1 = local_60) == null) ||
              (((lVar4 = Transform.Find(lVar4,"SkillSlot0",0), fVar1 = local_60, lVar4 == null ||
                (lVar4 = Transform.Find(lVar4,"NowEquipment",0), fVar1 = local_60) == null) ||
-              (lVar4 = Component.GetComponent(lVar4,DAT_181d6d240), fVar1 = local_60) == null)))
-          goto LAB_180ec1fc6;
+              (lVar4 = Component.GetComponent(lVar4,DAT_181d95ae0), fVar1 = local_60) == null)))
+          goto LAB_180e1d116;
           *(uint8 *)(lVar4 + 44) = 0;
           if (((this.heroDetailPanel == null) ||
               (lVar4 = GameObject.get_transform(this.heroDetailPanel,0), fVar1 = local_60,
@@ -4941,8 +4894,8 @@ public class HeroDetailController
              ((lVar4 = Transform.Find(lVar4,"Skill",0), fVar1 = local_60, lVar4 == null ||
               (((lVar4 = Transform.Find(lVar4,"SkillSlot0",0), fVar1 = local_60, lVar4 == null ||
                 (lVar4 = Transform.Find(lVar4,"NowEquipment",0), fVar1 = local_60) == null) ||
-               (lVar4 = Component.GetComponent(lVar4,DAT_181d6d240), fVar1 = local_60) == null)))))
-          goto LAB_180ec1fc6;
+               (lVar4 = Component.GetComponent(lVar4,DAT_181d95ae0), fVar1 = local_60) == null)))))
+          goto LAB_180e1d116;
           lVar4.summonSourceHero = 1;
           if ((((this.heroDetailPanel == null) ||
                (lVar4 = GameObject.get_transform(this.heroDetailPanel,0), fVar1 = local_60,
@@ -4950,21 +4903,21 @@ public class HeroDetailController
               (lVar4 = Transform.Find(lVar4,"Skill",0), fVar1 = local_60) == null) ||
              ((lVar4 = Transform.Find(lVar4,"SkillSlot0",0), fVar1 = local_60, lVar4 == null ||
               (lVar4 = Transform.Find(lVar4,"NowEquipment",0), fVar1 = local_60) == null)))
-          goto LAB_180ec1fc6;
-          lVar4 = Component.GetComponent(lVar4,DAT_181d6af40);
+          goto LAB_180e1d116;
+          lVar4 = Component.GetComponent(lVar4,DAT_181d93760);
           fVar1 = local_60;
-          if (this.nowShowHero == null) goto LAB_180ec1fc6;
+          if (this.nowShowHero == null) goto LAB_180e1d116;
           cVar2 = HeroData.ItemControlable(this.nowShowHero,0);
           uVar3 = 1;
           if (!cVar2) {
             uVar3 = this.itemSpeControlable;
           }
           fVar1 = local_60;
-          if (lVar4 == null) goto LAB_180ec1fc6;
+          if (lVar4 == null) goto LAB_180e1d116;
           Selectable.set_interactable(lVar4,uVar3,0);
         }
         fVar1 = local_60;
-        if (this.nowShowHero == null) goto LAB_180ec1fc6;
+        if (this.nowShowHero == null) goto LAB_180e1d116;
         lVar4 = this.heroDetailPanel;
         if (this.nowShowHero.dodgeSkill == null) {
           if ((((lVar4 == null) || (lVar4 = GameObject.get_transform(lVar4,0), fVar1 = local_60) == null
@@ -4972,7 +4925,7 @@ public class HeroDetailController
              (((lVar4 = Transform.Find(lVar4,"SkillSlot1",0), fVar1 = local_60, lVar4 == null ||
                (lVar4 = Transform.Find(lVar4,"NowEquipment",0), fVar1 = local_60) == null) ||
               (lVar4 = Component.get_gameObject(lVar4,0), fVar1 = local_60) == null)))
-          goto LAB_180ec1fc6;
+          goto LAB_180e1d116;
           cVar2 = GameObject.get_activeSelf(lVar4,0);
           if (cVar2) {
             fVar1 = local_60;
@@ -4982,7 +4935,7 @@ public class HeroDetailController
                ((lVar4 = Transform.Find(lVar4,"Skill",0), fVar1 = local_60, lVar4 == null ||
                 ((lVar4 = Transform.Find(lVar4,"SkillSlot1",0), fVar1 = local_60, lVar4 == null ||
                  (lVar4 = Transform.Find(lVar4,"NowEquipment",0), fVar1 = local_60) == null)))))
-            goto LAB_180ec1fc6;
+            goto LAB_180e1d116;
             uVar5 = Component.get_gameObject(lVar4,0);
             HeroDetailController.UnshowEquipIcon(this,uVar5,resetPos,0);
           }
@@ -4994,7 +4947,7 @@ public class HeroDetailController
               ((lVar4 = Transform.Find(lVar4,"SkillSlot1",0), fVar1 = local_60, lVar4 == null ||
                (lVar4 = Transform.Find(lVar4,"NowEquipment",0), fVar1 = local_60) == null))) ||
              (lVar4 = Component.get_gameObject(lVar4,0), fVar1 = local_60) == null)
-          goto LAB_180ec1fc6;
+          goto LAB_180e1d116;
           cVar2 = GameObject.get_activeSelf(lVar4,0);
           if (!cVar2) {
             fVar1 = local_60;
@@ -5004,7 +4957,7 @@ public class HeroDetailController
                ((lVar4 = Transform.Find(lVar4,"Skill",0), fVar1 = local_60, lVar4 == null ||
                 ((lVar4 = Transform.Find(lVar4,"SkillSlot1",0), fVar1 = local_60, lVar4 == null ||
                  (lVar4 = Transform.Find(lVar4,"NowEquipment",0), fVar1 = local_60) == null)))))
-            goto LAB_180ec1fc6;
+            goto LAB_180e1d116;
             uVar5 = Component.get_gameObject(lVar4,0);
             HeroDetailController.ShowEquipIcon(this,uVar5,resetPos,0);
           }
@@ -5014,14 +4967,14 @@ public class HeroDetailController
                lVar4 == null)) ||
               (lVar4 = Transform.Find(lVar4,"Skill",0), fVar1 = local_60) == null) ||
              (lVar4 = Transform.Find(lVar4,"SkillSlot1",0), fVar1 = local_60) == null)
-          goto LAB_180ec1fc6;
+          goto LAB_180e1d116;
           lVar4 = Transform.Find(lVar4,"NowEquipment",0);
           puVar6 = (uint64 *)Vector3.get_one(&local_48,0);
           local_68 = *puVar6;
           local_60 = *(float *)(puVar6 + 1) * 1.1;
           local_78 = CONCAT44((float)((uint64)local_68 >> 32) * 1.1,(float)local_68 * 1.1);
           fVar1 = *(float *)(puVar6 + 1);
-          if (lVar4 == null) goto LAB_180ec1fc6;
+          if (lVar4 == null) goto LAB_180e1d116;
           local_68 = local_78;
           Transform.set_localScale(lVar4,&local_68,0);
           fVar1 = local_60;
@@ -5031,10 +4984,10 @@ public class HeroDetailController
              ((lVar4 = Transform.Find(lVar4,"Skill",0), fVar1 = local_60, lVar4 == null ||
               ((lVar4 = Transform.Find(lVar4,"SkillSlot1",0), fVar1 = local_60, lVar4 == null ||
                (lVar4 = Transform.Find(lVar4,"NowEquipment",0), fVar1 = local_60) == null)))))
-          goto LAB_180ec1fc6;
-          lVar4 = Component.GetComponent(lVar4,DAT_181d6d240);
+          goto LAB_180e1d116;
+          lVar4 = Component.GetComponent(lVar4,DAT_181d95ae0);
           fVar1 = local_60;
-          if ((this.nowShowHero == null) || (lVar4 == null)) goto LAB_180ec1fc6;
+          if ((this.nowShowHero == null) || (lVar4 == null)) goto LAB_180e1d116;
           lVar4.summonControlable = this.nowShowHero.dodgeSkill;
           fVar1 = local_60;
           if (((((this.heroDetailPanel == null) ||
@@ -5043,8 +4996,8 @@ public class HeroDetailController
                (lVar4 = Transform.Find(lVar4,"Skill",0), fVar1 = local_60) == null) ||
               ((lVar4 = Transform.Find(lVar4,"SkillSlot1",0), fVar1 = local_60, lVar4 == null ||
                (lVar4 = Transform.Find(lVar4,"NowEquipment",0), fVar1 = local_60) == null))) ||
-             (lVar4 = Component.GetComponent(lVar4,DAT_181d6d240), fVar1 = local_60) == null)
-          goto LAB_180ec1fc6;
+             (lVar4 = Component.GetComponent(lVar4,DAT_181d95ae0), fVar1 = local_60) == null)
+          goto LAB_180e1d116;
           *(uint8 *)(lVar4 + 44) = 0;
           if (((this.heroDetailPanel == null) ||
               (lVar4 = GameObject.get_transform(this.heroDetailPanel,0), fVar1 = local_60,
@@ -5052,8 +5005,8 @@ public class HeroDetailController
              ((lVar4 = Transform.Find(lVar4,"Skill",0), fVar1 = local_60, lVar4 == null ||
               (((lVar4 = Transform.Find(lVar4,"SkillSlot1",0), fVar1 = local_60, lVar4 == null ||
                 (lVar4 = Transform.Find(lVar4,"NowEquipment",0), fVar1 = local_60) == null) ||
-               (lVar4 = Component.GetComponent(lVar4,DAT_181d6d240), fVar1 = local_60) == null)))))
-          goto LAB_180ec1fc6;
+               (lVar4 = Component.GetComponent(lVar4,DAT_181d95ae0), fVar1 = local_60) == null)))))
+          goto LAB_180e1d116;
           lVar4.summonSourceHero = 1;
           if (((this.heroDetailPanel == null) ||
               (lVar4 = GameObject.get_transform(this.heroDetailPanel,0), fVar1 = local_60,
@@ -5061,17 +5014,17 @@ public class HeroDetailController
              ((lVar4 = Transform.Find(lVar4,"Skill",0), fVar1 = local_60, lVar4 == null ||
               ((lVar4 = Transform.Find(lVar4,"SkillSlot1",0), fVar1 = local_60, lVar4 == null ||
                (lVar4 = Transform.Find(lVar4,"NowEquipment",0), fVar1 = local_60) == null)))))
-          goto LAB_180ec1fc6;
-          lVar4 = Component.GetComponent(lVar4,DAT_181d6af40);
+          goto LAB_180e1d116;
+          lVar4 = Component.GetComponent(lVar4,DAT_181d93760);
           fVar1 = local_60;
-          if (this.nowShowHero == null) goto LAB_180ec1fc6;
+          if (this.nowShowHero == null) goto LAB_180e1d116;
           cVar2 = HeroData.ItemControlable(this.nowShowHero,0);
           uVar3 = 1;
           if (!cVar2) {
             uVar3 = this.itemSpeControlable;
           }
           fVar1 = local_60;
-          if (lVar4 == null) goto LAB_180ec1fc6;
+          if (lVar4 == null) goto LAB_180e1d116;
           Selectable.set_interactable(lVar4,uVar3,0);
         }
         fVar1 = local_60;
@@ -5093,11 +5046,11 @@ public class HeroDetailController
                    ((lVar4 = Transform.Find(lVar4,"Skill",0), fVar1 = local_60, lVar4 == null ||
                     ((lVar4 = Transform.Find(lVar4,"SkillSlot2",0), fVar1 = local_60, lVar4 == null ||
                      (lVar4 = Transform.Find(lVar4,"NowEquipment",0), fVar1 = local_60) == null)))))
-                goto LAB_180ec1fc6;
+                goto LAB_180e1d116;
                 uVar5 = Component.get_gameObject(lVar4,0);
                 HeroDetailController.UnshowEquipIcon(this,uVar5,resetPos,0);
               }
-        LAB_180ec1163:
+        LAB_180e1c2b3:
               lVar4 = this.nowShowHero;
               if (lVar4 != null) {
                 while (lVar4.attackSkills != null) {
@@ -5105,14 +5058,14 @@ public class HeroDetailController
                     return;
                   }
                   fVar1 = local_60;
-                  if (lVar4 == null) goto LAB_180ec1fc6;
+                  if (lVar4 == null) goto LAB_180e1d116;
                   cVar2 = HeroData.AttackSkillSlotUnlocked(lVar4,iVar10,0);
                   lVar4 = this.heroDetailPanel;
                   fVar1 = local_60;
                   if (!cVar2) {
                     if ((lVar4 == null) ||
                        (lVar4 = GameObject.get_transform(lVar4,0), fVar1 = local_60) == null)
-                    goto LAB_180ec1fc6;
+                    goto LAB_180e1d116;
                     lVar4 = Transform.Find(lVar4,"Skill",0);
                     iVar9 = iVar10 + 3;
                     local_res8[0] = iVar9;
@@ -5123,13 +5076,13 @@ public class HeroDetailController
                        (((lVar4 = Transform.Find(lVar4,uVar5,0), fVar1 = local_60, lVar4 == null ||
                          (lVar4 = Transform.Find(lVar4,"Lock",0), fVar1 = local_60) == null)
                         || (lVar4 = Component.get_gameObject(lVar4,0), fVar1 = local_60) == null)))
-                    goto LAB_180ec1fc6;
+                    goto LAB_180e1d116;
                     cVar2 = GameObject.get_activeSelf(lVar4,0);
                     if (!cVar2) {
                       fVar1 = local_60;
                       if ((this.heroDetailPanel == null) ||
                          (lVar4 = GameObject.get_transform(this.heroDetailPanel,0),
-                         fVar1 = local_60, lVar4 == null)) goto LAB_180ec1fc6;
+                         fVar1 = local_60, lVar4 == null)) goto LAB_180e1d116;
                       lVar4 = Transform.Find(lVar4,"Skill",0);
                       local_res8[0] = iVar9;
                       uVar5 = Int32.ToString(local_res8,0);
@@ -5138,16 +5091,16 @@ public class HeroDetailController
                       if ((lVar4 == null) ||
                          ((lVar4 = Transform.Find(lVar4,uVar5,0), fVar1 = local_60, lVar4 == null ||
                           (lVar4 = Transform.Find(lVar4,"Lock",0), fVar1 = local_60) == null))
-                         ) goto LAB_180ec1fc6;
+                         ) goto LAB_180e1d116;
                       lVar4 = Component.get_gameObject(lVar4,0);
                       fVar1 = local_60;
-                      if (lVar4 == null) goto LAB_180ec1fc6;
+                      if (lVar4 == null) goto LAB_180e1d116;
                       GameObject.SetActive(lVar4,1,0);
                     }
                     fVar1 = local_60;
                     if ((this.heroDetailPanel == null) ||
                        (lVar4 = GameObject.get_transform(this.heroDetailPanel,0),
-                       fVar1 = local_60, lVar4 == null)) goto LAB_180ec1fc6;
+                       fVar1 = local_60, lVar4 == null)) goto LAB_180e1d116;
                     lVar4 = Transform.Find(lVar4,"Skill",0);
                     local_res8[0] = iVar9;
                     uVar5 = Int32.ToString(local_res8,0);
@@ -5157,13 +5110,13 @@ public class HeroDetailController
                        (((lVar4 = Transform.Find(lVar4,uVar5,0), fVar1 = local_60, lVar4 == null ||
                          (lVar4 = Transform.Find(lVar4,"Text",0), fVar1 = local_60) == null)
                         || (lVar4 = Component.get_gameObject(lVar4,0), fVar1 = local_60) == null)))
-                    goto LAB_180ec1fc6;
+                    goto LAB_180e1d116;
                     cVar2 = GameObject.get_activeSelf(lVar4,0);
                     if (cVar2) {
                       fVar1 = local_60;
                       if ((this.heroDetailPanel == null) ||
                          (lVar4 = GameObject.get_transform(this.heroDetailPanel,0),
-                         fVar1 = local_60, lVar4 == null)) goto LAB_180ec1fc6;
+                         fVar1 = local_60, lVar4 == null)) goto LAB_180e1d116;
                       lVar4 = Transform.Find(lVar4,"Skill",0);
                       local_res8[0] = iVar9;
                       uVar5 = Int32.ToString(local_res8,0);
@@ -5173,13 +5126,13 @@ public class HeroDetailController
                           ((lVar4 = Transform.Find(lVar4,uVar5,0), fVar1 = local_60, lVar4 == null ||
                            (lVar4 = Transform.Find(lVar4,"Text",0), fVar1 = local_60) == null)
                           )) || (lVar4 = Component.get_gameObject(lVar4,0), fVar1 = local_60) == null
-                         ) goto LAB_180ec1fc6;
+                         ) goto LAB_180e1d116;
                       GameObject.SetActive(lVar4,0,0);
                     }
                     fVar1 = local_60;
                     if ((this.heroDetailPanel == null) ||
                        (lVar4 = GameObject.get_transform(this.heroDetailPanel,0),
-                       fVar1 = local_60, lVar4 == null)) goto LAB_180ec1fc6;
+                       fVar1 = local_60, lVar4 == null)) goto LAB_180e1d116;
                     lVar4 = Transform.Find(lVar4,"Skill",0);
                     local_res8[0] = iVar9;
                     uVar5 = Int32.ToString(local_res8,0);
@@ -5189,13 +5142,13 @@ public class HeroDetailController
                        (((lVar4 = Transform.Find(lVar4,uVar5,0), fVar1 = local_60, lVar4 == null ||
                          (lVar4 = Transform.Find(lVar4,"Lock",0), fVar1 = local_60) == null)
                         || (lVar4 = Transform.Find(lVar4,"Light",0), fVar1 = local_60) == null)
-                       )) goto LAB_180ec1fc6;
-                    plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d6bc40);
+                       )) goto LAB_180e1d116;
+                    plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d94460);
                     lVar4 = FUN_18046c100(0);
                     fVar1 = local_60;
                     if (((lVar4 == null) || (lVar4.dailyAIManaged == null)) ||
-                       ((lVar4 = FUN_180002f80(lVar4.dailyAIManaged,iVar10 + -2,DAT_181d76758),
-                        fVar1 = local_60, lVar4 == null || (plVar7 == (int64 *)0)))) goto LAB_180ec1fc6;
+                       ((lVar4 = FUN_180002f80(lVar4.dailyAIManaged,iVar10 + -2,DAT_181d9e108),
+                        fVar1 = local_60, lVar4 == null || (plVar7 == (int64 *)0)))) goto LAB_180e1d116;
                     local_48 = lVar4.summonLv;
                     uStack_44 = lVar4.summonMoveRange;
                     uStack_40 = lVar4.summonControlable;
@@ -5204,7 +5157,7 @@ public class HeroDetailController
                     fVar1 = local_60;
                     if ((this.heroDetailPanel == null) ||
                        (lVar4 = GameObject.get_transform(this.heroDetailPanel,0),
-                       fVar1 = local_60, lVar4 == null)) goto LAB_180ec1fc6;
+                       fVar1 = local_60, lVar4 == null)) goto LAB_180e1d116;
                     lVar4 = Transform.Find(lVar4,"Skill",0);
                     local_res8[0] = iVar9;
                     uVar5 = Int32.ToString(local_res8,0);
@@ -5213,11 +5166,11 @@ public class HeroDetailController
                     if ((lVar4 == null) ||
                        ((lVar4 = Transform.Find(lVar4,uVar5,0), fVar1 = local_60, lVar4 == null ||
                         (lVar4 = Transform.Find(lVar4,"Lock",0), fVar1 = local_60) == null)))
-                    goto LAB_180ec1fc6;
-                    lVar4 = Component.GetComponent(lVar4,DAT_181d6ccc0);
-                    lVar8 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x4f0);
+                    goto LAB_180e1d116;
+                    lVar4 = Component.GetComponent(lVar4,DAT_181d95560);
+                    lVar8 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x4f8);
                     if (lVar8 == null) break;
-                    uVar5 = FUN_180002f80(lVar8,iVar10 + -2,DAT_181d7c9c0);
+                    uVar5 = FUN_180002f80(lVar8,iVar10 + -2,DAT_181da4358);
                     uVar5 = GlobalData.GenerateRareLvColorText(uVar5,iVar10 + -2,0);
                     uVar5 = String.Format("习得{0}武功后解锁",uVar5,0);
                     if (lVar4 == null) break;
@@ -5226,7 +5179,7 @@ public class HeroDetailController
                   else {
                     if ((lVar4 == null) ||
                        (lVar4 = GameObject.get_transform(lVar4,0), fVar1 = local_60) == null)
-                    goto LAB_180ec1fc6;
+                    goto LAB_180e1d116;
                     lVar4 = Transform.Find(lVar4,"Skill",0);
                     iVar9 = iVar10 + 3;
                     local_res8[0] = iVar9;
@@ -5237,13 +5190,13 @@ public class HeroDetailController
                        (((lVar4 = Transform.Find(lVar4,uVar5,0), fVar1 = local_60, lVar4 == null ||
                          (lVar4 = Transform.Find(lVar4,"Lock",0), fVar1 = local_60) == null)
                         || (lVar4 = Component.get_gameObject(lVar4,0), fVar1 = local_60) == null)))
-                    goto LAB_180ec1fc6;
+                    goto LAB_180e1d116;
                     cVar2 = GameObject.get_activeSelf(lVar4,0);
                     if (cVar2) {
                       fVar1 = local_60;
                       if ((this.heroDetailPanel == null) ||
                          (lVar4 = GameObject.get_transform(this.heroDetailPanel,0),
-                         fVar1 = local_60, lVar4 == null)) goto LAB_180ec1fc6;
+                         fVar1 = local_60, lVar4 == null)) goto LAB_180e1d116;
                       lVar4 = Transform.Find(lVar4,"Skill",0);
                       local_res8[0] = iVar9;
                       uVar5 = Int32.ToString(local_res8,0);
@@ -5253,13 +5206,13 @@ public class HeroDetailController
                           ((lVar4 = Transform.Find(lVar4,uVar5,0), fVar1 = local_60, lVar4 == null ||
                            (lVar4 = Transform.Find(lVar4,"Lock",0), fVar1 = local_60) == null)
                           )) || (lVar4 = Component.get_gameObject(lVar4,0), fVar1 = local_60) == null
-                         ) goto LAB_180ec1fc6;
+                         ) goto LAB_180e1d116;
                       GameObject.SetActive(lVar4,0,0);
                     }
                     fVar1 = local_60;
                     if ((this.heroDetailPanel == null) ||
                        (lVar4 = GameObject.get_transform(this.heroDetailPanel,0),
-                       fVar1 = local_60, lVar4 == null)) goto LAB_180ec1fc6;
+                       fVar1 = local_60, lVar4 == null)) goto LAB_180e1d116;
                     lVar4 = Transform.Find(lVar4,"Skill",0);
                     local_res8[0] = iVar9;
                     uVar5 = Int32.ToString(local_res8,0);
@@ -5269,13 +5222,13 @@ public class HeroDetailController
                        (((lVar4 = Transform.Find(lVar4,uVar5,0), fVar1 = local_60, lVar4 == null ||
                          (lVar4 = Transform.Find(lVar4,"Text",0), fVar1 = local_60) == null)
                         || (lVar4 = Component.get_gameObject(lVar4,0), fVar1 = local_60) == null)))
-                    goto LAB_180ec1fc6;
+                    goto LAB_180e1d116;
                     cVar2 = GameObject.get_activeSelf(lVar4,0);
                     if (!cVar2) {
                       fVar1 = local_60;
                       if ((this.heroDetailPanel == null) ||
                          (lVar4 = GameObject.get_transform(this.heroDetailPanel,0),
-                         fVar1 = local_60, lVar4 == null)) goto LAB_180ec1fc6;
+                         fVar1 = local_60, lVar4 == null)) goto LAB_180e1d116;
                       lVar4 = Transform.Find(lVar4,"Skill",0);
                       local_res8[0] = iVar9;
                       uVar5 = Int32.ToString(local_res8,0);
@@ -5284,17 +5237,17 @@ public class HeroDetailController
                       if ((lVar4 == null) ||
                          ((lVar4 = Transform.Find(lVar4,uVar5,0), fVar1 = local_60, lVar4 == null ||
                           (lVar4 = Transform.Find(lVar4,"Text",0), fVar1 = local_60) == null))
-                         ) goto LAB_180ec1fc6;
+                         ) goto LAB_180e1d116;
                       lVar4 = Component.get_gameObject(lVar4,0);
                       fVar1 = local_60;
-                      if (lVar4 == null) goto LAB_180ec1fc6;
+                      if (lVar4 == null) goto LAB_180e1d116;
                       GameObject.SetActive(lVar4,1,0);
                     }
                   }
                   iVar9 = iVar10 + 3;
                   if ((this.nowShowHero == null) ||
                      (lVar4 = this.nowShowHero.attackSkills) == null) break;
-                  lVar8 = FUN_180002f80(lVar4,iVar10,DAT_181d6ade8);
+                  lVar8 = FUN_180002f80(lVar4,iVar10,DAT_181d92590);
                   lVar4 = this.heroDetailPanel;
                   if (lVar8 == null) {
                     if ((lVar4 == null) || (lVar4 = GameObject.get_transform(lVar4,0)) == null) break;
@@ -5357,10 +5310,10 @@ public class HeroDetailController
                     if ((lVar4 == null) ||
                        ((lVar4 = Transform.Find(lVar4,uVar5,0), lVar4 == null ||
                         (lVar4 = Transform.Find(lVar4,"NowEquipment",0)) == null))) break;
-                    lVar4 = Component.GetComponent(lVar4,DAT_181d6d240);
+                    lVar4 = Component.GetComponent(lVar4,DAT_181d95ae0);
                     if ((this.nowShowHero == null) ||
                        ((lVar8 = this.nowShowHero.attackSkills, lVar8 == null ||
-                        (uVar5 = FUN_180002f80(lVar8,iVar10,DAT_181d6ade8), lVar4 == null)))) break;
+                        (uVar5 = FUN_180002f80(lVar8,iVar10,DAT_181d92590), lVar4 == null)))) break;
                     lVar4.summonControlable = uVar5;
                     if ((this.heroDetailPanel == null) ||
                        (lVar4 = GameObject.get_transform(this.heroDetailPanel,0)) == null)
@@ -5371,7 +5324,7 @@ public class HeroDetailController
                     uVar5 = String.Concat("SkillSlot",uVar5,0);
                     if ((((lVar4 == null) || (lVar4 = Transform.Find(lVar4,uVar5,0)) == null) ||
                         (lVar4 = Transform.Find(lVar4,"NowEquipment",0)) == null) ||
-                       (lVar4 = Component.GetComponent(lVar4,DAT_181d6d240)) == null) break;
+                       (lVar4 = Component.GetComponent(lVar4,DAT_181d95ae0)) == null) break;
                     *(uint8 *)(lVar4 + 44) = 0;
                     if ((this.heroDetailPanel == null) ||
                        (lVar4 = GameObject.get_transform(this.heroDetailPanel,0)) == null)
@@ -5383,7 +5336,7 @@ public class HeroDetailController
                     if ((lVar4 == null) ||
                        (((lVar4 = Transform.Find(lVar4,uVar5,0), lVar4 == null ||
                          (lVar4 = Transform.Find(lVar4,"NowEquipment",0)) == null) ||
-                        (lVar4 = Component.GetComponent(lVar4,DAT_181d6d240)) == null))) break;
+                        (lVar4 = Component.GetComponent(lVar4,DAT_181d95ae0)) == null))) break;
                     lVar4.summonSourceHero = 1;
                     if ((this.heroDetailPanel == null) ||
                        (lVar4 = GameObject.get_transform(this.heroDetailPanel,0)) == null)
@@ -5395,7 +5348,7 @@ public class HeroDetailController
                     if ((lVar4 == null) ||
                        ((lVar4 = Transform.Find(lVar4,uVar5,0), lVar4 == null ||
                         (lVar4 = Transform.Find(lVar4,"NowEquipment",0)) == null))) break;
-                    lVar4 = Component.GetComponent(lVar4,DAT_181d6af40);
+                    lVar4 = Component.GetComponent(lVar4,DAT_181d93760);
                     uVar3 = HeroDetailController.NowShowHeroItemControlable(this,0);
                     if (lVar4 == null) break;
                     Selectable.set_interactable(lVar4,uVar3,0);
@@ -5424,7 +5377,7 @@ public class HeroDetailController
                  ((lVar4 = Transform.Find(lVar4,"Skill",0), fVar1 = local_60, lVar4 == null ||
                   ((lVar4 = Transform.Find(lVar4,"SkillSlot2",0), fVar1 = local_60, lVar4 == null ||
                    (lVar4 = Transform.Find(lVar4,"NowEquipment",0), fVar1 = local_60) == null)))))
-              goto LAB_180ec1fc6;
+              goto LAB_180e1d116;
               uVar5 = Component.get_gameObject(lVar4,0);
               HeroDetailController.ShowEquipIcon(this,uVar5,resetPos,0);
             }
@@ -5450,7 +5403,7 @@ public class HeroDetailController
                    ((lVar4 = Transform.Find(lVar4,"Skill",0), fVar1 = local_60, lVar4 != null &&
                     ((lVar4 = Transform.Find(lVar4,"SkillSlot2",0), fVar1 = local_60, lVar4 != null &&
                      (lVar4 = Transform.Find(lVar4,"NowEquipment",0), fVar1 = local_60) != null))))) {
-                  lVar4 = Component.GetComponent(lVar4,DAT_181d6d240);
+                  lVar4 = Component.GetComponent(lVar4,DAT_181d95ae0);
                   fVar1 = local_60;
                   if ((this.nowShowHero != null) && (lVar4 != null)) {
                     lVar4.summonControlable = this.nowShowHero.uniqueSkill
@@ -5464,7 +5417,7 @@ public class HeroDetailController
                         && ((lVar4 = Transform.Find(lVar4,"SkillSlot2",0), fVar1 = local_60, lVar4 != null
                             && (lVar4 = Transform.Find(lVar4,"NowEquipment",0), fVar1 = local_60,
                                lVar4 != null)))) &&
-                       (lVar4 = Component.GetComponent(lVar4,DAT_181d6d240), fVar1 = local_60, lVar4 != null
+                       (lVar4 = Component.GetComponent(lVar4,DAT_181d95ae0), fVar1 = local_60, lVar4 != null
                        )) {
                       *(uint8 *)(lVar4 + 44) = 0;
                       if (((this.heroDetailPanel != null) &&
@@ -5474,7 +5427,7 @@ public class HeroDetailController
                           (((lVar4 = Transform.Find(lVar4,"SkillSlot2",0), fVar1 = local_60, lVar4 != null
                             && (lVar4 = Transform.Find(lVar4,"NowEquipment",0), fVar1 = local_60,
                                lVar4 != null)) &&
-                           (lVar4 = Component.GetComponent(lVar4,DAT_181d6d240), fVar1 = local_60,
+                           (lVar4 = Component.GetComponent(lVar4,DAT_181d95ae0), fVar1 = local_60,
                            lVar4 != null)))))) {
                         lVar4.summonSourceHero = 1;
                         if ((((this.heroDetailPanel != null) &&
@@ -5485,7 +5438,7 @@ public class HeroDetailController
                                   lVar4 != null &&
                                   (lVar4 = Transform.Find(lVar4,"NowEquipment",0), fVar1 = local_60,
                                   lVar4 != null)))) {
-                          lVar4 = Component.GetComponent(lVar4,DAT_181d6af40);
+                          lVar4 = Component.GetComponent(lVar4,DAT_181d93760);
                           fVar1 = local_60;
                           if (this.nowShowHero != null) {
                             cVar2 = HeroData.ItemControlable(this.nowShowHero,0);
@@ -5496,7 +5449,7 @@ public class HeroDetailController
                             fVar1 = local_60;
                             if (lVar4 != null) {
                               Selectable.set_interactable(lVar4,uVar3,0);
-                              goto LAB_180ec1163;
+                              goto LAB_180e1c2b3;
                             }
                           }
                         }
@@ -5508,12 +5461,12 @@ public class HeroDetailController
             }
           }
         }
-        LAB_180ec1fc6:
+        LAB_180e1d116:
         local_60 = fVar1;
     }
 
-    // Token : 0x6001746
-    // RVA   : 0xEBCC90   Offset: 0xEBB490   Length: 0x608
+    // Token : 0x600178A
+    // RVA   : 0xE17D10   Offset: 0xE17110   Length: 0x608
     public void RefreshEquipSlot(int slotID, ItemData targetItem, bool resetPos)
     {
         void HeroDetailController.RefreshEquipSlot
@@ -5567,7 +5520,7 @@ public class HeroDetailController
             (lVar4 = Component.get_gameObject(lVar4,0)) == null))) throw; // [null/range check failed]
         cVar1 = GameObject.get_activeSelf(lVar4,0);
         if (!cVar1) {
-        LAB_180ebcfc9:
+        LAB_180e18049:
           if ((this.heroDetailPanel == null) ||
              (lVar4 = GameObject.get_transform(this.heroDetailPanel,0)) == null)
           throw; // [null/range check failed]
@@ -5590,8 +5543,8 @@ public class HeroDetailController
           if (((lVar4 == null) ||
               ((lVar4 = Transform.Find(lVar4,uVar5,0), lVar4 == null ||
                (lVar4 = Transform.Find(lVar4,"NowEquipment",0)) == null))) ||
-             (lVar4 = Component.GetComponent(lVar4,DAT_181d6bdc0)) == null) throw; // [null/range check failed]
-          if (*(int64 *)(lVar4 + 32) != targetItem) goto LAB_180ebcfc9;
+             (lVar4 = Component.GetComponent(lVar4,DAT_181d945e0)) == null) throw; // [null/range check failed]
+          if (*(int64 *)(lVar4 + 32) != targetItem) goto LAB_180e18049;
         }
         if ((this.heroDetailPanel != null) &&
            (lVar4 = GameObject.get_transform(this.heroDetailPanel,0)) != null) {
@@ -5601,7 +5554,7 @@ public class HeroDetailController
           if ((lVar4 != null) &&
              (((lVar4 = Transform.Find(lVar4,uVar5,0), lVar4 != null &&
                (lVar4 = Transform.Find(lVar4,"NowEquipment",0)) != null) &&
-              (lVar4 = Component.GetComponent(lVar4,DAT_181d6bdc0)) != null))) {
+              (lVar4 = Component.GetComponent(lVar4,DAT_181d945e0)) != null))) {
             *(int64 *)(lVar4 + 32) = targetItem;
             if ((this.heroDetailPanel != null) &&
                (lVar4 = GameObject.get_transform(this.heroDetailPanel,0)) != null) {
@@ -5611,7 +5564,7 @@ public class HeroDetailController
               if ((lVar4 != null) &&
                  (((lVar4 = Transform.Find(lVar4,uVar5,0), lVar4 != null &&
                    (lVar4 = Transform.Find(lVar4,"NowEquipment",0)) != null) &&
-                  (lVar4 = Component.GetComponent(lVar4,DAT_181d6bdc0)) != null))) {
+                  (lVar4 = Component.GetComponent(lVar4,DAT_181d945e0)) != null))) {
                 *(uint8 *)(lVar4 + 52) = 0;
                 if ((this.heroDetailPanel != null) &&
                    (lVar4 = GameObject.get_transform(this.heroDetailPanel,0)) != null) {
@@ -5621,7 +5574,7 @@ public class HeroDetailController
                   if ((lVar4 != null) &&
                      ((lVar4 = Transform.Find(lVar4,uVar5,0), lVar4 != null &&
                       (lVar4 = Transform.Find(lVar4,"NowEquipment",0)) != null))) {
-                    lVar4 = Component.GetComponent(lVar4,DAT_181d6bdc0);
+                    lVar4 = Component.GetComponent(lVar4,DAT_181d945e0);
                     if (this.nowShowHero != null) {
                       cVar2 = HeroData.ItemControlable(this.nowShowHero,0);
                       cVar1 = true;
@@ -5645,12 +5598,12 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001747
-    // RVA   : 0xEBBDE0   Offset: 0xEBA5E0   Length: 0xEA4
+    // Token : 0x600178B
+    // RVA   : 0xE16E30   Offset: 0xE16230   Length: 0xED5
     public void RefreshEquipList(bool resetPos)
     {
-        var pGameController = *(int64*)(GameController_StaticsPtr + 184);
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics_2d50 = *(int64*)(DAT_181d72d50 + 184);
+        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
         float fVar2;
         long lVar3;
         byte uVar4;
@@ -5676,30 +5629,30 @@ public class HeroDetailController
              (lVar7 = GameObject.get_transform(this.heroDetailPanel,0)) != null) &&
             (lVar7 = Transform.Find(lVar7,"Item",0)) != null) &&
            ((lVar7 = Transform.Find(lVar7,"EquipmentWeight",0), lVar7 != null &&
-            (lVar7 = Component.GetComponent(lVar7,DAT_181d6ccc0)) != null))) {
+            (lVar7 = Component.GetComponent(lVar7,DAT_181d95560)) != null))) {
           lVar7.summonLv = "<b>装备负重</b>";
           iVar14 = 0;
           while( true ) {
-            lVar7 = *(int64 *)(pPlotController + 0x5d8);
+            lVar7 = *(int64 *)(pStatics_3d40 + 0x5e0);
             if (lVar7 == null) throw; // [null/range check failed]
             lVar3 = this.heroDetailPanel;
             if (lVar7.summonLv <= iVar14) break;
             if ((((lVar3 == null) || (lVar7 = GameObject.get_transform(lVar3,0)) == null) ||
                 (lVar7 = Transform.Find(lVar7,"Item",0)) == null) ||
                ((lVar7 = Transform.Find(lVar7,"EquipmentWeight",0), lVar7 == null ||
-                (lVar7 = Component.GetComponent(lVar7,DAT_181d6ccc0)) == null))) throw; // [null/range check failed]
+                (lVar7 = Component.GetComponent(lVar7,DAT_181d95560)) == null))) throw; // [null/range check failed]
             uVar12 = lVar7.summonLv;
             uVar11 = "\n{0}{1} 速度x{2}%";
-            lVar3 = *(int64 *)(pPlotController + 0x5d8);
+            lVar3 = *(int64 *)(pStatics_3d40 + 0x5e0);
             if (lVar3 == null) throw; // [null/range check failed]
             uVar8 = "超重";
             if (iVar14 != *(int *)(lVar3 + 24) + -1) {
-              lVar3 = *(int64 *)(pPlotController + 0x5d8);
+              lVar3 = *(int64 *)(pStatics_3d40 + 0x5e0);
               if (lVar3 == null) throw; // [null/range check failed]
-              uVar8 = FUN_180002f80(lVar3,iVar14,DAT_181d7c9c0);
+              uVar8 = FUN_180002f80(lVar3,iVar14,DAT_181da4358);
               uVar8 = String.Concat(uVar8,"装",0);
             }
-            lVar3 = *(int64 *)(pPlotController + 0x5d8);
+            lVar3 = *(int64 *)(pStatics_3d40 + 0x5e0);
             if (lVar3 == null) throw; // [null/range check failed]
             uVar10 = "<";
             if (iVar14 == *(int *)(lVar3 + 24) + -1) {
@@ -5713,9 +5666,9 @@ public class HeroDetailController
             local_res8[0] = local_res8[0] * (float)iVar5 * 0.2;
             uVar9 = Single.ToString(local_res8,"0.#",0);
             uVar10 = String.Concat(uVar10,uVar9,0);
-            lVar3 = *(int64 *)(pPlotController + 0x5e0);
+            lVar3 = *(int64 *)(pStatics_3d40 + 0x5e8);
             if (lVar3 == null) throw; // [null/range check failed]
-            local_res8[0] = (float)FUN_1800d6780(lVar3,iVar14,DAT_181d796d8);
+            local_res8[0] = (float)FUN_1800d6790(lVar3,iVar14,DAT_181da1078);
             local_res8[0] = local_res8[0] * 100.0;
             uVar9 = Single.ToString(local_res8,"f0",0);
             uVar11 = String.Format(uVar11,uVar8,uVar10,uVar9,0);
@@ -5726,9 +5679,9 @@ public class HeroDetailController
           if ((((lVar3 != null) && (lVar7 = GameObject.get_transform(lVar3,0)) != null) &&
               (lVar7 = Transform.Find(lVar7,"Item",0)) != null) &&
              ((lVar7 = Transform.Find(lVar7,"EquipmentWeight",0), lVar7 != null &&
-              (lVar7 = Component.GetComponent(lVar7,DAT_181d6ccc0)) != null))) {
+              (lVar7 = Component.GetComponent(lVar7,DAT_181d95560)) != null))) {
             uVar12 = lVar7.summonLv;
-            uVar11 = FUN_180004500(DAT_181d63120);
+            uVar11 = FUN_180004500(DAT_181d8b140);
             uVar11 = String.Format("\n每超重1点速度-1%/闪避-1%",uVar11,0);
             uVar12 = String.Concat(uVar12,uVar11,0);
             *puVar1 = uVar12;
@@ -5737,7 +5690,7 @@ public class HeroDetailController
                 ((lVar7 = GameObject.get_transform(this.heroDetailPanel,0), lVar7 != null &&
                  (lVar7 = Transform.Find(lVar7,"Item",0)) != null))) &&
                (lVar7 = Transform.Find(lVar7,"EquipmentWeight",0)) != null) {
-              uVar12 = Component.GetComponent(lVar7,DAT_181d6d8c0);
+              uVar12 = Component.GetComponent(lVar7,DAT_181d96160);
               lVar7 = this.nowShowHero;
               if ((lVar7 != null) && (lVar7.nowEquipment != null)) {
                 fVar2 = *(float *)(lVar7.nowEquipment + 16);
@@ -5755,17 +5708,16 @@ public class HeroDetailController
                       local_res8[0] = (float)HeroSpeAddData.Get(lVar7,207,0);
                       uVar10 = Single.ToString(local_res8,"0.#",0);
                       uVar11 = String.Format(uVar11,uVar8,uVar10,
-                                              *(uint64 *)
-                                               (pPlotController + 0x2c0),0
-                                             );
+                                              *(uint64 *)(pStatics_3d40 + 0x2c8)
+                                              ,0);
                       LTLocalization.SetText(uVar12,uVar11,0);
                       if ((((this.heroDetailPanel != null) &&
                            (lVar7 = GameObject.get_transform(this.heroDetailPanel,0), lVar7 != null
                            )) && (lVar7 = Transform.Find(lVar7,"Item",0)) != null) &&
                          ((lVar7 = Transform.Find(lVar7,"EquipmentWeight",0), lVar7 != null &&
                           (lVar7 = Transform.Find(lVar7,"Lv",0)) != null))) {
-                        uVar12 = Component.GetComponent(lVar7,DAT_181d6d8c0);
-                        lVar7 = *(int64 *)(pPlotController + 0x5d8);
+                        uVar12 = Component.GetComponent(lVar7,DAT_181d96160);
+                        lVar7 = *(int64 *)(pStatics_3d40 + 0x5e0);
                         if (this.nowShowHero != null) {
                           uVar6 = HeroData.GetEquipmentWeightLv(this.nowShowHero,0);
                           if (lVar7 != null) {
@@ -5782,13 +5734,11 @@ public class HeroDetailController
                                ((lVar7 = Transform.Find(lVar7,"Item",0), lVar7 != null &&
                                 ((lVar7 = Transform.Find(lVar7,"EquipmentWeight",0), lVar7 != null &&
                                  (lVar7 = Transform.Find(lVar7,"Lv",0)) != null))))) {
-                              plVar13 = (int64 *)Component.GetComponent(lVar7,DAT_181d6d8c0);
-                              lVar7 = *(int64 *)
-                                       (pGameController + 32);
+                              plVar13 = (int64 *)Component.GetComponent(lVar7,DAT_181d96160);
+                              lVar7 = *(int64 *)(pStatics_2d50 + 32);
                               if (lVar7 != null) {
                                 lVar7 = lVar7.dailyAIManaged;
-                                lVar3 = *(int64 *)
-                                         (pGameController + 32);
+                                lVar3 = *(int64 *)(pStatics_2d50 + 32);
                                 if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 56)) != null) {
                                   iVar14 = *(int *)(lVar3 + 24);
                                   if ((this.nowShowHero != null) &&
@@ -5815,20 +5765,18 @@ public class HeroDetailController
                                            && (lVar7 = Transform.Find(lVar7,"EquipmentWeight",0)) != null
                                            ) && (lVar7 = Transform.Find(lVar7,"Icon",0),
                                                 lVar7 != null)))) {
-                                        lVar7 = Component.GetComponent(lVar7,DAT_181d6ccc0);
+                                        lVar7 = Component.GetComponent(lVar7,DAT_181d95560);
                                         if (this.nowShowHero != null) {
                                           iVar14 = HeroData.GetEquipmentWeightLv
                                                              (this.nowShowHero,0);
                                           uVar12 = "<b>{0}</b>\n速度x{1}%";
                                           lVar3 = *(int64 *)
-                                                   (pPlotController +
-                                                   0x5d8);
+                                                   (pStatics_3d40 + 0x5e0);
                                           if (lVar3 != null) {
                                             uVar11 = "超重";
                                             if (iVar14 != *(int *)(lVar3 + 24) + -1) {
                                               lVar3 = *(int64 *)
-                                                       (pPlotController +
-                                                       0x5d8);
+                                                       (pStatics_3d40 + 0x5e0);
                                               if (this.nowShowHero == null) throw; // [null/range check failed]
                                               uVar6 = HeroData.GetEquipmentWeightLv
                                                                 (this.nowShowHero,0);
@@ -5842,8 +5790,7 @@ public class HeroDetailController
                                                                       "装",0);
                                             }
                                             lVar3 = *(int64 *)
-                                                     (pPlotController +
-                                                     0x5e0);
+                                                     (pStatics_3d40 + 0x5e8);
                                             if (this.nowShowHero != null) {
                                               uVar6 = HeroData.GetEquipmentWeightLv
                                                                 (this.nowShowHero,0);
@@ -5992,8 +5939,8 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001748
-    // RVA   : 0xEC4130   Offset: 0xEC2930   Length: 0x2F0
+    // Token : 0x600178C
+    // RVA   : 0xE1F310   Offset: 0xE1E710   Length: 0x2F0
     public void ShowEquipIcon(GameObject target, bool resetPos)
     {
         long lVar1;
@@ -6017,13 +5964,13 @@ public class HeroDetailController
                 local_28 = *puVar3;
                 Transform.set_localScale(lVar2,&local_28,0);
                 if ((*(int64 *)(lVar1 + 16) != 0) &&
-                   (lVar2 = GameObject.GetComponent(*(int64 *)(lVar1 + 16),DAT_181d9f080),
+                   (lVar2 = GameObject.GetComponent(*(int64 *)(lVar1 + 16),DAT_181dc7e20),
                    lVar2 != null)) {
                   CanvasGroup.set_alpha(lVar2,0x3f800000,0);
                   lVar2 = *(int64 *)(lVar1 + 16);
                   if (!resetPos) {
                     if ((lVar2 != null) &&
-                       (lVar2 = GameObject.GetComponent(lVar2,DAT_181d9ee60)) != null) {
+                       (lVar2 = GameObject.GetComponent(lVar2,DAT_181dc7c00)) != null) {
                       Selectable.set_interactable(lVar2,0,0);
                       if (*(int64 *)(lVar1 + 16) != 0) {
                         lVar2 = GameObject.get_transform(*(int64 *)(lVar1 + 16),0);
@@ -6043,9 +5990,9 @@ public class HeroDetailController
                               local_20 = *(uint32 *)(puVar3 + 1);
                               local_28 = *puVar3;
                               uVar5 = ShortcutExtensions.DOLocalMove(uVar5,&local_28,0x3f000000,0,0);
-                              uVar5 = TweenSettingsExtensions.SetEase(uVar5,9,DAT_181d97ca8);
-                              uVar6 = new OnTooltipCB(lVar1,DAT_181d7c870,0);
-                              TweenSettingsExtensions.OnComplete(uVar5,uVar6,DAT_181d96ee8);
+                              uVar5 = TweenSettingsExtensions.SetEase(uVar5,9,DAT_181dc0f80);
+                              uVar6 = new OnTooltipCB(lVar1,DAT_181da56c8,0);
+                              TweenSettingsExtensions.OnComplete(uVar5,uVar6,DAT_181dc01d0);
                               return;
                             }
                           }
@@ -6054,7 +6001,7 @@ public class HeroDetailController
                     }
                   }
                   else if ((lVar2 != null) &&
-                          (lVar1 = GameObject.GetComponent(lVar2,DAT_181d9ee60)) != null) {
+                          (lVar1 = GameObject.GetComponent(lVar2,DAT_181dc7c00)) != null) {
                     Selectable.set_interactable(lVar1,1,0);
                     return;
                   }
@@ -6065,8 +6012,8 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001749
-    // RVA   : 0xEC55A0   Offset: 0xEC3DA0   Length: 0x1DE
+    // Token : 0x600178D
+    // RVA   : 0xE20790   Offset: 0xE1FB90   Length: 0x1DE
     public void UnshowEquipIcon(GameObject target, bool resetPos)
     {
         long lVar1;
@@ -6079,19 +6026,19 @@ public class HeroDetailController
           lVar3 = *(int64 *)(lVar1 + 16);
           if (!resetPos) {
             if (lVar3 != null) {
-              uVar2 = GameObject.GetComponent(lVar3,DAT_181d9f080);
+              uVar2 = GameObject.GetComponent(lVar3,DAT_181dc7e20);
               uVar2 = DOTweenModuleUI.DOFade(uVar2,0,0x3e800000,0);
-              TweenSettingsExtensions.SetEase(uVar2,8,DAT_181d97b10);
+              TweenSettingsExtensions.SetEase(uVar2,8,DAT_181dc0df8);
               if ((*(int64 *)(lVar1 + 16) != 0) &&
-                 (lVar3 = GameObject.GetComponent(*(int64 *)(lVar1 + 16),DAT_181d9ee60)) != null
+                 (lVar3 = GameObject.GetComponent(*(int64 *)(lVar1 + 16),DAT_181dc7c00)) != null
                  ) {
                 Selectable.set_interactable(lVar3,0,0);
                 if (*(int64 *)(lVar1 + 16) != 0) {
                   uVar2 = GameObject.get_transform(*(int64 *)(lVar1 + 16),0);
                   uVar2 = ShortcutExtensions.DOScale(uVar2,0x3fc00000,0x3e800000,0);
-                  uVar2 = TweenSettingsExtensions.SetEase(uVar2,8,DAT_181d97ca8);
-                  uVar4 = new OnTooltipCB(lVar1,DAT_181d7c8f0,0);
-                  TweenSettingsExtensions.OnComplete(uVar2,uVar4,DAT_181d96ee8);
+                  uVar2 = TweenSettingsExtensions.SetEase(uVar2,8,DAT_181dc0f80);
+                  uVar4 = new OnTooltipCB(lVar1,DAT_181da5748,0);
+                  TweenSettingsExtensions.OnComplete(uVar2,uVar4,DAT_181dc01d0);
                   return;
                 }
               }
@@ -6104,8 +6051,8 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x600174A
-    // RVA   : 0xEC1FD0   Offset: 0xEC07D0   Length: 0x724
+    // Token : 0x600178E
+    // RVA   : 0xE1D120   Offset: 0xE1C520   Length: 0x724
     public void RefreshSkillList(bool resetPos)
     {
         bool cVar2;
@@ -6119,45 +6066,45 @@ public class HeroDetailController
         uint uVar10;
         if ((this.skillGrid == null) ||
            (lVar5 = GameObject.get_transform(this.skillGrid,0)) == null) {
-        LAB_180ec26ef:
+        LAB_180e1d83f:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         iVar3 = Transform.get_childCount(lVar5,0);
-        joined_r0x000180ec2094:
+        joined_r0x000180e1d1e4:
         iVar3 = iVar3 + -1;
         if (-1 < iVar3) {
           if (((this.skillGrid != null) &&
               (lVar5 = GameObject.get_transform(this.skillGrid,0)) != null) &&
              (lVar5 = Transform.GetChild(lVar5,iVar3,0)) != null) {
-            uVar6 = Component.GetComponent(lVar5,DAT_181d6d240);
+            uVar6 = Component.GetComponent(lVar5,DAT_181d95ae0);
             cVar2 = Object.op_Equality(uVar6,0);
-            if (cVar2) goto LAB_180ec220b;
+            if (cVar2) goto LAB_180e1d35b;
             if (this.nowShowHero != null) {
               lVar5 = this.nowShowHero.kungfuSkills;
               if (((this.skillGrid != null) &&
                   (lVar7 = GameObject.get_transform(this.skillGrid,0)) != null) &&
                  ((lVar7 = Transform.GetChild(lVar7,iVar3,0), lVar7 != null &&
-                  ((lVar7 = Component.GetComponent(lVar7,DAT_181d6d240), lVar7 != null && (lVar5 != null))))))
+                  ((lVar7 = Component.GetComponent(lVar7,DAT_181d95ae0), lVar7 != null && (lVar5 != null))))))
               {
-                cVar2 = FUN_1818279a0(lVar5,*(uint64 *)(lVar7 + 32));
-                if (!cVar2) goto LAB_180ec220b;
+                cVar2 = FUN_18181e400(lVar5,*(uint64 *)(lVar7 + 32));
+                if (!cVar2) goto LAB_180e1d35b;
                 if (((((this.skillGrid != null) &&
                       (lVar5 = GameObject.get_transform(this.skillGrid,0)) != null) &&
                      (lVar5 = Transform.GetChild(lVar5,iVar3,0)) != null) &&
                     ((lVar5 = Component.GetComponent(lVar5), lVar5 != null &&
                      (lVar5.summonControlable != null)))) &&
-                   (lVar5 = KungfuSkillLvData.DataBase()) != null) goto code_r0x000180ec21ff;
+                   (lVar5 = KungfuSkillLvData.DataBase()) != null) goto code_r0x000180e1d34f;
               }
             }
           }
-          goto LAB_180ec26ef;
+          goto LAB_180e1d83f;
         }
         lVar5 = this.nowShowHero;
         uVar10 = 0;
-        if (lVar5 == null) goto LAB_180ec26ef;
+        if (lVar5 == null) goto LAB_180e1d83f;
         lVar7 = 32;
-        LAB_180ec22f0:
+        LAB_180e1d440:
         if (lVar5.kungfuSkills != null) {
           if ((int)uVar10 < *(int *)(lVar5.kungfuSkills + 24)) {
             if ((lVar5 = lVar5?.kungfuSkills) != null) {
@@ -6171,124 +6118,124 @@ public class HeroDetailController
                   do {
                     if ((this.skillGrid == null) ||
                        (lVar5 = GameObject.get_transform(this.skillGrid,0)) == null)
-                    goto LAB_180ec26ef;
+                    goto LAB_180e1d83f;
                     iVar4 = Transform.get_childCount(lVar5,0);
                     lVar5 = this.skillGrid;
                     if (iVar4 <= iVar3) {
                       lVar8 = FUN_18046c1a0(0);
-                      if (lVar8 == null) goto LAB_180ec26ef;
+                      if (lVar8 == null) goto LAB_180e1d83f;
                       uVar6 = *(uint64 *)(lVar8 + 168);
                       lVar5 = GlobalData.AddChild(lVar5,uVar6,0);
                       this.temp = lVar5;
-                      if (*plVar1 == 0) goto LAB_180ec26ef;
-                      lVar5 = GameObject.GetComponent(*plVar1,DAT_181da1630);
+                      if (*plVar1 == 0) goto LAB_180e1d83f;
+                      lVar5 = GameObject.GetComponent(*plVar1,DAT_181d73800);
                       if (((this.nowShowHero == null) ||
                           (lVar8 = this.nowShowHero.kungfuSkills) == null) ||
-                         (uVar6 = FUN_180002f80(lVar8,uVar10), lVar5 == null)) goto LAB_180ec26ef;
+                         (uVar6 = FUN_180002f80(lVar8,uVar10), lVar5 == null)) goto LAB_180e1d83f;
                       lVar5.summonControlable = uVar6;
-                      goto LAB_180ec25e2;
+                      goto LAB_180e1d732;
                     }
                     if (((lVar5 == null) || (lVar5 = GameObject.get_transform(lVar5,0)) == null) ||
-                       (lVar5 = Transform.GetChild(lVar5,iVar3)) == null) goto LAB_180ec26ef;
+                       (lVar5 = Transform.GetChild(lVar5,iVar3)) == null) goto LAB_180e1d83f;
                     uVar6 = Component.GetComponent(lVar5);
                     cVar2 = Object.op_Inequality(uVar6);
                     if (cVar2) {
                       if ((((this.skillGrid == null) ||
                            (lVar5 = GameObject.get_transform(this.skillGrid,0), lVar5 == null
                            )) || (lVar5 = Transform.GetChild(lVar5,iVar3,0)) == null) ||
-                         (lVar5 = Component.GetComponent(lVar5,DAT_181d6d240)) == null)
-                      goto LAB_180ec26ef;
+                         (lVar5 = Component.GetComponent(lVar5,DAT_181d95ae0)) == null)
+                      goto LAB_180e1d83f;
                       lVar5 = lVar5.summonControlable;
                       if ((this.nowShowHero == null) ||
-                         (this.nowShowHero.kungfuSkills == null)) goto LAB_180ec26ef;
+                         (this.nowShowHero.kungfuSkills == null)) goto LAB_180e1d83f;
                       lVar8 = FUN_180002f80();
-                      if (lVar5 == lVar8) goto LAB_180ec248c;
+                      if (lVar5 == lVar8) goto LAB_180e1d5dc;
                     }
                     iVar3 = iVar3 + 1;
                   } while( true );
                 }
-                goto LAB_180ec2642;
+                goto LAB_180e1d792;
               }
             }
-            goto LAB_180ec26ef;
+            goto LAB_180e1d83f;
           }
           HeroDetailController.ResetSkillSortType(this,0);
           if (resetPos) {
             if (((this.skillGrid == null) ||
                 (lVar5 = GameObject.get_transform(this.skillGrid,0)) == null) ||
-               ((lVar5 = FUN_180da0f00(lVar5,0), lVar5 == null ||
-                (((lVar5 = FUN_180da0f00(lVar5,0), lVar5 == null ||
-                  (lVar5 = Component.GetComponent(lVar5,DAT_181d6c940)) == null) ||
-                 (lVar5.heroAIDataArriveTargetRecord == null)))))) goto LAB_180ec26ef;
+               ((lVar5 = FUN_180da9a20(lVar5,0), lVar5 == null ||
+                (((lVar5 = FUN_180da9a20(lVar5,0), lVar5 == null ||
+                  (lVar5 = Component.GetComponent(lVar5,DAT_181d951e0)) == null) ||
+                 (lVar5.heroAIDataArriveTargetRecord == null)))))) goto LAB_180e1d83f;
             Scrollbar.set_value(lVar5.heroAIDataArriveTargetRecord,0x3f800000,0);
           }
           return;
         }
-        goto LAB_180ec26ef;
-        code_r0x000180ec21ff:
+        goto LAB_180e1d83f;
+        code_r0x000180e1d34f:
         if (lVar5.interestingStar != this.nowSkillListType) {
-        LAB_180ec220b:
+        LAB_180e1d35b:
           if (((this.skillGrid == null) ||
               (lVar5 = GameObject.get_transform(this.skillGrid,0)) == null) ||
              ((lVar5 = Transform.GetChild(lVar5,iVar3,0), lVar5 == null ||
-              (lVar5 = Component.get_gameObject(lVar5,0)) == null))) goto LAB_180ec26ef;
+              (lVar5 = Component.get_gameObject(lVar5,0)) == null))) goto LAB_180e1d83f;
           GameObject.SetActive(lVar5,0);
           if (((this.skillGrid == null) ||
               (lVar5 = GameObject.get_transform(this.skillGrid,0)) == null) ||
-             (lVar5 = Transform.GetChild(lVar5,iVar3,0)) == null) goto LAB_180ec26ef;
+             (lVar5 = Transform.GetChild(lVar5,iVar3,0)) == null) goto LAB_180e1d83f;
           uVar6 = Component.get_gameObject(lVar5);
           Object.Destroy(uVar6);
         }
-        goto joined_r0x000180ec2094;
-        LAB_180ec248c:
+        goto joined_r0x000180e1d1e4;
+        LAB_180e1d5dc:
         if (((this.skillGrid == null) ||
             (lVar5 = GameObject.get_transform(this.skillGrid,0)) == null) ||
-           (lVar5 = Transform.GetChild(lVar5,iVar3)) == null) goto LAB_180ec26ef;
+           (lVar5 = Transform.GetChild(lVar5,iVar3)) == null) goto LAB_180e1d83f;
         uVar6 = Component.get_gameObject(lVar5,0);
         this.temp = uVar6;
         if ((((this.skillGrid == null) ||
              (lVar5 = GameObject.get_transform(this.skillGrid,0)) == null) ||
             (lVar5 = Transform.GetChild(lVar5,iVar3)) == null) ||
-           (lVar5 = Component.GetComponent(lVar5,DAT_181d6d240)) == null) goto LAB_180ec26ef;
+           (lVar5 = Component.GetComponent(lVar5,DAT_181d95ae0)) == null) goto LAB_180e1d83f;
         *(uint8 *)(lVar5 + 44) = 0;
-        LAB_180ec25e2:
+        LAB_180e1d732:
         lVar5 = this.temp;
-        if ((lVar5 == null) || (lVar5 = GameObject.GetComponent(lVar5,DAT_181da1630)) == null)
-        goto LAB_180ec26ef;
+        if ((lVar5 == null) || (lVar5 = GameObject.GetComponent(lVar5,DAT_181d73800)) == null)
+        goto LAB_180e1d83f;
         lVar5.summonLv = uVar10;
         lVar5 = this.temp;
-        if (lVar5 == null) goto LAB_180ec26ef;
-        lVar5 = GameObject.GetComponent(lVar5,DAT_181da1630);
+        if (lVar5 == null) goto LAB_180e1d83f;
+        lVar5 = GameObject.GetComponent(lVar5,DAT_181d73800);
         cVar2 = HeroDetailController.NowShowHeroItemControlable(this,0);
         uVar9 = 2;
         if (cVar2) {
           uVar9 = 0;
         }
-        if (lVar5 == null) goto LAB_180ec26ef;
+        if (lVar5 == null) goto LAB_180e1d83f;
         lVar5.summonSourceHero = uVar9;
-        LAB_180ec2642:
+        LAB_180e1d792:
         lVar5 = this.nowShowHero;
         uVar10 = uVar10 + 1;
         lVar7 = lVar7 + 8;
-        if (lVar5 == null) goto LAB_180ec26ef;
-        goto LAB_180ec22f0;
+        if (lVar5 == null) goto LAB_180e1d83f;
+        goto LAB_180e1d440;
     }
 
-    // Token : 0x600174B
-    // RVA   : 0xEB0B60   Offset: 0xEAF360   Length: 0x15D
+    // Token : 0x600178F
+    // RVA   : 0xE0B7D0   Offset: 0xE0ABD0   Length: 0x15D
     public void ChangeSkillSortType()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         if (this.skillSortTypeDropDown != null) {
           this.skillSortType = *(uint32 *)(this.skillSortTypeDropDown + 0x120);
-          if ((GameController._instance != null) &&
-             (lVar1 = GameController._instance.worldData) != null
-             ) {
-            lVar1.skillSortType = this.skillSortType;
+          if ((*pStatics != 0) &&
+             (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+            *(uint32 *)(lVar1 + 600) = this.skillSortType;
             HeroDetailController.ResetSkillSortType(this,0);
             plVar2 = (int64 *)Resources.Load("Sound/SoundEffect/Armor",0);
             plVar3 = (int64 *)0;
-            if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181d8a228)) {
+            if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf348)) {
               plVar3 = plVar2;
             }
             NGUITools.PlaySound(plVar3,0x3f19999a,0);
@@ -6297,10 +6244,11 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x600174C
-    // RVA   : 0xEB0910   Offset: 0xEAF110   Length: 0x243
+    // Token : 0x6001790
+    // RVA   : 0xE0B580   Offset: 0xE0A980   Length: 0x243
     public void ChangeSkillReverseType(GameObject buttonClicked)
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         ulong uVar2;
         int iVar4;
@@ -6308,9 +6256,9 @@ public class HeroDetailController
         float local_14;
         uint local_10;
         this.reverseOrder = !this.reverseOrder;
-        if (((GameController._instance != null) &&
-            (lVar1 = GameController._instance.worldData) != null)
-           && (lVar1.skillReverseOrder = this.reverseOrder, buttonClicked != null)) {
+        if (((*pStatics != 0) &&
+            (lVar1 = *(int64 *)(*pStatics + 32)) != null) &&
+           (*(uint8 *)(lVar1 + 0x25c) = this.reverseOrder, buttonClicked != null)) {
           lVar1 = GameObject.get_transform(buttonClicked,0);
           if (lVar1 != null) {
             uVar2 = Transform.Find(lVar1,"Icon",0);
@@ -6322,17 +6270,17 @@ public class HeroDetailController
             local_10 = 0x3f800000;
             local_14 = (float)iVar4;
             ShortcutExtensions.DOScale(uVar2,&local_18,0x3e4ccccd,0);
-            lVar1 = GameObject.GetComponent(buttonClicked,DAT_181da12b0);
+            lVar1 = GameObject.GetComponent(buttonClicked,DAT_181d73448);
             uVar2 = "升序";
             if (this.reverseOrder) {
               uVar2 = "降序";
             }
             if (lVar1 != null) {
-              lVar1.cityAreaID = uVar2;
+              *(uint64 *)(lVar1 + 24) = uVar2;
               HeroDetailController.ResetSkillSortType(this,0);
               plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/Armor",0);
               plVar5 = (int64 *)0;
-              if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181d8a228)) {
+              if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {
                 plVar5 = plVar3;
               }
               NGUITools.PlaySound(plVar5,0x3f19999a,0);
@@ -6342,8 +6290,8 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x600174D
-    // RVA   : 0xEC2E90   Offset: 0xEC1690   Length: 0x123
+    // Token : 0x6001791
+    // RVA   : 0xE1DFE0   Offset: 0xE1D3E0   Length: 0x123
     public void ResetSkillSortType()
     {
         int iVar1;
@@ -6361,7 +6309,7 @@ public class HeroDetailController
             }
             if ((((lVar2 == null) || (lVar2 = GameObject.get_transform(lVar2,0)) == null) ||
                 (lVar2 = Transform.GetChild(lVar2,iVar3,0)) == null) ||
-               (lVar2 = Component.GetComponent(lVar2,DAT_181d6d240)) == null) break;
+               (lVar2 = Component.GetComponent(lVar2,DAT_181d95ae0)) == null) break;
             SkillIconController.AutoSetName
                       (lVar2,this.skillSortType,this.reverseOrder,0);
             lVar2 = this.skillGrid;
@@ -6371,8 +6319,8 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x600174E
-    // RVA   : 0xEB0830   Offset: 0xEAF030   Length: 0xDD
+    // Token : 0x6001792
+    // RVA   : 0xE0B4A0   Offset: 0xE0A8A0   Length: 0xDD
     public void ChangeSkillListType(GameObject ButtonClicked)
     {
         int iVar1;
@@ -6387,7 +6335,7 @@ public class HeroDetailController
             HeroDetailController.RefreshSkillList(this,1,0);
             plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/Button/TabButton",0);
             plVar5 = (int64 *)0;
-            if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181d8a228)) {
+            if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
               plVar5 = plVar4;
             }
             NGUITools.PlaySound(plVar5,0);
@@ -6396,38 +6344,38 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x600174F
-    // RVA   : 0xEB1830   Offset: 0xEB0030   Length: 0x2F6
+    // Token : 0x6001793
+    // RVA   : 0xE0C4D0   Offset: 0xE0B8D0   Length: 0x2F6
     public void ExchangeTeamButtonClicked()
     {
+        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
+        var pStatics_d378 = *(int64*)(DAT_181dad378 + 184);
         long lVar1;
         bool cVar2;
         long lVar3;
         if (this.nowShowHero != null) {
           cVar2 = HeroData.ItemExchangeable(this.nowShowHero,0);
           if (!cVar2) {
-            lVar1 = PlotController.LeftFaceHideOffset;
-            if ((GameController._instance != null) &&
-               (lVar3 = GameController._instance.worldData,
-               lVar3 != null)) {
+            lVar1 = *(int64 *)(pStatics_d378 + 8);
+            if ((*pStatics_2cc8 != 0) &&
+               (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
               lVar3 = WorldData.Player(lVar3,0);
               if ((lVar3 != null) && ((this.nowShowHero != null && (lVar1 != null)))) {
                 TradeUIController.ShowTradeUI
-                          (lVar1,3,lVar3.speBookStorageSpeAdd,
+                          (lVar1,3,*(uint64 *)(lVar3 + 0x220),
                            this.nowShowHero.itemListData,0,0);
                 return;
               }
             }
           }
           else {
-            lVar1 = PlotController.LeftFaceHideOffset;
-            if ((GameController._instance != null) &&
-               (lVar3 = GameController._instance.worldData,
-               lVar3 != null)) {
+            lVar1 = *(int64 *)(pStatics_d378 + 8);
+            if ((*pStatics_2cc8 != 0) &&
+               (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
               lVar3 = WorldData.Player(lVar3,0);
               if ((lVar3 != null) && ((this.nowShowHero != null && (lVar1 != null)))) {
                 TradeUIController.ShowTradeUI
-                          (lVar1,1,lVar3.speBookStorageSpeAdd,
+                          (lVar1,1,*(uint64 *)(lVar3 + 0x220),
                            this.nowShowHero.itemListData,0,0);
                 return;
               }
@@ -6436,24 +6384,24 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001750
-    // RVA   : 0xEB9F10   Offset: 0xEB8710   Length: 0x20D
+    // Token : 0x6001794
+    // RVA   : 0xE14F30   Offset: 0xE14330   Length: 0x20F
     public void LeaveTeamButtonClicked()
     {
+        var pStatics = *(int64*)(DAT_181d91b88 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
-        if (PlotController._instance != null) {
-          PlotController._instance.targetInteractHero =
-               this.nowShowHero;
-          il2cpp_internal();
+        lVar1 = *(int64 *)(pStatics + 24);
+        if (lVar1 != null) {
+          *(uint64 *)(lVar1 + 112) = this.nowShowHero;
           HeroDetailController.UnshowHeroDetail(this,0);
-          lVar1 = PlotController._instance;
-          lVar2 = il2cpp_internal(DAT_181d72a30);
-          FUN_180f58a90(lVar2,DAT_181d7c250);
+          lVar1 = *(int64 *)(pStatics + 24);
+          lVar2 = il2cpp_internal(DAT_181d97750);
+          FUN_18132faf0(lVar2,DAT_181da3bd8);
           if (lVar2 != null) {
-            FUN_181827900(lVar2,"后会有期;SureHeroLeaveTeam",DAT_181d7c3d0);
-            FUN_181827900(lVar2,"开个玩笑;HideInteractUITemp",DAT_181d7c3d0);
+            FUN_18181e0a0(lVar2,"后会有期;SureHeroLeaveTeam",DAT_181da3d58);
+            FUN_18181e0a0(lVar2,"开个玩笑;HideInteractUITemp",DAT_181da3d58);
             uVar3 = new SinglePlotData("#PlayerName#已不需要我继续助阵了吗？",lVar2,0,0);
             if (lVar1 != null) {
               PlotController.ChangePlot(lVar1,uVar3,0);
@@ -6463,24 +6411,26 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001751
-    // RVA   : 0xEC5430   Offset: 0xEC3C30   Length: 0x11E
+    // Token : 0x6001795
+    // RVA   : 0xE20610   Offset: 0xE1FA10   Length: 0x120
     public void TalkButtonClicked()
     {
-        if (PlotController._instance != null) {
-          PlotController._instance.targetInteractHero =
-               this.nowShowHero;
-          il2cpp_internal();
+        var pStatics = *(int64*)(DAT_181d91b88 + 184);
+        long lVar1;
+        lVar1 = *(int64 *)(pStatics + 24);
+        if (lVar1 != null) {
+          *(uint64 *)(lVar1 + 112) = this.nowShowHero;
           HeroDetailController.UnshowHeroDetail(this,0);
-          if (PlotController._instance != null) {
-            PlotController.ChangeNormalMeetNpcPlot(PlotController._instance,0);
+          lVar1 = *(int64 *)(pStatics + 24);
+          if (lVar1 != null) {
+            PlotController.ChangeNormalMeetNpcPlot(lVar1,0);
             return;
           }
         }
     }
 
-    // Token : 0x6001752
-    // RVA   : 0xEB9EC0   Offset: 0xEB86C0   Length: 0x43
+    // Token : 0x6001796
+    // RVA   : 0xE14EE0   Offset: 0xE142E0   Length: 0x43
     public void InterestingStartButtonClicked()
     {
         long lVar1;
@@ -6496,8 +6446,8 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001753
-    // RVA   : 0xEBEA70   Offset: 0xEBD270   Length: 0x152
+    // Token : 0x6001797
+    // RVA   : 0xE19B20   Offset: 0xE18F20   Length: 0x152
     public void RefreshInterestingStar()
     {
         long lVar1;
@@ -6509,9 +6459,9 @@ public class HeroDetailController
           if (lVar2 != null) {
             lVar2 = Transform.Find(lVar2,"InterestingStarButton",0);
             if (lVar2 != null) {
-              lVar2 = Component.GetComponent(lVar2,DAT_181d6bc40);
+              lVar2 = Component.GetComponent(lVar2,DAT_181d94460);
               uVar4 = "UIAtlas";
-              lVar1 = **(int64 **)(DAT_181d86270 + 184);
+              lVar1 = **(int64 **)(DAT_181dab490 + 184);
               if (this.nowShowHero != null) {
                 uVar3 = "已收藏";
                 if (!this.nowShowHero.interestingStar) {
@@ -6531,26 +6481,27 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001754
-    // RVA   : 0xEB1510   Offset: 0xEAFD10   Length: 0x252
+    // Token : 0x6001798
+    // RVA   : 0xE0C1B0   Offset: 0xE0B5B0   Length: 0x252
     public void DiscardButtonClicked()
     {
+        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
+        var pStatics_d378 = *(int64*)(DAT_181dad378 + 184);
         long lVar1;
         ulong uVar2;
         long lVar3;
-        lVar1 = PlotController.LeftFaceHideOffset;
-        if ((GameController._instance != null) &&
-           (lVar3 = GameController._instance.worldData) != null)
-        {
+        lVar1 = *(int64 *)(pStatics_d378 + 8);
+        if ((*pStatics_2cc8 != 0) &&
+           (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
           lVar3 = WorldData.Player(lVar3,0);
           if (lVar3 != null) {
-            uVar2 = lVar3.speBookStorageSpeAdd;
-            lVar3 = PlotController.LeftFaceHideOffset;
+            uVar2 = *(uint64 *)(lVar3 + 0x220);
+            lVar3 = *(int64 *)(pStatics_d378 + 8);
             if ((lVar3 != null) && (lVar1 != null)) {
-              TradeUIController.ShowTradeUI(lVar1,1,uVar2,lVar3.forceMeetingStarted,0,0);
+              TradeUIController.ShowTradeUI(lVar1,1,uVar2,*(uint64 *)(lVar3 + 184),0,0);
               plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/Armor",0);
               plVar5 = (int64 *)0;
-              if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181d8a228)) {
+              if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
                 plVar5 = plVar4;
               }
               NGUITools.PlaySound(plVar5,0);
@@ -6560,8 +6511,8 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001755
-    // RVA   : 0xEB0730   Offset: 0xEAEF30   Length: 0xFB
+    // Token : 0x6001799
+    // RVA   : 0xE0B3A0   Offset: 0xE0A7A0   Length: 0xFB
     public void ChangeClothButtonClicked()
     {
         bool cVar1;
@@ -6577,7 +6528,7 @@ public class HeroDetailController
                 HeroDetailController.SetClothList(this,!cVar1,0);
                 plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/Bag",0);
                 plVar4 = (int64 *)0;
-                if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181d8a228)) {
+                if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {
                   plVar4 = plVar3;
                 }
                 NGUITools.PlaySound(plVar4,0);
@@ -6588,11 +6539,11 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001756
-    // RVA   : 0xEB0120   Offset: 0xEAE920   Length: 0x459
+    // Token : 0x600179A
+    // RVA   : 0xE0AD60   Offset: 0xE0A160   Length: 0x48B
     public GameObject AddClothChoice(int skinID, int skinLv)
     {
-        var pGameController = *(int64*)(GameController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d72d50 + 184);
         long lVar1;
         long lVar2;
         ulong uVar4;
@@ -6609,18 +6560,18 @@ public class HeroDetailController
         uVar5 = this.clothChoicePrefab;
         lVar1 = GlobalData.AddChild(uVar4,uVar5,0);
         if (lVar1 != null) {
-          lVar2 = GameObject.GetComponent(lVar1,DAT_181d9f218);
+          lVar2 = GameObject.GetComponent(lVar1,DAT_181dc7fb8);
           if (lVar2 != null) {
             *(int *)(lVar2 + 24) = skinID;
-            lVar2 = GameObject.GetComponent(lVar1,DAT_181d9f218);
+            lVar2 = GameObject.GetComponent(lVar1,DAT_181dc7fb8);
             if (lVar2 != null) {
               *(uint32 *)(lVar2 + 28) = skinLv;
               lVar2 = GameObject.get_transform(lVar1,0);
               if (lVar2 != null) {
                 lVar2 = Transform.Find(lVar2,"Icon",0);
                 if (lVar2 != null) {
-                  plVar3 = (int64 *)Component.GetComponent(lVar2,DAT_181d6bc40);
-                  lVar2 = GameController.lockObj;
+                  plVar3 = (int64 *)Component.GetComponent(lVar2,DAT_181d94460);
+                  lVar2 = *(int64 *)(pStatics + 32);
                   if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
                     if (*(uint32 *)(lVar2 + 24) <= skinLv) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -6637,17 +6588,16 @@ public class HeroDetailController
                       if (lVar2 != null) {
                         lVar2 = Transform.Find(lVar2,"Text",0);
                         if (lVar2 != null) {
-                          uVar4 = Component.GetComponent(lVar2,DAT_181d6d8c0);
-                          lVar2 = GameController.lockObj;
+                          uVar4 = Component.GetComponent(lVar2,DAT_181d96160);
+                          lVar2 = *(int64 *)(pStatics + 32);
                           if (lVar2 != null) {
                             lVar2 = GameDataController.FindSkinDataBase(lVar2,skinID,0);
                             if (lVar2 != null) {
                               uVar7 = 0;
                               uVar5 = SkinDataBase.GetSkinFullName(lVar2,skinLv,1,0,0);
                               LTLocalization.SetText(uVar4,uVar5,0);
-                              lVar2 = GameObject.GetComponent(lVar1,DAT_181da12b0);
-                              lVar6 = *(int64 *)
-                                       (pGameController + 32);
+                              lVar2 = GameObject.GetComponent(lVar1,DAT_181d73448);
+                              lVar6 = *(int64 *)(pStatics + 32);
                               if (lVar6 != null) {
                                 lVar6 = GameDataController.FindSkinDataBase(lVar6,skinID,0);
                                 if (lVar6 != null) {
@@ -6660,7 +6610,7 @@ public class HeroDetailController
                                       local_res8[0] = skinID + 100;
                                       uVar4 = Int32.ToString(local_res8,"000",0);
                                       local_38[0] = skinLv;
-                                      uVar5 = il2cpp_value_box(DAT_181d5b2f8,local_38);
+                                      uVar5 = il2cpp_value_box(DAT_181d80418,local_38);
                                       uVar4 = String.Format("{0}_{1}",uVar4,uVar5,0);
                                       Object.set_name(lVar1,uVar4,0);
                                       return lVar1;
@@ -6681,8 +6631,8 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001757
-    // RVA   : 0xEB9410   Offset: 0xEB7C10   Length: 0x160
+    // Token : 0x600179B
+    // RVA   : 0xE14460   Offset: 0xE13860   Length: 0x160
     public void InitClothList()
     {
         long lVar1;
@@ -6691,7 +6641,7 @@ public class HeroDetailController
         this.clothListInited = 1;
         iVar3 = 0;
         while( true ) {
-          lVar1 = GameController.lockObj;
+          lVar1 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
           if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 0x1a8)) == null) break;
           if (*(int *)(lVar1 + 24) <= iVar3) {
             return;
@@ -6700,7 +6650,7 @@ public class HeroDetailController
           do {
             lVar1 = FUN_18046c100(0);
             if (((lVar1 == null) || (*(int64 *)(lVar1 + 0x1a8) == 0)) ||
-               (lVar1 = FUN_180002f80(*(int64 *)(lVar1 + 0x1a8),iVar3,DAT_181d7b5d8)) == null)
+               (lVar1 = FUN_180002f80(*(int64 *)(lVar1 + 0x1a8),iVar3,DAT_181da2f58)) == null)
             throw; // [null/range check failed]
             HeroDetailController.AddClothChoice(this,*(uint32 *)(lVar1 + 16),iVar2,0);
             iVar2 = iVar2 + 1;
@@ -6709,8 +6659,8 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001758
-    // RVA   : 0xEC3720   Offset: 0xEC1F20   Length: 0x318
+    // Token : 0x600179C
+    // RVA   : 0xE1E900   Offset: 0xE1DD00   Length: 0x318
     public void SetClothList(bool active)
     {
         ulong uVar1;
@@ -6721,14 +6671,14 @@ public class HeroDetailController
           this.clothListInited = 1;
           iVar4 = 0;
           while( true ) {
-            lVar2 = GameController.lockObj;
+            lVar2 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
             if ((lVar2 == null) || (lVar2 = *(int64 *)(lVar2 + 0x1a8)) == null) break;
-            if (*(int *)(lVar2 + 24) <= iVar4) goto LAB_180ec38d7;
+            if (*(int *)(lVar2 + 24) <= iVar4) goto LAB_180e1eab7;
             iVar3 = 0;
             do {
               lVar2 = FUN_18046c100(0);
               if (((lVar2 == null) || (*(int64 *)(lVar2 + 0x1a8) == 0)) ||
-                 (lVar2 = FUN_180002f80(*(int64 *)(lVar2 + 0x1a8),iVar4,DAT_181d7b5d8)) == null)
+                 (lVar2 = FUN_180002f80(*(int64 *)(lVar2 + 0x1a8),iVar4,DAT_181da2f58)) == null)
               throw; // [null/range check failed]
               HeroDetailController.AddClothChoice(this,*(uint32 *)(lVar2 + 16),iVar3,0);
               iVar3 = iVar3 + 1;
@@ -6737,7 +6687,7 @@ public class HeroDetailController
           }
         }
         else {
-        LAB_180ec38d7:
+        LAB_180e1eab7:
           if ((((this.heroDetailPanel != null) &&
                (lVar2 = GameObject.get_transform(this.heroDetailPanel,0)) != null) &&
               (lVar2 = Transform.Find(lVar2,"ClothList",0)) != null) &&
@@ -6760,7 +6710,7 @@ public class HeroDetailController
                   (lVar2 = GameObject.get_transform(this.heroDetailPanel,0)) == null) ||
                  ((lVar2 = Transform.Find(lVar2,"ClothList",0), lVar2 == null ||
                   ((lVar2 = Transform.Find(lVar2,"SureButton",0), lVar2 == null ||
-                   (lVar2 = Component.GetComponent(lVar2,DAT_181d6af40)) == null)))))
+                   (lVar2 = Component.GetComponent(lVar2,DAT_181d93760)) == null)))))
               throw; // [null/range check failed]
               Selectable.set_interactable(lVar2,0,0);
             }
@@ -6769,8 +6719,8 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001759
-    // RVA   : 0xEBB3D0   Offset: 0xEB9BD0   Length: 0xA0C
+    // Token : 0x600179D
+    // RVA   : 0xE16420   Offset: 0xE15820   Length: 0xA0C
     public void RefreshClothList()
     {
         uint uVar1;
@@ -6803,12 +6753,12 @@ public class HeroDetailController
             if ((((this.clothGrid == null) ||
                  (lVar6 = GameObject.get_transform(this.clothGrid,0)) == null) ||
                 (lVar6 = Transform.GetChild(lVar6,iVar10,0)) == null) ||
-               (lVar6 = Component.GetComponent(lVar6,DAT_181d6b2c0)) == null) break;
+               (lVar6 = Component.GetComponent(lVar6,DAT_181d93ae0)) == null) break;
             uVar1 = *(uint32 *)(lVar6 + 24);
             if (((this.clothGrid == null) ||
                 (lVar6 = GameObject.get_transform(this.clothGrid,0)) == null) ||
                ((lVar6 = Transform.GetChild(lVar6,iVar10,0), lVar6 == null ||
-                ((lVar6 = Component.GetComponent(lVar6,DAT_181d6b2c0), lVar6 == null || (lVar5 == null))))))
+                ((lVar6 = Component.GetComponent(lVar6,DAT_181d93ae0), lVar6 == null || (lVar5 == null))))))
             break;
             cVar2 = WorldData.SkinUnlocked(lVar5,uVar1,*(uint32 *)(lVar6 + 28),0);
             lVar5 = this.clothGrid;
@@ -6822,7 +6772,7 @@ public class HeroDetailController
                    (lVar5 = GameObject.get_transform(this.clothGrid,0)) == null)
                 break;
                 lVar5 = Transform.GetChild(lVar5,iVar10,0);
-        LAB_180ebbd87:
+        LAB_180e16dd7:
                 if ((lVar5 == null) || (lVar5 = Component.get_gameObject(lVar5)) == null) break;
                 GameObject.SetActive(lVar5);
               }
@@ -6843,13 +6793,13 @@ public class HeroDetailController
               if (((this.clothGrid == null) ||
                   (lVar5 = GameObject.get_transform(this.clothGrid,0)) == null) ||
                  (lVar5 = Transform.GetChild(lVar5,iVar10,0)) == null) break;
-              lVar5 = Component.GetComponent(lVar5,DAT_181d6af40);
+              lVar5 = Component.GetComponent(lVar5,DAT_181d93760);
               if (this.nowShowHero == null) break;
               iVar3 = this.nowShowHero.heroForceLv;
               if ((((this.clothGrid == null) ||
                    (lVar6 = GameObject.get_transform(this.clothGrid,0)) == null) ||
                   (lVar6 = Transform.GetChild(lVar6,iVar10,0)) == null) ||
-                 ((lVar6 = Component.GetComponent(lVar6,DAT_181d6b2c0), lVar6 == null || (lVar5 == null))))
+                 ((lVar6 = Component.GetComponent(lVar6,DAT_181d93ae0), lVar6 == null || (lVar5 == null))))
               break;
               Selectable.set_interactable(lVar5,*(int *)(lVar6 + 28) <= iVar3,0);
               if ((this.clothGrid == null) ||
@@ -6861,14 +6811,14 @@ public class HeroDetailController
               if ((((this.clothGrid == null) ||
                    (lVar6 = GameObject.get_transform(this.clothGrid,0)) == null) ||
                   (lVar6 = Transform.GetChild(lVar6,iVar10,0)) == null) ||
-                 (lVar6 = Component.GetComponent(lVar6,DAT_181d6b2c0)) == null) break;
+                 (lVar6 = Component.GetComponent(lVar6,DAT_181d93ae0)) == null) break;
               if (iVar3 == *(int *)(lVar6 + 24)) {
                 if (this.nowShowHero == null) break;
                 iVar3 = this.nowShowHero.skinLv;
                 if (((this.clothGrid == null) ||
                     (lVar6 = GameObject.get_transform(this.clothGrid,0)) == null) ||
                    ((lVar6 = Transform.GetChild(lVar6,iVar10,0), lVar6 == null ||
-                    (lVar6 = Component.GetComponent(lVar6,DAT_181d6b2c0)) == null))) break;
+                    (lVar6 = Component.GetComponent(lVar6,DAT_181d93ae0)) == null))) break;
                 if (iVar3 == *(int *)(lVar6 + 28))
                 {
                   puVar7 = (uint64 *)Vector3.get_one(local_48,0);
@@ -6889,7 +6839,7 @@ public class HeroDetailController
               if (((this.clothGrid == null) ||
                   (lVar5 = GameObject.get_transform(this.clothGrid,0)) == null) ||
                  ((lVar5 = Transform.GetChild(lVar5,iVar10,0), lVar5 == null ||
-                  (lVar5 = Component.GetComponent(lVar5,DAT_181d6b2c0)) == null))) break;
+                  (lVar5 = Component.GetComponent(lVar5,DAT_181d93ae0)) == null))) break;
               if (iVar3 == *(int *)(lVar5 + 24)) {
                 iVar3 = this.tempSkinLv;
                 if (iVar3 == -99) {
@@ -6899,27 +6849,27 @@ public class HeroDetailController
                 if ((((this.clothGrid == null) ||
                      (lVar5 = GameObject.get_transform(this.clothGrid,0)) == null) ||
                     (lVar5 = Transform.GetChild(lVar5,iVar10,0)) == null) ||
-                   (lVar5 = Component.GetComponent(lVar5,DAT_181d6b2c0)) == null) break;
-                if (iVar3 != *(int *)(lVar5 + 28)) goto LAB_180ebba58;
+                   (lVar5 = Component.GetComponent(lVar5,DAT_181d93ae0)) == null) break;
+                if (iVar3 != *(int *)(lVar5 + 28)) goto LAB_180e16aa8;
                 if (((this.clothGrid == null) ||
                     (lVar5 = GameObject.get_transform(this.clothGrid,0)) == null) ||
                    (lVar5 = Transform.GetChild(lVar5,iVar10,0)) == null) break;
-                plVar8 = (int64 *)Component.GetComponent(lVar5,DAT_181d6bc40);
-                lVar5 = *(int64 *)(PlotController_StaticsPtr + 184);
+                plVar8 = (int64 *)Component.GetComponent(lVar5,DAT_181d94460);
+                lVar5 = *(int64 *)(DAT_181d73d40 + 184);
                 if (plVar8 == (int64 *)0) break;
-                local_28 = *(uint32 *)(lVar5 + 0x370);
-                uStack_24 = *(uint32 *)(lVar5 + 0x374);
-                uStack_20 = *(uint32 *)(lVar5 + 0x378);
-                uStack_1c = *(uint32 *)(lVar5 + 0x37c);
+                local_28 = *(uint32 *)(lVar5 + 0x378);
+                uStack_24 = *(uint32 *)(lVar5 + 0x37c);
+                uStack_20 = *(uint32 *)(lVar5 + 0x380);
+                uStack_1c = *(uint32 *)(lVar5 + 900);
                 (**(code **)(*plVar8 + 0x2a8))(plVar8,&local_28);
               }
               else {
-        LAB_180ebba58:
+        LAB_180e16aa8:
                 if (((this.clothGrid == null) ||
                     (lVar5 = GameObject.get_transform(this.clothGrid,0)) == null) ||
                    (lVar5 = Transform.GetChild(lVar5,iVar10,0)) == null) break;
-                plVar8 = (int64 *)Component.GetComponent(lVar5,DAT_181d6bc40);
-                puVar9 = (uint32 *)FUN_181098a50(local_18,0);
+                plVar8 = (int64 *)Component.GetComponent(lVar5,DAT_181d94460);
+                puVar9 = (uint32 *)FUN_1810d3570(local_18,0);
                 if (plVar8 == (int64 *)0) break;
                 local_28 = *puVar9;
                 uStack_24 = puVar9[1];
@@ -6930,7 +6880,7 @@ public class HeroDetailController
               if ((((this.clothGrid == null) ||
                    (lVar5 = GameObject.get_transform(this.clothGrid,0)) == null) ||
                   (lVar5 = Transform.GetChild(lVar5,iVar10,0)) == null) ||
-                 (lVar5 = Component.GetComponent(lVar5,DAT_181d6b2c0)) == null) break;
+                 (lVar5 = Component.GetComponent(lVar5,DAT_181d93ae0)) == null) break;
               iVar3 = *(int *)(lVar5 + 24);
               if (this.nowShowHero == null) break;
               iVar4 = HeroData.GetDefaultSkinID(this.nowShowHero,0);
@@ -6938,7 +6888,7 @@ public class HeroDetailController
                 if (((this.clothGrid == null) ||
                     (lVar5 = GameObject.get_transform(this.clothGrid,0)) == null) ||
                    ((lVar5 = Transform.GetChild(lVar5,iVar10,0), lVar5 == null ||
-                    ((lVar5 = Component.GetComponent(lVar5,DAT_181d6b2c0), lVar5 == null ||
+                    ((lVar5 = Component.GetComponent(lVar5,DAT_181d93ae0), lVar5 == null ||
                      (this.nowShowHero == null)))))) break;
                 if (*(int *)(lVar5 + 28) == this.nowShowHero.heroForceLv) {
                   if ((((this.clothGrid == null) ||
@@ -6960,7 +6910,7 @@ public class HeroDetailController
                       (lVar5 = GameObject.get_transform(this.clothGrid,0)) != null) &&
                      (lVar5 = Transform.GetChild(lVar5,iVar10,0)) != null) {
                     Transform.SetAsFirstSibling(lVar5);
-                    goto LAB_180ebbda8;
+                    goto LAB_180e16df8;
                   }
                   break;
                 }
@@ -6976,12 +6926,12 @@ public class HeroDetailController
                     (lVar5 = GameObject.get_transform(this.clothGrid,0)) != null) &&
                    (lVar5 = Transform.GetChild(lVar5,iVar10,0)) != null) {
                   lVar5 = Transform.Find(lVar5);
-                  goto LAB_180ebbd87;
+                  goto LAB_180e16dd7;
                 }
                 break;
               }
             }
-        LAB_180ebbda8:
+        LAB_180e16df8:
             lVar5 = this.clothGrid;
             iVar10 = iVar10 + 1;
             if (lVar5 == null) break;
@@ -6989,8 +6939,8 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x600175A
-    // RVA   : 0xEB0CC0   Offset: 0xEAF4C0   Length: 0x4A8
+    // Token : 0x600179E
+    // RVA   : 0xE0B930   Offset: 0xE0AD30   Length: 0x460
     public void ClothChoiceButtonClicked(int skinID, int skinLv)
     {
         long lVar1;
@@ -6999,8 +6949,8 @@ public class HeroDetailController
         lVar1 = this.nowShowHero;
         if (lVar1 != null) {
           if (lVar1.heroForceLv < (int)skinLv) {
-            lVar1 = GameController._instance;
-            lVar3 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x3d0);
+            lVar1 = **(int64 **)(DAT_181d72cc8 + 184);
+            lVar3 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x3d8);
             if (lVar3 == null) throw; // [null/range check failed]
             if (*(uint32 *)(lVar3 + 24) <= skinLv) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -7013,7 +6963,7 @@ public class HeroDetailController
             if ((skinID != 10) || (!lVar1.isFemale)) {
               plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/Bag",0);
               plVar5 = (int64 *)0;
-              if ((plVar4 != (int64 *)0) && (plVar5 = (int64 *)0, *plVar4 == DAT_181d8a228)) {
+              if ((plVar4 != (int64 *)0) && (plVar5 = (int64 *)0, *plVar4 == DAT_181daf348)) {
                 plVar5 = plVar4;
               }
               NGUITools.PlaySound(plVar5,0);
@@ -7035,7 +6985,7 @@ public class HeroDetailController
                          (lVar1 = GameObject.get_transform(this.heroDetailPanel,0)) != null)
                         && (lVar1 = Transform.Find(lVar1,"ClothList",0)) != null) &&
                        ((lVar1 = Transform.Find(lVar1,"SureButton",0), lVar1 != null &&
-                        (lVar1 = Component.GetComponent(lVar1,DAT_181d6af40)) != null))) {
+                        (lVar1 = Component.GetComponent(lVar1,DAT_181d93760)) != null))) {
                       Selectable.set_interactable(lVar1,0,0);
                       return;
                     }
@@ -7044,7 +6994,7 @@ public class HeroDetailController
                             ((lVar1 = GameObject.get_transform(this.heroDetailPanel,0),
                              lVar1 != null && (lVar1 = Transform.Find(lVar1,"ClothList",0)) != null)))
                            && (lVar1 = Transform.Find(lVar1,"SureButton",0)) != null) &&
-                          (lVar1 = Component.GetComponent(lVar1,DAT_181d6af40)) != null) {
+                          (lVar1 = Component.GetComponent(lVar1,DAT_181d93760)) != null) {
                     Selectable.set_interactable(lVar1,1,0);
                     return;
                   }
@@ -7053,14 +7003,14 @@ public class HeroDetailController
               throw; // [null/range check failed]
             }
             lVar1 = FUN_18046c0a0(0);
-            uVar2 = FUN_180004500(DAT_181d63120);
+            uVar2 = FUN_180004500(DAT_181d8b140);
             uVar2 = String.Format("女性角色无法穿着！",uVar2,0);
           }
           if (lVar1 != null) {
             GameController.ShowTextOnMouse(lVar1,uVar2,0);
             plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
             plVar5 = (int64 *)0;
-            if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181d8a228)) {
+            if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
               plVar5 = plVar4;
             }
             NGUITools.PlaySound(plVar5,0);
@@ -7069,11 +7019,11 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x600175B
-    // RVA   : 0xEC2700   Offset: 0xEC0F00   Length: 0x783
+    // Token : 0x600179F
+    // RVA   : 0xE1D850   Offset: 0xE1CC50   Length: 0x783
     public void ResetFaceSetting()
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d73d40 + 184);
         bool cVar1;
         long lVar2;
         long lVar3;
@@ -7098,9 +7048,9 @@ public class HeroDetailController
                   if (lVar2.summonLv <= local_res8[0]) {
                     return;
                   }
-                  lVar2 = *(int64 *)(pPlotController + 0x1d8);
+                  lVar2 = *(int64 *)(pStatics + 0x1e0);
                   if (lVar2 == null) break;
-                  uVar4 = FUN_180002f80(lVar2,local_res8[0],DAT_181d7c9c0);
+                  uVar4 = FUN_180002f80(lVar2,local_res8[0],DAT_181da4358);
                   cVar1 = String.op_Inequality(uVar4,"发后",0);
                   if (cVar1) {
                     lVar2 = GameObject.get_transform(lVar3,0);
@@ -7111,22 +7061,22 @@ public class HeroDetailController
                     if (cVar1) {
                       if (this.nowShowHero == null) break;
                       if (!this.nowShowHero.isFemale) {
-        LAB_180ec2a73:
-                        lVar2 = *(int64 *)(pPlotController + 0x1d8);
+        LAB_180e1dbc3:
+                        lVar2 = *(int64 *)(pStatics + 0x1e0);
                         if (lVar2 == null) break;
-                        uVar4 = FUN_180002f80(lVar2,local_res8[0],DAT_181d7c9c0);
-                        cVar1 = FUN_1816fd990(uVar4,"胡",0);
+                        uVar4 = FUN_180002f80(lVar2,local_res8[0],DAT_181da4358);
+                        cVar1 = FUN_18171e540(uVar4,"胡",0);
                         if (cVar1) {
                           lVar2 = GameObject.get_transform(lVar3,0);
                           uVar4 = Int32.ToString(local_res8,0);
                           if (((lVar2 == null) || (lVar2 = Transform.Find(lVar2,uVar4,0)) == null) ||
-                             (lVar2 = Component.GetComponent(lVar2,DAT_181d6d2c0)) == null) break;
+                             (lVar2 = Component.GetComponent(lVar2,DAT_181d95b60)) == null) break;
                           Selectable.set_interactable(lVar2,1,0);
                         }
                         lVar2 = GameObject.get_transform(lVar3,0);
                         uVar4 = Int32.ToString(local_res8,0);
                         if ((lVar2 == null) || (lVar2 = Transform.Find(lVar2,uVar4,0)) == null) break;
-                        lVar2 = Component.GetComponent(lVar2,DAT_181d6d2c0);
+                        lVar2 = Component.GetComponent(lVar2,DAT_181d95b60);
                         if (this.nowShowHero == null) break;
                         if (!this.nowShowHero.isFemale) {
                           lVar5 = FUN_18046c100(0);
@@ -7139,54 +7089,53 @@ public class HeroDetailController
                           lVar5 = *(int64 *)(lVar5 + 0x160);
                         }
                         if (((lVar5 == null) || (*(int64 *)(lVar5 + 16) == 0)) ||
-                           (FUN_1800d6750(*(int64 *)(lVar5 + 16),local_res8[0],DAT_181d68270),
+                           (FUN_1800d6760(*(int64 *)(lVar5 + 16),local_res8[0],DAT_181d8fa18),
                            lVar2 == null)) break;
                         Slider.set_maxValue(lVar2);
-                        lVar2 = *(int64 *)(pPlotController + 0x1d8);
+                        lVar2 = *(int64 *)(pStatics + 0x1e0);
                         if (lVar2 == null) break;
-                        uVar4 = FUN_180002f80(lVar2,local_res8[0],DAT_181d7c9c0);
-                        cVar1 = FUN_1816fd990(uVar4,"胡",0);
+                        uVar4 = FUN_180002f80(lVar2,local_res8[0],DAT_181da4358);
+                        cVar1 = FUN_18171e540(uVar4,"胡",0);
                         if (!cVar1) {
-                          lVar2 = *(int64 *)(pPlotController + 0x1d8);
+                          lVar2 = *(int64 *)(pStatics + 0x1e0);
                           if (lVar2 == null) break;
-                          uVar4 = FUN_180002f80(lVar2,local_res8[0],DAT_181d7c9c0);
-                          cVar1 = FUN_1816fd990(uVar4,"发",0);
+                          uVar4 = FUN_180002f80(lVar2,local_res8[0],DAT_181da4358);
+                          cVar1 = FUN_18171e540(uVar4,"发",0);
                           if (!cVar1) {
-                            lVar2 = *(int64 *)(pPlotController + 0x1d8)
-                            ;
+                            lVar2 = *(int64 *)(pStatics + 0x1e0);
                             if (lVar2 == null) break;
-                            uVar4 = FUN_180002f80(lVar2,local_res8[0],DAT_181d7c9c0);
-                            cVar1 = FUN_1816fd990(uVar4,"杂",0);
-                            if (!cVar1) goto LAB_180ec2dd1;
+                            uVar4 = FUN_180002f80(lVar2,local_res8[0],DAT_181da4358);
+                            cVar1 = FUN_18171e540(uVar4,"杂",0);
+                            if (!cVar1) goto LAB_180e1df21;
                           }
                         }
                         lVar2 = GameObject.get_transform(lVar3,0);
                         uVar4 = Int32.ToString(local_res8,0);
                         if (((lVar2 == null) || (lVar2 = Transform.Find(lVar2,uVar4,0)) == null) ||
-                           (lVar2 = Component.GetComponent(lVar2,DAT_181d6d2c0)) == null) break;
+                           (lVar2 = Component.GetComponent(lVar2,DAT_181d95b60)) == null) break;
                         Slider.set_minValue(lVar2);
                       }
                       else {
-                        lVar2 = *(int64 *)(pPlotController + 0x1d8);
+                        lVar2 = *(int64 *)(pStatics + 0x1e0);
                         if (lVar2 == null) break;
-                        uVar4 = FUN_180002f80(lVar2,local_res8[0],DAT_181d7c9c0);
-                        cVar1 = FUN_1816fd990(uVar4,"胡",0);
-                        if (!cVar1) goto LAB_180ec2a73;
+                        uVar4 = FUN_180002f80(lVar2,local_res8[0],DAT_181da4358);
+                        cVar1 = FUN_18171e540(uVar4,"胡",0);
+                        if (!cVar1) goto LAB_180e1dbc3;
                         lVar2 = GameObject.get_transform(lVar3,0);
                         uVar4 = Int32.ToString(local_res8,0);
                         if (((lVar2 == null) || (lVar2 = Transform.Find(lVar2,uVar4,0)) == null) ||
-                           (lVar2 = Component.GetComponent(lVar2,DAT_181d6d2c0)) == null) break;
+                           (lVar2 = Component.GetComponent(lVar2,DAT_181d95b60)) == null) break;
                         Selectable.set_interactable(lVar2,0,0);
                       }
-        LAB_180ec2dd1:
+        LAB_180e1df21:
                       lVar2 = GameObject.get_transform(lVar3,0);
                       uVar4 = Int32.ToString(local_res8,0);
                       if ((lVar2 == null) || (lVar2 = Transform.Find(lVar2,uVar4,0)) == null) break;
-                      plVar6 = (int64 *)Component.GetComponent(lVar2,DAT_181d6d2c0);
+                      plVar6 = (int64 *)Component.GetComponent(lVar2,DAT_181d95b60);
                       if ((this.nowShowHero == null) ||
                          (((lVar2 = this.nowShowHero.faceData, lVar2 == null ||
                            (lVar2 = lVar2.isSummon) == null) ||
-                          (FUN_1800d6750(lVar2,local_res8[0],DAT_181d68270), plVar6 == (int64 *)0))))
+                          (FUN_1800d6760(lVar2,local_res8[0],DAT_181d8fa18), plVar6 == (int64 *)0))))
                       break;
                       lVar2 = *plVar6;
                       (**(code **)(lVar2 + 0x428))(plVar6,lVar2,*(uint64 *)(lVar2 + 0x430));
@@ -7205,8 +7154,8 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x600175C
-    // RVA   : 0xEB1B30   Offset: 0xEB0330   Length: 0x602
+    // Token : 0x60017A0
+    // RVA   : 0xE0C7D0   Offset: 0xE0BBD0   Length: 0x62F
     public void FaceSliderChanged(GameObject target)
     {
         int iVar1;
@@ -7220,47 +7169,47 @@ public class HeroDetailController
         uVar2 = Object.get_name(target,0);
         iVar1 = Int32.Parse(uVar2,0);
         if (iVar1 == 3) {
-          plVar3 = (int64 *)GameObject.GetComponent(target,DAT_181da1730);
+          plVar3 = (int64 *)GameObject.GetComponent(target,DAT_181d73910);
           if (plVar3 == (int64 *)0) throw; // [null/range check failed]
           fVar7 = (float)(**(code **)(*plVar3 + 0x418))(plVar3,*(uint64 *)(*plVar3 + 0x420));
           this.tempHairID = (int)fVar7;
         }
         else if (iVar1 == 7) {
-          plVar3 = (int64 *)GameObject.GetComponent(target,DAT_181da1730);
+          plVar3 = (int64 *)GameObject.GetComponent(target,DAT_181d73910);
           if (plVar3 == (int64 *)0) throw; // [null/range check failed]
           fVar7 = (float)(**(code **)(*plVar3 + 0x418))(plVar3,*(uint64 *)(*plVar3 + 0x420));
           this.tempBeardID = (int)fVar7;
         }
         else if (iVar1 == 8) {
-          plVar3 = (int64 *)GameObject.GetComponent(target,DAT_181da1730);
+          plVar3 = (int64 *)GameObject.GetComponent(target,DAT_181d73910);
           if (plVar3 == (int64 *)0) throw; // [null/range check failed]
           fVar7 = (float)(**(code **)(*plVar3 + 0x418))(plVar3,*(uint64 *)(*plVar3 + 0x420));
           this.tempOtherID = (int)fVar7;
         }
         lVar4 = GameObject.get_transform(target,0);
         if (lVar4 == null) {
-        LAB_180eb212d:
+        LAB_180e0cdfa:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         lVar4 = Transform.Find(lVar4,"Id",0);
-        if (lVar4 == null) goto LAB_180eb212d;
-        uVar2 = Component.GetComponent(lVar4,DAT_181d6d8c0);
-        plVar3 = (int64 *)GameObject.GetComponent(target,DAT_181da1730);
-        if (plVar3 == (int64 *)0) goto LAB_180eb212d;
+        if (lVar4 == null) goto LAB_180e0cdfa;
+        uVar2 = Component.GetComponent(lVar4,DAT_181d96160);
+        plVar3 = (int64 *)GameObject.GetComponent(target,DAT_181d73910);
+        if (plVar3 == (int64 *)0) goto LAB_180e0cdfa;
         local_res10[0] = (**(code **)(*plVar3 + 0x418))(plVar3,*(uint64 *)(*plVar3 + 0x420));
-        uVar5 = il2cpp_value_box(DAT_181d7d0b8,local_res10);
+        uVar5 = il2cpp_value_box(DAT_181da22d8,local_res10);
         uVar5 = String.Format("({0})",uVar5,0);
         LTLocalization.SetText(uVar2,uVar5,0);
         lVar4 = this.nowShowHero;
-        if (this.heroDetailPanel == null) goto LAB_180eb212d;
+        if (this.heroDetailPanel == null) goto LAB_180e0cdfa;
         lVar6 = GameObject.get_transform(this.heroDetailPanel,0);
-        if (lVar6 == null) goto LAB_180eb212d;
+        if (lVar6 == null) goto LAB_180e0cdfa;
         uVar2 = Transform.Find(lVar6,"Face",0);
-        if (lVar4 == null) goto LAB_180eb212d;
+        if (lVar4 == null) goto LAB_180e0cdfa;
         uVar2 = HeroData.GetSkeletonGraphic(lVar4,uVar2,0);
-        plVar3 = (int64 *)GameObject.GetComponent(target,DAT_181da1730);
-        if (plVar3 == (int64 *)0) goto LAB_180eb212d;
+        plVar3 = (int64 *)GameObject.GetComponent(target,DAT_181d73910);
+        if (plVar3 == (int64 *)0) goto LAB_180e0cdfa;
         fVar7 = (float)(**(code **)(*plVar3 + 0x418))(plVar3,*(uint64 *)(*plVar3 + 0x420));
         HeroData.SetSkeletonGraphicFaceSlot(lVar4,uVar2,iVar1,(int)fVar7,0);
         if (iVar1 == 3) {
@@ -7271,7 +7220,7 @@ public class HeroDetailController
           uVar2 = Transform.Find(lVar6,"Face",0);
           if (lVar4 == null) throw; // [null/range check failed]
           uVar2 = HeroData.GetSkeletonGraphic(lVar4,uVar2,0);
-          plVar3 = (int64 *)GameObject.GetComponent(target,DAT_181da1730);
+          plVar3 = (int64 *)GameObject.GetComponent(target,DAT_181d73910);
           if (plVar3 == (int64 *)0) throw; // [null/range check failed]
           fVar7 = (float)(**(code **)(*plVar3 + 0x418))(plVar3,*(uint64 *)(*plVar3 + 0x420));
           HeroData.SetSkeletonGraphicFaceSlot(lVar4,uVar2,6,(int)fVar7,0);
@@ -7291,7 +7240,7 @@ public class HeroDetailController
           if (lVar4.summonLv < 7) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          if (iVar1 != *(int *)(lVar4.isSummon + 56)) goto LAB_180eb1fe6;
+          if (iVar1 != *(int *)(lVar4.isSummon + 56)) goto LAB_180e0ccb3;
           iVar1 = this.tempOtherID;
           if (((this.nowShowHero == null) ||
               (lVar4 = this.nowShowHero.faceData) == null) ||
@@ -7299,7 +7248,7 @@ public class HeroDetailController
           if (lVar4.summonLv < 8) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          if (iVar1 != *(int *)(lVar4.isSummon + 60)) goto LAB_180eb1fe6;
+          if (iVar1 != *(int *)(lVar4.isSummon + 60)) goto LAB_180e0ccb3;
           if (this.heroDetailPanel == null) throw; // [null/range check failed]
           lVar4 = GameObject.get_transform(this.heroDetailPanel,0);
           if (lVar4 == null) throw; // [null/range check failed]
@@ -7307,12 +7256,12 @@ public class HeroDetailController
           if (lVar4 == null) throw; // [null/range check failed]
           lVar4 = Transform.Find(lVar4,"SureButton",0);
           if (lVar4 == null) throw; // [null/range check failed]
-          lVar4 = Component.GetComponent(lVar4,DAT_181d6af40);
+          lVar4 = Component.GetComponent(lVar4,DAT_181d93760);
           if (lVar4 == null) throw; // [null/range check failed]
           uVar2 = 0;
         }
         else {
-        LAB_180eb1fe6:
+        LAB_180e0ccb3:
           if (this.heroDetailPanel == null) throw; // [null/range check failed]
           lVar4 = GameObject.get_transform(this.heroDetailPanel,0);
           if (lVar4 == null) throw; // [null/range check failed]
@@ -7320,12 +7269,12 @@ public class HeroDetailController
           if (lVar4 == null) throw; // [null/range check failed]
           lVar4 = Transform.Find(lVar4,"SureButton",0);
           if (lVar4 == null) throw; // [null/range check failed]
-          lVar4 = Component.GetComponent(lVar4,DAT_181d6af40);
+          lVar4 = Component.GetComponent(lVar4,DAT_181d93760);
           if (lVar4 == null) throw; // [null/range check failed]
           uVar2 = 1;
         }
         Selectable.set_interactable(lVar4,uVar2,0);
-        lVar4 = GameController.lockObj;
+        lVar4 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
         if (lVar4 != null) {
           uVar2 = lVar4.salary;
           NGUITools.PlaySound(uVar2,0x3e4ccccd,0);
@@ -7333,11 +7282,11 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x600175D
-    // RVA   : 0xEC4C60   Offset: 0xEC3460   Length: 0x3A2
+    // Token : 0x60017A1
+    // RVA   : 0xE1FE40   Offset: 0xE1F240   Length: 0x3A2
     public void SureChangeNowShowHeroCloth()
     {
-        var pStatics = *(int64*)(DAT_181d51d80 + 184);
+        var pStatics = *(int64*)(DAT_181d76ea8 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
@@ -7359,26 +7308,26 @@ public class HeroDetailController
           if (((this.nowShowHero == null) ||
               (lVar1 = this.nowShowHero.faceData) == null) ||
              (lVar1 = lVar1.isSummon) == null) throw; // [null/range check failed]
-          FUN_18181e970(lVar1,3,this.tempHairID,DAT_181d68370);
+          FUN_181833d40(lVar1,3,this.tempHairID,DAT_181d8fb18);
           if (((this.nowShowHero == null) ||
               (lVar1 = this.nowShowHero.faceData) == null) ||
              (lVar1 = lVar1.isSummon) == null) throw; // [null/range check failed]
-          FUN_18181e970(lVar1,6,this.tempHairID,DAT_181d68370);
+          FUN_181833d40(lVar1,6,this.tempHairID,DAT_181d8fb18);
         }
         if (this.tempBeardID != -99) {
           if (((this.nowShowHero == null) ||
               (lVar1 = this.nowShowHero.faceData) == null) ||
              (lVar1 = lVar1.isSummon) == null) throw; // [null/range check failed]
-          FUN_18181e970(lVar1,7,this.tempBeardID,DAT_181d68370);
+          FUN_181833d40(lVar1,7,this.tempBeardID,DAT_181d8fb18);
         }
         if (this.tempOtherID != -99) {
           if (((this.nowShowHero == null) ||
               (lVar1 = this.nowShowHero.faceData) == null) ||
              (lVar1 = lVar1.isSummon) == null) throw; // [null/range check failed]
-          FUN_18181e970(lVar1,8,this.tempOtherID,DAT_181d68370);
+          FUN_181833d40(lVar1,8,this.tempOtherID,DAT_181d8fb18);
         }
         lVar1 = this.nowShowHero;
-        lVar2 = GameController.difficultyExtraPoint;
+        lVar2 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 8);
         if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 16)) != null) {
           iVar5 = PlayerPrefDictionary.GetInt(lVar2,"TestMode",0);
           uVar7 = 30;
@@ -7391,13 +7340,13 @@ public class HeroDetailController
             HeroDetailController.SetClothList(this,0,0);
             plVar6 = (int64 *)Resources.Load("Sound/SoundEffect/Armor",0);
             plVar8 = (int64 *)0;
-            if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181d8a228)) {
+            if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf348)) {
               plVar8 = plVar6;
             }
             NGUITools.PlaySound(plVar8,0);
             if (this.nowShowHero != null) {
               if (this.nowShowHero.heroID == null) {
-                uVar3 = **(uint64 **)(DAT_181d51d80 + 184);
+                uVar3 = **(uint64 **)(DAT_181d76ea8 + 184);
                 cVar4 = Object.op_Inequality(uVar3,0,0);
                 if (cVar4) {
                   if (*pStatics == 0) throw; // [null/range check failed]
@@ -7410,8 +7359,8 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x600175E
-    // RVA   : 0xEB1770   Offset: 0xEAFF70   Length: 0xBE
+    // Token : 0x60017A2
+    // RVA   : 0xE0C410   Offset: 0xE0B810   Length: 0xBE
     public void EquipLockButtonClicked()
     {
         long lVar1;
@@ -7424,7 +7373,7 @@ public class HeroDetailController
             if (lVar2 != null) {
               lVar2 = Transform.Find(lVar2,"EquipLock",0);
               if (lVar2 != null) {
-                lVar2 = Component.GetComponent(lVar2,DAT_181d6da40);
+                lVar2 = Component.GetComponent(lVar2,DAT_181d962e0);
                 if ((lVar2 != null) && (lVar1 != null)) {
                   lVar1.equipLock = *(uint8 *)(lVar2 + 0x118);
                   return;
@@ -7435,8 +7384,8 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x600175F
-    // RVA   : 0xEC4810   Offset: 0xEC3010   Length: 0xBE
+    // Token : 0x60017A3
+    // RVA   : 0xE1F9F0   Offset: 0xE1EDF0   Length: 0xBE
     public void SkillLockButtonClicked()
     {
         long lVar1;
@@ -7449,7 +7398,7 @@ public class HeroDetailController
             if (lVar2 != null) {
               lVar2 = Transform.Find(lVar2,"SkillLock",0);
               if (lVar2 != null) {
-                lVar2 = Component.GetComponent(lVar2,DAT_181d6da40);
+                lVar2 = Component.GetComponent(lVar2,DAT_181d962e0);
                 if ((lVar2 != null) && (lVar1 != null)) {
                   lVar1.skillLock = *(uint8 *)(lVar2 + 0x118);
                   return;
@@ -7460,8 +7409,8 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001760
-    // RVA   : 0xEC3B60   Offset: 0xEC2360   Length: 0x153
+    // Token : 0x60017A4
+    // RVA   : 0xE1ED40   Offset: 0xE1E140   Length: 0x153
     public void SetNameButtonClicked()
     {
         bool cVar1;
@@ -7485,7 +7434,7 @@ public class HeroDetailController
                         GameObject.SetActive(lVar2,!cVar1,0);
                         plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/PaperQuick",0);
                         plVar5 = (int64 *)0;
-                        if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181d8a228)) {
+                        if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
                           plVar5 = plVar4;
                         }
                         NGUITools.PlaySound(plVar5,0);
@@ -7500,8 +7449,8 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001761
-    // RVA   : 0xEC3CC0   Offset: 0xEC24C0   Length: 0x351
+    // Token : 0x60017A5
+    // RVA   : 0xE1EEA0   Offset: 0xE1E2A0   Length: 0x351
     public void SetNameEndEdit()
     {
         long lVar1;
@@ -7509,18 +7458,18 @@ public class HeroDetailController
         ulong uVar5;
         ushort uVar6;
         ushort uVar7;
-        if (PlotController._instance == 1) {
+        if (**(int **)(DAT_181d73d40 + 184) == 1) {
           lVar1 = new c.DisplayClass9_0(0);
           if (this.heroDetailPanel != null) {
             lVar2 = GameObject.get_transform(this.heroDetailPanel,0);
             if (lVar2 != null) {
               lVar2 = Transform.Find(lVar2,"SetNameInput",0);
               if (lVar2 != null) {
-                lVar2 = Component.GetComponent(lVar2,DAT_181d6bcc0);
+                lVar2 = Component.GetComponent(lVar2,DAT_181d944e0);
                 if ((lVar2 != null) && (lVar1 != null)) {
                   *(uint64 *)(lVar1 + 16) = *(uint64 *)(lVar2 + 0x170);
                   *(uint8 *)(lVar1 + 24) =
-                       *(uint8 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 128);
+                       *(uint8 *)(*(int64 *)(DAT_181d73d40 + 184) + 128);
                   plVar3 = (int64 *)rail_api.RailFactory(0);
                   if (plVar3 != (int64 *)0) {
                     lVar2 = *plVar3;
@@ -7529,18 +7478,18 @@ public class HeroDetailController
                       uVar6 = uVar7;
                       do {
                         if (*(int64 *)(*(int64 *)(lVar2 + 176) + (uint64)uVar6 * 16) ==
-                            DAT_181d56638) {
+                            DAT_181d7b780) {
                           puVar4 = (uint64 *)
                                    ((int64)
                                     *(int *)(*(int64 *)(lVar2 + 176) + 8 + (uint64)uVar6 * 16) *
                                     16 + 0x248 + lVar2);
-                          goto LAB_180ec3ebf;
+                          goto LAB_180e1f09f;
                         }
                         uVar6 = uVar6 + 1;
                       } while (uVar6 < *(uint16 *)(lVar2 + 0x12a));
                     }
-                    puVar4 = (uint64 *)FUN_1800914f0(plVar3,DAT_181d56638,17);
-        LAB_180ec3ebf:
+                    puVar4 = (uint64 *)FUN_1800914f0(plVar3,DAT_181d7b780,17);
+        LAB_180e1f09f:
                     plVar3 = (int64 *)(*(code *)*puVar4)(plVar3,puVar4[1]);
                     uVar5 = "";
                     if (plVar3 != (int64 *)0) {
@@ -7548,20 +7497,20 @@ public class HeroDetailController
                       if (*(uint16 *)(lVar2 + 0x12a) != 0) {
                         do {
                           if (*(int64 *)(*(int64 *)(lVar2 + 176) + (uint64)uVar7 * 16) ==
-                              DAT_181d57ca8) {
+                              DAT_181d7cdd8) {
                             puVar4 = (uint64 *)
                                      ((int64)
                                       *(int *)(*(int64 *)(lVar2 + 176) + 8 + (uint64)uVar7 * 16)
                                       * 16 + 0x1f8 + lVar2);
-                            goto LAB_180ec3f27;
+                            goto LAB_180e1f107;
                           }
                           uVar7 = uVar7 + 1;
                         } while (uVar7 < *(uint16 *)(lVar2 + 0x12a));
                       }
-                      puVar4 = (uint64 *)FUN_1800914f0(plVar3,DAT_181d57ca8,12);
-        LAB_180ec3f27:
+                      puVar4 = (uint64 *)FUN_1800914f0(plVar3,DAT_181d7cdd8,12);
+        LAB_180e1f107:
                       (*(code *)*puVar4)(plVar3,lVar1,uVar5,puVar4[1]);
-                      goto LAB_180ec3fee;
+                      goto LAB_180e1f1ce;
                     }
                   }
                 }
@@ -7576,12 +7525,12 @@ public class HeroDetailController
             if (lVar2 != null) {
               lVar2 = Transform.Find(lVar2,"SetNameInput",0);
               if (lVar2 != null) {
-                lVar2 = Component.GetComponent(lVar2,DAT_181d6bcc0);
+                lVar2 = Component.GetComponent(lVar2,DAT_181d944e0);
                 if ((lVar2 != null) && (lVar1 != null)) {
                   uVar5 = CISFilterWordsSDK.FilterReplaceWithChar
                                     (lVar1,*(uint64 *)(lVar2 + 0x170),42,0);
                   HeroDetailController.SetNowShowHeroSettingName(this,uVar5,0);
-        LAB_180ec3fee:
+        LAB_180e1f1ce:
                   HeroDetailController.HideNameInput(this,0);
                   return;
                 }
@@ -7591,8 +7540,8 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001762
-    // RVA   : 0xEC4020   Offset: 0xEC2820   Length: 0x108
+    // Token : 0x60017A6
+    // RVA   : 0xE1F200   Offset: 0xE1E600   Length: 0x108
     public void SetNowShowHeroSettingName(string targetName)
     {
         bool cVar1;
@@ -7608,7 +7557,7 @@ public class HeroDetailController
                 HeroData.set_HeroIconDirty(this.nowShowHero,1,0);
                 plVar2 = (int64 *)Resources.Load("Sound/SoundEffect/PencilWriting",0);
                 plVar4 = (int64 *)0;
-                if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181d8a228)) {
+                if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf348)) {
                   plVar4 = plVar2;
                 }
                 NGUITools.PlaySound(plVar4,0);
@@ -7621,8 +7570,8 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001763
-    // RVA   : 0xEB9320   Offset: 0xEB7B20   Length: 0xE9
+    // Token : 0x60017A7
+    // RVA   : 0xE14370   Offset: 0xE13770   Length: 0xE9
     public void HideNameInput()
     {
         long lVar1;
@@ -7639,7 +7588,7 @@ public class HeroDetailController
                   if (lVar1 != null) {
                     lVar1 = Transform.Find(lVar1,"SetNameInput",0);
                     if (lVar1 != null) {
-                      lVar1 = Component.GetComponent(lVar1,DAT_181d6bcc0);
+                      lVar1 = Component.GetComponent(lVar1,DAT_181d944e0);
                       if (lVar1 != null) {
                         InputField.set_text(lVar1,"",0);
                         return;
@@ -7653,8 +7602,8 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001764
-    // RVA   : 0xEBA6C0   Offset: 0xEB8EC0   Length: 0x9A
+    // Token : 0x60017A8
+    // RVA   : 0xE156E0   Offset: 0xE14AE0   Length: 0x9A
     public void OnSetHeroNameFliterResult(RAILEventID id, EventBase data)
     {
         void HeroDetailController.OnSetHeroNameFliterResult
@@ -7668,25 +7617,25 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001765
-    // RVA   : 0xEBA760   Offset: 0xEB8F60   Length: 0x3E5
+    // Token : 0x60017A9
+    // RVA   : 0xE15780   Offset: 0xE14B80   Length: 0x3E5
     public void RecruitUnlockButtonClicked()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
         ulong uVar4;
         uint[] local_res18 = new uint[4];
-        if ((GameController._instance != null) &&
-           (lVar2 = GameController._instance.worldData) != null)
-        {
+        if ((*pStatics != 0) &&
+           (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
           lVar2 = WorldData.Player(lVar2,0);
           if (lVar2 != null) {
             lVar2 = HeroData.GetForce(lVar2,0,0);
             if (lVar2 != null) {
-              if ((GameController._instance == null) ||
-                 (lVar2 = GameController._instance.worldData,
-                 lVar2 == null)) throw; // [null/range check failed]
+              if ((*pStatics == 0) ||
+                 (lVar2 = *(int64 *)(*pStatics + 32)) == null)
+              throw; // [null/range check failed]
               lVar2 = WorldData.Player(lVar2,0);
               if (lVar2 == null) throw; // [null/range check failed]
               lVar2 = HeroData.GetForce(lVar2,0,0);
@@ -7695,10 +7644,10 @@ public class HeroDetailController
               if (lVar2 == null) throw; // [null/range check failed]
               cVar1 = ForceData.HaveResource(lVar2,5);
               if (cVar1) {
-                lVar2 = **(int64 **)(DAT_181d834f0 + 184);
+                lVar2 = **(int64 **)(DAT_181da8710 + 184);
                 if (this.nowShowHero != null) {
                   local_res18[0] = HeroData.GetRecruitUnlockCost(this.nowShowHero,0);
-                  uVar3 = il2cpp_value_box(DAT_181d5b2f8,local_res18);
+                  uVar3 = il2cpp_value_box(DAT_181d80418,local_res18);
                   if (this.nowShowHero != null) {
                     uVar4 = HeroData.GetHeroName(this.nowShowHero,0,0);
                     uVar3 = String.Format("确认要消耗{0}点门派威望\n解锁{1}的招募吗？",uVar3,uVar4,0);
@@ -7713,12 +7662,11 @@ public class HeroDetailController
                 FUN_1800d6620();
               }
             }
-            if (GameController._instance != null) {
-              GameController.ShowTextOnMouse
-                        (GameController._instance,"门派威望不足！",0);
+            if (*pStatics != 0) {
+              GameController.ShowTextOnMouse(*pStatics,"门派威望不足！",0);
               plVar5 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
               plVar6 = (int64 *)0;
-              if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181d8a228)) {
+              if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf348)) {
                 plVar6 = plVar5;
               }
               NGUITools.PlaySound(plVar6,0);
@@ -7728,10 +7676,11 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001766
-    // RVA   : 0xEC5010   Offset: 0xEC3810   Length: 0x418
+    // Token : 0x60017AA
+    // RVA   : 0xE201F0   Offset: 0xE1F5F0   Length: 0x418
     public void SureUnlockRecruit()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
@@ -7741,9 +7690,8 @@ public class HeroDetailController
         int[] local_38 = new int[4];
         ulong local_28;
         ulong uStack_20;
-        if ((GameController._instance != null) &&
-           (lVar2 = GameController._instance.worldData) != null)
-        {
+        if ((*pStatics != 0) &&
+           (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
           lVar2 = WorldData.Player(lVar2,0);
           if (lVar2 != null) {
             lVar2 = HeroData.GetForce(lVar2,0,0);
@@ -7751,21 +7699,20 @@ public class HeroDetailController
               HeroData.GetRecruitUnlockCost(this.nowShowHero,0);
               if (lVar2 != null) {
                 ForceData.CostResource(lVar2,5);
-                if ((GameController._instance != null) &&
-                   (lVar2 = GameController._instance.worldData,
-                   lVar2 != null)) {
-                  lVar2 = lVar2.PlotEventLog;
+                if ((*pStatics != 0) &&
+                   (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+                  lVar2 = *(int64 *)(lVar2 + 232);
                   if (this.nowShowHero != null) {
                     local_res18[0] = this.nowShowHero.heroForceLv;
-                    uVar3 = il2cpp_value_box(DAT_181d5b2f8,local_res18);
+                    uVar3 = il2cpp_value_box(DAT_181d80418,local_res18);
                     uVar3 = String.Format("RecruitUnlockNumLv{0}",uVar3,0);
-                    if ((GameController._instance != null) &&
-                       (lVar1 = GameController._instance.worldData,
-                       lVar1 != null)) {
-                      lVar1 = lVar1.PlotEventLog;
+                    if ((*pStatics != 0) &&
+                       (lVar1 = *(int64 *)(*pStatics + 32)) != null)
+                    {
+                      lVar1 = *(int64 *)(lVar1 + 232);
                       if (this.nowShowHero != null) {
                         local_res20[0] = this.nowShowHero.heroForceLv;
-                        uVar4 = il2cpp_value_box(DAT_181d5b2f8,local_res20);
+                        uVar4 = il2cpp_value_box(DAT_181d80418,local_res20);
                         uVar4 = String.Format("RecruitUnlockNumLv{0}",uVar4,0);
                         if (lVar1 != null) {
                           local_38[0] = PlotEventLogData.GetInt(lVar1,uVar4,0);
@@ -7777,7 +7724,7 @@ public class HeroDetailController
                               this.nowShowHero.recruitAble = 1;
                               if (this.nowShowHero != null) {
                                 this.nowShowHero.heroDetailDirty = 1;
-                                lVar2 = **(int64 **)(DAT_181d5a578 + 184);
+                                lVar2 = **(int64 **)(DAT_181d7f6a8 + 184);
                                 if (this.nowShowHero != null) {
                                   uVar3 = HeroData.HeroName(this.nowShowHero,0,0);
                                   uVar3 = String.Concat(uVar3,"可进行招募",0);
@@ -7804,15 +7751,15 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001767
-    // RVA   : 0xEB0580   Offset: 0xEAED80   Length: 0xEC
+    // Token : 0x60017AB
+    // RVA   : 0xE0B1F0   Offset: 0xE0A5F0   Length: 0xEC
     public void AllLeaveTeamButtonClicked()
     {
         long lVar1;
         ulong uVar2;
         ulong uVar3;
-        lVar1 = **(int64 **)(DAT_181d834f0 + 184);
-        uVar2 = FUN_180004500(DAT_181d63120);
+        lVar1 = **(int64 **)(DAT_181da8710 + 184);
+        uVar2 = FUN_180004500(DAT_181d8b140);
         uVar2 = String.Format("确认要解散全体队友吗？",uVar2,0);
         uVar3 = Component.get_gameObject(this,0);
         if (lVar1 != null) {
@@ -7821,31 +7768,31 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001768
-    // RVA   : 0xEC4A30   Offset: 0xEC3230   Length: 0x229
+    // Token : 0x60017AC
+    // RVA   : 0xE1FC10   Offset: 0xE1F010   Length: 0x229
     public void SureAllLeaveTeam()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         bool cVar2;
         uint uVar3;
         long lVar4;
         long lVar5;
         int iVar6;
         bVar1 = false;
-        if ((((GameController._instance != null) &&
-             (lVar4 = GameController._instance.worldData) != null
-             ) && (lVar4 = WorldData.Player(lVar4,0)) != null) && (*(int64 *)(lVar4 + 0x2f8) != 0)
-           ) {
+        if ((((*pStatics != 0) &&
+             (lVar4 = *(int64 *)(*pStatics + 32)) != null) &&
+            (lVar4 = WorldData.Player(lVar4,0)) != null) && (*(int64 *)(lVar4 + 0x2f8) != 0)) {
           iVar6 = *(int *)(*(int64 *)(lVar4 + 0x2f8) + 24) + -1;
           if (-1 < iVar6) {
             do {
               lVar4 = FUN_18046c0a0(0);
               if (lVar4 == null) throw; // [null/range check failed]
-              lVar4 = lVar4.villageAreaID;
+              lVar4 = *(int64 *)(lVar4 + 32);
               lVar5 = FUN_18046c0a0(0);
               if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
                  ((lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0), lVar5 == null ||
                   (((*(int64 *)(lVar5 + 0x2f8) == 0 ||
-                    (uVar3 = FUN_1800d6750(*(int64 *)(lVar5 + 0x2f8),iVar6,DAT_181d68270), lVar4 == null))
+                    (uVar3 = FUN_1800d6760(*(int64 *)(lVar5 + 0x2f8),iVar6,DAT_181d8fa18), lVar4 == null))
                    || (lVar4 = WorldData.GetHero(lVar4,uVar3,0)) == null))))) throw; // [null/range check failed]
               cVar2 = HeroData.MissionKeepInTeam(lVar4);
               if (!cVar2) {
@@ -7864,10 +7811,12 @@ public class HeroDetailController
         }
     }
 
-    // Token : 0x6001769
-    // RVA   : 0xEC5B80   Offset: 0xEC4380   Length: 0x47
+    // Token : 0x60017AD
+    // RVA   : 0xE20D70   Offset: 0xE20170   Length: 0x47
     public void /*ctor*/()
     {
+        void FUN_180e20d70(int64 this)
+        {
         this.originSkinID = 999999;
         this.originSkinLV = 999999;
         this.tempSkinID = 0xffffff9d;
@@ -7878,8 +7827,8 @@ public class HeroDetailController
         FUN_18044ef50(this,0);
     }
 
-    // Token : 0x600176A
-    // RVA   : 0xEC5550   Offset: 0xEC3D50   Length: 0x4B
+    // Token : 0x60017AE
+    // RVA   : 0xE20740   Offset: 0xE1FB40   Length: 0x4B
     private void <UnshowHeroDetail>b__26_0()
     {
         this.mainShowHero = 0;

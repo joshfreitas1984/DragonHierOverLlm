@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : DropdownSample
-// Token : 0x20003D5
+// Token : 0x20003DC
 // ============================================================
 
 public class DropdownSample
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001DDE
+    // Token: 0x4001EE8
     private TextMeshProUGUI text;
 
-    // Token: 0x4001DDF
+    // Token: 0x4001EE9
     private TMP_Dropdown dropdownWithoutPlaceholder;
 
-    // Token: 0x4001DE0
+    // Token: 0x4001EEA
     private TMP_Dropdown dropdownWithPlaceholder;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60023D1
-    // RVA   : 0x930DA0   Offset: 0x92F5A0   Length: 0x108
+    // Token : 0x6002454
+    // RVA   : 0x940760   Offset: 0x93FB60   Length: 0x108
     public void OnButtonClick()
     {
         ulong uVar2;
@@ -42,8 +42,8 @@ public class DropdownSample
         }
     }
 
-    // Token : 0x60023D2
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x6002455
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

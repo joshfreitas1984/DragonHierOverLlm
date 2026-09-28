@@ -1,52 +1,52 @@
 // ============================================================
 // Type  : SpePoisonData
-// Token : 0x20001D7
+// Token : 0x20001DD
 // ============================================================
 
 public class SpePoisonData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000C19
+    // Token: 0x4000CA6
     public List<ItemData> material;
 
-    // Token: 0x4000C1A
+    // Token: 0x4000CA7
     public int leftTime;
 
-    // Token: 0x4000C1B
+    // Token: 0x4000CA8
     public bool finished;
 
-    // Token: 0x4000C1C
+    // Token: 0x4000CA9
     public ItemData result;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000E9B
-    // RVA   : 0xC690C0   Offset: 0xC678C0   Length: 0xBF
+    // Token : 0x6000ED0
+    // RVA   : 0xC585C0   Offset: 0xC579C0   Length: 0xBF
     public void /*ctor*/()
     {
         long lVar1;
         ZhSegment.Initialize(this,0);
-        lVar1 = il2cpp_internal(DAT_181d6f430);
-        FUN_180f58a90(lVar1,DAT_181d691f0);
+        lVar1 = il2cpp_internal(DAT_181d940d0);
+        FUN_18132faf0(lVar1,DAT_181d90998);
         if (lVar1 != null) {
-          FUN_181827900(lVar1,0,DAT_181d692f0);
-          FUN_181827900(lVar1,0,DAT_181d692f0);
-          FUN_181827900(lVar1,0,DAT_181d692f0);
+          FUN_18181e0a0(lVar1,0,DAT_181d90a98);
+          FUN_18181e0a0(lVar1,0,DAT_181d90a98);
+          FUN_18181e0a0(lVar1,0,DAT_181d90a98);
           this.material = lVar1;
           return;
         }
     }
 
-    // Token : 0x6000E9C
-    // RVA   : 0xC68FF0   Offset: 0xC677F0   Length: 0xCB
+    // Token : 0x6000ED1
+    // RVA   : 0xC584F0   Offset: 0xC578F0   Length: 0xCB
     public void Reset()
     {
         long lVar1;
-        lVar1 = il2cpp_internal(DAT_181d6f430);
-        FUN_180f58a90(lVar1,DAT_181d691f0);
+        lVar1 = il2cpp_internal(DAT_181d940d0);
+        FUN_18132faf0(lVar1,DAT_181d90998);
         if (lVar1 != null) {
-          FUN_181827900(lVar1,0,DAT_181d692f0);
-          FUN_181827900(lVar1,0,DAT_181d692f0);
-          FUN_181827900(lVar1,0,DAT_181d692f0);
+          FUN_18181e0a0(lVar1,0,DAT_181d90a98);
+          FUN_18181e0a0(lVar1,0,DAT_181d90a98);
+          FUN_18181e0a0(lVar1,0,DAT_181d90a98);
           this.material = lVar1;
           this.leftTime = 0;
           this.finished = 0;
@@ -55,8 +55,8 @@ public class SpePoisonData
         }
     }
 
-    // Token : 0x6000E9D
-    // RVA   : 0xC68EE0   Offset: 0xC676E0   Length: 0x10E
+    // Token : 0x6000ED2
+    // RVA   : 0xC583E0   Offset: 0xC577E0   Length: 0x10E
     public float GetTotalScore(int spePoisonType)
     {
         long lVar1;
@@ -84,7 +84,7 @@ public class SpePoisonData
             }
             if (*(int64 *)(lVar2 + lVar1._items) != 0) {
               if ((this.material == null) ||
-                 (lVar1 = FUN_180002f80(this.material,uVar3,DAT_181d69770)) == null)
+                 (lVar1 = FUN_180002f80(this.material,uVar3,DAT_181d90f18)) == null)
               break;
               fVar4 = fVar4 + (float)*(int *)(lVar1 + 56);
             }
@@ -95,47 +95,15 @@ public class SpePoisonData
         }
     }
 
-    // Token : 0x6000E9E
-    // RVA   : 0xC68DA0   Offset: 0xC675A0   Length: 0x130
+    // Token : 0x6000ED3
+    // RVA   : 0xC583A0   Offset: 0xC577A0   Length: 0x3B
     public float GetScoreLv(int spePoisonType)
     {
-        long lVar1;
+        float fVar1;
         uint uVar2;
-        long lVar3;
-        ulong uVar4;
-        float fVar5;
-        float fVar6;
-        lVar1 = this.material;
-        uVar2 = 0;
-        fVar6 = 0.0;
-        if (lVar1 != null) {
-          lVar3 = 32;
-          do {
-            if (lVar1.Count <= (int)uVar2) {
-              if (spePoisonType == null) {
-                fVar5 = 0.5;
-              }
-              else {
-                fVar5 = 1.0;
-              }
-              uVar4 = Mathf.Max(uVar2,fVar5 * fVar6 * 0.05,0);
-              Mathf.Log(uVar4,0x40000000,0);
-              return;
-            }
-            if (lVar1 == null) break;
-            if (lVar1.Count <= uVar2) {
-              ThrowHelper.ThrowArgumentOutOfRangeException(0);
-            }
-            if (*(int64 *)(lVar3 + lVar1._items) != 0) {
-              if ((this.material == null) ||
-                 (lVar1 = FUN_180002f80(this.material,uVar2)) == null) break;
-              fVar6 = fVar6 + (float)*(int *)(lVar1 + 56);
-            }
-            lVar1 = this.material;
-            uVar2 = uVar2 + 1;
-            lVar3 = lVar3 + 8;
-          } while (lVar1 != null);
-        }
+        fVar1 = (float)SpePoisonData.GetTotalScore(this,spePoisonType,0);
+        uVar2 = Mathf.Max(0x3f800000,fVar1 * 0.05,0);
+        Mathf.Log(uVar2,0x40000000,0);
     }
 
 }

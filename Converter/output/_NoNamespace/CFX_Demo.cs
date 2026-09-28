@@ -1,50 +1,50 @@
 // ============================================================
 // Type  : CFX_Demo
-// Token : 0x20003B3
+// Token : 0x20003BA
 // ============================================================
 
 public class CFX_Demo
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001D19
+    // Token: 0x4001E23
     public bool orderedSpawns;
 
-    // Token: 0x4001D1A
+    // Token: 0x4001E24
     public float step;
 
-    // Token: 0x4001D1B
+    // Token: 0x4001E25
     public float range;
 
-    // Token: 0x4001D1C
+    // Token: 0x4001E26
     private float order;
 
-    // Token: 0x4001D1D
+    // Token: 0x4001E27
     public Material groundMat;
 
-    // Token: 0x4001D1E
+    // Token: 0x4001E28
     public Material waterMat;
 
-    // Token: 0x4001D1F
+    // Token: 0x4001E29
     public GameObject[] ParticleExamples;
 
-    // Token: 0x4001D20
+    // Token: 0x4001E2A
     private Dictionary<string, float> ParticlesYOffsetD;
 
-    // Token: 0x4001D21
+    // Token: 0x4001E2B
     private int exampleIndex;
 
-    // Token: 0x4001D22
+    // Token: 0x4001E2C
     private string randomSpawnsDelay;
 
-    // Token: 0x4001D23
+    // Token: 0x4001E2D
     private bool randomSpawns;
 
-    // Token: 0x4001D24
+    // Token: 0x4001E2E
     private bool slowMo;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002348
-    // RVA   : 0xBD42B0   Offset: 0xBD2AB0   Length: 0x1D0
+    // Token : 0x60023CB
+    // RVA   : 0xB7EB40   Offset: 0xB7DF40   Length: 0x1D0
     private void OnMouseDown()
     {
         bool cVar1;
@@ -74,7 +74,7 @@ public class CFX_Demo
         local_28 = 0;
         uStack_20 = 0;
         local_10 = 0;
-        lVar2 = Component.GetComponent(this,DAT_181d6b340);
+        lVar2 = Component.GetComponent(this,DAT_181d93b60);
         lVar3 = Camera.get_main(0);
         puVar4 = (uint64 *)Input.get_mousePosition(local_78,0);
         if (lVar3 != null) {
@@ -117,8 +117,8 @@ public class CFX_Demo
         }
     }
 
-    // Token : 0x6002349
-    // RVA   : 0xBD5340   Offset: 0xBD3B40   Length: 0x309
+    // Token : 0x60023CC
+    // RVA   : 0xB7FBD0   Offset: 0xB7EFD0   Length: 0x309
     private GameObject spawnParticle()
     {
         uint uVar1;
@@ -155,7 +155,7 @@ public class CFX_Demo
             FUN_1800d65f0(uVar6,0);
           }
           uVar6 = *(uint64 *)(lVar4 + 32 + (int64)(int)this.exampleIndex * 8);
-          lVar4 = Object.Instantiate(uVar6,DAT_181d69cf8);
+          lVar4 = Object.Instantiate(uVar6,DAT_181d92a18);
           if (lVar4 != null) {
             GameObject.SetActive(lVar4,1,0);
             iVar7 = 0;
@@ -166,13 +166,13 @@ public class CFX_Demo
               if (iVar3 <= iVar7) {
                 uVar8 = 0;
                 if (this.ParticlesYOffsetD != null) {
-                  FUN_1808abcf0(&local_58,this.ParticlesYOffsetD,DAT_181d4f358);
+                  FUN_1808abff0(&local_58,this.ParticlesYOffsetD,DAT_181d75588);
                   local_88 = local_58;
                   uStack_80 = uStack_50;
                   local_78 = local_48;
                   uStack_70 = uStack_40;
                   local_68 = local_38;
-                  goto LAB_180bd5510;
+                  goto LAB_180b7fda0;
                 }
                 break;
               }
@@ -200,16 +200,16 @@ public class CFX_Demo
           cVar2 = String.StartsWith(lVar5,local_98,0);
           uVar1 = uStack_90;
           if (cVar2) break;
-        LAB_180bd5510:
-          cVar2 = FUN_1811d7600(&local_88,DAT_181d7aca8);
+        LAB_180b7fda0:
+          cVar2 = FUN_1811c4060(&local_88,DAT_181da18b8);
           if (!cVar2) {
-            ZhSegment.Initialize(&local_88,DAT_181d7ac28);
-            goto LAB_180bd55be;
+            ZhSegment.Initialize(&local_88,DAT_181da1840);
+            goto LAB_180b7fe4e;
           }
         }
-        ZhSegment.Initialize(&local_88,DAT_181d7ac28);
+        ZhSegment.Initialize(&local_88,DAT_181da1840);
         uVar8 = uVar1;
-        LAB_180bd55be:
+        LAB_180b7fe4e:
         lVar5 = GameObject.get_transform(lVar4,0);
         if (lVar5 != null) {
           local_98 = (uint64)uVar8 << 32;
@@ -219,8 +219,8 @@ public class CFX_Demo
         }
     }
 
-    // Token : 0x600234A
-    // RVA   : 0xBD3950   Offset: 0xBD2150   Length: 0x95F
+    // Token : 0x60023CD
+    // RVA   : 0xB7E1E0   Offset: 0xB7D5E0   Length: 0x95F
     private void OnGUI()
     {
         bool cVar1;
@@ -237,15 +237,15 @@ public class CFX_Demo
         Screen.get_width(0);
         local_38 = 0;
         uStack_30 = 0;
-        FUN_1809981e0(&local_38,0x40a00000,0x41a00000);
+        FUN_1809dc910(&local_38,0x40a00000,0x41a00000);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
         uStack_1c = uStack_30._4_4_;
         GUILayout.BeginArea(&local_28,0);
-        uVar2 = FUN_180228420(DAT_181d62f20);
+        uVar2 = FUN_180228420(DAT_181d8af40);
         GUILayout.BeginHorizontal(uVar2,0);
-        plVar3 = (int64 *)FUN_1800d60b0(DAT_181d7da00,1);
+        plVar3 = (int64 *)FUN_1800d60b0(DAT_181da2920,1);
         lVar4 = GUILayout.Width(0x42480000,0);
         if (plVar3 != (int64 *)0) {
           if (lVar4 != null) {
@@ -264,7 +264,7 @@ public class CFX_Demo
           plVar3[4] = lVar4;
           il2cpp_internal(plVar3 + 4,lVar4);
           GUILayout.Label("Effect",plVar3,0);
-          plVar3 = (int64 *)FUN_1800d60b0(DAT_181d7da00,1);
+          plVar3 = (int64 *)FUN_1800d60b0(DAT_181da2920,1);
           lVar4 = GUILayout.Width(0x41a00000,0);
           if (plVar3 != (int64 *)0) {
             if (lVar4 != null) {
@@ -296,7 +296,7 @@ public class CFX_Demo
               lVar4 = *(int64 *)(lVar4 + 32 + (int64)(int)this.exampleIndex * 8);
               if (lVar4 != null) {
                 uVar2 = Object.get_name(lVar4,0);
-                plVar3 = (int64 *)FUN_1800d60b0(DAT_181d7da00,1);
+                plVar3 = (int64 *)FUN_1800d60b0(DAT_181da2920,1);
                 lVar4 = GUILayout.Width(0x433e0000,0);
                 if (plVar3 != (int64 *)0) {
                   if (lVar4 != null) {
@@ -315,7 +315,7 @@ public class CFX_Demo
                   plVar3[4] = lVar4;
                   il2cpp_internal(plVar3 + 4,lVar4);
                   GUILayout.Label(uVar2,plVar3,0);
-                  plVar3 = (int64 *)FUN_1800d60b0(DAT_181d7da00,1);
+                  plVar3 = (int64 *)FUN_1800d60b0(DAT_181da2920,1);
                   lVar4 = GUILayout.Width(0x41a00000,0);
                   if (plVar3 != (int64 *)0) {
                     if (lVar4 != null) {
@@ -337,13 +337,13 @@ public class CFX_Demo
                     if (cVar1) {
                       CFX_Demo.nextParticle(this,0);
                     }
-                    uVar2 = FUN_180228420(DAT_181d62f20);
+                    uVar2 = FUN_180228420(DAT_181d8af40);
                     GUILayout.Label("Click on the ground to spawn selected particles",uVar2,0);
                     uVar2 = "Rotate Camera";
-                    if (**(char **)(DAT_181d8fd40 + 184) != false) {
+                    if (**(char **)(DAT_181db4ee8 + 184) != false) {
                       uVar2 = "Pause Camera";
                     }
-                    plVar3 = (int64 *)FUN_1800d60b0(DAT_181d7da00,1);
+                    plVar3 = (int64 *)FUN_1800d60b0(DAT_181da2920,1);
                     lVar4 = GUILayout.Width(0x430c0000,0);
                     if (plVar3 != (int64 *)0) {
                       if (lVar4 != null) {
@@ -363,13 +363,13 @@ public class CFX_Demo
                       il2cpp_internal(plVar3 + 4,lVar4);
                       cVar1 = GUILayout.Button(uVar2,plVar3,0);
                       if (cVar1) {
-                        **(char **)(DAT_181d8fd40 + 184) = **(char **)(DAT_181d8fd40 + 184) == false;
+                        **(char **)(DAT_181db4ee8 + 184) = **(char **)(DAT_181db4ee8 + 184) == false;
                       }
                       uVar2 = "Start Random Spawns";
                       if (this.randomSpawns) {
                         uVar2 = "Stop Random Spawns";
                       }
-                      plVar3 = (int64 *)FUN_1800d60b0(DAT_181d7da00,1);
+                      plVar3 = (int64 *)FUN_1800d60b0(DAT_181da2920,1);
                       lVar4 = GUILayout.Width(0x430c0000,0);
                       if (plVar3 != (int64 *)0) {
                         if (lVar4 != null) {
@@ -399,7 +399,7 @@ public class CFX_Demo
                           }
                         }
                         uVar2 = this.randomSpawnsDelay;
-                        plVar3 = (int64 *)FUN_1800d60b0(DAT_181d7da00,1);
+                        plVar3 = (int64 *)FUN_1800d60b0(DAT_181da2920,1);
                         lVar4 = GUILayout.Width(0x42280000,0);
                         if (plVar3 != (int64 *)0) {
                           if (lVar4 != null) {
@@ -422,14 +422,14 @@ public class CFX_Demo
                           uVar2 = this.randomSpawnsDelay;
                           uVar2 = Regex.Replace(uVar2,"[^0-9.]","",0);
                           this.randomSpawnsDelay = uVar2;
-                          lVar4 = Component.GetComponent(this,DAT_181d6c7c0);
+                          lVar4 = Component.GetComponent(this,DAT_181d94fe0);
                           if (lVar4 != null) {
                             cVar1 = Renderer.get_enabled(lVar4,0);
                             uVar2 = "Show Ground";
                             if (cVar1) {
                               uVar2 = "Hide Ground";
                             }
-                            plVar3 = (int64 *)FUN_1800d60b0(DAT_181d7da00,1);
+                            plVar3 = (int64 *)FUN_1800d60b0(DAT_181da2920,1);
                             lVar4 = GUILayout.Width(0x42b40000,0);
                             if (plVar3 != (int64 *)0) {
                               if (lVar4 != null) {
@@ -449,18 +449,18 @@ public class CFX_Demo
                               il2cpp_internal(plVar3 + 4,lVar4);
                               cVar1 = GUILayout.Button(uVar2,plVar3,0);
                               if (cVar1) {
-                                lVar4 = Component.GetComponent(this,DAT_181d6c7c0);
-                                lVar5 = Component.GetComponent(this,DAT_181d6c7c0);
-                                if (lVar5 == null) goto LAB_180bd42aa;
+                                lVar4 = Component.GetComponent(this,DAT_181d94fe0);
+                                lVar5 = Component.GetComponent(this,DAT_181d94fe0);
+                                if (lVar5 == null) goto LAB_180b7eb3a;
                                 cVar1 = Renderer.get_enabled(lVar5,0);
-                                if (lVar4 == null) goto LAB_180bd42aa;
+                                if (lVar4 == null) goto LAB_180b7eb3a;
                                 Renderer.set_enabled(lVar4,!cVar1,0);
                               }
                               uVar2 = "Slow Motion";
                               if (this.slowMo) {
                                 uVar2 = "Normal Speed";
                               }
-                              plVar3 = (int64 *)FUN_1800d60b0(DAT_181d7da00,1);
+                              plVar3 = (int64 *)FUN_1800d60b0(DAT_181da2920,1);
                               lVar4 = GUILayout.Width(0x42c80000,0);
                               if (plVar3 != (int64 *)0) {
                                 if (lVar4 != null) {
@@ -503,15 +503,15 @@ public class CFX_Demo
                 }
               }
             }
-        LAB_180bd42aa:
+        LAB_180b7eb3a:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
         }
     }
 
-    // Token : 0x600234B
-    // RVA   : 0xBD48A0   Offset: 0xBD30A0   Length: 0x6C
+    // Token : 0x60023CE
+    // RVA   : 0xB7F130   Offset: 0xB7E530   Length: 0x6C
     private IEnumerator RandomSpawnsCoroutine()
     {
         long lVar1;
@@ -522,8 +522,8 @@ public class CFX_Demo
         }
     }
 
-    // Token : 0x600234C
-    // RVA   : 0xBD4AB0   Offset: 0xBD32B0   Length: 0x4B
+    // Token : 0x60023CF
+    // RVA   : 0xB7F340   Offset: 0xB7E740   Length: 0x4B
     private void Update()
     {
         bool cVar1;
@@ -539,8 +539,8 @@ public class CFX_Demo
         }
     }
 
-    // Token : 0x600234D
-    // RVA   : 0xBD5170   Offset: 0xBD3970   Length: 0x1C4
+    // Token : 0x60023D0
+    // RVA   : 0xB7FA00   Offset: 0xB7EE00   Length: 0x1C4
     private void prevParticle()
     {
         bool cVar1;
@@ -577,7 +577,7 @@ public class CFX_Demo
                 lVar3 = *(int64 *)(lVar3 + 32 + (int64)(int)this.exampleIndex * 8);
                 if (lVar3 == null) throw; // [null/range check failed]
                 uVar4 = Object.get_name(lVar3,0);
-                cVar1 = FUN_1816fd990(uVar4,"CFX_Ripple",0);
+                cVar1 = FUN_18171e540(uVar4,"CFX_Ripple",0);
                 if (!cVar1) {
                   lVar3 = this.ParticleExamples;
                   if (lVar3 == null) throw; // [null/range check failed]
@@ -589,20 +589,20 @@ public class CFX_Demo
                   lVar3 = *(int64 *)(lVar3 + 32 + (int64)(int)this.exampleIndex * 8);
                   if (lVar3 == null) throw; // [null/range check failed]
                   uVar4 = Object.get_name(lVar3,0);
-                  cVar1 = FUN_1816fd990(uVar4,"CFX_Fountain",0);
+                  cVar1 = FUN_18171e540(uVar4,"CFX_Fountain",0);
                   if (!cVar1) {
-                    lVar3 = Component.GetComponent(this,DAT_181d6c7c0);
+                    lVar3 = Component.GetComponent(this,DAT_181d94fe0);
                     if (lVar3 != null) {
-                      FUN_180d94fb0(lVar3,this.groundMat,0);
+                      FUN_180d9dad0(lVar3,this.groundMat,0);
                       return;
                     }
                     throw; // [null/range check failed]
                   }
                 }
               }
-              lVar3 = Component.GetComponent(this,DAT_181d6c7c0);
+              lVar3 = Component.GetComponent(this,DAT_181d94fe0);
               if (lVar3 != null) {
-                FUN_180d94fb0(lVar3,this.waterMat,0);
+                FUN_180d9dad0(lVar3,this.waterMat,0);
                 return;
               }
             }
@@ -610,8 +610,8 @@ public class CFX_Demo
         }
     }
 
-    // Token : 0x600234E
-    // RVA   : 0xBD4FB0   Offset: 0xBD37B0   Length: 0x1B6
+    // Token : 0x60023D1
+    // RVA   : 0xB7F840   Offset: 0xB7EC40   Length: 0x1B6
     private void nextParticle()
     {
         bool cVar1;
@@ -649,7 +649,7 @@ public class CFX_Demo
                 lVar3 = *(int64 *)(lVar3 + 32 + (int64)(int)this.exampleIndex * 8);
                 if (lVar3 == null) throw; // [null/range check failed]
                 uVar4 = Object.get_name(lVar3,0);
-                cVar1 = FUN_1816fd990(uVar4,"CFX_Ripple",0);
+                cVar1 = FUN_18171e540(uVar4,"CFX_Ripple",0);
                 if (!cVar1) {
                   lVar3 = this.ParticleExamples;
                   if (lVar3 == null) throw; // [null/range check failed]
@@ -661,20 +661,20 @@ public class CFX_Demo
                   lVar3 = *(int64 *)(lVar3 + 32 + (int64)(int)this.exampleIndex * 8);
                   if (lVar3 == null) throw; // [null/range check failed]
                   uVar4 = Object.get_name(lVar3,0);
-                  cVar1 = FUN_1816fd990(uVar4,"CFX_Fountain",0);
+                  cVar1 = FUN_18171e540(uVar4,"CFX_Fountain",0);
                   if (!cVar1) {
-                    lVar3 = Component.GetComponent(this,DAT_181d6c7c0);
+                    lVar3 = Component.GetComponent(this,DAT_181d94fe0);
                     if (lVar3 != null) {
-                      FUN_180d94fb0(lVar3,this.groundMat,0);
+                      FUN_180d9dad0(lVar3,this.groundMat,0);
                       return;
                     }
                     throw; // [null/range check failed]
                   }
                 }
               }
-              lVar3 = Component.GetComponent(this,DAT_181d6c7c0);
+              lVar3 = Component.GetComponent(this,DAT_181d94fe0);
               if (lVar3 != null) {
-                FUN_180d94fb0(lVar3,this.waterMat,0);
+                FUN_180d9dad0(lVar3,this.waterMat,0);
                 return;
               }
             }
@@ -682,8 +682,8 @@ public class CFX_Demo
         }
     }
 
-    // Token : 0x600234F
-    // RVA   : 0xBD4B00   Offset: 0xBD3300   Length: 0x4A6
+    // Token : 0x60023D2
+    // RVA   : 0xB7F390   Offset: 0xB7E790   Length: 0x4A6
     public void /*ctor*/()
     {
         long lVar1;
@@ -691,33 +691,33 @@ public class CFX_Demo
         this.step = 0x3f800000;
         this.range = 0x40a00000;
         this.order = 0xc0a00000;
-        lVar1 = il2cpp_internal(DAT_181d5e748);
-        FUN_1808ae540(lVar1,DAT_181d4f258);
+        lVar1 = il2cpp_internal(DAT_181d83268);
+        FUN_1808b1370(lVar1,DAT_181d75478);
         if (lVar1 != null) {
-          FUN_181772130(lVar1,"CFX_ElectricGround",0x3e19999a,DAT_181d4f2d8);
-          FUN_181772130(lVar1,"CFX_ElectricityBall",0x3f800000,DAT_181d4f2d8);
-          FUN_181772130(lVar1,"CFX_ElectricityBolt",0x3f800000,DAT_181d4f2d8);
-          FUN_181772130(lVar1,"CFX_Explosion",0x40000000,DAT_181d4f2d8);
-          FUN_181772130(lVar1,"CFX_SmallExplosion",0x3fc00000,DAT_181d4f2d8);
-          FUN_181772130(lVar1,"CFX_SmokeExplosion",0x40200000,DAT_181d4f2d8);
-          FUN_181772130(lVar1,"CFX_Flame",0x3f800000,DAT_181d4f2d8);
-          FUN_181772130(lVar1,"CFX_DoubleFlame",0x3f800000,DAT_181d4f2d8);
-          FUN_181772130(lVar1,"CFX_Hit",0x3f800000,DAT_181d4f2d8);
-          FUN_181772130(lVar1,"CFX_CircularLightWall",0x3d4ccccd,DAT_181d4f2d8);
-          FUN_181772130(lVar1,"CFX_LightWall",0x3d4ccccd,DAT_181d4f2d8);
-          FUN_181772130(lVar1,"CFX_Flash",0x40000000,DAT_181d4f2d8);
-          FUN_181772130(lVar1,"CFX_Poof",0x3fc00000,DAT_181d4f2d8);
-          FUN_181772130(lVar1,"CFX_Virus",0x3f800000,DAT_181d4f2d8);
-          FUN_181772130(lVar1,"CFX_SmokePuffs",0x40000000,DAT_181d4f2d8);
-          FUN_181772130(lVar1,"CFX_Slash",0x3f800000,DAT_181d4f2d8);
-          FUN_181772130(lVar1,"CFX_Splash",0x3d4ccccd,DAT_181d4f2d8);
-          FUN_181772130(lVar1,"CFX_Fountain",0x3d4ccccd,DAT_181d4f2d8);
-          FUN_181772130(lVar1,"CFX_Ripple",0x3d4ccccd,DAT_181d4f2d8);
-          FUN_181772130(lVar1,"CFX_Magic",0x40000000,DAT_181d4f2d8);
-          FUN_181772130(lVar1,"CFX_SoftStar",0x3f800000,DAT_181d4f2d8);
-          FUN_181772130(lVar1,"CFX_SpikyAura_Sphere",0x3f800000,DAT_181d4f2d8);
-          FUN_181772130(lVar1,"CFX_Firework",0x4019999a,DAT_181d4f2d8);
-          FUN_181772130(lVar1,"CFX_GroundA",0x3d4ccccd,DAT_181d4f2d8);
+          FUN_1817af4f0(lVar1,"CFX_ElectricGround",0x3e19999a,DAT_181d75500);
+          FUN_1817af4f0(lVar1,"CFX_ElectricityBall",0x3f800000,DAT_181d75500);
+          FUN_1817af4f0(lVar1,"CFX_ElectricityBolt",0x3f800000,DAT_181d75500);
+          FUN_1817af4f0(lVar1,"CFX_Explosion",0x40000000,DAT_181d75500);
+          FUN_1817af4f0(lVar1,"CFX_SmallExplosion",0x3fc00000,DAT_181d75500);
+          FUN_1817af4f0(lVar1,"CFX_SmokeExplosion",0x40200000,DAT_181d75500);
+          FUN_1817af4f0(lVar1,"CFX_Flame",0x3f800000,DAT_181d75500);
+          FUN_1817af4f0(lVar1,"CFX_DoubleFlame",0x3f800000,DAT_181d75500);
+          FUN_1817af4f0(lVar1,"CFX_Hit",0x3f800000,DAT_181d75500);
+          FUN_1817af4f0(lVar1,"CFX_CircularLightWall",0x3d4ccccd,DAT_181d75500);
+          FUN_1817af4f0(lVar1,"CFX_LightWall",0x3d4ccccd,DAT_181d75500);
+          FUN_1817af4f0(lVar1,"CFX_Flash",0x40000000,DAT_181d75500);
+          FUN_1817af4f0(lVar1,"CFX_Poof",0x3fc00000,DAT_181d75500);
+          FUN_1817af4f0(lVar1,"CFX_Virus",0x3f800000,DAT_181d75500);
+          FUN_1817af4f0(lVar1,"CFX_SmokePuffs",0x40000000,DAT_181d75500);
+          FUN_1817af4f0(lVar1,"CFX_Slash",0x3f800000,DAT_181d75500);
+          FUN_1817af4f0(lVar1,"CFX_Splash",0x3d4ccccd,DAT_181d75500);
+          FUN_1817af4f0(lVar1,"CFX_Fountain",0x3d4ccccd,DAT_181d75500);
+          FUN_1817af4f0(lVar1,"CFX_Ripple",0x3d4ccccd,DAT_181d75500);
+          FUN_1817af4f0(lVar1,"CFX_Magic",0x40000000,DAT_181d75500);
+          FUN_1817af4f0(lVar1,"CFX_SoftStar",0x3f800000,DAT_181d75500);
+          FUN_1817af4f0(lVar1,"CFX_SpikyAura_Sphere",0x3f800000,DAT_181d75500);
+          FUN_1817af4f0(lVar1,"CFX_Firework",0x4019999a,DAT_181d75500);
+          FUN_1817af4f0(lVar1,"CFX_GroundA",0x3d4ccccd,DAT_181d75500);
           this.ParticlesYOffsetD = lVar1;
           this.randomSpawnsDelay = "0.5";
           FUN_18044ef50(this,0);

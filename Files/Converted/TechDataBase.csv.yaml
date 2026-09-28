@@ -288,18 +288,18 @@
   splits:
   - split: 1
     text: "智力训练"
-    translated: "Brain Training"
+    translated: "Intelligence Training"
   - split: 2
     text: "智力训练"
-    translated: "Brain Training"
+    translated: "Intelligence Training"
 - raw: "34,意志训练,意志训练,3,全员意志,1,TRUE,3,银钱"
   splits:
   - split: 1
     text: "意志训练"
-    translated: "Will training"
+    translated: "Willpower training"
   - split: 2
     text: "意志训练"
-    translated: "Will training"
+    translated: "Willpower training"
 - raw: "35,体质训练,体质训练,3,全员体质,1,TRUE,3,银钱"
   splits:
   - split: 1
@@ -312,10 +312,10 @@
   splits:
   - split: 1
     text: "经脉训练"
-    translated: "Vital Meridian Training"
+    translated: "Meridian Training"
   - split: 2
     text: "经脉训练"
-    translated: "Vital Meridian Training"
+    translated: "Meridian Training"
 - raw: "37,内功训练,内功训练,3,全员内功,1,TRUE,2,银钱"
   splits:
   - split: 1

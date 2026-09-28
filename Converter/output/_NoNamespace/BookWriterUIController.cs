@@ -1,49 +1,51 @@
 // ============================================================
 // Type  : BookWriterUIController
-// Token : 0x200019B
+// Token : 0x20001A1
 // ============================================================
 
 public class BookWriterUIController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000AE0
+    // Token: 0x4000B6C
     public ForceData targetForce;
 
-    // Token: 0x4000AE1
+    // Token: 0x4000B6D
     public List<BookWriterData> targetBookWriterList;
 
-    // Token: 0x4000AE2
+    // Token: 0x4000B6E
     public GameObject bookWriterUI;
 
-    // Token: 0x4000AE3
+    // Token: 0x4000B6F
     public int activeID;
 
-    // Token: 0x4000AE4
+    // Token: 0x4000B70
     private static readonly int MaxBookWriterNum;
 
-    // Token: 0x4000AE5
+    // Token: 0x4000B71
     private GameObject temp;
 
-    // Token: 0x4000AE6
+    // Token: 0x4000B72
     private static BookWriterUIController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000D2B
-    // RVA   : 0xCE4A80   Offset: 0xCE3280   Length: 0x58
+    // Token : 0x6000D5F
+    // RVA   : 0xC8AAD0   Offset: 0xC89ED0   Length: 0x58
     public static BookWriterUIController get_Instance()
     {
-        return BookWriterUIController._instance;
+        return *(uint64 *)(*(int64 *)(DAT_181db29b8 + 184) + 8);
     }
 
-    // Token : 0x6000D2C
-    // RVA   : 0xCDFB60   Offset: 0xCDE360   Length: 0x68
+    // Token : 0x6000D60
+    // RVA   : 0xC85AC0   Offset: 0xC84EC0   Length: 0x68
     private void Awake()
     {
-        BookWriterUIController._instance = this;
+        puVar1 = (uint64 *)(*(int64 *)(DAT_181db29b8 + 184) + 8);
+        *puVar1 = this;
+        il2cpp_internal(puVar1,this);
     }
 
-    // Token : 0x6000D2D
-    // RVA   : 0xCE05D0   Offset: 0xCDEDD0   Length: 0x8D
+    // Token : 0x6000D61
+    // RVA   : 0xC86530   Offset: 0xC85930   Length: 0x8D
     public bool BookWriterUnlocked(int writerID)
     {
         long lVar1;
@@ -59,8 +61,8 @@ public class BookWriterUIController
         }
     }
 
-    // Token : 0x6000D2E
-    // RVA   : 0xCE1AE0   Offset: 0xCE02E0   Length: 0x9F
+    // Token : 0x6000D62
+    // RVA   : 0xC87A40   Offset: 0xC86E40   Length: 0x9F
     public Transform GetWriterRoot(int writerID)
     {
         long lVar1;
@@ -83,8 +85,8 @@ public class BookWriterUIController
         }
     }
 
-    // Token : 0x6000D2F
-    // RVA   : 0xCE1C70   Offset: 0xCE0470   Length: 0x235A
+    // Token : 0x6000D63
+    // RVA   : 0xC87BD0   Offset: 0xC86FD0   Length: 0x244E
     public void RefreshUI()
     {
         long lVar1;
@@ -117,87 +119,87 @@ public class BookWriterUIController
         local_c8 = 0.0;
         local_res18[0] = 0;
         local_res20[0] = 0;
-        LAB_180ce1f60:
-        if (BookWriterUIController.MaxBookWriterNum <= iVar14) {
+        LAB_180c87ed0:
+        if (**(int **)(DAT_181db29b8 + 184) <= iVar14) {
           if ((((this.bookWriterUI != null) &&
                (lVar7 = GameObject.get_transform(this.bookWriterUI,0)) != null) &&
               (lVar7 = Transform.Find(lVar7,"BookWriterGrid",0)) != null) &&
-             (lVar7 = Component.GetComponent(lVar7,DAT_181d6e0c0)) != null) {
+             (lVar7 = Component.GetComponent(lVar7,DAT_181d96960)) != null) {
             UIGrid.set_repositionNow(lVar7,1,0);
             return;
           }
-          goto LAB_180ce3fb9;
+          goto LAB_180c8a00d;
         }
-        if (this.targetBookWriterList == null) goto LAB_180ce3fc5;
+        if (this.targetBookWriterList == null) goto LAB_180c8a019;
         if (iVar14 < this.targetBookWriterList.Count) {
           lVar7 = BookWriterUIController.GetWriterRoot(this);
-          if ((lVar7 == null) || (lVar7 = FUN_180da0f00(lVar7,0)) == null) goto LAB_180ce3fc5;
+          if ((lVar7 == null) || (lVar7 = FUN_180da9a20(lVar7,0)) == null) goto LAB_180c8a019;
           lVar7 = Component.get_gameObject(lVar7,0);
-          if (lVar7 == null) goto LAB_180ce3fc5;
+          if (lVar7 == null) goto LAB_180c8a019;
           GameObject.SetActive(lVar7,1,0);
           if (0 < iVar14) {
             lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
             if (lVar7 == null) {
-        LAB_180ce3fc5:
+        LAB_180c8a019:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             lVar7 = Component.get_gameObject(lVar7,0);
             uVar2 = BookWriterUIController.BookWriterUnlocked(this,iVar14,0);
-            if (lVar7 == null) goto LAB_180ce3fc5;
+            if (lVar7 == null) goto LAB_180c8a019;
             GameObject.SetActive(lVar7,uVar2,0);
             lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
-            if (((lVar7 == null) || (lVar7 = FUN_180da0f00(lVar7,0)) == null) ||
-               (lVar7 = Transform.Find(lVar7,"Lock",0)) == null) goto LAB_180ce3fc5;
+            if (((lVar7 == null) || (lVar7 = FUN_180da9a20(lVar7,0)) == null) ||
+               (lVar7 = Transform.Find(lVar7,"Lock",0)) == null) goto LAB_180c8a019;
             lVar7 = Component.get_gameObject(lVar7,0);
             cVar3 = BookWriterUIController.BookWriterUnlocked(this,iVar14,0);
-            if (lVar7 == null) goto LAB_180ce3fc5;
+            if (lVar7 == null) goto LAB_180c8a019;
             GameObject.SetActive(lVar7,!cVar3,0);
             lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
-            if (((lVar7 == null) || (lVar7 = FUN_180da0f00(lVar7,0)) == null) ||
+            if (((lVar7 == null) || (lVar7 = FUN_180da9a20(lVar7,0)) == null) ||
                ((lVar7 = Transform.Find(lVar7,"Lock",0), lVar7 == null ||
-                (lVar7 = Transform.Find(lVar7,"Text",0)) == null))) goto LAB_180ce3fc5;
-            uVar8 = Component.GetComponent(lVar7,DAT_181d6d8c0);
+                (lVar7 = Transform.Find(lVar7,"Text",0)) == null))) goto LAB_180c8a019;
+            uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
             uVar9 = GlobalData.GetNumText(iVar14 * 3,0);
             uVar9 = String.Format("建筑{0}级解锁",uVar9,0);
             LTLocalization.SetText(uVar8,uVar9,0);
           }
           lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
           if ((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"ActiveCover",0)) == null)
-          goto LAB_180ce3fc5;
+          goto LAB_180c8a019;
           lVar7 = Component.get_gameObject(lVar7,0);
-          if (lVar7 == null) goto LAB_180ce3fc5;
+          if (lVar7 == null) goto LAB_180c8a019;
           GameObject.SetActive(lVar7,this.activeID != iVar14,0);
           local_res18[0] = 0;
           do {
             lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
-            if (lVar7 == null) goto LAB_180ce3fc5;
+            if (lVar7 == null) goto LAB_180c8a019;
             lVar7 = Transform.Find(lVar7,"Tabs",0);
             uVar8 = Int32.ToString(local_res18,0);
-            if ((lVar7 == null) || (lVar7 = Transform.Find(lVar7,uVar8,0)) == null) goto LAB_180ce3fc5;
-            lVar7 = Component.GetComponent(lVar7,DAT_181d6da40);
+            if ((lVar7 == null) || (lVar7 = Transform.Find(lVar7,uVar8,0)) == null) goto LAB_180c8a019;
+            lVar7 = Component.GetComponent(lVar7,DAT_181d962e0);
             if ((this.targetBookWriterList == null) ||
-               ((lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98), lVar10 == null
-                || (lVar7 == null)))) goto LAB_180ce3fc5;
+               ((lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420), lVar10 == null
+                || (lVar7 == null)))) goto LAB_180c8a019;
             bVar15 = false;
             Selectable.set_interactable(lVar7,*(char *)(lVar10 + 56) == false,0);
             if ((this.targetBookWriterList == null) ||
                (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14)) == null)
-            goto LAB_180ce3fc5;
+            goto LAB_180c8a019;
             if (*(int *)(lVar7 + 20) == local_res18[0]) {
               lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14);
-              if (lVar7 == null) goto LAB_180ce3fc5;
+              if (lVar7 == null) goto LAB_180c8a019;
               lVar7 = Transform.Find(lVar7,"Tabs");
               uVar8 = Int32.ToString(local_res18,0);
               if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,uVar8)) == null) ||
-                 (lVar7 = Component.GetComponent(lVar7,DAT_181d6da40)) == null) goto LAB_180ce3fc5;
+                 (lVar7 = Component.GetComponent(lVar7,DAT_181d962e0)) == null) goto LAB_180c8a019;
               if (*(char *)(lVar7 + 0x118) == false) {
                 lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14);
-                if (lVar7 == null) goto LAB_180ce3fc5;
+                if (lVar7 == null) goto LAB_180c8a019;
                 lVar7 = Transform.Find(lVar7,"Tabs");
                 uVar8 = Int32.ToString(local_res18,0);
                 if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,uVar8)) == null) ||
-                   (lVar7 = Component.GetComponent(lVar7,DAT_181d6da40)) == null) goto LAB_180ce3fc5;
+                   (lVar7 = Component.GetComponent(lVar7,DAT_181d962e0)) == null) goto LAB_180c8a019;
                 Toggle.set_isOn(lVar7,1);
               }
             }
@@ -205,199 +207,199 @@ public class BookWriterUIController
           } while (local_res18[0] < 3);
           lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
           if ((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"Hero",0)) == null)
-          goto LAB_180ce3fc5;
+          goto LAB_180c8a019;
           uVar8 = Transform.Find(lVar7,"icon",0);
           cVar3 = Object.op_Inequality(uVar8,0,0);
           if (cVar3) {
             lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
             if ((((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"Hero",0)) == null) ||
                 (lVar7 = Transform.Find(lVar7,"icon",0)) == null) ||
-               (lVar7 = Component.GetComponent(lVar7,DAT_181d6b8c0)) == null) goto LAB_180ce3fc5;
+               (lVar7 = Component.GetComponent(lVar7,DAT_181d940e0)) == null) goto LAB_180c8a019;
             lVar7 = *(int64 *)(lVar7 + 32);
             if ((this.targetBookWriterList == null) ||
-               (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null)
-            goto LAB_180ce3fc5;
+               (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420)) == null)
+            goto LAB_180c8a019;
             lVar10 = BookWriterData.GetBookWriterHero(lVar10,0);
             if (lVar7 != lVar10) {
               lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
               if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"Hero",0)) == null) ||
-                 (lVar7 = Transform.Find(lVar7,"icon",0)) == null) goto LAB_180ce3fc5;
+                 (lVar7 = Transform.Find(lVar7,"icon",0)) == null) goto LAB_180c8a019;
               uVar8 = Component.get_gameObject(lVar7,0);
               Object.Destroy(uVar8,0);
             }
           }
           if ((this.targetBookWriterList == null) ||
-             (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null)
-          goto LAB_180ce3fc5;
+             (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420)) == null)
+          goto LAB_180c8a019;
           lVar7 = BookWriterData.GetBookWriterHero(lVar7,0);
           if (lVar7 != null) {
             lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
             if ((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"Hero",0)) == null)
-            goto LAB_180ce3fc5;
+            goto LAB_180c8a019;
             uVar8 = Transform.Find(lVar7,"icon",0);
             cVar3 = Object.op_Equality(uVar8,0,0);
             if (cVar3) {
               lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
               if ((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"Hero",0)) == null)
-              goto LAB_180ce3fc5;
+              goto LAB_180c8a019;
               uVar8 = Component.get_gameObject(lVar7,0);
               lVar7 = FUN_18046c1a0(0);
-              if (lVar7 == null) goto LAB_180ce3fc5;
+              if (lVar7 == null) goto LAB_180c8a019;
               uVar9 = *(uint64 *)(lVar7 + 144);
               uVar8 = GlobalData.AddChild(uVar8,uVar9,0);
               this.temp = uVar8;
-              if (this.temp == null) goto LAB_180ce3fc5;
-              lVar7 = GameObject.GetComponent(this.temp,DAT_181d9fb20);
+              if (this.temp == null) goto LAB_180c8a019;
+              lVar7 = GameObject.GetComponent(this.temp,DAT_181d71b50);
               if (((this.targetBookWriterList == null) ||
-                  (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98), lVar10 == null
+                  (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420), lVar10 == null
                   )) || (uVar8 = BookWriterData.GetBookWriterHero(lVar10,0), lVar7 == null))
-              goto LAB_180ce3fc5;
+              goto LAB_180c8a019;
               *(uint64 *)(lVar7 + 32) = uVar8;
               if ((this.temp == null) ||
-                 (lVar7 = GameObject.GetComponent(this.temp,DAT_181d9fb20),
-                 lVar7 == null)) goto LAB_180ce3fc5;
+                 (lVar7 = GameObject.GetComponent(this.temp,DAT_181d71b50),
+                 lVar7 == null)) goto LAB_180c8a019;
               *(uint32 *)(lVar7 + 24) = 0;
               if ((this.temp == null) ||
-                 (lVar7 = GameObject.GetComponent(this.temp,DAT_181d9fb20),
-                 lVar7 == null)) goto LAB_180ce3fc5;
+                 (lVar7 = GameObject.GetComponent(this.temp,DAT_181d71b50),
+                 lVar7 == null)) goto LAB_180c8a019;
               Object.set_name(lVar7,"icon",0);
             }
           }
           lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
           if ((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"ClearHeroButton",0)) == null)
-          goto LAB_180ce3fc5;
+          goto LAB_180c8a019;
           lVar7 = Component.get_gameObject(lVar7,0);
           if ((this.targetBookWriterList == null) ||
-             (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null)
-          goto LAB_180ce3fc5;
+             (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420)) == null)
+          goto LAB_180c8a019;
           lVar10 = BookWriterData.GetBookWriterHero(lVar10,0);
           bVar4 = bVar15;
           if (lVar10 != null) {
             if ((this.targetBookWriterList == null) ||
-               (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null)
-            goto LAB_180ce3fc5;
+               (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420)) == null)
+            goto LAB_180c8a019;
             bVar4 = *(char *)(lVar10 + 56) == false;
           }
-          if (lVar7 == null) goto LAB_180ce3fc5;
+          if (lVar7 == null) goto LAB_180c8a019;
           GameObject.SetActive(lVar7,bVar4,0);
           lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
           if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"Combine",0)) == null) ||
-             (lVar7 = Transform.Find(lVar7,"CombineTarget",0)) == null) goto LAB_180ce3fc5;
+             (lVar7 = Transform.Find(lVar7,"CombineTarget",0)) == null) goto LAB_180c8a019;
           uVar8 = Transform.Find(lVar7,"icon",0);
           cVar3 = Object.op_Inequality(uVar8,0,0);
           if (cVar3) {
             lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
             if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"Combine",0)) == null) ||
                ((lVar7 = Transform.Find(lVar7,"CombineTarget",0), lVar7 == null ||
-                (lVar7 = Transform.Find(lVar7,"icon",0)) == null))) goto LAB_180ce3fc5;
+                (lVar7 = Transform.Find(lVar7,"icon",0)) == null))) goto LAB_180c8a019;
             uVar8 = Component.get_gameObject(lVar7,0);
             Object.Destroy(uVar8,0);
           }
           lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
           if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"Combine",0)) == null) ||
-             (lVar7 = Transform.Find(lVar7,"CombineTarget2",0)) == null) goto LAB_180ce3fc5;
+             (lVar7 = Transform.Find(lVar7,"CombineTarget2",0)) == null) goto LAB_180c8a019;
           uVar8 = Transform.Find(lVar7,"icon",0);
           cVar3 = Object.op_Inequality(uVar8,0,0);
           if (cVar3) {
             lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
             if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"Combine",0)) == null) ||
                ((lVar7 = Transform.Find(lVar7,"CombineTarget2",0), lVar7 == null ||
-                (lVar7 = Transform.Find(lVar7,"icon",0)) == null))) goto LAB_180ce3fc5;
+                (lVar7 = Transform.Find(lVar7,"icon",0)) == null))) goto LAB_180c8a019;
             uVar8 = Component.get_gameObject(lVar7,0);
             Object.Destroy(uVar8,0);
           }
           lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
           if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"Copy",0)) == null) ||
-             (lVar7 = Transform.Find(lVar7,"CopyTarget",0)) == null) goto LAB_180ce3fc5;
+             (lVar7 = Transform.Find(lVar7,"CopyTarget",0)) == null) goto LAB_180c8a019;
           uVar8 = Transform.Find(lVar7,"icon",0);
           cVar3 = Object.op_Inequality(uVar8,0,0);
           if (cVar3) {
             lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
             if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"Copy",0)) == null) ||
                ((lVar7 = Transform.Find(lVar7,"CopyTarget",0), lVar7 == null ||
-                (lVar7 = Transform.Find(lVar7,"icon",0)) == null))) goto LAB_180ce3fc5;
+                (lVar7 = Transform.Find(lVar7,"icon",0)) == null))) goto LAB_180c8a019;
             uVar8 = Component.get_gameObject(lVar7,0);
             Object.Destroy(uVar8,0);
           }
           lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
           if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"Memory",0)) == null) ||
-             (lVar7 = Transform.Find(lVar7,"MemoryTarget",0)) == null) goto LAB_180ce3fc5;
+             (lVar7 = Transform.Find(lVar7,"MemoryTarget",0)) == null) goto LAB_180c8a019;
           uVar8 = Transform.Find(lVar7,"icon",0);
           cVar3 = Object.op_Inequality(uVar8,0,0);
           if (cVar3) {
             lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
             if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"Memory",0)) == null) ||
                ((lVar7 = Transform.Find(lVar7,"MemoryTarget",0), lVar7 == null ||
-                (lVar7 = Transform.Find(lVar7,"icon",0)) == null))) goto LAB_180ce3fc5;
+                (lVar7 = Transform.Find(lVar7,"icon",0)) == null))) goto LAB_180c8a019;
             uVar8 = Component.get_gameObject(lVar7,0);
             Object.Destroy(uVar8,0);
           }
           if ((this.targetBookWriterList == null) ||
-             (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null)
-          goto LAB_180ce3fc5;
+             (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420)) == null)
+          goto LAB_180c8a019;
           iVar6 = *(int *)(lVar7 + 20);
           if (iVar6 == 0) {
             if ((this.targetBookWriterList == null) ||
-               (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null)
-            goto LAB_180ce3fc5;
+               (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420)) == null)
+            goto LAB_180c8a019;
             if (*(int64 *)(lVar7 + 32) != 0) {
               lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
               if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"Combine",0)) == null) ||
-                 (lVar7 = Transform.Find(lVar7,"CombineTarget",0)) == null) goto LAB_180ce3fc5;
+                 (lVar7 = Transform.Find(lVar7,"CombineTarget",0)) == null) goto LAB_180c8a019;
               uVar8 = Component.get_gameObject(lVar7,0);
               lVar7 = FUN_18046c1a0(0);
-              if (lVar7 == null) goto LAB_180ce3fc5;
+              if (lVar7 == null) goto LAB_180c8a019;
               uVar9 = *(uint64 *)(lVar7 + 160);
               uVar8 = GlobalData.AddChild(uVar8,uVar9,0);
               this.temp = uVar8;
-              if (this.temp == null) goto LAB_180ce3fc5;
-              lVar7 = GameObject.GetComponent(this.temp,DAT_181da0070);
+              if (this.temp == null) goto LAB_180c8a019;
+              lVar7 = GameObject.GetComponent(this.temp,DAT_181d720a0);
               if (((this.targetBookWriterList == null) ||
-                  (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98), lVar10 == null
-                  )) || (lVar7 == null)) goto LAB_180ce3fc5;
+                  (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420), lVar10 == null
+                  )) || (lVar7 == null)) goto LAB_180c8a019;
               *(uint64 *)(lVar7 + 32) = *(uint64 *)(lVar10 + 32);
               if ((this.temp == null) ||
-                 (lVar7 = GameObject.GetComponent(this.temp,DAT_181da0070),
-                 lVar7 == null)) goto LAB_180ce3fc5;
+                 (lVar7 = GameObject.GetComponent(this.temp,DAT_181d720a0),
+                 lVar7 == null)) goto LAB_180c8a019;
               *(uint32 *)(lVar7 + 40) = 1;
               if ((this.temp == null) ||
-                 (lVar7 = GameObject.GetComponent(this.temp,DAT_181da0070),
-                 lVar7 == null)) goto LAB_180ce3fc5;
+                 (lVar7 = GameObject.GetComponent(this.temp,DAT_181d720a0),
+                 lVar7 == null)) goto LAB_180c8a019;
               Object.set_name(lVar7,"icon",0);
               lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
               if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"Combine",0)) == null) ||
-                 (lVar7 = Transform.Find(lVar7,"CombineTarget2",0)) == null) goto LAB_180ce3fc5;
+                 (lVar7 = Transform.Find(lVar7,"CombineTarget2",0)) == null) goto LAB_180c8a019;
               uVar8 = Component.get_gameObject(lVar7,0);
               lVar7 = FUN_18046c1a0(0);
-              if (lVar7 == null) goto LAB_180ce3fc5;
+              if (lVar7 == null) goto LAB_180c8a019;
               uVar8 = GlobalData.AddChild(uVar8,*(uint64 *)(lVar7 + 160),0);
               this.temp = uVar8;
-              if (this.temp == null) goto LAB_180ce3fc5;
-              lVar7 = GameObject.GetComponent(this.temp,DAT_181da0070);
+              if (this.temp == null) goto LAB_180c8a019;
+              lVar7 = GameObject.GetComponent(this.temp,DAT_181d720a0);
               if ((this.targetBookWriterList == null) ||
-                 (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null
-                 ) goto LAB_180ce3fc5;
+                 (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420)) == null
+                 ) goto LAB_180c8a019;
               uVar8 = *(uint64 *)(lVar10 + 40);
-        LAB_180ce31f0:
-              if (lVar7 == null) goto LAB_180ce3fc5;
+        LAB_180c89180:
+              if (lVar7 == null) goto LAB_180c8a019;
               *(uint64 *)(lVar7 + 32) = uVar8;
               if ((this.temp == null) ||
-                 (lVar7 = GameObject.GetComponent(this.temp,DAT_181da0070),
-                 lVar7 == null)) goto LAB_180ce3fc5;
+                 (lVar7 = GameObject.GetComponent(this.temp,DAT_181d720a0),
+                 lVar7 == null)) goto LAB_180c8a019;
               *(uint32 *)(lVar7 + 40) = 1;
               lVar7 = this.temp;
-              uVar8 = DAT_181da0070;
-              if (lVar7 == null) goto LAB_180ce3fc5;
-        LAB_180ce3242:
+              uVar8 = DAT_181d720a0;
+              if (lVar7 == null) goto LAB_180c8a019;
+        LAB_180c891d2:
               lVar7 = GameObject.GetComponent(lVar7,uVar8);
-              if (lVar7 == null) goto LAB_180ce3fc5;
+              if (lVar7 == null) goto LAB_180c8a019;
               Object.set_name(lVar7,"icon",0);
             }
           }
           else if (iVar6 == 1) {
             if ((this.targetBookWriterList == null) ||
-               (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null)
-            goto LAB_180ce3fc5;
+               (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420)) == null)
+            goto LAB_180c8a019;
             if (*(int64 *)(lVar7 + 32) != 0) {
               lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
               if (((lVar7 != null) && (lVar7 = Transform.Find(lVar7,"Copy",0)) != null) &&
@@ -409,23 +411,23 @@ public class BookWriterUIController
                   uVar8 = GlobalData.AddChild(uVar8,uVar9,0);
                   this.temp = uVar8;
                   if (this.temp != null) {
-                    lVar7 = GameObject.GetComponent(this.temp,DAT_181da0070);
+                    lVar7 = GameObject.GetComponent(this.temp,DAT_181d720a0);
                     if ((this.targetBookWriterList != null) &&
-                       (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98),
+                       (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420),
                        lVar10 != null)) {
                       uVar8 = *(uint64 *)(lVar10 + 32);
-                      goto LAB_180ce31f0;
+                      goto LAB_180c89180;
                     }
                   }
                 }
               }
-              goto LAB_180ce3fc5;
+              goto LAB_180c8a019;
             }
           }
           else if (iVar6 == 2) {
             if ((this.targetBookWriterList == null) ||
-               (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null)
-            goto LAB_180ce3fc5;
+               (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420)) == null)
+            goto LAB_180c8a019;
             if (*(int64 *)(lVar7 + 48) != 0) {
               lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
               if (((lVar7 != null) && (lVar7 = Transform.Find(lVar7,"Memory",0)) != null) &&
@@ -437,68 +439,68 @@ public class BookWriterUIController
                   uVar8 = GlobalData.AddChild(uVar8,uVar9,0);
                   this.temp = uVar8;
                   if (this.temp != null) {
-                    lVar7 = GameObject.GetComponent(this.temp,DAT_181da1630);
+                    lVar7 = GameObject.GetComponent(this.temp,DAT_181d73800);
                     if (((this.targetBookWriterList != null) &&
-                        (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98),
+                        (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420),
                         lVar10 != null)) && (lVar7 != null)) {
                       *(uint64 *)(lVar7 + 32) = *(uint64 *)(lVar10 + 48);
                       if ((this.temp != null) &&
-                         (lVar7 = GameObject.GetComponent(this.temp,DAT_181da1630),
+                         (lVar7 = GameObject.GetComponent(this.temp,DAT_181d73800),
                          lVar7 != null)) {
                         *(uint32 *)(lVar7 + 40) = 2;
                         lVar7 = this.temp;
-                        uVar8 = DAT_181da1630;
-                        if (lVar7 != null) goto LAB_180ce3242;
+                        uVar8 = DAT_181d73800;
+                        if (lVar7 != null) goto LAB_180c891d2;
                       }
                     }
                   }
                 }
               }
-              goto LAB_180ce3fc5;
+              goto LAB_180c8a019;
             }
           }
           lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
           if ((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"ClearBookButton",0)) == null)
-          goto LAB_180ce3fc5;
+          goto LAB_180c8a019;
           lVar7 = Component.get_gameObject(lVar7,0);
           if ((this.targetBookWriterList == null) ||
-             (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null)
-          goto LAB_180ce3fc5;
+             (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420)) == null)
+          goto LAB_180c8a019;
           if (*(int64 *)(lVar10 + 32) == 0) {
             if ((this.targetBookWriterList == null) ||
-               (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null)
-            goto LAB_180ce3fc5;
+               (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420)) == null)
+            goto LAB_180c8a019;
             if (*(int64 *)(lVar10 + 48) == 0)
             {
               }
               else {
             }
             if ((this.targetBookWriterList == null) ||
-               (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null)
-            goto LAB_180ce3fc5;
+               (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420)) == null)
+            goto LAB_180c8a019;
             bVar15 = *(char *)(lVar10 + 56) == false;
           }
-          if (lVar7 == null) goto LAB_180ce3fc5;
+          if (lVar7 == null) goto LAB_180c8a019;
           GameObject.SetActive(lVar7,bVar15,0);
           if ((this.targetBookWriterList == null) ||
-             (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null)
-          goto LAB_180ce3fc5;
+             (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420)) == null)
+          goto LAB_180c8a019;
           iVar6 = *(int *)(lVar7 + 20);
           if ((iVar6 == 0) || (iVar6 == 1)) {
             lVar7 = *(int64 *)(lVar7 + 32);
-        LAB_180ce337e:
-            if (lVar7 == null) goto LAB_180ce379d;
+        LAB_180c8930e:
+            if (lVar7 == null) goto LAB_180c8976f;
             if ((this.targetBookWriterList == null) ||
-               (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null)
-            goto LAB_180ce3fc5;
-            if (*(char *)(lVar7 + 56) != false) goto LAB_180ce379d;
+               (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420)) == null)
+            goto LAB_180c8a019;
+            if (*(char *)(lVar7 + 56) != false) goto LAB_180c8976f;
             lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
             if ((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"CostTime",0)) == null)
-            goto LAB_180ce3fc5;
-            uVar8 = Component.GetComponent(lVar7,DAT_181d6d8c0);
+            goto LAB_180c8a019;
+            uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
             if ((this.targetBookWriterList == null) ||
-               (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null)
-            goto LAB_180ce3fc5;
+               (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420)) == null)
+            goto LAB_180c8a019;
             fVar16 = (float)BookWriterData.GetEachDayWorkPercent(lVar7,0);
             local_res20[0] = Mathf.CeilToInt(1.0 / fVar16,0);
             uVar9 = Int32.ToString(local_res20,0);
@@ -506,22 +508,22 @@ public class BookWriterUIController
             LTLocalization.SetText(uVar8,uVar9,0);
             lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
             if ((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"CostMoney",0)) == null)
-            goto LAB_180ce3fc5;
-            uVar8 = Component.GetComponent(lVar7,DAT_181d6d8c0);
+            goto LAB_180c8a019;
+            uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
             if ((this.targetBookWriterList == null) ||
-               (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null)
-            goto LAB_180ce3fc5;
+               (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420)) == null)
+            goto LAB_180c8a019;
             local_res20[0] = BookWriterData.GetMoneyCost(lVar7,0);
             uVar9 = Int32.ToString(local_res20,0);
             uVar9 = String.Concat("消耗银两: ",uVar9,0);
             LTLocalization.SetText(uVar8,uVar9,0);
             lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
             if ((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"CostMoney",0)) == null)
-            goto LAB_180ce3fc5;
-            plVar11 = (int64 *)Component.GetComponent(lVar7,DAT_181d6d8c0);
+            goto LAB_180c8a019;
+            plVar11 = (int64 *)Component.GetComponent(lVar7,DAT_181d96160);
             if ((this.targetBookWriterList == null) ||
-               (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null)
-            goto LAB_180ce3fc5;
+               (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420)) == null)
+            goto LAB_180c8a019;
             cVar3 = BookWriterData.HaveMoney(lVar7,0);
             if (!cVar3) {
               puVar12 = (uint32 *)Color.get_red(local_98,0);
@@ -530,7 +532,7 @@ public class BookWriterUIController
               puVar12 = (uint32 *)Color.get_black(local_a8);
             }
             if (plVar11 == (int64 *)0) {
-        LAB_180ce3fbf:
+        LAB_180c8a013:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -541,27 +543,27 @@ public class BookWriterUIController
             (**(code **)(*plVar11 + 0x2a8))(plVar11,&local_b8,*(uint64 *)(*plVar11 + 0x2b0));
             lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
             if ((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"MinKnowledge",0)) == null)
-            goto LAB_180ce3fbf;
-            uVar8 = Component.GetComponent(lVar7,DAT_181d6d8c0);
+            goto LAB_180c8a013;
+            uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
             if ((this.targetBookWriterList == null) ||
-               (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null)
-            goto LAB_180ce3fbf;
+               (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420)) == null)
+            goto LAB_180c8a013;
             local_c4[0] = BookWriterData.GetMinSkillLv(lVar7,0);
-            uVar9 = il2cpp_value_box(DAT_181d5b2f8,local_c4);
-            lVar7 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x498);
+            uVar9 = il2cpp_value_box(DAT_181d80418,local_c4);
+            lVar7 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x4a0);
             if (((this.targetBookWriterList == null) ||
-                (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null)
-               || (uVar5 = BookWriterData.GetTargetSkillType(lVar10,0), lVar7 == null)) goto LAB_180ce3fbf;
-            uVar13 = FUN_180002f80(lVar7,uVar5,DAT_181d7c9c0);
+                (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420)) == null)
+               || (uVar5 = BookWriterData.GetTargetSkillType(lVar10,0), lVar7 == null)) goto LAB_180c8a013;
+            uVar13 = FUN_180002f80(lVar7,uVar5,DAT_181da4358);
             uVar9 = String.Format("需要学识{0}/{1}{0}",uVar9,uVar13,0);
             LTLocalization.SetText(uVar8,uVar9,0);
             lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
             if ((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"MinKnowledge",0)) == null)
-            goto LAB_180ce3fbf;
-            plVar11 = (int64 *)Component.GetComponent(lVar7,DAT_181d6d8c0);
+            goto LAB_180c8a013;
+            plVar11 = (int64 *)Component.GetComponent(lVar7,DAT_181d96160);
             if ((this.targetBookWriterList == null) ||
-               (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null)
-            goto LAB_180ce3fbf;
+               (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420)) == null)
+            goto LAB_180c8a013;
             cVar3 = BookWriterData.HaveEnoughSkill(lVar7,0);
             if (!cVar3) {
               puVar12 = (uint32 *)Color.get_red(local_78,0);
@@ -569,7 +571,7 @@ public class BookWriterUIController
             else {
               puVar12 = (uint32 *)Color.get_black(local_88);
             }
-            if (plVar11 == (int64 *)0) goto LAB_180ce3fc5;
+            if (plVar11 == (int64 *)0) goto LAB_180c8a019;
             local_b8 = *puVar12;
             uStack_b4 = puVar12[1];
             uStack_b0 = puVar12[2];
@@ -579,27 +581,26 @@ public class BookWriterUIController
           else {
             if (iVar6 == 2) {
               lVar7 = *(int64 *)(lVar7 + 48);
-              goto LAB_180ce337e;
+              goto LAB_180c8930e;
             }
-        LAB_180ce379d:
+        LAB_180c8976f:
             lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
-            if (lVar7 == null) goto LAB_180ce3fc5;
-            lVar7 = Transform.Find(lVar7,"CostTime",0);
-            if (lVar7 == null) goto LAB_180ce3fb9;
-            uVar8 = Component.GetComponent(lVar7,DAT_181d6d8c0);
+            if ((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"CostTime",0)) == null)
+            goto LAB_180c8a00d;
+            uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
             if ((this.targetBookWriterList == null) ||
-               (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null)
-            goto LAB_180ce3fb9;
+               (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420)) == null)
+            goto LAB_180c8a00d;
             uVar9 = "";
             if (*(char *)(lVar7 + 56) != false) {
               if ((this.targetBookWriterList == null) ||
-                 (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null)
-              goto LAB_180ce3fb9;
+                 (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420)) == null)
+              goto LAB_180c8a00d;
               fVar16 = (float)BookWriterData.GetEachDayWorkPercent(lVar7,0);
               iVar6 = Mathf.CeilToInt(1.0 / fVar16,0);
               if ((this.targetBookWriterList == null) ||
-                 (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null)
-              goto LAB_180ce3fb9;
+                 (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420)) == null)
+              goto LAB_180c8a00d;
               local_res20[0] = Mathf.CeilToInt((1.0 - *(float *)(lVar7 + 60)) * (float)iVar6,0);
               uVar9 = Int32.ToString(local_res20,0);
               uVar9 = String.Concat("预计时间:",uVar9,"天",0);
@@ -607,16 +608,16 @@ public class BookWriterUIController
             LTLocalization.SetText(uVar8,uVar9,0);
             lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
             if ((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"CostMoney",0)) == null)
-            goto LAB_180ce3fb9;
-            uVar8 = Component.GetComponent(lVar7,DAT_181d6d8c0);
+            goto LAB_180c8a00d;
+            uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
             if ((this.targetBookWriterList == null) ||
-               (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null)
-            goto LAB_180ce3fb9;
+               (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420)) == null)
+            goto LAB_180c8a00d;
             uVar9 = "";
             if (*(char *)(lVar7 + 56) != false) {
               if ((this.targetBookWriterList == null) ||
-                 (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null)
-              goto LAB_180ce3fb9;
+                 (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420)) == null)
+              goto LAB_180c8a00d;
               local_c8 = (float)BookWriterData.GetEachDayWorkPercent(lVar7,0);
               local_c8 = local_c8 * 100.0;
               uVar9 = Single.ToString(&local_c8,"+0",0);
@@ -625,49 +626,49 @@ public class BookWriterUIController
             LTLocalization.SetText(uVar8,uVar9,0);
             lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
             if ((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"MinKnowledge",0)) == null)
-            goto LAB_180ce3fb9;
-            uVar8 = Component.GetComponent(lVar7,DAT_181d6d8c0);
+            goto LAB_180c8a00d;
+            uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
             LTLocalization.SetText(uVar8,"",0);
           }
           if ((this.targetBookWriterList == null) ||
-             (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null)
-          goto LAB_180ce3fb9;
+             (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420)) == null)
+          goto LAB_180c8a00d;
           if (*(char *)(lVar7 + 56) == false) {
             lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14);
             if ((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"SureButton",0)) == null)
-            goto LAB_180ce3fb9;
-            lVar7 = Component.GetComponent(lVar7,DAT_181d6af40);
+            goto LAB_180c8a00d;
+            lVar7 = Component.GetComponent(lVar7,DAT_181d93760);
             if ((this.targetBookWriterList == null) ||
-               (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98)) == null)
-            goto LAB_180ce3fb9;
+               (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420)) == null)
+            goto LAB_180c8a00d;
             iVar6 = *(int *)(lVar10 + 20);
             if ((iVar6 == 0) || (iVar6 == 1)) {
               lVar1 = *(int64 *)(lVar10 + 32);
-        LAB_180ce3ab6:
-              if ((lVar1 == null) || (*(int *)(lVar10 + 24) == -1)) goto LAB_180ce3aca;
+        LAB_180c89ac8:
+              if ((lVar1 == null) || (*(int *)(lVar10 + 24) == -1)) goto LAB_180c89adc;
               uVar2 = BookWriterData.HaveMoney(lVar10,0);
             }
             else {
               if (iVar6 == 2) {
                 lVar1 = *(int64 *)(lVar10 + 48);
-                goto LAB_180ce3ab6;
+                goto LAB_180c89ac8;
               }
-        LAB_180ce3aca:
+        LAB_180c89adc:
               uVar2 = 0;
             }
             if (lVar7 != null) {
               Selectable.set_interactable(lVar7,uVar2,0);
               lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
               if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"SureButton",0)) == null) ||
-                 (lVar7 = Transform.Find(lVar7,"Label",0)) == null) goto LAB_180ce3fb9;
-              uVar8 = Component.GetComponent(lVar7,DAT_181d6d8c0);
+                 (lVar7 = Transform.Find(lVar7,"Label",0)) == null) goto LAB_180c8a00d;
+              uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
               LTLocalization.SetText(uVar8,"开始",0);
               lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
               if ((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"SureButton",0)) == null)
-              goto LAB_180ce3fb9;
-              plVar11 = (int64 *)Component.GetComponent(lVar7,DAT_181d6bc40);
-              puVar12 = (uint32 *)FUN_181098a50(local_68,0);
-              if (plVar11 == (int64 *)0) goto LAB_180ce3fb9;
+              goto LAB_180c8a00d;
+              plVar11 = (int64 *)Component.GetComponent(lVar7,DAT_181d94460);
+              puVar12 = (uint32 *)FUN_1810d3570(local_68,0);
+              if (plVar11 == (int64 *)0) goto LAB_180c8a00d;
               local_b8 = *puVar12;
               uStack_b4 = puVar12[1];
               uStack_b0 = puVar12[2];
@@ -675,23 +676,23 @@ public class BookWriterUIController
               (**(code **)(*plVar11 + 0x2a8))(plVar11,&local_b8);
               lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14);
               if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7)) == null) ||
-                 (lVar7 = Component.get_gameObject(lVar7)) == null) goto LAB_180ce3fb9;
-              goto LAB_180ce3f2a;
+                 (lVar7 = Component.get_gameObject(lVar7)) == null) goto LAB_180c8a00d;
+              goto LAB_180c89f7e;
             }
           }
           else {
             lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
             if (((lVar7 != null) && (lVar7 = Transform.Find(lVar7,"SureButton",0)) != null) &&
-               (lVar7 = Component.GetComponent(lVar7,DAT_181d6af40)) != null) {
+               (lVar7 = Component.GetComponent(lVar7,DAT_181d93760)) != null) {
               Selectable.set_interactable(lVar7,1,0);
               lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
               if (((lVar7 != null) && (lVar7 = Transform.Find(lVar7,"SureButton",0)) != null) &&
                  (lVar7 = Transform.Find(lVar7,"Label",0)) != null) {
-                uVar8 = Component.GetComponent(lVar7,DAT_181d6d8c0);
+                uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
                 LTLocalization.SetText(uVar8,"取消",0);
                 lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
                 if ((lVar7 != null) && (lVar7 = Transform.Find(lVar7,"SureButton",0)) != null) {
-                  plVar11 = (int64 *)Component.GetComponent(lVar7,DAT_181d6bc40);
+                  plVar11 = (int64 *)Component.GetComponent(lVar7,DAT_181d94460);
                   puVar12 = (uint32 *)Color.get_red(local_58,0);
                   if (plVar11 != (int64 *)0) {
                     local_b8 = *puVar12;
@@ -707,25 +708,25 @@ public class BookWriterUIController
                         lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
                         if (((lVar7 != null) && (lVar7 = Transform.Find(lVar7,"PercentBarBack",0)) != null)
                            && (lVar7 = Transform.Find(lVar7,"PercentBar",0)) != null) {
-                          lVar7 = Component.GetComponent(lVar7,DAT_181d6bc40);
+                          lVar7 = Component.GetComponent(lVar7,DAT_181d94460);
                           if (((this.targetBookWriterList != null) &&
-                              (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d58c98),
+                              (lVar10 = FUN_180002f80(this.targetBookWriterList,iVar14,DAT_181d80420),
                               lVar10 != null)) && (lVar7 != null)) {
                             Image.set_fillAmount(lVar7);
                             lVar7 = BookWriterUIController.GetWriterRoot(this,iVar14,0);
                             if (((lVar7 != null) &&
                                 (lVar7 = Transform.Find(lVar7,"PercentBarBack",0)) != null) &&
                                (lVar7 = Transform.Find(lVar7,"PercentNum",0)) != null) {
-                              uVar8 = Component.GetComponent(lVar7,DAT_181d6d8c0);
+                              uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
                               if ((this.targetBookWriterList == null) ||
                                  (lVar7 = FUN_180002f80(this.targetBookWriterList,iVar14)) == null
-                                 ) goto LAB_180ce3fb9;
+                                 ) goto LAB_180c8a00d;
                               local_c8 = *(float *)(lVar7 + 60) * 100.0;
                               uVar9 = Single.ToString(&local_c8,"f0");
                               String.Concat(uVar9,"%");
                               LTLocalization.SetText(uVar8);
                               iVar14 = iVar14 + 1;
-                              goto LAB_180ce1f60;
+                              goto LAB_180c87ed0;
                             }
                           }
                         }
@@ -736,41 +737,41 @@ public class BookWriterUIController
               }
             }
           }
-        LAB_180ce3fb9:
+        LAB_180c8a00d:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         lVar7 = BookWriterUIController.GetWriterRoot(this);
-        if (((lVar7 == null) || (lVar7 = FUN_180da0f00(lVar7)) == null) ||
-           (lVar7 = Component.get_gameObject(lVar7)) == null) goto LAB_180ce3fc5;
-        LAB_180ce3f2a:
+        if (((lVar7 == null) || (lVar7 = FUN_180da9a20(lVar7)) == null) ||
+           (lVar7 = Component.get_gameObject(lVar7)) == null) goto LAB_180c8a019;
+        LAB_180c89f7e:
         GameObject.SetActive(lVar7);
         iVar14 = iVar14 + 1;
-        goto LAB_180ce1f60;
+        goto LAB_180c87ed0;
     }
 
-    // Token : 0x6000D30
-    // RVA   : 0xCDFBD0   Offset: 0xCDE3D0   Length: 0x2F1
+    // Token : 0x6000D64
+    // RVA   : 0xC85B30   Offset: 0xC84F30   Length: 0x2F1
     public void BookWriterActiveCoverClicked(GameObject buttonClicked)
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         uint uVar1;
         bool cVar2;
         uint uVar3;
         long lVar4;
         ulong uVar5;
         if ((((buttonClicked != null) && (lVar4 = GameObject.get_transform(buttonClicked,0)) != null) &&
-            (lVar4 = FUN_180da0f00(lVar4,0)) != null) && (lVar4 = FUN_180da0f00(lVar4,0)) != null)
+            (lVar4 = FUN_180da9a20(lVar4,0)) != null) && (lVar4 = FUN_180da9a20(lVar4,0)) != null)
         {
           uVar5 = Object.get_name(lVar4,0);
           uVar3 = Int32.Parse(uVar5,0);
           cVar2 = BookWriterUIController.BookWriterUnlocked(this,uVar3,0);
           if (!cVar2) {
-            if (GameController._instance != null) {
-              GameController.ShowTextOnMouse
-                        (GameController._instance,"未解锁",0);
+            if (*pStatics != 0) {
+              GameController.ShowTextOnMouse(*pStatics,"未解锁",0);
               plVar6 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
               plVar7 = (int64 *)0;
-              if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181d8a228)) {
+              if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf348)) {
                 plVar7 = plVar6;
               }
               NGUITools.PlaySound(plVar7,0);
@@ -780,7 +781,7 @@ public class BookWriterUIController
           else {
             plVar6 = (int64 *)Resources.Load("Sound/SoundEffect/PaperQuick",0);
             plVar7 = (int64 *)0;
-            if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181d8a228)) {
+            if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf348)) {
               plVar7 = plVar6;
             }
             NGUITools.PlaySound(plVar7,0);
@@ -806,8 +807,8 @@ public class BookWriterUIController
               }
             }
             lVar4 = GameObject.get_transform(buttonClicked,0);
-            if (((lVar4 != null) && (lVar4 = FUN_180da0f00(lVar4,0)) != null) &&
-               (lVar4 = FUN_180da0f00(lVar4,0)) != null) {
+            if (((lVar4 != null) && (lVar4 = FUN_180da9a20(lVar4,0)) != null) &&
+               (lVar4 = FUN_180da9a20(lVar4,0)) != null) {
               uVar5 = Object.get_name(lVar4,0);
               uVar3 = Int32.Parse(uVar5,0);
               this.activeID = uVar3;
@@ -818,8 +819,8 @@ public class BookWriterUIController
         }
     }
 
-    // Token : 0x6000D31
-    // RVA   : 0xCE03A0   Offset: 0xCDEBA0   Length: 0x224
+    // Token : 0x6000D65
+    // RVA   : 0xC86300   Offset: 0xC85700   Length: 0x224
     public void BookWriterTypeTabClicked(GameObject tabClicked)
     {
         uint uVar1;
@@ -827,15 +828,15 @@ public class BookWriterUIController
         long lVar3;
         long lVar4;
         ulong uVar5;
-        if ((tabClicked != null) && (lVar3 = GameObject.GetComponent(tabClicked,DAT_181da2130)) != null) {
+        if ((tabClicked != null) && (lVar3 = GameObject.GetComponent(tabClicked,DAT_181d743b0)) != null) {
           if (*(char *)(lVar3 + 0x118) == false) {
             return;
           }
           lVar3 = this.targetBookWriterList;
           lVar4 = GameObject.get_transform(tabClicked,0);
-          if ((((lVar4 != null) && (lVar4 = FUN_180da0f00(lVar4,0)) != null) &&
-              (lVar4 = FUN_180da0f00(lVar4,0)) != null) &&
-             (lVar4 = FUN_180da0f00(lVar4,0)) != null) {
+          if ((((lVar4 != null) && (lVar4 = FUN_180da9a20(lVar4,0)) != null) &&
+              (lVar4 = FUN_180da9a20(lVar4,0)) != null) &&
+             (lVar4 = FUN_180da9a20(lVar4,0)) != null) {
             uVar5 = Object.get_name(lVar4,0);
             uVar1 = Int32.Parse(uVar5,0);
             if (lVar3 != null) {
@@ -845,15 +846,15 @@ public class BookWriterUIController
               lVar3 = lVar3._items[uVar1];
               if (lVar3 != null) {
                 if (*(char *)(lVar3 + 56) != false) {
-        LAB_180ce05a0:
+        LAB_180c86500:
                   BookWriterUIController.RefreshUI(this,0);
                   return;
                 }
                 lVar3 = this.targetBookWriterList;
                 lVar4 = GameObject.get_transform(tabClicked,0);
-                if (((lVar4 != null) && (lVar4 = FUN_180da0f00(lVar4,0)) != null) &&
-                   ((lVar4 = FUN_180da0f00(lVar4,0), lVar4 != null &&
-                    (lVar4 = FUN_180da0f00(lVar4,0)) != null))) {
+                if (((lVar4 != null) && (lVar4 = FUN_180da9a20(lVar4,0)) != null) &&
+                   ((lVar4 = FUN_180da9a20(lVar4,0), lVar4 != null &&
+                    (lVar4 = FUN_180da9a20(lVar4,0)) != null))) {
                   uVar5 = Object.get_name(lVar4,0);
                   uVar1 = Int32.Parse(uVar5,0);
                   if (lVar3 != null) {
@@ -866,12 +867,12 @@ public class BookWriterUIController
                     if (lVar3 != null) {
                       *(uint32 *)(lVar3 + 20) = uVar2;
                       lVar3 = GameObject.get_transform(tabClicked,0);
-                      if (((lVar3 != null) && (lVar3 = FUN_180da0f00(lVar3,0)) != null) &&
-                         ((lVar3 = FUN_180da0f00(lVar3,0), lVar3 != null &&
-                          (lVar3 = FUN_180da0f00(lVar3,0)) != null))) {
+                      if (((lVar3 != null) && (lVar3 = FUN_180da9a20(lVar3,0)) != null) &&
+                         ((lVar3 = FUN_180da9a20(lVar3,0), lVar3 != null &&
+                          (lVar3 = FUN_180da9a20(lVar3,0)) != null))) {
                         uVar5 = Object.get_name(lVar3,0);
                         BookWriterUIController.ClearChoosenBook(this,uVar5,0,0);
-                        goto LAB_180ce05a0;
+                        goto LAB_180c86500;
                       }
                     }
                   }
@@ -882,10 +883,11 @@ public class BookWriterUIController
         }
     }
 
-    // Token : 0x6000D32
-    // RVA   : 0xCE0C40   Offset: 0xCDF440   Length: 0x9CA
+    // Token : 0x6000D66
+    // RVA   : 0xC86BA0   Offset: 0xC85FA0   Length: 0x9CA
     public void ChooseHeroButtonClicked(GameObject buttonClick)
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         bool cVar1;
         long lVar2;
         long lVar3;
@@ -893,42 +895,41 @@ public class BookWriterUIController
         long lVar5;
         ulong uVar6;
         int iVar7;
-        lVar2 = il2cpp_internal(DAT_181d6e6b0);
-        FUN_180f58a90(lVar2,DAT_181d63c78);
-        if ((GameController._instance != null) &&
-           (lVar3 = GameController._instance.worldData) != null)
-        {
+        lVar2 = il2cpp_internal(DAT_181d93350);
+        FUN_18132faf0(lVar2,DAT_181d8b418);
+        if ((*pStatics != 0) &&
+           (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
           lVar3 = WorldData.Player(lVar3,0);
           if (lVar3 != null) {
             if (*(char *)(lVar3 + 0x370) == false) {
-              if ((GameController._instance == null) ||
-                 (lVar3 = GameController._instance.worldData,
-                 lVar3 == null)) throw; // [null/range check failed]
+              if ((*pStatics == 0) ||
+                 (lVar3 = *(int64 *)(*pStatics + 32)) == null)
+              throw; // [null/range check failed]
               uVar4 = WorldData.Player(lVar3,0);
               if (lVar2 == null) throw; // [null/range check failed]
-              FUN_181827900(lVar2,uVar4,DAT_181d63d78);
+              FUN_18181e0a0(lVar2,uVar4,DAT_181d8b518);
             }
             if (this.targetForce == null) {
-              if ((GameController._instance == null) ||
-                 (lVar3 = GameController._instance.worldData,
-                 lVar3 == null)) throw; // [null/range check failed]
+              if ((*pStatics == 0) ||
+                 (lVar3 = *(int64 *)(*pStatics + 32)) == null)
+              throw; // [null/range check failed]
               lVar3 = WorldData.Player(lVar3,0);
               if (lVar3 == null) throw; // [null/range check failed]
               cVar1 = HeroData.HaveLover(lVar3,0);
               if (cVar1) {
                 lVar3 = FUN_18046c0a0(0);
                 if (lVar3 == null) throw; // [null/range check failed]
-                lVar3 = lVar3.villageAreaID;
+                lVar3 = *(int64 *)(lVar3 + 32);
                 lVar5 = FUN_18046c0a0(0);
                 if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) throw; // [null/range check failed]
                 lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0);
                 if ((lVar5 == null) || (lVar3 == null)) throw; // [null/range check failed]
                 lVar3 = WorldData.GetHero(lVar3,*(uint32 *)(lVar5 + 0x328),0);
                 if (lVar3 == null) throw; // [null/range check failed]
-                if (!lVar3.BigMapRandomEventDatas) {
+                if (*(char *)(lVar3 + 96) == false) {
                   lVar3 = FUN_18046c0a0(0);
                   if (lVar3 == null) throw; // [null/range check failed]
-                  lVar3 = lVar3.villageAreaID;
+                  lVar3 = *(int64 *)(lVar3 + 32);
                   lVar5 = FUN_18046c0a0(0);
                   if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) throw; // [null/range check failed]
                   lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0);
@@ -938,7 +939,7 @@ public class BookWriterUIController
                   if (*(char *)(lVar3 + 209) == false) {
                     lVar3 = FUN_18046c0a0(0);
                     if (lVar3 == null) throw; // [null/range check failed]
-                    lVar3 = lVar3.villageAreaID;
+                    lVar3 = *(int64 *)(lVar3 + 32);
                     lVar5 = FUN_18046c0a0(0);
                     if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) throw; // [null/range check failed]
                     lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0);
@@ -948,58 +949,58 @@ public class BookWriterUIController
                     if (*(char *)(lVar3 + 0x370) == false) {
                       lVar3 = FUN_18046c0a0(0);
                       if (lVar3 == null) throw; // [null/range check failed]
-                      lVar3 = lVar3.villageAreaID;
+                      lVar3 = *(int64 *)(lVar3 + 32);
                       lVar5 = FUN_18046c0a0(0);
                       if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) throw; // [null/range check failed]
                       lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0);
                       if ((lVar5 == null) || (lVar3 == null)) throw; // [null/range check failed]
                       uVar4 = WorldData.GetHero(lVar3,*(uint32 *)(lVar5 + 0x328),0);
                       if (lVar2 == null) throw; // [null/range check failed]
-                      FUN_181827900(lVar2,uVar4,DAT_181d63d78);
+                      FUN_18181e0a0(lVar2,uVar4,DAT_181d8b518);
                     }
                   }
                 }
               }
             }
             else {
-              if ((GameController._instance == null) ||
-                 (lVar3 = GameController._instance.worldData,
-                 lVar3 == null)) throw; // [null/range check failed]
+              if ((*pStatics == 0) ||
+                 (lVar3 = *(int64 *)(*pStatics + 32)) == null)
+              throw; // [null/range check failed]
               lVar3 = WorldData.Player(lVar3,0);
               if (lVar3 == null) throw; // [null/range check failed]
-              if (lVar3.hour) {
+              if (*(char *)(lVar3 + 180) != false) {
                 iVar7 = 0;
                 while( true ) {
-                  if ((GameController._instance == null) ||
-                     (lVar3 = GameController._instance.worldData,
-                     lVar3 == null)) break;
+                  if ((*pStatics == 0) ||
+                     (lVar3 = *(int64 *)(*pStatics + 32)) == null)
+                  break;
                   lVar3 = WorldData.Player(lVar3,0);
                   if (lVar3 == null) break;
                   lVar3 = HeroData.GetForce(lVar3,0,0);
-                  if ((lVar3 == null) || (lVar3.lastRandomWorldEventDay == null)) break;
-                  if (*(int *)(lVar3.lastRandomWorldEventDay + 24) <= iVar7) goto LAB_180ce112a;
+                  if ((lVar3 == null) || (*(int64 *)(lVar3 + 112) == 0)) break;
+                  if (*(int *)(*(int64 *)(lVar3 + 112) + 24) <= iVar7) goto LAB_180c8708a;
                   lVar3 = FUN_18046c0a0(0);
-                  if ((lVar3 == null) || (lVar3.villageAreaID == null)) break;
-                  lVar3 = WorldData.Player(lVar3.villageAreaID,0);
+                  if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) break;
+                  lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0);
                   if (lVar3 == null) break;
                   lVar3 = HeroData.GetForce(lVar3,0,0);
                   if (lVar3 == null) break;
                   ForceData.GetOwnHero(lVar3,iVar7,0);
                   if (lVar2 == null) break;
-                  cVar1 = FUN_1818279a0(lVar2);
+                  cVar1 = FUN_18181e400(lVar2);
                   if (!cVar1) {
                     lVar3 = FUN_18046c0a0(0);
-                    if ((lVar3 == null) || (lVar3.villageAreaID == null)) break;
-                    lVar3 = WorldData.Player(lVar3.villageAreaID,0);
+                    if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) break;
+                    lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0);
                     if (lVar3 == null) break;
                     lVar3 = HeroData.GetForce(lVar3,0);
                     if (lVar3 == null) break;
                     lVar3 = ForceData.GetOwnHero(lVar3);
                     if (lVar3 == null) break;
-                    if (!lVar3.BigMapRandomEventDatas) {
+                    if (*(char *)(lVar3 + 96) == false) {
                       lVar3 = FUN_18046c0a0(0);
-                      if ((lVar3 == null) || (lVar3.villageAreaID == null)) break;
-                      lVar3 = WorldData.Player(lVar3.villageAreaID,0);
+                      if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) break;
+                      lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0);
                       if (lVar3 == null) break;
                       lVar3 = HeroData.GetForce(lVar3,0);
                       if (lVar3 == null) break;
@@ -1007,8 +1008,8 @@ public class BookWriterUIController
                       if (lVar3 == null) break;
                       if (*(char *)(lVar3 + 209) == false) {
                         lVar3 = FUN_18046c0a0(0);
-                        if ((lVar3 == null) || (lVar3.villageAreaID == null)) break;
-                        lVar3 = WorldData.Player(lVar3.villageAreaID,0);
+                        if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) break;
+                        lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0);
                         if (lVar3 == null) break;
                         lVar3 = HeroData.GetForce(lVar3,0);
                         if (lVar3 == null) break;
@@ -1016,13 +1017,13 @@ public class BookWriterUIController
                         if (lVar3 == null) break;
                         if (*(char *)(lVar3 + 0x370) == false) {
                           lVar3 = FUN_18046c0a0(0);
-                          if ((lVar3 == null) || (lVar3.villageAreaID == null)) break;
-                          lVar3 = WorldData.Player(lVar3.villageAreaID,0);
+                          if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) break;
+                          lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0);
                           if (lVar3 == null) break;
                           lVar3 = HeroData.GetForce(lVar3,0,0);
                           if (lVar3 == null) break;
                           ForceData.GetOwnHero(lVar3,iVar7,0);
-                          FUN_181827900(lVar2);
+                          FUN_18181e0a0(lVar2);
                         }
                       }
                     }
@@ -1032,15 +1033,15 @@ public class BookWriterUIController
                 throw; // [null/range check failed]
               }
             }
-        LAB_180ce112a:
-            lVar3 = **(int64 **)(DAT_181d92370 + 184);
+        LAB_180c8708a:
+            lVar3 = **(int64 **)(DAT_181db7518 + 184);
             uVar4 = Component.get_gameObject(this,0);
             if (buttonClick != null) {
               lVar5 = GameObject.get_transform(buttonClick,0);
               if (lVar5 != null) {
-                lVar5 = FUN_180da0f00(lVar5,0);
+                lVar5 = FUN_180da9a20(lVar5,0);
                 if (lVar5 != null) {
-                  lVar5 = FUN_180da0f00(lVar5,0);
+                  lVar5 = FUN_180da9a20(lVar5,0);
                   if (lVar5 != null) {
                     uVar6 = Object.get_name(lVar5,0);
                     if (lVar3 != null) {
@@ -1055,11 +1056,11 @@ public class BookWriterUIController
         }
     }
 
-    // Token : 0x6000D33
-    // RVA   : 0xCE0260   Offset: 0xCDEA60   Length: 0x137
+    // Token : 0x6000D67
+    // RVA   : 0xC861C0   Offset: 0xC855C0   Length: 0x137
     public void BookWriterTargetHeroChoosen(string writerID)
     {
-        var pStatics = *(int64*)(DAT_181d92370 + 184);
+        var pStatics = *(int64*)(DAT_181db7518 + 184);
         long lVar1;
         uint uVar2;
         long lVar3;
@@ -1083,7 +1084,7 @@ public class BookWriterUIController
               lVar1 = lVar1._items[uVar2];
               if ((((*pStatics != 0) &&
                    (lVar3 = *(int64 *)(*pStatics + 72)) != null) &&
-                  (lVar3 = GameObject.GetComponent(lVar3,DAT_181d9fb20)) != null) &&
+                  (lVar3 = GameObject.GetComponent(lVar3,DAT_181d71b50)) != null) &&
                  ((*(int64 *)(lVar3 + 32) != 0 && (lVar1 != null)))) {
                 lVar1.Count = *(uint32 *)(*(int64 *)(lVar3 + 32) + 88);
                 BookWriterUIController.RefreshUI(this,0);
@@ -1094,8 +1095,8 @@ public class BookWriterUIController
         }
     }
 
-    // Token : 0x6000D34
-    // RVA   : 0xCE18B0   Offset: 0xCE00B0   Length: 0x12B
+    // Token : 0x6000D68
+    // RVA   : 0xC87810   Offset: 0xC86C10   Length: 0x12B
     public void ClearChoosenHero(GameObject buttonClick)
     {
         long lVar1;
@@ -1130,8 +1131,8 @@ public class BookWriterUIController
         }
     }
 
-    // Token : 0x6000D35
-    // RVA   : 0xCE19E0   Offset: 0xCE01E0   Length: 0xF1
+    // Token : 0x6000D69
+    // RVA   : 0xC87940   Offset: 0xC86D40   Length: 0xF1
     public void ClearChoosenHero(string writerID, bool refresh)
     {
         long lVar1;
@@ -1166,11 +1167,11 @@ public class BookWriterUIController
         }
     }
 
-    // Token : 0x6000D36
-    // RVA   : 0xCE0660   Offset: 0xCDEE60   Length: 0x5DF
+    // Token : 0x6000D6A
+    // RVA   : 0xC865C0   Offset: 0xC859C0   Length: 0x5DF
     public void ChooseBookButtonClicked(GameObject buttonClick)
     {
-        var pStatics = *(int64*)(DAT_181d92370 + 184);
+        var pStatics = *(int64*)(DAT_181db7518 + 184);
         int iVar1;
         uint uVar2;
         uint uVar3;
@@ -1183,51 +1184,51 @@ public class BookWriterUIController
         uint[] local_res10 = new uint[2];
         uint[] local_res20 = new uint[2];
         if ((((buttonClick == null) || (lVar4 = GameObject.get_transform(buttonClick,0)) == null) ||
-            (lVar4 = FUN_180da0f00(lVar4,0)) == null) ||
-           ((lVar4 = FUN_180da0f00(lVar4,0), lVar4 == null || (lVar4 = FUN_180da0f00(lVar4,0)) == null)))
+            (lVar4 = FUN_180da9a20(lVar4,0)) == null) ||
+           ((lVar4 = FUN_180da9a20(lVar4,0), lVar4 == null || (lVar4 = FUN_180da9a20(lVar4,0)) == null)))
         {
-        LAB_180ce0c28:
+        LAB_180c86b88:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         uVar5 = Object.get_name(lVar4,0);
         lVar4 = this.targetBookWriterList;
         uVar2 = Int32.Parse(uVar5,0);
-        if (lVar4 == null) goto LAB_180ce0c28;
+        if (lVar4 == null) goto LAB_180c86b88;
         if (lVar4.Count <= uVar2) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         lVar4 = lVar4._items[uVar2];
-        if (lVar4 == null) goto LAB_180ce0c28;
+        if (lVar4 == null) goto LAB_180c86b88;
         iVar1 = *(int *)(lVar4 + 20);
         if (iVar1 == 0) {
           lVar4 = this.targetBookWriterList;
           uVar2 = Int32.Parse(uVar5,0);
-          if (lVar4 == null) goto LAB_180ce0c28;
+          if (lVar4 == null) goto LAB_180c86b88;
           if (lVar4.Count <= uVar2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar4 = lVar4._items[uVar2];
-          if (lVar4 == null) goto LAB_180ce0c28;
+          if (lVar4 == null) goto LAB_180c86b88;
           if (*(int64 *)(lVar4 + 32) != 0) {
             return;
           }
           lVar4 = *pStatics;
-          lVar6 = il2cpp_internal(DAT_181d701b0);
-          FUN_180f58a90(lVar6,DAT_181d6dfe8);
+          lVar6 = il2cpp_internal(DAT_181d94e50);
+          FUN_18132faf0(lVar6,DAT_181d95788);
           local_res10[0] = 0;
-          uVar8 = il2cpp_value_box(DAT_181d5b2f8,local_res10);
+          uVar8 = il2cpp_value_box(DAT_181d80418,local_res10);
           if (lVar6 == null) {
-        LAB_180ce0c3a:
+        LAB_180c86b9a:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          FUN_181827900(lVar6,uVar8,DAT_181d6e0e8);
+          FUN_18181e0a0(lVar6,uVar8,DAT_181d95888);
           local_res20[0] = 3;
-          uVar8 = il2cpp_value_box(DAT_181d5b2f8,local_res20);
-          FUN_181827900(lVar6,uVar8,DAT_181d6e0e8);
+          uVar8 = il2cpp_value_box(DAT_181d80418,local_res20);
+          FUN_18181e0a0(lVar6,uVar8,DAT_181d95888);
           uVar8 = Component.get_gameObject(this,0);
-          if (lVar4 == null) goto LAB_180ce0c3a;
+          if (lVar4 == null) goto LAB_180c86b9a;
           uVar3 = 6;
         }
         else {
@@ -1237,23 +1238,23 @@ public class BookWriterUIController
             }
             lVar4 = this.targetBookWriterList;
             uVar2 = Int32.Parse(uVar5,0);
-            if (lVar4 == null) goto LAB_180ce0c28;
+            if (lVar4 == null) goto LAB_180c86b88;
             if (lVar4.Count <= uVar2) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar4 = lVar4._items[uVar2];
-            if (lVar4 == null) goto LAB_180ce0c28;
+            if (lVar4 == null) goto LAB_180c86b88;
             if (*(int64 *)(lVar4 + 48) != 0) {
               return;
             }
             lVar4 = this.targetBookWriterList;
             uVar2 = Int32.Parse(uVar5,0);
-            if (lVar4 == null) goto LAB_180ce0c28;
+            if (lVar4 == null) goto LAB_180c86b88;
             if (lVar4.Count <= uVar2) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar4 = lVar4._items[uVar2];
-            if (lVar4 == null) goto LAB_180ce0c28;
+            if (lVar4 == null) goto LAB_180c86b88;
             lVar4 = BookWriterData.GetBookWriterHero(lVar4,0);
             if (lVar4 == null) {
               lVar4 = FUN_18046c0a0(0);
@@ -1261,73 +1262,73 @@ public class BookWriterUIController
                 GameController.ShowTextOnMouse(lVar4,"需先选择编纂角色",0);
                 plVar9 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
                 plVar11 = (int64 *)0;
-                if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181d8a228)) {
+                if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181daf348)) {
                   plVar11 = plVar9;
                 }
                 NGUITools.PlaySound(plVar11,0);
                 return;
               }
-              goto LAB_180ce0c28;
+              goto LAB_180c86b88;
             }
             lVar4 = FUN_18046bd60(0);
-            lVar6 = il2cpp_internal(DAT_181d701b0);
-            FUN_180f58a90(lVar6,DAT_181d6dfe8);
+            lVar6 = il2cpp_internal(DAT_181d94e50);
+            FUN_18132faf0(lVar6,DAT_181d95788);
             lVar7 = this.targetBookWriterList;
             uVar3 = Int32.Parse(uVar5,0);
-            if ((lVar7 == null) || (lVar7 = FUN_180002f80(lVar7,uVar3,DAT_181d58c98)) == null) {
-        LAB_180ce0c2e:
+            if ((lVar7 == null) || (lVar7 = FUN_180002f80(lVar7,uVar3,DAT_181d80420)) == null) {
+        LAB_180c86b8e:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             local_res10[0] = lVar7.Count;
-            uVar8 = il2cpp_value_box(DAT_181d5b2f8,local_res10);
-            if (lVar6 == null) goto LAB_180ce0c2e;
-            FUN_181827900(lVar6,uVar8,DAT_181d6e0e8);
+            uVar8 = il2cpp_value_box(DAT_181d80418,local_res10);
+            if (lVar6 == null) goto LAB_180c86b8e;
+            FUN_18181e0a0(lVar6,uVar8,DAT_181d95888);
             uVar8 = Component.get_gameObject(this,0);
-            if (lVar4 == null) goto LAB_180ce0c2e;
+            if (lVar4 == null) goto LAB_180c86b8e;
             uVar10 = 0;
             uVar3 = 0;
-            goto LAB_180ce0ae9;
+            goto LAB_180c86a49;
           }
           lVar4 = this.targetBookWriterList;
           uVar2 = Int32.Parse(uVar5,0);
-          if (lVar4 == null) goto LAB_180ce0c28;
+          if (lVar4 == null) goto LAB_180c86b88;
           if (lVar4.Count <= uVar2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar4 = lVar4._items[uVar2];
-          if (lVar4 == null) goto LAB_180ce0c28;
+          if (lVar4 == null) goto LAB_180c86b88;
           if (*(int64 *)(lVar4 + 32) != 0) {
             return;
           }
           lVar4 = *pStatics;
-          lVar6 = il2cpp_internal(DAT_181d701b0);
-          FUN_180f58a90(lVar6,DAT_181d6dfe8);
+          lVar6 = il2cpp_internal(DAT_181d94e50);
+          FUN_18132faf0(lVar6,DAT_181d95788);
           local_res10[0] = 0;
-          uVar8 = il2cpp_value_box(DAT_181d5b2f8,local_res10);
+          uVar8 = il2cpp_value_box(DAT_181d80418,local_res10);
           if (lVar6 == null) {
-        LAB_180ce0c34:
+        LAB_180c86b94:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          FUN_181827900(lVar6,uVar8,DAT_181d6e0e8);
+          FUN_18181e0a0(lVar6,uVar8,DAT_181d95888);
           local_res20[0] = 3;
-          uVar8 = il2cpp_value_box(DAT_181d5b2f8,local_res20);
-          FUN_181827900(lVar6,uVar8,DAT_181d6e0e8);
+          uVar8 = il2cpp_value_box(DAT_181d80418,local_res20);
+          FUN_18181e0a0(lVar6,uVar8,DAT_181d95888);
           uVar8 = Component.get_gameObject(this,0);
-          if (lVar4 == null) goto LAB_180ce0c34;
+          if (lVar4 == null) goto LAB_180c86b94;
           uVar3 = 25;
         }
         uVar10 = 1;
-        LAB_180ce0ae9:
+        LAB_180c86a49:
         ChooseController.ShowChoosePanel(lVar4,uVar10,lVar6,uVar8,"BookWriterTargetBookChoosen",uVar5,uVar3,0,0,0);
     }
 
-    // Token : 0x6000D37
-    // RVA   : 0xCDFED0   Offset: 0xCDE6D0   Length: 0x388
+    // Token : 0x6000D6B
+    // RVA   : 0xC85E30   Offset: 0xC85230   Length: 0x388
     public void BookWriterTargetBookChoosen(string writerID)
     {
-        var pStatics = *(int64*)(DAT_181d92370 + 184);
+        var pStatics = *(int64*)(DAT_181db7518 + 184);
         int iVar1;
         long lVar2;
         uint uVar3;
@@ -1337,7 +1338,7 @@ public class BookWriterUIController
         lVar2 = this.targetBookWriterList;
         uVar3 = Int32.Parse(writerID,0);
         if (lVar2 == null) {
-        LAB_180ce0253:
+        LAB_180c861b3:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -1345,85 +1346,85 @@ public class BookWriterUIController
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         lVar2 = lVar2._items[uVar3];
-        if (lVar2 == null) goto LAB_180ce0253;
+        if (lVar2 == null) goto LAB_180c861b3;
         iVar1 = *(int *)(lVar2 + 20);
         if (iVar1 == 0) {
           lVar2 = this.targetBookWriterList;
           uVar3 = Int32.Parse(writerID,0);
-          if (lVar2 == null) goto LAB_180ce0253;
+          if (lVar2 == null) goto LAB_180c861b3;
           if (lVar2.Count <= uVar3) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar2 = lVar2._items[uVar3];
           if ((*pStatics == 0) ||
              (lVar4 = *(int64 *)(*pStatics + 72)) == null)
-          goto LAB_180ce0253;
-          lVar4 = GameObject.GetComponent(lVar4,DAT_181da0070);
-          if ((lVar4 == null) || (lVar2 == null)) goto LAB_180ce0253;
+          goto LAB_180c861b3;
+          lVar4 = GameObject.GetComponent(lVar4,DAT_181d720a0);
+          if ((lVar4 == null) || (lVar2 == null)) goto LAB_180c861b3;
           *(uint64 *)(lVar2 + 32) = *(uint64 *)(lVar4 + 32);
           lVar2 = this.targetBookWriterList;
           uVar3 = Int32.Parse(writerID,0);
-          if (lVar2 == null) goto LAB_180ce0253;
+          if (lVar2 == null) goto LAB_180c861b3;
           if (lVar2.Count <= uVar3) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar2 = lVar2._items[uVar3];
           lVar4 = FUN_18046c0a0(0);
-          if ((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) goto LAB_180ce0253;
+          if ((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) goto LAB_180c861b3;
           lVar5 = WorldData.Player(*(int64 *)(lVar4 + 32),0);
           lVar4 = this.targetBookWriterList;
           uVar3 = Int32.Parse(writerID,0);
-          if (lVar4 == null) goto LAB_180ce0253;
+          if (lVar4 == null) goto LAB_180c861b3;
           if (lVar4.Count <= uVar3) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar4 = lVar4._items[uVar3];
-          if ((lVar4 == null) || (lVar5 == null)) goto LAB_180ce0253;
+          if ((lVar4 == null) || (lVar5 == null)) goto LAB_180c861b3;
           uVar6 = HeroData.FindSameBook(lVar5,*(uint64 *)(lVar4 + 32),0);
-          if (lVar2 == null) goto LAB_180ce0253;
+          if (lVar2 == null) goto LAB_180c861b3;
           puVar7 = (uint64 *)(lVar2 + 40);
           *puVar7 = uVar6;
         }
         else if (iVar1 == 1) {
           lVar2 = this.targetBookWriterList;
           uVar3 = Int32.Parse(writerID,0);
-          if (lVar2 == null) goto LAB_180ce0253;
+          if (lVar2 == null) goto LAB_180c861b3;
           if (lVar2.Count <= uVar3) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar2 = lVar2._items[uVar3];
           if ((*pStatics == 0) ||
              (lVar4 = *(int64 *)(*pStatics + 72)) == null)
-          goto LAB_180ce0253;
-          lVar4 = GameObject.GetComponent(lVar4,DAT_181da0070);
-          if ((lVar4 == null) || (uVar6 = *(uint64 *)(lVar4 + 32), lVar2 == null)) goto LAB_180ce0253;
+          goto LAB_180c861b3;
+          lVar4 = GameObject.GetComponent(lVar4,DAT_181d720a0);
+          if ((lVar4 == null) || (uVar6 = *(uint64 *)(lVar4 + 32), lVar2 == null)) goto LAB_180c861b3;
           puVar7 = (uint64 *)(lVar2 + 32);
           *puVar7 = uVar6;
         }
         else {
-          if (iVar1 != 2) goto LAB_180ce0230;
+          if (iVar1 != 2) goto LAB_180c86190;
           lVar2 = this.targetBookWriterList;
           uVar3 = Int32.Parse(writerID,0);
-          if (lVar2 == null) goto LAB_180ce0253;
+          if (lVar2 == null) goto LAB_180c861b3;
           if (lVar2.Count <= uVar3) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar2 = lVar2._items[uVar3];
           if ((*pStatics == 0) ||
              (lVar4 = *(int64 *)(*pStatics + 72)) == null)
-          goto LAB_180ce0253;
-          lVar4 = GameObject.GetComponent(lVar4,DAT_181da1630);
-          if ((lVar4 == null) || (uVar6 = *(uint64 *)(lVar4 + 32), lVar2 == null)) goto LAB_180ce0253;
+          goto LAB_180c861b3;
+          lVar4 = GameObject.GetComponent(lVar4,DAT_181d73800);
+          if ((lVar4 == null) || (uVar6 = *(uint64 *)(lVar4 + 32), lVar2 == null)) goto LAB_180c861b3;
           puVar7 = (uint64 *)(lVar2 + 48);
           *puVar7 = uVar6;
         }
         il2cpp_internal(puVar7,uVar6);
-        LAB_180ce0230:
+        LAB_180c86190:
         BookWriterUIController.RefreshUI(this,0);
     }
 
-    // Token : 0x6000D38
-    // RVA   : 0xCE1840   Offset: 0xCE0040   Length: 0x63
+    // Token : 0x6000D6C
+    // RVA   : 0xC877A0   Offset: 0xC86BA0   Length: 0x63
     public void ClearChoosenBook(GameObject buttonClick)
     {
         long lVar1;
@@ -1473,8 +1474,8 @@ public class BookWriterUIController
         }
     }
 
-    // Token : 0x6000D39
-    // RVA   : 0xCE16F0   Offset: 0xCDFEF0   Length: 0x141
+    // Token : 0x6000D6D
+    // RVA   : 0xC87650   Offset: 0xC86A50   Length: 0x141
     public void ClearChoosenBook(string writerID, bool refresh)
     {
         long lVar1;
@@ -1524,10 +1525,11 @@ public class BookWriterUIController
         }
     }
 
-    // Token : 0x6000D3A
-    // RVA   : 0xCE4040   Offset: 0xCE2840   Length: 0x9FF
+    // Token : 0x6000D6E
+    // RVA   : 0xC8A090   Offset: 0xC89490   Length: 0x9FF
     public void SureButtonClicked(GameObject buttonClick)
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         bool cVar1;
         uint uVar2;
         int iVar3;
@@ -1535,7 +1537,7 @@ public class BookWriterUIController
         ulong uVar5;
         long lVar6;
         if ((((buttonClick != null) && (lVar4 = GameObject.get_transform(buttonClick,0)) != null) &&
-            (lVar4 = FUN_180da0f00(lVar4,0)) != null) && (lVar4 = FUN_180da0f00(lVar4,0)) != null)
+            (lVar4 = FUN_180da9a20(lVar4,0)) != null) && (lVar4 = FUN_180da9a20(lVar4,0)) != null)
         {
           uVar5 = Object.get_name(lVar4,0);
           lVar4 = this.targetBookWriterList;
@@ -1570,7 +1572,7 @@ public class BookWriterUIController
                       lVar6 = lVar6._items[uVar2]
                       ;
                       if ((lVar6 == null) || (lVar4 == null)) throw; // [null/range check failed]
-                      cVar1 = FUN_1818279a0(lVar4,*(uint64 *)(lVar6 + 32),DAT_181d693f0);
+                      cVar1 = FUN_18181e400(lVar4,*(uint64 *)(lVar6 + 32),DAT_181d90b98);
                       if (!cVar1) {
                         lVar4 = FUN_18046c0a0(0);
                         if (((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
@@ -1628,7 +1630,7 @@ public class BookWriterUIController
                           lVar6 = *(int64 *)
                                    (lVar6._items + 32 + (int64)(int)uVar2 * 8);
                           if ((lVar6 == null) || (lVar4 == null)) throw; // [null/range check failed]
-                          cVar1 = FUN_1818279a0(lVar4,*(uint64 *)(lVar6 + 40),DAT_181d693f0);
+                          cVar1 = FUN_18181e400(lVar4,*(uint64 *)(lVar6 + 40),DAT_181d90b98);
                           if (!cVar1) {
                             lVar4 = FUN_18046c0a0(0);
                             if (((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
@@ -1662,9 +1664,8 @@ public class BookWriterUIController
                             HeroData.LoseItem(lVar6,*(uint64 *)(lVar4 + 40),1,0);
                           }
                         }
-                        if ((GameController._instance != null) &&
-                           (lVar4 = *(int64 *)
-                                     (GameController._instance + 32),
+                        if ((*pStatics != 0) &&
+                           (lVar4 = *(int64 *)(*pStatics + 32),
                            lVar4 != null)) {
                           lVar6 = WorldData.Player(lVar4,0);
                           lVar4 = this.targetBookWriterList;
@@ -1701,7 +1702,7 @@ public class BookWriterUIController
                                     if (lVar4 != null) {
                                       *(uint8 *)(lVar4 + 56) = 1;
                                       plVar7 = (int64 *)Resources.Load("Sound/SoundEffect/PencilWriting",0);
-                                      goto LAB_180ce49f9;
+                                      goto LAB_180c8aa49;
                                     }
                                   }
                                 }
@@ -1781,9 +1782,9 @@ public class BookWriterUIController
                         *(uint8 *)(lVar4 + 56) = 0;
                         *(uint32 *)(lVar4 + 60) = 0;
                         plVar7 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
-        LAB_180ce49f9:
+        LAB_180c8aa49:
                         plVar8 = (int64 *)0;
-                        if ((plVar7 != (int64 *)0) && (*plVar7 == DAT_181d8a228)) {
+                        if ((plVar7 != (int64 *)0) && (*plVar7 == DAT_181daf348)) {
                           plVar8 = plVar7;
                         }
                         NGUITools.PlaySound(plVar8,0);
@@ -1799,8 +1800,8 @@ public class BookWriterUIController
         }
     }
 
-    // Token : 0x6000D3B
-    // RVA   : 0xCE1610   Offset: 0xCDFE10   Length: 0xD5
+    // Token : 0x6000D6F
+    // RVA   : 0xC87570   Offset: 0xC86970   Length: 0xD5
     public void ClearAll()
     {
         long lVar1;
@@ -1822,7 +1823,7 @@ public class BookWriterUIController
             if (lVar1 == null) break;
             if (*(char *)(lVar1 + 56) == false) {
               if ((this.targetBookWriterList == null) ||
-                 (lVar1 = FUN_180002f80(this.targetBookWriterList,uVar3,DAT_181d58c98)) == null)
+                 (lVar1 = FUN_180002f80(this.targetBookWriterList,uVar3,DAT_181d80420)) == null)
               break;
               BookWriterData.Reset(lVar1,0);
             }
@@ -1834,8 +1835,8 @@ public class BookWriterUIController
         }
     }
 
-    // Token : 0x6000D3C
-    // RVA   : 0xCE1B80   Offset: 0xCE0380   Length: 0xEC
+    // Token : 0x6000D70
+    // RVA   : 0xC87AE0   Offset: 0xC86EE0   Length: 0xEC
     public void HideBookWriterUI()
     {
         long lVar1;
@@ -1869,8 +1870,8 @@ public class BookWriterUIController
         }
     }
 
-    // Token : 0x6000D3D
-    // RVA   : 0xCE3FD0   Offset: 0xCE27D0   Length: 0x6E
+    // Token : 0x6000D71
+    // RVA   : 0xC8A020   Offset: 0xC89420   Length: 0x6E
     public void ShowBookWriterUI(List<BookWriterData> _bookWriterList, ForceData _targetForce)
     {
         void BookWriterUIController.ShowBookWriterUI
@@ -1886,18 +1887,18 @@ public class BookWriterUIController
         }
     }
 
-    // Token : 0x6000D3E
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x6000D72
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);
     }
 
-    // Token : 0x6000D3F
-    // RVA   : 0xCE4A40   Offset: 0xCE3240   Length: 0x39
+    // Token : 0x6000D73
+    // RVA   : 0xC8AA90   Offset: 0xC89E90   Length: 0x39
     private static void /*cctor*/()
     {
-        BookWriterUIController.MaxBookWriterNum = 4;
+        **(uint32 **)(DAT_181db29b8 + 184) = 4;
     }
 
 }

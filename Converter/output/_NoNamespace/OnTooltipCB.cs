@@ -1,13 +1,13 @@
 // ============================================================
 // Type  : OnTooltipCB
-// Token : 0x2000113
+// Token : 0x2000114
 // ============================================================
 
 public class OnTooltipCB
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000946
-    // RVA   : 0x210320   Offset: 0x20EB20   Length: 0x6A
+    // Token : 0x600095E
+    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
@@ -25,8 +25,8 @@ public class OnTooltipCB
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x6000947
-    // RVA   : 0xB05230   Offset: 0xB03A30   Length: 0x2AF
+    // Token : 0x600095F
+    // RVA   : 0x8E46D0   Offset: 0x8E3AD0   Length: 0x2AF
     public virtual void Invoke(object obj, bool show)
     {
         long lVar1;
@@ -62,7 +62,7 @@ public class OnTooltipCB
             if (*(char *)(lVar1 + 74) == '\x02') {
               if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                   ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-              goto LAB_180b05495;
+              goto LAB_1808e4935;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
                 cVar4 = FUN_1800d65c0(lVar1);
@@ -74,7 +74,7 @@ public class OnTooltipCB
                 }
                 else {
                   uVar7 = il2cpp_class_get_namespace(lVar1);
-                  FUN_18014a9c0(*(uint16 *)(lVar1 + 72),uVar7,plVar3,obj,show);
+                  FUN_180133470(*(uint16 *)(lVar1 + 72),uVar7,plVar3,obj,show);
                 }
               }
               else {
@@ -88,13 +88,13 @@ public class OnTooltipCB
                   (*(code *)*puVar6)(plVar3,obj,show,puVar6);
                 }
                 else {
-                  FUN_18014a7a0(lVar1,plVar3,obj,show);
+                  FUN_1801331b0(lVar1,plVar3,obj,show);
                 }
               }
             }
             else {
               if ((*(short *)(lVar1 + 72) == -1) || (*(int64 *)(this + 24) == 0))
-              goto LAB_180b052d7;
+              goto LAB_1808e4777;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
                 cVar4 = FUN_1800d65c0(lVar1);
@@ -126,11 +126,11 @@ public class OnTooltipCB
             }
           }
           else if (*(char *)(lVar1 + 74) == '\x02') {
-        LAB_180b052d7:
+        LAB_1808e4777:
             (*pcVar2)(obj,show,lVar1);
           }
           else {
-        LAB_180b05495:
+        LAB_1808e4935:
             (*pcVar2)(plVar3,obj,show,lVar1);
           }
           uVar9 = uVar9 + 1;
@@ -140,8 +140,8 @@ public class OnTooltipCB
         } while( true );
     }
 
-    // Token : 0x6000948
-    // RVA   : 0xB09640   Offset: 0xB07E40   Length: 0x82
+    // Token : 0x6000960
+    // RVA   : 0x183DDF0   Offset: 0x183D1F0   Length: 0x82
     public virtual IAsyncResult BeginInvoke(object obj, bool show, AsyncCallback callback, object object)
     {
         void OnTooltipCB.BeginInvoke
@@ -155,12 +155,12 @@ public class OnTooltipCB
         local_res18[0] = show;
         local_18 = 0;
         local_28 = obj;
-        local_20 = il2cpp_value_box(DAT_181d8d920,local_res18);
+        local_20 = il2cpp_value_box(DAT_181db2ac8,local_res18);
         il2cpp_internal(this,&local_28,callback,object);
     }
 
-    // Token : 0x6000949
-    // RVA   : 0x210040   Offset: 0x20E840   Length: 0xA
+    // Token : 0x6000961
+    // RVA   : 0x210040   Offset: 0x20F440   Length: 0xA
     public virtual void EndInvoke(IAsyncResult result)
     {
         il2cpp_internal(result,0);

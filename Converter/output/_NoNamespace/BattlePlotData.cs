@@ -1,26 +1,26 @@
 // ============================================================
 // Type  : BattlePlotData
-// Token : 0x2000153
+// Token : 0x2000157
 // ============================================================
 
 public class BattlePlotData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000886
+    // Token: 0x40008AD
     public BattlePlotTrigger battlePlotTrigger;
 
-    // Token: 0x4000887
+    // Token: 0x40008AE
     public string battlePlotTarget;
 
-    // Token: 0x4000888
+    // Token: 0x40008AF
     public int battlePlotID;
 
-    // Token: 0x4000889
+    // Token: 0x40008B0
     public bool noAutoDestroy;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000AD2
-    // RVA   : 0x8DF770   Offset: 0x8DDF70   Length: 0x58
+    // Token : 0x6000AF5
+    // RVA   : 0x8CA950   Offset: 0x8C9D50   Length: 0x58
     public void /*ctor*/(BattlePlotTrigger _battlePlotTrigger, string _battlePlotTarget, int _battlePlotID, bool _noAutoDestroy)
     {
         void BattlePlotData.ctor

@@ -1,29 +1,29 @@
 // ============================================================
 // Type  : TweenPosition
-// Token : 0x20000C0
+// Token : 0x20000C1
 // ============================================================
 
 public class TweenPosition
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000486
+    // Token: 0x40004A2
     public Vector3 from;
 
-    // Token: 0x4000487
+    // Token: 0x40004A3
     public Vector3 to;
 
-    // Token: 0x4000488
+    // Token: 0x40004A4
     public bool worldSpace;
 
-    // Token: 0x4000489
+    // Token: 0x40004A5
     private Transform mTrans;
 
-    // Token: 0x400048A
+    // Token: 0x40004A6
     private UIRect mRect;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60005C4
-    // RVA   : 0xA72240   Offset: 0xA70A40   Length: 0x9B
+    // Token : 0x60005DC
+    // RVA   : 0xAEBF10   Offset: 0xAEB310   Length: 0x9B
     public Transform get_cachedTransform()
     {
         bool cVar1;
@@ -37,8 +37,8 @@ public class TweenPosition
         return this.mTrans;
     }
 
-    // Token : 0x60005C5
-    // RVA   : 0xA722E0   Offset: 0xA70AE0   Length: 0x74
+    // Token : 0x60005DD
+    // RVA   : 0xAEBFB0   Offset: 0xAEB3B0   Length: 0x74
     public Vector3 get_position()
     {
         uint uVar1;
@@ -67,8 +67,8 @@ public class TweenPosition
         return this;
     }
 
-    // Token : 0x60005C6
-    // RVA   : 0xA723D0   Offset: 0xA70BD0   Length: 0x27
+    // Token : 0x60005DE
+    // RVA   : 0xAEC0A0   Offset: 0xAEB4A0   Length: 0x27
     public void set_position(Vector3 value)
     {
         ulong local_18;
@@ -78,8 +78,8 @@ public class TweenPosition
         TweenPosition.set_value(local_18,&local_18,0);
     }
 
-    // Token : 0x60005C7
-    // RVA   : 0xA72360   Offset: 0xA70B60   Length: 0x6E
+    // Token : 0x60005DF
+    // RVA   : 0xAEC030   Offset: 0xAEB430   Length: 0x6E
     public Vector3 get_value()
     {
         uint uVar1;
@@ -106,8 +106,8 @@ public class TweenPosition
         return this;
     }
 
-    // Token : 0x60005C8
-    // RVA   : 0xA72400   Offset: 0xA70C00   Length: 0x1D2
+    // Token : 0x60005E0
+    // RVA   : 0xAEC0D0   Offset: 0xAEB4D0   Length: 0x1D2
     public void set_value(Vector3 value)
     {
         ulong uVar1;
@@ -123,7 +123,7 @@ public class TweenPosition
         if (!cVar2) {
           if (this.mRect == null) throw; // [null/range check failed]
           cVar2 = UIRect.get_isAnchored(this.mRect,0);
-          if (!cVar2) goto LAB_180a72544;
+          if (!cVar2) goto LAB_180aec214;
           if (!this.worldSpace) {
             lVar3 = TweenPosition.get_cachedTransform(this,0);
             if (lVar3 != null) {
@@ -141,7 +141,7 @@ public class TweenPosition
           }
         }
         else {
-        LAB_180a72544:
+        LAB_180aec214:
           if (!this.worldSpace) {
             lVar3 = TweenPosition.get_cachedTransform(this,0);
             if (lVar3 != null) {
@@ -162,17 +162,17 @@ public class TweenPosition
         }
     }
 
-    // Token : 0x60005C9
-    // RVA   : 0xA71D80   Offset: 0xA70580   Length: 0x4B
+    // Token : 0x60005E1
+    // RVA   : 0xAEBA50   Offset: 0xAEAE50   Length: 0x4B
     private void Awake()
     {
         ulong uVar1;
-        uVar1 = Component.GetComponent(this,DAT_181d6e440);
+        uVar1 = Component.GetComponent(this,DAT_181d96ce0);
         this.mRect = uVar1;
     }
 
-    // Token : 0x60005CA
-    // RVA   : 0xA72020   Offset: 0xA70820   Length: 0xCB
+    // Token : 0x60005E2
+    // RVA   : 0xAEBCF0   Offset: 0xAEB0F0   Length: 0xCB
     protected override void OnUpdate(float factor, bool isFinished)
     {
         float fVar1;
@@ -190,8 +190,8 @@ public class TweenPosition
         TweenPosition.set_value(fVar2,&local_48,0);
     }
 
-    // Token : 0x60005CB
-    // RVA   : 0xA71F00   Offset: 0xA70700   Length: 0x116
+    // Token : 0x60005E3
+    // RVA   : 0xAEBBD0   Offset: 0xAEAFD0   Length: 0x116
     public static TweenPosition Begin(GameObject go, float duration, Vector3 pos)
     {
         uint uVar1;
@@ -200,7 +200,7 @@ public class TweenPosition
         long lVar4;
         byte[] local_48 = new byte[16];
         byte[] local_38 = new byte[48];
-        lVar3 = UITweener.Begin(go,duration,0,DAT_181d9dae8);
+        lVar3 = UITweener.Begin(go,duration,0,DAT_181dc6dd8);
         if (lVar3 != null) {
           *(char *)(lVar3 + 144) = param_4;
           lVar4 = TweenPosition.get_cachedTransform(lVar3,0);
@@ -229,8 +229,8 @@ public class TweenPosition
         }
     }
 
-    // Token : 0x60005CC
-    // RVA   : 0xA71DD0   Offset: 0xA705D0   Length: 0x123
+    // Token : 0x60005E4
+    // RVA   : 0xAEBAA0   Offset: 0xAEAEA0   Length: 0x123
     public static TweenPosition Begin(GameObject go, float duration, Vector3 pos, bool worldSpace)
     {
         uint uVar1;
@@ -239,7 +239,7 @@ public class TweenPosition
         long lVar4;
         byte[] local_48 = new byte[16];
         byte[] local_38 = new byte[48];
-        lVar3 = UITweener.Begin(go,duration,0,DAT_181d9dae8);
+        lVar3 = UITweener.Begin(go,duration,0,DAT_181dc6dd8);
         if (lVar3 != null) {
           *(char *)(lVar3 + 144) = worldSpace;
           lVar4 = TweenPosition.get_cachedTransform(lVar3,0);
@@ -268,8 +268,8 @@ public class TweenPosition
         }
     }
 
-    // Token : 0x60005CD
-    // RVA   : 0xA721C0   Offset: 0xA709C0   Length: 0x6C
+    // Token : 0x60005E5
+    // RVA   : 0xAEBE90   Offset: 0xAEB290   Length: 0x6C
     public override void SetStartToCurrentValue()
     {
         uint uVar1;
@@ -297,8 +297,8 @@ public class TweenPosition
         *(uint32 *)(this + 128) = uVar1;
     }
 
-    // Token : 0x60005CE
-    // RVA   : 0xA72150   Offset: 0xA70950   Length: 0x6F
+    // Token : 0x60005E6
+    // RVA   : 0xAEBE20   Offset: 0xAEB220   Length: 0x6F
     public override void SetEndToCurrentValue()
     {
         uint uVar1;
@@ -326,8 +326,8 @@ public class TweenPosition
         *(uint32 *)(this + 140) = uVar1;
     }
 
-    // Token : 0x60005CF
-    // RVA   : 0xA72120   Offset: 0xA70920   Length: 0x2B
+    // Token : 0x60005E7
+    // RVA   : 0xAEBDF0   Offset: 0xAEB1F0   Length: 0x2B
     private void SetCurrentValueToStart()
     {
         ulong local_18;
@@ -337,8 +337,8 @@ public class TweenPosition
         TweenPosition.set_value(local_18,&local_18,0);
     }
 
-    // Token : 0x60005D0
-    // RVA   : 0xA720F0   Offset: 0xA708F0   Length: 0x2E
+    // Token : 0x60005E8
+    // RVA   : 0xAEBDC0   Offset: 0xAEB1C0   Length: 0x2E
     private void SetCurrentValueToEnd()
     {
         ulong local_18;
@@ -348,10 +348,12 @@ public class TweenPosition
         TweenPosition.set_value(local_18,&local_18,0);
     }
 
-    // Token : 0x60005D1
-    // RVA   : 0xA72230   Offset: 0xA70A30   Length: 0x7
+    // Token : 0x60005E9
+    // RVA   : 0xAEBF00   Offset: 0xAEB300   Length: 0x7
     public void /*ctor*/()
     {
+        void FUN_180aebf00(uint64 this)
+        {
         UITweener.ctor(this,0);
     }
 

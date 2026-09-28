@@ -1,27 +1,27 @@
 // ============================================================
 // Type  : ExploreTileEventTypeData
-// Token : 0x200026A
+// Token : 0x2000270
 // ============================================================
 
 public class ExploreTileEventTypeData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40012F0
+    // Token: 0x4001393
     public ExploreTileEventType eventType;
 
-    // Token: 0x40012F1
+    // Token: 0x4001394
     public List<float> param;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60013CC
-    // RVA   : 0x210B70   Offset: 0x20F370   Length: 0x7
+    // Token : 0x600140D
+    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);
     }
 
-    // Token : 0x60013CD
-    // RVA   : 0xB9EA80   Offset: 0xB9D280   Length: 0x175
+    // Token : 0x600140E
+    // RVA   : 0xB271D0   Offset: 0xB265D0   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -32,13 +32,13 @@ public class ExploreTileEventTypeData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -50,7 +50,7 @@ public class ExploreTileEventTypeData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d53c70,plVar1);
+            FUN_180002970(0,DAT_181d78da0,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

@@ -1,26 +1,26 @@
 // ============================================================
 // Type  : VariousRotateObject
-// Token : 0x20003D2
+// Token : 0x20003D9
 // ============================================================
 
 public class VariousRotateObject
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001DD0
+    // Token: 0x4001EDA
     public Vector3 RotateOffset;
 
-    // Token: 0x4001DD1
+    // Token: 0x4001EDB
     private Vector3 RotateMulti;
 
-    // Token: 0x4001DD2
+    // Token: 0x4001EDC
     public float m_delay;
 
-    // Token: 0x4001DD3
+    // Token: 0x4001EDD
     private float m_Time;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60023C7
-    // RVA   : 0x9DCE80   Offset: 0x9DB680   Length: 0x1B
+    // Token : 0x600244A
+    // RVA   : 0xC10E40   Offset: 0xC10240   Length: 0x1B
     private void Awake()
     {
         uint uVar1;
@@ -28,8 +28,8 @@ public class VariousRotateObject
         this.m_Time = uVar1;
     }
 
-    // Token : 0x60023C8
-    // RVA   : 0x9DCEA0   Offset: 0x9DB6A0   Length: 0x162
+    // Token : 0x600244B
+    // RVA   : 0xC10E60   Offset: 0xC10260   Length: 0x162
     private void Update()
     {
         ulong uVar1;
@@ -83,8 +83,8 @@ public class VariousRotateObject
         }
     }
 
-    // Token : 0x60023C9
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x600244C
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

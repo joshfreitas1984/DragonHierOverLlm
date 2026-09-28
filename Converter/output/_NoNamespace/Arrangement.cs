@@ -1,21 +1,21 @@
 // ============================================================
 // Type  : Arrangement
-// Token : 0x2000048
+// Token : 0x2000049
 // ============================================================
 
 public class Arrangement
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000183
+    // Token: 0x400019F
     public int value__;
 
-    // Token: 0x4000184
+    // Token: 0x40001A0
     public const Arrangement Horizontal;
 
-    // Token: 0x4000185
+    // Token: 0x40001A1
     public const Arrangement Vertical;
 
-    // Token: 0x4000186
+    // Token: 0x40001A2
     public const Arrangement CellSnap;
 
 }

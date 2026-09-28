@@ -1,13 +1,13 @@
 // ============================================================
 // Type  : OnClippingMoved
-// Token : 0x2000106
+// Token : 0x2000107
 // ============================================================
 
 public class OnClippingMoved
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60008CA
-    // RVA   : 0x210320   Offset: 0x20EB20   Length: 0x6A
+    // Token : 0x60008E2
+    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
@@ -25,8 +25,8 @@ public class OnClippingMoved
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x60008CB
-    // RVA   : 0x31A640   Offset: 0x318E40   Length: 0x36A
+    // Token : 0x60008E3
+    // RVA   : 0x31A640   Offset: 0x319A40   Length: 0x36A
     public virtual void Invoke(UIPanel panel)
     {
         long lVar1;
@@ -179,8 +179,8 @@ public class OnClippingMoved
         } while( true );
     }
 
-    // Token : 0x60008CC
-    // RVA   : 0x216660   Offset: 0x214E60   Length: 0x21
+    // Token : 0x60008E4
+    // RVA   : 0x216660   Offset: 0x215A60   Length: 0x21
     public virtual IAsyncResult BeginInvoke(UIPanel panel, AsyncCallback callback, object object)
     {
         ulong local_18;
@@ -190,8 +190,8 @@ public class OnClippingMoved
         il2cpp_internal(this,&local_18);
     }
 
-    // Token : 0x60008CD
-    // RVA   : 0x210040   Offset: 0x20E840   Length: 0xA
+    // Token : 0x60008E5
+    // RVA   : 0x210040   Offset: 0x20F440   Length: 0xA
     public virtual void EndInvoke(IAsyncResult result)
     {
         il2cpp_internal(result,0);

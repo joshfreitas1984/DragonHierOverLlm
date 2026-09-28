@@ -1,87 +1,87 @@
 // ============================================================
 // Type  : GameTitleController
-// Token : 0x20002AA
+// Token : 0x20002B0
 // ============================================================
 
 public class GameTitleController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40014F3
+    // Token: 0x40015A5
     public GameObject TitleImage;
 
-    // Token: 0x40014F4
+    // Token: 0x40015A6
     public GameObject WishListButton;
 
-    // Token: 0x40014F5
+    // Token: 0x40015A7
     public GameObject AccountMenu;
 
-    // Token: 0x40014F6
+    // Token: 0x40015A8
     public GameObject StartInfoMenu;
 
-    // Token: 0x40014F7
+    // Token: 0x40015A9
     public GameObject MainMenu;
 
-    // Token: 0x40014F8
+    // Token: 0x40015AA
     public GameObject continueButton;
 
-    // Token: 0x40014F9
+    // Token: 0x40015AB
     public GameObject startButton;
 
-    // Token: 0x40014FA
+    // Token: 0x40015AC
     public GameObject loadButton;
 
-    // Token: 0x40014FB
+    // Token: 0x40015AD
     public GameObject settingButton;
 
-    // Token: 0x40014FC
+    // Token: 0x40015AE
     public GameObject quitButton;
 
-    // Token: 0x40014FD
+    // Token: 0x40015AF
     public Text versionText;
 
-    // Token: 0x40014FE
+    // Token: 0x40015B0
     public Text extraInfo;
 
-    // Token: 0x40014FF
+    // Token: 0x40015B1
     public GameObject checkText;
 
-    // Token: 0x4001500
+    // Token: 0x40015B2
     public GameObject checkPlayerAge;
 
-    // Token: 0x4001501
+    // Token: 0x40015B3
     public SaveLoadMenuController saveLoadMenuController;
 
-    // Token: 0x4001502
+    // Token: 0x40015B4
     public SettingMenuController settingMenuController;
 
-    // Token: 0x4001503
+    // Token: 0x40015B5
     public List<Transform> pathPoints;
 
-    // Token: 0x4001504
+    // Token: 0x40015B6
     public Vector3[] buttonPath;
 
-    // Token: 0x4001505
+    // Token: 0x40015B7
     public List<DlcSprite> dlcSprites;
 
-    // Token: 0x4001506
+    // Token: 0x40015B8
     public InfoMenuController infoMenuController;
 
-    // Token: 0x4001507
+    // Token: 0x40015B9
     private static GameTitleController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600168B
-    // RVA   : 0xA316E0   Offset: 0xA2FEE0   Length: 0x36
+    // Token : 0x60016CF
+    // RVA   : 0xA60360   Offset: 0xA5F760   Length: 0x36
     public static GameTitleController get_Instance()
     {
-        return **(uint64 **)(DAT_181d4e708 + 184);
+        return **(uint64 **)(DAT_181d734c0 + 184);
     }
 
-    // Token : 0x600168C
-    // RVA   : 0xA2F930   Offset: 0xA2E130   Length: 0x51E
+    // Token : 0x60016D0
+    // RVA   : 0xA5E5B0   Offset: 0xA5D9B0   Length: 0x51E
     private void Awake()
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d73d40 + 184);
         int iVar1;
         long lVar3;
         bool cVar4;
@@ -90,30 +90,30 @@ public class GameTitleController
         uint uVar8;
         long lVar9;
         byte[] local_28 = new byte[16];
-        uVar5 = **(uint64 **)(DAT_181d4e708 + 184);
+        uVar5 = **(uint64 **)(DAT_181d734c0 + 184);
         cVar4 = Object.op_Equality(uVar5,0,0);
         if (cVar4) {
-          plVar2 = *(int64 **)(DAT_181d4e708 + 184);
+          plVar2 = *(int64 **)(DAT_181d734c0 + 184);
           *plVar2 = this;
           il2cpp_internal(plVar2,this);
         }
-        if (PlotController._instance == 2) {
-        LAB_180a2fb17:
+        if (**(int **)(DAT_181d73d40 + 184) == 2) {
+        LAB_180a5e797:
           lVar6 = this.checkText;
           if (lVar6 == null) throw; // [null/range check failed]
           uVar5 = 1;
         }
         else {
-          if (PlotController._instance == 4) goto LAB_180a2fb17;
-          if (*(char *)(pPlotController + 4) != false) goto LAB_180a2fb17;
+          if (**(int **)(DAT_181d73d40 + 184) == 4) goto LAB_180a5e797;
+          if (*(char *)(pStatics + 4) != false) goto LAB_180a5e797;
           lVar6 = this.checkText;
           if (lVar6 == null) throw; // [null/range check failed]
           uVar5 = 0;
         }
         GameObject.SetActive(lVar6,uVar5,0);
         uVar8 = 0;
-        if (PlotController._instance == 2) {
-        LAB_180a2fcec:
+        if (**(int **)(DAT_181d73d40 + 184) == 2) {
+        LAB_180a5e96c:
           if ((this.versionText == null) ||
              (lVar6 = Component.get_gameObject(this.versionText,0)) == null)
           throw; // [null/range check failed]
@@ -124,9 +124,9 @@ public class GameTitleController
           GameObject.SetActive(lVar6,0,0);
         }
         else {
-          if (PlotController._instance == 4) goto LAB_180a2fcec;
+          if (**(int **)(DAT_181d73d40 + 184) == 4) goto LAB_180a5e96c;
           plVar2 = this.versionText;
-          iVar1 = PlotController.LeftFaceHideOffset;
+          iVar1 = *(int *)(pStatics + 8);
           uVar5 = "PlayTest ";
           if (((iVar1 != 1) && (uVar5 = "Demo ", iVar1 != 2)) && (uVar5 = "Expo ", iVar1 != 3)
              ) {
@@ -138,13 +138,12 @@ public class GameTitleController
           if (plVar2 == (int64 *)0) throw; // [null/range check failed]
           uVar5 = (**(code **)(*plVar2 + 0x5d8))(plVar2,*(uint64 *)(*plVar2 + 0x5e0));
           uVar5 = String.Concat(uVar5,"V",
-                                 *(uint64 *)(pPlotController + 112),
-                                 *(uint64 *)(pPlotController + 120),0
-                                );
+                                 *(uint64 *)(pStatics + 112),
+                                 *(uint64 *)(pStatics + 120),0);
           (**(code **)(*plVar2 + 0x5e8))(plVar2,uVar5,*(uint64 *)(*plVar2 + 0x5f0));
         }
         if (this.pathPoints != null) {
-          uVar5 = FUN_1800d60b0(DAT_181d81c40,this.pathPoints.Count + 1);
+          uVar5 = FUN_1800d60b0(DAT_181da6d60,this.pathPoints.Count + 1);
           this.buttonPath = uVar5;
           lVar6 = this.pathPoints;
           if (lVar6 != null) {
@@ -179,11 +178,13 @@ public class GameTitleController
         }
     }
 
-    // Token : 0x600168D
-    // RVA   : 0xA30A70   Offset: 0xA2F270   Length: 0xBCA
+    // Token : 0x60016D1
+    // RVA   : 0xA5F6F0   Offset: 0xA5EAF0   Length: 0xBCA
     private void Start()
     {
-        var pStatics = *(int64*)(DAT_181d8ffe8 + 184);
+        var pStatics_2d50 = *(int64*)(DAT_181d72d50 + 184);
+        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics_5190 = *(int64*)(DAT_181db5190 + 184);
         long lVar1;
         int iVar2;
         long lVar3;
@@ -200,22 +201,22 @@ public class GameTitleController
         ulong local_58;
         ulong uStack_50;
         if (this.continueButton == null) throw; // [null/range check failed]
-        lVar3 = GameObject.GetComponent(this.continueButton,DAT_181d9ee60);
+        lVar3 = GameObject.GetComponent(this.continueButton,DAT_181dc7c00);
         if (this.saveLoadMenuController == null) throw; // [null/range check failed]
         iVar2 = SaveLoadMenuController.GetRecentSaveSlotID(this.saveLoadMenuController,0);
         if (lVar3 == null) throw; // [null/range check failed]
         Selectable.set_interactable(lVar3,iVar2 != -1,0);
         if (this.continueButton == null) throw; // [null/range check failed]
-        lVar3 = GameObject.GetComponent(this.continueButton,DAT_181d9ee60);
+        lVar3 = GameObject.GetComponent(this.continueButton,DAT_181dc7c00);
         if (lVar3 == null) throw; // [null/range check failed]
         lVar8 = this.continueButton;
         if (*(char *)(lVar3 + 208) == false) {
           if (lVar8 == null) throw; // [null/range check failed]
-          plVar4 = (int64 *)GameObject.GetComponent(lVar8,DAT_181d9fe50);
-          puVar5 = (uint64 *)FUN_181098a50(&local_58,0);
+          plVar4 = (int64 *)GameObject.GetComponent(lVar8,DAT_181d71e80);
+          puVar5 = (uint64 *)FUN_1810d3570(&local_58,0);
           local_58 = *puVar5;
           uStack_50 = puVar5[1];
-          puVar5 = (uint64 *)FUN_181098d60(&local_68,&local_58,0x3f000000,0);
+          puVar5 = (uint64 *)FUN_1810d3880(&local_68,&local_58,0x3f000000,0);
           if (plVar4 == (int64 *)0) throw; // [null/range check failed]
           local_58 = *puVar5;
           uStack_50 = puVar5[1];
@@ -223,22 +224,22 @@ public class GameTitleController
         }
         else {
           if (lVar8 == null) throw; // [null/range check failed]
-          lVar3 = GameObject.GetComponent(lVar8,DAT_181da12b0);
+          lVar3 = GameObject.GetComponent(lVar8,DAT_181d73448);
           if (this.saveLoadMenuController == null) throw; // [null/range check failed]
           uVar6 = SaveLoadMenuController.GetRecentSaveSlotDescribe(this.saveLoadMenuController,0);
           if (lVar3 == null) throw; // [null/range check failed]
           *(uint64 *)(lVar3 + 24) = uVar6;
         }
         if (this.TitleImage == null) throw; // [null/range check failed]
-        plVar4 = (int64 *)GameObject.GetComponent(this.TitleImage,DAT_181d9fe50);
-        puVar5 = (uint64 *)FUN_180d904c0(&local_58,0);
+        plVar4 = (int64 *)GameObject.GetComponent(this.TitleImage,DAT_181d71e80);
+        puVar5 = (uint64 *)FUN_180d98fe0(&local_58,0);
         if (plVar4 == (int64 *)0) throw; // [null/range check failed]
         local_58 = *puVar5;
         uStack_50 = puVar5[1];
         (**(code **)(*plVar4 + 0x2a8))(plVar4,&local_58,*(uint64 *)(*plVar4 + 0x2b0));
         if (this.TitleImage == null) throw; // [null/range check failed]
-        uVar6 = GameObject.GetComponent(this.TitleImage,DAT_181d9fe50);
-        puVar5 = (uint64 *)FUN_181098a50(&local_58,0);
+        uVar6 = GameObject.GetComponent(this.TitleImage,DAT_181d71e80);
+        puVar5 = (uint64 *)FUN_1810d3570(&local_58,0);
         local_58 = *puVar5;
         uStack_50 = puVar5[1];
         DOTweenModuleUI.DOColor(uVar6,&local_58,0x3f800000,0);
@@ -252,45 +253,45 @@ public class GameTitleController
         if (this.WishListButton == null) throw; // [null/range check failed]
         uVar6 = GameObject.get_transform(this.WishListButton,0);
         uVar6 = ShortcutExtensions.DOScale(uVar6,0x3f800000,0x3f000000,0);
-        uVar6 = TweenSettingsExtensions.SetDelay(uVar6,0x3f800000,DAT_181d97978);
-        uVar7 = new OnTooltipCB(this,DAT_181d4d320,0);
-        TweenSettingsExtensions.OnComplete(uVar6,uVar7,DAT_181d96ee8);
-        if (PlotController._instance == 2) {
-        LAB_180a30ff5:
+        uVar6 = TweenSettingsExtensions.SetDelay(uVar6,0x3f800000,DAT_181dc0c60);
+        uVar7 = new OnTooltipCB(this,DAT_181d75e40,0);
+        TweenSettingsExtensions.OnComplete(uVar6,uVar7,DAT_181dc01d0);
+        if (**(int **)(DAT_181d73d40 + 184) == 2) {
+        LAB_180a5fc75:
           if (this.checkPlayerAge == null) throw; // [null/range check failed]
           GameObject.SetActive(this.checkPlayerAge,1,0);
-          if (*pStatics == 0) throw; // [null/range check failed]
-          if (*(char *)(*pStatics + 24) != false) goto LAB_180a3107b;
+          if (*pStatics_5190 == 0) throw; // [null/range check failed]
+          if (*(char *)(*pStatics_5190 + 24) != false) goto LAB_180a5fcfb;
           lVar3 = this.AccountMenu;
-        LAB_180a3104f:
+        LAB_180a5fccf:
           if (lVar3 == null) throw; // [null/range check failed]
           GameObject.SetActive(lVar3,1,0);
           if (this.MainMenu == null) throw; // [null/range check failed]
           GameObject.SetActive(this.MainMenu,0,0);
         }
         else {
-          if (PlotController._instance == 4) goto LAB_180a30ff5;
-          if (PlotController.LeftFaceHideOffset == 1) {
-        LAB_180a30fef:
+          if (**(int **)(DAT_181d73d40 + 184) == 4) goto LAB_180a5fc75;
+          if (*(int *)(pStatics_3d40 + 8) == 1) {
+        LAB_180a5fc6f:
             lVar3 = this.StartInfoMenu;
-            goto LAB_180a3104f;
+            goto LAB_180a5fccf;
           }
-          lVar3 = GameController.difficultyExtraPoint;
+          lVar3 = *(int64 *)(pStatics_2d50 + 8);
           if ((lVar3 == null) || (lVar3 = *(int64 *)(lVar3 + 16)) == null) throw; // [null/range check failed]
           iVar2 = PlayerPrefDictionary.GetInt(lVar3,"WelcomeTextShowed",0);
           if (iVar2 < 1) {
-            lVar3 = GameController.difficultyExtraPoint;
+            lVar3 = *(int64 *)(pStatics_2d50 + 8);
             if ((lVar3 == null) || (lVar3 = *(int64 *)(lVar3 + 16)) == null) throw; // [null/range check failed]
             PlayerPrefDictionary.SetKey(lVar3,"WelcomeTextShowed",1);
-            goto LAB_180a30fef;
+            goto LAB_180a5fc6f;
           }
-        LAB_180a3107b:
+        LAB_180a5fcfb:
           GameTitleController.ShowMainMenu(this,0);
         }
         local_res8[0] = 0;
         while( true ) {
           iVar2 = local_res8[0];
-          lVar3 = PlotController.FightResultPlotText;
+          lVar3 = *(int64 *)(pStatics_3d40 + 64);
           if (lVar3 == null) break;
           if (*(int *)(lVar3 + 24) <= iVar2) {
             return;
@@ -303,15 +304,15 @@ public class GameTitleController
           if (lVar3 == null) break;
           lVar3 = Transform.Find(lVar3,uVar6,0);
           if (lVar3 == null) break;
-          lVar3 = Component.GetComponent(lVar3,DAT_181d6e8c0);
-          if (PlotController._instance == 1) {
-            lVar8 = PlotController.YoungHeroFightMatchResultString;
+          lVar3 = Component.GetComponent(lVar3,DAT_181d97160);
+          if (**(int **)(DAT_181d73d40 + 184) == 1) {
+            lVar8 = *(int64 *)(pStatics_3d40 + 96);
           }
           else {
-            lVar8 = PlotController.FirstMeetTalkText;
+            lVar8 = *(int64 *)(pStatics_3d40 + 88);
           }
           if (lVar8 == null) break;
-          uVar6 = FUN_180002f80(lVar8,local_res8[0],DAT_181d7c9c0);
+          uVar6 = FUN_180002f80(lVar8,local_res8[0],DAT_181da4358);
           if (lVar3 == null) break;
           *(uint64 *)(lVar3 + 24) = uVar6;
           if (this.MainMenu == null) break;
@@ -324,12 +325,12 @@ public class GameTitleController
           if (lVar3 == null) break;
           lVar3 = Transform.Find(lVar3,"Image",0);
           if (lVar3 == null) break;
-          lVar3 = Component.GetComponent(lVar3,DAT_181d6bc40);
+          lVar3 = Component.GetComponent(lVar3,DAT_181d94460);
           if (this.dlcSprites == null) break;
-          lVar8 = FUN_180002f80(this.dlcSprites,local_res8[0],DAT_181d5d500);
+          lVar8 = FUN_180002f80(this.dlcSprites,local_res8[0],DAT_181d84ca0);
           if (lVar8 == null) break;
           lVar8 = *(int64 *)(lVar8 + 16);
-          lVar1 = GameController.difficultyExtraPoint;
+          lVar1 = *(int64 *)(pStatics_2d50 + 8);
           if (lVar1 == null) break;
           lVar1 = *(int64 *)(lVar1 + 16);
           uVar6 = Int32.ToString(local_res8,0);
@@ -337,7 +338,7 @@ public class GameTitleController
           if (lVar1 == null) break;
           iVar2 = PlayerPrefDictionary.GetInt(lVar1,uVar6,0);
           if (lVar8 == null) break;
-          uVar6 = FUN_180002f80(lVar8,0 < iVar2,DAT_181d7c050);
+          uVar6 = FUN_180002f80(lVar8,0 < iVar2,DAT_181da39d8);
           if (lVar3 == null) break;
           Image.set_sprite(lVar3,uVar6,0);
           if (this.MainMenu == null) break;
@@ -350,8 +351,8 @@ public class GameTitleController
           if (lVar3 == null) break;
           lVar3 = Transform.Find(lVar3,"Text",0);
           if (lVar3 == null) break;
-          plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d6d8c0);
-          lVar3 = GameController.difficultyExtraPoint;
+          plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d96160);
+          lVar3 = *(int64 *)(pStatics_2d50 + 8);
           if (lVar3 == null) break;
           lVar3 = *(int64 *)(lVar3 + 16);
           uVar6 = Int32.ToString(local_res8,0);
@@ -374,8 +375,8 @@ public class GameTitleController
           if (lVar3 == null) break;
           lVar3 = Transform.Find(lVar3,"Text",0);
           if (lVar3 == null) break;
-          plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d6d8c0);
-          lVar3 = GameController.difficultyExtraPoint;
+          plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d96160);
+          lVar3 = *(int64 *)(pStatics_2d50 + 8);
           if (lVar3 == null) break;
           lVar3 = *(int64 *)(lVar3 + 16);
           uVar6 = Int32.ToString(local_res8,0);
@@ -383,7 +384,7 @@ public class GameTitleController
           if (lVar3 == null) break;
           iVar2 = PlayerPrefDictionary.GetInt(lVar3,uVar6,0);
           if (iVar2 < 1) {
-            puVar9 = (uint32 *)FUN_181098a50(&local_68,0);
+            puVar9 = (uint32 *)FUN_1810d3570(&local_68,0);
             uVar10 = *puVar9;
             uVar11 = puVar9[1];
             uVar12 = puVar9[2];
@@ -406,8 +407,8 @@ public class GameTitleController
         }
     }
 
-    // Token : 0x600168E
-    // RVA   : 0xA30980   Offset: 0xA2F180   Length: 0x39
+    // Token : 0x60016D2
+    // RVA   : 0xA5F600   Offset: 0xA5EA00   Length: 0x39
     public void ShowStartInfoMenu()
     {
         if (this.StartInfoMenu != null) {
@@ -419,8 +420,8 @@ public class GameTitleController
         }
     }
 
-    // Token : 0x600168F
-    // RVA   : 0xA2FF90   Offset: 0xA2E790   Length: 0x39
+    // Token : 0x60016D3
+    // RVA   : 0xA5EC10   Offset: 0xA5E010   Length: 0x39
     public void ShowAccountMenu()
     {
         if (this.AccountMenu != null) {
@@ -432,11 +433,12 @@ public class GameTitleController
         }
     }
 
-    // Token : 0x6001690
-    // RVA   : 0xA30000   Offset: 0xA2E800   Length: 0x970
+    // Token : 0x60016D4
+    // RVA   : 0xA5EC80   Offset: 0xA5E080   Length: 0x970
     public void ShowMainMenu()
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics_2d50 = *(int64*)(DAT_181d72d50 + 184);
+        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
         long lVar1;
         float fVar2;
         bool cVar3;
@@ -479,26 +481,22 @@ public class GameTitleController
             if (this.MainMenu != null) {
               GameObject.SetActive(this.MainMenu,1,0);
               MonoBehaviour.Invoke(this,"PlayLeafSound",0x3f000000,0);
-              if (PlotController._instance != 2) {
-                if (PlotController._instance != 4) {
-                  lVar7 = GameController.difficultyExtraPoint;
+              if (**(int **)(DAT_181d73d40 + 184) != 2) {
+                if (**(int **)(DAT_181d73d40 + 184) != 4) {
+                  lVar7 = *(int64 *)(pStatics_2d50 + 8);
                   if (lVar7 == null) throw; // [null/range check failed]
                   lVar7 = *(int64 *)(lVar7 + 16);
-                  uVar6 = String.Concat(*(uint64 *)
-                                          (pPlotController + 112),
-                                         *(uint64 *)
-                                          (pPlotController + 120),
+                  uVar6 = String.Concat(*(uint64 *)(pStatics_3d40 + 112),
+                                         *(uint64 *)(pStatics_3d40 + 120),
                                          "LogShowed",0);
                   if (lVar7 == null) throw; // [null/range check failed]
                   iVar4 = PlayerPrefDictionary.GetInt(lVar7,uVar6,0);
                   if (iVar4 == 0) {
-                    lVar7 = GameController.difficultyExtraPoint;
+                    lVar7 = *(int64 *)(pStatics_2d50 + 8);
                     if (lVar7 == null) throw; // [null/range check failed]
                     lVar7 = *(int64 *)(lVar7 + 16);
-                    uVar6 = String.Concat(*(uint64 *)
-                                            (pPlotController + 112),
-                                           *(uint64 *)
-                                            (pPlotController + 120),
+                    uVar6 = String.Concat(*(uint64 *)(pStatics_3d40 + 112),
+                                           *(uint64 *)(pStatics_3d40 + 120),
                                            "LogShowed",0);
                     if (lVar7 == null) throw; // [null/range check failed]
                     PlayerPrefDictionary.SetKey(lVar7,uVar6,"1",0);
@@ -522,7 +520,7 @@ public class GameTitleController
                   *(uint64 *)(lVar7 + 16) = uVar6;
                   if (*(int64 *)(lVar7 + 16) == 0) break;
                   uVar6 = Object.get_name(*(int64 *)(lVar7 + 16),0);
-                  cVar3 = FUN_1816fd990(uVar6);
+                  cVar3 = FUN_18171e540(uVar6);
                   uVar13 = (uint32)((uint64)in_stack_fffffffffffffe28 >> 32);
                   if (!cVar3) {
                     if (iVar4 < 5) {
@@ -556,18 +554,18 @@ public class GameTitleController
                       uVar6 = ShortcutExtensions.DOLocalPath
                                         (*(uint64 *)(lVar7 + 16),this.buttonPath,
                                          0x3fc00000,1,in_stack_fffffffffffffe28,10,&local_138,0);
-                      uVar6 = TweenSettingsExtensions.SetEase(uVar6,10,DAT_181d97c20);
-                      uVar6 = TweenSettingsExtensions.SetDelay(uVar6,(float)iVar4 * 0.1,DAT_181d978f0);
-                      uVar10 = new OnTooltipCB(lVar7,DAT_181d7ba08);
-                      uVar6 = TweenSettingsExtensions.OnStart(uVar6,uVar10,DAT_181d97188);
-                      uVar10 = new OnTooltipCB(lVar7,DAT_181d7ba88);
+                      uVar6 = TweenSettingsExtensions.SetEase(uVar6,10,DAT_181dc0ef8);
+                      uVar6 = TweenSettingsExtensions.SetDelay(uVar6,(float)iVar4 * 0.1,DAT_181dc0bd8);
+                      uVar10 = new OnTooltipCB(lVar7,DAT_181da4888);
+                      uVar6 = TweenSettingsExtensions.OnStart(uVar6,uVar10,DAT_181dc0478);
+                      uVar10 = new OnTooltipCB(lVar7,DAT_181da4908);
                       TweenSettingsExtensions.OnComplete(uVar6);
                     }
                     else {
                       cVar3 = GlobalData.IsCheckVersion(1);
                       lVar8 = *(int64 *)(lVar7 + 16);
                       if (cVar3) {
-                        if (lVar8 != null) goto LAB_180a308ab;
+                        if (lVar8 != null) goto LAB_180a5f52b;
                         break;
                       }
                       if ((lVar8 == null) || (lVar8 = Component.get_gameObject()) == null) break;
@@ -621,7 +619,7 @@ public class GameTitleController
                     }
                     else {
                       if (lVar8 == null) break;
-        LAB_180a308ab:
+        LAB_180a5f52b:
                       lVar7 = Component.get_gameObject(lVar8);
                       if (lVar7 == null) break;
                       GameObject.SetActive(lVar7);
@@ -637,8 +635,8 @@ public class GameTitleController
         }
     }
 
-    // Token : 0x6001691
-    // RVA   : 0xA2FFD0   Offset: 0xA2E7D0   Length: 0x20
+    // Token : 0x60016D5
+    // RVA   : 0xA5EC50   Offset: 0xA5E050   Length: 0x20
     public void ShowInfoMenu()
     {
         if (this.infoMenuController != null) {
@@ -647,20 +645,20 @@ public class GameTitleController
         }
     }
 
-    // Token : 0x6001692
-    // RVA   : 0xA2FEB0   Offset: 0xA2E6B0   Length: 0x93
+    // Token : 0x60016D6
+    // RVA   : 0xA5EB30   Offset: 0xA5DF30   Length: 0x93
     public void PlayLeafSound()
     {
         plVar1 = (int64 *)Resources.Load("Sound/SoundEffect/SpeEffect/飞叶",0);
         plVar2 = (int64 *)0;
-        if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181d8a228)) {
+        if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf348)) {
           plVar2 = plVar1;
         }
         NGUITools.PlaySound(plVar2,0x3e99999a,0);
     }
 
-    // Token : 0x6001693
-    // RVA   : 0xA2FE50   Offset: 0xA2E650   Length: 0x20
+    // Token : 0x60016D7
+    // RVA   : 0xA5EAD0   Offset: 0xA5DED0   Length: 0x20
     public void ContinueButtonClicked()
     {
         if (this.saveLoadMenuController != null) {
@@ -669,18 +667,19 @@ public class GameTitleController
         }
     }
 
-    // Token : 0x6001694
-    // RVA   : 0xA309C0   Offset: 0xA2F1C0   Length: 0xAB
+    // Token : 0x60016D8
+    // RVA   : 0xA5F640   Offset: 0xA5EA40   Length: 0xAB
     public void StartButtonClicked()
     {
-        if (StartMenuController._instance != null) {
-          StartMenuController.ShowStartMenu(StartMenuController._instance,0);
+        var pStatics = *(int64*)(DAT_181da6810 + 184);
+        if (*pStatics != 0) {
+          StartMenuController.ShowStartMenu(*pStatics,0);
           return;
         }
     }
 
-    // Token : 0x6001695
-    // RVA   : 0xA2FE80   Offset: 0xA2E680   Length: 0x25
+    // Token : 0x60016D9
+    // RVA   : 0xA5EB00   Offset: 0xA5DF00   Length: 0x25
     public void LoadButtonClicked()
     {
         if (this.saveLoadMenuController != null) {
@@ -689,8 +688,8 @@ public class GameTitleController
         }
     }
 
-    // Token : 0x6001696
-    // RVA   : 0xA2FF60   Offset: 0xA2E760   Length: 0x20
+    // Token : 0x60016DA
+    // RVA   : 0xA5EBE0   Offset: 0xA5DFE0   Length: 0x20
     public void SettingButtonClicked()
     {
         if (this.settingMenuController != null) {
@@ -699,30 +698,32 @@ public class GameTitleController
         }
     }
 
-    // Token : 0x6001697
-    // RVA   : 0xA2FF50   Offset: 0xA2E750   Length: 0x7
+    // Token : 0x60016DB
+    // RVA   : 0xA5EBD0   Offset: 0xA5DFD0   Length: 0x7
     public void QuitButtonClicked()
     {
+        void FUN_180a5ebd0(void)
+        {
         Application.Quit(0);
     }
 
-    // Token : 0x6001698
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x60016DC
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);
     }
 
-    // Token : 0x6001699
-    // RVA   : 0xA31640   Offset: 0xA2FE40   Length: 0x92
+    // Token : 0x60016DD
+    // RVA   : 0xA602C0   Offset: 0xA5F6C0   Length: 0x92
     private void <Start>b__24_0()
     {
         ulong uVar1;
         if (this.WishListButton != null) {
           uVar1 = GameObject.get_transform(this.WishListButton,0);
           uVar1 = ShortcutExtensions.DOScale(uVar1,0x3f866666,0x40000000,0);
-          uVar1 = TweenSettingsExtensions.SetLoops(uVar1,0xffffffff,1,DAT_181d98060);
-          TweenSettingsExtensions.SetEase(uVar1,2,DAT_181d97ca8);
+          uVar1 = TweenSettingsExtensions.SetLoops(uVar1,0xffffffff,1,DAT_181dc1330);
+          TweenSettingsExtensions.SetEase(uVar1,2,DAT_181dc0f80);
           return;
         }
     }

@@ -1,56 +1,56 @@
 // ============================================================
 // Type  : BattleTeam
-// Token : 0x2000172
+// Token : 0x2000177
 // ============================================================
 
 public class BattleTeam
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400097F
+    // Token: 0x40009FA
     public int ID;
 
-    // Token: 0x4000980
+    // Token: 0x40009FB
     public bool havePlayer;
 
-    // Token: 0x4000981
+    // Token: 0x40009FC
     public List<BattleUnit> battleUnits;
 
-    // Token: 0x4000982
+    // Token: 0x40009FD
     public List<BattleUnit> needProtectUnits;
 
-    // Token: 0x4000983
+    // Token: 0x40009FE
     public bool needProtectUnitDestroyed;
 
-    // Token: 0x4000984
+    // Token: 0x40009FF
     public HeroSpeAddData teamSpeAddData;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000C0F
-    // RVA   : 0x8E20F0   Offset: 0x8E08F0   Length: 0xE7
+    // Token : 0x6000C39
+    // RVA   : 0x8CD360   Offset: 0x8CC760   Length: 0xE7
     public void /*ctor*/(int teamID)
     {
         ulong uVar1;
-        uVar1 = il2cpp_internal(DAT_181d6c930);
-        FUN_180f58a90(uVar1,DAT_181d58128);
+        uVar1 = il2cpp_internal(DAT_181d915e0);
+        FUN_18132faf0(uVar1,DAT_181d7f8a8);
         this.battleUnits = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d6c930);
-        FUN_180f58a90(uVar1,DAT_181d58128);
+        uVar1 = il2cpp_internal(DAT_181d915e0);
+        FUN_18132faf0(uVar1,DAT_181d7f8a8);
         this.needProtectUnits = uVar1;
         this.teamSpeAddData = new HeroSpeAddData(0);
         ZhSegment.Initialize(this,0);
         this.ID = teamID;
     }
 
-    // Token : 0x6000C10
-    // RVA   : 0x8E1CD0   Offset: 0x8E04D0   Length: 0x91
+    // Token : 0x6000C3A
+    // RVA   : 0x8CCF40   Offset: 0x8CC340   Length: 0x91
     public void AddNeedProtectUnit(BattleUnit battleUnit)
     {
         bool cVar1;
         if (this.needProtectUnits != null) {
-          cVar1 = FUN_1818279a0(this.needProtectUnits,battleUnit,DAT_181d582a8);
+          cVar1 = FUN_18181e400(this.needProtectUnits,battleUnit,DAT_181d7fa28);
           if (!cVar1) {
             if (this.needProtectUnits == null) throw; // [null/range check failed]
-            FUN_181827900(this.needProtectUnits,battleUnit,DAT_181d581a8);
+            FUN_18181e0a0(this.needProtectUnits,battleUnit,DAT_181d7f928);
           }
           if ((battleUnit != null) && (*(int64 *)(battleUnit + 64) != 0)) {
             *(uint8 *)(*(int64 *)(battleUnit + 64) + 0x244) = 1;
@@ -59,8 +59,8 @@ public class BattleTeam
         }
     }
 
-    // Token : 0x6000C11
-    // RVA   : 0x8E1B20   Offset: 0x8E0320   Length: 0x1AF
+    // Token : 0x6000C3B
+    // RVA   : 0x8CCD90   Offset: 0x8CC190   Length: 0x1AF
     public void AddBattleUnit(BattleUnit battleUnit)
     {
         long lVar2;
@@ -80,17 +80,17 @@ public class BattleTeam
             return;
           }
           if (this.battleUnits != null) {
-            cVar3 = FUN_1818279a0(this.battleUnits,battleUnit,DAT_181d582a8);
+            cVar3 = FUN_18181e400(this.battleUnits,battleUnit,DAT_181d7fa28);
             if (cVar3) {
               return;
             }
             if (this.battleUnits != null) {
-              FUN_181827900(this.battleUnits,battleUnit,DAT_181d581a8);
+              FUN_18181e0a0(this.battleUnits,battleUnit,DAT_181d7f928);
               lVar2 = *(int64 *)(battleUnit + 64);
               if (lVar2 != null) {
                 if (*(char *)(lVar2 + 0x244) != false) {
                   if (*(int64 *)(lVar2 + 0x2d0) == 0) throw; // [null/range check failed]
-                  FUN_18181e970(*(int64 *)(lVar2 + 0x2d0),0,1,DAT_181d68370);
+                  FUN_181833d40(*(int64 *)(lVar2 + 0x2d0),0,1,DAT_181d8fb18);
                   BattleTeam.AddNeedProtectUnit(this,battleUnit,0);
                 }
                 *(int64 *)(battleUnit + 88) = this;
@@ -101,8 +101,8 @@ public class BattleTeam
         }
     }
 
-    // Token : 0x6000C12
-    // RVA   : 0x8E2000   Offset: 0x8E0800   Length: 0xEC
+    // Token : 0x6000C3C
+    // RVA   : 0x8CD270   Offset: 0x8CC670   Length: 0xEC
     public void RemoveBattleUnit(BattleUnit battleUnit)
     {
         bool cVar2;
@@ -112,7 +112,7 @@ public class BattleTeam
             cVar2 = (**(code **)(*plVar1 + 0x138))(plVar1,this,*(uint64 *)(*plVar1 + 0x140));
             if (cVar2) {
               if (this.battleUnits != null) {
-                FUN_181801c10(this.battleUnits,battleUnit,DAT_181d58328);
+                FUN_1817eee00(this.battleUnits,battleUnit,DAT_181d7faa0);
                 *(uint64 *)(battleUnit + 88) = 0;
                 return;
               }
@@ -124,8 +124,8 @@ public class BattleTeam
         }
     }
 
-    // Token : 0x6000C13
-    // RVA   : 0x8E1F50   Offset: 0x8E0750   Length: 0xAC
+    // Token : 0x6000C3D
+    // RVA   : 0x8CD1C0   Offset: 0x8CC5C0   Length: 0xAC
     public void LeaveBattleField()
     {
         long lVar1;
@@ -153,8 +153,8 @@ public class BattleTeam
         }
     }
 
-    // Token : 0x6000C14
-    // RVA   : 0x8E1D70   Offset: 0x8E0570   Length: 0x12D
+    // Token : 0x6000C3E
+    // RVA   : 0x8CCFE0   Offset: 0x8CC3E0   Length: 0x12D
     public void DestroySelf()
     {
         ulong uVar1;
@@ -187,13 +187,13 @@ public class BattleTeam
             lVar5 = this.battleUnits;
             if (lVar5 == null) throw; // [null/range check failed]
           }
-          FUN_180f56130(lVar5,DAT_181d58228);
+          FUN_1812f9a10(lVar5,DAT_181d7f9a8);
           return;
         }
     }
 
-    // Token : 0x6000C15
-    // RVA   : 0x8E1EA0   Offset: 0x8E06A0   Length: 0xA6
+    // Token : 0x6000C3F
+    // RVA   : 0x8CD110   Offset: 0x8CC510   Length: 0xA6
     public override bool Equals(object obj)
     {
         long lVar1;
@@ -201,14 +201,14 @@ public class BattleTeam
         if (obj != (int64 *)0) {
           lVar1 = *obj;
           in_RAX = 0;
-          if ((*(byte *)(DAT_181d8b5a8 + 300) <= *(byte *)(lVar1 + 300)) &&
+          if ((*(byte *)(DAT_181db06c8 + 300) <= *(byte *)(lVar1 + 300)) &&
              (in_RAX = *(uint64 *)(lVar1 + 200),
-             *(int64 *)((in_RAX - 8) + (uint64)*(byte *)(DAT_181d8b5a8 + 300) * 8) == DAT_181d8b5a8)
+             *(int64 *)((in_RAX - 8) + (uint64)*(byte *)(DAT_181db06c8 + 300) * 8) == DAT_181db06c8)
              ) {
-            if ((*(byte *)(DAT_181d8b5a8 + 300) <= *(byte *)(lVar1 + 300)) &&
+            if ((*(byte *)(DAT_181db06c8 + 300) <= *(byte *)(lVar1 + 300)) &&
                (*(int64 *)
-                 (*(int64 *)(lVar1 + 200) + -8 + (uint64)*(byte *)(DAT_181d8b5a8 + 300) * 8) ==
-                DAT_181d8b5a8)) {
+                 (*(int64 *)(lVar1 + 200) + -8 + (uint64)*(byte *)(DAT_181db06c8 + 300) * 8) ==
+                DAT_181db06c8)) {
               return CONCAT71((int7)((uint64)*(int64 *)(lVar1 + 200) >> 8),
                               this.ID == (int)obj[2]);
             }

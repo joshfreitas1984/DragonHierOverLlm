@@ -1,21 +1,21 @@
 // ============================================================
 // Type  : OnReturnKey
-// Token : 0x20000F8
+// Token : 0x20000F9
 // ============================================================
 
 public class OnReturnKey
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000608
+    // Token: 0x4000624
     public int value__;
 
-    // Token: 0x4000609
+    // Token: 0x4000625
     public const OnReturnKey Default;
 
-    // Token: 0x400060A
+    // Token: 0x4000626
     public const OnReturnKey Submit;
 
-    // Token: 0x400060B
+    // Token: 0x4000627
     public const OnReturnKey NewLine;
 
 }

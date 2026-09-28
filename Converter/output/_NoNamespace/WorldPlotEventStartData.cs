@@ -1,47 +1,47 @@
 // ============================================================
 // Type  : WorldPlotEventStartData
-// Token : 0x2000205
+// Token : 0x200020B
 // ============================================================
 
 public class WorldPlotEventStartData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000E3A
+    // Token: 0x4000ECA
     public string name;
 
-    // Token: 0x4000E3B
+    // Token: 0x4000ECB
     public float difficulty;
 
-    // Token: 0x4000E3C
+    // Token: 0x4000ECC
     public int plotID;
 
-    // Token: 0x4000E3D
+    // Token: 0x4000ECD
     public PlotTriggerType triggerType;
 
-    // Token: 0x4000E3E
+    // Token: 0x4000ECE
     public string triggerTargetID;
 
-    // Token: 0x4000E3F
+    // Token: 0x4000ECF
     public int startLeftDay;
 
-    // Token: 0x4000E40
+    // Token: 0x4000ED0
     public int targetEventSaveRecord;
 
-    // Token: 0x4000E41
+    // Token: 0x4000ED1
     public EventData targetEvent;
 
-    // Token: 0x4000E42
+    // Token: 0x4000ED2
     public bool noAutoDestroy;
 
-    // Token: 0x4000E43
+    // Token: 0x4000ED3
     public string outtimeCallSpeFuc;
 
-    // Token: 0x4000E44
+    // Token: 0x4000ED4
     public bool notImportant;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000FB9
-    // RVA   : 0x210B70   Offset: 0x20F370   Length: 0x7
+    // Token : 0x6000FF1
+    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);
@@ -59,8 +59,8 @@ public class WorldPlotEventStartData
         }
     }
 
-    // Token : 0x6000FBA
-    // RVA   : 0xB2DDF0   Offset: 0xB2C5F0   Length: 0x83
+    // Token : 0x6000FF2
+    // RVA   : 0x9D5F20   Offset: 0x9D5320   Length: 0x83
     public void /*ctor*/(int _plotID, PlotTriggerType _triggerType, string _triggerTargetID, int _startLeftDay, string _name, float _difficulty, EventData _targetEvent)
     {
         ZhSegment.Initialize(this,0);
@@ -78,8 +78,8 @@ public class WorldPlotEventStartData
         }
     }
 
-    // Token : 0x6000FBB
-    // RVA   : 0xB2DD60   Offset: 0xB2C560   Length: 0x88
+    // Token : 0x6000FF3
+    // RVA   : 0x9D5E90   Offset: 0x9D5290   Length: 0x88
     public void /*ctor*/(WorldPlotEventData worldPlotEventData)
     {
         ZhSegment.Initialize(this,0);
@@ -97,8 +97,8 @@ public class WorldPlotEventStartData
         }
     }
 
-    // Token : 0x6000FBC
-    // RVA   : 0xB2DBE0   Offset: 0xB2C3E0   Length: 0x175
+    // Token : 0x6000FF4
+    // RVA   : 0x9D5D10   Offset: 0x9D5110   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -109,13 +109,13 @@ public class WorldPlotEventStartData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -127,7 +127,7 @@ public class WorldPlotEventStartData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d53c70,plVar1);
+            FUN_180002970(0,DAT_181d78da0,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

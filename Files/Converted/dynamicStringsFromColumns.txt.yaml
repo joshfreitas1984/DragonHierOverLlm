@@ -52802,8 +52802,8 @@
 - raw: "经脉潜力"
   splits:
   - text: "经脉潜力"
-    translated: "Vital Meridian Potential"
-    qcReviewedText: "Vital Meridian Potential"
+    translated: "Meridian Potential"
+    qcReviewedText: "Meridian Potential"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : InvAttachmentPoint
-// Token : 0x200000A
+// Token : 0x200000B
 // ============================================================
 
 public class InvAttachmentPoint
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000023
+    // Token: 0x400003F
     public Slot slot;
 
-    // Token: 0x4000024
+    // Token: 0x4000040
     private GameObject mPrefab;
 
-    // Token: 0x4000025
+    // Token: 0x4000041
     private GameObject mChild;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000024
-    // RVA   : 0xB71360   Offset: 0xB6FB60   Length: 0x2A6
+    // Token : 0x600003C
+    // RVA   : 0xC9B2C0   Offset: 0xC9A6C0   Length: 0x2A6
     public GameObject Attach(GameObject prefab)
     {
         ulong uVar1;
@@ -54,7 +54,7 @@ public class InvAttachmentPoint
               uStack_30 = puVar5[1];
               local_48 = uVar1;
               local_40 = uVar2;
-              uVar6 = Object.Instantiate(uVar6,&local_48,&local_38,DAT_181d6a0f8);
+              uVar6 = Object.Instantiate(uVar6,&local_48,&local_38,DAT_181d92e18);
               this.mChild = uVar6;
               if (this.mChild != null) {
                 lVar7 = GameObject.get_transform(this.mChild,0);
@@ -72,7 +72,7 @@ public class InvAttachmentPoint
                   local_48 = *puVar5;
                   local_40 = *(uint32 *)(puVar5 + 1);
                   Transform.set_localScale(lVar7,&local_48,0);
-                  goto LAB_180b715e7;
+                  goto LAB_180c9b547;
                 }
               }
             }
@@ -80,12 +80,12 @@ public class InvAttachmentPoint
             FUN_1800d6620();
           }
         }
-        LAB_180b715e7:
+        LAB_180c9b547:
         return this.mChild;
     }
 
-    // Token : 0x6000025
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x600003D
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

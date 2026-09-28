@@ -1,29 +1,29 @@
 // ============================================================
 // Type  : LittlePeopleController
-// Token : 0x20002F3
+// Token : 0x20002FA
 // ============================================================
 
 public class LittlePeopleController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40017B0
+    // Token: 0x400189E
     public int areaDirection;
 
-    // Token: 0x40017B1
+    // Token: 0x400189F
     public SkeletonAnimation skeleton;
 
-    // Token: 0x40017B2
+    // Token: 0x40018A0
     private bool moving;
 
-    // Token: 0x40017B3
+    // Token: 0x40018A1
     private float waitTime;
 
-    // Token: 0x40017B4
+    // Token: 0x40018A2
     public Vector3 moveTargetPos;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001874
-    // RVA   : 0xA84C10   Offset: 0xA83410   Length: 0x40
+    // Token : 0x60018D1
+    // RVA   : 0xA80000   Offset: 0xA7F400   Length: 0x40
     private void Start()
     {
         float fVar1;
@@ -35,11 +35,10 @@ public class LittlePeopleController
         }
     }
 
-    // Token : 0x6001875
-    // RVA   : 0xA84C50   Offset: 0xA83450   Length: 0x85A
+    // Token : 0x60018D2
+    // RVA   : 0xA80040   Offset: 0xA7F440   Length: 0x85A
     private void Update()
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
         ulong uVar1;
         bool cVar2;
         long lVar3;
@@ -105,7 +104,7 @@ public class LittlePeopleController
           local_90 = *(uint32 *)(this + 56);
           fVar15 = (float)Vector2.Distance(*puVar5,local_98,0);
           if (fVar15 <= 0.01) {
-        LAB_180a8527f:
+        LAB_180a8066f:
             lVar3 = Component.get_transform(this,0);
             if (lVar3 == null) throw; // [null/range check failed]
             local_90 = *(uint32 *)(this + 56);
@@ -166,7 +165,7 @@ public class LittlePeopleController
             local_res20._4_4_ = (float)((uint64)uVar7 >> 32);
             fVar14 = local_res18._4_4_ - local_res20._4_4_;
             local_res20 = uVar7;
-            if (9.9999994e-11 <= fVar14 * fVar14 + fVar12 * fVar12) goto LAB_180a8527f;
+            if (9.9999994e-11 <= fVar14 * fVar14 + fVar12 * fVar12) goto LAB_180a8066f;
             lVar3 = Component.get_transform(this,0);
             if (lVar3 == null) throw; // [null/range check failed]
             pfVar6 = (float *)Transform.get_localPosition(&local_88,lVar3,0);
@@ -179,7 +178,7 @@ public class LittlePeopleController
               uVar13 = puVar8[1];
               fStack_80 = (float)puVar8[2];
               uStack_7c = puVar8[3];
-        LAB_180a85196:
+        LAB_180a80586:
               local_88 = CONCAT44(uVar13,uVar11);
               Transform.set_localRotation(lVar3,&local_88,0);
             }
@@ -190,13 +189,13 @@ public class LittlePeopleController
               if (fVar15 < *pfVar6) {
                 if (this.skeleton == null) throw; // [null/range check failed]
                 lVar3 = Component.get_transform(this.skeleton,0);
-                lVar4 = pPlotController;
+                lVar4 = *(int64 *)(DAT_181d73d40 + 184);
                 if (lVar3 == null) throw; // [null/range check failed]
-                uVar11 = *(uint32 *)(lVar4 + 0x688);
-                uVar13 = *(uint32 *)(lVar4 + 0x68c);
-                fStack_80 = *(float *)(lVar4 + 0x690);
-                uStack_7c = *(uint32 *)(lVar4 + 0x694);
-                goto LAB_180a85196;
+                uVar11 = *(uint32 *)(lVar4 + 0x690);
+                uVar13 = *(uint32 *)(lVar4 + 0x694);
+                fStack_80 = *(float *)(lVar4 + 0x698);
+                uStack_7c = *(uint32 *)(lVar4 + 0x69c);
+                goto LAB_180a80586;
               }
             }
             lVar3 = Component.get_transform(this,0);
@@ -227,7 +226,7 @@ public class LittlePeopleController
           puVar5 = (uint64 *)Transform.get_localPosition(&local_88,lVar4,0);
           uVar7 = *puVar5;
           uVar11 = *(uint32 *)(puVar5 + 1);
-          lVar4 = PlotController.LaBaFestivelResultTalkText;
+          lVar4 = *(int64 *)(*(int64 *)(DAT_181dac758 + 184) + 56);
           lVar9 = Component.get_transform(this,0);
           if (lVar9 != null) {
             puVar5 = (uint64 *)Transform.get_localPosition(&local_88,lVar9,0);
@@ -251,8 +250,8 @@ public class LittlePeopleController
         }
     }
 
-    // Token : 0x6001876
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x60018D3
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

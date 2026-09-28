@@ -1,44 +1,44 @@
 // ============================================================
 // Type  : SkillMaxPracticeExpData
-// Token : 0x2000217
+// Token : 0x200021D
 // ============================================================
 
 public class SkillMaxPracticeExpData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000EE8
+    // Token: 0x4000F7E
     public int skillID;
 
-    // Token: 0x4000EE9
+    // Token: 0x4000F7F
     public float maxPracticeExp;
 
-    // Token: 0x4000EEA
+    // Token: 0x4000F80
     public List<float> maxReadExp;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001046
-    // RVA   : 0x9745F0   Offset: 0x972DF0   Length: 0x101
+    // Token : 0x6001082
+    // RVA   : 0x987240   Offset: 0x986640   Length: 0x101
     public void /*ctor*/(int _skillID)
     {
         long lVar1;
         ZhSegment.Initialize(this,0);
         this.skillID = _skillID;
-        lVar1 = il2cpp_internal(DAT_181d721b0);
-        FUN_180f58a90(lVar1,DAT_181d79358);
+        lVar1 = il2cpp_internal(DAT_181d96ed0);
+        FUN_18132faf0(lVar1,DAT_181da0cf8);
         if (lVar1 != null) {
-          FUN_181805690(lVar1,0,DAT_181d79458);
-          FUN_181805690(lVar1,0,DAT_181d79458);
-          FUN_181805690(lVar1,0,DAT_181d79458);
-          FUN_181805690(lVar1,0,DAT_181d79458);
-          FUN_181805690(lVar1,0,DAT_181d79458);
-          FUN_181805690(lVar1,0,DAT_181d79458);
+          FUN_18181de10(lVar1,0,DAT_181da0df8);
+          FUN_18181de10(lVar1,0,DAT_181da0df8);
+          FUN_18181de10(lVar1,0,DAT_181da0df8);
+          FUN_18181de10(lVar1,0,DAT_181da0df8);
+          FUN_18181de10(lVar1,0,DAT_181da0df8);
+          FUN_18181de10(lVar1,0,DAT_181da0df8);
           this.maxReadExp = lVar1;
           return;
         }
     }
 
-    // Token : 0x6001047
-    // RVA   : 0x974470   Offset: 0x972C70   Length: 0x175
+    // Token : 0x6001083
+    // RVA   : 0x9870C0   Offset: 0x9864C0   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -49,13 +49,13 @@ public class SkillMaxPracticeExpData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -67,7 +67,7 @@ public class SkillMaxPracticeExpData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d53c70,plVar1);
+            FUN_180002970(0,DAT_181d78da0,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : UIQuitController
-// Token : 0x20003A6
+// Token : 0x20003AD
 // ============================================================
 
 public class UIQuitController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001CCF
+    // Token: 0x4001DD4
     public List<UIQuitTarget> QuitTargets;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60022E3
-    // RVA   : 0x1582930   Offset: 0x1581130   Length: 0x77
+    // Token : 0x6002365
+    // RVA   : 0x16FCAB0   Offset: 0x16FBEB0   Length: 0x77
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d96278 + 184);
+        var pStatics = *(int64*)(DAT_181dbb428 + 184);
         bool cVar1;
         cVar1 = FUN_1804625b0(27);
         if (!cVar1) {
@@ -33,11 +33,12 @@ public class UIQuitController
         UIQuitController.OnExcapeButtonClicked(this,0);
     }
 
-    // Token : 0x60022E4
-    // RVA   : 0x1582520   Offset: 0x1580D20   Length: 0x40B
+    // Token : 0x6002366
+    // RVA   : 0x16FC6A0   Offset: 0x16FBAA0   Length: 0x40B
     public void OnExcapeButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d4e090 + 184);
+        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
+        var pStatics_2dd8 = *(int64*)(DAT_181d72dd8 + 184);
         bool cVar1;
         int iVar2;
         long lVar3;
@@ -64,24 +65,24 @@ public class UIQuitController
               cVar1 = GameObject.get_activeInHierarchy();
               if (cVar1) {
                 if ((this.QuitTargets != null) &&
-                   (lVar3 = FUN_180002f80(this.QuitTargets,plVar4,DAT_181d82a78)) != null
+                   (lVar3 = FUN_180002f80(this.QuitTargets,plVar4,DAT_181daa418)) != null
                    ) {
                   if (lVar3.Count == null) {
                     return;
                   }
                   if (((this.QuitTargets != null) &&
-                      (lVar3 = FUN_180002f80(this.QuitTargets,plVar4,DAT_181d82a78),
+                      (lVar3 = FUN_180002f80(this.QuitTargets,plVar4,DAT_181daa418),
                       lVar3 != null)) && (lVar3.Count != null)) {
                     iVar2 = UnityEventBase.GetPersistentEventCount(lVar3.Count,0);
                     if (iVar2 < 1) {
                       return;
                     }
                     if (((this.QuitTargets != null) &&
-                        (lVar3 = FUN_180002f80(this.QuitTargets,plVar4,DAT_181d82a78),
+                        (lVar3 = FUN_180002f80(this.QuitTargets,plVar4,DAT_181daa418),
                         lVar3 != null)) && (lVar3.Count != null)) {
                       UnityEvent.Invoke(lVar3.Count,0);
                       uVar6 = "Sound/SoundEffect/Woosh";
-                      goto LAB_18158286a;
+                      goto LAB_1816fc9ea;
                     }
                   }
                 }
@@ -93,25 +94,25 @@ public class UIQuitController
             lVar8 = lVar8 + 8;
             if (lVar3 == null) throw; // [null/range check failed]
           }
-          uVar6 = GameController._instance;
+          uVar6 = **(uint64 **)(DAT_181d72cc8 + 184);
           cVar1 = Object.op_Inequality(uVar6,0,0);
           if (!cVar1) {
             return;
           }
-          if (GameController._instance != null) {
-            cVar1 = GameController.CanSaveLoad(GameController._instance,1,0);
+          if (*pStatics_2cc8 != 0) {
+            cVar1 = GameController.CanSaveLoad(*pStatics_2cc8,1,0);
             uVar6 = "Sound/SoundEffect/WrongClick";
             if (!cVar1) {
-        LAB_18158286a:
+        LAB_1816fc9ea:
               plVar4 = (int64 *)Resources.Load(uVar6,0);
-              if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181d8a228)) {
+              if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
                 plVar7 = plVar4;
               }
               NGUITools.PlaySound(plVar7,0);
               return;
             }
-            if ((*pStatics != 0) &&
-               (lVar3 = *(int64 *)(*pStatics + 24)) != null) {
+            if ((*pStatics_2dd8 != 0) &&
+               (lVar3 = *(int64 *)(*pStatics_2dd8 + 24)) != null) {
               cVar1 = GameObject.get_activeSelf(lVar3,0);
               if (cVar1) {
                 return;
@@ -126,8 +127,8 @@ public class UIQuitController
         }
     }
 
-    // Token : 0x60022E5
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x6002367
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

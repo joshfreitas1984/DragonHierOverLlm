@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : PlotChoiceRequirement
-// Token : 0x2000319
+// Token : 0x2000320
 // ============================================================
 
 public class PlotChoiceRequirement
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40018D1
+    // Token: 0x40019C3
     public ChoiceRequirementType requireType;
 
-    // Token: 0x40018D2
+    // Token: 0x40019C4
     public float requireNum;
 
-    // Token: 0x40018D3
+    // Token: 0x40019C5
     public bool autoChangeReuqireByDifficulty;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001966
-    // RVA   : 0x47A090   Offset: 0x478890   Length: 0x36
+    // Token : 0x60019C5
+    // RVA   : 0x46E160   Offset: 0x46D560   Length: 0x36
     public void /*ctor*/(ChoiceRequirementType _requireType, float _requireNum)
     {
         ZhSegment.Initialize(this,0);

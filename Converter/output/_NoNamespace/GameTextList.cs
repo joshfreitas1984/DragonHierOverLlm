@@ -1,59 +1,59 @@
 // ============================================================
 // Type  : GameTextList
-// Token : 0x20002A6
+// Token : 0x20002AC
 // ============================================================
 
 public class GameTextList
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40014DD
+    // Token: 0x400158F
     public List<bool> hideInfoType;
 
-    // Token: 0x40014DE
+    // Token: 0x4001590
     public UILabel textLabel;
 
-    // Token: 0x40014DF
+    // Token: 0x4001591
     public UIProgressBar scrollBar;
 
-    // Token: 0x40014E0
+    // Token: 0x4001592
     public Style style;
 
-    // Token: 0x40014E1
+    // Token: 0x4001593
     public int paragraphHistory;
 
-    // Token: 0x40014E2
+    // Token: 0x4001594
     protected char[] mSeparator;
 
-    // Token: 0x40014E3
+    // Token: 0x4001595
     protected float mScroll;
 
-    // Token: 0x40014E4
+    // Token: 0x4001596
     protected int mTotalLines;
 
-    // Token: 0x40014E5
+    // Token: 0x4001597
     protected int mLastWidth;
 
-    // Token: 0x40014E6
+    // Token: 0x4001598
     protected int mLastHeight;
 
-    // Token: 0x40014E7
+    // Token: 0x4001599
     private BetterList<Paragraph> mParagraphs;
 
-    // Token: 0x40014E8
+    // Token: 0x400159A
     private static Dictionary<string, BetterList<Paragraph>> mHistory;
 
-    // Token: 0x40014E9
+    // Token: 0x400159B
     private bool needRebuild;
 
-    // Token: 0x40014EA
+    // Token: 0x400159C
     private StringBuilder final;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001674
-    // RVA   : 0xA2F670   Offset: 0xA2DE70   Length: 0x16A
+    // Token : 0x60016B8
+    // RVA   : 0xA5E2F0   Offset: 0xA5D6F0   Length: 0x16A
     protected BetterList<Paragraph> get_paragraphs()
     {
-        var pStatics = *(int64*)(DAT_181d4e688 + 184);
+        var pStatics = *(int64*)(DAT_181d73438 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
@@ -61,24 +61,24 @@ public class GameTextList
           lVar1 = *pStatics;
           uVar3 = Object.get_name(this,0);
           if (lVar1 == null) {
-        LAB_180a2f7d5:
+        LAB_180a5e455:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          cVar2 = FUN_1808addd0(lVar1,uVar3,this + 80,DAT_181da1f78);
+          cVar2 = FUN_1808b04c0(lVar1,uVar3,this + 80,DAT_181d715c8);
           if (!cVar2) {
-            this.mParagraphs = new BetterList_1(DAT_181d82018);
+            this.mParagraphs = new BetterList_1(DAT_181da73b8);
             lVar1 = *pStatics;
             uVar3 = Object.get_name(this,0);
-            if (lVar1 == null) goto LAB_180a2f7d5;
-            FUN_1808ab680(lVar1,uVar3,this.mParagraphs,DAT_181da1ef8);
+            if (lVar1 == null) goto LAB_180a5e455;
+            FUN_1808ab370(lVar1,uVar3,this.mParagraphs,DAT_181d71540);
           }
         }
         return this.mParagraphs;
     }
 
-    // Token : 0x6001675
-    // RVA   : 0xA2F650   Offset: 0xA2DE50   Length: 0x1D
+    // Token : 0x60016B9
+    // RVA   : 0xA5E2D0   Offset: 0xA5D6D0   Length: 0x1D
     public int get_paragraphCount()
     {
         long lVar1;
@@ -88,8 +88,8 @@ public class GameTextList
         }
     }
 
-    // Token : 0x6001676
-    // RVA   : 0xA2F4E0   Offset: 0xA2DCE0   Length: 0xB4
+    // Token : 0x60016BA
+    // RVA   : 0xA5E160   Offset: 0xA5D560   Length: 0xB4
     public bool get_isValid()
     {
         ulong uVar1;
@@ -106,15 +106,17 @@ public class GameTextList
         }
     }
 
-    // Token : 0x6001677
-    // RVA   : 0xA2F850   Offset: 0xA2E050   Length: 0x6
+    // Token : 0x60016BB
+    // RVA   : 0xA5E4D0   Offset: 0xA5D8D0   Length: 0x6
     public float get_scrollValue()
     {
+        uint32 FUN_180a5e4d0(int64 this)
+        {
         return this.mScroll;
     }
 
-    // Token : 0x6001678
-    // RVA   : 0xA2F860   Offset: 0xA2E060   Length: 0xCE
+    // Token : 0x60016BC
+    // RVA   : 0xA5E4E0   Offset: 0xA5D8E0   Length: 0xCE
     public void set_scrollValue(float value)
     {
         ulong uVar1;
@@ -130,7 +132,7 @@ public class GameTextList
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            UIProgressBar.set_value(this.scrollBar,fVar3,0);
+            UISlider.set_sliderValue(this.scrollBar,fVar3,0);
             return;
           }
           this.mScroll = fVar3;
@@ -138,8 +140,8 @@ public class GameTextList
         }
     }
 
-    // Token : 0x6001679
-    // RVA   : 0xA2F5A0   Offset: 0xA2DDA0   Length: 0xA0
+    // Token : 0x60016BD
+    // RVA   : 0xA5E220   Offset: 0xA5D620   Length: 0xA0
     protected float get_lineHeight()
     {
         int iVar1;
@@ -162,8 +164,8 @@ public class GameTextList
         return 20.0;
     }
 
-    // Token : 0x600167A
-    // RVA   : 0xA2F7E0   Offset: 0xA2DFE0   Length: 0x6D
+    // Token : 0x60016BE
+    // RVA   : 0xA5E460   Offset: 0xA5D860   Length: 0x6D
     protected int get_scrollHeight()
     {
         bool cVar1;
@@ -183,21 +185,21 @@ public class GameTextList
         }
     }
 
-    // Token : 0x600167B
-    // RVA   : 0xA2E5B0   Offset: 0xA2CDB0   Length: 0x57
+    // Token : 0x60016BF
+    // RVA   : 0xA5D230   Offset: 0xA5C630   Length: 0x57
     public void Clear()
     {
         long lVar1;
         lVar1 = GameTextList.get_paragraphs(this,0);
         if (lVar1 != null) {
-          BetterList_1.Clear(lVar1,DAT_181d82118);
+          BetterList_1.Clear(lVar1,DAT_181da74b8);
           GameTextList.UpdateVisibleText(this,0);
           return;
         }
     }
 
-    // Token : 0x600167C
-    // RVA   : 0xA2ECE0   Offset: 0xA2D4E0   Length: 0x1BC
+    // Token : 0x60016C0
+    // RVA   : 0xA5D960   Offset: 0xA5CD60   Length: 0x1BC
     private void Start()
     {
         long lVar1;
@@ -208,7 +210,7 @@ public class GameTextList
         uVar3 = this.textLabel;
         cVar2 = Object.op_Equality(uVar3,0,0);
         if (cVar2) {
-          uVar3 = Component.GetComponentInChildren(this,DAT_181d6ecc0);
+          uVar3 = Component.GetComponentInChildren(this,DAT_181d97560);
           this.textLabel = uVar3;
         }
         uVar3 = this.scrollBar;
@@ -216,7 +218,7 @@ public class GameTextList
         if (cVar2) {
           if (this.scrollBar == null) throw; // [null/range check failed]
           uVar3 = this.scrollBar.onChange;
-          uVar4 = new OnTooltipCB(this,DAT_181d4d2a0,0);
+          uVar4 = new OnTooltipCB(this,DAT_181d75db8,0);
           EventDelegate.Add(uVar3,uVar4,0);
         }
         if (this.textLabel != null) {
@@ -237,8 +239,8 @@ public class GameTextList
         }
     }
 
-    // Token : 0x600167D
-    // RVA   : 0xA2F320   Offset: 0xA2DB20   Length: 0x61
+    // Token : 0x60016C1
+    // RVA   : 0xA5DFA0   Offset: 0xA5D3A0   Length: 0x61
     private void Update()
     {
         long lVar1;
@@ -262,8 +264,8 @@ public class GameTextList
         }
     }
 
-    // Token : 0x600167E
-    // RVA   : 0xA2E720   Offset: 0xA2CF20   Length: 0xA6
+    // Token : 0x60016C2
+    // RVA   : 0xA5D3A0   Offset: 0xA5C7A0   Length: 0xA6
     public void OnScroll(float val)
     {
         bool cVar1;
@@ -287,8 +289,8 @@ public class GameTextList
         }
     }
 
-    // Token : 0x600167F
-    // RVA   : 0xA2E610   Offset: 0xA2CE10   Length: 0xA0
+    // Token : 0x60016C3
+    // RVA   : 0xA5D290   Offset: 0xA5C690   Length: 0xA0
     public void OnDrag(Vector2 delta)
     {
         bool cVar1;
@@ -314,22 +316,22 @@ public class GameTextList
         }
     }
 
-    // Token : 0x6001680
-    // RVA   : 0xA2E6C0   Offset: 0xA2CEC0   Length: 0x5B
+    // Token : 0x60016C4
+    // RVA   : 0xA5D340   Offset: 0xA5C740   Length: 0x5B
     private void OnScrollBar()
     {
-        var pStatics = *(int64*)(DAT_181d8ae58 + 184);
+        var pStatics = *(int64*)(DAT_181db0078 + 184);
         uint uVar1;
         if (*pStatics != 0) {
-          uVar1 = UIProgressBar.get_value(*pStatics,0);
+          uVar1 = UISlider.get_sliderValue(*pStatics,0);
           this.mScroll = uVar1;
           GameTextList.UpdateVisibleText(this,0);
           return;
         }
     }
 
-    // Token : 0x6001681
-    // RVA   : 0xA2E460   Offset: 0xA2CC60   Length: 0x144
+    // Token : 0x60016C5
+    // RVA   : 0xA5D0E0   Offset: 0xA5C4E0   Length: 0x144
     public void Add(int type, string text)
     {
         long lVar1;
@@ -350,13 +352,13 @@ public class GameTextList
               FUN_1800d65f0(uVar5,0);
             }
             lVar1 = *(int64 *)(lVar1 + 32);
-            FUN_18154e570(lVar4,0,DAT_181d82198);
+            FUN_181585670(lVar4,0,DAT_181da7538);
           }
           if (lVar1 != null) {
             *(int64 *)(lVar1 + 40) = text;
             *(uint32 *)(lVar1 + 32) = type;
-            plVar2 = (int64 *)FUN_1800d60b0(DAT_181d7f180,4);
-            lVar4 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x418);
+            plVar2 = (int64 *)FUN_1800d60b0(DAT_181da4120,4);
+            lVar4 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x420);
             if (lVar4 != null) {
               if (lVar4.size <= type) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -429,7 +431,7 @@ public class GameTextList
                   uVar5 = String.Format("[A9A9A9][{0}[-][A9A9A9]{1}/{2}][-]{3}",plVar2,0);
                   *(uint64 *)(lVar1 + 16) = uVar5;
                   if (this.mParagraphs != null) {
-                    FUN_18154cb60(this.mParagraphs,lVar1,DAT_181d82098);
+                    FUN_181583c60(this.mParagraphs,lVar1,DAT_181da7438);
                     this.needRebuild = 1;
                     return;
                   }
@@ -440,8 +442,8 @@ public class GameTextList
         }
     }
 
-    // Token : 0x6001682
-    // RVA   : 0xA2E420   Offset: 0xA2CC20   Length: 0x31
+    // Token : 0x60016C6
+    // RVA   : 0xA5D0A0   Offset: 0xA5C4A0   Length: 0x31
     public void Add(InfoData info)
     {
         long lVar1;
@@ -462,13 +464,13 @@ public class GameTextList
               FUN_1800d65f0(uVar5,0);
             }
             lVar1 = *(int64 *)(lVar1 + 32);
-            FUN_18154e570(lVar4,0,DAT_181d82198);
+            FUN_181585670(lVar4,0,DAT_181da7538);
           }
           if (lVar1 != null) {
             *(int64 *)(lVar1 + 40) = param_3;
             *(uint32 *)(lVar1 + 32) = info;
-            plVar2 = (int64 *)FUN_1800d60b0(DAT_181d7f180,4);
-            lVar4 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x418);
+            plVar2 = (int64 *)FUN_1800d60b0(DAT_181da4120,4);
+            lVar4 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x420);
             if (lVar4 != null) {
               if (lVar4.size <= info) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -541,7 +543,7 @@ public class GameTextList
                   uVar5 = String.Format("[A9A9A9][{0}[-][A9A9A9]{1}/{2}][-]{3}",plVar2,0);
                   *(uint64 *)(lVar1 + 16) = uVar5;
                   if (this.mParagraphs != null) {
-                    FUN_18154cb60(this.mParagraphs,lVar1,DAT_181d82098);
+                    FUN_181583c60(this.mParagraphs,lVar1,DAT_181da7438);
                     this.needRebuild = 1;
                     return;
                   }
@@ -552,8 +554,8 @@ public class GameTextList
         }
     }
 
-    // Token : 0x6001683
-    // RVA   : 0xA2E0A0   Offset: 0xA2C8A0   Length: 0x373
+    // Token : 0x60016C7
+    // RVA   : 0xA5CD20   Offset: 0xA5C120   Length: 0x373
     protected void Add(int type, TimeData time, string text, bool updateVisible)
     {
         long lVar1;
@@ -574,13 +576,13 @@ public class GameTextList
               FUN_1800d65f0(uVar5,0);
             }
             lVar1 = *(int64 *)(lVar1 + 32);
-            FUN_18154e570(lVar4,0,DAT_181d82198);
+            FUN_181585670(lVar4,0,DAT_181da7538);
           }
           if (lVar1 != null) {
             *(int64 *)(lVar1 + 40) = time;
             *(uint32 *)(lVar1 + 32) = type;
-            plVar2 = (int64 *)FUN_1800d60b0(DAT_181d7f180,4);
-            lVar4 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x418);
+            plVar2 = (int64 *)FUN_1800d60b0(DAT_181da4120,4);
+            lVar4 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x420);
             if (lVar4 != null) {
               if (lVar4.size <= type) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -653,7 +655,7 @@ public class GameTextList
                   uVar5 = String.Format("[A9A9A9][{0}[-][A9A9A9]{1}/{2}][-]{3}",plVar2,0);
                   *(uint64 *)(lVar1 + 16) = uVar5;
                   if (this.mParagraphs != null) {
-                    FUN_18154cb60(this.mParagraphs,lVar1,DAT_181d82098);
+                    FUN_181583c60(this.mParagraphs,lVar1,DAT_181da7438);
                     this.needRebuild = 1;
                     return;
                   }
@@ -664,10 +666,11 @@ public class GameTextList
         }
     }
 
-    // Token : 0x6001684
-    // RVA   : 0xA2E7D0   Offset: 0xA2CFD0   Length: 0x50C
+    // Token : 0x60016C8
+    // RVA   : 0xA5D450   Offset: 0xA5C850   Length: 0x50C
     protected void Rebuild()
     {
+        var pStatics = *(int64*)(DAT_181d8bc90 + 184);
         uint uVar1;
         long lVar2;
         bool cVar4;
@@ -688,8 +691,8 @@ public class GameTextList
           this.mLastWidth = *(uint32 *)(lVar6 + 164);
           this.mLastHeight = *(uint32 *)(lVar6 + 168);
           UILabel.UpdateNGUIText(lVar6,0);
-          NGUIText.rectHeight = 1000000;
-          NGUIText.regionHeight = 1000000;
+          *(uint32 *)(pStatics + 64) = 1000000;
+          *(uint32 *)(pStatics + 72) = 1000000;
           this.mTotalLines = 0;
           lVar6 = GameTextList.get_paragraphs(this,0);
           plVar10 = plVar11;
@@ -698,14 +701,14 @@ public class GameTextList
               lVar2 = this.mParagraphs;
               uVar9 = (uint32)plVar10;
               if (*(int *)(lVar6 + 24) <= (int)uVar9) break;
-              if ((lVar2 == null) || (lVar6 = lVar2.buffer) == null) goto LAB_180a2ec87;
+              if ((lVar2 == null) || (lVar6 = lVar2.buffer) == null) goto LAB_180a5d907;
               if (*(uint32 *)(lVar6 + 24) <= uVar9) {
                 uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                 FUN_1800d65f0(uVar8,0);
               }
               lVar6 = lVar6[uVar9];
-              if ((lVar6 == null) || (lVar2 = this.hideInfoType) == null) goto LAB_180a2ec87;
+              if ((lVar6 == null) || (lVar2 = this.hideInfoType) == null) goto LAB_180a5d907;
               uVar1 = *(uint32 *)(lVar6 + 32);
               if (lVar2.size <= uVar1) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -713,46 +716,46 @@ public class GameTextList
               if (*(char *)(lVar2.buffer + 32 + (int64)(int)uVar1) == false) {
                 if ((this.mParagraphs == null) ||
                    (lVar6 = this.mParagraphs.buffer) == null)
-                goto LAB_180a2ec87;
+                goto LAB_180a5d907;
                 if (*(uint32 *)(lVar6 + 24) <= uVar9) {
                   uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                   FUN_1800d65f0(uVar8,0);
                 }
                 lVar6 = lVar6[uVar9];
-                if (lVar6 == null) goto LAB_180a2ec87;
+                if (lVar6 == null) goto LAB_180a5d907;
                 uVar8 = *(uint64 *)(lVar6 + 16);
                 NGUIText.WrapText(uVar8,local_res18,0,1,0,0);
                 lVar2 = local_res18[0];
-                lVar7 = FUN_1800d60b0(DAT_181d7c118,1);
-                if (lVar7 == null) goto LAB_180a2ec87;
+                lVar7 = FUN_1800d60b0(DAT_181da1040,1);
+                if (lVar7 == null) goto LAB_180a5d907;
                 if (*(int *)(lVar7 + 24) == 0) {
                   uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                   FUN_1800d65f0(uVar8,0);
                 }
                 *(uint16 *)(lVar7 + 32) = 10;
-                if (lVar2 == null) goto LAB_180a2ec87;
+                if (lVar2 == null) goto LAB_180a5d907;
                 uVar8 = String.Split(lVar2,lVar7);
                 *(uint64 *)(lVar6 + 24) = uVar8;
-                if (*(int64 *)(lVar6 + 24) == 0) goto LAB_180a2ec87;
+                if (*(int64 *)(lVar6 + 24) == 0) goto LAB_180a5d907;
                 this.mTotalLines =
                      this.mTotalLines + *(int *)(*(int64 *)(lVar6 + 24) + 24);
               }
               plVar10 = (int64 *)(uint64)(uVar9 + 1);
               lVar6 = GameTextList.get_paragraphs(this);
-              if (lVar6 == null) goto LAB_180a2ec87;
+              if (lVar6 == null) goto LAB_180a5d907;
             }
             this.mTotalLines = 0;
             if (lVar2 != null) {
               iVar5 = lVar2.size;
               plVar10 = plVar11;
-              if (0 < iVar5) goto LAB_180a2ea70;
-              goto LAB_180a2eb1b;
+              if (0 < iVar5) goto LAB_180a5d6f0;
+              goto LAB_180a5d79b;
             }
           }
         }
-        LAB_180a2ec87:
+        LAB_180a5d907:
                           // WARNING: Subroutine does not return
         FUN_1800d6620();
         while( true ) {
@@ -763,7 +766,7 @@ public class GameTextList
             FUN_1800d65f0(uVar8,0);
           }
           lVar6 = lVar6[uVar9];
-          if ((lVar6 == null) || (lVar2 = this.hideInfoType) == null) goto LAB_180a2ec87;
+          if ((lVar6 == null) || (lVar2 = this.hideInfoType) == null) goto LAB_180a5d907;
           uVar1 = *(uint32 *)(lVar6 + 32);
           if (lVar2.size <= uVar1) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -771,33 +774,33 @@ public class GameTextList
           if (*(char *)(lVar2.buffer + 32 + (int64)(int)uVar1) == false) {
             if ((this.mParagraphs == null) ||
                (lVar6 = this.mParagraphs.buffer) == null)
-            goto LAB_180a2ec87;
+            goto LAB_180a5d907;
             if (*(uint32 *)(lVar6 + 24) <= uVar9) {
               uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
               FUN_1800d65f0(uVar8,0);
             }
             lVar6 = lVar6[uVar9];
-            if ((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 24)) == null) goto LAB_180a2ec87;
+            if ((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 24)) == null) goto LAB_180a5d907;
             this.mTotalLines = this.mTotalLines + *(int *)(lVar6 + 24);
           }
           plVar10 = (int64 *)(uint64)(uVar9 + 1);
           if (iVar5 <= (int)(uVar9 + 1)) break;
-        LAB_180a2ea70:
+        LAB_180a5d6f0:
           if ((this.mParagraphs == null) ||
              (lVar6 = this.mParagraphs.buffer) == null)
-          goto LAB_180a2ec87;
+          goto LAB_180a5d907;
         }
-        LAB_180a2eb1b:
+        LAB_180a5d79b:
         uVar8 = this.scrollBar;
         cVar4 = Object.op_Inequality(uVar8,0,0);
         if (cVar4) {
           plVar10 = this.scrollBar;
           if (plVar10 != (int64 *)0) {
-            if ((*(byte *)(*plVar10 + 300) < *(byte *)(DAT_181d8afd8 + 300)) ||
+            if ((*(byte *)(*plVar10 + 300) < *(byte *)(DAT_181db01f8 + 300)) ||
                (*(int64 *)
-                 (*(int64 *)(*plVar10 + 200) + -8 + (uint64)*(byte *)(DAT_181d8afd8 + 300) * 8) !=
-                DAT_181d8afd8)) {
+                 (*(int64 *)(*plVar10 + 200) + -8 + (uint64)*(byte *)(DAT_181db01f8 + 300) * 8) !=
+                DAT_181db01f8)) {
               bVar3 = false;
             }
             else {
@@ -811,20 +814,20 @@ public class GameTextList
           if (cVar4) {
             if ((this.mTotalLines != null) &&
                (cVar4 = GameTextList.get_isValid(this,0), cVar4)) {
-              if (this.textLabel == null) goto LAB_180a2ec87;
+              if (this.textLabel == null) goto LAB_180a5d907;
               GameTextList.get_lineHeight(this,0);
               iVar5 = Mathf.FloorToInt();
               Mathf.Max(0,this.mTotalLines - iVar5,0);
             }
-            if (plVar11 == (int64 *)0) goto LAB_180a2ec87;
+            if (plVar11 == (int64 *)0) goto LAB_180a5d907;
             UIScrollBar.set_barSize(plVar11);
           }
         }
         GameTextList.UpdateVisibleText(this,0);
     }
 
-    // Token : 0x6001685
-    // RVA   : 0xA2F010   Offset: 0xA2D810   Length: 0x301
+    // Token : 0x60016C9
+    // RVA   : 0xA5DC90   Offset: 0xA5D090   Length: 0x301
     protected void UpdateVisibleText()
     {
         uint uVar1;
@@ -844,7 +847,7 @@ public class GameTextList
           lVar10 = this.textLabel;
           uVar11 = "";
           if (this.mTotalLines != null) {
-            if (lVar10 == null) goto LAB_180a2f2dc;
+            if (lVar10 == null) goto LAB_180a5df5c;
             GameTextList.get_lineHeight(this,0);
             iVar6 = Mathf.FloorToInt();
             iVar7 = Mathf.Max(0,this.mTotalLines - iVar6,0);
@@ -853,15 +856,15 @@ public class GameTextList
             if ((int)uVar8 < 0) {
               uVar8 = uVar13;
             }
-            if (this.final == null) goto LAB_180a2f2dc;
+            if (this.final == null) goto LAB_180a5df5c;
             StringBuilder.Clear(this.final,0);
             lVar10 = GameTextList.get_paragraphs(this,0);
-            if (lVar10 == null) goto LAB_180a2f2dc;
+            if (lVar10 == null) goto LAB_180a5df5c;
             iVar7 = *(int *)(lVar10 + 24);
             for (; (0 < iVar6 && (uVar12 = 0, (int)uVar13 < iVar7)); uVar13 = uVar13 + 1) {
               if ((this.mParagraphs == null) ||
                  (lVar10 = this.mParagraphs.buffer) == null)
-              goto LAB_180a2f2dc;
+              goto LAB_180a5df5c;
               if (*(uint32 *)(lVar10 + 24) <= uVar13) {
                 uVar11 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -869,7 +872,7 @@ public class GameTextList
               }
               lVar10 = lVar10[uVar13];
               if ((lVar10 == null) || (lVar3 = this.hideInfoType) == null)
-              goto LAB_180a2f2dc;
+              goto LAB_180a5df5c;
               uVar1 = *(uint32 *)(lVar10 + 32);
               if (*(uint32 *)(lVar3 + 24) <= uVar1) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -877,20 +880,20 @@ public class GameTextList
               if (*(char *)(*(int64 *)(lVar3 + 16) + 32 + (int64)(int)uVar1) == false) {
                 if ((this.mParagraphs == null) ||
                    (lVar10 = this.mParagraphs.buffer) == null)
-                goto LAB_180a2f2dc;
+                goto LAB_180a5df5c;
                 if (*(uint32 *)(lVar10 + 24) <= uVar13) {
                   uVar11 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                   FUN_1800d65f0(uVar11,0);
                 }
                 lVar10 = lVar10[uVar13];
-                if ((lVar10 == null) || (*(int64 *)(lVar10 + 24) == 0)) goto LAB_180a2f2dc;
+                if ((lVar10 == null) || (*(int64 *)(lVar10 + 24) == 0)) goto LAB_180a5df5c;
                 iVar2 = *(int *)(*(int64 *)(lVar10 + 24) + 24);
                 if (iVar6 != 0) {
                   do {
                     if (iVar2 <= (int)uVar12) break;
                     lVar3 = *(int64 *)(lVar10 + 24);
-                    if (lVar3 == null) goto LAB_180a2f2dc;
+                    if (lVar3 == null) goto LAB_180a5df5c;
                     if (*(uint32 *)(lVar3 + 24) <= uVar12) {
                       uVar11 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -898,13 +901,13 @@ public class GameTextList
                     }
                     uVar11 = lVar3[uVar12];
                     if ((int)uVar8 < 1) {
-                      if (this.final == null) goto LAB_180a2f2dc;
-                      iVar9 = FUN_18123bdd0(this.final,0);
+                      if (this.final == null) goto LAB_180a5df5c;
+                      iVar9 = FUN_181259800(this.final,0);
                       if (0 < iVar9) {
-                        if (this.final == null) goto LAB_180a2f2dc;
+                        if (this.final == null) goto LAB_180a5df5c;
                         StringBuilder.Append(this.final,"\n",0);
                       }
-                      if (this.final == null) goto LAB_180a2f2dc;
+                      if (this.final == null) goto LAB_180a5df5c;
                       StringBuilder.Append(this.final,uVar11,0);
                       iVar6 = iVar6 + -1;
                     }
@@ -918,11 +921,11 @@ public class GameTextList
             }
             plVar4 = this.final;
             lVar10 = this.textLabel;
-            if (plVar4 == (int64 *)0) goto LAB_180a2f2dc;
+            if (plVar4 == (int64 *)0) goto LAB_180a5df5c;
             uVar11 = (**(code **)(*plVar4 + 0x168))(plVar4,*(uint64 *)(*plVar4 + 0x170));
           }
           if (lVar10 == null) {
-        LAB_180a2f2dc:
+        LAB_180a5df5c:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -930,8 +933,8 @@ public class GameTextList
         }
     }
 
-    // Token : 0x6001686
-    // RVA   : 0xA2EEA0   Offset: 0xA2D6A0   Length: 0x16D
+    // Token : 0x60016CA
+    // RVA   : 0xA5DB20   Offset: 0xA5CF20   Length: 0x16D
     public void TypeTabClicked(GameObject tab)
     {
         long lVar1;
@@ -955,9 +958,9 @@ public class GameTextList
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             if (lVar1 != null) {
-              FUN_181814bb0(lVar1,uVar2,
+              FUN_1817f42f0(lVar1,uVar2,
                             *(char *)(lVar5._items + 32 + (int64)(int)uVar3) == false,
-                            DAT_181d58f90);
+                            DAT_181d80720);
               lVar5 = GameObject.GetComponent(tab);
               lVar1 = this.hideInfoType;
               uVar4 = Object.get_name(tab);
@@ -967,10 +970,10 @@ public class GameTextList
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 if (*(char *)(lVar1._items + 32 + (int64)(int)uVar3) == false) {
-                  puVar6 = (uint32 *)FUN_181098a50(&local_28);
+                  puVar6 = (uint32 *)FUN_1810d3570(&local_28);
                 }
                 else {
-                  puVar6 = (uint32 *)FUN_1810988d0();
+                  puVar6 = (uint32 *)FUN_1810d33f0();
                 }
                 local_28 = *puVar6;
                 uStack_24 = puVar6[1];
@@ -987,14 +990,14 @@ public class GameTextList
         }
     }
 
-    // Token : 0x6001687
-    // RVA   : 0xA2F410   Offset: 0xA2DC10   Length: 0xC2
+    // Token : 0x60016CB
+    // RVA   : 0xA5E090   Offset: 0xA5D490   Length: 0xC2
     public void /*ctor*/()
     {
         long lVar1;
         ulong uVar2;
         this.paragraphHistory = 100;
-        lVar1 = FUN_1800d60b0(DAT_181d7c118,1);
+        lVar1 = FUN_1800d60b0(DAT_181da1040,1);
         if (lVar1 != null) {
           if (*(int *)(lVar1 + 24) != 0) {
             *(uint16 *)(lVar1 + 32) = 10;
@@ -1009,14 +1012,14 @@ public class GameTextList
         }
     }
 
-    // Token : 0x6001688
-    // RVA   : 0xA2F390   Offset: 0xA2DB90   Length: 0x76
+    // Token : 0x60016CC
+    // RVA   : 0xA5E010   Offset: 0xA5D410   Length: 0x76
     private static void /*cctor*/()
     {
         ulong uVar2;
-        uVar2 = il2cpp_internal(DAT_181d5dac8);
-        FUN_1808ae540(uVar2,DAT_181da1e78);
-        puVar1 = *(uint64 **)(DAT_181d4e688 + 184);
+        uVar2 = il2cpp_internal(DAT_181d82568);
+        FUN_1808b1370(uVar2,DAT_181dc8338);
+        puVar1 = *(uint64 **)(DAT_181d73438 + 184);
         *puVar1 = uVar2;
         il2cpp_internal(puVar1,uVar2);
     }

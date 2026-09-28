@@ -1,55 +1,55 @@
 // ============================================================
 // Type  : <HeroEnterBattleFieldCoroutine>d__163
-// Token : 0x2000160
+// Token : 0x2000165
 // ============================================================
 
 public class <HeroEnterBattleFieldCoroutine>d__163
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000933
+    // Token: 0x40009AE
     private int <>1__state;
 
-    // Token: 0x4000934
+    // Token: 0x40009AF
     private object <>2__current;
 
-    // Token: 0x4000935
+    // Token: 0x40009B0
     public BattleController <>4__this;
 
-    // Token: 0x4000936
+    // Token: 0x40009B1
     public HeroData heroData;
 
-    // Token: 0x4000937
+    // Token: 0x40009B2
     public BattleTeam targetTeam;
 
-    // Token: 0x4000938
+    // Token: 0x40009B3
     public GridUnitData targetGrid;
 
-    // Token: 0x4000939
+    // Token: 0x40009B4
     public int startTalkType;
 
-    // Token: 0x400093A
+    // Token: 0x40009B5
     public float startMovePower;
 
-    // Token: 0x400093B
+    // Token: 0x40009B6
     public float waitTime;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000B92
-    // RVA   : 0x219070   Offset: 0x217870   Length: 0x24
+    // Token : 0x6000BBC
+    // RVA   : 0x219070   Offset: 0x218470   Length: 0x24
     public void /*ctor*/(int <>1__state)
     {
         ZhSegment.Initialize(this,0);
         this.<>1__state = <>1__state;
     }
 
-    // Token : 0x6000B93
-    // RVA   : 0x245810   Offset: 0x244010   Length: 0x3
+    // Token : 0x6000BBD
+    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
     private virtual void System.IDisposable.Dispose()
     {
     }
 
-    // Token : 0x6000B94
-    // RVA   : 0xB238E0   Offset: 0xB220E0   Length: 0xDD
+    // Token : 0x6000BBE
+    // RVA   : 0x92F730   Offset: 0x92EB30   Length: 0xDD
     private virtual bool MoveNext()
     {
         uint uVar1;
@@ -76,27 +76,27 @@ public class <HeroEnterBattleFieldCoroutine>d__163
         return false;
     }
 
-    // Token : 0x6000B95
-    // RVA   : 0x20F140   Offset: 0x20D940   Length: 0x5
+    // Token : 0x6000BBF
+    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
     private virtual object System.Collections.Generic.IEnumerator<System.object>.get_Current()
     {
         return this.<>2__current;
     }
 
-    // Token : 0x6000B96
-    // RVA   : 0xB239C0   Offset: 0xB221C0   Length: 0x3E
+    // Token : 0x6000BC0
+    // RVA   : 0x92F810   Offset: 0x92EC10   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d682e8);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d6ea18);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181d978b8);
     }
 
-    // Token : 0x6000B97
-    // RVA   : 0x20F140   Offset: 0x20D940   Length: 0x5
+    // Token : 0x6000BC1
+    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
     private virtual object System.Collections.IEnumerator.get_Current()
     {
         return this.<>2__current;

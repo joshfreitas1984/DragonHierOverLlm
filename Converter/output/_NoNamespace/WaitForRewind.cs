@@ -1,17 +1,17 @@
 // ============================================================
 // Type  : WaitForRewind
-// Token : 0x2000485
+// Token : 0x200048C
 // ============================================================
 
 public class WaitForRewind
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002054
+    // Token: 0x400215E
     private readonly Tween t;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60026E8
-    // RVA   : 0x8D8F60   Offset: 0x8D7760   Length: 0x66
+    // Token : 0x600276B
+    // RVA   : 0x93B070   Offset: 0x93A470   Length: 0x66
     public override bool get_keepWaiting()
     {
         float fVar1;
@@ -33,8 +33,8 @@ public class WaitForRewind
         return 0.0 < (float)(iVar3 + 1) * fVar1;
     }
 
-    // Token : 0x60026E9
-    // RVA   : 0x249490   Offset: 0x247C90   Length: 0x30
+    // Token : 0x600276C
+    // RVA   : 0x249490   Offset: 0x248890   Length: 0x30
     public void /*ctor*/(Tween tween)
     {
         c__DisplayClass9_0.ctor(this,0);

@@ -1,21 +1,21 @@
 // ============================================================
 // Type  : AttackDirectionType
-// Token : 0x2000178
+// Token : 0x200017D
 // ============================================================
 
 public class AttackDirectionType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40009A1
+    // Token: 0x4000A1C
     public int value__;
 
-    // Token: 0x40009A2
+    // Token: 0x4000A1D
     public const AttackDirectionType Front;
 
-    // Token: 0x40009A3
+    // Token: 0x4000A1E
     public const AttackDirectionType Side;
 
-    // Token: 0x40009A4
+    // Token: 0x4000A1F
     public const AttackDirectionType Back;
 
 }

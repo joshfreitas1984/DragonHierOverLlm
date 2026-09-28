@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : PitchShifter
-// Token : 0x2000125
+// Token : 0x2000126
 // ============================================================
 
 public class PitchShifter
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000727
+    // Token: 0x4000743
     public Range pitchRange;
 
-    // Token: 0x4000728
+    // Token: 0x4000744
     public AudioSource src;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60009A2
-    // RVA   : 0x478900   Offset: 0x477100   Length: 0x42
+    // Token : 0x60009BA
+    // RVA   : 0x46C9D0   Offset: 0x46BDD0   Length: 0x42
     private void Start()
     {
         long lVar1;
@@ -31,8 +31,8 @@ public class PitchShifter
         }
     }
 
-    // Token : 0x60009A3
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x60009BB
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

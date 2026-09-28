@@ -1,67 +1,67 @@
 // ============================================================
 // Type  : HeroTagDataBase
-// Token : 0x2000232
+// Token : 0x2000238
 // ============================================================
 
 public class HeroTagDataBase
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400111E
+    // Token: 0x40011C1
     public int id;
 
-    // Token: 0x400111F
+    // Token: 0x40011C2
     public string name;
 
-    // Token: 0x4001120
+    // Token: 0x40011C3
     public int value;
 
-    // Token: 0x4001121
+    // Token: 0x40011C4
     public SkillTargetType effectTarget;
 
-    // Token: 0x4001122
+    // Token: 0x40011C5
     public string sameMeaning;
 
-    // Token: 0x4001123
+    // Token: 0x40011C6
     public string oppositeMeaning;
 
-    // Token: 0x4001124
+    // Token: 0x40011C7
     public bool canRandom;
 
-    // Token: 0x4001125
+    // Token: 0x40011C8
     public List<string> requirement;
 
-    // Token: 0x4001126
+    // Token: 0x40011C9
     public List<string> replaceTag;
 
-    // Token: 0x4001127
+    // Token: 0x40011CA
     public string category;
 
-    // Token: 0x4001128
+    // Token: 0x40011CB
     public HeroSpeAddData buffData;
 
-    // Token: 0x4001129
+    // Token: 0x40011CC
     public bool showRightLine;
 
-    // Token: 0x400112A
+    // Token: 0x40011CD
     public int order;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001275
-    // RVA   : 0xB3CE70   Offset: 0xB3B670   Length: 0xA3
+    // Token : 0x60012B6
+    // RVA   : 0xAFDDD0   Offset: 0xAFD1D0   Length: 0xA3
     public void /*ctor*/()
     {
         ulong uVar1;
         ZhSegment.Initialize(this,0);
-        uVar1 = il2cpp_internal(DAT_181d72a30);
-        FUN_180f58a90(uVar1,DAT_181d7c250);
+        uVar1 = il2cpp_internal(DAT_181d97750);
+        FUN_18132faf0(uVar1,DAT_181da3bd8);
         this.requirement = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d72a30);
-        FUN_180f58a90(uVar1,DAT_181d7c250);
+        uVar1 = il2cpp_internal(DAT_181d97750);
+        FUN_18132faf0(uVar1,DAT_181da3bd8);
         this.replaceTag = uVar1;
     }
 
-    // Token : 0x6001276
-    // RVA   : 0xB3CD40   Offset: 0xB3B540   Length: 0x125
+    // Token : 0x60012B7
+    // RVA   : 0xAFDCA0   Offset: 0xAFD0A0   Length: 0x125
     public string Name()
     {
         ulong uVar1;
@@ -69,7 +69,7 @@ public class HeroTagDataBase
         uint uVar3;
         uVar1 = this.name;
         uVar3 = Mathf.Abs(this.value,0);
-        lVar2 = GameController.lockObj;
+        lVar2 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
         if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
           uVar3 = Mathf.Clamp(uVar3,0,*(int *)(lVar2 + 24) + -1,0);
           GlobalData.GenerateRareLvColorText(uVar1,uVar3,0);
@@ -77,8 +77,8 @@ public class HeroTagDataBase
         }
     }
 
-    // Token : 0x6001277
-    // RVA   : 0xB3CC40   Offset: 0xB3B440   Length: 0xF4
+    // Token : 0x60012B8
+    // RVA   : 0xAFDBA0   Offset: 0xAFCFA0   Length: 0xF4
     public string GetDescribe(bool showEffectTarget)
     {
         int iVar1;
@@ -99,8 +99,8 @@ public class HeroTagDataBase
         String.Concat(uVar2,uVar3,0);
     }
 
-    // Token : 0x6001278
-    // RVA   : 0xB3CC10   Offset: 0xB3B410   Length: 0x2D
+    // Token : 0x60012B9
+    // RVA   : 0xAFDB70   Offset: 0xAFCF70   Length: 0x2D
     public float GetCostValue(bool startCost)
     {
         if (this.value < 0) {
@@ -108,8 +108,8 @@ public class HeroTagDataBase
         }
     }
 
-    // Token : 0x6001279
-    // RVA   : 0xB3CBD0   Offset: 0xB3B3D0   Length: 0x3E
+    // Token : 0x60012BA
+    // RVA   : 0xAFDB30   Offset: 0xAFCF30   Length: 0x3E
     public int GetCostTime()
     {
         int iVar1;
@@ -125,8 +125,8 @@ public class HeroTagDataBase
         Mathf.Max(1,uVar2);
     }
 
-    // Token : 0x600127A
-    // RVA   : 0xB3CB80   Offset: 0xB3B380   Length: 0x42
+    // Token : 0x60012BB
+    // RVA   : 0xAFDAE0   Offset: 0xAFCEE0   Length: 0x42
     public int GetCostMoney()
     {
         int iVar1;
@@ -143,8 +143,8 @@ public class HeroTagDataBase
         return iVar1 * 50;
     }
 
-    // Token : 0x600127B
-    // RVA   : 0xB3CA00   Offset: 0xB3B200   Length: 0x175
+    // Token : 0x60012BC
+    // RVA   : 0xAFD960   Offset: 0xAFCD60   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -155,13 +155,13 @@ public class HeroTagDataBase
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -173,7 +173,7 @@ public class HeroTagDataBase
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d53c70,plVar1);
+            FUN_180002970(0,DAT_181d78da0,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

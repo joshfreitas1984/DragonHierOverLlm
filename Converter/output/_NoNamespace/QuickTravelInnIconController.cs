@@ -1,26 +1,26 @@
 // ============================================================
 // Type  : QuickTravelInnIconController
-// Token : 0x2000329
+// Token : 0x2000330
 // ============================================================
 
 public class QuickTravelInnIconController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001985
+    // Token: 0x4001A7C
     public InnData innData;
 
-    // Token: 0x4001986
+    // Token: 0x4001A7D
     public QuickTravelAreaIconType innIconType;
 
-    // Token: 0x4001987
+    // Token: 0x4001A7E
     public Image missionTarget;
 
-    // Token: 0x4001988
+    // Token: 0x4001A7F
     private bool hightLight;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001F9F
-    // RVA   : 0xC4F5B0   Offset: 0xC4DDB0   Length: 0x7F
+    // Token : 0x600201F
+    // RVA   : 0xD00370   Offset: 0xCFF770   Length: 0x7F
     private void Start()
     {
         long lVar1;
@@ -29,18 +29,19 @@ public class QuickTravelInnIconController
         if (lVar1 != null) {
           lVar1 = Transform.Find(lVar1,"MissionTarget",0);
           if (lVar1 != null) {
-            uVar2 = Component.GetComponent(lVar1,DAT_181d6bc40);
+            uVar2 = Component.GetComponent(lVar1,DAT_181d94460);
             this.missionTarget = uVar2;
             return;
           }
         }
     }
 
-    // Token : 0x6001FA0
-    // RVA   : 0xC4F630   Offset: 0xC4DE30   Length: 0x5A2
+    // Token : 0x6002020
+    // RVA   : 0xD003F0   Offset: 0xCFF7F0   Length: 0x5A2
     public void Update()
     {
-        var pStatics = *(int64*)(DAT_181d86270 + 184);
+        var pStatics_b490 = *(int64*)(DAT_181dab490 + 184);
+        var pStatics_b790 = *(int64*)(DAT_181d8b790 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
@@ -50,46 +51,43 @@ public class QuickTravelInnIconController
         uint uStack_10;
         uint32 uStack_c;
         this.hightLight = 0;
-        uVar2 = MouseController.hoveredUI;
+        uVar2 = *(uint64 *)(pStatics_b790 + 72);
         cVar1 = Object.op_Inequality(uVar2,0,0);
         if (cVar1) {
-          if (MouseController.hoveredUI == null)
-          goto LAB_180c4fbcd;
+          if (*(int64 *)(pStatics_b790 + 72) == 0) goto LAB_180d0098d;
           uVar2 = GameObject.GetComponent();
           cVar1 = Object.op_Inequality(uVar2,0,0);
           if (cVar1) {
-            if (MouseController.hoveredUI == null)
-            goto LAB_180c4fbcd;
+            if (*(int64 *)(pStatics_b790 + 72) == 0) goto LAB_180d0098d;
             lVar3 = GameObject.GetComponent();
-            if (lVar3 == null) goto LAB_180c4fbcd;
+            if (lVar3 == null) goto LAB_180d0098d;
             if (lVar3.innName != null) {
-              if (MouseController.hoveredUI == null)
-              goto LAB_180c4fbcd;
+              if (*(int64 *)(pStatics_b790 + 72) == 0) goto LAB_180d0098d;
               lVar3 = GameObject.GetComponent();
               if (((lVar3 == null) || (lVar3.innName == null)) ||
                  (lVar3 = *(int64 *)(lVar3.innName + 120)) == null)
-              goto LAB_180c4fbcd;
+              goto LAB_180d0098d;
               if (lVar3.innName == null) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               lVar3 = *(int64 *)(lVar3.id + 32);
-              if (lVar3 == null) goto LAB_180c4fbcd;
+              if (lVar3 == null) goto LAB_180d0098d;
               if (lVar3.shopItemList == 6) {
-                lVar3 = MouseController.hoveredUI;
-                if (lVar3 == null) goto LAB_180c4fbcd;
-                lVar3 = GameObject.GetComponent(lVar3,DAT_181da0538);
+                lVar3 = *(int64 *)(pStatics_b790 + 72);
+                if (lVar3 == null) goto LAB_180d0098d;
+                lVar3 = GameObject.GetComponent(lVar3,DAT_181d72568);
                 if (((lVar3 == null) || (lVar3.innName == null)) ||
                    (lVar3 = *(int64 *)(lVar3.innName + 120)) == null)
-                goto LAB_180c4fbcd;
+                goto LAB_180d0098d;
                 if (lVar3.innName == null) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 lVar3 = *(int64 *)(lVar3.id + 32);
-                if (lVar3 == null) goto LAB_180c4fbcd;
+                if (lVar3 == null) goto LAB_180d0098d;
                 uVar2 = lVar3.bigMapPos;
-                if (this.innData == null) goto LAB_180c4fbcd;
+                if (this.innData == null) goto LAB_180d0098d;
                 uVar4 = Int32.ToString(this.innData + 16,0);
-                cVar1 = FUN_1816fd990(uVar2,uVar4,0);
+                cVar1 = FUN_18171e540(uVar2,uVar4,0);
                 if (cVar1) {
                   this.hightLight = 1;
                 }
@@ -99,77 +97,77 @@ public class QuickTravelInnIconController
         }
         if (!this.hightLight) {
           lVar3 = Component.get_transform(this);
-          if (lVar3 == null) goto LAB_180c4fbcd;
+          if (lVar3 == null) goto LAB_180d0098d;
           lVar3 = Transform.Find(lVar3,"HighLight",0);
-          if (lVar3 == null) goto LAB_180c4fbcd;
+          if (lVar3 == null) goto LAB_180d0098d;
           lVar3 = Component.get_gameObject(lVar3,0);
-          if (lVar3 == null) goto LAB_180c4fbcd;
+          if (lVar3 == null) goto LAB_180d0098d;
           cVar1 = GameObject.get_activeSelf(lVar3,0);
           if (cVar1) {
             lVar3 = Component.get_transform(this,0);
-            if (lVar3 == null) goto LAB_180c4fbcd;
+            if (lVar3 == null) goto LAB_180d0098d;
             lVar3 = Transform.Find(lVar3,"HighLight",0);
-            if (lVar3 == null) goto LAB_180c4fbcd;
+            if (lVar3 == null) goto LAB_180d0098d;
             lVar3 = Component.get_gameObject(lVar3,0);
-            if (lVar3 == null) goto LAB_180c4fbcd;
+            if (lVar3 == null) goto LAB_180d0098d;
             uVar2 = 0;
-        LAB_180c4fa70:
+        LAB_180d00830:
             GameObject.SetActive(lVar3,uVar2,0);
           }
         }
         else {
           lVar3 = Component.get_transform(this);
-          if (lVar3 == null) goto LAB_180c4fbcd;
+          if (lVar3 == null) goto LAB_180d0098d;
           lVar3 = Transform.Find(lVar3,"HighLight",0);
-          if (lVar3 == null) goto LAB_180c4fbcd;
+          if (lVar3 == null) goto LAB_180d0098d;
           lVar3 = Component.get_gameObject(lVar3,0);
-          if (lVar3 == null) goto LAB_180c4fbcd;
+          if (lVar3 == null) goto LAB_180d0098d;
           cVar1 = GameObject.get_activeSelf(lVar3,0);
           if (!cVar1) {
             lVar3 = Component.get_transform(this,0);
-            if (lVar3 == null) goto LAB_180c4fbcd;
+            if (lVar3 == null) goto LAB_180d0098d;
             lVar3 = Transform.Find(lVar3,"HighLight",0);
-            if (lVar3 == null) goto LAB_180c4fbcd;
+            if (lVar3 == null) goto LAB_180d0098d;
             lVar3 = Component.get_gameObject(lVar3,0);
-            if (lVar3 == null) goto LAB_180c4fbcd;
+            if (lVar3 == null) goto LAB_180d0098d;
             uVar2 = 1;
-            goto LAB_180c4fa70;
+            goto LAB_180d00830;
           }
         }
         lVar3 = this.innData;
-        if (lVar3 == null) goto LAB_180c4fbcd;
+        if (lVar3 == null) goto LAB_180d0098d;
         plVar6 = this.missionTarget;
         if (lVar3.plotNumCount < 1) {
           if (lVar3.missionNumCount < 1) {
-            puVar5 = (uint32 *)FUN_180d904c0(&local_18,0);
-            if (plVar6 == (int64 *)0) goto LAB_180c4fbcd;
+            puVar5 = (uint32 *)FUN_180d98fe0(&local_18,0);
+            if (plVar6 == (int64 *)0) goto LAB_180d0098d;
             lVar3 = *plVar6;
-            goto LAB_180c4fba7;
+            goto LAB_180d00967;
           }
-          if (*pStatics == 0) goto LAB_180c4fbcd;
+          if (*pStatics_b490 == 0) goto LAB_180d0098d;
           uVar2 = TextureController.LoadAtlasSprite
-                            (*pStatics,"UIAtlas","任务目标",0);
-          if (plVar6 == (int64 *)0) goto LAB_180c4fbcd;
+                            (*pStatics_b490,"UIAtlas","任务目标",0);
+          if (plVar6 == (int64 *)0) goto LAB_180d0098d;
           Image.set_sprite(plVar6,uVar2,0);
           plVar6 = this.missionTarget;
-          puVar5 = (uint32 *)FUN_181098a50(&local_18,0);
+          puVar5 = (uint32 *)FUN_1810d3570(&local_18,0);
         }
         else {
-          if (*pStatics == 0) goto LAB_180c4fbcd;
+          if (*pStatics_b490 == 0) goto LAB_180d0098d;
           uVar2 = TextureController.LoadAtlasSprite
-                            (*pStatics,"UIAtlas","问号",0);
-          if (plVar6 == (int64 *)0) goto LAB_180c4fbcd;
+                            (*pStatics_b490,"UIAtlas","问号",0);
+          if (plVar6 == (int64 *)0) goto LAB_180d0098d;
           Image.set_sprite(plVar6,uVar2,0);
           plVar6 = this.missionTarget;
           puVar5 = (uint32 *)Color.get_yellow(&local_18,0);
         }
         if (plVar6 == (int64 *)0) {
-        LAB_180c4fbcd:
+        LAB_180d0098d:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         lVar3 = *plVar6;
-        LAB_180c4fba7:
+        LAB_180d00967:
         local_18 = *puVar5;
         uStack_14 = puVar5[1];
         uStack_10 = puVar5[2];
@@ -177,11 +175,12 @@ public class QuickTravelInnIconController
         (**(code **)(lVar3 + 0x2a8))(plVar6,&local_18,*(uint64 *)(lVar3 + 0x2b0));
     }
 
-    // Token : 0x6001FA1
-    // RVA   : 0xC4F150   Offset: 0xC4D950   Length: 0x453
+    // Token : 0x6002021
+    // RVA   : 0xCFFF10   Offset: 0xCFF310   Length: 0x453
     public void RefreshState()
     {
-        var pStatics = *(int64*)(DAT_181d6ede0 + 184);
+        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics_4000 = *(int64*)(DAT_181d94000 + 184);
         bool cVar1;
         long lVar3;
         uint uVar6;
@@ -190,31 +189,31 @@ public class QuickTravelInnIconController
         uint uStack_30;
         uint32 uStack_2c;
         uint8 local_28 [32];
-        if (PlotController.LeftFaceHideOffset == 1) {
-          lVar3 = PlotController.LanternFestivelRewardLvTalkText;
+        if (*(int *)(pStatics_3d40 + 8) == 1) {
+          lVar3 = *(int64 *)(pStatics_3d40 + 40);
           if ((this.innData == null) || (lVar3 == null)) throw; // [null/range check failed]
-          cVar1 = FUN_181815240(lVar3,this.innData.id,DAT_181d67bf8)
+          cVar1 = FUN_18182a3a0(lVar3,this.innData.id,DAT_181d8f398)
           ;
           if (!(cVar1))
           {
-            plVar2 = (int64 *)Component.GetComponent(this,DAT_181d6bc40);
+            plVar2 = (int64 *)Component.GetComponent(this,DAT_181d94460);
             if (plVar2 == (int64 *)0) throw; // [null/range check failed]
             (**(code **)(*plVar2 + 0x2c8))(plVar2,0,*(uint64 *)(*plVar2 + 0x2d0));
             }
             else {
           }
-          plVar2 = (int64 *)Component.GetComponent(this,DAT_181d6bc40);
-          if ((*pStatics == 0) || (plVar2 == (int64 *)0))
+          plVar2 = (int64 *)Component.GetComponent(this,DAT_181d94460);
+          if ((*pStatics_4000 == 0) || (plVar2 == (int64 *)0))
           throw; // [null/range check failed]
           (**(code **)(*plVar2 + 0x2c8))
-                    (plVar2,*(uint8 *)(*pStatics + 129),
+                    (plVar2,*(uint8 *)(*pStatics_4000 + 129),
                      *(uint64 *)(*plVar2 + 0x2d0));
         }
-        plVar2 = (int64 *)Component.GetComponent(this,DAT_181d6bc40);
+        plVar2 = (int64 *)Component.GetComponent(this,DAT_181d94460);
         if (plVar2 == (int64 *)0) throw; // [null/range check failed]
         cVar1 = (**(code **)(*plVar2 + 0x2b8))(plVar2,*(uint64 *)(*plVar2 + 0x2c0));
         if (!cVar1) {
-        LAB_180c4f498:
+        LAB_180d00258:
           lVar3 = Component.get_transform(this,0);
           if (lVar3 == null) throw; // [null/range check failed]
           lVar3 = Transform.Find(lVar3,"AreaNameBack",0);
@@ -231,8 +230,8 @@ public class QuickTravelInnIconController
             if (lVar3 == null) throw; // [null/range check failed]
             GameObject.SetActive(lVar3,0,0);
           }
-          plVar2 = (int64 *)Component.GetComponent(this,DAT_181d6bc40);
-          plVar4 = (int64 *)Component.GetComponent(this,DAT_181d6bc40);
+          plVar2 = (int64 *)Component.GetComponent(this,DAT_181d94460);
+          plVar4 = (int64 *)Component.GetComponent(this,DAT_181d94460);
           if (plVar4 == (int64 *)0) throw; // [null/range check failed]
           puVar5 = (uint32 *)
                    (**(code **)(*plVar4 + 0x298))(local_28,plVar4,*(uint64 *)(*plVar4 + 0x2a0));
@@ -243,8 +242,8 @@ public class QuickTravelInnIconController
           uVar6 = 0x3e19999a;
         }
         else {
-          if (*pStatics == 0) throw; // [null/range check failed]
-          if (*(char *)(*pStatics + 129) == false) goto LAB_180c4f498;
+          if (*pStatics_4000 == 0) throw; // [null/range check failed]
+          if (*(char *)(*pStatics_4000 + 129) == false) goto LAB_180d00258;
           lVar3 = Component.get_transform(this,0);
           if (lVar3 == null) throw; // [null/range check failed]
           lVar3 = Transform.Find(lVar3,"AreaNameBack",0);
@@ -261,8 +260,8 @@ public class QuickTravelInnIconController
             if (lVar3 == null) throw; // [null/range check failed]
             GameObject.SetActive(lVar3,1,0);
           }
-          plVar2 = (int64 *)Component.GetComponent(this,DAT_181d6bc40);
-          plVar4 = (int64 *)Component.GetComponent(this,DAT_181d6bc40);
+          plVar2 = (int64 *)Component.GetComponent(this,DAT_181d94460);
+          plVar4 = (int64 *)Component.GetComponent(this,DAT_181d94460);
           if (plVar4 == (int64 *)0) throw; // [null/range check failed]
           puVar5 = (uint32 *)
                    (**(code **)(*plVar4 + 0x298))(&local_38,plVar4,*(uint64 *)(*plVar4 + 0x2a0));
@@ -283,11 +282,11 @@ public class QuickTravelInnIconController
         }
     }
 
-    // Token : 0x6001FA2
-    // RVA   : 0xC4F030   Offset: 0xC4D830   Length: 0x118
+    // Token : 0x6002022
+    // RVA   : 0xCFFDF0   Offset: 0xCFF1F0   Length: 0x118
     public void RefreshNameScale()
     {
-        var pStatics = *(int64*)(DAT_181d6ede0 + 184);
+        var pStatics = *(int64*)(DAT_181d94000 + 184);
         long lVar1;
         ulong local_28;
         float local_20;
@@ -315,30 +314,30 @@ public class QuickTravelInnIconController
         }
     }
 
-    // Token : 0x6001FA3
-    // RVA   : 0xBEEC30   Offset: 0xBED430   Length: 0x50
+    // Token : 0x6002023
+    // RVA   : 0xB23BF0   Offset: 0xB22FF0   Length: 0x50
     public virtual void OnDrag(PointerEventData eventData)
     {
-        var pStatics = *(int64*)(DAT_181d6ed60 + 184);
+        var pStatics = *(int64*)(DAT_181d93f80 + 184);
         if (*pStatics != 0) {
           QuickTravelBigMapSpriteController.OnDrag(*pStatics,eventData,0);
           return;
         }
     }
 
-    // Token : 0x6001FA4
-    // RVA   : 0xBEEC90   Offset: 0xBED490   Length: 0x50
+    // Token : 0x6002024
+    // RVA   : 0xB23C50   Offset: 0xB23050   Length: 0x50
     public virtual void OnScroll(PointerEventData eventData)
     {
-        var pStatics = *(int64*)(DAT_181d6ed60 + 184);
+        var pStatics = *(int64*)(DAT_181d93f80 + 184);
         if (*pStatics != 0) {
           QuickTravelBigMapSpriteController.OnScroll(*pStatics,eventData,0);
           return;
         }
     }
 
-    // Token : 0x6001FA5
-    // RVA   : 0xC4EF30   Offset: 0xC4D730   Length: 0xFA
+    // Token : 0x6002025
+    // RVA   : 0xCFFCF0   Offset: 0xCFF0F0   Length: 0xFA
     public void OnClick()
     {
         long lVar1;
@@ -347,7 +346,7 @@ public class QuickTravelInnIconController
         if (this.innIconType != 2) {
           return;
         }
-        lVar1 = **(int64 **)(DAT_181d834f0 + 184);
+        lVar1 = **(int64 **)(DAT_181da8710 + 184);
         if (this.innData != null) {
           uVar2 = String.Format("确认前往{0}吗？",this.innData.innName,0);
           if ((this.innData != null) &&
@@ -358,8 +357,8 @@ public class QuickTravelInnIconController
         }
     }
 
-    // Token : 0x6001FA6
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x6002026
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

@@ -1,47 +1,47 @@
 // ============================================================
 // Type  : AreaTileData
-// Token : 0x20001ED
+// Token : 0x20001F3
 // ============================================================
 
 public class AreaTileData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000D56
+    // Token: 0x4000DE4
     public string name;
 
-    // Token: 0x4000D57
+    // Token: 0x4000DE5
     public string spriteName;
 
-    // Token: 0x4000D58
+    // Token: 0x4000DE6
     public SpriteRotateType spriteRotateType;
 
-    // Token: 0x4000D59
+    // Token: 0x4000DE7
     public bool spriteFlipX;
 
-    // Token: 0x4000D5A
+    // Token: 0x4000DE8
     public bool spriteFlipY;
 
-    // Token: 0x4000D5B
+    // Token: 0x4000DE9
     public AreaBuildingData building;
 
-    // Token: 0x4000D5C
+    // Token: 0x4000DEA
     public AreaTileType tileType;
 
-    // Token: 0x4000D5D
+    // Token: 0x4000DEB
     public AreaRoadData areaRoadData;
 
-    // Token: 0x4000D5E
+    // Token: 0x4000DEC
     public int areaID;
 
-    // Token: 0x4000D5F
+    // Token: 0x4000DED
     public int row;
 
-    // Token: 0x4000D60
+    // Token: 0x4000DEE
     public int column;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000F5B
-    // RVA   : 0x7EFDA0   Offset: 0x7EE5A0   Length: 0x34
+    // Token : 0x6000F90
+    // RVA   : 0x7EE100   Offset: 0x7ED500   Length: 0x34
     public void /*ctor*/(int _areaID, AreaTileType _tileType)
     {
         ZhSegment.Initialize(this,0);
@@ -49,21 +49,21 @@ public class AreaTileData
         this.tileType = _tileType;
     }
 
-    // Token : 0x6000F5C
-    // RVA   : 0x7EFCE0   Offset: 0x7EE4E0   Length: 0xBE
+    // Token : 0x6000F91
+    // RVA   : 0x7EE040   Offset: 0x7ED440   Length: 0xBE
     public AreaData GetArea()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
-        if ((GameController._instance != null) &&
-           (lVar1 = GameController._instance.worldData) != null)
-        {
+        if ((*pStatics != 0) &&
+           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
           WorldData.GetArea(lVar1,this.areaID,0);
           return;
         }
     }
 
-    // Token : 0x6000F5D
-    // RVA   : 0x7EFB60   Offset: 0x7EE360   Length: 0x175
+    // Token : 0x6000F92
+    // RVA   : 0x7EDEC0   Offset: 0x7ED2C0   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -74,13 +74,13 @@ public class AreaTileData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -92,7 +92,7 @@ public class AreaTileData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d53c70,plVar1);
+            FUN_180002970(0,DAT_181d78da0,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

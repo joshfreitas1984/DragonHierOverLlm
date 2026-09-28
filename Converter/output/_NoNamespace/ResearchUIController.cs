@@ -1,72 +1,72 @@
 // ============================================================
 // Type  : ResearchUIController
-// Token : 0x2000340
+// Token : 0x2000347
 // ============================================================
 
 public class ResearchUIController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001A25
+    // Token: 0x4001B1C
     public ResearchUIType researchUIType;
 
-    // Token: 0x4001A26
+    // Token: 0x4001B1D
     public GameObject researchUI;
 
-    // Token: 0x4001A27
+    // Token: 0x4001B1E
     public GameObject researchTechPrefab;
 
-    // Token: 0x4001A28
+    // Token: 0x4001B1F
     public ForceData targetForce;
 
-    // Token: 0x4001A29
+    // Token: 0x4001B20
     public List<GameObject> researchTechObj;
 
-    // Token: 0x4001A2A
+    // Token: 0x4001B21
     public GameObject nowResearchObj;
 
-    // Token: 0x4001A2B
+    // Token: 0x4001B22
     public GameObject researchTechListIconPrefab;
 
-    // Token: 0x4001A2C
+    // Token: 0x4001B23
     public GameObject researchTechListGrid;
 
-    // Token: 0x4001A2D
+    // Token: 0x4001B24
     public GameObject researchTechListNum;
 
-    // Token: 0x4001A2E
+    // Token: 0x4001B25
     public GameObject cancelNowResearchButton;
 
-    // Token: 0x4001A2F
+    // Token: 0x4001B26
     public static int ManageResearchMinForceLv;
 
-    // Token: 0x4001A30
+    // Token: 0x4001B27
     private GameObject temp;
 
-    // Token: 0x4001A31
+    // Token: 0x4001B28
     private static ResearchUIController _instance;
 
-    // Token: 0x4001A32
+    // Token: 0x4001B29
     private bool inited;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002031
-    // RVA   : 0xC64270   Offset: 0xC62A70   Length: 0x58
+    // Token : 0x60020B1
+    // RVA   : 0xD157C0   Offset: 0xD14BC0   Length: 0x58
     public static ResearchUIController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(ResearchTechController_StaticsPtr + 184) + 8);
+        return *(uint64 *)(*(int64 *)(DAT_181d9c580 + 184) + 8);
     }
 
-    // Token : 0x6002032
-    // RVA   : 0xC62670   Offset: 0xC60E70   Length: 0x68
+    // Token : 0x60020B2
+    // RVA   : 0xD13B90   Offset: 0xD12F90   Length: 0x68
     private void Awake()
     {
-        puVar1 = (uint64 *)(*(int64 *)(ResearchTechController_StaticsPtr + 184) + 8);
+        puVar1 = (uint64 *)(*(int64 *)(DAT_181d9c580 + 184) + 8);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
-    // Token : 0x6002033
-    // RVA   : 0xC628E0   Offset: 0xC610E0   Length: 0x3B9
+    // Token : 0x60020B3
+    // RVA   : 0xD13E00   Offset: 0xD13200   Length: 0x3B9
     public void Init()
     {
         bool cVar1;
@@ -85,18 +85,18 @@ public class ResearchUIController
         uint32 uStack_1c;
         int64 local_18;
         this.inited = 1;
-        lVar2 = GameController.lockObj;
+        lVar2 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
         if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 160)) != null) {
-          lVar2 = FUN_1808acf30(lVar2,DAT_181d94530);
+          lVar2 = FUN_1808ae5b0(lVar2,DAT_181db9b18);
           if (lVar2 != null) {
-            ValueCollection.GetEnumerator(&local_28,lVar2,DAT_181d569e8);
+            ValueCollection.GetEnumerator(&local_28,lVar2,DAT_181d7e6f0);
             local_40 = local_28;
             uStack_3c = uStack_24;
             uStack_38 = uStack_20;
             uStack_34 = uStack_1c;
             local_30 = local_18;
             while( true ) {
-              cVar1 = FUN_1811d7520(&local_40,DAT_181d71fb8);
+              cVar1 = FUN_1811c3f80(&local_40,DAT_181d98458);
               lVar2 = local_30;
               if (!cVar1) break;
               if (this.researchUI == null) {
@@ -141,9 +141,9 @@ public class ResearchUIController
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              FUN_181827900(this.researchTechObj,this.temp);
+              FUN_18181e0a0(this.researchTechObj,this.temp);
             }
-            ZhSegment.Initialize(&local_40,DAT_181d71f38);
+            ZhSegment.Initialize(&local_40,DAT_181d983d8);
             if (this.researchUI != null) {
               lVar2 = GameObject.get_transform(this.researchUI,0);
               if (lVar2 != null) {
@@ -161,8 +161,8 @@ public class ResearchUIController
         }
     }
 
-    // Token : 0x6002034
-    // RVA   : 0x478350   Offset: 0x476B50   Length: 0x20
+    // Token : 0x60020B4
+    // RVA   : 0x8CBD70   Offset: 0x8CB170   Length: 0x20
     public void HideResearchUI()
     {
         if (this.researchUI != null) {
@@ -171,10 +171,11 @@ public class ResearchUIController
         }
     }
 
-    // Token : 0x6002035
-    // RVA   : 0xC63A30   Offset: 0xC62230   Length: 0x63C
+    // Token : 0x60020B5
+    // RVA   : 0xD14F50   Offset: 0xD14350   Length: 0x66C
     public void ShowResearchUI(ResearchUIType _researchUIType, ForceData _targetForce)
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
@@ -193,7 +194,7 @@ public class ResearchUIController
         if (((this.researchUI == null) ||
             (lVar2 = GameObject.get_transform(this.researchUI,0)) == null) ||
            (lVar2 = Transform.Find(lVar2,"ResearchSpeed",0)) == null) throw; // [null/range check failed]
-        uVar3 = Component.GetComponent(lVar2,DAT_181d6d8c0);
+        uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
         if ((this.targetForce == null) ||
            (lVar2 = this.targetForce.forceSpeAddData) == null) throw; // [null/range check failed]
         fVar9 = (float)ForceSpeAddData.Get(lVar2,4);
@@ -201,11 +202,11 @@ public class ResearchUIController
         uVar4 = Single.ToString(local_res8,"f0",0);
         uVar4 = String.Format("研究速率 {0}%",uVar4,0);
         LTLocalization.SetText(uVar3,uVar4,0);
-        if (((GameController._instance == null) ||
-            (lVar2 = GameController._instance.worldData) == null)
-           || (lVar2 = WorldData.Player(lVar2,0)) == null) throw; // [null/range check failed]
-        if (!lVar2.hour) {
-        LAB_180c63e2e:
+        if (((*pStatics == 0) ||
+            (lVar2 = *(int64 *)(*pStatics + 32)) == null) ||
+           (lVar2 = WorldData.Player(lVar2,0)) == null) throw; // [null/range check failed]
+        if (*(char *)(lVar2 + 180) == false) {
+        LAB_180d1537f:
           if (((this.researchUI == null) ||
               (lVar2 = GameObject.get_transform(this.researchUI,0)) == null) ||
              ((lVar2 = Transform.Find(lVar2,"AutoResearch",0), lVar2 == null ||
@@ -213,12 +214,12 @@ public class ResearchUIController
           GameObject.SetActive(lVar2,0,0);
         }
         else {
-          if ((((GameController._instance == null) ||
-               (lVar2 = GameController._instance.worldData,
-               lVar2 == null)) || (lVar2 = WorldData.Player(lVar2,0)) == null) ||
-             (this.targetForce == null)) throw; // [null/range check failed]
+          if ((((*pStatics == 0) ||
+               (lVar2 = *(int64 *)(*pStatics + 32)) == null) ||
+              (lVar2 = WorldData.Player(lVar2,0)) == null) || (this.targetForce == null))
+          throw; // [null/range check failed]
           if (lVar2.totalPopulation != this.targetForce.forceID)
-          goto LAB_180c63e2e;
+          goto LAB_180d1537f;
           if (((this.researchUI == null) ||
               (lVar2 = GameObject.get_transform(this.researchUI,0)) == null) ||
              (lVar2 = Transform.Find(lVar2,"AutoResearch",0)) == null) throw; // [null/range check failed]
@@ -228,7 +229,7 @@ public class ResearchUIController
           if (((this.researchUI == null) ||
               (lVar2 = GameObject.get_transform(this.researchUI,0)) == null) ||
              (lVar2 = Transform.Find(lVar2,"AutoResearch",0)) == null) throw; // [null/range check failed]
-          lVar2 = Component.GetComponent(lVar2,DAT_181d6da40);
+          lVar2 = Component.GetComponent(lVar2,DAT_181d962e0);
           lVar5 = FUN_18046c0a0(0);
           if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) || (lVar2 == null)) throw; // [null/range check failed]
           Toggle.set_isOn(lVar2,*(uint8 *)(*(int64 *)(lVar5 + 32) + 0x240),0);
@@ -244,7 +245,7 @@ public class ResearchUIController
               ResearchUIController.RefreshNowResearch(this,0);
               ResearchUIController.RefreshResearchTechList(this,0);
               plVar6 = (int64 *)Resources.Load("Sound/SoundEffect/OpenBook",0);
-              if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181d8a228)) {
+              if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf348)) {
                 plVar8 = plVar6;
               }
               NGUITools.PlaySound(plVar8,0);
@@ -257,7 +258,7 @@ public class ResearchUIController
             }
             lVar2 = *(int64 *)(lVar5 + lVar2.forceID);
             if (lVar2 == null) break;
-            lVar2 = GameObject.GetComponent(lVar2,DAT_181da0ca8);
+            lVar2 = GameObject.GetComponent(lVar2,DAT_181d72de8);
             if ((this.targetForce == null) ||
                (lVar1 = this.targetForce.techLvData) == null) break;
             if (*(uint32 *)(lVar1 + 24) <= uVar7) {
@@ -271,7 +272,7 @@ public class ResearchUIController
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar2 = *(int64 *)(lVar5 + lVar2.forceID);
-            if ((lVar2 == null) || (lVar2 = GameObject.GetComponent(lVar2,DAT_181da0ca8)) == null)
+            if ((lVar2 == null) || (lVar2 = GameObject.GetComponent(lVar2,DAT_181d72de8)) == null)
             break;
             ResearchTechController.Refresh(lVar2,0);
             lVar2 = this.targetForce;
@@ -282,8 +283,8 @@ public class ResearchUIController
         }
     }
 
-    // Token : 0x6002036
-    // RVA   : 0xC63110   Offset: 0xC61910   Length: 0x18D
+    // Token : 0x60020B6
+    // RVA   : 0xD14630   Offset: 0xD13A30   Length: 0x18D
     public void RefreshUI()
     {
         long lVar1;
@@ -307,7 +308,7 @@ public class ResearchUIController
             }
             lVar2 = *(int64 *)(lVar4 + lVar2.forceID);
             if (lVar2 == null) break;
-            lVar2 = GameObject.GetComponent(lVar2,DAT_181da0ca8);
+            lVar2 = GameObject.GetComponent(lVar2,DAT_181d72de8);
             if ((this.targetForce == null) ||
                (lVar1 = this.targetForce.techLvData) == null) break;
             if (*(uint32 *)(lVar1 + 24) <= uVar3) {
@@ -331,21 +332,21 @@ public class ResearchUIController
         }
     }
 
-    // Token : 0x6002037
-    // RVA   : 0xC62CA0   Offset: 0xC614A0   Length: 0xD8
+    // Token : 0x60020B7
+    // RVA   : 0xD141C0   Offset: 0xD135C0   Length: 0xD8
     public void RefreshNowResearch()
     {
         long lVar1;
         ulong uVar2;
         long lVar3;
         if (this.nowResearchObj != null) {
-          lVar1 = GameObject.GetComponent(this.nowResearchObj,DAT_181da0ca8);
+          lVar1 = GameObject.GetComponent(this.nowResearchObj,DAT_181d72de8);
           if (this.targetForce != null) {
             uVar2 = ForceData.GetNowResearchTech(this.targetForce,0);
             if (lVar1 != null) {
               *(uint64 *)(lVar1 + 24) = uVar2;
               if (this.nowResearchObj != null) {
-                lVar1 = GameObject.GetComponent(this.nowResearchObj,DAT_181da0ca8);
+                lVar1 = GameObject.GetComponent(this.nowResearchObj,DAT_181d72de8);
                 if (lVar1 != null) {
                   ResearchTechController.Refresh(lVar1,0);
                   lVar1 = this.cancelNowResearchButton;
@@ -368,22 +369,23 @@ public class ResearchUIController
         }
     }
 
-    // Token : 0x6002038
-    // RVA   : 0xC62540   Offset: 0xC60D40   Length: 0x122
+    // Token : 0x60020B8
+    // RVA   : 0xD13A60   Offset: 0xD12E60   Length: 0x122
     public void AutoResearchButtonClicked()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         long lVar2;
-        if (GameController._instance != null) {
-          lVar1 = GameController._instance.worldData;
+        if (*pStatics != 0) {
+          lVar1 = *(int64 *)(*pStatics + 32);
           if (this.researchUI != null) {
             lVar2 = GameObject.get_transform(this.researchUI,0);
             if (lVar2 != null) {
               lVar2 = Transform.Find(lVar2,"AutoResearch",0);
               if (lVar2 != null) {
-                lVar2 = Component.GetComponent(lVar2,DAT_181d6da40);
+                lVar2 = Component.GetComponent(lVar2,DAT_181d962e0);
                 if ((lVar2 != null) && (lVar1 != null)) {
-                  lVar1.autoResearch = *(uint8 *)(lVar2 + 0x118);
+                  *(uint8 *)(lVar1 + 0x240) = *(uint8 *)(lVar2 + 0x118);
                   return;
                 }
               }
@@ -392,8 +394,8 @@ public class ResearchUIController
         }
     }
 
-    // Token : 0x6002039
-    // RVA   : 0xC62D80   Offset: 0xC61580   Length: 0x380
+    // Token : 0x60020B9
+    // RVA   : 0xD142A0   Offset: 0xD136A0   Length: 0x380
     public void RefreshResearchTechList()
     {
         ulong uVar1;
@@ -406,15 +408,15 @@ public class ResearchUIController
         lVar4 = this.researchTechListNum;
         if (this.researchUIType != null) {
           if (((lVar4 != null) && (lVar4 = GameObject.get_transform(lVar4,0)) != null) &&
-             ((lVar4 = FUN_180da0f00(lVar4,0), lVar4 != null &&
+             ((lVar4 = FUN_180da9a20(lVar4,0), lVar4 != null &&
               (lVar4 = Component.get_gameObject(lVar4,0)) != null))) {
             GameObject.SetActive(lVar4,1,0);
             if (this.researchTechListNum != null) {
-              plVar5 = (int64 *)GameObject.GetComponent(this.researchTechListNum,DAT_181da1eb0);
+              plVar5 = (int64 *)GameObject.GetComponent(this.researchTechListNum,DAT_181d74108);
               if ((this.targetForce != null) &&
                  (lVar4 = this.targetForce.reasearchTechList) != null) {
                 local_res8[0] = lVar4.forceName;
-                uVar6 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
+                uVar6 = il2cpp_value_box(DAT_181d80418,local_res8);
                 uVar6 = String.Format("研究队列 {0}/8",uVar6,0);
                 if (plVar5 != (int64 *)0) {
                   (**(code **)(*plVar5 + 0x5e8))(plVar5,uVar6,*(uint64 *)(*plVar5 + 0x5f0));
@@ -434,19 +436,19 @@ public class ResearchUIController
                       if (((this.temp == null) ||
                           (lVar4 = GameObject.get_transform(this.temp,0)) == null
                           ) || (lVar4 = Transform.Find(lVar4,"Text",0)) == null) break;
-                      plVar5 = (int64 *)Component.GetComponent(lVar4,DAT_181d6d8c0);
+                      plVar5 = (int64 *)Component.GetComponent(lVar4,DAT_181d96160);
                       lVar4 = this.targetForce;
                       if (lVar4 == null) break;
                       lVar2 = lVar4.techLvData;
                       if (((lVar4.reasearchTechList == null) ||
-                          (uVar3 = FUN_1800d6750(lVar4.reasearchTechList,iVar7,DAT_181d68270),
+                          (uVar3 = FUN_1800d6760(lVar4.reasearchTechList,iVar7,DAT_181d8fa18),
                           lVar2 == null)) ||
-                         ((lVar4 = FUN_180002f80(lVar2,uVar3,DAT_181d613f8), lVar4 == null ||
+                         ((lVar4 = FUN_180002f80(lVar2,uVar3,DAT_181d88b98), lVar4 == null ||
                           ((lVar4 = ForceTechLvData.Database(lVar4,0), lVar4 == null ||
                            (plVar5 == (int64 *)0)))))) break;
                       (**(code **)(*plVar5 + 0x5e8))(plVar5,lVar4.forceName);
                       if ((this.temp == null) ||
-                         (lVar4 = GameObject.GetComponent(this.temp,DAT_181da0d30),
+                         (lVar4 = GameObject.GetComponent(this.temp,DAT_181d72e70),
                          lVar4 == null)) break;
                       lVar4.forceName = iVar7;
                       iVar7 = iVar7 + 1;
@@ -463,24 +465,24 @@ public class ResearchUIController
           FUN_1800d6620();
         }
         if ((((lVar4 != null) && (lVar4 = GameObject.get_transform(lVar4,0)) != null) &&
-            (lVar4 = FUN_180da0f00(lVar4,0)) != null) &&
+            (lVar4 = FUN_180da9a20(lVar4,0)) != null) &&
            (lVar4 = Component.get_gameObject(lVar4,0)) != null) {
           GameObject.SetActive(lVar4,0,0);
           return;
         }
     }
 
-    // Token : 0x600203A
-    // RVA   : 0xC632A0   Offset: 0xC61AA0   Length: 0xD6
+    // Token : 0x60020BA
+    // RVA   : 0xD147C0   Offset: 0xD13BC0   Length: 0xD6
     public void RemoveResearchList(int techListID)
     {
         long lVar1;
         if ((this.targetForce != null) &&
            (lVar1 = this.targetForce.reasearchTechList) != null) {
-          FUN_18180c7d0(lVar1,techListID,DAT_181d67f70);
+          FUN_1817eed70(lVar1,techListID,DAT_181d8f718);
           plVar2 = (int64 *)Resources.Load("Sound/SoundEffect/PaperQuick",0);
           plVar3 = (int64 *)0;
-          if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181d8a228)) {
+          if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf348)) {
             plVar3 = plVar2;
           }
           NGUITools.PlaySound(plVar3,0);
@@ -489,8 +491,8 @@ public class ResearchUIController
         }
     }
 
-    // Token : 0x600203B
-    // RVA   : 0xC63380   Offset: 0xC61B80   Length: 0x319
+    // Token : 0x60020BB
+    // RVA   : 0xD148A0   Offset: 0xD13CA0   Length: 0x319
     public void ResearchTechClicked(ForceTechLvData targetLvData)
     {
         int iVar1;
@@ -511,11 +513,11 @@ public class ResearchUIController
           }
           if (lVar3.reasearchTechList != null) {
             if (*(int *)(lVar3.reasearchTechList + 24) < 8) {
-              if (!DAT_181e78fd0) {
-                il2cpp_runtime_class_init(&DAT_181d681f0);
-                il2cpp_runtime_class_init(&DAT_181d68270);
+              if (!DAT_181e9e915) {
+                il2cpp_runtime_class_init(&DAT_181d8f998);
+                il2cpp_runtime_class_init(&DAT_181d8fa18);
                 lVar3 = this.targetForce;
-                DAT_181e78fd0 = true;
+                DAT_181e9e915 = true;
               }
               if (lVar3 != null) {
                 iVar9 = *(int *)(targetLvData + 16);
@@ -530,7 +532,7 @@ public class ResearchUIController
                   if (*(int *)(lVar3.reasearchTechList + 24) <= (int)uVar8) {
                     if (iVar1 < lVar3.forceLv) {
                       if (lVar3.reasearchTechList == null) break;
-                      FUN_181814fa0(lVar3.reasearchTechList,iVar9,DAT_181d67a78);
+                      FUN_18182a0b0(lVar3.reasearchTechList,iVar9,DAT_181d8f218);
                       ResearchUIController.RefreshResearchTechList(this,0);
                       uVar6 = "Sound/SoundEffect/PencilWriting";
                     }
@@ -541,7 +543,7 @@ public class ResearchUIController
                       uVar6 = "Sound/SoundEffect/WrongClick";
                     }
                     plVar4 = (int64 *)Resources.Load(uVar6,0);
-                    goto LAB_180c635e4;
+                    goto LAB_180d14b04;
                   }
                   lVar3 = lVar3.reasearchTechList;
                   if (lVar3 == null) break;
@@ -566,9 +568,9 @@ public class ResearchUIController
               if (lVar3 != null) {
                 GameController.ShowTextOnMouse(lVar3,"研究队列已满！",0);
                 plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
-        LAB_180c635e4:
+        LAB_180d14b04:
                 plVar7 = (int64 *)0;
-                if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181d8a228)) {
+                if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
                   plVar7 = plVar4;
                 }
                 NGUITools.PlaySound(plVar7,0);
@@ -579,8 +581,8 @@ public class ResearchUIController
         }
     }
 
-    // Token : 0x600203C
-    // RVA   : 0xC627E0   Offset: 0xC60FE0   Length: 0xFD
+    // Token : 0x60020BC
+    // RVA   : 0xD13D00   Offset: 0xD13100   Length: 0xFD
     public int GetResearchTargetLv(ForceTechLvData targetLvData)
     {
         int iVar1;
@@ -620,8 +622,8 @@ public class ResearchUIController
         }
     }
 
-    // Token : 0x600203D
-    // RVA   : 0xC636A0   Offset: 0xC61EA0   Length: 0x38F
+    // Token : 0x60020BD
+    // RVA   : 0xD14BC0   Offset: 0xD13FC0   Length: 0x38F
     public void SetNowReseach(ForceTechLvData targetLvData)
     {
         bool cVar1;
@@ -636,7 +638,7 @@ public class ResearchUIController
           uVar2 = ForceTechLvData.GetResearchCostResource(targetLvData,0x3f800000,0);
           cVar1 = ForceData.HaveResource(lVar7,uVar2,0);
           if (cVar1) {
-            lVar7 = **(int64 **)(DAT_181d834f0 + 184);
+            lVar7 = **(int64 **)(DAT_181da8710 + 184);
             lVar3 = ForceTechLvData.Database(targetLvData,0);
             if (lVar3 != null) {
               uVar2 = *(uint64 *)(lVar3 + 24);
@@ -670,14 +672,14 @@ public class ResearchUIController
           uVar2 = "资源不足！";
         }
         else {
-          lVar7 = GameController._instance;
+          lVar7 = **(int64 **)(DAT_181d72cc8 + 184);
           uVar2 = "需要升级门派正厅！";
         }
         if (lVar7 != null) {
           GameController.ShowTextOnMouse(lVar7,uVar2,0);
           plVar8 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
           plVar9 = (int64 *)0;
-          if ((plVar8 != (int64 *)0) && (*plVar8 == DAT_181d8a228)) {
+          if ((plVar8 != (int64 *)0) && (*plVar8 == DAT_181daf348)) {
             plVar9 = plVar8;
           }
           NGUITools.PlaySound(plVar9,0);
@@ -685,8 +687,8 @@ public class ResearchUIController
         }
     }
 
-    // Token : 0x600203E
-    // RVA   : 0xC64120   Offset: 0xC62920   Length: 0x100
+    // Token : 0x60020BE
+    // RVA   : 0xD15670   Offset: 0xD14A70   Length: 0x100
     public void SureSetNowResearch(string param)
     {
         long lVar1;
@@ -718,15 +720,15 @@ public class ResearchUIController
         }
     }
 
-    // Token : 0x600203F
-    // RVA   : 0xC626E0   Offset: 0xC60EE0   Length: 0xFD
+    // Token : 0x60020BF
+    // RVA   : 0xD13C00   Offset: 0xD13000   Length: 0xFD
     public void CancelNowResearch()
     {
         long lVar1;
         long lVar2;
         ulong uVar3;
         ulong uVar4;
-        lVar1 = **(int64 **)(DAT_181d834f0 + 184);
+        lVar1 = **(int64 **)(DAT_181da8710 + 184);
         if (this.targetForce != null) {
           lVar2 = ForceData.GetNowResearchTech(this.targetForce,0);
           if (lVar2 != null) {
@@ -743,8 +745,8 @@ public class ResearchUIController
         }
     }
 
-    // Token : 0x6002040
-    // RVA   : 0xC64070   Offset: 0xC62870   Length: 0xAF
+    // Token : 0x60020C0
+    // RVA   : 0xD155C0   Offset: 0xD149C0   Length: 0xAF
     public void SureCancelNowResearch()
     {
         if (this.targetForce != null) {
@@ -752,7 +754,7 @@ public class ResearchUIController
           ResearchUIController.RefreshNowResearch(this,0);
           plVar1 = (int64 *)Resources.Load("Sound/SoundEffect/PaperQuick",0);
           plVar2 = (int64 *)0;
-          if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181d8a228)) {
+          if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf348)) {
             plVar2 = plVar1;
           }
           NGUITools.PlaySound(plVar2,0);
@@ -760,18 +762,18 @@ public class ResearchUIController
         }
     }
 
-    // Token : 0x6002041
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x60020C1
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);
     }
 
-    // Token : 0x6002042
-    // RVA   : 0xC64230   Offset: 0xC62A30   Length: 0x39
+    // Token : 0x60020C2
+    // RVA   : 0xD15780   Offset: 0xD14B80   Length: 0x39
     private static void /*cctor*/()
     {
-        **(uint32 **)(ResearchTechController_StaticsPtr + 184) = 3;
+        **(uint32 **)(DAT_181d9c580 + 184) = 3;
     }
 
 }

@@ -1,40 +1,40 @@
 // ============================================================
 // Type  : <FinishStudyInternalSkill>d__48
-// Token : 0x2000384
+// Token : 0x200038B
 // ============================================================
 
 public class <FinishStudyInternalSkill>d__48
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001C0B
+    // Token: 0x4001D10
     private int <>1__state;
 
-    // Token: 0x4001C0C
+    // Token: 0x4001D11
     private object <>2__current;
 
-    // Token: 0x4001C0D
+    // Token: 0x4001D12
     public StudyInternalResult studyInternalResult;
 
-    // Token: 0x4001C0E
+    // Token: 0x4001D13
     public StudyInternalSkillController <>4__this;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002216
-    // RVA   : 0x219070   Offset: 0x217870   Length: 0x24
+    // Token : 0x6002298
+    // RVA   : 0x219070   Offset: 0x218470   Length: 0x24
     public void /*ctor*/(int <>1__state)
     {
         ZhSegment.Initialize(this,0);
         this.<>1__state = <>1__state;
     }
 
-    // Token : 0x6002217
-    // RVA   : 0x245810   Offset: 0x244010   Length: 0x3
+    // Token : 0x6002299
+    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
     private virtual void System.IDisposable.Dispose()
     {
     }
 
-    // Token : 0x6002218
-    // RVA   : 0xB116A0   Offset: 0xB0FEA0   Length: 0xB27
+    // Token : 0x600229A
+    // RVA   : 0x8EC640   Offset: 0x8EBA40   Length: 0xB47
     private virtual bool MoveNext()
     {
         var plVar3 = *(int64*)(lVar3 + 184);
@@ -70,8 +70,8 @@ public class <FinishStudyInternalSkill>d__48
                 lVar4 = 32;
                 while (lVar10 = plVar3) != null {
                   if ((int)*(uint32 *)(lVar10 + 24) <= (int)uVar13) {
-                    FUN_180f56130(lVar10,DAT_181d61c78);
-                    if (StudySkillController._instance != null) {
+                    FUN_1812f9a10(lVar10,DAT_181d89418);
+                    if (**(int64 **)(DAT_181da8190 + 184) != 0) {
                       StudySkillController.FinishStudySkill();
                       return false;
                     }
@@ -120,7 +120,7 @@ public class <FinishStudyInternalSkill>d__48
                      (uint64)puVar8 & 0xffffffffffffff00,0);
           plVar9 = (int64 *)Resources.Load("Sound/SoundEffect/BigFail",0);
           plVar11 = (int64 *)0;
-          if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181d8a228)) {
+          if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181daf348)) {
             plVar11 = plVar9;
           }
           NGUITools.PlaySound(plVar11,0);
@@ -142,14 +142,14 @@ public class <FinishStudyInternalSkill>d__48
             local_50 = uVar2;
             GameController.ShowTextAtPos(lVar4,"修炼终止！",&local_58,23,&local_48,0);
             plVar11 = (int64 *)Resources.Load("Sound/SoundEffect/Fail",0);
-            if ((plVar11 != (int64 *)0) && (*plVar11 == DAT_181d8a228)) {
+            if ((plVar11 != (int64 *)0) && (*plVar11 == DAT_181daf348)) {
               plVar9 = plVar11;
             }
             NGUITools.PlaySound(plVar9,0);
           }
           else if (iVar1 == 2) {
             lVar4 = FUN_18046c0a0(0);
-            uVar5 = FUN_180004500(DAT_181d63120);
+            uVar5 = FUN_180004500(DAT_181d8b140);
             uVar6 = String.Format("打通周天\n经验+50%",uVar5,0);
             puVar7 = (uint64 *)Vector3.get_zero(&local_58,0);
             uVar5 = *puVar7;
@@ -164,7 +164,7 @@ public class <FinishStudyInternalSkill>d__48
             local_50 = uVar2;
             GameController.ShowTextAtPos(lVar4,uVar6,&local_58,23,&local_48,0);
             plVar11 = (int64 *)Resources.Load("Sound/SoundEffect/Success",0);
-            if ((plVar11 != (int64 *)0) && (*plVar11 == DAT_181d8a228)) {
+            if ((plVar11 != (int64 *)0) && (*plVar11 == DAT_181daf348)) {
               plVar9 = plVar11;
             }
             NGUITools.PlaySound(plVar9,0);
@@ -172,7 +172,7 @@ public class <FinishStudyInternalSkill>d__48
           }
           else if (iVar1 == 3) {
             lVar4 = FUN_18046c0a0(0);
-            uVar5 = FUN_180004500(DAT_181d63120);
+            uVar5 = FUN_180004500(DAT_181d8b140);
             uVar6 = String.Format("打通小周天\n经验+100%",uVar5,0);
             puVar7 = (uint64 *)Vector3.get_zero(&local_58,0);
             uVar5 = *puVar7;
@@ -187,7 +187,7 @@ public class <FinishStudyInternalSkill>d__48
             local_50 = uVar2;
             GameController.ShowTextAtPos(lVar4,uVar6,&local_58,24,&local_48,0);
             plVar11 = (int64 *)Resources.Load("Sound/SoundEffect/Success",0);
-            if ((plVar11 != (int64 *)0) && (*plVar11 == DAT_181d8a228)) {
+            if ((plVar11 != (int64 *)0) && (*plVar11 == DAT_181daf348)) {
               plVar9 = plVar11;
             }
             NGUITools.PlaySound(plVar9,0);
@@ -195,7 +195,7 @@ public class <FinishStudyInternalSkill>d__48
           }
           else if (iVar1 == 4) {
             lVar4 = FUN_18046c0a0(0);
-            uVar5 = FUN_180004500(DAT_181d63120);
+            uVar5 = FUN_180004500(DAT_181d8b140);
             uVar6 = String.Format("打通大周天\n经验+150%",uVar5,0);
             puVar7 = (uint64 *)Vector3.get_zero(&local_58,0);
             uVar5 = *puVar7;
@@ -212,7 +212,7 @@ public class <FinishStudyInternalSkill>d__48
             GameController.ShowTextAtPos(lVar4,uVar6,&local_58,26,&local_48,0);
             plVar9 = (int64 *)Resources.Load("Sound/SoundEffect/BigSuccess",0);
             plVar12 = plVar11;
-            if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181d8a228)) {
+            if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181daf348)) {
               plVar12 = plVar9;
             }
             NGUITools.PlaySound(plVar12,0);
@@ -228,11 +228,11 @@ public class <FinishStudyInternalSkill>d__48
                     if ((*(int64 *)(lVar3 + 40) != 0) &&
                        ((lVar10 = KungfuSkillLvData.DataBase(*(int64 *)(lVar3 + 40),0), lVar10 != null
                         && (lVar4 != null)))) {
-                      FUN_1801f7f00(0x40000000);
+                      FUN_1801f8ab0(0x40000000);
                       HeroData.ChangeMaxMana(lVar4);
                       if (*(int64 *)(lVar3 + 40) != 0) {
                         *(uint8 *)(*(int64 *)(lVar3 + 40) + 109) = 1;
-                        goto LAB_180b11acd;
+                        goto LAB_1808eca6c;
                       }
                     }
                   }
@@ -245,27 +245,27 @@ public class <FinishStudyInternalSkill>d__48
                    (lVar10 = GameObject.GetComponent()) == null) break;
                 if (*(int *)(lVar10 + 52) != 0) {
                   if (((plVar3 == 0) ||
-                      (lVar10 = FUN_180002f80(plVar3,plVar11,DAT_181d62178),
+                      (lVar10 = FUN_180002f80(plVar3,plVar11,DAT_181d89918),
                       lVar10 == null)) || (lVar10 = GameObject.GetComponent(lVar10)) == null) break;
-                  if (*(char *)(lVar10 + 45) == false) goto LAB_180b11acd;
+                  if (*(char *)(lVar10 + 45) == false) goto LAB_1808eca6c;
                 }
                 plVar11 = (int64 *)(uint64)(uVar13 + 1);
                 lVar4 = lVar4 + 8;
               }
               throw; // [null/range check failed]
             }
-        LAB_180b11acd:
+        LAB_1808eca6c:
             fVar14 = 2.5;
-            goto LAB_180b11f01;
+            goto LAB_1808ece9f;
           }
           if (lVar3 == null) throw; // [null/range check failed]
         }
-        LAB_180b11f01:
+        LAB_1808ece9f:
         *(float *)(lVar3 + 28) = fVar14 * *(float *)(lVar3 + 28);
         if (((*(int64 *)(lVar3 + 88) != 0) &&
             (lVar4 = GameObject.get_transform(*(int64 *)(lVar3 + 88),0)) != null) &&
            (lVar4 = Transform.Find(lVar4,"Exp",0)) != null) {
-          uVar5 = Component.GetComponent(lVar4,DAT_181d6d8c0);
+          uVar5 = Component.GetComponent(lVar4,DAT_181d96160);
           uVar6 = Single.ToString(lVar3 + 28,"f0",0);
           uVar6 = String.Concat("经验 ",uVar6,0);
           LTLocalization.SetText(uVar5,uVar6,0);
@@ -273,7 +273,7 @@ public class <FinishStudyInternalSkill>d__48
              (lVar4 = GameObject.get_transform(*(int64 *)(lVar3 + 88),0)) != null) {
             uVar5 = Transform.Find(lVar4,"Exp",0);
             uVar5 = ShortcutExtensions.DOScale(uVar5);
-            TweenSettingsExtensions.SetLoops(uVar5,2,1,DAT_181d98060);
+            TweenSettingsExtensions.SetLoops(uVar5,2,1,DAT_181dc1330);
             *(uint16 *)(lVar3 + 128) = 0;
             *(uint8 *)(lVar3 + 24) = 0;
             *(uint32 *)(lVar3 + 192) = 0;
@@ -285,27 +285,27 @@ public class <FinishStudyInternalSkill>d__48
         }
     }
 
-    // Token : 0x6002219
-    // RVA   : 0x20F140   Offset: 0x20D940   Length: 0x5
+    // Token : 0x600229B
+    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
     private virtual object System.Collections.Generic.IEnumerator<System.object>.get_Current()
     {
         return this.<>2__current;
     }
 
-    // Token : 0x600221A
-    // RVA   : 0xB121D0   Offset: 0xB109D0   Length: 0x3E
+    // Token : 0x600229C
+    // RVA   : 0x8ED190   Offset: 0x8EC590   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d682e8);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d8b990);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181db4c28);
     }
 
-    // Token : 0x600221B
-    // RVA   : 0x20F140   Offset: 0x20D940   Length: 0x5
+    // Token : 0x600229D
+    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
     private virtual object System.Collections.IEnumerator.get_Current()
     {
         return this.<>2__current;

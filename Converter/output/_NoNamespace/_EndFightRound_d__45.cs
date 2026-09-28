@@ -1,43 +1,43 @@
 // ============================================================
 // Type  : <EndFightRound>d__45
-// Token : 0x200027C
+// Token : 0x2000282
 // ============================================================
 
 public class <EndFightRound>d__45
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001390
+    // Token: 0x4001441
     private int <>1__state;
 
-    // Token: 0x4001391
+    // Token: 0x4001442
     private object <>2__current;
 
-    // Token: 0x4001392
+    // Token: 0x4001443
     public FightMatchController <>4__this;
 
-    // Token: 0x4001393
+    // Token: 0x4001444
     public int winTeam;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600143A
-    // RVA   : 0x219070   Offset: 0x217870   Length: 0x24
+    // Token : 0x600147E
+    // RVA   : 0x219070   Offset: 0x218470   Length: 0x24
     public void /*ctor*/(int <>1__state)
     {
         ZhSegment.Initialize(this,0);
         this.<>1__state = <>1__state;
     }
 
-    // Token : 0x600143B
-    // RVA   : 0x245810   Offset: 0x244010   Length: 0x3
+    // Token : 0x600147F
+    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
     private virtual void System.IDisposable.Dispose()
     {
     }
 
-    // Token : 0x600143C
-    // RVA   : 0x8C9050   Offset: 0x8C7850   Length: 0x9B4
+    // Token : 0x6001480
+    // RVA   : 0x92E850   Offset: 0x92DC50   Length: 0x9B4
     private virtual bool MoveNext()
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d73d40 + 184);
         long lVar1;
         long lVar3;
         long lVar5;
@@ -55,13 +55,13 @@ public class <EndFightRound>d__45
           this.<>1__state = 0xffffffff;
           plVar2 = (int64 *)Resources.Load("Sound/SoundEffect/NoticeLittle",0);
           plVar8 = (int64 *)0;
-          if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181d8a228)) {
+          if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf348)) {
             plVar8 = plVar2;
           }
           NGUITools.PlaySound(plVar8,0);
           if ((lVar1 != null) && (lVar3 = *(int64 *)(lVar1 + 96)) != null) {
             if (*(int *)(lVar3 + 40) != -1) {
-        LAB_1808c9937:
+        LAB_18092f137:
               if (*(char *)(lVar1 + 136) == false) {
                 uVar9 = 0x3f000000;
               }
@@ -86,7 +86,7 @@ public class <EndFightRound>d__45
                                                  ,0), lVar3 == null)) ||
                    (lVar3 = Transform.Find(lVar3,"LeftHeroPos",0)) == null) ||
                   (lVar3 = Transform.GetChild(lVar3,0,0)) == null))) throw; // [null/range check failed]
-              plVar2 = (int64 *)Component.GetComponent(lVar3,DAT_181d6bc40);
+              plVar2 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
               puVar6 = (uint32 *)Color.get_green(&local_28,0);
               if (plVar2 == (int64 *)0) throw; // [null/range check failed]
               local_28 = *puVar6;
@@ -110,16 +110,16 @@ public class <EndFightRound>d__45
                     puVar4 = (uint64 *)Transform.get_position(&local_38,lVar5,0);
                     uVar7 = *puVar4;
                     uVar9 = *(uint32 *)(puVar4 + 1);
-                    lVar5 = pPlotController;
+                    lVar5 = pStatics;
                     if (lVar3 != null) {
-                      local_28 = *(uint32 *)(lVar5 + 0x280);
-                      uStack_24 = *(uint32 *)(lVar5 + 0x284);
-                      uStack_20 = *(uint32 *)(lVar5 + 0x288);
-                      uStack_1c = *(uint32 *)(lVar5 + 0x28c);
+                      local_28 = *(uint32 *)(lVar5 + 0x288);
+                      uStack_24 = *(uint32 *)(lVar5 + 0x28c);
+                      uStack_20 = *(uint32 *)(lVar5 + 0x290);
+                      uStack_1c = *(uint32 *)(lVar5 + 0x294);
                       local_38 = uVar7;
                       uStack_30 = uVar9;
                       GameController.ShowTextAtPos(lVar3,"轮空",&local_38,30,&local_28,0);
-                      goto LAB_1808c9937;
+                      goto LAB_18092f137;
                     }
                   }
                 }
@@ -138,12 +138,12 @@ public class <EndFightRound>d__45
               puVar4 = (uint64 *)Transform.get_position(&local_38,lVar5,0);
               uVar7 = *puVar4;
               uVar9 = *(uint32 *)(puVar4 + 1);
-              lVar5 = pPlotController;
+              lVar5 = pStatics;
               if (lVar3 == null) throw; // [null/range check failed]
-              local_28 = *(uint32 *)(lVar5 + 0x280);
-              uStack_24 = *(uint32 *)(lVar5 + 0x284);
-              uStack_20 = *(uint32 *)(lVar5 + 0x288);
-              uStack_1c = *(uint32 *)(lVar5 + 0x28c);
+              local_28 = *(uint32 *)(lVar5 + 0x288);
+              uStack_24 = *(uint32 *)(lVar5 + 0x28c);
+              uStack_20 = *(uint32 *)(lVar5 + 0x290);
+              uStack_1c = *(uint32 *)(lVar5 + 0x294);
               local_38 = uVar7;
               uStack_30 = uVar9;
               GameController.ShowTextAtPos(lVar3,"胜",&local_38,30,&local_28,0);
@@ -157,7 +157,7 @@ public class <EndFightRound>d__45
                                                  ,0), lVar3 == null)) ||
                    (lVar3 = Transform.Find(lVar3,"RightHeroPos",0)) == null) ||
                   (lVar3 = Transform.GetChild(lVar3,0,0)) == null))) throw; // [null/range check failed]
-              plVar2 = (int64 *)Component.GetComponent(lVar3,DAT_181d6bc40);
+              plVar2 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
               puVar6 = (uint32 *)Color.get_red(&local_28,0);
               if (plVar2 == (int64 *)0) throw; // [null/range check failed]
               local_28 = *puVar6;
@@ -179,7 +179,7 @@ public class <EndFightRound>d__45
                                                  ,0), lVar3 == null)))) ||
                   (lVar3 = Transform.Find(lVar3,"LeftHeroPos",0)) == null) ||
                  (lVar3 = Transform.GetChild(lVar3,0,0)) == null) throw; // [null/range check failed]
-              plVar2 = (int64 *)Component.GetComponent(lVar3,DAT_181d6bc40);
+              plVar2 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
               puVar4 = (uint64 *)Color.get_red(&local_28,0);
               if (plVar2 == (int64 *)0) throw; // [null/range check failed]
               local_38 = *puVar4;
@@ -196,7 +196,7 @@ public class <EndFightRound>d__45
                                                  ,0), lVar3 == null)) ||
                    (lVar3 = Transform.Find(lVar3,"RightHeroPos",0)) == null))) ||
                  (lVar3 = Transform.GetChild(lVar3,0,0)) == null) throw; // [null/range check failed]
-              plVar2 = (int64 *)Component.GetComponent(lVar3,DAT_181d6bc40);
+              plVar2 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
               puVar4 = (uint64 *)Color.get_green(&local_28,0);
               if (plVar2 == (int64 *)0) throw; // [null/range check failed]
               local_38 = *puVar4;
@@ -216,12 +216,12 @@ public class <EndFightRound>d__45
               puVar4 = (uint64 *)Transform.get_position(&local_38,lVar5,0);
               uVar7 = *puVar4;
               uVar9 = *(uint32 *)(puVar4 + 1);
-              lVar5 = pPlotController;
+              lVar5 = pStatics;
               if (lVar3 == null) throw; // [null/range check failed]
-              local_28 = *(uint32 *)(lVar5 + 0x280);
-              uStack_24 = *(uint32 *)(lVar5 + 0x284);
-              uStack_20 = *(uint32 *)(lVar5 + 0x288);
-              uStack_1c = *(uint32 *)(lVar5 + 0x28c);
+              local_28 = *(uint32 *)(lVar5 + 0x288);
+              uStack_24 = *(uint32 *)(lVar5 + 0x28c);
+              uStack_20 = *(uint32 *)(lVar5 + 0x290);
+              uStack_1c = *(uint32 *)(lVar5 + 0x294);
               local_38 = uVar7;
               uStack_30 = uVar9;
               GameController.ShowTextAtPos(lVar3,"胜",&local_38,30,&local_28,0);
@@ -234,8 +234,8 @@ public class <EndFightRound>d__45
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               if (lVar3 != null) {
-                FUN_18182ac70(lVar3,0,*(uint64 *)(*(int64 *)(lVar5 + 16) + 32),DAT_181d64078);
-                goto LAB_1808c9937;
+                FUN_181822520(lVar3,0,*(uint64 *)(*(int64 *)(lVar5 + 16) + 32),DAT_181d8b818);
+                goto LAB_18092f137;
               }
             }
           }
@@ -246,7 +246,7 @@ public class <EndFightRound>d__45
           }
           this.<>1__state = 0xffffffff;
           if (((lVar1 != null) && (*(int64 *)(lVar1 + 40) != 0)) &&
-             (lVar3 = GameObject.GetComponent(*(int64 *)(lVar1 + 40),DAT_181d9ee60)) != null) {
+             (lVar3 = GameObject.GetComponent(*(int64 *)(lVar1 + 40),DAT_181dc7c00)) != null) {
             Selectable.set_interactable(lVar3,1,0);
             if (*(int64 *)(lVar1 + 96) != 0) {
               FightMatchController.RefreshNextButton
@@ -257,27 +257,27 @@ public class <EndFightRound>d__45
         }
     }
 
-    // Token : 0x600143D
-    // RVA   : 0x20F140   Offset: 0x20D940   Length: 0x5
+    // Token : 0x6001481
+    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
     private virtual object System.Collections.Generic.IEnumerator<System.object>.get_Current()
     {
         return this.<>2__current;
     }
 
-    // Token : 0x600143E
-    // RVA   : 0x8C9A10   Offset: 0x8C8210   Length: 0x3E
+    // Token : 0x6001482
+    // RVA   : 0x92F210   Offset: 0x92E610   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d682e8);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d7a808);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181da3688);
     }
 
-    // Token : 0x600143F
-    // RVA   : 0x20F140   Offset: 0x20D940   Length: 0x5
+    // Token : 0x6001483
+    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
     private virtual object System.Collections.IEnumerator.get_Current()
     {
         return this.<>2__current;

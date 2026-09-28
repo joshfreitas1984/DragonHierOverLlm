@@ -1,66 +1,82 @@
 // ============================================================
 // Type  : WeatherController
-// Token : 0x20003AC
+// Token : 0x20003B3
 // ============================================================
 
 public class WeatherController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001CEB
+    // Token: 0x4001DF0
     public GameObject weatherSpeObjRoot;
 
-    // Token: 0x4001CEC
+    // Token: 0x4001DF1
     public List<WeatherData> WeatherDataBase;
 
-    // Token: 0x4001CED
+    // Token: 0x4001DF2
     public PostProcessVolume postProcessVolume;
 
-    // Token: 0x4001CEE
+    // Token: 0x4001DF3
     private float nextThunderTime;
 
-    // Token: 0x4001CEF
+    // Token: 0x4001DF4
     private float totalThunderTime;
 
-    // Token: 0x4001CF0
+    // Token: 0x4001DF5
     private float leftThunderTime;
 
-    // Token: 0x4001CF1
+    // Token: 0x4001DF6
+    private readonly List<AudioSource> weatherSpeAudioSources;
+
+    // Token: 0x4001DF7
+    private readonly List<List<ParticleSystem>> weatherSpeParticleSystems;
+
+    // Token: 0x4001DF8
+    private ColorGrading colorGrading;
+
+    // Token: 0x4001DF9
+    private float currentExposure;
+
+    // Token: 0x4001DFA
+    private static readonly AudioClip[] thunderClips;
+
+    // Token: 0x4001DFB
     private static WeatherController _instance;
 
-    // Token: 0x4001CF2
+    // Token: 0x4001DFC
     private bool totalFinish;
 
-    // Token: 0x4001CF3
+    // Token: 0x4001DFD
     private List<GameObject> needHideWeatherObj;
 
-    // Token: 0x4001CF4
+    // Token: 0x4001DFE
     private EmissionModule emission;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60022FF
-    // RVA   : 0x9E4650   Offset: 0x9E2E50   Length: 0x36
+    // Token : 0x6002381
+    // RVA   : 0xC18740   Offset: 0xC17B40   Length: 0x58
     public static WeatherController get_Instance()
     {
-        return **(uint64 **)(DAT_181d8fc60 + 184);
+        return *(uint64 *)(*(int64 *)(DAT_181db4f18 + 184) + 8);
     }
 
-    // Token : 0x6002300
-    // RVA   : 0x9E2710   Offset: 0x9E0F10   Length: 0x99
+    // Token : 0x6002382
+    // RVA   : 0xC165C0   Offset: 0xC159C0   Length: 0xE0
     private void Awake()
     {
+        var pStatics = *(int64*)(DAT_181db4f18 + 184);
         ulong uVar1;
-        bool cVar3;
-        uVar1 = **(uint64 **)(DAT_181d8fc60 + 184);
-        cVar3 = Object.op_Equality(uVar1,0,0);
-        if (cVar3) {
-          puVar2 = *(uint64 **)(DAT_181d8fc60 + 184);
-          *puVar2 = this;
-          il2cpp_internal(puVar2,this);
+        bool cVar2;
+        uVar1 = *(uint64 *)(pStatics + 8);
+        cVar2 = Object.op_Equality(uVar1,0,0);
+        if (cVar2) {
+          puVar3 = (uint64 *)(pStatics + 8);
+          *puVar3 = this;
+          il2cpp_internal(puVar3,this);
         }
     }
 
-    // Token : 0x6002301
-    // RVA   : 0x9E3680   Offset: 0x9E1E80   Length: 0x53B
+    // Token : 0x6002383
+    // RVA   : 0xC17560   Offset: 0xC16960   Length: 0x6D8
     private void Start()
     {
         bool cVar1;
@@ -68,347 +84,396 @@ public class WeatherController
         long lVar3;
         ulong uVar4;
         long lVar5;
-        int iVar6;
-        uint uVar7;
-        long lVar8;
-        uint uVar9;
-        ulong[] local_res18 = new ulong[2];
-        local_res18[0] = 0;
+        long lVar6;
+        long lVar7;
+        uint uVar8;
+        long lVar9;
+        int iVar10;
+        uint uVar11;
+        ulong local_res18;
+        local_res18 = 0;
         lVar3 = Camera.get_main(0);
         if (lVar3 != null) {
-          uVar4 = Component.GetComponent(lVar3,DAT_181d6c4c0);
+          uVar4 = Component.GetComponent(lVar3,DAT_181d94ce0);
           this.postProcessVolume = uVar4;
-          lVar3 = this.WeatherDataBase;
-          uVar7 = 0;
-          if (lVar3 != null) {
-            lVar8 = 32;
-            do {
-              if (lVar3.Count <= (int)uVar7) {
-                return;
-              }
-              if (lVar3 == null) break;
-              if (lVar3.Count <= uVar7) {
-                ThrowHelper.ThrowArgumentOutOfRangeException(0);
-              }
-              lVar3 = *(int64 *)(lVar8 + lVar3._items);
-              if (lVar3 == null) break;
-              uVar4 = *(uint64 *)(lVar3 + 40);
-              cVar1 = Object.op_Inequality(uVar4,0,0);
-              if (cVar1) {
-                if ((this.WeatherDataBase == null) ||
-                   (lVar3 = FUN_180002f80(this.WeatherDataBase,uVar7,DAT_181d84ef8)) == null)
-                break;
-                lVar3 = *(int64 *)(lVar3 + 48);
-                if ((this.WeatherDataBase == null) ||
-                   ((lVar5 = FUN_180002f80(this.WeatherDataBase,uVar7,DAT_181d84ef8), lVar5 == null
-                    || (lVar3 == null)))) break;
-                FUN_181827900(lVar3,*(uint64 *)(lVar5 + 40),DAT_181d61bf8);
-                if ((this.WeatherDataBase == null) ||
-                   (lVar3 = FUN_180002f80(this.WeatherDataBase,uVar7,DAT_181d84ef8)) == null)
-                break;
-                lVar3 = *(int64 *)(lVar3 + 56);
-                if ((((this.WeatherDataBase == null) ||
-                     (lVar5 = FUN_180002f80(this.WeatherDataBase,uVar7,DAT_181d84ef8), lVar5 == null
-                     )) || (*(int64 *)(lVar5 + 40) == 0)) ||
-                   (lVar5 = GameObject.GetComponent(*(int64 *)(lVar5 + 40),DAT_181da06d0),
-                   lVar5 == null)) break;
-                local_res18[0] = FUN_1804651e0(lVar5,0);
-                uVar9 = FUN_1804645a0(local_res18,0);
-                if (lVar3 == null) break;
-                FUN_181805690(lVar3,uVar9,DAT_181d79458);
-                iVar6 = 0;
-                while( true ) {
-                  if (((this.WeatherDataBase == null) ||
-                      (lVar3 = FUN_180002f80(this.WeatherDataBase,uVar7,DAT_181d84ef8),
-                      lVar3 == null)) ||
-                     ((*(int64 *)(lVar3 + 40) == 0 ||
-                      (lVar3 = GameObject.get_transform(*(int64 *)(lVar3 + 40),0)) == null)))
-                  throw; // [null/range check failed]
-                  iVar2 = Transform.get_childCount(lVar3,0);
+          if ((this.postProcessVolume != null) &&
+             (lVar3 = PostProcessVolume.get_profile(this.postProcessVolume,0)) != null) {
+            uVar4 = PostProcessProfile.GetSetting(lVar3,DAT_181d98490);
+            this.colorGrading = uVar4;
+            if ((this.colorGrading != null) &&
+               (lVar3 = *(int64 *)(this.colorGrading + 176)) != null) {
+              this.currentExposure = lVar3.Count;
+              if (this.weatherSpeAudioSources != null) {
+                FUN_1812f9a10(this.weatherSpeAudioSources,DAT_181d7ded0);
+                if (this.weatherSpeParticleSystems != null) {
+                  FUN_1812f9a10(this.weatherSpeParticleSystems,DAT_181d78f28);
                   lVar3 = this.WeatherDataBase;
-                  if (iVar2 <= iVar6) break;
-                  if ((lVar3 == null) || (lVar3 = FUN_180002f80(lVar3,uVar7,DAT_181d84ef8)) == null)
-                  throw; // [null/range check failed]
-                  lVar3 = *(int64 *)(lVar3 + 48);
-                  if (((this.WeatherDataBase == null) ||
-                      (((lVar5 = FUN_180002f80(this.WeatherDataBase,uVar7,DAT_181d84ef8),
-                        lVar5 == null || (*(int64 *)(lVar5 + 40) == 0)) ||
-                       (lVar5 = GameObject.get_transform(*(int64 *)(lVar5 + 40),0)) == null)))
-                     || ((lVar5 = Transform.GetChild(lVar5,iVar6,0), lVar5 == null ||
-                         (uVar4 = Component.get_gameObject(lVar5,0), lVar3 == null)))) throw; // [null/range check failed]
-                  FUN_181827900(lVar3,uVar4,DAT_181d61bf8);
-                  if ((this.WeatherDataBase == null) ||
-                     (lVar3 = FUN_180002f80(this.WeatherDataBase,uVar7,DAT_181d84ef8), lVar3 == null
-                     )) throw; // [null/range check failed]
-                  lVar3 = *(int64 *)(lVar3 + 56);
-                  if (((this.WeatherDataBase == null) ||
-                      (lVar5 = FUN_180002f80(this.WeatherDataBase,uVar7,DAT_181d84ef8),
-                      lVar5 == null)) ||
-                     ((*(int64 *)(lVar5 + 40) == 0 ||
-                      (((lVar5 = GameObject.get_transform(*(int64 *)(lVar5 + 40),0), lVar5 == null ||
-                        (lVar5 = Transform.GetChild(lVar5,iVar6,0)) == null) ||
-                       (lVar5 = Component.GetComponent(lVar5,DAT_181d6c340)) == null)))))
-                  throw; // [null/range check failed]
-                  local_res18[0] = FUN_1804651e0(lVar5,0);
-                  uVar9 = FUN_1804645a0(local_res18,0);
-                  if (lVar3 == null) throw; // [null/range check failed]
-                  FUN_181805690(lVar3,uVar9,DAT_181d79458);
-                  iVar6 = iVar6 + 1;
+                  uVar8 = 0;
+                  if (lVar3 != null) {
+                    lVar9 = 32;
+                    do {
+                      if (lVar3.Count <= (int)uVar8) {
+                        return;
+                      }
+                      if (this.weatherSpeAudioSources == null) break;
+                      FUN_18181e0a0(this.weatherSpeAudioSources,0,DAT_181d7de50);
+                      if (this.weatherSpeParticleSystems == null) break;
+                      FUN_18181e0a0(this.weatherSpeParticleSystems,0,DAT_181d78ea8);
+                      lVar3 = this.WeatherDataBase;
+                      if (lVar3 == null) break;
+                      if (lVar3.Count <= uVar8) {
+                        ThrowHelper.ThrowArgumentOutOfRangeException(0);
+                      }
+                      lVar3 = *(int64 *)(lVar3._items + lVar9);
+                      if (lVar3 == null) break;
+                      uVar4 = *(uint64 *)(lVar3 + 40);
+                      cVar1 = Object.op_Inequality(uVar4,0,0);
+                      if (cVar1) {
+                        if (((this.WeatherDataBase == null) ||
+                            (lVar3 = FUN_180002f80(this.WeatherDataBase,uVar8,DAT_181dac888),
+                            lVar3 == null)) || (*(int64 *)(lVar3 + 40) == 0)) break;
+                        lVar3 = GameObject.GetComponent(*(int64 *)(lVar3 + 40),DAT_181dc72f8);
+                        if (this.weatherSpeAudioSources == null) break;
+                        FUN_181829cd0(this.weatherSpeAudioSources,uVar8,lVar3,DAT_181d7e050);
+                        lVar5 = il2cpp_internal(DAT_181d95050);
+                        FUN_18132faf0(lVar5,DAT_181d96808);
+                        if (this.weatherSpeParticleSystems == null) break;
+                        FUN_181829cd0(this.weatherSpeParticleSystems,uVar8,lVar5,DAT_181d79028);
+                        if ((this.WeatherDataBase == null) ||
+                           (lVar6 = FUN_180002f80(this.WeatherDataBase,uVar8,DAT_181dac888),
+                           lVar6 == null)) break;
+                        lVar6 = *(int64 *)(lVar6 + 48);
+                        if ((this.WeatherDataBase == null) ||
+                           ((lVar7 = FUN_180002f80(this.WeatherDataBase,uVar8,DAT_181dac888),
+                            lVar7 == null || (lVar6 == null)))) break;
+                        FUN_18181e0a0(lVar6,*(uint64 *)(lVar7 + 40),DAT_181d89398);
+                        if ((this.WeatherDataBase == null) ||
+                           (((lVar6 = FUN_180002f80(this.WeatherDataBase,uVar8,DAT_181dac888),
+                             lVar6 == null || (*(int64 *)(lVar6 + 40) == 0)) ||
+                            (lVar6 = GameObject.GetComponent(*(int64 *)(lVar6 + 40),DAT_181d72700),
+                            lVar5 == null)))) break;
+                        FUN_18181e0a0(lVar5,lVar6,DAT_181d96888);
+                        if (((this.WeatherDataBase == null) ||
+                            (lVar7 = FUN_180002f80(this.WeatherDataBase,uVar8,DAT_181dac888),
+                            lVar7 == null)) || (lVar7 = *(int64 *)(lVar7 + 56), lVar6 == null)) break;
+                        local_res18 = FUN_1804651e0(lVar6,0);
+                        uVar11 = FUN_1804645a0(&local_res18,0);
+                        if (lVar7 == null) break;
+                        FUN_18181de10(lVar7,uVar11,DAT_181da0df8);
+                        iVar10 = 0;
+                        while( true ) {
+                          if (((this.WeatherDataBase == null) ||
+                              (lVar6 = FUN_180002f80(this.WeatherDataBase,uVar8,DAT_181dac888),
+                              lVar6 == null)) ||
+                             ((*(int64 *)(lVar6 + 40) == 0 ||
+                              (lVar6 = GameObject.get_transform(*(int64 *)(lVar6 + 40),0),
+                              lVar6 == null)))) throw; // [null/range check failed]
+                          iVar2 = Transform.get_childCount(lVar6,0);
+                          lVar6 = this.WeatherDataBase;
+                          if (iVar2 <= iVar10) break;
+                          if (((lVar6 == null) ||
+                              (lVar6 = FUN_180002f80(lVar6,uVar8,DAT_181dac888)) == null) ||
+                             ((*(int64 *)(lVar6 + 40) == 0 ||
+                              ((lVar6 = GameObject.get_transform(*(int64 *)(lVar6 + 40),0),
+                               lVar6 == null || (lVar6 = Transform.GetChild(lVar6,iVar10,0)) == null))))
+                             ) throw; // [null/range check failed]
+                          lVar6 = Component.get_gameObject(lVar6,0);
+                          if ((this.WeatherDataBase == null) ||
+                             (((lVar7 = FUN_180002f80(this.WeatherDataBase,uVar8,DAT_181dac888),
+                               lVar7 == null || (*(int64 *)(lVar7 + 48) == 0)) ||
+                              (FUN_18181e0a0(*(int64 *)(lVar7 + 48),lVar6,DAT_181d89398), lVar6 == null)
+                              ))) throw; // [null/range check failed]
+                          lVar6 = GameObject.GetComponent(lVar6,DAT_181d72700);
+                          FUN_18181e0a0(lVar5,lVar6,DAT_181d96888);
+                          if (((this.WeatherDataBase == null) ||
+                              (lVar7 = FUN_180002f80(this.WeatherDataBase,uVar8,DAT_181dac888),
+                              lVar7 == null)) || (lVar7 = *(int64 *)(lVar7 + 56), lVar6 == null))
+                          throw; // [null/range check failed]
+                          local_res18 = FUN_1804651e0(lVar6,0);
+                          uVar11 = FUN_1804645a0(&local_res18,0);
+                          if (lVar7 == null) throw; // [null/range check failed]
+                          FUN_18181de10(lVar7,uVar11,DAT_181da0df8);
+                          iVar10 = iVar10 + 1;
+                        }
+                        if (lVar6 == null) break;
+                        uVar4 = FUN_180002f80(lVar6,uVar8,DAT_181dac888);
+                        WeatherController.ResetSpeRateMultiplier(this,uVar4,0);
+                        if (((this.WeatherDataBase == null) ||
+                            (lVar5 = FUN_180002f80(this.WeatherDataBase,uVar8,DAT_181dac888),
+                            lVar3 == null)) || (uVar11 = AudioSource.get_volume(lVar3,0), lVar5 == null))
+                        break;
+                        *(uint32 *)(lVar5 + 84) = uVar11;
+                        if (this.WeatherDataBase == null) break;
+                        lVar3 = FUN_180002f80(this.WeatherDataBase,uVar8,DAT_181dac888);
+                        if ((lVar3 == null) || (*(int64 *)(lVar3 + 40) == 0)) break;
+                        GameObject.SetActive(*(int64 *)(lVar3 + 40),1,0);
+                      }
+                      lVar3 = this.WeatherDataBase;
+                      uVar8 = uVar8 + 1;
+                      lVar9 = lVar9 + 8;
+                    } while (lVar3 != null);
+                  }
                 }
-                if (lVar3 == null) break;
-                uVar4 = FUN_180002f80(lVar3,uVar7,DAT_181d84ef8);
-                WeatherController.ResetSpeRateMultiplier(this,uVar4,0);
-                if (this.WeatherDataBase == null) break;
-                lVar3 = FUN_180002f80(this.WeatherDataBase,uVar7,DAT_181d84ef8);
-                if (((this.WeatherDataBase == null) ||
-                    (lVar5 = FUN_180002f80(this.WeatherDataBase,uVar7,DAT_181d84ef8)) == null
-                    ) || ((*(int64 *)(lVar5 + 40) == 0 ||
-                          ((lVar5 = GameObject.GetComponent(*(int64 *)(lVar5 + 40),DAT_181d9e558),
-                           lVar5 == null || (uVar9 = AudioSource.get_volume(lVar5,0), lVar3 == null))))))
-                break;
-                *(uint32 *)(lVar3 + 84) = uVar9;
-                if ((this.WeatherDataBase == null) ||
-                   ((lVar3 = FUN_180002f80(this.WeatherDataBase,uVar7), lVar3 == null ||
-                    (*(int64 *)(lVar3 + 40) == 0)))) break;
-                GameObject.SetActive();
               }
-              lVar3 = this.WeatherDataBase;
-              uVar7 = uVar7 + 1;
-              lVar8 = lVar8 + 8;
-            } while (lVar3 != null);
+            }
           }
         }
     }
 
-    // Token : 0x6002302
-    // RVA   : 0x9E3BC0   Offset: 0x9E23C0   Length: 0xA07
+    // Token : 0x6002384
+    // RVA   : 0xC17C40   Offset: 0xC17040   Length: 0x99A
     private void Update()
     {
-        bool cVar1;
-        long lVar2;
+        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
+        var pStatics_4f18 = *(int64*)(DAT_181db4f18 + 184);
+        long lVar1;
+        bool cVar2;
         ulong uVar3;
         long lVar4;
-        uint uVar7;
+        long lVar7;
+        int iVar8;
         long lVar9;
-        float fVar11;
+        long lVar10;
+        long lVar11;
         uint uVar12;
         float fVar13;
-        uint[] local_res8 = new uint[2];
-        lVar2 = this.WeatherDataBase;
-        plVar10 = (int64 *)0;
-        local_res8[0] = 0;
-        if (lVar2 != null) {
-          lVar9 = 32;
-          plVar6 = plVar10;
-          while (uVar7 = (uint32)plVar6, (int)uVar7 < lVar2.Count) {
-            if (lVar2 == null) throw; // [null/range check failed]
-            if (lVar2.Count <= uVar7) {
-              ThrowHelper.ThrowArgumentOutOfRangeException(0);
-            }
-            lVar2 = *(int64 *)(lVar9 + lVar2._items);
-            if (lVar2 == null) throw; // [null/range check failed]
-            uVar3 = *(uint64 *)(lVar2 + 40);
-            cVar1 = Object.op_Equality(uVar3,0,0);
-            lVar2 = this.WeatherDataBase;
-            if (!cVar1) {
-              if (((lVar2 == null) || (lVar2 = FUN_180002f80(lVar2,plVar6,DAT_181d84ef8)) == null) ||
-                 (*(int64 *)(lVar2 + 40) == 0)) throw; // [null/range check failed]
-              uVar3 = GameObject.GetComponent(*(int64 *)(lVar2 + 40),DAT_181d9e558);
-              fVar11 = (float)RealTime.get_deltaTime(0);
-              lVar2 = FUN_18046c0a0(0);
-              if ((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) throw; // [null/range check failed]
-              if (*(uint32 *)(*(int64 *)(lVar2 + 32) + 0x16c) == uVar7) {
-                lVar2 = FUN_18046bca0(0);
-                if (lVar2 == null) throw; // [null/range check failed]
-                if (lVar2.Count == null) {
-                  lVar2 = this.WeatherDataBase;
-                  lVar4 = FUN_18046c0a0(0);
-                  if ((((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) || (lVar2 == null)) ||
-                     (lVar2 = FUN_180002f80(lVar2,*(uint32 *)(*(int64 *)(lVar4 + 32) + 0x16c),
-                                            DAT_181d84ef8), lVar2 == null)) throw; // [null/range check failed]
-                  pfVar5 = (float *)(lVar2 + 84);
-                }
-                else {
-                  pfVar5 = *(float **)(PlotController_StaticsPtr + 184);
-                }
-                fVar13 = *pfVar5;
-                fVar13 = fVar13 * GameController.CheckShowSpeHero;
+        float fVar14;
+        float fVar15;
+        uint uVar16;
+        float fVar17;
+        float fVar18;
+        uint[] local_res18 = new uint[2];
+        uint local_res20;
+        local_res18[0] = 0;
+        if ((*pStatics_2cc8 != 0) &&
+           (lVar11 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
+          uVar12 = *(uint32 *)(lVar11 + 0x16c);
+          lVar11 = (int64)(int)uVar12;
+          local_res20 = uVar12;
+          lVar1 = *(int64 *)(*(int64 *)(DAT_181db4008 + 184) + 8);
+          if (lVar1 != null) {
+            lVar7 = this.WeatherDataBase;
+            lVar1 = *(int64 *)(lVar1 + 24);
+            if (lVar7 != null) {
+              if (lVar7.Count <= uVar12) {
+                ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
-              else {
-                fVar13 = 0.0;
-              }
-              WeatherController.ChangeParticleSystemAudioSourceVolumn
-                        (this,uVar3,fVar11 * 0.2,fVar13,0);
-              if ((this.WeatherDataBase == null) ||
-                 (lVar2 = FUN_180002f80(this.WeatherDataBase,plVar6,DAT_181d84ef8)) == null)
-              throw; // [null/range check failed]
-              if (*(int *)(lVar2 + 64) == 1) {
-                this.totalFinish = 1;
-                plVar8 = plVar10;
-                while( true ) {
-                  if (((this.WeatherDataBase == null) || (lVar2 = FUN_180002f80()) == null) ||
-                     (*(int64 *)(lVar2 + 48) == 0)) throw; // [null/range check failed]
-                  if (*(int *)(*(int64 *)(lVar2 + 48) + 24) <= (int)plVar8) break;
-                  if (((this.WeatherDataBase == null) ||
-                      (lVar2 = FUN_180002f80(this.WeatherDataBase,plVar6,DAT_181d84ef8),
-                      lVar2 == null)) ||
-                     ((*(int64 *)(lVar2 + 48) == 0 ||
-                      (lVar2 = FUN_180002f80(*(int64 *)(lVar2 + 48),plVar8,DAT_181d62178), lVar2 == null
-                      )))) throw; // [null/range check failed]
-                  uVar3 = GameObject.GetComponent(lVar2,DAT_181da06d0);
-                  fVar11 = (float)RealTime.get_deltaTime(0);
-                  if (((this.WeatherDataBase == null) ||
-                      (lVar2 = FUN_180002f80(this.WeatherDataBase,plVar6,DAT_181d84ef8),
-                      lVar2 == null)) || (*(int64 *)(lVar2 + 56) == 0)) throw; // [null/range check failed]
-                  fVar13 = (float)FUN_1800d6780(*(int64 *)(lVar2 + 56),plVar8,DAT_181d796d8);
-                  if (((this.WeatherDataBase == null) ||
-                      (lVar2 = FUN_180002f80(this.WeatherDataBase,plVar6,DAT_181d84ef8),
-                      lVar2 == null)) || (*(int64 *)(lVar2 + 56) == 0)) throw; // [null/range check failed]
-                  uVar12 = FUN_1800d6780(*(int64 *)(lVar2 + 56),plVar8,DAT_181d796d8);
-                  cVar1 = WeatherController.ChangeParticleSystemRateOverTimeMultiplier
-                                    (this,uVar3,fVar11 * 0.2 * fVar13,uVar12,0);
-                  if (!cVar1) {
-                    this.totalFinish = 0;
-                  }
-                  plVar8 = (int64 *)(uint64)((int)plVar8 + 1);
-                }
-        LAB_1809e422d:
-                if (this.totalFinish) {
-                  lVar2 = this.WeatherDataBase;
-                  goto LAB_1809e4237;
-                }
-              }
-              else {
-                if ((this.WeatherDataBase == null) || (lVar2 = FUN_180002f80()) == null)
-                throw; // [null/range check failed]
-                if (*(int *)(lVar2 + 64) == 2) {
-                  this.totalFinish = 1;
-                  plVar8 = plVar10;
-                  while( true ) {
-                    if (((this.WeatherDataBase == null) || (lVar2 = FUN_180002f80()) == null) ||
-                       (*(int64 *)(lVar2 + 48) == 0)) throw; // [null/range check failed]
-                    if (*(int *)(*(int64 *)(lVar2 + 48) + 24) <= (int)plVar8) break;
-                    if ((((this.WeatherDataBase == null) ||
-                         (lVar2 = FUN_180002f80(this.WeatherDataBase,plVar6,DAT_181d84ef8),
-                         lVar2 == null)) || (*(int64 *)(lVar2 + 48) == 0)) ||
-                       (lVar2 = FUN_180002f80(*(int64 *)(lVar2 + 48),plVar8,DAT_181d62178),
-                       lVar2 == null)) throw; // [null/range check failed]
-                    uVar3 = GameObject.GetComponent(lVar2,DAT_181da06d0);
-                    fVar11 = (float)RealTime.get_deltaTime(0);
-                    if (((this.WeatherDataBase == null) ||
-                        (lVar2 = FUN_180002f80(this.WeatherDataBase,plVar6,DAT_181d84ef8),
-                        lVar2 == null)) || (*(int64 *)(lVar2 + 56) == 0)) throw; // [null/range check failed]
-                    fVar13 = (float)FUN_1800d6780(*(int64 *)(lVar2 + 56),plVar8,DAT_181d796d8);
-                    if (((this.WeatherDataBase == null) ||
-                        (lVar2 = FUN_180002f80(this.WeatherDataBase,plVar6,DAT_181d84ef8),
-                        lVar2 == null)) || (*(int64 *)(lVar2 + 56) == 0)) throw; // [null/range check failed]
-                    uVar12 = FUN_1800d6780(*(int64 *)(lVar2 + 56),plVar8,DAT_181d796d8);
-                    cVar1 = WeatherController.ChangeParticleSystemRateOverTimeMultiplier
-                                      (this,uVar3,fVar11 * -0.2 * fVar13,uVar12,0);
-                    if (!cVar1) {
-                      this.totalFinish = 0;
+              lVar7 = *(int64 *)(lVar7._items + 32 + lVar11 * 8);
+              if (lVar7 != null) {
+                fVar18 = *(float *)(lVar7 + 84);
+                uVar12 = 0;
+                fVar15 = *(float *)(*(int64 *)(DAT_181d72d50 + 184) + 16);
+                fVar17 = **(float **)(DAT_181db4008 + 184);
+                lVar7 = this.WeatherDataBase;
+                if (lVar7 != null) {
+                  lVar9 = 32;
+                  lVar10 = 0;
+                  do {
+                    if (lVar7.Count <= (int)uVar12) {
+                      if (lVar7.Count <= local_res20) {
+                        ThrowHelper.ThrowArgumentOutOfRangeException(0);
+                      }
+                      lVar11 = *(int64 *)(lVar7._items + 32 + lVar11 * 8);
+                      if (lVar11 == null) break;
+                      if (*(char *)(lVar11 + 80) != false) {
+                        fVar18 = this.nextThunderTime;
+                        fVar15 = (float)Time.get_deltaTime(0);
+                        fVar18 = fVar18 - fVar15;
+                        this.nextThunderTime = fVar18;
+                        if (fVar18 <= 0.0) {
+                          uVar16 = Random.Range(0x40800000,0x41500000,0);
+                          this.nextThunderTime = uVar16;
+                          uVar16 = Random.Range(0x3ee66666,0x3f0ccccd,0);
+                          this.totalThunderTime = uVar16;
+                          this.leftThunderTime = uVar16;
+                          local_res18[0] = FUN_180d95a30(0,6);
+                          lVar11 = *pStatics_4f18;
+                          if (lVar11 == null) break;
+                          if (*(uint32 *)(lVar11 + 24) <= local_res18[0]) {
+                            uVar3 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+                            FUN_1800d65f0(uVar3,0);
+                          }
+                          uVar3 = *(uint64 *)(lVar11 + 32 + (int64)(int)local_res18[0] * 8);
+                          cVar2 = Object.op_Equality(uVar3,0,0);
+                          if (cVar2) {
+                            uVar12 = local_res18[0];
+                            lVar7 = (int64)(int)local_res18[0];
+                            lVar11 = *pStatics_4f18;
+                            uVar3 = Int32.ToString(local_res18,0);
+                            String.Concat("Sound/SoundEffect/Thunder/",uVar3,0);
+                            plVar5 = (int64 *)Resources.Load();
+                            if (lVar11 == null) break;
+                            if (plVar5 == (int64 *)0) {
+                              plVar6 = (int64 *)0;
+                            }
+                            else {
+                              plVar6 = (int64 *)0;
+                              if (*plVar5 == DAT_181daf348) {
+                                plVar6 = plVar5;
+                              }
+                              if ((plVar6 != (int64 *)0) &&
+                                 (lVar9 = il2cpp_internal()) == null) {
+                                uVar3 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+                                FUN_1800d65f0(uVar3,0);
+                              }
+                              plVar6 = (int64 *)0;
+                              if (*plVar5 == DAT_181daf348) {
+                                plVar6 = plVar5;
+                              }
+                            }
+                            if (*(uint32 *)(lVar11 + 24) <= uVar12) {
+                              uVar3 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+                              FUN_1800d65f0(uVar3,0);
+                            }
+                            *(int64 **)(lVar11 + (lVar7 + 4) * 8) = plVar6;
+                          }
+                          lVar11 = *pStatics_4f18;
+                          if (lVar11 == null) break;
+                          if (*(uint32 *)(lVar11 + 24) <= local_res18[0]) {
+                            uVar3 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+                            FUN_1800d65f0(uVar3,0);
+                          }
+                          uVar3 = *(uint64 *)(lVar11 + 32 + (int64)(int)local_res18[0] * 8);
+                          if (lVar1 == null) {
+                            fVar18 = 1.0;
+                          }
+                          else {
+                            fVar18 = **(float **)(DAT_181db4008 + 184) +
+                                     **(float **)(DAT_181db4008 + 184);
+                          }
+                          NGUITools.PlaySound(uVar3,fVar18 * 0.6,0);
+                        }
+                      }
+                      fVar18 = this.leftThunderTime;
+                      fVar15 = this.currentExposure;
+                      if (0.0 < fVar18) {
+                        fVar17 = (fVar18 * 150.0) / this.totalThunderTime;
+                        if (fVar15 != fVar17) {
+                          this.currentExposure = fVar17;
+                          if ((this.colorGrading == null) ||
+                             (lVar11 = *(int64 *)(this.colorGrading + 176)) == null)
+                          break;
+                          *(float *)(lVar11 + 24) = fVar17;
+                          fVar18 = this.leftThunderTime;
+                        }
+                        fVar15 = (float)RealTime.get_deltaTime(0);
+                        this.leftThunderTime = fVar18 - fVar15;
+                        if (0.0 < fVar18 - fVar15) {
+                          return;
+                        }
+                        fVar15 = this.currentExposure;
+                        this.leftThunderTime = 0;
+                      }
+                      if (fVar15 != 0.0) {
+                        this.currentExposure = 0;
+                        if ((this.colorGrading == null) ||
+                           (lVar11 = *(int64 *)(this.colorGrading + 176)) == null)
+                        break;
+                        *(uint32 *)(lVar11 + 24) = 0;
+                      }
+                      return;
                     }
-                    plVar8 = (int64 *)(uint64)((int)plVar8 + 1);
-                  }
-                  goto LAB_1809e422d;
-                }
-              }
-            }
-            else {
-        LAB_1809e4237:
-              if ((lVar2 == null) || (lVar2 = FUN_180002f80()) == null) throw; // [null/range check failed]
-              *(uint32 *)(lVar2 + 64) = 0;
-            }
-            lVar2 = this.WeatherDataBase;
-            plVar6 = (int64 *)(uint64)(uVar7 + 1);
-            lVar9 = lVar9 + 8;
-            if (lVar2 == null) throw; // [null/range check failed]
-          }
-          if (((GameController._instance != null) &&
-              (lVar9 = GameController._instance.worldData, lVar9 != null
-              )) && (lVar2 != null)) {
-            uVar7 = lVar9.nowWeather;
-            if (lVar2.Count <= uVar7) {
-              ThrowHelper.ThrowArgumentOutOfRangeException(0);
-            }
-            lVar2 = lVar2._items[uVar7];
-            if (lVar2 != null) {
-              if (*(char *)(lVar2 + 80) != false) {
-                fVar11 = this.nextThunderTime;
-                fVar13 = (float)Time.get_deltaTime(0);
-                fVar11 = fVar11 - fVar13;
-                this.nextThunderTime = fVar11;
-                if (fVar11 <= 0.0) {
-                  uVar12 = Random.Range(0x40800000,0x41500000,0);
-                  this.nextThunderTime = uVar12;
-                  uVar12 = Random.Range(0x3ee66666,0x3f0ccccd,0);
-                  this.totalThunderTime = uVar12;
-                  this.leftThunderTime = uVar12;
-                  local_res8[0] = FUN_180d8cf10(0,6);
-                  uVar3 = Int32.ToString(local_res8,0);
-                  uVar3 = String.Concat("Sound/SoundEffect/Thunder/",uVar3,0);
-                  plVar6 = (int64 *)Resources.Load(uVar3,0);
-                  lVar2 = FUN_18046bca0(0);
-                  if (lVar2 == null) throw; // [null/range check failed]
-                  plVar8 = plVar10;
-                  if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181d8a228)) {
-                    plVar8 = plVar6;
-                  }
-                  if (lVar2.Count == null) {
-                    plVar8 = plVar10;
-                    if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181d8a228)) {
-                      plVar8 = plVar6;
+                    if (lVar7 == null) break;
+                    if (lVar7.Count <= uVar12) {
+                      ThrowHelper.ThrowArgumentOutOfRangeException(0);
                     }
-                    fVar11 = 1.0;
-                  }
-                  else {
-                    fVar11 = PlotController._instance +
-                             PlotController._instance;
-                  }
-                  NGUITools.PlaySound(plVar8,fVar11 * 0.6,0);
+                    lVar7 = *(int64 *)(lVar9 + lVar7._items);
+                    if (lVar7 == null) break;
+                    uVar3 = *(uint64 *)(lVar7 + 40);
+                    cVar2 = Object.op_Equality(uVar3,0);
+                    if (!cVar2) {
+                      if (this.weatherSpeAudioSources == null) break;
+                      uVar3 = FUN_180002f80(this.weatherSpeAudioSources,uVar12);
+                      fVar13 = (float)RealTime.get_deltaTime(0);
+                      if (lVar11 == lVar10) {
+                        fVar14 = fVar15 * fVar18;
+                        if (lVar1 != null) {
+                          fVar14 = fVar15 * fVar17;
+                        }
+                      }
+                      else {
+                        fVar14 = 0.0;
+                      }
+                      WeatherController.ChangeParticleSystemAudioSourceVolumn
+                                (this,uVar3,fVar13 * 0.2,fVar14,0);
+                      if (*(int *)(lVar7 + 64) == 1) {
+                        this.totalFinish = 1;
+                        if (this.weatherSpeParticleSystems == null) break;
+                        lVar4 = FUN_180002f80();
+                        iVar8 = 0;
+                        while( true ) {
+                          if (lVar4 == null) throw; // [null/range check failed]
+                          if (*(int *)(lVar4 + 24) <= iVar8) break;
+                          if (*(int64 *)(lVar7 + 56) == 0) throw; // [null/range check failed]
+                          fVar13 = (float)FUN_1800d6790(*(int64 *)(lVar7 + 56),iVar8,DAT_181da1078);
+                          uVar3 = FUN_180002f80(lVar4,iVar8);
+                          fVar14 = (float)RealTime.get_deltaTime(0);
+                          cVar2 = WeatherController.ChangeParticleSystemRateOverTimeMultiplier
+                                            (this,uVar3,fVar14 * 0.2 * fVar13,fVar13,0);
+                          if (!cVar2) {
+                            this.totalFinish = 0;
+                          }
+                          iVar8 = iVar8 + 1;
+                        }
+                      }
+                      else {
+                        if (*(int *)(lVar7 + 64) != 2) goto LAB_180c1818d;
+                        this.totalFinish = 1;
+                        if (this.weatherSpeParticleSystems == null) break;
+                        lVar4 = FUN_180002f80();
+                        iVar8 = 0;
+                        while( true ) {
+                          if (lVar4 == null) throw; // [null/range check failed]
+                          if (*(int *)(lVar4 + 24) <= iVar8) break;
+                          if (*(int64 *)(lVar7 + 56) == 0) throw; // [null/range check failed]
+                          fVar13 = (float)FUN_1800d6790(*(int64 *)(lVar7 + 56),iVar8,DAT_181da1078);
+                          uVar3 = FUN_180002f80(lVar4,iVar8);
+                          fVar14 = (float)RealTime.get_deltaTime(0);
+                          cVar2 = WeatherController.ChangeParticleSystemRateOverTimeMultiplier
+                                            (this,uVar3,fVar14 * -0.2 * fVar13,fVar13,0);
+                          if (!cVar2) {
+                            this.totalFinish = 0;
+                          }
+                          iVar8 = iVar8 + 1;
+                        }
+                      }
+                      if (this.totalFinish) {
+                        *(uint32 *)(lVar7 + 64) = 0;
+                      }
+                    }
+                    else {
+                      *(uint32 *)(lVar7 + 64) = 0;
+                    }
+        LAB_180c1818d:
+                    lVar7 = this.WeatherDataBase;
+                    uVar12 = uVar12 + 1;
+                    lVar10 = lVar10 + 1;
+                    lVar9 = lVar9 + 8;
+                  } while (lVar7 != null);
                 }
               }
-              if (0.0 < this.leftThunderTime) {
-                WeatherController.SetExposure
-                          (this,(this.leftThunderTime * 150.0) / this.totalThunderTime,0);
-                fVar11 = this.leftThunderTime;
-                fVar13 = (float)RealTime.get_deltaTime(0);
-                fVar11 = fVar11 - fVar13;
-                this.leftThunderTime = fVar11;
-                if (0.0 < fVar11) {
-                  return;
-                }
-                this.leftThunderTime = 0;
-              }
-              else {
-                if ((((this.postProcessVolume == null) ||
-                     (lVar2 = PostProcessVolume.get_profile(this.postProcessVolume,0)) == null
-                     ) || (lVar2 = PostProcessProfile.GetSetting(lVar2,DAT_181d6f5f0)) == null) ||
-                   (*(int64 *)(lVar2 + 176) == 0)) throw; // [null/range check failed]
-                if (*(float *)(*(int64 *)(lVar2 + 176) + 24) == 0.0) {
-                  return;
-                }
-              }
-              WeatherController.SetExposure(this,0,0);
-              return;
             }
           }
         }
     }
 
-    // Token : 0x6002303
-    // RVA   : 0x9E35C0   Offset: 0x9E1DC0   Length: 0xB4
+    // Token : 0x6002385
+    // RVA   : 0xC174A0   Offset: 0xC168A0   Length: 0xB4
     public void SetWeatherSpeActive(bool active, GameObject targetObj)
     {
         long lVar1;
         lVar1 = this.needHideWeatherObj;
         if (!active) {
           if (lVar1 == null) throw; // [null/range check failed]
-          FUN_181827900(lVar1,targetObj,DAT_181d61bf8);
+          FUN_18181e0a0(lVar1,targetObj,DAT_181d89398);
         }
         else {
           if (lVar1 == null) throw; // [null/range check failed]
-          FUN_181801c10(lVar1,targetObj,DAT_181d61e78);
+          FUN_1817eee00(lVar1,targetObj,DAT_181d89618);
         }
         if ((this.needHideWeatherObj != null) && (this.weatherSpeObjRoot != null)) {
           GameObject.SetActive
@@ -417,8 +482,8 @@ public class WeatherController
         }
     }
 
-    // Token : 0x6002304
-    // RVA   : 0x9E27B0   Offset: 0x9E0FB0   Length: 0x17E
+    // Token : 0x6002386
+    // RVA   : 0xC166A0   Offset: 0xC15AA0   Length: 0x17E
     public void ChangeParticleSystemAudioSourceVolumn(AudioSource target, float deltaVolumn, float targetVolumn)
     {
         void WeatherController.ChangeParticleSystemAudioSourceVolumn
@@ -465,41 +530,44 @@ public class WeatherController
         }
     }
 
-    // Token : 0x6002305
-    // RVA   : 0x9E3060   Offset: 0x9E1860   Length: 0x76
+    // Token : 0x6002387
+    // RVA   : 0xC16F50   Offset: 0xC16350   Length: 0xA0
     public float GetExposure()
     {
-        long lVar1;
-        if (this.postProcessVolume != null) {
-          lVar1 = PostProcessVolume.get_profile(this.postProcessVolume,0);
-          if (lVar1 != null) {
-            lVar1 = PostProcessProfile.GetSetting(lVar1,DAT_181d6f5f0);
-            if ((lVar1 != null) && (*(int64 *)(lVar1 + 176) != 0)) {
-              return *(uint32 *)(*(int64 *)(lVar1 + 176) + 24);
-            }
+        ulong uVar1;
+        long lVar2;
+        bool cVar3;
+        uVar1 = this.colorGrading;
+        cVar3 = Object.op_Inequality(uVar1,0,0);
+        if (cVar3) {
+          if ((this.colorGrading != null) &&
+             (lVar2 = *(int64 *)(this.colorGrading + 176)) != null) {
+            return *(uint32 *)(lVar2 + 24);
           }
+                          // WARNING: Subroutine does not return
+          FUN_1800d6620();
         }
+        return 0;
     }
 
-    // Token : 0x6002306
-    // RVA   : 0x9E3540   Offset: 0x9E1D40   Length: 0x77
+    // Token : 0x6002388
+    // RVA   : 0xC17460   Offset: 0xC16860   Length: 0x39
     public void SetExposure(float exposure)
     {
         long lVar1;
-        if (this.postProcessVolume != null) {
-          lVar1 = PostProcessVolume.get_profile(this.postProcessVolume,0);
-          if (lVar1 != null) {
-            lVar1 = PostProcessProfile.GetSetting(lVar1,DAT_181d6f5f0);
-            if ((lVar1 != null) && (*(int64 *)(lVar1 + 176) != 0)) {
-              *(uint32 *)(*(int64 *)(lVar1 + 176) + 24) = exposure;
-              return;
-            }
+        if (this.currentExposure != exposure) {
+          this.currentExposure = exposure;
+          if ((this.colorGrading == null) ||
+             (lVar1 = *(int64 *)(this.colorGrading + 176)) == null) {
+                          // WARNING: Subroutine does not return
+            FUN_1800d6620();
           }
+          *(float *)(lVar1 + 24) = exposure;
         }
     }
 
-    // Token : 0x6002307
-    // RVA   : 0x9E2930   Offset: 0x9E1130   Length: 0xCC
+    // Token : 0x6002389
+    // RVA   : 0xC16820   Offset: 0xC15C20   Length: 0xCC
     public bool ChangeParticleSystemRateOverTimeMultiplier(ParticleSystem targetParticleSystem, float deltaRate, float maxRate)
     {
         uint64
@@ -531,8 +599,8 @@ public class WeatherController
         return true;
     }
 
-    // Token : 0x6002308
-    // RVA   : 0x9E3450   Offset: 0x9E1C50   Length: 0xEF
+    // Token : 0x600238A
+    // RVA   : 0xC17370   Offset: 0xC16770   Length: 0xEF
     public void ResetSpeRateMultiplier(WeatherData targetWeather)
     {
         long lVar1;
@@ -551,30 +619,29 @@ public class WeatherController
             }
             lVar1 = *(int64 *)(lVar3 + *(int64 *)(lVar1 + 16));
             if (lVar1 == null) break;
-            lVar1 = GameObject.GetComponent(lVar1,DAT_181da06d0);
+            lVar1 = GameObject.GetComponent(lVar1,DAT_181d72700);
             if (lVar1 == null) break;
             uVar2 = FUN_1804651e0(lVar1,0);
             this.emission = uVar2;
-            FUN_180464630(this + 72,0,0);
+            FUN_180464630(this + 104,0,0);
             uVar4 = uVar4 + 1;
             lVar3 = lVar3 + 8;
           }
         }
     }
 
-    // Token : 0x6002309
-    // RVA   : 0x9E2A00   Offset: 0x9E1200   Length: 0x14B
+    // Token : 0x600238B
+    // RVA   : 0xC168F0   Offset: 0xC15CF0   Length: 0x14B
     public void ChangeWeatherLastTime(float deltaTime)
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
-        if ((GameController._instance != null) &&
-           (lVar1 = GameController._instance.worldData) != null)
-        {
-          lVar1.weatherLastTime = deltaTime + lVar1.weatherLastTime;
-          if ((GameController._instance != null) &&
-             (lVar1 = GameController._instance.worldData) != null
-             ) {
-            if (lVar1.weatherLastTime <= 0.0) {
+        if ((*pStatics != 0) &&
+           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+          *(float *)(lVar1 + 0x170) = deltaTime + *(float *)(lVar1 + 0x170);
+          if ((*pStatics != 0) &&
+             (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+            if (*(float *)(lVar1 + 0x170) <= 0.0) {
               WeatherController.RandomChangeWeather(this,0);
             }
             return;
@@ -582,8 +649,8 @@ public class WeatherController
         }
     }
 
-    // Token : 0x600230A
-    // RVA   : 0x9E31D0   Offset: 0x9E19D0   Length: 0x277
+    // Token : 0x600238C
+    // RVA   : 0xC170F0   Offset: 0xC164F0   Length: 0x277
     public void RandomChangeWeather()
     {
         bool cVar1;
@@ -602,9 +669,9 @@ public class WeatherController
             lVar2 = FUN_18046c0a0(0);
             if ((((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) || (lVar3 == null)) ||
                ((lVar3 = FUN_180002f80(lVar3,*(uint32 *)(*(int64 *)(lVar2 + 32) + 0x16c),
-                                       DAT_181d84ef8), lVar3 == null || (*(int64 *)(lVar3 + 32) == 0))))
+                                       DAT_181dac888), lVar3 == null || (*(int64 *)(lVar3 + 32) == 0))))
             throw; // [null/range check failed]
-            cVar1 = FUN_181815240(*(int64 *)(lVar3 + 32),iVar4);
+            cVar1 = FUN_18182a3a0(*(int64 *)(lVar3 + 32),iVar4);
             if (cVar1) {
               if ((this.WeatherDataBase == null) ||
                  (lVar3 = FUN_180002f80(this.WeatherDataBase,iVar4)) == null)
@@ -633,12 +700,12 @@ public class WeatherController
           lVar2 = FUN_18046c0a0(0);
           if ((((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) || (lVar3 == null)) ||
              ((lVar3 = FUN_180002f80(lVar3,*(uint32 *)(*(int64 *)(lVar2 + 32) + 0x16c),
-                                     DAT_181d84ef8), lVar3 == null || (*(int64 *)(lVar3 + 32) == 0))))
+                                     DAT_181dac888), lVar3 == null || (*(int64 *)(lVar3 + 32) == 0))))
           break;
-          cVar1 = FUN_181815240(*(int64 *)(lVar3 + 32),iVar5,DAT_181d67bf8);
+          cVar1 = FUN_18182a3a0(*(int64 *)(lVar3 + 32),iVar5,DAT_181d8f398);
           if (cVar1) {
             if ((this.WeatherDataBase == null) ||
-               (lVar3 = FUN_180002f80(this.WeatherDataBase,iVar5,DAT_181d84ef8)) == null)
+               (lVar3 = FUN_180002f80(this.WeatherDataBase,iVar5,DAT_181dac888)) == null)
             break;
             fVar6 = (float)WeatherData.GetRandomRate(lVar3,0);
             fVar7 = fVar7 - fVar6;
@@ -650,29 +717,30 @@ public class WeatherController
         }
     }
 
-    // Token : 0x600230B
-    // RVA   : 0x9E2B50   Offset: 0x9E1350   Length: 0xA3
+    // Token : 0x600238D
+    // RVA   : 0xC16A40   Offset: 0xC15E40   Length: 0xA3
     public void ChangeWeather(int targetWeatherID)
     {
-        var pStatics = *(int64*)(DAT_181d7e3b0 + 184);
+        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
+        var pStatics_35d0 = *(int64*)(DAT_181da35d0 + 184);
         uint uVar1;
         long lVar2;
         long lVar3;
-        if ((GameController._instance == null) ||
-           (lVar2 = GameController._instance.worldData) == null)
+        if ((*pStatics_2cc8 == 0) ||
+           (lVar2 = *(int64 *)(*pStatics_2cc8 + 32)) == null)
         throw; // [null/range check failed]
-        if (targetWeatherID != lVar2.nowWeather) {
+        if (targetWeatherID != *(uint32 *)(lVar2 + 0x16c)) {
           lVar2 = this.WeatherDataBase;
-          if (((GameController._instance == null) ||
-              (lVar3 = GameController._instance.worldData, lVar3 == null
-              )) || (lVar2 == null)) throw; // [null/range check failed]
-          uVar1 = lVar3.nowWeather;
+          if (((*pStatics_2cc8 == 0) ||
+              (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+             (lVar2 == null)) throw; // [null/range check failed]
+          uVar1 = *(uint32 *)(lVar3 + 0x16c);
           if (lVar2.Count <= uVar1) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar2 = lVar2._items[uVar1];
           if (lVar2 == null) throw; // [null/range check failed]
-          lVar2.ResourcePoints = 2;
+          *(uint32 *)(lVar2 + 64) = 2;
           lVar2 = this.WeatherDataBase;
           if (lVar2 == null) throw; // [null/range check failed]
           if (lVar2.Count <= targetWeatherID) {
@@ -680,47 +748,46 @@ public class WeatherController
           }
           lVar2 = lVar2._items[targetWeatherID];
           if (lVar2 == null) throw; // [null/range check failed]
-          lVar2.ResourcePoints = 1;
+          *(uint32 *)(lVar2 + 64) = 1;
         }
-        if ((GameController._instance != null) &&
-           (lVar2 = GameController._instance.worldData) != null)
-        {
-          lVar2.nowWeather = targetWeatherID;
-          if ((GameController._instance != null) &&
-             (lVar2 = GameController._instance.worldData) != null
-             ) {
-            lVar2.weatherLastTime = param_3;
-            if (*pStatics != 0) {
-              SkyController.RefreshCloud(*pStatics,1,0);
+        if ((*pStatics_2cc8 != 0) &&
+           (lVar2 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
+          *(uint32 *)(lVar2 + 0x16c) = targetWeatherID;
+          if ((*pStatics_2cc8 != 0) &&
+             (lVar2 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
+            *(uint32 *)(lVar2 + 0x170) = param_3;
+            if (*pStatics_35d0 != 0) {
+              SkyController.RefreshCloud(*pStatics_35d0,1,0);
               return;
             }
           }
         }
     }
 
-    // Token : 0x600230C
-    // RVA   : 0x9E2C00   Offset: 0x9E1400   Length: 0x310
+    // Token : 0x600238E
+    // RVA   : 0xC16AF0   Offset: 0xC15EF0   Length: 0x310
     public void ChangeWeather(int targetWeatherID, float lastTime)
     {
-        var pStatics = *(int64*)(DAT_181d7e3b0 + 184);
+        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
+        var pStatics_35d0 = *(int64*)(DAT_181da35d0 + 184);
         uint uVar1;
         long lVar2;
         long lVar3;
-        if ((GameController._instance == null) ||
-           (lVar2 = GameController._instance.worldData) == null)
+        if ((*pStatics_2cc8 == 0) ||
+           (lVar2 = *(int64 *)(*pStatics_2cc8 + 32)) == null)
         throw; // [null/range check failed]
-        if (targetWeatherID != lVar2.nowWeather) {
+        if (targetWeatherID != *(uint32 *)(lVar2 + 0x16c)) {
           lVar2 = this.WeatherDataBase;
-          if (((GameController._instance == null) ||
-              (lVar3 = GameController._instance.worldData, lVar3 == null
-              )) || (lVar2 == null)) throw; // [null/range check failed]
-          uVar1 = lVar3.nowWeather;
+          if (((*pStatics_2cc8 == 0) ||
+              (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+             (lVar2 == null)) throw; // [null/range check failed]
+          uVar1 = *(uint32 *)(lVar3 + 0x16c);
           if (lVar2.Count <= uVar1) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar2 = lVar2._items[uVar1];
           if (lVar2 == null) throw; // [null/range check failed]
-          lVar2.ResourcePoints = 2;
+          *(uint32 *)(lVar2 + 64) = 2;
           lVar2 = this.WeatherDataBase;
           if (lVar2 == null) throw; // [null/range check failed]
           if (lVar2.Count <= targetWeatherID) {
@@ -728,63 +795,63 @@ public class WeatherController
           }
           lVar2 = lVar2._items[targetWeatherID];
           if (lVar2 == null) throw; // [null/range check failed]
-          lVar2.ResourcePoints = 1;
+          *(uint32 *)(lVar2 + 64) = 1;
         }
-        if ((GameController._instance != null) &&
-           (lVar2 = GameController._instance.worldData) != null)
-        {
-          lVar2.nowWeather = targetWeatherID;
-          if ((GameController._instance != null) &&
-             (lVar2 = GameController._instance.worldData) != null
-             ) {
-            lVar2.weatherLastTime = lastTime;
-            if (*pStatics != 0) {
-              SkyController.RefreshCloud(*pStatics,1,0);
+        if ((*pStatics_2cc8 != 0) &&
+           (lVar2 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
+          *(uint32 *)(lVar2 + 0x16c) = targetWeatherID;
+          if ((*pStatics_2cc8 != 0) &&
+             (lVar2 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
+            *(uint32 *)(lVar2 + 0x170) = lastTime;
+            if (*pStatics_35d0 != 0) {
+              SkyController.RefreshCloud(*pStatics_35d0,1,0);
               return;
             }
           }
         }
     }
 
-    // Token : 0x600230D
-    // RVA   : 0x9E2F20   Offset: 0x9E1720   Length: 0x13A
+    // Token : 0x600238F
+    // RVA   : 0xC16E10   Offset: 0xC16210   Length: 0x13A
     public void GameStartRefreshNowWeather()
     {
-        var pStatics = *(int64*)(DAT_181d7e3b0 + 184);
+        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
+        var pStatics_35d0 = *(int64*)(DAT_181da35d0 + 184);
         uint uVar1;
         long lVar2;
         long lVar3;
         lVar2 = this.WeatherDataBase;
-        if (((GameController._instance != null) &&
-            (lVar3 = GameController._instance.worldData) != null)
-           && (lVar2 != null)) {
-          uVar1 = lVar3.nowWeather;
+        if (((*pStatics_2cc8 != 0) &&
+            (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) != null) &&
+           (lVar2 != null)) {
+          uVar1 = *(uint32 *)(lVar3 + 0x16c);
           if (lVar2.Count <= uVar1) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar2 = lVar2._items[uVar1];
           if (lVar2 != null) {
             *(uint32 *)(lVar2 + 64) = 1;
-            if (*pStatics != 0) {
-              SkyController.RefreshCloud(*pStatics,1,0);
+            if (*pStatics_35d0 != 0) {
+              SkyController.RefreshCloud(*pStatics_35d0,1,0);
               return;
             }
           }
         }
     }
 
-    // Token : 0x600230E
-    // RVA   : 0x9E30E0   Offset: 0x9E18E0   Length: 0xEF
+    // Token : 0x6002390
+    // RVA   : 0xC17000   Offset: 0xC16400   Length: 0xEF
     public WeatherData GetNowWeather()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         uint uVar1;
         long lVar2;
         long lVar3;
         lVar2 = this.WeatherDataBase;
-        if (((GameController._instance != null) &&
-            (lVar3 = GameController._instance.worldData) != null)
-           && (lVar2 != null)) {
-          uVar1 = lVar3.nowWeather;
+        if (((*pStatics != 0) &&
+            (lVar3 = *(int64 *)(*pStatics + 32)) != null) &&
+           (lVar2 != null)) {
+          uVar1 = *(uint32 *)(lVar3 + 0x16c);
           if (lVar2.Count <= uVar1) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -792,15 +859,32 @@ public class WeatherController
         }
     }
 
-    // Token : 0x600230F
-    // RVA   : 0x9E45D0   Offset: 0x9E2DD0   Length: 0x76
+    // Token : 0x6002391
+    // RVA   : 0xC18640   Offset: 0xC17A40   Length: 0x100
     public void /*ctor*/()
     {
         ulong uVar1;
-        uVar1 = il2cpp_internal(DAT_181d6e2b0);
-        FUN_180f58a90(uVar1,DAT_181d61af8);
+        uVar1 = il2cpp_internal(DAT_181d911e0);
+        FUN_18132faf0(uVar1,DAT_181d7ddd0);
+        this.weatherSpeAudioSources = uVar1;
+        uVar1 = il2cpp_internal(DAT_181d902e0);
+        FUN_18132faf0(uVar1,DAT_181d78e28);
+        this.weatherSpeParticleSystems = uVar1;
+        uVar1 = il2cpp_internal(DAT_181d92f58);
+        FUN_18132faf0(uVar1,DAT_181d89298);
         this.needHideWeatherObj = uVar1;
         FUN_18044ef50(this,0);
+    }
+
+    // Token : 0x6002392
+    // RVA   : 0xC185E0   Offset: 0xC179E0   Length: 0x5A
+    private static void /*cctor*/()
+    {
+        ulong uVar2;
+        uVar2 = FUN_1800d60b0(DAT_181da07c0,6);
+        puVar1 = *(uint64 **)(DAT_181db4f18 + 184);
+        *puVar1 = uVar2;
+        il2cpp_internal(puVar1,uVar2);
     }
 
 }

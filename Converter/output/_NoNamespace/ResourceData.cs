@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : ResourceData
-// Token : 0x20001CA
+// Token : 0x20001D0
 // ============================================================
 
 public class ResourceData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000BE6
+    // Token: 0x4000C73
     public int resourceType;
 
-    // Token: 0x4000BE7
+    // Token: 0x4000C74
     public float resourceNum;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000E83
-    // RVA   : 0x47A090   Offset: 0x478890   Length: 0x36
+    // Token : 0x6000EB8
+    // RVA   : 0x46E160   Offset: 0x46D560   Length: 0x36
     public void /*ctor*/(int type, float num)
     {
         ZhSegment.Initialize(this,0);
@@ -22,15 +22,15 @@ public class ResourceData
         this.resourceType = type;
     }
 
-    // Token : 0x6000E84
-    // RVA   : 0xC64450   Offset: 0xC62C50   Length: 0xCF
+    // Token : 0x6000EB9
+    // RVA   : 0xD159A0   Offset: 0xD14DA0   Length: 0xCF
     public string GetDescribe()
     {
         uint uVar1;
         long lVar2;
         ulong uVar3;
         ulong uVar4;
-        lVar2 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x430);
+        lVar2 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x438);
         if (lVar2 != null) {
           uVar1 = this.resourceType;
           if (*(uint32 *)(lVar2 + 24) <= uVar1) {
@@ -43,8 +43,8 @@ public class ResourceData
         }
     }
 
-    // Token : 0x6000E85
-    // RVA   : 0xC64520   Offset: 0xC62D20   Length: 0x8B
+    // Token : 0x6000EBA
+    // RVA   : 0xD15A70   Offset: 0xD14E70   Length: 0x8B
     public static ResourceData op_Multiply(ResourceData a, int b)
     {
         float fVar1;
@@ -60,8 +60,8 @@ public class ResourceData
         }
     }
 
-    // Token : 0x6000E86
-    // RVA   : 0xC642D0   Offset: 0xC62AD0   Length: 0x175
+    // Token : 0x6000EBB
+    // RVA   : 0xD15820   Offset: 0xD14C20   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -72,13 +72,13 @@ public class ResourceData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -90,7 +90,7 @@ public class ResourceData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d53c70,plVar1);
+            FUN_180002970(0,DAT_181d78da0,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

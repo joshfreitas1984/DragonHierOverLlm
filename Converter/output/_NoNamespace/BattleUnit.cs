@@ -1,158 +1,173 @@
 // ============================================================
 // Type  : BattleUnit
-// Token : 0x2000179
+// Token : 0x200017E
 // ============================================================
 
 public class BattleUnit
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40009A5
+    // Token: 0x4000A20
     public SkeletonAnimation skeleton;
 
-    // Token: 0x40009A6
+    // Token: 0x4000A21
     public GameObject hipPos;
 
-    // Token: 0x40009A7
+    // Token: 0x4000A22
     public GameObject mouthPos;
 
-    // Token: 0x40009A8
+    // Token: 0x4000A23
     public GameObject bulletPos;
 
-    // Token: 0x40009A9
+    // Token: 0x4000A24
     public bool playerControl;
 
-    // Token: 0x40009AA
+    // Token: 0x4000A25
     public HeroData heroData;
 
-    // Token: 0x40009AB
+    // Token: 0x4000A26
     public BattleUnit summonSourceHero;
 
-    // Token: 0x40009AC
+    // Token: 0x4000A27
     public KungfuSkillLvData summonSourceSkill;
 
-    // Token: 0x40009AD
+    // Token: 0x4000A28
     public BattleTeam battleTeam;
 
-    // Token: 0x40009AE
+    // Token: 0x4000A29
     public GridUnitData mapGrid;
 
-    // Token: 0x40009AF
+    // Token: 0x4000A2A
     public GameObject followUI;
 
-    // Token: 0x40009B0
+    // Token: 0x4000A2B
     public List<AudioSource> heroAudioSources;
 
-    // Token: 0x40009B1
+    // Token: 0x4000A2C
     public List<float> heroAudioSouceVolumn;
 
-    // Token: 0x40009B2
+    // Token: 0x4000A2D
     public Trail trail;
 
-    // Token: 0x40009B3
+    // Token: 0x4000A2E
     public SmokeTrail smokeTrail;
 
-    // Token: 0x40009B4
+    // Token: 0x4000A2F
     public SmokePlume smokePlume;
 
-    // Token: 0x40009B5
+    // Token: 0x4000A30
     public ParticleSystem weaponLight;
 
-    // Token: 0x40009B6
+    // Token: 0x4000A31
     public ActionBarUnit actionBarUnit;
 
-    // Token: 0x40009B7
+    // Token: 0x4000A32
     public BattleInfoData battleInfo;
 
-    // Token: 0x40009B8
+    // Token: 0x4000A33
     public bool autoFight;
 
-    // Token: 0x40009B9
+    // Token: 0x4000A34
     public float battleMove;
 
-    // Token: 0x40009BA
+    // Token: 0x4000A35
     public bool moved;
 
-    // Token: 0x40009BB
+    // Token: 0x4000A36
     public bool attacked;
 
-    // Token: 0x40009BC
+    // Token: 0x4000A37
     public bool reborn;
 
-    // Token: 0x40009BD
+    // Token: 0x4000A38
     public int stepMoved;
 
-    // Token: 0x40009BE
+    // Token: 0x4000A39
     public float originHp;
 
-    // Token: 0x40009BF
+    // Token: 0x4000A3A
     public float originMp;
 
-    // Token: 0x40009C0
+    // Token: 0x4000A3B
     public float originExternalInjury;
 
-    // Token: 0x40009C1
+    // Token: 0x4000A3C
     public float originInternalInjury;
 
-    // Token: 0x40009C2
+    // Token: 0x4000A3D
     public float originPoisonInjury;
 
-    // Token: 0x40009C3
+    // Token: 0x4000A3E
     public static Vector3 headPos;
 
-    // Token: 0x40009C4
+    // Token: 0x4000A3F
     public static Vector3 highLightScale;
 
-    // Token: 0x40009C5
+    // Token: 0x4000A40
     public static float UnitMoveOneGridTime;
 
-    // Token: 0x40009C6
+    // Token: 0x4000A41
     public static int damageBaseFontSize;
 
-    // Token: 0x40009C7
+    // Token: 0x4000A42
     public bool inited;
 
-    // Token: 0x40009C8
+    // Token: 0x4000A43
     public bool destroyed;
 
-    // Token: 0x40009C9
+    // Token: 0x4000A44
     private KungfuSkillLvData nowOnAttackSkill;
 
-    // Token: 0x40009CA
+    // Token: 0x4000A45
+    private Image damageBarImage;
+
+    // Token: 0x4000A46
+    private RectTransform damageBarRect;
+
+    // Token: 0x4000A47
+    private GameObject protectIconObj;
+
+    // Token: 0x4000A48
+    private GameObject summonIconObj;
+
+    // Token: 0x4000A49
+    private bool damageBarShown;
+
+    // Token: 0x4000A4A
     private static readonly List<Vector3> SummonFollowUIOffset;
 
-    // Token: 0x40009CB
+    // Token: 0x4000A4B
     public bool killTalk;
 
-    // Token: 0x40009CC
+    // Token: 0x4000A4C
     private GameObject invincibleEffect;
 
-    // Token: 0x40009CD
+    // Token: 0x4000A4D
     public int OnceShowText;
 
-    // Token: 0x40009CE
+    // Token: 0x4000A4E
     public static List<string> HeroKillTalk;
 
-    // Token: 0x40009CF
+    // Token: 0x4000A4F
     public static List<string> HeroDeadTalk;
 
-    // Token: 0x40009D0
+    // Token: 0x4000A50
     public static List<string> HeroLowHpTalk;
 
-    // Token: 0x40009D1
+    // Token: 0x4000A51
     public static List<string> StudyFightStartTalk;
 
-    // Token: 0x40009D2
+    // Token: 0x4000A52
     public static List<string> DeathFightStartTalk;
 
-    // Token: 0x40009D3
+    // Token: 0x4000A53
     public static List<string> UseSkillTalk;
 
-    // Token: 0x40009D4
+    // Token: 0x4000A54
     public static List<string> FriendDeadTalk;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000C1A
-    // RVA   : 0x8EB890   Offset: 0x8EA090   Length: 0x38
+    // Token : 0x6000C44
+    // RVA   : 0x8D6840   Offset: 0x8D5C40   Length: 0x38
     public bool get_IsAlive()
     {
         long lVar1;
@@ -166,15 +181,17 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C1B
-    // RVA   : 0x8EA070   Offset: 0x8E8870   Length: 0x7
+    // Token : 0x6000C45
+    // RVA   : 0x8D5020   Offset: 0x8D4420   Length: 0x7
     private void Start()
     {
+        void FUN_1808d5020(uint64 this)
+        {
         BattleUnit.Init(this,0);
     }
 
-    // Token : 0x6000C1C
-    // RVA   : 0x8E21E0   Offset: 0x8E09E0   Length: 0x139
+    // Token : 0x6000C46
+    // RVA   : 0x8CD450   Offset: 0x8CC850   Length: 0x139
     public bool AISettingControlable()
     {
         int iVar1;
@@ -215,8 +232,8 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C1D
-    // RVA   : 0x8E2CE0   Offset: 0x8E14E0   Length: 0x66
+    // Token : 0x6000C47
+    // RVA   : 0x8CDF50   Offset: 0x8CD350   Length: 0x66
     public void ChangeAutoType()
     {
         ulong uVar1;
@@ -229,7 +246,7 @@ public class BattleUnit
         }
         this.autoFight = 1;
         this.playerControl = 0;
-        lVar3 = PlotController.StopWarCostFavor;
+        lVar3 = *(int64 *)(*(int64 *)(DAT_181db0248 + 184) + 80);
         if (lVar3 != null) {
           uVar1 = *(uint64 *)(lVar3 + 0x110);
           cVar2 = Object.op_Equality(uVar1,this,0);
@@ -279,8 +296,8 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C1E
-    // RVA   : 0x8E2D50   Offset: 0x8E1550   Length: 0x2F1
+    // Token : 0x6000C48
+    // RVA   : 0x8CDFC0   Offset: 0x8CD3C0   Length: 0x2F1
     public void ChangeAutoType(bool auto)
     {
         ulong uVar1;
@@ -293,7 +310,7 @@ public class BattleUnit
         }
         this.autoFight = 1;
         this.playerControl = 0;
-        lVar3 = PlotController.StopWarCostFavor;
+        lVar3 = *(int64 *)(*(int64 *)(DAT_181db0248 + 184) + 80);
         if (lVar3 != null) {
           uVar1 = *(uint64 *)(lVar3 + 0x110);
           cVar2 = Object.op_Equality(uVar1,this,0);
@@ -343,8 +360,8 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C1F
-    // RVA   : 0x8E7120   Offset: 0x8E5920   Length: 0x81
+    // Token : 0x6000C49
+    // RVA   : 0x8D2390   Offset: 0x8D1790   Length: 0x81
     public BattleUnit GetSummonSource()
     {
         bool cVar1;
@@ -363,8 +380,8 @@ public class BattleUnit
         return this;
     }
 
-    // Token : 0x6000C20
-    // RVA   : 0x8E7070   Offset: 0x8E5870   Length: 0xA0
+    // Token : 0x6000C4A
+    // RVA   : 0x8D22E0   Offset: 0x8D16E0   Length: 0xA0
     public KungfuSkillLvData GetSummonSourceSkill()
     {
         bool cVar1;
@@ -388,8 +405,8 @@ public class BattleUnit
         return uVar3;
     }
 
-    // Token : 0x6000C21
-    // RVA   : 0x8E6B70   Offset: 0x8E5370   Length: 0x123
+    // Token : 0x6000C4B
+    // RVA   : 0x8D1DE0   Offset: 0x8D11E0   Length: 0x123
     public AttackDirectionType GetAttackDirectionType(GridUnitData sourceMapGrid)
     {
         ulong uVar1;
@@ -450,8 +467,8 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C22
-    // RVA   : 0x8E7520   Offset: 0x8E5D20   Length: 0x2B8
+    // Token : 0x6000C4C
+    // RVA   : 0x8D2790   Offset: 0x8D1B90   Length: 0x2B8
     private void Init()
     {
         long lVar1;
@@ -483,17 +500,17 @@ public class BattleUnit
           fVar2 = local_40;
           if (this.skeleton != null) {
             lVar5 = *(int64 *)(this.skeleton + 224);
-            uVar3 = new OnTooltipCB(this,DAT_181d60bd0,0);
+            uVar3 = new OnTooltipCB(this,DAT_181d893f0,0);
             fVar2 = local_40;
             if (lVar5 != null) {
               AnimationState.add_Event(lVar5,uVar3,0);
               lVar5 = Component.get_gameObject(this,0);
               fVar2 = local_40;
               if ((lVar5 != null) &&
-                 (lVar5 = GameObject.AddComponent(lVar5,DAT_181d9c4f0), fVar2 = local_40) != null) {
+                 (lVar5 = GameObject.AddComponent(lVar5,DAT_181dc5290), fVar2 = local_40) != null) {
                 FootStepController.Init(lVar5,this.skeleton,0);
-                uVar3 = il2cpp_internal(DAT_181d721b0);
-                FUN_180f58a90(uVar3,DAT_181d79358);
+                uVar3 = il2cpp_internal(DAT_181d96ed0);
+                FUN_18132faf0(uVar3,DAT_181da0cf8);
                 this.heroAudioSouceVolumn = uVar3;
                 lVar5 = this.heroAudioSources;
                 uVar6 = 0;
@@ -514,7 +531,7 @@ public class BattleUnit
                     fVar2 = local_40;
                     if ((lVar5 == null) ||
                        (uVar8 = AudioSource.get_volume(lVar5,0), fVar2 = local_40, lVar1 == null)) break;
-                    FUN_181805690(lVar1,uVar8,DAT_181d79458);
+                    FUN_18181de10(lVar1,uVar8,DAT_181da0df8);
                     lVar5 = this.heroAudioSources;
                     uVar6 = uVar6 + 1;
                     lVar7 = lVar7 + 8;
@@ -529,8 +546,8 @@ public class BattleUnit
         local_40 = fVar2;
     }
 
-    // Token : 0x6000C23
-    // RVA   : 0x8E71B0   Offset: 0x8E59B0   Length: 0x360
+    // Token : 0x6000C4D
+    // RVA   : 0x8D2420   Offset: 0x8D1820   Length: 0x360
     private void HandleEvent(TrackEntry trackEntry, Event e)
     {
         long lVar1;
@@ -541,11 +558,11 @@ public class BattleUnit
         uint uVar8;
         float fVar9;
         if ((e != null) && (*(int64 *)(e + 16) != 0)) {
-          cVar2 = FUN_1816fd990(*(uint64 *)(*(int64 *)(e + 16) + 16),"skillshoot",0);
+          cVar2 = FUN_18171e540(*(uint64 *)(*(int64 *)(e + 16) + 16),"skillshoot",0);
           if (!cVar2) {
             if (*(int64 *)(e + 16) != 0) {
               lVar1 = *(int64 *)(*(int64 *)(e + 16) + 16);
-              lVar4 = FUN_1800d60b0(DAT_181d7c118,1);
+              lVar4 = FUN_1800d60b0(DAT_181da1040,1);
               if (lVar4 != null) {
                 if (*(int *)(lVar4 + 24) == 0) {
                   uVar5 = il2cpp_internal();
@@ -576,8 +593,7 @@ public class BattleUnit
                       }
                       if (lVar1 != null) {
                         AudioSource.set_volume
-                                  (lVar1,fVar9 * *(float *)(*(int64 *)
-                                                             (GameController_StaticsPtr + 184) + 16),0)
+                                  (lVar1,fVar9 * *(float *)(*(int64 *)(DAT_181d72d50 + 184) + 16),0)
                         ;
                         lVar1 = this.heroAudioSources;
                         if (lVar1 != null) {
@@ -603,7 +619,7 @@ public class BattleUnit
                               plVar6 = (int64 *)Resources.Load(uVar5,0);
                               if (lVar1 != null) {
                                 plVar7 = (int64 *)0;
-                                if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181d8a228)) {
+                                if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf348)) {
                                   plVar7 = plVar6;
                                 }
                                 AudioSource.PlayOneShot(lVar1,plVar7,0);
@@ -620,18 +636,18 @@ public class BattleUnit
             }
           }
           else {
-            lVar1 = PlotController.StopWarCostFavor;
+            lVar1 = *(int64 *)(*(int64 *)(DAT_181db0248 + 184) + 80);
             if (lVar1 != null) {
               uVar5 = BattleController.BattleUnitAttackHappen(lVar1,0);
-              FUN_180d837c0(this,uVar5,0);
+              FUN_180d8c2e0(this,uVar5,0);
               return;
             }
           }
         }
     }
 
-    // Token : 0x6000C24
-    // RVA   : 0x8E3050   Offset: 0x8E1850   Length: 0x14B
+    // Token : 0x6000C4E
+    // RVA   : 0x8CE2C0   Offset: 0x8CD6C0   Length: 0x14B
     public void ChangeBattleMove(float num, bool useMaxFightMovePower, bool useAnim)
     {
         float fVar1;
@@ -643,27 +659,27 @@ public class BattleUnit
           uVar4 = 0x497423f0;
         }
         else {
-          uVar4 = *(uint32 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x228);
+          uVar4 = *(uint32 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x230);
         }
-        uVar4 = FUN_1810a8ba0(fVar1 + num,0,uVar4,0);
+        uVar4 = FUN_1810e36c0(fVar1 + num,0,uVar4,0);
         this.battleMove = uVar4;
         uVar2 = this.actionBarUnit;
         cVar3 = Object.op_Inequality(uVar2,0,0);
         if ((cVar3) && (!this.destroyed)) {
           if (this.heroData == null) {
-        LAB_1808e3196:
+        LAB_1808ce406:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           if (0.0 < this.heroData.hp) {
-            if (this.actionBarUnit == null) goto LAB_1808e3196;
+            if (this.actionBarUnit == null) goto LAB_1808ce406;
             ActionBarUnit.RefreshActionBarUnit(this.actionBarUnit,useAnim,0);
           }
         }
     }
 
-    // Token : 0x6000C25
-    // RVA   : 0x8E9A00   Offset: 0x8E8200   Length: 0x93
+    // Token : 0x6000C4F
+    // RVA   : 0x8D49B0   Offset: 0x8D3DB0   Length: 0x93
     public void SetWeaponTrail(bool start, int trailType)
     {
         long lVar1;
@@ -675,7 +691,7 @@ public class BattleUnit
               *(uint8 *)(this.smokePlume + 32) = 0;
               if ((start) && (-1 < trailType)) {
                 if (trailType == null) {
-                  trailType = FUN_180d8cf10(1);
+                  trailType = FUN_180d95a30(1);
                 }
                 if (trailType == 1) {
                   lVar1 = this.trail;
@@ -698,10 +714,11 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C26
-    // RVA   : 0x8EA1C0   Offset: 0x8E89C0   Length: 0x189
+    // Token : 0x6000C50
+    // RVA   : 0x8D5170   Offset: 0x8D4570   Length: 0x189
     private void Update()
     {
+        var pStatics = *(int64*)(DAT_181db0248 + 184);
         float fVar1;
         long lVar2;
         long lVar3;
@@ -711,12 +728,12 @@ public class BattleUnit
         BattleUnit.RefreshFollowUI(this,0);
         if (this.skeleton != null) {
           fVar1 = *(float *)(this.skeleton + 300);
-          lVar2 = PlotController.StopWarCostFavor;
+          lVar2 = *(int64 *)(pStatics + 80);
           if (lVar2 != null) {
             fVar4 = (float)BattleController.GetHalfBattleTimeScale(lVar2,0);
             if (fVar1 != fVar4) {
               lVar2 = this.skeleton;
-              lVar3 = PlotController.StopWarCostFavor;
+              lVar3 = *(int64 *)(pStatics + 80);
               if ((lVar3 == null) || (uVar5 = BattleController.GetHalfBattleTimeScale(lVar3,0), lVar2 == null))
               throw; // [null/range check failed]
               *(uint32 *)(lVar2 + 300) = uVar5;
@@ -726,8 +743,8 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C27
-    // RVA   : 0x8E7B00   Offset: 0x8E6300   Length: 0x214
+    // Token : 0x6000C51
+    // RVA   : 0x8D2D70   Offset: 0x8D2170   Length: 0x214
     public void PlayHeroSound(AudioClip targetAudioClip, HeroAudioTrack targetTrack, bool forcePlay, bool useVoicePitch)
     {
         void BattleUnit.PlayHeroSound
@@ -768,13 +785,13 @@ public class BattleUnit
         }
         lVar2 = *(int64 *)(lVar2._items + 32 + lVar5 * 8);
         if (!useVoicePitch) {
-        LAB_1808e7c1a:
+        LAB_1808d2e8a:
           uVar6 = 0x3f800000;
         }
         else {
           lVar3 = this.heroData;
           if (lVar3 == null) throw; // [null/range check failed]
-          if (lVar3.isSummon) goto LAB_1808e7c1a;
+          if (lVar3.isSummon) goto LAB_1808d2e8a;
           uVar6 = HeroData.GetHeroSoundVoiceAgePitch(lVar3,0);
         }
         if (lVar2 != null) {
@@ -793,8 +810,7 @@ public class BattleUnit
               fVar1 = *(float *)(lVar3.isSummon + 32 + lVar5 * 4);
               if (lVar2 != null) {
                 AudioSource.set_volume
-                          (lVar2,fVar1 * *(float *)(*(int64 *)(GameController_StaticsPtr + 184) + 16
-                                                   ),0);
+                          (lVar2,fVar1 * *(float *)(*(int64 *)(DAT_181d72d50 + 184) + 16),0);
                 lVar2 = this.heroAudioSources;
                 if (lVar2 != null) {
                   if (lVar2.Count <= targetTrack) {
@@ -812,26 +828,27 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C28
-    // RVA   : 0x8E7FA0   Offset: 0x8E67A0   Length: 0x171A
+    // Token : 0x6000C52
+    // RVA   : 0x8D3210   Offset: 0x8D2610   Length: 0x1453
     public void RefreshFollowUI()
     {
-        var pStatics = *(int64*)(DAT_181d4e188 + 184);
-        float fVar2;
+        var pStatics_0248 = *(int64*)(DAT_181db0248 + 184);
+        var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
+        float fVar1;
+        bool cVar2;
         uint uVar3;
         bool cVar4;
         long lVar5;
         ulong uVar6;
         long lVar9;
         ulong uVar11;
-        ulong uVar12;
+        float fVar13;
         float fVar14;
         float fVar15;
-        float fVar16;
+        uint uVar16;
         uint uVar17;
         uint uVar18;
-        uint uVar19;
-        float fVar20;
+        float fVar19;
         ulong local_b8;
         float local_b0;
         ulong local_a8;
@@ -842,251 +859,195 @@ public class BattleUnit
         uint uStack_84;
         uint uStack_80;
         uint32 uStack_7c;
-        lVar5 = this.followUI;
-        cVar4 = Object.op_Equality(lVar5,0,0);
+        uVar6 = this.followUI;
+        cVar4 = Object.op_Equality(uVar6,0,0);
         if (cVar4) {
-          uVar11 = local_b8;
-          if ((((*pStatics == 0) ||
-               (lVar5 = *(int64 *)(*pStatics + 56)) == null) ||
-              (lVar5 = GameObject.get_transform(lVar5,0), uVar11 = local_b8) == null) ||
-             (lVar5 = Transform.Find(lVar5,"HeroFollowUI",0), uVar11 = local_b8) == null)
-          goto LAB_1808e96b5;
+          if ((((*pStatics_2ee8 == 0) ||
+               (lVar5 = *(int64 *)(*pStatics_2ee8 + 56)) == null) ||
+              (lVar5 = GameObject.get_transform(lVar5,0)) == null) ||
+             (lVar5 = Transform.Find(lVar5,"HeroFollowUI",0)) == null) goto LAB_1808d465e;
           uVar6 = Component.get_gameObject(lVar5,0);
-          lVar5 = PlotController.StopWarCostFavor;
-          uVar11 = local_b8;
-          if (lVar5 == null) goto LAB_1808e96b5;
-          uVar11 = lVar5.maxLivingSkill;
-          lVar5 = GlobalData.AddChild(uVar6,uVar11,0);
-          *plVar1 = lVar5;
-          il2cpp_internal(plVar1,lVar5);
-          uVar11 = local_b8;
-          if (this.battleTeam == null) goto LAB_1808e96b5;
-          lVar5 = *plVar1;
+          lVar5 = *(int64 *)(pStatics_0248 + 80);
+          if (lVar5 == null) goto LAB_1808d465e;
+          uVar11 = *(uint64 *)(lVar5 + 0x160);
+          uVar6 = GlobalData.AddChild(uVar6,uVar11,0);
+          this.followUI = uVar6;
+          if (((this.followUI == null) ||
+              (lVar5 = GameObject.get_transform(this.followUI,0)) == null) ||
+             (lVar5 = Transform.Find(lVar5,"DamageBar",0)) == null) goto LAB_1808d465e;
+          uVar6 = Component.GetComponent(lVar5,DAT_181d94460);
+          this.damageBarImage = uVar6;
+          uVar6 = Component.GetComponent(lVar5,DAT_181d94f60);
+          this.damageBarRect = uVar6;
+          if (((this.followUI == null) ||
+              (lVar5 = GameObject.get_transform(this.followUI,0)) == null) ||
+             (lVar5 = Transform.Find(lVar5,"ProtectIcon",0)) == null) goto LAB_1808d465e;
+          uVar6 = Component.get_gameObject(lVar5,0);
+          this.protectIconObj = uVar6;
+          if (((this.followUI == null) ||
+              (lVar5 = GameObject.get_transform(this.followUI,0)) == null) ||
+             (lVar5 = Transform.Find(lVar5,"SummonIcon",0)) == null) goto LAB_1808d465e;
+          uVar6 = Component.get_gameObject(lVar5,0);
+          this.summonIconObj = uVar6;
+          if (this.battleTeam == null) goto LAB_1808d465e;
+          lVar5 = this.protectIconObj;
           if (this.battleTeam.ID == null) {
-            if (((lVar5 == null) ||
-                (lVar5 = GameObject.get_transform(lVar5,0), uVar11 = local_b8) == null) ||
-               (lVar5 = Transform.Find(lVar5,"ProtectIcon",0), uVar11 = local_b8) == null)
-            goto LAB_1808e96b5;
-            plVar7 = (int64 *)Component.GetComponent(lVar5,DAT_181d6bc40);
+            if (lVar5 == null) goto LAB_1808d465e;
+            plVar7 = (int64 *)GameObject.GetComponent(lVar5,DAT_181d71e80);
             puVar8 = (uint64 *)Color.get_green(&local_98,0);
-            uVar11 = local_b8;
-            if (plVar7 == (int64 *)0) goto LAB_1808e96b5;
+            if (plVar7 == (int64 *)0) goto LAB_1808d465e;
             local_98 = *puVar8;
             uStack_90 = puVar8[1];
             (**(code **)(*plVar7 + 0x2a8))(plVar7,&local_98,*(uint64 *)(*plVar7 + 0x2b0));
-            uVar11 = local_b8;
-            if (((*plVar1 == 0) ||
-                (lVar5 = GameObject.get_transform(*plVar1,0), uVar11 = local_b8) == null) ||
-               (lVar5 = Transform.Find(lVar5,"SummonIcon",0), uVar11 = local_b8) == null)
-            goto LAB_1808e96b5;
-            plVar7 = (int64 *)Component.GetComponent(lVar5,DAT_181d6bc40);
+            if (this.summonIconObj == null) goto LAB_1808d465e;
+            plVar7 = (int64 *)GameObject.GetComponent(this.summonIconObj,DAT_181d71e80);
             puVar8 = (uint64 *)Color.get_green(&local_98,0);
-            uVar11 = local_b8;
-            if (plVar7 == (int64 *)0) goto LAB_1808e96b5;
+            if (plVar7 == (int64 *)0) goto LAB_1808d465e;
             local_98 = *puVar8;
             uStack_90 = puVar8[1];
             (**(code **)(*plVar7 + 0x2a8))(plVar7,&local_98,*(uint64 *)(*plVar7 + 0x2b0));
-            uVar11 = local_b8;
-            if (((*plVar1 == 0) ||
-                (lVar5 = GameObject.get_transform(*plVar1,0), uVar11 = local_b8) == null) ||
-               (lVar5 = Transform.Find(lVar5,"HpBar",0), uVar11 = local_b8) == null)
-            goto LAB_1808e96b5;
-            plVar7 = (int64 *)Component.GetComponent(lVar5,DAT_181d6bc40);
+            if (((this.followUI == null) ||
+                (lVar5 = GameObject.get_transform(this.followUI,0)) == null) ||
+               (lVar5 = Transform.Find(lVar5,"HpBar",0)) == null) goto LAB_1808d465e;
+            plVar7 = (int64 *)Component.GetComponent(lVar5,DAT_181d94460);
             puVar8 = (uint64 *)Color.get_green(&local_98,0);
           }
           else {
-            if (((lVar5 == null) ||
-                (lVar5 = GameObject.get_transform(lVar5,0), uVar11 = local_b8) == null) ||
-               (lVar5 = Transform.Find(lVar5,"ProtectIcon",0), uVar11 = local_b8) == null)
-            goto LAB_1808e96b5;
-            plVar7 = (int64 *)Component.GetComponent(lVar5,DAT_181d6bc40);
+            if (lVar5 == null) goto LAB_1808d465e;
+            plVar7 = (int64 *)GameObject.GetComponent(lVar5,DAT_181d71e80);
             puVar8 = (uint64 *)Color.get_red(&local_98,0);
-            uVar11 = local_b8;
-            if (plVar7 == (int64 *)0) goto LAB_1808e96b5;
+            if (plVar7 == (int64 *)0) goto LAB_1808d465e;
             local_98 = *puVar8;
             uStack_90 = puVar8[1];
             (**(code **)(*plVar7 + 0x2a8))(plVar7,&local_98,*(uint64 *)(*plVar7 + 0x2b0));
-            uVar11 = local_b8;
-            if (((*plVar1 == 0) ||
-                (lVar5 = GameObject.get_transform(*plVar1,0), uVar11 = local_b8) == null) ||
-               (lVar5 = Transform.Find(lVar5,"SummonIcon",0), uVar11 = local_b8) == null)
-            goto LAB_1808e96b5;
-            plVar7 = (int64 *)Component.GetComponent(lVar5,DAT_181d6bc40);
+            if (this.summonIconObj == null) goto LAB_1808d465e;
+            plVar7 = (int64 *)GameObject.GetComponent(this.summonIconObj,DAT_181d71e80);
             puVar8 = (uint64 *)Color.get_red(&local_98,0);
-            uVar11 = local_b8;
-            if (plVar7 == (int64 *)0) goto LAB_1808e96b5;
+            if (plVar7 == (int64 *)0) goto LAB_1808d465e;
             local_98 = *puVar8;
             uStack_90 = puVar8[1];
             (**(code **)(*plVar7 + 0x2a8))(plVar7,&local_98,*(uint64 *)(*plVar7 + 0x2b0));
-            uVar11 = local_b8;
-            if (((*plVar1 == 0) ||
-                (lVar5 = GameObject.get_transform(*plVar1,0), uVar11 = local_b8) == null) ||
-               (lVar5 = Transform.Find(lVar5,"HpBar",0), uVar11 = local_b8) == null)
-            goto LAB_1808e96b5;
-            plVar7 = (int64 *)Component.GetComponent(lVar5,DAT_181d6bc40);
+            if (((this.followUI == null) ||
+                (lVar5 = GameObject.get_transform(this.followUI,0)) == null) ||
+               (lVar5 = Transform.Find(lVar5,"HpBar",0)) == null) goto LAB_1808d465e;
+            plVar7 = (int64 *)Component.GetComponent(lVar5,DAT_181d94460);
             puVar8 = (uint64 *)Color.get_red(&local_98,0);
           }
-          uVar11 = local_b8;
-          if (plVar7 == (int64 *)0) goto LAB_1808e96b5;
+          if (plVar7 == (int64 *)0) goto LAB_1808d465e;
           local_98 = *puVar8;
           uStack_90 = puVar8[1];
           (**(code **)(*plVar7 + 0x2a8))(plVar7,&local_98,*(uint64 *)(*plVar7 + 0x2b0));
         }
-        uVar11 = local_b8;
-        if (*plVar1 == 0) goto LAB_1808e96b5;
-        lVar5 = GameObject.get_transform(*plVar1,0);
-        uVar11 = local_b8;
+        if (this.followUI == null) goto LAB_1808d465e;
+        lVar5 = GameObject.get_transform(this.followUI,0);
         if (((this.hipPos == null) ||
-            (lVar9 = GameObject.get_transform(this.hipPos,0), uVar11 = local_b8,
-            lVar9 == null)) ||
-           (puVar8 = (uint64 *)Transform.get_position(&local_b8,lVar9,0), uVar11 = local_b8,
-           lVar5 == null)) goto LAB_1808e96b5;
+            (lVar9 = GameObject.get_transform(this.hipPos,0)) == null) ||
+           (puVar8 = (uint64 *)Transform.get_position(&local_b8,lVar9,0), lVar5 == null))
+        goto LAB_1808d465e;
         local_a8 = *puVar8;
         local_a0 = *(float *)(puVar8 + 1);
         Transform.set_position(lVar5,&local_a8,0);
-        uVar11 = local_b8;
-        if (this.heroData == null) goto LAB_1808e96b5;
+        if (this.heroData == null) goto LAB_1808d465e;
         if (this.heroData.isSummon) {
-          if ((*plVar1 == 0) ||
-             (lVar5 = GameObject.get_transform(*plVar1,0), uVar11 = local_b8) == null)
-          goto LAB_1808e96b5;
+          if ((this.followUI == null) ||
+             (lVar5 = GameObject.get_transform(this.followUI,0)) == null)
+          goto LAB_1808d465e;
           puVar8 = (uint64 *)Transform.get_localPosition(&local_b8,lVar5,0);
           local_a8 = *puVar8;
           local_a0 = *(float *)(puVar8 + 1);
-          lVar9 = BattleUnit.SummonFollowUIOffset;
-          uVar11 = local_b8;
-          if ((this.heroData == null) || (lVar9 == null)) goto LAB_1808e96b5;
+          lVar9 = *(int64 *)(*(int64 *)(DAT_181db07c8 + 184) + 32);
+          if ((this.heroData == null) || (lVar9 == null)) goto LAB_1808d465e;
           uVar3 = this.heroData.summonID;
           if (lVar9.summonLv <= uVar3) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           local_b8 = lVar9.isSummon[uVar3];
           local_b0 = *(float *)(lVar9.isSummon + 40 + (int64)(int)uVar3 * 12);
-          lVar9 = PlotController.StopWarCostFavor;
-          uVar11 = local_b8;
-          if (((lVar9 = lVar9?.atAreaID) == null) ||
-             (lVar9 = GameObject.get_transform(lVar9,0), uVar11 = local_b8) == null)
-          goto LAB_1808e96b5;
+
+          if (((lVar9 = *(int64 *)(pStatics_0248 + 80)?.atAreaID) == null) ||
+             (lVar9 = GameObject.get_transform(lVar9,0)) == null) goto LAB_1808d465e;
           pfVar10 = (float *)Transform.get_localScale(&local_98,lVar9,0);
-          fVar14 = *pfVar10;
-          local_b0 = local_b0 * fVar14 + local_a0;
-          local_a8 = CONCAT44(local_b8._4_4_ * fVar14 + local_a8._4_4_,
-                              fVar14 * (float)local_b8 + (float)local_a8);
+          fVar13 = *pfVar10;
+          local_b0 = fVar13 * local_b0 + local_a0;
+          local_a8 = CONCAT44(fVar13 * local_b8._4_4_ + local_a8._4_4_,
+                              fVar13 * (float)local_b8 + (float)local_a8);
           local_a0 = local_b0;
           Transform.set_localPosition(lVar5,&local_a8,0);
         }
-        uVar11 = local_b8;
-        if (*plVar1 == 0) goto LAB_1808e96b5;
-        lVar5 = GameObject.get_transform(*plVar1,0);
-        lVar9 = PlotController.StopWarCostFavor;
-        uVar11 = local_b8;
-        if ((((lVar9 = lVar9?.atAreaID) == null) ||
-            (lVar9 = GameObject.get_transform(lVar9,0), uVar11 = local_b8) == null) ||
-           (puVar8 = (uint64 *)Transform.get_localScale(&local_98,lVar9,0), uVar11 = local_b8,
-           lVar5 == null)) goto LAB_1808e96b5;
+        if (this.followUI == null) goto LAB_1808d465e;
+        lVar5 = GameObject.get_transform(this.followUI,0);
+
+        if ((((lVar9 = *(int64 *)(pStatics_0248 + 80)?.atAreaID) == null) ||
+            (lVar9 = GameObject.get_transform(lVar9,0)) == null) ||
+           (puVar8 = (uint64 *)Transform.get_localScale(&local_98,lVar9,0), lVar5 == null))
+        goto LAB_1808d465e;
         local_a8 = *puVar8;
         local_a0 = *(float *)(puVar8 + 1);
         Transform.set_localScale(lVar5,&local_a8,0);
-        uVar11 = local_b8;
-        if (this.heroData == null) goto LAB_1808e96b5;
-        HeroData.SetHpBar(this.heroData,*plVar1,0);
-        uVar11 = local_b8;
-        if (this.heroData == null) goto LAB_1808e96b5;
-        HeroData.SetMpBar(this.heroData,*plVar1,0);
-        uVar11 = local_b8;
-        if (((*plVar1 == 0) ||
-            (lVar5 = GameObject.get_transform(*plVar1,0), uVar11 = local_b8) == null) ||
-           ((lVar5 = Transform.Find(lVar5,"ProtectIcon",0), uVar11 = local_b8, lVar5 == null ||
-            (lVar5 = Component.get_gameObject(lVar5,0), uVar11 = local_b8) == null)))
-        goto LAB_1808e96b5;
-        cVar4 = GameObject.get_activeSelf(lVar5,0);
-        uVar11 = local_b8;
-        if (this.heroData == null) goto LAB_1808e96b5;
-        if (cVar4 != this.heroData.fightProtectTarget) {
-          if (((*plVar1 == 0) ||
-              (lVar5 = GameObject.get_transform(*plVar1,0), uVar11 = local_b8) == null) ||
-             (lVar5 = Transform.Find(lVar5,"ProtectIcon",0), uVar11 = local_b8) == null)
-          goto LAB_1808e96b5;
-          lVar5 = Component.get_gameObject(lVar5,0);
-          uVar11 = local_b8;
-          if ((this.heroData == null) || (lVar5 == null)) goto LAB_1808e96b5;
-          GameObject.SetActive(lVar5,this.heroData.fightProtectTarget,0);
+        if (this.heroData == null) goto LAB_1808d465e;
+        HeroData.SetHpBar(this.heroData,this.followUI,0);
+        if (this.heroData == null) goto LAB_1808d465e;
+        HeroData.SetMpBar(this.heroData,this.followUI,0);
+        if (this.protectIconObj == null) goto LAB_1808d465e;
+        cVar4 = GameObject.get_activeSelf(this.protectIconObj,0);
+        if (this.heroData == null) goto LAB_1808d465e;
+        cVar2 = this.heroData.fightProtectTarget;
+        if (cVar4 != cVar2) {
+          if (this.protectIconObj == null) goto LAB_1808d465e;
+          GameObject.SetActive(this.protectIconObj,cVar2,0);
         }
-        uVar11 = local_b8;
-        if ((((*plVar1 == 0) ||
-             (lVar5 = GameObject.get_transform(*plVar1,0), uVar11 = local_b8) == null) ||
-            (lVar5 = Transform.Find(lVar5,"SummonIcon",0), uVar11 = local_b8) == null) ||
-           (lVar5 = Component.get_gameObject(lVar5,0), uVar11 = local_b8) == null)
-        goto LAB_1808e96b5;
-        cVar4 = GameObject.get_activeSelf(lVar5,0);
-        uVar11 = local_b8;
-        if (this.heroData == null) goto LAB_1808e96b5;
-        if (cVar4 != this.heroData.isSummon) {
-          if (((*plVar1 == 0) ||
-              (lVar5 = GameObject.get_transform(*plVar1,0), uVar11 = local_b8) == null) ||
-             (lVar5 = Transform.Find(lVar5,"SummonIcon",0), uVar11 = local_b8) == null)
-          goto LAB_1808e96b5;
-          lVar5 = Component.get_gameObject(lVar5,0);
-          uVar11 = local_b8;
-          if ((this.heroData == null) || (lVar5 == null)) goto LAB_1808e96b5;
-          GameObject.SetActive(lVar5,this.heroData.isSummon,0);
+        if (this.summonIconObj == null) goto LAB_1808d465e;
+        cVar4 = GameObject.get_activeSelf(this.summonIconObj,0);
+        if (this.heroData == null) goto LAB_1808d465e;
+        cVar2 = this.heroData.isSummon;
+        if (cVar4 != cVar2) {
+          if (this.summonIconObj == null) goto LAB_1808d465e;
+          GameObject.SetActive(this.summonIconObj,cVar2,0);
         }
-        lVar5 = PlotController.StopWarCostFavor;
-        uVar11 = local_b8;
-        if (lVar5 == null) goto LAB_1808e96b5;
-        if (*(int *)(lVar5 + 36) == 3) {
-          lVar5 = PlotController.StopWarCostFavor;
-          uVar11 = local_b8;
-          if (lVar5 == null) goto LAB_1808e96b5;
-          if (lVar5.favor == 10) {
+        lVar5 = *(int64 *)(pStatics_0248 + 80);
+        if (lVar5 == null) goto LAB_1808d465e;
+        if (lVar5.belongHeroID == 3) {
+          lVar5 = *(int64 *)(pStatics_0248 + 80);
+          if (lVar5 == null) goto LAB_1808d465e;
+          if (*(int *)(lVar5 + 0x124) == 10) {
             lVar5 = FUN_18046bb80(0);
-            uVar11 = local_b8;
-            if (lVar5 == null) goto LAB_1808e96b5;
-            uVar11 = lVar5.livingSkillFocus;
-            cVar4 = Object.op_Inequality(uVar11,0,0);
+            if (lVar5 == null) goto LAB_1808d465e;
+            uVar6 = *(uint64 *)(lVar5 + 0x110);
+            cVar4 = Object.op_Inequality(uVar6,0,0);
             if (cVar4) {
               lVar5 = FUN_18046bb80(0);
-              uVar11 = local_b8;
-              if ((lVar5 == null) || (lVar5.livingSkillFocus == null)) goto LAB_1808e96b5;
-              if (*(char *)(lVar5.livingSkillFocus + 56) != false) {
+              if ((lVar5 == null) || (*(int64 *)(lVar5 + 0x110) == 0)) goto LAB_1808d465e;
+              if (*(char *)(*(int64 *)(lVar5 + 0x110) + 56) != false) {
                 lVar5 = FUN_18046bb80(0);
-                uVar11 = local_b8;
-                if (((lVar5 == null) || (lVar5.livingSkillFocus == null)) ||
-                   (lVar5 = *(int64 *)(lVar5.livingSkillFocus + 64)) == null)
-                goto LAB_1808e96b5;
+                if (((lVar5 == null) || (*(int64 *)(lVar5 + 0x110) == 0)) ||
+                   (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 0x110) + 64)) == null)
+                goto LAB_1808d465e;
                 lVar5 = HeroData.GetNowActiveSkill(lVar5,0);
                 if (lVar5 != null) {
                   lVar5 = FUN_18046bb80(0);
-                  uVar11 = local_b8;
-                  if (((lVar5 == null) || (lVar5.livingSkillFocus == null)) ||
-                     ((lVar5 = *(int64 *)(lVar5.livingSkillFocus + 64), lVar5 == null ||
-                      ((lVar5 = HeroData.GetNowActiveSkill(lVar5,0), uVar11 = local_b8, lVar5 == null ||
-                       (lVar5 = KungfuSkillLvData.DataBase(lVar5,0), uVar11 = local_b8) == null)))))
-                  goto LAB_1808e96b5;
-                  if (2 < lVar5.interestingStar) {
+                  if (((lVar5 == null) || (*(int64 *)(lVar5 + 0x110) == 0)) ||
+                     ((lVar5 = *(int64 *)(*(int64 *)(lVar5 + 0x110) + 64), lVar5 == null ||
+                      ((lVar5 = HeroData.GetNowActiveSkill(lVar5,0), lVar5 == null ||
+                       (lVar5 = KungfuSkillLvData.DataBase(lVar5,0)) == null))))) goto LAB_1808d465e;
+                  if (2 < lVar5.equipUseSpeAddValue) {
                     lVar5 = FUN_18046bb80(0);
-                    uVar11 = local_b8;
-                    if ((((lVar5 == null) || (lVar5.livingSkillFocus == null)) ||
-                        (lVar5 = *(int64 *)(lVar5.livingSkillFocus + 64)) == null) ||
-                       ((lVar5 = HeroData.GetNowActiveSkill(lVar5,0), uVar11 = local_b8, lVar5 == null ||
-                        (lVar5 = KungfuSkillLvData.DataBase(lVar5,0), uVar11 = local_b8) == null)))
-                    goto LAB_1808e96b5;
-                    if (lVar5.summonMoveRange == null) {
+                    if ((((lVar5 == null) || (*(int64 *)(lVar5 + 0x110) == 0)) ||
+                        (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 0x110) + 64)) == null) ||
+                       ((lVar5 = HeroData.GetNowActiveSkill(lVar5,0), lVar5 == null ||
+                        (lVar5 = KungfuSkillLvData.DataBase(lVar5,0)) == null))) goto LAB_1808d465e;
+                    if (lVar5.bookExp == null) {
                       lVar5 = FUN_18046bb80(0);
-                      uVar11 = local_b8;
-                      if ((lVar5 == null) || (lVar5.livingSkillFocus == null)) goto LAB_1808e96b5;
-                      if (*(int64 *)(lVar5.livingSkillFocus + 88) ==
-                          this.battleTeam) goto LAB_1808e8d3b;
-        LAB_1808e9005:
+                      if ((lVar5 == null) || (*(int64 *)(lVar5 + 0x110) == 0)) goto LAB_1808d465e;
+                      if (*(int64 *)(*(int64 *)(lVar5 + 0x110) + 88) ==
+                          this.battleTeam) goto LAB_1808d3f26;
+        LAB_1808d41f0:
                       lVar5 = FUN_18046bb80(0);
-                      uVar11 = local_b8;
-                      if ((lVar5 == null) || (lVar5.horse == null)) goto LAB_1808e96b5;
-                      cVar4 = FUN_1818279a0(lVar5.horse,this.mapGrid,
-                                            DAT_181d63878);
+                      if ((lVar5 == null) || (*(int64 *)(lVar5 + 0x208) == 0)) goto LAB_1808d465e;
+                      cVar4 = FUN_18181e400(*(int64 *)(lVar5 + 0x208),this.mapGrid,
+                                            DAT_181d8b018);
                       if (cVar4) {
                         lVar5 = this.nowOnAttackSkill;
                         lVar9 = FUN_18046bb80(0);
-                        uVar11 = local_b8;
                         if (((lVar9 != null) && (lVar9.livingSkillFocus != null)) &&
                            (lVar9 = *(int64 *)(lVar9.livingSkillFocus + 64)) != null) {
                           lVar9 = HeroData.GetNowActiveSkill(lVar9,0);
@@ -1094,152 +1055,89 @@ public class BattleUnit
                             return;
                           }
                           lVar5 = FUN_18046bb80(0);
-                          uVar11 = local_b8;
-                          if (((lVar5 != null) && (lVar5.livingSkillFocus != null)) &&
-                             (lVar5 = *(int64 *)(lVar5.livingSkillFocus + 64)) != null) {
-                            uVar11 = HeroData.GetNowActiveSkill(lVar5,0);
-                            this.nowOnAttackSkill = uVar11;
+                          if (((lVar5 != null) && (*(int64 *)(lVar5 + 0x110) != 0)) &&
+                             (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 0x110) + 64)) != null) {
+                            uVar6 = HeroData.GetNowActiveSkill(lVar5,0);
+                            this.nowOnAttackSkill = uVar6;
                             lVar5 = FUN_18046bb80(0);
                             lVar9 = FUN_18046bb80(0);
-                            uVar11 = local_b8;
                             if (lVar9 != null) {
                               uVar6 = lVar9.livingSkillFocus;
                               lVar9 = FUN_18046bb80(0);
-                              uVar11 = local_b8;
                               if ((((lVar9 != null) && (lVar9.livingSkillFocus != null)) &&
                                   (lVar9 = *(int64 *)(lVar9.livingSkillFocus + 64)) != null
-                                  ) && (uVar12 = HeroData.GetNowActiveSkill(lVar9,0), uVar11 = local_b8,
-                                       lVar5 != null)) {
-                                fVar14 = (float)BattleController.CountBaseDamage
-                                                          (lVar5,uVar6,uVar12,this,1,0);
-                                uVar11 = local_b8;
-                                if (((*plVar1 != 0) &&
-                                    (lVar5 = GameObject.get_transform(*plVar1,0), uVar11 = local_b8,
-                                    lVar5 != null)) &&
-                                   (lVar5 = Transform.Find(lVar5,"DamageBar",0), uVar11 = local_b8,
-                                   lVar5 != null)) {
-                                  lVar9 = Component.GetComponent(lVar5,DAT_181d6bc40);
-                                  lVar5 = this.heroData;
-                                  uVar11 = local_b8;
-                                  if (fVar14 <= 0.0) {
-                                    if (lVar5 == null) goto LAB_1808e96b5;
-                                    fVar15 = -fVar14;
-                                    fVar16 = lVar5.realMaxHp - lVar5.hp;
-                                  }
-                                  else {
-                                    if (lVar5 == null) goto LAB_1808e96b5;
-                                    fVar16 = lVar5.hp;
-                                    fVar15 = fVar14;
-                                  }
-                                  fVar16 = (float)Mathf.Min(fVar15,fVar16,0);
-                                  uVar11 = local_b8;
-                                  if ((this.heroData != null) && (lVar9 != null)) {
-                                    Image.set_fillAmount
-                                              (lVar9,fVar16 / *(float *)(this.heroData +
-                                                                        0x17c),0);
-                                    uVar11 = local_b8;
-                                    if ((*plVar1 != 0) &&
-                                       ((lVar5 = GameObject.get_transform(*plVar1,0), uVar11 = local_b8,
-                                        lVar5 != null &&
-                                        (lVar5 = Transform.Find(lVar5,"DamageBar",0), uVar11 = local_b8
-                                        , lVar5 != null)))) {
-                                      lVar5 = Component.get_transform(lVar5,0);
-                                      uVar11 = local_b8;
-                                      if ((*plVar1 != 0) &&
-                                         (((lVar9 = GameObject.get_transform(*plVar1,0),
-                                           uVar11 = local_b8, lVar9 != null &&
-                                           (lVar9 = Transform.Find(lVar9,"DamageBar",0),
-                                           uVar11 = local_b8, lVar9 != null)) &&
-                                          (lVar9 = Component.GetComponent(lVar9,DAT_181d6c740),
-                                          uVar11 = local_b8, lVar9 != null)))) {
-                                        puVar13 = (uint32 *)RectTransform.get_rect(&local_98,lVar9,0)
-                                        ;
-                                        local_88 = *puVar13;
-                                        uStack_84 = puVar13[1];
-                                        uStack_80 = puVar13[2];
-                                        uStack_7c = puVar13[3];
-                                        fVar16 = (float)FUN_180d90480(&local_88,0);
-                                        lVar9 = this.heroData;
-                                        uVar11 = local_b8;
-                                        if (lVar9 != null) {
-                                          fVar15 = lVar9.hp;
-                                          fVar2 = lVar9.maxhp;
-                                          if (fVar14 <= 0.0) {
-                                            if (((*plVar1 == 0) ||
-                                                (lVar9 = GameObject.get_transform(*plVar1,0),
-                                                uVar11 = local_b8, lVar9 == null)) ||
-                                               ((lVar9 = Transform.Find(lVar9,"DamageBar",0),
-                                                uVar11 = local_b8, lVar9 == null ||
-                                                (lVar9 = Component.GetComponent(lVar9,DAT_181d6bc40),
-                                                uVar11 = local_b8, lVar9 == null)))) goto LAB_1808e96b5;
-                                            fVar20 = lVar9.skinLv;
-                                          }
-                                          else {
-                                            fVar20 = 0.0;
-                                          }
-                                          uVar11 = local_b8;
-                                          if (((*plVar1 != 0) &&
-                                              (lVar9 = GameObject.get_transform(*plVar1,0),
-                                              uVar11 = local_b8, lVar9 != null)) &&
-                                             ((lVar9 = Transform.Find(lVar9,"DamageBar",0),
-                                              uVar11 = local_b8, lVar9 != null &&
-                                              (lVar9 = Component.get_transform(lVar9,0),
-                                              uVar11 = local_b8, lVar9 != null)))) {
-                                            puVar8 = (uint64 *)
-                                                     Transform.get_localPosition(&local_98,lVar9,0);
-                                            local_a0 = 0.0;
-                                            local_b0 = *(float *)(puVar8 + 1);
-                                            local_b8 = CONCAT44((int)((uint64)*puVar8 >> 32),
-                                                                ((fVar15 / fVar2 - 0.5) + fVar20) * fVar16
-                                                               );
-                                            uVar11 = *puVar8;
-                                            local_a8 = local_b8;
-                                            if (lVar5 != null) {
-                                              local_b0 = 0.0;
-                                              Transform.set_localPosition(lVar5,&local_b8,0);
-                                              uVar11 = local_b8;
-                                              if (((*plVar1 != 0) &&
-                                                  (lVar5 = GameObject.get_transform(*plVar1,0),
-                                                  uVar11 = local_b8, lVar5 != null)) &&
-                                                 (lVar5 = Transform.Find(lVar5,"DamageBar",0),
-                                                 uVar11 = local_b8, lVar5 != null)) {
-                                                plVar7 = (int64 *)
-                                                         Component.GetComponent(lVar5,DAT_181d6bc40);
-                                                local_98 = 0;
-                                                uStack_90 = 0;
-                                                if (fVar14 <= 0.0) {
-                                                  uVar19 = 0;
-                                                  uVar18 = 0x3f000000;
-                                                  uVar17 = 0;
-                                                }
-                                                else {
-                                                  uVar18 = 0x3e4ccccd;
-                                                  uVar19 = 0x3e4ccccd;
-                                                  uVar17 = uVar18;
-                                                }
-                                                FUN_1809981e0(&local_98,uVar17,uVar18,uVar19,0,0);
-                                                uVar11 = local_b8;
-                                                if (plVar7 != (int64 *)0) {
-                                                  (**(code **)(*plVar7 + 0x2a8))
-                                                            (plVar7,&local_98,
-                                                             *(uint64 *)(*plVar7 + 0x2b0));
-                                                  uVar11 = local_b8;
-                                                  if (((*plVar1 != 0) &&
-                                                      (lVar5 = GameObject.get_transform(*plVar1,0),
-                                                      uVar11 = local_b8, lVar5 != null)) &&
-                                                     (lVar5 = Transform.Find(lVar5,"DamageBar",0),
-                                                     uVar11 = local_b8, lVar5 != null)) {
-                                                    uVar11 = Component.GetComponent(lVar5,DAT_181d6bc40);
-                                                    uVar11 = DOTweenModuleUI.DOFade
-                                                                       (uVar11,0x3f4ccccd,0x3f19999a,0);
-                                                    TweenSettingsExtensions.SetLoops
-                                                              (uVar11,0xffffffff,1,DAT_181d97f50);
-                                                    return;
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
+                                  ) && (uVar11 = HeroData.GetNowActiveSkill(lVar9,0), lVar5 != null)) {
+                                fVar13 = (float)BattleController.CountBaseDamage
+                                                          (lVar5,uVar6,uVar11,this,1,0);
+                                lVar5 = this.damageBarImage;
+                                lVar9 = this.heroData;
+                                if (fVar13 <= 0.0) {
+                                  if (lVar9 == null) goto LAB_1808d465e;
+                                  fVar15 = lVar9.realMaxHp - lVar9.hp;
+                                  fVar14 = -fVar13;
+                                }
+                                else {
+                                  if (lVar9 == null) goto LAB_1808d465e;
+                                  fVar15 = lVar9.hp;
+                                  fVar14 = fVar13;
+                                }
+                                fVar15 = (float)Mathf.Min(fVar14,fVar15,0);
+                                if ((this.heroData != null) && (lVar5 != null)) {
+                                  Image.set_fillAmount
+                                            (lVar5,fVar15 / *(float *)(this.heroData +
+                                                                      0x17c),0);
+                                  lVar5 = this.damageBarRect;
+                                  if (lVar5 != null) {
+                                    puVar12 = (uint32 *)RectTransform.get_rect(&local_98,lVar5,0);
+                                    local_88 = *puVar12;
+                                    uStack_84 = puVar12[1];
+                                    uStack_80 = puVar12[2];
+                                    uStack_7c = puVar12[3];
+                                    fVar15 = (float)FUN_180d98fa0(&local_88,0);
+                                    lVar9 = this.heroData;
+                                    if (lVar9 != null) {
+                                      fVar14 = lVar9.hp;
+                                      fVar1 = lVar9.maxhp;
+                                      if (fVar13 <= 0.0) {
+                                        if (this.damageBarImage == null) goto LAB_1808d465e;
+                                        fVar19 = *(float *)(this.damageBarImage + 244);
+                                      }
+                                      else {
+                                        fVar19 = 0.0;
+                                      }
+                                      if (this.damageBarRect != null) {
+                                        puVar8 = (uint64 *)
+                                                 Transform.get_localPosition
+                                                           (&local_98,this.damageBarRect,0);
+                                        local_b0 = 0.0;
+                                        local_a0 = 0.0;
+                                        local_a8 = CONCAT44((int)((uint64)*puVar8 >> 32),
+                                                            ((fVar14 / fVar1 - 0.5) + fVar19) * fVar15);
+                                        Transform.set_localPosition(lVar5,&local_a8,0);
+                                        plVar7 = this.damageBarImage;
+                                        local_98 = 0;
+                                        uStack_90 = 0;
+                                        if (fVar13 <= 0.0) {
+                                          uVar18 = 0;
+                                          uVar17 = 0x3f000000;
+                                          uVar16 = 0;
+                                        }
+                                        else {
+                                          uVar16 = 0x3e4ccccd;
+                                          uVar18 = 0x3e4ccccd;
+                                          uVar17 = 0x3e4ccccd;
+                                        }
+                                        FUN_1809dc910(&local_98,uVar16,uVar17,uVar18,0,0);
+                                        if (plVar7 != (int64 *)0) {
+                                          (**(code **)(*plVar7 + 0x2a8))
+                                                    (plVar7,&local_98,*(uint64 *)(*plVar7 + 0x2b0));
+                                          uVar6 = DOTweenModuleUI.DOFade
+                                                            (this.damageBarImage,0x3f4ccccd,
+                                                             0x3f19999a,0);
+                                          TweenSettingsExtensions.SetLoops
+                                                    (uVar6,0xffffffff,1,DAT_181dc1220);
+                                          this.damageBarShown = 1;
+                                          return;
                                         }
                                       }
                                     }
@@ -1249,59 +1147,52 @@ public class BattleUnit
                             }
                           }
                         }
-                        goto LAB_1808e96b5;
+                        goto LAB_1808d465e;
                       }
                     }
                     else {
-        LAB_1808e8d3b:
+        LAB_1808d3f26:
                       lVar5 = FUN_18046bb80(0);
-                      uVar11 = local_b8;
-                      if ((((lVar5 == null) || (lVar5.livingSkillFocus == null)) ||
-                          (lVar5 = *(int64 *)(lVar5.livingSkillFocus + 64)) == null) ||
-                         ((lVar5 = HeroData.GetNowActiveSkill(lVar5,0), uVar11 = local_b8, lVar5 == null ||
-                          (lVar5 = KungfuSkillLvData.DataBase(lVar5,0), uVar11 = local_b8) == null)))
-                      goto LAB_1808e96b5;
-                      if (lVar5.summonMoveRange == 1) {
+                      if ((((lVar5 == null) || (*(int64 *)(lVar5 + 0x110) == 0)) ||
+                          (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 0x110) + 64)) == null) ||
+                         ((lVar5 = HeroData.GetNowActiveSkill(lVar5,0), lVar5 == null ||
+                          (lVar5 = KungfuSkillLvData.DataBase(lVar5,0)) == null)))
+                      goto LAB_1808d465e;
+                      if (lVar5.bookExp == 1) {
                         lVar5 = FUN_18046bb80(0);
-                        uVar11 = local_b8;
-                        if ((lVar5 == null) || (lVar5.livingSkillFocus == null)) goto LAB_1808e96b5;
-                        if (*(int64 *)(lVar5.livingSkillFocus + 88) ==
-                            this.battleTeam) goto LAB_1808e9005;
+                        if ((lVar5 == null) || (*(int64 *)(lVar5 + 0x110) == 0)) goto LAB_1808d465e;
+                        if (*(int64 *)(*(int64 *)(lVar5 + 0x110) + 88) ==
+                            this.battleTeam) goto LAB_1808d41f0;
                       }
                       lVar5 = FUN_18046bb80(0);
-                      uVar11 = local_b8;
-                      if ((((lVar5 == null) || (lVar5.livingSkillFocus == null)) ||
-                          (lVar5 = *(int64 *)(lVar5.livingSkillFocus + 64)) == null) ||
-                         ((lVar5 = HeroData.GetNowActiveSkill(lVar5,0), uVar11 = local_b8, lVar5 == null ||
-                          (lVar5 = KungfuSkillLvData.DataBase(lVar5,0), uVar11 = local_b8) == null)))
-                      goto LAB_1808e96b5;
-                      if (lVar5.summonMoveRange == 2) {
+                      if ((((lVar5 == null) || (*(int64 *)(lVar5 + 0x110) == 0)) ||
+                          (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 0x110) + 64)) == null) ||
+                         ((lVar5 = HeroData.GetNowActiveSkill(lVar5,0), lVar5 == null ||
+                          (lVar5 = KungfuSkillLvData.DataBase(lVar5,0)) == null)))
+                      goto LAB_1808d465e;
+                      if (lVar5.bookExp == 2) {
                         lVar5 = FUN_18046bb80(0);
-                        uVar11 = local_b8;
-                        if (lVar5 == null) goto LAB_1808e96b5;
-                        uVar11 = lVar5.livingSkillFocus;
-                        cVar4 = Object.op_Equality(uVar11,this,0);
-                        if (cVar4) goto LAB_1808e9005;
+                        if (lVar5 == null) goto LAB_1808d465e;
+                        uVar6 = *(uint64 *)(lVar5 + 0x110);
+                        cVar4 = Object.op_Equality(uVar6,this,0);
+                        if (cVar4) goto LAB_1808d41f0;
                       }
                       lVar5 = FUN_18046bb80(0);
-                      uVar11 = local_b8;
-                      if ((((lVar5 == null) || (lVar5.livingSkillFocus == null)) ||
-                          (lVar5 = *(int64 *)(lVar5.livingSkillFocus + 64)) == null) ||
-                         ((lVar5 = HeroData.GetNowActiveSkill(lVar5,0), uVar11 = local_b8, lVar5 == null ||
-                          (lVar5 = KungfuSkillLvData.DataBase(lVar5,0), uVar11 = local_b8) == null)))
-                      goto LAB_1808e96b5;
-                      if (lVar5.summonMoveRange == 3) {
+                      if ((((lVar5 == null) || (*(int64 *)(lVar5 + 0x110) == 0)) ||
+                          (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 0x110) + 64)) == null) ||
+                         ((lVar5 = HeroData.GetNowActiveSkill(lVar5,0), lVar5 == null ||
+                          (lVar5 = KungfuSkillLvData.DataBase(lVar5,0)) == null)))
+                      goto LAB_1808d465e;
+                      if (lVar5.bookExp == 3) {
                         lVar5 = FUN_18046bb80(0);
-                        uVar11 = local_b8;
-                        if ((lVar5 == null) || (lVar5.livingSkillFocus == null)) goto LAB_1808e96b5;
-                        if (*(int64 *)(lVar5.livingSkillFocus + 88) ==
+                        if ((lVar5 == null) || (*(int64 *)(lVar5 + 0x110) == 0)) goto LAB_1808d465e;
+                        if (*(int64 *)(*(int64 *)(lVar5 + 0x110) + 88) ==
                             this.battleTeam) {
                           lVar5 = FUN_18046bb80(0);
-                          uVar11 = local_b8;
-                          if (lVar5 == null) goto LAB_1808e96b5;
-                          uVar11 = lVar5.livingSkillFocus;
-                          cVar4 = Object.op_Inequality(uVar11,this,0);
-                          if (cVar4) goto LAB_1808e9005;
+                          if (lVar5 == null) goto LAB_1808d465e;
+                          uVar6 = *(uint64 *)(lVar5 + 0x110);
+                          cVar4 = Object.op_Inequality(uVar6,this,0);
+                          if (cVar4) goto LAB_1808d41f0;
                         }
                       }
                     }
@@ -1312,27 +1203,21 @@ public class BattleUnit
           }
         }
         this.nowOnAttackSkill = 0;
-        uVar11 = local_b8;
-        if (((*plVar1 != 0) &&
-            (lVar5 = GameObject.get_transform(*plVar1,0), uVar11 = local_b8) != null) &&
-           ((lVar5 = Transform.Find(lVar5,"DamageBar",0), uVar11 = local_b8, lVar5 != null &&
-            (lVar5 = Component.GetComponent(lVar5,DAT_181d6bc40), uVar11 = local_b8) != null))) {
-          Image.set_fillAmount(lVar5,0,0);
-          uVar11 = local_b8;
-          if (((*plVar1 != 0) &&
-              (lVar5 = GameObject.get_transform(*plVar1,0), uVar11 = local_b8) != null) &&
-             (lVar5 = Transform.Find(lVar5,"DamageBar",0), uVar11 = local_b8) != null) {
-            uVar11 = Component.GetComponent(lVar5,DAT_181d6bc40);
-            DOTween.Kill(uVar11,0,0);
-            return;
+        if (this.damageBarShown) {
+          this.damageBarShown = 0;
+          if (this.damageBarImage == null) {
+        LAB_1808d465e:
+                          // WARNING: Subroutine does not return
+            FUN_1800d6620();
           }
+          Image.set_fillAmount(this.damageBarImage,0,0);
+          uVar6 = this.damageBarImage;
+          DOTween.Kill(uVar6,0,0);
         }
-        LAB_1808e96b5:
-        local_b8 = uVar11;
     }
 
-    // Token : 0x6000C29
-    // RVA   : 0x8EA080   Offset: 0x8E8880   Length: 0x13F
+    // Token : 0x6000C53
+    // RVA   : 0x8D5030   Offset: 0x8D4430   Length: 0x13F
     public void Talk(string _text, float _lifeTime)
     {
         uint uVar1;
@@ -1340,7 +1225,7 @@ public class BattleUnit
         long lVar3;
         bool cVar4;
         long lVar5;
-        if ((_text == null) || (cVar4 = FUN_1816fd990(_text,"",0), cVar4)) {
+        if ((_text == null) || (cVar4 = FUN_18171e540(_text,"",0), cVar4)) {
           return;
         }
         lVar5 = this.heroData;
@@ -1348,13 +1233,13 @@ public class BattleUnit
           if (lVar5.isSummon) {
             return;
           }
-          if (!DAT_181e6a738) {
-            il2cpp_runtime_class_init(&DAT_181d51180);
-            DAT_181e6a738 = true;
+          if (!DAT_181e9acd9) {
+            il2cpp_runtime_class_init(&DAT_181d761e8);
+            DAT_181e9acd9 = true;
             lVar5 = this.heroData;
           }
           uVar2 = this.mouthPos;
-          lVar3 = **(int64 **)(DAT_181d51180 + 184);
+          lVar3 = **(int64 **)(DAT_181d761e8 + 184);
           if (lVar5 != null) {
             uVar1 = lVar5.heroID;
             lVar5 = FUN_18046bb80(0);
@@ -1367,8 +1252,8 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C2A
-    // RVA   : 0x8E33B0   Offset: 0x8E1BB0   Length: 0x161
+    // Token : 0x6000C54
+    // RVA   : 0x8CE620   Offset: 0x8CDA20   Length: 0x161
     public void ChangeFaceDirection(bool right, bool forceBuilding)
     {
         long lVar1;
@@ -1383,8 +1268,8 @@ public class BattleUnit
             lVar2 = FUN_18046c100(0);
             if ((((lVar2 == null) || (this.heroData == null)) ||
                 (*(int64 *)(lVar2 + 0x180) == 0)) ||
-               (lVar2 = FUN_1817cc780(*(int64 *)(lVar2 + 0x180),
-                                      this.heroData.summonID,DAT_181d99060)
+               (lVar2 = FUN_1817d9e10(*(int64 *)(lVar2 + 0x180),
+                                      this.heroData.summonID,DAT_181dbea08)
                , lVar2 == null)) throw; // [null/range check failed]
             if (*(char *)(lVar2 + 64) != false) {
               return;
@@ -1394,11 +1279,11 @@ public class BattleUnit
         if (this.skeleton != null) {
           lVar2 = Component.get_transform(this.skeleton,0);
           if (!right) {
-            lVar1 = *(int64 *)(PlotController_StaticsPtr + 184);
-            local_18 = *(uint32 *)(lVar1 + 0x688);
-            uStack_14 = *(uint32 *)(lVar1 + 0x68c);
-            uStack_10 = *(uint32 *)(lVar1 + 0x690);
-            uStack_c = *(uint32 *)(lVar1 + 0x694);
+            lVar1 = *(int64 *)(DAT_181d73d40 + 184);
+            local_18 = *(uint32 *)(lVar1 + 0x690);
+            uStack_14 = *(uint32 *)(lVar1 + 0x694);
+            uStack_10 = *(uint32 *)(lVar1 + 0x698);
+            uStack_c = *(uint32 *)(lVar1 + 0x69c);
           }
           else {
             puVar3 = (uint32 *)Quaternion.get_identity(&local_18,0);
@@ -1414,10 +1299,12 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C2B
-    // RVA   : 0x8E5830   Offset: 0x8E4030   Length: 0x822
+    // Token : 0x6000C55
+    // RVA   : 0x8D0AA0   Offset: 0x8CFEA0   Length: 0x822
     public void EnterBattleField(GridUnitData bornGrid)
     {
+        var pStatics_0248 = *(int64*)(DAT_181db0248 + 184);
+        var pStatics_2d50 = *(int64*)(DAT_181d72d50 + 184);
         uint uVar1;
         ulong uVar2;
         int iVar3;
@@ -1443,7 +1330,7 @@ public class BattleUnit
         BattleUnit.Init(this,0);
         if (bornGrid != null) {
           iVar3 = *(int *)(bornGrid + 40);
-          lVar4 = PlotController.StopWarCostFavor;
+          lVar4 = *(int64 *)(pStatics_0248 + 80);
           if ((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 24)) != null) {
             BattleUnit.ChangeFaceDirection
                       (this,(float)iVar3 < (float)*(int *)(lVar4 + 32) * 0.5,1,0);
@@ -1455,7 +1342,7 @@ public class BattleUnit
                   if (!this.heroData.isSummon) {
                     if (this.skeleton == null) throw; // [null/range check failed]
                     lVar4 = SkeletonAnimation.get_AnimationState(this.skeleton,0);
-                    local_res10[0] = FUN_180d8cf10(0,4);
+                    local_res10[0] = FUN_180d95a30(0,4);
                     uVar5 = Int32.ToString(local_res10,0);
                     uVar5 = String.Concat("entrance_",uVar5,0);
                     if (lVar4 == null) throw; // [null/range check failed]
@@ -1487,7 +1374,7 @@ public class BattleUnit
                     BattleUnit.EnterGrid(this,bornGrid,0,0,0);
                     if (this.heroData == null) throw; // [null/range check failed]
                     iVar3 = this.heroData.heroForceLv;
-                    lVar4 = GameController.lockObj;
+                    lVar4 = *(int64 *)(pStatics_2d50 + 32);
                     if (((lVar4 == null) || (this.heroData == null)) ||
                        (lVar4 = *(int64 *)(lVar4 + 56)) == null) throw; // [null/range check failed]
                     uVar1 = this.heroData.heroForceLv;
@@ -1499,7 +1386,7 @@ public class BattleUnit
                     uVar5 = *(uint64 *)(lVar4 + 24);
                     uVar2 = *(uint64 *)(lVar4 + 32);
                     if (this.weaponLight == null) {
-        LAB_1808e604d:
+        LAB_1808d12bd:
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
@@ -1534,7 +1421,7 @@ public class BattleUnit
                     uStack_b0 = puVar7[5];
                     local_a8 = puVar7[6];
                     MainModule.set_startColor(&local_res20,&local_d8,0);
-                    if (this.weaponLight == null) goto LAB_1808e604d;
+                    if (this.weaponLight == null) goto LAB_1808d12bd;
                     ParticleSystem.Play();
                   }
                   else {
@@ -1548,7 +1435,7 @@ public class BattleUnit
                       if (lVar4 == null) throw; // [null/range check failed]
                       lVar4 = Transform.Find(lVar4,"Sprite",0);
                       if (lVar4 == null) throw; // [null/range check failed]
-                      lVar4 = Component.GetComponent(lVar4,DAT_181d6d540);
+                      lVar4 = Component.GetComponent(lVar4,DAT_181d95de0);
                       puVar7 = (uint64 *)Color.get_green(&local_d8,0);
                     }
                     else {
@@ -1558,7 +1445,7 @@ public class BattleUnit
                       if (lVar4 == null) throw; // [null/range check failed]
                       lVar4 = Transform.Find(lVar4,"Sprite",0);
                       if (lVar4 == null) throw; // [null/range check failed]
-                      lVar4 = Component.GetComponent(lVar4,DAT_181d6d540);
+                      lVar4 = Component.GetComponent(lVar4,DAT_181d95de0);
                       puVar7 = (uint64 *)Color.get_red(&local_d8,0);
                     }
                     uVar5 = *puVar7;
@@ -1570,11 +1457,11 @@ public class BattleUnit
                       local_d8 = *puVar7;
                       uStack_d0 = puVar7[1];
                       SpriteRenderer.set_color(lVar4,&local_d8,0);
-                      lVar4 = GameController.difficultyExtraPoint;
+                      lVar4 = *(int64 *)(pStatics_2d50 + 8);
                       if ((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 16)) != null) {
                         iVar3 = PlayerPrefDictionary.GetInt(lVar4,"FightViewFollow",0);
                         if (iVar3 == 1) {
-                          lVar4 = PlotController.StopWarCostFavor;
+                          lVar4 = *(int64 *)(pStatics_0248 + 80);
                           uVar5 = GridUnitData.get_GridObj(bornGrid,0);
                           if (lVar4 == null) throw; // [null/range check failed]
                           BattleController.FocusOnTarget(lVar4,uVar5,0);
@@ -1590,8 +1477,8 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C2C
-    // RVA   : 0x8E9800   Offset: 0x8E8000   Length: 0x1F8
+    // Token : 0x6000C56
+    // RVA   : 0x8D47B0   Offset: 0x8D3BB0   Length: 0x1F8
     public void SetHighLightAnim(bool active)
     {
         long lVar1;
@@ -1631,18 +1518,18 @@ public class BattleUnit
             uStack_10 = 0x43b40000;
             local_18 = 0;
             uVar2 = ShortcutExtensions.DOLocalRotate(uVar2,&local_18,0x3f800000,1,0);
-            uVar2 = TweenSettingsExtensions.SetLoops(uVar2,0xffffffff,0,DAT_181d97fd8);
-            TweenSettingsExtensions.SetEase(uVar2,1,DAT_181d97a88);
+            uVar2 = TweenSettingsExtensions.SetLoops(uVar2,0xffffffff,0,DAT_181dc12a8);
+            TweenSettingsExtensions.SetEase(uVar2,1,DAT_181dc0d70);
             return;
           }
         }
     }
 
-    // Token : 0x6000C2D
-    // RVA   : 0x8E9AA0   Offset: 0x8E82A0   Length: 0x1F0
+    // Token : 0x6000C57
+    // RVA   : 0x8D4A50   Offset: 0x8D3E50   Length: 0x1F0
     public void ShowFocusAnim()
     {
-        var pBattleUnit = *(int64*)(BattleUnit_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181db07c8 + 184);
         long lVar1;
         ulong uVar2;
         ulong uVar3;
@@ -1656,8 +1543,8 @@ public class BattleUnit
           lVar1 = Component.get_transform(this,0);
           if (lVar1 != null) {
             lVar1 = Transform.Find(lVar1,"HighLight",0);
-            local_28 = BattleUnit.highLightScale;
-            local_20 = *(float *)(pBattleUnit + 20);
+            local_28 = *(uint64 *)(pStatics + 12);
+            local_20 = *(float *)(pStatics + 20);
             fVar4 = local_20 * 2.0;
             uVar2 = CONCAT44((float)((uint64)local_28 >> 32) * 2.0,(float)local_28 * 2.0);
             if (lVar1 != null) {
@@ -1667,10 +1554,10 @@ public class BattleUnit
               lVar1 = Component.get_transform(this,0);
               if (lVar1 != null) {
                 uVar3 = Transform.Find(lVar1,"HighLight",0);
-                local_20 = *(float *)(pBattleUnit + 20);
-                local_28 = BattleUnit.highLightScale;
+                local_20 = *(float *)(pStatics + 20);
+                local_28 = *(uint64 *)(pStatics + 12);
                 uVar2 = ShortcutExtensions.DOScale(uVar3,&local_28,0x3f000000,0,uVar2,fVar4);
-                TweenSettingsExtensions.SetEase(uVar2,27,DAT_181d97ca8);
+                TweenSettingsExtensions.SetEase(uVar2,27,DAT_181dc0f80);
                 return;
               }
             }
@@ -1678,8 +1565,8 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C2E
-    // RVA   : 0x8E9F10   Offset: 0x8E8710   Length: 0x15B
+    // Token : 0x6000C58
+    // RVA   : 0x8D4EC0   Offset: 0x8D42C0   Length: 0x15B
     public void ShowWeaponLight(float size, float time, Color color)
     {
         void BattleUnit.ShowWeaponLight
@@ -1760,15 +1647,15 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C2F
-    // RVA   : 0x8E77E0   Offset: 0x8E5FE0   Length: 0x144
+    // Token : 0x6000C59
+    // RVA   : 0x8D2A50   Offset: 0x8D1E50   Length: 0x144
     public void LeaveBattleField()
     {
         ulong uVar1;
         bool cVar2;
         if (this.mapGrid != null) {
           BattleUnit.SetDownObstacleNeedRefresh(this,0);
-          if (this.mapGrid == null) goto LAB_1808e791f;
+          if (this.mapGrid == null) goto LAB_1808d2b8f;
           GridUnitData.OnLeave(this.mapGrid,0);
           this.mapGrid = 0;
         }
@@ -1782,7 +1669,7 @@ public class BattleUnit
         cVar2 = Object.op_Inequality(uVar1,0,0);
         if (cVar2) {
           if (this.actionBarUnit == null) {
-        LAB_1808e791f:
+        LAB_1808d2b8f:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -1791,20 +1678,20 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C30
-    // RVA   : 0x245810   Offset: 0x244010   Length: 0x3
+    // Token : 0x6000C5A
+    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
     private void UseSkill()
     {
     }
 
-    // Token : 0x6000C31
-    // RVA   : 0x245810   Offset: 0x244010   Length: 0x3
+    // Token : 0x6000C5B
+    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
     private void AcceptSkillResult()
     {
     }
 
-    // Token : 0x6000C32
-    // RVA   : 0x8E6CA0   Offset: 0x8E54A0   Length: 0x5B
+    // Token : 0x6000C5C
+    // RVA   : 0x8D1F10   Offset: 0x8D1310   Length: 0x5B
     public SkillTargetType GetSkillTargetType()
     {
         long lVar1;
@@ -1825,8 +1712,8 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C33
-    // RVA   : 0x8EA350   Offset: 0x8E8B50   Length: 0x5FF
+    // Token : 0x6000C5D
+    // RVA   : 0x8D5300   Offset: 0x8D4700   Length: 0x5FF
     public void UseMedFood(ItemData targetItem, HeroData sourceHero)
     {
         float fVar1;
@@ -1945,7 +1832,7 @@ public class BattleUnit
                               (this,uVar4,&local_48,18,CONCAT44(uVar7,24),"UIAtlas",0,0,0);
                     uVar2 = String.Concat(uVar2,"，",uVar4,0);
                   }
-                  lVar5 = PlotController.StopWarCostFavor;
+                  lVar5 = *(int64 *)(*(int64 *)(DAT_181db0248 + 184) + 80);
                   uVar2 = String.Concat(uVar2,"。",0);
                   if (lVar5 != null) {
                     BattleController.AddInfoText(lVar5,uVar2,1,0);
@@ -1958,8 +1845,8 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C34
-    // RVA   : 0x8E7DE0   Offset: 0x8E65E0   Length: 0x1B0
+    // Token : 0x6000C5E
+    // RVA   : 0x8D3050   Offset: 0x8D2450   Length: 0x1B0
     public void RecoverPartPosture(float recoverRate)
     {
         float fVar1;
@@ -1993,7 +1880,7 @@ public class BattleUnit
             fVar6 = (float)Mathf.Max(*(float *)(lVar5 + lVar3.isSummon) * recoverRate,0x3f800000
                                       ,0);
             uVar7 = Mathf.Max(0,fVar1 - fVar6);
-            FUN_181814d10(lVar2,uVar4,uVar7,DAT_181d79758);
+            FUN_181829d40(lVar2,uVar4,uVar7,DAT_181da10f8);
             lVar3 = this.heroData;
             uVar4 = uVar4 + 1;
             lVar5 = lVar5 + 4;
@@ -2002,8 +1889,8 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C35
-    // RVA   : 0x8E41B0   Offset: 0x8E29B0   Length: 0x1ED
+    // Token : 0x6000C5F
+    // RVA   : 0x8CF420   Offset: 0x8CE820   Length: 0x1ED
     public void ChangePower(float num, bool showText)
     {
         long lVar1;
@@ -2047,8 +1934,7 @@ public class BattleUnit
             uStack_30 = (uint32)uStack_48;
             uStack_2c = uStack_48._4_4_;
             BattleUnit.ShowTextOnHead
-                      (this,uVar3,&local_38,
-                       BattleUnit.damageBaseFontSize + -4,
+                      (this,uVar3,&local_38,*(int *)(*(int64 *)(DAT_181db07c8 + 184) + 28) + -4,
                        CONCAT44(uVar5,24),"UIAtlas",0,0,0);
           }
           if (this.heroData == null) {
@@ -2059,8 +1945,8 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C36
-    // RVA   : 0x8E3D70   Offset: 0x8E2570   Length: 0x225
+    // Token : 0x6000C60
+    // RVA   : 0x8CEFE0   Offset: 0x8CE3E0   Length: 0x225
     public void ChangeMana(float num, bool showText, bool useRecoverRate)
     {
         long lVar1;
@@ -2089,7 +1975,7 @@ public class BattleUnit
               else {
                 if ((this.heroData == null) ||
                    (lVar1 = this.heroData.totalAddData) == null)
-                goto LAB_1808e3f90;
+                goto LAB_1808cf200;
                 local_38[0] = (float)HeroSpeAddData.Get(lVar1,73);
               }
               local_38[0] = fVar2 * local_38[0];
@@ -2099,7 +1985,7 @@ public class BattleUnit
               uVar6 = puVar4[1];
               uVar7 = puVar4[2];
               uVar8 = puVar4[3];
-              if (this == 0) goto LAB_1808e3f90;
+              if (this == 0) goto LAB_1808cf200;
             }
             else {
               uVar3 = Single.ToString(local_res10,"+0;-0;0",0);
@@ -2115,12 +2001,11 @@ public class BattleUnit
             uStack_20 = uVar7;
             uStack_1c = uVar8;
             BattleUnit.ShowTextOnHead
-                      (this,uVar3,&local_28,
-                       BattleUnit.damageBaseFontSize + -2,24,
-                       "UIAtlas",0,0,0);
+                      (this,uVar3,&local_28,*(int *)(*(int64 *)(DAT_181db07c8 + 184) + 28) + -2,
+                       24,"UIAtlas",0,0,0);
           }
           if (this.heroData == null) {
-        LAB_1808e3f90:
+        LAB_1808cf200:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -2130,10 +2015,11 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C37
-    // RVA   : 0x8E3520   Offset: 0x8E1D20   Length: 0x639
+    // Token : 0x6000C61
+    // RVA   : 0x8CE790   Offset: 0x8CDB90   Length: 0x639
     public void ChangeHp(float num, bool isCrit, bool useRecoverRate, bool noDead)
     {
+        var pStatics = *(int64*)(DAT_181db07c8 + 184);
         void BattleUnit.ChangeHp
                      (int64 this,float num,char isCrit,char useRecoverRate,uint8 noDead)
         {
@@ -2181,15 +2067,14 @@ public class BattleUnit
           uVar13 = puVar5[2];
           uVar14 = puVar5[3];
           if (this == 0) throw; // [null/range check failed]
-        LAB_1808e3975:
+        LAB_1808cebe5:
           uVar15 = "UIAtlas";
           local_68 = uVar11;
           uStack_64 = uVar12;
           uStack_60 = uVar13;
           uStack_5c = uVar14;
           BattleUnit.ShowTextOnHead
-                    (this,uVar4,&local_68,
-                     BattleUnit.damageBaseFontSize,
+                    (this,uVar4,&local_68,*(uint32 *)(pStatics + 28),
                      CONCAT44(uVar2,24),"UIAtlas",0,0,0);
         }
         else {
@@ -2211,12 +2096,11 @@ public class BattleUnit
             uVar13 = puVar5[2];
             uVar14 = puVar5[3];
             uVar4 = "-0";
-            if (((*(byte *)(BattleUnit_StaticsPtr + 0x133) & 4) != 0) &&
-               (*(int *)(BattleUnit_StaticsPtr + 224) == 0)) {
+            if (((*(byte *)(DAT_181db07c8 + 0x133) & 4) != 0) && (*(int *)(DAT_181db07c8 + 224) == 0)) {
               il2cpp_runtime_class_init();
               uVar4 = "-0";
             }
-            goto LAB_1808e3975;
+            goto LAB_1808cebe5;
           }
           uVar4 = Single.ToString(local_res10,"+0;-0;0",0);
           if (!isCrit) {
@@ -2225,7 +2109,7 @@ public class BattleUnit
             uStack_64 = puVar5[1];
             uStack_60 = puVar5[2];
             uStack_5c = puVar5[3];
-            iVar9 = BattleUnit.damageBaseFontSize;
+            iVar9 = *(int *)(pStatics + 28);
           }
           else {
             puVar5 = (uint32 *)Color.get_red();
@@ -2233,25 +2117,24 @@ public class BattleUnit
             uStack_64 = puVar5[1];
             uStack_60 = puVar5[2];
             uStack_5c = puVar5[3];
-            iVar9 = BattleUnit.damageBaseFontSize + 3;
+            iVar9 = *(int *)(pStatics + 28) + 3;
           }
           BattleUnit.ShowTextOnHead
                     (this,uVar4,&local_68,iVar9,CONCAT44(uVar2,24),"UIAtlas",0,0,0);
           uVar4 = this.hipPos;
           if (this.heroData == null) throw; // [null/range check failed]
           if (!this.heroData.isSummon) {
-            if (PlotController._instance == 2) goto LAB_1808e3818;
+            if (**(int **)(DAT_181d73d40 + 184) == 2) goto LAB_1808cea88;
             uVar7 = "SpeEffect/BloodSplash";
-            if (*(char *)(*(int64 *)(PlotController_StaticsPtr + 184) + 4) != false)
-            goto LAB_1808e3818;
+            if (*(char *)(*(int64 *)(DAT_181d73d40 + 184) + 4) != false) goto LAB_1808cea88;
           }
           else {
-        LAB_1808e3818:
+        LAB_1808cea88:
             uVar7 = "SpeEffect/DirtSplash";
           }
           plVar6 = (int64 *)Resources.Load(uVar7,0);
           plVar8 = (int64 *)0;
-          if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181d4e110)) {
+          if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181d72e60)) {
             plVar8 = plVar6;
           }
           GlobalData.AddChild(uVar4,plVar8,1,0);
@@ -2281,10 +2164,10 @@ public class BattleUnit
               if ((((0.0 < lVar3.hp) && (0.2 <= fVar10 / lVar3.maxhp)) &&
                   (lVar3.hp / lVar3.maxhp < 0.2)) &&
                  (fVar10 = (float)Random.get_value(0), fVar10 <= 1.0)) {
-                lVar3 = BattleUnit.HeroLowHpTalk;
+                lVar3 = *(int64 *)(pStatics + 56);
                 if (lVar3 == null) throw; // [null/range check failed]
-                uVar2 = FUN_180d8cf10(0,lVar3.summonLv,0);
-                uVar4 = FUN_180002f80(lVar3,uVar2,DAT_181d7c9c0);
+                uVar2 = FUN_180d95a30(0,lVar3.summonLv,0);
+                uVar4 = FUN_180002f80(lVar3,uVar2,DAT_181da4358);
                 BattleUnit.Talk(this,uVar4,0x40400000,0);
               }
             }
@@ -2293,8 +2176,8 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C38
-    // RVA   : 0x8E5470   Offset: 0x8E3C70   Length: 0x217
+    // Token : 0x6000C62
+    // RVA   : 0x8D06E0   Offset: 0x8CFAE0   Length: 0x217
     public void CheckInvincibleEffect()
     {
         float fVar1;
@@ -2306,7 +2189,7 @@ public class BattleUnit
         ulong local_18;
         float local_10;
         if (this.heroData == null) {
-        LAB_1808e5682:
+        LAB_1808d08f2:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -2335,20 +2218,20 @@ public class BattleUnit
               local_18 = local_28;
               local_28 = 0;
               plVar7 = (int64 *)0;
-              if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181d4e110)) {
+              if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181d72e60)) {
                 plVar7 = plVar3;
               }
               uVar6 = GlobalData.AddChild(uVar6,plVar7,&local_28,&local_18,0);
               this.invincibleEffect = uVar6;
               return;
             }
-            goto LAB_1808e5682;
+            goto LAB_1808d08f2;
           }
         }
     }
 
-    // Token : 0x6000C39
-    // RVA   : 0x8E7D20   Offset: 0x8E6520   Length: 0x9A
+    // Token : 0x6000C63
+    // RVA   : 0x8D2F90   Offset: 0x8D2390   Length: 0x9A
     public void PlayHitAnim()
     {
         long lVar1;
@@ -2367,10 +2250,11 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C3A
-    // RVA   : 0x8E43A0   Offset: 0x8E2BA0   Length: 0x2A7
+    // Token : 0x6000C64
+    // RVA   : 0x8CF610   Offset: 0x8CEA10   Length: 0x2A7
     public void ChangeTrueHp(float num)
     {
+        var pStatics = *(int64*)(DAT_181db07c8 + 184);
         long lVar1;
         bool cVar2;
         uint uVar3;
@@ -2403,40 +2287,40 @@ public class BattleUnit
                 if ((((0.0 < lVar1.hp) && (0.2 <= fVar6 / lVar1.maxhp)) &&
                     (lVar1.hp / lVar1.maxhp < 0.2)) &&
                    (fVar6 = (float)Random.get_value(0), fVar6 <= 1.0)) {
-                  lVar1 = BattleUnit.HeroLowHpTalk;
+                  lVar1 = *(int64 *)(pStatics + 56);
                   if (lVar1 == null) throw; // [null/range check failed]
-                  uVar3 = FUN_180d8cf10(0,lVar1.summonLv,0);
-                  uVar4 = FUN_180002f80(lVar1,uVar3,DAT_181d7c9c0);
+                  uVar3 = FUN_180d95a30(0,lVar1.summonLv,0);
+                  uVar4 = FUN_180002f80(lVar1,uVar3,DAT_181da4358);
                   BattleUnit.Talk(this,uVar4,0x40400000,0);
                 }
               }
               uVar4 = Single.ToString(local_res10,"+0;-0;0",0);
-              puVar5 = (uint64 *)FUN_181098a50(&local_38,0);
+              puVar5 = (uint64 *)FUN_1810d3570(&local_38,0);
               local_38 = *puVar5;
               uStack_30 = puVar5[1];
               BattleUnit.ShowTextOnHead
                         (this,uVar4,&local_38,
-                         BattleUnit.damageBaseFontSize,24,
-                         "UIAtlas",0,0,0);
+                         *(uint32 *)(pStatics + 28),24,"UIAtlas",0,
+                         0,0);
               return;
             }
           }
         }
     }
 
-    // Token : 0x6000C3B
-    // RVA   : 0x8E2BD0   Offset: 0x8E13D0   Length: 0x10B
+    // Token : 0x6000C65
+    // RVA   : 0x8CDE40   Offset: 0x8CD240   Length: 0x10B
     public void AutoCureInjuryUseMana(float num)
     {
         float fVar1;
         if (this.heroData == null) {
-        LAB_1808e2cd0:
+        LAB_1808cdf40:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         fVar1 = (float)HeroData.GetTotalInjury(this.heroData,0);
         if (0.0 < fVar1) {
-          if (this.heroData == null) goto LAB_1808e2cd0;
+          if (this.heroData == null) goto LAB_1808cdf40;
           fVar1 = (float)Mathf.Min(this.heroData.mana * 0.1,num,0);
           if (fVar1 * -10.0 != null.0) {
             if (this.heroData == null) {
@@ -2449,11 +2333,12 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C3C
-    // RVA   : 0x8E65E0   Offset: 0x8E4DE0   Length: 0x584
+    // Token : 0x6000C66
+    // RVA   : 0x8D1850   Offset: 0x8D0C50   Length: 0x584
     public void FightCureSelfInjury(float num)
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics_07c8 = *(int64*)(DAT_181db07c8 + 184);
+        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
         float fVar1;
         float fVar2;
         ulong uVar3;
@@ -2481,15 +2366,15 @@ public class BattleUnit
           fVar2 = lVar6.poisonInjury;
           if ((fVar2 < lVar6.internalInjury) || (fVar2 < fVar1)) {
             if ((fVar1 < lVar6.internalInjury) || (fVar1 < fVar2)) {
-              if (!DAT_181e77d0b) {
-                il2cpp_internal(&BattleUnit_StaticsPtr);
-                il2cpp_internal(&PlotController_StaticsPtr);
-                il2cpp_runtime_class_init(&DAT_181d5b800);
+              if (!DAT_181e9d142) {
+                il2cpp_runtime_class_init(&DAT_181db07c8);
+                il2cpp_runtime_class_init(&DAT_181d73d40);
+                il2cpp_runtime_class_init(&DAT_181d82fa0);
                 il2cpp_internal(&"+0;-0;0");
                 il2cpp_internal(&"UIAtlas");
                 lVar6 = this.heroData;
-                DAT_181e77d0b = true;
-                if (lVar6 == null) goto LAB_1808e6b5f;
+                DAT_181e9d142 = true;
+                if (lVar6 == null) goto LAB_1808d1dcf;
               }
               if (lVar6.isSummon) {
                 return;
@@ -2506,9 +2391,9 @@ public class BattleUnit
                 uVar11 = puVar4[3];
               }
               else {
-                lVar6 = *(int64 *)(pPlotController + 0x3b8);
+                lVar6 = *(int64 *)(pStatics_3d40 + 0x3c0);
                 if (lVar6 == null) {
-        LAB_1808e6b5f:
+        LAB_1808d1dcf:
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
@@ -2521,19 +2406,19 @@ public class BattleUnit
                 uVar10 = lVar6.dailyAIManaged;
                 uVar11 = *(uint32 *)(lVar6 + 60);
               }
-              iVar7 = BattleUnit.damageBaseFontSize;
+              iVar7 = *(int *)(pStatics_07c8 + 28);
               uVar5 = 1;
             }
             else {
-              if (!DAT_181e77d0a) {
-                il2cpp_internal(&BattleUnit_StaticsPtr);
-                il2cpp_internal(&PlotController_StaticsPtr);
-                il2cpp_runtime_class_init(&DAT_181d5b800);
+              if (!DAT_181e9d141) {
+                il2cpp_runtime_class_init(&DAT_181db07c8);
+                il2cpp_runtime_class_init(&DAT_181d73d40);
+                il2cpp_runtime_class_init(&DAT_181d82fa0);
                 il2cpp_internal(&"+0;-0;0");
                 il2cpp_internal(&"UIAtlas");
                 lVar6 = this.heroData;
-                DAT_181e77d0a = true;
-                if (lVar6 == null) goto LAB_1808e6b59;
+                DAT_181e9d141 = true;
+                if (lVar6 == null) goto LAB_1808d1dc9;
               }
               if (lVar6.isSummon) {
                 return;
@@ -2550,9 +2435,9 @@ public class BattleUnit
                 uVar11 = puVar4[3];
               }
               else {
-                lVar6 = *(int64 *)(pPlotController + 0x3b8);
+                lVar6 = *(int64 *)(pStatics_3d40 + 0x3c0);
                 if (lVar6 == null) {
-        LAB_1808e6b59:
+        LAB_1808d1dc9:
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
@@ -2565,20 +2450,20 @@ public class BattleUnit
                 uVar10 = lVar6.summonSourceHero;
                 uVar11 = *(uint32 *)(lVar6 + 44);
               }
-              iVar7 = BattleUnit.damageBaseFontSize;
+              iVar7 = *(int *)(pStatics_07c8 + 28);
               uVar5 = 0;
             }
           }
           else {
-            if (!DAT_181e77d0c) {
-              il2cpp_internal(&BattleUnit_StaticsPtr);
-              il2cpp_internal(&PlotController_StaticsPtr);
-              il2cpp_runtime_class_init(&DAT_181d5b800);
+            if (!DAT_181e9d143) {
+              il2cpp_runtime_class_init(&DAT_181db07c8);
+              il2cpp_runtime_class_init(&DAT_181d73d40);
+              il2cpp_runtime_class_init(&DAT_181d82fa0);
               il2cpp_internal(&"+0;-0;0");
               il2cpp_internal(&"UIAtlas");
               lVar6 = this.heroData;
-              DAT_181e77d0c = true;
-              if (lVar6 == null) goto LAB_1808e6b53;
+              DAT_181e9d143 = true;
+              if (lVar6 == null) goto LAB_1808d1dc3;
             }
             if (lVar6.isSummon) {
               return;
@@ -2595,9 +2480,9 @@ public class BattleUnit
               uVar11 = puVar4[3];
             }
             else {
-              lVar6 = *(int64 *)(pPlotController + 0x3b8);
+              lVar6 = *(int64 *)(pStatics_3d40 + 0x3c0);
               if (lVar6 == null) {
-        LAB_1808e6b53:
+        LAB_1808d1dc3:
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
@@ -2610,7 +2495,7 @@ public class BattleUnit
               uVar10 = lVar6.heroAIDataArriveTargetRecord;
               uVar11 = *(uint32 *)(lVar6 + 76);
             }
-            iVar7 = BattleUnit.damageBaseFontSize;
+            iVar7 = *(int *)(pStatics_07c8 + 28);
             uVar5 = 2;
           }
           uVar5 = GlobalData.GetInjuryIconName(uVar5,0);
@@ -2622,8 +2507,8 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C3D
-    // RVA   : 0x8E31A0   Offset: 0x8E19A0   Length: 0x207
+    // Token : 0x6000C67
+    // RVA   : 0x8CE410   Offset: 0x8CD810   Length: 0x207
     public void ChangeExternalInjury(float num, bool showInfo, bool extraResist)
     {
         void BattleUnit.ChangeExternalInjury
@@ -2657,7 +2542,7 @@ public class BattleUnit
                 uVar9 = puVar4[3];
               }
               else {
-                lVar2 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x3b8);
+                lVar2 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x3c0);
                 if (lVar2 == null) throw; // [null/range check failed]
                 if (lVar2.summonLv == null) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -2668,7 +2553,7 @@ public class BattleUnit
                 uVar8 = lVar2.summonSourceHero;
                 uVar9 = *(uint32 *)(lVar2 + 44);
               }
-              iVar1 = BattleUnit.damageBaseFontSize;
+              iVar1 = *(int *)(*(int64 *)(DAT_181db07c8 + 184) + 28);
               uVar5 = GlobalData.GetInjuryIconName(0,0);
               local_28 = uVar6;
               uStack_24 = uVar7;
@@ -2681,8 +2566,8 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C3E
-    // RVA   : 0x8E3B60   Offset: 0x8E2360   Length: 0x208
+    // Token : 0x6000C68
+    // RVA   : 0x8CEDD0   Offset: 0x8CE1D0   Length: 0x208
     public void ChangeInternalInjury(float num, bool showInfo, bool extraResist)
     {
         void BattleUnit.ChangeInternalInjury
@@ -2716,7 +2601,7 @@ public class BattleUnit
                 uVar9 = puVar4[3];
               }
               else {
-                lVar2 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x3b8);
+                lVar2 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x3c0);
                 if (lVar2 == null) throw; // [null/range check failed]
                 if (lVar2.summonLv < 2) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -2727,7 +2612,7 @@ public class BattleUnit
                 uVar8 = lVar2.dailyAIManaged;
                 uVar9 = *(uint32 *)(lVar2 + 60);
               }
-              iVar1 = BattleUnit.damageBaseFontSize;
+              iVar1 = *(int *)(*(int64 *)(DAT_181db07c8 + 184) + 28);
               uVar5 = GlobalData.GetInjuryIconName(1);
               local_28 = uVar6;
               uStack_24 = uVar7;
@@ -2740,8 +2625,8 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C3F
-    // RVA   : 0x8E3FA0   Offset: 0x8E27A0   Length: 0x208
+    // Token : 0x6000C69
+    // RVA   : 0x8CF210   Offset: 0x8CE610   Length: 0x208
     public void ChangePoisonInjury(float num, bool showInfo, bool extraResist)
     {
         void BattleUnit.ChangePoisonInjury
@@ -2775,7 +2660,7 @@ public class BattleUnit
                 uVar9 = puVar4[3];
               }
               else {
-                lVar2 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x3b8);
+                lVar2 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x3c0);
                 if (lVar2 == null) throw; // [null/range check failed]
                 if (lVar2.summonLv < 3) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -2786,7 +2671,7 @@ public class BattleUnit
                 uVar8 = lVar2.heroAIDataArriveTargetRecord;
                 uVar9 = *(uint32 *)(lVar2 + 76);
               }
-              iVar1 = BattleUnit.damageBaseFontSize;
+              iVar1 = *(int *)(*(int64 *)(DAT_181db07c8 + 184) + 28);
               uVar5 = GlobalData.GetInjuryIconName(2);
               local_28 = uVar6;
               uStack_24 = uVar7;
@@ -2799,11 +2684,11 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C40
-    // RVA   : 0x8E4650   Offset: 0x8E2E50   Length: 0xE1F
+    // Token : 0x6000C6A
+    // RVA   : 0x8CF8C0   Offset: 0x8CECC0   Length: 0xE1F
     public void CheckDead()
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d73d40 + 184);
         float fVar1;
         bool cVar2;
         long lVar3;
@@ -2900,22 +2785,20 @@ public class BattleUnit
                                         iVar8 = iVar8 + 1;
                                         if (lVar3 == null) throw; // [null/range check failed]
                                       }
-                                      if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0) &&
-                                         (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
-                                        il2cpp_runtime_class_init(PlotController_StaticsPtr);
+                                      if (((*(byte *)(DAT_181d73d40 + 0x133) & 4) != 0) &&
+                                         (*(int *)(DAT_181d73d40 + 224) == 0)) {
+                                        il2cpp_runtime_class_init(DAT_181d73d40);
                                         lVar3 = this.heroData;
                                       }
-                                      fVar12 = *(float *)(pPlotController
-                                                         + 0x228);
+                                      fVar12 = *(float *)(pStatics + 0x230);
                                       if ((lVar3 != null) && (*(int64 *)(lVar3 + 0x2b8) != 0)) {
                                         fVar13 = (float)HeroSpeAddData.Get(*(int64 *)(lVar3 + 0x2b8),
                                                                             129,0);
                                         fVar1 = this.battleMove;
-                                        uVar14 = FUN_1810a8ba0(fVar1 + fVar13 * fVar12,0,
+                                        uVar14 = FUN_1810e36c0(fVar1 + fVar13 * fVar12,0,
                                                                *(uint32 *)
-                                                                (*(int64 *)
-                                                                  (PlotController_StaticsPtr + 184) +
-                                                                0x228),0);
+                                                                (pStatics +
+                                                                0x230),0);
                                         this.battleMove = uVar14;
                                         uVar15 = this.actionBarUnit;
                                         cVar2 = Object.op_Inequality(uVar15,0,0);
@@ -2944,9 +2827,8 @@ public class BattleUnit
                                             HeroData.RemoveAllDebuff(this.heroData,0);
                                             this.reborn = 1;
                                             lVar3 = *(int64 *)
-                                                     (pPlotController +
-                                                     80);
-                                            plVar5 = (int64 *)FUN_1800d60b0(DAT_181d7f180,5);
+                                                     (*(int64 *)(DAT_181db0248 + 184) + 80);
+                                            plVar5 = (int64 *)FUN_1800d60b0(DAT_181da4120,5);
                                             if ((this.heroData != null) &&
                                                (lVar6 = HeroData.Name(this.heroData,1,0),
                                                plVar5 != (int64 *)0)) {
@@ -3033,7 +2915,7 @@ public class BattleUnit
                                               uVar15 = String.Format("{0}死而复生，恢复{1}生命/{2}内力/{3}体力/{4}全架势/{4}%行动力。",plVar5,0);
                                               if (lVar3 != null) {
                                                 uVar11 = (undefined7)((uint64)uVar10 >> 8);
-                                                goto LAB_1808e4eed;
+                                                goto LAB_1808d015d;
                                               }
                                             }
                                           }
@@ -3069,9 +2951,9 @@ public class BattleUnit
                  lVar3 == null)) break;
               AnimationState.SetAnimation(lVar3,1,"die",0,0);
               BattleUnit.LeaveBattleField(this,0);
-              lVar3 = BattleUnit.HeroDeadTalk;
+              lVar3 = *(int64 *)(*(int64 *)(DAT_181db07c8 + 184) + 48);
               if (lVar3 == null) break;
-              uVar9 = FUN_180d8cf10(0,lVar3.battleUnits,0);
+              uVar9 = FUN_180d95a30(0,lVar3.battleUnits,0);
               if (lVar3.battleUnits <= uVar9) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
@@ -3084,7 +2966,7 @@ public class BattleUnit
               BattleUnit.PlayHeroSound(this,uVar15,1,1,1,0);
               if ((this.battleTeam == null) ||
                  (lVar3 = this.battleTeam.needProtectUnits) == null) break;
-              cVar2 = FUN_1818279a0(lVar3,this,DAT_181d582a8);
+              cVar2 = FUN_18181e400(lVar3,this,DAT_181d7fa28);
               if (cVar2) {
                 if (this.battleTeam == null) break;
                 this.battleTeam.needProtectUnitDestroyed = 1;
@@ -3092,12 +2974,12 @@ public class BattleUnit
               lVar3 = new WarpText_d__8(0,0);
               if (lVar3 != null) {
                 lVar3.needProtectUnits = this;
-                FUN_180d837c0(this,lVar3,0);
-                lVar3 = **(int64 **)(DAT_181d5a578 + 184);
+                FUN_180d8c2e0(this,lVar3,0);
+                lVar3 = **(int64 **)(DAT_181d7f6a8 + 184);
                 if (this.heroData != null) {
                   uVar15 = HeroData.Name(this.heroData,1,0);
                   uVar15 = String.Format("{0}败退",uVar15,0);
-                  puVar4 = (uint64 *)FUN_1810988d0(&local_78,0);
+                  puVar4 = (uint64 *)FUN_1810d33f0(&local_78,0);
                   if (lVar3 != null) {
                     local_78 = *puVar4;
                     uStack_70 = puVar4[1];
@@ -3111,7 +2993,7 @@ public class BattleUnit
                       uVar15 = String.Format("{0}败退。",uVar15,0);
                       if (lVar3 != null) {
                         uVar11 = (undefined7)((uint64)uVar10 >> 8);
-        LAB_1808e4eed:
+        LAB_1808d015d:
                         BattleController.AddInfoText(lVar3,uVar15,CONCAT71(uVar11,1),0);
                         return;
                       }
@@ -3137,10 +3019,10 @@ public class BattleUnit
               if (cVar2) {
                 if ((this.battleTeam == null) ||
                    (lVar3 = this.battleTeam.battleUnits) == null) break;
-                lVar3 = FUN_180002f80(lVar3,uVar9,DAT_181d584a0);
+                lVar3 = FUN_180002f80(lVar3,uVar9,DAT_181d7fc20);
                 if ((((this.battleTeam == null) ||
                      ((lVar7 = this.battleTeam.battleUnits, lVar7 == null ||
-                      (lVar7 = FUN_180002f80(lVar7,uVar9,DAT_181d584a0)) == null))) ||
+                      (lVar7 = FUN_180002f80(lVar7,uVar9,DAT_181d7fc20)) == null))) ||
                     (*(int64 *)(lVar7 + 64) == 0)) || (lVar3 == null)) break;
                 in_stack_ffffffffffffff48 = in_stack_ffffffffffffff48 & 0xffffffffffffff00;
                 BattleUnit.ChangeHp
@@ -3160,8 +3042,8 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C41
-    // RVA   : 0x8E57C0   Offset: 0x8E3FC0   Length: 0x6C
+    // Token : 0x6000C6B
+    // RVA   : 0x8D0A30   Offset: 0x8CFE30   Length: 0x6C
     public IEnumerator Dying()
     {
         long lVar1;
@@ -3172,8 +3054,8 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C42
-    // RVA   : 0x8E9CA0   Offset: 0x8E84A0   Length: 0x26A
+    // Token : 0x6000C6C
+    // RVA   : 0x8D4C50   Offset: 0x8D4050   Length: 0x26A
     public void ShowTextOnHead(string text, Color color, int fontSize, Ease setEase, string atlasName, string spriteName, string font)
     {
         void BattleUnit.ShowTextOnHead
@@ -3193,15 +3075,15 @@ public class BattleUnit
         uint64 local_28;
         float fStack_20;
         uint32 uStack_1c;
-        lVar1 = GameController._instance;
+        lVar1 = **(int64 **)(DAT_181d72cc8 + 184);
         if (this.hipPos != null) {
           lVar2 = GameObject.get_transform(this.hipPos,0);
           if (lVar2 != null) {
             puVar3 = (uint64 *)Transform.get_position(&local_28,lVar2,0);
             local_58 = *puVar3;
             local_50 = *(float *)(puVar3 + 1);
-            local_30 = *(float *)(*(uint64 **)(BattleUnit_StaticsPtr + 184) + 1);
-            local_38 = BattleUnit.headPos;
+            local_30 = *(float *)(*(uint64 **)(DAT_181db07c8 + 184) + 1);
+            local_38 = **(uint64 **)(DAT_181db07c8 + 184);
             fVar4 = (float)this.OnceShowText * 0.0;
             local_40 = local_50 + local_30 + fVar4;
             local_48 = CONCAT44(local_58._4_4_ + (float)((uint64)local_38 >> 32) +
@@ -3227,8 +3109,8 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C43
-    // RVA   : 0x8E5730   Offset: 0x8E3F30   Length: 0x8A
+    // Token : 0x6000C6D
+    // RVA   : 0x8D09A0   Offset: 0x8CFDA0   Length: 0x8A
     public void DisactiveSelf()
     {
         bool cVar1;
@@ -3246,8 +3128,8 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C44
-    // RVA   : 0x8E5690   Offset: 0x8E3E90   Length: 0x9E
+    // Token : 0x6000C6E
+    // RVA   : 0x8D0900   Offset: 0x8CFD00   Length: 0x9E
     public void DestroySelf()
     {
         ulong uVar1;
@@ -3261,8 +3143,8 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C45
-    // RVA   : 0x8E7980   Offset: 0x8E6180   Length: 0x98
+    // Token : 0x6000C6F
+    // RVA   : 0x8D2BF0   Offset: 0x8D1FF0   Length: 0x98
     public IEnumerator MoveFromTarget(GridUnitData targetGrid, int num)
     {
         long lVar1;
@@ -3275,12 +3157,12 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C46
-    // RVA   : 0x8E2320   Offset: 0x8E0B20   Length: 0x8A6
+    // Token : 0x6000C70
+    // RVA   : 0x8CD590   Offset: 0x8CC990   Length: 0x8A6
     public void AddBuff(int id, float time)
     {
-        var pGameController = *(int64*)(GameController_StaticsPtr + 184);
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics_2d50 = *(int64*)(DAT_181d72d50 + 184);
+        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
         long lVar1;
         float fVar2;
         ulong uVar3;
@@ -3301,21 +3183,21 @@ public class BattleUnit
            (lVar1 = this.heroData.heroBuff) == null) throw; // [null/range check failed]
         fVar10 = (float)HeroSpeAddData.Get(lVar1,id,0);
         if (fVar10 < fVar2) {
-        LAB_1808e24ec:
+        LAB_1808cd75c:
           if (this.heroData == null) throw; // [null/range check failed]
           HeroData.AddBuff(this.heroData,id,local_res18[0],0);
         }
         else {
-          lVar1 = GameController.lockObj;
+          lVar1 = *(int64 *)(pStatics_2d50 + 32);
           if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 144)) == null) throw; // [null/range check failed]
           if (*(uint32 *)(lVar1 + 24) <= id) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar1 = *(int64 *)(*(int64 *)(lVar1 + 16) + 32 + lVar9 * 8);
           if (lVar1 == null) throw; // [null/range check failed]
-          if (*(char *)(lVar1 + 90) != false) goto LAB_1808e24ec;
+          if (*(char *)(lVar1 + 90) != false) goto LAB_1808cd75c;
         }
-        lVar1 = GameController.lockObj;
+        lVar1 = *(int64 *)(pStatics_2d50 + 32);
         if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 144)) != null) {
           if (*(uint32 *)(lVar1 + 24) <= id) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -3326,7 +3208,7 @@ public class BattleUnit
             if (this.heroData != null) {
               uVar3 = HeroData.GetBuffLevelString(this.heroData,id,0);
               uVar4 = String.Concat(uVar4,uVar3,0);
-              lVar1 = GameController.lockObj;
+              lVar1 = *(int64 *)(pStatics_2d50 + 32);
               if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 144)) != null) {
                 if (*(uint32 *)(lVar1 + 24) <= id) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -3344,8 +3226,8 @@ public class BattleUnit
                   uStack_40 = puVar5[2];
                   uStack_3c = puVar5[3];
                   BattleUnit.ShowTextOnHead(this,uVar4,&local_48,18,24,"UIAtlas",0,0,0);
-                  lVar1 = PlotController.StopWarCostFavor;
-                  plVar6 = (int64 *)FUN_1800d60b0(DAT_181d7f180,4);
+                  lVar1 = *(int64 *)(*(int64 *)(DAT_181db0248 + 184) + 80);
+                  plVar6 = (int64 *)FUN_1800d60b0(DAT_181da4120,4);
                   if (this.heroData != null) {
                     lVar7 = HeroData.Name(this.heroData,1,0);
                     if (plVar6 != (int64 *)0) {
@@ -3364,7 +3246,7 @@ public class BattleUnit
                       }
                       plVar6[4] = lVar7;
                       il2cpp_internal(plVar6 + 4,lVar7);
-                      lVar7 = GameController.lockObj;
+                      lVar7 = *(int64 *)(pStatics_2d50 + 32);
                       if ((lVar7 != null) && (lVar7 = *(int64 *)(lVar7 + 144)) != null) {
                         if (*(uint32 *)(lVar7 + 24) <= id) {
                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -3373,14 +3255,12 @@ public class BattleUnit
                         lVar7 = *(int64 *)(*(int64 *)(lVar7 + 16) + 32 + lVar9 * 8);
                         if (lVar7 != null) {
                           if (*(char *)(lVar7 + 64) == false) {
-                            uVar3 = *(uint64 *)
-                                     (pPlotController + 0x2c8);
+                            uVar3 = *(uint64 *)(pStatics_3d40 + 0x2d0);
                           }
                           else {
-                            uVar3 = *(uint64 *)
-                                     (pPlotController + 0x260);
+                            uVar3 = *(uint64 *)(pStatics_3d40 + 0x268);
                           }
-                          lVar7 = GameController.lockObj;
+                          lVar7 = *(int64 *)(pStatics_2d50 + 32);
                           if ((lVar7 != null) && (lVar7 = *(int64 *)(lVar7 + 144)) != null) {
                             if (*(uint32 *)(lVar7 + 24) <= id) {
                               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -3419,8 +3299,7 @@ public class BattleUnit
                               }
                               plVar6[6] = lVar7;
                               il2cpp_internal(plVar6 + 6,lVar7);
-                              lVar7 = *(int64 *)
-                                       (pGameController + 32);
+                              lVar7 = *(int64 *)(pStatics_2d50 + 32);
                               if ((lVar7 != null) && (lVar7 = *(int64 *)(lVar7 + 144)) != null) {
                                 if (*(uint32 *)(lVar7 + 24) <= id) {
                                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -3466,11 +3345,12 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C47
-    // RVA   : 0x8E6060   Offset: 0x8E4860   Length: 0x571
+    // Token : 0x6000C71
+    // RVA   : 0x8D12D0   Offset: 0x8D06D0   Length: 0x571
     public void EnterGrid(GridUnitData grid, bool noTurnRotation, bool teleport)
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics_0248 = *(int64*)(DAT_181db0248 + 184);
+        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         float fVar2;
         float fVar3;
         long lVar4;
@@ -3490,7 +3370,7 @@ public class BattleUnit
             Debug.LogError(uVar7,0);
             return;
           }
-          goto LAB_1808e65cc;
+          goto LAB_1808d183c;
         }
         plVar1 = &this.mapGrid;
         if (this.mapGrid != null) {
@@ -3510,7 +3390,7 @@ public class BattleUnit
           if (this.mapGrid != null) {
             BattleUnit.SetDownObstacleNeedRefresh(this,0);
             fVar3 = local_40;
-            if (this.mapGrid == null) goto LAB_1808e65cc;
+            if (this.mapGrid == null) goto LAB_1808d183c;
             GridUnitData.OnLeave(this.mapGrid,0);
             this.mapGrid = 0;
             il2cpp_internal(plVar1,0);
@@ -3529,49 +3409,48 @@ public class BattleUnit
             fVar9 = *(float *)(puVar6 + 1);
             local_68._0_4_ = (float)uVar7;
             local_68._4_4_ = (float)((uint64)uVar7 >> 32);
-            local_48 = *(uint64 *)(pPlotController + 28);
-            local_40 = *(float *)(pPlotController + 36);
+            local_48 = *(uint64 *)(pStatics_0248 + 28);
+            local_40 = *(float *)(pStatics_0248 + 36);
             fVar9 = fVar9 + local_40;
             local_58 = CONCAT44(local_68._4_4_ + (float)((uint64)local_48 >> 32),
                                 (float)local_68 + (float)local_48);
-            fVar2 = BattleUnit.UnitMoveOneGridTime;
+            fVar2 = *(float *)(*(int64 *)(DAT_181db07c8 + 184) + 24);
             fVar3 = local_40;
-            if ((GameController._instance != null) &&
-               (lVar5 = GameController._instance.worldData,
-               lVar5 != null)) {
+            if ((*pStatics_2cc8 != 0) &&
+               (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
               local_48 = local_58;
               local_40 = fVar9;
               uVar7 = ShortcutExtensions.DOLocalMove
-                                (lVar4,&local_48,fVar2 / lVar5.battleTimeScale,0,0);
-              TweenSettingsExtensions.SetEase(uVar7,1,DAT_181d97ca8);
-        LAB_1808e642b:
+                                (lVar4,&local_48,fVar2 / *(float *)(lVar5 + 0x1d8),0,0);
+              TweenSettingsExtensions.SetEase(uVar7,1,DAT_181dc0f80);
+        LAB_1808d169b:
               GridUnitData.OnEnter(grid,this,0);
               if (this.mapGrid != null) {
                 iVar8 = -1;
                 do {
                   fVar3 = local_40;
-                  if (this.mapGrid == null) goto LAB_1808e65cc;
+                  if (this.mapGrid == null) goto LAB_1808d183c;
                   if (this.mapGrid.row + iVar8 < 0) {
                     return;
                   }
                   lVar5 = FUN_18046bb80(0);
                   fVar3 = local_40;
                   if ((((lVar5 == null) || (lVar4 = this.mapGrid) == null) ||
-                      (lVar5.cityAreaID == null)) ||
+                      (*(int64 *)(lVar5 + 24) == 0)) ||
                      (lVar5 = BattleMapData.GetGridData
-                                        (lVar5.cityAreaID,*(int *)(lVar4 + 36) + iVar8,
+                                        (*(int64 *)(lVar5 + 24),*(int *)(lVar4 + 36) + iVar8,
                                          *(uint32 *)(lVar4 + 40),0), fVar3 = local_40, lVar5 == null))
-                  goto LAB_1808e65cc;
+                  goto LAB_1808d183c;
                   if (*(int *)(lVar5 + 20) == 2) {
                     lVar5 = FUN_18046bb80(0);
                     fVar3 = local_40;
                     if (((lVar5 == null) || (lVar4 = this.mapGrid) == null) ||
-                       ((lVar5.cityAreaID == null ||
+                       ((*(int64 *)(lVar5 + 24) == 0 ||
                         ((lVar5 = BattleMapData.GetGridData
-                                            (lVar5.cityAreaID,*(int *)(lVar4 + 36) + iVar8,
+                                            (*(int64 *)(lVar5 + 24),*(int *)(lVar4 + 36) + iVar8,
                                              *(uint32 *)(lVar4 + 40),0), fVar3 = local_40,
-                         lVar5 == null || (lVar5.Areas == null)))))) goto LAB_1808e65cc;
-                    *(uint8 *)(lVar5.Areas + 64) = 1;
+                         lVar5 == null || (*(int64 *)(lVar5 + 48) == 0)))))) goto LAB_1808d183c;
+                    *(uint8 *)(*(int64 *)(lVar5 + 48) + 64) = 1;
                   }
                   iVar8 = iVar8 + -1;
                 } while (-4 < iVar8);
@@ -3588,23 +3467,23 @@ public class BattleUnit
           fVar9 = *(float *)(puVar6 + 1);
           local_58._0_4_ = (float)uVar7;
           local_58._4_4_ = (float)((uint64)uVar7 >> 32);
-          local_48 = *(uint64 *)(pPlotController + 28);
-          fVar3 = *(float *)(pPlotController + 36);
+          local_48 = *(uint64 *)(pStatics_0248 + 28);
+          fVar3 = *(float *)(pStatics_0248 + 36);
           local_40 = fVar9 + fVar3;
           local_68 = CONCAT44(local_58._4_4_ + (float)((uint64)local_48 >> 32),
                               (float)local_58 + (float)local_48);
           if (lVar4 != null) {
             local_48 = local_68;
             Transform.set_localPosition(lVar4,&local_48,0);
-            goto LAB_1808e642b;
+            goto LAB_1808d169b;
           }
         }
-        LAB_1808e65cc:
+        LAB_1808d183c:
         local_40 = fVar3;
     }
 
-    // Token : 0x6000C48
-    // RVA   : 0x8E7930   Offset: 0x8E6130   Length: 0x48
+    // Token : 0x6000C72
+    // RVA   : 0x8D2BA0   Offset: 0x8D1FA0   Length: 0x48
     public void LeaveGrid()
     {
         plVar1 = &this.mapGrid;
@@ -3620,8 +3499,8 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C49
-    // RVA   : 0x8E96C0   Offset: 0x8E7EC0   Length: 0x138
+    // Token : 0x6000C73
+    // RVA   : 0x8D4670   Offset: 0x8D3A70   Length: 0x138
     public void SetDownObstacleNeedRefresh()
     {
         long lVar1;
@@ -3631,7 +3510,7 @@ public class BattleUnit
           iVar3 = -1;
           do {
             if (this.mapGrid == null) {
-        LAB_1808e97f3:
+        LAB_1808d47a3:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -3643,7 +3522,7 @@ public class BattleUnit
                 (*(int64 *)(lVar2 + 24) == 0)) ||
                (lVar2 = BattleMapData.GetGridData
                                   (*(int64 *)(lVar2 + 24),*(int *)(lVar1 + 36) + iVar3,
-                                   *(uint32 *)(lVar1 + 40),0), lVar2 == null)) goto LAB_1808e97f3;
+                                   *(uint32 *)(lVar1 + 40),0), lVar2 == null)) goto LAB_1808d47a3;
             if (*(int *)(lVar2 + 20) == 2) {
               lVar2 = FUN_18046bb80(0);
               if (((lVar2 == null) || (lVar1 = this.mapGrid) == null) ||
@@ -3651,7 +3530,7 @@ public class BattleUnit
                   ((lVar2 = BattleMapData.GetGridData
                                       (*(int64 *)(lVar2 + 24),*(int *)(lVar1 + 36) + iVar3,
                                        *(uint32 *)(lVar1 + 40),0), lVar2 == null ||
-                   (*(int64 *)(lVar2 + 48) == 0)))))) goto LAB_1808e97f3;
+                   (*(int64 *)(lVar2 + 48) == 0)))))) goto LAB_1808d47a3;
               *(uint8 *)(*(int64 *)(lVar2 + 48) + 64) = 1;
             }
             iVar3 = iVar3 + -1;
@@ -3659,24 +3538,29 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C4A
-    // RVA   : 0x272A00   Offset: 0x271200   Length: 0xC
+    // Token : 0x6000C74
+    // RVA   : 0x272A00   Offset: 0x271E00   Length: 0xC
     public void JoinBattleTeam(BattleTeam team)
     {
+        void FUN_180272a00(int64 this,uint64 team)
+        {
         this.battleTeam = team;
     }
 
-    // Token : 0x6000C4B
-    // RVA   : 0x8E7DC0   Offset: 0x8E65C0   Length: 0x12
+    // Token : 0x6000C75
+    // RVA   : 0x8D3030   Offset: 0x8D2430   Length: 0x12
     public void QuitBattleTeam()
     {
+        void FUN_1808d3030(int64 this)
+        {
         this.battleTeam = 0;
     }
 
-    // Token : 0x6000C4C
-    // RVA   : 0x8E6D00   Offset: 0x8E5500   Length: 0x36B
+    // Token : 0x6000C76
+    // RVA   : 0x8D1F70   Offset: 0x8D1370   Length: 0x36B
     public string GetStartFightTalk(bool isSupport)
     {
+        var pStatics = *(int64*)(DAT_181db07c8 + 184);
         long lVar1;
         uint uVar2;
         long lVar3;
@@ -3687,19 +3571,19 @@ public class BattleUnit
         ulong uVar8;
         uVar5 = "";
         if (!isSupport) {
-          lVar3 = PlotController.StopWarCostFavor;
+          lVar3 = *(int64 *)(*(int64 *)(DAT_181db0248 + 184) + 80);
           if (lVar3 != null) {
             if (lVar3.needProtectUnits == null) {
-              lVar3 = BattleUnit.StudyFightStartTalk;
+              lVar3 = *(int64 *)(pStatics + 64);
             }
             else {
-              if (PlotController._instance == 2) {
+              if (**(int **)(DAT_181d73d40 + 184) == 2) {
                 return uVar5;
               }
-              lVar3 = BattleUnit.DeathFightStartTalk;
+              lVar3 = *(int64 *)(pStatics + 72);
             }
             if (lVar3 != null) {
-              uVar2 = FUN_180d8cf10(0,lVar3.battleUnits,0);
+              uVar2 = FUN_180d95a30(0,lVar3.battleUnits,0);
               if (lVar3.battleUnits <= uVar2) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
@@ -3716,7 +3600,7 @@ public class BattleUnit
             while (lVar3.battleUnits != null) {
               uVar2 = (uint32)uVar7;
               if (*(int *)(lVar3.battleUnits + 24) <= (int)uVar2) {
-        LAB_1808e6fe7:
+        LAB_1808d2257:
                 uVar5 = "{0}莫慌，\n我来助阵！";
                 uVar4 = "";
                 if (uVar8 != 0) {
@@ -3736,9 +3620,9 @@ public class BattleUnit
               lVar3 = this.battleTeam;
               if (*(char *)(lVar1 + 16) == false) {
                 if (((lVar3 != null) && (lVar3.battleUnits != null)) &&
-                   (lVar3 = FUN_180002f80(lVar3.battleUnits,uVar7,DAT_181d584a0)) != null) {
+                   (lVar3 = FUN_180002f80(lVar3.battleUnits,uVar7,DAT_181d7fc20)) != null) {
                   uVar8 = *(uint64 *)(lVar3 + 64);
-                  goto LAB_1808e6fe7;
+                  goto LAB_1808d2257;
                 }
                 break;
               }
@@ -3750,8 +3634,8 @@ public class BattleUnit
         }
     }
 
-    // Token : 0x6000C4D
-    // RVA   : 0x8E7A20   Offset: 0x8E6220   Length: 0xD5
+    // Token : 0x6000C77
+    // RVA   : 0x8D2C90   Offset: 0x8D2090   Length: 0xD5
     private void OnDestroy()
     {
         long lVar1;
@@ -3766,14 +3650,14 @@ public class BattleUnit
           }
           lVar1 = *(int64 *)(this.skeleton + 224);
           if (lVar1 != null) {
-            uVar3 = new OnTooltipCB(this,DAT_181d60bd0,0);
+            uVar3 = new OnTooltipCB(this,DAT_181d893f0,0);
             AnimationState.remove_Event(lVar1,uVar3,0);
           }
         }
     }
 
-    // Token : 0x6000C4E
-    // RVA   : 0x8EB820   Offset: 0x8EA020   Length: 0x68
+    // Token : 0x6000C78
+    // RVA   : 0x8D67D0   Offset: 0x8D5BD0   Length: 0x68
     public void /*ctor*/()
     {
         ulong uVar1;
@@ -3781,160 +3665,176 @@ public class BattleUnit
         FUN_18044ef50(this,0);
     }
 
-    // Token : 0x6000C4F
-    // RVA   : 0x8EA950   Offset: 0x8E9150   Length: 0xECE
+    // Token : 0x6000C79
+    // RVA   : 0x8D5900   Offset: 0x8D4D00   Length: 0xECE
     private static void /*cctor*/()
     {
-        var pBattleUnit = *(int64*)(BattleUnit_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181db07c8 + 184);
         long lVar2;
         ulong local_38;
         uint local_30;
-        puVar1 = *(uint64 **)(BattleUnit_StaticsPtr + 184);
+        puVar1 = *(uint64 **)(DAT_181db07c8 + 184);
         *puVar1 = 0x3d99999a00000000;
         *(uint32 *)(puVar1 + 1) = 0;
         local_30 = 0x3f800000;
-        lVar2 = pBattleUnit;
+        lVar2 = pStatics;
         *(uint64 *)(lVar2 + 12) = 0x3e4ccccd3ecccccd;
         *(uint32 *)(lVar2 + 20) = 0x3f800000;
-        BattleUnit.UnitMoveOneGridTime = 0x3e4ccccd;
-        BattleUnit.damageBaseFontSize = 25;
-        lVar2 = il2cpp_internal(DAT_181d73eb0);
-        FUN_180f58a90(lVar2,DAT_181d841f8);
+        *(uint32 *)(pStatics + 24) = 0x3e4ccccd;
+        *(uint32 *)(pStatics + 28) = 25;
+        lVar2 = il2cpp_internal(DAT_181d98bd0);
+        FUN_18132faf0(lVar2,DAT_181dabb98);
         if (lVar2 != null) {
           local_38 = 0x4120000000000000;
           local_30 = 0;
-          FUN_181805a40(lVar2,&local_38,DAT_181d84278);
+          FUN_181816b80(lVar2,&local_38,DAT_181dabc18);
           local_38 = 0xc160000000000000;
           local_30 = 0;
-          FUN_181805a40(lVar2,&local_38,DAT_181d84278);
+          FUN_181816b80(lVar2,&local_38,DAT_181dabc18);
           local_38 = 0x40a0000000000000;
           local_30 = 0;
-          FUN_181805a40(lVar2,&local_38,DAT_181d84278);
+          FUN_181816b80(lVar2,&local_38,DAT_181dabc18);
           local_38 = 0x4120000000000000;
           local_30 = 0;
-          FUN_181805a40(lVar2,&local_38,DAT_181d84278);
+          FUN_181816b80(lVar2,&local_38,DAT_181dabc18);
           local_38 = 0x4120000000000000;
           local_30 = 0;
-          FUN_181805a40(lVar2,&local_38,DAT_181d84278);
+          FUN_181816b80(lVar2,&local_38,DAT_181dabc18);
           local_38 = 0;
           local_30 = 0;
-          FUN_181805a40(lVar2,&local_38,DAT_181d84278);
+          FUN_181816b80(lVar2,&local_38,DAT_181dabc18);
           local_38 = 0x4120000000000000;
           local_30 = 0;
-          FUN_181805a40(lVar2,&local_38,DAT_181d84278);
+          FUN_181816b80(lVar2,&local_38,DAT_181dabc18);
           local_38 = 0;
           local_30 = 0;
-          FUN_181805a40(lVar2,&local_38,DAT_181d84278);
+          FUN_181816b80(lVar2,&local_38,DAT_181dabc18);
           local_38 = 0xc1a0000000000000;
           local_30 = 0;
-          FUN_181805a40(lVar2,&local_38,DAT_181d84278);
+          FUN_181816b80(lVar2,&local_38,DAT_181dabc18);
           local_38 = 0x4120000000000000;
           local_30 = 0;
-          FUN_181805a40(lVar2,&local_38,DAT_181d84278);
-          BattleUnit.SummonFollowUIOffset = lVar2;
-          lVar2 = il2cpp_internal(DAT_181d72a30);
-          FUN_180f58a90(lVar2,DAT_181d7c250);
+          FUN_181816b80(lVar2,&local_38,DAT_181dabc18);
+          plVar3 = (int64 *)(pStatics + 32);
+          *plVar3 = lVar2;
+          il2cpp_internal(plVar3,lVar2);
+          lVar2 = il2cpp_internal(DAT_181d97750);
+          FUN_18132faf0(lVar2,DAT_181da3bd8);
           if (lVar2 != null) {
-            FUN_181827900(lVar2,"不堪一击",DAT_181d7c3d0);
-            FUN_181827900(lVar2,"承让承让",DAT_181d7c3d0);
-            FUN_181827900(lVar2,"得罪了",DAT_181d7c3d0);
-            FUN_181827900(lVar2,"我还未出全力",DAT_181d7c3d0);
-            FUN_181827900(lVar2,"山外有山，人外有人",DAT_181d7c3d0);
-            FUN_181827900(lVar2,"破！",DAT_181d7c3d0);
-            FUN_181827900(lVar2,"着！",DAT_181d7c3d0);
-            FUN_181827900(lVar2,"得手了",DAT_181d7c3d0);
-            FUN_181827900(lVar2,"拿下一城",DAT_181d7c3d0);
-            FUN_181827900(lVar2,"中！",DAT_181d7c3d0);
-            BattleUnit.HeroKillTalk = lVar2;
-            lVar2 = il2cpp_internal(DAT_181d72a30);
-            FUN_180f58a90(lVar2,DAT_181d7c250);
+            FUN_18181e0a0(lVar2,"不堪一击",DAT_181da3d58);
+            FUN_18181e0a0(lVar2,"承让承让",DAT_181da3d58);
+            FUN_18181e0a0(lVar2,"得罪了",DAT_181da3d58);
+            FUN_18181e0a0(lVar2,"我还未出全力",DAT_181da3d58);
+            FUN_18181e0a0(lVar2,"山外有山，人外有人",DAT_181da3d58);
+            FUN_18181e0a0(lVar2,"破！",DAT_181da3d58);
+            FUN_18181e0a0(lVar2,"着！",DAT_181da3d58);
+            FUN_18181e0a0(lVar2,"得手了",DAT_181da3d58);
+            FUN_18181e0a0(lVar2,"拿下一城",DAT_181da3d58);
+            FUN_18181e0a0(lVar2,"中！",DAT_181da3d58);
+            plVar3 = (int64 *)(pStatics + 40);
+            *plVar3 = lVar2;
+            il2cpp_internal(plVar3,lVar2);
+            lVar2 = il2cpp_internal(DAT_181d97750);
+            FUN_18132faf0(lVar2,DAT_181da3bd8);
             if (lVar2 != null) {
-              FUN_181827900(lVar2,"唔！",DAT_181d7c3d0);
-              FUN_181827900(lVar2,"可恶...",DAT_181d7c3d0);
-              FUN_181827900(lVar2,"好功夫！",DAT_181d7c3d0);
-              FUN_181827900(lVar2,"甘拜下风",DAT_181d7c3d0);
-              FUN_181827900(lVar2,"愿赌服输",DAT_181d7c3d0);
-              FUN_181827900(lVar2,"技不如人",DAT_181d7c3d0);
-              FUN_181827900(lVar2,"唔啊",DAT_181d7c3d0);
-              FUN_181827900(lVar2,"败矣",DAT_181d7c3d0);
-              FUN_181827900(lVar2,"糟糕",DAT_181d7c3d0);
-              FUN_181827900(lVar2,"啊！",DAT_181d7c3d0);
-              FUN_181827900(lVar2,"不可能",DAT_181d7c3d0);
-              FUN_181827900(lVar2,"为之奈何...",DAT_181d7c3d0);
-              FUN_181827900(lVar2,"怎会如此...",DAT_181d7c3d0);
-              FUN_181827900(lVar2,"终究棋差一着",DAT_181d7c3d0);
-              FUN_181827900(lVar2,"竟败于你手",DAT_181d7c3d0);
-              FUN_181827900(lVar2,"我本有机会...",DAT_181d7c3d0);
-              FUN_181827900(lVar2,"无力再战了",DAT_181d7c3d0);
-              BattleUnit.HeroDeadTalk = lVar2;
-              lVar2 = il2cpp_internal(DAT_181d72a30);
-              FUN_180f58a90(lVar2,DAT_181d7c250);
+              FUN_18181e0a0(lVar2,"唔！",DAT_181da3d58);
+              FUN_18181e0a0(lVar2,"可恶...",DAT_181da3d58);
+              FUN_18181e0a0(lVar2,"好功夫！",DAT_181da3d58);
+              FUN_18181e0a0(lVar2,"甘拜下风",DAT_181da3d58);
+              FUN_18181e0a0(lVar2,"愿赌服输",DAT_181da3d58);
+              FUN_18181e0a0(lVar2,"技不如人",DAT_181da3d58);
+              FUN_18181e0a0(lVar2,"唔啊",DAT_181da3d58);
+              FUN_18181e0a0(lVar2,"败矣",DAT_181da3d58);
+              FUN_18181e0a0(lVar2,"糟糕",DAT_181da3d58);
+              FUN_18181e0a0(lVar2,"啊！",DAT_181da3d58);
+              FUN_18181e0a0(lVar2,"不可能",DAT_181da3d58);
+              FUN_18181e0a0(lVar2,"为之奈何...",DAT_181da3d58);
+              FUN_18181e0a0(lVar2,"怎会如此...",DAT_181da3d58);
+              FUN_18181e0a0(lVar2,"终究棋差一着",DAT_181da3d58);
+              FUN_18181e0a0(lVar2,"竟败于你手",DAT_181da3d58);
+              FUN_18181e0a0(lVar2,"我本有机会...",DAT_181da3d58);
+              FUN_18181e0a0(lVar2,"无力再战了",DAT_181da3d58);
+              plVar3 = (int64 *)(pStatics + 48);
+              *plVar3 = lVar2;
+              il2cpp_internal(plVar3,lVar2);
+              lVar2 = il2cpp_internal(DAT_181d97750);
+              FUN_18132faf0(lVar2,DAT_181da3bd8);
               if (lVar2 != null) {
-                FUN_181827900(lVar2,"唔！",DAT_181d7c3d0);
-                FUN_181827900(lVar2,"可恶...",DAT_181d7c3d0);
-                FUN_181827900(lVar2,"已经到极限了",DAT_181d7c3d0);
-                FUN_181827900(lVar2,"到此为止了吗？",DAT_181d7c3d0);
-                FUN_181827900(lVar2,"一点小伤而已",DAT_181d7c3d0);
-                FUN_181827900(lVar2,"还不可轻言失败",DAT_181d7c3d0);
-                FUN_181827900(lVar2,"糟糕",DAT_181d7c3d0);
-                FUN_181827900(lVar2,"情势不妙",DAT_181d7c3d0);
-                FUN_181827900(lVar2,"天旋地转",DAT_181d7c3d0);
-                FUN_181827900(lVar2,"为之奈何...",DAT_181d7c3d0);
-                FUN_181827900(lVar2,"怎会如此...",DAT_181d7c3d0);
-                FUN_181827900(lVar2,"眼冒金星",DAT_181d7c3d0);
-                FUN_181827900(lVar2,"鹿死谁手犹未可知",DAT_181d7c3d0);
-                FUN_181827900(lVar2,"该如何力挽狂澜",DAT_181d7c3d0);
-                FUN_181827900(lVar2,"渐处下风，得想想办法",DAT_181d7c3d0);
-                FUN_181827900(lVar2,"我竟会如此狼狈",DAT_181d7c3d0);
-                BattleUnit.HeroLowHpTalk = lVar2;
-                lVar2 = il2cpp_internal(DAT_181d72a30);
-                FUN_180f58a90(lVar2,DAT_181d7c250);
+                FUN_18181e0a0(lVar2,"唔！",DAT_181da3d58);
+                FUN_18181e0a0(lVar2,"可恶...",DAT_181da3d58);
+                FUN_18181e0a0(lVar2,"已经到极限了",DAT_181da3d58);
+                FUN_18181e0a0(lVar2,"到此为止了吗？",DAT_181da3d58);
+                FUN_18181e0a0(lVar2,"一点小伤而已",DAT_181da3d58);
+                FUN_18181e0a0(lVar2,"还不可轻言失败",DAT_181da3d58);
+                FUN_18181e0a0(lVar2,"糟糕",DAT_181da3d58);
+                FUN_18181e0a0(lVar2,"情势不妙",DAT_181da3d58);
+                FUN_18181e0a0(lVar2,"天旋地转",DAT_181da3d58);
+                FUN_18181e0a0(lVar2,"为之奈何...",DAT_181da3d58);
+                FUN_18181e0a0(lVar2,"怎会如此...",DAT_181da3d58);
+                FUN_18181e0a0(lVar2,"眼冒金星",DAT_181da3d58);
+                FUN_18181e0a0(lVar2,"鹿死谁手犹未可知",DAT_181da3d58);
+                FUN_18181e0a0(lVar2,"该如何力挽狂澜",DAT_181da3d58);
+                FUN_18181e0a0(lVar2,"渐处下风，得想想办法",DAT_181da3d58);
+                FUN_18181e0a0(lVar2,"我竟会如此狼狈",DAT_181da3d58);
+                plVar3 = (int64 *)(pStatics + 56);
+                *plVar3 = lVar2;
+                il2cpp_internal(plVar3,lVar2);
+                lVar2 = il2cpp_internal(DAT_181d97750);
+                FUN_18132faf0(lVar2,DAT_181da3bd8);
                 if (lVar2 != null) {
-                  FUN_181827900(lVar2,"得罪了",DAT_181d7c3d0);
-                  FUN_181827900(lVar2,"进招吧",DAT_181d7c3d0);
-                  FUN_181827900(lVar2,"点到为止",DAT_181d7c3d0);
-                  FUN_181827900(lVar2,"今日一战我期待已久",DAT_181d7c3d0);
-                  FUN_181827900(lVar2,"请指教",DAT_181d7c3d0);
-                  FUN_181827900(lVar2,"刀剑无眼，请多加小心",DAT_181d7c3d0);
-                  FUN_181827900(lVar2,"我已有三成把握",DAT_181d7c3d0);
-                  BattleUnit.StudyFightStartTalk = lVar2;
-                  lVar2 = il2cpp_internal(DAT_181d72a30);
-                  FUN_180f58a90(lVar2,DAT_181d7c250);
+                  FUN_18181e0a0(lVar2,"得罪了",DAT_181da3d58);
+                  FUN_18181e0a0(lVar2,"进招吧",DAT_181da3d58);
+                  FUN_18181e0a0(lVar2,"点到为止",DAT_181da3d58);
+                  FUN_18181e0a0(lVar2,"今日一战我期待已久",DAT_181da3d58);
+                  FUN_18181e0a0(lVar2,"请指教",DAT_181da3d58);
+                  FUN_18181e0a0(lVar2,"刀剑无眼，请多加小心",DAT_181da3d58);
+                  FUN_18181e0a0(lVar2,"我已有三成把握",DAT_181da3d58);
+                  plVar3 = (int64 *)(pStatics + 64);
+                  *plVar3 = lVar2;
+                  il2cpp_internal(plVar3,lVar2);
+                  lVar2 = il2cpp_internal(DAT_181d97750);
+                  FUN_18132faf0(lVar2,DAT_181da3bd8);
                   if (lVar2 != null) {
-                    FUN_181827900(lVar2,"快刀斩乱麻吧",DAT_181d7c3d0);
-                    FUN_181827900(lVar2,"战端一起，恐怕难以善罢甘休",DAT_181d7c3d0);
-                    FUN_181827900(lVar2,"今日看来非得见血不可了",DAT_181d7c3d0);
-                    FUN_181827900(lVar2,"十步杀一人，千里不留行",DAT_181d7c3d0);
-                    FUN_181827900(lVar2,"此时若要后悔，恐怕也太迟了",DAT_181d7c3d0);
-                    FUN_181827900(lVar2,"既然你如此相逼，我也只好出手了",DAT_181d7c3d0);
-                    FUN_181827900(lVar2,"成王败寇，在此一战",DAT_181d7c3d0);
-                    FUN_181827900(lVar2,"今日你我，必有一人血溅当场",DAT_181d7c3d0);
-                    FUN_181827900(lVar2,"十年磨一剑，霜刃未曾试",DAT_181d7c3d0);
-                    FUN_181827900(lVar2,"是何人敢与我一战？",DAT_181d7c3d0);
-                    FUN_181827900(lVar2,"求死之人，神仙也难救",DAT_181d7c3d0);
-                    FUN_181827900(lVar2,"波澜已至，谁又能独善其身",DAT_181d7c3d0);
-                    FUN_181827900(lVar2,"自不量力",DAT_181d7c3d0);
-                    BattleUnit.DeathFightStartTalk = lVar2;
-                    lVar2 = il2cpp_internal(DAT_181d72a30);
-                    FUN_180f58a90(lVar2,DAT_181d7c250);
+                    FUN_18181e0a0(lVar2,"快刀斩乱麻吧",DAT_181da3d58);
+                    FUN_18181e0a0(lVar2,"战端一起，恐怕难以善罢甘休",DAT_181da3d58);
+                    FUN_18181e0a0(lVar2,"今日看来非得见血不可了",DAT_181da3d58);
+                    FUN_18181e0a0(lVar2,"十步杀一人，千里不留行",DAT_181da3d58);
+                    FUN_18181e0a0(lVar2,"此时若要后悔，恐怕也太迟了",DAT_181da3d58);
+                    FUN_18181e0a0(lVar2,"既然你如此相逼，我也只好出手了",DAT_181da3d58);
+                    FUN_18181e0a0(lVar2,"成王败寇，在此一战",DAT_181da3d58);
+                    FUN_18181e0a0(lVar2,"今日你我，必有一人血溅当场",DAT_181da3d58);
+                    FUN_18181e0a0(lVar2,"十年磨一剑，霜刃未曾试",DAT_181da3d58);
+                    FUN_18181e0a0(lVar2,"是何人敢与我一战？",DAT_181da3d58);
+                    FUN_18181e0a0(lVar2,"求死之人，神仙也难救",DAT_181da3d58);
+                    FUN_18181e0a0(lVar2,"波澜已至，谁又能独善其身",DAT_181da3d58);
+                    FUN_18181e0a0(lVar2,"自不量力",DAT_181da3d58);
+                    plVar3 = (int64 *)(pStatics + 72);
+                    *plVar3 = lVar2;
+                    il2cpp_internal(plVar3,lVar2);
+                    lVar2 = il2cpp_internal(DAT_181d97750);
+                    FUN_18132faf0(lVar2,DAT_181da3bd8);
                     if (lVar2 != null) {
-                      FUN_181827900(lVar2,"#SkillName#！",DAT_181d7c3d0);
-                      FUN_181827900(lVar2,"可识得此招#SkillName#？",DAT_181d7c3d0);
-                      FUN_181827900(lVar2,"尝尝这招#SkillName#",DAT_181d7c3d0);
-                      FUN_181827900(lVar2,"这#SkillName#你能否抵挡？",DAT_181d7c3d0);
-                      FUN_181827900(lVar2,"这#SkillName#乃我成名绝学",DAT_181d7c3d0);
-                      BattleUnit.UseSkillTalk = lVar2;
-                      lVar2 = il2cpp_internal(DAT_181d72a30);
-                      FUN_180f58a90(lVar2,DAT_181d7c250);
+                      FUN_18181e0a0(lVar2,"#SkillName#！",DAT_181da3d58);
+                      FUN_18181e0a0(lVar2,"可识得此招#SkillName#？",DAT_181da3d58);
+                      FUN_18181e0a0(lVar2,"尝尝这招#SkillName#",DAT_181da3d58);
+                      FUN_18181e0a0(lVar2,"这#SkillName#你能否抵挡？",DAT_181da3d58);
+                      FUN_18181e0a0(lVar2,"这#SkillName#乃我成名绝学",DAT_181da3d58);
+                      plVar3 = (int64 *)(pStatics + 80);
+                      *plVar3 = lVar2;
+                      il2cpp_internal(plVar3,lVar2);
+                      lVar2 = il2cpp_internal(DAT_181d97750);
+                      FUN_18132faf0(lVar2,DAT_181da3bd8);
                       if (lVar2 != null) {
-                        FUN_181827900(lVar2,"{0}！",DAT_181d7c3d0);
-                        FUN_181827900(lVar2,"竟敢伤我{0}！",DAT_181d7c3d0);
-                        FUN_181827900(lVar2,"{0}当心！",DAT_181d7c3d0);
-                        FUN_181827900(lVar2,"休要伤我{0}！",DAT_181d7c3d0);
-                        FUN_181827900(lVar2,"{0}你快退开，此处交给我便是！",DAT_181d7c3d0);
-                        FUN_181827900(lVar2,"竟然连{0}也...",DAT_181d7c3d0);
-                        FUN_181827900(lVar2,"{0}！你没事吧！",DAT_181d7c3d0);
-                        BattleUnit.FriendDeadTalk = lVar2;
+                        FUN_18181e0a0(lVar2,"{0}！",DAT_181da3d58);
+                        FUN_18181e0a0(lVar2,"竟敢伤我{0}！",DAT_181da3d58);
+                        FUN_18181e0a0(lVar2,"{0}当心！",DAT_181da3d58);
+                        FUN_18181e0a0(lVar2,"休要伤我{0}！",DAT_181da3d58);
+                        FUN_18181e0a0(lVar2,"{0}你快退开，此处交给我便是！",DAT_181da3d58);
+                        FUN_18181e0a0(lVar2,"竟然连{0}也...",DAT_181da3d58);
+                        FUN_18181e0a0(lVar2,"{0}！你没事吧！",DAT_181da3d58);
+                        plVar3 = (int64 *)(pStatics + 88);
+                        *plVar3 = lVar2;
+                        il2cpp_internal(plVar3,lVar2);
                         return;
                       }
                     }

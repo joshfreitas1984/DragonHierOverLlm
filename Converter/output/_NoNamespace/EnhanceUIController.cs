@@ -1,69 +1,69 @@
 // ============================================================
 // Type  : EnhanceUIController
-// Token : 0x2000263
+// Token : 0x2000269
 // ============================================================
 
 public class EnhanceUIController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40012C7
+    // Token: 0x400136A
     public CraftType enhanceType;
 
-    // Token: 0x40012C8
+    // Token: 0x400136B
     public GameObject enhanceUIPanel;
 
-    // Token: 0x40012C9
+    // Token: 0x400136C
     public AreaBuildingData targetBuilding;
 
-    // Token: 0x40012CA
+    // Token: 0x400136D
     public bool useMoney;
 
-    // Token: 0x40012CB
+    // Token: 0x400136E
     public GameObject enhanceTargetClearButton;
 
-    // Token: 0x40012CC
+    // Token: 0x400136F
     public GameObject enhanceMaterialClearButton;
 
-    // Token: 0x40012CD
+    // Token: 0x4001370
     public GameObject enhanceTargetItemIcon;
 
-    // Token: 0x40012CE
+    // Token: 0x4001371
     public GameObject enhanceMaterialItemIcon;
 
-    // Token: 0x40012CF
+    // Token: 0x4001372
     private static EnhanceUIController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600139C
-    // RVA   : 0x934640   Offset: 0x932E40   Length: 0x36
+    // Token : 0x60013DD
+    // RVA   : 0x9440C0   Offset: 0x9434C0   Length: 0x36
     public static EnhanceUIController get_Instance()
     {
-        return **(uint64 **)(DAT_181d9e5d0 + 184);
+        return **(uint64 **)(DAT_181dc3770 + 184);
     }
 
-    // Token : 0x600139D
-    // RVA   : 0x931240   Offset: 0x92FA40   Length: 0xD7
+    // Token : 0x60013DE
+    // RVA   : 0x940C00   Offset: 0x940000   Length: 0xD7
     private void Awake()
     {
         bool cVar2;
         ulong uVar3;
-        uVar3 = **(uint64 **)(DAT_181d9e5d0 + 184);
+        uVar3 = **(uint64 **)(DAT_181dc3770 + 184);
         cVar2 = Object.op_Equality(uVar3,0,0);
         if (!cVar2) {
           uVar3 = Component.get_gameObject(this,0);
           Object.Destroy(uVar3,0);
           return;
         }
-        puVar1 = *(uint64 **)(DAT_181d9e5d0 + 184);
+        puVar1 = *(uint64 **)(DAT_181dc3770 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
-    // Token : 0x600139E
-    // RVA   : 0x9339E0   Offset: 0x9321E0   Length: 0xC5C
+    // Token : 0x60013DF
+    // RVA   : 0x9433D0   Offset: 0x9427D0   Length: 0xCEC
     private void Update()
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d73d40 + 184);
         bool cVar1;
         byte uVar2;
         int iVar3;
@@ -86,17 +86,17 @@ public class EnhanceUIController
           if (iVar3 < 10) {
             if (((lVar5 == null) || (lVar5 = GameObject.get_transform(lVar5,0)) == null) ||
                (lVar5 = Transform.Find(lVar5,"EnhanceCost",0)) == null) throw; // [null/range check failed]
-            uVar6 = Component.GetComponent(lVar5,DAT_181d6d8c0);
-            plVar7 = (int64 *)FUN_1800d60b0(DAT_181d7f180,7);
+            uVar6 = Component.GetComponent(lVar5,DAT_181d96160);
+            plVar7 = (int64 *)FUN_1800d60b0(DAT_181da4120,7);
             if (this.targetBuilding == null) throw; // [null/range check failed]
             iVar3 = this.targetBuilding.lv;
             iVar4 = EnhanceUIController.EnhanceNeedBuildingLv(this,0);
             uVar11 = "提升强化等级至+{6}\n{0}需要建筑等级 {1}级</color>\n{2}需要{5}技能 {3}</color>\n{4}";
             if (iVar3 < iVar4) {
-              lVar5 = *(int64 *)(pPlotController + 0x2c8);
+              lVar5 = *(int64 *)(pStatics + 0x2d0);
             }
             else {
-              lVar5 = *(int64 *)(pPlotController + 0x260);
+              lVar5 = *(int64 *)(pStatics + 0x268);
             }
             if (plVar7 == (int64 *)0) {
                           // WARNING: Subroutine does not return
@@ -116,7 +116,7 @@ public class EnhanceUIController
             plVar7[4] = lVar5;
             il2cpp_internal(plVar7 + 4,lVar5);
             local_res8[0] = EnhanceUIController.EnhanceNeedBuildingLv(this,0);
-            lVar5 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
+            lVar5 = il2cpp_value_box(DAT_181d80418,local_res8);
             if ((lVar5 != null) &&
                (lVar8 = il2cpp_internal(lVar5,*(uint64 *)(*plVar7 + 64))) == null) {
               uVar6 = il2cpp_internal();
@@ -133,10 +133,10 @@ public class EnhanceUIController
             fVar13 = (float)EnhanceUIController.GetPlayerTargetSkill(this,0);
             iVar3 = EnhanceUIController.EnhanceNeedSkillLv(this,0);
             if (fVar13 < (float)iVar3) {
-              lVar5 = *(int64 *)(pPlotController + 0x2c8);
+              lVar5 = *(int64 *)(pStatics + 0x2d0);
             }
             else {
-              lVar5 = *(int64 *)(pPlotController + 0x260);
+              lVar5 = *(int64 *)(pStatics + 0x268);
             }
             if ((lVar5 != null) &&
                (lVar8 = il2cpp_internal(lVar5,*(uint64 *)(*plVar7 + 64))) == null) {
@@ -152,7 +152,7 @@ public class EnhanceUIController
             plVar7[6] = lVar5;
             il2cpp_internal(plVar7 + 6,lVar5);
             local_res8[0] = EnhanceUIController.EnhanceNeedSkillLv(this,0);
-            lVar5 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
+            lVar5 = il2cpp_value_box(DAT_181d80418,local_res8);
             if ((lVar5 != null) &&
                (lVar8 = il2cpp_internal(lVar5,*(uint64 *)(*plVar7 + 64))) == null) {
               uVar6 = il2cpp_internal();
@@ -171,7 +171,7 @@ public class EnhanceUIController
               lVar5 = GlobalData.GetResourceDescribe(uVar10,0);
             }
             else {
-              lVar5 = *(int64 *)(pPlotController + 0x430);
+              lVar5 = *(int64 *)(pStatics + 0x438);
               if (lVar5 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
@@ -181,7 +181,7 @@ public class EnhanceUIController
               }
               uVar10 = *(uint64 *)(*(int64 *)(lVar5 + 16) + 32);
               local_res8[0] = EnhanceUIController.GetEnhanceResourceCostNum(this,0);
-              uVar9 = il2cpp_value_box(DAT_181d7d0b8,local_res8);
+              uVar9 = il2cpp_value_box(DAT_181da22d8,local_res8);
               uVar10 = String.Format("{0}-{1}",uVar10,uVar9,0);
               uVar2 = EnhanceUIController.HaveResource(this,0);
               lVar5 = GlobalData.GenerateChangeColorText(uVar10,uVar2,0);
@@ -201,7 +201,7 @@ public class EnhanceUIController
             il2cpp_internal(plVar7 + 8,lVar5);
             uVar12 = 0;
             iVar3 = this.enhanceType;
-            lVar5 = *(int64 *)(pPlotController + 0x4a8);
+            lVar5 = *(int64 *)(pStatics + 0x4b0);
             if (iVar3 == 0) {
               uVar12 = 6;
             }
@@ -212,7 +212,7 @@ public class EnhanceUIController
               uVar12 = 8;
             }
             if (lVar5 == null) {
-        LAB_180934631:
+        LAB_1809440b1:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -235,7 +235,7 @@ public class EnhanceUIController
             il2cpp_internal(plVar7 + 9,lVar5);
             local_res18[0] = EnhanceUIController.GetNowEnhanceLv(this,0);
             local_res18[0] = local_res18[0] + 1;
-            lVar5 = il2cpp_value_box(DAT_181d5b2f8,local_res18);
+            lVar5 = il2cpp_value_box(DAT_181d80418,local_res18);
             if ((lVar5 != null) &&
                (lVar8 = il2cpp_internal(lVar5,*(uint64 *)(*plVar7 + 64))) == null) {
               uVar6 = il2cpp_internal();
@@ -253,8 +253,8 @@ public class EnhanceUIController
             LTLocalization.SetText(uVar6,uVar11,0);
             if (((this.enhanceUIPanel == null) ||
                 (lVar5 = GameObject.get_transform(this.enhanceUIPanel,0)) == null) ||
-               (lVar5 = Transform.Find(lVar5,"EnhanceExtraAdd",0)) == null) goto LAB_180934631;
-            uVar11 = Component.GetComponent(lVar5,DAT_181d6d8c0);
+               (lVar5 = Transform.Find(lVar5,"EnhanceExtraAdd",0)) == null) goto LAB_1809440b1;
+            uVar11 = Component.GetComponent(lVar5,DAT_181d96160);
             uVar6 = this.enhanceTargetItemIcon;
             cVar1 = Object.op_Equality(uVar6,0,0);
             uVar6 = "";
@@ -270,21 +270,21 @@ public class EnhanceUIController
             LTLocalization.SetText(uVar11,uVar6,0);
             if (((this.enhanceUIPanel == null) ||
                 (lVar5 = GameObject.get_transform(this.enhanceUIPanel,0)) == null) ||
-               (lVar5 = Transform.Find(lVar5,"CostTime",0)) == null) goto LAB_18093462b;
-            uVar6 = Component.GetComponent(lVar5,DAT_181d6d8c0);
+               (lVar5 = Transform.Find(lVar5,"CostTime",0)) == null) goto LAB_1809440ab;
+            uVar6 = Component.GetComponent(lVar5,DAT_181d96160);
             local_res8[0] = EnhanceUIController.EnhanceNeedTime(this,0);
-            uVar11 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
+            uVar11 = il2cpp_value_box(DAT_181d80418,local_res8);
             uVar11 = String.Format("消耗时间：{0}天",uVar11,0);
             LTLocalization.SetText(uVar6,uVar11,0);
             if (((this.enhanceUIPanel == null) ||
                 (lVar5 = GameObject.get_transform(this.enhanceUIPanel,0)) == null) ||
-               (lVar5 = Transform.Find(lVar5,"EnhanceButton",0)) == null) goto LAB_18093462b;
-            lVar5 = Component.GetComponent(lVar5,DAT_181d6af40);
-            if (this.targetBuilding == null) goto LAB_18093462b;
+               (lVar5 = Transform.Find(lVar5,"EnhanceButton",0)) == null) goto LAB_1809440ab;
+            lVar5 = Component.GetComponent(lVar5,DAT_181d93760);
+            if (this.targetBuilding == null) goto LAB_1809440ab;
             iVar3 = this.targetBuilding.lv;
             iVar4 = EnhanceUIController.EnhanceNeedBuildingLv(this,0);
             if (iVar3 < iVar4) {
-        LAB_180934269:
+        LAB_180943ca7:
               uVar2 = 0;
             }
             else {
@@ -292,7 +292,7 @@ public class EnhanceUIController
               iVar3 = EnhanceUIController.EnhanceNeedSkillLv(this,0);
               if ((fVar13 < (float)iVar3) ||
                  (cVar1 = EnhanceUIController.HaveResource(this,0), !cVar1))
-              goto LAB_180934269;
+              goto LAB_180943ca7;
               uVar6 = this.enhanceMaterialItemIcon;
               uVar2 = Object.op_Inequality(uVar6,0,0);
             }
@@ -300,15 +300,15 @@ public class EnhanceUIController
               Selectable.set_interactable(lVar5,uVar2,0);
               return;
             }
-        LAB_18093462b:
+        LAB_1809440ab:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           if (((lVar5 == null) || (lVar5 = GameObject.get_transform(lVar5,0)) == null) ||
              (lVar5 = Transform.Find(lVar5,"EnhanceCost",0)) == null) throw; // [null/range check failed]
-          uVar6 = Component.GetComponent(lVar5,DAT_181d6d8c0);
-          lVar5 = *(int64 *)(pPlotController + 0x578);
-          uVar11 = *(uint64 *)(pPlotController + 0x2c8);
+          uVar6 = Component.GetComponent(lVar5,DAT_181d96160);
+          lVar5 = *(int64 *)(pStatics + 0x580);
+          uVar11 = *(uint64 *)(pStatics + 0x2d0);
           if (lVar5 == null) throw; // [null/range check failed]
           uVar12 = this.enhanceType;
           if (*(uint32 *)(lVar5 + 24) <= uVar12) {
@@ -321,7 +321,7 @@ public class EnhanceUIController
           if (((this.enhanceUIPanel == null) ||
               (lVar5 = GameObject.get_transform(this.enhanceUIPanel,0)) == null) ||
              (lVar5 = Transform.Find(lVar5,"CostTime",0)) == null) throw; // [null/range check failed]
-          uVar6 = Component.GetComponent(lVar5,DAT_181d6d8c0);
+          uVar6 = Component.GetComponent(lVar5,DAT_181d96160);
           LTLocalization.SetText(uVar6,"",0);
           if (this.enhanceUIPanel == null) throw; // [null/range check failed]
           lVar5 = GameObject.get_transform(this.enhanceUIPanel,0);
@@ -331,32 +331,32 @@ public class EnhanceUIController
           if (((this.enhanceUIPanel == null) ||
               (lVar5 = GameObject.get_transform(this.enhanceUIPanel,0)) == null) ||
              (lVar5 = Transform.Find(lVar5,"EnhanceCost",0)) == null) throw; // [null/range check failed]
-          uVar6 = Component.GetComponent(lVar5,DAT_181d6d8c0);
+          uVar6 = Component.GetComponent(lVar5,DAT_181d96160);
           LTLocalization.SetText(uVar6,"",0);
           if (((this.enhanceUIPanel == null) ||
               (lVar5 = GameObject.get_transform(this.enhanceUIPanel,0)) == null) ||
              (lVar5 = Transform.Find(lVar5,"EnhanceExtraAdd",0)) == null) throw; // [null/range check failed]
-          uVar6 = Component.GetComponent(lVar5,DAT_181d6d8c0);
+          uVar6 = Component.GetComponent(lVar5,DAT_181d96160);
           LTLocalization.SetText(uVar6,"",0);
           if (this.enhanceUIPanel == null) throw; // [null/range check failed]
           lVar5 = GameObject.get_transform(this.enhanceUIPanel,0);
           uVar6 = "CostTime";
         }
         if ((lVar5 != null) && (lVar5 = Transform.Find(lVar5,uVar6,0)) != null) {
-          uVar6 = Component.GetComponent(lVar5,DAT_181d6d8c0);
+          uVar6 = Component.GetComponent(lVar5,DAT_181d96160);
           LTLocalization.SetText(uVar6,"",0);
-          if ((this.enhanceUIPanel != null) &&
-             (((lVar5 = GameObject.get_transform(this.enhanceUIPanel,0), lVar5 != null &&
-               (lVar5 = Transform.Find(lVar5,"EnhanceButton",0)) != null) &&
-              (lVar5 = Component.GetComponent(lVar5,DAT_181d6af40)) != null))) {
+          if (((this.enhanceUIPanel != null) &&
+              ((lVar5 = GameObject.get_transform(this.enhanceUIPanel,0), lVar5 != null &&
+               (lVar5 = Transform.Find(lVar5,"EnhanceButton",0)) != null))) &&
+             (lVar5 = Component.GetComponent(lVar5,DAT_181d93760)) != null) {
             Selectable.set_interactable(lVar5,0,0);
             return;
           }
         }
     }
 
-    // Token : 0x600139F
-    // RVA   : 0x933670   Offset: 0x931E70   Length: 0x30
+    // Token : 0x60013E0
+    // RVA   : 0x943030   Offset: 0x942430   Length: 0x30
     public void HideEnhanceUI()
     {
         if (this.enhanceUIPanel != null) {
@@ -366,29 +366,30 @@ public class EnhanceUIController
         }
     }
 
-    // Token : 0x60013A0
-    // RVA   : 0x9336B0   Offset: 0x931EB0   Length: 0x325
+    // Token : 0x60013E1
+    // RVA   : 0x943070   Offset: 0x942470   Length: 0x356
     public void OpenEnhanceUI(CraftType _enhanceType, AreaBuildingData _targetBuilding, bool _useMoney)
     {
         void EnhanceUIController.OpenEnhanceUI
                      (int64 this,int _enhanceType,uint64 _targetBuilding,uint8 _useMoney)
         {
         uint32 uVar1;
-        char cVar2;
-        int64 *plVar3;
-        int64 lVar4;
-        uint64 uVar5;
-        int64 *plVar6;
+        uint64 uVar2;
+        char cVar3;
+        int64 *plVar4;
+        int64 lVar5;
+        uint64 uVar6;
+        int64 *plVar7;
         int local_res10 [2];
-        uVar5 = "Sound/SoundEffect/Armor";
-        if (((_enhanceType == null) || (uVar5 = "Sound/SoundEffect/Med", _enhanceType == 1)) ||
-           (uVar5 = "Sound/SoundEffect/Food", _enhanceType == 2)) {
-          plVar3 = (int64 *)Resources.Load(uVar5,0);
-          plVar6 = (int64 *)0;
-          if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181d8a228)) {
-            plVar6 = plVar3;
+        uVar6 = "Sound/SoundEffect/Armor";
+        if (((_enhanceType == null) || (uVar6 = "Sound/SoundEffect/Med", _enhanceType == 1)) ||
+           (uVar6 = "Sound/SoundEffect/Food", _enhanceType == 2)) {
+          plVar4 = (int64 *)Resources.Load(uVar6,0);
+          plVar7 = (int64 *)0;
+          if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
+            plVar7 = plVar4;
           }
-          NGUITools.PlaySound(plVar6,0);
+          NGUITools.PlaySound(plVar7,0);
         }
         if (this.enhanceUIPanel != null) {
           GameObject.SetActive(this.enhanceUIPanel,1,0);
@@ -396,39 +397,38 @@ public class EnhanceUIController
           this.enhanceType = _enhanceType;
           this.useMoney = _useMoney;
           if (((this.enhanceUIPanel != null) &&
-              (lVar4 = GameObject.get_transform(this.enhanceUIPanel,0)) != null) &&
-             (lVar4 = Transform.Find(lVar4,"Title",0)) != null) {
-            uVar5 = Component.GetComponent(lVar4,DAT_181d6d8c0);
-            lVar4 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x578);
-            if (lVar4 != null) {
+              (lVar5 = GameObject.get_transform(this.enhanceUIPanel,0)) != null) &&
+             (lVar5 = Transform.Find(lVar5,"Title",0)) != null) {
+            uVar6 = Component.GetComponent(lVar5,DAT_181d96160);
+            lVar5 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x580);
+            if (lVar5 != null) {
               uVar1 = this.enhanceType;
-              if (*(uint32 *)(lVar4 + 24) <= uVar1) {
+              if (*(uint32 *)(lVar5 + 24) <= uVar1) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
-              LTLocalization.SetText
-                        (uVar5,*(uint64 *)
-                                (*(int64 *)(lVar4 + 16) + 32 + (int64)(int)uVar1 * 8),0);
+              uVar2 = lVar5[uVar1];
+              LTLocalization.SetText(uVar6,uVar2,0);
               local_res10[0] = 0;
               do {
                 if ((this.enhanceUIPanel == null) ||
-                   (lVar4 = GameObject.get_transform(this.enhanceUIPanel,0)) == null)
+                   (lVar5 = GameObject.get_transform(this.enhanceUIPanel,0)) == null)
                 break;
-                lVar4 = Transform.Find(lVar4,"Decoration",0);
-                uVar5 = Int32.ToString(local_res10,0);
-                if ((lVar4 == null) ||
-                   ((lVar4 = Transform.Find(lVar4,uVar5,0), lVar4 == null ||
-                    (lVar4 = Component.get_gameObject(lVar4,0)) == null))) break;
-                cVar2 = GameObject.get_activeSelf(lVar4,0);
-                if ((bool)cVar2 != (this.enhanceType == local_res10[0])) {
+                lVar5 = Transform.Find(lVar5,"Decoration",0);
+                uVar6 = Int32.ToString(local_res10,0);
+                if ((lVar5 == null) ||
+                   ((lVar5 = Transform.Find(lVar5,uVar6,0), lVar5 == null ||
+                    (lVar5 = Component.get_gameObject(lVar5,0)) == null))) break;
+                cVar3 = GameObject.get_activeSelf(lVar5,0);
+                if ((bool)cVar3 != (this.enhanceType == local_res10[0])) {
                   if ((this.enhanceUIPanel == null) ||
-                     (lVar4 = GameObject.get_transform(this.enhanceUIPanel,0)) == null)
+                     (lVar5 = GameObject.get_transform(this.enhanceUIPanel,0)) == null)
                   break;
-                  lVar4 = Transform.Find(lVar4,"Decoration",0);
-                  uVar5 = Int32.ToString(local_res10,0);
-                  if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,uVar5,0)) == null) break;
-                  lVar4 = Component.get_gameObject(lVar4,0);
-                  if (lVar4 == null) break;
-                  GameObject.SetActive(lVar4,this.enhanceType == local_res10[0]);
+                  lVar5 = Transform.Find(lVar5,"Decoration",0);
+                  uVar6 = Int32.ToString(local_res10,0);
+                  if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,uVar6,0)) == null) break;
+                  lVar5 = Component.get_gameObject(lVar5,0);
+                  if (lVar5 == null) break;
+                  GameObject.SetActive(lVar5,this.enhanceType == local_res10[0]);
                 }
                 local_res10[0] = local_res10[0] + 1;
                 if (2 < local_res10[0]) {
@@ -440,11 +440,11 @@ public class EnhanceUIController
         }
     }
 
-    // Token : 0x60013A1
-    // RVA   : 0x932570   Offset: 0x930D70   Length: 0x35D
+    // Token : 0x60013E2
+    // RVA   : 0x941F30   Offset: 0x941330   Length: 0x35D
     public void EnhanceTargetButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d92370 + 184);
+        var pStatics = *(int64*)(DAT_181db7518 + 184);
         int iVar1;
         bool cVar2;
         long lVar3;
@@ -458,71 +458,71 @@ public class EnhanceUIController
           iVar1 = this.enhanceType;
           if (iVar1 == 0) {
             lVar5 = *pStatics;
-            lVar3 = il2cpp_internal(DAT_181d701b0);
-            FUN_180f58a90(lVar3,DAT_181d6dfe8);
+            lVar3 = il2cpp_internal(DAT_181d94e50);
+            FUN_18132faf0(lVar3,DAT_181d95788);
             local_res8[0] = 0;
-            uVar4 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
+            uVar4 = il2cpp_value_box(DAT_181d80418,local_res8);
             if (lVar3 == null) {
-        LAB_1809328bc:
+        LAB_18094227c:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            FUN_181827900(lVar3,uVar4,DAT_181d6e0e8);
+            FUN_18181e0a0(lVar3,uVar4,DAT_181d95888);
             local_res18[0] = 0;
-            uVar4 = il2cpp_value_box(DAT_181d5b2f8,local_res18);
-            FUN_181827900(lVar3,uVar4,DAT_181d6e0e8);
+            uVar4 = il2cpp_value_box(DAT_181d80418,local_res18);
+            FUN_18181e0a0(lVar3,uVar4,DAT_181d95888);
             uVar4 = Component.get_gameObject(this,0);
-            if (lVar5 == null) goto LAB_1809328bc;
+            if (lVar5 == null) goto LAB_18094227c;
           }
           else if (iVar1 == 1) {
             lVar5 = *pStatics;
-            lVar3 = il2cpp_internal(DAT_181d701b0);
-            FUN_180f58a90(lVar3,DAT_181d6dfe8);
+            lVar3 = il2cpp_internal(DAT_181d94e50);
+            FUN_18132faf0(lVar3,DAT_181d95788);
             local_res8[0] = 0;
-            uVar4 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
+            uVar4 = il2cpp_value_box(DAT_181d80418,local_res8);
             if (lVar3 == null) {
-        LAB_1809328c8:
+        LAB_180942288:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            FUN_181827900(lVar3,uVar4,DAT_181d6e0e8);
+            FUN_18181e0a0(lVar3,uVar4,DAT_181d95888);
             local_res18[0] = 1;
-            uVar4 = il2cpp_value_box(DAT_181d5b2f8,local_res18);
-            FUN_181827900(lVar3,uVar4,DAT_181d6e0e8);
+            uVar4 = il2cpp_value_box(DAT_181d80418,local_res18);
+            FUN_18181e0a0(lVar3,uVar4,DAT_181d95888);
             uVar4 = Component.get_gameObject(this,0);
-            if (lVar5 == null) goto LAB_1809328c8;
+            if (lVar5 == null) goto LAB_180942288;
           }
           else {
             if (iVar1 != 2) {
               return;
             }
             lVar5 = *pStatics;
-            lVar3 = il2cpp_internal(DAT_181d701b0);
-            FUN_180f58a90(lVar3,DAT_181d6dfe8);
+            lVar3 = il2cpp_internal(DAT_181d94e50);
+            FUN_18132faf0(lVar3,DAT_181d95788);
             local_res8[0] = 0;
-            uVar4 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
+            uVar4 = il2cpp_value_box(DAT_181d80418,local_res8);
             if (lVar3 == null) {
-        LAB_1809328c2:
+        LAB_180942282:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            FUN_181827900(lVar3,uVar4,DAT_181d6e0e8);
+            FUN_18181e0a0(lVar3,uVar4,DAT_181d95888);
             local_res18[0] = 2;
-            uVar4 = il2cpp_value_box(DAT_181d5b2f8,local_res18);
-            FUN_181827900(lVar3,uVar4,DAT_181d6e0e8);
+            uVar4 = il2cpp_value_box(DAT_181d80418,local_res18);
+            FUN_18181e0a0(lVar3,uVar4,DAT_181d95888);
             uVar4 = Component.get_gameObject(this,0);
-            if (lVar5 == null) goto LAB_1809328c2;
+            if (lVar5 == null) goto LAB_180942282;
           }
           ChooseController.ShowChoosePanel(lVar5,1,lVar3,uVar4,"EnhanceTargetChoosen",0,0,0,0,0);
         }
     }
 
-    // Token : 0x60013A2
-    // RVA   : 0x9328D0   Offset: 0x9310D0   Length: 0x260
+    // Token : 0x60013E3
+    // RVA   : 0x942290   Offset: 0x941690   Length: 0x260
     public void EnhanceTargetChoosen()
     {
-        var pStatics_2370 = *(int64*)(DAT_181d92370 + 184);
-        var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
+        var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
+        var pStatics_7518 = *(int64*)(DAT_181db7518 + 184);
         ulong uVar1;
         long lVar2;
         ulong uVar3;
@@ -533,23 +533,23 @@ public class EnhanceUIController
             lVar2 = Transform.Find(lVar2,"EnhanceTarget",0);
             if (lVar2 != null) {
               uVar3 = Component.get_gameObject(lVar2,0);
-              if (*pStatics_e188 != 0) {
-                uVar1 = *(uint64 *)(*pStatics_e188 + 160);
+              if (*pStatics_2ee8 != 0) {
+                uVar1 = *(uint64 *)(*pStatics_2ee8 + 160);
                 uVar3 = GlobalData.AddChild(uVar3,uVar1,0);
                 this.enhanceTargetItemIcon = uVar3;
                 if (this.enhanceTargetItemIcon != null) {
-                  lVar2 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181da0070);
-                  if ((*pStatics_2370 != 0) &&
-                     (lVar4 = *(int64 *)(*pStatics_2370 + 72)) != null) {
-                    lVar4 = GameObject.GetComponent(lVar4,DAT_181da0070);
+                  lVar2 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181d720a0);
+                  if ((*pStatics_7518 != 0) &&
+                     (lVar4 = *(int64 *)(*pStatics_7518 + 72)) != null) {
+                    lVar4 = GameObject.GetComponent(lVar4,DAT_181d720a0);
                     if ((lVar4 != null) && (lVar2 != null)) {
                       *(uint64 *)(lVar2 + 32) = *(uint64 *)(lVar4 + 32);
                       if (this.enhanceTargetItemIcon != null) {
-                        lVar2 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181da0070);
+                        lVar2 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181d720a0);
                         if (lVar2 != null) {
                           *(uint32 *)(lVar2 + 40) = 1;
                           if (this.enhanceTargetItemIcon != null) {
-                            lVar2 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181da0070);
+                            lVar2 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181d720a0);
                             if (lVar2 != null) {
                               ItemIconController.AutoSetName(lVar2,1,0);
                               if (this.enhanceTargetClearButton != null) {
@@ -576,8 +576,8 @@ public class EnhanceUIController
         }
     }
 
-    // Token : 0x60013A3
-    // RVA   : 0x9314D0   Offset: 0x92FCD0   Length: 0x1A0
+    // Token : 0x60013E4
+    // RVA   : 0x940E90   Offset: 0x940290   Length: 0x1A0
     public void ClearEnhanceTarget()
     {
         long lVar1;
@@ -611,8 +611,8 @@ public class EnhanceUIController
         }
     }
 
-    // Token : 0x60013A4
-    // RVA   : 0x931A60   Offset: 0x930260   Length: 0x4EB
+    // Token : 0x60013E5
+    // RVA   : 0x941420   Offset: 0x940820   Length: 0x4EB
     public void EnhanceMaterialButtonClicked()
     {
         int iVar1;
@@ -642,52 +642,52 @@ public class EnhanceUIController
           iVar1 = this.enhanceType;
           if (iVar1 == 0) {
             lVar3 = FUN_18046bd60(0);
-            lVar4 = il2cpp_internal(DAT_181d701b0);
-            FUN_180f58a90(lVar4,DAT_181d6dfe8);
+            lVar4 = il2cpp_internal(DAT_181d94e50);
+            FUN_18132faf0(lVar4,DAT_181d95788);
             local_res8[0] = 0;
-            uVar5 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
+            uVar5 = il2cpp_value_box(DAT_181d80418,local_res8);
             if (lVar4 == null) {
-        LAB_180931f46:
+        LAB_180941906:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            FUN_181827900(lVar4,uVar5,DAT_181d6e0e8);
+            FUN_18181e0a0(lVar4,uVar5,DAT_181d95888);
             local_res18[0] = 5;
-            uVar5 = il2cpp_value_box(DAT_181d5b2f8,local_res18);
-            FUN_181827900(lVar4,uVar5,DAT_181d6e0e8);
+            uVar5 = il2cpp_value_box(DAT_181d80418,local_res18);
+            FUN_18181e0a0(lVar4,uVar5,DAT_181d95888);
             if (((this.enhanceTargetItemIcon == null) ||
-                (lVar6 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181da0070), lVar6 == null
-                )) || (*(int64 *)(lVar6 + 32) == 0)) goto LAB_180931f46;
+                (lVar6 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181d720a0), lVar6 == null
+                )) || (*(int64 *)(lVar6 + 32) == 0)) goto LAB_180941906;
             local_res20[0] = *(uint32 *)(*(int64 *)(lVar6 + 32) + 60);
-            uVar5 = il2cpp_value_box(DAT_181d5b2f8,local_res20);
-            FUN_181827900(lVar4,uVar5,DAT_181d6e0e8);
+            uVar5 = il2cpp_value_box(DAT_181d80418,local_res20);
+            FUN_18181e0a0(lVar4,uVar5,DAT_181d95888);
             uVar5 = Component.get_gameObject(this,0);
-            if (lVar3 == null) goto LAB_180931f46;
+            if (lVar3 == null) goto LAB_180941906;
             uVar7 = 3;
           }
           else if (iVar1 == 1) {
             lVar3 = FUN_18046bd60(0);
-            lVar4 = il2cpp_internal(DAT_181d701b0);
-            FUN_180f58a90(lVar4,DAT_181d6dfe8);
+            lVar4 = il2cpp_internal(DAT_181d94e50);
+            FUN_18132faf0(lVar4,DAT_181d95788);
             local_res8[0] = 0;
-            uVar5 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
+            uVar5 = il2cpp_value_box(DAT_181d80418,local_res8);
             if (lVar4 == null) {
-        LAB_180931f40:
+        LAB_180941900:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            FUN_181827900(lVar4,uVar5,DAT_181d6e0e8);
+            FUN_18181e0a0(lVar4,uVar5,DAT_181d95888);
             local_res18[0] = 5;
-            uVar5 = il2cpp_value_box(DAT_181d5b2f8,local_res18);
-            FUN_181827900(lVar4,uVar5,DAT_181d6e0e8);
+            uVar5 = il2cpp_value_box(DAT_181d80418,local_res18);
+            FUN_18181e0a0(lVar4,uVar5,DAT_181d95888);
             if (((this.enhanceTargetItemIcon == null) ||
-                (lVar6 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181da0070), lVar6 == null
-                )) || (*(int64 *)(lVar6 + 32) == 0)) goto LAB_180931f40;
+                (lVar6 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181d720a0), lVar6 == null
+                )) || (*(int64 *)(lVar6 + 32) == 0)) goto LAB_180941900;
             local_res20[0] = *(uint32 *)(*(int64 *)(lVar6 + 32) + 60);
-            uVar5 = il2cpp_value_box(DAT_181d5b2f8,local_res20);
-            FUN_181827900(lVar4,uVar5,DAT_181d6e0e8);
+            uVar5 = il2cpp_value_box(DAT_181d80418,local_res20);
+            FUN_18181e0a0(lVar4,uVar5,DAT_181d95888);
             uVar5 = Component.get_gameObject(this,0);
-            if (lVar3 == null) goto LAB_180931f40;
+            if (lVar3 == null) goto LAB_180941900;
             uVar7 = 4;
           }
           else {
@@ -695,39 +695,39 @@ public class EnhanceUIController
               return;
             }
             lVar3 = FUN_18046bd60(0);
-            lVar4 = il2cpp_internal(DAT_181d701b0);
-            FUN_180f58a90(lVar4,DAT_181d6dfe8);
+            lVar4 = il2cpp_internal(DAT_181d94e50);
+            FUN_18132faf0(lVar4,DAT_181d95788);
             local_res8[0] = 0;
-            uVar5 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
+            uVar5 = il2cpp_value_box(DAT_181d80418,local_res8);
             if (lVar4 == null) {
-        LAB_180931f3a:
+        LAB_1809418fa:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            FUN_181827900(lVar4,uVar5,DAT_181d6e0e8);
+            FUN_18181e0a0(lVar4,uVar5,DAT_181d95888);
             local_res18[0] = 5;
-            uVar5 = il2cpp_value_box(DAT_181d5b2f8,local_res18);
-            FUN_181827900(lVar4,uVar5,DAT_181d6e0e8);
+            uVar5 = il2cpp_value_box(DAT_181d80418,local_res18);
+            FUN_18181e0a0(lVar4,uVar5,DAT_181d95888);
             if (((this.enhanceTargetItemIcon == null) ||
-                (lVar6 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181da0070), lVar6 == null
-                )) || (*(int64 *)(lVar6 + 32) == 0)) goto LAB_180931f3a;
+                (lVar6 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181d720a0), lVar6 == null
+                )) || (*(int64 *)(lVar6 + 32) == 0)) goto LAB_1809418fa;
             local_res20[0] = *(uint32 *)(*(int64 *)(lVar6 + 32) + 60);
-            uVar5 = il2cpp_value_box(DAT_181d5b2f8,local_res20);
-            FUN_181827900(lVar4,uVar5,DAT_181d6e0e8);
+            uVar5 = il2cpp_value_box(DAT_181d80418,local_res20);
+            FUN_18181e0a0(lVar4,uVar5,DAT_181d95888);
             uVar5 = Component.get_gameObject(this,0);
-            if (lVar3 == null) goto LAB_180931f3a;
+            if (lVar3 == null) goto LAB_1809418fa;
             uVar7 = 5;
           }
           ChooseController.ShowChoosePanel(lVar3,1,lVar4,uVar5,"EnhanceMaterialChoosen",0,uVar7,0,0,0);
         }
     }
 
-    // Token : 0x60013A5
-    // RVA   : 0x931F50   Offset: 0x930750   Length: 0x260
+    // Token : 0x60013E6
+    // RVA   : 0x941910   Offset: 0x940D10   Length: 0x260
     public void EnhanceMaterialChoosen()
     {
-        var pStatics_2370 = *(int64*)(DAT_181d92370 + 184);
-        var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
+        var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
+        var pStatics_7518 = *(int64*)(DAT_181db7518 + 184);
         ulong uVar1;
         long lVar2;
         ulong uVar3;
@@ -738,23 +738,23 @@ public class EnhanceUIController
             lVar2 = Transform.Find(lVar2,"EnhanceMaterial",0);
             if (lVar2 != null) {
               uVar3 = Component.get_gameObject(lVar2,0);
-              if (*pStatics_e188 != 0) {
-                uVar1 = *(uint64 *)(*pStatics_e188 + 160);
+              if (*pStatics_2ee8 != 0) {
+                uVar1 = *(uint64 *)(*pStatics_2ee8 + 160);
                 uVar3 = GlobalData.AddChild(uVar3,uVar1,0);
                 this.enhanceMaterialItemIcon = uVar3;
                 if (this.enhanceMaterialItemIcon != null) {
-                  lVar2 = GameObject.GetComponent(this.enhanceMaterialItemIcon,DAT_181da0070);
-                  if ((*pStatics_2370 != 0) &&
-                     (lVar4 = *(int64 *)(*pStatics_2370 + 72)) != null) {
-                    lVar4 = GameObject.GetComponent(lVar4,DAT_181da0070);
+                  lVar2 = GameObject.GetComponent(this.enhanceMaterialItemIcon,DAT_181d720a0);
+                  if ((*pStatics_7518 != 0) &&
+                     (lVar4 = *(int64 *)(*pStatics_7518 + 72)) != null) {
+                    lVar4 = GameObject.GetComponent(lVar4,DAT_181d720a0);
                     if ((lVar4 != null) && (lVar2 != null)) {
                       *(uint64 *)(lVar2 + 32) = *(uint64 *)(lVar4 + 32);
                       if (this.enhanceMaterialItemIcon != null) {
-                        lVar2 = GameObject.GetComponent(this.enhanceMaterialItemIcon,DAT_181da0070);
+                        lVar2 = GameObject.GetComponent(this.enhanceMaterialItemIcon,DAT_181d720a0);
                         if (lVar2 != null) {
                           *(uint32 *)(lVar2 + 40) = 1;
                           if (this.enhanceMaterialItemIcon != null) {
-                            lVar2 = GameObject.GetComponent(this.enhanceMaterialItemIcon,DAT_181da0070);
+                            lVar2 = GameObject.GetComponent(this.enhanceMaterialItemIcon,DAT_181d720a0);
                             if (lVar2 != null) {
                               ItemIconController.AutoSetName(lVar2,1,0);
                               if (this.enhanceMaterialClearButton != null) {
@@ -781,8 +781,8 @@ public class EnhanceUIController
         }
     }
 
-    // Token : 0x60013A6
-    // RVA   : 0x9313F0   Offset: 0x92FBF0   Length: 0xDD
+    // Token : 0x60013E7
+    // RVA   : 0x940DB0   Offset: 0x9401B0   Length: 0xDD
     public void ClearEnhanceMaterial()
     {
         long lVar1;
@@ -803,8 +803,8 @@ public class EnhanceUIController
         }
     }
 
-    // Token : 0x60013A7
-    // RVA   : 0x932EF0   Offset: 0x9316F0   Length: 0x218
+    // Token : 0x60013E8
+    // RVA   : 0x9428B0   Offset: 0x941CB0   Length: 0x218
     public float GetEnhanceResourceCostNum()
     {
         int iVar1;
@@ -813,7 +813,7 @@ public class EnhanceUIController
         iVar1 = this.enhanceType;
         if (iVar1 == 0) {
           if (((this.enhanceTargetItemIcon != null) &&
-              (lVar3 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181da0070)) != null)
+              (lVar3 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181d720a0)) != null)
              && (*(int64 *)(lVar3 + 32) != 0)) {
             EnhanceUIController.GetNowEnhanceLv(this,0);
             return;
@@ -821,7 +821,7 @@ public class EnhanceUIController
         }
         else if (iVar1 == 1) {
           if (((this.enhanceTargetItemIcon != null) &&
-              (lVar3 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181da0070)) != null)
+              (lVar3 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181d720a0)) != null)
              && (*(int64 *)(lVar3 + 32) != 0)) {
             EnhanceUIController.GetNowEnhanceLv(this,0);
             lVar3 = FUN_18046c0a0(0);
@@ -840,7 +840,7 @@ public class EnhanceUIController
             return;
           }
           if (((this.enhanceTargetItemIcon != null) &&
-              (lVar3 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181da0070)) != null)
+              (lVar3 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181d720a0)) != null)
              && (*(int64 *)(lVar3 + 32) != 0)) {
             EnhanceUIController.GetNowEnhanceLv(this,0);
             return;
@@ -848,8 +848,8 @@ public class EnhanceUIController
         }
     }
 
-    // Token : 0x60013A8
-    // RVA   : 0x933110   Offset: 0x931910   Length: 0x189
+    // Token : 0x60013E9
+    // RVA   : 0x942AD0   Offset: 0x941ED0   Length: 0x189
     public List<ResourceData> GetEnhanceResourceCost()
     {
         int iVar1;
@@ -857,21 +857,21 @@ public class EnhanceUIController
         ulong uVar3;
         ulong uVar4;
         uint uVar5;
-        lVar2 = il2cpp_internal(DAT_181d71cb0);
-        FUN_180f58a90(lVar2,DAT_181d77dd8);
+        lVar2 = il2cpp_internal(DAT_181d969d0);
+        FUN_18132faf0(lVar2,DAT_181d9f778);
         iVar1 = this.enhanceType;
         if (iVar1 == 0) {
           uVar5 = EnhanceUIController.GetEnhanceResourceCostNum(this,0);
           uVar3 = new PlotChoiceRequirement(2,uVar5);
-          if (lVar2 == null) goto LAB_180933294;
-          FUN_181827900(lVar2,uVar3,DAT_181d77e58);
+          if (lVar2 == null) goto LAB_180942c54;
+          FUN_18181e0a0(lVar2,uVar3,DAT_181d9f7f8);
           uVar5 = EnhanceUIController.GetEnhanceResourceCostNum(this,0);
           uVar3 = new PlotChoiceRequirement(3,uVar5);
         }
         else {
           if (iVar1 == 1) {
             uVar5 = EnhanceUIController.GetEnhanceResourceCostNum(this,0);
-            uVar3 = il2cpp_internal(DAT_181d774d0);
+            uVar3 = il2cpp_internal(DAT_181d9c700);
             uVar4 = 4;
           }
           else {
@@ -879,25 +879,25 @@ public class EnhanceUIController
               return lVar2;
             }
             uVar5 = EnhanceUIController.GetEnhanceResourceCostNum(this,0);
-            uVar3 = il2cpp_internal(DAT_181d774d0);
+            uVar3 = il2cpp_internal(DAT_181d9c700);
             uVar4 = 1;
           }
           PlotChoiceRequirement.ctor(uVar3,uVar4,uVar5,0);
           if (lVar2 == null) {
-        LAB_180933294:
+        LAB_180942c54:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
         }
-        FUN_181827900(lVar2,uVar3,DAT_181d77e58);
+        FUN_18181e0a0(lVar2,uVar3,DAT_181d9f7f8);
         return lVar2;
     }
 
-    // Token : 0x60013A9
-    // RVA   : 0x931680   Offset: 0x92FE80   Length: 0x3DB
+    // Token : 0x60013EA
+    // RVA   : 0x941040   Offset: 0x940440   Length: 0x3DB
     public void EnhanceButtonClicked()
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         uint uVar2;
         long lVar3;
@@ -906,18 +906,18 @@ public class EnhanceUIController
         ulong uVar6;
         float fVar9;
         if (!this.useMoney) {
-          if (((GameController._instance == null) ||
-              (lVar5 = GameController._instance.worldData, lVar5 == null
-              )) || (lVar5 = WorldData.Player(lVar5,0)) == null) throw; // [null/range check failed]
+          if (((*pStatics == 0) ||
+              (lVar5 = *(int64 *)(*pStatics + 32)) == null) ||
+             (lVar5 = WorldData.Player(lVar5,0)) == null) throw; // [null/range check failed]
           lVar5 = HeroData.GetForce(lVar5,0,0);
           uVar6 = EnhanceUIController.GetEnhanceResourceCost(this,0);
           if (lVar5 == null) throw; // [null/range check failed]
           ForceData.CostResource(lVar5,uVar6,1,0);
         }
         else {
-          if ((GameController._instance == null) ||
-             (lVar5 = GameController._instance.worldData) == null
-             ) throw; // [null/range check failed]
+          if ((*pStatics == 0) ||
+             (lVar5 = *(int64 *)(*pStatics + 32)) == null)
+          throw; // [null/range check failed]
           lVar5 = WorldData.Player(lVar5,0);
           fVar9 = (float)EnhanceUIController.GetEnhanceResourceCostNum(this,0);
           if (lVar5 == null) throw; // [null/range check failed]
@@ -929,13 +929,13 @@ public class EnhanceUIController
         {
           plVar7 = (int64 *)Resources.Load(uVar6,0);
           plVar8 = (int64 *)0;
-          if ((plVar7 != (int64 *)0) && (*plVar7 == DAT_181d8a228)) {
+          if ((plVar7 != (int64 *)0) && (*plVar7 == DAT_181daf348)) {
             plVar8 = plVar7;
           }
           NGUITools.PlaySound(plVar8,0);
         }
-        lVar5 = PlotController.LeftFaceHideOffset;
-        lVar3 = *(int64 *)(pPlotController + 0x578);
+        lVar5 = *(int64 *)(*(int64 *)(DAT_181db5de8 + 184) + 8);
+        lVar3 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x580);
         if (lVar3 != null) {
           uVar2 = this.enhanceType;
           if (*(uint32 *)(lVar3 + 24) <= uVar2) {
@@ -951,10 +951,11 @@ public class EnhanceUIController
         }
     }
 
-    // Token : 0x60013AA
-    // RVA   : 0x9321C0   Offset: 0x9309C0   Length: 0x175
+    // Token : 0x60013EB
+    // RVA   : 0x941B80   Offset: 0x940F80   Length: 0x175
     public int EnhanceNeedBuildingLv()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         bool cVar2;
         int iVar3;
@@ -963,35 +964,36 @@ public class EnhanceUIController
         float fVar6;
         iVar3 = EnhanceUIController.GetNowEnhanceLv(this,0);
         if (this.enhanceTargetItemIcon == null) {
-        LAB_180932330:
+        LAB_180941cf0:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        lVar5 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181da0070);
-        if ((lVar5 == null) || (lVar5.villageAreaID == null)) goto LAB_180932330;
-        iVar1 = *(int *)(lVar5.villageAreaID + 60);
+        lVar5 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181d720a0);
+        if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) goto LAB_180941cf0;
+        iVar1 = *(int *)(*(int64 *)(lVar5 + 32) + 60);
         if (this.enhanceType == 1) {
-          if ((GameController._instance == null) ||
-             (lVar5 = GameController._instance.worldData) == null
-             ) goto LAB_180932330;
+          if ((*pStatics == 0) ||
+             (lVar5 = *(int64 *)(*pStatics + 32)) == null)
+          goto LAB_180941cf0;
           lVar5 = WorldData.Player(lVar5,0);
-          if (lVar5 == null) goto LAB_180932330;
+          if (lVar5 == null) goto LAB_180941cf0;
           cVar2 = HeroData.HaveForceFunction(lVar5,2);
           if (cVar2) {
             fVar6 = 0.5;
-            goto LAB_180932303;
+            goto LAB_180941cc3;
           }
         }
         fVar6 = 1.0;
-        LAB_180932303:
+        LAB_180941cc3:
         uVar4 = Mathf.RoundToInt((float)(iVar3 + -4 + iVar1) * fVar6,0);
         Mathf.Clamp(uVar4,0,10);
     }
 
-    // Token : 0x60013AB
-    // RVA   : 0x932340   Offset: 0x930B40   Length: 0x17C
+    // Token : 0x60013EC
+    // RVA   : 0x941D00   Offset: 0x941100   Length: 0x17C
     public int EnhanceNeedSkillLv()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         bool cVar2;
         int iVar3;
@@ -1000,33 +1002,33 @@ public class EnhanceUIController
         float fVar6;
         iVar3 = EnhanceUIController.GetNowEnhanceLv(this,0);
         if (this.enhanceTargetItemIcon == null) {
-        LAB_1809324b7:
+        LAB_180941e77:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        lVar5 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181da0070);
-        if ((lVar5 == null) || (lVar5.villageAreaID == null)) goto LAB_1809324b7;
-        iVar1 = *(int *)(lVar5.villageAreaID + 60);
+        lVar5 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181d720a0);
+        if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) goto LAB_180941e77;
+        iVar1 = *(int *)(*(int64 *)(lVar5 + 32) + 60);
         if (this.enhanceType == 1) {
-          if ((GameController._instance == null) ||
-             (lVar5 = GameController._instance.worldData) == null
-             ) goto LAB_1809324b7;
+          if ((*pStatics == 0) ||
+             (lVar5 = *(int64 *)(*pStatics + 32)) == null)
+          goto LAB_180941e77;
           lVar5 = WorldData.Player(lVar5,0);
-          if (lVar5 == null) goto LAB_1809324b7;
+          if (lVar5 == null) goto LAB_180941e77;
           cVar2 = HeroData.HaveForceFunction(lVar5,2);
           if (cVar2) {
             fVar6 = 0.5;
-            goto LAB_18093248a;
+            goto LAB_180941e4a;
           }
         }
         fVar6 = 1.0;
-        LAB_18093248a:
+        LAB_180941e4a:
         uVar4 = Mathf.RoundToInt((float)((iVar1 * 2 + 1 + iVar3) * 5) * fVar6,0);
         Mathf.Clamp(uVar4,0,100);
     }
 
-    // Token : 0x60013AC
-    // RVA   : 0x9324C0   Offset: 0x930CC0   Length: 0xA3
+    // Token : 0x60013ED
+    // RVA   : 0x941E80   Offset: 0x941280   Length: 0xA3
     public int EnhanceNeedTime()
     {
         int iVar1;
@@ -1035,21 +1037,21 @@ public class EnhanceUIController
           return 1;
         }
         iVar1 = 0;
-        if (!DAT_181e78040) {
-          il2cpp_runtime_class_init(&DAT_181da0070);
+        if (!DAT_181e9d534) {
+          il2cpp_runtime_class_init(&DAT_181d720a0);
           iVar1 = this.enhanceType;
-          DAT_181e78040 = true;
+          DAT_181e9d534 = true;
         }
         lVar2 = this.enhanceTargetItemIcon;
         if (iVar1 == 0) {
           if (lVar2 == null) throw; // [null/range check failed]
-          lVar2 = GameObject.GetComponent(lVar2,DAT_181da0070);
+          lVar2 = GameObject.GetComponent(lVar2,DAT_181d720a0);
           if ((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) throw; // [null/range check failed]
           lVar2 = *(int64 *)(*(int64 *)(lVar2 + 32) + 96);
         }
         else {
           if (lVar2 == null) throw; // [null/range check failed]
-          lVar2 = GameObject.GetComponent(lVar2,DAT_181da0070);
+          lVar2 = GameObject.GetComponent(lVar2,DAT_181d720a0);
           if ((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) throw; // [null/range check failed]
           lVar2 = *(int64 *)(*(int64 *)(lVar2 + 32) + 104);
         }
@@ -1058,21 +1060,21 @@ public class EnhanceUIController
         }
     }
 
-    // Token : 0x60013AD
-    // RVA   : 0x9332A0   Offset: 0x931AA0   Length: 0x8A
+    // Token : 0x60013EE
+    // RVA   : 0x942C60   Offset: 0x942060   Length: 0x8A
     public int GetNowEnhanceLv()
     {
         long lVar1;
         lVar1 = this.enhanceTargetItemIcon;
         if (this.enhanceType == null) {
           if (lVar1 == null) throw; // [null/range check failed]
-          lVar1 = GameObject.GetComponent(lVar1,DAT_181da0070);
+          lVar1 = GameObject.GetComponent(lVar1,DAT_181d720a0);
           if ((lVar1 == null) || (*(int64 *)(lVar1 + 32) == 0)) throw; // [null/range check failed]
           lVar1 = *(int64 *)(*(int64 *)(lVar1 + 32) + 96);
         }
         else {
           if (lVar1 == null) throw; // [null/range check failed]
-          lVar1 = GameObject.GetComponent(lVar1,DAT_181da0070);
+          lVar1 = GameObject.GetComponent(lVar1,DAT_181d720a0);
           if ((lVar1 == null) || (*(int64 *)(lVar1 + 32) == 0)) throw; // [null/range check failed]
           lVar1 = *(int64 *)(*(int64 *)(lVar1 + 32) + 104);
         }
@@ -1081,8 +1083,8 @@ public class EnhanceUIController
         }
     }
 
-    // Token : 0x60013AE
-    // RVA   : 0x933460   Offset: 0x931C60   Length: 0x26
+    // Token : 0x60013EF
+    // RVA   : 0x942E20   Offset: 0x942220   Length: 0x26
     public int GetTargetSkillType()
     {
         int iVar1;
@@ -1099,21 +1101,21 @@ public class EnhanceUIController
         return 7;
     }
 
-    // Token : 0x60013AF
-    // RVA   : 0x933330   Offset: 0x931B30   Length: 0x128
+    // Token : 0x60013F0
+    // RVA   : 0x942CF0   Offset: 0x9420F0   Length: 0x128
     public float GetPlayerTargetSkill()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         long lVar2;
         uint uVar3;
-        if ((GameController._instance != null) &&
-           (lVar2 = GameController._instance.worldData) != null)
-        {
+        if ((*pStatics != 0) &&
+           (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
           lVar2 = WorldData.Player(lVar2,0);
           if (lVar2 != null) {
             iVar1 = this.enhanceType;
             uVar3 = 0;
-            lVar2 = lVar2.showRoomChangeFame;
+            lVar2 = *(int64 *)(lVar2 + 0x168);
             if (iVar1 == 0) {
               uVar3 = 6;
             }
@@ -1124,17 +1126,17 @@ public class EnhanceUIController
               uVar3 = 8;
             }
             if (lVar2 != null) {
-              if (lVar2.cityAreaID <= uVar3) {
+              if (*(uint32 *)(lVar2 + 24) <= uVar3) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
-              return *(uint32 *)(lVar2.chapter + 32 + (uint64)uVar3 * 4);
+              return *(uint32 *)(*(int64 *)(lVar2 + 16) + 32 + (uint64)uVar3 * 4);
             }
           }
         }
     }
 
-    // Token : 0x60013B0
-    // RVA   : 0x931320   Offset: 0x92FB20   Length: 0xCE
+    // Token : 0x60013F1
+    // RVA   : 0x940CE0   Offset: 0x9400E0   Length: 0xCE
     public bool CanEnhance()
     {
         int iVar1;
@@ -1160,19 +1162,19 @@ public class EnhanceUIController
         }
     }
 
-    // Token : 0x60013B1
-    // RVA   : 0x933490   Offset: 0x931C90   Length: 0x1D2
+    // Token : 0x60013F2
+    // RVA   : 0x942E50   Offset: 0x942250   Length: 0x1D2
     public bool HaveResource()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         byte uVar2;
         long lVar3;
         ulong uVar4;
         float extraout_XMM0_Da;
         if (!this.useMoney) {
-          if ((GameController._instance != null) &&
-             (lVar3 = GameController._instance.worldData) != null
-             ) {
+          if ((*pStatics != 0) &&
+             (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
             lVar3 = WorldData.Player(lVar3,0);
             if (lVar3 != null) {
               lVar3 = HeroData.GetForce(lVar3,0,0);
@@ -1185,12 +1187,11 @@ public class EnhanceUIController
           }
         }
         else {
-          if ((GameController._instance != null) &&
-             (lVar3 = GameController._instance.worldData) != null
-             ) {
+          if ((*pStatics != 0) &&
+             (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
             lVar3 = WorldData.Player(lVar3,0);
-            if ((lVar3 != null) && (lVar3.speBookStorageSpeAdd != null)) {
-              iVar1 = *(int *)(lVar3.speBookStorageSpeAdd + 24);
+            if ((lVar3 != null) && (*(int64 *)(lVar3 + 0x220) != 0)) {
+              iVar1 = *(int *)(*(int64 *)(lVar3 + 0x220) + 24);
               EnhanceUIController.GetEnhanceResourceCostNum(this,0);
               return extraout_XMM0_Da <= (float)iVar1;
             }
@@ -1198,8 +1199,8 @@ public class EnhanceUIController
         }
     }
 
-    // Token : 0x60013B2
-    // RVA   : 0x932B40   Offset: 0x931340   Length: 0x3AC
+    // Token : 0x60013F3
+    // RVA   : 0x942500   Offset: 0x941900   Length: 0x3AC
     public string GetEnhanceExtraAdd()
     {
         ulong uVar1;
@@ -1236,38 +1237,38 @@ public class EnhanceUIController
         }
         lVar3 = this.enhanceTargetItemIcon;
         if (this.enhanceType == null) {
-          if (((lVar3 == null) || (lVar3 = GameObject.GetComponent(lVar3,DAT_181da0070)) == null) ||
+          if (((lVar3 == null) || (lVar3 = GameObject.GetComponent(lVar3,DAT_181d720a0)) == null) ||
              (*(int64 *)(lVar3 + 32) == 0)) throw; // [null/range check failed]
           lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 96);
         }
         else {
-          if (((lVar3 == null) || (lVar3 = GameObject.GetComponent(lVar3,DAT_181da0070)) == null) ||
+          if (((lVar3 == null) || (lVar3 = GameObject.GetComponent(lVar3,DAT_181d720a0)) == null) ||
              (*(int64 *)(lVar3 + 32) == 0)) throw; // [null/range check failed]
           lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 104);
         }
         if (lVar3 != null) {
           lVar3 = *(int64 *)(lVar3 + 40);
           if (((this.enhanceMaterialItemIcon != null) &&
-              (lVar4 = GameObject.GetComponent(this.enhanceMaterialItemIcon,DAT_181da0070)) != null)
+              (lVar4 = GameObject.GetComponent(this.enhanceMaterialItemIcon,DAT_181d720a0)) != null)
              && ((*(int64 *)(lVar4 + 32) != 0 &&
                  (lVar4 = *(int64 *)(*(int64 *)(lVar4 + 32) + 128)) != null))) {
             lVar4 = *(int64 *)(lVar4 + 16);
             if ((lVar3 != null) && (lVar4 != null)) {
               if ((*(int64 *)(lVar3 + 16) == 0) ||
-                 (lVar5 = Dictionary_2.get_Keys(*(int64 *)(lVar3 + 16),DAT_181d98b10)) == null)
+                 (lVar5 = Dictionary_2.get_Keys(*(int64 *)(lVar3 + 16),DAT_181dbe4b8)) == null)
               throw; // [null/range check failed]
-              FUN_180ed4d30(&local_68,lVar5,DAT_181d9c570);
+              FUN_180ecbf30(&local_68,lVar5,DAT_181dc36f0);
               local_80 = CONCAT44(uStack_64,local_68);
               uStack_78 = CONCAT44(uStack_5c,uStack_60);
               local_70 = local_58;
-              while (cVar2 = FUN_1811d8280(&local_80,DAT_181d74c38), uVar1 = local_70, cVar2) {
+              while (cVar2 = FUN_1811c4f60(&local_80,DAT_181d9b258), uVar1 = local_70, cVar2) {
                 fVar9 = (float)HeroSpeAddData.Get(lVar3,local_70 & 0xffffffff,0);
                 if ((fVar9 != 0.0) &&
                    (fVar9 = (float)HeroSpeAddData.Get(lVar4,uVar1 & 0xffffffff,0), fVar9 != 0.0)) {
                   fVar9 = (float)HeroSpeAddData.Get(lVar4,uVar1 & 0xffffffff,0);
                   fVar10 = (float)HeroSpeAddData.Get(lVar3,uVar1 & 0xffffffff);
                   if (fVar10 < fVar9) {
-                    cVar2 = FUN_1816fd990(uVar7,"",0);
+                    cVar2 = FUN_18171e540(uVar7,"",0);
                     uVar8 = "\n";
                     if (cVar2) {
                       uVar8 = "";
@@ -1278,9 +1279,9 @@ public class EnhanceUIController
                   }
                 }
               }
-              ZhSegment.Initialize(&local_80,DAT_181d74bb8);
+              ZhSegment.Initialize(&local_80,DAT_181d9b1d8);
             }
-            cVar2 = FUN_180d6ca90(uVar7,0);
+            cVar2 = FUN_180d755b0(uVar7,0);
             if (!cVar2) {
               return uVar7;
             }
@@ -1289,8 +1290,8 @@ public class EnhanceUIController
         }
     }
 
-    // Token : 0x60013B3
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x60013F4
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

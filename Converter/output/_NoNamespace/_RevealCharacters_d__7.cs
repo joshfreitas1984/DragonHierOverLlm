@@ -1,49 +1,49 @@
 // ============================================================
 // Type  : <RevealCharacters>d__7
-// Token : 0x2000403
+// Token : 0x200040A
 // ============================================================
 
 public class <RevealCharacters>d__7
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001EC7
+    // Token: 0x4001FD1
     private int <>1__state;
 
-    // Token: 0x4001EC8
+    // Token: 0x4001FD2
     private object <>2__current;
 
-    // Token: 0x4001EC9
+    // Token: 0x4001FD3
     public TMP_Text textComponent;
 
-    // Token: 0x4001ECA
+    // Token: 0x4001FD4
     public TextConsoleSimulator <>4__this;
 
-    // Token: 0x4001ECB
+    // Token: 0x4001FD5
     private TMP_TextInfo <textInfo>5__2;
 
-    // Token: 0x4001ECC
+    // Token: 0x4001FD6
     private int <totalVisibleCharacters>5__3;
 
-    // Token: 0x4001ECD
+    // Token: 0x4001FD7
     private int <visibleCount>5__4;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600247C
-    // RVA   : 0x219070   Offset: 0x217870   Length: 0x24
+    // Token : 0x60024FF
+    // RVA   : 0x219070   Offset: 0x218470   Length: 0x24
     public void /*ctor*/(int <>1__state)
     {
         ZhSegment.Initialize(this,0);
         this.<>1__state = <>1__state;
     }
 
-    // Token : 0x600247D
-    // RVA   : 0x245810   Offset: 0x244010   Length: 0x3
+    // Token : 0x6002500
+    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
     private virtual void System.IDisposable.Dispose()
     {
     }
 
-    // Token : 0x600247E
-    // RVA   : 0xB13190   Offset: 0xB11990   Length: 0x197
+    // Token : 0x6002501
+    // RVA   : 0x8F1940   Offset: 0x8F0D40   Length: 0x197
     private virtual bool MoveNext()
     {
         long lVar1;
@@ -61,7 +61,7 @@ public class <RevealCharacters>d__7
           if (this.<textInfo>5__2 == 0) throw; // [null/range check failed]
           this.<totalVisibleCharacters>5__3 = *(uint32 *)(this.<textInfo>5__2 + 24);
           this.<visibleCount>5__4 = 0;
-        LAB_180b13267:
+        LAB_1808f1a17:
           if (lVar1 == null) throw; // [null/range check failed]
           if (*(char *)(lVar1 + 32) != false) {
             if (this.<textInfo>5__2 == 0) throw; // [null/range check failed]
@@ -82,7 +82,7 @@ public class <RevealCharacters>d__7
               return false;
             }
             this.<>1__state = 0xffffffff;
-            goto LAB_180b13267;
+            goto LAB_1808f1a17;
           }
           this.<>1__state = 0xffffffff;
           iVar4 = 0;
@@ -97,27 +97,27 @@ public class <RevealCharacters>d__7
         }
     }
 
-    // Token : 0x600247F
-    // RVA   : 0x20F140   Offset: 0x20D940   Length: 0x5
+    // Token : 0x6002502
+    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
     private virtual object System.Collections.Generic.IEnumerator<System.object>.get_Current()
     {
         return this.<>2__current;
     }
 
-    // Token : 0x6002480
-    // RVA   : 0xB13330   Offset: 0xB11B30   Length: 0x3E
+    // Token : 0x6002503
+    // RVA   : 0x8F1AE0   Offset: 0x8F0EE0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d682e8);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d8cd60);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181db60d0);
     }
 
-    // Token : 0x6002481
-    // RVA   : 0x20F140   Offset: 0x20D940   Length: 0x5
+    // Token : 0x6002504
+    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
     private virtual object System.Collections.IEnumerator.get_Current()
     {
         return this.<>2__current;

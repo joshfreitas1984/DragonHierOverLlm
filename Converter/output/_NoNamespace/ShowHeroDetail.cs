@@ -1,26 +1,26 @@
 // ============================================================
 // Type  : ShowHeroDetail
-// Token : 0x200034C
+// Token : 0x2000353
 // ============================================================
 
 public class ShowHeroDetail
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001A6C
+    // Token: 0x4001B6D
     public HeroData heroData;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002081
-    // RVA   : 0x96BA70   Offset: 0x96A270   Length: 0x11E
+    // Token : 0x6002102
+    // RVA   : 0x97E410   Offset: 0x97D810   Length: 0x11E
     public void OnClick()
     {
-        var pStatics_0f00 = *(int64*)(DAT_181d50f00 + 184);
-        var pStatics_6278 = *(int64*)(DAT_181d96278 + 184);
-        if (*pStatics_6278 != 0) {
-          if (*(int *)(*pStatics_6278 + 24) != 0) {
+        var pStatics_5f40 = *(int64*)(DAT_181d75f40 + 184);
+        var pStatics_b428 = *(int64*)(DAT_181dbb428 + 184);
+        if (*pStatics_b428 != 0) {
+          if (*(int *)(*pStatics_b428 + 24) != 0) {
             plVar1 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
             plVar2 = (int64 *)0;
-            if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181d8a228)) {
+            if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf348)) {
               plVar2 = plVar1;
             }
             NGUITools.PlaySound(plVar2,0);
@@ -29,16 +29,16 @@ public class ShowHeroDetail
           if (this.heroData == null) {
             return;
           }
-          if (*pStatics_0f00 != 0) {
+          if (*pStatics_5f40 != 0) {
             HeroDetailController.SetHeroDetail
-                      (*pStatics_0f00,this.heroData,0);
+                      (*pStatics_5f40,this.heroData,0);
             return;
           }
         }
     }
 
-    // Token : 0x6002082
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x6002103
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

@@ -1,30 +1,30 @@
 // ============================================================
 // Type  : TradeUIType
-// Token : 0x200039C
+// Token : 0x20003A3
 // ============================================================
 
 public class TradeUIType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001C85
+    // Token: 0x4001D8A
     public int value__;
 
-    // Token: 0x4001C86
+    // Token: 0x4001D8B
     public const TradeUIType None;
 
-    // Token: 0x4001C87
+    // Token: 0x4001D8C
     public const TradeUIType Shop;
 
-    // Token: 0x4001C88
+    // Token: 0x4001D8D
     public const TradeUIType Storage;
 
-    // Token: 0x4001C89
+    // Token: 0x4001D8E
     public const TradeUIType ForceStorage;
 
-    // Token: 0x4001C8A
+    // Token: 0x4001D8F
     public const TradeUIType Give;
 
-    // Token: 0x4001C8B
+    // Token: 0x4001D90
     public const TradeUIType GovernStorage;
 
 }

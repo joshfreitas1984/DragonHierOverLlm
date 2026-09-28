@@ -1,36 +1,36 @@
 // ============================================================
 // Type  : ExploreTileTypeData
-// Token : 0x2000269
+// Token : 0x200026F
 // ============================================================
 
 public class ExploreTileTypeData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40012EB
+    // Token: 0x400138E
     public string name;
 
-    // Token: 0x40012EC
+    // Token: 0x400138F
     public bool autoSeen;
 
-    // Token: 0x40012ED
+    // Token: 0x4001390
     public List<ExploreType> exploreType;
 
-    // Token: 0x40012EE
+    // Token: 0x4001391
     public List<ExploreTileEventTypeData> eventTypes;
 
-    // Token: 0x40012EF
+    // Token: 0x4001392
     public string soundEffect;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60013CA
-    // RVA   : 0x210B70   Offset: 0x20F370   Length: 0x7
+    // Token : 0x600140B
+    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);
     }
 
-    // Token : 0x60013CB
-    // RVA   : 0xB9EC00   Offset: 0xB9D400   Length: 0x175
+    // Token : 0x600140C
+    // RVA   : 0xB27350   Offset: 0xB26750   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -41,13 +41,13 @@ public class ExploreTileTypeData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -59,7 +59,7 @@ public class ExploreTileTypeData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d53c70,plVar1);
+            FUN_180002970(0,DAT_181d78da0,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

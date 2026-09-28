@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : DownloadTexture
-// Token : 0x2000015
+// Token : 0x2000016
 // ============================================================
 
 public class DownloadTexture
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000068
+    // Token: 0x4000084
     public string url;
 
-    // Token: 0x4000069
+    // Token: 0x4000085
     public bool pixelPerfect;
 
-    // Token: 0x400006A
+    // Token: 0x4000086
     private Texture2D mTex;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600004A
-    // RVA   : 0x92BBB0   Offset: 0x92A3B0   Length: 0x6C
+    // Token : 0x6000062
+    // RVA   : 0x93B450   Offset: 0x93A850   Length: 0x6C
     private IEnumerator Start()
     {
         long lVar1;
@@ -28,8 +28,8 @@ public class DownloadTexture
         }
     }
 
-    // Token : 0x600004B
-    // RVA   : 0x92BB10   Offset: 0x92A310   Length: 0x93
+    // Token : 0x6000063
+    // RVA   : 0x93B3B0   Offset: 0x93A7B0   Length: 0x93
     private void OnDestroy()
     {
         ulong uVar1;
@@ -42,8 +42,8 @@ public class DownloadTexture
         }
     }
 
-    // Token : 0x600004C
-    // RVA   : 0x92BC20   Offset: 0x92A420   Length: 0x4B
+    // Token : 0x6000064
+    // RVA   : 0x93B4C0   Offset: 0x93A8C0   Length: 0x4B
     public void /*ctor*/()
     {
         this.url = "http://www.yourwebsite.com/logo.png";

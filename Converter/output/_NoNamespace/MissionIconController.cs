@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : MissionIconController
-// Token : 0x2000300
+// Token : 0x2000307
 // ============================================================
 
 public class MissionIconController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001808
+    // Token: 0x40018F6
     public MissionData missionData;
 
-    // Token: 0x4001809
+    // Token: 0x40018F7
     public bool inited;
 
-    // Token: 0x400180A
+    // Token: 0x40018F8
     private float refreshTime;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60018CD
-    // RVA   : 0xAEFB50   Offset: 0xAEE350   Length: 0x3CA
+    // Token : 0x600192A
+    // RVA   : 0xE69A50   Offset: 0xE68E50   Length: 0x41C
     private void Update()
     {
         uint uVar1;
@@ -37,8 +37,8 @@ public class MissionIconController
           lVar3 = Component.get_transform(this,0);
           if ((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"HighLight",0)) == null)
           throw; // [null/range check failed]
-          plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d6bc40);
-          lVar3 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x460);
+          plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
+          lVar3 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x468);
           if ((this.missionData == null) || (lVar3 == null)) throw; // [null/range check failed]
           uVar1 = this.missionData.missionSourceType;
           if (lVar3.name <= uVar1) {
@@ -56,7 +56,7 @@ public class MissionIconController
           lVar3 = Component.get_transform(this,0);
           if ((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"RareLv",0)) == null)
           throw; // [null/range check failed]
-          plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d6bc40);
+          plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
           if ((this.missionData == null) ||
              (puVar5 = (uint32 *)
                        GlobalData.GetDifficultyColor
@@ -78,7 +78,7 @@ public class MissionIconController
         this.refreshTime = 0x3dcccccd;
         lVar3 = Component.get_transform(this,0);
         if ((lVar3 != null) && (lVar3 = Transform.Find(lVar3,"Title",0)) != null) {
-          uVar6 = Component.GetComponent(lVar3,DAT_181d6d8c0);
+          uVar6 = Component.GetComponent(lVar3,DAT_181d96160);
           lVar3 = this.missionData;
           if (lVar3 != null) {
             uVar8 = lVar3.name;
@@ -106,7 +106,7 @@ public class MissionIconController
                 LTLocalization.SetText(uVar6,uVar8,0);
                 lVar3 = Component.get_transform(this,0);
                 if ((lVar3 != null) && (lVar3 = Transform.Find(lVar3,"LeftTime",0)) != null) {
-                  uVar6 = Component.GetComponent(lVar3,DAT_181d6d8c0);
+                  uVar6 = Component.GetComponent(lVar3,DAT_181d96160);
                   if (this.missionData != null) {
                     piVar9 = &this.missionData.leftTime;
                     uVar8 = "";
@@ -124,11 +124,12 @@ public class MissionIconController
         }
     }
 
-    // Token : 0x60018CE
-    // RVA   : 0xAEF7A0   Offset: 0xAEDFA0   Length: 0x3A7
+    // Token : 0x600192B
+    // RVA   : 0xE696A0   Offset: 0xE68AA0   Length: 0x3A7
     public void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181d4e188 + 184);
+        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
+        var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
         bool cVar1;
         int iVar2;
         uint uVar3;
@@ -140,13 +141,13 @@ public class MissionIconController
         uint local_28;
         uint uStack_24;
         byte[] local_18 = new byte[16];
-        if (GameController._instance != null) {
-          cVar1 = GameController.HaveSpeUI(GameController._instance,1,0);
+        if (*pStatics_2cc8 != 0) {
+          cVar1 = GameController.HaveSpeUI(*pStatics_2cc8,1,0);
           if (cVar1) {
             return;
           }
-          if ((*pStatics != 0) &&
-             (lVar4 = *(int64 *)(*pStatics + 32)) != null) {
+          if ((*pStatics_2ee8 != 0) &&
+             (lVar4 = *(int64 *)(*pStatics_2ee8 + 32)) != null) {
             cVar1 = GameObject.get_activeSelf(lVar4,0);
             if (!cVar1) {
               return;
@@ -167,22 +168,22 @@ public class MissionIconController
                     lVar4 = FUN_18046bbe0(0);
                     lVar5 = FUN_18046bbe0(0);
                     if (lVar5 != null) {
-                      lVar5 = *(int64 *)(lVar5 + 112);
+                      lVar5 = *(int64 *)(lVar5 + 120);
                       if (((this.missionData != null) &&
                           (uVar3 = MissionData.GetTargetInnID(this.missionData,0),
                           lVar5 != null)) &&
-                         ((lVar5 = FUN_1817cc780(lVar5,uVar3,DAT_181d946c8), lVar5 != null &&
+                         ((lVar5 = FUN_1817d9e10(lVar5,uVar3,DAT_181db9ed0), lVar5 != null &&
                           (lVar5 = GameObject.get_transform(lVar5,0)) != null))) {
                         puVar6 = (uint64 *)Transform.get_localPosition(local_18,lVar5,0);
                         if (lVar4 != null) {
                           local_38 = (uint32)*puVar6;
                           uStack_24 = (uint32)((uint64)*puVar6 >> 32);
-        LAB_180aefa0d:
-                          lVar4.missionJoinTeamHeroID = local_38;
-                          *(uint32 *)(lVar4 + 164) = uStack_24;
+        LAB_180e6990d:
+                          *(uint32 *)(lVar4 + 168) = local_38;
+                          *(uint32 *)(lVar4 + 172) = uStack_24;
                           plVar7 = (int64 *)Resources.Load("Sound/SoundEffect/Woosh",0);
                           plVar9 = (int64 *)0;
-                          if ((plVar7 != (int64 *)0) && (*plVar7 == DAT_181d8a228)) {
+                          if ((plVar7 != (int64 *)0) && (*plVar7 == DAT_181daf348)) {
                             plVar9 = plVar7;
                           }
                           NGUITools.PlaySound(plVar9,0);
@@ -204,8 +205,8 @@ public class MissionIconController
                         ThrowHelper.ThrowArgumentOutOfRangeException(0);
                       }
                       if (((lVar5 != null) &&
-                          (lVar5 = FUN_1817cc780(lVar5,*(uint32 *)(*(int64 *)(lVar8 + 16) + 32)
-                                                 ,DAT_181d946c8), lVar5 != null)) &&
+                          (lVar5 = FUN_1817d9e10(lVar5,*(uint32 *)(*(int64 *)(lVar8 + 16) + 32)
+                                                 ,DAT_181db9ed0), lVar5 != null)) &&
                          (lVar5 = GameObject.get_transform(lVar5,0)) != null) {
                         puVar6 = (uint64 *)Transform.get_localPosition(local_18,lVar5,0);
                         if (lVar4 != null) {
@@ -213,7 +214,7 @@ public class MissionIconController
                           uStack_34 = (uint32)((uint64)*puVar6 >> 32);
                           uStack_24 = uStack_34;
                           local_38 = local_28;
-                          goto LAB_180aefa0d;
+                          goto LAB_180e6990d;
                         }
                       }
                     }
@@ -225,8 +226,8 @@ public class MissionIconController
         }
     }
 
-    // Token : 0x60018CF
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x600192C
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

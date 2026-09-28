@@ -1,53 +1,53 @@
 // ============================================================
 // Type  : UIItemSlot
-// Token : 0x2000007
+// Token : 0x2000008
 // ============================================================
 
 public class UIItemSlot
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000010
+    // Token: 0x400002C
     public UISprite icon;
 
-    // Token: 0x4000011
+    // Token: 0x400002D
     public UIWidget background;
 
-    // Token: 0x4000012
+    // Token: 0x400002E
     public UILabel label;
 
-    // Token: 0x4000013
+    // Token: 0x400002F
     public AudioClip grabSound;
 
-    // Token: 0x4000014
+    // Token: 0x4000030
     public AudioClip placeSound;
 
-    // Token: 0x4000015
+    // Token: 0x4000031
     public AudioClip errorSound;
 
-    // Token: 0x4000016
+    // Token: 0x4000032
     private InvGameItem mItem;
 
-    // Token: 0x4000017
+    // Token: 0x4000033
     private string mText;
 
-    // Token: 0x4000018
+    // Token: 0x4000034
     private static InvGameItem mDraggedItem;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000013
+    // Token : 0x600002B
     // (no native address)
     protected virtual InvGameItem get_observedItem()
     {
     }
 
-    // Token : 0x6000014
+    // Token : 0x600002C
     // (no native address)
     protected virtual InvGameItem Replace(InvGameItem item)
     {
     }
 
-    // Token : 0x6000015
-    // RVA   : 0x10F29B0   Offset: 0x10F11B0   Length: 0x789
+    // Token : 0x600002D
+    // RVA   : 0x118B6F0   Offset: 0x118AAF0   Length: 0x789
     private void OnTooltip(bool show)
     {
         int iVar1;
@@ -68,7 +68,7 @@ public class UIItemSlot
           UITooltip.Hide(0);
           return;
         }
-        plVar5 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,5);
+        plVar5 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,5);
         if (plVar5 != (int64 *)0) {
           if (("[" != 0) &&
              (lVar6 = il2cpp_internal("[",*(uint64 *)(*plVar5 + 64))) == null) {
@@ -144,7 +144,7 @@ public class UIItemSlot
           plVar5[8] = "[-]\n";
           il2cpp_internal(plVar5 + 8,lVar6);
           lVar6 = String.Concat(plVar5,0);
-          plVar5 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,5);
+          plVar5 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,5);
           if (plVar5 != (int64 *)0) {
             if ((lVar6 != null) &&
                (lVar8 = il2cpp_internal(lVar6,*(uint64 *)(*plVar5 + 64))) == null) {
@@ -201,7 +201,7 @@ public class UIItemSlot
             }
             plVar5[7] = " ";
             il2cpp_internal(plVar5 + 7,lVar6);
-            plVar9 = (int64 *)il2cpp_value_box(DAT_181d55b70,lVar4 + 40);
+            plVar9 = (int64 *)il2cpp_value_box(DAT_181d7aea8,lVar4 + 40);
             if (plVar9 != (int64 *)0) {
               lVar6 = (**(code **)(*plVar9 + 0x168))(plVar9,*(uint64 *)(*plVar9 + 0x170));
               puVar10 = (uint32 *)il2cpp_object_unbox(plVar9);
@@ -246,7 +246,7 @@ public class UIItemSlot
                       if (*(int *)(lVar2 + 20) == 1) {
                         uVar11 = String.Concat(uVar11,"%",0);
                       }
-                      plVar5 = (int64 *)il2cpp_value_box(DAT_181d55c70,(uint32 *)(lVar2 + 16));
+                      plVar5 = (int64 *)il2cpp_value_box(DAT_181d7afa8,(uint32 *)(lVar2 + 16));
                       if (plVar5 == (int64 *)0) throw; // [null/range check failed]
                       uVar14 = (**(code **)(*plVar5 + 0x168))(plVar5,*(uint64 *)(*plVar5 + 0x170));
                       puVar10 = (uint32 *)il2cpp_object_unbox(plVar5);
@@ -259,7 +259,7 @@ public class UIItemSlot
                     lVar8 = lVar8 + 8;
                   } while (lVar6 < iVar1);
                 }
-                cVar3 = FUN_180d6ca90(*(uint64 *)(lVar4 + 32),0);
+                cVar3 = FUN_180d755b0(*(uint64 *)(lVar4 + 32),0);
                 if (!cVar3) {
                   uVar11 = String.Concat(uVar11,"\n[FF9900]",*(uint64 *)(lVar4 + 32),0);
                 }
@@ -271,18 +271,18 @@ public class UIItemSlot
         }
     }
 
-    // Token : 0x6000016
-    // RVA   : 0x10F25E0   Offset: 0x10F0DE0   Length: 0x1B3
+    // Token : 0x600002E
+    // RVA   : 0x118B320   Offset: 0x118A720   Length: 0x1B3
     private void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181d8a9d8 + 184);
+        var pStatics = *(int64*)(DAT_181dafbf8 + 184);
         ulong uVar3;
         long lVar4;
         long lVar5;
         if (*pStatics == 0) {
           if (this[9] != 0) {
             uVar3 = (**(code **)(*this + 0x188))(this,0,*(uint64 *)(*this + 400));
-            puVar1 = *(uint64 **)(DAT_181d8a9d8 + 184);
+            puVar1 = *(uint64 **)(DAT_181dafbf8 + 184);
             *puVar1 = uVar3;
             il2cpp_internal(puVar1,uVar3);
             if (*pStatics != 0) {
@@ -295,7 +295,7 @@ public class UIItemSlot
         }
         else {
           lVar4 = (**(code **)(*this + 0x188))
-                            (this,**(uint64 **)(DAT_181d8a9d8 + 184),
+                            (this,**(uint64 **)(DAT_181dafbf8 + 184),
                              *(uint64 *)(*this + 400));
           if (*pStatics == lVar4) {
             lVar5 = this[8];
@@ -314,21 +314,21 @@ public class UIItemSlot
         }
     }
 
-    // Token : 0x6000017
-    // RVA   : 0x10F27A0   Offset: 0x10F0FA0   Length: 0x11B
+    // Token : 0x600002F
+    // RVA   : 0x118B4E0   Offset: 0x118A8E0   Length: 0x11B
     private void OnDrag(Vector2 delta)
     {
         long lVar1;
         ulong uVar3;
-        if ((**(int64 **)(DAT_181d8a9d8 + 184) == 0) && (this[9] != 0)) {
-          lVar1 = UICamera.currentTouch;
+        if ((**(int64 **)(DAT_181dafbf8 + 184) == 0) && (this[9] != 0)) {
+          lVar1 = *(int64 *)(*(int64 *)(DAT_181daf678 + 184) + 224);
           if (lVar1 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          lVar1.clickNotification = 2;
+          *(uint32 *)(lVar1 + 112) = 2;
           uVar3 = (**(code **)(*this + 0x188))(this,0,*(uint64 *)(*this + 400));
-          puVar2 = *(uint64 **)(DAT_181d8a9d8 + 184);
+          puVar2 = *(uint64 **)(DAT_181dafbf8 + 184);
           *puVar2 = uVar3;
           il2cpp_internal(puVar2,uVar3);
           lVar1 = this[6];
@@ -337,15 +337,15 @@ public class UIItemSlot
         }
     }
 
-    // Token : 0x6000018
-    // RVA   : 0x10F28C0   Offset: 0x10F10C0   Length: 0xE3
+    // Token : 0x6000030
+    // RVA   : 0x118B600   Offset: 0x118AA00   Length: 0xE3
     private void OnDrop(GameObject go)
     {
-        var pStatics = *(int64*)(DAT_181d8a9d8 + 184);
+        var pStatics = *(int64*)(DAT_181dafbf8 + 184);
         long lVar2;
         long lVar3;
         lVar2 = (**(code **)(*this + 0x188))
-                          (this,**(uint64 **)(DAT_181d8a9d8 + 184),*(uint64 *)(*this + 400)
+                          (this,**(uint64 **)(DAT_181dafbf8 + 184),*(uint64 *)(*this + 400)
                           );
         if (*pStatics == lVar2) {
           lVar3 = this[8];
@@ -363,11 +363,11 @@ public class UIItemSlot
         UIItemSlot.UpdateCursor(this,0);
     }
 
-    // Token : 0x6000019
-    // RVA   : 0x10F3140   Offset: 0x10F1940   Length: 0xE7
+    // Token : 0x6000031
+    // RVA   : 0x118BE80   Offset: 0x118B280   Length: 0xE7
     private void UpdateCursor()
     {
-        var pStatics = *(int64*)(DAT_181d8a9d8 + 184);
+        var pStatics = *(int64*)(DAT_181dafbf8 + 184);
         ulong uVar1;
         long lVar2;
         ulong uVar3;
@@ -382,7 +382,7 @@ public class UIItemSlot
                   lVar2 = InvGameItem.get_baseItem(*pStatics,0);
                   if (lVar2 != null) {
                     uVar1 = *(uint64 *)(lVar2 + 96);
-                    uVar3 = il2cpp_internal(uVar3,DAT_181d55650);
+                    uVar3 = il2cpp_internal(uVar3,DAT_181d7a788);
                     UICursor.Set(uVar3,uVar1,0);
                     return;
                   }
@@ -396,8 +396,8 @@ public class UIItemSlot
         UICursor.Clear(0);
     }
 
-    // Token : 0x600001A
-    // RVA   : 0x10F3230   Offset: 0x10F1A30   Length: 0x2B6
+    // Token : 0x6000032
+    // RVA   : 0x118BF70   Offset: 0x118B370   Length: 0x2B6
     private void Update()
     {
         long lVar1;
@@ -428,16 +428,16 @@ public class UIItemSlot
           if (lVar4 != null) {
             lVar6 = InvGameItem.get_name(lVar4,0);
           }
-          cVar3 = FUN_180d6ca90(this[10],0);
+          cVar3 = FUN_180d755b0(this[10],0);
           if (cVar3) {
-            if (this[5] == 0) goto LAB_1810f34e1;
+            if (this[5] == 0) goto LAB_18118c221;
             this[10] = *(int64 *)(this[5] + 0x1a0);
             il2cpp_internal(this + 10);
           }
           if (lVar6 == null) {
             lVar6 = this[10];
           }
-          if (this[5] == 0) goto LAB_1810f34e1;
+          if (this[5] == 0) goto LAB_18118c221;
           UILabel.set_text(this[5],lVar6,0);
         }
         lVar6 = this[3];
@@ -448,29 +448,29 @@ public class UIItemSlot
             cVar3 = Object.op_Equality(uVar7,0,0);
             if (!cVar3) {
               lVar6 = this[3];
-              if (lVar6 == null) goto LAB_1810f34e1;
-              uVar7 = il2cpp_internal(*(uint64 *)(lVar5 + 88),DAT_181d55650);
+              if (lVar6 == null) goto LAB_18118c221;
+              uVar7 = il2cpp_internal(*(uint64 *)(lVar5 + 88),DAT_181d7a788);
               UISprite.set_atlas(lVar6,uVar7,0);
-              if (this[3] == 0) goto LAB_1810f34e1;
+              if (this[3] == 0) goto LAB_18118c221;
               UISprite.set_spriteName(this[3],*(uint64 *)(lVar5 + 96),0);
-              if (this[3] == 0) goto LAB_1810f34e1;
+              if (this[3] == 0) goto LAB_18118c221;
               Behaviour.set_enabled(this[3],1,0);
               plVar2 = (int64 *)this[3];
-              if (plVar2 == (int64 *)0) goto LAB_1810f34e1;
+              if (plVar2 == (int64 *)0) goto LAB_18118c221;
               (**(code **)(*plVar2 + 0x348))(plVar2,*(uint64 *)(*plVar2 + 0x350));
-              goto LAB_1810f3454;
+              goto LAB_18118c194;
             }
           }
-          if (this[3] == 0) goto LAB_1810f34e1;
+          if (this[3] == 0) goto LAB_18118c221;
           Behaviour.set_enabled(this[3],0,0);
         }
-        LAB_1810f3454:
+        LAB_18118c194:
         lVar6 = this[4];
         cVar3 = Object.op_Inequality(lVar6,0,0);
         if (cVar3) {
           lVar6 = this[4];
           if (lVar4 == null) {
-            puVar8 = (uint32 *)FUN_181098a50(&local_18,0);
+            puVar8 = (uint32 *)FUN_1810d3570(&local_18,0);
           }
           else {
             puVar8 = (uint32 *)InvGameItem.get_color(&local_18,lVar4,0);
@@ -480,7 +480,7 @@ public class UIItemSlot
           uStack_10 = puVar8[2];
           uStack_c = puVar8[3];
           if (lVar6 == null) {
-        LAB_1810f34e1:
+        LAB_18118c221:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -488,8 +488,8 @@ public class UIItemSlot
         }
     }
 
-    // Token : 0x600001B
-    // RVA   : 0x10E65F0   Offset: 0x10E4DF0   Length: 0x47
+    // Token : 0x6000033
+    // RVA   : 0x118C230   Offset: 0x118B630   Length: 0x47
     protected void /*ctor*/()
     {
         this.mText = "";

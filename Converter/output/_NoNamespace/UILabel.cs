@@ -1,158 +1,158 @@
 // ============================================================
 // Type  : UILabel
-// Token : 0x20000FB
+// Token : 0x20000FC
 // ============================================================
 
 public class UILabel
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400060D
+    // Token: 0x4000629
     public Crispness keepCrispWhenShrunk;
 
-    // Token: 0x400060E
+    // Token: 0x400062A
     private Font mTrueTypeFont;
 
-    // Token: 0x400060F
+    // Token: 0x400062B
     private object mFont;
 
-    // Token: 0x4000610
+    // Token: 0x400062C
     private string mText;
 
-    // Token: 0x4000611
+    // Token: 0x400062D
     private int mFontSize;
 
-    // Token: 0x4000612
+    // Token: 0x400062E
     private FontStyle mFontStyle;
 
-    // Token: 0x4000613
+    // Token: 0x400062F
     private Alignment mAlignment;
 
-    // Token: 0x4000614
+    // Token: 0x4000630
     private bool mEncoding;
 
-    // Token: 0x4000615
+    // Token: 0x4000631
     private int mMaxLineCount;
 
-    // Token: 0x4000616
+    // Token: 0x4000632
     private Effect mEffectStyle;
 
-    // Token: 0x4000617
+    // Token: 0x4000633
     private Color mEffectColor;
 
-    // Token: 0x4000618
+    // Token: 0x4000634
     private SymbolStyle mSymbols;
 
-    // Token: 0x4000619
+    // Token: 0x4000635
     private Vector2 mEffectDistance;
 
-    // Token: 0x400061A
+    // Token: 0x4000636
     private Overflow mOverflow;
 
-    // Token: 0x400061B
+    // Token: 0x4000637
     private bool mApplyGradient;
 
-    // Token: 0x400061C
+    // Token: 0x4000638
     private Color mGradientTop;
 
-    // Token: 0x400061D
+    // Token: 0x4000639
     private Color mGradientBottom;
 
-    // Token: 0x400061E
+    // Token: 0x400063A
     private int mSpacingX;
 
-    // Token: 0x400061F
+    // Token: 0x400063B
     private int mSpacingY;
 
-    // Token: 0x4000620
+    // Token: 0x400063C
     private bool mUseFloatSpacing;
 
-    // Token: 0x4000621
+    // Token: 0x400063D
     private float mFloatSpacingX;
 
-    // Token: 0x4000622
+    // Token: 0x400063E
     private float mFloatSpacingY;
 
-    // Token: 0x4000623
+    // Token: 0x400063F
     private bool mOverflowEllipsis;
 
-    // Token: 0x4000624
+    // Token: 0x4000640
     private int mOverflowWidth;
 
-    // Token: 0x4000625
+    // Token: 0x4000641
     private int mOverflowHeight;
 
-    // Token: 0x4000626
+    // Token: 0x4000642
     private Modifier mModifier;
 
-    // Token: 0x4000627
+    // Token: 0x4000643
     private bool mShrinkToFit;
 
-    // Token: 0x4000628
+    // Token: 0x4000644
     private int mMaxLineWidth;
 
-    // Token: 0x4000629
+    // Token: 0x4000645
     private int mMaxLineHeight;
 
-    // Token: 0x400062A
+    // Token: 0x4000646
     private float mLineWidth;
 
-    // Token: 0x400062B
+    // Token: 0x4000647
     private bool mMultiline;
 
-    // Token: 0x400062C
+    // Token: 0x4000648
     private Font mActiveTTF;
 
-    // Token: 0x400062D
+    // Token: 0x4000649
     private float mDensity;
 
-    // Token: 0x400062E
+    // Token: 0x400064A
     private bool mShouldBeProcessed;
 
-    // Token: 0x400062F
+    // Token: 0x400064B
     private string mProcessedText;
 
-    // Token: 0x4000630
+    // Token: 0x400064C
     private bool mPremultiply;
 
-    // Token: 0x4000631
+    // Token: 0x400064D
     private Vector2 mCalculatedSize;
 
-    // Token: 0x4000632
+    // Token: 0x400064E
     private float mScale;
 
-    // Token: 0x4000633
+    // Token: 0x400064F
     private int mFinalFontSize;
 
-    // Token: 0x4000634
+    // Token: 0x4000650
     private int mLastWidth;
 
-    // Token: 0x4000635
+    // Token: 0x4000651
     private int mLastHeight;
 
-    // Token: 0x4000636
+    // Token: 0x4000652
     public ModifierFunc customModifier;
 
-    // Token: 0x4000637
+    // Token: 0x4000653
     private static BetterList<UILabel> mList;
 
-    // Token: 0x4000638
+    // Token: 0x4000654
     private static Dictionary<Font, int> mFontUsage;
 
-    // Token: 0x4000639
+    // Token: 0x4000655
     private static BetterList<UIDrawCall> mTempDrawcalls;
 
-    // Token: 0x400063A
+    // Token: 0x4000656
     private static bool mTexRebuildAdded;
 
-    // Token: 0x400063B
+    // Token: 0x4000657
     private static List<Vector3> mTempVerts;
 
-    // Token: 0x400063C
+    // Token: 0x4000658
     private static List<int> mTempIndices;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60007EC
-    // RVA   : 0x10FBD00   Offset: 0x10FA500   Length: 0x90
+    // Token : 0x6000804
+    // RVA   : 0x1194A50   Offset: 0x1193E50   Length: 0x90
     public int get_finalFontSize()
     {
         int iVar1;
@@ -169,17 +169,21 @@ public class UILabel
         Mathf.RoundToInt((float)iVar1 * this.mScale,0);
     }
 
-    // Token : 0x60007ED
-    // RVA   : 0x10FC600   Offset: 0x10FAE00   Length: 0x8
+    // Token : 0x6000805
+    // RVA   : 0x1195400   Offset: 0x1194800   Length: 0x8
     private bool get_shouldBeProcessed()
     {
+        uint8 FUN_181195400(int64 this)
+        {
         return this.mShouldBeProcessed;
     }
 
-    // Token : 0x60007EE
-    // RVA   : 0x10FD000   Offset: 0x10FB800   Length: 0x17
+    // Token : 0x6000806
+    // RVA   : 0x1195D50   Offset: 0x1195150   Length: 0x17
     private void set_shouldBeProcessed(bool value)
     {
+        void FUN_181195d50(int64 this,char value)
+        {
         if (!value) {
           this.mShouldBeProcessed = 0;
           return;
@@ -188,8 +192,8 @@ public class UILabel
         this.mShouldBeProcessed = 1;
     }
 
-    // Token : 0x60007EF
-    // RVA   : 0x10FBEA0   Offset: 0x10FA6A0   Length: 0x2C
+    // Token : 0x6000807
+    // RVA   : 0x1194BF0   Offset: 0x1193FF0   Length: 0x2C
     public override bool get_isAnchoredHorizontally()
     {
         bool cVar1;
@@ -200,8 +204,8 @@ public class UILabel
         return this.mOverflow == 2;
     }
 
-    // Token : 0x60007F0
-    // RVA   : 0x10FBED0   Offset: 0x10FA6D0   Length: 0x33
+    // Token : 0x6000808
+    // RVA   : 0x1194C20   Offset: 0x1194020   Length: 0x33
     public override bool get_isAnchoredVertically()
     {
         bool cVar1;
@@ -214,90 +218,132 @@ public class UILabel
         return true;
     }
 
-    // Token : 0x60007F1
-    // RVA   : 0x10FC1E0   Offset: 0x10FA9E0   Length: 0x136
+    // Token : 0x6000809
+    // RVA   : 0x1194FA0   Offset: 0x11943A0   Length: 0x19A
     public override Material get_material()
     {
-        bool cVar1;
-        long lVar2;
-        ulong uVar3;
-        uVar3 = *(uint64 *)(this + 176);
-        cVar1 = Object.op_Inequality(uVar3,0,0);
-        if (cVar1) {
+        long lVar1;
+        bool cVar2;
+        ulong uVar4;
+        ushort uVar6;
+        uVar4 = *(uint64 *)(this + 176);
+        cVar2 = Object.op_Inequality(uVar4,0,0);
+        if (cVar2) {
           return *(uint64 *)(this + 176);
         }
-        lVar2 = il2cpp_internal(this.mFont,DAT_181d556d0);
-        if (lVar2 != null) {
-          uVar3 = FUN_180002970(12,DAT_181d556d0,lVar2);
-          return uVar3;
+        plVar3 = (int64 *)il2cpp_internal(this.mFont,DAT_181d7a800);
+        if (plVar3 == (int64 *)0) {
+          uVar4 = *(uint64 *)(this + 400);
+          cVar2 = Object.op_Inequality(uVar4,0,0);
+          if (!cVar2) {
+            return 0;
+          }
+          if (*(int64 *)(this + 400) != 0) {
+            uVar4 = Font.get_material(*(int64 *)(this + 400),0);
+            return uVar4;
+          }
+                          // WARNING: Subroutine does not return
+          FUN_1800d6620();
         }
-        uVar3 = *(uint64 *)(this + 400);
-        cVar1 = Object.op_Inequality(uVar3,0,0);
-        if (!cVar1) {
-          return 0;
+        lVar1 = *plVar3;
+        uVar6 = 0;
+        if (*(uint16 *)(lVar1 + 0x12a) != 0) {
+          do {
+            if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar6 * 16) == DAT_181d7a800) {
+              puVar5 = (uint64 *)
+                       ((int64)*(int *)(*(int64 *)(lVar1 + 176) + 8 + (uint64)uVar6 * 16) *
+                        16 + 0x1f8 + lVar1);
+              goto LAB_1811950f8;
+            }
+            uVar6 = uVar6 + 1;
+          } while (uVar6 < *(uint16 *)(lVar1 + 0x12a));
         }
-        if (*(int64 *)(this + 400) != 0) {
-          uVar3 = Font.get_material(*(int64 *)(this + 400),0);
-          return uVar3;
-        }
+        puVar5 = (uint64 *)FUN_1800914f0(plVar3,DAT_181d7a800,12);
+        LAB_1811950f8:
+                          // WARNING: Could not recover jumptable at 0x000181195109. Too many branches
+                          // WARNING: Treating indirect jump as call
+        uVar4 = (*(code *)*puVar5)(plVar3,puVar5[1]);
+        return uVar4;
     }
 
-    // Token : 0x60007F2
-    // RVA   : 0x10FCE80   Offset: 0x10FB680   Length: 0x8
+    // Token : 0x600080A
+    // RVA   : 0x1195BD0   Offset: 0x1194FD0   Length: 0x8
     public override void set_material(Material value)
     {
+        void FUN_181195bd0(uint64 this,uint64 value)
+        {
         UIWidget.set_material(this,value,0);
     }
 
-    // Token : 0x60007F3
-    // RVA   : 0x10FC0B0   Offset: 0x10FA8B0   Length: 0x127
+    // Token : 0x600080B
+    // RVA   : 0x1194E00   Offset: 0x1194200   Length: 0x198
     public override Texture get_mainTexture()
     {
         bool cVar1;
-        long lVar2;
-        ulong uVar3;
-        lVar2 = il2cpp_internal(this.mFont,DAT_181d556d0);
-        if (lVar2 == null) {
-          uVar3 = *(uint64 *)(this + 400);
-          cVar1 = Object.op_Inequality(uVar3,0,0);
+        long lVar3;
+        ulong uVar4;
+        ushort uVar6;
+        plVar2 = (int64 *)il2cpp_internal(this.mFont,DAT_181d7a800);
+        if (plVar2 == (int64 *)0) {
+          uVar4 = *(uint64 *)(this + 400);
+          cVar1 = Object.op_Inequality(uVar4,0,0);
           if (!cVar1) {
             return 0;
           }
           if (*(int64 *)(this + 400) != 0) {
-            lVar2 = Font.get_material(*(int64 *)(this + 400),0);
-            cVar1 = Object.op_Inequality(lVar2,0,0);
+            lVar3 = Font.get_material(*(int64 *)(this + 400),0);
+            cVar1 = Object.op_Inequality(lVar3,0,0);
             if (!cVar1) {
               return 0;
             }
-            if (lVar2 != null) {
-              uVar3 = Material.get_mainTexture(lVar2,0);
-              return uVar3;
+            if (lVar3 != null) {
+              uVar4 = Material.get_mainTexture(lVar3,0);
+              return uVar4;
             }
           }
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        uVar3 = FUN_180002970(16,DAT_181d556d0,lVar2);
-        return uVar3;
+        lVar3 = *plVar2;
+        uVar6 = 0;
+        if (*(uint16 *)(lVar3 + 0x12a) != 0) {
+          do {
+            if (*(int64 *)(*(int64 *)(lVar3 + 176) + (uint64)uVar6 * 16) == DAT_181d7a800) {
+              puVar5 = (uint64 *)
+                       ((int64)*(int *)(*(int64 *)(lVar3 + 176) + 8 + (uint64)uVar6 * 16) *
+                        16 + 0x238 + lVar3);
+              goto LAB_181194f68;
+            }
+            uVar6 = uVar6 + 1;
+          } while (uVar6 < *(uint16 *)(lVar3 + 0x12a));
+        }
+        puVar5 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d7a800,16);
+        LAB_181194f68:
+                          // WARNING: Could not recover jumptable at 0x000181194f79. Too many branches
+                          // WARNING: Treating indirect jump as call
+        uVar4 = (*(code *)*puVar5)(plVar2,puVar5[1]);
+        return uVar4;
     }
 
-    // Token : 0x60007F4
-    // RVA   : 0x10FCE70   Offset: 0x10FB670   Length: 0x8
+    // Token : 0x600080C
+    // RVA   : 0x1195BC0   Offset: 0x1194FC0   Length: 0x8
     public override void set_mainTexture(Texture value)
     {
+        void FUN_181195bc0(uint64 this,uint64 value)
+        {
         UIWidget.set_mainTexture(this,value,0);
     }
 
-    // Token : 0x60007F5
-    // RVA   : 0x10FBDD0   Offset: 0x10FA5D0   Length: 0xAA
+    // Token : 0x600080D
+    // RVA   : 0x1194B20   Offset: 0x1193F20   Length: 0xAA
     public object get_font()
     {
-        plVar1 = (int64 *)il2cpp_internal(this.mFont,DAT_181d556d0);
+        plVar1 = (int64 *)il2cpp_internal(this.mFont,DAT_181d7a800);
         if (plVar1 != (int64 *)0) {
-          if ((*(byte *)(DAT_181d68fe8 + 300) <= *(byte *)(*plVar1 + 300)) &&
+          if ((*(byte *)(DAT_181d8e210 + 300) <= *(byte *)(*plVar1 + 300)) &&
              (*(int64 *)
-               (*(int64 *)(*plVar1 + 200) + -8 + (uint64)*(byte *)(DAT_181d68fe8 + 300) * 8) ==
-              DAT_181d68fe8)) {
+               (*(int64 *)(*plVar1 + 200) + -8 + (uint64)*(byte *)(DAT_181d8e210 + 300) * 8) ==
+              DAT_181d8e210)) {
             return plVar1;
           }
           return (int64 *)0;
@@ -305,24 +351,24 @@ public class UILabel
         return (int64 *)0;
     }
 
-    // Token : 0x60007F6
-    // RVA   : 0x10FCD10   Offset: 0x10FB510   Length: 0x53
+    // Token : 0x600080E
+    // RVA   : 0x1195A60   Offset: 0x1194E60   Length: 0x53
     public void set_font(object value)
     {
         ulong uVar1;
-        uVar1 = il2cpp_internal(value,DAT_181d556d0);
+        uVar1 = il2cpp_internal(value,DAT_181d7a800);
         UILabel.set_bitmapFont(this,uVar1,0);
     }
 
-    // Token : 0x60007F7
-    // RVA   : 0x10FBB00   Offset: 0x10FA300   Length: 0x3D
+    // Token : 0x600080F
+    // RVA   : 0x1194850   Offset: 0x1193C50   Length: 0x3D
     public INGUIFont get_bitmapFont()
     {
-        il2cpp_internal(this.mFont,DAT_181d556d0);
+        il2cpp_internal(this.mFont,DAT_181d7a800);
     }
 
-    // Token : 0x60007F8
-    // RVA   : 0x10FCA10   Offset: 0x10FB210   Length: 0xEC
+    // Token : 0x6000810
+    // RVA   : 0x1195760   Offset: 0x1194B60   Length: 0xEC
     public void set_bitmapFont(INGUIFont value)
     {
         plVar2 = (int64 *)il2cpp_internal(this[51]);
@@ -342,31 +388,47 @@ public class UILabel
         }
     }
 
-    // Token : 0x60007F9
-    // RVA   : 0x10FBA80   Offset: 0x10FA280   Length: 0x78
+    // Token : 0x6000811
+    // RVA   : 0x11947D0   Offset: 0x1193BD0   Length: 0x78
     public INGUIAtlas get_atlas()
     {
         long lVar1;
-        lVar1 = il2cpp_internal(this.mFont,DAT_181d556d0);
+        lVar1 = il2cpp_internal(this.mFont,DAT_181d7a800);
         if (lVar1 == null) {
           return;
         }
-        FUN_180002970(9,DAT_181d556d0,lVar1);
+        FUN_180002970(9,DAT_181d7a800,lVar1);
     }
 
-    // Token : 0x60007FA
-    // RVA   : 0x10FC980   Offset: 0x10FB180   Length: 0x82
+    // Token : 0x6000812
+    // RVA   : 0x1195670   Offset: 0x1194A70   Length: 0xE6
     public void set_atlas(INGUIAtlas value)
     {
         long lVar1;
-        lVar1 = il2cpp_internal(this.mFont,DAT_181d556d0);
-        if (lVar1 != null) {
-          FUN_180004720(10,DAT_181d556d0,lVar1,value);
+        ushort uVar4;
+        plVar2 = (int64 *)il2cpp_internal(this.mFont,DAT_181d7a800);
+        if (plVar2 != (int64 *)0) {
+          lVar1 = *plVar2;
+          uVar4 = 0;
+          if (*(uint16 *)(lVar1 + 0x12a) != 0) {
+            do {
+              if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar4 * 16) == DAT_181d7a800) {
+                puVar3 = (uint64 *)
+                         ((int64)*(int *)(*(int64 *)(lVar1 + 176) + 8 + (uint64)uVar4 * 16) *
+                          16 + 0x1d8 + lVar1);
+                goto LAB_181195728;
+              }
+              uVar4 = uVar4 + 1;
+            } while (uVar4 < *(uint16 *)(lVar1 + 0x12a));
+          }
+          puVar3 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d7a800,10);
+        LAB_181195728:
+          (*(code *)*puVar3)(plVar2,value,puVar3[1]);
         }
     }
 
-    // Token : 0x60007FB
-    // RVA   : 0x10FC670   Offset: 0x10FAE70   Length: 0xD9
+    // Token : 0x6000813
+    // RVA   : 0x1195470   Offset: 0x1194870   Length: 0xD9
     public Font get_trueTypeFont()
     {
         bool cVar1;
@@ -377,16 +439,16 @@ public class UILabel
         if (cVar1) {
           return *(uint64 *)(this + 400);
         }
-        lVar2 = il2cpp_internal(this.mFont,DAT_181d556d0);
+        lVar2 = il2cpp_internal(this.mFont,DAT_181d7a800);
         if (lVar2 == null) {
           return 0;
         }
-        uVar3 = FUN_180002970(29,DAT_181d556d0,lVar2);
+        uVar3 = FUN_180002970(29,DAT_181d7a800,lVar2);
         return uVar3;
     }
 
-    // Token : 0x60007FC
-    // RVA   : 0x10FD1A0   Offset: 0x10FB9A0   Length: 0x12B
+    // Token : 0x6000814
+    // RVA   : 0x1195EF0   Offset: 0x11952F0   Length: 0x12B
     public void set_trueTypeFont(Font value)
     {
         ulong uVar1;
@@ -410,8 +472,8 @@ public class UILabel
         }
     }
 
-    // Token : 0x60007FD
-    // RVA   : 0x10FB9E0   Offset: 0x10FA1E0   Length: 0x83
+    // Token : 0x6000815
+    // RVA   : 0x1194730   Offset: 0x1193B30   Length: 0x83
     public object get_ambigiousFont()
     {
         ulong uVar1;
@@ -424,57 +486,41 @@ public class UILabel
         return *(uint64 *)(this + 400);
     }
 
-    // Token : 0x60007FE
-    // RVA   : 0x10FC7C0   Offset: 0x10FAFC0   Length: 0x198
+    // Token : 0x6000816
+    // RVA   : 0x11955C0   Offset: 0x11949C0   Length: 0x8E
     public void set_ambigiousFont(object value)
     {
-        ulong uVar1;
-        bool cVar2;
-        long lVar3;
-        lVar3 = il2cpp_internal(value,DAT_181d556d0);
-        if (lVar3 == null) {
-          plVar4 = (int64 *)0;
-          if ((value != (int64 *)0) && (*value == DAT_181da26a0)) {
-            plVar4 = value;
+        long lVar1;
+        lVar1 = il2cpp_internal(value,DAT_181d7a800);
+        if (lVar1 == null) {
+          plVar2 = (int64 *)0;
+          if ((value != (int64 *)0) && (*value == DAT_181dc79d0)) {
+            plVar2 = value;
           }
-          uVar1 = *(uint64 *)(this + 400);
-          cVar2 = Object.op_Inequality(uVar1,plVar4,0);
-          if (cVar2) {
-            UILabel.SetActiveFont(this,0,0);
-            UIWidget.RemoveFromPanel(this,0);
-            *(int64 **)(this + 400) = plVar4;
-            *(uint8 *)(this + 88) = 1;
-            this.mShouldBeProcessed = 1;
-            this.mFont = 0;
-            UILabel.SetActiveFont(this,plVar4,0);
-            UILabel.ProcessAndRequest(this,0);
-            uVar1 = this.mActiveTTF;
-            cVar2 = Object.op_Inequality(uVar1,0,0);
-            if (cVar2) {
-              UIWidget.MarkAsChanged(this,0);
-            }
-          }
+          UILabel.set_trueTypeFont(this,plVar2,0);
           return;
         }
-        UILabel.set_bitmapFont(this,lVar3,0);
+        UILabel.set_bitmapFont(this,lVar1,0);
     }
 
-    // Token : 0x60007FF
-    // RVA   : 0x10FC660   Offset: 0x10FAE60   Length: 0x8
+    // Token : 0x6000817
+    // RVA   : 0x1195460   Offset: 0x1194860   Length: 0x8
     public string get_text()
     {
+        uint64 FUN_181195460(int64 this)
+        {
         return this.mText;
     }
 
-    // Token : 0x6000800
-    // RVA   : 0x10FD0D0   Offset: 0x10FB8D0   Length: 0xCF
+    // Token : 0x6000818
+    // RVA   : 0x1195E20   Offset: 0x1195220   Length: 0xCF
     public void set_text(string value)
     {
         bool cVar2;
         plVar1 = this + 52;
-        cVar2 = FUN_1816fd990(*plVar1,value,0);
+        cVar2 = FUN_18171e540(*plVar1,value,0);
         if (!cVar2) {
-          cVar2 = FUN_180d6ca90(value,0);
+          cVar2 = FUN_180d755b0(value,0);
           if (!cVar2) {
             cVar2 = String.op_Inequality(*plVar1,value,0);
             if (!cVar2) {
@@ -483,7 +529,7 @@ public class UILabel
             *plVar1 = value;
           }
           else {
-            cVar2 = FUN_180d6ca90(*plVar1,0);
+            cVar2 = FUN_180d755b0(*plVar1,0);
             value = "";
             if (cVar2) {
               return;
@@ -499,8 +545,8 @@ public class UILabel
         }
     }
 
-    // Token : 0x6000801
-    // RVA   : 0x10FBB40   Offset: 0x10FA340   Length: 0xE3
+    // Token : 0x6000819
+    // RVA   : 0x1194890   Offset: 0x1193C90   Length: 0xE3
     public int get_defaultFontSize()
     {
         bool cVar1;
@@ -512,23 +558,25 @@ public class UILabel
         if (cVar1) {
           return (uint64)this.mFontSize;
         }
-        lVar3 = il2cpp_internal(this.mFont,DAT_181d556d0);
+        lVar3 = il2cpp_internal(this.mFont,DAT_181d7a800);
         if (lVar3 == null) {
           return 16;
         }
-        uVar4 = FUN_180002970(22,DAT_181d556d0,lVar3);
+        uVar4 = FUN_180002970(22,DAT_181d7a800,lVar3);
         return uVar4;
     }
 
-    // Token : 0x6000802
-    // RVA   : 0x10FBDB0   Offset: 0x10FA5B0   Length: 0x7
+    // Token : 0x600081A
+    // RVA   : 0x1194B00   Offset: 0x1193F00   Length: 0x7
     public int get_fontSize()
     {
+        uint32 FUN_181194b00(int64 this)
+        {
         return this.mFontSize;
     }
 
-    // Token : 0x6000803
-    // RVA   : 0x10FCC90   Offset: 0x10FB490   Length: 0x4B
+    // Token : 0x600081B
+    // RVA   : 0x11959E0   Offset: 0x1194DE0   Length: 0x4B
     public void set_fontSize(int value)
     {
         int iVar1;
@@ -542,17 +590,21 @@ public class UILabel
         }
     }
 
-    // Token : 0x6000804
-    // RVA   : 0x10FBDC0   Offset: 0x10FA5C0   Length: 0x7
+    // Token : 0x600081C
+    // RVA   : 0x1194B10   Offset: 0x1193F10   Length: 0x7
     public FontStyle get_fontStyle()
     {
+        uint32 FUN_181194b10(int64 this)
+        {
         return this.mFontStyle;
     }
 
-    // Token : 0x6000805
-    // RVA   : 0x10FCCE0   Offset: 0x10FB4E0   Length: 0x21
+    // Token : 0x600081D
+    // RVA   : 0x1195A30   Offset: 0x1194E30   Length: 0x21
     public void set_fontStyle(FontStyle value)
     {
+        void FUN_181195a30(int64 this,int value)
+        {
         if (this.mFontStyle != value) {
           this.mFontStyle = value;
           *(uint8 *)(this + 88) = 1;
@@ -562,15 +614,17 @@ public class UILabel
         }
     }
 
-    // Token : 0x6000806
-    // RVA   : 0x10FB9D0   Offset: 0x10FA1D0   Length: 0x7
+    // Token : 0x600081E
+    // RVA   : 0x1194720   Offset: 0x1193B20   Length: 0x7
     public Alignment get_alignment()
     {
+        uint32 FUN_181194720(int64 this)
+        {
         return this.mAlignment;
     }
 
-    // Token : 0x6000807
-    // RVA   : 0x10FC790   Offset: 0x10FAF90   Length: 0x21
+    // Token : 0x600081F
+    // RVA   : 0x1195590   Offset: 0x1194990   Length: 0x21
     public void set_alignment(Alignment value)
     {
         if (this.mAlignment != value) {
@@ -582,39 +636,45 @@ public class UILabel
         }
     }
 
-    // Token : 0x6000808
-    // RVA   : 0x10FBA70   Offset: 0x10FA270   Length: 0x8
+    // Token : 0x6000820
+    // RVA   : 0x11947C0   Offset: 0x1193BC0   Length: 0x8
     public bool get_applyGradient()
     {
+        uint8 FUN_1811947c0(int64 this)
+        {
         return this.mApplyGradient;
     }
 
-    // Token : 0x6000809
-    // RVA   : 0x10FC960   Offset: 0x10FB160   Length: 0x20
+    // Token : 0x6000821
+    // RVA   : 0x1195650   Offset: 0x1194A50   Length: 0x20
     public void set_applyGradient(bool value)
     {
+        void FUN_181195650(int64 *this,char value)
+        {
         if ((char)this[60] != value) {
           *(char *)(this + 60) = value;
-                          // WARNING: Could not recover jumptable at 0x0001810fc978. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000181195668. Too many branches
                           // WARNING: Treating indirect jump as call
           (**(code **)(*this + 0x328))(this,*(uint64 *)(*this + 0x330));
           return;
         }
     }
 
-    // Token : 0x600080A
-    // RVA   : 0x10FBE90   Offset: 0x10FA690   Length: 0xE
+    // Token : 0x6000822
+    // RVA   : 0x1194BE0   Offset: 0x1193FE0   Length: 0xE
     public Color get_gradientTop()
     {
-        ulong uVar1;
+        uint64 * FUN_181194be0(uint64 *this,int64 param_2)
+        {
+        uint64 uVar1;
         uVar1 = *(uint64 *)(param_2 + 0x1ec);
         *this = *(uint64 *)(param_2 + 0x1e4);
         this[1] = uVar1;
         return this;
     }
 
-    // Token : 0x600080B
-    // RVA   : 0x10FCDE0   Offset: 0x10FB5E0   Length: 0x6B
+    // Token : 0x6000823
+    // RVA   : 0x1195B30   Offset: 0x1194F30   Length: 0x6B
     public void set_gradientTop(Color value)
     {
         uint uVar1;
@@ -648,19 +708,21 @@ public class UILabel
         }
     }
 
-    // Token : 0x600080C
-    // RVA   : 0x10FBE80   Offset: 0x10FA680   Length: 0xE
+    // Token : 0x6000824
+    // RVA   : 0x1194BD0   Offset: 0x1193FD0   Length: 0xE
     public Color get_gradientBottom()
     {
-        ulong uVar1;
+        uint64 * FUN_181194bd0(uint64 *this,int64 param_2)
+        {
+        uint64 uVar1;
         uVar1 = *(uint64 *)(param_2 + 0x1fc);
         *this = *(uint64 *)(param_2 + 500);
         this[1] = uVar1;
         return this;
     }
 
-    // Token : 0x600080D
-    // RVA   : 0x10FCD70   Offset: 0x10FB570   Length: 0x6B
+    // Token : 0x6000825
+    // RVA   : 0x1195AC0   Offset: 0x1194EC0   Length: 0x6B
     public void set_gradientBottom(Color value)
     {
         uint uVar1;
@@ -694,57 +756,69 @@ public class UILabel
         }
     }
 
-    // Token : 0x600080E
-    // RVA   : 0x10FC620   Offset: 0x10FAE20   Length: 0x7
+    // Token : 0x6000826
+    // RVA   : 0x1195420   Offset: 0x1194820   Length: 0x7
     public int get_spacingX()
     {
+        uint32 FUN_181195420(int64 this)
+        {
         return this.mSpacingX;
     }
 
-    // Token : 0x600080F
-    // RVA   : 0x10FD050   Offset: 0x10FB850   Length: 0x20
+    // Token : 0x6000827
+    // RVA   : 0x1195DA0   Offset: 0x11951A0   Length: 0x20
     public void set_spacingX(int value)
     {
+        void FUN_181195da0(int64 *this,int value)
+        {
         if (*(int *)((int64)this + 0x204) != value) {
           *(int *)((int64)this + 0x204) = value;
-                          // WARNING: Could not recover jumptable at 0x0001810fd068. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000181195db8. Too many branches
                           // WARNING: Treating indirect jump as call
           (**(code **)(*this + 0x328))(this,*(uint64 *)(*this + 0x330));
           return;
         }
     }
 
-    // Token : 0x6000810
-    // RVA   : 0x10FC630   Offset: 0x10FAE30   Length: 0x7
+    // Token : 0x6000828
+    // RVA   : 0x1195430   Offset: 0x1194830   Length: 0x7
     public int get_spacingY()
     {
+        uint32 FUN_181195430(int64 this)
+        {
         return this.mSpacingY;
     }
 
-    // Token : 0x6000811
-    // RVA   : 0x10FD070   Offset: 0x10FB870   Length: 0x20
+    // Token : 0x6000829
+    // RVA   : 0x1195DC0   Offset: 0x11951C0   Length: 0x20
     public void set_spacingY(int value)
     {
+        void FUN_181195dc0(int64 *this,int value)
+        {
         if ((int)this[65] != value) {
           *(int *)(this + 65) = value;
-                          // WARNING: Could not recover jumptable at 0x0001810fd088. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000181195dd8. Too many branches
                           // WARNING: Treating indirect jump as call
           (**(code **)(*this + 0x328))(this,*(uint64 *)(*this + 0x330));
           return;
         }
     }
 
-    // Token : 0x6000812
-    // RVA   : 0x10FC750   Offset: 0x10FAF50   Length: 0x8
+    // Token : 0x600082A
+    // RVA   : 0x1195550   Offset: 0x1194950   Length: 0x8
     public bool get_useFloatSpacing()
     {
+        uint8 FUN_181195550(int64 this)
+        {
         return this.mUseFloatSpacing;
     }
 
-    // Token : 0x6000813
-    // RVA   : 0x10FD2D0   Offset: 0x10FBAD0   Length: 0x1A
+    // Token : 0x600082B
+    // RVA   : 0x1196020   Offset: 0x1195420   Length: 0x1A
     public void set_useFloatSpacing(bool value)
     {
+        void FUN_181196020(int64 this,char value)
+        {
         if (this.mUseFloatSpacing != value) {
           this.mUseFloatSpacing = value;
           *(uint8 *)(this + 88) = 1;
@@ -752,15 +826,17 @@ public class UILabel
         }
     }
 
-    // Token : 0x6000814
-    // RVA   : 0x10FBD90   Offset: 0x10FA590   Length: 0x9
+    // Token : 0x600082C
+    // RVA   : 0x1194AE0   Offset: 0x1193EE0   Length: 0x9
     public float get_floatSpacingX()
     {
+        uint32 FUN_181194ae0(int64 this)
+        {
         return this.mFloatSpacingX;
     }
 
-    // Token : 0x6000815
-    // RVA   : 0x10FCBF0   Offset: 0x10FB3F0   Length: 0x4B
+    // Token : 0x600082D
+    // RVA   : 0x1195940   Offset: 0x1194D40   Length: 0x4B
     public void set_floatSpacingX(float value)
     {
         bool cVar1;
@@ -772,15 +848,17 @@ public class UILabel
         }
     }
 
-    // Token : 0x6000816
-    // RVA   : 0x10FBDA0   Offset: 0x10FA5A0   Length: 0x9
+    // Token : 0x600082E
+    // RVA   : 0x1194AF0   Offset: 0x1193EF0   Length: 0x9
     public float get_floatSpacingY()
     {
+        uint32 FUN_181194af0(int64 this)
+        {
         return this.mFloatSpacingY;
     }
 
-    // Token : 0x6000817
-    // RVA   : 0x10FCC40   Offset: 0x10FB440   Length: 0x4B
+    // Token : 0x600082F
+    // RVA   : 0x1195990   Offset: 0x1194D90   Length: 0x4B
     public void set_floatSpacingY(float value)
     {
         bool cVar1;
@@ -792,8 +870,8 @@ public class UILabel
         }
     }
 
-    // Token : 0x6000818
-    // RVA   : 0x10FBCE0   Offset: 0x10FA4E0   Length: 0x1E
+    // Token : 0x6000830
+    // RVA   : 0x1194A30   Offset: 0x1193E30   Length: 0x1E
     public float get_effectiveSpacingY()
     {
         if (this.mUseFloatSpacing) {
@@ -801,46 +879,54 @@ public class UILabel
         }
     }
 
-    // Token : 0x6000819
-    // RVA   : 0x10FBCC0   Offset: 0x10FA4C0   Length: 0x1E
+    // Token : 0x6000831
+    // RVA   : 0x1194A10   Offset: 0x1193E10   Length: 0x1E
     public float get_effectiveSpacingX()
     {
+        void FUN_181194a10(int64 this)
+        {
         if (this.mUseFloatSpacing) {
           return;
         }
     }
 
-    // Token : 0x600081A
-    // RVA   : 0xA76B40   Offset: 0xA75340   Length: 0x8
+    // Token : 0x6000832
+    // RVA   : 0xAF0560   Offset: 0xAEF960   Length: 0x8
     public bool get_overflowEllipsis()
     {
+        uint8 FUN_180af0560(int64 this)
+        {
         return this.mOverflowEllipsis;
     }
 
-    // Token : 0x600081B
-    // RVA   : 0x10FCF60   Offset: 0x10FB760   Length: 0x20
+    // Token : 0x6000833
+    // RVA   : 0x1195CB0   Offset: 0x11950B0   Length: 0x20
     public void set_overflowEllipsis(bool value)
     {
         if ((char)this[67] != value) {
           *(char *)(this + 67) = value;
-                          // WARNING: Could not recover jumptable at 0x0001810fcf78. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000181195cc8. Too many branches
                           // WARNING: Treating indirect jump as call
           (**(code **)(*this + 0x328))(this,*(uint64 *)(*this + 0x330));
           return;
         }
     }
 
-    // Token : 0x600081C
-    // RVA   : 0x10FC360   Offset: 0x10FAB60   Length: 0x7
+    // Token : 0x6000834
+    // RVA   : 0x1148640   Offset: 0x1147A40   Length: 0x7
     public int get_overflowWidth()
     {
+        uint32 FUN_181148640(int64 this)
+        {
         return this.mOverflowWidth;
     }
 
-    // Token : 0x600081D
-    // RVA   : 0x10FCFD0   Offset: 0x10FB7D0   Length: 0x29
+    // Token : 0x6000835
+    // RVA   : 0x1195D20   Offset: 0x1195120   Length: 0x29
     public void set_overflowWidth(int value)
     {
+        void FUN_181195d20(int64 *this,int value)
+        {
         int iVar1;
         iVar1 = 0;
         if (-1 < value) {
@@ -848,24 +934,28 @@ public class UILabel
         }
         if (*(int *)((int64)this + 0x21c) != iVar1) {
           *(int *)((int64)this + 0x21c) = iVar1;
-                          // WARNING: Could not recover jumptable at 0x0001810fcff1. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000181195d41. Too many branches
                           // WARNING: Treating indirect jump as call
           (**(code **)(*this + 0x328))(this,*(uint64 *)(*this + 0x330));
           return;
         }
     }
 
-    // Token : 0x600081E
-    // RVA   : 0xF020F0   Offset: 0xF008F0   Length: 0x7
+    // Token : 0x6000836
+    // RVA   : 0xF084F0   Offset: 0xF078F0   Length: 0x7
     public int get_overflowHeight()
     {
+        uint32 FUN_180f084f0(int64 this)
+        {
         return this.mOverflowHeight;
     }
 
-    // Token : 0x600081F
-    // RVA   : 0x10FCF80   Offset: 0x10FB780   Length: 0x29
+    // Token : 0x6000837
+    // RVA   : 0x1195CD0   Offset: 0x11950D0   Length: 0x29
     public void set_overflowHeight(int value)
     {
+        void FUN_181195cd0(int64 *this,int value)
+        {
         int iVar1;
         iVar1 = 0;
         if (-1 < value) {
@@ -873,15 +963,15 @@ public class UILabel
         }
         if ((int)this[68] != iVar1) {
           *(int *)(this + 68) = iVar1;
-                          // WARNING: Could not recover jumptable at 0x0001810fcfa1. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000181195cf1. Too many branches
                           // WARNING: Treating indirect jump as call
           (**(code **)(*this + 0x328))(this,*(uint64 *)(*this + 0x330));
           return;
         }
     }
 
-    // Token : 0x6000820
-    // RVA   : 0x10FBFC0   Offset: 0x10FA7C0   Length: 0x88
+    // Token : 0x6000838
+    // RVA   : 0x1194D10   Offset: 0x1194110   Length: 0x88
     private bool get_keepCrisp()
     {
         ulong uVar1;
@@ -894,15 +984,17 @@ public class UILabel
         return false;
     }
 
-    // Token : 0x6000821
-    // RVA   : 0x10FC640   Offset: 0x10FAE40   Length: 0x8
+    // Token : 0x6000839
+    // RVA   : 0x1195440   Offset: 0x1194840   Length: 0x8
     public bool get_supportEncoding()
     {
+        uint8 FUN_181195440(int64 this)
+        {
         return this.mEncoding;
     }
 
-    // Token : 0x6000822
-    // RVA   : 0x10FD090   Offset: 0x10FB890   Length: 0x1A
+    // Token : 0x600083A
+    // RVA   : 0x1195DE0   Offset: 0x11951E0   Length: 0x1A
     public void set_supportEncoding(bool value)
     {
         if (this.mEncoding != value) {
@@ -912,17 +1004,21 @@ public class UILabel
         }
     }
 
-    // Token : 0x6000823
-    // RVA   : 0x10FC650   Offset: 0x10FAE50   Length: 0x7
+    // Token : 0x600083B
+    // RVA   : 0x1195450   Offset: 0x1194850   Length: 0x7
     public SymbolStyle get_symbolStyle()
     {
+        uint32 FUN_181195450(int64 this)
+        {
         return this.mSymbols;
     }
 
-    // Token : 0x6000824
-    // RVA   : 0x10FD0B0   Offset: 0x10FB8B0   Length: 0x1A
+    // Token : 0x600083C
+    // RVA   : 0x1195E00   Offset: 0x1195200   Length: 0x1A
     public void set_symbolStyle(SymbolStyle value)
     {
+        void FUN_181195e00(int64 this,int value)
+        {
         if (this.mSymbols != value) {
           this.mSymbols = value;
           *(uint8 *)(this + 88) = 1;
@@ -930,15 +1026,17 @@ public class UILabel
         }
     }
 
-    // Token : 0x6000825
-    // RVA   : 0x10FC350   Offset: 0x10FAB50   Length: 0x7
+    // Token : 0x600083D
+    // RVA   : 0x1195160   Offset: 0x1194560   Length: 0x7
     public Overflow get_overflowMethod()
     {
+        uint32 FUN_181195160(int64 this)
+        {
         return this.mOverflow;
     }
 
-    // Token : 0x6000826
-    // RVA   : 0x10FCFB0   Offset: 0x10FB7B0   Length: 0x1A
+    // Token : 0x600083E
+    // RVA   : 0x1195D00   Offset: 0x1195100   Length: 0x1A
     public void set_overflowMethod(Overflow value)
     {
         if (this.mOverflow != value) {
@@ -948,45 +1046,55 @@ public class UILabel
         }
     }
 
-    // Token : 0x6000827
-    // RVA   : 0x9D9CB0   Offset: 0x9D84B0   Length: 0x7
+    // Token : 0x600083F
+    // RVA   : 0xC0DC70   Offset: 0xC0D070   Length: 0x7
     public int get_lineWidth()
     {
+        uint32 FUN_180c0dc70(int64 this)
+        {
         return *(uint32 *)(this + 164);
     }
 
-    // Token : 0x6000828
-    // RVA   : 0x10FCE60   Offset: 0x10FB660   Length: 0x8
+    // Token : 0x6000840
+    // RVA   : 0x1195BB0   Offset: 0x1194FB0   Length: 0x8
     public void set_lineWidth(int value)
     {
+        void FUN_181195bb0(uint64 this,uint64 value)
+        {
         UIWidget.set_width(this,value,0);
     }
 
-    // Token : 0x6000829
-    // RVA   : 0x9D96C0   Offset: 0x9D7EC0   Length: 0x7
+    // Token : 0x6000841
+    // RVA   : 0xC0D680   Offset: 0xC0CA80   Length: 0x7
     public int get_lineHeight()
     {
+        uint32 FUN_180c0d680(int64 this)
+        {
         return *(uint32 *)(this + 168);
     }
 
-    // Token : 0x600082A
-    // RVA   : 0x10FCE50   Offset: 0x10FB650   Length: 0x8
+    // Token : 0x6000842
+    // RVA   : 0x1195BA0   Offset: 0x1194FA0   Length: 0x8
     public void set_lineHeight(int value)
     {
+        void FUN_181195ba0(uint64 this,uint64 value)
+        {
         UIWidget.set_height(this,value,0);
     }
 
-    // Token : 0x600082B
-    // RVA   : 0x10FC340   Offset: 0x10FAB40   Length: 0xB
+    // Token : 0x6000843
+    // RVA   : 0x1195150   Offset: 0x1194550   Length: 0xB
     public bool get_multiLine()
     {
         return this.mMaxLineCount != 1;
     }
 
-    // Token : 0x600082C
-    // RVA   : 0x10FCF30   Offset: 0x10FB730   Length: 0x2C
+    // Token : 0x6000844
+    // RVA   : 0x1195C80   Offset: 0x1195080   Length: 0x2C
     public void set_multiLine(bool value)
     {
+        void FUN_181195c80(int64 this,byte value)
+        {
         if ((uint32)(this.mMaxLineCount != 1) != (uint32)value) {
           *(uint8 *)(this + 88) = 1;
           this.mMaxLineCount = value ^ 1;
@@ -994,8 +1102,8 @@ public class UILabel
         }
     }
 
-    // Token : 0x600082D
-    // RVA   : 0x10FC050   Offset: 0x10FA850   Length: 0x2E
+    // Token : 0x6000845
+    // RVA   : 0x1194DA0   Offset: 0x11941A0   Length: 0x2E
     public override Vector3[] get_localCorners()
     {
         if (this.mShouldBeProcessed) {
@@ -1004,8 +1112,8 @@ public class UILabel
         UIWidget.get_localCorners(this,0);
     }
 
-    // Token : 0x600082E
-    // RVA   : 0x10FC760   Offset: 0x10FAF60   Length: 0x2E
+    // Token : 0x6000846
+    // RVA   : 0x1195560   Offset: 0x1194960   Length: 0x2E
     public override Vector3[] get_worldCorners()
     {
         if (this.mShouldBeProcessed) {
@@ -1014,8 +1122,8 @@ public class UILabel
         UIWidget.get_worldCorners(this,0);
     }
 
-    // Token : 0x600082F
-    // RVA   : 0x10FBC30   Offset: 0x10FA430   Length: 0x4D
+    // Token : 0x6000847
+    // RVA   : 0x1194980   Offset: 0x1193D80   Length: 0x4D
     public override Vector4 get_drawingDimensions()
     {
         ulong uVar1;
@@ -1030,15 +1138,17 @@ public class UILabel
         return this;
     }
 
-    // Token : 0x6000830
-    // RVA   : 0x10FC320   Offset: 0x10FAB20   Length: 0x7
+    // Token : 0x6000848
+    // RVA   : 0x1195140   Offset: 0x1194540   Length: 0x7
     public int get_maxLineCount()
     {
+        uint32 FUN_181195140(int64 this)
+        {
         return this.mMaxLineCount;
     }
 
-    // Token : 0x6000831
-    // RVA   : 0x10FCE90   Offset: 0x10FB690   Length: 0x58
+    // Token : 0x6000849
+    // RVA   : 0x1195BE0   Offset: 0x1194FE0   Length: 0x58
     public void set_maxLineCount(int value)
     {
         uint uVar1;
@@ -1048,7 +1158,7 @@ public class UILabel
           *(uint8 *)(this + 11) = 1;
           *(uint8 *)((int64)this + 0x24c) = 1;
           if (*(int *)((int64)this + 0x1dc) == 0) {
-                          // WARNING: Could not recover jumptable at 0x0001810fcedb. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000181195c2b. Too many branches
                           // WARNING: Treating indirect jump as call
             (**(code **)(*this + 0x348))(this,*(uint64 *)(*this + 0x350));
             return;
@@ -1056,17 +1166,21 @@ public class UILabel
         }
     }
 
-    // Token : 0x6000832
-    // RVA   : 0x10FBCB0   Offset: 0x10FA4B0   Length: 0x7
+    // Token : 0x600084A
+    // RVA   : 0x1194A00   Offset: 0x1193E00   Length: 0x7
     public Effect get_effectStyle()
     {
+        uint32 FUN_181194a00(int64 this)
+        {
         return this.mEffectStyle;
     }
 
-    // Token : 0x6000833
-    // RVA   : 0x10FCBD0   Offset: 0x10FB3D0   Length: 0x1A
+    // Token : 0x600084B
+    // RVA   : 0x1195920   Offset: 0x1194D20   Length: 0x1A
     public void set_effectStyle(Effect value)
     {
+        void FUN_181195920(int64 this,int value)
+        {
         if (this.mEffectStyle != value) {
           this.mEffectStyle = value;
           *(uint8 *)(this + 88) = 1;
@@ -1074,19 +1188,21 @@ public class UILabel
         }
     }
 
-    // Token : 0x6000834
-    // RVA   : 0x10FBC80   Offset: 0x10FA480   Length: 0xE
+    // Token : 0x600084C
+    // RVA   : 0x11949D0   Offset: 0x1193DD0   Length: 0xE
     public Color get_effectColor()
     {
-        ulong uVar1;
+        uint64 * FUN_1811949d0(uint64 *this,int64 param_2)
+        {
+        uint64 uVar1;
         uVar1 = *(uint64 *)(param_2 + 0x1c8);
         *this = *(uint64 *)(param_2 + 0x1c0);
         this[1] = uVar1;
         return this;
     }
 
-    // Token : 0x6000835
-    // RVA   : 0x10FCB00   Offset: 0x10FB300   Length: 0x63
+    // Token : 0x600084D
+    // RVA   : 0x1195850   Offset: 0x1194C50   Length: 0x63
     public void set_effectColor(Color value)
     {
         ulong uVar1;
@@ -1115,17 +1231,21 @@ public class UILabel
         }
     }
 
-    // Token : 0x6000836
-    // RVA   : 0x10FBC90   Offset: 0x10FA490   Length: 0x19
+    // Token : 0x600084E
+    // RVA   : 0x11949E0   Offset: 0x1193DE0   Length: 0x19
     public Vector2 get_effectDistance()
     {
+        uint64 FUN_1811949e0(int64 this)
+        {
         return this.mEffectDistance;
     }
 
-    // Token : 0x6000837
-    // RVA   : 0x10FCB70   Offset: 0x10FB370   Length: 0x51
+    // Token : 0x600084F
+    // RVA   : 0x11958C0   Offset: 0x1194CC0   Length: 0x51
     public void set_effectDistance(Vector2 value)
     {
+        void FUN_1811958c0(int64 this,uint64 value)
+        {
         float fVar1;
         float fVar2;
         fVar1 = this.mEffectDistance - (float)value;
@@ -1137,8 +1257,8 @@ public class UILabel
         }
     }
 
-    // Token : 0x6000838
-    // RVA   : 0x10FC5D0   Offset: 0x10FADD0   Length: 0x2D
+    // Token : 0x6000850
+    // RVA   : 0x11953D0   Offset: 0x11947D0   Length: 0x2D
     public int get_quadsPerCharacter()
     {
         int iVar1;
@@ -1157,17 +1277,21 @@ public class UILabel
         return 5;
     }
 
-    // Token : 0x6000839
-    // RVA   : 0x10FC610   Offset: 0x10FAE10   Length: 0xB
+    // Token : 0x6000851
+    // RVA   : 0x1195410   Offset: 0x1194810   Length: 0xB
     public bool get_shrinkToFit()
     {
+        bool FUN_181195410(int64 this)
+        {
         return this.mOverflow == null;
     }
 
-    // Token : 0x600083A
-    // RVA   : 0x10FD020   Offset: 0x10FB820   Length: 0x23
+    // Token : 0x6000852
+    // RVA   : 0x1195D70   Offset: 0x1195170   Length: 0x23
     public void set_shrinkToFit(bool value)
     {
+        void FUN_181195d70(int64 this,char value)
+        {
         if ((value) && (this.mOverflow != null)) {
           this.mOverflow = 0;
           *(uint8 *)(this + 88) = 1;
@@ -1175,8 +1299,8 @@ public class UILabel
         }
     }
 
-    // Token : 0x600083B
-    // RVA   : 0x10FC550   Offset: 0x10FAD50   Length: 0x71
+    // Token : 0x6000853
+    // RVA   : 0x1195350   Offset: 0x1194750   Length: 0x71
     public string get_processedText()
     {
         if ((this.mLastWidth == *(int *)(this + 164)) &&
@@ -1194,8 +1318,8 @@ public class UILabel
         return this.mProcessedText;
     }
 
-    // Token : 0x600083C
-    // RVA   : 0x10FC470   Offset: 0x10FAC70   Length: 0x3D
+    // Token : 0x6000854
+    // RVA   : 0x1195270   Offset: 0x1194670   Length: 0x3D
     public Vector2 get_printedSize()
     {
         if (this.mShouldBeProcessed) {
@@ -1204,8 +1328,8 @@ public class UILabel
         return this.mCalculatedSize;
     }
 
-    // Token : 0x600083D
-    // RVA   : 0x10FC080   Offset: 0x10FA880   Length: 0x2E
+    // Token : 0x6000855
+    // RVA   : 0x1194DD0   Offset: 0x11941D0   Length: 0x2E
     public override Vector2 get_localSize()
     {
         if (this.mShouldBeProcessed) {
@@ -1214,8 +1338,8 @@ public class UILabel
         UIWidget.get_localSize(this,0);
     }
 
-    // Token : 0x600083E
-    // RVA   : 0x10FBF10   Offset: 0x10FA710   Length: 0xA8
+    // Token : 0x6000856
+    // RVA   : 0x1194C60   Offset: 0x1194060   Length: 0xA8
     private bool get_isValid()
     {
         ulong uVar1;
@@ -1231,15 +1355,17 @@ public class UILabel
         return uVar3;
     }
 
-    // Token : 0x600083F
-    // RVA   : 0x10FC330   Offset: 0x10FAB30   Length: 0x7
+    // Token : 0x6000857
+    // RVA   : 0x1129E50   Offset: 0x1129250   Length: 0x7
     public Modifier get_modifier()
     {
+        uint32 FUN_181129e50(int64 this)
+        {
         return this.mModifier;
     }
 
-    // Token : 0x6000840
-    // RVA   : 0x10FCEF0   Offset: 0x10FB6F0   Length: 0x3C
+    // Token : 0x6000858
+    // RVA   : 0x1195C40   Offset: 0x1195040   Length: 0x3C
     public void set_modifier(Modifier value)
     {
         if (*(int *)((int64)this + 0x224) != value) {
@@ -1250,36 +1376,39 @@ public class UILabel
         }
     }
 
-    // Token : 0x6000841
-    // RVA   : 0x10F91E0   Offset: 0x10F79E0   Length: 0xA3
+    // Token : 0x6000859
+    // RVA   : 0x1191F30   Offset: 0x1191330   Length: 0xA3
     protected override void OnInit()
     {
+        var pStatics = *(int64*)(DAT_181dafd78 + 184);
         ulong uVar1;
         UIWidget.OnInit(this,0);
-        if (UILabel.mList != null) {
-          FUN_18154cb60(UILabel.mList,this,DAT_181d81a98);
+        if (*pStatics != 0) {
+          FUN_181583c60(*pStatics,this,DAT_181da6e38);
           uVar1 = UILabel.get_trueTypeFont(this,0);
           UILabel.SetActiveFont(this,uVar1,0);
           return;
         }
     }
 
-    // Token : 0x6000842
-    // RVA   : 0x10F8620   Offset: 0x10F6E20   Length: 0x98
+    // Token : 0x600085A
+    // RVA   : 0x1191370   Offset: 0x1190770   Length: 0x98
     protected override void OnDisable()
     {
+        var pStatics = *(int64*)(DAT_181dafd78 + 184);
         UILabel.SetActiveFont(this,0,0);
-        if (UILabel.mList != null) {
-          FUN_18154eb70(UILabel.mList,this,DAT_181d81b18);
+        if (*pStatics != 0) {
+          FUN_181585c70(*pStatics,this,DAT_181da6eb8);
           UIWidget.OnDisable(this,0);
           return;
         }
     }
 
-    // Token : 0x6000843
-    // RVA   : 0x10FA4B0   Offset: 0x10F8CB0   Length: 0x292
+    // Token : 0x600085B
+    // RVA   : 0x1193200   Offset: 0x1192600   Length: 0x292
     protected void SetActiveFont(Font fnt)
     {
+        var pStatics = *(int64*)(DAT_181dafd78 + 184);
         ulong uVar1;
         long lVar2;
         bool cVar3;
@@ -1291,46 +1420,46 @@ public class UILabel
           uVar1 = this.mActiveTTF;
           cVar3 = Object.op_Inequality(uVar1,0,0);
           if (cVar3) {
-            lVar2 = UILabel.mFontUsage;
-            if (lVar2 == null) goto LAB_1810fa73d;
-            cVar3 = FUN_181783810(lVar2,uVar1,local_res8,DAT_181d8ffc0);
+            lVar2 = *(int64 *)(pStatics + 8);
+            if (lVar2 == null) goto LAB_18119348d;
+            cVar3 = FUN_1817c0490(lVar2,uVar1,local_res8,DAT_181db55a8);
             if (cVar3) {
               local_res8[0] = local_res8[0] + -1;
               local_res8[0] = Mathf.Max(0,local_res8[0],0);
               if (local_res8[0] == 0) {
-                lVar2 = UILabel.mFontUsage;
-                if (lVar2 == null) goto LAB_1810fa73d;
-                FUN_181779c50(lVar2,uVar1,DAT_181d8ff38);
+                lVar2 = *(int64 *)(pStatics + 8);
+                if (lVar2 == null) goto LAB_18119348d;
+                FUN_1817b6e90(lVar2,uVar1,DAT_181db5520);
               }
               else {
-                lVar2 = UILabel.mFontUsage;
-                if (lVar2 == null) goto LAB_1810fa73d;
-                FUN_1808aec90(lVar2,uVar1,local_res8[0],DAT_181d90048);
+                lVar2 = *(int64 *)(pStatics + 8);
+                if (lVar2 == null) goto LAB_18119348d;
+                FUN_1808b2160(lVar2,uVar1,local_res8[0],DAT_181db5630);
               }
             }
           }
           this.mActiveTTF = fnt;
           cVar3 = Object.op_Inequality(fnt,0,0);
           if (cVar3) {
-            lVar2 = UILabel.mFontUsage;
+            lVar2 = *(int64 *)(pStatics + 8);
             if (lVar2 == null) {
-        LAB_1810fa73d:
+        LAB_18119348d:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            FUN_1808aec90(lVar2,fnt,1,DAT_181d90048);
+            FUN_1808b2160(lVar2,fnt,1,DAT_181db5630);
           }
         }
     }
 
-    // Token : 0x6000844
-    // RVA   : 0x10FC4B0   Offset: 0x10FACB0   Length: 0x98
+    // Token : 0x600085C
+    // RVA   : 0x11952B0   Offset: 0x11946B0   Length: 0x98
     public string get_printedText()
     {
         int iVar1;
         bool cVar2;
         ulong uVar3;
-        cVar2 = FUN_180d6ca90(this.mText,0);
+        cVar2 = FUN_180d755b0(this.mText,0);
         if ((!cVar2) && (iVar1 = this.mModifier) != null) {
           if (iVar1 == 2) {
             if (this.mText != null) {
@@ -1345,7 +1474,7 @@ public class UILabel
                                   (this.customModifier,this.mText,0);
                 return uVar3;
               }
-              goto LAB_1810fc536;
+              goto LAB_181195336;
             }
             if (this.mText != null) {
               uVar3 = String.ToUpper(this.mText,0);
@@ -1355,14 +1484,15 @@ public class UILabel
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        LAB_1810fc536:
+        LAB_181195336:
         return this.mText;
     }
 
-    // Token : 0x6000845
-    // RVA   : 0x10F8CC0   Offset: 0x10F74C0   Length: 0x51B
+    // Token : 0x600085D
+    // RVA   : 0x1191A10   Offset: 0x1190E10   Length: 0x51B
     private static void OnFontChanged(Font font)
     {
+        var pStatics = *(int64*)(DAT_181dafd78 + 184);
         int iVar1;
         bool cVar3;
         long lVar4;
@@ -1372,10 +1502,10 @@ public class UILabel
         uVar8 = 0;
         uVar7 = uVar8;
         while( true ) {
-          if (UILabel.mList == null) throw; // [null/range check failed]
-          if (*(int *)(UILabel.mList + 24) <= (int)uVar7) break;
-          if ((UILabel.mList == null) ||
-             (lVar4 = *(int64 *)(UILabel.mList + 16)) == null)
+          if (*pStatics == 0) throw; // [null/range check failed]
+          if (*(int *)(*pStatics + 24) <= (int)uVar7) break;
+          if ((*pStatics == 0) ||
+             (lVar4 = *(int64 *)(*pStatics + 16)) == null)
           throw; // [null/range check failed]
           if (*(uint32 *)(lVar4 + 24) <= uVar7) {
             uVar5 = il2cpp_internal();
@@ -1399,34 +1529,36 @@ public class UILabel
               if (cVar3) {
                 UIWidget.CreatePanel(plVar2,0);
               }
-              if (UILabel.mTempDrawcalls == null) {
-                uVar5 = new BetterList_1(DAT_181d81518);
-                UILabel.mTempDrawcalls = uVar5;
+              if (*(int64 *)(pStatics + 16) == 0) {
+                uVar5 = new BetterList_1(DAT_181da68b8);
+                puVar6 = (uint64 *)(pStatics + 16);
+                *puVar6 = uVar5;
+                il2cpp_internal(puVar6,uVar5);
               }
               lVar4 = plVar2[43];
               cVar3 = Object.op_Inequality(lVar4,0,0);
               if (cVar3) {
-                lVar4 = UILabel.mTempDrawcalls;
+                lVar4 = *(int64 *)(pStatics + 16);
                 if (lVar4 == null) throw; // [null/range check failed]
-                cVar3 = FUN_18154d3d0(lVar4,plVar2[43]);
+                cVar3 = FUN_1815844d0(lVar4,plVar2[43]);
                 if (!cVar3) {
-                  lVar4 = UILabel.mTempDrawcalls;
+                  lVar4 = *(int64 *)(pStatics + 16);
                   if (lVar4 == null) throw; // [null/range check failed]
-                  FUN_18154cb60(lVar4,plVar2[43]);
+                  FUN_181583c60(lVar4,plVar2[43]);
                 }
               }
             }
           }
           uVar7 = uVar7 + 1;
         }
-        if (UILabel.mTempDrawcalls == null) {
+        if (*(int64 *)(pStatics + 16) == 0) {
           return;
         }
-        lVar4 = UILabel.mTempDrawcalls;
+        lVar4 = *(int64 *)(pStatics + 16);
         if (lVar4 != null) {
           iVar1 = *(int *)(lVar4 + 24);
-          if (iVar1 < 1) goto LAB_1810f9161;
-          goto LAB_1810f90b0;
+          if (iVar1 < 1) goto LAB_181191eb1;
+          goto LAB_181191e00;
         }
         throw; // [null/range check failed]
         while( true ) {
@@ -1445,20 +1577,20 @@ public class UILabel
           }
           uVar8 = uVar8 + 1;
           if (iVar1 <= (int)uVar8) break;
-        LAB_1810f90b0:
-          lVar4 = UILabel.mTempDrawcalls;
+        LAB_181191e00:
+          lVar4 = *(int64 *)(pStatics + 16);
           if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 16)) == null) throw; // [null/range check failed]
         }
-        LAB_1810f9161:
-        lVar4 = UILabel.mTempDrawcalls;
+        LAB_181191eb1:
+        lVar4 = *(int64 *)(pStatics + 16);
         if (lVar4 != null) {
-          BetterList_1.Clear(lVar4,DAT_181d81618);
+          BetterList_1.Clear(lVar4,DAT_181da69b8);
           return;
         }
     }
 
-    // Token : 0x6000846
-    // RVA   : 0x10F7C50   Offset: 0x10F6450   Length: 0x3E
+    // Token : 0x600085E
+    // RVA   : 0x11909A0   Offset: 0x118FDA0   Length: 0x3E
     public override Vector3[] GetSides(Transform relativeTo)
     {
         if (this.mShouldBeProcessed) {
@@ -1467,8 +1599,8 @@ public class UILabel
         UIWidget.GetSides(this,relativeTo,0);
     }
 
-    // Token : 0x6000847
-    // RVA   : 0x10FB350   Offset: 0x10F9B50   Length: 0x1BB
+    // Token : 0x600085F
+    // RVA   : 0x11940A0   Offset: 0x11934A0   Length: 0x1BB
     protected override void UpgradeFrom265()
     {
         bool cVar1;
@@ -1484,7 +1616,7 @@ public class UILabel
           this.mMaxLineCount = 0;
         }
         if (this.mMaxLineWidth == null) {
-          if (this.mOverflow == 2) goto LAB_1810fb417;
+          if (this.mOverflow == 2) goto LAB_181194167;
           this.mOverflow = 2;
         }
         else {
@@ -1493,12 +1625,12 @@ public class UILabel
           if (this.mMaxLineCount < 1) {
             iVar2 = 0;
           }
-          if (this.mOverflow == iVar2) goto LAB_1810fb417;
+          if (this.mOverflow == iVar2) goto LAB_181194167;
           this.mOverflow = iVar2;
         }
         this.mShouldBeProcessed = 1;
         *(uint8 *)(this + 88) = 1;
-        LAB_1810fb417:
+        LAB_181194167:
         if (this.mMaxLineHeight != null) {
           UIWidget.set_height(this,this.mMaxLineHeight,0);
         }
@@ -1523,8 +1655,8 @@ public class UILabel
         NGUITools.UpdateWidgetCollider(uVar3,1,0);
     }
 
-    // Token : 0x6000848
-    // RVA   : 0x10F84A0   Offset: 0x10F6CA0   Length: 0xED
+    // Token : 0x6000860
+    // RVA   : 0x11911F0   Offset: 0x11905F0   Length: 0xED
     protected override void OnAnchor()
     {
         ulong uVar1;
@@ -1533,28 +1665,28 @@ public class UILabel
           cVar2 = UIRect.get_isFullyAnchored(this,0);
         }
         else {
-          if (this.mOverflow != 3) goto LAB_1810f8574;
+          if (this.mOverflow != 3) goto LAB_1811912c4;
           if (*(int64 *)(this + 48) == 0) {
-        LAB_1810f8588:
+        LAB_1811912d8:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           uVar1 = *(uint64 *)(*(int64 *)(this + 48) + 16);
           cVar2 = Object.op_Inequality(uVar1,0,0);
-          if (!cVar2) goto LAB_1810f8574;
-          if (*(int64 *)(this + 40) == 0) goto LAB_1810f8588;
+          if (!cVar2) goto LAB_1811912c4;
+          if (*(int64 *)(this + 40) == 0) goto LAB_1811912d8;
           uVar1 = *(uint64 *)(*(int64 *)(this + 40) + 16);
           cVar2 = Object.op_Inequality(uVar1,0,0);
         }
         if (cVar2) {
           this.mOverflow = 0;
         }
-        LAB_1810f8574:
+        LAB_1811912c4:
         UIWidget.OnAnchor(this,0);
     }
 
-    // Token : 0x6000849
-    // RVA   : 0x10F9800   Offset: 0x10F8000   Length: 0x80
+    // Token : 0x6000861
+    // RVA   : 0x1192550   Offset: 0x1191950   Length: 0x80
     private void ProcessAndRequest()
     {
         ulong uVar1;
@@ -1566,22 +1698,23 @@ public class UILabel
         }
     }
 
-    // Token : 0x600084A
-    // RVA   : 0x10F86C0   Offset: 0x10F6EC0   Length: 0xEA
+    // Token : 0x6000862
+    // RVA   : 0x1191410   Offset: 0x1190810   Length: 0xEA
     protected override void OnEnable()
     {
+        var pStatics = *(int64*)(DAT_181dafd78 + 184);
         ulong uVar1;
         UIRect.OnEnable(this,0);
-        if (!UILabel.mTexRebuildAdded) {
-          UILabel.mTexRebuildAdded = 1;
-          uVar1 = new OnTooltipCB(0,DAT_181d9cb80,DAT_181d72588);
+        if (*(char *)(pStatics + 24) == false) {
+          *(uint8 *)(pStatics + 24) = 1;
+          uVar1 = new OnTooltipCB(0,DAT_181dc5e70,DAT_181d97928);
           Font.add_textureRebuilt(uVar1,0);
           return;
         }
     }
 
-    // Token : 0x600084B
-    // RVA   : 0x10F9290   Offset: 0x10F7A90   Length: 0x18C
+    // Token : 0x6000863
+    // RVA   : 0x1191FE0   Offset: 0x11913E0   Length: 0x18C
     protected override void OnStart()
     {
         bool cVar1;
@@ -1603,43 +1736,46 @@ public class UILabel
         cVar1 = Object.op_Inequality(uVar4,0,0);
         if (cVar1) {
           lVar5 = (**(code **)(*this + 0x2c8))(this,*(uint64 *)(*this + 0x2d0));
-          if (lVar5 == null) goto LAB_1810f9417;
+          if (lVar5 == null) goto LAB_181192167;
           uVar4 = Material.get_shader(lVar5,0);
           cVar1 = Object.op_Inequality(uVar4,0,0);
           if (cVar1) {
             lVar5 = (**(code **)(*this + 0x2c8))(this,*(uint64 *)(*this + 0x2d0));
             if (lVar5 == null) {
-        LAB_1810f9417:
+        LAB_181192167:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             lVar5 = Material.get_shader(lVar5,0);
-            if (lVar5 == null) goto LAB_1810f9417;
+            if (lVar5 == null) goto LAB_181192167;
             lVar5 = Object.get_name(lVar5,0);
-            if (lVar5 == null) goto LAB_1810f9417;
+            if (lVar5 == null) goto LAB_181192167;
             uVar2 = String.Contains(lVar5,"Premultiplied",0);
-            goto LAB_1810f93fd;
+            goto LAB_18119214d;
           }
         }
         uVar2 = 0;
-        LAB_1810f93fd:
+        LAB_18119214d:
         *(uint8 *)(this + 75) = uVar2;
         UILabel.ProcessAndRequest(this,0);
     }
 
-    // Token : 0x600084C
-    // RVA   : 0x10F8480   Offset: 0x10F6C80   Length: 0x12
+    // Token : 0x6000864
+    // RVA   : 0x11911D0   Offset: 0x11905D0   Length: 0x12
     public override void MarkAsChanged()
     {
+        void FUN_1811911d0(int64 this)
+        {
         *(uint8 *)(this + 88) = 1;
         this.mShouldBeProcessed = 1;
         UIWidget.MarkAsChanged(this,0);
     }
 
-    // Token : 0x600084D
-    // RVA   : 0x10F9880   Offset: 0x10F8080   Length: 0xC29
+    // Token : 0x6000865
+    // RVA   : 0x11925D0   Offset: 0x11919D0   Length: 0xC29
     public void ProcessText(bool legacyMode, bool full)
     {
+        var pStatics = *(int64*)(DAT_181d8bc90 + 184);
         float fVar1;
         bool cVar2;
         bool cVar3;
@@ -1673,7 +1809,7 @@ public class UILabel
             iVar12 = *(int *)((int64)this + 0x22c);
           }
         }
-        NGUIText.rectWidth = iVar12;
+        *(int *)(pStatics + 60) = iVar12;
         if (!legacyMode) {
           iVar12 = (int)this[21];
         }
@@ -1683,37 +1819,35 @@ public class UILabel
             iVar12 = (int)this[70];
           }
         }
-        NGUIText.rectHeight = iVar12;
+        *(int *)(pStatics + 64) = iVar12;
         if (fVar14 == 1.0) {
-          uVar4 = NGUIText.rectWidth;
+          uVar4 = *(uint32 *)(pStatics + 60);
         }
         else {
-          uVar4 = Mathf.RoundToInt((float)NGUIText.rectWidth *
-                                    fVar14);
+          uVar4 = Mathf.RoundToInt((float)*(int *)(pStatics + 60) * fVar14);
         }
-        NGUIText.regionWidth = uVar4;
+        *(uint32 *)(pStatics + 68) = uVar4;
         if (fVar13 == 1.0) {
-          uVar4 = NGUIText.rectHeight;
+          uVar4 = *(uint32 *)(pStatics + 64);
         }
         else {
-          uVar4 = Mathf.RoundToInt((float)NGUIText.rectHeight *
-                                    fVar13);
+          uVar4 = Mathf.RoundToInt((float)*(int *)(pStatics + 64) * fVar13);
         }
-        NGUIText.regionHeight = uVar4;
+        *(uint32 *)(pStatics + 72) = uVar4;
         if (!legacyMode) {
           uVar4 = UILabel.get_defaultFontSize(this);
         }
         else {
           lVar9 = UIRect.get_cachedTransform();
-          if (lVar9 == null) goto LAB_1810fa4a4;
+          if (lVar9 == null) goto LAB_1811931f4;
           Transform.get_localScale(&local_88,lVar9,0);
           uVar4 = Mathf.RoundToInt();
         }
         uVar4 = Mathf.Abs(uVar4);
         *(uint32 *)(this + 77) = uVar4;
         *(uint32 *)((int64)this + 0x264) = 0x3f800000;
-        if (0 < NGUIText.regionWidth) {
-          if (-1 < NGUIText.regionHeight) {
+        if (0 < *(int *)(pStatics + 68)) {
+          if (-1 < *(int *)(pStatics + 72)) {
             uVar10 = UILabel.get_trueTypeFont(this);
             cVar2 = Object.op_Inequality(uVar10,0,0);
             if ((!cVar2) || (cVar2 = UILabel.get_keepCrisp(this), !cVar2)) {
@@ -1728,7 +1862,7 @@ public class UILabel
                   *(uint32 *)(this + 73) = 0x3f800000;
                 }
                 else {
-                  if (lVar9 == null) goto LAB_1810fa4a4;
+                  if (lVar9 == null) goto LAB_1811931f4;
                   uVar4 = UIRoot.get_pixelSizeAdjustment(lVar9);
                   *(uint32 *)(this + 73) = uVar4;
                 }
@@ -1740,37 +1874,37 @@ public class UILabel
             if (*(int *)((int64)this + 0x1dc) == 2) {
               iVar12 = *(int *)((int64)this + 0x21c);
               if (iVar12 < 1) {
-                NGUIText.rectWidth = 1000000;
-                NGUIText.regionWidth = 1000000;
+                *(uint32 *)(pStatics + 60) = 1000000;
+                *(uint32 *)(pStatics + 68) = 1000000;
               }
               else {
-                NGUIText.rectWidth = iVar12;
-                NGUIText.regionWidth =
+                *(int *)(pStatics + 60) = iVar12;
+                *(uint32 *)(pStatics + 68) =
                      *(uint32 *)((int64)this + 0x21c);
               }
               lVar9 = this[68];
               if ((int)lVar9 < 1) {
-                if (((*(byte *)(NGUIText_StaticsPtr + 0x133) & 4) == 0) ||
-                   (*(int *)(NGUIText_StaticsPtr + 224) != 0)) goto LAB_1810f9d41;
-                il2cpp_runtime_class_init(NGUIText_StaticsPtr);
-                NGUIText.rectHeight = 1000000;
-                NGUIText.regionHeight = 1000000;
+                if (((*(byte *)(DAT_181d8bc90 + 0x133) & 4) == 0) || (*(int *)(DAT_181d8bc90 + 224) != 0)
+                   ) goto LAB_181192a91;
+                il2cpp_runtime_class_init(DAT_181d8bc90);
+                *(uint32 *)(pStatics + 64) = 1000000;
+                *(uint32 *)(pStatics + 72) = 1000000;
               }
               else {
-                NGUIText.rectHeight = (int)lVar9;
-                NGUIText.regionHeight = (int)this[68];
+                *(int *)(pStatics + 64) = (int)lVar9;
+                *(int *)(pStatics + 72) = (int)this[68];
               }
             }
             else if (*(int *)((int64)this + 0x1dc) == 3) {
-        LAB_1810f9d41:
-              NGUIText.rectHeight = 1000000;
-              NGUIText.regionHeight = 1000000;
+        LAB_181192a91:
+              *(uint32 *)(pStatics + 64) = 1000000;
+              *(uint32 *)(pStatics + 72) = 1000000;
             }
             if ((int)this[77] < 1) {
               lVar9 = UIRect.get_cachedTransform();
               puVar11 = (uint64 *)Vector3.get_one(local_78,0);
               if (lVar9 == null) {
-        LAB_1810fa4a4:
+        LAB_1811931f4:
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
@@ -1791,19 +1925,19 @@ public class UILabel
                     lVar9 = UILabel.get_bitmapFont(this,0);
                     if (lVar9 == null) {
                       uVar4 = *(uint32 *)((int64)this + 0x264);
-                      NGUIText.fontScale = uVar4;
+                      *(uint32 *)(pStatics + 28) = uVar4;
                     }
                     else {
                       lVar9 = this[53];
                       iVar5 = UILabel.get_defaultFontSize(this,0);
                       fVar1 = *(float *)((int64)this + 0x264);
-                      NGUIText.fontScale =
+                      *(float *)(pStatics + 28) =
                            ((float)(int)lVar9 / (float)iVar5) * fVar1;
                     }
                   }
                   else {
                     *(int *)(this + 77) = iVar12;
-                    NGUIText.fontSize = iVar12;
+                    *(int *)(pStatics + 24) = iVar12;
                   }
                   NGUIText.Update(0,0);
                   uVar10 = UILabel.get_printedText(this,0);
@@ -1818,17 +1952,17 @@ public class UILabel
                   if (iVar5 != 0) break;
                   if (cVar3) {
                     lVar9 = this[74];
-        LAB_1810fa2a7:
+        LAB_181192ff7:
                     uVar10 = NGUIText.CalculatePrintedSize(lVar9,0);
                     local_88._0_4_ = (uint32)uVar10;
                     local_88._4_4_ = (uint32)((uint64)uVar10 >> 32);
                     *(uint32 *)((int64)this + 0x25c) = (uint32)local_88;
                     *(uint32 *)(this + 76) = local_88._4_4_;
                     local_88 = uVar10;
-                    goto LAB_1810fa3ba;
+                    goto LAB_18119310a;
                   }
-        LAB_1810fa1b6:
-                  if ((iVar12 + -1 < 2) || (iVar12 = iVar12 + -2, iVar12 < 1)) goto LAB_1810f9f12;
+        LAB_181192f06:
+                  if ((iVar12 + -1 < 2) || (iVar12 = iVar12 + -2, iVar12 < 1)) goto LAB_181192c62;
                 }
                 if (iVar5 == 2) {
                   lVar9 = this[74];
@@ -1838,7 +1972,7 @@ public class UILabel
                   *(uint32 *)((int64)this + 0x25c) = (uint32)local_88;
                   *(uint32 *)(this + 76) = local_88._4_4_;
                   local_88 = uVar10;
-                  if ((!cVar3) && (0 < *(int *)((int64)this + 0x21c))) goto LAB_1810fa1b6;
+                  if ((!cVar3) && (0 < *(int *)((int64)this + 0x21c))) goto LAB_181192f06;
                   uVar4 = (**(code **)(*this + 0x358))(this,*(uint64 *)(*this + 0x360));
                   uVar6 = Mathf.RoundToInt();
                   uVar7 = Mathf.Max(uVar4,uVar6,0);
@@ -1860,7 +1994,7 @@ public class UILabel
                   if ((*(uint32 *)((int64)this + 164) != uVar7) ||
                      (*(uint32 *)(this + 21) != uVar8)) {
                     *(uint32 *)((int64)this + 164) = uVar7;
-        LAB_1810fa3a1:
+        LAB_1811930f1:
                     *(uint32 *)(this + 21) = uVar8;
                     if (this[23] != 0) {
                       OnGeometryUpdated.Invoke(this[23],0);
@@ -1869,7 +2003,7 @@ public class UILabel
                 }
                 else {
                   lVar9 = this[74];
-                  if (iVar5 != 3) goto LAB_1810fa2a7;
+                  if (iVar5 != 3) goto LAB_181192ff7;
                   uVar10 = NGUIText.CalculatePrintedSize(lVar9,0);
                   local_88._0_4_ = (uint32)uVar10;
                   local_88._4_4_ = (uint32)((uint64)uVar10 >> 32);
@@ -1886,9 +2020,9 @@ public class UILabel
                   if ((uVar7 & 1) == 0) {
                     uVar8 = uVar7;
                   }
-                  if (*(uint32 *)(this + 21) != uVar8) goto LAB_1810fa3a1;
+                  if (*(uint32 *)(this + 21) != uVar8) goto LAB_1811930f1;
                 }
-        LAB_1810fa3ba:
+        LAB_18119310a:
                 if (legacyMode) {
                   uVar4 = Mathf.RoundToInt();
                   UIWidget.set_width(this,uVar4,0);
@@ -1896,35 +2030,35 @@ public class UILabel
                   UIWidget.set_height(this,uVar4,0);
                   lVar9 = UIRect.get_cachedTransform(this,0);
                   puVar11 = (uint64 *)Vector3.get_one(local_78,0);
-                  if (lVar9 == null) goto LAB_1810fa4a4;
+                  if (lVar9 == null) goto LAB_1811931f4;
                   local_80 = *(uint32 *)(puVar11 + 1);
                   local_88 = *puVar11;
                   Transform.set_localScale(lVar9,&local_88,0);
                 }
               }
             }
-        LAB_1810f9f12:
+        LAB_181192c62:
             if (!full) {
               return;
             }
-            puVar11 = *(uint64 **)(NGUIText_StaticsPtr + 184);
+            puVar11 = *(uint64 **)(DAT_181d8bc90 + 184);
             *puVar11 = 0;
             il2cpp_internal(puVar11,0);
-            this = &NGUIText.dynamicFont;
+            this = (int64 *)(pStatics + 8);
             lVar9 = 0;
             *this = 0;
-            goto LAB_1810fa451;
+            goto LAB_1811931a1;
           }
         }
         lVar9 = "";
         this = this + 74;
         *this = "";
-        LAB_1810fa451:
+        LAB_1811931a1:
         il2cpp_internal(this,lVar9);
     }
 
-    // Token : 0x600084E
-    // RVA   : 0x10F8110   Offset: 0x10F6910   Length: 0x36E
+    // Token : 0x6000866
+    // RVA   : 0x1190E60   Offset: 0x1190260   Length: 0x36E
     public override void MakePixelPerfect()
     {
         bool cVar1;
@@ -1996,7 +2130,7 @@ public class UILabel
                 *(uint32 *)((int64)this + 164) = uVar8;
                 uVar8 = Mathf.Max((int)lVar10,uVar7,0);
                 *(uint32 *)(this + 21) = uVar8;
-                          // WARNING: Could not recover jumptable at 0x0001810f838f. Too many branches
+                          // WARNING: Could not recover jumptable at 0x0001811910df. Too many branches
                           // WARNING: Treating indirect jump as call
                 (**(code **)(*this + 0x328))(this,*(uint64 *)(*this + 0x330));
                 return;
@@ -2019,7 +2153,7 @@ public class UILabel
               if ((uVar6 & 1) != 0) {
                 *(uint32 *)(this + 21) = uVar6 + 1;
               }
-                          // WARNING: Could not recover jumptable at 0x0001810f8472. Too many branches
+                          // WARNING: Could not recover jumptable at 0x0001811911c2. Too many branches
                           // WARNING: Treating indirect jump as call
               (**(code **)(*this + 0x328))(this,*(uint64 *)(*this + 0x330));
               return;
@@ -2028,8 +2162,8 @@ public class UILabel
         }
     }
 
-    // Token : 0x600084F
-    // RVA   : 0x10F6FE0   Offset: 0x10F57E0   Length: 0xF4
+    // Token : 0x6000867
+    // RVA   : 0x118FD30   Offset: 0x118F130   Length: 0xF4
     public void AssumeNaturalSize()
     {
         bool cVar1;
@@ -2056,10 +2190,11 @@ public class UILabel
         }
     }
 
-    // Token : 0x6000850
-    // RVA   : 0x10F7670   Offset: 0x10F5E70   Length: 0x75
+    // Token : 0x6000868
+    // RVA   : 0x11903C0   Offset: 0x118F7C0   Length: 0x75
     public int GetCharacterIndex(Vector3 worldPos)
     {
+        var pStatics = *(int64*)(DAT_181dafd78 + 184);
         int iVar1;
         ulong uVar2;
         ulong uVar3;
@@ -2076,30 +2211,30 @@ public class UILabel
         cVar5 = UILabel.get_isValid(this,0);
         if (cVar5) {
           lVar8 = UILabel.get_processedText(this,0);
-          cVar5 = FUN_180d6ca90(lVar8,0);
+          cVar5 = FUN_180d755b0(lVar8,0);
           if (!cVar5) {
             iVar6 = UILabel.get_defaultFontSize(this,0);
             UILabel.UpdateNGUIText(this,0);
-            uVar2 = UILabel.mTempVerts;
-            uVar3 = UILabel.mTempIndices;
+            uVar2 = *(uint64 *)(pStatics + 32);
+            uVar3 = *(uint64 *)(pStatics + 40);
             NGUIText.PrintApproximateCharacterPositions(lVar8,uVar2,uVar3,0);
-            lVar4 = UILabel.mTempVerts;
-            if (lVar4 == null) goto LAB_1810f7c3d;
+            lVar4 = *(int64 *)(pStatics + 32);
+            if (lVar4 == null) goto LAB_18119098d;
             if (0 < *(int *)(lVar4 + 24)) {
               UILabel.ApplyOffset
-                        (this,UILabel.mTempVerts,0,0);
+                        (this,*(uint64 *)(pStatics + 32),0,0);
               uVar10 = 0;
-              lVar4 = UILabel.mTempIndices;
-              if (lVar4 == null) goto LAB_1810f7c3d;
+              lVar4 = *(int64 *)(pStatics + 40);
+              if (lVar4 == null) goto LAB_18119098d;
               iVar1 = *(int *)(lVar4 + 24);
               if (0 < iVar1) {
                 do {
-                  lVar4 = UILabel.mTempIndices;
-                  if (lVar4 == null) goto LAB_1810f7c3d;
-                  iVar7 = FUN_1800d6750(lVar4,uVar10,DAT_181d68270);
+                  lVar4 = *(int64 *)(pStatics + 40);
+                  if (lVar4 == null) goto LAB_18119098d;
+                  iVar7 = FUN_1800d6760(lVar4,uVar10,DAT_181d8fa18);
                   if (iVar7 == worldPos) {
-                    lVar4 = UILabel.mTempVerts;
-                    if (lVar4 == null) goto LAB_1810f7c3d;
+                    lVar4 = *(int64 *)(pStatics + 32);
+                    if (lVar4 == null) goto LAB_18119098d;
                     if (*(uint32 *)(lVar4 + 24) <= uVar10) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
                     }
@@ -2131,38 +2266,40 @@ public class UILabel
                     else if (param_3 == 0x117) {
                       fVar12 = fVar12 + 1000.0;
                     }
-                    uVar2 = UILabel.mTempVerts;
-                    uVar3 = UILabel.mTempIndices;
+                    uVar2 = *(uint64 *)(pStatics + 32);
+                    uVar3 = *(uint64 *)(pStatics + 40);
                     local_48 = CONCAT44(fVar13,fVar12);
                     iVar6 = NGUIText.GetApproximateCharacterIndex(uVar2,uVar3,local_48,0);
                     if (iVar6 != worldPos) {
-                      lVar8 = UILabel.mTempVerts;
+                      lVar8 = *(int64 *)(pStatics + 32);
                       if (lVar8 != null) {
-                        FUN_180f56130(lVar8,DAT_181d84378);
-                        lVar8 = UILabel.mTempIndices;
+                        FUN_1812f9a10(lVar8,DAT_181dabd18);
+                        lVar8 = *(int64 *)(pStatics + 40);
                         if (lVar8 != null) {
-                          FUN_180f56130(lVar8,DAT_181d67b78);
+                          FUN_1812f9a10(lVar8,DAT_181d8f318);
                           return iVar6;
                         }
                       }
-                      goto LAB_1810f7c3d;
+                      goto LAB_18119098d;
                     }
                     break;
                   }
                   uVar10 = uVar10 + 1;
                 } while ((int)uVar10 < iVar1);
               }
-              lVar4 = UILabel.mTempVerts;
-              if (lVar4 == null) goto LAB_1810f7c3d;
-              FUN_180f56130(lVar4,DAT_181d84378);
-              lVar4 = UILabel.mTempIndices;
-              if (lVar4 == null) goto LAB_1810f7c3d;
-              FUN_180f56130(lVar4,DAT_181d67b78);
+              lVar4 = *(int64 *)(pStatics + 32);
+              if (lVar4 == null) goto LAB_18119098d;
+              FUN_1812f9a10(lVar4,DAT_181dabd18);
+              lVar4 = *(int64 *)(pStatics + 40);
+              if (lVar4 == null) goto LAB_18119098d;
+              FUN_1812f9a10(lVar4,DAT_181d8f318);
             }
-            puVar9 = *(uint64 **)(NGUIText_StaticsPtr + 184);
+            puVar9 = *(uint64 **)(DAT_181d8bc90 + 184);
             *puVar9 = 0;
             il2cpp_internal(puVar9,0);
-            NGUIText.dynamicFont = 0;
+            puVar9 = (uint64 *)(*(int64 *)(DAT_181d8bc90 + 184) + 8);
+            *puVar9 = 0;
+            il2cpp_internal(puVar9,0);
             if ((param_3 != 0x111) && (param_3 != 0x116)) {
               if ((param_3 != 0x112) && (param_3 != 0x117)) {
                 return worldPos;
@@ -2170,7 +2307,7 @@ public class UILabel
               if (lVar8 != null) {
                 return *(int *)(lVar8 + 16);
               }
-        LAB_1810f7c3d:
+        LAB_18119098d:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -2180,10 +2317,11 @@ public class UILabel
         return worldPos;
     }
 
-    // Token : 0x6000851
-    // RVA   : 0x10F7660   Offset: 0x10F5E60   Length: 0xB
+    // Token : 0x6000869
+    // RVA   : 0x11903B0   Offset: 0x118F7B0   Length: 0xB
     public int GetCharacterIndex(Vector2 localPos)
     {
+        var pStatics = *(int64*)(DAT_181dafd78 + 184);
         int iVar1;
         ulong uVar2;
         ulong uVar3;
@@ -2200,30 +2338,30 @@ public class UILabel
         cVar5 = UILabel.get_isValid(this,0);
         if (cVar5) {
           lVar8 = UILabel.get_processedText(this,0);
-          cVar5 = FUN_180d6ca90(lVar8,0);
+          cVar5 = FUN_180d755b0(lVar8,0);
           if (!cVar5) {
             iVar6 = UILabel.get_defaultFontSize(this,0);
             UILabel.UpdateNGUIText(this,0);
-            uVar2 = UILabel.mTempVerts;
-            uVar3 = UILabel.mTempIndices;
+            uVar2 = *(uint64 *)(pStatics + 32);
+            uVar3 = *(uint64 *)(pStatics + 40);
             NGUIText.PrintApproximateCharacterPositions(lVar8,uVar2,uVar3,0);
-            lVar4 = UILabel.mTempVerts;
-            if (lVar4 == null) goto LAB_1810f7c3d;
+            lVar4 = *(int64 *)(pStatics + 32);
+            if (lVar4 == null) goto LAB_18119098d;
             if (0 < *(int *)(lVar4 + 24)) {
               UILabel.ApplyOffset
-                        (this,UILabel.mTempVerts,0,0);
+                        (this,*(uint64 *)(pStatics + 32),0,0);
               uVar10 = 0;
-              lVar4 = UILabel.mTempIndices;
-              if (lVar4 == null) goto LAB_1810f7c3d;
+              lVar4 = *(int64 *)(pStatics + 40);
+              if (lVar4 == null) goto LAB_18119098d;
               iVar1 = *(int *)(lVar4 + 24);
               if (0 < iVar1) {
                 do {
-                  lVar4 = UILabel.mTempIndices;
-                  if (lVar4 == null) goto LAB_1810f7c3d;
-                  iVar7 = FUN_1800d6750(lVar4,uVar10,DAT_181d68270);
+                  lVar4 = *(int64 *)(pStatics + 40);
+                  if (lVar4 == null) goto LAB_18119098d;
+                  iVar7 = FUN_1800d6760(lVar4,uVar10,DAT_181d8fa18);
                   if (iVar7 == localPos) {
-                    lVar4 = UILabel.mTempVerts;
-                    if (lVar4 == null) goto LAB_1810f7c3d;
+                    lVar4 = *(int64 *)(pStatics + 32);
+                    if (lVar4 == null) goto LAB_18119098d;
                     if (*(uint32 *)(lVar4 + 24) <= uVar10) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
                     }
@@ -2255,38 +2393,40 @@ public class UILabel
                     else if (param_3 == 0x117) {
                       fVar12 = fVar12 + 1000.0;
                     }
-                    uVar2 = UILabel.mTempVerts;
-                    uVar3 = UILabel.mTempIndices;
+                    uVar2 = *(uint64 *)(pStatics + 32);
+                    uVar3 = *(uint64 *)(pStatics + 40);
                     local_48 = CONCAT44(fVar13,fVar12);
                     iVar6 = NGUIText.GetApproximateCharacterIndex(uVar2,uVar3,local_48,0);
                     if (iVar6 != localPos) {
-                      lVar8 = UILabel.mTempVerts;
+                      lVar8 = *(int64 *)(pStatics + 32);
                       if (lVar8 != null) {
-                        FUN_180f56130(lVar8,DAT_181d84378);
-                        lVar8 = UILabel.mTempIndices;
+                        FUN_1812f9a10(lVar8,DAT_181dabd18);
+                        lVar8 = *(int64 *)(pStatics + 40);
                         if (lVar8 != null) {
-                          FUN_180f56130(lVar8,DAT_181d67b78);
+                          FUN_1812f9a10(lVar8,DAT_181d8f318);
                           return iVar6;
                         }
                       }
-                      goto LAB_1810f7c3d;
+                      goto LAB_18119098d;
                     }
                     break;
                   }
                   uVar10 = uVar10 + 1;
                 } while ((int)uVar10 < iVar1);
               }
-              lVar4 = UILabel.mTempVerts;
-              if (lVar4 == null) goto LAB_1810f7c3d;
-              FUN_180f56130(lVar4,DAT_181d84378);
-              lVar4 = UILabel.mTempIndices;
-              if (lVar4 == null) goto LAB_1810f7c3d;
-              FUN_180f56130(lVar4,DAT_181d67b78);
+              lVar4 = *(int64 *)(pStatics + 32);
+              if (lVar4 == null) goto LAB_18119098d;
+              FUN_1812f9a10(lVar4,DAT_181dabd18);
+              lVar4 = *(int64 *)(pStatics + 40);
+              if (lVar4 == null) goto LAB_18119098d;
+              FUN_1812f9a10(lVar4,DAT_181d8f318);
             }
-            puVar9 = *(uint64 **)(NGUIText_StaticsPtr + 184);
+            puVar9 = *(uint64 **)(DAT_181d8bc90 + 184);
             *puVar9 = 0;
             il2cpp_internal(puVar9,0);
-            NGUIText.dynamicFont = 0;
+            puVar9 = (uint64 *)(*(int64 *)(DAT_181d8bc90 + 184) + 8);
+            *puVar9 = 0;
+            il2cpp_internal(puVar9,0);
             if ((param_3 != 0x111) && (param_3 != 0x116)) {
               if ((param_3 != 0x112) && (param_3 != 0x117)) {
                 return localPos;
@@ -2294,7 +2434,7 @@ public class UILabel
               if (lVar8 != null) {
                 return *(int *)(lVar8 + 16);
               }
-        LAB_1810f7c3d:
+        LAB_18119098d:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -2304,10 +2444,12 @@ public class UILabel
         return localPos;
     }
 
-    // Token : 0x6000852
-    // RVA   : 0x10F71C0   Offset: 0x10F59C0   Length: 0x84
+    // Token : 0x600086A
+    // RVA   : 0x118FF10   Offset: 0x118F310   Length: 0x84
     public int GetCharacterIndexAtPosition(Vector3 worldPos, bool precise)
     {
+        var pStatics_bc90 = *(int64*)(DAT_181d8bc90 + 184);
+        var pStatics_fd78 = *(int64*)(DAT_181dafd78 + 184);
         ulong uVar1;
         ulong uVar2;
         long lVar3;
@@ -2317,50 +2459,54 @@ public class UILabel
         cVar4 = UILabel.get_isValid(this,0);
         if (cVar4) {
           uVar6 = UILabel.get_processedText(this,0);
-          cVar4 = FUN_180d6ca90(uVar6,0);
+          cVar4 = FUN_180d755b0(uVar6,0);
           if (!cVar4) {
             UILabel.UpdateNGUIText(this,0);
             if (!precise) {
-              uVar1 = UILabel.mTempVerts;
-              uVar2 = UILabel.mTempIndices;
+              uVar1 = *(uint64 *)(pStatics_fd78 + 32);
+              uVar2 = *(uint64 *)(pStatics_fd78 + 40);
               NGUIText.PrintApproximateCharacterPositions(uVar6,uVar1,uVar2,0);
             }
             else {
-              uVar1 = UILabel.mTempVerts;
-              uVar2 = UILabel.mTempIndices;
+              uVar1 = *(uint64 *)(pStatics_fd78 + 32);
+              uVar2 = *(uint64 *)(pStatics_fd78 + 40);
               NGUIText.PrintExactCharacterPositions(uVar6,uVar1,uVar2,0);
             }
-            lVar3 = UILabel.mTempVerts;
+            lVar3 = *(int64 *)(pStatics_fd78 + 32);
             if (lVar3 != null) {
               if (*(int *)(lVar3 + 24) < 1) {
-                puVar7 = *(uint64 **)(NGUIText_StaticsPtr + 184);
+                puVar7 = *(uint64 **)(DAT_181d8bc90 + 184);
                 *puVar7 = 0;
                 il2cpp_internal(puVar7,0);
-                NGUIText.dynamicFont = 0;
+                puVar7 = (uint64 *)(pStatics_bc90 + 8);
+                *puVar7 = 0;
+                il2cpp_internal(puVar7,0);
                 return false;
               }
               UILabel.ApplyOffset
-                        (this,UILabel.mTempVerts,0,0);
+                        (this,*(uint64 *)(pStatics_fd78 + 32),0,0);
               if (!precise) {
-                uVar6 = UILabel.mTempVerts;
-                uVar1 = UILabel.mTempIndices;
+                uVar6 = *(uint64 *)(pStatics_fd78 + 32);
+                uVar1 = *(uint64 *)(pStatics_fd78 + 40);
                 uVar5 = NGUIText.GetApproximateCharacterIndex(uVar6,uVar1,worldPos,0);
               }
               else {
-                uVar6 = UILabel.mTempVerts;
-                uVar1 = UILabel.mTempIndices;
+                uVar6 = *(uint64 *)(pStatics_fd78 + 32);
+                uVar1 = *(uint64 *)(pStatics_fd78 + 40);
                 uVar5 = NGUIText.GetExactCharacterIndex(uVar6,uVar1,worldPos,0);
               }
-              lVar3 = UILabel.mTempVerts;
+              lVar3 = *(int64 *)(pStatics_fd78 + 32);
               if (lVar3 != null) {
-                FUN_180f56130(lVar3,DAT_181d84378);
-                lVar3 = UILabel.mTempIndices;
+                FUN_1812f9a10(lVar3,DAT_181dabd18);
+                lVar3 = *(int64 *)(pStatics_fd78 + 40);
                 if (lVar3 != null) {
-                  FUN_180f56130(lVar3,DAT_181d67b78);
-                  puVar7 = *(uint64 **)(NGUIText_StaticsPtr + 184);
+                  FUN_1812f9a10(lVar3,DAT_181d8f318);
+                  puVar7 = *(uint64 **)(DAT_181d8bc90 + 184);
                   *puVar7 = 0;
                   il2cpp_internal(puVar7,0);
-                  NGUIText.dynamicFont = 0;
+                  puVar7 = (uint64 *)(pStatics_bc90 + 8);
+                  *puVar7 = 0;
+                  il2cpp_internal(puVar7,0);
                   return uVar5;
                 }
               }
@@ -2372,10 +2518,12 @@ public class UILabel
         return false;
     }
 
-    // Token : 0x6000853
-    // RVA   : 0x10F7250   Offset: 0x10F5A50   Length: 0x40D
+    // Token : 0x600086B
+    // RVA   : 0x118FFA0   Offset: 0x118F3A0   Length: 0x40D
     public int GetCharacterIndexAtPosition(Vector2 localPos, bool precise)
     {
+        var pStatics_bc90 = *(int64*)(DAT_181d8bc90 + 184);
+        var pStatics_fd78 = *(int64*)(DAT_181dafd78 + 184);
         ulong uVar1;
         ulong uVar2;
         long lVar3;
@@ -2385,50 +2533,54 @@ public class UILabel
         cVar4 = UILabel.get_isValid(this,0);
         if (cVar4) {
           uVar6 = UILabel.get_processedText(this,0);
-          cVar4 = FUN_180d6ca90(uVar6,0);
+          cVar4 = FUN_180d755b0(uVar6,0);
           if (!cVar4) {
             UILabel.UpdateNGUIText(this,0);
             if (!precise) {
-              uVar1 = UILabel.mTempVerts;
-              uVar2 = UILabel.mTempIndices;
+              uVar1 = *(uint64 *)(pStatics_fd78 + 32);
+              uVar2 = *(uint64 *)(pStatics_fd78 + 40);
               NGUIText.PrintApproximateCharacterPositions(uVar6,uVar1,uVar2,0);
             }
             else {
-              uVar1 = UILabel.mTempVerts;
-              uVar2 = UILabel.mTempIndices;
+              uVar1 = *(uint64 *)(pStatics_fd78 + 32);
+              uVar2 = *(uint64 *)(pStatics_fd78 + 40);
               NGUIText.PrintExactCharacterPositions(uVar6,uVar1,uVar2,0);
             }
-            lVar3 = UILabel.mTempVerts;
+            lVar3 = *(int64 *)(pStatics_fd78 + 32);
             if (lVar3 != null) {
               if (*(int *)(lVar3 + 24) < 1) {
-                puVar7 = *(uint64 **)(NGUIText_StaticsPtr + 184);
+                puVar7 = *(uint64 **)(DAT_181d8bc90 + 184);
                 *puVar7 = 0;
                 il2cpp_internal(puVar7,0);
-                NGUIText.dynamicFont = 0;
+                puVar7 = (uint64 *)(pStatics_bc90 + 8);
+                *puVar7 = 0;
+                il2cpp_internal(puVar7,0);
                 return false;
               }
               UILabel.ApplyOffset
-                        (this,UILabel.mTempVerts,0,0);
+                        (this,*(uint64 *)(pStatics_fd78 + 32),0,0);
               if (!precise) {
-                uVar6 = UILabel.mTempVerts;
-                uVar1 = UILabel.mTempIndices;
+                uVar6 = *(uint64 *)(pStatics_fd78 + 32);
+                uVar1 = *(uint64 *)(pStatics_fd78 + 40);
                 uVar5 = NGUIText.GetApproximateCharacterIndex(uVar6,uVar1,localPos,0);
               }
               else {
-                uVar6 = UILabel.mTempVerts;
-                uVar1 = UILabel.mTempIndices;
+                uVar6 = *(uint64 *)(pStatics_fd78 + 32);
+                uVar1 = *(uint64 *)(pStatics_fd78 + 40);
                 uVar5 = NGUIText.GetExactCharacterIndex(uVar6,uVar1,localPos,0);
               }
-              lVar3 = UILabel.mTempVerts;
+              lVar3 = *(int64 *)(pStatics_fd78 + 32);
               if (lVar3 != null) {
-                FUN_180f56130(lVar3,DAT_181d84378);
-                lVar3 = UILabel.mTempIndices;
+                FUN_1812f9a10(lVar3,DAT_181dabd18);
+                lVar3 = *(int64 *)(pStatics_fd78 + 40);
                 if (lVar3 != null) {
-                  FUN_180f56130(lVar3,DAT_181d67b78);
-                  puVar7 = *(uint64 **)(NGUIText_StaticsPtr + 184);
+                  FUN_1812f9a10(lVar3,DAT_181d8f318);
+                  puVar7 = *(uint64 **)(DAT_181d8bc90 + 184);
                   *puVar7 = 0;
                   il2cpp_internal(puVar7,0);
-                  NGUIText.dynamicFont = 0;
+                  puVar7 = (uint64 *)(pStatics_bc90 + 8);
+                  *puVar7 = 0;
+                  il2cpp_internal(puVar7,0);
                   return uVar5;
                 }
               }
@@ -2440,8 +2592,8 @@ public class UILabel
         return false;
     }
 
-    // Token : 0x6000854
-    // RVA   : 0x10F8050   Offset: 0x10F6850   Length: 0x82
+    // Token : 0x600086C
+    // RVA   : 0x1190DA0   Offset: 0x11901A0   Length: 0x82
     public string GetWordAtPosition(Vector3 worldPos)
     {
         uint uVar1;
@@ -2449,8 +2601,8 @@ public class UILabel
         UILabel.GetWordAtCharacterIndex(this,uVar1,0);
     }
 
-    // Token : 0x6000855
-    // RVA   : 0x10F80E0   Offset: 0x10F68E0   Length: 0x26
+    // Token : 0x600086D
+    // RVA   : 0x1190E30   Offset: 0x1190230   Length: 0x26
     public string GetWordAtPosition(Vector2 localPos)
     {
         uint uVar1;
@@ -2458,8 +2610,8 @@ public class UILabel
         UILabel.GetWordAtCharacterIndex(this,uVar1,0);
     }
 
-    // Token : 0x6000856
-    // RVA   : 0x10F7EC0   Offset: 0x10F66C0   Length: 0x18B
+    // Token : 0x600086E
+    // RVA   : 0x1190C10   Offset: 0x1190010   Length: 0x18B
     public string GetWordAtCharacterIndex(int characterIndex)
     {
         int iVar1;
@@ -2470,13 +2622,13 @@ public class UILabel
         lVar3 = UILabel.get_printedText(this,0);
         if (characterIndex != -1) {
           if (lVar3 == null) {
-        LAB_1810f8046:
+        LAB_181190d96:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           if (characterIndex < *(int *)(lVar3 + 16)) {
-            lVar4 = FUN_1800d60b0(DAT_181d7c118,2);
-            if (lVar4 == null) goto LAB_1810f8046;
+            lVar4 = FUN_1800d60b0(DAT_181da1040,2);
+            if (lVar4 == null) goto LAB_181190d96;
             if (*(uint32 *)(lVar4 + 24) == 0) {
               uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -2491,8 +2643,8 @@ public class UILabel
             *(uint16 *)(lVar4 + 34) = 10;
             iVar1 = String.LastIndexOfAny(lVar3,lVar4,characterIndex,0);
             iVar1 = iVar1 + 1;
-            uVar5 = FUN_1800d60b0(DAT_181d7c118,4);
-            RuntimeHelpers.InitializeArray(uVar5,DAT_181d91d80,0);
+            uVar5 = FUN_1800d60b0(DAT_181da1040,4);
+            RuntimeHelpers.InitializeArray(uVar5,DAT_181dbb0e8,0);
             iVar2 = String.IndexOfAny(lVar3,uVar5,characterIndex,0);
             if (iVar2 == -1) {
               iVar2 = *(int *)(lVar3 + 16);
@@ -2507,8 +2659,8 @@ public class UILabel
         return 0;
     }
 
-    // Token : 0x6000857
-    // RVA   : 0x10F7E00   Offset: 0x10F6600   Length: 0x82
+    // Token : 0x600086F
+    // RVA   : 0x1190B50   Offset: 0x118FF50   Length: 0x82
     public string GetUrlAtPosition(Vector3 worldPos)
     {
         uint uVar1;
@@ -2516,8 +2668,8 @@ public class UILabel
         UILabel.GetUrlAtCharacterIndex(this,uVar1,0);
     }
 
-    // Token : 0x6000858
-    // RVA   : 0x10F7E90   Offset: 0x10F6690   Length: 0x26
+    // Token : 0x6000870
+    // RVA   : 0x1190BE0   Offset: 0x118FFE0   Length: 0x26
     public string GetUrlAtPosition(Vector2 localPos)
     {
         uint uVar1;
@@ -2525,8 +2677,8 @@ public class UILabel
         UILabel.GetUrlAtCharacterIndex(this,uVar1,0);
     }
 
-    // Token : 0x6000859
-    // RVA   : 0x10F7C90   Offset: 0x10F6490   Length: 0x16A
+    // Token : 0x6000871
+    // RVA   : 0x11909E0   Offset: 0x118FDE0   Length: 0x16A
     public string GetUrlAtCharacterIndex(int characterIndex)
     {
         int iVar2;
@@ -2560,10 +2712,11 @@ public class UILabel
         return 0;
     }
 
-    // Token : 0x600085A
-    // RVA   : 0x10F76F0   Offset: 0x10F5EF0   Length: 0x552
+    // Token : 0x6000872
+    // RVA   : 0x1190440   Offset: 0x118F840   Length: 0x552
     public int GetCharacterIndex(int currentIndex, KeyCode key)
     {
+        var pStatics = *(int64*)(DAT_181dafd78 + 184);
         int iVar1;
         ulong uVar2;
         ulong uVar3;
@@ -2580,30 +2733,30 @@ public class UILabel
         cVar5 = UILabel.get_isValid(this,0);
         if (cVar5) {
           lVar8 = UILabel.get_processedText(this,0);
-          cVar5 = FUN_180d6ca90(lVar8,0);
+          cVar5 = FUN_180d755b0(lVar8,0);
           if (!cVar5) {
             iVar6 = UILabel.get_defaultFontSize(this,0);
             UILabel.UpdateNGUIText(this,0);
-            uVar2 = UILabel.mTempVerts;
-            uVar3 = UILabel.mTempIndices;
+            uVar2 = *(uint64 *)(pStatics + 32);
+            uVar3 = *(uint64 *)(pStatics + 40);
             NGUIText.PrintApproximateCharacterPositions(lVar8,uVar2,uVar3,0);
-            lVar4 = UILabel.mTempVerts;
-            if (lVar4 == null) goto LAB_1810f7c3d;
+            lVar4 = *(int64 *)(pStatics + 32);
+            if (lVar4 == null) goto LAB_18119098d;
             if (0 < *(int *)(lVar4 + 24)) {
               UILabel.ApplyOffset
-                        (this,UILabel.mTempVerts,0,0);
+                        (this,*(uint64 *)(pStatics + 32),0,0);
               uVar10 = 0;
-              lVar4 = UILabel.mTempIndices;
-              if (lVar4 == null) goto LAB_1810f7c3d;
+              lVar4 = *(int64 *)(pStatics + 40);
+              if (lVar4 == null) goto LAB_18119098d;
               iVar1 = *(int *)(lVar4 + 24);
               if (0 < iVar1) {
                 do {
-                  lVar4 = UILabel.mTempIndices;
-                  if (lVar4 == null) goto LAB_1810f7c3d;
-                  iVar7 = FUN_1800d6750(lVar4,uVar10,DAT_181d68270);
+                  lVar4 = *(int64 *)(pStatics + 40);
+                  if (lVar4 == null) goto LAB_18119098d;
+                  iVar7 = FUN_1800d6760(lVar4,uVar10,DAT_181d8fa18);
                   if (iVar7 == currentIndex) {
-                    lVar4 = UILabel.mTempVerts;
-                    if (lVar4 == null) goto LAB_1810f7c3d;
+                    lVar4 = *(int64 *)(pStatics + 32);
+                    if (lVar4 == null) goto LAB_18119098d;
                     if (*(uint32 *)(lVar4 + 24) <= uVar10) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
                     }
@@ -2635,38 +2788,40 @@ public class UILabel
                     else if (key == 0x117) {
                       fVar12 = fVar12 + 1000.0;
                     }
-                    uVar2 = UILabel.mTempVerts;
-                    uVar3 = UILabel.mTempIndices;
+                    uVar2 = *(uint64 *)(pStatics + 32);
+                    uVar3 = *(uint64 *)(pStatics + 40);
                     local_48 = CONCAT44(fVar13,fVar12);
                     iVar6 = NGUIText.GetApproximateCharacterIndex(uVar2,uVar3,local_48,0);
                     if (iVar6 != currentIndex) {
-                      lVar8 = UILabel.mTempVerts;
+                      lVar8 = *(int64 *)(pStatics + 32);
                       if (lVar8 != null) {
-                        FUN_180f56130(lVar8,DAT_181d84378);
-                        lVar8 = UILabel.mTempIndices;
+                        FUN_1812f9a10(lVar8,DAT_181dabd18);
+                        lVar8 = *(int64 *)(pStatics + 40);
                         if (lVar8 != null) {
-                          FUN_180f56130(lVar8,DAT_181d67b78);
+                          FUN_1812f9a10(lVar8,DAT_181d8f318);
                           return iVar6;
                         }
                       }
-                      goto LAB_1810f7c3d;
+                      goto LAB_18119098d;
                     }
                     break;
                   }
                   uVar10 = uVar10 + 1;
                 } while ((int)uVar10 < iVar1);
               }
-              lVar4 = UILabel.mTempVerts;
-              if (lVar4 == null) goto LAB_1810f7c3d;
-              FUN_180f56130(lVar4,DAT_181d84378);
-              lVar4 = UILabel.mTempIndices;
-              if (lVar4 == null) goto LAB_1810f7c3d;
-              FUN_180f56130(lVar4,DAT_181d67b78);
+              lVar4 = *(int64 *)(pStatics + 32);
+              if (lVar4 == null) goto LAB_18119098d;
+              FUN_1812f9a10(lVar4,DAT_181dabd18);
+              lVar4 = *(int64 *)(pStatics + 40);
+              if (lVar4 == null) goto LAB_18119098d;
+              FUN_1812f9a10(lVar4,DAT_181d8f318);
             }
-            puVar9 = *(uint64 **)(NGUIText_StaticsPtr + 184);
+            puVar9 = *(uint64 **)(DAT_181d8bc90 + 184);
             *puVar9 = 0;
             il2cpp_internal(puVar9,0);
-            NGUIText.dynamicFont = 0;
+            puVar9 = (uint64 *)(*(int64 *)(DAT_181d8bc90 + 184) + 8);
+            *puVar9 = 0;
+            il2cpp_internal(puVar9,0);
             if ((key != 0x111) && (key != 0x116)) {
               if ((key != 0x112) && (key != 0x117)) {
                 return currentIndex;
@@ -2674,7 +2829,7 @@ public class UILabel
               if (lVar8 != null) {
                 return *(int *)(lVar8 + 16);
               }
-        LAB_1810f7c3d:
+        LAB_18119098d:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -2684,8 +2839,8 @@ public class UILabel
         return currentIndex;
     }
 
-    // Token : 0x600085B
-    // RVA   : 0x10F9420   Offset: 0x10F7C20   Length: 0x3D5
+    // Token : 0x6000873
+    // RVA   : 0x1192170   Offset: 0x1191570   Length: 0x3D5
     public void PrintOverlay(int start, int end, UIGeometry caret, UIGeometry highlight, Color caretColor, Color highlightColor)
     {
         void UILabel.PrintOverlay
@@ -2723,7 +2878,7 @@ public class UILabel
         if (cVar4) {
           local_88 = UILabel.get_processedText(this,0);
           UILabel.UpdateNGUIText(this,0);
-          if ((caret == null) || (lVar3 = *(int64 *)(caret + 16)) == null) goto LAB_1810f97f0;
+          if ((caret == null) || (lVar3 = *(int64 *)(caret + 16)) == null) goto LAB_181192540;
           iVar7 = *(int *)(lVar3 + 24);
           fVar1 = *(float *)(this + 140);
           if ((highlight == null) || (start == end)) {
@@ -2732,85 +2887,87 @@ public class UILabel
           }
           else {
             lVar8 = *(int64 *)(highlight + 16);
-            if (lVar8 == null) goto LAB_1810f97f0;
+            if (lVar8 == null) goto LAB_181192540;
             iVar6 = *(int *)(lVar8 + 24);
             NGUIText.PrintCaretAndSelection(local_88,start,end,lVar3,lVar8,0);
             uVar10 = (uint32)((uint64)lVar8 >> 32);
             lVar3 = *(int64 *)(highlight + 16);
-            if (lVar3 == null) goto LAB_1810f97f0;
+            if (lVar3 == null) goto LAB_181192540;
             if (iVar6 < *(int *)(lVar3 + 24)) {
               UILabel.ApplyOffset(this,lVar3,iVar6,0);
               uVar9 = CONCAT44(uVar10,(float)highlightColor[3] * fVar1);
-              FUN_1809981e0(&local_78,*highlightColor,highlightColor[1],highlightColor[2],uVar9,0);
+              FUN_1809dc910(&local_78,*highlightColor,highlightColor[1],highlightColor[2],uVar9,0);
               uVar10 = (uint32)((uint64)uVar9 >> 32);
-              if (*(int64 *)(highlight + 16) == 0) goto LAB_1810f97f0;
+              if (*(int64 *)(highlight + 16) == 0) goto LAB_181192540;
               iVar2 = *(int *)(*(int64 *)(highlight + 16) + 24);
               for (; iVar6 < iVar2; iVar6 = iVar6 + 1) {
-                if (*(int64 *)(highlight + 24) == 0) goto LAB_1810f97f0;
-                FUN_181814e80(*(int64 *)(highlight + 24),0x3f0000003f000000,DAT_181d83f78);
-                if (*(int64 *)(highlight + 32) == 0) goto LAB_1810f97f0;
+                if (*(int64 *)(highlight + 24) == 0) goto LAB_181192540;
+                FUN_181829f90(*(int64 *)(highlight + 24),0x3f0000003f000000,DAT_181dab918);
+                if (*(int64 *)(highlight + 32) == 0) goto LAB_181192540;
                 local_88 = local_78;
                 uStack_80 = (uint32)uStack_70;
                 uStack_7c = uStack_70._4_4_;
-                FUN_1818059b0(*(int64 *)(highlight + 32),&local_88,DAT_181d5b680);
+                FUN_1817e9a90(*(int64 *)(highlight + 32),&local_88,DAT_181d82e20);
                 uVar10 = (uint32)((uint64)uVar9 >> 32);
               }
             }
           }
           UILabel.ApplyOffset(this,*(uint64 *)(caret + 16),iVar7,0);
-          FUN_1809981e0(&local_68,*caretColor,caretColor[1],caretColor[2],
+          FUN_1809dc910(&local_68,*caretColor,caretColor[1],caretColor[2],
                         CONCAT44(uVar10,(float)caretColor[3] * fVar1),0);
           if (*(int64 *)(caret + 16) == 0) {
-        LAB_1810f97f0:
+        LAB_181192540:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           iVar6 = *(int *)(*(int64 *)(caret + 16) + 24);
           for (; iVar7 < iVar6; iVar7 = iVar7 + 1) {
-            if (*(int64 *)(caret + 24) == 0) goto LAB_1810f97f0;
-            FUN_181814e80(*(int64 *)(caret + 24),0x3f0000003f000000,DAT_181d83f78);
-            if (*(int64 *)(caret + 32) == 0) goto LAB_1810f97f0;
+            if (*(int64 *)(caret + 24) == 0) goto LAB_181192540;
+            FUN_181829f90(*(int64 *)(caret + 24),0x3f0000003f000000,DAT_181dab918);
+            if (*(int64 *)(caret + 32) == 0) goto LAB_181192540;
             local_88 = local_68;
             uStack_80 = (uint32)uStack_60;
             uStack_7c = uStack_60._4_4_;
-            FUN_1818059b0(*(int64 *)(caret + 32),&local_88,DAT_181d5b680);
+            FUN_1817e9a90(*(int64 *)(caret + 32),&local_88,DAT_181d82e20);
           }
-          puVar5 = *(uint64 **)(NGUIText_StaticsPtr + 184);
+          puVar5 = *(uint64 **)(DAT_181d8bc90 + 184);
           *puVar5 = 0;
           il2cpp_internal(puVar5,0);
-          NGUIText.dynamicFont = 0;
+          puVar5 = (uint64 *)(*(int64 *)(DAT_181d8bc90 + 184) + 8);
+          *puVar5 = 0;
+          il2cpp_internal(puVar5,0);
         }
     }
 
-    // Token : 0x600085C
-    // RVA   : 0x10FC3F0   Offset: 0x10FABF0   Length: 0x78
+    // Token : 0x6000874
+    // RVA   : 0x11951F0   Offset: 0x11945F0   Length: 0x78
     private bool get_premultipliedAlphaShader()
     {
         long lVar1;
-        lVar1 = il2cpp_internal(this.mFont,DAT_181d556d0);
+        lVar1 = il2cpp_internal(this.mFont,DAT_181d7a800);
         if (lVar1 == null) {
           return;
         }
-        FUN_180002970(14,DAT_181d556d0,lVar1);
+        FUN_180002970(14,DAT_181d7a800,lVar1);
     }
 
-    // Token : 0x600085D
-    // RVA   : 0x10FC370   Offset: 0x10FAB70   Length: 0x78
+    // Token : 0x6000875
+    // RVA   : 0x1195170   Offset: 0x1194570   Length: 0x78
     private bool get_packedFontShader()
     {
         long lVar1;
-        lVar1 = il2cpp_internal(this.mFont,DAT_181d556d0);
+        lVar1 = il2cpp_internal(this.mFont,DAT_181d7a800);
         if (lVar1 == null) {
           return;
         }
-        FUN_180002970(15,DAT_181d556d0,lVar1);
+        FUN_180002970(15,DAT_181d7a800,lVar1);
     }
 
-    // Token : 0x600085E
-    // RVA   : 0x10F87B0   Offset: 0x10F6FB0   Length: 0x50B
+    // Token : 0x6000876
+    // RVA   : 0x1191500   Offset: 0x1190900   Length: 0x50B
     public override void OnFill(List<Vector3> verts, List<Vector2> uvs, List<Color> cols)
     {
-        var pNGUIText = *(int64*)(NGUIText_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d8bc90 + 184);
         uint uVar1;
         uint uVar2;
         bool cVar3;
@@ -2840,7 +2997,7 @@ public class UILabel
         cVar3 = UILabel.get_isValid(this,0);
         if (cVar3) {
           if (verts == null) {
-        LAB_1810f8cb6:
+        LAB_181191a06:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -2864,7 +3021,7 @@ public class UILabel
           uVar5 = UILabel.get_processedText(this,0);
           uVar2 = *(uint32 *)(verts + 24);
           UILabel.UpdateNGUIText(this,0);
-          lVar6 = pNGUIText;
+          lVar6 = pStatics;
           uVar8 = 0;
           uVar16 = 0;
           *(uint32 *)(lVar6 + 44) = uVar11;
@@ -2872,10 +3029,12 @@ public class UILabel
           *(uint32 *)(lVar6 + 52) = uVar13;
           *(uint32 *)(lVar6 + 56) = uVar14;
           NGUIText.Print(uVar5,verts,uvs,cols,0);
-          puVar7 = *(uint64 **)(NGUIText_StaticsPtr + 184);
+          puVar7 = *(uint64 **)(DAT_181d8bc90 + 184);
           *puVar7 = 0;
           il2cpp_internal(puVar7,0);
-          NGUIText.dynamicFont = 0;
+          puVar7 = (uint64 *)(pStatics + 8);
+          *puVar7 = 0;
+          il2cpp_internal(puVar7,0);
           UILabel.ApplyOffset(this,verts,uVar2,0);
           cVar3 = UILabel.get_packedFontShader(this,0);
           if (!cVar3) {
@@ -2914,8 +3073,8 @@ public class UILabel
                 }
               }
             }
-            if (NGUIText.symbolStyle == 3) {
-              if (cols == null) goto LAB_1810f8cb6;
+            if (*(int *)(pStatics + 132) == 3) {
+              if (cols == null) goto LAB_181191a06;
               lVar6 = (int64)*(int *)(cols + 24);
               if (0 < *(int *)(cols + 24)) {
                 lVar9 = 32;
@@ -2924,12 +3083,12 @@ public class UILabel
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
                   }
                   if (*(float *)(*(int64 *)(cols + 16) + lVar9) == -1.0) {
-                    puVar4 = (uint32 *)FUN_181098a50(local_88,0);
+                    puVar4 = (uint32 *)FUN_1810d3570(local_88,0);
                     local_98 = *puVar4;
                     uStack_94 = puVar4[1];
                     uStack_90 = puVar4[2];
                     uStack_8c = puVar4[3];
-                    FUN_181814c20(cols,uVar8,&local_98,DAT_181d5b880);
+                    FUN_1817f4530(cols,uVar8,&local_98,DAT_181d83020);
                   }
                   uVar8 = uVar8 + 1;
                   lVar9 = lVar9 + 16;
@@ -2945,8 +3104,8 @@ public class UILabel
         }
     }
 
-    // Token : 0x600085F
-    // RVA   : 0x10F6A90   Offset: 0x10F5290   Length: 0x1C3
+    // Token : 0x6000877
+    // RVA   : 0x118F7E0   Offset: 0x118EBE0   Length: 0x1C3
     public Vector2 ApplyOffset(List<Vector3> verts, int start)
     {
         ulong uVar1;
@@ -2981,7 +3140,7 @@ public class UILabel
             local_48._4_4_ = (float)((uint64)uVar1 >> 32);
             local_58 = CONCAT44(local_48._4_4_ + fVar6,(float)uVar1 + fVar5);
             local_48 = uVar1;
-            FUN_181814c90(verts,uVar2 & 0xffffffff,&local_58,DAT_181d844f8);
+            FUN_18181dd90(verts,uVar2 & 0xffffffff,&local_58,DAT_181dabe90);
             uVar2 = (uint64)((uint32)uVar2 + 1);
             lVar4 = lVar4 + 12;
             lVar3 = lVar3 + -1;
@@ -2990,8 +3149,8 @@ public class UILabel
         return CONCAT44(fVar6,fVar5);
     }
 
-    // Token : 0x6000860
-    // RVA   : 0x10F6C60   Offset: 0x10F5460   Length: 0x375
+    // Token : 0x6000878
+    // RVA   : 0x118F9B0   Offset: 0x118EDB0   Length: 0x375
     public void ApplyShadow(List<Vector3> verts, List<Vector2> uvs, List<Color> cols, int start, int end, float x, float y)
     {
         void UILabel.ApplyShadow
@@ -3050,7 +3209,7 @@ public class UILabel
           lVar9 = (uVar8 + 2) * 16;
           do {
             if (verts == null) {
-        LAB_1810f6fd0:
+        LAB_18118fd20:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -3060,15 +3219,15 @@ public class UILabel
             }
             local_b8 = *(uint64 *)(lVar10 + 32 + *(int64 *)(verts + 16));
             local_b0 = *(uint32 *)(lVar10 + 40 + *(int64 *)(verts + 16));
-            FUN_181805a40(verts,&local_b8,DAT_181d84278);
-            if (uvs == null) goto LAB_1810f6fd0;
+            FUN_181816b80(verts,&local_b8,DAT_181dabc18);
+            if (uvs == null) goto LAB_18118fd20;
             if (*(uint32 *)(uvs + 24) <= uVar7) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
-            FUN_181814e80(uvs,CONCAT44(*(uint32 *)(*(int64 *)(uvs + 16) + 4 + lVar11),
+            FUN_181829f90(uvs,CONCAT44(*(uint32 *)(*(int64 *)(uvs + 16) + 4 + lVar11),
                                            *(uint32 *)(*(int64 *)(uvs + 16) + lVar11)),
-                          DAT_181d83f78);
-            if (cols == null) goto LAB_1810f6fd0;
+                          DAT_181dab918);
+            if (cols == null) goto LAB_18118fd20;
             if (*(uint32 *)(cols + 24) <= uVar7) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
@@ -3077,7 +3236,7 @@ public class UILabel
             uStack_84 = puVar1[1];
             uStack_80 = puVar1[2];
             fStack_7c = (float)puVar1[3];
-            FUN_1818059b0(cols,&local_88,DAT_181d5b680);
+            FUN_1817e9a90(cols,&local_88,DAT_181d82e20);
             if (*(uint32 *)(verts + 24) <= uVar7) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
@@ -3086,7 +3245,7 @@ public class UILabel
             local_98._4_4_ = (float)((uint64)uVar2 >> 32);
             local_a8 = CONCAT44(local_98._4_4_ + y,(float)uVar2 + x);
             local_98 = uVar2;
-            FUN_181814c90(verts,uVar8 & 0xffffffff,&local_a8,DAT_181d844f8);
+            FUN_18181dd90(verts,uVar8 & 0xffffffff,&local_a8,DAT_181dabe90);
             if (*(uint32 *)(cols + 24) <= uVar7) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
@@ -3097,7 +3256,7 @@ public class UILabel
             local_88 = uVar12;
             uStack_84 = uVar13;
             uStack_80 = uVar3;
-            FUN_181814c20(cols,uVar8 & 0xffffffff,&local_88,DAT_181d5b880);
+            FUN_1817f4530(cols,uVar8 & 0xffffffff,&local_88,DAT_181d83020);
             uVar8 = (uint64)(uVar7 + 1);
             lVar11 = lVar11 + 8;
             lVar9 = lVar9 + 16;
@@ -3106,60 +3265,63 @@ public class UILabel
         }
     }
 
-    // Token : 0x6000861
-    // RVA   : 0x10F70E0   Offset: 0x10F58E0   Length: 0xD6
+    // Token : 0x6000879
+    // RVA   : 0x118FE30   Offset: 0x118F230   Length: 0xD6
     public int CalculateOffsetToFit(string text)
     {
+        var pStatics = *(int64*)(DAT_181d8bc90 + 184);
         uint uVar1;
         UILabel.UpdateNGUIText(this,0);
-        NGUIText.encoding = 0;
-        NGUIText.symbolStyle = 0;
+        *(uint8 *)(pStatics + 116) = 0;
+        *(uint32 *)(pStatics + 132) = 0;
         uVar1 = NGUIText.CalculateOffsetToFit(text,0);
-        puVar2 = *(uint64 **)(NGUIText_StaticsPtr + 184);
+        puVar2 = *(uint64 **)(DAT_181d8bc90 + 184);
         *puVar2 = 0;
         il2cpp_internal(puVar2,0);
-        NGUIText.dynamicFont = 0;
+        puVar2 = (uint64 *)(pStatics + 8);
+        *puVar2 = 0;
+        il2cpp_internal(puVar2,0);
         return uVar1;
     }
 
-    // Token : 0x6000862
-    // RVA   : 0x10FA840   Offset: 0x10F9040   Length: 0xD6
+    // Token : 0x600087A
+    // RVA   : 0x1193590   Offset: 0x1192990   Length: 0xD6
     public void SetCurrentProgress()
     {
-        var pStatics = *(int64*)(DAT_181d8ae58 + 184);
+        var pStatics = *(int64*)(DAT_181db0078 + 184);
         bool cVar1;
         ulong uVar2;
         uint[] local_res18 = new uint[4];
-        uVar2 = **(uint64 **)(DAT_181d8ae58 + 184);
+        uVar2 = **(uint64 **)(DAT_181db0078 + 184);
         cVar1 = Object.op_Inequality(uVar2,0,0);
         if (cVar1) {
           if (*pStatics == 0) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          local_res18[0] = UIProgressBar.get_value(*pStatics,0);
+          local_res18[0] = UISlider.get_sliderValue(*pStatics,0);
           uVar2 = Single.ToString(local_res18,"F",0);
           UILabel.set_text(this,uVar2,0);
         }
     }
 
-    // Token : 0x6000863
-    // RVA   : 0x10FA750   Offset: 0x10F8F50   Length: 0xED
+    // Token : 0x600087B
+    // RVA   : 0x11934A0   Offset: 0x11928A0   Length: 0xED
     public void SetCurrentPercent()
     {
-        var pStatics = *(int64*)(DAT_181d8ae58 + 184);
+        var pStatics = *(int64*)(DAT_181db0078 + 184);
         bool cVar1;
         ulong uVar2;
         float fVar3;
         uint[] local_res18 = new uint[4];
-        uVar2 = **(uint64 **)(DAT_181d8ae58 + 184);
+        uVar2 = **(uint64 **)(DAT_181db0078 + 184);
         cVar1 = Object.op_Inequality(uVar2,0,0);
         if (cVar1) {
           if (*pStatics == 0) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          fVar3 = (float)UIProgressBar.get_value(*pStatics,0);
+          fVar3 = (float)UISlider.get_sliderValue(*pStatics,0);
           local_res18[0] = Mathf.RoundToInt(fVar3 * 100.0,0);
           uVar2 = Int32.ToString(local_res18,0);
           uVar2 = String.Concat(uVar2,"%",0);
@@ -3167,25 +3329,26 @@ public class UILabel
         }
     }
 
-    // Token : 0x6000864
-    // RVA   : 0x10FA920   Offset: 0x10F9120   Length: 0x1B8
+    // Token : 0x600087C
+    // RVA   : 0x1193670   Offset: 0x1192A70   Length: 0x1B8
     public void SetCurrentSelection()
     {
+        var pStatics = *(int64*)(DAT_181dafff8 + 184);
         bool cVar2;
         ulong uVar3;
-        uVar3 = UIPopupList.current;
+        uVar3 = **(uint64 **)(DAT_181dafff8 + 184);
         cVar2 = Object.op_Inequality(uVar3,0,0);
         if (!cVar2) {
           return;
         }
-        if (UIPopupList.current != null) {
-          if (!UIPopupList.current.isLocalized) {
-            plVar1 = (int64 *)UIPopupList.current;
+        if (*pStatics != 0) {
+          if (*(char *)(*pStatics + 185) == false) {
+            plVar1 = (int64 *)*pStatics;
             if (plVar1 == (int64 *)0) throw; // [null/range check failed]
             uVar3 = (**(code **)(*plVar1 + 0x178))(plVar1,*(uint64 *)(*plVar1 + 0x180));
           }
           else {
-            plVar1 = (int64 *)UIPopupList.current;
+            plVar1 = (int64 *)*pStatics;
             if (plVar1 == (int64 *)0) throw; // [null/range check failed]
             uVar3 = (**(code **)(*plVar1 + 0x178))(plVar1,*(uint64 *)(*plVar1 + 0x180));
             uVar3 = Localization.Get(uVar3,1,0);
@@ -3197,51 +3360,57 @@ public class UILabel
         }
     }
 
-    // Token : 0x6000865
-    // RVA   : 0x10FB600   Offset: 0x10F9E00   Length: 0xE6
+    // Token : 0x600087D
+    // RVA   : 0x1194350   Offset: 0x1193750   Length: 0xE6
     public bool Wrap(string text, ref string final)
     {
+        var pStatics = *(int64*)(DAT_181d8bc90 + 184);
         uint8
         UILabel.Wrap(uint64 this,uint64 text,uint64 final,uint32 param_4)
         {
         uint8 uVar1;
         uint64 *puVar2;
         UILabel.UpdateNGUIText(this,0);
-        NGUIText.rectHeight = param_4;
-        NGUIText.regionHeight = param_4;
+        *(uint32 *)(pStatics + 64) = param_4;
+        *(uint32 *)(pStatics + 72) = param_4;
         uVar1 = NGUIText.WrapText(text,final,0,0);
-        puVar2 = *(uint64 **)(NGUIText_StaticsPtr + 184);
+        puVar2 = *(uint64 **)(DAT_181d8bc90 + 184);
         *puVar2 = 0;
         il2cpp_internal(puVar2,0);
-        NGUIText.dynamicFont = 0;
+        puVar2 = (uint64 *)(pStatics + 8);
+        *puVar2 = 0;
+        il2cpp_internal(puVar2,0);
         return uVar1;
     }
 
-    // Token : 0x6000866
-    // RVA   : 0x10FB510   Offset: 0x10F9D10   Length: 0xEB
+    // Token : 0x600087E
+    // RVA   : 0x1194260   Offset: 0x1193660   Length: 0xEB
     public bool Wrap(string text, ref string final, int height)
     {
+        var pStatics = *(int64*)(DAT_181d8bc90 + 184);
         uint8
         UILabel.Wrap(uint64 this,uint64 text,uint64 final,uint32 height)
         {
         uint8 uVar1;
         uint64 *puVar2;
         UILabel.UpdateNGUIText(this,0);
-        NGUIText.rectHeight = height;
-        NGUIText.regionHeight = height;
+        *(uint32 *)(pStatics + 64) = height;
+        *(uint32 *)(pStatics + 72) = height;
         uVar1 = NGUIText.WrapText(text,final,0,0);
-        puVar2 = *(uint64 **)(NGUIText_StaticsPtr + 184);
+        puVar2 = *(uint64 **)(DAT_181d8bc90 + 184);
         *puVar2 = 0;
         il2cpp_internal(puVar2,0);
-        NGUIText.dynamicFont = 0;
+        puVar2 = (uint64 *)(pStatics + 8);
+        *puVar2 = 0;
+        il2cpp_internal(puVar2,0);
         return uVar1;
     }
 
-    // Token : 0x6000867
-    // RVA   : 0x10FAAE0   Offset: 0x10F92E0   Length: 0x861
+    // Token : 0x600087F
+    // RVA   : 0x1193830   Offset: 0x1192C30   Length: 0x861
     public void UpdateNGUIText()
     {
-        var pNGUIText = *(int64*)(NGUIText_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d8bc90 + 184);
         int iVar1;
         ulong uVar2;
         bool cVar3;
@@ -3254,19 +3423,16 @@ public class UILabel
         uVar7 = UILabel.get_trueTypeFont(this,0);
         cVar3 = Object.op_Inequality(uVar7,0,0);
         uVar5 = this.mFinalFontSize;
-        NGUIText.fontSize = uVar5;
-        NGUIText.fontStyle =
-             this.mFontStyle;
-        NGUIText.rectWidth =
-             *(uint32 *)(this + 164);
-        NGUIText.rectHeight =
-             *(uint32 *)(this + 168);
+        *(uint32 *)(pStatics + 24) = uVar5;
+        *(uint32 *)(pStatics + 36) = this.mFontStyle;
+        *(uint32 *)(pStatics + 60) = *(uint32 *)(this + 164);
+        *(uint32 *)(pStatics + 64) = *(uint32 *)(this + 168);
         uVar5 = Mathf.RoundToInt((*(float *)(this + 0x104) - *(float *)(this + 252)) *
                                   (float)*(int *)(this + 164),0);
-        NGUIText.regionWidth = uVar5;
+        *(uint32 *)(pStatics + 68) = uVar5;
         uVar5 = Mathf.RoundToInt((*(float *)(this + 0x108) - *(float *)(this + 0x100)) *
                                   (float)*(int *)(this + 168),0);
-        NGUIText.regionHeight = uVar5;
+        *(uint32 *)(pStatics + 72) = uVar5;
         if (!this.mApplyGradient) {
           bVar11 = false;
         }
@@ -3274,76 +3440,75 @@ public class UILabel
           cVar4 = UILabel.get_packedFontShader(this,0);
           bVar11 = !cVar4;
         }
-        NGUIText.gradient = bVar11;
+        *(bool *)(pStatics + 80) = bVar11;
         uVar2 = *(uint64 *)(this + 0x1ec);
-        lVar8 = pNGUIText;
+        lVar8 = pStatics;
         *(uint64 *)(lVar8 + 100) = this.mGradientTop;
         *(uint64 *)(lVar8 + 108) = uVar2;
         uVar2 = *(uint64 *)(this + 0x1fc);
-        lVar8 = pNGUIText;
+        lVar8 = pStatics;
         *(uint64 *)(lVar8 + 84) = *(uint64 *)(this + 500);
         *(uint64 *)(lVar8 + 92) = uVar2;
-        NGUIText.encoding =
-             this.mEncoding;
-        NGUIText.premultiply = *(uint8 *)(this + 600)
-        ;
-        NGUIText.symbolStyle =
-             this.mSymbols;
-        NGUIText.maxLines =
-             this.mMaxLineCount;
+        *(uint8 *)(pStatics + 116) = this.mEncoding;
+        *(uint8 *)(pStatics + 128) = *(uint8 *)(this + 600);
+        *(uint32 *)(pStatics + 132) = this.mSymbols;
+        *(uint32 *)(pStatics + 76) = this.mMaxLineCount;
         if (!this.mUseFloatSpacing) {
           fVar12 = (float)this.mSpacingX;
         }
         else {
           fVar12 = this.mFloatSpacingX;
         }
-        NGUIText.spacingX = fVar12;
+        *(float *)(pStatics + 120) = fVar12;
         if (!this.mUseFloatSpacing) {
           fVar12 = (float)this.mSpacingY;
         }
         else {
           fVar12 = this.mFloatSpacingY;
         }
-        bVar11 = !DAT_181e7c338;
-        NGUIText.spacingY = fVar12;
+        bVar11 = !DAT_181ea1be5;
+        *(float *)(pStatics + 124) = fVar12;
         if (bVar11) {
-          il2cpp_runtime_class_init(&DAT_181d556d0);
-          DAT_181e7c338 = true;
+          il2cpp_runtime_class_init(&DAT_181d7a800);
+          DAT_181ea1be5 = true;
         }
-        lVar8 = il2cpp_internal(this.mFont,DAT_181d556d0);
+        lVar8 = il2cpp_internal(this.mFont,DAT_181d7a800);
         if (!cVar3) {
           if (lVar8 == null) {
             uVar5 = this.mScale;
-            NGUIText.fontScale = uVar5;
-            goto LAB_1810fae25;
+            *(uint32 *)(pStatics + 28) = uVar5;
+            goto LAB_181193b75;
           }
-          lVar8 = FUN_180002970(27,DAT_181d556d0,lVar8);
+          lVar8 = FUN_180002970(27,DAT_181d7a800,lVar8);
           iVar1 = this.mFontSize;
-          if (lVar8 == null) goto LAB_1810fb33c;
-          iVar6 = FUN_180002970(22,DAT_181d556d0,lVar8);
+          if (lVar8 == null) goto LAB_18119408c;
+          iVar6 = FUN_180002970(22,DAT_181d7a800,lVar8);
           fVar12 = this.mScale;
-          NGUIText.fontScale =
-               ((float)iVar1 / (float)iVar6) * fVar12;
-        LAB_1810fb008:
+          *(float *)(pStatics + 28) = ((float)iVar1 / (float)iVar6) * fVar12;
+        LAB_181193d58:
           cVar4 = Object.op_Inequality(uVar7,0,0);
-          if (cVar4) goto LAB_1810fae25;
-          NGUIText.dynamicFont = 0;
-          plVar10 = pNGUIText;
+          if (cVar4) goto LAB_181193b75;
+          puVar9 = (uint64 *)(pStatics + 8);
+          *puVar9 = 0;
+          il2cpp_internal(puVar9,0);
+          plVar10 = pStatics;
           *plVar10 = lVar8;
         }
         else {
           uVar5 = this.mScale;
-          NGUIText.fontScale = uVar5;
-          if (lVar8 != null) goto LAB_1810fb008;
-        LAB_1810fae25:
-          NGUIText.dynamicFont = uVar7;
-          plVar10 = pNGUIText;
+          *(uint32 *)(pStatics + 28) = uVar5;
+          if (lVar8 != null) goto LAB_181193d58;
+        LAB_181193b75:
+          puVar9 = (uint64 *)(pStatics + 8);
+          *puVar9 = uVar7;
+          il2cpp_internal(puVar9,uVar7);
+          plVar10 = pStatics;
           *plVar10 = 0;
           lVar8 = 0;
         }
         il2cpp_internal(plVar10,lVar8);
         if ((!cVar3) || (cVar3 = UILabel.get_keepCrisp(this,0), !cVar3)) {
-          NGUIText.pixelDensity = 0x3f800000;
+          *(uint32 *)(pStatics + 32) = 0x3f800000;
         }
         else {
           lVar8 = UIRect.get_root(this,0);
@@ -3355,50 +3520,49 @@ public class UILabel
             }
             else {
               if (lVar8 == null) {
-        LAB_1810fb33c:
+        LAB_18119408c:
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
               uVar5 = UIRoot.get_pixelSizeAdjustment(lVar8,0);
             }
-            NGUIText.pixelDensity = uVar5;
+            *(uint32 *)(pStatics + 32) = uVar5;
           }
         }
         fVar12 = this.mDensity;
-        if (fVar12 != NGUIText.pixelDensity) {
+        if (fVar12 != *(float *)(pStatics + 32)) {
           UILabel.ProcessText(this,0,0,0);
           uVar5 = *(uint32 *)(this + 164);
-          NGUIText.rectWidth = uVar5;
-          NGUIText.rectHeight =
-               *(uint32 *)(this + 168);
+          *(uint32 *)(pStatics + 60) = uVar5;
+          *(uint32 *)(pStatics + 64) = *(uint32 *)(this + 168);
           uVar5 = Mathf.RoundToInt((*(float *)(this + 0x104) - *(float *)(this + 252)) *
                                     (float)*(int *)(this + 164),0);
-          NGUIText.regionWidth = uVar5;
+          *(uint32 *)(pStatics + 68) = uVar5;
           uVar5 = Mathf.RoundToInt((*(float *)(this + 0x108) - *(float *)(this + 0x100)) *
                                     (float)*(int *)(this + 168),0);
-          NGUIText.regionHeight = uVar5;
+          *(uint32 *)(pStatics + 72) = uVar5;
         }
         iVar1 = this.mAlignment;
         if (iVar1 == 0) {
           iVar1 = *(int *)(this + 160);
           if (((iVar1 == 3) || (iVar1 == 0)) || (iVar1 == 6)) {
-            NGUIText.alignment = 1;
+            *(uint32 *)(pStatics + 40) = 1;
           }
           else if (((iVar1 == 5) || (iVar1 == 2)) || (iVar1 == 8)) {
-            NGUIText.alignment = 3;
+            *(uint32 *)(pStatics + 40) = 3;
           }
           else {
-            NGUIText.alignment = 2;
+            *(uint32 *)(pStatics + 40) = 2;
           }
         }
         else {
-          NGUIText.alignment = iVar1;
+          *(int *)(pStatics + 40) = iVar1;
         }
         NGUIText.Update(0);
     }
 
-    // Token : 0x6000868
-    // RVA   : 0x10F8590   Offset: 0x10F6D90   Length: 0x87
+    // Token : 0x6000880
+    // RVA   : 0x11912E0   Offset: 0x11906E0   Length: 0x87
     private void OnApplicationPause(bool paused)
     {
         long lVar1;
@@ -3412,8 +3576,8 @@ public class UILabel
         }
     }
 
-    // Token : 0x6000869
-    // RVA   : 0x10FB880   Offset: 0x10FA080   Length: 0x143
+    // Token : 0x6000881
+    // RVA   : 0x11945D0   Offset: 0x11939D0   Length: 0x143
     public void /*ctor*/()
     {
         uint uVar1;
@@ -3445,7 +3609,7 @@ public class UILabel
         uStackX_c = (uint32)((uint64)uVar6 >> 32);
         this.mEffectDistance = local_res8;
         *(uint32 *)(this + 0x1d8) = uStackX_c;
-        puVar5 = (uint32 *)FUN_181098a50(local_18,0);
+        puVar5 = (uint32 *)FUN_1810d3570(local_18,0);
         uVar1 = puVar5[1];
         uVar2 = puVar5[2];
         uVar3 = puVar5[3];
@@ -3472,25 +3636,32 @@ public class UILabel
         UIWidget.ctor(this,0);
     }
 
-    // Token : 0x600086A
-    // RVA   : 0x10FB6F0   Offset: 0x10F9EF0   Length: 0x181
+    // Token : 0x6000882
+    // RVA   : 0x1194440   Offset: 0x1193840   Length: 0x181
     private static void /*cctor*/()
     {
+        var pStatics = *(int64*)(DAT_181dafd78 + 184);
         ulong uVar1;
-        uVar1 = new BetterList_1(DAT_181d81a18);
-        puVar2 = *(uint64 **)(UILabel_StaticsPtr + 184);
+        uVar1 = new BetterList_1(DAT_181da6db8);
+        puVar2 = *(uint64 **)(DAT_181dafd78 + 184);
         *puVar2 = uVar1;
         il2cpp_internal(puVar2,uVar1);
-        uVar1 = il2cpp_internal(DAT_181d5b848);
-        FUN_1808ae540(uVar1,DAT_181d8feb0);
-        UILabel.mFontUsage = uVar1;
-        UILabel.mTexRebuildAdded = 0;
-        uVar1 = il2cpp_internal(DAT_181d73eb0);
-        FUN_180f58a90(uVar1,DAT_181d841f8);
-        UILabel.mTempVerts = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d6f030);
-        FUN_180f58a90(uVar1,DAT_181d678f8);
-        UILabel.mTempIndices = uVar1;
+        uVar1 = il2cpp_internal(DAT_181d80168);
+        FUN_1808b1370(uVar1,DAT_181db5498);
+        puVar2 = (uint64 *)(pStatics + 8);
+        *puVar2 = uVar1;
+        il2cpp_internal(puVar2,uVar1);
+        *(uint8 *)(pStatics + 24) = 0;
+        uVar1 = il2cpp_internal(DAT_181d98bd0);
+        FUN_18132faf0(uVar1,DAT_181dabb98);
+        puVar2 = (uint64 *)(pStatics + 32);
+        *puVar2 = uVar1;
+        il2cpp_internal(puVar2,uVar1);
+        uVar1 = il2cpp_internal(DAT_181d93cd0);
+        FUN_18132faf0(uVar1,DAT_181d8f098);
+        puVar2 = (uint64 *)(pStatics + 40);
+        *puVar2 = uVar1;
+        il2cpp_internal(puVar2,uVar1);
     }
 
 }

@@ -1,27 +1,27 @@
 // ============================================================
 // Type  : BattleMapType
-// Token : 0x2000158
+// Token : 0x200015C
 // ============================================================
 
 public class BattleMapType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400089D
+    // Token: 0x40008C4
     public int value__;
 
-    // Token: 0x400089E
+    // Token: 0x40008C5
     public const BattleMapType Wild;
 
-    // Token: 0x400089F
+    // Token: 0x40008C6
     public const BattleMapType City;
 
-    // Token: 0x40008A0
+    // Token: 0x40008C7
     public const BattleMapType Indoor;
 
-    // Token: 0x40008A1
+    // Token: 0x40008C8
     public const BattleMapType Arena;
 
-    // Token: 0x40008A2
+    // Token: 0x40008C9
     public const BattleMapType AttackArea;
 
 }

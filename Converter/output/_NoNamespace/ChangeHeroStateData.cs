@@ -1,59 +1,59 @@
 // ============================================================
 // Type  : ChangeHeroStateData
-// Token : 0x2000233
+// Token : 0x2000239
 // ============================================================
 
 public class ChangeHeroStateData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400112B
+    // Token: 0x40011CE
     public float hp;
 
-    // Token: 0x400112C
+    // Token: 0x40011CF
     public float maxhp;
 
-    // Token: 0x400112D
+    // Token: 0x40011D0
     public float mana;
 
-    // Token: 0x400112E
+    // Token: 0x40011D1
     public float maxMana;
 
-    // Token: 0x400112F
+    // Token: 0x40011D2
     public float power;
 
-    // Token: 0x4001130
+    // Token: 0x40011D3
     public float maxPower;
 
-    // Token: 0x4001131
+    // Token: 0x40011D4
     public float externalInjury;
 
-    // Token: 0x4001132
+    // Token: 0x40011D5
     public float internalInjury;
 
-    // Token: 0x4001133
+    // Token: 0x40011D6
     public float poisonInjury;
 
-    // Token: 0x4001134
+    // Token: 0x40011D7
     public List<int> changeAttri;
 
-    // Token: 0x4001135
+    // Token: 0x40011D8
     public float charm;
 
-    // Token: 0x4001136
+    // Token: 0x40011D9
     public HeroSpeAddData buffData;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600127C
-    // RVA   : 0x9F0D60   Offset: 0x9EF560   Length: 0xC3
+    // Token : 0x60012BD
+    // RVA   : 0x993460   Offset: 0x992860   Length: 0xC3
     public static ChangeHeroStateData op_Multiply(ChangeHeroStateData a, float b)
     {
         if (a != null) {
           plVar1 = (int64 *)ChangeHeroStateData.Clone(a,0);
           if (plVar1 != (int64 *)0) {
-            if ((*(byte *)(DAT_181d91a68 + 300) <= *(byte *)(*plVar1 + 300)) &&
+            if ((*(byte *)(DAT_181db6c10 + 300) <= *(byte *)(*plVar1 + 300)) &&
                (*(int64 *)
-                 (*(int64 *)(*plVar1 + 200) + -8 + (uint64)*(byte *)(DAT_181d91a68 + 300) * 8) ==
-                DAT_181d91a68)) {
+                 (*(int64 *)(*plVar1 + 200) + -8 + (uint64)*(byte *)(DAT_181db6c10 + 300) * 8) ==
+                DAT_181db6c10)) {
               *(float *)(plVar1 + 2) = *(float *)(plVar1 + 2) * b;
               *(float *)((int64)plVar1 + 20) = *(float *)((int64)plVar1 + 20) * b;
               *(float *)(plVar1 + 3) = *(float *)(plVar1 + 3) * b;
@@ -67,39 +67,39 @@ public class ChangeHeroStateData
               return plVar1;
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar1,DAT_181d91a68);
+            FUN_1800d6070(plVar1,DAT_181db6c10);
           }
         }
     }
 
-    // Token : 0x600127D
-    // RVA   : 0x9F0CB0   Offset: 0x9EF4B0   Length: 0xAA
+    // Token : 0x60012BE
+    // RVA   : 0x9933B0   Offset: 0x9927B0   Length: 0xAA
     public void /*ctor*/()
     {
         ulong uVar1;
         ZhSegment.Initialize(this,0);
-        uVar1 = il2cpp_internal(DAT_181d6f030);
-        FUN_180f58a90(uVar1,DAT_181d678f8);
+        uVar1 = il2cpp_internal(DAT_181d93cd0);
+        FUN_18132faf0(uVar1,DAT_181d8f098);
         this.changeAttri = uVar1;
         this.buffData = new HeroSpeAddData(0);
     }
 
-    // Token : 0x600127E
-    // RVA   : 0x9F0C90   Offset: 0x9EF490   Length: 0xE
+    // Token : 0x60012BF
+    // RVA   : 0x993390   Offset: 0x992790   Length: 0xE
     public float GetMaxChangeMaxHp()
     {
         return this.maxhp * 10.0;
     }
 
-    // Token : 0x600127F
-    // RVA   : 0x9F0CA0   Offset: 0x9EF4A0   Length: 0xE
+    // Token : 0x60012C0
+    // RVA   : 0x9933A0   Offset: 0x9927A0   Length: 0xE
     public float GetMaxChangeMaxMp()
     {
         return this.maxMana * 10.0;
     }
 
-    // Token : 0x6001280
-    // RVA   : 0x9F0860   Offset: 0x9EF060   Length: 0x427
+    // Token : 0x60012C1
+    // RVA   : 0x992F60   Offset: 0x992360   Length: 0x427
     public string GetDescribe()
     {
         bool cVar1;
@@ -112,7 +112,7 @@ public class ChangeHeroStateData
           uVar3 = String.Concat(uVar3,"生命",uVar2,0);
         }
         if (this.maxhp != null.0) {
-          cVar1 = FUN_1816fd990(uVar3,"",0);
+          cVar1 = FUN_18171e540(uVar3,"",0);
           uVar2 = "\n";
           if (cVar1) {
             uVar2 = "";
@@ -121,7 +121,7 @@ public class ChangeHeroStateData
           uVar3 = String.Concat(uVar3,uVar2,"生命上限",uVar4,0);
         }
         if (this.mana != null.0) {
-          cVar1 = FUN_1816fd990(uVar3,"",0);
+          cVar1 = FUN_18171e540(uVar3,"",0);
           uVar2 = "\n";
           if (cVar1) {
             uVar2 = "";
@@ -130,7 +130,7 @@ public class ChangeHeroStateData
           uVar3 = String.Concat(uVar3,uVar2,"内力",uVar4,0);
         }
         if (this.maxMana != null.0) {
-          cVar1 = FUN_1816fd990(uVar3,"",0);
+          cVar1 = FUN_18171e540(uVar3,"",0);
           uVar2 = "\n";
           if (cVar1) {
             uVar2 = "";
@@ -139,7 +139,7 @@ public class ChangeHeroStateData
           uVar3 = String.Concat(uVar3,uVar2,"内力上限",uVar4,0);
         }
         if (this.power != null.0) {
-          cVar1 = FUN_1816fd990(uVar3,"",0);
+          cVar1 = FUN_18171e540(uVar3,"",0);
           uVar2 = "\n";
           if (cVar1) {
             uVar2 = "";
@@ -148,7 +148,7 @@ public class ChangeHeroStateData
           uVar3 = String.Concat(uVar3,uVar2,"体力",uVar4,0);
         }
         if (this.maxPower != null.0) {
-          cVar1 = FUN_1816fd990(uVar3,"",0);
+          cVar1 = FUN_18171e540(uVar3,"",0);
           uVar2 = "\n";
           if (cVar1) {
             uVar2 = "";
@@ -157,7 +157,7 @@ public class ChangeHeroStateData
           uVar3 = String.Concat(uVar3,uVar2,"体力上限",uVar4,0);
         }
         if (this.externalInjury != null.0) {
-          cVar1 = FUN_1816fd990(uVar3,"",0);
+          cVar1 = FUN_18171e540(uVar3,"",0);
           uVar2 = "\n";
           if (cVar1) {
             uVar2 = "";
@@ -166,7 +166,7 @@ public class ChangeHeroStateData
           uVar3 = String.Concat(uVar3,uVar2,"外伤",uVar4,0);
         }
         if (this.internalInjury != null.0) {
-          cVar1 = FUN_1816fd990(uVar3,"",0);
+          cVar1 = FUN_18171e540(uVar3,"",0);
           uVar2 = "\n";
           if (cVar1) {
             uVar2 = "";
@@ -175,7 +175,7 @@ public class ChangeHeroStateData
           uVar3 = String.Concat(uVar3,uVar2,"内伤",uVar4,0);
         }
         if (this.poisonInjury != null.0) {
-          cVar1 = FUN_1816fd990(uVar3,"",0);
+          cVar1 = FUN_18171e540(uVar3,"",0);
           uVar2 = "\n";
           if (cVar1) {
             uVar2 = "";
@@ -186,8 +186,8 @@ public class ChangeHeroStateData
         return uVar3;
     }
 
-    // Token : 0x6001281
-    // RVA   : 0x9F0680   Offset: 0x9EEE80   Length: 0x1DD
+    // Token : 0x60012C2
+    // RVA   : 0x992D80   Offset: 0x992180   Length: 0x1DD
     public virtual object Clone()
     {
         long lVar2;
@@ -201,13 +201,13 @@ public class ChangeHeroStateData
         uint32 uStack_1c;
         uint64 uVar6;
         uVar6 = 0;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar7 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -228,18 +228,18 @@ public class ChangeHeroStateData
         lVar2 = *plVar1;
         if (*(uint16 *)(lVar2 + 0x12a) != 0) {
           do {
-            if (*(int64 *)(*(int64 *)(lVar2 + 176) + uVar6 * 16) == DAT_181d53c70) {
+            if (*(int64 *)(*(int64 *)(lVar2 + 176) + uVar6 * 16) == DAT_181d78da0) {
               puVar4 = (uint64 *)
                        ((int64)*(int *)(*(int64 *)(lVar2 + 176) + 8 + uVar6 * 16) * 16 + 0x138
                        + lVar2);
-              goto LAB_1809f0804;
+              goto LAB_180992f04;
             }
             uVar5 = (short)uVar6 + 1;
             uVar6 = (uint64)uVar5;
           } while (uVar5 < *(uint16 *)(lVar2 + 0x12a));
         }
-        puVar4 = (uint64 *)FUN_1800914f0(plVar1,DAT_181d53c70,0);
-        LAB_1809f0804:
+        puVar4 = (uint64 *)FUN_1800914f0(plVar1,DAT_181d78da0,0);
+        LAB_180992f04:
         (*(code *)*puVar4)(plVar1,puVar4[1]);
         return uVar3;
     }

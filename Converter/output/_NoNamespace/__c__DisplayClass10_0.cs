@@ -1,24 +1,24 @@
 // ============================================================
 // Type  : <>c__DisplayClass10_0
-// Token : 0x200045A
+// Token : 0x2000461
 // ============================================================
 
 public class <>c__DisplayClass10_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400200A
+    // Token: 0x4002114
     public Outline target;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002660
-    // RVA   : 0x210B70   Offset: 0x20F370   Length: 0x7
+    // Token : 0x60026E3
+    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);
     }
 
-    // Token : 0x6002661
-    // RVA   : 0x8D4B90   Offset: 0x8D3390   Length: 0x21
+    // Token : 0x60026E4
+    // RVA   : 0x937140   Offset: 0x936540   Length: 0x21
     internal Color <DOColor>b__0()
     {
         long lVar1;
@@ -32,8 +32,8 @@ public class <>c__DisplayClass10_0
         }
     }
 
-    // Token : 0x6002662
-    // RVA   : 0x8D4BC0   Offset: 0x8D33C0   Length: 0x2C
+    // Token : 0x60026E5
+    // RVA   : 0x937170   Offset: 0x936570   Length: 0x2C
     internal void <DOColor>b__1(Color x)
     {
         uint local_18;

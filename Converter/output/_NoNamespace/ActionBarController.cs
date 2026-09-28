@@ -1,51 +1,51 @@
 // ============================================================
 // Type  : ActionBarController
-// Token : 0x2000138
+// Token : 0x200013C
 // ============================================================
 
 public class ActionBarController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000794
+    // Token: 0x40007B3
     public GameObject actionBarUnitRoot;
 
-    // Token: 0x4000795
+    // Token: 0x40007B4
     public GameObject actionBarUnitPrefab;
 
-    // Token: 0x4000796
+    // Token: 0x40007B5
     public List<GameObject> actionBarUnits;
 
-    // Token: 0x4000797
+    // Token: 0x40007B6
     private static ActionBarController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000A02
-    // RVA   : 0xA0A6C0   Offset: 0xA08EC0   Length: 0x36
+    // Token : 0x6000A24
+    // RVA   : 0xA1BF90   Offset: 0xA1B390   Length: 0x36
     public static ActionBarController get_Instance()
     {
-        return **(uint64 **)(DAT_181d85740 + 184);
+        return **(uint64 **)(DAT_181daa860 + 184);
     }
 
-    // Token : 0x6000A03
-    // RVA   : 0xA09F90   Offset: 0xA08790   Length: 0xD7
+    // Token : 0x6000A25
+    // RVA   : 0xA1B830   Offset: 0xA1AC30   Length: 0xD7
     private void Awake()
     {
         bool cVar2;
         ulong uVar3;
-        uVar3 = **(uint64 **)(DAT_181d85740 + 184);
+        uVar3 = **(uint64 **)(DAT_181daa860 + 184);
         cVar2 = Object.op_Equality(uVar3,0,0);
         if (!cVar2) {
           uVar3 = Component.get_gameObject(this,0);
           Object.Destroy(uVar3,0);
           return;
         }
-        puVar1 = *(uint64 **)(DAT_181d85740 + 184);
+        puVar1 = *(uint64 **)(DAT_181daa860 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
-    // Token : 0x6000A04
-    // RVA   : 0xA0A460   Offset: 0xA08C60   Length: 0x25F
+    // Token : 0x6000A26
+    // RVA   : 0xA1BD30   Offset: 0xA1B130   Length: 0x25F
     public void SortActionBarUnit()
     {
         ulong uVar1;
@@ -75,14 +75,14 @@ public class ActionBarController
             if ((((this.actionBarUnitRoot == null) ||
                  (lVar6 = GameObject.get_transform(this.actionBarUnitRoot,0)) == null) ||
                 (lVar6 = Transform.GetChild(lVar6,iVar7,0)) == null) ||
-               (lVar6 = Component.GetComponent(lVar6,DAT_181d6a840)) == null) break;
+               (lVar6 = Component.GetComponent(lVar6,DAT_181d93068)) == null) break;
             uVar2 = *(uint64 *)(lVar6 + 24);
             cVar3 = Object.op_Equality(uVar1,uVar2);
             if (!cVar3) {
               if (((this.actionBarUnitRoot == null) ||
                   (lVar6 = GameObject.get_transform(this.actionBarUnitRoot,0)) == null) ||
                  ((lVar6 = Transform.GetChild(lVar6,iVar7,0), lVar6 == null ||
-                  ((lVar6 = Component.GetComponent(lVar6,DAT_181d6a840), lVar6 == null ||
+                  ((lVar6 = Component.GetComponent(lVar6,DAT_181d93068), lVar6 == null ||
                    (*(int64 *)(lVar6 + 24) == 0)))))) break;
               Single.ToString(*(int64 *)(lVar6 + 24) + 180,"000.000");
             }
@@ -99,8 +99,8 @@ public class ActionBarController
         }
     }
 
-    // Token : 0x6000A05
-    // RVA   : 0xA0A070   Offset: 0xA08870   Length: 0x56
+    // Token : 0x6000A27
+    // RVA   : 0xA1B910   Offset: 0xA1AD10   Length: 0x56
     public void ClearActionBar()
     {
         ulong uVar1;
@@ -108,8 +108,8 @@ public class ActionBarController
         GlobalData.DestroyAll(uVar1,0);
     }
 
-    // Token : 0x6000A06
-    // RVA   : 0xA0A0D0   Offset: 0xA088D0   Length: 0x388
+    // Token : 0x6000A28
+    // RVA   : 0xA1B970   Offset: 0xA1AD70   Length: 0x3B9
     public void GenerateActionBar(BattleUnit targetBattleUnit)
     {
         uint uVar1;
@@ -125,7 +125,7 @@ public class ActionBarController
         uVar4 = this.actionBarUnitPrefab;
         uVar2 = GlobalData.AddChild(uVar2,uVar4,0);
         if (lVar3 != null) {
-          FUN_181827900(lVar3,uVar2,DAT_181d61bf8);
+          FUN_18181e0a0(lVar3,uVar2,DAT_181d89398);
           lVar3 = this.actionBarUnits;
           if (lVar3 != null) {
             uVar1 = lVar3.Count;
@@ -134,7 +134,7 @@ public class ActionBarController
             }
             lVar3 = *(int64 *)(lVar3._items + 24 + (int64)(int)uVar1 * 8);
             if (lVar3 != null) {
-              lVar3 = GameObject.GetComponent(lVar3,DAT_181d9e1a0);
+              lVar3 = GameObject.GetComponent(lVar3,DAT_181dc6f40);
               if (lVar3 != null) {
                 lVar3.Count = targetBattleUnit;
                 lVar3 = this.actionBarUnits;
@@ -153,7 +153,7 @@ public class ActionBarController
                         if (lVar3 != null) {
                           lVar3 = Transform.Find(lVar3,"Text",0);
                           if (lVar3 != null) {
-                            uVar2 = Component.GetComponent(lVar3,DAT_181d6d8c0);
+                            uVar2 = Component.GetComponent(lVar3,DAT_181d96160);
                             if ((targetBattleUnit != null) && (*(int64 *)(targetBattleUnit + 64) != 0)) {
                               uVar4 = HeroData.HeroName(*(int64 *)(targetBattleUnit + 64),1,0);
                               LTLocalization.SetText(uVar2,uVar4,0);
@@ -195,7 +195,7 @@ public class ActionBarController
                                                      (lVar3._items + 24 +
                                                      (int64)(int)uVar1 * 8);
                                             if (lVar3 != null) {
-                                              uVar2 = GameObject.GetComponent(lVar3,DAT_181d9e1a0);
+                                              uVar2 = GameObject.GetComponent(lVar3,DAT_181dc6f40);
                                               *(uint64 *)(targetBattleUnit + 160) = uVar2;
                                               lVar3 = this.actionBarUnits;
                                               if (lVar3 != null) {
@@ -207,7 +207,7 @@ public class ActionBarController
                                                          (lVar3._items + 24 +
                                                          (int64)(int)uVar1 * 8);
                                                 if (lVar3 != null) {
-                                                  lVar3 = GameObject.GetComponent(lVar3,DAT_181d9e1a0);
+                                                  lVar3 = GameObject.GetComponent(lVar3,DAT_181dc6f40);
                                                   if (lVar3 != null) {
                                                     ActionBarUnit.RefreshActionBarUnit(lVar3,0,0);
                                                     return;
@@ -235,8 +235,8 @@ public class ActionBarController
         }
     }
 
-    // Token : 0x6000A07
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x6000A29
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

@@ -1,36 +1,38 @@
 // ============================================================
 // Type  : ForceInteractionTimeData
-// Token : 0x2000215
+// Token : 0x200021B
 // ============================================================
 
 public class ForceInteractionTimeData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000EDB
+    // Token: 0x4000F71
     public int addFavorTime;
 
-    // Token: 0x4000EDC
+    // Token: 0x4000F72
     public int reduceFavorTime;
 
-    // Token: 0x4000EDD
+    // Token: 0x4000F73
     public int stealResourceTime;
 
-    // Token: 0x4000EDE
+    // Token: 0x4000F74
     public int giveGiftTime;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001041
-    // RVA   : 0x77E7F0   Offset: 0x77CFF0   Length: 0x1D
+    // Token : 0x600107D
+    // RVA   : 0x77B100   Offset: 0x77A500   Length: 0x1D
     public void ResetTime()
     {
+        void FUN_18077b100(int64 this)
+        {
         this.addFavorTime = 1;
         this.reduceFavorTime = 1;
         this.stealResourceTime = 1;
         this.giveGiftTime = 1;
     }
 
-    // Token : 0x6001042
-    // RVA   : 0x77E810   Offset: 0x77D010   Length: 0x32
+    // Token : 0x600107E
+    // RVA   : 0x77B120   Offset: 0x77A520   Length: 0x32
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);
@@ -40,8 +42,8 @@ public class ForceInteractionTimeData
         this.giveGiftTime = 1;
     }
 
-    // Token : 0x6001043
-    // RVA   : 0x77E670   Offset: 0x77CE70   Length: 0x175
+    // Token : 0x600107F
+    // RVA   : 0x77AF80   Offset: 0x77A380   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -52,13 +54,13 @@ public class ForceInteractionTimeData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -70,7 +72,7 @@ public class ForceInteractionTimeData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d53c70,plVar1);
+            FUN_180002970(0,DAT_181d78da0,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

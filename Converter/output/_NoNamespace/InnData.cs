@@ -1,41 +1,41 @@
 // ============================================================
 // Type  : InnData
-// Token : 0x20001F2
+// Token : 0x20001F8
 // ============================================================
 
 public class InnData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000D76
+    // Token: 0x4000E04
     public int id;
 
-    // Token: 0x4000D77
+    // Token: 0x4000E05
     public string innName;
 
-    // Token: 0x4000D78
+    // Token: 0x4000E06
     public string describe;
 
-    // Token: 0x4000D79
+    // Token: 0x4000E07
     public ItemListData shopItemList;
 
-    // Token: 0x4000D7A
+    // Token: 0x4000E08
     public BigMapPos bigMapPos;
 
-    // Token: 0x4000D7B
+    // Token: 0x4000E09
     public List<int> nearAreaID;
 
-    // Token: 0x4000D7C
+    // Token: 0x4000E0A
     public bool haveSpeEvent;
 
-    // Token: 0x4000D7D
+    // Token: 0x4000E0B
     public int plotNumCount;
 
-    // Token: 0x4000D7E
+    // Token: 0x4000E0C
     public int missionNumCount;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000F72
-    // RVA   : 0xB6FEA0   Offset: 0xB6E6A0   Length: 0xFF
+    // Token : 0x6000FA9
+    // RVA   : 0xC99CD0   Offset: 0xC990D0   Length: 0xFF
     public void /*ctor*/(int _id, string _innName)
     {
         ulong uVar1;
@@ -44,13 +44,13 @@ public class InnData
         this.id = _id;
         this.shopItemList = new ItemListData(0);
         this.bigMapPos = new c.DisplayClass9_0(0);
-        uVar1 = il2cpp_internal(DAT_181d6f030);
-        FUN_180f58a90(uVar1,DAT_181d678f8);
+        uVar1 = il2cpp_internal(DAT_181d93cd0);
+        FUN_18132faf0(uVar1,DAT_181d8f098);
         this.nearAreaID = uVar1;
     }
 
-    // Token : 0x6000F73
-    // RVA   : 0xB6FD20   Offset: 0xB6E520   Length: 0x175
+    // Token : 0x6000FAA
+    // RVA   : 0xC99B50   Offset: 0xC98F50   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -61,13 +61,13 @@ public class InnData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -79,7 +79,7 @@ public class InnData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d53c70,plVar1);
+            FUN_180002970(0,DAT_181d78da0,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

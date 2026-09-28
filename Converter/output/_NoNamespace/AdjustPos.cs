@@ -1,29 +1,29 @@
 // ============================================================
 // Type  : AdjustPos
-// Token : 0x200013A
+// Token : 0x200013E
 // ============================================================
 
 public class AdjustPos
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000799
+    // Token: 0x40007B8
     public bool stopped;
 
-    // Token: 0x400079A
+    // Token: 0x40007B9
     public Vector3 speed;
 
-    // Token: 0x400079B
+    // Token: 0x40007BA
     public GameObject followTarget;
 
-    // Token: 0x400079C
+    // Token: 0x40007BB
     public float delay;
 
-    // Token: 0x400079D
+    // Token: 0x40007BC
     private Vector3 xOffset;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000A0B
-    // RVA   : 0xA0C8F0   Offset: 0xA0B0F0   Length: 0x40C
+    // Token : 0x6000A2D
+    // RVA   : 0xA1E1C0   Offset: 0xA1D5C0   Length: 0x40C
     private void Update()
     {
         ulong uVar1;
@@ -56,13 +56,13 @@ public class AdjustPos
           cVar3 = Vector3.op_Equality(&local_78,&local_68,0);
           if (cVar3) {
             lVar5 = Component.get_transform(this,0);
-            if (lVar5 == null) goto LAB_180a0ccf7;
+            if (lVar5 == null) goto LAB_180a1e5c7;
             puVar4 = (uint64 *)Transform.get_position(local_48,lVar5,0);
             local_78 = *puVar4;
             local_70 = *(float *)(puVar4 + 1);
             if ((this.followTarget == null) ||
                (lVar5 = GameObject.get_transform(this.followTarget,0)) == null)
-            goto LAB_180a0ccf7;
+            goto LAB_180a1e5c7;
             puVar4 = (uint64 *)Transform.get_position(local_48,lVar5,0);
             local_68 = *puVar4;
             local_60 = *(float *)(puVar4 + 1);
@@ -129,7 +129,7 @@ public class AdjustPos
                 }
               }
             }
-        LAB_180a0ccf7:
+        LAB_180a1e5c7:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -138,8 +138,8 @@ public class AdjustPos
         }
     }
 
-    // Token : 0x6000A0C
-    // RVA   : 0xA0CD00   Offset: 0xA0B500   Length: 0x70
+    // Token : 0x6000A2E
+    // RVA   : 0xA1E5D0   Offset: 0xA1D9D0   Length: 0x70
     public void /*ctor*/()
     {
         float fVar1;

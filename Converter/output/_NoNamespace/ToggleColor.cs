@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : ToggleColor
-// Token : 0x200039A
+// Token : 0x20003A1
 // ============================================================
 
 public class ToggleColor
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001C80
+    // Token: 0x4001D85
     public List<ToggleTargetColor> toggleTargetColors;
 
-    // Token: 0x4001C81
+    // Token: 0x4001D86
     public List<ToggleTargetScale> toggleTargetScales;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600227B
-    // RVA   : 0xAC5EE0   Offset: 0xAC46E0   Length: 0x4BB
+    // Token : 0x60022FD
+    // RVA   : 0xAA5560   Offset: 0xAA4960   Length: 0x4BB
     public void OnToggle(bool isOn)
     {
         bool cVar1;
@@ -46,18 +46,18 @@ public class ToggleColor
             cVar1 = Object.op_Inequality(uVar3,0,0);
             if (cVar1) {
               if (((this.toggleTargetColors == null) ||
-                  (lVar2 = FUN_180002f80(this.toggleTargetColors,uVar5,DAT_181d7fff8)) == null)
+                  (lVar2 = FUN_180002f80(this.toggleTargetColors,uVar5,DAT_181da7998)) == null)
                  || (lVar2._items == null)) throw; // [null/range check failed]
-              uVar3 = GameObject.GetComponent(lVar2._items,DAT_181d9fe50);
+              uVar3 = GameObject.GetComponent(lVar2._items,DAT_181d71e80);
               cVar1 = Object.op_Inequality(uVar3,0,0);
               if (cVar1) {
                 if (((this.toggleTargetColors == null) ||
-                    (lVar2 = FUN_180002f80(this.toggleTargetColors,uVar5,DAT_181d7fff8)) == null
+                    (lVar2 = FUN_180002f80(this.toggleTargetColors,uVar5,DAT_181da7998)) == null
                     ) || (lVar2._items == null)) throw; // [null/range check failed]
-                uVar3 = GameObject.GetComponent(lVar2._items,DAT_181d9fe50);
+                uVar3 = GameObject.GetComponent(lVar2._items,DAT_181d71e80);
                 lVar2 = this.toggleTargetColors;
                 if (!isOn) {
-                  if ((lVar2 == null) || (lVar2 = FUN_180002f80(lVar2,uVar5,DAT_181d7fff8)) == null)
+                  if ((lVar2 == null) || (lVar2 = FUN_180002f80(lVar2,uVar5,DAT_181da7998)) == null)
                   throw; // [null/range check failed]
                   local_38 = *(uint32 *)(lVar2 + 40);
                   uStack_34 = *(uint32 *)(lVar2 + 44);
@@ -65,7 +65,7 @@ public class ToggleColor
                   uStack_2c = *(uint32 *)(lVar2 + 52);
                 }
                 else {
-                  if ((lVar2 == null) || (lVar2 = FUN_180002f80(lVar2,uVar5,DAT_181d7fff8)) == null)
+                  if ((lVar2 == null) || (lVar2 = FUN_180002f80(lVar2,uVar5,DAT_181da7998)) == null)
                   throw; // [null/range check failed]
                   local_38 = lVar2.Count;
                   uStack_34 = lVar2._version;
@@ -81,9 +81,9 @@ public class ToggleColor
               cVar1 = Object.op_Inequality(uVar3,0,0);
               if (cVar1) {
                 if (((this.toggleTargetColors == null) ||
-                    (lVar2 = FUN_180002f80(this.toggleTargetColors,uVar5,DAT_181d7fff8)) == null
+                    (lVar2 = FUN_180002f80(this.toggleTargetColors,uVar5,DAT_181da7998)) == null
                     ) || (lVar2._items == null)) throw; // [null/range check failed]
-                uVar3 = GameObject.GetComponent(lVar2._items,DAT_181da1eb0);
+                uVar3 = GameObject.GetComponent(lVar2._items,DAT_181d74108);
                 lVar2 = this.toggleTargetColors;
                 if (!isOn) {
                   if ((lVar2 == null) || (lVar2 = FUN_180002f80(lVar2,uVar5)) == null)
@@ -133,7 +133,7 @@ public class ToggleColor
           cVar1 = Object.op_Inequality(uVar3,0,0);
           if (cVar1) {
             if (((this.toggleTargetScales == null) ||
-                (lVar2 = FUN_180002f80(this.toggleTargetScales,uVar4,DAT_181d800f8)) == null) ||
+                (lVar2 = FUN_180002f80(this.toggleTargetScales,uVar4,DAT_181da7a98)) == null) ||
                (lVar2._items == null)) break;
             uVar3 = GameObject.get_transform(lVar2._items,0);
             if (!isOn) {
@@ -149,8 +149,8 @@ public class ToggleColor
         }
     }
 
-    // Token : 0x600227C
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x60022FE
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

@@ -1,13 +1,13 @@
 // ============================================================
 // Type  : RemoveTouchDelegate
-// Token : 0x20000E1
+// Token : 0x20000E2
 // ============================================================
 
 public class RemoveTouchDelegate
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600073A
-    // RVA   : 0x210320   Offset: 0x20EB20   Length: 0x6A
+    // Token : 0x6000752
+    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
@@ -25,8 +25,8 @@ public class RemoveTouchDelegate
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x600073B
-    // RVA   : 0xB09CD0   Offset: 0xB084D0   Length: 0x1AE
+    // Token : 0x6000753
+    // RVA   : 0x8E8200   Offset: 0x8E7600   Length: 0x1AE
     public virtual void Invoke(int id)
     {
         long lVar1;
@@ -61,7 +61,7 @@ public class RemoveTouchDelegate
           if (!cVar4) {
             if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                 ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-            goto LAB_180b09e42;
+            goto LAB_1808e8372;
             cVar4 = il2cpp_internal(lVar1);
             if (!cVar4) {
               cVar4 = FUN_1800d65c0(lVar1);
@@ -95,7 +95,7 @@ public class RemoveTouchDelegate
             (*pcVar2)(id,lVar1);
           }
           else {
-        LAB_180b09e42:
+        LAB_1808e8372:
             (*pcVar2)(plVar3,id,lVar1);
           }
           uVar7 = uVar7 + 1;
@@ -105,8 +105,8 @@ public class RemoveTouchDelegate
         } while( true );
     }
 
-    // Token : 0x600073C
-    // RVA   : 0xB09C50   Offset: 0xB08450   Length: 0x7A
+    // Token : 0x6000754
+    // RVA   : 0x8E8180   Offset: 0x8E7580   Length: 0x7A
     public virtual IAsyncResult BeginInvoke(int id, AsyncCallback callback, object object)
     {
         void RemoveTouchDelegate.BeginInvoke
@@ -117,12 +117,12 @@ public class RemoveTouchDelegate
         uint64 local_10;
         local_res10[0] = id;
         local_10 = 0;
-        local_18 = il2cpp_value_box(DAT_181d5b2f8,local_res10);
+        local_18 = il2cpp_value_box(DAT_181d80418,local_res10);
         il2cpp_internal(this,&local_18,callback,object);
     }
 
-    // Token : 0x600073D
-    // RVA   : 0x210040   Offset: 0x20E840   Length: 0xA
+    // Token : 0x6000755
+    // RVA   : 0x210040   Offset: 0x20F440   Length: 0xA
     public virtual void EndInvoke(IAsyncResult result)
     {
         il2cpp_internal(result,0);

@@ -1,48 +1,48 @@
 // ============================================================
 // Type  : BattleAiMenuController
-// Token : 0x200018A
+// Token : 0x2000190
 // ============================================================
 
 public class BattleAiMenuController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000A57
+    // Token: 0x4000ADD
     public GameObject battleAiMenuPanel;
 
-    // Token: 0x4000A58
+    // Token: 0x4000ADE
     public GameObject battleAiGrid;
 
-    // Token: 0x4000A59
+    // Token: 0x4000ADF
     public GameObject battleAiSettingPrefab;
 
-    // Token: 0x4000A5A
+    // Token: 0x4000AE0
     private static BattleAiMenuController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000C99
-    // RVA   : 0x7FAA00   Offset: 0x7F9200   Length: 0x36
+    // Token : 0x6000CC8
+    // RVA   : 0x7F8E40   Offset: 0x7F8240   Length: 0x36
     public static BattleAiMenuController get_Instance()
     {
-        return **(uint64 **)(DAT_181d8b0a8 + 184);
+        return **(uint64 **)(DAT_181db01c8 + 184);
     }
 
-    // Token : 0x6000C9A
-    // RVA   : 0x7FA340   Offset: 0x7F8B40   Length: 0x99
+    // Token : 0x6000CC9
+    // RVA   : 0x7F8780   Offset: 0x7F7B80   Length: 0x99
     private void Awake()
     {
         ulong uVar1;
         bool cVar3;
-        uVar1 = **(uint64 **)(DAT_181d8b0a8 + 184);
+        uVar1 = **(uint64 **)(DAT_181db01c8 + 184);
         cVar3 = Object.op_Equality(uVar1,0,0);
         if (cVar3) {
-          puVar2 = *(uint64 **)(DAT_181d8b0a8 + 184);
+          puVar2 = *(uint64 **)(DAT_181db01c8 + 184);
           *puVar2 = this;
           il2cpp_internal(puVar2,this);
         }
     }
 
-    // Token : 0x6000C9B
-    // RVA   : 0x7FA3E0   Offset: 0x7F8BE0   Length: 0x475
+    // Token : 0x6000CCA
+    // RVA   : 0x7F8820   Offset: 0x7F7C20   Length: 0x475
     public void ShowBattleAiMenu()
     {
         ulong uVar1;
@@ -64,8 +64,8 @@ public class BattleAiMenuController
             if (lVar4 != null) {
               lVar4 = Transform.Find(lVar4,"BlackBackground",0);
               if (lVar4 != null) {
-                plVar5 = (int64 *)Component.GetComponent(lVar4,DAT_181d6bc40);
-                puVar6 = (uint32 *)FUN_180d904c0(&local_28,0);
+                plVar5 = (int64 *)Component.GetComponent(lVar4,DAT_181d94460);
+                puVar6 = (uint32 *)FUN_180d98fe0(&local_28,0);
                 if (plVar5 != (int64 *)0) {
                   local_28 = *puVar6;
                   uStack_24 = puVar6[1];
@@ -77,7 +77,7 @@ public class BattleAiMenuController
                     if (lVar4 != null) {
                       lVar4 = Transform.Find(lVar4,"BlackBackground",0);
                       if (lVar4 != null) {
-                        uVar7 = Component.GetComponent(lVar4,DAT_181d6bc40);
+                        uVar7 = Component.GetComponent(lVar4,DAT_181d94460);
                         DOTweenModuleUI.DOFade(uVar7,0x3f400000,0x3e4ccccd,0);
                         if (this.battleAiMenuPanel != null) {
                           lVar4 = GameObject.get_transform(this.battleAiMenuPanel,0);
@@ -93,8 +93,7 @@ public class BattleAiMenuController
                                 if (lVar4 != null) {
                                   uVar7 = Transform.Find(lVar4,"BattleAIMenuRoot",0);
                                   ShortcutExtensions.DOScaleX(uVar7,0x3f800000,0x3e4ccccd,0);
-                                  lVar4 = *(int64 *)
-                                           (*(int64 *)(PlotController_StaticsPtr + 184) + 80);
+                                  lVar4 = *(int64 *)(*(int64 *)(DAT_181db0248 + 184) + 80);
                                   if (lVar4 != null) {
                                     lVar10 = *(int64 *)(lVar4 + 112);
                                     uVar3 = BattleController.GetPlayerControlTeamID(lVar4,0);
@@ -124,7 +123,7 @@ public class BattleAiMenuController
                                             lVar8 = GlobalData.AddChild(uVar7,uVar1,0);
                                             if (*(int64 *)(lVar4 + 24) == 0) break;
                                             lVar9 = FUN_180002f80(*(int64 *)(lVar4 + 24),uVar3,
-                                                                  DAT_181d584a0);
+                                                                  DAT_181d7fc20);
                                             if (((lVar9 == null) || (*(int64 *)(lVar9 + 64) == 0)) ||
                                                (lVar8 == null)) break;
                                             if (*(int *)(*(int64 *)(lVar9 + 64) + 88) == 0) {
@@ -132,7 +131,7 @@ public class BattleAiMenuController
                                               if (lVar9 == null) break;
                                               Transform.SetAsFirstSibling(lVar9,0);
                                             }
-                                            lVar9 = GameObject.GetComponent(lVar8,DAT_181d9e5e0);
+                                            lVar9 = GameObject.GetComponent(lVar8,DAT_181dc7380);
                                             if (*(int64 *)(lVar4 + 24) == 0) break;
                                             uVar7 = FUN_180002f80(*(int64 *)(lVar4 + 24),uVar3);
                                             if (lVar9 == null) break;
@@ -162,8 +161,8 @@ public class BattleAiMenuController
         }
     }
 
-    // Token : 0x6000C9C
-    // RVA   : 0x7FA860   Offset: 0x7F9060   Length: 0x192
+    // Token : 0x6000CCB
+    // RVA   : 0x7F8CA0   Offset: 0x7F80A0   Length: 0x192
     public void UnShowBattleAiMenu()
     {
         long lVar1;
@@ -174,15 +173,15 @@ public class BattleAiMenuController
           if (lVar1 != null) {
             lVar1 = Transform.Find(lVar1,"BlackBackground",0);
             if (lVar1 != null) {
-              uVar2 = Component.GetComponent(lVar1,DAT_181d6bc40);
+              uVar2 = Component.GetComponent(lVar1,DAT_181d94460);
               DOTweenModuleUI.DOFade(uVar2,0,0x3e4ccccd,0);
               if (this.battleAiMenuPanel != null) {
                 lVar1 = GameObject.get_transform(this.battleAiMenuPanel,0);
                 if (lVar1 != null) {
                   uVar2 = Transform.Find(lVar1,"BattleAIMenuRoot",0);
                   uVar2 = ShortcutExtensions.DOScaleX(uVar2,0,0x3e4ccccd,0);
-                  uVar3 = new OnTooltipCB(this,DAT_181d60a50,0);
-                  TweenSettingsExtensions.OnComplete(uVar2,uVar3,DAT_181d96ee8);
+                  uVar3 = new OnTooltipCB(this,DAT_181d89270,0);
+                  TweenSettingsExtensions.OnComplete(uVar2,uVar3,DAT_181dc01d0);
                   uVar2 = this.battleAiGrid;
                   GlobalData.DeleteAllChild(uVar2,0);
                   return;
@@ -193,8 +192,8 @@ public class BattleAiMenuController
         }
     }
 
-    // Token : 0x6000C9D
-    // RVA   : 0x7F9F00   Offset: 0x7F8700   Length: 0x21A
+    // Token : 0x6000CCC
+    // RVA   : 0x7F8340   Offset: 0x7F7740   Length: 0x21A
     public void AllAutoButtonClicked()
     {
         int iVar1;
@@ -224,8 +223,8 @@ public class BattleAiMenuController
               uVar3 = Component.get_gameObject(lVar2,0);
               uVar4 = EventSystem.get_current(0);
               uVar5 = new PointerEventData(uVar4,0);
-              uVar4 = FUN_1807e8680(0);
-              ExecuteEvents.Execute(uVar3,uVar5,uVar4,DAT_181d90080);
+              uVar4 = FUN_1807e6470(0);
+              ExecuteEvents.Execute(uVar3,uVar5,uVar4,DAT_181db8e18);
             }
             lVar2 = this.battleAiGrid;
             iVar6 = iVar6 + 1;
@@ -234,8 +233,8 @@ public class BattleAiMenuController
         }
     }
 
-    // Token : 0x6000C9E
-    // RVA   : 0x7FA120   Offset: 0x7F8920   Length: 0x21A
+    // Token : 0x6000CCD
+    // RVA   : 0x7F8560   Offset: 0x7F7960   Length: 0x21A
     public void AllHandButtonClicked()
     {
         int iVar1;
@@ -265,8 +264,8 @@ public class BattleAiMenuController
               uVar3 = Component.get_gameObject(lVar2,0);
               uVar4 = EventSystem.get_current(0);
               uVar5 = new PointerEventData(uVar4,0);
-              uVar4 = FUN_1807e8680(0);
-              ExecuteEvents.Execute(uVar3,uVar5,uVar4,DAT_181d90080);
+              uVar4 = FUN_1807e6470(0);
+              ExecuteEvents.Execute(uVar3,uVar5,uVar4,DAT_181db8e18);
             }
             lVar2 = this.battleAiGrid;
             iVar6 = iVar6 + 1;
@@ -275,15 +274,15 @@ public class BattleAiMenuController
         }
     }
 
-    // Token : 0x6000C9F
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x6000CCE
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);
     }
 
-    // Token : 0x6000CA0
-    // RVA   : 0x790570   Offset: 0x78ED70   Length: 0x20
+    // Token : 0x6000CCF
+    // RVA   : 0x78D070   Offset: 0x78C470   Length: 0x20
     private void <UnShowBattleAiMenu>b__8_0()
     {
         if (this.battleAiMenuPanel != null) {

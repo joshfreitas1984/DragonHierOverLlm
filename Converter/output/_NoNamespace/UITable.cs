@@ -1,53 +1,53 @@
 // ============================================================
 // Type  : UITable
-// Token : 0x200006A
+// Token : 0x200006B
 // ============================================================
 
 public class UITable
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000285
+    // Token: 0x40002A1
     public int columns;
 
-    // Token: 0x4000286
+    // Token: 0x40002A2
     public Direction direction;
 
-    // Token: 0x4000287
+    // Token: 0x40002A3
     public Sorting sorting;
 
-    // Token: 0x4000288
+    // Token: 0x40002A4
     public Pivot pivot;
 
-    // Token: 0x4000289
+    // Token: 0x40002A5
     public Pivot cellAlignment;
 
-    // Token: 0x400028A
+    // Token: 0x40002A6
     public bool hideInactive;
 
-    // Token: 0x400028B
+    // Token: 0x40002A7
     public bool keepWithinPanel;
 
-    // Token: 0x400028C
+    // Token: 0x40002A8
     public Vector2 padding;
 
-    // Token: 0x400028D
+    // Token: 0x40002A9
     public OnReposition onReposition;
 
-    // Token: 0x400028E
+    // Token: 0x40002AA
     public Comparison<Transform> onCustomSort;
 
-    // Token: 0x400028F
+    // Token: 0x40002AB
     protected UIPanel mPanel;
 
-    // Token: 0x4000290
+    // Token: 0x40002AC
     protected bool mInitDone;
 
-    // Token: 0x4000291
+    // Token: 0x40002AD
     protected bool mReposition;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000272
-    // RVA   : 0x16960B0   Offset: 0x16948B0   Length: 0x13
+    // Token : 0x600028A
+    // RVA   : 0x170DEF0   Offset: 0x170D2F0   Length: 0x13
     public void set_repositionNow(bool value)
     {
         if (value) {
@@ -57,8 +57,8 @@ public class UITable
         }
     }
 
-    // Token : 0x6000273
-    // RVA   : 0x1694D90   Offset: 0x1693590   Length: 0x27E
+    // Token : 0x600028B
+    // RVA   : 0x170CBD0   Offset: 0x170BFD0   Length: 0x27E
     public List<Transform> GetChildList()
     {
         bool cVar1;
@@ -69,16 +69,16 @@ public class UITable
         ulong uVar6;
         int iVar7;
         lVar3 = Component.get_transform(this,0);
-        lVar4 = il2cpp_internal(DAT_181d734b0);
-        FUN_180f58a90(lVar4,DAT_181d80278);
+        lVar4 = il2cpp_internal(DAT_181d981d0);
+        FUN_18132faf0(lVar4,DAT_181da7c18);
         iVar7 = 0;
         if (lVar3 == null) throw; // [null/range check failed]
         for (; iVar2 = Transform.get_childCount(lVar3,0), iVar7 < iVar2; iVar7 = iVar7 + 1) {
           lVar5 = Transform.GetChild(lVar3,iVar7,0);
           if (*(char *)((int64)this + 44) == false) {
-        LAB_181694f17:
+        LAB_18170cd57:
             if (lVar4 == null) throw; // [null/range check failed]
-            FUN_181827900(lVar4);
+            FUN_18181e0a0(lVar4);
           }
           else {
             cVar1 = Object.op_Implicit(lVar5);
@@ -86,7 +86,7 @@ public class UITable
               if (lVar5 == null) throw; // [null/range check failed]
               uVar6 = Component.get_gameObject(lVar5);
               cVar1 = NGUITools.GetActive(uVar6);
-              if (cVar1) goto LAB_181694f17;
+              if (cVar1) goto LAB_18170cd57;
             }
           }
         }
@@ -95,21 +95,21 @@ public class UITable
           return lVar4;
         }
         if (iVar7 == 1) {
-          lVar3 = il2cpp_internal(DAT_181d59ac8);
-          uVar6 = DAT_181d9c9e8;
-        LAB_181694fc2:
-          OnTooltipCB.ctor(lVar3,0,uVar6,DAT_181d86498);
+          lVar3 = il2cpp_internal(DAT_181d7e390);
+          uVar6 = DAT_181dc5cd8;
+        LAB_18170ce02:
+          OnTooltipCB.ctor(lVar3,0,uVar6,DAT_181dab838);
         }
         else {
           if (iVar7 == 2) {
-            lVar3 = il2cpp_internal(DAT_181d59ac8);
-            uVar6 = DAT_181d9ca70;
-            goto LAB_181694fc2;
+            lVar3 = il2cpp_internal(DAT_181d7e390);
+            uVar6 = DAT_181dc5d60;
+            goto LAB_18170ce02;
           }
           if (iVar7 == 3) {
-            lVar3 = il2cpp_internal(DAT_181d59ac8);
-            uVar6 = DAT_181d9caf8;
-            goto LAB_181694fc2;
+            lVar3 = il2cpp_internal(DAT_181d7e390);
+            uVar6 = DAT_181dc5de8;
+            goto LAB_18170ce02;
           }
           lVar3 = this[8];
           if (lVar3 == null) {
@@ -118,25 +118,25 @@ public class UITable
           }
         }
         if (lVar4 != null) {
-          List_1.Sort(lVar4,lVar3,DAT_181d805f8);
+          List_1.Sort(lVar4,lVar3,DAT_181da7f98);
           return lVar4;
         }
     }
 
-    // Token : 0x6000274
-    // RVA   : 0x1695F90   Offset: 0x1694790   Length: 0x9A
+    // Token : 0x600028C
+    // RVA   : 0x170DDD0   Offset: 0x170D1D0   Length: 0x9A
     protected virtual void Sort(List<Transform> list)
     {
         ulong uVar1;
-        uVar1 = new OnTooltipCB(0,DAT_181d9c9e8,DAT_181d86498);
+        uVar1 = new OnTooltipCB(0,DAT_181dc5cd8,DAT_181dab838);
         if (list != null) {
-          List_1.Sort(list,uVar1,DAT_181d805f8);
+          List_1.Sort(list,uVar1,DAT_181da7f98);
           return;
         }
     }
 
-    // Token : 0x6000275
-    // RVA   : 0x1696030   Offset: 0x1694830   Length: 0x3E
+    // Token : 0x600028D
+    // RVA   : 0x170DE70   Offset: 0x170D270   Length: 0x3E
     protected virtual void Start()
     {
         (**(code **)(*this + 0x198))(this,*(uint64 *)(*this + 0x1a0));
@@ -144,19 +144,19 @@ public class UITable
         Behaviour.set_enabled(this,0,0);
     }
 
-    // Token : 0x6000276
-    // RVA   : 0x1695010   Offset: 0x1693810   Length: 0x8C
+    // Token : 0x600028E
+    // RVA   : 0x170CE50   Offset: 0x170C250   Length: 0x8C
     protected virtual void Init()
     {
         ulong uVar1;
         this.mInitDone = 1;
         uVar1 = Component.get_gameObject(this,0);
-        uVar1 = NGUITools.FindInParents(uVar1,DAT_181d66900);
+        uVar1 = NGUITools.FindInParents(uVar1,DAT_181d8f620);
         this.mPanel = uVar1;
     }
 
-    // Token : 0x6000277
-    // RVA   : 0x16950A0   Offset: 0x16938A0   Length: 0x31
+    // Token : 0x600028F
+    // RVA   : 0x170CEE0   Offset: 0x170C2E0   Length: 0x31
     protected virtual void LateUpdate()
     {
         if (*(char *)((int64)this + 81) != false) {
@@ -165,8 +165,8 @@ public class UITable
         Behaviour.set_enabled(this,0,0);
     }
 
-    // Token : 0x6000278
-    // RVA   : 0x16950E0   Offset: 0x16938E0   Length: 0x7B
+    // Token : 0x6000290
+    // RVA   : 0x170CF20   Offset: 0x170C320   Length: 0x7B
     private void OnValidate()
     {
         bool cVar1;
@@ -174,7 +174,7 @@ public class UITable
         if (!cVar1) {
           cVar1 = NGUITools.GetActive(this,0);
           if (cVar1) {
-                          // WARNING: Could not recover jumptable at 0x00018169514e. Too many branches
+                          // WARNING: Could not recover jumptable at 0x00018170cf8e. Too many branches
                           // WARNING: Treating indirect jump as call
             (**(code **)(*this + 0x1b8))(this,*(uint64 *)(*this + 0x1c0));
             return;
@@ -182,8 +182,8 @@ public class UITable
         }
     }
 
-    // Token : 0x6000279
-    // RVA   : 0x1695160   Offset: 0x1693960   Length: 0xC64
+    // Token : 0x6000291
+    // RVA   : 0x170CFA0   Offset: 0x170C3A0   Length: 0xC64
     protected void RepositionVariableSize(List<Transform> children)
     {
         float fVar1;
@@ -300,18 +300,18 @@ public class UITable
         uStack_218 = 0;
         if (iVar10 < 1) {
           iVar25 = 1;
-          if (children == null) goto LAB_181695dbf;
+          if (children == null) goto LAB_18170dbff;
           iVar10 = *(int *)(children + 24);
         }
         else {
-          if (children == null) goto LAB_181695dbf;
+          if (children == null) goto LAB_18170dbff;
           iVar25 = *(int *)(children + 24) / iVar10 + 1;
         }
         local_1e8 = (int64)iVar25;
         local_1e0 = (int64)iVar10;
-        lVar11 = FUN_1800d6020(DAT_181d847c0,&local_1e8);
-        lVar12 = FUN_1800d60b0(DAT_181d7bd20,iVar10);
-        lVar13 = FUN_1800d60b0(DAT_181d7bd20,iVar25);
+        lVar11 = FUN_1800d6020(DAT_181da98e0,&local_1e8);
+        lVar12 = FUN_1800d60b0(DAT_181da0bc0,iVar10);
+        lVar13 = FUN_1800d60b0(DAT_181da0bc0,iVar25);
         uVar26 = 0;
         uVar27 = 0;
         if (children == null) {
@@ -341,7 +341,7 @@ public class UITable
             uStack_2e8 = puVar14[2];
             uStack_2e4 = puVar14[3];
             local_2e0 = *(uint64 *)(puVar14 + 4);
-            if (lVar17 == null) goto LAB_181695dbf;
+            if (lVar17 == null) goto LAB_18170dbff;
             plVar15 = (int64 *)Transform.get_localScale(local_1b0,lVar17,0);
             local_2c0 = *(float *)(plVar15 + 1);
             lVar17 = *plVar15;
@@ -364,7 +364,7 @@ public class UITable
                                  (float)local_288 * (float)lVar17);
             local_278 = lVar17;
             Bounds.set_max(&local_2f0,&local_328,0);
-            if (lVar11 == null) goto LAB_181695dbf;
+            if (lVar11 == null) goto LAB_18170dbff;
             if (**(uint32 **)(lVar11 + 16) <= uVar28) {
               uVar21 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -383,7 +383,7 @@ public class UITable
             puVar14[2] = uStack_2e8;
             puVar14[3] = uStack_2e4;
             *(uint64 *)(lVar11 + 48 + lVar17 * 24) = local_2e0;
-            if (lVar12 == null) goto LAB_181695dbf;
+            if (lVar12 == null) goto LAB_18170dbff;
             local_268 = local_2f0;
             uStack_264 = uStack_2ec;
             uStack_260 = uStack_2e8;
@@ -395,7 +395,7 @@ public class UITable
               FUN_1800d65f0(uVar21,0);
             }
             Bounds.Encapsulate(lVar12 + (int64)(int)uVar24 * 24 + 32,&local_268,0);
-            if (lVar13 == null) goto LAB_181695dbf;
+            if (lVar13 == null) goto LAB_18170dbff;
             local_208 = local_2f0;
             uStack_204 = uStack_2ec;
             uStack_200 = uStack_2e8;
@@ -431,7 +431,7 @@ public class UITable
               lVar17 = local_2d8;
             }
             local_2d0 = *(int64 *)(lVar17 + *(int64 *)(children + 16));
-            if (lVar11 == null) goto LAB_181695dbf;
+            if (lVar11 == null) goto LAB_18170dbff;
             lVar17 = (int64)(int)uVar24;
             lVar23 = (int64)(int)uVar26;
             if (**(uint32 **)(lVar11 + 16) <= uVar24) {
@@ -450,7 +450,7 @@ public class UITable
             local_308 = *puVar16;
             uStack_300 = puVar16[1];
             local_2f8 = *(uint64 *)(lVar11 + 48 + lVar19 * 24);
-            if (lVar12 == null) goto LAB_181695dbf;
+            if (lVar12 == null) goto LAB_18170dbff;
             if (*(uint32 *)(lVar12 + 24) <= uVar26) {
               uVar21 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -460,7 +460,7 @@ public class UITable
             local_248 = *puVar16;
             uStack_240 = puVar16[1];
             local_238 = *(uint64 *)(lVar12 + 48 + lVar23 * 24);
-            if (lVar13 == null) goto LAB_181695dbf;
+            if (lVar13 == null) goto LAB_18170dbff;
             if (*(uint32 *)(lVar13 + 24) <= uVar24) {
               uVar21 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -470,7 +470,7 @@ public class UITable
             local_2b8 = *puVar16;
             uStack_2b0 = puVar16[1];
             local_2a8 = *(uint64 *)(lVar13 + 48 + lVar17 * 24);
-            if (local_2d0 == 0) goto LAB_181695dbf;
+            if (local_2d0 == 0) goto LAB_18170dbff;
             puVar16 = (uint64 *)Transform.get_localPosition(local_1d0,local_2d0,0);
             local_318 = *puVar16;
             fVar8 = *(float *)(puVar16 + 1);
@@ -565,14 +565,14 @@ public class UITable
                                       *puVar16);
           lVar11 = Component.get_transform(this,0);
           if (lVar11 == null) {
-        LAB_181695dbf:
+        LAB_18170dbff:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           while (iVar10 = Transform.get_childCount(lVar11,0), (int)uVar27 < iVar10) {
             lVar12 = Transform.GetChild(lVar11,uVar27,0);
-            if (lVar12 == null) goto LAB_181695dbf;
-            lVar13 = Component.GetComponent(lVar12,DAT_181d6d4c0);
+            if (lVar12 == null) goto LAB_18170dbff;
+            lVar13 = Component.GetComponent(lVar12,DAT_181d95d60);
             cVar9 = Object.op_Inequality(lVar13,0);
             if (!cVar9) {
               puVar16 = (uint64 *)Transform.get_localPosition(&local_268,lVar12);
@@ -583,7 +583,7 @@ public class UITable
               uVar27 = uVar27 + 1;
             }
             else {
-              if (lVar13 == null) goto LAB_181695dbf;
+              if (lVar13 == null) goto LAB_18170dbff;
               Behaviour.set_enabled(lVar13,0);
               *(float *)(lVar13 + 24) = *(float *)(lVar13 + 24) - fVar31;
               *(float *)(lVar13 + 28) = *(float *)(lVar13 + 28) - fVar32;
@@ -594,8 +594,8 @@ public class UITable
         }
     }
 
-    // Token : 0x600027A
-    // RVA   : 0x1695DD0   Offset: 0x16945D0   Length: 0x1B8
+    // Token : 0x6000292
+    // RVA   : 0x170DC10   Offset: 0x170D010   Length: 0x1B8
     public virtual void Reposition()
     {
         bool cVar1;
@@ -611,7 +611,7 @@ public class UITable
         *(uint8 *)((int64)this + 81) = 0;
         uVar2 = Component.get_transform(this,0);
         lVar3 = UITable.GetChildList(this,0);
-        if (lVar3 == null) goto LAB_181695f83;
+        if (lVar3 == null) goto LAB_18170ddc3;
         if (0 < *(int *)(lVar3 + 24)) {
           UITable.RepositionVariableSize(this,lVar3,0);
         }
@@ -622,28 +622,28 @@ public class UITable
             if (this[9] != 0) {
               UIPanel.ConstrainTargetToBounds(this[9],uVar2,1,0);
               if (this[9] != 0) {
-                plVar4 = (int64 *)Component.GetComponent(this[9],DAT_181d6e540);
+                plVar4 = (int64 *)Component.GetComponent(this[9],DAT_181d96de0);
                 cVar1 = Object.op_Inequality(plVar4,0,0);
                 if (cVar1) {
-                  if (plVar4 == (int64 *)0) goto LAB_181695f83;
+                  if (plVar4 == (int64 *)0) goto LAB_18170ddc3;
                   (**(code **)(*plVar4 + 0x1b8))(plVar4,1,*(uint64 *)(*plVar4 + 0x1c0));
                 }
-                goto LAB_181695f63;
+                goto LAB_18170dda3;
               }
             }
-        LAB_181695f83:
+        LAB_18170ddc3:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
         }
-        LAB_181695f63:
+        LAB_18170dda3:
         if (this[7] != 0) {
           OnGeometryUpdated.Invoke(this[7],0);
         }
     }
 
-    // Token : 0x600027B
-    // RVA   : 0x1696070   Offset: 0x1694870   Length: 0x3E
+    // Token : 0x6000293
+    // RVA   : 0x170DEB0   Offset: 0x170D2B0   Length: 0x3E
     public void /*ctor*/()
     {
         ulong uVar1;

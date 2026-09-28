@@ -1,65 +1,65 @@
 // ============================================================
 // Type  : UIPlayTween
-// Token : 0x2000053
+// Token : 0x2000054
 // ============================================================
 
 public class UIPlayTween
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40001D2
+    // Token: 0x40001EE
     public static UIPlayTween current;
 
-    // Token: 0x40001D3
+    // Token: 0x40001EF
     public GameObject tweenTarget;
 
-    // Token: 0x40001D4
+    // Token: 0x40001F0
     public int tweenGroup;
 
-    // Token: 0x40001D5
+    // Token: 0x40001F1
     public Trigger trigger;
 
-    // Token: 0x40001D6
+    // Token: 0x40001F2
     public Direction playDirection;
 
-    // Token: 0x40001D7
+    // Token: 0x40001F3
     public bool resetOnPlay;
 
-    // Token: 0x40001D8
+    // Token: 0x40001F4
     public bool resetIfDisabled;
 
-    // Token: 0x40001D9
+    // Token: 0x40001F5
     public EnableCondition ifDisabledOnPlay;
 
-    // Token: 0x40001DA
+    // Token: 0x40001F6
     public DisableCondition disableWhenFinished;
 
-    // Token: 0x40001DB
+    // Token: 0x40001F7
     public bool includeChildren;
 
-    // Token: 0x40001DC
+    // Token: 0x40001F8
     public List<EventDelegate> onFinished;
 
-    // Token: 0x40001DD
+    // Token: 0x40001F9
     private GameObject eventReceiver;
 
-    // Token: 0x40001DE
+    // Token: 0x40001FA
     private string callWhenFinished;
 
-    // Token: 0x40001DF
+    // Token: 0x40001FB
     private UITweener[] mTweens;
 
-    // Token: 0x40001E0
+    // Token: 0x40001FC
     private bool mStarted;
 
-    // Token: 0x40001E1
+    // Token: 0x40001FD
     private int mActive;
 
-    // Token: 0x40001E2
+    // Token: 0x40001FE
     private bool mActivated;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60001B3
-    // RVA   : 0x1579540   Offset: 0x1577D40   Length: 0xCC
+    // Token : 0x60001CB
+    // RVA   : 0x119F7A0   Offset: 0x119EBA0   Length: 0xCC
     private void Awake()
     {
         ulong uVar1;
@@ -76,8 +76,8 @@ public class UIPlayTween
         }
     }
 
-    // Token : 0x60001B4
-    // RVA   : 0x157A7C0   Offset: 0x1578FC0   Length: 0x8F
+    // Token : 0x60001CC
+    // RVA   : 0x11A0A20   Offset: 0x119FE20   Length: 0x8F
     private void Start()
     {
         bool cVar1;
@@ -91,10 +91,11 @@ public class UIPlayTween
         }
     }
 
-    // Token : 0x60001B5
-    // RVA   : 0x1579AB0   Offset: 0x15782B0   Length: 0x2A7
+    // Token : 0x60001CD
+    // RVA   : 0x119FD10   Offset: 0x119F110   Length: 0x2A7
     private void OnEnable()
     {
+        var pStatics = *(int64*)(DAT_181daf678 + 184);
         byte uVar1;
         bool cVar2;
         int iVar3;
@@ -106,49 +107,49 @@ public class UIPlayTween
           uVar1 = UICamera.IsHighlighted(uVar4,0);
           UIPlayTween.OnHover(this,uVar1,0);
         }
-        if (UICamera.currentTouch != null) {
+        if (*(int64 *)(pStatics + 224) != 0) {
           iVar3 = this.trigger;
           if ((iVar3 == 2) || (iVar3 == 5)) {
-            lVar6 = UICamera.currentTouch;
-            if (lVar6 == null) goto LAB_181579d52;
-            uVar4 = lVar6.pressed;
+            lVar6 = *(int64 *)(pStatics + 224);
+            if (lVar6 == null) goto LAB_18119ffb2;
+            uVar4 = *(uint64 *)(lVar6 + 80);
             uVar5 = Component.get_gameObject(this,0);
             uVar1 = Object.op_Equality(uVar4,uVar5,0);
             this.mActivated = uVar1;
             iVar3 = this.trigger;
           }
           if ((iVar3 - 1U & 0xfffffffd) == 0) {
-            lVar6 = UICamera.currentTouch;
-            if (lVar6 == null) goto LAB_181579d52;
-            uVar4 = lVar6.current;
+            lVar6 = *(int64 *)(pStatics + 224);
+            if (lVar6 == null) goto LAB_18119ffb2;
+            uVar4 = *(uint64 *)(lVar6 + 72);
             uVar5 = Component.get_gameObject(this,0);
             uVar1 = Object.op_Equality(uVar4,uVar5,0);
             this.mActivated = uVar1;
           }
         }
-        lVar6 = Component.GetComponent(this,DAT_181d6e740);
+        lVar6 = Component.GetComponent(this,DAT_181d96fe0);
         cVar2 = Object.op_Inequality(lVar6,0,0);
         if (cVar2) {
           if (lVar6 == null) {
-        LAB_181579d52:
+        LAB_18119ffb2:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          uVar4 = lVar6.pressed;
-          uVar5 = new OnTooltipCB(this,DAT_181d9cf38,0);
+          uVar4 = *(uint64 *)(lVar6 + 80);
+          uVar5 = new OnTooltipCB(this,DAT_181dc6228,0);
           EventDelegate.Add(uVar4,uVar5,0);
         }
     }
 
-    // Token : 0x60001B6
-    // RVA   : 0x1579890   Offset: 0x1578090   Length: 0x10D
+    // Token : 0x60001CE
+    // RVA   : 0x119FAF0   Offset: 0x119EEF0   Length: 0x10D
     private void OnDisable()
     {
         ulong uVar1;
         long lVar2;
         bool cVar3;
         ulong uVar4;
-        lVar2 = Component.GetComponent(this,DAT_181d6e740);
+        lVar2 = Component.GetComponent(this,DAT_181d96fe0);
         cVar3 = Object.op_Inequality(lVar2,0,0);
         if (cVar3) {
           if (lVar2 == null) {
@@ -156,13 +157,13 @@ public class UIPlayTween
             FUN_1800d6620();
           }
           uVar1 = *(uint64 *)(lVar2 + 80);
-          uVar4 = new OnTooltipCB(this,DAT_181d9cf38,0);
+          uVar4 = new OnTooltipCB(this,DAT_181dc6228,0);
           EventDelegate.Remove(uVar1,uVar4,0);
         }
     }
 
-    // Token : 0x60001B7
-    // RVA   : 0x1579A20   Offset: 0x1578220   Length: 0x8C
+    // Token : 0x60001CF
+    // RVA   : 0x119FC80   Offset: 0x119F080   Length: 0x8C
     private void OnDragOver()
     {
         bool cVar1;
@@ -176,10 +177,11 @@ public class UIPlayTween
         }
     }
 
-    // Token : 0x60001B8
-    // RVA   : 0x1579EE0   Offset: 0x15786E0   Length: 0x249
+    // Token : 0x60001D0
+    // RVA   : 0x11A0140   Offset: 0x119F540   Length: 0x249
     private void OnHover(bool isOver)
     {
+        var pStatics = *(int64*)(DAT_181daf678 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
@@ -211,31 +213,31 @@ public class UIPlayTween
         if (!isOver) {
           uVar2 = UICamera.get_hoveredObject(0);
           cVar1 = Object.op_Inequality(uVar2,0,0);
-          if (!cVar1) goto LAB_18157a0f1;
+          if (!cVar1) goto LAB_1811a0351;
           lVar3 = UICamera.get_hoveredObject(0);
           if (lVar3 == null) {
-        LAB_18157a118:
+        LAB_1811a0378:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           lVar3 = GameObject.get_transform(lVar3,0);
           uVar2 = Component.get_transform(this,0);
-          if (lVar3 == null) goto LAB_18157a118;
+          if (lVar3 == null) goto LAB_1811a0378;
           cVar1 = Transform.IsChildOf(lVar3,uVar2,0);
-          if (!cVar1) goto LAB_18157a0f1;
-          uVar2 = UICamera.onHover;
-          uVar4 = new OnTooltipCB(this,DAT_181d9ce28,0);
+          if (!cVar1) goto LAB_1811a0351;
+          uVar2 = *(uint64 *)(pStatics + 0x110);
+          uVar4 = new OnTooltipCB(this,DAT_181dc6118,0);
           plVar5 = (int64 *)Delegate.Combine(uVar2,uVar4,0);
           if (plVar5 != (int64 *)0) {
-            if (*plVar5 == DAT_181d67e90) {
+            if (*plVar5 == DAT_181d8d238) {
               plVar7 = plVar5;
             }
             if (plVar7 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar5,DAT_181d67e90);
+              FUN_1800d6070(plVar5,DAT_181d8d238);
             }
           }
-          UICamera.onHover = plVar7;
+          *(int64 **)(pStatics + 0x110) = plVar7;
           isOver = true;
           if (this.mActivated) {
             return;
@@ -243,15 +245,16 @@ public class UIPlayTween
           iVar6 = this.trigger;
         }
         plVar7 = (int64 *)(uint64)(iVar6 == 1);
-        LAB_18157a0f1:
+        LAB_1811a0351:
         this.mActivated = (char)plVar7;
         UIPlayTween.Play(this,isOver,0);
     }
 
-    // Token : 0x60001B9
-    // RVA   : 0x1579610   Offset: 0x1577E10   Length: 0x231
+    // Token : 0x60001D1
+    // RVA   : 0x119F870   Offset: 0x119EC70   Length: 0x231
     private void CustomHoverListener(GameObject go, bool isOver)
     {
+        var pStatics = *(int64*)(DAT_181daf678 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
@@ -268,13 +271,13 @@ public class UIPlayTween
                 return;
               }
               if (go == null) {
-        LAB_18157983c:
+        LAB_18119fa9c:
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
               lVar3 = GameObject.get_transform(go,0);
               uVar2 = Component.get_transform(this,0);
-              if (lVar3 == null) goto LAB_18157983c;
+              if (lVar3 == null) goto LAB_18119fa9c;
               cVar1 = Transform.IsChildOf(lVar3,uVar2,0);
               if (cVar1) {
                 return;
@@ -282,25 +285,25 @@ public class UIPlayTween
             }
           }
           UIPlayTween.OnHover(this,0,0);
-          uVar2 = UICamera.onHover;
-          uVar4 = new OnTooltipCB(this,DAT_181d9ce28,0);
+          uVar2 = *(uint64 *)(pStatics + 0x110);
+          uVar4 = new OnTooltipCB(this,DAT_181dc6118,0);
           plVar5 = (int64 *)Delegate.Remove(uVar2,uVar4,0);
           plVar6 = (int64 *)0;
           if (plVar5 != (int64 *)0) {
-            if (*plVar5 == DAT_181d67e90) {
+            if (*plVar5 == DAT_181d8d238) {
               plVar6 = plVar5;
             }
             if (plVar6 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar5,DAT_181d67e90);
+              FUN_1800d6070(plVar5,DAT_181d8d238);
             }
           }
-          UICamera.onHover = plVar6;
+          *(int64 **)(pStatics + 0x110) = plVar6;
         }
     }
 
-    // Token : 0x60001BA
-    // RVA   : 0x15799E0   Offset: 0x15781E0   Length: 0x36
+    // Token : 0x60001D2
+    // RVA   : 0x119FC40   Offset: 0x119F040   Length: 0x36
     private void OnDragOut()
     {
         bool cVar1;
@@ -312,8 +315,8 @@ public class UIPlayTween
         }
     }
 
-    // Token : 0x60001BB
-    // RVA   : 0x157A130   Offset: 0x1578930   Length: 0x6B
+    // Token : 0x60001D3
+    // RVA   : 0x11A0390   Offset: 0x119F790   Length: 0x6B
     private void OnPress(bool isPressed)
     {
         int iVar1;
@@ -336,19 +339,19 @@ public class UIPlayTween
             if (isPressed) {
               return;
             }
-            goto LAB_18157a17e;
+            goto LAB_1811a03de;
           }
         }
         if (isPressed) {
           bVar3 = iVar1 == 2;
         }
-        LAB_18157a17e:
+        LAB_1811a03de:
         this.mActivated = bVar3;
         UIPlayTween.Play(this,isPressed,0);
     }
 
-    // Token : 0x60001BC
-    // RVA   : 0x1579850   Offset: 0x1578050   Length: 0x32
+    // Token : 0x60001D4
+    // RVA   : 0x119FAB0   Offset: 0x119EEB0   Length: 0x32
     private void OnClick()
     {
         bool cVar1;
@@ -359,8 +362,8 @@ public class UIPlayTween
         }
     }
 
-    // Token : 0x60001BD
-    // RVA   : 0x15799A0   Offset: 0x15781A0   Length: 0x32
+    // Token : 0x60001D5
+    // RVA   : 0x119FC00   Offset: 0x119F000   Length: 0x32
     private void OnDoubleClick()
     {
         bool cVar1;
@@ -371,8 +374,8 @@ public class UIPlayTween
         }
     }
 
-    // Token : 0x60001BE
-    // RVA   : 0x157A1A0   Offset: 0x15789A0   Length: 0x6B
+    // Token : 0x60001D6
+    // RVA   : 0x11A0400   Offset: 0x119F800   Length: 0x6B
     private void OnSelect(bool isSelected)
     {
         int iVar1;
@@ -395,22 +398,22 @@ public class UIPlayTween
             if (isSelected) {
               return;
             }
-            goto LAB_18157a1ee;
+            goto LAB_1811a044e;
           }
         }
         if (isSelected) {
           bVar3 = iVar1 == 11;
         }
-        LAB_18157a1ee:
+        LAB_1811a044e:
         this.mActivated = bVar3;
         UIPlayTween.Play(this,isSelected,0);
     }
 
-    // Token : 0x60001BF
-    // RVA   : 0x157A210   Offset: 0x1578A10   Length: 0x1B5
+    // Token : 0x60001D7
+    // RVA   : 0x11A0470   Offset: 0x119F870   Length: 0x1B5
     private void OnToggle()
     {
-        var pUIPlayAnimation = *(int64*)(UIPlayAnimation_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181db04f8 + 184);
         ulong uVar1;
         long lVar2;
         bool cVar3;
@@ -419,30 +422,30 @@ public class UIPlayTween
         if (!cVar3) {
           return;
         }
-        uVar1 = *(uint64 *)(pUIPlayAnimation + 8);
+        uVar1 = *(uint64 *)(pStatics + 8);
         cVar3 = Object.op_Equality(uVar1,0,0);
         if (cVar3) {
           return;
         }
         if (this.trigger != 7) {
           if (this.trigger == 8) {
-            lVar2 = *(int64 *)(pUIPlayAnimation + 8);
+            lVar2 = *(int64 *)(pStatics + 8);
             if (lVar2 == null) throw; // [null/range check failed]
             cVar3 = UIToggle.get_isChecked(lVar2,0);
-            if (cVar3) goto LAB_18157a368;
+            if (cVar3) goto LAB_1811a05c8;
           }
           if (this.trigger != 9) {
             return;
           }
-          lVar2 = *(int64 *)(pUIPlayAnimation + 8);
+          lVar2 = *(int64 *)(pStatics + 8);
           if (lVar2 == null) throw; // [null/range check failed]
           cVar3 = UIToggle.get_isChecked(lVar2,0);
           if (cVar3) {
             return;
           }
         }
-        LAB_18157a368:
-        lVar2 = *(int64 *)(pUIPlayAnimation + 8);
+        LAB_1811a05c8:
+        lVar2 = *(int64 *)(pStatics + 8);
         if (lVar2 != null) {
           uVar4 = UIToggle.get_isChecked(lVar2,0);
           UIPlayTween.Play(this,uVar4,0);
@@ -450,8 +453,8 @@ public class UIPlayTween
         }
     }
 
-    // Token : 0x60001C0
-    // RVA   : 0x157A850   Offset: 0x1579050   Length: 0x145
+    // Token : 0x60001D8
+    // RVA   : 0x11A0AB0   Offset: 0x119FEB0   Length: 0x145
     private void Update()
     {
         int iVar1;
@@ -474,7 +477,7 @@ public class UIPlayTween
           do {
             lVar2 = this.mTweens;
             if (lVar2 == null) {
-        LAB_18157a980:
+        LAB_1811a0be0:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -484,7 +487,7 @@ public class UIPlayTween
               FUN_1800d65f0(uVar5,0);
             }
             lVar2 = lVar2[uVar6];
-            if (lVar2 == null) goto LAB_18157a980;
+            if (lVar2 == null) goto LAB_1811a0be0;
             if (*(int *)(lVar2 + 56) == this.tweenGroup) {
               cVar3 = Behaviour.get_enabled(lVar2);
               if (cVar3) {
@@ -506,8 +509,8 @@ public class UIPlayTween
         this.mTweens = 0;
     }
 
-    // Token : 0x60001C1
-    // RVA   : 0x157A3D0   Offset: 0x1578BD0   Length: 0xA
+    // Token : 0x60001D9
+    // RVA   : 0x11A0630   Offset: 0x119FA30   Length: 0xA
     public void Play()
     {
         long lVar1;
@@ -535,10 +538,10 @@ public class UIPlayTween
         }
         if (lVar6 != null) {
           if (!this.includeChildren) {
-            uVar7 = GameObject.GetComponents(lVar6,DAT_181da2c30);
+            uVar7 = GameObject.GetComponents(lVar6,DAT_181d74f60);
           }
           else {
-            uVar7 = FUN_180956bf0(lVar6,DAT_181da31b0);
+            uVar7 = FUN_1809674e0(lVar6,DAT_181d75538);
           }
           this.mTweens = uVar7;
           if (this.mTweens != null) {
@@ -578,7 +581,7 @@ public class UIPlayTween
                     *(int *)(this + 100) = *(int *)(this + 100) + 1;
                     if (this.playDirection == null) {
                       lVar1 = plVar2[8];
-                      uVar7 = new OnTooltipCB(this,DAT_181d9ceb0,0);
+                      uVar7 = new OnTooltipCB(this,DAT_181dc61a0,0);
                       EventDelegate.Add(lVar1);
                       UITweener.Toggle(plVar2);
                     }
@@ -590,7 +593,7 @@ public class UIPlayTween
                         UITweener.ResetToBeginning(plVar2,0);
                       }
                       lVar1 = plVar2[8];
-                      uVar7 = new OnTooltipCB(this,DAT_181d9ceb0,0);
+                      uVar7 = new OnTooltipCB(this,DAT_181dc61a0,0);
                       EventDelegate.Add(lVar1,uVar7,1);
                       (**(code **)(*plVar2 + 0x188))(plVar2);
                     }
@@ -604,8 +607,8 @@ public class UIPlayTween
         }
     }
 
-    // Token : 0x60001C2
-    // RVA   : 0x157A3E0   Offset: 0x1578BE0   Length: 0x3D7
+    // Token : 0x60001DA
+    // RVA   : 0x11A0640   Offset: 0x119FA40   Length: 0x3D7
     public void Play(bool forward)
     {
         long lVar1;
@@ -633,10 +636,10 @@ public class UIPlayTween
         }
         if (lVar6 != null) {
           if (!this.includeChildren) {
-            uVar7 = GameObject.GetComponents(lVar6,DAT_181da2c30);
+            uVar7 = GameObject.GetComponents(lVar6,DAT_181d74f60);
           }
           else {
-            uVar7 = FUN_180956bf0(lVar6,DAT_181da31b0);
+            uVar7 = FUN_1809674e0(lVar6,DAT_181d75538);
           }
           this.mTweens = uVar7;
           if (this.mTweens != null) {
@@ -676,7 +679,7 @@ public class UIPlayTween
                     *(int *)(this + 100) = *(int *)(this + 100) + 1;
                     if (this.playDirection == null) {
                       lVar1 = plVar2[8];
-                      uVar7 = new OnTooltipCB(this,DAT_181d9ceb0,0);
+                      uVar7 = new OnTooltipCB(this,DAT_181dc61a0,0);
                       EventDelegate.Add(lVar1);
                       UITweener.Toggle(plVar2);
                     }
@@ -688,7 +691,7 @@ public class UIPlayTween
                         UITweener.ResetToBeginning(plVar2,0);
                       }
                       lVar1 = plVar2[8];
-                      uVar7 = new OnTooltipCB(this,DAT_181d9ceb0,0);
+                      uVar7 = new OnTooltipCB(this,DAT_181dc61a0,0);
                       EventDelegate.Add(lVar1,uVar7,1);
                       (**(code **)(*plVar2 + 0x188))(plVar2);
                     }
@@ -702,8 +705,8 @@ public class UIPlayTween
         }
     }
 
-    // Token : 0x60001C3
-    // RVA   : 0x1579D60   Offset: 0x1578560   Length: 0x173
+    // Token : 0x60001DB
+    // RVA   : 0x119FFC0   Offset: 0x119F3C0   Length: 0x173
     private void OnFinished()
     {
         ulong uVar2;
@@ -711,10 +714,10 @@ public class UIPlayTween
         bool cVar6;
         this.mActive = *piVar1 + -1;
         if (*piVar1 == 0) {
-          uVar2 = **(uint64 **)(DAT_181d8ad58 + 184);
+          uVar2 = **(uint64 **)(DAT_181daff78 + 184);
           cVar6 = Object.op_Equality(uVar2,0,0);
           if (cVar6) {
-            plVar3 = *(int64 **)(DAT_181d8ad58 + 184);
+            plVar3 = *(int64 **)(DAT_181daff78 + 184);
             *plVar3 = this;
             il2cpp_internal(plVar3,this);
             uVar2 = this.onFinished;
@@ -722,7 +725,7 @@ public class UIPlayTween
             lVar4 = this.eventReceiver;
             cVar6 = Object.op_Inequality(lVar4,0,0);
             if ((cVar6) &&
-               (cVar6 = FUN_180d6ca90(this.callWhenFinished,0), !cVar6)) {
+               (cVar6 = FUN_180d755b0(this.callWhenFinished,0), !cVar6)) {
               if (*plVar3 == 0) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
@@ -731,21 +734,21 @@ public class UIPlayTween
             }
             *plVar3 = 0;
             il2cpp_internal(plVar3,0);
-            puVar5 = *(uint64 **)(DAT_181d8ad58 + 184);
+            puVar5 = *(uint64 **)(DAT_181daff78 + 184);
             *puVar5 = 0;
             il2cpp_internal(puVar5,0);
           }
         }
     }
 
-    // Token : 0x60001C4
-    // RVA   : 0x157A9A0   Offset: 0x15791A0   Length: 0x7D
+    // Token : 0x60001DC
+    // RVA   : 0x11A0C00   Offset: 0x11A0000   Length: 0x7D
     public void /*ctor*/()
     {
         ulong uVar1;
         this.playDirection = 1;
-        uVar1 = il2cpp_internal(DAT_181d6d9b0);
-        FUN_180f58a90(uVar1,DAT_181d5e700);
+        uVar1 = il2cpp_internal(DAT_181d92658);
+        FUN_18132faf0(uVar1,DAT_181d85ea0);
         this.onFinished = uVar1;
         FUN_18044ef50(this,0);
     }

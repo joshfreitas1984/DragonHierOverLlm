@@ -1,39 +1,39 @@
 // ============================================================
 // Type  : FightSkillType
-// Token : 0x20001BA
+// Token : 0x20001C0
 // ============================================================
 
 public class FightSkillType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000B97
+    // Token: 0x4000C24
     public int value__;
 
-    // Token: 0x4000B98
+    // Token: 0x4000C25
     public const FightSkillType Internal;
 
-    // Token: 0x4000B99
+    // Token: 0x4000C26
     public const FightSkillType Dodge;
 
-    // Token: 0x4000B9A
+    // Token: 0x4000C27
     public const FightSkillType Unique;
 
-    // Token: 0x4000B9B
+    // Token: 0x4000C28
     public const FightSkillType Fist;
 
-    // Token: 0x4000B9C
+    // Token: 0x4000C29
     public const FightSkillType Sword;
 
-    // Token: 0x4000B9D
+    // Token: 0x4000C2A
     public const FightSkillType Knife;
 
-    // Token: 0x4000B9E
+    // Token: 0x4000C2B
     public const FightSkillType Long;
 
-    // Token: 0x4000B9F
+    // Token: 0x4000C2C
     public const FightSkillType Strange;
 
-    // Token: 0x4000BA0
+    // Token: 0x4000C2D
     public const FightSkillType Shoot;
 
 }

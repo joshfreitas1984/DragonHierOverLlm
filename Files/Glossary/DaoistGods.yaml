@@ -1,0 +1,19 @@
+- raw: 土地公
+  result: Earth God
+- raw: 城隍爷
+  result: City God
+- raw: 山神
+  result: Mountain God
+- raw: 河神
+  result: River God
+- raw: 龙王
+  result: Dragon King
+  badtrans: false
+- raw: 财神
+  result: God of Wealth
+- raw: 灶神
+  result: Kitchen God
+# - raw: 门神
+#   result: Door God
+- raw: 土地神
+  result: Earth Deity

@@ -1,38 +1,38 @@
 // ============================================================
 // Type  : StudyDodgeTileController
-// Token : 0x200037B
+// Token : 0x2000382
 // ============================================================
 
 public class StudyDodgeTileController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001BB0
+    // Token: 0x4001CB5
     public int column;
 
-    // Token: 0x4001BB1
+    // Token: 0x4001CB6
     public int row;
 
-    // Token: 0x4001BB2
+    // Token: 0x4001CB7
     public bool attacking;
 
-    // Token: 0x4001BB3
+    // Token: 0x4001CB8
     public float nextAttackTime;
 
-    // Token: 0x4001BB4
+    // Token: 0x4001CB9
     public float nextAttackTimeCount;
 
-    // Token: 0x4001BB5
+    // Token: 0x4001CBA
     public bool nailOut;
 
-    // Token: 0x4001BB6
+    // Token: 0x4001CBB
     public GameObject attackRange;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60021D7
-    // RVA   : 0xB8BCC0   Offset: 0xB8A4C0   Length: 0x4F2
+    // Token : 0x6002259
+    // RVA   : 0xFDAA80   Offset: 0xFD9E80   Length: 0x4F2
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d82df0 + 184);
+        var pStatics = *(int64*)(DAT_181da8010 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar4;
@@ -79,22 +79,21 @@ public class StudyDodgeTileController
             if (lVar2 == null) throw; // [null/range check failed]
             uVar5 = Transform.Find(lVar2,"Nail",0);
             uVar5 = ShortcutExtensions.DOScaleY(uVar5,0x3f19999a,0x3dcccccd,0);
-            uVar4 = new OnTooltipCB(this,DAT_181d8dc90,0);
-            TweenSettingsExtensions.OnComplete(uVar5,uVar4,DAT_181d96ee8);
+            uVar4 = new OnTooltipCB(this,DAT_181db6f80,0);
+            TweenSettingsExtensions.OnComplete(uVar5,uVar4,DAT_181dc01d0);
             lVar2 = Component.get_transform(this,0);
             if (lVar2 == null) throw; // [null/range check failed]
             uVar5 = Transform.Find(lVar2,"Nail",0);
             uVar5 = ShortcutExtensions.DOScaleY(uVar5,0,0x3dcccccd,0);
-            uVar5 = TweenSettingsExtensions.SetDelay(uVar5,0x3f000000,DAT_181d97978);
-            uVar4 = new OnTooltipCB(this,DAT_181d8dd18,0);
-            TweenSettingsExtensions.OnComplete(uVar5,uVar4,DAT_181d96ee8);
-            lVar2 = Component.GetComponent(this,DAT_181d6ab40);
+            uVar5 = TweenSettingsExtensions.SetDelay(uVar5,0x3f000000,DAT_181dc0c60);
+            uVar4 = new OnTooltipCB(this,DAT_181db7008,0);
+            TweenSettingsExtensions.OnComplete(uVar5,uVar4,DAT_181dc01d0);
+            lVar2 = Component.GetComponent(this,DAT_181d93360);
             if (lVar2 == null) throw; // [null/range check failed]
             fVar7 = (float)AudioSource.get_volume(lVar2,0);
             AudioSource.set_volume
-                      (lVar2,fVar7 * GameController.CheckShowSpeHero,0)
-            ;
-            lVar2 = Component.GetComponent(this,DAT_181d6ab40);
+                      (lVar2,fVar7 * *(float *)(*(int64 *)(DAT_181d72d50 + 184) + 16),0);
+            lVar2 = Component.GetComponent(this,DAT_181d93360);
             if (lVar2 == null) throw; // [null/range check failed]
             AudioSource.Play(lVar2,0);
           }
@@ -126,26 +125,26 @@ public class StudyDodgeTileController
         }
     }
 
-    // Token : 0x60021D8
-    // RVA   : 0xB8BB20   Offset: 0xB8A320   Length: 0x177
+    // Token : 0x600225A
+    // RVA   : 0xFDA8E0   Offset: 0xFD9CE0   Length: 0x177
     private void NailBack()
     {
-        var pStudyDodgePlayer = *(int64*)(StudyDodgePlayer_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181da8090 + 184);
         long lVar1;
         ulong uVar2;
         this.nailOut = 0;
-        lVar1 = *(int64 *)(pStudyDodgePlayer + 8);
+        lVar1 = *(int64 *)(pStatics + 8);
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 104);
           uVar2 = Component.get_gameObject(this,0);
           if (lVar1 != null) {
-            FUN_181801c10(lVar1,uVar2,DAT_181d61e78);
-            lVar1 = *(int64 *)(pStudyDodgePlayer + 8);
+            FUN_1817eee00(lVar1,uVar2,DAT_181d89618);
+            lVar1 = *(int64 *)(pStatics + 8);
             if (lVar1 != null) {
               lVar1 = *(int64 *)(lVar1 + 96);
               uVar2 = Component.get_gameObject(this,0);
               if (lVar1 != null) {
-                FUN_181827900(lVar1,uVar2,DAT_181d61bf8);
+                FUN_18181e0a0(lVar1,uVar2,DAT_181d89398);
                 return;
               }
             }
@@ -153,24 +152,28 @@ public class StudyDodgeTileController
         }
     }
 
-    // Token : 0x60021D9
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x600225B
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);
     }
 
-    // Token : 0x60021DA
-    // RVA   : 0xB8BCA0   Offset: 0xB8A4A0   Length: 0x5
+    // Token : 0x600225C
+    // RVA   : 0xFDAA60   Offset: 0xFD9E60   Length: 0x5
     private void <Update>b__7_0()
     {
+        void FUN_180fdaa60(int64 this)
+        {
         this.nailOut = 1;
     }
 
-    // Token : 0x60021DB
-    // RVA   : 0xB8BCB0   Offset: 0xB8A4B0   Length: 0x7
+    // Token : 0x600225D
+    // RVA   : 0xFDAA70   Offset: 0xFD9E70   Length: 0x7
     private void <Update>b__7_1()
     {
+        void FUN_180fdaa70(uint64 this)
+        {
         StudyDodgeTileController.NailBack(this,0);
     }
 

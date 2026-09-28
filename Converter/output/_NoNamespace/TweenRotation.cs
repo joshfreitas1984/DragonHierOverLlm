@@ -1,26 +1,26 @@
 // ============================================================
 // Type  : TweenRotation
-// Token : 0x20000C1
+// Token : 0x20000C2
 // ============================================================
 
 public class TweenRotation
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400048B
+    // Token: 0x40004A7
     public Vector3 from;
 
-    // Token: 0x400048C
+    // Token: 0x40004A8
     public Vector3 to;
 
-    // Token: 0x400048D
+    // Token: 0x40004A9
     public bool quaternionLerp;
 
-    // Token: 0x400048E
+    // Token: 0x40004AA
     private Transform mTrans;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60005D2
-    // RVA   : 0xA72A40   Offset: 0xA71240   Length: 0x9B
+    // Token : 0x60005EA
+    // RVA   : 0xAEC710   Offset: 0xAEBB10   Length: 0x9B
     public Transform get_cachedTransform()
     {
         bool cVar1;
@@ -34,8 +34,8 @@ public class TweenRotation
         return this.mTrans;
     }
 
-    // Token : 0x60005D3
-    // RVA   : 0xA72AE0   Offset: 0xA712E0   Length: 0x3F
+    // Token : 0x60005EB
+    // RVA   : 0xAEC7B0   Offset: 0xAEBBB0   Length: 0x3F
     public Quaternion get_rotation()
     {
         ulong uVar1;
@@ -51,8 +51,8 @@ public class TweenRotation
         }
     }
 
-    // Token : 0x60005D4
-    // RVA   : 0xA72B20   Offset: 0xA71320   Length: 0x38
+    // Token : 0x60005EC
+    // RVA   : 0xAEC7F0   Offset: 0xAEBBF0   Length: 0x38
     public void set_rotation(Quaternion value)
     {
         long lVar1;
@@ -71,8 +71,8 @@ public class TweenRotation
         }
     }
 
-    // Token : 0x60005D5
-    // RVA   : 0xA72AE0   Offset: 0xA712E0   Length: 0x3F
+    // Token : 0x60005ED
+    // RVA   : 0xAEC7B0   Offset: 0xAEBBB0   Length: 0x3F
     public Quaternion get_value()
     {
         ulong uVar1;
@@ -88,8 +88,8 @@ public class TweenRotation
         }
     }
 
-    // Token : 0x60005D6
-    // RVA   : 0xA72B20   Offset: 0xA71320   Length: 0x38
+    // Token : 0x60005EE
+    // RVA   : 0xAEC7F0   Offset: 0xAEBBF0   Length: 0x38
     public void set_value(Quaternion value)
     {
         long lVar1;
@@ -108,8 +108,8 @@ public class TweenRotation
         }
     }
 
-    // Token : 0x60005D7
-    // RVA   : 0xA72700   Offset: 0xA70F00   Length: 0x187
+    // Token : 0x60005EF
+    // RVA   : 0xAEC3D0   Offset: 0xAEB7D0   Length: 0x187
     protected override void OnUpdate(float factor, bool isFinished)
     {
         ulong uVar1;
@@ -158,8 +158,8 @@ public class TweenRotation
         }
     }
 
-    // Token : 0x60005D8
-    // RVA   : 0xA725E0   Offset: 0xA70DE0   Length: 0x116
+    // Token : 0x60005F0
+    // RVA   : 0xAEC2B0   Offset: 0xAEB6B0   Length: 0x116
     public static TweenRotation Begin(GameObject go, float duration, Quaternion rot)
     {
         long lVar1;
@@ -169,7 +169,7 @@ public class TweenRotation
         uint uStack_34;
         uint uStack_30;
         uint32 uStack_2c;
-        lVar1 = UITweener.Begin(go,duration,0,DAT_181d9db70);
+        lVar1 = UITweener.Begin(go,duration,0,DAT_181dc6e60);
         if (lVar1 != null) {
           lVar2 = TweenRotation.get_cachedTransform(lVar1,0);
           if (lVar2 != null) {
@@ -193,8 +193,8 @@ public class TweenRotation
         }
     }
 
-    // Token : 0x60005D9
-    // RVA   : 0xA729E0   Offset: 0xA711E0   Length: 0x5C
+    // Token : 0x60005F1
+    // RVA   : 0xAEC6B0   Offset: 0xAEBAB0   Length: 0x5C
     public override void SetStartToCurrentValue()
     {
         long lVar1;
@@ -217,8 +217,8 @@ public class TweenRotation
         }
     }
 
-    // Token : 0x60005DA
-    // RVA   : 0xA72980   Offset: 0xA71180   Length: 0x5F
+    // Token : 0x60005F2
+    // RVA   : 0xAEC650   Offset: 0xAEBA50   Length: 0x5F
     public override void SetEndToCurrentValue()
     {
         long lVar1;
@@ -241,8 +241,8 @@ public class TweenRotation
         }
     }
 
-    // Token : 0x60005DB
-    // RVA   : 0xA72910   Offset: 0xA71110   Length: 0x6D
+    // Token : 0x60005F3
+    // RVA   : 0xAEC5E0   Offset: 0xAEB9E0   Length: 0x6D
     private void SetCurrentValueToStart()
     {
         ulong uVar1;
@@ -265,8 +265,8 @@ public class TweenRotation
         }
     }
 
-    // Token : 0x60005DC
-    // RVA   : 0xA72890   Offset: 0xA71090   Length: 0x70
+    // Token : 0x60005F4
+    // RVA   : 0xAEC560   Offset: 0xAEB960   Length: 0x70
     private void SetCurrentValueToEnd()
     {
         ulong uVar1;
@@ -289,10 +289,12 @@ public class TweenRotation
         }
     }
 
-    // Token : 0x60005DD
-    // RVA   : 0xA72230   Offset: 0xA70A30   Length: 0x7
+    // Token : 0x60005F5
+    // RVA   : 0xAEBF00   Offset: 0xAEB300   Length: 0x7
     public void /*ctor*/()
     {
+        void FUN_180aebf00(uint64 this)
+        {
         UITweener.ctor(this,0);
     }
 

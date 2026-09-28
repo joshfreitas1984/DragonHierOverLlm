@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : WaitForPosition
-// Token : 0x2000488
+// Token : 0x200048F
 // ============================================================
 
 public class WaitForPosition
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002058
+    // Token: 0x4002162
     private readonly Tween t;
 
-    // Token: 0x4002059
+    // Token: 0x4002163
     private readonly float position;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60026EE
-    // RVA   : 0x8D8F00   Offset: 0x8D7700   Length: 0x5F
+    // Token : 0x6002771
+    // RVA   : 0x93B010   Offset: 0x93A410   Length: 0x5F
     public override bool get_keepWaiting()
     {
         float fVar1;
@@ -36,8 +36,8 @@ public class WaitForPosition
                         (float)(iVar3 + 1) * fVar1 < this.position);
     }
 
-    // Token : 0x60026EF
-    // RVA   : 0x8D8EB0   Offset: 0x8D76B0   Length: 0x43
+    // Token : 0x6002772
+    // RVA   : 0x93AFC0   Offset: 0x93A3C0   Length: 0x43
     public void /*ctor*/(Tween tween, float position)
     {
         c__DisplayClass9_0.ctor(this,0);

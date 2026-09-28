@@ -1,27 +1,27 @@
 // ============================================================
 // Type  : <>c__DisplayClass6_0
-// Token : 0x2000448
+// Token : 0x200044F
 // ============================================================
 
 public class <>c__DisplayClass6_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001FF8
+    // Token: 0x4002102
     public Transform trans;
 
-    // Token: 0x4001FF9
+    // Token: 0x4002103
     public Rigidbody2D target;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002604
-    // RVA   : 0x210B70   Offset: 0x20F370   Length: 0x7
+    // Token : 0x6002687
+    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);
     }
 
-    // Token : 0x6002605
-    // RVA   : 0x424410   Offset: 0x422C10   Length: 0x3B
+    // Token : 0x6002688
+    // RVA   : 0x424410   Offset: 0x423810   Length: 0x3B
     internal Vector3 <DOLocalPath>b__0()
     {
         uint uVar1;
@@ -35,8 +35,8 @@ public class <>c__DisplayClass6_0
         }
     }
 
-    // Token : 0x6002606
-    // RVA   : 0x8D7830   Offset: 0x8D6030   Length: 0x111
+    // Token : 0x6002689
+    // RVA   : 0x939D20   Offset: 0x939120   Length: 0x111
     internal void <DOLocalPath>b__1(Vector3 x)
     {
         long lVar1;
@@ -48,11 +48,11 @@ public class <>c__DisplayClass6_0
         byte[] local_18 = new byte[16];
         lVar1 = this.target;
         if (this.trans == null) throw; // [null/range check failed]
-        uVar2 = FUN_180da0f00(this.trans,0);
+        uVar2 = FUN_180da9a20(this.trans,0);
         cVar4 = Object.op_Equality(uVar2,0,0);
         if (!cVar4) {
           if (this.trans == null) throw; // [null/range check failed]
-          lVar5 = FUN_180da0f00(this.trans,0);
+          lVar5 = FUN_180da9a20(this.trans,0);
           if (lVar5 == null) throw; // [null/range check failed]
           local_20 = *(uint32 *)(x + 1);
           local_28 = *x;

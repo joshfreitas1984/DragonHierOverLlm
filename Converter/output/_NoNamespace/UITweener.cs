@@ -1,74 +1,74 @@
 // ============================================================
 // Type  : UITweener
-// Token : 0x20000C6
+// Token : 0x20000C7
 // ============================================================
 
 public class UITweener
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40004A5
+    // Token: 0x40004C1
     public static UITweener current;
 
-    // Token: 0x40004A6
+    // Token: 0x40004C2
     public Method method;
 
-    // Token: 0x40004A7
+    // Token: 0x40004C3
     public Style style;
 
-    // Token: 0x40004A8
+    // Token: 0x40004C4
     public AnimationCurve animationCurve;
 
-    // Token: 0x40004A9
+    // Token: 0x40004C5
     public bool ignoreTimeScale;
 
-    // Token: 0x40004AA
+    // Token: 0x40004C6
     public float delay;
 
-    // Token: 0x40004AB
+    // Token: 0x40004C7
     public float duration;
 
-    // Token: 0x40004AC
+    // Token: 0x40004C8
     public bool steeperCurves;
 
-    // Token: 0x40004AD
+    // Token: 0x40004C9
     public int tweenGroup;
 
-    // Token: 0x40004AE
+    // Token: 0x40004CA
     public bool useFixedUpdate;
 
-    // Token: 0x40004AF
+    // Token: 0x40004CB
     public List<EventDelegate> onFinished;
 
-    // Token: 0x40004B0
+    // Token: 0x40004CC
     public GameObject eventReceiver;
 
-    // Token: 0x40004B1
+    // Token: 0x40004CD
     public string callWhenFinished;
 
-    // Token: 0x40004B2
+    // Token: 0x40004CE
     public float timeScale;
 
-    // Token: 0x40004B3
+    // Token: 0x40004CF
     private bool mStarted;
 
-    // Token: 0x40004B4
+    // Token: 0x40004D0
     private float mStartTime;
 
-    // Token: 0x40004B5
+    // Token: 0x40004D1
     private float mDuration;
 
-    // Token: 0x40004B6
+    // Token: 0x40004D2
     private float mAmountPerDelta;
 
-    // Token: 0x40004B7
+    // Token: 0x40004D3
     private float mFactor;
 
-    // Token: 0x40004B8
+    // Token: 0x40004D4
     private List<EventDelegate> mTemp;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000604
-    // RVA   : 0x9D5820   Offset: 0x9D4020   Length: 0x84
+    // Token : 0x600061C
+    // RVA   : 0xC097E0   Offset: 0xC08BE0   Length: 0x84
     public float get_amountPerDelta()
     {
         float fVar1;
@@ -87,15 +87,17 @@ public class UITweener
         return this.mAmountPerDelta;
     }
 
-    // Token : 0x6000605
-    // RVA   : 0x9D58E0   Offset: 0x9D40E0   Length: 0x6
+    // Token : 0x600061D
+    // RVA   : 0xC098A0   Offset: 0xC08CA0   Length: 0x6
     public float get_tweenFactor()
     {
+        uint32 FUN_180c098a0(int64 this)
+        {
         return this.mFactor;
     }
 
-    // Token : 0x6000606
-    // RVA   : 0x9D58F0   Offset: 0x9D40F0   Length: 0x1E
+    // Token : 0x600061E
+    // RVA   : 0xC098B0   Offset: 0xC08CB0   Length: 0x1E
     public void set_tweenFactor(float value)
     {
         uint uVar1;
@@ -103,8 +105,8 @@ public class UITweener
         this.mFactor = uVar1;
     }
 
-    // Token : 0x6000607
-    // RVA   : 0x9D58B0   Offset: 0x9D40B0   Length: 0x23
+    // Token : 0x600061F
+    // RVA   : 0xC09870   Offset: 0xC08C70   Length: 0x23
     public Direction get_direction()
     {
         ulong uVar1;
@@ -117,51 +119,57 @@ public class UITweener
         return uVar1;
     }
 
-    // Token : 0x6000608
-    // RVA   : 0x9D52F0   Offset: 0x9D3AF0   Length: 0x3E
+    // Token : 0x6000620
+    // RVA   : 0xC092B0   Offset: 0xC086B0   Length: 0x3E
     private void Reset()
     {
         if (*(char *)((int64)this + 92) == false) {
           (**(code **)(*this + 0x1a8))(this,*(uint64 *)(*this + 0x1b0));
-                          // WARNING: Could not recover jumptable at 0x0001809d5321. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000180c092e1. Too many branches
                           // WARNING: Treating indirect jump as call
           (**(code **)(*this + 0x1b8))(this,*(uint64 *)(*this + 0x1c0));
           return;
         }
     }
 
-    // Token : 0x6000609
-    // RVA   : 0x9D55B0   Offset: 0x9D3DB0   Length: 0x7
+    // Token : 0x6000621
+    // RVA   : 0xC09570   Offset: 0xC08970   Length: 0x7
     protected virtual void Start()
     {
+        void FUN_180c09570(uint64 this)
+        {
         UITweener.DoUpdate(this,0);
     }
 
-    // Token : 0x600060A
-    // RVA   : 0x9D5610   Offset: 0x9D3E10   Length: 0xE
+    // Token : 0x6000622
+    // RVA   : 0xC095D0   Offset: 0xC089D0   Length: 0xE
     protected void Update()
     {
+        void FUN_180c095d0(int64 this)
+        {
         if (!this.useFixedUpdate) {
           UITweener.DoUpdate(this,0);
           return;
         }
     }
 
-    // Token : 0x600060B
-    // RVA   : 0x9D5170   Offset: 0x9D3970   Length: 0xE
+    // Token : 0x6000623
+    // RVA   : 0xC09130   Offset: 0xC08530   Length: 0xE
     protected void FixedUpdate()
     {
+        void FUN_180c09130(int64 this)
+        {
         if (this.useFixedUpdate) {
           UITweener.DoUpdate(this,0);
           return;
         }
     }
 
-    // Token : 0x600060C
-    // RVA   : 0x9D4C30   Offset: 0x9D3430   Length: 0x4E9
+    // Token : 0x6000624
+    // RVA   : 0xC08BF0   Offset: 0xC07FF0   Length: 0x4E9
     protected void DoUpdate()
     {
-        var pStatics = *(int64*)(DAT_181d8b3d8 + 184);
+        var pStatics = *(int64*)(DAT_181db05f8 + 184);
         int iVar1;
         long lVar3;
         bool cVar4;
@@ -217,7 +225,7 @@ public class UITweener
         this.mFactor = fVar11;
         iVar1 = this.style;
         if (iVar1 == 1) {
-          if (fVar11 <= 1.0) goto LAB_1809d5101;
+          if (fVar11 <= 1.0) goto LAB_180c090c1;
           fVar9 = floorf(fVar11);
           fVar11 = fVar11 - fVar9;
         }
@@ -225,12 +233,12 @@ public class UITweener
           if (iVar1 != 2) {
             if ((iVar1 != 0) ||
                (((this.duration != null.0 && (fVar11 <= 1.0)) && (0.0 <= fVar11))))
-            goto LAB_1809d5101;
+            goto LAB_180c090c1;
             uVar13 = Mathf.Clamp01(fVar11,0);
             this.mFactor = uVar13;
             UITweener.Sample(this,uVar13,1,0);
             Behaviour.set_enabled(this,0,0);
-            uVar5 = **(uint64 **)(DAT_181d8b3d8 + 184);
+            uVar5 = **(uint64 **)(DAT_181db05f8 + 184);
             cVar4 = Object.op_Inequality(uVar5,this,0);
             if (!cVar4) {
               return;
@@ -240,12 +248,12 @@ public class UITweener
             *plVar2 = this;
             il2cpp_internal(plVar2,this);
             if (this.onFinished == null) {
-        LAB_1809d500d:
+        LAB_180c08fcd:
               uVar5 = this.eventReceiver;
               cVar4 = Object.op_Inequality(uVar5,0,0);
               if ((cVar4) &&
-                 (cVar4 = FUN_180d6ca90(this.callWhenFinished,0), !cVar4)) {
-                if (this.eventReceiver == null) goto LAB_1809d5114;
+                 (cVar4 = FUN_180d755b0(this.callWhenFinished,0), !cVar4)) {
+                if (this.eventReceiver == null) goto LAB_180c090d4;
                 GameObject.SendMessage
                           (this.eventReceiver,this.callWhenFinished,this,1,0);
               }
@@ -255,8 +263,8 @@ public class UITweener
               return;
             }
             this.mTemp = this.onFinished;
-            uVar5 = il2cpp_internal(DAT_181d6d9b0);
-            FUN_180f58a90(uVar5,DAT_181d5e700);
+            uVar5 = il2cpp_internal(DAT_181d92658);
+            FUN_18132faf0(uVar5,DAT_181d85ea0);
             this.onFinished = uVar5;
             uVar5 = this.mTemp;
             EventDelegate.Execute(uVar5,0);
@@ -267,7 +275,7 @@ public class UITweener
               do {
                 if (lVar6.Count <= (int)uVar7) {
                   this.mTemp = 0;
-                  goto LAB_1809d500d;
+                  goto LAB_180c08fcd;
                 }
                 if (lVar6 == null) break;
                 if (lVar6.Count <= uVar7) {
@@ -283,7 +291,7 @@ public class UITweener
                 lVar8 = lVar8 + 8;
               } while (lVar6 != null);
             }
-        LAB_1809d5114:
+        LAB_180c090d4:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -292,19 +300,19 @@ public class UITweener
             fVar11 = 1.0 - (fVar11 - fVar9);
           }
           else {
-            if (0.0 <= fVar11) goto LAB_1809d5101;
+            if (0.0 <= fVar11) goto LAB_180c090c1;
             fVar9 = floorf(-fVar11);
             fVar11 = -fVar11 - fVar9;
           }
           this.mAmountPerDelta = this.mAmountPerDelta ^ 0x80000000;
         }
         this.mFactor = fVar11;
-        LAB_1809d5101:
+        LAB_180c090c1:
         UITweener.Sample(this,fVar11,0,0);
     }
 
-    // Token : 0x600060D
-    // RVA   : 0x9D54D0   Offset: 0x9D3CD0   Length: 0x66
+    // Token : 0x6000625
+    // RVA   : 0xC09490   Offset: 0xC08890   Length: 0x66
     public void SetOnFinished(Callback del)
     {
         ulong uVar1;
@@ -312,8 +320,8 @@ public class UITweener
         EventDelegate.Set(uVar1,del,0);
     }
 
-    // Token : 0x600060E
-    // RVA   : 0x9D5540   Offset: 0x9D3D40   Length: 0x66
+    // Token : 0x6000626
+    // RVA   : 0xC09500   Offset: 0xC08900   Length: 0x66
     public void SetOnFinished(EventDelegate del)
     {
         ulong uVar1;
@@ -321,8 +329,8 @@ public class UITweener
         EventDelegate.Set(uVar1,del,0);
     }
 
-    // Token : 0x600060F
-    // RVA   : 0x9D4AB0   Offset: 0x9D32B0   Length: 0x66
+    // Token : 0x6000627
+    // RVA   : 0xC08A70   Offset: 0xC07E70   Length: 0x66
     public void AddOnFinished(Callback del)
     {
         ulong uVar1;
@@ -330,8 +338,8 @@ public class UITweener
         EventDelegate.Add(uVar1,del,0);
     }
 
-    // Token : 0x6000610
-    // RVA   : 0x9D4B20   Offset: 0x9D3320   Length: 0x66
+    // Token : 0x6000628
+    // RVA   : 0xC08AE0   Offset: 0xC07EE0   Length: 0x66
     public void AddOnFinished(EventDelegate del)
     {
         ulong uVar1;
@@ -339,27 +347,29 @@ public class UITweener
         EventDelegate.Add(uVar1,del,0);
     }
 
-    // Token : 0x6000611
-    // RVA   : 0x9D5240   Offset: 0x9D3A40   Length: 0x67
+    // Token : 0x6000629
+    // RVA   : 0xC09200   Offset: 0xC08600   Length: 0x67
     public void RemoveOnFinished(EventDelegate del)
     {
         if (this.onFinished != null) {
-          FUN_181801c10(this.onFinished,del,DAT_181d5e880);
+          FUN_1817eee00(this.onFinished,del,DAT_181d86020);
         }
         if (this.mTemp != null) {
-          FUN_181801c10(this.mTemp,del,DAT_181d5e880);
+          FUN_1817eee00(this.mTemp,del,DAT_181d86020);
         }
     }
 
-    // Token : 0x6000612
-    // RVA   : 0x9D5180   Offset: 0x9D3980   Length: 0x5
+    // Token : 0x600062A
+    // RVA   : 0xC09140   Offset: 0xC08540   Length: 0x5
     private void OnDisable()
     {
+        void FUN_180c09140(int64 this)
+        {
         this.mStarted = 0;
     }
 
-    // Token : 0x6000613
-    // RVA   : 0x9D5120   Offset: 0x9D3920   Length: 0x4F
+    // Token : 0x600062B
+    // RVA   : 0xC090E0   Offset: 0xC084E0   Length: 0x4F
     public void Finish()
     {
         bool cVar1;
@@ -376,8 +386,8 @@ public class UITweener
         }
     }
 
-    // Token : 0x6000614
-    // RVA   : 0x9D5330   Offset: 0x9D3B30   Length: 0x1A0
+    // Token : 0x600062C
+    // RVA   : 0xC092F0   Offset: 0xC086F0   Length: 0x1A0
     public void Sample(float factor, bool isFinished)
     {
         int iVar1;
@@ -386,20 +396,20 @@ public class UITweener
         fVar2 = (float)Mathf.Clamp01(factor,0);
         iVar1 = (int)this[3];
         if (iVar1 == 1) {
-          fVar2 = (float)FUN_1801e72c0((1.0 - fVar2) * 1.5707964);
+          fVar2 = (float)FUN_1801e7e70((1.0 - fVar2) * 1.5707964);
           fVar2 = 1.0 - fVar2;
           if (*(char *)((int64)this + 52) != false) {
             fVar2 = fVar2 * fVar2;
           }
         }
         else if (iVar1 == 2) {
-          fVar2 = (float)FUN_1801e72c0(fVar2 * 1.5707964);
+          fVar2 = (float)FUN_1801e7e70(fVar2 * 1.5707964);
           if (*(char *)((int64)this + 52) != false) {
             fVar2 = 1.0 - (1.0 - fVar2) * (1.0 - fVar2);
           }
         }
         else if (iVar1 == 3) {
-          fVar3 = (float)FUN_1801e72c0(fVar2 * 6.2831855);
+          fVar3 = (float)FUN_1801e7e70(fVar2 * 6.2831855);
           fVar2 = fVar2 - fVar3 / 6.2831855;
           if (*(char *)((int64)this + 52) != false) {
             fVar3 = (fVar2 + fVar2) - 1.0;
@@ -418,13 +428,13 @@ public class UITweener
         if (this[4] != 0) {
           fVar2 = (float)AnimationCurve.Evaluate(this[4],fVar2,0);
         }
-                          // WARNING: Could not recover jumptable at 0x0001809d54c9. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000180c09489. Too many branches
                           // WARNING: Treating indirect jump as call
         (**(code **)(*this + 0x198))(this,fVar2,isFinished,*(uint64 *)(*this + 0x1a0));
     }
 
-    // Token : 0x6000615
-    // RVA   : 0x9D4B90   Offset: 0x9D3390   Length: 0x9A
+    // Token : 0x600062D
+    // RVA   : 0xC08B50   Offset: 0xC07F50   Length: 0x9A
     private float BounceLogic(float val)
     {
         if (val < 0.363636) {
@@ -439,8 +449,8 @@ public class UITweener
         return (val - 0.545454) * 7.5625 * (val - 0.545454) + 0.75;
     }
 
-    // Token : 0x6000616
-    // RVA   : 0x9D5190   Offset: 0x9D3990   Length: 0x13
+    // Token : 0x600062E
+    // RVA   : 0xC09150   Offset: 0xC08550   Length: 0x13
     public void Play()
     {
         bool cVar1;
@@ -458,26 +468,26 @@ public class UITweener
         UITweener.DoUpdate(this,0);
     }
 
-    // Token : 0x6000617
-    // RVA   : 0x9D5190   Offset: 0x9D3990   Length: 0x13
+    // Token : 0x600062F
+    // RVA   : 0xC09150   Offset: 0xC08550   Length: 0x13
     public void PlayForward()
     {
-                          // WARNING: Could not recover jumptable at 0x0001809d519c. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000180c0915c. Too many branches
                           // WARNING: Treating indirect jump as call
         (**(code **)(*this + 0x188))(this,1,*(uint64 *)(*this + 400));
     }
 
-    // Token : 0x6000618
-    // RVA   : 0x9D51B0   Offset: 0x9D39B0   Length: 0x13
+    // Token : 0x6000630
+    // RVA   : 0xC09170   Offset: 0xC08570   Length: 0x13
     public void PlayReverse()
     {
-                          // WARNING: Could not recover jumptable at 0x0001809d51bc. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000180c0917c. Too many branches
                           // WARNING: Treating indirect jump as call
         (**(code **)(*this + 0x188))(this,0,*(uint64 *)(*this + 400));
     }
 
-    // Token : 0x6000619
-    // RVA   : 0x9D51D0   Offset: 0x9D39D0   Length: 0x66
+    // Token : 0x6000631
+    // RVA   : 0xC09190   Offset: 0xC08590   Length: 0x66
     public virtual void Play(bool forward)
     {
         bool cVar1;
@@ -495,8 +505,8 @@ public class UITweener
         UITweener.DoUpdate(this,0);
     }
 
-    // Token : 0x600061A
-    // RVA   : 0x9D52B0   Offset: 0x9D3AB0   Length: 0x3C
+    // Token : 0x6000632
+    // RVA   : 0xC09270   Offset: 0xC08670   Length: 0x3C
     public void ResetToBeginning()
     {
         float fVar1;
@@ -511,8 +521,8 @@ public class UITweener
         UITweener.Sample(this,uVar2,0,0);
     }
 
-    // Token : 0x600061B
-    // RVA   : 0x9D55C0   Offset: 0x9D3DC0   Length: 0x49
+    // Token : 0x6000633
+    // RVA   : 0xC09580   Offset: 0xC08980   Length: 0x49
     public void Toggle()
     {
         uint uVar1;
@@ -528,14 +538,14 @@ public class UITweener
         Behaviour.set_enabled(this,1,0);
     }
 
-    // Token : 0x600061C
+    // Token : 0x6000634
     // (no native address)
     protected virtual void OnUpdate(float factor, bool isFinished)
     {
     }
 
-    // Token : 0x600061D
-    // RVA   : 0x165CA80   Offset: 0x165B280   Length: 0x533
+    // Token : 0x6000635
+    // RVA   : 0x15E4790   Offset: 0x15E3B90   Length: 0x533
     public static T Begin<T>(GameObject go, float duration, float delay)
     {
         int iVar1;
@@ -627,7 +637,7 @@ public class UITweener
             }
             *(float *)(lVar4 + 104) = fVar12;
             *(uint32 *)(lVar4 + 28) = 0;
-            lVar5 = FUN_1800d60b0(DAT_181d7ec00,2);
+            lVar5 = FUN_1800d60b0(DAT_181da3ba0,2);
             uVar7 = CONCAT44(uVar13,0x3f800000);
             local_78 = 0;
             local_70 = 0;
@@ -665,9 +675,9 @@ public class UITweener
               *(uint64 *)(lVar4 + 72) = 0;
               *(uint64 *)(lVar4 + 80) = 0;
               if (*(int64 *)(lVar4 + 64) != 0) {
-                FUN_180f56130(*(int64 *)(lVar4 + 64),DAT_181d5e800);
+                FUN_1812f9a10(*(int64 *)(lVar4 + 64),DAT_181d85fa0);
                 if (*(int64 *)(lVar4 + 112) != 0) {
-                  FUN_180f56130(*(int64 *)(lVar4 + 112),DAT_181d5e800);
+                  FUN_1812f9a10(*(int64 *)(lVar4 + 112),DAT_181d85fa0);
                 }
                 Behaviour.set_enabled(lVar4,1,0);
                 return lVar4;
@@ -679,20 +689,20 @@ public class UITweener
         }
     }
 
-    // Token : 0x600061E
-    // RVA   : 0x245810   Offset: 0x244010   Length: 0x3
+    // Token : 0x6000636
+    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
     public virtual void SetStartToCurrentValue()
     {
     }
 
-    // Token : 0x600061F
-    // RVA   : 0x245810   Offset: 0x244010   Length: 0x3
+    // Token : 0x6000637
+    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
     public virtual void SetEndToCurrentValue()
     {
     }
 
-    // Token : 0x6000620
-    // RVA   : 0x9D5620   Offset: 0x9D3E20   Length: 0x1F3
+    // Token : 0x6000638
+    // RVA   : 0xC095E0   Offset: 0xC089E0   Length: 0x1F3
     protected void /*ctor*/()
     {
         long lVar1;
@@ -705,7 +715,7 @@ public class UITweener
         ulong uStack_40;
         ulong local_38;
         uint local_30;
-        lVar1 = FUN_1800d60b0(DAT_181d7ec00,2);
+        lVar1 = FUN_1800d60b0(DAT_181da3ba0,2);
         local_58 = 0;
         local_50 = 0;
         local_68 = 0;
@@ -739,8 +749,8 @@ public class UITweener
           this.animationCurve = new AnimationCurve(lVar1,0);
           this.ignoreTimeScale = 1;
           this.duration = 0x3f800000;
-          uVar2 = il2cpp_internal(DAT_181d6d9b0);
-          FUN_180f58a90(uVar2,DAT_181d5e700);
+          uVar2 = il2cpp_internal(DAT_181d92658);
+          FUN_18132faf0(uVar2,DAT_181d85ea0);
           this.onFinished = uVar2;
           this.timeScale = 0x3f800000;
           this.mAmountPerDelta = 0x447a0000;

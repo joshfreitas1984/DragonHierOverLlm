@@ -1,116 +1,116 @@
 // ============================================================
 // Type  : EventData
-// Token : 0x20001F5
+// Token : 0x20001FB
 // ============================================================
 
 public class EventData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000DB5
+    // Token: 0x4000E45
     public int id;
 
-    // Token: 0x4000DB6
+    // Token: 0x4000E46
     public string eventName;
 
-    // Token: 0x4000DB7
+    // Token: 0x4000E47
     public string eventDescribe;
 
-    // Token: 0x4000DB8
+    // Token: 0x4000E48
     public List<EventAvailableAreaType> eventAvailableAreaType;
 
-    // Token: 0x4000DB9
+    // Token: 0x4000E49
     public string spriteName;
 
-    // Token: 0x4000DBA
+    // Token: 0x4000E4A
     public bool isAreaEvent;
 
-    // Token: 0x4000DBB
+    // Token: 0x4000E4B
     public int resourcePointID;
 
-    // Token: 0x4000DBC
+    // Token: 0x4000E4C
     public List<int> areaID;
 
-    // Token: 0x4000DBD
+    // Token: 0x4000E4D
     public List<int> areaMapTileID;
 
-    // Token: 0x4000DBE
+    // Token: 0x4000E4E
     public BigMapPos bigMapPos;
 
-    // Token: 0x4000DBF
+    // Token: 0x4000E4F
     public int nearAreaID;
 
-    // Token: 0x4000DC0
+    // Token: 0x4000E50
     public int nearAreaDirection;
 
-    // Token: 0x4000DC1
+    // Token: 0x4000E51
     public bool seen;
 
-    // Token: 0x4000DC2
+    // Token: 0x4000E52
     public bool happened;
 
-    // Token: 0x4000DC3
+    // Token: 0x4000E53
     public bool noticed;
 
-    // Token: 0x4000DC4
+    // Token: 0x4000E54
     public bool hovered;
 
-    // Token: 0x4000DC5
+    // Token: 0x4000E55
     public bool plotTargetEvent;
 
-    // Token: 0x4000DC6
+    // Token: 0x4000E56
     public bool missionTargetEvent;
 
-    // Token: 0x4000DC7
+    // Token: 0x4000E57
     public bool autoDestroy;
 
-    // Token: 0x4000DC8
+    // Token: 0x4000E58
     public int leftTime;
 
-    // Token: 0x4000DC9
+    // Token: 0x4000E59
     public float difficulty;
 
-    // Token: 0x4000DCA
+    // Token: 0x4000E5A
     public float difficultyRate;
 
-    // Token: 0x4000DCB
+    // Token: 0x4000E5B
     public int speTargetID;
 
-    // Token: 0x4000DCC
+    // Token: 0x4000E5C
     public PlotData plotData;
 
-    // Token: 0x4000DCD
+    // Token: 0x4000E5D
     public ItemListData eventItemList;
 
-    // Token: 0x4000DCE
+    // Token: 0x4000E5E
     public LeaderLimit leaderLimit;
 
-    // Token: 0x4000DCF
+    // Token: 0x4000E5F
     public string eventOutTimeCallFuc;
 
-    // Token: 0x4000DD0
+    // Token: 0x4000E60
     public float seeRange;
 
-    // Token: 0x4000DD1
+    // Token: 0x4000E61
     public int randomSeed;
 
-    // Token: 0x4000DD2
+    // Token: 0x4000E62
     public bool inaccuracyPosText;
 
-    // Token: 0x4000DD3
+    // Token: 0x4000E63
     public bool notImportant;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000FAA
-    // RVA   : 0x936540   Offset: 0x934D40   Length: 0xF4
+    // Token : 0x6000FE2
+    // RVA   : 0x946000   Offset: 0x945400   Length: 0xF4
     public void /*ctor*/()
     {
         ulong uVar1;
         this.resourcePointID = 0xffffffff;
-        uVar1 = il2cpp_internal(DAT_181d6f030);
-        FUN_180f58a90(uVar1,DAT_181d678f8);
+        uVar1 = il2cpp_internal(DAT_181d93cd0);
+        FUN_18132faf0(uVar1,DAT_181d8f098);
         this.areaID = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d6f030);
-        FUN_180f58a90(uVar1,DAT_181d678f8);
+        uVar1 = il2cpp_internal(DAT_181d93cd0);
+        FUN_18132faf0(uVar1,DAT_181d8f098);
         this.areaMapTileID = uVar1;
         this.nearAreaID = 0xffffffffffffffff;
         this.difficultyRate = 0x3f800000;
@@ -119,15 +119,17 @@ public class EventData
         this.bigMapPos = new c.DisplayClass9_0(0);
     }
 
-    // Token : 0x6000FAB
-    // RVA   : 0x2A5CA0   Offset: 0x2A44A0   Length: 0xC
+    // Token : 0x6000FE3
+    // RVA   : 0x2A5CA0   Offset: 0x2A50A0   Length: 0xC
     public void SetPlotData(PlotData _plotData)
     {
+        void FUN_1802a5ca0(int64 this,uint64 _plotData)
+        {
         this.plotData = _plotData;
     }
 
-    // Token : 0x6000FAC
-    // RVA   : 0x935F70   Offset: 0x934770   Length: 0x28
+    // Token : 0x6000FE4
+    // RVA   : 0x945A10   Offset: 0x944E10   Length: 0x28
     public int GetEventRareLv()
     {
         int iVar1;
@@ -135,8 +137,8 @@ public class EventData
         return (int)((float)iVar1 * 0.5);
     }
 
-    // Token : 0x6000FAD
-    // RVA   : 0x9364B0   Offset: 0x934CB0   Length: 0x81
+    // Token : 0x6000FE5
+    // RVA   : 0x945F70   Offset: 0x945370   Length: 0x81
     public string Name()
     {
         ulong uVar1;
@@ -146,11 +148,12 @@ public class EventData
         GlobalData.GenerateRareLvColorText(uVar1,(int)((float)iVar2 * 0.5),0);
     }
 
-    // Token : 0x6000FAE
-    // RVA   : 0x935A10   Offset: 0x934210   Length: 0x55E
+    // Token : 0x6000FE6
+    // RVA   : 0x945490   Offset: 0x944890   Length: 0x576
     public string GetDescribe(bool showDifficulty)
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
+        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
         long lVar1;
         int iVar2;
         long lVar3;
@@ -167,9 +170,9 @@ public class EventData
           if (this.areaID != null) {
             uVar6 = "";
             if (0 < this.areaID.Count) {
-              if (GameController._instance == null) throw; // [null/range check failed]
+              if (*pStatics_2cc8 == 0) throw; // [null/range check failed]
               lVar5 = this.areaID;
-              lVar1 = GameController._instance.worldData;
+              lVar1 = *(int64 *)(*pStatics_2cc8 + 32);
               if (lVar5 == null) throw; // [null/range check failed]
               if (lVar5.Count == null) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -183,16 +186,17 @@ public class EventData
                 lVar5 = FUN_18046c0a0(0);
                 if (lVar5 == null) throw; // [null/range check failed]
                 lVar1 = this.areaID;
-                lVar5 = lVar5.villageAreaID;
+                lVar5 = *(int64 *)(lVar5 + 32);
                 if (lVar1 == null) throw; // [null/range check failed]
                 if (lVar1.Count == null) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
-                if (((lVar5 == null) ||
-                    (lVar5 = WorldData.GetArea(lVar5,*(uint32 *)(lVar1._items + 32),
-                                                0), lVar5 == null)) ||
-                   (lVar5 = AreaData.GetForce(lVar5,0)) == null) throw; // [null/range check failed]
-                uVar6 = lVar5.Count;
+                if ((lVar5 == null) ||
+                   (lVar5 = WorldData.GetArea(lVar5,*(uint32 *)(lVar1._items + 32),0
+                                              ), lVar5 == null)) throw; // [null/range check failed]
+                lVar5 = AreaData.GetForce(lVar5,0);
+                if (lVar5 == null) throw; // [null/range check failed]
+                uVar6 = ForceData.GetForceName(lVar5,1,0);
               }
             }
             if (lVar3 != null) {
@@ -200,17 +204,17 @@ public class EventData
               uVar4 = "#EnemyForceName#";
               uVar6 = "";
               if (-1 < this.speTargetID) {
-                if (((GameController._instance == null) ||
-                    (lVar5 = GameController._instance.worldData,
-                    lVar5 == null)) ||
-                   (lVar5 = WorldData.GetForce(lVar5,this.speTargetID,0)) == null)
+                if ((*pStatics_2cc8 == 0) ||
+                   (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) == null)
                 throw; // [null/range check failed]
-                uVar6 = lVar5.Count;
+                lVar5 = WorldData.GetForce(lVar5,this.speTargetID,0);
+                if (lVar5 == null) throw; // [null/range check failed]
+                uVar6 = ForceData.GetForceName(lVar5,1,0);
               }
               if (lVar3 != null) {
                 lVar3 = String.Replace(lVar3,uVar4,uVar6,0);
-                lVar5 = *(int64 *)(pPlotController + 0x400);
-                iVar2 = Mathf.RoundToInt(pPlotController,0);
+                lVar5 = *(int64 *)(pStatics_3d40 + 0x408);
+                iVar2 = Mathf.RoundToInt(pStatics_3d40,0);
                 uVar7 = (uint32)((float)iVar2 * 0.5);
                 if (lVar5 != null) {
                   if (lVar5.Count <= uVar7) {
@@ -221,8 +225,8 @@ public class EventData
                   uVar4 = GlobalData.GenerateRareLvColorText(uVar4,(int)((float)iVar2 * 0.5),0);
                   if (lVar3 != null) {
                     lVar5 = String.Replace(lVar3,"#DifficultyRateText#",uVar4,0);
-                    lVar3 = *(int64 *)(pPlotController + 0x500);
-                    iVar2 = Mathf.RoundToInt(PlotController_StaticsPtr,0);
+                    lVar3 = *(int64 *)(pStatics_3d40 + 0x508);
+                    iVar2 = Mathf.RoundToInt(DAT_181d73d40,0);
                     uVar7 = (uint32)((float)iVar2 * 0.5);
                     if (lVar3 != null) {
                       if (*(uint32 *)(lVar3 + 24) <= uVar7) {
@@ -249,83 +253,86 @@ public class EventData
         }
     }
 
-    // Token : 0x6000FAF
-    // RVA   : 0x935FA0   Offset: 0x9347A0   Length: 0x50C
+    // Token : 0x6000FE7
+    // RVA   : 0x945A40   Offset: 0x944E40   Length: 0x527
     public string GetPosText()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         uint uVar1;
-        ulong uVar2;
-        bool cVar3;
-        uint uVar4;
+        bool cVar2;
+        uint uVar3;
+        long lVar4;
         long lVar5;
-        long lVar6;
+        ulong uVar6;
         ulong uVar7;
         int iVar8;
         if (this.resourcePointID < 0) {
           if (this.nearAreaID == -1) {
-            lVar6 = this.areaID;
-            if (lVar6 != null) {
-              if (lVar6.Count == 1) {
-                lVar6 = FUN_18046c0a0(0);
-                if (lVar6 != null) {
-                  lVar5 = this.areaID;
-                  lVar6 = lVar6.villageAreaID;
-                  if (lVar5 != null) {
-                    if (lVar5.Count == null) {
+            lVar5 = this.areaID;
+            if (lVar5 != null) {
+              if (lVar5.Count == 1) {
+                lVar5 = FUN_18046c0a0(0);
+                if (lVar5 != null) {
+                  lVar4 = this.areaID;
+                  lVar5 = *(int64 *)(lVar5 + 32);
+                  if (lVar4 != null) {
+                    if (lVar4.Count == null) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
                     }
-                    if ((lVar6 != null) &&
-                       (lVar6 = WorldData.GetArea(lVar6,*(uint32 *)
-                                                          (lVar5._items + 32),0),
-                       lVar6 != null)) {
-                      return lVar6.Count;
+                    if ((lVar5 != null) &&
+                       (lVar5 = WorldData.GetArea(lVar5,*(uint32 *)
+                                                          (lVar4._items + 32),0),
+                       lVar5 != null)) {
+                      uVar7 = AreaData.GetAreaName(lVar5,0);
+                      return uVar7;
                     }
                   }
                 }
               }
               else {
-                lVar5 = FUN_18046c0a0(0);
-                if ((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) {
-                  uVar7 = *(uint64 *)(*(int64 *)(lVar5 + 32) + 24);
-                  cVar3 = GlobalData.ListEqual(lVar6,uVar7,0);
-                  if (cVar3) {
+                lVar4 = FUN_18046c0a0(0);
+                if ((lVar4 != null) && (*(int64 *)(lVar4 + 32) != 0)) {
+                  uVar7 = *(uint64 *)(*(int64 *)(lVar4 + 32) + 24);
+                  cVar2 = GlobalData.ListEqual(lVar5,uVar7,0);
+                  if (cVar2) {
                     return "所有城市";
                   }
                   uVar7 = this.areaID;
-                  lVar6 = FUN_18046c0a0(0);
-                  if ((lVar6 != null) && (lVar6.villageAreaID != null)) {
-                    uVar2 = *(uint64 *)(lVar6.villageAreaID + 32);
-                    cVar3 = GlobalData.ListEqual(uVar7,uVar2,0);
-                    if (cVar3) {
+                  lVar5 = FUN_18046c0a0(0);
+                  if ((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) {
+                    uVar6 = *(uint64 *)(*(int64 *)(lVar5 + 32) + 32);
+                    cVar2 = GlobalData.ListEqual(uVar7,uVar6,0);
+                    if (cVar2) {
                       return "所有村镇";
                     }
                     uVar7 = this.areaID;
-                    lVar6 = FUN_18046c0a0(0);
-                    if ((lVar6 != null) && (lVar6.villageAreaID != null)) {
-                      uVar2 = *(uint64 *)(lVar6.villageAreaID + 40);
-                      cVar3 = GlobalData.ListEqual(uVar7,uVar2,0);
-                      if (cVar3) {
+                    lVar5 = FUN_18046c0a0(0);
+                    if ((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) {
+                      uVar6 = *(uint64 *)(*(int64 *)(lVar5 + 32) + 40);
+                      cVar2 = GlobalData.ListEqual(uVar7,uVar6,0);
+                      if (cVar2) {
                         return "所有门派";
                       }
-                      lVar6 = this.areaID;
+                      lVar5 = this.areaID;
                       iVar8 = 0;
                       uVar7 = "";
-                      if (lVar6 != null) {
+                      if (lVar5 != null) {
                         while( true ) {
-                          if (lVar6.Count <= iVar8) {
+                          if (lVar5.Count <= iVar8) {
                             return uVar7;
                           }
-                          lVar6 = FUN_18046c0a0(0);
-                          if (lVar6 == null) break;
-                          lVar6 = lVar6.villageAreaID;
+                          lVar5 = FUN_18046c0a0(0);
+                          if (lVar5 == null) break;
+                          lVar5 = *(int64 *)(lVar5 + 32);
                           if (((this.areaID == null) ||
-                              (uVar4 = FUN_1800d6750(this.areaID,iVar8,DAT_181d68270),
-                              lVar6 == null)) || (lVar6 = WorldData.GetArea(lVar6,uVar4,0)) == null)
+                              (uVar3 = FUN_1800d6760(this.areaID,iVar8,DAT_181d8fa18),
+                              lVar5 == null)) || (lVar5 = WorldData.GetArea(lVar5,uVar3,0)) == null)
                           break;
-                          uVar7 = String.Concat(uVar7,lVar6.Count,0);
+                          uVar6 = AreaData.GetAreaName(lVar5,0);
+                          uVar7 = String.Concat(uVar7,uVar6,0);
                           iVar8 = iVar8 + 1;
-                          lVar6 = this.areaID;
-                          if (lVar6 == null) break;
+                          lVar5 = this.areaID;
+                          if (lVar5 == null) break;
                         }
                       }
                     }
@@ -339,20 +346,20 @@ public class EventData
             if (this.inaccuracyPosText) {
               uVar7 = "{0}周边";
             }
-            lVar6 = FUN_18046c0a0(0);
-            if (((lVar6 != null) && (lVar6.villageAreaID != null)) &&
-               (lVar6 = WorldData.GetArea(lVar6.villageAreaID,this.nearAreaID,0),
-               lVar6 != null)) {
-              uVar2 = lVar6.Count;
-              lVar6 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x3c0);
-              if (lVar6 != null) {
+            lVar5 = FUN_18046c0a0(0);
+            if (((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) &&
+               (lVar5 = WorldData.GetArea(*(int64 *)(lVar5 + 32),this.nearAreaID,0),
+               lVar5 != null)) {
+              uVar6 = AreaData.GetAreaName(lVar5,0);
+              lVar5 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x3c8);
+              if (lVar5 != null) {
                 uVar1 = this.nearAreaDirection;
-                if (lVar6.Count <= uVar1) {
+                if (lVar5.Count <= uVar1) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
-                uVar7 = String.Format(uVar7,uVar2,
+                uVar7 = String.Format(uVar7,uVar6,
                                        *(uint64 *)
-                                        (lVar6._items + 32 + (int64)(int)uVar1 * 8),0)
+                                        (lVar5._items + 32 + (int64)(int)uVar1 * 8),0)
                 ;
                 return uVar7;
               }
@@ -360,17 +367,17 @@ public class EventData
           }
         }
         else {
-          if (((GameController._instance != null) &&
-              (lVar6 = GameController._instance.worldData, lVar6 != null
-              )) && (lVar6 = WorldData.GetResourcePoint(lVar6,this.resourcePointID,0),
-                    lVar6 != null)) {
-            return lVar6.villageAreaID;
+          if (((*pStatics != 0) &&
+              (lVar5 = *(int64 *)(*pStatics + 32)) != null) &&
+             (lVar5 = WorldData.GetResourcePoint(lVar5,this.resourcePointID,0)) != null) {
+            uVar7 = ResourcePointData.GetResourcePointFullName(lVar5,0);
+            return uVar7;
           }
         }
     }
 
-    // Token : 0x6000FB0
-    // RVA   : 0x935890   Offset: 0x934090   Length: 0x175
+    // Token : 0x6000FE8
+    // RVA   : 0x945310   Offset: 0x944710   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -381,13 +388,13 @@ public class EventData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -399,7 +406,7 @@ public class EventData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d53c70,plVar1);
+            FUN_180002970(0,DAT_181d78da0,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

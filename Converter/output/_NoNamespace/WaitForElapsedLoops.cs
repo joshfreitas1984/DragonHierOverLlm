@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : WaitForElapsedLoops
-// Token : 0x2000487
+// Token : 0x200048E
 // ============================================================
 
 public class WaitForElapsedLoops
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002056
+    // Token: 0x4002160
     private readonly Tween t;
 
-    // Token: 0x4002057
+    // Token: 0x4002161
     private readonly int elapsedLoops;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60026EC
-    // RVA   : 0x8D8E50   Offset: 0x8D7650   Length: 0x3B
+    // Token : 0x600276F
+    // RVA   : 0x93AF60   Offset: 0x93A360   Length: 0x3B
     public override bool get_keepWaiting()
     {
         long lVar1;
@@ -31,8 +31,8 @@ public class WaitForElapsedLoops
         return iVar2 < this.elapsedLoops;
     }
 
-    // Token : 0x60026ED
-    // RVA   : 0x30BD50   Offset: 0x30A550   Length: 0x41
+    // Token : 0x6002770
+    // RVA   : 0x30BD50   Offset: 0x30B150   Length: 0x41
     public void /*ctor*/(Tween tween, int elapsedLoops)
     {
         c__DisplayClass9_0.ctor(this,0);

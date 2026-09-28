@@ -1,13 +1,13 @@
 // ============================================================
 // Type  : OnCustomWrite
-// Token : 0x20000A6
+// Token : 0x20000A7
 // ============================================================
 
 public class OnCustomWrite
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60004D2
-    // RVA   : 0x210320   Offset: 0x20EB20   Length: 0x6A
+    // Token : 0x60004EA
+    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
@@ -25,8 +25,8 @@ public class OnCustomWrite
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x60004D3
-    // RVA   : 0xB080B0   Offset: 0xB068B0   Length: 0x420
+    // Token : 0x60004EB
+    // RVA   : 0x8E76A0   Offset: 0x8E6AA0   Length: 0x55B
     public virtual void Invoke(List<Vector3> v, List<Vector2> u, List<Color> c, List<Vector3> n, List<Vector4> t, List<Vector4> u2)
     {
         void OnCustomWrite.Invoke
@@ -74,7 +74,7 @@ public class OnCustomWrite
             if (*(char *)(lVar11 + 74) == '\x06') {
               if ((((plVar2 == (int64 *)0) || (*(short *)(lVar11 + 72) == -1)) ||
                   ((*(uint32 *)(*plVar2 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(local_res8 + 24) == 0)
-                 ) goto LAB_180b08592;
+                 ) goto LAB_1808e7b82;
               cVar3 = il2cpp_internal(lVar11);
               if (!cVar3) {
                 cVar3 = FUN_1800d65c0(lVar11);
@@ -96,13 +96,13 @@ public class OnCustomWrite
                                   (int)((uint32)*(uint16 *)(lVar11 + 72) +
                                        *(int *)(*(int64 *)(lVar4 + 176) + 8 + (uint64)uVar8 * 16)
                                        ) * 16 + 0x138 + lVar4);
-                        goto LAB_180b08506;
+                        goto LAB_1808e7af6;
                       }
                       uVar8 = uVar8 + 1;
                     } while (uVar8 < *(uint16 *)(lVar4 + 0x12a));
                   }
                   puVar5 = (uint64 *)FUN_1800914f0(plVar2,lVar6,*(uint16 *)(lVar11 + 72));
-        LAB_180b08506:
+        LAB_1808e7af6:
                   (*(code *)*puVar5)(plVar2,v,u,c,n,t,u2,puVar5[1]);
                 }
               }
@@ -123,13 +123,13 @@ public class OnCustomWrite
                                 (int)((uint32)uVar8 +
                                      *(int *)(*(int64 *)(lVar4 + 176) + 8 + (uint64)uVar7 * 16))
                                 * 16 + 0x138 + lVar4;
-                        goto LAB_180b08436;
+                        goto LAB_1808e7a26;
                       }
                       uVar7 = uVar7 + 1;
                     } while (uVar7 < *(uint16 *)(lVar4 + 0x12a));
                   }
                   lVar4 = FUN_1800914f0(plVar2,*(int64 *)(lVar11 + 24),uVar8);
-        LAB_180b08436:
+        LAB_1808e7a26:
                   uVar9 = *(uint64 *)(lVar4 + 8);
                 }
                 puVar5 = (uint64 *)il2cpp_internal(uVar9,lVar11);
@@ -138,7 +138,7 @@ public class OnCustomWrite
             }
             else {
               if ((*(short *)(lVar11 + 72) == -1) || (*(int64 *)(local_res8 + 24) == 0))
-              goto LAB_180b08187;
+              goto LAB_1808e7777;
               cVar3 = il2cpp_internal(lVar11);
               if (!cVar3) {
                 cVar3 = FUN_1800d65c0(lVar11);
@@ -160,13 +160,13 @@ public class OnCustomWrite
                                   (int)((uint32)*(uint16 *)(lVar11 + 72) +
                                        *(int *)(*(int64 *)(lVar4 + 176) + 8 + (uint64)uVar8 * 16)
                                        ) * 16 + 0x138 + lVar4);
-                        goto LAB_180b08306;
+                        goto LAB_1808e78f6;
                       }
                       uVar8 = uVar8 + 1;
                     } while (uVar8 < *(uint16 *)(lVar4 + 0x12a));
                   }
                   puVar5 = (uint64 *)FUN_1800914f0(v,lVar6,*(uint16 *)(lVar11 + 72));
-        LAB_180b08306:
+        LAB_1808e78f6:
                   (*(code *)*puVar5)(v,u,c,n,t,u2,puVar5[1]);
                 }
               }
@@ -188,7 +188,7 @@ public class OnCustomWrite
                                   (int)((uint32)uVar8 +
                                        *(int *)(*(int64 *)(lVar4 + 176) + 8 + (uint64)uVar7 * 16)
                                        ) * 16 + lVar4 + 0x140);
-                        goto LAB_180b0826b;
+                        goto LAB_1808e785b;
                       }
                       uVar7 = uVar7 + 1;
                     } while (uVar7 < *(uint16 *)(lVar4 + 0x12a));
@@ -196,18 +196,18 @@ public class OnCustomWrite
                   lVar4 = FUN_1800914f0(v,*(int64 *)(lVar11 + 24),uVar8);
                   uVar9 = *(uint64 *)(lVar4 + 8);
                 }
-        LAB_180b0826b:
+        LAB_1808e785b:
                 puVar5 = (uint64 *)il2cpp_internal(uVar9,lVar11);
                 (*(code *)*puVar5)(v,u,c,n,t,u2,puVar5);
               }
             }
           }
           else if (*(char *)(lVar11 + 74) == '\x06') {
-        LAB_180b08187:
+        LAB_1808e7777:
             (*pcVar1)(v,u,c,n,t,u2,lVar11);
           }
           else {
-        LAB_180b08592:
+        LAB_1808e7b82:
             (*pcVar1)(plVar2,v,u,c,n,t,u2,lVar11);
           }
           local_58 = local_58 + 1;
@@ -217,8 +217,8 @@ public class OnCustomWrite
         } while( true );
     }
 
-    // Token : 0x60004D4
-    // RVA   : 0xB08050   Offset: 0xB06850   Length: 0x5D
+    // Token : 0x60004EC
+    // RVA   : 0x8E7640   Offset: 0x8E6A40   Length: 0x5D
     public virtual IAsyncResult BeginInvoke(List<Vector3> v, List<Vector2> u, List<Color> c, List<Vector3> n, List<Vector4> t, List<Vector4> u2, AsyncCallback callback, object object)
     {
         void OnCustomWrite.BeginInvoke
@@ -243,8 +243,8 @@ public class OnCustomWrite
         il2cpp_internal(this,&local_48,callback,object);
     }
 
-    // Token : 0x60004D5
-    // RVA   : 0x210040   Offset: 0x20E840   Length: 0xA
+    // Token : 0x60004ED
+    // RVA   : 0x210040   Offset: 0x20F440   Length: 0xA
     public virtual void EndInvoke(IAsyncResult result)
     {
         il2cpp_internal(result,0);

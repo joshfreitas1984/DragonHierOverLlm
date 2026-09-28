@@ -1,18 +1,18 @@
 // ============================================================
 // Type  : ProcessEventsIn
-// Token : 0x20000E3
+// Token : 0x20000E4
 // ============================================================
 
 public class ProcessEventsIn
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400059E
+    // Token: 0x40005BA
     public int value__;
 
-    // Token: 0x400059F
+    // Token: 0x40005BB
     public const ProcessEventsIn Update;
 
-    // Token: 0x40005A0
+    // Token: 0x40005BC
     public const ProcessEventsIn LateUpdate;
 
 }

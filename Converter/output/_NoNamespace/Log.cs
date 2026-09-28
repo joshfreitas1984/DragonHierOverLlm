@@ -1,18 +1,18 @@
 // ============================================================
 // Type  : Log
-// Token : 0x2000418
+// Token : 0x200041F
 // ============================================================
 
 public class Log
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001F4E
+    // Token: 0x4002058
     public string message;
 
-    // Token: 0x4001F4F
+    // Token: 0x4002059
     public string stackTrace;
 
-    // Token: 0x4001F50
+    // Token: 0x400205A
     public LogType type;
 
 }

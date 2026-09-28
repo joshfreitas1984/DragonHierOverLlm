@@ -1,59 +1,65 @@
 // ============================================================
 // Type  : UI2DSpriteAnimation
-// Token : 0x20000D0
+// Token : 0x20000D1
 // ============================================================
 
 public class UI2DSpriteAnimation
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40004E2
+    // Token: 0x40004FE
     public int frameIndex;
 
-    // Token: 0x40004E3
+    // Token: 0x40004FF
     protected int framerate;
 
-    // Token: 0x40004E4
+    // Token: 0x4000500
     public bool ignoreTimeScale;
 
-    // Token: 0x40004E5
+    // Token: 0x4000501
     public bool loop;
 
-    // Token: 0x40004E6
+    // Token: 0x4000502
     public Sprite[] frames;
 
-    // Token: 0x40004E7
+    // Token: 0x4000503
     private SpriteRenderer mUnitySprite;
 
-    // Token: 0x40004E8
+    // Token: 0x4000504
     private UI2DSprite mNguiSprite;
 
-    // Token: 0x40004E9
+    // Token: 0x4000505
     private float mUpdate;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60006B0
-    // RVA   : 0xA75790   Offset: 0xA73F90   Length: 0x7
+    // Token : 0x60006C8
+    // RVA   : 0xAEF460   Offset: 0xAEE860   Length: 0x7
     public bool get_isPlaying()
     {
+        void FUN_180aef460(uint64 this)
+        {
         Behaviour.get_enabled(this,0);
     }
 
-    // Token : 0x60006B1
-    // RVA   : 0x2E7E80   Offset: 0x2E6680   Length: 0x4
+    // Token : 0x60006C9
+    // RVA   : 0x2E7E80   Offset: 0x2E7280   Length: 0x4
     public int get_framesPerSecond()
     {
+        uint32 FUN_1802e7e80(int64 this)
+        {
         return this.framerate;
     }
 
-    // Token : 0x60006B2
-    // RVA   : 0x2E7EB0   Offset: 0x2E66B0   Length: 0x4
+    // Token : 0x60006CA
+    // RVA   : 0x2E7EB0   Offset: 0x2E72B0   Length: 0x4
     public void set_framesPerSecond(int value)
     {
+        void FUN_1802e7eb0(int64 this,uint32 value)
+        {
         this.framerate = value;
     }
 
-    // Token : 0x60006B3
-    // RVA   : 0xA75330   Offset: 0xA73B30   Length: 0x8E
+    // Token : 0x60006CB
+    // RVA   : 0xAEF000   Offset: 0xAEE400   Length: 0x8E
     public void Play()
     {
         bool cVar1;
@@ -72,7 +78,7 @@ public class UI2DSpriteAnimation
           if (-1 < iVar2) {
             if (this.frames != null)
             {
-              if (iVar2 < *(int *)(this.frames + 24)) goto LAB_180a75397;
+              if (iVar2 < *(int *)(this.frames + 24)) goto LAB_180aef067;
               }
               if (this.framerate < 0) {
               if (this.frames == null) {
@@ -87,20 +93,22 @@ public class UI2DSpriteAnimation
           }
           this.frameIndex = iVar2;
         }
-        LAB_180a75397:
+        LAB_180aef067:
         Behaviour.set_enabled(this,1,0);
         UI2DSpriteAnimation.UpdateSprite(this,0);
     }
 
-    // Token : 0x60006B4
-    // RVA   : 0xA75320   Offset: 0xA73B20   Length: 0xA
+    // Token : 0x60006CC
+    // RVA   : 0xAEEFF0   Offset: 0xAEE3F0   Length: 0xA
     public void Pause()
     {
+        void FUN_180aeeff0(uint64 this)
+        {
         Behaviour.set_enabled(this,0,0);
     }
 
-    // Token : 0x60006B5
-    // RVA   : 0xA753C0   Offset: 0xA73BC0   Length: 0x3B
+    // Token : 0x60006CD
+    // RVA   : 0xAEF090   Offset: 0xAEE490   Length: 0x3B
     public void ResetToBeginning()
     {
         if (-1 < this.framerate) {
@@ -115,8 +123,8 @@ public class UI2DSpriteAnimation
         }
     }
 
-    // Token : 0x60006B6
-    // RVA   : 0xA75330   Offset: 0xA73B30   Length: 0x8E
+    // Token : 0x60006CE
+    // RVA   : 0xAEF000   Offset: 0xAEE400   Length: 0x8E
     private void Start()
     {
         bool cVar1;
@@ -135,7 +143,7 @@ public class UI2DSpriteAnimation
           if (-1 < iVar2) {
             if (this.frames != null)
             {
-              if (iVar2 < *(int *)(this.frames + 24)) goto LAB_180a75397;
+              if (iVar2 < *(int *)(this.frames + 24)) goto LAB_180aef067;
               }
               if (this.framerate < 0) {
               if (this.frames == null) {
@@ -150,13 +158,13 @@ public class UI2DSpriteAnimation
           }
           this.frameIndex = iVar2;
         }
-        LAB_180a75397:
+        LAB_180aef067:
         Behaviour.set_enabled(this,1,0);
         UI2DSpriteAnimation.UpdateSprite(this,0);
     }
 
-    // Token : 0x60006B7
-    // RVA   : 0xA756C0   Offset: 0xA73EC0   Length: 0xAF
+    // Token : 0x60006CF
+    // RVA   : 0xAEF390   Offset: 0xAEE790   Length: 0xAF
     private void Update()
     {
         uint uVar1;
@@ -164,7 +172,7 @@ public class UI2DSpriteAnimation
         int iVar3;
         float fVar4;
         if ((this.frames == null) ||
-           (*(int64 *)(this.frames + 24) == 0)) goto LAB_180a7572c;
+           (*(int64 *)(this.frames + 24) == 0)) goto LAB_180aef3fc;
         if (this.framerate != null) {
           if (!this.ignoreTimeScale) {
             fVar4 = (float)Time.get_time(0);
@@ -182,30 +190,30 @@ public class UI2DSpriteAnimation
             if (!this.loop) {
               if (-1 < iVar3) {
                 lVar2 = this.frames;
-                if (lVar2 == null) goto LAB_180a7576a;
-                if (iVar3 < *(int *)(lVar2 + 24)) goto LAB_180a7574d;
+                if (lVar2 == null) goto LAB_180aef43a;
+                if (iVar3 < *(int *)(lVar2 + 24)) goto LAB_180aef41d;
               }
-        LAB_180a7572c:
+        LAB_180aef3fc:
               Behaviour.set_enabled(this,0,0);
               return;
             }
             lVar2 = this.frames;
             if (lVar2 != null) {
-        LAB_180a7574d:
+        LAB_180aef41d:
               uVar1 = NGUIMath.RepeatIndex(iVar3,*(uint32 *)(lVar2 + 24),0);
               this.frameIndex = uVar1;
               UI2DSpriteAnimation.UpdateSprite(this,0);
               return;
             }
-        LAB_180a7576a:
+        LAB_180aef43a:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
         }
     }
 
-    // Token : 0x60006B8
-    // RVA   : 0xA75400   Offset: 0xA73C00   Length: 0x2B2
+    // Token : 0x60006D0
+    // RVA   : 0xAEF0D0   Offset: 0xAEE4D0   Length: 0x2B2
     private void UpdateSprite()
     {
         long lVar2;
@@ -218,9 +226,9 @@ public class UI2DSpriteAnimation
           uVar4 = this.mNguiSprite;
           cVar3 = Object.op_Equality(uVar4,0,0);
           if (cVar3) {
-            uVar4 = Component.GetComponent(this,DAT_181d6d540);
+            uVar4 = Component.GetComponent(this,DAT_181d95de0);
             this.mUnitySprite = uVar4;
-            uVar4 = Component.GetComponent(this,DAT_181d6dd40);
+            uVar4 = Component.GetComponent(this,DAT_181d965e0);
             this.mNguiSprite = uVar4;
             uVar4 = this.mUnitySprite;
             cVar3 = Object.op_Equality(uVar4,0,0);
@@ -283,10 +291,12 @@ public class UI2DSpriteAnimation
         }
     }
 
-    // Token : 0x60006B9
-    // RVA   : 0xA75770   Offset: 0xA73F70   Length: 0x14
+    // Token : 0x60006D1
+    // RVA   : 0xAEF440   Offset: 0xAEE840   Length: 0x14
     public void /*ctor*/()
     {
+        void FUN_180aef440(int64 this)
+        {
         this.framerate = 20;
         this.ignoreTimeScale = 0x101;
         FUN_18044ef50(this,0);

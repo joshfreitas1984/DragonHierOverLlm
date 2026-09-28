@@ -1,24 +1,24 @@
 // ============================================================
 // Type  : BountyType
-// Token : 0x2000244
+// Token : 0x200024A
 // ============================================================
 
 public class BountyType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40011B5
+    // Token: 0x4001258
     public int value__;
 
-    // Token: 0x40011B6
+    // Token: 0x4001259
     public const BountyType ForceBounty;
 
-    // Token: 0x40011B7
+    // Token: 0x400125A
     public const BountyType CommonBounty;
 
-    // Token: 0x40011B8
+    // Token: 0x400125B
     public const BountyType GovernBounty;
 
-    // Token: 0x40011B9
+    // Token: 0x400125C
     public const BountyType NpcBounty;
 
 }

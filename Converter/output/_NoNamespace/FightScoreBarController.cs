@@ -23,32 +23,32 @@ public class FightScoreBarController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000001
-    // RVA   : 0xBA61E0   Offset: 0xBA49E0   Length: 0x36
+    // RVA   : 0xB2EC10   Offset: 0xB2E010   Length: 0x36
     public static FightScoreBarController get_Instance()
     {
-        return **(uint64 **)(DAT_181da1d20 + 184);
+        return **(uint64 **)(DAT_181dc6fb8 + 184);
     }
 
     // Token : 0x6000002
-    // RVA   : 0xBA58D0   Offset: 0xBA40D0   Length: 0x11D
+    // RVA   : 0xB2E300   Offset: 0xB2D700   Length: 0x11D
     private void Awake()
     {
         bool cVar2;
         uint uVar3;
         ulong uVar4;
         long lVar5;
-        uVar4 = **(uint64 **)(DAT_181da1d20 + 184);
+        uVar4 = **(uint64 **)(DAT_181dc6fb8 + 184);
         cVar2 = Object.op_Equality(uVar4,0,0);
         if (!cVar2) {
           uVar4 = Component.get_gameObject(this,0);
           Object.Destroy(uVar4,0);
           return;
         }
-        plVar1 = *(int64 **)(DAT_181da1d20 + 184);
+        plVar1 = *(int64 **)(DAT_181dc6fb8 + 184);
         *plVar1 = this;
         il2cpp_internal(plVar1,this);
         if (this.greenBar != null) {
-          lVar5 = GameObject.GetComponent(this.greenBar,DAT_181da0b98);
+          lVar5 = GameObject.GetComponent(this.greenBar,DAT_181d72bc8);
           if (lVar5 != null) {
             uVar3 = RectTransform.get_sizeDelta(lVar5,0);
             this.barWidth = uVar3;
@@ -58,7 +58,7 @@ public class FightScoreBarController
     }
 
     // Token : 0x6000003
-    // RVA   : 0xBA59F0   Offset: 0xBA41F0   Length: 0x7ED
+    // RVA   : 0xB2E420   Offset: 0xB2D820   Length: 0x7ED
     public void RefreshFightScoreBar(bool skipAnim)
     {
         float fVar1;
@@ -78,11 +78,11 @@ public class FightScoreBarController
         uint32 local_80;
         uint64 local_78;
         uint32 local_70;
-        lVar4 = il2cpp_internal(DAT_181d721b0);
-        FUN_180f58a90(lVar4,DAT_181d79358);
+        lVar4 = il2cpp_internal(DAT_181d96ed0);
+        FUN_18132faf0(lVar4,DAT_181da0cf8);
         if (lVar4 != null) {
-          FUN_181805690(lVar4,0,DAT_181d79458);
-          FUN_181805690(lVar4,0,DAT_181d79458);
+          FUN_18181de10(lVar4,0,DAT_181da0df8);
+          FUN_18181de10(lVar4,0,DAT_181da0df8);
           this.teamScore = lVar4;
           iVar9 = 0;
           do {
@@ -90,41 +90,41 @@ public class FightScoreBarController
             while( true ) {
               lVar4 = FUN_18046bb80(0);
               if ((((lVar4 == null) || (*(int64 *)(lVar4 + 112) == 0)) ||
-                  (lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 112),iVar9,DAT_181d580a8)) == null) ||
+                  (lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 112),iVar9,DAT_181d7f830)) == null) ||
                  (lVar4.Count == null)) throw; // [null/range check failed]
               if (*(int *)(lVar4.Count + 24) <= iVar8) break;
               lVar4 = FUN_18046bb80(0);
               if ((((lVar4 == null) || (*(int64 *)(lVar4 + 112) == 0)) ||
-                  (lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 112),iVar9,DAT_181d580a8)) == null) ||
+                  (lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 112),iVar9,DAT_181d7f830)) == null) ||
                  ((lVar4.Count == null ||
-                  (lVar4 = FUN_180002f80(lVar4.Count,iVar8,DAT_181d584a0)) == null)))
+                  (lVar4 = FUN_180002f80(lVar4.Count,iVar8,DAT_181d7fc20)) == null)))
               throw; // [null/range check failed]
               cVar3 = BattleUnit.get_IsAlive(lVar4,0);
               if (cVar3) {
                 lVar4 = this.teamScore;
                 if (lVar4 == null) throw; // [null/range check failed]
-                fVar10 = (float)FUN_1800d6780(lVar4,iVar9,DAT_181d796d8);
+                fVar10 = (float)FUN_1800d6790(lVar4,iVar9,DAT_181da1078);
                 lVar5 = FUN_18046bb80(0);
                 if ((((lVar5 == null) || (*(int64 *)(lVar5 + 112) == 0)) ||
-                    (lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 112),iVar9,DAT_181d580a8)) == null)
+                    (lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 112),iVar9,DAT_181d7f830)) == null)
                    || (((lVar5.Count == null ||
-                        (lVar5 = FUN_180002f80(lVar5.Count,iVar8,DAT_181d584a0),
+                        (lVar5 = FUN_180002f80(lVar5.Count,iVar8,DAT_181d7fc20),
                         lVar5 == null)) || (*(int64 *)(lVar5 + 64) == 0)))) throw; // [null/range check failed]
-                fVar1 = *(float *)(*(int64 *)(lVar5 + 64) + 0x38c);
+                fVar1 = *(float *)(*(int64 *)(lVar5 + 64) + 0x3d4);
                 lVar5 = FUN_18046bb80(0);
                 if (((lVar5 == null) || (*(int64 *)(lVar5 + 112) == 0)) ||
-                   ((lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 112),iVar9,DAT_181d580a8), lVar5 == null ||
+                   ((lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 112),iVar9,DAT_181d7f830), lVar5 == null ||
                     (((lVar5.Count == null ||
-                      (lVar5 = FUN_180002f80(lVar5.Count,iVar8,DAT_181d584a0)) == null
+                      (lVar5 = FUN_180002f80(lVar5.Count,iVar8,DAT_181d7fc20)) == null
                       ) || (*(int64 *)(lVar5 + 64) == 0)))))) throw; // [null/range check failed]
                 fVar2 = *(float *)(*(int64 *)(lVar5 + 64) + 0x178);
                 lVar5 = FUN_18046bb80(0);
                 if (((lVar5 == null) || (*(int64 *)(lVar5 + 112) == 0)) ||
-                   ((lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 112),iVar9,DAT_181d580a8), lVar5 == null ||
+                   ((lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 112),iVar9,DAT_181d7f830), lVar5 == null ||
                     (((lVar5.Count == null ||
-                      (lVar5 = FUN_180002f80(lVar5.Count,iVar8,DAT_181d584a0)) == null
+                      (lVar5 = FUN_180002f80(lVar5.Count,iVar8,DAT_181d7fc20)) == null
                       ) || (*(int64 *)(lVar5 + 64) == 0)))))) throw; // [null/range check failed]
-                FUN_181814d10(lVar4,iVar9,
+                FUN_181829d40(lVar4,iVar9,
                               (fVar2 * fVar1) / *(float *)(*(int64 *)(lVar5 + 64) + 0x180) + fVar10);
               }
               iVar8 = iVar8 + 1;
@@ -158,10 +158,10 @@ public class FightScoreBarController
               lVar4 = this.greenBar;
               if (!skipAnim) {
                 if (lVar4 != null) {
-                  uVar6 = GameObject.GetComponent(lVar4,DAT_181da0b98);
+                  uVar6 = GameObject.GetComponent(lVar4,DAT_181d72bc8);
                   fVar1 = this.barWidth;
                   if ((this.greenBar != null) &&
-                     (lVar4 = GameObject.GetComponent(this.greenBar,DAT_181da0b98),
+                     (lVar4 = GameObject.GetComponent(this.greenBar,DAT_181d72bc8),
                      lVar4 != null)) {
                     RectTransform.get_sizeDelta(lVar4,0);
                     DOTweenModuleUI.DOSizeDelta
@@ -183,7 +183,7 @@ public class FightScoreBarController
                             if (this.icon != null) {
                               uVar6 = GameObject.get_transform(this.icon,0);
                               uVar6 = ShortcutExtensions.DOScale(uVar6,0x3fc00000,0x3dcccccd,0);
-                              TweenSettingsExtensions.SetLoops(uVar6,2,1,DAT_181d98060);
+                              TweenSettingsExtensions.SetLoops(uVar6,2,1,DAT_181dc1330);
                               return;
                             }
                           }
@@ -194,10 +194,10 @@ public class FightScoreBarController
                 }
               }
               else if (lVar4 != null) {
-                lVar4 = GameObject.GetComponent(lVar4,DAT_181da0b98);
+                lVar4 = GameObject.GetComponent(lVar4,DAT_181d72bc8);
                 fVar1 = this.barWidth;
                 if ((this.greenBar != null) &&
-                   (lVar5 = GameObject.GetComponent(this.greenBar,DAT_181da0b98),
+                   (lVar5 = GameObject.GetComponent(this.greenBar,DAT_181d72bc8),
                    lVar5 != null)) {
                   local_98 = RectTransform.get_sizeDelta(lVar5,0);
                   if (lVar4 != null) {
@@ -245,7 +245,7 @@ public class FightScoreBarController
     }
 
     // Token : 0x6000004
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

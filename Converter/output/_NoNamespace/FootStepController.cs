@@ -1,38 +1,38 @@
 // ============================================================
 // Type  : FootStepController
-// Token : 0x2000280
+// Token : 0x2000286
 // ============================================================
 
 public class FootStepController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400139F
+    // Token: 0x4001450
     public SkeletonAnimation skeleton;
 
-    // Token: 0x40013A0
+    // Token: 0x4001451
     public List<float> volumn;
 
-    // Token: 0x40013A1
+    // Token: 0x4001452
     public bool inWater;
 
-    // Token: 0x40013A2
+    // Token: 0x4001453
     private Bone leftFootBone;
 
-    // Token: 0x40013A3
+    // Token: 0x4001454
     private Bone rightFootBone;
 
-    // Token: 0x40013A4
+    // Token: 0x4001455
     private List<Bone> horseFootBones;
 
-    // Token: 0x40013A5
+    // Token: 0x4001456
     private GameObject temp;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600144C
-    // RVA   : 0xBA6B00   Offset: 0xBA5300   Length: 0x2DF
+    // Token : 0x6001490
+    // RVA   : 0xB2F530   Offset: 0xB2E930   Length: 0x2DF
     public void Init(SkeletonAnimation targetSkeleton)
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d73d40 + 184);
         long lVar1;
         ulong uVar2;
         long lVar3;
@@ -41,46 +41,44 @@ public class FootStepController
         this.skeleton = targetSkeleton;
         if (this.skeleton != null) {
           lVar3 = *(int64 *)(this.skeleton + 224);
-          uVar2 = new OnTooltipCB(this,DAT_181d98358,0);
+          uVar2 = new OnTooltipCB(this,DAT_181dc10e0,0);
           if (lVar3 != null) {
             AnimationState.add_Event(lVar3,uVar2,0);
             if (this.skeleton != null) {
-              lVar3 = Component.GetComponent(this.skeleton,DAT_181d6cd40);
+              lVar3 = Component.GetComponent(this.skeleton,DAT_181d955e0);
               if (lVar3 != null) {
                 lVar3 = *(int64 *)(lVar3 + 192);
                 if (lVar3 != null) {
                   uVar2 = Skeleton.FindBone(lVar3,*(uint64 *)
-                                                    (pPlotController +
-                                                    0x1b8),0);
+                                                    (pStatics + 0x1c0),0);
                   this.leftFootBone = uVar2;
                   if (this.skeleton != null) {
-                    lVar3 = Component.GetComponent(this.skeleton,DAT_181d6cd40);
+                    lVar3 = Component.GetComponent(this.skeleton,DAT_181d955e0);
                     if (lVar3 != null) {
                       if (*(int64 *)(lVar3 + 192) != 0) {
                         uVar2 = Skeleton.FindBone(*(int64 *)(lVar3 + 192),
                                                    *(uint64 *)
-                                                    (pPlotController +
-                                                    0x1c0),0);
+                                                    (pStatics + 0x1c8),0);
                         this.rightFootBone = uVar2;
                         iVar5 = 0;
                         while( true ) {
-                          lVar3 = *(int64 *)(pPlotController + 0x1d0);
+                          lVar3 = *(int64 *)(pStatics + 0x1d8);
                           if (lVar3 == null) break;
                           if (lVar3.Count <= iVar5) {
                             return;
                           }
                           lVar3 = this.horseFootBones;
                           if (this.skeleton == null) break;
-                          lVar4 = Component.GetComponent(this.skeleton,DAT_181d6cd40);
+                          lVar4 = Component.GetComponent(this.skeleton,DAT_181d955e0);
                           if (lVar4 == null) break;
                           lVar4 = *(int64 *)(lVar4 + 192);
-                          lVar1 = *(int64 *)(pPlotController + 0x1d0);
+                          lVar1 = *(int64 *)(pStatics + 0x1d8);
                           if (lVar1 == null) break;
-                          uVar2 = FUN_180002f80(lVar1,iVar5,DAT_181d7c9c0);
+                          uVar2 = FUN_180002f80(lVar1,iVar5,DAT_181da4358);
                           if (lVar4 == null) break;
                           uVar2 = Skeleton.FindBone(lVar4,uVar2,0);
                           if (lVar3 == null) break;
-                          FUN_181827900(lVar3,uVar2,DAT_181d58818);
+                          FUN_18181e0a0(lVar3,uVar2,DAT_181d7ffa0);
                           iVar5 = iVar5 + 1;
                         }
                       }
@@ -93,11 +91,11 @@ public class FootStepController
         }
     }
 
-    // Token : 0x600144D
-    // RVA   : 0xBA6EC0   Offset: 0xBA56C0   Length: 0x5C3
+    // Token : 0x6001491
+    // RVA   : 0xB2F8F0   Offset: 0xB2ECF0   Length: 0x5C3
     private void PrintFootStep(Vector3 targetLocalPos, bool isHorseStep)
     {
-        var pStatics = *(int64*)(DAT_181d4e188 + 184);
+        var pStatics = *(int64*)(DAT_181d72ee8 + 184);
         ulong uVar1;
         uint uVar2;
         ulong uVar3;
@@ -129,7 +127,7 @@ public class FootStepController
           if ((*pStatics == 0) ||
              (lVar5 = *(int64 *)(*pStatics + 240)) == null)
           throw; // [null/range check failed]
-          uVar2 = FUN_180d8cf10(0,lVar5.Count,0);
+          uVar2 = FUN_180d95a30(0,lVar5.Count,0);
           if (lVar4 == null) throw; // [null/range check failed]
           if (lVar4.Count <= uVar2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -156,7 +154,7 @@ public class FootStepController
           lVar4 = *(int64 *)(*pStatics + 0x100);
           if (((*pStatics == 0) ||
               (lVar5 = *(int64 *)(*pStatics + 0x100)) == null) ||
-             (uVar2 = FUN_180d8cf10(0,lVar5.Count,0), lVar4 == null)) throw; // [null/range check failed]
+             (uVar2 = FUN_180d95a30(0,lVar5.Count,0), lVar4 == null)) throw; // [null/range check failed]
           if (lVar4.Count <= uVar2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -179,7 +177,7 @@ public class FootStepController
           if ((*pStatics == 0) ||
              (lVar5 = *(int64 *)(*pStatics + 248)) == null)
           throw; // [null/range check failed]
-          uVar2 = FUN_180d8cf10(0,lVar5.Count,0);
+          uVar2 = FUN_180d95a30(0,lVar5.Count,0);
           if (lVar4 == null) throw; // [null/range check failed]
           if (lVar4.Count <= uVar2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -207,7 +205,7 @@ public class FootStepController
           lVar4 = *(int64 *)(*pStatics + 0x100);
           if (((*pStatics == 0) ||
               (lVar5 = *(int64 *)(*pStatics + 0x100)) == null) ||
-             (uVar2 = FUN_180d8cf10(0,lVar5.Count,0), lVar4 == null)) throw; // [null/range check failed]
+             (uVar2 = FUN_180d95a30(0,lVar5.Count,0), lVar4 == null)) throw; // [null/range check failed]
           if (lVar4.Count <= uVar2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -235,11 +233,11 @@ public class FootStepController
         }
     }
 
-    // Token : 0x600144E
-    // RVA   : 0xBA6220   Offset: 0xBA4A20   Length: 0x35C
+    // Token : 0x6001492
+    // RVA   : 0xB2EC50   Offset: 0xB2E050   Length: 0x35C
     private void GenerateFootStepParticle(int particleID, Vector3 targetLocalPos)
     {
-        var pStatics = *(int64*)(DAT_181d4e188 + 184);
+        var pStatics = *(int64*)(DAT_181d72ee8 + 184);
         ulong uVar1;
         float fVar2;
         long lVar3;
@@ -257,7 +255,7 @@ public class FootStepController
         lVar3 = Component.get_transform(this,0);
         fVar2 = local_80;
         if (lVar3 != null) {
-          lVar3 = FUN_180da0f00(lVar3,0);
+          lVar3 = FUN_180da9a20(lVar3,0);
           fVar2 = local_80;
           if (lVar3 != null) {
             uVar4 = Component.get_gameObject(lVar3,0);
@@ -325,16 +323,16 @@ public class FootStepController
         local_80 = fVar2;
     }
 
-    // Token : 0x600144F
-    // RVA   : 0xBA6580   Offset: 0xBA4D80   Length: 0x570
+    // Token : 0x6001493
+    // RVA   : 0xB2EFB0   Offset: 0xB2E3B0   Length: 0x571
     private void HandleEvent(TrackEntry trackEntry, Event e)
     {
-        var p_ShowItemAnim_d__32 = *(int64*)(_ShowItemAnim_d__32_StaticsPtr + 184);
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
-        var pStatics_0f00 = *(int64*)(DAT_181d50f00 + 184);
-        var pStatics_1200 = *(int64*)(DAT_181d51200 + 184);
-        var pStatics_e090 = *(int64*)(DAT_181d4e090 + 184);
-        var pStatics_ede0 = *(int64*)(DAT_181d6ede0 + 184);
+        var pStatics_2dd8 = *(int64*)(DAT_181d72dd8 + 184);
+        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics_4000 = *(int64*)(DAT_181d94000 + 184);
+        var pStatics_4450 = *(int64*)(DAT_181da4450 + 184);
+        var pStatics_5f40 = *(int64*)(DAT_181d75f40 + 184);
+        var pStatics_6270 = *(int64*)(DAT_181d76270 + 184);
         long lVar1;
         bool cVar2;
         uint uVar3;
@@ -344,69 +342,70 @@ public class FootStepController
         float local_20;
         byte[] local_18 = new byte[8];
         float local_10;
-        if (PlotController._instance != null) {
-          if (PlotController._instance.plotHappen) {
+        lVar4 = *(int64 *)(*(int64 *)(DAT_181d91b88 + 184) + 24);
+        if (lVar4 != null) {
+          if (lVar4.Count) {
             return;
           }
-          if ((*p_ShowItemAnim_d__32 == 0) ||
-             (lVar4 = *(int64 *)(*p_ShowItemAnim_d__32 + 40),
-             lVar4 == null)) throw; // [null/range check failed]
-          cVar2 = GameObject.get_activeSelf(lVar4,0);
-          if (cVar2) {
-            return;
-          }
-          if ((*pStatics_0f00 == 0) ||
-             (lVar4 = *(int64 *)(*pStatics_0f00 + 32)) == null)
+          if ((*pStatics_4450 == 0) ||
+             (lVar4 = *(int64 *)(*pStatics_4450 + 40)) == null)
           throw; // [null/range check failed]
           cVar2 = GameObject.get_activeSelf(lVar4,0);
           if (cVar2) {
             return;
           }
-          if ((*pStatics_ede0 == 0) ||
-             (lVar4 = *(int64 *)(*pStatics_ede0 + 32)) == null)
+          if ((*pStatics_5f40 == 0) ||
+             (lVar4 = *(int64 *)(*pStatics_5f40 + 32)) == null)
           throw; // [null/range check failed]
           cVar2 = GameObject.get_activeSelf(lVar4,0);
           if (cVar2) {
             return;
           }
-          lVar4 = FUN_18077c180(0);
+          if ((*pStatics_4000 == 0) ||
+             (lVar4 = *(int64 *)(*pStatics_4000 + 32)) == null)
+          throw; // [null/range check failed]
+          cVar2 = GameObject.get_activeSelf(lVar4,0);
+          if (cVar2) {
+            return;
+          }
+          lVar4 = FUN_180778960(0);
           if ((lVar4 == null) || (lVar4.Count == null)) throw; // [null/range check failed]
           cVar2 = GameObject.get_activeSelf(lVar4.Count,0);
           if (cVar2) {
             return;
           }
-          if ((*pStatics_1200 == 0) ||
-             (lVar4 = *(int64 *)(*pStatics_1200 + 24)) == null)
+          if ((*pStatics_6270 == 0) ||
+             (lVar4 = *(int64 *)(*pStatics_6270 + 24)) == null)
           throw; // [null/range check failed]
           cVar2 = GameObject.get_activeSelf(lVar4,0);
           if (cVar2) {
             return;
           }
-          if ((*pStatics_e090 == 0) ||
-             (lVar4 = *(int64 *)(*pStatics_e090 + 24)) == null)
+          if ((*pStatics_2dd8 == 0) ||
+             (lVar4 = *(int64 *)(*pStatics_2dd8 + 24)) == null)
           throw; // [null/range check failed]
           cVar2 = GameObject.get_activeSelf(lVar4,0);
           if (cVar2) {
             return;
           }
           if ((e == null) || (*(int64 *)(e + 16) == 0)) throw; // [null/range check failed]
-          cVar2 = FUN_1816fd990(*(uint64 *)(*(int64 *)(e + 16) + 16),"leftfootstep",0);
+          cVar2 = FUN_18171e540(*(uint64 *)(*(int64 *)(e + 16) + 16),"leftfootstep",0);
           if (!cVar2) {
             if (*(int64 *)(e + 16) == 0) throw; // [null/range check failed]
-            cVar2 = FUN_1816fd990(*(uint64 *)(*(int64 *)(e + 16) + 16),"rightfootstep",0);
+            cVar2 = FUN_18171e540(*(uint64 *)(*(int64 *)(e + 16) + 16),"rightfootstep",0);
             if (!cVar2) {
-              lVar4 = *(int64 *)(pPlotController + 0x1c8);
+              lVar4 = *(int64 *)(pStatics_3d40 + 0x1d0);
               if ((*(int64 *)(e + 16) == 0) || (lVar4 == null)) throw; // [null/range check failed]
-              cVar2 = FUN_1818279a0(lVar4,*(uint64 *)(*(int64 *)(e + 16) + 16),
-                                    DAT_181d7c4d0);
+              cVar2 = FUN_18181e400(lVar4,*(uint64 *)(*(int64 *)(e + 16) + 16),
+                                    DAT_181da3e58);
               if (!cVar2) {
                 return;
               }
               lVar4 = this.horseFootBones;
-              lVar1 = *(int64 *)(pPlotController + 0x1c8);
+              lVar1 = *(int64 *)(pStatics_3d40 + 0x1d0);
               if ((*(int64 *)(e + 16) == 0) || (lVar1 == null)) throw; // [null/range check failed]
-              uVar3 = FUN_1817ff280(lVar1,*(uint64 *)(*(int64 *)(e + 16) + 16),
-                                    DAT_181d7c648);
+              uVar3 = FUN_1817eb4e0(lVar1,*(uint64 *)(*(int64 *)(e + 16) + 16),
+                                    DAT_181da3fd8);
               if (lVar4 == null) throw; // [null/range check failed]
               if (lVar4.Count <= uVar3) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -421,7 +420,7 @@ public class FootStepController
               local_10 = *pfVar5;
               local_28 = CONCAT44(local_28._4_4_ * local_10,(float)local_28 * local_10);
               uVar6 = 1;
-              goto LAB_180ba6a4f;
+              goto LAB_180b2f480;
             }
             uVar6 = this.rightFootBone;
           }
@@ -435,7 +434,7 @@ public class FootStepController
             local_10 = *pfVar5;
             local_28 = CONCAT44(local_28._4_4_ * local_10,(float)local_28 * local_10);
             uVar6 = 0;
-        LAB_180ba6a4f:
+        LAB_180b2f480:
             local_10 = local_10 * 0.0;
             local_20 = local_10;
             FootStepController.PrintFootStep(this,&local_28,uVar6,0);
@@ -444,8 +443,8 @@ public class FootStepController
         }
     }
 
-    // Token : 0x6001450
-    // RVA   : 0xBA6DE0   Offset: 0xBA55E0   Length: 0xD5
+    // Token : 0x6001494
+    // RVA   : 0xB2F810   Offset: 0xB2EC10   Length: 0xD5
     private void OnDestroy()
     {
         long lVar1;
@@ -460,26 +459,26 @@ public class FootStepController
           }
           lVar1 = *(int64 *)(this.skeleton + 224);
           if (lVar1 != null) {
-            uVar3 = new OnTooltipCB(this,DAT_181d98358,0);
+            uVar3 = new OnTooltipCB(this,DAT_181dc10e0,0);
             AnimationState.remove_Event(lVar1,uVar3,0);
           }
         }
     }
 
-    // Token : 0x6001451
-    // RVA   : 0xBA7490   Offset: 0xBA5C90   Length: 0xFF
+    // Token : 0x6001495
+    // RVA   : 0xB2FEC0   Offset: 0xB2F2C0   Length: 0xFF
     public void /*ctor*/()
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = il2cpp_internal(DAT_181d721b0);
-        FUN_180f58a90(lVar1,DAT_181d79358);
+        lVar1 = il2cpp_internal(DAT_181d96ed0);
+        FUN_18132faf0(lVar1,DAT_181da0cf8);
         if (lVar1 != null) {
-          FUN_181805690(lVar1,0x3f800000,DAT_181d79458);
-          FUN_181805690(lVar1,0x3f800000,DAT_181d79458);
+          FUN_18181de10(lVar1,0x3f800000,DAT_181da0df8);
+          FUN_18181de10(lVar1,0x3f800000,DAT_181da0df8);
           this.volumn = lVar1;
-          uVar2 = il2cpp_internal(DAT_181d6ca30);
-          FUN_180f58a90(uVar2,DAT_181d58798);
+          uVar2 = il2cpp_internal(DAT_181d916d8);
+          FUN_18132faf0(uVar2,DAT_181d7ff20);
           this.horseFootBones = uVar2;
           FUN_18044ef50(this,0);
           return;

@@ -1,26 +1,26 @@
 // ============================================================
 // Type  : PrisonData
-// Token : 0x20001D5
+// Token : 0x20001DB
 // ============================================================
 
 public class PrisonData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000C11
+    // Token: 0x4000C9E
     public float guardAlert;
 
-    // Token: 0x4000C12
+    // Token: 0x4000C9F
     public float guardFavor;
 
-    // Token: 0x4000C13
+    // Token: 0x4000CA0
     public ItemListData prisonItemKeep;
 
-    // Token: 0x4000C14
+    // Token: 0x4000CA1
     public float buyGuardCd;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000E98
-    // RVA   : 0xBDD6D0   Offset: 0xBDBED0   Length: 0x6D
+    // Token : 0x6000ECD
+    // RVA   : 0xB11BA0   Offset: 0xB10FA0   Length: 0x6D
     public void /*ctor*/()
     {
         ulong uVar1;

@@ -1,18 +1,18 @@
 // ============================================================
 // Type  : ShowRoomType
-// Token : 0x200034D
+// Token : 0x2000354
 // ============================================================
 
 public class ShowRoomType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001A6D
+    // Token: 0x4001B6E
     public int value__;
 
-    // Token: 0x4001A6E
+    // Token: 0x4001B6F
     public const ShowRoomType ForceShowRoom;
 
-    // Token: 0x4001A6F
+    // Token: 0x4001B70
     public const ShowRoomType HeroShowRoom;
 
 }

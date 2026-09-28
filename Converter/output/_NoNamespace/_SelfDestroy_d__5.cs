@@ -1,40 +1,40 @@
 // ============================================================
 // Type  : <SelfDestroy>d__5
-// Token : 0x2000306
+// Token : 0x200030D
 // ============================================================
 
 public class <SelfDestroy>d__5
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001840
+    // Token: 0x4001931
     private int <>1__state;
 
-    // Token: 0x4001841
+    // Token: 0x4001932
     private object <>2__current;
 
-    // Token: 0x4001842
+    // Token: 0x4001933
     public float delay;
 
-    // Token: 0x4001843
+    // Token: 0x4001934
     public MoveTowardTarget <>4__this;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001905
-    // RVA   : 0x219070   Offset: 0x217870   Length: 0x24
+    // Token : 0x6001964
+    // RVA   : 0x219070   Offset: 0x218470   Length: 0x24
     public void /*ctor*/(int <>1__state)
     {
         ZhSegment.Initialize(this,0);
         this.<>1__state = <>1__state;
     }
 
-    // Token : 0x6001906
-    // RVA   : 0x245810   Offset: 0x244010   Length: 0x3
+    // Token : 0x6001965
+    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
     private virtual void System.IDisposable.Dispose()
     {
     }
 
-    // Token : 0x6001907
-    // RVA   : 0x8CFD70   Offset: 0x8CE570   Length: 0xEC
+    // Token : 0x6001966
+    // RVA   : 0x8F1FF0   Offset: 0x8F13F0   Length: 0xEC
     private virtual bool MoveNext()
     {
         uint uVar1;
@@ -59,27 +59,27 @@ public class <SelfDestroy>d__5
         return false;
     }
 
-    // Token : 0x6001908
-    // RVA   : 0x20F140   Offset: 0x20D940   Length: 0x5
+    // Token : 0x6001967
+    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
     private virtual object System.Collections.Generic.IEnumerator<System.object>.get_Current()
     {
         return this.<>2__current;
     }
 
-    // Token : 0x6001909
-    // RVA   : 0x8CFE60   Offset: 0x8CE660   Length: 0x3E
+    // Token : 0x6001968
+    // RVA   : 0x8F20E0   Offset: 0x8F14E0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d682e8);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d7f468);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181da8348);
     }
 
-    // Token : 0x600190A
-    // RVA   : 0x20F140   Offset: 0x20D940   Length: 0x5
+    // Token : 0x6001969
+    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
     private virtual object System.Collections.IEnumerator.get_Current()
     {
         return this.<>2__current;

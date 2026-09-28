@@ -1,135 +1,137 @@
 // ============================================================
 // Type  : UIScrollView
-// Token : 0x2000061
+// Token : 0x2000062
 // ============================================================
 
 public class UIScrollView
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000246
+    // Token: 0x4000262
     public static BetterList<UIScrollView> list;
 
-    // Token: 0x4000247
+    // Token: 0x4000263
     public Movement movement;
 
-    // Token: 0x4000248
+    // Token: 0x4000264
     public DragEffect dragEffect;
 
-    // Token: 0x4000249
+    // Token: 0x4000265
     public bool restrictWithinPanel;
 
-    // Token: 0x400024A
+    // Token: 0x4000266
     public bool constrainOnDrag;
 
-    // Token: 0x400024B
+    // Token: 0x4000267
     public bool disableDragIfFits;
 
-    // Token: 0x400024C
+    // Token: 0x4000268
     public bool smoothDragStart;
 
-    // Token: 0x400024D
+    // Token: 0x4000269
     public bool iOSDragEmulation;
 
-    // Token: 0x400024E
+    // Token: 0x400026A
     public float scrollWheelFactor;
 
-    // Token: 0x400024F
+    // Token: 0x400026B
     public float momentumAmount;
 
-    // Token: 0x4000250
+    // Token: 0x400026C
     public float dampenStrength;
 
-    // Token: 0x4000251
+    // Token: 0x400026D
     public UIProgressBar horizontalScrollBar;
 
-    // Token: 0x4000252
+    // Token: 0x400026E
     public UIProgressBar verticalScrollBar;
 
-    // Token: 0x4000253
+    // Token: 0x400026F
     public ShowCondition showScrollBars;
 
-    // Token: 0x4000254
+    // Token: 0x4000270
     public Vector2 customMovement;
 
-    // Token: 0x4000255
+    // Token: 0x4000271
     public Pivot contentPivot;
 
-    // Token: 0x4000256
+    // Token: 0x4000272
     public OnDragNotification onDragStarted;
 
-    // Token: 0x4000257
+    // Token: 0x4000273
     public OnDragNotification onDragFinished;
 
-    // Token: 0x4000258
+    // Token: 0x4000274
     public OnDragNotification onMomentumMove;
 
-    // Token: 0x4000259
+    // Token: 0x4000275
     public OnDragNotification onStoppedMoving;
 
-    // Token: 0x400025A
+    // Token: 0x4000276
     private Vector3 scale;
 
-    // Token: 0x400025B
+    // Token: 0x4000277
     private Vector2 relativePositionOnReset;
 
-    // Token: 0x400025C
+    // Token: 0x4000278
     protected Transform mTrans;
 
-    // Token: 0x400025D
+    // Token: 0x4000279
     protected UIPanel mPanel;
 
-    // Token: 0x400025E
+    // Token: 0x400027A
     protected Plane mPlane;
 
-    // Token: 0x400025F
+    // Token: 0x400027B
     protected Vector3 mLastPos;
 
-    // Token: 0x4000260
+    // Token: 0x400027C
     protected bool mPressed;
 
-    // Token: 0x4000261
+    // Token: 0x400027D
     protected Vector3 mMomentum;
 
-    // Token: 0x4000262
+    // Token: 0x400027E
     protected float mScroll;
 
-    // Token: 0x4000263
+    // Token: 0x400027F
     protected Bounds mBounds;
 
-    // Token: 0x4000264
+    // Token: 0x4000280
     protected bool mCalculatedBounds;
 
-    // Token: 0x4000265
+    // Token: 0x4000281
     protected bool mShouldMove;
 
-    // Token: 0x4000266
+    // Token: 0x4000282
     protected bool mIgnoreCallbacks;
 
-    // Token: 0x4000267
+    // Token: 0x4000283
     protected int mDragID;
 
-    // Token: 0x4000268
+    // Token: 0x4000284
     protected Vector2 mDragStartOffset;
 
-    // Token: 0x4000269
+    // Token: 0x4000285
     protected bool mDragStarted;
 
-    // Token: 0x400026A
+    // Token: 0x4000286
     private bool mStarted;
 
-    // Token: 0x400026B
+    // Token: 0x4000287
     public UICenterOnChild centerOnChild;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000237
-    // RVA   : 0x27B020   Offset: 0x279820   Length: 0x8
+    // Token : 0x600024F
+    // RVA   : 0x27B020   Offset: 0x27A420   Length: 0x8
     public UIPanel get_panel()
     {
+        uint64 FUN_18027b020(int64 this)
+        {
         return this.mPanel;
     }
 
-    // Token : 0x6000238
-    // RVA   : 0x168D320   Offset: 0x168BB20   Length: 0x14
+    // Token : 0x6000250
+    // RVA   : 0x1705010   Offset: 0x1704410   Length: 0x14
     public bool get_isDragging()
     {
         ulong in_RAX;
@@ -139,8 +141,8 @@ public class UIScrollView
         return (uint64)this.mDragStarted;
     }
 
-    // Token : 0x6000239
-    // RVA   : 0x168D200   Offset: 0x168BA00   Length: 0x9D
+    // Token : 0x6000251
+    // RVA   : 0x1704EF0   Offset: 0x17042F0   Length: 0x9D
     public virtual Bounds get_bounds()
     {
         ulong uVar1;
@@ -166,8 +168,8 @@ public class UIScrollView
         return this;
     }
 
-    // Token : 0x600023A
-    // RVA   : 0x168D2A0   Offset: 0x168BAA0   Length: 0x24
+    // Token : 0x6000252
+    // RVA   : 0x1704F90   Offset: 0x1704390   Length: 0x24
     public bool get_canMoveHorizontally()
     {
         uint uVar1;
@@ -179,8 +181,8 @@ public class UIScrollView
         return CONCAT71(uVar2,1);
     }
 
-    // Token : 0x600023B
-    // RVA   : 0x168D2D0   Offset: 0x168BAD0   Length: 0x25
+    // Token : 0x6000253
+    // RVA   : 0x1704FC0   Offset: 0x17043C0   Length: 0x25
     public bool get_canMoveVertically()
     {
         uint uVar1;
@@ -192,8 +194,8 @@ public class UIScrollView
         return CONCAT71(uVar2,1);
     }
 
-    // Token : 0x600023C
-    // RVA   : 0x168D340   Offset: 0x168BB40   Length: 0x9E
+    // Token : 0x6000254
+    // RVA   : 0x1705030   Offset: 0x1704430   Length: 0x9E
     public virtual bool get_shouldMoveHorizontally()
     {
         long lVar1;
@@ -226,8 +228,8 @@ public class UIScrollView
         }
     }
 
-    // Token : 0x600023D
-    // RVA   : 0x168D3E0   Offset: 0x168BBE0   Length: 0xAE
+    // Token : 0x6000255
+    // RVA   : 0x17050D0   Offset: 0x17044D0   Length: 0xAE
     public virtual bool get_shouldMoveVertically()
     {
         long lVar1;
@@ -262,8 +264,8 @@ public class UIScrollView
         return 0 < iVar2;
     }
 
-    // Token : 0x600023E
-    // RVA   : 0x168D490   Offset: 0x168BC90   Length: 0x2C1
+    // Token : 0x6000256
+    // RVA   : 0x1705180   Offset: 0x1704580   Length: 0x2C1
     protected virtual bool get_shouldMove()
     {
         float fVar1;
@@ -287,7 +289,7 @@ public class UIScrollView
           lVar4 = this[19];
           cVar2 = Object.op_Equality(lVar4,0,0);
           if (cVar2) {
-            lVar4 = Component.GetComponent(this,DAT_181d6e2c0);
+            lVar4 = Component.GetComponent(this,DAT_181d96b60);
             this[19] = lVar4;
             il2cpp_internal(this + 19,lVar4);
           }
@@ -348,30 +350,34 @@ public class UIScrollView
         return true;
     }
 
-    // Token : 0x600023F
-    // RVA   : 0x168D300   Offset: 0x168BB00   Length: 0x19
+    // Token : 0x6000257
+    // RVA   : 0x1704FF0   Offset: 0x17043F0   Length: 0x19
     public Vector3 get_currentMomentum()
     {
-        uint uVar1;
+        uint64 * FUN_181704ff0(uint64 *this,int64 param_2)
+        {
+        uint32 uVar1;
         uVar1 = *(uint32 *)(param_2 + 200);
         *this = *(uint64 *)(param_2 + 192);
         *(uint32 *)(this + 1) = uVar1;
         return this;
     }
 
-    // Token : 0x6000240
-    // RVA   : 0x168D760   Offset: 0x168BF60   Length: 0x1D
+    // Token : 0x6000258
+    // RVA   : 0x1705450   Offset: 0x1704850   Length: 0x1D
     public void set_currentMomentum(Vector3 value)
     {
-        uint uVar1;
+        void FUN_181705450(int64 this,uint64 *value)
+        {
+        uint32 uVar1;
         uVar1 = *(uint32 *)(value + 1);
         this.mMomentum = *value;
         *(uint32 *)(this + 200) = uVar1;
         this.mShouldMove = 1;
     }
 
-    // Token : 0x6000241
-    // RVA   : 0x1689CF0   Offset: 0x16884F0   Length: 0x211
+    // Token : 0x6000259
+    // RVA   : 0x17017E0   Offset: 0x1700BE0   Length: 0x211
     private void Awake()
     {
         long lVar1;
@@ -384,7 +390,7 @@ public class UIScrollView
         uint8 local_48 [64];
         uVar3 = Component.get_transform(this,0);
         this.mTrans = uVar3;
-        uVar3 = Component.GetComponent(this,DAT_181d6e2c0);
+        uVar3 = Component.GetComponent(this,DAT_181d96b60);
         this.mPanel = uVar3;
         lVar1 = this.mPanel;
         if (lVar1 != null) {
@@ -435,14 +441,14 @@ public class UIScrollView
         }
     }
 
-    // Token : 0x6000242
-    // RVA   : 0x168B550   Offset: 0x1689D50   Length: 0xA5
+    // Token : 0x600025A
+    // RVA   : 0x1703040   Offset: 0x1702440   Length: 0xA5
     private void OnEnable()
     {
-        var pStatics = *(int64*)(DAT_181d8b058 + 184);
+        var pStatics = *(int64*)(DAT_181db0278 + 184);
         bool cVar1;
         if (*pStatics != 0) {
-          FUN_18154cb60(*pStatics,this,DAT_181d81d98);
+          FUN_181583c60(*pStatics,this,DAT_181da7138);
           if (this.mStarted) {
             cVar1 = Application.get_isPlaying(0);
             if (cVar1) {
@@ -454,8 +460,8 @@ public class UIScrollView
         }
     }
 
-    // Token : 0x6000243
-    // RVA   : 0x168C800   Offset: 0x168B000   Length: 0x30
+    // Token : 0x600025B
+    // RVA   : 0x1704340   Offset: 0x1703740   Length: 0x30
     private void Start()
     {
         bool cVar1;
@@ -467,8 +473,8 @@ public class UIScrollView
         }
     }
 
-    // Token : 0x6000244
-    // RVA   : 0x1689F10   Offset: 0x1688710   Length: 0x26A
+    // Token : 0x600025C
+    // RVA   : 0x1701A00   Offset: 0x1700E00   Length: 0x26A
     private void CheckScrollbars()
     {
         long lVar1;
@@ -483,7 +489,7 @@ public class UIScrollView
         if (cVar3) {
           if (this[7] == 0) throw; // [null/range check failed]
           uVar2 = *(uint64 *)(this[7] + 104);
-          uVar4 = new OnTooltipCB(this,DAT_181d9d158,0);
+          uVar4 = new OnTooltipCB(this,DAT_181dc6448,0);
           EventDelegate.Add(uVar2,uVar4,0);
           if (this[7] == 0) throw; // [null/range check failed]
           Component.BroadcastMessage(this[7],"CacheDefaultColor",1);
@@ -506,7 +512,7 @@ public class UIScrollView
         }
         if (this[8] != 0) {
           uVar2 = *(uint64 *)(this[8] + 104);
-          uVar4 = new OnTooltipCB(this,DAT_181d9d158,0);
+          uVar4 = new OnTooltipCB(this,DAT_181dc6448,0);
           EventDelegate.Add(uVar2,uVar4,0);
           if (this[8] != 0) {
             Component.BroadcastMessage(this[8],"CacheDefaultColor",1);
@@ -524,20 +530,20 @@ public class UIScrollView
         }
     }
 
-    // Token : 0x6000245
-    // RVA   : 0x168B4C0   Offset: 0x1689CC0   Length: 0x89
+    // Token : 0x600025D
+    // RVA   : 0x1702FB0   Offset: 0x17023B0   Length: 0x89
     private void OnDisable()
     {
-        var pStatics = *(int64*)(DAT_181d8b058 + 184);
+        var pStatics = *(int64*)(DAT_181db0278 + 184);
         if (*pStatics != 0) {
-          FUN_18154eb70(*pStatics,this,DAT_181d81e18);
+          FUN_181585c70(*pStatics,this,DAT_181da71b8);
           this.mPressed = 0;
           return;
         }
     }
 
-    // Token : 0x6000246
-    // RVA   : 0x168C240   Offset: 0x168AA40   Length: 0x1E
+    // Token : 0x600025E
+    // RVA   : 0x1703D80   Offset: 0x1703180   Length: 0x1E
     public bool RestrictWithinBounds(bool instant)
     {
         uint64
@@ -648,8 +654,8 @@ public class UIScrollView
         }
     }
 
-    // Token : 0x6000247
-    // RVA   : 0x168BF00   Offset: 0x168A700   Length: 0x33C
+    // Token : 0x600025F
+    // RVA   : 0x1703A40   Offset: 0x1702E40   Length: 0x33C
     public bool RestrictWithinBounds(bool instant, bool horizontal, bool vertical)
     {
         uint64
@@ -760,13 +766,13 @@ public class UIScrollView
         }
     }
 
-    // Token : 0x6000248
-    // RVA   : 0x168A180   Offset: 0x1688980   Length: 0x94
+    // Token : 0x6000260
+    // RVA   : 0x1701C70   Offset: 0x1701070   Length: 0x94
     public void DisableSpring()
     {
         long lVar1;
         bool cVar2;
-        lVar1 = Component.GetComponent(this,DAT_181d6d440);
+        lVar1 = Component.GetComponent(this,DAT_181d95ce0);
         cVar2 = Object.op_Inequality(lVar1,0,0);
         if (cVar2) {
           if (lVar1 != null) {
@@ -778,224 +784,293 @@ public class UIScrollView
         }
     }
 
-    // Token : 0x6000249
-    // RVA   : 0x123CFF0   Offset: 0x123B7F0   Length: 0x13
+    // Token : 0x6000261
+    // RVA   : 0x125AA20   Offset: 0x1259E20   Length: 0x13
     public void UpdateScrollbars()
     {
         void UIScrollView.UpdateScrollbars
                      (int64 this,int64 *param_2,float param_3,float param_4,float param_5,
                      float param_6,char param_7)
         {
-        bool bVar1;
-        char cVar2;
-        int64 *plVar3;
-        float fVar4;
-        float fVar5;
-        float fVar6;
+        uint64 uVar1;
+        uint64 *puVar2;
+        int64 lVar3;
+        bool bVar4;
+        char cVar5;
+        int64 *plVar6;
         float fVar7;
-        cVar2 = Object.op_Equality(param_2,0,0);
-        if (!cVar2) {
+        float fVar8;
+        float fVar9;
+        float fVar10;
+        cVar5 = Object.op_Equality(param_2,0,0);
+        if (!cVar5) {
           this.mIgnoreCallbacks = 1;
           if (param_6 < param_5) {
-            fVar4 = (float)Mathf.Clamp01(param_3 / param_5,0);
-            fVar7 = (float)Mathf.Clamp01(param_4 / param_5,0);
-            fVar7 = fVar7 + fVar4;
+            fVar7 = (float)Mathf.Clamp01(param_3 / param_5,0);
+            fVar10 = (float)Mathf.Clamp01(param_4 / param_5,0);
+            fVar10 = fVar10 + fVar7;
             if (!param_7) {
-              if (fVar7 <= 0.001) {
-                fVar4 = 1.0;
+              if (fVar10 <= 0.001) {
+                fVar7 = 1.0;
               }
               else {
-                fVar4 = fVar4 / fVar7;
+                fVar7 = fVar7 / fVar10;
               }
             }
-            else if (fVar7 <= 0.001) {
-              fVar4 = 0.0;
+            else if (fVar10 <= 0.001) {
+              fVar7 = 0.0;
             }
             else {
-              fVar4 = 1.0 - fVar4 / fVar7;
+              fVar7 = 1.0 - fVar7 / fVar10;
             }
-            if (param_2 == (int64 *)0) goto LAB_18168d08a;
-            UIProgressBar.set_value(param_2,fVar4,0);
+            if (param_2 == (int64 *)0) goto LAB_181704d6e;
+            UIProgressBar.Set(param_2,fVar7,1,0);
           }
           else {
-            fVar4 = (float)Mathf.Clamp01(-param_3 / param_5,0);
-            fVar5 = (float)Mathf.Clamp01(-param_4 / param_5,0);
-            fVar7 = fVar4 + fVar5;
+            fVar7 = (float)Mathf.Clamp01(-param_3 / param_5,0);
+            fVar8 = (float)Mathf.Clamp01(-param_4 / param_5,0);
+            fVar10 = fVar7 + fVar8;
             if (!param_7) {
-              if (fVar7 <= 0.001) {
-                fVar6 = 1.0;
+              if (fVar10 <= 0.001) {
+                fVar9 = 1.0;
               }
               else {
-                fVar6 = fVar4 / fVar7;
+                fVar9 = fVar7 / fVar10;
               }
             }
-            else if (fVar7 <= 0.001) {
-              fVar6 = 0.0;
+            else if (fVar10 <= 0.001) {
+              fVar9 = 0.0;
             }
             else {
-              fVar6 = 1.0 - fVar4 / fVar7;
+              fVar9 = 1.0 - fVar7 / fVar10;
             }
-            if (param_2 == (int64 *)0) goto LAB_18168d08a;
-            UIProgressBar.set_value(param_2,fVar6,0);
+            if (param_2 == (int64 *)0) goto LAB_181704d6e;
+            UIProgressBar.Set(param_2,fVar9,1,0);
             if (0.0 < param_5) {
-              fVar4 = (float)Mathf.Clamp01(fVar4 / param_5,0);
-              fVar7 = (float)Mathf.Clamp01(fVar5 / param_5,0);
-              fVar7 = fVar7 + fVar4;
+              fVar7 = (float)Mathf.Clamp01(fVar7 / param_5,0);
+              fVar10 = (float)Mathf.Clamp01(fVar8 / param_5,0);
+              fVar10 = fVar10 + fVar7;
             }
           }
-          plVar3 = param_2;
-            UIScrollBar.set_barSize(plVar3,1.0 - fVar7,0);
+          plVar6 = param_2;
+            fVar10 = (float)Mathf.Clamp01(1.0 - fVar10,0);
+            if (*(float *)(plVar6 + 17) != fVar10) {
+              *(float *)(plVar6 + 17) = fVar10;
+              *(uint8 *)(plVar6 + 10) = 1;
+              cVar5 = NGUITools.GetActive(plVar6,0);
+              if (cVar5) {
+                uVar1 = **(uint64 **)(DAT_181db0078 + 184);
+                cVar5 = Object.op_Equality(uVar1,0,0);
+                if ((cVar5) && (plVar6[13] != 0)) {
+                  puVar2 = *(uint64 **)(DAT_181db0078 + 184);
+                  *puVar2 = plVar6;
+                  il2cpp_internal(puVar2,plVar6);
+                  lVar3 = plVar6[13];
+                  EventDelegate.Execute(lVar3,0);
+                  puVar2 = *(uint64 **)(DAT_181db0078 + 184);
+                  *puVar2 = 0;
+                  il2cpp_internal(puVar2,0);
+                }
+                (**(code **)(*plVar6 + 0x1a8))(plVar6,*(uint64 *)(*plVar6 + 0x1b0));
+              }
+            }
           }
           this.mIgnoreCallbacks = 0;
         }
     }
 
-    // Token : 0x600024A
-    // RVA   : 0x168C9F0   Offset: 0x168B1F0   Length: 0x3BC
+    // Token : 0x6000262
+    // RVA   : 0x1704580   Offset: 0x1703980   Length: 0x3BC
     public virtual void UpdateScrollbars(bool recalculateBounds)
     {
         void UIScrollView.UpdateScrollbars
                      (int64 this,int64 *recalculateBounds,float param_3,float param_4,float param_5,
                      float param_6,char param_7)
         {
-        bool bVar1;
-        char cVar2;
-        int64 *plVar3;
-        float fVar4;
-        float fVar5;
-        float fVar6;
+        uint64 uVar1;
+        uint64 *puVar2;
+        int64 lVar3;
+        bool bVar4;
+        char cVar5;
+        int64 *plVar6;
         float fVar7;
-        cVar2 = Object.op_Equality(recalculateBounds,0,0);
-        if (!cVar2) {
+        float fVar8;
+        float fVar9;
+        float fVar10;
+        cVar5 = Object.op_Equality(recalculateBounds,0,0);
+        if (!cVar5) {
           this.mIgnoreCallbacks = 1;
           if (param_6 < param_5) {
-            fVar4 = (float)Mathf.Clamp01(param_3 / param_5,0);
-            fVar7 = (float)Mathf.Clamp01(param_4 / param_5,0);
-            fVar7 = fVar7 + fVar4;
+            fVar7 = (float)Mathf.Clamp01(param_3 / param_5,0);
+            fVar10 = (float)Mathf.Clamp01(param_4 / param_5,0);
+            fVar10 = fVar10 + fVar7;
             if (!param_7) {
-              if (fVar7 <= 0.001) {
-                fVar4 = 1.0;
+              if (fVar10 <= 0.001) {
+                fVar7 = 1.0;
               }
               else {
-                fVar4 = fVar4 / fVar7;
+                fVar7 = fVar7 / fVar10;
               }
             }
-            else if (fVar7 <= 0.001) {
-              fVar4 = 0.0;
+            else if (fVar10 <= 0.001) {
+              fVar7 = 0.0;
             }
             else {
-              fVar4 = 1.0 - fVar4 / fVar7;
+              fVar7 = 1.0 - fVar7 / fVar10;
             }
-            if (recalculateBounds == (int64 *)0) goto LAB_18168d08a;
-            UIProgressBar.set_value(recalculateBounds,fVar4,0);
+            if (recalculateBounds == (int64 *)0) goto LAB_181704d6e;
+            UIProgressBar.Set(recalculateBounds,fVar7,1,0);
           }
           else {
-            fVar4 = (float)Mathf.Clamp01(-param_3 / param_5,0);
-            fVar5 = (float)Mathf.Clamp01(-param_4 / param_5,0);
-            fVar7 = fVar4 + fVar5;
+            fVar7 = (float)Mathf.Clamp01(-param_3 / param_5,0);
+            fVar8 = (float)Mathf.Clamp01(-param_4 / param_5,0);
+            fVar10 = fVar7 + fVar8;
             if (!param_7) {
-              if (fVar7 <= 0.001) {
-                fVar6 = 1.0;
+              if (fVar10 <= 0.001) {
+                fVar9 = 1.0;
               }
               else {
-                fVar6 = fVar4 / fVar7;
+                fVar9 = fVar7 / fVar10;
               }
             }
-            else if (fVar7 <= 0.001) {
-              fVar6 = 0.0;
+            else if (fVar10 <= 0.001) {
+              fVar9 = 0.0;
             }
             else {
-              fVar6 = 1.0 - fVar4 / fVar7;
+              fVar9 = 1.0 - fVar7 / fVar10;
             }
-            if (recalculateBounds == (int64 *)0) goto LAB_18168d08a;
-            UIProgressBar.set_value(recalculateBounds,fVar6,0);
+            if (recalculateBounds == (int64 *)0) goto LAB_181704d6e;
+            UIProgressBar.Set(recalculateBounds,fVar9,1,0);
             if (0.0 < param_5) {
-              fVar4 = (float)Mathf.Clamp01(fVar4 / param_5,0);
-              fVar7 = (float)Mathf.Clamp01(fVar5 / param_5,0);
-              fVar7 = fVar7 + fVar4;
+              fVar7 = (float)Mathf.Clamp01(fVar7 / param_5,0);
+              fVar10 = (float)Mathf.Clamp01(fVar8 / param_5,0);
+              fVar10 = fVar10 + fVar7;
             }
           }
-          plVar3 = recalculateBounds;
-            UIScrollBar.set_barSize(plVar3,1.0 - fVar7,0);
+          plVar6 = recalculateBounds;
+            fVar10 = (float)Mathf.Clamp01(1.0 - fVar10,0);
+            if (*(float *)(plVar6 + 17) != fVar10) {
+              *(float *)(plVar6 + 17) = fVar10;
+              *(uint8 *)(plVar6 + 10) = 1;
+              cVar5 = NGUITools.GetActive(plVar6,0);
+              if (cVar5) {
+                uVar1 = **(uint64 **)(DAT_181db0078 + 184);
+                cVar5 = Object.op_Equality(uVar1,0,0);
+                if ((cVar5) && (plVar6[13] != 0)) {
+                  puVar2 = *(uint64 **)(DAT_181db0078 + 184);
+                  *puVar2 = plVar6;
+                  il2cpp_internal(puVar2,plVar6);
+                  lVar3 = plVar6[13];
+                  EventDelegate.Execute(lVar3,0);
+                  puVar2 = *(uint64 **)(DAT_181db0078 + 184);
+                  *puVar2 = 0;
+                  il2cpp_internal(puVar2,0);
+                }
+                (**(code **)(*plVar6 + 0x1a8))(plVar6,*(uint64 *)(*plVar6 + 0x1b0));
+              }
+            }
           }
           this.mIgnoreCallbacks = 0;
         }
     }
 
-    // Token : 0x600024B
-    // RVA   : 0x168CDB0   Offset: 0x168B5B0   Length: 0x2DF
+    // Token : 0x6000263
+    // RVA   : 0x1704940   Offset: 0x1703D40   Length: 0x433
     protected void UpdateScrollbars(UIProgressBar slider, float contentMin, float contentMax, float contentSize, float viewSize, bool inverted)
     {
         void UIScrollView.UpdateScrollbars
                      (int64 this,int64 *slider,float contentMin,float contentMax,float contentSize,
                      float viewSize,char inverted)
         {
-        bool bVar1;
-        char cVar2;
-        int64 *plVar3;
-        float fVar4;
-        float fVar5;
-        float fVar6;
+        uint64 uVar1;
+        uint64 *puVar2;
+        int64 lVar3;
+        bool bVar4;
+        char cVar5;
+        int64 *plVar6;
         float fVar7;
-        cVar2 = Object.op_Equality(slider,0,0);
-        if (!cVar2) {
+        float fVar8;
+        float fVar9;
+        float fVar10;
+        cVar5 = Object.op_Equality(slider,0,0);
+        if (!cVar5) {
           this.mIgnoreCallbacks = 1;
           if (viewSize < contentSize) {
-            fVar4 = (float)Mathf.Clamp01(contentMin / contentSize,0);
-            fVar7 = (float)Mathf.Clamp01(contentMax / contentSize,0);
-            fVar7 = fVar7 + fVar4;
+            fVar7 = (float)Mathf.Clamp01(contentMin / contentSize,0);
+            fVar10 = (float)Mathf.Clamp01(contentMax / contentSize,0);
+            fVar10 = fVar10 + fVar7;
             if (!inverted) {
-              if (fVar7 <= 0.001) {
-                fVar4 = 1.0;
+              if (fVar10 <= 0.001) {
+                fVar7 = 1.0;
               }
               else {
-                fVar4 = fVar4 / fVar7;
+                fVar7 = fVar7 / fVar10;
               }
             }
-            else if (fVar7 <= 0.001) {
-              fVar4 = 0.0;
+            else if (fVar10 <= 0.001) {
+              fVar7 = 0.0;
             }
             else {
-              fVar4 = 1.0 - fVar4 / fVar7;
+              fVar7 = 1.0 - fVar7 / fVar10;
             }
-            if (slider == (int64 *)0) goto LAB_18168d08a;
-            UIProgressBar.set_value(slider,fVar4,0);
+            if (slider == (int64 *)0) goto LAB_181704d6e;
+            UIProgressBar.Set(slider,fVar7,1,0);
           }
           else {
-            fVar4 = (float)Mathf.Clamp01(-contentMin / contentSize,0);
-            fVar5 = (float)Mathf.Clamp01(-contentMax / contentSize,0);
-            fVar7 = fVar4 + fVar5;
+            fVar7 = (float)Mathf.Clamp01(-contentMin / contentSize,0);
+            fVar8 = (float)Mathf.Clamp01(-contentMax / contentSize,0);
+            fVar10 = fVar7 + fVar8;
             if (!inverted) {
-              if (fVar7 <= 0.001) {
-                fVar6 = 1.0;
+              if (fVar10 <= 0.001) {
+                fVar9 = 1.0;
               }
               else {
-                fVar6 = fVar4 / fVar7;
+                fVar9 = fVar7 / fVar10;
               }
             }
-            else if (fVar7 <= 0.001) {
-              fVar6 = 0.0;
+            else if (fVar10 <= 0.001) {
+              fVar9 = 0.0;
             }
             else {
-              fVar6 = 1.0 - fVar4 / fVar7;
+              fVar9 = 1.0 - fVar7 / fVar10;
             }
-            if (slider == (int64 *)0) goto LAB_18168d08a;
-            UIProgressBar.set_value(slider,fVar6,0);
+            if (slider == (int64 *)0) goto LAB_181704d6e;
+            UIProgressBar.Set(slider,fVar9,1,0);
             if (0.0 < contentSize) {
-              fVar4 = (float)Mathf.Clamp01(fVar4 / contentSize,0);
-              fVar7 = (float)Mathf.Clamp01(fVar5 / contentSize,0);
-              fVar7 = fVar7 + fVar4;
+              fVar7 = (float)Mathf.Clamp01(fVar7 / contentSize,0);
+              fVar10 = (float)Mathf.Clamp01(fVar8 / contentSize,0);
+              fVar10 = fVar10 + fVar7;
             }
           }
-          plVar3 = slider;
-            UIScrollBar.set_barSize(plVar3,1.0 - fVar7,0);
+          plVar6 = slider;
+            fVar10 = (float)Mathf.Clamp01(1.0 - fVar10,0);
+            if (*(float *)(plVar6 + 17) != fVar10) {
+              *(float *)(plVar6 + 17) = fVar10;
+              *(uint8 *)(plVar6 + 10) = 1;
+              cVar5 = NGUITools.GetActive(plVar6,0);
+              if (cVar5) {
+                uVar1 = **(uint64 **)(DAT_181db0078 + 184);
+                cVar5 = Object.op_Equality(uVar1,0,0);
+                if ((cVar5) && (plVar6[13] != 0)) {
+                  puVar2 = *(uint64 **)(DAT_181db0078 + 184);
+                  *puVar2 = plVar6;
+                  il2cpp_internal(puVar2,plVar6);
+                  lVar3 = plVar6[13];
+                  EventDelegate.Execute(lVar3,0);
+                  puVar2 = *(uint64 **)(DAT_181db0078 + 184);
+                  *puVar2 = 0;
+                  il2cpp_internal(puVar2,0);
+                }
+                (**(code **)(*plVar6 + 0x1a8))(plVar6,*(uint64 *)(*plVar6 + 0x1b0));
+              }
+            }
           }
           this.mIgnoreCallbacks = 0;
         }
     }
 
-    // Token : 0x600024C
-    // RVA   : 0x168C390   Offset: 0x168AB90   Length: 0x46E
+    // Token : 0x6000264
+    // RVA   : 0x1703ED0   Offset: 0x17032D0   Length: 0x46E
     public virtual void SetDragAmount(float x, float y, bool updateScrollbars)
     {
         void UIScrollView.SetDragAmount
@@ -1029,7 +1104,7 @@ public class UIScrollView
         lVar5 = *plVar1;
         cVar4 = Object.op_Equality(lVar5,0,0);
         if (cVar4) {
-          lVar5 = Component.GetComponent(this,DAT_181d6e2c0);
+          lVar5 = Component.GetComponent(this,DAT_181d96b60);
           *plVar1 = lVar5;
           il2cpp_internal(plVar1,lVar5);
         }
@@ -1095,20 +1170,20 @@ public class UIScrollView
           uVar3 = *(uint32 *)(this + 3);
           local_b8 = *puVar8;
           if ((uVar3 & 0xfffffffd) == 0) {
-        LAB_18168c6b4:
+        LAB_1817041f4:
             local_b8._4_4_ = (float)((uint64)local_b8 >> 32);
             local_b8 = CONCAT44(local_b8._4_4_,(fVar9 - fVar13) + (float)local_b8);
-        LAB_18168c6c6:
-            if (uVar3 - 1 < 2) goto LAB_18168c6e0;
+        LAB_181704206:
+            if (uVar3 - 1 < 2) goto LAB_181704220;
             if (uVar3 != 3)
             {
               }
               else {
-              if (uVar3 != 3) goto LAB_18168c6c6;
-              if (*(float *)((int64)this + 76) != 0.0) goto LAB_18168c6b4;
+              if (uVar3 != 3) goto LAB_181704206;
+              if (*(float *)((int64)this + 76) != 0.0) goto LAB_1817041f4;
             }
             if (*(float *)(this + 10) != 0.0) {
-        LAB_18168c6e0:
+        LAB_181704220:
               local_b8 = CONCAT44((fVar10 - fVar11) + local_b8._4_4_,(float)local_b8);
             }
           }
@@ -1120,7 +1195,7 @@ public class UIScrollView
         fVar12 = fVar13;
         if ((((uVar3 & 0xfffffffd) == 0) || (fVar12 = fVar9, uVar3 != 3)) ||
            (fVar12 = fVar13, *(float *)((int64)this + 76) != 0.0)) {
-          if (uVar3 - 1 < 2) goto LAB_18168c756;
+          if (uVar3 - 1 < 2) goto LAB_181704296;
           fVar9 = fVar12;
           if (uVar3 != 3)
           {
@@ -1129,7 +1204,7 @@ public class UIScrollView
           }
           fVar12 = fVar9;
           if (*(float *)(this + 10) != 0.0) {
-        LAB_18168c756:
+        LAB_181704296:
             fVar10 = fVar11;
           }
         }
@@ -1147,15 +1222,15 @@ public class UIScrollView
         }
     }
 
-    // Token : 0x600024D
-    // RVA   : 0x168ABD0   Offset: 0x16893D0   Length: 0x8
+    // Token : 0x6000265
+    // RVA   : 0x17026C0   Offset: 0x1701AC0   Length: 0x8
     public void InvalidateBounds()
     {
         this.mCalculatedBounds = 0;
     }
 
-    // Token : 0x600024E
-    // RVA   : 0x168BE30   Offset: 0x168A630   Length: 0xCD
+    // Token : 0x6000266
+    // RVA   : 0x1703970   Offset: 0x1702D70   Length: 0xCD
     public void ResetPosition()
     {
         bool cVar1;
@@ -1175,14 +1250,14 @@ public class UIScrollView
         }
     }
 
-    // Token : 0x600024F
-    // RVA   : 0x168C830   Offset: 0x168B030   Length: 0x1BA
+    // Token : 0x6000267
+    // RVA   : 0x1704370   Offset: 0x1703770   Length: 0x20E
     public void UpdatePosition()
     {
         long lVar1;
         bool cVar2;
         ulong uVar3;
-        uint local_res8;
+        float local_res8;
         float fStackX_c;
         if (*(char *)((int64)this + 234) == false) {
           lVar1 = this[7];
@@ -1200,11 +1275,16 @@ public class UIScrollView
           lVar1 = this[7];
           cVar2 = Object.op_Inequality(lVar1,0,0);
           if (!cVar2) {
-            local_res8 = (uint32)uVar3;
+            local_res8 = (float)uVar3;
           }
           else {
-            if (this[7] == 0) goto LAB_18168c9e5;
-            local_res8 = UIProgressBar.get_value(this[7],0);
+            lVar1 = this[7];
+            if (lVar1 == null) goto LAB_181704579;
+            local_res8 = *(float *)(lVar1 + 56);
+            if (1 < *(int *)(lVar1 + 100)) {
+              local_res8 = (float)FUN_18000d7c0((float)(*(int *)(lVar1 + 100) + -1) * local_res8);
+              local_res8 = local_res8 / (float)(*(int *)(lVar1 + 100) + -1);
+            }
           }
           lVar1 = this[8];
           cVar2 = Object.op_Inequality(lVar1,0,0);
@@ -1213,12 +1293,17 @@ public class UIScrollView
             fStackX_c = 1.0 - fStackX_c;
           }
           else {
-            if (this[8] == 0) {
-        LAB_18168c9e5:
+            lVar1 = this[8];
+            if (lVar1 == null) {
+        LAB_181704579:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            fStackX_c = (float)UIProgressBar.get_value(this[8],0);
+            fStackX_c = *(float *)(lVar1 + 56);
+            if (1 < *(int *)(lVar1 + 100)) {
+              fStackX_c = (float)FUN_18000d7c0((float)(*(int *)(lVar1 + 100) + -1) * fStackX_c);
+              fStackX_c = fStackX_c / (float)(*(int *)(lVar1 + 100) + -1);
+            }
           }
           (**(code **)(*this + 0x1c8))
                     (this,local_res8,fStackX_c,0,*(uint64 *)(*this + 0x1d0));
@@ -1227,44 +1312,53 @@ public class UIScrollView
         }
     }
 
-    // Token : 0x6000250
-    // RVA   : 0x168B7C0   Offset: 0x1689FC0   Length: 0x122
+    // Token : 0x6000268
+    // RVA   : 0x17032B0   Offset: 0x17026B0   Length: 0x172
     public void OnScrollBar()
     {
         long lVar1;
         bool cVar2;
-        uint uVar3;
-        uint uVar4;
+        float fVar3;
+        float fVar4;
         if (*(char *)((int64)this + 234) == false) {
           *(uint8 *)((int64)this + 234) = 1;
           lVar1 = this[7];
           cVar2 = Object.op_Inequality(lVar1,0,0);
-          uVar4 = 0;
+          fVar4 = 0.0;
           if (!cVar2) {
-            uVar3 = 0;
+            fVar3 = 0.0;
           }
           else {
-            if (this[7] != 0)
-            {
-              uVar3 = UIProgressBar.get_value(this[7],0);
-              }
-              lVar1 = this[8];
-              cVar2 = Object.op_Inequality(lVar1,0,0);
-              if (cVar2) {
-              if (this[8] == 0) {
+            lVar1 = this[7];
+            if (lVar1 == null) goto LAB_18170341d;
+            fVar3 = *(float *)(lVar1 + 56);
+            if (1 < *(int *)(lVar1 + 100)) {
+              fVar3 = (float)FUN_18000d7c0((float)(*(int *)(lVar1 + 100) + -1) * fVar3);
+              fVar3 = fVar3 / (float)(*(int *)(lVar1 + 100) + -1);
             }
+          }
+          lVar1 = this[8];
+          cVar2 = Object.op_Inequality(lVar1,0,0);
+          if (cVar2) {
+            lVar1 = this[8];
+            if (lVar1 == null) {
+        LAB_18170341d:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            uVar4 = UIProgressBar.get_value(this[8],0);
+            fVar4 = *(float *)(lVar1 + 56);
+            if (1 < *(int *)(lVar1 + 100)) {
+              fVar4 = (float)FUN_18000d7c0((float)(*(int *)(lVar1 + 100) + -1) * fVar4);
+              fVar4 = fVar4 / (float)(*(int *)(lVar1 + 100) + -1);
+            }
           }
-          (**(code **)(*this + 0x1c8))(this,uVar3,uVar4,0,*(uint64 *)(*this + 0x1d0));
+          (**(code **)(*this + 0x1c8))(this,fVar3,fVar4,0,*(uint64 *)(*this + 0x1d0));
           *(uint8 *)((int64)this + 234) = 0;
         }
     }
 
-    // Token : 0x6000251
-    // RVA   : 0x168B3A0   Offset: 0x1689BA0   Length: 0x119
+    // Token : 0x6000269
+    // RVA   : 0x1702E90   Offset: 0x1702290   Length: 0x119
     public virtual void MoveRelative(Vector3 relative)
     {
         ulong uVar1;
@@ -1287,7 +1381,7 @@ public class UIScrollView
             UIPanel.set_clipOffset
                       (lVar2,CONCAT44(*(float *)(lVar2 + 0x168) - relative[1],
                                       *(float *)(lVar2 + 0x164) - *relative),0);
-                          // WARNING: Could not recover jumptable at 0x00018168b4ad. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000181702f9d. Too many branches
                           // WARNING: Treating indirect jump as call
             (**(code **)(*this + 0x1b8))(this,0,*(uint64 *)(*this + 0x1c0));
             return;
@@ -1295,8 +1389,8 @@ public class UIScrollView
         }
     }
 
-    // Token : 0x6000252
-    // RVA   : 0x168B290   Offset: 0x1689A90   Length: 0x10E
+    // Token : 0x600026A
+    // RVA   : 0x1702D80   Offset: 0x1702180   Length: 0x10E
     public void MoveAbsolute(Vector3 absolute)
     {
         long lVar1;
@@ -1329,11 +1423,11 @@ public class UIScrollView
         }
     }
 
-    // Token : 0x6000253
-    // RVA   : 0x168B8F0   Offset: 0x168A0F0   Length: 0x53C
+    // Token : 0x600026B
+    // RVA   : 0x1703430   Offset: 0x1702830   Length: 0x53C
     public void Press(bool pressed)
     {
-        var pUICamera = *(int64*)(UICamera_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181daf678 + 184);
         uint uVar1;
         long lVar2;
         bool cVar3;
@@ -1377,7 +1471,7 @@ public class UIScrollView
         }
         if (pressed == null) {
           iVar4 = *(int *)((int64)this + 236);
-          if (iVar4 == UICamera.currentTouchID) {
+          if (iVar4 == *(int *)(pStatics + 212)) {
             *(uint32 *)((int64)this + 236) = 0xfffffff6;
           }
         }
@@ -1394,7 +1488,7 @@ public class UIScrollView
           *(int *)(this + 25) = (int)plVar6[1];
           *(uint32 *)((int64)this + 204) = 0;
           UIScrollView.DisableSpring(this,0);
-          lVar2 = pUICamera;
+          lVar2 = pStatics;
           this[22] = *(int64 *)(lVar2 + 100);
           *(uint32 *)(this + 23) = *(uint32 *)(lVar2 + 108);
           if (this[18] != 0) {
@@ -1470,26 +1564,26 @@ public class UIScrollView
             UICenterOnChild.Recenter(this[32],0);
             return;
           }
-        LAB_18168be27:
+        LAB_181703967:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        if ((char)this[31] == false) goto LAB_18168bb79;
+        if ((char)this[31] == false) goto LAB_1817036b9;
         if ((char)this[4] != false) {
-          if (this[19] == 0) goto LAB_18168be27;
-          if (*(int *)(this[19] + 0x134) == 0) goto LAB_18168bb69;
+          if (this[19] == 0) goto LAB_181703967;
+          if (*(int *)(this[19] + 0x134) == 0) goto LAB_1817036a9;
           uVar1 = *(uint32 *)(this + 3);
           if ((uVar1 & 0xfffffffd) == 0) {
             uVar5 = 1;
-        LAB_18168bb0c:
-            if (uVar1 - 1 < 2) goto LAB_18168bb43;
-            if (uVar1 == 3) goto LAB_18168bb32;
+        LAB_18170364c:
+            if (uVar1 - 1 < 2) goto LAB_181703683;
+            if (uVar1 == 3) goto LAB_181703672;
             uVar8 = 0;
           }
           else {
             if (uVar1 != 3) {
               uVar5 = 0;
-              goto LAB_18168bb0c;
+              goto LAB_18170364c;
             }
             if (*(float *)((int64)this + 76) == 0.0) {
               uVar5 = 0;
@@ -1497,33 +1591,34 @@ public class UIScrollView
             else {
               uVar5 = 1;
             }
-        LAB_18168bb32:
+        LAB_181703672:
             if (*(float *)(this + 10) == 0.0) {
               uVar8 = 0;
             }
             else {
-        LAB_18168bb43:
+        LAB_181703683:
               uVar8 = 1;
             }
           }
           UIScrollView.RestrictWithinBounds
                     (this,*(int *)((int64)this + 28) == 0,uVar5,uVar8,0);
-          if ((char)this[31] == false) goto LAB_18168bb79;
+          if ((char)this[31] == false) goto LAB_1817036b9;
         }
-        LAB_18168bb69:
+        LAB_1817036a9:
         if (this[12] != 0) {
           OnGeometryUpdated.Invoke(this[12],0);
         }
-        LAB_18168bb79:
+        LAB_1817036b9:
         if ((*(char *)((int64)this + 233) == false) && (this[14] != 0)) {
           OnGeometryUpdated.Invoke(this[14],0);
         }
     }
 
-    // Token : 0x6000254
-    // RVA   : 0x168A220   Offset: 0x1688A20   Length: 0x9AD
+    // Token : 0x600026C
+    // RVA   : 0x1701D10   Offset: 0x1701110   Length: 0x9AD
     public void Drag()
     {
+        var pStatics = *(int64*)(DAT_181daf678 + 184);
         uint uVar1;
         uint uVar2;
         long lVar3;
@@ -1588,39 +1683,39 @@ public class UIScrollView
         }
         if (*(int *)((int64)this + 236) == -10) {
           *(uint32 *)((int64)this + 236) =
-               UICamera.currentTouchID;
+               *(uint32 *)(pStatics + 212);
         }
-        lVar11 = UICamera.currentTouch;
-        if (lVar11 == null) goto LAB_18168abc8;
-        lVar11.clickNotification = 2;
+        lVar11 = *(int64 *)(pStatics + 224);
+        if (lVar11 == null) goto LAB_1817026b8;
+        *(uint32 *)(lVar11 + 112) = 2;
         if (*(char *)((int64)this + 35) == false) {
-        LAB_18168a4bf:
-          lVar3 = UICamera.currentTouch;
-          lVar11 = UICamera.currentCamera;
-          if (lVar3 == null) goto LAB_18168abc8;
-          fVar13 = lVar3.pos;
+        LAB_181701faf:
+          lVar3 = *(int64 *)(pStatics + 224);
+          lVar11 = *(int64 *)(pStatics + 192);
+          if (lVar3 == null) goto LAB_1817026b8;
+          fVar13 = *(float *)(lVar3 + 20);
           fVar16 = *(float *)(lVar3 + 24);
         }
         else {
           if ((char)this[31] == false) {
             *(uint8 *)(this + 31) = 1;
-            lVar11 = UICamera.currentTouch;
-            if (lVar11 == null) goto LAB_18168abc8;
+            lVar11 = *(int64 *)(pStatics + 224);
+            if (lVar11 == null) goto LAB_1817026b8;
             uVar1 = *(uint32 *)(lVar11 + 48);
-            *(uint32 *)(this + 30) = lVar11.totalDelta;
+            *(uint32 *)(this + 30) = *(uint32 *)(lVar11 + 44);
             *(uint32 *)((int64)this + 244) = uVar1;
             if (this[11] != 0) {
               OnGeometryUpdated.Invoke(this[11],0);
             }
           }
-          if (*(char *)((int64)this + 35) == false) goto LAB_18168a4bf;
-          lVar3 = UICamera.currentTouch;
-          lVar11 = UICamera.currentCamera;
-          if (lVar3 == null) goto LAB_18168abc8;
-          fVar13 = lVar3.pos - *(float *)(this + 30);
+          if (*(char *)((int64)this + 35) == false) goto LAB_181701faf;
+          lVar3 = *(int64 *)(pStatics + 224);
+          lVar11 = *(int64 *)(pStatics + 192);
+          if (lVar3 == null) goto LAB_1817026b8;
+          fVar13 = *(float *)(lVar3 + 20) - *(float *)(this + 30);
           fVar16 = *(float *)(lVar3 + 24) - *(float *)((int64)this + 244);
         }
-        if (lVar11 == null) goto LAB_18168abc8;
+        if (lVar11 == null) goto LAB_1817026b8;
         local_128 = CONCAT44(fVar16,fVar13);
         local_120 = 0.0;
         puVar7 = (uint32 *)Camera.ScreenPointToRay(&local_f8,lVar11,&local_128,0);
@@ -1649,7 +1744,7 @@ public class UIScrollView
         this[22] = local_128;
         *(int *)(this + 23) = (int)plVar8[1];
         if (((fVar16 != 0.0) || (fVar20 != 0.0)) || (fVar13 != 0.0)) {
-          if (this[18] == 0) goto LAB_18168abc8;
+          if (this[18] == 0) goto LAB_1817026b8;
           local_128 = CONCAT44(fVar20,fVar16);
           local_120 = fVar13;
           puVar9 = (uint64 *)
@@ -1669,12 +1764,12 @@ public class UIScrollView
               local_138 = local_138 * *(float *)((int64)this + 76);
               fStack_134 = fStack_134 * *(float *)(this + 10);
               local_130 = *(float *)(puVar9 + 1) * 0.0;
-              goto LAB_18168a713;
+              goto LAB_181702203;
             }
             local_130 = 0.0;
           }
-        LAB_18168a713:
-          if (this[18] == 0) goto LAB_18168abc8;
+        LAB_181702203:
+          if (this[18] == 0) goto LAB_1817026b8;
           local_128 = CONCAT44(fStack_134,local_138);
           local_120 = local_130;
           puVar9 = (uint64 *)Transform.TransformDirection(&local_f8,this[18],&local_128,0);
@@ -1704,7 +1799,7 @@ public class UIScrollView
           *(float *)(this + 25) = local_110;
         }
         if ((*(char *)((int64)this + 36) == false) || (*(int *)((int64)this + 28) != 2)) {
-        LAB_18168aad4:
+        LAB_1817025c4:
           local_128 = CONCAT44(fVar20,fVar16);
           local_120 = fVar13;
           UIScrollView.MoveAbsolute(this,&local_128,0);
@@ -1726,7 +1821,7 @@ public class UIScrollView
           local_c8 = puVar9[2];
           puVar9 = (uint64 *)Bounds.get_max(&local_f8,&local_d8,0);
           local_110 = *(float *)(puVar9 + 1);
-          if (plVar8 == (int64 *)0) goto LAB_18168abc8;
+          if (plVar8 == (int64 *)0) goto LAB_1817026b8;
           puVar10 = (uint64 *)
                     (**(code **)(*plVar8 + 0x2a8))
                               (&local_f8,plVar8,uVar6,*puVar9,*(uint64 *)(*plVar8 + 0x2b0));
@@ -1746,7 +1841,7 @@ public class UIScrollView
                                  local_138 * *(float *)((int64)this + 76));
           }
           fVar15 = (float)Vector3.get_magnitude(&local_108,0);
-          if (fVar15 <= 1.0) goto LAB_18168aad4;
+          if (fVar15 <= 1.0) goto LAB_1817025c4;
           local_120 = fVar13 * 0.5;
           local_128 = CONCAT44(fVar20 * 0.5,fVar16 * 0.5);
           local_110 = local_120;
@@ -1763,7 +1858,7 @@ public class UIScrollView
           return;
         }
         if (this[19] == 0) {
-        LAB_18168abc8:
+        LAB_1817026b8:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -1776,14 +1871,14 @@ public class UIScrollView
         uVar2 = *(uint32 *)(this + 3);
         if ((uVar2 & 0xfffffffd) == 0) {
           uVar6 = 1;
-        LAB_18168ab2f:
-          if (uVar2 - 1 < 2) goto LAB_18168ab63;
-          if (uVar2 == 3) goto LAB_18168ab56;
+        LAB_18170261f:
+          if (uVar2 - 1 < 2) goto LAB_181702653;
+          if (uVar2 == 3) goto LAB_181702646;
         }
         else {
           if (uVar2 != 3) {
             uVar6 = 0;
-            goto LAB_18168ab2f;
+            goto LAB_18170261f;
           }
           if (*(float *)((int64)this + 76) == 0.0) {
             uVar6 = 0;
@@ -1791,20 +1886,20 @@ public class UIScrollView
           else {
             uVar6 = 1;
           }
-        LAB_18168ab56:
+        LAB_181702646:
           if (*(float *)(this + 10) != 0.0) {
-        LAB_18168ab63:
+        LAB_181702653:
             uVar12 = 1;
-            goto LAB_18168ab66;
+            goto LAB_181702656;
           }
         }
         uVar12 = 0;
-        LAB_18168ab66:
+        LAB_181702656:
         UIScrollView.RestrictWithinBounds(this,1,uVar6,uVar12,0);
     }
 
-    // Token : 0x6000255
-    // RVA   : 0x168C260   Offset: 0x168AA60   Length: 0x125
+    // Token : 0x600026D
+    // RVA   : 0x1703DA0   Offset: 0x17031A0   Length: 0x125
     public void Scroll(float delta)
     {
         bool cVar1;
@@ -1832,8 +1927,8 @@ public class UIScrollView
         }
     }
 
-    // Token : 0x6000256
-    // RVA   : 0x168ABE0   Offset: 0x16893E0   Length: 0x6A9
+    // Token : 0x600026E
+    // RVA   : 0x17026D0   Offset: 0x1701AD0   Length: 0x6A9
     private void LateUpdate()
     {
         int iVar2;
@@ -1868,7 +1963,7 @@ public class UIScrollView
           if (!cVar5) {
             lVar9 = this[7];
             cVar5 = Object.op_Implicit(lVar9,0);
-            if (!cVar5) goto LAB_18168ae7a;
+            if (!cVar5) goto LAB_18170296a;
           }
           cVar5 = false;
           cVar6 = false;
@@ -1880,7 +1975,7 @@ public class UIScrollView
           lVar9 = this[8];
           cVar7 = Object.op_Implicit(lVar9,0);
           if (cVar7) {
-            if (this[8] == 0) goto LAB_18168b284;
+            if (this[8] == 0) goto LAB_181702d74;
             fVar13 = (float)UIProgressBar.get_alpha(this[8],0);
             if (!cVar5) {
               fVar16 = -fVar12 * 3.0;
@@ -1889,17 +1984,17 @@ public class UIScrollView
               fVar16 = fVar12 * 6.0;
             }
             uVar15 = Mathf.Clamp01(fVar13 + fVar16,0);
-            if (this[8] == 0) goto LAB_18168b284;
+            if (this[8] == 0) goto LAB_181702d74;
             fVar13 = (float)UIProgressBar.get_alpha(this[8],0);
             if (fVar13 != (float)uVar15) {
-              if (this[8] == 0) goto LAB_18168b284;
+              if (this[8] == 0) goto LAB_181702d74;
               UIProgressBar.set_alpha(this[8],uVar15,0);
             }
           }
           lVar9 = this[7];
           cVar5 = Object.op_Implicit(lVar9,0);
           if (cVar5) {
-            if (this[7] == 0) goto LAB_18168b284;
+            if (this[7] == 0) goto LAB_181702d74;
             fVar13 = (float)UIProgressBar.get_alpha(this[7],0);
             if (!cVar6) {
               fVar16 = -fVar12 * 3.0;
@@ -1908,15 +2003,15 @@ public class UIScrollView
               fVar16 = fVar12 * 6.0;
             }
             uVar15 = Mathf.Clamp01(fVar13 + fVar16,0);
-            if (this[7] == 0) goto LAB_18168b284;
+            if (this[7] == 0) goto LAB_181702d74;
             fVar13 = (float)UIProgressBar.get_alpha(this[7],0);
             if (fVar13 != (float)uVar15) {
-              if (this[7] == 0) goto LAB_18168b284;
+              if (this[7] == 0) goto LAB_181702d74;
               UIProgressBar.set_alpha(this[7],uVar15,0);
             }
           }
         }
-        LAB_18168ae7a:
+        LAB_18170296a:
         if (*(char *)((int64)this + 233) == false) {
           return;
         }
@@ -1932,10 +2027,10 @@ public class UIScrollView
           plVar8 = (int64 *)Vector3.get_zero(local_48,0);
           *plVar1 = *plVar8;
           *(int *)(this + 25) = (int)plVar8[1];
-          lVar9 = Component.GetComponent(this,DAT_181d6d440);
+          lVar9 = Component.GetComponent(this,DAT_181d95ce0);
           cVar5 = Object.op_Inequality(lVar9,0,0);
           if (cVar5) {
-            if (lVar9 == null) goto LAB_18168b284;
+            if (lVar9 == null) goto LAB_181702d74;
             cVar5 = Behaviour.get_enabled(lVar9,0);
             if (cVar5) {
               return;
@@ -1943,7 +2038,7 @@ public class UIScrollView
           }
           lVar9 = this[14];
           *(uint8 *)((int64)this + 233) = 0;
-          goto LAB_18168b26f;
+          goto LAB_181702d5f;
         }
         iVar2 = (int)this[3];
         lVar4 = this[18];
@@ -1951,17 +2046,17 @@ public class UIScrollView
         lVar9 = *plVar1;
         if (iVar2 == 0) {
           local_60 = *(float *)(this + 25);
-          if (lVar4 == null) goto LAB_18168b284;
+          if (lVar4 == null) goto LAB_181702d74;
           fStack_54 = 0.0;
           fVar16 = fStack_54;
-        LAB_18168b082:
+        LAB_181702b72:
           fStack_54 = fVar16;
           fVar16 = fVar13 * 0.05;
           fVar13 = fStack_54;
         }
         else if (iVar2 == 1) {
           local_60 = *(float *)(this + 25);
-          if (lVar4 == null) goto LAB_18168b284;
+          if (lVar4 == null) goto LAB_181702d74;
           local_58 = 0.0;
           fVar16 = local_58;
           fVar13 = fVar13 * 0.05;
@@ -1970,12 +2065,12 @@ public class UIScrollView
           local_60 = *(float *)(this + 25);
           if (iVar2 == 2) {
             fVar16 = fVar13 * 0.05;
-            if (lVar4 == null) goto LAB_18168b284;
-            goto LAB_18168b082;
+            if (lVar4 == null) goto LAB_181702d74;
+            goto LAB_181702b72;
           }
           fVar16 = fVar13 * *(float *)((int64)this + 76) * 0.05;
           fVar13 = fVar13 * *(float *)(this + 10) * 0.05;
-          if (lVar4 == null) goto LAB_18168b284;
+          if (lVar4 == null) goto LAB_181702d74;
         }
         fStack_54 = fVar13;
         local_58 = fVar16;
@@ -1997,9 +2092,9 @@ public class UIScrollView
         local_58 = (float)*puVar10;
         fStack_54 = (float)((uint64)*puVar10 >> 32);
         UIScrollView.MoveAbsolute(this,&local_58,0);
-        if ((char)this[4] == false) goto LAB_18168b26b;
+        if ((char)this[4] == false) goto LAB_181702d5b;
         if (this[19] == 0) {
-        LAB_18168b284:
+        LAB_181702d74:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -2011,19 +2106,19 @@ public class UIScrollView
             uVar11 = (uint7)((uint64)uVar15 >> 8);
             if ((uVar3 & 0xfffffffd) == 0) {
               uVar15 = 1;
-        LAB_18168b1bf:
+        LAB_181702caf:
               if (1 < uVar3 - 1) {
                 if (uVar3 != 3) {
                   UIScrollView.RestrictWithinBounds(this,0,uVar15,(uint64)uVar11 << 8,0);
-                  goto LAB_18168b26b;
+                  goto LAB_181702d5b;
                 }
-                goto LAB_18168b1f7;
+                goto LAB_181702ce7;
               }
             }
             else {
               if (uVar3 != 3) {
                 uVar15 = 0;
-                goto LAB_18168b1bf;
+                goto LAB_181702caf;
               }
               if (*(float *)((int64)this + 76) == 0.0) {
                 uVar15 = 0;
@@ -2031,17 +2126,17 @@ public class UIScrollView
               else {
                 uVar15 = 1;
               }
-        LAB_18168b1f7:
+        LAB_181702ce7:
               if (*(float *)(this + 10) == 0.0) {
                 UIScrollView.RestrictWithinBounds(this,0,uVar15,(uint64)uVar11 << 8,0);
-                goto LAB_18168b26b;
+                goto LAB_181702d5b;
               }
             }
             UIScrollView.RestrictWithinBounds(this,0,uVar15,CONCAT71(uVar11,1),0);
           }
           else {
             lVar9 = this[32];
-            if (lVar9 == null) goto LAB_18168b284;
+            if (lVar9 == null) goto LAB_181702d74;
             if (*(float *)(lVar9 + 28) == 0.0) {
               UICenterOnChild.Recenter(lVar9,0);
             }
@@ -2053,16 +2148,16 @@ public class UIScrollView
             }
           }
         }
-        LAB_18168b26b:
+        LAB_181702d5b:
         lVar9 = this[13];
-        LAB_18168b26f:
+        LAB_181702d5f:
         if (lVar9 != null) {
           OnGeometryUpdated.Invoke(lVar9,0);
         }
     }
 
-    // Token : 0x6000257
-    // RVA   : 0x168B600   Offset: 0x1689E00   Length: 0x1B2
+    // Token : 0x600026F
+    // RVA   : 0x17030F0   Offset: 0x17024F0   Length: 0x1B2
     public void OnPan(Vector2 delta)
     {
         uint uVar1;
@@ -2107,22 +2202,22 @@ public class UIScrollView
             if (uVar1 != 1) {
               return;
             }
-            goto LAB_18168b792;
+            goto LAB_181703282;
           }
           if (this.customMovement == null.0) {
             if (*(float *)(this + 80) == 0.0) {
               return;
             }
-            goto LAB_18168b792;
+            goto LAB_181703282;
           }
         }
         local_28 = (uint32)delta;
-        LAB_18168b792:
+        LAB_181703282:
         UIScrollView.Scroll(this,local_28,0);
     }
 
-    // Token : 0x6000258
-    // RVA   : 0x168D110   Offset: 0x168B910   Length: 0xED
+    // Token : 0x6000270
+    // RVA   : 0x1704E00   Offset: 0x1704200   Length: 0xED
     public void /*ctor*/()
     {
         ulong uVar1;
@@ -2158,13 +2253,13 @@ public class UIScrollView
         FUN_18044ef50(this,0);
     }
 
-    // Token : 0x6000259
-    // RVA   : 0x168D090   Offset: 0x168B890   Length: 0x76
+    // Token : 0x6000271
+    // RVA   : 0x1704D80   Offset: 0x1704180   Length: 0x76
     private static void /*cctor*/()
     {
         ulong uVar2;
-        uVar2 = new BetterList_1(DAT_181d81d18);
-        puVar1 = *(uint64 **)(DAT_181d8b058 + 184);
+        uVar2 = new BetterList_1(DAT_181da70b8);
+        puVar1 = *(uint64 **)(DAT_181db0278 + 184);
         *puVar1 = uVar2;
         il2cpp_internal(puVar1,uVar2);
     }

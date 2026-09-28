@@ -1,54 +1,54 @@
 // ============================================================
 // Type  : BattleMapData
-// Token : 0x2000171
+// Token : 0x2000176
 // ============================================================
 
 public class BattleMapData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000974
+    // Token: 0x40009EF
     public int mapID;
 
-    // Token: 0x4000975
+    // Token: 0x40009F0
     public BattleMapTypeData battleMapTypeData;
 
-    // Token: 0x4000976
+    // Token: 0x40009F1
     public int mapWidth;
 
-    // Token: 0x4000977
+    // Token: 0x40009F2
     public int mapHeight;
 
-    // Token: 0x4000978
+    // Token: 0x40009F3
     public int wallColumn;
 
-    // Token: 0x4000979
+    // Token: 0x40009F4
     public GridUnitData[] mapGrids;
 
-    // Token: 0x400097A
+    // Token: 0x40009F5
     public List<GridUnitData> mustEmptyGrids;
 
-    // Token: 0x400097B
+    // Token: 0x40009F6
     public List<GridUnitData> normalGrids;
 
-    // Token: 0x400097C
+    // Token: 0x40009F7
     public List<GridUnitData> obstacleGrids;
 
-    // Token: 0x400097D
+    // Token: 0x40009F8
     private static List<int> DefenceTrapID;
 
-    // Token: 0x400097E
+    // Token: 0x40009F9
     private static List<Vector2> DefenceGuardMapGridsOffset;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000BF1
-    // RVA   : 0x8DF070   Offset: 0x8DD870   Length: 0x8
+    // Token : 0x6000C1B
+    // RVA   : 0x8CA250   Offset: 0x8C9650   Length: 0x8
     public int get_GridCount()
     {
         return this.mapHeight * this.mapWidth;
     }
 
-    // Token : 0x6000BF2
-    // RVA   : 0x8DC4D0   Offset: 0x8DACD0   Length: 0x159
+    // Token : 0x6000C1C
+    // RVA   : 0x8C76B0   Offset: 0x8C6AB0   Length: 0x159
     public void Generate(BattleMapTypeData _battleMapTypeData)
     {
         uint uVar1;
@@ -59,7 +59,7 @@ public class BattleMapData
         long local_28;
         long local_20;
         if (_battleMapTypeData == null) {
-        LAB_1808dc624:
+        LAB_1808c7804:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -69,7 +69,7 @@ public class BattleMapData
           this.mapWidth = *(int *)(_battleMapTypeData + 20);
           local_20 = (int64)*(int *)(_battleMapTypeData + 24);
           this.mapHeight = *(int *)(_battleMapTypeData + 24);
-          uVar2 = FUN_1800d6020(DAT_181d84940,&local_28);
+          uVar2 = FUN_1800d6020(DAT_181da9a60,&local_28);
           this.mapGrids = uVar2;
           iVar5 = 0;
           if (0 < this.mapHeight) {
@@ -79,10 +79,10 @@ public class BattleMapData
                 do {
                   uVar1 = this.mapID;
                   lVar3 = new GridUnitData(uVar1,iVar5,iVar4,0);
-                  if (lVar3 == null) goto LAB_1808dc624;
+                  if (lVar3 == null) goto LAB_1808c7804;
                   GridUnitData.set_GridType(lVar3,1);
-                  if (this.mapGrids == null) goto LAB_1808dc624;
-                  FUN_180127fe0(this.mapGrids,(int64)iVar4,(int64)iVar5,lVar3);
+                  if (this.mapGrids == null) goto LAB_1808c7804;
+                  FUN_180128020(this.mapGrids,(int64)iVar4,(int64)iVar5,lVar3);
                   iVar4 = iVar4 + 1;
                 } while (iVar4 < this.mapWidth);
               }
@@ -92,8 +92,8 @@ public class BattleMapData
         }
     }
 
-    // Token : 0x6000BF3
-    // RVA   : 0x8DB990   Offset: 0x8DA190   Length: 0x34D
+    // Token : 0x6000C1D
+    // RVA   : 0x8C6B70   Offset: 0x8C5F70   Length: 0x34D
     public void GenerateMapObjs()
     {
         long lVar1;
@@ -112,7 +112,7 @@ public class BattleMapData
         if (((iVar3 == 0) || (iVar3 == 1)) || (iVar3 == 2)) {
           fVar9 = (float)Random.Range();
           fVar9 = (float)this.mapWidth * fVar9 * (float)this.mapHeight;
-        LAB_1808dbacf:
+        LAB_1808c6caf:
           iVar8 = (int)fVar9;
           Random.Range();
           uVar2 = Mathf.RoundToInt();
@@ -124,18 +124,18 @@ public class BattleMapData
         else if (iVar3 == 4) {
           fVar9 = (float)Random.Range();
           fVar9 = (float)this.mapWidth * fVar9 * (float)this.mapHeight;
-          goto LAB_1808dbacf;
+          goto LAB_1808c6caf;
         }
         BattleMapData.GenerateBuildingObstacle(this,iVar8,0,0);
-        lVar1 = PlotController.StopWarCostFavor;
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181db0248 + 184) + 80);
         if (lVar1 != null) {
           if (*(int *)(lVar1 + 32) != 0) {
             BattleMapData.GenerateSpeGridObj(this,uVar2,0);
           }
           if (this.normalGrids != null) {
-            FUN_180f56130(this.normalGrids,DAT_181d637f8);
+            FUN_1812f9a10(this.normalGrids,DAT_181d8af98);
             if (this.obstacleGrids != null) {
-              FUN_180f56130(this.obstacleGrids,DAT_181d637f8);
+              FUN_1812f9a10(this.obstacleGrids,DAT_181d8af98);
               lVar1 = this.mapGrids;
               if (lVar1 != null) {
                 iVar3 = Array.GetUpperBound(lVar1,0,0);
@@ -148,17 +148,17 @@ public class BattleMapData
                   iVar5 = Array.GetLowerBound(lVar1,1);
                   if (iVar5 <= iVar4) {
                     do {
-                      lVar6 = FUN_180127f50(lVar1,(int64)iVar8);
+                      lVar6 = FUN_180127f90(lVar1,(int64)iVar8);
                       if (lVar6 == null) throw; // [null/range check failed]
                       if (*(int *)(lVar6 + 20) == 1) {
                         lVar7 = this.normalGrids;
-        LAB_1808dbc9a:
+        LAB_1808c6e7a:
                         if (lVar7 == null) throw; // [null/range check failed]
-                        FUN_181827900(lVar7,lVar6);
+                        FUN_18181e0a0(lVar7,lVar6);
                       }
                       else if (*(int *)(lVar6 + 20) == 2) {
                         lVar7 = this.obstacleGrids;
-                        goto LAB_1808dbc9a;
+                        goto LAB_1808c6e7a;
                       }
                       iVar5 = iVar5 + 1;
                     } while (iVar5 <= iVar4);
@@ -171,10 +171,11 @@ public class BattleMapData
         }
     }
 
-    // Token : 0x6000BF4
-    // RVA   : 0x8DBCE0   Offset: 0x8DA4E0   Length: 0x387
+    // Token : 0x6000C1E
+    // RVA   : 0x8C6EC0   Offset: 0x8C62C0   Length: 0x387
     private ObstacleData GenerateObstacleData(int obstacleID, bool bigObstacle)
     {
+        var pStatics = *(int64*)(DAT_181db0248 + 184);
         long lVar1;
         ulong uVar2;
         int iVar3;
@@ -185,14 +186,14 @@ public class BattleMapData
         byte uVar8;
         double dVar9;
         float fVar10;
-        lVar5 = PlotController.StopWarCostFavor;
+        lVar5 = *(int64 *)(pStatics + 80);
         if ((lVar5 != null) && (lVar5 = *(int64 *)(lVar5 + 600)) != null) {
           if (*(uint32 *)(lVar5 + 24) <= obstacleID) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           uVar8 = 0;
           lVar5 = lVar5[obstacleID];
-          lVar1 = PlotController.StopWarCostFavor;
+          lVar1 = *(int64 *)(pStatics + 80);
           if (lVar1 != null) {
             if (*(int *)(lVar1 + 32) != 0) {
               dVar9 = (double)GlobalData.RandomRangeDouble(0,0);
@@ -228,13 +229,13 @@ public class BattleMapData
                 if (*(uint32 *)(lVar7 + 24) < 2) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
-                iVar3 = FUN_180d8cf10(uVar4,*(int *)(*(int64 *)(lVar7 + 16) + 36) + 1,0);
+                iVar3 = FUN_180d95a30(uVar4,*(int *)(*(int64 *)(lVar7 + 16) + 36) + 1,0);
                 if (bigObstacle) {
                   iVar3 = iVar3 * 2;
                 }
                 uVar2 = *(uint64 *)(lVar5 + 24);
-                uVar4 = FUN_180d8cf10(0,*(uint32 *)(lVar5 + 32),0);
-                uVar6 = il2cpp_internal(DAT_181d697e8);
+                uVar4 = FUN_180d95a30(0,*(uint32 *)(lVar5 + 32),0);
+                uVar6 = il2cpp_internal(DAT_181d8ea10);
                 ObstacleData.ctor(uVar6,0,obstacleID,uVar2,uVar4,(float)iVar3,(float)iVar3,0xffffffff,
                                    bigObstacle,uVar8,0);
                 return uVar6;
@@ -244,24 +245,25 @@ public class BattleMapData
         }
     }
 
-    // Token : 0x6000BF5
-    // RVA   : 0x8DC410   Offset: 0x8DAC10   Length: 0xB5
+    // Token : 0x6000C1F
+    // RVA   : 0x8C75F0   Offset: 0x8C69F0   Length: 0xB5
     private ObstacleData GenerateWallData(int hp, int maxhp, int teamID)
     {
         uint64
         BattleMapData.GenerateWallData(uint64 this,int hp,int maxhp,uint32 teamID)
         {
         uint64 uVar1;
-        uVar1 = il2cpp_internal(DAT_181d697e8);
+        uVar1 = il2cpp_internal(DAT_181d8ea10);
         ObstacleData.ctor(uVar1,1,0xffffffff,"城墙",0,(float)hp,(float)maxhp,teamID,0,0,0)
         ;
         return uVar1;
     }
 
-    // Token : 0x6000BF6
-    // RVA   : 0x8DB680   Offset: 0x8D9E80   Length: 0x304
+    // Token : 0x6000C20
+    // RVA   : 0x8C6860   Offset: 0x8C5C60   Length: 0x304
     public void GenerateGuard(int homeBaseRow, float guardLv, int num)
     {
+        var pStatics = *(int64*)(DAT_181db0348 + 184);
         void BattleMapData.GenerateGuard
                      (int64 this,int homeBaseRow,uint32 guardLv,uint32 num)
         {
@@ -285,35 +287,35 @@ public class BattleMapData
           do {
             lVar6 = FUN_18046bb80(0);
             lVar7 = FUN_18046c0a0(0);
-            lVar2 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 216);
+            lVar2 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 216);
             if (lVar2 == null) {
-        LAB_1808db97f:
+        LAB_1808c6b5f:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             local_res20[0] = String.get_Chars(lVar2,iVar10,0);
             uVar8 = Char.ToString(local_res20,0);
             uVar8 = String.Concat("守卫",uVar8,0);
-            if (lVar7 == null) goto LAB_1808db97f;
+            if (lVar7 == null) goto LAB_1808c6b5f;
             uVar8 = GameController.GenerateHeroData
                               (lVar7,uVar8,0xffffffff,0xffffffff,guardLv,
                                in_stack_ffffffffffffff80 & 0xffffff00,0);
             lVar7 = FUN_18046bb80(0);
-            if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 112)) == null) goto LAB_1808db97f;
+            if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 112)) == null) goto LAB_1808c6b5f;
             if (*(uint32 *)(lVar7 + 24) < 2) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar2 = this.mapGrids;
             iVar1 = this.mapWidth;
             uVar3 = *(uint64 *)(*(int64 *)(lVar7 + 16) + 40);
-            lVar7 = BattleMapData.DefenceGuardMapGridsOffset;
-            if (lVar7 == null) goto LAB_1808db97f;
-            fVar5 = (float)FUN_180132c70(lVar7,iVar10,DAT_181d840f8);
-            lVar7 = BattleMapData.DefenceGuardMapGridsOffset;
-            if (((lVar7 == null) || (FUN_180132c70(lVar7,iVar10,DAT_181d840f8), lVar2 == null)) ||
-               (uVar9 = FUN_180127f50(lVar2,(int64)((int)fVar5 + iVar1),
+            lVar7 = *(int64 *)(pStatics + 8);
+            if (lVar7 == null) goto LAB_1808c6b5f;
+            fVar5 = (float)FUN_180132d60(lVar7,iVar10,DAT_181daba98);
+            lVar7 = *(int64 *)(pStatics + 8);
+            if (((lVar7 == null) || (FUN_180132d60(lVar7,iVar10,DAT_181daba98), lVar2 == null)) ||
+               (uVar9 = FUN_180127f90(lVar2,(int64)((int)fVar5 + iVar1),
                                       (int64)((int)extraout_var + homeBaseRow)), lVar6 == null))
-            goto LAB_1808db97f;
+            goto LAB_1808c6b5f;
             in_stack_ffffffffffffff80 = 0;
             BattleController.HeroEnterBattleField(lVar6,uVar8,uVar3,uVar9,0,0,0);
             iVar10 = iVar10 + 1;
@@ -321,10 +323,11 @@ public class BattleMapData
         }
     }
 
-    // Token : 0x6000BF7
-    // RVA   : 0x8D9320   Offset: 0x8D7B20   Length: 0x235C
+    // Token : 0x6000C21
+    // RVA   : 0x8C4500   Offset: 0x8C3900   Length: 0x235C
     private void GenerateBuildingObstacle(int obstacleCount, int gap)
     {
+        var pStatics = *(int64*)(DAT_181db0248 + 184);
         int iVar1;
         ulong uVar2;
         bool cVar3;
@@ -360,14 +363,14 @@ public class BattleMapData
         long local_c0;
         uint64 extraout_XMM0_Qb;
         uint64 extraout_XMM0_Qb_00;
-        lVar8 = il2cpp_internal(DAT_181d6e630);
-        FUN_180f58a90(lVar8,DAT_181d63678);
-        uVar9 = il2cpp_internal(DAT_181d6e630);
-        FUN_180f58a90(uVar9,DAT_181d63678);
-        lVar10 = il2cpp_internal(DAT_181d6e630);
-        FUN_180f58a90(lVar10,DAT_181d63678);
+        lVar8 = il2cpp_internal(DAT_181d932d0);
+        FUN_18132faf0(lVar8,DAT_181d8ae18);
+        uVar9 = il2cpp_internal(DAT_181d932d0);
+        FUN_18132faf0(uVar9,DAT_181d8ae18);
+        lVar10 = il2cpp_internal(DAT_181d932d0);
+        FUN_18132faf0(lVar10,DAT_181d8ae18);
         lVar11 = this.battleMapTypeData;
-        if (lVar11 == null) goto LAB_1808db659;
+        if (lVar11 == null) goto LAB_1808c6839;
         iVar22 = 0;
         if (lVar11.battleMapType == 4) {
           if ((lVar11.targetArea != null) &&
@@ -375,44 +378,44 @@ public class BattleMapData
             lVar11 = FUN_18046c0a0(0);
             if (((lVar11 == null) || (lVar11.targetArea == null)) ||
                (lVar11 = WorldData.Player(lVar11.targetArea,0)) == null)
-            goto LAB_1808db659;
+            goto LAB_1808c6839;
           }
-          lVar11 = PlotController.StopWarCostFavor;
+          lVar11 = *(int64 *)(pStatics + 80);
           if (((lVar11 == null) || (this.battleMapTypeData == null)) ||
-             (lVar11 = *(int64 *)(lVar11 + 0x250)) == null) goto LAB_1808db659;
+             (lVar11 = *(int64 *)(lVar11 + 0x250)) == null) goto LAB_1808c6839;
           uVar7 = this.battleMapTypeData.attackAreaType;
           if (lVar11.row <= uVar7) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar11 = lVar11.battleMapType[uVar7];
-          if (lVar11 == null) goto LAB_1808db659;
+          if (lVar11 == null) goto LAB_1808c6839;
           fVar29 = *(float *)(lVar11 + 36);
-          lVar11 = PlotController.StopWarCostFavor;
-          if ((lVar11 == null) || (lVar11 = *(int64 *)(lVar11 + 112)) == null) goto LAB_1808db659;
+          lVar11 = *(int64 *)(pStatics + 80);
+          if ((lVar11 == null) || (lVar11 = *(int64 *)(lVar11 + 112)) == null) goto LAB_1808c6839;
           if (lVar11.row < 2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar11 = *(int64 *)(lVar11.battleMapType + 40);
-          if ((lVar11 == null) || (lVar11 = *(int64 *)(lVar11 + 48)) == null) goto LAB_1808db659;
+          if ((lVar11 == null) || (lVar11 = *(int64 *)(lVar11 + 48)) == null) goto LAB_1808c6839;
           fVar23 = (float)HeroSpeAddData.Get(lVar11,211,0);
           uVar4 = Mathf.RoundToInt(((float)this.mapWidth + (float)this.mapWidth) /
                                     3.0,0);
           this.wallColumn = uVar4;
           iVar5 = Mathf.RoundToInt((float)this.mapHeight * 0.5,0);
-          if (this.battleMapTypeData == null) goto LAB_1808db659;
+          if (this.battleMapTypeData == null) goto LAB_1808c6839;
           uVar7 = this.battleMapTypeData.attackAreaType;
           if (uVar7 < 2) {
             fVar24 = (float)BattleMapData.GetAreaDefenceLv(this,0xffffffff);
             lVar11 = this.battleMapTypeData;
             if (((lVar11 == null) || (lVar11.targetArea == null)) ||
                (lVar12 = *(int64 *)(lVar11.targetArea + 208)) == null)
-            goto LAB_1808db659;
+            goto LAB_1808c6839;
             if (*(int *)(lVar12 + 24) == 0) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
               lVar11 = this.battleMapTypeData;
-              if (lVar11 == null) goto LAB_1808db659;
+              if (lVar11 == null) goto LAB_1808c6839;
             }
-            if (lVar11.targetArea == null) goto LAB_1808db659;
+            if (lVar11.targetArea == null) goto LAB_1808c6839;
             Mathf.RoundToInt(*(float *)(lVar11.targetArea + 84) * 0.04 +
                               ((float)*(int *)(*(int64 *)(lVar12 + 16) + 32) + fVar24) * 0.2,0);
             in_stack_fffffffffffffee8 = 0;
@@ -422,71 +425,71 @@ public class BattleMapData
             lVar11 = FUN_18046bb80(0);
             lVar12 = FUN_18046c0a0(0);
             BattleMapData.GetAreaDefenceLv(this,2);
-            if ((this.battleMapTypeData == null) || (lVar12 == null)) goto LAB_1808db659;
+            if ((this.battleMapTypeData == null) || (lVar12 == null)) goto LAB_1808c6839;
             uVar30 = 0;
             in_stack_fffffffffffffee8 = in_stack_fffffffffffffee8 & 0xffffffffffffff00;
             uVar9 = GameController.GenerateSummonData(lVar12,0);
             lVar12 = FUN_18046bb80(0);
-            if ((lVar12 == null) || (lVar12 = *(int64 *)(lVar12 + 112)) == null) goto LAB_1808db659;
+            if ((lVar12 == null) || (lVar12 = *(int64 *)(lVar12 + 112)) == null) goto LAB_1808c6839;
             if (*(uint32 *)(lVar12 + 24) < 2) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             uVar2 = *(uint64 *)(*(int64 *)(lVar12 + 16) + 40);
             if ((this.mapGrids == null) ||
-               (uVar13 = FUN_180127f50(this.mapGrids,
+               (uVar13 = FUN_180127f90(this.mapGrids,
                                        (int64)(this.mapWidth + -1),(int64)(iVar5 + 3)),
-               lVar11 == null)) goto LAB_1808db659;
+               lVar11 == null)) goto LAB_1808c6839;
             in_stack_fffffffffffffee8 = in_stack_fffffffffffffee8 & 0xffffffff00000000;
             BattleController.HeroEnterBattleField
                       (lVar11,uVar9,uVar2,uVar13,in_stack_fffffffffffffee8,uVar30 & 0xffffffff00000000,0);
             lVar11 = FUN_18046bb80(0);
             lVar12 = FUN_18046c0a0(0);
             BattleMapData.GetAreaDefenceLv(this,2);
-            if ((this.battleMapTypeData == null) || (lVar12 == null)) goto LAB_1808db659;
+            if ((this.battleMapTypeData == null) || (lVar12 == null)) goto LAB_1808c6839;
             uVar30 = 0;
             in_stack_fffffffffffffee8 = in_stack_fffffffffffffee8 & 0xffffffffffffff00;
             uVar9 = GameController.GenerateSummonData(lVar12,0);
             lVar12 = FUN_18046bb80(0);
-            if ((lVar12 == null) || (lVar12 = *(int64 *)(lVar12 + 112)) == null) goto LAB_1808db659;
+            if ((lVar12 == null) || (lVar12 = *(int64 *)(lVar12 + 112)) == null) goto LAB_1808c6839;
             if (*(uint32 *)(lVar12 + 24) < 2) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             uVar2 = *(uint64 *)(*(int64 *)(lVar12 + 16) + 40);
             if ((this.mapGrids == null) ||
-               (uVar13 = FUN_180127f50(this.mapGrids,
+               (uVar13 = FUN_180127f90(this.mapGrids,
                                        (int64)(this.mapWidth + -1),(int64)(iVar5 + -4)),
-               lVar11 == null)) goto LAB_1808db659;
+               lVar11 == null)) goto LAB_1808c6839;
             BattleController.HeroEnterBattleField
                       (lVar11,uVar9,uVar2,uVar13,in_stack_fffffffffffffee8 & 0xffffffff00000000,
                        uVar30 & 0xffffffff00000000,0);
             if ((this.battleMapTypeData == null) ||
                ((lVar11 = this.battleMapTypeData.targetArea, lVar11 == null ||
-                (lVar11 = AreaData.GetCenterBuilding(lVar11,0)) == null))) goto LAB_1808db659;
+                (lVar11 = AreaData.GetCenterBuilding(lVar11,0)) == null))) goto LAB_1808c6839;
             in_stack_fffffffffffffee8 = 0;
             BattleMapData.GenerateGuard
                       (this,iVar5,(float)lVar11.column + (float)lVar11.column,4,0);
           }
-          if (PlotController._instance != 2) {
-            lVar11 = PlotController.StopWarCostFavor;
+          if (**(int **)(DAT_181d73d40 + 184) != 2) {
+            lVar11 = *(int64 *)(pStatics + 80);
             if (((lVar11 == null) || (this.battleMapTypeData == null)) ||
-               (lVar11 = *(int64 *)(lVar11 + 0x250)) == null) goto LAB_1808db659;
+               (lVar11 = *(int64 *)(lVar11 + 0x250)) == null) goto LAB_1808c6839;
             uVar7 = this.battleMapTypeData.attackAreaType;
             if (lVar11.row <= uVar7) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar11 = lVar11.battleMapType[uVar7];
-            if ((lVar11 = lVar11?.row) == null) goto LAB_1808db659;
+            if ((lVar11 = lVar11?.row) == null) goto LAB_1808c6839;
             for (; iVar22 < lVar11.row; iVar22 = iVar22 + 1) {
               lVar12 = FUN_18046bb80(0);
               lVar14 = FUN_18046c0a0(0);
               BattleMapData.GetAreaDefenceLv(this,2);
-              if ((this.battleMapTypeData == null) || (lVar14 == null)) goto LAB_1808db659;
+              if ((this.battleMapTypeData == null) || (lVar14 == null)) goto LAB_1808c6839;
               uVar30 = 0;
               in_stack_fffffffffffffee8 = in_stack_fffffffffffffee8 & 0xffffffffffffff00;
               uVar9 = GameController.GenerateSummonData(lVar14,0);
               lVar14 = FUN_18046bb80(0);
               if ((lVar14 == null) || (lVar14 = *(int64 *)(lVar14 + 112)) == null)
-              goto LAB_1808db659;
+              goto LAB_1808c6839;
               if (*(uint32 *)(lVar14 + 24) < 2) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
@@ -499,27 +502,27 @@ public class BattleMapData
               else {
                 iVar21 = this.wallColumn + 1;
               }
-              iVar6 = FUN_1800d6750(lVar11,iVar22,DAT_181d68270);
+              iVar6 = FUN_1800d6760(lVar11,iVar22,DAT_181d8fa18);
               if ((lVar16 == null) ||
-                 (uVar13 = FUN_180127f50(lVar16,(int64)iVar21,(int64)iVar6), lVar12 == null))
-              goto LAB_1808db659;
+                 (uVar13 = FUN_180127f90(lVar16,(int64)iVar21,(int64)iVar6), lVar12 == null))
+              goto LAB_1808c6839;
               in_stack_fffffffffffffee8 = in_stack_fffffffffffffee8 & 0xffffffff00000000;
               BattleController.HeroEnterBattleField
                         (lVar12,uVar9,uVar2,uVar13,in_stack_fffffffffffffee8,uVar30 & 0xffffffff00000000,0
                         );
             }
             lVar11 = FUN_18046bb80(0);
-            if ((lVar11 == null) || (lVar11 = *(int64 *)(lVar11 + 112)) == null) goto LAB_1808db659;
+            if ((lVar11 == null) || (lVar11 = *(int64 *)(lVar11 + 112)) == null) goto LAB_1808c6839;
             if (lVar11.row < 2) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar11 = *(int64 *)(lVar11.battleMapType + 40);
             lVar12 = FUN_18046bb80(0);
             lVar14 = FUN_18046c0a0(0);
-            if (this.battleMapTypeData == null) goto LAB_1808db659;
+            if (this.battleMapTypeData == null) goto LAB_1808c6839;
             iVar22 = this.battleMapTypeData.attackAreaType;
             BattleMapData.GetAreaDefenceLv(this,0xffffffff);
-            if ((this.battleMapTypeData == null) || (lVar14 == null)) goto LAB_1808db659;
+            if ((this.battleMapTypeData == null) || (lVar14 == null)) goto LAB_1808c6839;
             uVar9 = 9;
             if (iVar22 != 2) {
               uVar9 = 6;
@@ -528,46 +531,46 @@ public class BattleMapData
             in_stack_fffffffffffffee8 = in_stack_fffffffffffffee8 & 0xffffffffffffff00;
             uVar9 = GameController.GenerateSummonData(lVar14,uVar9);
             lVar14 = FUN_18046bb80(0);
-            if ((lVar14 == null) || (lVar14 = *(int64 *)(lVar14 + 112)) == null) goto LAB_1808db659;
+            if ((lVar14 == null) || (lVar14 = *(int64 *)(lVar14 + 112)) == null) goto LAB_1808c6839;
             if (*(uint32 *)(lVar14 + 24) < 2) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             uVar2 = *(uint64 *)(*(int64 *)(lVar14 + 16) + 40);
             if ((this.mapGrids == null) ||
-               (uVar13 = FUN_180127f50(this.mapGrids,
+               (uVar13 = FUN_180127f90(this.mapGrids,
                                        (int64)(this.mapWidth + -1),(int64)iVar5),
-               lVar12 == null)) goto LAB_1808db659;
+               lVar12 == null)) goto LAB_1808c6839;
             in_stack_fffffffffffffee8 = in_stack_fffffffffffffee8 & 0xffffffff00000000;
             lVar12 = BattleController.HeroEnterBattleField
                                (lVar12,uVar9,uVar2,uVar13,in_stack_fffffffffffffee8,
                                 uVar30 & 0xffffffff00000000,0);
-            if ((lVar12 == null) || (uVar9 = GameObject.GetComponent(lVar12,DAT_181d9e778), lVar11 == null))
-            goto LAB_1808db659;
+            if ((lVar12 == null) || (uVar9 = GameObject.GetComponent(lVar12,DAT_181dc7518), lVar11 == null))
+            goto LAB_1808c6839;
             BattleTeam.AddNeedProtectUnit(lVar11,uVar9,0);
             lVar11 = FUN_18046bb80(0);
             lVar12 = FUN_18046c0a0(0);
             BattleMapData.GetAreaDefenceLv(this,4);
-            if ((this.battleMapTypeData == null) || (lVar12 == null)) goto LAB_1808db659;
+            if ((this.battleMapTypeData == null) || (lVar12 == null)) goto LAB_1808c6839;
             uVar30 = 0;
             in_stack_fffffffffffffee8 = in_stack_fffffffffffffee8 & 0xffffffffffffff00;
             uVar9 = GameController.GenerateSummonData(lVar12,7);
             lVar12 = FUN_18046bb80(0);
-            if ((lVar12 == null) || (lVar12 = *(int64 *)(lVar12 + 112)) == null) goto LAB_1808db659;
+            if ((lVar12 == null) || (lVar12 = *(int64 *)(lVar12 + 112)) == null) goto LAB_1808c6839;
             if (*(uint32 *)(lVar12 + 24) < 2) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             uVar2 = *(uint64 *)(*(int64 *)(lVar12 + 16) + 40);
             if ((this.mapGrids == null) ||
-               (uVar13 = FUN_180127f50(this.mapGrids,
+               (uVar13 = FUN_180127f90(this.mapGrids,
                                        (int64)(this.mapWidth + -1),(int64)(iVar5 + -1)),
-               lVar11 == null)) goto LAB_1808db659;
+               lVar11 == null)) goto LAB_1808c6839;
             BattleController.HeroEnterBattleField
                       (lVar11,uVar9,uVar2,uVar13,in_stack_fffffffffffffee8 & 0xffffffff00000000,
                        uVar30 & 0xffffffff00000000,0);
           }
           auVar25._0_8_ = BattleMapData.GetAreaDefenceLv(this,3);
           auVar25._8_8_ = extraout_XMM0_Qb;
-          if (this.battleMapTypeData == null) goto LAB_1808db659;
+          if (this.battleMapTypeData == null) goto LAB_1808c6839;
           auVar26._4_12_ = auVar25._4_12_;
           auVar26._0_4_ =
                ((float)auVar25._0_8_ * 100.0 + 100.0) * (fVar23 + 1.0) * fVar29 *
@@ -582,121 +585,121 @@ public class BattleMapData
               fVar23 = (float)iVar5;
               fVar29 = (float)iVar22 * 0.5;
               if ((fVar23 == fVar29) || (fVar23 == fVar29 - 1.0)) {
-                if (this.mapGrids == null) goto LAB_1808db659;
+                if (this.mapGrids == null) goto LAB_1808c6839;
                 lVar12 = (int64)iVar5;
-                lVar11 = FUN_180127f50(this.mapGrids,(int64)this.wallColumn,
+                lVar11 = FUN_180127f90(this.mapGrids,(int64)this.wallColumn,
                                        lVar12);
                 lVar14 = FUN_18046bb80(0);
                 if ((lVar14 == null) || (lVar14 = *(int64 *)(lVar14 + 0x248)) == null)
-                goto LAB_1808db659;
+                goto LAB_1808c6839;
                 if (*(uint32 *)(lVar14 + 24) < 2) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 lVar14 = *(int64 *)(*(int64 *)(lVar14 + 16) + 40);
                 if ((lVar14 == null) || (plVar15 = (int64 *)SpeGridObjData.Clone(lVar14,0), lVar11 == null))
-                goto LAB_1808db659;
+                goto LAB_1808c6839;
                 plVar20 = (int64 *)0;
                 if (plVar15 != (int64 *)0) {
                 }
                 *(int64 **)(lVar11 + 56) = plVar20;
                 if (((this.mapGrids == null) ||
-                    (lVar11 = FUN_180127f50(this.mapGrids,
+                    (lVar11 = FUN_180127f90(this.mapGrids,
                                             (int64)this.wallColumn,lVar12), lVar11 == null)) ||
-                   (*(int64 *)(lVar11 + 56) == 0)) goto LAB_1808db659;
+                   (*(int64 *)(lVar11 + 56) == 0)) goto LAB_1808c6839;
                 *(uint8 *)(*(int64 *)(lVar11 + 56) + 72) = 1;
                 iVar22 = -2;
                 do {
                   lVar11 = this.mustEmptyGrids;
                   if ((this.mapGrids == null) ||
-                     (uVar9 = FUN_180127f50(this.mapGrids,
+                     (uVar9 = FUN_180127f90(this.mapGrids,
                                             (int64)(this.wallColumn + iVar22),lVar12),
-                     lVar11 == null)) goto LAB_1808db659;
-                  FUN_181827900(lVar11,uVar9,DAT_181d63778);
+                     lVar11 == null)) goto LAB_1808c6839;
+                  FUN_18181e0a0(lVar11,uVar9,DAT_181d8af18);
                   iVar22 = iVar22 + 1;
                 } while (iVar22 < 2);
               }
               else {
                 if ((fVar23 <= fVar29 + 3.0) && (fVar29 - 4.0 <= fVar23)) {
-                  if (this.mapGrids == null) goto LAB_1808db659;
+                  if (this.mapGrids == null) goto LAB_1808c6839;
                   lVar12 = (int64)iVar5;
-                  lVar11 = FUN_180127f50(this.mapGrids,
+                  lVar11 = FUN_180127f90(this.mapGrids,
                                          (int64)(this.wallColumn + -1),lVar12);
-                  if (lVar11 == null) goto LAB_1808db659;
+                  if (lVar11 == null) goto LAB_1808c6839;
                   GridUnitData.set_GridType(lVar11,2);
-                  if (this.mapGrids == null) goto LAB_1808db659;
-                  lVar11 = FUN_180127f50(this.mapGrids,
+                  if (this.mapGrids == null) goto LAB_1808c6839;
+                  lVar11 = FUN_180127f90(this.mapGrids,
                                          (int64)this.wallColumn + -1,lVar12);
                   uVar9 = BattleMapData.GenerateWallData(this,uVar4,uVar4,1,0);
-                  if (lVar11 == null) goto LAB_1808db659;
+                  if (lVar11 == null) goto LAB_1808c6839;
                   *(uint64 *)(lVar11 + 48) = uVar9;
                   if (((this.mapGrids == null) ||
-                      (lVar11 = FUN_180127f50(this.mapGrids,
+                      (lVar11 = FUN_180127f90(this.mapGrids,
                                               (int64)this.wallColumn + -1,lVar12), lVar11 == null
-                      )) || (*(int64 *)(lVar11 + 48) == 0)) goto LAB_1808db659;
+                      )) || (*(int64 *)(lVar11 + 48) == 0)) goto LAB_1808c6839;
                   lVar11 = *(int64 *)(*(int64 *)(lVar11 + 48) + 56);
                   if ((this.mapGrids == null) ||
-                     (uVar9 = FUN_180127f50(this.mapGrids,
+                     (uVar9 = FUN_180127f90(this.mapGrids,
                                             (int64)(this.wallColumn + -1),lVar12), lVar11 == null
-                     )) goto LAB_1808db659;
-                  FUN_181827900(lVar11,uVar9,DAT_181d63778);
+                     )) goto LAB_1808c6839;
+                  FUN_18181e0a0(lVar11,uVar9,DAT_181d8af18);
                 }
-                if (this.mapGrids == null) goto LAB_1808db659;
+                if (this.mapGrids == null) goto LAB_1808c6839;
                 lVar12 = (int64)iVar5;
-                lVar11 = FUN_180127f50(this.mapGrids,(int64)this.wallColumn,
+                lVar11 = FUN_180127f90(this.mapGrids,(int64)this.wallColumn,
                                        lVar12);
-                if (lVar11 == null) goto LAB_1808db659;
+                if (lVar11 == null) goto LAB_1808c6839;
                 cVar3 = GridUnitData.isEmpty(lVar11,0);
                 if (cVar3) {
                   if ((this.mapGrids == null) ||
-                     (lVar11 = FUN_180127f50(this.mapGrids,
+                     (lVar11 = FUN_180127f90(this.mapGrids,
                                              (int64)this.wallColumn,lVar12), lVar11 == null))
-                  goto LAB_1808db659;
+                  goto LAB_1808c6839;
                   GridUnitData.set_GridType(lVar11,2);
-                  if (this.mapGrids == null) goto LAB_1808db659;
-                  lVar11 = FUN_180127f50(this.mapGrids,(int64)this.wallColumn,
+                  if (this.mapGrids == null) goto LAB_1808c6839;
+                  lVar11 = FUN_180127f90(this.mapGrids,(int64)this.wallColumn,
                                          lVar12);
                   uVar9 = BattleMapData.GenerateWallData(this,uVar4,uVar4,1,0);
-                  if (lVar11 == null) goto LAB_1808db659;
+                  if (lVar11 == null) goto LAB_1808c6839;
                   *(uint64 *)(lVar11 + 48) = uVar9;
                   if (((this.mapGrids == null) ||
-                      (lVar11 = FUN_180127f50(this.mapGrids,
+                      (lVar11 = FUN_180127f90(this.mapGrids,
                                               (int64)this.wallColumn,lVar12), lVar11 == null)) ||
-                     (*(int64 *)(lVar11 + 48) == 0)) goto LAB_1808db659;
+                     (*(int64 *)(lVar11 + 48) == 0)) goto LAB_1808c6839;
                   lVar11 = *(int64 *)(*(int64 *)(lVar11 + 48) + 56);
                   if ((this.mapGrids == null) ||
-                     (uVar9 = FUN_180127f50(this.mapGrids,
+                     (uVar9 = FUN_180127f90(this.mapGrids,
                                             (int64)this.wallColumn,lVar12), lVar11 == null))
-                  goto LAB_1808db659;
-                  FUN_181827900(lVar11,uVar9,DAT_181d63778);
+                  goto LAB_1808c6839;
+                  FUN_18181e0a0(lVar11,uVar9,DAT_181d8af18);
                 }
               }
               iVar22 = this.mapHeight;
               plVar15 = (int64 *)(uint64)(iVar5 + 1U);
             } while ((int)(iVar5 + 1U) < iVar22);
           }
-          lVar12 = il2cpp_internal(DAT_181d6e630);
-          FUN_180f58a90(lVar12,DAT_181d63678);
+          lVar12 = il2cpp_internal(DAT_181d932d0);
+          FUN_18132faf0(lVar12,DAT_181d8ae18);
           lVar11 = this.mapGrids;
-          if (lVar11 == null) goto LAB_1808db659;
+          if (lVar11 == null) goto LAB_1808c6839;
           iVar5 = Array.GetUpperBound(lVar11,0,0);
           iVar21 = Array.GetUpperBound(lVar11,1);
           for (iVar22 = Array.GetLowerBound(lVar11,0,0); iVar22 <= iVar5; iVar22 = iVar22 + 1) {
             iVar6 = Array.GetLowerBound(lVar11,1);
             if (iVar6 <= iVar21) {
               do {
-                lVar14 = FUN_180127f50(lVar11,(int64)iVar22);
-                if (lVar14 == null) goto LAB_1808db659;
+                lVar14 = FUN_180127f90(lVar11,(int64)iVar22);
+                if (lVar14 == null) goto LAB_1808c6839;
                 cVar3 = GridUnitData.isEmpty(lVar14,1);
                 if (cVar3) {
-                  if (this.mustEmptyGrids == null) goto LAB_1808db659;
-                  cVar3 = FUN_1818279a0(this.mustEmptyGrids,lVar14);
+                  if (this.mustEmptyGrids == null) goto LAB_1808c6839;
+                  cVar3 = FUN_18181e400(this.mustEmptyGrids,lVar14);
                   if (!cVar3) {
                     if (((this.wallColumn + -3 <= *(int *)(lVar14 + 40)) &&
                         (*(int *)(lVar14 + 40) <= this.wallColumn + 3)) &&
                        ((1 < *(int *)(lVar14 + 36) &&
                         (*(int *)(lVar14 + 36) <= this.mapHeight + -3)))) {
-                      if (lVar12 == null) goto LAB_1808db659;
-                      FUN_181827900(lVar12,lVar14);
+                      if (lVar12 == null) goto LAB_1808c6839;
+                      FUN_18181e0a0(lVar12,lVar14);
                     }
                   }
                 }
@@ -706,33 +709,33 @@ public class BattleMapData
           }
           auVar27._0_8_ = BattleMapData.GetAreaDefenceLv(this,1);
           auVar27._8_8_ = extraout_XMM0_Qb_00;
-          if (lVar12 == null) goto LAB_1808db659;
+          if (lVar12 == null) goto LAB_1808c6839;
           iVar22 = 0;
           auVar28._4_12_ = auVar27._4_12_;
           auVar28._0_4_ = (float)auVar27._0_8_ * 3.0 + 3.0;
           fVar29 = (float)Mathf.Min(auVar28._0_8_,(float)*(int *)(lVar12 + 24) * 0.33,0);
           if (0.0 < fVar29) {
             do {
-              uVar7 = FUN_180d8cf10(0,*(uint32 *)(lVar12 + 24),0);
+              uVar7 = FUN_180d95a30(0,*(uint32 *)(lVar12 + 24),0);
               if (*(uint32 *)(lVar12 + 24) <= uVar7) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               lVar11 = lVar12[uVar7];
-              FUN_181801c10(lVar12,lVar11,DAT_181d638f8);
+              FUN_1817eee00(lVar12,lVar11,DAT_181d8b098);
               lVar14 = FUN_18046bb80(0);
-              if (lVar14 == null) goto LAB_1808db659;
+              if (lVar14 == null) goto LAB_1808c6839;
               lVar14 = *(int64 *)(lVar14 + 0x248);
-              lVar16 = BattleMapData.DefenceTrapID;
-              if (lVar16 == null) goto LAB_1808db659;
-              uVar4 = FUN_180d8cf10(0,*(uint32 *)(lVar16 + 24),0);
-              uVar4 = FUN_1800d6750(lVar16,uVar4,DAT_181d68270);
-              if (((lVar14 == null) || (lVar14 = FUN_180002f80(lVar14,uVar4,DAT_181d7bf58)) == null) ||
-                 (plVar15 = (int64 *)SpeGridObjData.Clone(lVar14,0), lVar11 == null)) goto LAB_1808db659;
+              lVar16 = **(int64 **)(DAT_181db0348 + 184);
+              if (lVar16 == null) goto LAB_1808c6839;
+              uVar4 = FUN_180d95a30(0,*(uint32 *)(lVar16 + 24),0);
+              uVar4 = FUN_1800d6760(lVar16,uVar4,DAT_181d8fa18);
+              if (((lVar14 == null) || (lVar14 = FUN_180002f80(lVar14,uVar4,DAT_181da38d8)) == null) ||
+                 (plVar15 = (int64 *)SpeGridObjData.Clone(lVar14,0), lVar11 == null)) goto LAB_1808c6839;
               plVar20 = (int64 *)0;
               if (plVar15 != (int64 *)0) {
               }
               *(int64 **)(lVar11 + 56) = plVar20;
-              if (*(int64 *)(lVar11 + 56) == 0) goto LAB_1808db659;
+              if (*(int64 *)(lVar11 + 56) == 0) goto LAB_1808c6839;
               iVar22 = iVar22 + 1;
               *(uint32 *)(*(int64 *)(lVar11 + 56) + 48) = 1;
             } while ((float)iVar22 < fVar29);
@@ -746,43 +749,43 @@ public class BattleMapData
             iVar6 = Array.GetLowerBound(lVar11,1);
             if (iVar6 <= iVar21) {
               do {
-                lVar12 = FUN_180127f50(lVar11,(int64)iVar22);
-                if (lVar12 == null) goto LAB_1808db659;
+                lVar12 = FUN_180127f90(lVar11,(int64)iVar22);
+                if (lVar12 == null) goto LAB_1808c6839;
                 cVar3 = GridUnitData.isEmpty(lVar12,1);
                 if (cVar3) {
-                  if (this.mustEmptyGrids == null) goto LAB_1808db659;
-                  cVar3 = FUN_1818279a0(this.mustEmptyGrids,lVar12);
+                  if (this.mustEmptyGrids == null) goto LAB_1808c6839;
+                  cVar3 = FUN_18181e400(this.mustEmptyGrids,lVar12);
                   if (((!cVar3) && (iVar1 = *(int *)(lVar12 + 40), 0 < iVar1)) &&
                      (iVar1 < this.mapWidth + -1)) {
-                    if (this.battleMapTypeData == null) goto LAB_1808db659;
+                    if (this.battleMapTypeData == null) goto LAB_1808c6839;
                     if (this.battleMapTypeData.battleMapType == 4) {
                       fVar29 = (float)this.mapHeight * 0.5;
                       if ((((float)*(int *)(lVar12 + 36) == fVar29) ||
                           ((float)*(int *)(lVar12 + 36) == fVar29 - 1.0)) ||
-                         (this.wallColumn <= iVar1)) goto LAB_1808da90b;
+                         (this.wallColumn <= iVar1)) goto LAB_1808c5aeb;
                     }
-                    if ((lVar8 == null) || (FUN_181827900(lVar8,lVar12,DAT_181d63778), lVar10 == null))
-                    goto LAB_1808db659;
-                    FUN_181827900(lVar10,lVar12);
+                    if ((lVar8 == null) || (FUN_18181e0a0(lVar8,lVar12,DAT_181d8af18), lVar10 == null))
+                    goto LAB_1808c6839;
+                    FUN_18181e0a0(lVar10,lVar12);
                   }
                 }
-        LAB_1808da90b:
+        LAB_1808c5aeb:
                 iVar6 = iVar6 + 1;
               } while (iVar6 <= iVar21);
             }
           }
-          lVar11 = il2cpp_internal(DAT_181d6f030);
-          FUN_180f58a90(lVar11,DAT_181d678f8);
+          lVar11 = il2cpp_internal(DAT_181d93cd0);
+          FUN_18132faf0(lVar11,DAT_181d8f098);
           iVar22 = 0;
           while( true ) {
-            lVar12 = PlotController.StopWarCostFavor;
+            lVar12 = *(int64 *)(pStatics + 80);
             if ((lVar12 == null) || (lVar12 = *(int64 *)(lVar12 + 600)) == null) break;
-            if (*(int *)(lVar12 + 24) <= iVar22) goto joined_r0x0001808dac21;
+            if (*(int *)(lVar12 + 24) <= iVar22) goto joined_r0x0001808c5e01;
             lVar12 = FUN_18046bb80(0);
             if ((((lVar12 == null) || (*(int64 *)(lVar12 + 600) == 0)) ||
-                (lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 600),iVar22,DAT_181d6e868)) == null)
+                (lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 600),iVar22,DAT_181d96008)) == null)
                || ((this.battleMapTypeData == null || (*(int64 *)(lVar12 + 16) == 0)))) break;
-            cVar3 = FUN_181815240(*(int64 *)(lVar12 + 16),
+            cVar3 = FUN_18182a3a0(*(int64 *)(lVar12 + 16),
                                   this.battleMapTypeData.battleMapType);
             if (cVar3) {
               iVar5 = 0;
@@ -791,30 +794,30 @@ public class BattleMapData
                 lVar12 = FUN_18046bb80(0);
                 if ((((lVar12 == null) || (*(int64 *)(lVar12 + 600) == 0)) ||
                     (lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 600),iVar22)) == null) ||
-                   (*(int64 *)(lVar12 + 56) == 0)) goto LAB_1808db659;
-                if (*(int *)(*(int64 *)(lVar12 + 56) + 24) <= iVar21) goto LAB_1808dabe9;
+                   (*(int64 *)(lVar12 + 56) == 0)) goto LAB_1808c6839;
+                if (*(int *)(*(int64 *)(lVar12 + 56) + 24) <= iVar21) goto LAB_1808c5dc9;
                 lVar12 = FUN_18046bb80(0);
                 if (((lVar12 == null) || (*(int64 *)(lVar12 + 600) == 0)) ||
-                   ((lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 600),iVar22,DAT_181d6e868), lVar12 == null
+                   ((lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 600),iVar22,DAT_181d96008), lVar12 == null
                     || (((*(int64 *)(lVar12 + 56) == 0 ||
-                         (lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 56),iVar21,DAT_181d6e968),
-                         lVar12 == null)) || (this.battleMapTypeData == null)))))) goto LAB_1808db659;
+                         (lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 56),iVar21,DAT_181d96108),
+                         lVar12 == null)) || (this.battleMapTypeData == null)))))) goto LAB_1808c6839;
                 if (*(int *)(lVar12 + 16) == this.battleMapTypeData.battleMapType) break;
                 iVar21 = iVar21 + 1;
               }
               lVar12 = FUN_18046bb80(0);
               if (((lVar12 == null) || (*(int64 *)(lVar12 + 600) == 0)) ||
-                 ((lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 600),iVar22,DAT_181d6e868), lVar12 == null
+                 ((lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 600),iVar22,DAT_181d96008), lVar12 == null
                   || ((*(int64 *)(lVar12 + 56) == 0 ||
                       (lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 56),iVar21)) == null)))))
               break;
               iVar5 = *(int *)(lVar12 + 20);
-        LAB_1808dabe9:
+        LAB_1808c5dc9:
               iVar21 = 0;
               if (0 < iVar5 + 1) {
                 do {
-                  if (lVar11 == null) goto LAB_1808db659;
-                  FUN_181814fa0(lVar11,iVar22);
+                  if (lVar11 == null) goto LAB_1808c6839;
+                  FUN_18182a0b0(lVar11,iVar22);
                   iVar21 = iVar21 + 1;
                 } while (iVar21 < iVar5 + 1);
               }
@@ -822,32 +825,32 @@ public class BattleMapData
             iVar22 = iVar22 + 1;
           }
         }
-        LAB_1808db659:
+        LAB_1808c6839:
                           // WARNING: Subroutine does not return
         FUN_1800d6620();
-        joined_r0x0001808dac21:
+        joined_r0x0001808c5e01:
         do {
           if (obstacleCount < 1) {
             return;
           }
-          if (lVar8 == null) goto LAB_1808db659;
+          if (lVar8 == null) goto LAB_1808c6839;
           if (*(int *)(lVar8 + 24) < 1) {
             return;
           }
-          uVar7 = FUN_180d8cf10(0,*(int *)(lVar8 + 24),0);
+          uVar7 = FUN_180d95a30(0,*(int *)(lVar8 + 24),0);
           if (*(uint32 *)(lVar8 + 24) <= uVar7) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar12 = lVar8[uVar7];
           if ((lVar12 == null) || (GridUnitData.set_GridType(lVar12,2), lVar10 == null)) {
-        LAB_1808db677:
+        LAB_1808c6857:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          FUN_181801c10(lVar10,lVar12,DAT_181d638f8);
+          FUN_1817eee00(lVar10,lVar12,DAT_181d8b098);
           local_d8 = (int64)this.mapWidth;
           local_d0 = (int64)this.mapHeight;
-          lVar14 = FUN_1800d6020(DAT_181d84740,&local_d8);
+          lVar14 = FUN_1800d6020(DAT_181da9860,&local_d8);
           if (*(int *)(lVar10 + 24) == 0) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -859,17 +862,17 @@ public class BattleMapData
               iVar5 = 0;
               if (0 < this.mapHeight) {
                 do {
-                  if (this.mapGrids == null) goto LAB_1808db677;
-                  lVar16 = FUN_180127f50(this.mapGrids,(int64)iVar22,(int64)iVar5);
-                  if (lVar16 == null) goto LAB_1808db677;
+                  if (this.mapGrids == null) goto LAB_1808c6857;
+                  lVar16 = FUN_180127f90(this.mapGrids,(int64)iVar22,(int64)iVar5);
+                  if (lVar16 == null) goto LAB_1808c6857;
                   if (*(int *)(lVar16 + 20) == 1) {
-                    if (lVar14 == null) goto LAB_1808db677;
-                    cVar3 = FUN_180132c20(lVar14,(int64)iVar22,(int64)iVar5);
+                    if (lVar14 == null) goto LAB_1808c6857;
+                    cVar3 = FUN_180132d10(lVar14,(int64)iVar22,(int64)iVar5);
                     if (!cVar3) {
                       GridUnitData.set_GridType(lVar12,1);
-                      FUN_181827900(lVar10,lVar12,DAT_181d63778);
-                      FUN_181801c10(lVar8,lVar12);
-                      goto joined_r0x0001808dac21;
+                      FUN_18181e0a0(lVar10,lVar12,DAT_181d8af18);
+                      FUN_1817eee00(lVar8,lVar12);
+                      goto joined_r0x0001808c5e01;
                     }
                   }
                   iVar5 = iVar5 + 1;
@@ -878,136 +881,136 @@ public class BattleMapData
               iVar22 = iVar22 + 1;
             } while (iVar22 < this.mapWidth);
           }
-          FUN_181801c10(lVar8,lVar12,DAT_181d638f8);
+          FUN_1817eee00(lVar8,lVar12,DAT_181d8b098);
           fVar29 = (float)Random.get_value(0);
           if (fVar29 < 0.1) {
-            lVar14 = il2cpp_internal(DAT_181d6f030);
-            FUN_180f58a90(lVar14,DAT_181d678f8);
+            lVar14 = il2cpp_internal(DAT_181d93cd0);
+            FUN_18132faf0(lVar14,DAT_181d8f098);
             if (lVar14 != null) {
-              FUN_181814fa0(lVar14,0,DAT_181d67a78);
-              FUN_181814fa0(lVar14,1,DAT_181d67a78);
-              FUN_181814fa0(lVar14,2,DAT_181d67a78);
-              FUN_181814fa0(lVar14,3,DAT_181d67a78);
+              FUN_18182a0b0(lVar14,0,DAT_181d8f218);
+              FUN_18182a0b0(lVar14,1,DAT_181d8f218);
+              FUN_18182a0b0(lVar14,2,DAT_181d8f218);
+              FUN_18182a0b0(lVar14,3,DAT_181d8f218);
               if (*(int *)(lVar12 + 40) == 0) {
-                FUN_181801c10(lVar14,0,DAT_181d67e70);
+                FUN_1817eee00(lVar14,0,DAT_181d8f618);
                 uVar9 = 1;
-        LAB_1808daea3:
-                FUN_181801c10(lVar14,uVar9,DAT_181d67e70);
+        LAB_1808c6083:
+                FUN_1817eee00(lVar14,uVar9,DAT_181d8f618);
               }
               else if (*(int *)(lVar12 + 40) == this.mapWidth + -1) {
-                FUN_181801c10(lVar14,2,DAT_181d67e70);
+                FUN_1817eee00(lVar14,2,DAT_181d8f618);
                 uVar9 = 3;
-                goto LAB_1808daea3;
+                goto LAB_1808c6083;
               }
               if (*(int *)(lVar12 + 36) == 0) {
-                FUN_181801c10(lVar14,0,DAT_181d67e70);
+                FUN_1817eee00(lVar14,0,DAT_181d8f618);
                 uVar9 = 2;
               }
               else {
                 if (*(int *)(lVar12 + 36) == this.mapHeight + -1)
                 {
-                  FUN_181801c10(lVar14,1,DAT_181d67e70);
+                  FUN_1817eee00(lVar14,1,DAT_181d8f618);
                   uVar9 = 3;
                   }
-                  FUN_181801c10(lVar14,uVar9,DAT_181d67e70);
+                  FUN_1817eee00(lVar14,uVar9,DAT_181d8f618);
                 }
-              lVar16 = il2cpp_internal(DAT_181d6e630);
-              FUN_180f58a90(lVar16,DAT_181d63678);
-              lVar17 = il2cpp_internal(DAT_181d6e630);
-              FUN_180f58a90(lVar17,DAT_181d63678);
-        LAB_1808daf40:
+              lVar16 = il2cpp_internal(DAT_181d932d0);
+              FUN_18132faf0(lVar16,DAT_181d8ae18);
+              lVar17 = il2cpp_internal(DAT_181d932d0);
+              FUN_18132faf0(lVar17,DAT_181d8ae18);
+        LAB_1808c6120:
               if (0 < *(int *)(lVar14 + 24)) {
-                uVar4 = FUN_180d8cf10(0,*(int *)(lVar14 + 24),0);
-                iVar22 = FUN_1800d6750(lVar14,uVar4,DAT_181d68270);
-                FUN_181801c10(lVar14,iVar22,DAT_181d67e70);
-                if ((lVar16 == null) || (FUN_180f56130(lVar16,DAT_181d637f8), lVar17 == null))
-                goto LAB_1808db659;
-                FUN_180f56130(lVar17,DAT_181d637f8);
+                uVar4 = FUN_180d95a30(0,*(int *)(lVar14 + 24),0);
+                iVar22 = FUN_1800d6760(lVar14,uVar4,DAT_181d8fa18);
+                FUN_1817eee00(lVar14,iVar22,DAT_181d8f618);
+                if ((lVar16 == null) || (FUN_1812f9a10(lVar16,DAT_181d8af98), lVar17 == null))
+                goto LAB_1808c6839;
+                FUN_1812f9a10(lVar17,DAT_181d8af98);
                 if (iVar22 == 0) {
                   uVar9 = BattleMapData.GetGridData
                                     (this,*(int *)(lVar12 + 36) + -1,*(uint32 *)(lVar12 + 40));
-                  FUN_181827900(lVar16,uVar9,DAT_181d63778);
+                  FUN_18181e0a0(lVar16,uVar9,DAT_181d8af18);
                   uVar9 = BattleMapData.GetGridData
                                     (this,*(uint32 *)(lVar12 + 36),*(int *)(lVar12 + 40) + -1);
-                  FUN_181827900(lVar16,uVar9,DAT_181d63778);
+                  FUN_18181e0a0(lVar16,uVar9,DAT_181d8af18);
                   iVar22 = *(int *)(lVar12 + 40) + -1;
-        LAB_1808db14e:
+        LAB_1808c632e:
                   iVar5 = *(int *)(lVar12 + 36) + -1;
-        LAB_1808db155:
+        LAB_1808c6335:
                   uVar9 = BattleMapData.GetGridData(this,iVar5,iVar22);
-                  FUN_181827900(lVar16,uVar9,DAT_181d63778);
+                  FUN_18181e0a0(lVar16,uVar9,DAT_181d8af18);
                 }
                 else {
                   if (iVar22 == 1) {
                     uVar9 = BattleMapData.GetGridData
                                       (this,*(int *)(lVar12 + 36) + 1,*(uint32 *)(lVar12 + 40))
                     ;
-                    FUN_181827900(lVar16,uVar9,DAT_181d63778);
+                    FUN_18181e0a0(lVar16,uVar9,DAT_181d8af18);
                     uVar9 = BattleMapData.GetGridData
                                       (this,*(uint32 *)(lVar12 + 36),*(int *)(lVar12 + 40) + -1
                                       );
-                    FUN_181827900(lVar16,uVar9,DAT_181d63778);
+                    FUN_18181e0a0(lVar16,uVar9,DAT_181d8af18);
                     iVar22 = *(int *)(lVar12 + 40) + -1;
                     iVar5 = *(int *)(lVar12 + 36) + 1;
-                    goto LAB_1808db155;
+                    goto LAB_1808c6335;
                   }
                   if (iVar22 == 2) {
                     uVar9 = BattleMapData.GetGridData
                                       (this,*(int *)(lVar12 + 36) + -1,*(uint32 *)(lVar12 + 40)
                                       );
-                    FUN_181827900(lVar16,uVar9,DAT_181d63778);
+                    FUN_18181e0a0(lVar16,uVar9,DAT_181d8af18);
                     uVar9 = BattleMapData.GetGridData
                                       (this,*(uint32 *)(lVar12 + 36),*(int *)(lVar12 + 40) + 1)
                     ;
-                    FUN_181827900(lVar16,uVar9,DAT_181d63778);
+                    FUN_18181e0a0(lVar16,uVar9,DAT_181d8af18);
                     iVar22 = *(int *)(lVar12 + 40) + 1;
-                    goto LAB_1808db14e;
+                    goto LAB_1808c632e;
                   }
                   if (iVar22 == 3) {
                     uVar9 = BattleMapData.GetGridData
                                       (this,*(int *)(lVar12 + 36) + 1,*(uint32 *)(lVar12 + 40))
                     ;
-                    FUN_181827900(lVar16,uVar9,DAT_181d63778);
+                    FUN_18181e0a0(lVar16,uVar9,DAT_181d8af18);
                     uVar9 = BattleMapData.GetGridData
                                       (this,*(uint32 *)(lVar12 + 36),*(int *)(lVar12 + 40) + 1)
                     ;
-                    FUN_181827900(lVar16,uVar9,DAT_181d63778);
+                    FUN_18181e0a0(lVar16,uVar9,DAT_181d8af18);
                     iVar22 = *(int *)(lVar12 + 40) + 1;
                     iVar5 = *(int *)(lVar12 + 36) + 1;
-                    goto LAB_1808db155;
+                    goto LAB_1808c6335;
                   }
                 }
                 for (iVar22 = 0; iVar22 < *(int *)(lVar16 + 24); iVar22 = iVar22 + 1) {
-                  uVar9 = FUN_180002f80(lVar16,iVar22,DAT_181d63bf8);
-                  cVar3 = FUN_1818279a0(lVar8,uVar9,DAT_181d63878);
+                  uVar9 = FUN_180002f80(lVar16,iVar22,DAT_181d8b398);
+                  cVar3 = FUN_18181e400(lVar8,uVar9,DAT_181d8b018);
                   if (!cVar3) {
                     lVar18 = FUN_180002f80(lVar16,iVar22);
-                    if (lVar18 == null) goto LAB_1808db659;
-                    if (*(int *)(lVar18 + 20) != 2) goto LAB_1808daf40;
+                    if (lVar18 == null) goto LAB_1808c6839;
+                    if (*(int *)(lVar18 + 20) != 2) goto LAB_1808c6120;
                     lVar18 = FUN_180002f80(lVar16,iVar22);
-                    if ((lVar18 == null) || (*(int64 *)(lVar18 + 48) == 0)) goto LAB_1808db659;
-                    if (*(int *)(*(int64 *)(lVar18 + 48) + 16) != 0) goto LAB_1808daf40;
+                    if ((lVar18 == null) || (*(int64 *)(lVar18 + 48) == 0)) goto LAB_1808c6839;
+                    if (*(int *)(*(int64 *)(lVar18 + 48) + 16) != 0) goto LAB_1808c6120;
                     lVar18 = FUN_180002f80(lVar16,iVar22);
-                    if ((lVar18 == null) || (*(int64 *)(lVar18 + 48) == 0)) goto LAB_1808db659;
-                    if (*(char *)(*(int64 *)(lVar18 + 48) + 48) != false) goto LAB_1808daf40;
+                    if ((lVar18 == null) || (*(int64 *)(lVar18 + 48) == 0)) goto LAB_1808c6839;
+                    if (*(char *)(*(int64 *)(lVar18 + 48) + 48) != false) goto LAB_1808c6120;
                   }
                 }
                 for (iVar22 = 0; iVar22 < *(int *)(lVar16 + 24); iVar22 = iVar22 + 1) {
-                  lVar18 = FUN_180002f80(lVar16,iVar22,DAT_181d63bf8);
-                  if (lVar18 == null) goto LAB_1808db659;
+                  lVar18 = FUN_180002f80(lVar16,iVar22,DAT_181d8b398);
+                  if (lVar18 == null) goto LAB_1808c6839;
                   if (*(int *)(lVar18 + 20) == 1) {
-                    uVar9 = FUN_180002f80(lVar16,iVar22,DAT_181d63bf8);
-                    FUN_181827900(lVar17,uVar9,DAT_181d63778);
-                    lVar18 = FUN_180002f80(lVar16,iVar22,DAT_181d63bf8);
-                    if (lVar18 == null) goto LAB_1808db659;
+                    uVar9 = FUN_180002f80(lVar16,iVar22,DAT_181d8b398);
+                    FUN_18181e0a0(lVar17,uVar9,DAT_181d8af18);
+                    lVar18 = FUN_180002f80(lVar16,iVar22,DAT_181d8b398);
+                    if (lVar18 == null) goto LAB_1808c6839;
                     GridUnitData.set_GridType(lVar18,2);
-                    uVar9 = FUN_180002f80(lVar16,iVar22,DAT_181d63bf8);
-                    FUN_181801c10(lVar10,uVar9,DAT_181d638f8);
+                    uVar9 = FUN_180002f80(lVar16,iVar22,DAT_181d8b398);
+                    FUN_1817eee00(lVar10,uVar9,DAT_181d8b098);
                   }
                 }
                 local_c8 = (int64)this.mapWidth;
                 local_c0 = (int64)this.mapHeight;
-                lVar18 = FUN_1800d6020(DAT_181d84740,&local_c8);
+                lVar18 = FUN_1800d6020(DAT_181da9860,&local_c8);
                 if (*(int *)(lVar10 + 24) == 0) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
@@ -1020,19 +1023,19 @@ public class BattleMapData
                     if (0 < this.mapHeight) {
                       do {
                         if (this.mapGrids == null) {
-        LAB_1808db671:
+        LAB_1808c6851:
                           // WARNING: Subroutine does not return
                           FUN_1800d6620();
                         }
-                        lVar19 = FUN_180127f50(this.mapGrids,(int64)iVar22,
+                        lVar19 = FUN_180127f90(this.mapGrids,(int64)iVar22,
                                                (int64)iVar5);
-                        if (lVar19 == null) goto LAB_1808db671;
+                        if (lVar19 == null) goto LAB_1808c6851;
                         if (*(int *)(lVar19 + 20) == 1) {
-                          if (lVar18 == null) goto LAB_1808db671;
-                          cVar3 = FUN_180132c20(lVar18,(int64)iVar22);
+                          if (lVar18 == null) goto LAB_1808c6851;
+                          cVar3 = FUN_180132d10(lVar18,(int64)iVar22);
                           if (!cVar3) {
                             iVar22 = 0;
-                            goto LAB_1808db4d0;
+                            goto LAB_1808c66b0;
                           }
                         }
                         iVar5 = iVar5 + 1;
@@ -1041,65 +1044,65 @@ public class BattleMapData
                     iVar22 = iVar22 + 1;
                   } while (iVar22 < this.mapWidth);
                 }
-                if (lVar11 == null) goto LAB_1808db659;
-                uVar4 = FUN_180d8cf10(0,lVar11.row,0);
-                uVar4 = FUN_1800d6750(lVar11,uVar4,DAT_181d68270);
+                if (lVar11 == null) goto LAB_1808c6839;
+                uVar4 = FUN_180d95a30(0,lVar11.row,0);
+                uVar4 = FUN_1800d6760(lVar11,uVar4,DAT_181d8fa18);
                 lVar14 = BattleMapData.GenerateObstacleData(this,uVar4,1);
                 plVar15 = (int64 *)(lVar12 + 48);
                 *plVar15 = lVar14;
                 il2cpp_internal(plVar15,lVar14);
                 if ((*plVar15 == 0) || (lVar14 = *(int64 *)(*plVar15 + 56)) == null)
-                goto LAB_1808db659;
-                FUN_181827900(lVar14,lVar12);
+                goto LAB_1808c6839;
+                FUN_18181e0a0(lVar14,lVar12);
                 iVar22 = 0;
-                goto LAB_1808db430;
+                goto LAB_1808c6610;
               }
-              goto LAB_1808db554;
+              goto LAB_1808c6734;
             }
-            goto LAB_1808db659;
+            goto LAB_1808c6839;
           }
-        LAB_1808db554:
-          if (lVar11 == null) goto LAB_1808db659;
-          uVar4 = FUN_180d8cf10(0,lVar11.row,0);
-          uVar4 = FUN_1800d6750(lVar11,uVar4,DAT_181d68270);
+        LAB_1808c6734:
+          if (lVar11 == null) goto LAB_1808c6839;
+          uVar4 = FUN_180d95a30(0,lVar11.row,0);
+          uVar4 = FUN_1800d6760(lVar11,uVar4,DAT_181d8fa18);
           uVar9 = BattleMapData.GenerateObstacleData(this,uVar4,0);
           *(uint64 *)(lVar12 + 48) = uVar9;
           if ((*(int64 *)(lVar12 + 48) == 0) ||
              (lVar14 = *(int64 *)(*(int64 *)(lVar12 + 48) + 56)) == null)
-          goto LAB_1808db659;
-          FUN_181827900(lVar14,lVar12);
+          goto LAB_1808c6839;
+          FUN_18181e0a0(lVar14,lVar12);
           obstacleCount = obstacleCount + -1;
         } while( true );
-        LAB_1808db4d0:
-        if (*(int *)(lVar17 + 24) <= iVar22) goto LAB_1808daf40;
-        lVar18 = FUN_180002f80(lVar17,iVar22,DAT_181d63bf8);
-        if (lVar18 == null) goto LAB_1808db659;
+        LAB_1808c66b0:
+        if (*(int *)(lVar17 + 24) <= iVar22) goto LAB_1808c6120;
+        lVar18 = FUN_180002f80(lVar17,iVar22,DAT_181d8b398);
+        if (lVar18 == null) goto LAB_1808c6839;
         GridUnitData.set_GridType(lVar18,1);
-        uVar9 = FUN_180002f80(lVar17,iVar22,DAT_181d63bf8);
-        FUN_181827900(lVar10,uVar9);
+        uVar9 = FUN_180002f80(lVar17,iVar22,DAT_181d8b398);
+        FUN_18181e0a0(lVar10,uVar9);
         iVar22 = iVar22 + 1;
-        goto LAB_1808db4d0;
-        LAB_1808db430:
-        if (*(int *)(lVar16 + 24) <= iVar22) goto LAB_1808db53d;
-        lVar12 = FUN_180002f80(lVar16,iVar22,DAT_181d63bf8);
-        if (lVar12 == null) goto LAB_1808db659;
+        goto LAB_1808c66b0;
+        LAB_1808c6610:
+        if (*(int *)(lVar16 + 24) <= iVar22) goto LAB_1808c671d;
+        lVar12 = FUN_180002f80(lVar16,iVar22,DAT_181d8b398);
+        if (lVar12 == null) goto LAB_1808c6839;
         *(int64 *)(lVar12 + 48) = *plVar15;
-        if (*plVar15 == 0) goto LAB_1808db659;
+        if (*plVar15 == 0) goto LAB_1808c6839;
         lVar12 = *(int64 *)(*plVar15 + 56);
-        uVar9 = FUN_180002f80(lVar16,iVar22,DAT_181d63bf8);
-        if (lVar12 == null) goto LAB_1808db659;
-        FUN_181827900(lVar12,uVar9,DAT_181d63778);
-        uVar9 = FUN_180002f80(lVar16,iVar22,DAT_181d63bf8);
-        FUN_181801c10(lVar8,uVar9);
+        uVar9 = FUN_180002f80(lVar16,iVar22,DAT_181d8b398);
+        if (lVar12 == null) goto LAB_1808c6839;
+        FUN_18181e0a0(lVar12,uVar9,DAT_181d8af18);
+        uVar9 = FUN_180002f80(lVar16,iVar22,DAT_181d8b398);
+        FUN_1817eee00(lVar8,uVar9);
         iVar22 = iVar22 + 1;
-        goto LAB_1808db430;
-        LAB_1808db53d:
+        goto LAB_1808c6610;
+        LAB_1808c671d:
         obstacleCount = obstacleCount + -2;
-        goto joined_r0x0001808dac21;
+        goto joined_r0x0001808c5e01;
     }
 
-    // Token : 0x6000BF8
-    // RVA   : 0x8DEB20   Offset: 0x8DD320   Length: 0xA0
+    // Token : 0x6000C22
+    // RVA   : 0x8C9D00   Offset: 0x8C9100   Length: 0xA0
     public bool NormalGridAllConnected(bool[] vis)
     {
         bool cVar1;
@@ -1113,15 +1116,15 @@ public class BattleMapData
             if (0 < this.mapHeight) {
               do {
                 if (this.mapGrids == null) {
-        LAB_1808debbb:
+        LAB_1808c9d9b:
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                lVar2 = FUN_180127f50(this.mapGrids,(int64)iVar4,(int64)iVar3);
-                if (lVar2 == null) goto LAB_1808debbb;
+                lVar2 = FUN_180127f90(this.mapGrids,(int64)iVar4,(int64)iVar3);
+                if (lVar2 == null) goto LAB_1808c9d9b;
                 if (*(int *)(lVar2 + 20) == 1) {
-                  if (vis == null) goto LAB_1808debbb;
-                  cVar1 = FUN_180132c20(vis,(int64)iVar4,(int64)iVar3);
+                  if (vis == null) goto LAB_1808c9d9b;
+                  cVar1 = FUN_180132d10(vis,(int64)iVar4,(int64)iVar3);
                   if (!cVar1) {
                     return false;
                   }
@@ -1135,8 +1138,8 @@ public class BattleMapData
         return true;
     }
 
-    // Token : 0x6000BF9
-    // RVA   : 0x8DC630   Offset: 0x8DAE30   Length: 0x120
+    // Token : 0x6000C23
+    // RVA   : 0x8C7810   Offset: 0x8C6C10   Length: 0x120
     public float GetAreaDefenceLv(int defenceType)
     {
         long lVar1;
@@ -1173,8 +1176,8 @@ public class BattleMapData
         }
     }
 
-    // Token : 0x6000BFA
-    // RVA   : 0x8DC760   Offset: 0x8DAF60   Length: 0xAD
+    // Token : 0x6000C24
+    // RVA   : 0x8C7940   Offset: 0x8C6D40   Length: 0xAD
     public float GetAreaWallSkinLv()
     {
         long lVar1;
@@ -1203,8 +1206,8 @@ public class BattleMapData
         }
     }
 
-    // Token : 0x6000BFB
-    // RVA   : 0x8DC070   Offset: 0x8DA870   Length: 0x399
+    // Token : 0x6000C25
+    // RVA   : 0x8C7250   Offset: 0x8C6650   Length: 0x399
     private void GenerateSpeGridObj(int speGridObjNum)
     {
         long lVar1;
@@ -1219,8 +1222,8 @@ public class BattleMapData
         long lVar10;
         ulong uVar11;
         long lVar12;
-        lVar9 = il2cpp_internal(DAT_181d6e630);
-        FUN_180f58a90(lVar9,DAT_181d63678);
+        lVar9 = il2cpp_internal(DAT_181d932d0);
+        FUN_18132faf0(lVar9,DAT_181d8ae18);
         lVar1 = this.mapGrids;
         if (lVar1 != null) {
           iVar3 = Array.GetUpperBound(lVar1,0,0);
@@ -1229,16 +1232,16 @@ public class BattleMapData
             iVar6 = Array.GetLowerBound(lVar1,1);
             if (iVar6 <= iVar4) {
               do {
-                lVar10 = FUN_180127f50(lVar1,(int64)iVar5);
+                lVar10 = FUN_180127f90(lVar1,(int64)iVar5);
                 if (lVar10 == null) throw; // [null/range check failed]
                 cVar2 = GridUnitData.isEmpty(lVar10,1);
                 if (cVar2) {
                   if (this.mustEmptyGrids == null) throw; // [null/range check failed]
-                  cVar2 = FUN_1818279a0(this.mustEmptyGrids,lVar10);
+                  cVar2 = FUN_18181e400(this.mustEmptyGrids,lVar10);
                   if (((!cVar2) && (0 < *(int *)(lVar10 + 40))) &&
                      (*(int *)(lVar10 + 40) < this.mapWidth + -1)) {
                     if (lVar9 == null) throw; // [null/range check failed]
-                    FUN_181827900(lVar9,lVar10);
+                    FUN_18181e0a0(lVar9,lVar10);
                   }
                 }
                 iVar6 = iVar6 + 1;
@@ -1252,21 +1255,21 @@ public class BattleMapData
                 return;
               }
               speGridObjNum = speGridObjNum + -1;
-              uVar7 = FUN_180d8cf10(0,*(int *)(lVar9 + 24),0);
+              uVar7 = FUN_180d95a30(0,*(int *)(lVar9 + 24),0);
               if (*(uint32 *)(lVar9 + 24) <= uVar7) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               lVar1 = lVar9[uVar7];
-              FUN_181801c10(lVar9,lVar1,DAT_181d638f8);
+              FUN_1817eee00(lVar9,lVar1,DAT_181d8b098);
               lVar10 = FUN_18046bb80(0);
-              uVar11 = DAT_181d9cf50;
+              uVar11 = DAT_181dc1800;
               if (lVar10 == null) throw; // [null/range check failed]
               lVar10 = *(int64 *)(lVar10 + 0x248);
               uVar11 = Type.GetTypeFromHandle(uVar11,0);
               lVar12 = Enum.GetNames(uVar11,0);
               if ((((lVar12 == null) ||
-                   (uVar8 = FUN_180d8cf10(1,*(uint32 *)(lVar12 + 24)), lVar10 == null)) ||
-                  (lVar10 = FUN_180002f80(lVar10,uVar8,DAT_181d7bf58)) == null) ||
+                   (uVar8 = FUN_180d95a30(1,*(uint32 *)(lVar12 + 24)), lVar10 == null)) ||
+                  (lVar10 = FUN_180002f80(lVar10,uVar8,DAT_181da38d8)) == null) ||
                  (plVar13 = (int64 *)SpeGridObjData.Clone(lVar10,0), lVar1 == null)) throw; // [null/range check failed]
               plVar14 = (int64 *)0;
               if (plVar13 != (int64 *)0) {
@@ -1278,8 +1281,8 @@ public class BattleMapData
         }
     }
 
-    // Token : 0x6000BFC
-    // RVA   : 0x8DEBD0   Offset: 0x8DD3D0   Length: 0x165
+    // Token : 0x6000C26
+    // RVA   : 0x8C9DB0   Offset: 0x8C91B0   Length: 0x165
     private void TidyGridList()
     {
         long lVar1;
@@ -1290,9 +1293,9 @@ public class BattleMapData
         long lVar6;
         long lVar7;
         if (this.normalGrids != null) {
-          FUN_180f56130(this.normalGrids,DAT_181d637f8);
+          FUN_1812f9a10(this.normalGrids,DAT_181d8af98);
           if (this.obstacleGrids != null) {
-            FUN_180f56130(this.obstacleGrids,DAT_181d637f8);
+            FUN_1812f9a10(this.obstacleGrids,DAT_181d8af98);
             lVar1 = this.mapGrids;
             if (lVar1 != null) {
               iVar2 = Array.GetUpperBound(lVar1,0,0);
@@ -1305,17 +1308,17 @@ public class BattleMapData
                 iVar5 = Array.GetLowerBound(lVar1,1);
                 if (iVar5 <= iVar3) {
                   do {
-                    lVar6 = FUN_180127f50(lVar1,(int64)iVar4);
+                    lVar6 = FUN_180127f90(lVar1,(int64)iVar4);
                     if (lVar6 == null) throw; // [null/range check failed]
                     if (*(int *)(lVar6 + 20) == 1) {
                       lVar7 = this.normalGrids;
-        LAB_1808decea:
+        LAB_1808c9eca:
                       if (lVar7 == null) throw; // [null/range check failed]
-                      FUN_181827900(lVar7,lVar6);
+                      FUN_18181e0a0(lVar7,lVar6);
                     }
                     else if (*(int *)(lVar6 + 20) == 2) {
                       lVar7 = this.obstacleGrids;
-                      goto LAB_1808decea;
+                      goto LAB_1808c9eca;
                     }
                     iVar5 = iVar5 + 1;
                   } while (iVar5 <= iVar3);
@@ -1327,15 +1330,15 @@ public class BattleMapData
         }
     }
 
-    // Token : 0x6000BFD
-    // RVA   : 0x8DD940   Offset: 0x8DC140   Length: 0x3E
+    // Token : 0x6000C27
+    // RVA   : 0x8C8B20   Offset: 0x8C7F20   Length: 0x3E
     public GridUnitData GetGridData(int row, int column)
     {
         ulong uVar1;
         if ((((-1 < row) && (row < this.mapHeight)) && (-1 < column)) &&
            (column < this.mapWidth)) {
           if (this.mapGrids != null) {
-            uVar1 = FUN_180127f50(this.mapGrids,(int64)column,(int64)row);
+            uVar1 = FUN_180127f90(this.mapGrids,(int64)column,(int64)row);
             return uVar1;
           }
                           // WARNING: Subroutine does not return
@@ -1344,8 +1347,8 @@ public class BattleMapData
         return 0;
     }
 
-    // Token : 0x6000BFE
-    // RVA   : 0x8DD870   Offset: 0x8DC070   Length: 0xCE
+    // Token : 0x6000C28
+    // RVA   : 0x8C8A50   Offset: 0x8C7E50   Length: 0xCE
     public GridUnitData GetGridDataByDir(int row, int column, int dir)
     {
         ulong uVar1;
@@ -1364,7 +1367,7 @@ public class BattleMapData
             return 0;
           }
           if (this.mapGrids != null) {
-            uVar1 = FUN_180127f50(this.mapGrids,(int64)column,(int64)row);
+            uVar1 = FUN_180127f90(this.mapGrids,(int64)column,(int64)row);
             return uVar1;
           }
         }
@@ -1383,7 +1386,7 @@ public class BattleMapData
             return 0;
           }
           if (this.mapGrids != null) {
-            uVar1 = FUN_180127f50(this.mapGrids,(int64)column,(int64)row);
+            uVar1 = FUN_180127f90(this.mapGrids,(int64)column,(int64)row);
             return uVar1;
           }
         }
@@ -1402,14 +1405,14 @@ public class BattleMapData
             return 0;
           }
           if (this.mapGrids != null) {
-            uVar1 = FUN_180127f50(this.mapGrids,(int64)column,(int64)row);
+            uVar1 = FUN_180127f90(this.mapGrids,(int64)column,(int64)row);
             return uVar1;
           }
         }
     }
 
-    // Token : 0x6000BFF
-    // RVA   : 0x8D9010   Offset: 0x8D7810   Length: 0x154
+    // Token : 0x6000C29
+    // RVA   : 0x8C41F0   Offset: 0x8C35F0   Length: 0x154
     public bool AroundGridHaveEnemy(int row, int column, int selfTeamID)
     {
         uint64 BattleMapData.AroundGridHaveEnemy
@@ -1426,7 +1429,7 @@ public class BattleMapData
           if (lVar2 != null) {
             lVar2 = BattleMapData.GetGridDataByDir(this,row,column,iVar4,0);
             if (lVar2 == null) {
-        LAB_1808d915f:
+        LAB_1808c433f:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -1434,13 +1437,13 @@ public class BattleMapData
             uVar3 = Object.op_Inequality(uVar1,0,0);
             if ((char)uVar3) {
               lVar2 = BattleMapData.GetGridDataByDir(this,row,column,iVar4,0);
-              if ((lVar2 == null) || (*(int64 *)(lVar2 + 24) == 0)) goto LAB_1808d915f;
+              if ((lVar2 == null) || (*(int64 *)(lVar2 + 24) == 0)) goto LAB_1808c433f;
               uVar3 = BattleUnit.get_IsAlive(*(int64 *)(lVar2 + 24),0);
               if ((char)uVar3) {
                 lVar2 = BattleMapData.GetGridDataByDir(this,row,column,iVar4,0);
                 if (((lVar2 == null) || (*(int64 *)(lVar2 + 24) == 0)) ||
                    (uVar3 = *(uint64 *)(*(int64 *)(lVar2 + 24) + 88)) == null)
-                goto LAB_1808d915f;
+                goto LAB_1808c433f;
                 if (*(int *)(uVar3 + 16) != selfTeamID) {
                   return CONCAT71((int7)(uVar3 >> 8),1);
                 }
@@ -1454,8 +1457,8 @@ public class BattleMapData
         } while( true );
     }
 
-    // Token : 0x6000C00
-    // RVA   : 0x8D9220   Offset: 0x8D7A20   Length: 0xFE
+    // Token : 0x6000C2A
+    // RVA   : 0x8C4400   Offset: 0x8C3800   Length: 0xFE
     private void FindConnectedGrid(bool[] vis, GridUnitData targetGrid)
     {
         bool cVar1;
@@ -1482,7 +1485,7 @@ public class BattleMapData
                               (this,*(uint32 *)(targetGrid + 36),*(uint32 *)(targetGrid + 40),
                                iVar4,0);
             if ((lVar2 != null) && (*(int *)(lVar2 + 20) == 1)) {
-              cVar1 = FUN_180132c20(vis,(int64)*(int *)(lVar2 + 40),
+              cVar1 = FUN_180132d10(vis,(int64)*(int *)(lVar2 + 40),
                                     (int64)*(int *)(lVar2 + 36));
               if (!cVar1) {
                 BattleMapData.FindConnectedGrid(this,vis,lVar2,0);
@@ -1495,8 +1498,8 @@ public class BattleMapData
         uVar3 = il2cpp_internal();
     }
 
-    // Token : 0x6000C01
-    // RVA   : 0x8DD6C0   Offset: 0x8DBEC0   Length: 0x1A0
+    // Token : 0x6000C2B
+    // RVA   : 0x8C88A0   Offset: 0x8C7CA0   Length: 0x1A0
     public GridUnitData GetEmptyGrid(GridUnitData from, GridUnitData to, List<GridUnitData> path, int mobility)
     {
         uint64
@@ -1509,11 +1512,11 @@ public class BattleMapData
         char cVar3;
         int64 lVar4;
         if (path == null) {
-          path = il2cpp_internal(DAT_181d6e630);
-          FUN_180f58a90(path,DAT_181d63678);
+          path = il2cpp_internal(DAT_181d932d0);
+          FUN_18132faf0(path,DAT_181d8ae18);
           if (path == null) throw; // [null/range check failed]
         }
-        FUN_180f56130(path);
+        FUN_1812f9a10(path);
         lVar4 = MapNavigator.get_Instance(0);
         if (lVar4 != null) {
           cVar3 = MapNavigator.Navigate(lVar4,this,from,to,path,0,mobility,0xffffffff,0);
@@ -1527,7 +1530,7 @@ public class BattleMapData
               if (plVar2 != (int64 *)0) {
                 cVar3 = (**(code **)(*plVar2 + 0x138))(plVar2,to,*(uint64 *)(*plVar2 + 0x140));
                 if (cVar3) {
-                  FUN_18182b220(path,*(int *)(path + 24) + -1,DAT_181d63978);
+                  FUN_181823590(path,*(int *)(path + 24) + -1,DAT_181d8b118);
                 }
                 uVar1 = *(uint32 *)(path + 24);
                 if (uVar1 <= uVar1 - 1) {
@@ -1538,7 +1541,7 @@ public class BattleMapData
               throw; // [null/range check failed]
             }
             if (0 < (int)uVar1) {
-              FUN_180f56130(path,DAT_181d637f8);
+              FUN_1812f9a10(path,DAT_181d8af98);
               return from;
             }
           }
@@ -1546,8 +1549,8 @@ public class BattleMapData
         }
     }
 
-    // Token : 0x6000C02
-    // RVA   : 0x8DD980   Offset: 0x8DC180   Length: 0x639
+    // Token : 0x6000C2C
+    // RVA   : 0x8C8B60   Offset: 0x8C7F60   Length: 0x639
     public void GetMoveRangeGrids(int row, int column, int minRange, int maxRange, List<GridUnitData> grids, int selfTeamID)
     {
         void BattleMapData.GetMoveRangeGrids
@@ -1567,9 +1570,9 @@ public class BattleMapData
         int local_48;
         lVar9 = (int64)row;
         if (grids != null) {
-          FUN_180f56130(grids,DAT_181d637f8);
-          lVar4 = il2cpp_internal(DAT_181d6e630);
-          FUN_180f58a90(lVar4,DAT_181d63678);
+          FUN_1812f9a10(grids,DAT_181d8af98);
+          lVar4 = il2cpp_internal(DAT_181d932d0);
+          FUN_18132faf0(lVar4,DAT_181d8ae18);
           local_48 = 0;
           if (-1 < maxRange) {
             do {
@@ -1578,37 +1581,37 @@ public class BattleMapData
               for (; iVar2 <= iVar3; iVar2 = iVar2 + 1) {
                 if (local_48 == 0) {
                   if ((iVar2 == column) && (minRange < 1)) {
-                    if (this.mapGrids == null) goto LAB_1808ddfb4;
-                    uVar6 = FUN_180127f50(this.mapGrids,(int64)iVar2,lVar9);
-                    FUN_181827900(grids,uVar6);
+                    if (this.mapGrids == null) goto LAB_1808c9194;
+                    uVar6 = FUN_180127f90(this.mapGrids,(int64)iVar2,lVar9);
+                    FUN_18181e0a0(grids,uVar6);
                   }
                   else {
-                    if (this.mapGrids == null) goto LAB_1808ddfb4;
+                    if (this.mapGrids == null) goto LAB_1808c9194;
                     lVar10 = (int64)iVar2;
-                    lVar5 = FUN_180127f50(this.mapGrids,lVar10);
-                    if (lVar5 == null) goto LAB_1808ddfb4;
+                    lVar5 = FUN_180127f90(this.mapGrids,lVar10);
+                    if (lVar5 == null) goto LAB_1808c9194;
                     if (*(int *)(lVar5 + 20) != 2) {
                       if ((this.mapGrids == null) ||
-                         (lVar5 = FUN_180127f50(this.mapGrids,lVar10)) == null)
-                      goto LAB_1808ddfb4;
+                         (lVar5 = FUN_180127f90(this.mapGrids,lVar10)) == null)
+                      goto LAB_1808c9194;
                       uVar6 = *(uint64 *)(lVar5 + 24);
                       cVar1 = Object.op_Equality(uVar6,0);
                       if (cVar1) {
                         lVar5 = MapNavigator.get_Instance(0);
-                        if (this.mapGrids == null) goto LAB_1808ddfb4;
-                        uVar6 = FUN_180127f50(this.mapGrids,(int64)column,lVar9);
+                        if (this.mapGrids == null) goto LAB_1808c9194;
+                        uVar6 = FUN_180127f90(this.mapGrids,(int64)column,lVar9);
                         if ((this.mapGrids == null) ||
-                           (uVar7 = FUN_180127f50(this.mapGrids,lVar10,lVar9), lVar5 == null)
-                           ) goto LAB_1808ddfb4;
+                           (uVar7 = FUN_180127f90(this.mapGrids,lVar10,lVar9), lVar5 == null)
+                           ) goto LAB_1808c9194;
                         cVar1 = MapNavigator.Navigate(lVar5,this,uVar6,uVar7,lVar4,0,999999,selfTeamID,0)
                         ;
                         if (cVar1) {
-                          if (lVar4 == null) goto LAB_1808ddfb4;
+                          if (lVar4 == null) goto LAB_1808c9194;
                           if ((*(int *)(lVar4 + 24) <= maxRange) && (minRange <= *(int *)(lVar4 + 24)))
                           {
-                            if (this.mapGrids == null) goto LAB_1808ddfb4;
-                            uVar6 = FUN_180127f50(this.mapGrids,lVar10,lVar9);
-                            FUN_181827900(grids,uVar6);
+                            if (this.mapGrids == null) goto LAB_1808c9194;
+                            uVar6 = FUN_180127f90(this.mapGrids,lVar10,lVar9);
+                            FUN_18181e0a0(grids,uVar6);
                           }
                         }
                       }
@@ -1618,32 +1621,32 @@ public class BattleMapData
                 else {
                   iVar8 = row - local_48;
                   if (-1 < iVar8) {
-                    if (this.mapGrids == null) goto LAB_1808ddfb4;
+                    if (this.mapGrids == null) goto LAB_1808c9194;
                     lVar10 = (int64)iVar2;
-                    lVar5 = FUN_180127f50(this.mapGrids,lVar10);
-                    if (lVar5 == null) goto LAB_1808ddfb4;
+                    lVar5 = FUN_180127f90(this.mapGrids,lVar10);
+                    if (lVar5 == null) goto LAB_1808c9194;
                     if (*(int *)(lVar5 + 20) != 2) {
                       if ((this.mapGrids == null) ||
-                         (lVar5 = FUN_180127f50(this.mapGrids,lVar10)) == null)
-                      goto LAB_1808ddfb4;
+                         (lVar5 = FUN_180127f90(this.mapGrids,lVar10)) == null)
+                      goto LAB_1808c9194;
                       uVar6 = *(uint64 *)(lVar5 + 24);
                       cVar1 = Object.op_Equality(uVar6,0);
                       if (cVar1) {
                         lVar5 = MapNavigator.get_Instance(0);
-                        if (this.mapGrids == null) goto LAB_1808ddfb4;
-                        uVar6 = FUN_180127f50(this.mapGrids,(int64)column,lVar9);
+                        if (this.mapGrids == null) goto LAB_1808c9194;
+                        uVar6 = FUN_180127f90(this.mapGrids,(int64)column,lVar9);
                         if ((this.mapGrids == null) ||
-                           (uVar7 = FUN_180127f50(this.mapGrids,lVar10,(int64)iVar8),
-                           lVar5 == null)) goto LAB_1808ddfb4;
+                           (uVar7 = FUN_180127f90(this.mapGrids,lVar10,(int64)iVar8),
+                           lVar5 == null)) goto LAB_1808c9194;
                         cVar1 = MapNavigator.Navigate(lVar5,this,uVar6,uVar7,lVar4,0,999999,selfTeamID,0)
                         ;
                         if (cVar1) {
-                          if (lVar4 == null) goto LAB_1808ddfb4;
+                          if (lVar4 == null) goto LAB_1808c9194;
                           if ((*(int *)(lVar4 + 24) <= maxRange) && (minRange <= *(int *)(lVar4 + 24)))
                           {
-                            if (this.mapGrids == null) goto LAB_1808ddfb4;
-                            uVar6 = FUN_180127f50(this.mapGrids,lVar10,(int64)iVar8);
-                            FUN_181827900(grids,uVar6);
+                            if (this.mapGrids == null) goto LAB_1808c9194;
+                            uVar6 = FUN_180127f90(this.mapGrids,lVar10,(int64)iVar8);
+                            FUN_18181e0a0(grids,uVar6);
                           }
                         }
                       }
@@ -1652,35 +1655,35 @@ public class BattleMapData
                   iVar8 = local_48 + row;
                   if (iVar8 < this.mapHeight) {
                     if (this.mapGrids == null) {
-        LAB_1808ddfb4:
+        LAB_1808c9194:
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
                     lVar10 = (int64)iVar2;
-                    lVar5 = FUN_180127f50(this.mapGrids,lVar10);
-                    if (lVar5 == null) goto LAB_1808ddfb4;
+                    lVar5 = FUN_180127f90(this.mapGrids,lVar10);
+                    if (lVar5 == null) goto LAB_1808c9194;
                     if (*(int *)(lVar5 + 20) != 2) {
                       if ((this.mapGrids == null) ||
-                         (lVar5 = FUN_180127f50(this.mapGrids,lVar10)) == null)
-                      goto LAB_1808ddfb4;
+                         (lVar5 = FUN_180127f90(this.mapGrids,lVar10)) == null)
+                      goto LAB_1808c9194;
                       uVar6 = *(uint64 *)(lVar5 + 24);
                       cVar1 = Object.op_Equality(uVar6,0);
                       if (cVar1) {
                         lVar5 = MapNavigator.get_Instance(0);
-                        if (this.mapGrids == null) goto LAB_1808ddfb4;
-                        uVar6 = FUN_180127f50(this.mapGrids,(int64)column,lVar9);
+                        if (this.mapGrids == null) goto LAB_1808c9194;
+                        uVar6 = FUN_180127f90(this.mapGrids,(int64)column,lVar9);
                         if ((this.mapGrids == null) ||
-                           (uVar7 = FUN_180127f50(this.mapGrids,lVar10,(int64)iVar8),
-                           lVar5 == null)) goto LAB_1808ddfb4;
+                           (uVar7 = FUN_180127f90(this.mapGrids,lVar10,(int64)iVar8),
+                           lVar5 == null)) goto LAB_1808c9194;
                         cVar1 = MapNavigator.Navigate(lVar5,this,uVar6,uVar7,lVar4,0,999999,selfTeamID,0)
                         ;
                         if (cVar1) {
-                          if (lVar4 == null) goto LAB_1808ddfb4;
+                          if (lVar4 == null) goto LAB_1808c9194;
                           if ((*(int *)(lVar4 + 24) <= maxRange) && (minRange <= *(int *)(lVar4 + 24)))
                           {
-                            if (this.mapGrids == null) goto LAB_1808ddfb4;
-                            uVar6 = FUN_180127f50(this.mapGrids,lVar10,(int64)iVar8);
-                            FUN_181827900(grids,uVar6);
+                            if (this.mapGrids == null) goto LAB_1808c9194;
+                            uVar6 = FUN_180127f90(this.mapGrids,lVar10,(int64)iVar8);
+                            FUN_18181e0a0(grids,uVar6);
                           }
                         }
                       }
@@ -1694,8 +1697,8 @@ public class BattleMapData
         }
     }
 
-    // Token : 0x6000C03
-    // RVA   : 0x8DCFE0   Offset: 0x8DB7E0   Length: 0x226
+    // Token : 0x6000C2D
+    // RVA   : 0x8C81C0   Offset: 0x8C75C0   Length: 0x226
     public void GetDirectionObliqueGrids(int direction, int centerRow, int centerColumn, int innerRange, int outerRange, List<GridUnitData> grids)
     {
         void BattleMapData.GetDirectionObliqueGrids
@@ -1706,7 +1709,7 @@ public class BattleMapData
         int iVar2;
         uint64 uVar3;
         if ((grids != null) && (-1 < outerRange)) {
-          FUN_180f56130(grids,DAT_181d637f8);
+          FUN_1812f9a10(grids,DAT_181d8af98);
           if (direction == null) {
             if (innerRange <= outerRange) {
               iVar2 = centerColumn - innerRange;
@@ -1714,9 +1717,9 @@ public class BattleMapData
                 if ((((-1 < iVar2) && (iVar2 < this.mapWidth)) &&
                     (iVar1 = iVar2 + (centerRow - centerColumn), -1 < iVar1)) &&
                    (iVar1 < this.mapHeight)) {
-                  if (this.mapGrids == null) goto LAB_1808dd201;
-                  uVar3 = FUN_180127f50(this.mapGrids,(int64)iVar2,(int64)iVar1);
-                  FUN_181827900(grids,uVar3,DAT_181d63778);
+                  if (this.mapGrids == null) goto LAB_1808c83e1;
+                  uVar3 = FUN_180127f90(this.mapGrids,(int64)iVar2,(int64)iVar1);
+                  FUN_18181e0a0(grids,uVar3,DAT_181d8af18);
                 }
                 innerRange = innerRange + 1;
                 iVar2 = iVar2 + -1;
@@ -1730,9 +1733,9 @@ public class BattleMapData
               do {
                 if (((-1 < centerColumn) && (centerColumn < this.mapWidth)) &&
                    ((-1 < iVar2 && (iVar2 < this.mapHeight)))) {
-                  if (this.mapGrids == null) goto LAB_1808dd201;
-                  uVar3 = FUN_180127f50(this.mapGrids,(int64)centerColumn,(int64)iVar2);
-                  FUN_181827900(grids,uVar3,DAT_181d63778);
+                  if (this.mapGrids == null) goto LAB_1808c83e1;
+                  uVar3 = FUN_180127f90(this.mapGrids,(int64)centerColumn,(int64)iVar2);
+                  FUN_18181e0a0(grids,uVar3,DAT_181d8af18);
                 }
                 iVar2 = iVar2 + 1;
                 centerColumn = centerColumn + -1;
@@ -1746,9 +1749,9 @@ public class BattleMapData
               do {
                 if (((-1 < iVar2) && (iVar2 < this.mapWidth)) &&
                    ((-1 < centerRow && (centerRow < this.mapHeight)))) {
-                  if (this.mapGrids == null) goto LAB_1808dd201;
-                  uVar3 = FUN_180127f50(this.mapGrids,(int64)iVar2,(int64)centerRow);
-                  FUN_181827900(grids,uVar3,DAT_181d63778);
+                  if (this.mapGrids == null) goto LAB_1808c83e1;
+                  uVar3 = FUN_180127f90(this.mapGrids,(int64)iVar2,(int64)centerRow);
+                  FUN_18181e0a0(grids,uVar3,DAT_181d8af18);
                 }
                 iVar2 = iVar2 + 1;
                 centerRow = centerRow + -1;
@@ -1762,12 +1765,12 @@ public class BattleMapData
                   (iVar2 = (centerRow - centerColumn) + innerRange, -1 < iVar2)) &&
                  (iVar2 < this.mapHeight)) {
                 if (this.mapGrids == null) {
-        LAB_1808dd201:
+        LAB_1808c83e1:
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                uVar3 = FUN_180127f50(this.mapGrids,(int64)innerRange,(int64)iVar2);
-                FUN_181827900(grids,uVar3,DAT_181d63778);
+                uVar3 = FUN_180127f90(this.mapGrids,(int64)innerRange,(int64)iVar2);
+                FUN_18181e0a0(grids,uVar3,DAT_181d8af18);
               }
               innerRange = innerRange + 1;
             } while (innerRange - centerColumn <= outerRange);
@@ -1775,8 +1778,8 @@ public class BattleMapData
         }
     }
 
-    // Token : 0x6000C04
-    // RVA   : 0x8DC810   Offset: 0x8DB010   Length: 0x4E8
+    // Token : 0x6000C2E
+    // RVA   : 0x8C79F0   Offset: 0x8C6DF0   Length: 0x4E8
     public void GetDirectionCrossGrids(int direction, int centerRow, int centerColumn, int innerRange, int outerRange, List<GridUnitData> grids)
     {
         void BattleMapData.GetDirectionCrossGrids
@@ -1791,7 +1794,7 @@ public class BattleMapData
         int iVar6;
         uint64 uVar7;
         if ((grids != null) && (-1 < outerRange)) {
-          FUN_180f56130(grids,DAT_181d637f8);
+          FUN_1812f9a10(grids,DAT_181d8af98);
           iVar1 = Mathf.Clamp(centerColumn - outerRange,0,this.mapWidth + -1,0);
           iVar2 = Mathf.Clamp(centerColumn + outerRange,0,this.mapWidth + -1,0);
           iVar3 = Mathf.Clamp(centerRow - outerRange,0,this.mapHeight + -1,0);
@@ -1810,9 +1813,9 @@ public class BattleMapData
                   iVar2 = Mathf.Clamp(centerRow - iVar3,0,this.mapHeight + -1,0);
                   iVar3 = Mathf.Clamp(iVar3 + centerRow,0,this.mapHeight + -1);
                   for (; iVar2 <= iVar3; iVar2 = iVar2 + 1) {
-                    if (this.mapGrids == null) goto LAB_1808dccf3;
-                    uVar7 = FUN_180127f50(this.mapGrids,(int64)iVar1,(int64)iVar2);
-                    FUN_181827900(grids,uVar7,DAT_181d63778);
+                    if (this.mapGrids == null) goto LAB_1808c7ed3;
+                    uVar7 = FUN_180127f90(this.mapGrids,(int64)iVar1,(int64)iVar2);
+                    FUN_18181e0a0(grids,uVar7,DAT_181d8af18);
                   }
                 }
               }
@@ -1836,9 +1839,9 @@ public class BattleMapData
                   iVar6 = Mathf.Clamp(centerRow - iVar5,0,this.mapHeight + -1,0);
                   iVar5 = Mathf.Clamp(iVar5 + centerRow,0,this.mapHeight + -1);
                   for (; iVar6 <= iVar5; iVar6 = iVar6 + 1) {
-                    if (this.mapGrids == null) goto LAB_1808dccf3;
-                    uVar7 = FUN_180127f50(this.mapGrids,(int64)iVar3,(int64)iVar6);
-                    FUN_181827900(grids,uVar7,DAT_181d63778);
+                    if (this.mapGrids == null) goto LAB_1808c7ed3;
+                    uVar7 = FUN_180127f90(this.mapGrids,(int64)iVar3,(int64)iVar6);
+                    FUN_18181e0a0(grids,uVar7,DAT_181d8af18);
                   }
                 }
                 iVar3 = iVar3 + 1;
@@ -1860,9 +1863,9 @@ public class BattleMapData
                   iVar2 = Mathf.Clamp(centerColumn - iVar1,0,this.mapWidth + -1,0);
                   iVar1 = Mathf.Clamp(centerColumn + iVar1,0,this.mapWidth + -1);
                   for (; iVar2 <= iVar1; iVar2 = iVar2 + 1) {
-                    if (this.mapGrids == null) goto LAB_1808dccf3;
-                    uVar7 = FUN_180127f50(this.mapGrids,(int64)iVar2,(int64)iVar3);
-                    FUN_181827900(grids,uVar7,DAT_181d63778);
+                    if (this.mapGrids == null) goto LAB_1808c7ed3;
+                    uVar7 = FUN_180127f90(this.mapGrids,(int64)iVar2,(int64)iVar3);
+                    FUN_18181e0a0(grids,uVar7,DAT_181d8af18);
                   }
                 }
               }
@@ -1885,12 +1888,12 @@ public class BattleMapData
                 iVar5 = Mathf.Clamp(iVar5 + centerColumn,0,this.mapWidth + -1);
                 for (; iVar6 <= iVar5; iVar6 = iVar6 + 1) {
                   if (this.mapGrids == null) {
-        LAB_1808dccf3:
+        LAB_1808c7ed3:
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  uVar7 = FUN_180127f50(this.mapGrids,(int64)iVar6,(int64)iVar3);
-                  FUN_181827900(grids,uVar7,DAT_181d63778);
+                  uVar7 = FUN_180127f90(this.mapGrids,(int64)iVar6,(int64)iVar3);
+                  FUN_18181e0a0(grids,uVar7,DAT_181d8af18);
                 }
               }
               iVar3 = iVar3 + 1;
@@ -1900,8 +1903,8 @@ public class BattleMapData
         }
     }
 
-    // Token : 0x6000C05
-    // RVA   : 0x8DD210   Offset: 0x8DBA10   Length: 0x4AC
+    // Token : 0x6000C2F
+    // RVA   : 0x8C83F0   Offset: 0x8C77F0   Length: 0x4AC
     public void GetDirectionSectorGrids(int direction, int centerRow, int centerColumn, int innerRange, int outerRange, List<GridUnitData> grids)
     {
         void BattleMapData.GetDirectionSectorGrids
@@ -1914,7 +1917,7 @@ public class BattleMapData
         int iVar4;
         int iVar5;
         if ((grids != null) && (-1 < outerRange)) {
-          FUN_180f56130(grids,DAT_181d637f8);
+          FUN_1812f9a10(grids,DAT_181d8af98);
           iVar2 = Mathf.Clamp(centerColumn - outerRange,0,this.mapWidth + -1,0);
           iVar3 = Mathf.Clamp(centerColumn + outerRange,0,this.mapWidth + -1,0);
           iVar4 = Mathf.Clamp(centerRow - outerRange,0,this.mapHeight + -1,0);
@@ -1930,9 +1933,9 @@ public class BattleMapData
                   iVar4 = Mathf.Clamp(centerRow - (iVar5 + -1),0,this.mapHeight + -1,0);
                   iVar5 = Mathf.Clamp(iVar5 + -1 + centerRow,0,this.mapHeight + -1);
                   for (; iVar4 <= iVar5; iVar4 = iVar4 + 1) {
-                    if (this.mapGrids == null) goto LAB_1808dd6b7;
-                    uVar1 = FUN_180127f50(this.mapGrids,(int64)iVar2,(int64)iVar4);
-                    FUN_181827900(grids,uVar1,DAT_181d63778);
+                    if (this.mapGrids == null) goto LAB_1808c8897;
+                    uVar1 = FUN_180127f90(this.mapGrids,(int64)iVar2,(int64)iVar4);
+                    FUN_18181e0a0(grids,uVar1,DAT_181d8af18);
                   }
                 }
                 iVar2 = iVar2 + 1;
@@ -1952,10 +1955,10 @@ public class BattleMapData
                   iVar4 = Mathf.Clamp(centerRow - (iVar5 + -1),0,this.mapHeight + -1,0);
                   iVar5 = Mathf.Clamp(iVar5 + -1 + centerRow,0,this.mapHeight + -1);
                   for (; iVar4 <= iVar5; iVar4 = iVar4 + 1) {
-                    if (this.mapGrids == null) goto LAB_1808dd6b7;
-                    uVar1 = FUN_180127f50(this.mapGrids,(int64)centerColumn,(int64)iVar4)
+                    if (this.mapGrids == null) goto LAB_1808c8897;
+                    uVar1 = FUN_180127f90(this.mapGrids,(int64)centerColumn,(int64)iVar4)
                     ;
-                    FUN_181827900(grids,uVar1,DAT_181d63778);
+                    FUN_18181e0a0(grids,uVar1,DAT_181d8af18);
                   }
                 }
                 centerColumn = centerColumn + 1;
@@ -1974,9 +1977,9 @@ public class BattleMapData
                   iVar3 = Mathf.Clamp(centerColumn - (iVar5 + -1),0,this.mapWidth + -1,0);
                   iVar5 = Mathf.Clamp(iVar5 + -1 + centerColumn,0,this.mapWidth + -1);
                   for (; iVar3 <= iVar5; iVar3 = iVar3 + 1) {
-                    if (this.mapGrids == null) goto LAB_1808dd6b7;
-                    uVar1 = FUN_180127f50(this.mapGrids,(int64)iVar3,(int64)iVar4);
-                    FUN_181827900(grids,uVar1,DAT_181d63778);
+                    if (this.mapGrids == null) goto LAB_1808c8897;
+                    uVar1 = FUN_180127f90(this.mapGrids,(int64)iVar3,(int64)iVar4);
+                    FUN_18181e0a0(grids,uVar1,DAT_181d8af18);
                   }
                 }
                 iVar4 = iVar4 + 1;
@@ -1995,12 +1998,12 @@ public class BattleMapData
                 iVar4 = Mathf.Clamp(iVar4 + -1 + centerColumn,0,this.mapWidth + -1);
                 for (; iVar3 <= iVar4; iVar3 = iVar3 + 1) {
                   if (this.mapGrids == null) {
-        LAB_1808dd6b7:
+        LAB_1808c8897:
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  uVar1 = FUN_180127f50(this.mapGrids,(int64)iVar3,(int64)centerRow);
-                  FUN_181827900(grids,uVar1,DAT_181d63778);
+                  uVar1 = FUN_180127f90(this.mapGrids,(int64)iVar3,(int64)centerRow);
+                  FUN_18181e0a0(grids,uVar1,DAT_181d8af18);
                 }
               }
               centerRow = centerRow + 1;
@@ -2010,8 +2013,8 @@ public class BattleMapData
         }
     }
 
-    // Token : 0x6000C06
-    // RVA   : 0x8DCD00   Offset: 0x8DB500   Length: 0x2DF
+    // Token : 0x6000C30
+    // RVA   : 0x8C7EE0   Offset: 0x8C72E0   Length: 0x2DF
     public void GetDirectionLineGrids(int direction, int centerRow, int centerColumn, int innerRange, int outerRange, List<GridUnitData> grids)
     {
         void BattleMapData.GetDirectionLineGrids
@@ -2023,16 +2026,16 @@ public class BattleMapData
         int iVar3;
         int iVar4;
         if ((grids != null) && (-1 < outerRange)) {
-          FUN_180f56130(grids,DAT_181d637f8);
+          FUN_1812f9a10(grids,DAT_181d8af98);
           if (direction == null) {
             iVar2 = Mathf.Clamp(centerColumn - outerRange,0,this.mapWidth + -1,0);
             for (; iVar2 <= centerColumn + -1; iVar2 = iVar2 + 1) {
               if ((-1 < centerRow) && (centerRow < this.mapHeight)) {
                 iVar4 = Mathf.Abs(iVar2 - centerColumn,0);
                 if ((innerRange <= iVar4) && (iVar4 = Mathf.Abs(iVar2 - centerColumn,0), iVar4 <= outerRange)) {
-                  if (this.mapGrids == null) goto LAB_1808dcfda;
-                  uVar1 = FUN_180127f50(this.mapGrids,(int64)iVar2,(int64)centerRow);
-                  FUN_181827900(grids,uVar1,DAT_181d63778);
+                  if (this.mapGrids == null) goto LAB_1808c81ba;
+                  uVar1 = FUN_180127f90(this.mapGrids,(int64)iVar2,(int64)centerRow);
+                  FUN_18181e0a0(grids,uVar1,DAT_181d8af18);
                 }
               }
             }
@@ -2046,10 +2049,10 @@ public class BattleMapData
                 if ((((-1 < centerRow) && (centerRow < this.mapHeight)) &&
                     (iVar3 = Mathf.Abs(iVar4,0), innerRange <= iVar3)) &&
                    (iVar3 = Mathf.Abs(iVar4,0), iVar3 <= outerRange)) {
-                  if (this.mapGrids == null) goto LAB_1808dcfda;
-                  uVar1 = FUN_180127f50(this.mapGrids,(int64)centerColumn,(int64)centerRow)
+                  if (this.mapGrids == null) goto LAB_1808c81ba;
+                  uVar1 = FUN_180127f90(this.mapGrids,(int64)centerColumn,(int64)centerRow)
                   ;
-                  FUN_181827900(grids,uVar1,DAT_181d63778);
+                  FUN_18181e0a0(grids,uVar1,DAT_181d8af18);
                 }
                 centerColumn = centerColumn + 1;
                 iVar4 = iVar4 + 1;
@@ -2062,9 +2065,9 @@ public class BattleMapData
               if ((-1 < centerColumn) && (centerColumn < this.mapWidth)) {
                 iVar4 = Mathf.Abs(iVar2 - centerRow,0);
                 if ((innerRange <= iVar4) && (iVar4 = Mathf.Abs(iVar2 - centerRow,0), iVar4 <= outerRange)) {
-                  if (this.mapGrids == null) goto LAB_1808dcfda;
-                  uVar1 = FUN_180127f50(this.mapGrids,(int64)centerColumn,(int64)iVar2);
-                  FUN_181827900(grids,uVar1,DAT_181d63778);
+                  if (this.mapGrids == null) goto LAB_1808c81ba;
+                  uVar1 = FUN_180127f90(this.mapGrids,(int64)centerColumn,(int64)iVar2);
+                  FUN_18181e0a0(grids,uVar1,DAT_181d8af18);
                 }
               }
             }
@@ -2079,13 +2082,13 @@ public class BattleMapData
                    ((iVar3 = Mathf.Abs(iVar4,0), innerRange <= iVar3 &&
                     (iVar3 = Mathf.Abs(iVar4,0), iVar3 <= outerRange)))) {
                   if (this.mapGrids == null) {
-        LAB_1808dcfda:
+        LAB_1808c81ba:
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  uVar1 = FUN_180127f50(this.mapGrids,(int64)centerColumn,(int64)centerRow)
+                  uVar1 = FUN_180127f90(this.mapGrids,(int64)centerColumn,(int64)centerRow)
                   ;
-                  FUN_181827900(grids,uVar1,DAT_181d63778);
+                  FUN_18181e0a0(grids,uVar1,DAT_181d8af18);
                 }
                 centerRow = centerRow + 1;
                 iVar4 = iVar4 + 1;
@@ -2095,8 +2098,8 @@ public class BattleMapData
         }
     }
 
-    // Token : 0x6000C07
-    // RVA   : 0x8DDFC0   Offset: 0x8DC7C0   Length: 0x1FA
+    // Token : 0x6000C31
+    // RVA   : 0x8C91A0   Offset: 0x8C85A0   Length: 0x1FA
     public void GetObliqueLineGrids(int centerRow, int centerColumn, int innerRange, int outerRange, bool containCenter, List<GridUnitData> grids)
     {
         void BattleMapData.GetObliqueLineGrids
@@ -2112,7 +2115,7 @@ public class BattleMapData
         int iVar7;
         int iVar8;
         if ((grids != null) && (-1 < outerRange)) {
-          FUN_180f56130(grids,DAT_181d637f8);
+          FUN_1812f9a10(grids,DAT_181d8af98);
           iVar2 = Mathf.Clamp(centerColumn - outerRange,0,this.mapWidth + -1,0);
           iVar3 = Mathf.Clamp(centerColumn + outerRange,0,this.mapWidth + -1,0);
           if (iVar2 <= iVar3) {
@@ -2129,9 +2132,9 @@ public class BattleMapData
                   iVar8 = iVar2 + -centerColumn;
                   iVar5 = Mathf.Abs(iVar8,0);
                   if ((innerRange <= iVar5) && (iVar5 = Mathf.Abs(iVar8,0), iVar5 <= outerRange)) {
-                    if (this.mapGrids == null) goto LAB_1808de1b5;
-                    uVar6 = FUN_180127f50(this.mapGrids,(int64)iVar2,(int64)iVar4);
-                    FUN_181827900(grids,uVar6,DAT_181d63778);
+                    if (this.mapGrids == null) goto LAB_1808c9395;
+                    uVar6 = FUN_180127f90(this.mapGrids,(int64)iVar2,(int64)iVar4);
+                    FUN_18181e0a0(grids,uVar6,DAT_181d8af18);
                   }
                 }
               }
@@ -2142,12 +2145,12 @@ public class BattleMapData
                 iVar5 = Mathf.Abs(iVar8,0);
                 if ((innerRange <= iVar5) && (iVar5 = Mathf.Abs(iVar8,0), iVar5 <= outerRange)) {
                   if (this.mapGrids == null) {
-        LAB_1808de1b5:
+        LAB_1808c9395:
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  uVar6 = FUN_180127f50(this.mapGrids,(int64)iVar2,(int64)iVar4);
-                  FUN_181827900(grids,uVar6,DAT_181d63778);
+                  uVar6 = FUN_180127f90(this.mapGrids,(int64)iVar2,(int64)iVar4);
+                  FUN_18181e0a0(grids,uVar6,DAT_181d8af18);
                 }
               }
               iVar2 = iVar2 + 1;
@@ -2157,8 +2160,8 @@ public class BattleMapData
         }
     }
 
-    // Token : 0x6000C08
-    // RVA   : 0x8DE920   Offset: 0x8DD120   Length: 0x1F9
+    // Token : 0x6000C32
+    // RVA   : 0x8C9B00   Offset: 0x8C8F00   Length: 0x1F9
     public void GetStraightLineGrids(int centerRow, int centerColumn, int innerRange, int outerRange, bool containCenter, List<GridUnitData> grids)
     {
         void BattleMapData.GetStraightLineGrids
@@ -2171,7 +2174,7 @@ public class BattleMapData
         uint64 uVar4;
         char cVar5;
         if ((grids != null) && (-1 < outerRange)) {
-          FUN_180f56130(grids,DAT_181d637f8);
+          FUN_1812f9a10(grids,DAT_181d8af98);
           iVar1 = Mathf.Clamp(centerColumn - outerRange,0,this.mapWidth + -1,0);
           iVar2 = Mathf.Clamp(centerColumn + outerRange,0,this.mapWidth + -1,0);
           for (; iVar1 <= iVar2; iVar1 = iVar1 + 1) {
@@ -2182,9 +2185,9 @@ public class BattleMapData
             if (((cVar5) && (-1 < centerRow)) && (centerRow < this.mapHeight)) {
               iVar3 = Mathf.Abs(iVar1 - centerColumn,0);
               if ((innerRange <= iVar3) && (iVar3 = Mathf.Abs(iVar1 - centerColumn,0), iVar3 <= outerRange)) {
-                if (this.mapGrids == null) goto LAB_1808deb14;
-                uVar4 = FUN_180127f50(this.mapGrids,(int64)iVar1,(int64)centerRow);
-                FUN_181827900(grids,uVar4,DAT_181d63778);
+                if (this.mapGrids == null) goto LAB_1808c9cf4;
+                uVar4 = FUN_180127f90(this.mapGrids,(int64)iVar1,(int64)centerRow);
+                FUN_18181e0a0(grids,uVar4,DAT_181d8af18);
               }
             }
           }
@@ -2195,20 +2198,20 @@ public class BattleMapData
               iVar3 = Mathf.Abs(iVar1 - centerRow,0);
               if ((innerRange <= iVar3) && (iVar3 = Mathf.Abs(iVar1 - centerRow,0), iVar3 <= outerRange)) {
                 if (this.mapGrids == null) {
-        LAB_1808deb14:
+        LAB_1808c9cf4:
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                uVar4 = FUN_180127f50(this.mapGrids,(int64)centerColumn,(int64)iVar1);
-                FUN_181827900(grids,uVar4,DAT_181d63778);
+                uVar4 = FUN_180127f90(this.mapGrids,(int64)centerColumn,(int64)iVar1);
+                FUN_18181e0a0(grids,uVar4,DAT_181d8af18);
               }
             }
           }
         }
     }
 
-    // Token : 0x6000C09
-    // RVA   : 0x8DE680   Offset: 0x8DCE80   Length: 0x294
+    // Token : 0x6000C33
+    // RVA   : 0x8C9860   Offset: 0x8C8C60   Length: 0x294
     public void GetSquareGrids(int centerRow, int centerColumn, int innerRange, int outerRange, bool containCenter, List<GridUnitData> grids)
     {
         void BattleMapData.GetSquareGrids
@@ -2225,7 +2228,7 @@ public class BattleMapData
         int iVar8;
         int iVar9;
         if ((grids != null) && (-1 < outerRange)) {
-          FUN_180f56130(grids,DAT_181d637f8);
+          FUN_1812f9a10(grids,DAT_181d8af98);
           iVar9 = 0;
           do {
             iVar3 = Mathf.Clamp(centerColumn - outerRange,0,this.mapWidth + -1,0);
@@ -2243,7 +2246,7 @@ public class BattleMapData
                       (iVar7 = Mathf.Abs(iVar3,0), iVar7 <= outerRange)))) {
                     lVar1 = this.mapGrids;
                     iVar7 = centerRow;
-                    goto joined_r0x0001808de8e7;
+                    goto joined_r0x0001808c9ac7;
                   }
                 }
                 else {
@@ -2254,10 +2257,10 @@ public class BattleMapData
                        (iVar5 = Mathf.Abs(iVar8,0), innerRange <= iVar5)))) &&
                      ((iVar5 = Mathf.Abs(iVar3,0), iVar5 <= outerRange &&
                       (iVar8 = Mathf.Abs(iVar8,0), iVar8 <= outerRange)))) {
-                    if (this.mapGrids == null) goto LAB_1808de90f;
-                    uVar6 = FUN_180127f50(this.mapGrids,(int64)(centerColumn + iVar3),
+                    if (this.mapGrids == null) goto LAB_1808c9aef;
+                    uVar6 = FUN_180127f90(this.mapGrids,(int64)(centerColumn + iVar3),
                                           (int64)iVar7);
-                    FUN_181827900(grids,uVar6,DAT_181d63778);
+                    FUN_18181e0a0(grids,uVar6,DAT_181d8af18);
                   }
                   iVar7 = iVar9 + centerRow;
                   if ((((-1 < iVar7) && (iVar7 < this.mapHeight)) &&
@@ -2266,14 +2269,14 @@ public class BattleMapData
                      ((iVar8 = Mathf.Abs(iVar3,0), iVar8 <= outerRange &&
                       (iVar8 = Mathf.Abs(iVar9,0), iVar8 <= outerRange)))) {
                     lVar1 = this.mapGrids;
-        joined_r0x0001808de8e7:
+        joined_r0x0001808c9ac7:
                     if (lVar1 == null) {
-        LAB_1808de90f:
+        LAB_1808c9aef:
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    uVar6 = FUN_180127f50(lVar1,(int64)(centerColumn + iVar3),(int64)iVar7);
-                    FUN_181827900(grids,uVar6,DAT_181d63778);
+                    uVar6 = FUN_180127f90(lVar1,(int64)(centerColumn + iVar3),(int64)iVar7);
+                    FUN_18181e0a0(grids,uVar6,DAT_181d8af18);
                   }
                 }
                 iVar3 = iVar3 + 1;
@@ -2284,8 +2287,8 @@ public class BattleMapData
         }
     }
 
-    // Token : 0x6000C0A
-    // RVA   : 0x8DE3E0   Offset: 0x8DCBE0   Length: 0x29C
+    // Token : 0x6000C34
+    // RVA   : 0x8C95C0   Offset: 0x8C89C0   Length: 0x29C
     public void GetRangeGrids(int centerRow, int centerColumn, int innerRange, int outerRange, bool containCenter, List<GridUnitData> grids)
     {
         void BattleMapData.GetRangeGrids
@@ -2302,7 +2305,7 @@ public class BattleMapData
         int iVar8;
         int iVar9;
         if ((grids != null) && (-1 < outerRange)) {
-          FUN_180f56130(grids,DAT_181d637f8);
+          FUN_1812f9a10(grids,DAT_181d8af98);
           iVar9 = 0;
           do {
             iVar2 = Mathf.Clamp((iVar9 - outerRange) + centerColumn,0,this.mapWidth + -1,0);
@@ -2320,13 +2323,13 @@ public class BattleMapData
                      ((iVar7 = Mathf.Abs(iVar2), innerRange <= iVar7 &&
                       (iVar7 = Mathf.Abs(iVar2), iVar7 <= outerRange)))) {
                     if (this.mapGrids == null) {
-        LAB_1808de677:
+        LAB_1808c9857:
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    uVar6 = FUN_180127f50(this.mapGrids,(int64)(iVar2 + centerColumn),
+                    uVar6 = FUN_180127f90(this.mapGrids,(int64)(iVar2 + centerColumn),
                                           (int64)centerRow);
-                    FUN_181827900(grids,uVar6,DAT_181d63778);
+                    FUN_18181e0a0(grids,uVar6,DAT_181d8af18);
                   }
                 }
                 else {
@@ -2338,10 +2341,10 @@ public class BattleMapData
                       iVar4 = Mathf.Abs(iVar2);
                       iVar5 = Mathf.Abs(iVar8);
                       if (iVar5 + iVar4 <= outerRange) {
-                        if (this.mapGrids == null) goto LAB_1808de677;
-                        uVar6 = FUN_180127f50(this.mapGrids,(int64)(iVar2 + centerColumn),
+                        if (this.mapGrids == null) goto LAB_1808c9857;
+                        uVar6 = FUN_180127f90(this.mapGrids,(int64)(iVar2 + centerColumn),
                                               (int64)iVar7);
-                        FUN_181827900(grids,uVar6,DAT_181d63778);
+                        FUN_18181e0a0(grids,uVar6,DAT_181d8af18);
                       }
                     }
                   }
@@ -2353,10 +2356,10 @@ public class BattleMapData
                       iVar4 = Mathf.Abs(iVar2);
                       iVar5 = Mathf.Abs(iVar9);
                       if (iVar5 + iVar4 <= outerRange) {
-                        if (this.mapGrids == null) goto LAB_1808de677;
-                        uVar6 = FUN_180127f50(this.mapGrids,(int64)(iVar2 + centerColumn),
+                        if (this.mapGrids == null) goto LAB_1808c9857;
+                        uVar6 = FUN_180127f90(this.mapGrids,(int64)(iVar2 + centerColumn),
                                               (int64)iVar7);
-                        FUN_181827900(grids,uVar6,DAT_181d63778);
+                        FUN_18181e0a0(grids,uVar6,DAT_181d8af18);
                       }
                     }
                   }
@@ -2369,8 +2372,8 @@ public class BattleMapData
         }
     }
 
-    // Token : 0x6000C0B
-    // RVA   : 0x8DE1C0   Offset: 0x8DC9C0   Length: 0x21C
+    // Token : 0x6000C35
+    // RVA   : 0x8C93A0   Offset: 0x8C87A0   Length: 0x21C
     public GridUnitData GetRandomBornGrid(int teamID)
     {
         long lVar1;
@@ -2380,8 +2383,8 @@ public class BattleMapData
         ulong uVar5;
         uint uVar6;
         uint uVar7;
-        lVar3 = il2cpp_internal(DAT_181d6e630);
-        FUN_180f58a90(lVar3,DAT_181d63678);
+        lVar3 = il2cpp_internal(DAT_181d932d0);
+        FUN_18132faf0(lVar3,DAT_181d8ae18);
         if ((teamID & 1) == 0) {
           uVar7 = 0;
         }
@@ -2410,13 +2413,13 @@ public class BattleMapData
               uVar5 = *(uint64 *)(lVar4 + 24);
               cVar2 = Object.op_Equality(uVar5,0,0);
               if (cVar2) {
-                if ((this.mapGrids == null) || (lVar4 = FUN_180127f50()) == null)
+                if ((this.mapGrids == null) || (lVar4 = FUN_180127f90()) == null)
                 throw; // [null/range check failed]
                 if (*(int *)(lVar4 + 20) != 2) {
                   if ((this.mapGrids == null) ||
-                     (FUN_180127f50(this.mapGrids,(int64)(int)uVar7,
+                     (FUN_180127f90(this.mapGrids,(int64)(int)uVar7,
                                     (int64)(int)uVar6), lVar3 == null)) throw; // [null/range check failed]
-                  FUN_181827900(lVar3);
+                  FUN_18181e0a0(lVar3);
                 }
               }
               uVar6 = uVar6 + 1;
@@ -2424,7 +2427,7 @@ public class BattleMapData
           }
           if (lVar3 == null) break;
           if (*(int *)(lVar3 + 24) != 0) {
-            uVar7 = FUN_180d8cf10(0,*(int *)(lVar3 + 24),0);
+            uVar7 = FUN_180d95a30(0,*(int *)(lVar3 + 24),0);
             if (*(uint32 *)(lVar3 + 24) <= uVar7) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
@@ -2434,8 +2437,8 @@ public class BattleMapData
         }
     }
 
-    // Token : 0x6000C0C
-    // RVA   : 0x8D9170   Offset: 0x8D7970   Length: 0xA6
+    // Token : 0x6000C36
+    // RVA   : 0x8C4350   Offset: 0x8C3750   Length: 0xA6
     public override bool Equals(object obj)
     {
         long lVar1;
@@ -2443,14 +2446,14 @@ public class BattleMapData
         if (obj != (int64 *)0) {
           lVar1 = *obj;
           in_RAX = 0;
-          if ((*(byte *)(BattleMapData_StaticsPtr + 300) <= *(byte *)(lVar1 + 300)) &&
+          if ((*(byte *)(DAT_181db0348 + 300) <= *(byte *)(lVar1 + 300)) &&
              (in_RAX = *(uint64 *)(lVar1 + 200),
-             *(int64 *)((in_RAX - 8) + (uint64)*(byte *)(BattleMapData_StaticsPtr + 300) * 8) ==
-             BattleMapData_StaticsPtr)) {
-            if ((*(byte *)(BattleMapData_StaticsPtr + 300) <= *(byte *)(lVar1 + 300)) &&
+             *(int64 *)((in_RAX - 8) + (uint64)*(byte *)(DAT_181db0348 + 300) * 8) == DAT_181db0348)
+             ) {
+            if ((*(byte *)(DAT_181db0348 + 300) <= *(byte *)(lVar1 + 300)) &&
                (*(int64 *)
-                 (*(int64 *)(lVar1 + 200) + -8 +
-                 (uint64)*(byte *)(BattleMapData_StaticsPtr + 300) * 8) == BattleMapData_StaticsPtr)) {
+                 (*(int64 *)(lVar1 + 200) + -8 + (uint64)*(byte *)(DAT_181db0348 + 300) * 8) ==
+                DAT_181db0348)) {
               return CONCAT71((int7)((uint64)*(int64 *)(lVar1 + 200) >> 8),
                               this.mapID == (int)obj[2]);
             }
@@ -2461,50 +2464,52 @@ public class BattleMapData
         return in_RAX & 0xffffffffffffff00;
     }
 
-    // Token : 0x6000C0D
-    // RVA   : 0x8DEFA0   Offset: 0x8DD7A0   Length: 0xD0
+    // Token : 0x6000C37
+    // RVA   : 0x8CA180   Offset: 0x8C9580   Length: 0xD0
     public void /*ctor*/()
     {
         ulong uVar1;
-        uVar1 = il2cpp_internal(DAT_181d6e630);
-        FUN_180f58a90(uVar1,DAT_181d63678);
+        uVar1 = il2cpp_internal(DAT_181d932d0);
+        FUN_18132faf0(uVar1,DAT_181d8ae18);
         this.mustEmptyGrids = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d6e630);
-        FUN_180f58a90(uVar1,DAT_181d63678);
+        uVar1 = il2cpp_internal(DAT_181d932d0);
+        FUN_18132faf0(uVar1,DAT_181d8ae18);
         this.normalGrids = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d6e630);
-        FUN_180f58a90(uVar1,DAT_181d63678);
+        uVar1 = il2cpp_internal(DAT_181d932d0);
+        FUN_18132faf0(uVar1,DAT_181d8ae18);
         this.obstacleGrids = uVar1;
         ZhSegment.Initialize(this,0);
     }
 
-    // Token : 0x6000C0E
-    // RVA   : 0x8DED40   Offset: 0x8DD540   Length: 0x25B
+    // Token : 0x6000C38
+    // RVA   : 0x8C9F20   Offset: 0x8C9320   Length: 0x25B
     private static void /*cctor*/()
     {
-        var pBattleMapData = *(int64*)(BattleMapData_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181db0348 + 184);
         long lVar1;
-        lVar1 = il2cpp_internal(DAT_181d6f030);
-        FUN_180f58a90(lVar1,DAT_181d678f8);
+        lVar1 = il2cpp_internal(DAT_181d93cd0);
+        FUN_18132faf0(lVar1,DAT_181d8f098);
         if (lVar1 != null) {
-          FUN_181814fa0(lVar1,9,DAT_181d67a78);
-          FUN_181814fa0(lVar1,11,DAT_181d67a78);
-          FUN_181814fa0(lVar1,13,DAT_181d67a78);
-          plVar2 = pBattleMapData;
+          FUN_18182a0b0(lVar1,9,DAT_181d8f218);
+          FUN_18182a0b0(lVar1,11,DAT_181d8f218);
+          FUN_18182a0b0(lVar1,13,DAT_181d8f218);
+          plVar2 = pStatics;
           *plVar2 = lVar1;
           il2cpp_internal(plVar2,lVar1);
-          lVar1 = il2cpp_internal(DAT_181d73e30);
-          FUN_180f58a90(lVar1,DAT_181d83ef8);
+          lVar1 = il2cpp_internal(DAT_181d98b50);
+          FUN_18132faf0(lVar1,DAT_181dab898);
           if (lVar1 != null) {
-            FUN_181814e80(lVar1,0x3f800000bf800000,DAT_181d83f78);
-            FUN_181814e80(lVar1,0xc0000000bf800000,DAT_181d83f78);
-            FUN_181814e80(lVar1,0xc0000000,DAT_181d83f78);
-            FUN_181814e80(lVar1,0xbf800000c0000000,DAT_181d83f78);
-            FUN_181814e80(lVar1,0x40000000bf800000,DAT_181d83f78);
-            FUN_181814e80(lVar1,0xc0400000bf800000,DAT_181d83f78);
-            FUN_181814e80(lVar1,0x40800000bf800000,DAT_181d83f78);
-            FUN_181814e80(lVar1,0xc0a00000bf800000,DAT_181d83f78);
-            BattleMapData.DefenceGuardMapGridsOffset = lVar1;
+            FUN_181829f90(lVar1,0x3f800000bf800000,DAT_181dab918);
+            FUN_181829f90(lVar1,0xc0000000bf800000,DAT_181dab918);
+            FUN_181829f90(lVar1,0xc0000000,DAT_181dab918);
+            FUN_181829f90(lVar1,0xbf800000c0000000,DAT_181dab918);
+            FUN_181829f90(lVar1,0x40000000bf800000,DAT_181dab918);
+            FUN_181829f90(lVar1,0xc0400000bf800000,DAT_181dab918);
+            FUN_181829f90(lVar1,0x40800000bf800000,DAT_181dab918);
+            FUN_181829f90(lVar1,0xc0a00000bf800000,DAT_181dab918);
+            plVar2 = (int64 *)(pStatics + 8);
+            *plVar2 = lVar1;
+            il2cpp_internal(plVar2,lVar1);
             return;
           }
         }

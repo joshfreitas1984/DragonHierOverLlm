@@ -1,13 +1,13 @@
 // ============================================================
 // Type  : OnCustomInput
-// Token : 0x20000E4
+// Token : 0x20000E5
 // ============================================================
 
 public class OnCustomInput
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000742
-    // RVA   : 0x210320   Offset: 0x20EB20   Length: 0x6A
+    // Token : 0x600075A
+    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
@@ -25,8 +25,8 @@ public class OnCustomInput
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x6000743
-    // RVA   : 0x46A840   Offset: 0x469040   Length: 0x19A
+    // Token : 0x600075B
+    // RVA   : 0x46A840   Offset: 0x469C40   Length: 0x19A
     public virtual void Invoke()
     {
         long lVar1;
@@ -104,8 +104,8 @@ public class OnCustomInput
         } while( true );
     }
 
-    // Token : 0x6000744
-    // RVA   : 0x2F7010   Offset: 0x2F5810   Length: 0x22
+    // Token : 0x600075C
+    // RVA   : 0x2F7010   Offset: 0x2F6410   Length: 0x22
     public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object)
     {
         ulong[] local_18 = new ulong[3];
@@ -113,8 +113,8 @@ public class OnCustomInput
         il2cpp_internal(this,local_18,callback,object);
     }
 
-    // Token : 0x6000745
-    // RVA   : 0x210040   Offset: 0x20E840   Length: 0xA
+    // Token : 0x600075D
+    // RVA   : 0x210040   Offset: 0x20F440   Length: 0xA
     public virtual void EndInvoke(IAsyncResult result)
     {
         il2cpp_internal(result,0);

@@ -1,47 +1,47 @@
 // ============================================================
 // Type  : FPSWeaponTrigger
-// Token : 0x2000121
+// Token : 0x2000122
 // ============================================================
 
 public class FPSWeaponTrigger
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000713
+    // Token: 0x400072F
     public Transform ShellEjectionTransform;
 
-    // Token: 0x4000714
+    // Token: 0x4000730
     public float EjectionForce;
 
-    // Token: 0x4000715
+    // Token: 0x4000731
     public Rigidbody Shell;
 
-    // Token: 0x4000716
+    // Token: 0x4000732
     public Transform Muzzle;
 
-    // Token: 0x4000717
+    // Token: 0x4000733
     public GameObject Bullet;
 
-    // Token: 0x4000718
+    // Token: 0x4000734
     public float SmokeAfter;
 
-    // Token: 0x4000719
+    // Token: 0x4000735
     public float SmokeMax;
 
-    // Token: 0x400071A
+    // Token: 0x4000736
     public float SmokeIncrement;
 
-    // Token: 0x400071B
+    // Token: 0x4000737
     public SmokePlume MuzzlePlume;
 
-    // Token: 0x400071C
+    // Token: 0x4000738
     public GameObject MuzzleFlashObject;
 
-    // Token: 0x400071D
+    // Token: 0x4000739
     private float _smoke;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000995
-    // RVA   : 0xBA1740   Offset: 0xB9FF40   Length: 0x6E
+    // Token : 0x60009AD
+    // RVA   : 0xB2A030   Offset: 0xB29430   Length: 0x6E
     private void Update()
     {
         float fVar1;
@@ -68,8 +68,8 @@ public class FPSWeaponTrigger
         }
     }
 
-    // Token : 0x6000996
-    // RVA   : 0xBA13B0   Offset: 0xB9FBB0   Length: 0x35E
+    // Token : 0x60009AE
+    // RVA   : 0xB29CA0   Offset: 0xB290A0   Length: 0x35E
     public void Fire()
     {
         ulong uVar1;
@@ -103,9 +103,9 @@ public class FPSWeaponTrigger
                 uStack_40 = puVar6[1];
                 local_88 = uVar1;
                 local_80 = fVar2;
-                lVar7 = Object.Instantiate(uVar5,&local_88,&local_48,DAT_181d6a0f8);
+                lVar7 = Object.Instantiate(uVar5,&local_88,&local_48,DAT_181d92e18);
                 if (lVar7 != null) {
-                  lVar7 = GameObject.GetComponent(lVar7,DAT_181da0eb0);
+                  lVar7 = GameObject.GetComponent(lVar7,DAT_181d73008);
                   if (this.ShellEjectionTransform != null) {
                     fVar2 = this.EjectionForce;
                     puVar6 = (uint64 *)Transform.get_right(&local_68,this.ShellEjectionTransform,0)
@@ -138,7 +138,7 @@ public class FPSWeaponTrigger
                         lVar7 = Component.get_transform(this.Muzzle,0);
                         if (lVar7 != null) {
                           puVar6 = (uint64 *)Transform.get_position(&local_48,lVar7,0);
-                          uVar4 = DAT_181d6a0f8;
+                          uVar4 = DAT_181d92e18;
                           uVar1 = *puVar6;
                           uVar3 = *(uint32 *)(puVar6 + 1);
                           if (this.Muzzle != null) {
@@ -162,8 +162,8 @@ public class FPSWeaponTrigger
         }
     }
 
-    // Token : 0x6000997
-    // RVA   : 0xBA1710   Offset: 0xB9FF10   Length: 0x20
+    // Token : 0x60009AF
+    // RVA   : 0xB2A000   Offset: 0xB29400   Length: 0x20
     private void LightsOff()
     {
         if (this.MuzzleFlashObject != null) {
@@ -172,8 +172,8 @@ public class FPSWeaponTrigger
         }
     }
 
-    // Token : 0x6000998
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x60009B0
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

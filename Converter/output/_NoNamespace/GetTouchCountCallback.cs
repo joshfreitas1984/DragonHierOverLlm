@@ -1,13 +1,13 @@
 // ============================================================
 // Type  : GetTouchCountCallback
-// Token : 0x20000EF
+// Token : 0x20000F0
 // ============================================================
 
 public class GetTouchCountCallback
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000767
-    // RVA   : 0x210320   Offset: 0x20EB20   Length: 0x6A
+    // Token : 0x600077F
+    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
@@ -25,8 +25,8 @@ public class GetTouchCountCallback
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x6000768
-    // RVA   : 0x2F7040   Offset: 0x2F5840   Length: 0x217
+    // Token : 0x6000780
+    // RVA   : 0x2F7040   Offset: 0x2F6440   Length: 0x217
     public virtual int Invoke()
     {
         ushort uVar1;
@@ -123,8 +123,8 @@ public class GetTouchCountCallback
         } while( true );
     }
 
-    // Token : 0x6000769
-    // RVA   : 0x2F7010   Offset: 0x2F5810   Length: 0x22
+    // Token : 0x6000781
+    // RVA   : 0x2F7010   Offset: 0x2F6410   Length: 0x22
     public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object)
     {
         ulong[] local_18 = new ulong[3];
@@ -132,8 +132,8 @@ public class GetTouchCountCallback
         il2cpp_internal(this,local_18,callback,object);
     }
 
-    // Token : 0x600076A
-    // RVA   : 0x219140   Offset: 0x217940   Length: 0x27
+    // Token : 0x6000782
+    // RVA   : 0x219140   Offset: 0x218540   Length: 0x27
     public virtual int EndInvoke(IAsyncResult result)
     {
         long lVar1;

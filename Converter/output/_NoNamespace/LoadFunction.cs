@@ -1,13 +1,13 @@
 // ============================================================
 // Type  : LoadFunction
-// Token : 0x2000081
+// Token : 0x2000082
 // ============================================================
 
 public class LoadFunction
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000341
-    // RVA   : 0x210320   Offset: 0x20EB20   Length: 0x6A
+    // Token : 0x6000359
+    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
@@ -25,8 +25,8 @@ public class LoadFunction
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x6000342
-    // RVA   : 0x8C66B0   Offset: 0x8C4EB0   Length: 0x43A
+    // Token : 0x600035A
+    // RVA   : 0x8E6340   Offset: 0x8E5740   Length: 0x43A
     public virtual byte[] Invoke(string path)
     {
         long lVar1;
@@ -66,7 +66,7 @@ public class LoadFunction
             if (*(char *)(lVar1 + 74) == true) {
               if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                   ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-              goto LAB_1808c6aae;
+              goto LAB_1808e673e;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
                 cVar4 = FUN_1800d65c0(lVar1);
@@ -90,7 +90,7 @@ public class LoadFunction
                                        *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar10 * 16
                                                )) * 16 + 0x138 + lVar6);
                         uVar5 = (*(code *)*puVar7)(plVar3,path,puVar7[1]);
-                        goto LAB_1808c6ab9;
+                        goto LAB_1808e6749;
                       }
                       uVar10 = uVar10 + 1;
                     } while (uVar10 < *(uint16 *)(lVar6 + 0x12a));
@@ -119,13 +119,13 @@ public class LoadFunction
                                 (int)((uint32)uVar10 +
                                      *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar9 * 16))
                                 * 16 + 0x138 + lVar6;
-                        goto LAB_1808c6986;
+                        goto LAB_1808e6616;
                       }
                       uVar9 = uVar9 + 1;
                     } while (uVar9 < *(uint16 *)(lVar6 + 0x12a));
                   }
                   lVar6 = FUN_1800914f0(plVar3,*(int64 *)(lVar1 + 24),uVar10);
-        LAB_1808c6986:
+        LAB_1808e6616:
                   puVar7 = (uint64 *)il2cpp_internal(*(uint64 *)(lVar6 + 8),lVar1);
                   uVar5 = (*(code *)*puVar7)(plVar3,path,puVar7);
                 }
@@ -133,7 +133,7 @@ public class LoadFunction
             }
             else {
               if ((*(short *)(lVar1 + 72) == -1) || (*(int64 *)(this + 24) == 0))
-              goto LAB_1808c6749;
+              goto LAB_1808e63d9;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
                 cVar4 = FUN_1800d65c0(lVar1);
@@ -157,7 +157,7 @@ public class LoadFunction
                                        *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar10 * 16
                                                )) * 16 + 0x138 + lVar6);
                         uVar5 = (*(code *)*puVar7)(path,puVar7[1]);
-                        goto LAB_1808c6ab9;
+                        goto LAB_1808e6749;
                       }
                       uVar10 = uVar10 + 1;
                     } while (uVar10 < *(uint16 *)(lVar6 + 0x12a));
@@ -184,7 +184,7 @@ public class LoadFunction
                                   (int)((uint32)uVar10 +
                                        *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar9 * 16)
                                        ) * 16 + lVar6 + 0x140);
-                        goto LAB_1808c680b;
+                        goto LAB_1808e649b;
                       }
                       uVar9 = uVar9 + 1;
                     } while (uVar9 < *(uint16 *)(lVar6 + 0x12a));
@@ -192,21 +192,21 @@ public class LoadFunction
                   lVar6 = FUN_1800914f0(path,*(int64 *)(lVar1 + 24),uVar10);
                   uVar5 = *(uint64 *)(lVar6 + 8);
                 }
-        LAB_1808c680b:
+        LAB_1808e649b:
                 puVar7 = (uint64 *)il2cpp_internal(uVar5,lVar1);
                 uVar5 = (*(code *)*puVar7)(path,puVar7);
               }
             }
           }
           else if (*(char *)(lVar1 + 74) == true) {
-        LAB_1808c6749:
+        LAB_1808e63d9:
             uVar5 = (*pcVar2)(path,lVar1);
           }
           else {
-        LAB_1808c6aae:
+        LAB_1808e673e:
             uVar5 = (*pcVar2)(plVar3,path,lVar1);
           }
-        LAB_1808c6ab9:
+        LAB_1808e6749:
           uVar13 = uVar13 + 1;
           if (uVar11 <= uVar13) {
             return uVar5;
@@ -214,8 +214,8 @@ public class LoadFunction
         } while( true );
     }
 
-    // Token : 0x6000343
-    // RVA   : 0x216660   Offset: 0x214E60   Length: 0x21
+    // Token : 0x600035B
+    // RVA   : 0x216660   Offset: 0x215A60   Length: 0x21
     public virtual IAsyncResult BeginInvoke(string path, AsyncCallback callback, object object)
     {
         ulong local_18;
@@ -225,8 +225,8 @@ public class LoadFunction
         il2cpp_internal(this,&local_18);
     }
 
-    // Token : 0x6000344
-    // RVA   : 0x210040   Offset: 0x20E840   Length: 0xA
+    // Token : 0x600035C
+    // RVA   : 0x210040   Offset: 0x20F440   Length: 0xA
     public virtual byte[] EndInvoke(IAsyncResult result)
     {
         il2cpp_internal(result,0);

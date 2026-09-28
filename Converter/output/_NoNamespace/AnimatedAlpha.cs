@@ -1,30 +1,30 @@
 // ============================================================
 // Type  : AnimatedAlpha
-// Token : 0x20000B1
+// Token : 0x20000B2
 // ============================================================
 
 public class AnimatedAlpha
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000437
+    // Token: 0x4000453
     public float alpha;
 
-    // Token: 0x4000438
+    // Token: 0x4000454
     private UIWidget mWidget;
 
-    // Token: 0x4000439
+    // Token: 0x4000455
     private UIPanel mPanel;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000564
-    // RVA   : 0xA0CFB0   Offset: 0xA0B7B0   Length: 0x155
+    // Token : 0x600057C
+    // RVA   : 0xA1E880   Offset: 0xA1DC80   Length: 0x155
     private void OnEnable()
     {
         bool cVar2;
         ulong uVar3;
-        uVar3 = Component.GetComponent(this,DAT_181d6e7c0);
+        uVar3 = Component.GetComponent(this,DAT_181d97060);
         this.mWidget = uVar3;
-        uVar3 = Component.GetComponent(this,DAT_181d6e2c0);
+        uVar3 = Component.GetComponent(this,DAT_181d96b60);
         this.mPanel = uVar3;
         uVar3 = this.mWidget;
         cVar2 = Object.op_Inequality(uVar3,0,0);
@@ -49,8 +49,8 @@ public class AnimatedAlpha
         }
     }
 
-    // Token : 0x6000565
-    // RVA   : 0xA0CED0   Offset: 0xA0B6D0   Length: 0xDB
+    // Token : 0x600057D
+    // RVA   : 0xA1E7A0   Offset: 0xA1DBA0   Length: 0xDB
     private void LateUpdate()
     {
         ulong uVar1;
@@ -78,10 +78,12 @@ public class AnimatedAlpha
         }
     }
 
-    // Token : 0x6000566
-    // RVA   : 0xA0D110   Offset: 0xA0B910   Length: 0xE
+    // Token : 0x600057E
+    // RVA   : 0xA1E9E0   Offset: 0xA1DDE0   Length: 0xE
     public void /*ctor*/()
     {
+        void FUN_180a1e9e0(int64 this)
+        {
         this.alpha = 0x3f800000;
         FUN_18044ef50(this,0);
     }

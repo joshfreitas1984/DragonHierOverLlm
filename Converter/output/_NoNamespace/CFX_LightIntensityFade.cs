@@ -1,40 +1,40 @@
 // ============================================================
 // Type  : CFX_LightIntensityFade
-// Token : 0x20003BC
+// Token : 0x20003C3
 // ============================================================
 
 public class CFX_LightIntensityFade
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001D38
+    // Token: 0x4001E42
     public float duration;
 
-    // Token: 0x4001D39
+    // Token: 0x4001E43
     public float delay;
 
-    // Token: 0x4001D3A
+    // Token: 0x4001E44
     public float finalIntensity;
 
-    // Token: 0x4001D3B
+    // Token: 0x4001E45
     private float baseIntensity;
 
-    // Token: 0x4001D3C
+    // Token: 0x4001E46
     public bool autodestruct;
 
-    // Token: 0x4001D3D
+    // Token: 0x4001E47
     private float p_lifetime;
 
-    // Token: 0x4001D3E
+    // Token: 0x4001E48
     private float p_delay;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600236B
-    // RVA   : 0xBD5820   Offset: 0xBD4020   Length: 0x53
+    // Token : 0x60023EE
+    // RVA   : 0xB800B0   Offset: 0xB7F4B0   Length: 0x53
     private void Start()
     {
         long lVar1;
         uint uVar2;
-        lVar1 = Component.GetComponent(this,DAT_181d6bfc0);
+        lVar1 = Component.GetComponent(this,DAT_181d947e0);
         if (lVar1 != null) {
           uVar2 = Light.get_intensity(lVar1,0);
           this.baseIntensity = uVar2;
@@ -42,15 +42,15 @@ public class CFX_LightIntensityFade
         }
     }
 
-    // Token : 0x600236C
-    // RVA   : 0xBD57B0   Offset: 0xBD3FB0   Length: 0x6F
+    // Token : 0x60023EF
+    // RVA   : 0xB80040   Offset: 0xB7F440   Length: 0x6F
     private void OnEnable()
     {
         long lVar1;
         this.p_lifetime = 0;
         this.p_delay = this.delay;
         if (0.0 < this.delay) {
-          lVar1 = Component.GetComponent(this,DAT_181d6bfc0);
+          lVar1 = Component.GetComponent(this,DAT_181d947e0);
           if (lVar1 != null) {
             Behaviour.set_enabled(lVar1,0,0);
             return;
@@ -60,8 +60,8 @@ public class CFX_LightIntensityFade
         }
     }
 
-    // Token : 0x600236D
-    // RVA   : 0xBD5880   Offset: 0xBD4080   Length: 0x154
+    // Token : 0x60023F0
+    // RVA   : 0xB80110   Offset: 0xB7F510   Length: 0x154
     private void Update()
     {
         ulong uVar1;
@@ -75,14 +75,14 @@ public class CFX_LightIntensityFade
           fVar5 = fVar5 - fVar4;
           this.p_delay = fVar5;
           if (fVar5 <= 0.0) {
-            lVar2 = Component.GetComponent(this,DAT_181d6bfc0);
+            lVar2 = Component.GetComponent(this,DAT_181d947e0);
             if (lVar2 != null)
             {
               Behaviour.set_enabled(lVar2,1,0);
               }
               }
               else if (this.p_lifetime / this.duration < 1.0) {
-              lVar2 = Component.GetComponent(this,DAT_181d6bfc0);
+              lVar2 = Component.GetComponent(this,DAT_181d947e0);
               uVar3 = Mathf.Lerp(this.baseIntensity,this.finalIntensity,
               this.p_lifetime / this.duration,0);
               if (lVar2 == null) {
@@ -101,10 +101,12 @@ public class CFX_LightIntensityFade
         }
     }
 
-    // Token : 0x600236E
-    // RVA   : 0xA0D110   Offset: 0xA0B910   Length: 0xE
+    // Token : 0x60023F1
+    // RVA   : 0xA1E9E0   Offset: 0xA1DDE0   Length: 0xE
     public void /*ctor*/()
     {
+        void FUN_180a1e9e0(int64 this)
+        {
         this.duration = 0x3f800000;
         FUN_18044ef50(this,0);
     }

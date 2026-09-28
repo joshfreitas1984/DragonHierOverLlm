@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : GameStopQuitButtonController
-// Token : 0x20002A5
+// Token : 0x20002AB
 // ============================================================
 
 public class GameStopQuitButtonController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40014DB
+    // Token: 0x400158D
     public bool clickCloseMenu;
 
-    // Token: 0x40014DC
+    // Token: 0x400158E
     public float autoClickTime;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001671
-    // RVA   : 0xA2DFF0   Offset: 0xA2C7F0   Length: 0xA0
+    // Token : 0x60016B5
+    // RVA   : 0xA5CC70   Offset: 0xA5C070   Length: 0xA0
     public void Update()
     {
         long lVar1;
@@ -29,7 +29,7 @@ public class GameStopQuitButtonController
             if (this.clickCloseMenu) {
               lVar1 = Component.get_transform(this,0);
               if (lVar1 != null) {
-                lVar1 = FUN_180da0f00(lVar1,0);
+                lVar1 = FUN_180da9a20(lVar1,0);
                 if (lVar1 != null) {
                   lVar1 = Component.get_gameObject(lVar1,0);
                   if (lVar1 != null) {
@@ -46,8 +46,8 @@ public class GameStopQuitButtonController
         }
     }
 
-    // Token : 0x6001672
-    // RVA   : 0xA2DF90   Offset: 0xA2C790   Length: 0x55
+    // Token : 0x60016B6
+    // RVA   : 0xA5CC10   Offset: 0xA5C010   Length: 0x55
     public void OnClick()
     {
         long lVar1;
@@ -57,7 +57,7 @@ public class GameStopQuitButtonController
         }
         lVar1 = Component.get_transform(this,0);
         if (lVar1 != null) {
-          lVar1 = FUN_180da0f00(lVar1,0);
+          lVar1 = FUN_180da9a20(lVar1,0);
           if (lVar1 != null) {
             lVar1 = Component.get_gameObject(lVar1,0);
             if (lVar1 != null) {
@@ -68,8 +68,8 @@ public class GameStopQuitButtonController
         }
     }
 
-    // Token : 0x6001673
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x60016B7
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

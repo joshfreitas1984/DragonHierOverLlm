@@ -1,33 +1,33 @@
 // ============================================================
 // Type  : MapNavigator
-// Token : 0x2000187
+// Token : 0x200018D
 // ============================================================
 
 public class MapNavigator
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000A4D
+    // Token: 0x4000AD3
     private static MapNavigator instance;
 
-    // Token: 0x4000A4E
+    // Token: 0x4000AD4
     private int curUsedIdx;
 
-    // Token: 0x4000A4F
+    // Token: 0x4000AD5
     private List<NavigationData> navigationDataPool;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000C8B
-    // RVA   : 0x210B70   Offset: 0x20F370   Length: 0x7
+    // Token : 0x6000CBA
+    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
     private void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);
     }
 
-    // Token : 0x6000C8C
-    // RVA   : 0xA8E5F0   Offset: 0xA8CDF0   Length: 0x17A
+    // Token : 0x6000CBB
+    // RVA   : 0xA8D610   Offset: 0xA8CA10   Length: 0x17A
     public static MapNavigator get_Instance()
     {
-        var pStatics = *(int64*)(DAT_181d62af0 + 184);
+        var pStatics = *(int64*)(DAT_181d87d18 + 184);
         long lVar2;
         long lVar3;
         ulong uVar4;
@@ -35,31 +35,31 @@ public class MapNavigator
         if (*pStatics == 0) {
           uVar4 = il2cpp_internal();
           ZhSegment.Initialize(uVar4,0);
-          puVar1 = *(uint64 **)(DAT_181d62af0 + 184);
+          puVar1 = *(uint64 **)(DAT_181d87d18 + 184);
           *puVar1 = uVar4;
           il2cpp_internal(puVar1,uVar4);
           lVar2 = *pStatics;
           if (lVar2 == null) {
-        LAB_180a8e765:
+        LAB_180a8d785:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          uVar4 = new List_1(99,DAT_181d88760);
+          uVar4 = new List_1(99,DAT_181db0100);
           *(uint64 *)(lVar2 + 24) = uVar4;
           iVar5 = 0;
           do {
             lVar3 = *(int64 *)(lVar2 + 24);
             uVar4 = new NavigationData(0);
-            if (lVar3 == null) goto LAB_180a8e765;
-            FUN_181827900(lVar3,uVar4,DAT_181d887e0);
+            if (lVar3 == null) goto LAB_180a8d785;
+            FUN_18181e0a0(lVar3,uVar4,DAT_181db0180);
             iVar5 = iVar5 + 1;
           } while (iVar5 < 99);
         }
-        return **(uint64 **)(DAT_181d62af0 + 184);
+        return **(uint64 **)(DAT_181d87d18 + 184);
     }
 
-    // Token : 0x6000C8D
-    // RVA   : 0xA8DC90   Offset: 0xA8C490   Length: 0x138
+    // Token : 0x6000CBC
+    // RVA   : 0xA8CCB0   Offset: 0xA8C0B0   Length: 0x138
     private NavigationData GetEmptyNavigationData(GridUnitData _thisGrid, NavigationData _preGrid, int _G, int _H)
     {
         int64 MapNavigator.GetEmptyNavigationData
@@ -80,7 +80,7 @@ public class MapNavigator
           else {
             var lVar2 = new NavigationData(0);
             if (this.navigationDataPool == null) throw; // [null/range check failed]
-            FUN_181827900(this.navigationDataPool,lVar2,DAT_181d887e0);
+            FUN_18181e0a0(this.navigationDataPool,lVar2,DAT_181db0180);
           }
           this.curUsedIdx = this.curUsedIdx + 1;
           if (lVar2 != null) {
@@ -100,8 +100,8 @@ public class MapNavigator
         }
     }
 
-    // Token : 0x6000C8E
-    // RVA   : 0xA8E550   Offset: 0xA8CD50   Length: 0x95
+    // Token : 0x6000CBD
+    // RVA   : 0xA8D570   Offset: 0xA8C970   Length: 0x95
     private void ResetPool()
     {
         long lVar1;
@@ -113,7 +113,7 @@ public class MapNavigator
           do {
             lVar1 = this.navigationDataPool;
             if (lVar1 == null) {
-        LAB_180a8e5e0:
+        LAB_180a8d600:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -121,7 +121,7 @@ public class MapNavigator
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar1 = *(int64 *)(lVar3 + lVar1._items);
-            if (lVar1 == null) goto LAB_180a8e5e0;
+            if (lVar1 == null) goto LAB_180a8d600;
             NavigationData.Reset(lVar1,0);
             uVar2 = uVar2 + 1;
             lVar3 = lVar3 + 8;
@@ -130,14 +130,14 @@ public class MapNavigator
         this.curUsedIdx = 0;
     }
 
-    // Token : 0x6000C8F
-    // RVA   : 0xA8DDD0   Offset: 0xA8C5D0   Length: 0xE6
+    // Token : 0x6000CBE
+    // RVA   : 0xA8CDF0   Offset: 0xA8C1F0   Length: 0xE6
     private void Init()
     {
         long lVar1;
         ulong uVar2;
         int iVar3;
-        this.navigationDataPool = new List_1(99,DAT_181d88760);
+        this.navigationDataPool = new List_1(99,DAT_181db0100);
         iVar3 = 0;
         do {
           lVar1 = this.navigationDataPool;
@@ -146,13 +146,13 @@ public class MapNavigator
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          FUN_181827900(lVar1,uVar2,DAT_181d887e0);
+          FUN_18181e0a0(lVar1,uVar2,DAT_181db0180);
           iVar3 = iVar3 + 1;
         } while (iVar3 < 99);
     }
 
-    // Token : 0x6000C90
-    // RVA   : 0xA8DEC0   Offset: 0xA8C6C0   Length: 0x689
+    // Token : 0x6000CBF
+    // RVA   : 0xA8CEE0   Offset: 0xA8C2E0   Length: 0x689
     public bool Navigate(BattleMapData battleMap, GridUnitData from, GridUnitData to, List<GridUnitData> path, List<GridUnitData> searched, int stepLimit, int selfTeamID)
     {
         uint64 MapNavigator.Navigate
@@ -185,19 +185,19 @@ public class MapNavigator
           return in_RAX & 0xffffffffffffff00;
         }
         if (path != null) {
-          FUN_180f56130(path,DAT_181d637f8);
+          FUN_1812f9a10(path,DAT_181d8af98);
         }
         if (searched != null) {
-          FUN_180f56130(searched,DAT_181d637f8);
+          FUN_1812f9a10(searched,DAT_181d8af98);
         }
         iVar2 = BattleMapData.get_GridCount(battleMap,0);
-        lVar6 = il2cpp_internal(DAT_181d74cb0);
-        FUN_180f58a90(lVar6,DAT_181d886e0);
+        lVar6 = il2cpp_internal(DAT_181d999d0);
+        FUN_18132faf0(lVar6,DAT_181db0080);
         if (from != null) {
           uVar3 = GridUnitData.Distance(from,to,0);
           uVar7 = MapNavigator.GetEmptyNavigationData(this,from,0,0,CONCAT44(uVar17,uVar3),0);
           if (lVar6 != null) {
-            FUN_181827900(lVar6,uVar7,DAT_181d887e0);
+            FUN_18181e0a0(lVar6,uVar7,DAT_181db0180);
             iVar12 = 0;
             local_68 = 0;
             plVar15 = (int64 *)0;
@@ -211,16 +211,16 @@ public class MapNavigator
                   iVar16 = *(int *)(lVar6 + 24);
                   iVar4 = 999999;
                   while (iVar16 = iVar16 + -1, -1 < iVar16) {
-                    lVar8 = FUN_180002f80(lVar6,iVar16,DAT_181d889e0);
+                    lVar8 = FUN_180002f80(lVar6,iVar16,DAT_181db0380);
                     if (lVar8 == null) throw; // [null/range check failed]
                     if (!lVar8._items) {
-                      FUN_18182b220(lVar6,iVar16,DAT_181d888e0);
+                      FUN_181823590(lVar6,iVar16,DAT_181db0280);
                     }
                     else {
-                      lVar8 = FUN_180002f80(lVar6,iVar16,DAT_181d889e0);
+                      lVar8 = FUN_180002f80(lVar6,iVar16,DAT_181db0380);
                       if (lVar8 == null) throw; // [null/range check failed]
                       if (*(int *)(lVar8 + 20) < iVar4) {
-                        plVar9 = (int64 *)FUN_180002f80(lVar6,iVar16,DAT_181d889e0);
+                        plVar9 = (int64 *)FUN_180002f80(lVar6,iVar16,DAT_181db0380);
                         if (plVar9 == (int64 *)0) throw; // [null/range check failed]
                         iVar4 = *(int *)((int64)plVar9 + 20);
                       }
@@ -234,7 +234,7 @@ public class MapNavigator
                 }
                 *(uint8 *)(plVar9 + 2) = 0;
                 if (searched != null) {
-                  FUN_181827900(searched,plVar9[4],DAT_181d63778);
+                  FUN_18181e0a0(searched,plVar9[4],DAT_181d8af18);
                 }
                 iVar16 = 4;
                 if (plVar9[4] == 0) throw; // [null/range check failed]
@@ -255,16 +255,16 @@ public class MapNavigator
                       if (cVar1) {
                         local_68 = 1;
                         if (path != null) {
-                          FUN_181827900(path,plVar10,DAT_181d63778);
+                          FUN_18181e0a0(path,plVar10,DAT_181d8af18);
                           plVar10 = plVar9;
                           if (plVar9 == (int64 *)0) throw; // [null/range check failed]
                           do {
                             if (plVar10[4] != from) {
-                              FUN_181827900(path,plVar10[4],DAT_181d63778);
+                              FUN_18181e0a0(path,plVar10[4],DAT_181d8af18);
                             }
                             plVar10 = (int64 *)plVar10[5];
                           } while (plVar10 != (int64 *)0);
-                          List_1.Reverse(path,DAT_181d63a78);
+                          List_1.Reverse(path,DAT_181d8b218);
                         }
                         break;
                       }
@@ -273,14 +273,14 @@ public class MapNavigator
                       if (cVar1) {
                         if (plVar10[3] == 0) throw; // [null/range check failed]
                         cVar1 = BattleUnit.get_IsAlive(plVar10[3],0);
-                        if (cVar1) goto LAB_180a8e38b;
+                        if (cVar1) goto LAB_180a8d3ab;
                       }
                       if (selfTeamID != -1) {
                         uVar17 = 0;
                         cVar1 = BattleMapData.AroundGridHaveEnemy
                                           (battleMap,*(uint32 *)((int64)plVar10 + 36),
                                            (int)plVar10[5],selfTeamID,0);
-                        if (cVar1) goto LAB_180a8e38b;
+                        if (cVar1) goto LAB_180a8d3ab;
                       }
                       plVar11 = (int64 *)plVar10[8];
                       if (plVar11 == (int64 *)0) {
@@ -293,10 +293,10 @@ public class MapNavigator
                         if (plVar11 == (int64 *)0) throw; // [null/range check failed]
                         if ((*(int *)((int64)plVar9 + 20) < *(int *)((int64)plVar11 + 20)) ||
                            (plVar15 != (int64 *)0)) {
-                          FUN_181827900(lVar6,plVar11,DAT_181d887e0);
+                          FUN_18181e0a0(lVar6,plVar11,DAT_181db0180);
                         }
                         else {
-        LAB_180a8e387:
+        LAB_180a8d3a7:
                           plVar15 = plVar11;
                           local_64 = uVar13;
                         }
@@ -315,12 +315,12 @@ public class MapNavigator
                             il2cpp_internal(plVar11 + 4,plVar10);
                           }
                           if ((*(int *)((int64)plVar11 + 20) <= *(int *)((int64)plVar9 + 20)) &&
-                             (plVar15 == (int64 *)0)) goto LAB_180a8e387;
+                             (plVar15 == (int64 *)0)) goto LAB_180a8d3a7;
                         }
                       }
                     }
                   }
-        LAB_180a8e38b:
+        LAB_180a8d3ab:
                   uVar5 = uVar13 + 1;
                   uVar13 = 0;
                   if ((int)uVar5 < 4) {
@@ -330,7 +330,7 @@ public class MapNavigator
                 } while (0 < iVar16);
               } while (iVar12 <= iVar2);
             }
-            FUN_180f56130(lVar6,DAT_181d88860);
+            FUN_1812f9a10(lVar6,DAT_181db0200);
             uVar14 = 0;
             if (0 < this.curUsedIdx) {
               lVar6 = 32;
@@ -350,7 +350,7 @@ public class MapNavigator
             this.curUsedIdx = 0;
             if ((((local_68 != 0) && (path != null)) && (0 < stepLimit)) &&
                (stepLimit < *(int *)(path + 24))) {
-              List_1.RemoveRange(path,stepLimit,*(int *)(path + 24) - stepLimit,DAT_181d639f8);
+              List_1.RemoveRange(path,stepLimit,*(int *)(path + 24) - stepLimit,DAT_181d8b198);
             }
             return (uint64)local_68;
           }

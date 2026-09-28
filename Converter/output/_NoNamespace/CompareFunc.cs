@@ -1,13 +1,13 @@
 // ============================================================
 // Type  : CompareFunc
-// Token : 0x200007A
+// Token : 0x200007B
 // ============================================================
 
 public class CompareFunc
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60002E4
-    // RVA   : 0x210320   Offset: 0x20EB20   Length: 0x6A
+    // Token : 0x60002FC
+    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
@@ -25,8 +25,8 @@ public class CompareFunc
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x60002E5
-    // RVA   : 0x10D5720   Offset: 0x10D3F20   Length: 0x347
+    // Token : 0x60002FD
+    // RVA   : 0x1110240   Offset: 0x110F640   Length: 0x347
     public virtual int Invoke(T left, T right)
     {
         long lVar1;
@@ -86,7 +86,7 @@ public class CompareFunc
                 uVar16 = *(uint32 *)((int64)left + 4);
                 uVar17 = *(uint32 *)(left + 1);
                 uVar18 = *(uint32 *)((int64)left + 12);
-                goto LAB_1810d5a10;
+                goto LAB_181110530;
               }
               uVar6 = (*pcVar2)(left + -2,&local_48,lVar1);
             }
@@ -121,13 +121,13 @@ public class CompareFunc
                                   (int)((uint32)*(uint16 *)(lVar1 + 72) +
                                        *(int *)(*(int64 *)(lVar7 + 176) + 8 + (uint64)uVar10 * 16
                                                )) * 16 + 0x138 + lVar7);
-                        goto LAB_1810d5976;
+                        goto LAB_181110496;
                       }
                       uVar10 = uVar10 + 1;
                     } while (uVar10 < *(uint16 *)(lVar7 + 0x12a));
                   }
                   puVar8 = (uint64 *)FUN_1800914f0(plVar3,lVar9,*(uint16 *)(lVar1 + 72));
-        LAB_1810d5976:
+        LAB_181110496:
                   local_48 = *(uint32 *)right;
                   uStack_44 = *(uint32 *)((int64)right + 4);
                   uStack_40 = *(uint32 *)(right + 1);
@@ -156,13 +156,13 @@ public class CompareFunc
                                 (int)((uint32)*(uint16 *)(lVar1 + 72) +
                                      *(int *)(*(int64 *)(lVar7 + 176) + 8 + (uint64)uVar10 * 16))
                                 * 16 + 0x138 + lVar7;
-                        goto LAB_1810d58a6;
+                        goto LAB_1811103c6;
                       }
                       uVar10 = uVar10 + 1;
                     } while (uVar10 < *(uint16 *)(lVar7 + 0x12a));
                   }
                   lVar7 = FUN_1800914f0(plVar3,*(int64 *)(lVar1 + 24),*(uint16 *)(lVar1 + 72));
-        LAB_1810d58a6:
+        LAB_1811103c6:
                   uVar12 = *(uint64 *)(lVar7 + 8);
                 }
                 puVar8 = (uint64 *)il2cpp_internal(uVar12,lVar1);
@@ -195,7 +195,7 @@ public class CompareFunc
               uVar6 = (*pcVar2)(&local_48,&local_58,lVar1);
             }
             else {
-        LAB_1810d5a10:
+        LAB_181110530:
               local_58 = CONCAT44(uVar16,uVar15);
               uStack_50 = CONCAT44(uVar18,uVar17);
               uVar6 = (*pcVar2)(plVar3,&local_58,&local_48,lVar1);
@@ -208,8 +208,8 @@ public class CompareFunc
         } while( true );
     }
 
-    // Token : 0x60002E6
-    // RVA   : 0x10D4D30   Offset: 0x10D3530   Length: 0x97
+    // Token : 0x60002FE
+    // RVA   : 0x110F850   Offset: 0x110EC50   Length: 0x97
     public virtual IAsyncResult BeginInvoke(T left, T right, AsyncCallback callback, object object)
     {
         void CompareFunc.BeginInvoke
@@ -220,13 +220,13 @@ public class CompareFunc
         uint64 local_20;
         uint64 local_18;
         local_18 = 0;
-        local_28 = il2cpp_value_box(DAT_181d931c0,left);
-        local_20 = il2cpp_value_box(DAT_181d931c0,right);
+        local_28 = il2cpp_value_box(DAT_181db8370,left);
+        local_20 = il2cpp_value_box(DAT_181db8370,right);
         il2cpp_internal(this,&local_28,callback,object);
     }
 
-    // Token : 0x60002E7
-    // RVA   : 0x219140   Offset: 0x217940   Length: 0x27
+    // Token : 0x60002FF
+    // RVA   : 0x219140   Offset: 0x218540   Length: 0x27
     public virtual int EndInvoke(IAsyncResult result)
     {
         long lVar1;

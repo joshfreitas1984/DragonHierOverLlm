@@ -1,24 +1,24 @@
 // ============================================================
 // Type  : <>c__DisplayClass30_0
-// Token : 0x200046E
+// Token : 0x2000475
 // ============================================================
 
 public class <>c__DisplayClass30_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002023
+    // Token: 0x400212D
     public ScrollRect target;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60026A0
-    // RVA   : 0x210B70   Offset: 0x20F370   Length: 0x7
+    // Token : 0x6002723
+    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);
     }
 
-    // Token : 0x60026A1
-    // RVA   : 0x8D6E20   Offset: 0x8D5620   Length: 0x4C
+    // Token : 0x6002724
+    // RVA   : 0x939310   Offset: 0x938710   Length: 0x4C
     internal Vector2 <DONormalizedPos>b__0()
     {
         uint uVar1;
@@ -32,18 +32,18 @@ public class <>c__DisplayClass30_0
         }
     }
 
-    // Token : 0x60026A2
-    // RVA   : 0x8D6E70   Offset: 0x8D5670   Length: 0x46
+    // Token : 0x6002725
+    // RVA   : 0x939360   Offset: 0x938760   Length: 0x46
     internal void <DONormalizedPos>b__1(Vector2 x)
     {
         uint local_res8;
         uint32 uStackX_c;
         if (this.target != null) {
           local_res8 = (uint32)x;
-          FUN_181369950(this.target,local_res8,0);
+          FUN_1813baf00(this.target,local_res8,0);
           if (this.target != null) {
             uStackX_c = (uint32)((uint64)x >> 32);
-            FUN_18136a4a0(this.target,uStackX_c,0);
+            FUN_1813bba50(this.target,uStackX_c,0);
             return;
           }
         }

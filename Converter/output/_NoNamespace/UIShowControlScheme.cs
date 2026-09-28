@@ -1,40 +1,41 @@
 // ============================================================
 // Type  : UIShowControlScheme
-// Token : 0x2000066
+// Token : 0x2000067
 // ============================================================
 
 public class UIShowControlScheme
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000279
+    // Token: 0x4000295
     public GameObject target;
 
-    // Token: 0x400027A
+    // Token: 0x4000296
     public bool mouse;
 
-    // Token: 0x400027B
+    // Token: 0x4000297
     public bool touch;
 
-    // Token: 0x400027C
+    // Token: 0x4000298
     public bool controller;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600025E
-    // RVA   : 0x168D880   Offset: 0x168C080   Length: 0x1D2
+    // Token : 0x6000276
+    // RVA   : 0x1705570   Offset: 0x1704970   Length: 0x1D2
     private void OnEnable()
     {
+        var pStatics = *(int64*)(DAT_181daf678 + 184);
         ulong uVar1;
         bool cVar2;
         int iVar3;
         ulong uVar4;
         long lVar7;
         byte uVar8;
-        uVar1 = UICamera.onSchemeChange;
-        uVar4 = new OnTooltipCB(this,DAT_181d9d1e0,0);
+        uVar1 = *(uint64 *)(pStatics + 200);
+        uVar4 = new OnTooltipCB(this,DAT_181dc64d0,0);
         plVar5 = (int64 *)Delegate.Combine(uVar1,uVar4);
         plVar9 = (int64 *)0;
         if (plVar5 != (int64 *)0) {
-          if (*plVar5 == DAT_181d68310) {
+          if (*plVar5 == DAT_181d8d6b8) {
             plVar9 = plVar5;
           }
           if (plVar9 == (int64 *)0) {
@@ -42,19 +43,21 @@ public class UIShowControlScheme
             FUN_1800d6070(plVar5);
           }
         }
-        UICamera.onSchemeChange = plVar9;
+        puVar6 = (uint64 *)(pStatics + 200);
+        *puVar6 = plVar9;
+        il2cpp_internal(puVar6,plVar9);
         uVar1 = this.target;
         cVar2 = Object.op_Inequality(uVar1,0,0);
         if (cVar2) {
           iVar3 = UICamera.get_currentScheme(0);
           if (iVar3 == 0) {
             lVar7 = this.target;
-            if (lVar7 == null) goto LAB_18168da4d;
+            if (lVar7 == null) goto LAB_18170573d;
             uVar8 = this.mouse;
           }
           else if (iVar3 == 1) {
             lVar7 = this.target;
-            if (lVar7 == null) goto LAB_18168da4d;
+            if (lVar7 == null) goto LAB_18170573d;
             uVar8 = this.touch;
           }
           else {
@@ -63,7 +66,7 @@ public class UIShowControlScheme
             }
             lVar7 = this.target;
             if (lVar7 == null) {
-        LAB_18168da4d:
+        LAB_18170573d:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -73,30 +76,31 @@ public class UIShowControlScheme
         }
     }
 
-    // Token : 0x600025F
-    // RVA   : 0x168D780   Offset: 0x168BF80   Length: 0xFF
+    // Token : 0x6000277
+    // RVA   : 0x1705470   Offset: 0x1704870   Length: 0xFF
     private void OnDisable()
     {
+        var pStatics = *(int64*)(DAT_181daf678 + 184);
         ulong uVar1;
         ulong uVar2;
-        uVar1 = UICamera.onSchemeChange;
-        uVar2 = new OnTooltipCB(this,DAT_181d9d1e0,0);
+        uVar1 = *(uint64 *)(pStatics + 200);
+        uVar2 = new OnTooltipCB(this,DAT_181dc64d0,0);
         plVar3 = (int64 *)Delegate.Remove(uVar1,uVar2,0);
         plVar4 = (int64 *)0;
         if (plVar3 != (int64 *)0) {
-          if (*plVar3 == DAT_181d68310) {
+          if (*plVar3 == DAT_181d8d6b8) {
             plVar4 = plVar3;
           }
           if (plVar4 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar3,DAT_181d68310);
+            FUN_1800d6070(plVar3,DAT_181d8d6b8);
           }
         }
-        UICamera.onSchemeChange = plVar4;
+        *(int64 **)(pStatics + 200) = plVar4;
     }
 
-    // Token : 0x6000260
-    // RVA   : 0x168DA60   Offset: 0x168C260   Length: 0xFE
+    // Token : 0x6000278
+    // RVA   : 0x1705750   Offset: 0x1704B50   Length: 0xFE
     private void OnScheme()
     {
         ulong uVar1;
@@ -129,10 +133,12 @@ public class UIShowControlScheme
         }
     }
 
-    // Token : 0x6000261
-    // RVA   : 0x168DB60   Offset: 0x168C360   Length: 0xB
+    // Token : 0x6000279
+    // RVA   : 0x1705850   Offset: 0x1704C50   Length: 0xB
     public void /*ctor*/()
     {
+        void FUN_181705850(int64 this)
+        {
         this.controller = 1;
         FUN_18044ef50(this,0);
     }

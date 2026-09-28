@@ -1,26 +1,26 @@
 // ============================================================
 // Type  : WindowAutoYaw
-// Token : 0x2000026
+// Token : 0x2000027
 // ============================================================
 
 public class WindowAutoYaw
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000098
+    // Token: 0x40000B4
     public int updateOrder;
 
-    // Token: 0x4000099
+    // Token: 0x40000B5
     public Camera uiCamera;
 
-    // Token: 0x400009A
+    // Token: 0x40000B6
     public float yawAmount;
 
-    // Token: 0x400009B
+    // Token: 0x40000B7
     private Transform mTrans;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000081
-    // RVA   : 0x9E7090   Offset: 0x9E5890   Length: 0x3E
+    // Token : 0x6000099
+    // RVA   : 0x9C9670   Offset: 0x9C8A70   Length: 0x3E
     private void OnDisable()
     {
         long lVar1;
@@ -40,8 +40,8 @@ public class WindowAutoYaw
         }
     }
 
-    // Token : 0x6000082
-    // RVA   : 0x9E70D0   Offset: 0x9E58D0   Length: 0xEC
+    // Token : 0x600009A
+    // RVA   : 0x9C96B0   Offset: 0x9C8AB0   Length: 0xEC
     private void OnEnable()
     {
         bool cVar1;
@@ -64,8 +64,8 @@ public class WindowAutoYaw
         this.mTrans = uVar4;
     }
 
-    // Token : 0x6000083
-    // RVA   : 0x9E71C0   Offset: 0x9E59C0   Length: 0x113
+    // Token : 0x600009B
+    // RVA   : 0x9C97A0   Offset: 0x9C8BA0   Length: 0x113
     private void Update()
     {
         ulong uVar1;
@@ -104,10 +104,12 @@ public class WindowAutoYaw
         }
     }
 
-    // Token : 0x6000084
-    // RVA   : 0x9E72E0   Offset: 0x9E5AE0   Length: 0xE
+    // Token : 0x600009C
+    // RVA   : 0x9C98C0   Offset: 0x9C8CC0   Length: 0xE
     public void /*ctor*/()
     {
+        void FUN_1809c98c0(int64 this)
+        {
         this.yawAmount = 0x41a00000;
         FUN_18044ef50(this,0);
     }

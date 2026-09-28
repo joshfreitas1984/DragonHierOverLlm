@@ -1,59 +1,59 @@
 // ============================================================
 // Type  : WeatherData
-// Token : 0x20003AB
+// Token : 0x20003B2
 // ============================================================
 
 public class WeatherData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001CDC
+    // Token: 0x4001DE1
     public string name;
 
-    // Token: 0x4001CDD
+    // Token: 0x4001DE2
     public float baseLastTime;
 
-    // Token: 0x4001CDE
+    // Token: 0x4001DE3
     public List<int> nextAvailableWeatherID;
 
-    // Token: 0x4001CDF
+    // Token: 0x4001DE4
     public GameObject weatherSpeObj;
 
-    // Token: 0x4001CE0
+    // Token: 0x4001DE5
     public List<GameObject> weatherSpeObjs;
 
-    // Token: 0x4001CE1
+    // Token: 0x4001DE6
     public List<float> weatherSpeObjOriginEmitRate;
 
-    // Token: 0x4001CE2
+    // Token: 0x4001DE7
     public WeatherSpeShowType weatherSpeShowType;
 
-    // Token: 0x4001CE3
+    // Token: 0x4001DE8
     public float weatherTravelSpeedRate;
 
-    // Token: 0x4001CE4
+    // Token: 0x4001DE9
     public float baseRandomRate;
 
-    // Token: 0x4001CE5
+    // Token: 0x4001DEA
     public int maxRateMonth;
 
-    // Token: 0x4001CE6
+    // Token: 0x4001DEB
     public bool generateThunder;
 
-    // Token: 0x4001CE7
+    // Token: 0x4001DEC
     public float maxVolumn;
 
-    // Token: 0x4001CE8
+    // Token: 0x4001DED
     public float cloudNumRate;
 
-    // Token: 0x4001CE9
+    // Token: 0x4001DEE
     public float cloudSpeedRate;
 
-    // Token: 0x4001CEA
+    // Token: 0x4001DEF
     public Color cloudColor;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60022FC
-    // RVA   : 0x9E4690   Offset: 0x9E2E90   Length: 0x156
+    // Token : 0x600237E
+    // RVA   : 0x9C6C70   Offset: 0x9C6070   Length: 0x156
     public float GetRandomRate()
     {
         uint uVar1;
@@ -76,8 +76,8 @@ public class WeatherData
         return (uint64)this.baseRandomRate;
     }
 
-    // Token : 0x60022FD
-    // RVA   : 0x9E47F0   Offset: 0x9E2FF0   Length: 0x97
+    // Token : 0x600237F
+    // RVA   : 0x9C6DD0   Offset: 0x9C61D0   Length: 0x97
     public float GetRandomRate(int targetMonth)
     {
         uint uVar1;
@@ -100,8 +100,8 @@ public class WeatherData
         return (uint64)this.baseRandomRate;
     }
 
-    // Token : 0x60022FE
-    // RVA   : 0x9E4890   Offset: 0x9E3090   Length: 0x39
+    // Token : 0x6002380
+    // RVA   : 0x9C6E70   Offset: 0x9C6270   Length: 0x39
     public void /*ctor*/()
     {
         uint uVar1;
@@ -110,7 +110,7 @@ public class WeatherData
         byte[] local_18 = new byte[16];
         this.cloudNumRate = 0x3f800000;
         this.cloudSpeedRate = 0x3f800000;
-        puVar4 = (uint32 *)FUN_181098a50(local_18,0);
+        puVar4 = (uint32 *)FUN_1810d3570(local_18,0);
         uVar1 = puVar4[1];
         uVar2 = puVar4[2];
         uVar3 = puVar4[3];

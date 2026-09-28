@@ -1,53 +1,53 @@
 // ============================================================
 // Type  : SpringPosition
-// Token : 0x20000B4
+// Token : 0x20000B5
 // ============================================================
 
 public class SpringPosition
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400043F
+    // Token: 0x400045B
     public static SpringPosition current;
 
-    // Token: 0x4000440
+    // Token: 0x400045C
     public Vector3 target;
 
-    // Token: 0x4000441
+    // Token: 0x400045D
     public float strength;
 
-    // Token: 0x4000442
+    // Token: 0x400045E
     public bool worldSpace;
 
-    // Token: 0x4000443
+    // Token: 0x400045F
     public bool ignoreTimeScale;
 
-    // Token: 0x4000444
+    // Token: 0x4000460
     public bool updateScrollView;
 
-    // Token: 0x4000445
+    // Token: 0x4000461
     public float stopMinDistance;
 
-    // Token: 0x4000446
+    // Token: 0x4000462
     public OnFinished onFinished;
 
-    // Token: 0x4000447
+    // Token: 0x4000463
     private GameObject eventReceiver;
 
-    // Token: 0x4000448
+    // Token: 0x4000464
     public string callWhenFinished;
 
-    // Token: 0x4000449
+    // Token: 0x4000465
     private Transform mTrans;
 
-    // Token: 0x400044A
+    // Token: 0x4000466
     private float mThreshold;
 
-    // Token: 0x400044B
+    // Token: 0x4000467
     private UIScrollView mSv;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600056D
-    // RVA   : 0xC6EE10   Offset: 0xC6D610   Length: 0xA9
+    // Token : 0x6000585
+    // RVA   : 0xC5E430   Offset: 0xC5D830   Length: 0xA9
     private void Start()
     {
         ulong uVar1;
@@ -55,13 +55,13 @@ public class SpringPosition
         this.mTrans = uVar1;
         if (this.updateScrollView) {
           uVar1 = Component.get_gameObject(this,0);
-          uVar1 = NGUITools.FindInParents(uVar1,DAT_181d66c00);
+          uVar1 = NGUITools.FindInParents(uVar1,DAT_181d8f920);
           this.mSv = uVar1;
         }
     }
 
-    // Token : 0x600056E
-    // RVA   : 0xC6EEC0   Offset: 0xC6D6C0   Length: 0x562
+    // Token : 0x6000586
+    // RVA   : 0xC5E4E0   Offset: 0xC5D8E0   Length: 0x562
     private void Update()
     {
         uint uVar1;
@@ -91,7 +91,7 @@ public class SpringPosition
           if (this.mThreshold == null.0) {
             local_68 = this.target;
             local_60 = *(float *)(this + 32);
-            if (this.mTrans == null) goto LAB_180c6f41d;
+            if (this.mTrans == null) goto LAB_180c5ea3d;
             puVar6 = (uint64 *)Transform.get_localPosition(local_38,this.mTrans,0);
             local_58 = *puVar6;
             local_50 = *(float *)(puVar6 + 1);
@@ -103,7 +103,7 @@ public class SpringPosition
             this.mThreshold = fVar8 * 1e-05;
           }
           lVar3 = this.mTrans;
-          if (lVar3 == null) goto LAB_180c6f41d;
+          if (lVar3 == null) goto LAB_180c5ea3d;
           local_58 = this.target;
           local_50 = *(float *)(this + 32);
           uVar1 = this.strength;
@@ -117,7 +117,7 @@ public class SpringPosition
           local_68 = this.target;
           local_60 = *(float *)(this + 32);
           fVar8 = this.mThreshold;
-          if (this.mTrans == null) goto LAB_180c6f41d;
+          if (this.mTrans == null) goto LAB_180c5ea3d;
           puVar6 = (uint64 *)Transform.get_localPosition(local_38,this.mTrans,0);
           local_58 = *puVar6;
           local_50 = *(float *)(puVar6 + 1);
@@ -127,29 +127,29 @@ public class SpringPosition
           local_40 = local_70;
           fVar9 = (float)Vector3.get_sqrMagnitude(&local_78,0);
           if (fVar9 <= fVar8) {
-        LAB_180c6f13b:
-            if (this.mTrans == null) goto LAB_180c6f41d;
+        LAB_180c5e75b:
+            if (this.mTrans == null) goto LAB_180c5ea3d;
             local_58 = this.target;
             local_50 = *(float *)(this + 32);
             Transform.set_localPosition(this.mTrans,&local_58,0);
-            goto LAB_180c6f38f;
+            goto LAB_180c5e9af;
           }
           uVar2 = this.target;
           fVar8 = *(float *)(this + 32);
-          if (this.mTrans == null) goto LAB_180c6f41d;
+          if (this.mTrans == null) goto LAB_180c5ea3d;
           puVar6 = (uint64 *)Transform.get_localPosition(local_38,this.mTrans,0);
           local_58 = *puVar6;
           local_50 = *(float *)(puVar6 + 1);
           local_68 = uVar2;
           local_60 = fVar8;
           fVar8 = (float)Vector3.Distance(&local_68,&local_58,0);
-          if (fVar8 <= this.stopMinDistance) goto LAB_180c6f13b;
+          if (fVar8 <= this.stopMinDistance) goto LAB_180c5e75b;
         }
         else {
           if (this.mThreshold == null.0) {
             local_68 = this.target;
             local_60 = *(float *)(this + 32);
-            if (this.mTrans == null) goto LAB_180c6f41d;
+            if (this.mTrans == null) goto LAB_180c5ea3d;
             puVar6 = (uint64 *)Transform.get_position(local_38,this.mTrans,0);
             local_58 = *puVar6;
             local_50 = *(float *)(puVar6 + 1);
@@ -161,7 +161,7 @@ public class SpringPosition
             this.mThreshold = fVar8 * 0.001;
           }
           lVar3 = this.mTrans;
-          if (lVar3 == null) goto LAB_180c6f41d;
+          if (lVar3 == null) goto LAB_180c5ea3d;
           local_58 = this.target;
           local_50 = *(float *)(this + 32);
           uVar1 = this.strength;
@@ -175,7 +175,7 @@ public class SpringPosition
           local_68 = this.target;
           local_60 = *(float *)(this + 32);
           fVar8 = this.mThreshold;
-          if (this.mTrans == null) goto LAB_180c6f41d;
+          if (this.mTrans == null) goto LAB_180c5ea3d;
           puVar6 = (uint64 *)Transform.get_position(local_38,this.mTrans,0);
           local_58 = *puVar6;
           local_50 = *(float *)(puVar6 + 1);
@@ -187,30 +187,30 @@ public class SpringPosition
           if (fVar8 < fVar9) {
             uVar2 = this.target;
             fVar8 = *(float *)(this + 32);
-            if (this.mTrans == null) goto LAB_180c6f41d;
+            if (this.mTrans == null) goto LAB_180c5ea3d;
             puVar6 = (uint64 *)Transform.get_position(local_38,this.mTrans,0);
             local_58 = *puVar6;
             local_50 = *(float *)(puVar6 + 1);
             local_68 = uVar2;
             local_60 = fVar8;
             fVar8 = (float)Vector3.Distance(&local_68,&local_58,0);
-            if (this.stopMinDistance < fVar8) goto LAB_180c6f3a6;
+            if (this.stopMinDistance < fVar8) goto LAB_180c5e9c6;
           }
-          if (this.mTrans == null) goto LAB_180c6f41d;
+          if (this.mTrans == null) goto LAB_180c5ea3d;
           local_58 = this.target;
           local_50 = *(float *)(this + 32);
           Transform.set_position(this.mTrans,&local_58,0);
-        LAB_180c6f38f:
+        LAB_180c5e9af:
           SpringPosition.NotifyListeners(this,0);
           Behaviour.set_enabled(this,0,0);
         }
-        LAB_180c6f3a6:
+        LAB_180c5e9c6:
         uVar2 = this.mSv;
         cVar5 = Object.op_Inequality(uVar2,0,0);
         if (cVar5) {
           plVar4 = this.mSv;
           if (plVar4 == (int64 *)0) {
-        LAB_180c6f41d:
+        LAB_180c5ea3d:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -218,13 +218,13 @@ public class SpringPosition
         }
     }
 
-    // Token : 0x600056F
-    // RVA   : 0xC6ED20   Offset: 0xC6D520   Length: 0xE7
+    // Token : 0x6000587
+    // RVA   : 0xC5E340   Offset: 0xC5D740   Length: 0xE7
     private void NotifyListeners()
     {
         ulong uVar2;
         bool cVar4;
-        plVar1 = *(int64 **)(DAT_181d7f930 + 184);
+        plVar1 = *(int64 **)(DAT_181da4b50 + 184);
         *plVar1 = this;
         il2cpp_internal(plVar1,this);
         if (this.onFinished != null) {
@@ -233,7 +233,7 @@ public class SpringPosition
         uVar2 = this.eventReceiver;
         cVar4 = Object.op_Inequality(uVar2,0,0);
         if (cVar4) {
-          cVar4 = FUN_180d6ca90(this.callWhenFinished,0);
+          cVar4 = FUN_180d755b0(this.callWhenFinished,0);
           if (!cVar4) {
             if (this.eventReceiver == null) {
                           // WARNING: Subroutine does not return
@@ -243,23 +243,23 @@ public class SpringPosition
                       (this.eventReceiver,this.callWhenFinished,this,1,0);
           }
         }
-        puVar3 = *(uint64 **)(DAT_181d7f930 + 184);
+        puVar3 = *(uint64 **)(DAT_181da4b50 + 184);
         *puVar3 = 0;
         il2cpp_internal(puVar3,0);
     }
 
-    // Token : 0x6000570
-    // RVA   : 0xC6EC00   Offset: 0xC6D400   Length: 0x110
+    // Token : 0x6000588
+    // RVA   : 0xC5E220   Offset: 0xC5D620   Length: 0x110
     public static SpringPosition Begin(GameObject go, Vector3 pos, float strength)
     {
         uint uVar1;
         bool cVar2;
         long lVar3;
         if (go != null) {
-          lVar3 = GameObject.GetComponent(go,DAT_181da1930);
+          lVar3 = GameObject.GetComponent(go,DAT_181d73b30);
           cVar2 = Object.op_Equality(lVar3,0,0);
           if (cVar2) {
-            lVar3 = GameObject.AddComponent(go,DAT_181d9d458);
+            lVar3 = GameObject.AddComponent(go,DAT_181dc61f8);
           }
           if (lVar3 != null) {
             uVar1 = *(uint32 *)(pos + 1);
@@ -276,8 +276,8 @@ public class SpringPosition
         }
     }
 
-    // Token : 0x6000571
-    // RVA   : 0xC6EBC0   Offset: 0xC6D3C0   Length: 0x3A
+    // Token : 0x6000589
+    // RVA   : 0xC5E1E0   Offset: 0xC5D5E0   Length: 0x3A
     public void /*ctor*/()
     {
         byte[] local_18 = new byte[16];

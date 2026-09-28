@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : AreaRoadData
-// Token : 0x20001EB
+// Token : 0x20001F1
 // ============================================================
 
 public class AreaRoadData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000D4C
+    // Token: 0x4000DDA
     public int areaID;
 
-    // Token: 0x4000D4D
+    // Token: 0x4000DDB
     public int roadLv;
 
-    // Token: 0x4000D4E
+    // Token: 0x4000DDC
     public int upgradeTimeLeft;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000F52
-    // RVA   : 0x7EF800   Offset: 0x7EE000   Length: 0x287
+    // Token : 0x6000F87
+    // RVA   : 0x7EDB60   Offset: 0x7ECF60   Length: 0x287
     public string GetUpgradeCostText()
     {
         int iVar1;
@@ -34,7 +34,7 @@ public class AreaRoadData
           fVar5 = fVar5 + 1.0;
           lVar2 = AreaRoadData.GetArea(this,0);
           if (lVar2 != null) {
-            if (-1 < *(int *)(lVar2 + 112)) {
+            if (*(int *)(lVar2 + 112) != -1) {
               lVar2 = AreaRoadData.GetArea(this,0);
               if (lVar2 == null) throw; // [null/range check failed]
               lVar2 = AreaData.GetForce(lVar2,0);
@@ -43,16 +43,16 @@ public class AreaRoadData
               fVar5 = fVar5 + fVar6;
             }
             local_res8[0] = Mathf.RoundToInt(((float)(iVar1 + 1) * 10.0) / fVar5,0);
-            uVar3 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
-            lVar2 = il2cpp_internal(DAT_181d721b0);
-            FUN_180f58a90(lVar2,DAT_181d79358);
+            uVar3 = il2cpp_value_box(DAT_181d80418,local_res8);
+            lVar2 = il2cpp_internal(DAT_181d96ed0);
+            FUN_18132faf0(lVar2,DAT_181da0cf8);
             if (lVar2 != null) {
-              FUN_181805690(lVar2);
-              FUN_181805690(lVar2);
-              FUN_181805690(lVar2);
-              FUN_181805690(lVar2);
-              FUN_181805690(lVar2);
-              FUN_181805690(lVar2);
+              FUN_18181de10(lVar2);
+              FUN_18181de10(lVar2);
+              FUN_18181de10(lVar2);
+              FUN_18181de10(lVar2);
+              FUN_18181de10(lVar2);
+              FUN_18181de10(lVar2);
               uVar4 = GlobalData.ListMulti(lVar2);
               uVar4 = GlobalData.GetResourceDescribe(uVar4,0);
               String.Format("消耗 ({0}天)\n{1}",uVar3,uVar4,0);
@@ -62,27 +62,27 @@ public class AreaRoadData
         }
     }
 
-    // Token : 0x6000F53
-    // RVA   : 0x7EF6D0   Offset: 0x7EDED0   Length: 0x12F
+    // Token : 0x6000F88
+    // RVA   : 0x7EDA30   Offset: 0x7ECE30   Length: 0x12F
     public List<float> GetUpgradeCostResource()
     {
         long lVar1;
-        lVar1 = il2cpp_internal(DAT_181d721b0);
-        FUN_180f58a90(lVar1,DAT_181d79358);
+        lVar1 = il2cpp_internal(DAT_181d96ed0);
+        FUN_18132faf0(lVar1,DAT_181da0cf8);
         if (lVar1 != null) {
-          FUN_181805690(lVar1);
-          FUN_181805690(lVar1);
-          FUN_181805690(lVar1);
-          FUN_181805690(lVar1);
-          FUN_181805690(lVar1);
-          FUN_181805690(lVar1);
+          FUN_18181de10(lVar1);
+          FUN_18181de10(lVar1);
+          FUN_18181de10(lVar1);
+          FUN_18181de10(lVar1);
+          FUN_18181de10(lVar1);
+          FUN_18181de10(lVar1);
           GlobalData.ListMulti(lVar1);
           return;
         }
     }
 
-    // Token : 0x6000F54
-    // RVA   : 0x7EFA90   Offset: 0x7EE290   Length: 0xCC
+    // Token : 0x6000F89
+    // RVA   : 0x7EDDF0   Offset: 0x7ED1F0   Length: 0xCC
     public int GetUpgradeTime()
     {
         int iVar1;
@@ -96,8 +96,8 @@ public class AreaRoadData
           fVar3 = fVar3 + 1.0;
           lVar2 = AreaRoadData.GetArea(this,0);
           if (lVar2 != null) {
-            if (*(int *)(lVar2 + 112) < 0) {
-        LAB_1807efb2b:
+            if (*(int *)(lVar2 + 112) == -1) {
+        LAB_1807ede8b:
               Mathf.RoundToInt(((float)(iVar1 + 1) * 10.0) / fVar3,0);
               return;
             }
@@ -107,15 +107,15 @@ public class AreaRoadData
               if ((lVar2 != null) && (*(int64 *)(lVar2 + 0x148) != 0)) {
                 fVar4 = (float)ForceSpeAddData.Get(*(int64 *)(lVar2 + 0x148),12);
                 fVar3 = fVar3 + fVar4;
-                goto LAB_1807efb2b;
+                goto LAB_1807ede8b;
               }
             }
           }
         }
     }
 
-    // Token : 0x6000F55
-    // RVA   : 0x7EF3E0   Offset: 0x7EDBE0   Length: 0xA3
+    // Token : 0x6000F8A
+    // RVA   : 0x7ED740   Offset: 0x7ECB40   Length: 0xA3
     public float GetBuildSpeedRate()
     {
         long lVar1;
@@ -126,7 +126,7 @@ public class AreaRoadData
           fVar2 = (float)ForceSpeAddData.Get(*(int64 *)(lVar1 + 176),13);
           lVar1 = AreaRoadData.GetArea(this,0);
           if (lVar1 != null) {
-            if (*(int *)(lVar1 + 112) < 0) {
+            if (*(int *)(lVar1 + 112) == -1) {
               return fVar2 + 1.0;
             }
             lVar1 = AreaRoadData.GetArea(this,0);
@@ -139,28 +139,28 @@ public class AreaRoadData
         }
     }
 
-    // Token : 0x6000F56
-    // RVA   : 0x7EF320   Offset: 0x7EDB20   Length: 0xBE
+    // Token : 0x6000F8B
+    // RVA   : 0x7ED680   Offset: 0x7ECA80   Length: 0xBE
     public AreaData GetArea()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
-        if ((GameController._instance != null) &&
-           (lVar1 = GameController._instance.worldData) != null)
-        {
+        if ((*pStatics != 0) &&
+           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
           WorldData.GetArea(lVar1,this.areaID,0);
           return;
         }
     }
 
-    // Token : 0x6000F57
-    // RVA   : 0x7EF490   Offset: 0x7EDC90   Length: 0x11
+    // Token : 0x6000F8C
+    // RVA   : 0x7ED7F0   Offset: 0x7ECBF0   Length: 0x11
     public float GetProduceRateChange()
     {
         return (float)this.roadLv * 0.05;
     }
 
-    // Token : 0x6000F58
-    // RVA   : 0x7EF4B0   Offset: 0x7EDCB0   Length: 0x213
+    // Token : 0x6000F8D
+    // RVA   : 0x7ED810   Offset: 0x7ECC10   Length: 0x213
     public string GetRoadDescribe()
     {
         uint uVar1;
@@ -192,10 +192,9 @@ public class AreaRoadData
         }
         uVar6 = String.Concat(uVar6,uVar5,0);
         local_res18[0] = (float)this.roadLv * 0.05 * 100.0;
-        uVar5 = il2cpp_value_box(DAT_181d7d0b8,local_res18);
+        uVar5 = il2cpp_value_box(DAT_181da22d8,local_res18);
         uVar6 = String.Format(uVar2,uVar6,uVar5,
-                               *(uint64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x260),0)
-        ;
+                               *(uint64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x268),0);
         uVar2 = "";
         if (0 < this.upgradeTimeLeft) {
           uVar2 = Int32.ToString(this + 24,0);
@@ -204,8 +203,8 @@ public class AreaRoadData
         String.Concat(uVar3,uVar6,uVar2,0);
     }
 
-    // Token : 0x6000F59
-    // RVA   : 0x248060   Offset: 0x246860   Length: 0x34
+    // Token : 0x6000F8E
+    // RVA   : 0x248060   Offset: 0x247460   Length: 0x34
     public void /*ctor*/(int _areaID, int _roadLv)
     {
         ZhSegment.Initialize(this,0);
@@ -213,8 +212,8 @@ public class AreaRoadData
         this.roadLv = _roadLv;
     }
 
-    // Token : 0x6000F5A
-    // RVA   : 0x7EF1A0   Offset: 0x7ED9A0   Length: 0x175
+    // Token : 0x6000F8F
+    // RVA   : 0x7ED500   Offset: 0x7EC900   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -225,13 +224,13 @@ public class AreaRoadData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -243,7 +242,7 @@ public class AreaRoadData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d53c70,plVar1);
+            FUN_180002970(0,DAT_181d78da0,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

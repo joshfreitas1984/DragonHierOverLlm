@@ -1,37 +1,38 @@
 // ============================================================
 // Type  : MailData
-// Token : 0x2000218
+// Token : 0x200021E
 // ============================================================
 
 public class MailData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000EEB
+    // Token: 0x4000F81
     public string mailTitle;
 
-    // Token: 0x4000EEC
+    // Token: 0x4000F82
     public string mailText;
 
-    // Token: 0x4000EED
+    // Token: 0x4000F83
     public TimeData mailTime;
 
-    // Token: 0x4000EEE
+    // Token: 0x4000F84
     public bool important;
 
-    // Token: 0x4000EEF
+    // Token: 0x4000F85
     public bool noticed;
 
-    // Token: 0x4000EF0
+    // Token: 0x4000F86
     public int autoDestroyTime;
 
-    // Token: 0x4000EF1
+    // Token: 0x4000F87
     public bool notImportant;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001048
-    // RVA   : 0x210B70   Offset: 0x20F370   Length: 0x7
+    // Token : 0x6001084
+    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
     public void /*ctor*/()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
                          uint8 param_5,uint8 param_6)
         {
         int64 lVar1;
@@ -39,9 +40,9 @@ public class MailData
         this.mailTitle = param_2;
         this.mailText = param_3;
         if (param_4 == (int64 *)0) {
-          if (((GameController._instance == null) ||
-              (lVar1 = GameController._instance.worldData, lVar1 == null
-              )) || (lVar1 = lVar1.worldTime) == null) {
+          if (((*pStatics == 0) ||
+              (lVar1 = *(int64 *)(*pStatics + 32)) == null) ||
+             (lVar1 = *(int64 *)(lVar1 + 168)) == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -52,10 +53,11 @@ public class MailData
         this.notImportant = param_6;
     }
 
-    // Token : 0x6001049
-    // RVA   : 0xA8B400   Offset: 0xA89C00   Length: 0x18B
+    // Token : 0x6001085
+    // RVA   : 0xA868E0   Offset: 0xA85CE0   Length: 0x18B
     public void /*ctor*/(string _mailTitle, string _mailText, TimeData _mailTime, bool _important, bool _notImportant)
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
                          uint8 _important,uint8 _notImportant)
         {
         int64 lVar1;
@@ -63,9 +65,9 @@ public class MailData
         this.mailTitle = _mailTitle;
         this.mailText = _mailText;
         if (_mailTime == (int64 *)0) {
-          if (((GameController._instance == null) ||
-              (lVar1 = GameController._instance.worldData, lVar1 == null
-              )) || (lVar1 = lVar1.worldTime) == null) {
+          if (((*pStatics == 0) ||
+              (lVar1 = *(int64 *)(*pStatics + 32)) == null) ||
+             (lVar1 = *(int64 *)(lVar1 + 168)) == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -76,62 +78,42 @@ public class MailData
         this.notImportant = _notImportant;
     }
 
-    // Token : 0x600104A
-    // RVA   : 0xA8B220   Offset: 0xA89A20   Length: 0x1DD
+    // Token : 0x6001086
+    // RVA   : 0xA86760   Offset: 0xA85B60   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
         ulong uVar3;
-        ushort uVar5;
         ulong local_38;
         ulong uStack_30;
         uint local_28;
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        uint64 uVar6;
-        uVar6 = 0;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
-        plVar7 = plVar1;
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
+        plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
         uStack_1c = uStack_30._4_4_;
-        BinaryFormatter.ctor(lVar2,0,&local_28,0,plVar7);
-        if (lVar2 == null) {
+        BinaryFormatter.ctor(lVar2,0,&local_28,0,plVar4);
+        if (lVar2 != null) {
+          BinaryFormatter.Serialize(lVar2,plVar1,this,0);
+          if (plVar1 != (int64 *)0) {
+            (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
+            uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
+            (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
+            FUN_180002970(0,DAT_181d78da0,plVar1);
+            return uVar3;
+          }
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        BinaryFormatter.Serialize(lVar2,plVar1,this,0);
-        if (plVar1 == (int64 *)0) {
-                          // WARNING: Subroutine does not return
-          FUN_1800d6620();
-        }
-        (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
-        uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
-        (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-        lVar2 = *plVar1;
-        if (*(uint16 *)(lVar2 + 0x12a) != 0) {
-          do {
-            if (*(int64 *)(*(int64 *)(lVar2 + 176) + uVar6 * 16) == DAT_181d53c70) {
-              puVar4 = (uint64 *)
-                       ((int64)*(int *)(*(int64 *)(lVar2 + 176) + 8 + uVar6 * 16) * 16 + 0x138
-                       + lVar2);
-              goto LAB_180a8b3a4;
-            }
-            uVar5 = (short)uVar6 + 1;
-            uVar6 = (uint64)uVar5;
-          } while (uVar5 < *(uint16 *)(lVar2 + 0x12a));
-        }
-        puVar4 = (uint64 *)FUN_1800914f0(plVar1,DAT_181d53c70,0);
-        LAB_180a8b3a4:
-        (*(code *)*puVar4)(plVar1,puVar4[1]);
-        return uVar3;
     }
 
 }

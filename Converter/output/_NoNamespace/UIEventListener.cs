@@ -1,75 +1,75 @@
 // ============================================================
 // Type  : UIEventListener
-// Token : 0x200009E
+// Token : 0x200009F
 // ============================================================
 
 public class UIEventListener
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40003CF
+    // Token: 0x40003EB
     public object parameter;
 
-    // Token: 0x40003D0
+    // Token: 0x40003EC
     public VoidDelegate onSubmit;
 
-    // Token: 0x40003D1
+    // Token: 0x40003ED
     public VoidDelegate onClick;
 
-    // Token: 0x40003D2
+    // Token: 0x40003EE
     public VoidDelegate onDoubleClick;
 
-    // Token: 0x40003D3
+    // Token: 0x40003EF
     public BoolDelegate onHover;
 
-    // Token: 0x40003D4
+    // Token: 0x40003F0
     public BoolDelegate onPress;
 
-    // Token: 0x40003D5
+    // Token: 0x40003F1
     public BoolDelegate onSelect;
 
-    // Token: 0x40003D6
+    // Token: 0x40003F2
     public FloatDelegate onScroll;
 
-    // Token: 0x40003D7
+    // Token: 0x40003F3
     public VoidDelegate onDragStart;
 
-    // Token: 0x40003D8
+    // Token: 0x40003F4
     public VectorDelegate onDrag;
 
-    // Token: 0x40003D9
+    // Token: 0x40003F5
     public VoidDelegate onDragOver;
 
-    // Token: 0x40003DA
+    // Token: 0x40003F6
     public VoidDelegate onDragOut;
 
-    // Token: 0x40003DB
+    // Token: 0x40003F7
     public VoidDelegate onDragEnd;
 
-    // Token: 0x40003DC
+    // Token: 0x40003F8
     public ObjectDelegate onDrop;
 
-    // Token: 0x40003DD
+    // Token: 0x40003F9
     public KeyCodeDelegate onKey;
 
-    // Token: 0x40003DE
+    // Token: 0x40003FA
     public BoolDelegate onTooltip;
 
-    // Token: 0x40003DF
+    // Token: 0x40003FB
     public bool needsActiveCollider;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60004A1
-    // RVA   : 0x10E6D60   Offset: 0x10E5560   Length: 0x11B
+    // Token : 0x60004B9
+    // RVA   : 0x12BD6C0   Offset: 0x12BCAC0   Length: 0x11B
     private bool get_isColliderEnabled()
     {
         long lVar1;
         bool cVar2;
         byte uVar3;
         if (this.needsActiveCollider) {
-          lVar1 = Component.GetComponent(this,DAT_181d6b340);
+          lVar1 = Component.GetComponent(this,DAT_181d93b60);
           cVar2 = Object.op_Inequality(lVar1,0,0);
           if (!cVar2) {
-            lVar1 = Component.GetComponent(this,DAT_181d6b3c0);
+            lVar1 = Component.GetComponent(this,DAT_181d93be0);
             cVar2 = Object.op_Inequality(lVar1,0,0);
             if (!cVar2) {
               return false;
@@ -89,8 +89,8 @@ public class UIEventListener
         return true;
     }
 
-    // Token : 0x60004A2
-    // RVA   : 0x10E6CA0   Offset: 0x10E54A0   Length: 0x45
+    // Token : 0x60004BA
+    // RVA   : 0x12BD600   Offset: 0x12BCA00   Length: 0x45
     private void OnSubmit()
     {
         long lVar1;
@@ -103,8 +103,8 @@ public class UIEventListener
         }
     }
 
-    // Token : 0x60004A3
-    // RVA   : 0x10E6880   Offset: 0x10E5080   Length: 0x45
+    // Token : 0x60004BB
+    // RVA   : 0x12BD1E0   Offset: 0x12BC5E0   Length: 0x45
     private void OnClick()
     {
         long lVar1;
@@ -117,8 +117,8 @@ public class UIEventListener
         }
     }
 
-    // Token : 0x60004A4
-    // RVA   : 0x10E68D0   Offset: 0x10E50D0   Length: 0x45
+    // Token : 0x60004BC
+    // RVA   : 0x12BD230   Offset: 0x12BC630   Length: 0x45
     private void OnDoubleClick()
     {
         long lVar1;
@@ -131,8 +131,8 @@ public class UIEventListener
         }
     }
 
-    // Token : 0x60004A5
-    // RVA   : 0x10E6AC0   Offset: 0x10E52C0   Length: 0x55
+    // Token : 0x60004BD
+    // RVA   : 0x12BD420   Offset: 0x12BC820   Length: 0x55
     private void OnHover(bool isOver)
     {
         long lVar1;
@@ -145,8 +145,8 @@ public class UIEventListener
         }
     }
 
-    // Token : 0x60004A6
-    // RVA   : 0x10E6B80   Offset: 0x10E5380   Length: 0x55
+    // Token : 0x60004BE
+    // RVA   : 0x12BD4E0   Offset: 0x12BC8E0   Length: 0x55
     private void OnPress(bool isPressed)
     {
         long lVar1;
@@ -159,8 +159,8 @@ public class UIEventListener
         }
     }
 
-    // Token : 0x60004A7
-    // RVA   : 0x10E6C40   Offset: 0x10E5440   Length: 0x55
+    // Token : 0x60004BF
+    // RVA   : 0x12BD5A0   Offset: 0x12BC9A0   Length: 0x55
     private void OnSelect(bool selected)
     {
         long lVar1;
@@ -173,8 +173,8 @@ public class UIEventListener
         }
     }
 
-    // Token : 0x60004A8
-    // RVA   : 0x10E6BE0   Offset: 0x10E53E0   Length: 0x55
+    // Token : 0x60004C0
+    // RVA   : 0x12BD540   Offset: 0x12BC940   Length: 0x55
     private void OnScroll(float delta)
     {
         long lVar1;
@@ -187,8 +187,8 @@ public class UIEventListener
         }
     }
 
-    // Token : 0x60004A9
-    // RVA   : 0x10E69F0   Offset: 0x10E51F0   Length: 0x2F
+    // Token : 0x60004C1
+    // RVA   : 0x12BD350   Offset: 0x12BC750   Length: 0x2F
     private void OnDragStart()
     {
         long lVar1;
@@ -201,8 +201,8 @@ public class UIEventListener
         }
     }
 
-    // Token : 0x60004AA
-    // RVA   : 0x10E6A20   Offset: 0x10E5220   Length: 0x3E
+    // Token : 0x60004C2
+    // RVA   : 0x12BD380   Offset: 0x12BC780   Length: 0x3E
     private void OnDrag(Vector2 delta)
     {
         long lVar1;
@@ -214,8 +214,8 @@ public class UIEventListener
         }
     }
 
-    // Token : 0x60004AB
-    // RVA   : 0x10E69A0   Offset: 0x10E51A0   Length: 0x45
+    // Token : 0x60004C3
+    // RVA   : 0x12BD300   Offset: 0x12BC700   Length: 0x45
     private void OnDragOver()
     {
         long lVar1;
@@ -228,8 +228,8 @@ public class UIEventListener
         }
     }
 
-    // Token : 0x60004AC
-    // RVA   : 0x10E6950   Offset: 0x10E5150   Length: 0x45
+    // Token : 0x60004C4
+    // RVA   : 0x12BD2B0   Offset: 0x12BC6B0   Length: 0x45
     private void OnDragOut()
     {
         long lVar1;
@@ -242,8 +242,8 @@ public class UIEventListener
         }
     }
 
-    // Token : 0x60004AD
-    // RVA   : 0x10E6920   Offset: 0x10E5120   Length: 0x2F
+    // Token : 0x60004C5
+    // RVA   : 0x12BD280   Offset: 0x12BC680   Length: 0x2F
     private void OnDragEnd()
     {
         long lVar1;
@@ -256,8 +256,8 @@ public class UIEventListener
         }
     }
 
-    // Token : 0x60004AE
-    // RVA   : 0x10E6A60   Offset: 0x10E5260   Length: 0x57
+    // Token : 0x60004C6
+    // RVA   : 0x12BD3C0   Offset: 0x12BC7C0   Length: 0x57
     private void OnDrop(GameObject go)
     {
         long lVar1;
@@ -270,8 +270,8 @@ public class UIEventListener
         }
     }
 
-    // Token : 0x60004AF
-    // RVA   : 0x10E6B20   Offset: 0x10E5320   Length: 0x56
+    // Token : 0x60004C7
+    // RVA   : 0x12BD480   Offset: 0x12BC880   Length: 0x56
     private void OnKey(KeyCode key)
     {
         long lVar1;
@@ -284,8 +284,8 @@ public class UIEventListener
         }
     }
 
-    // Token : 0x60004B0
-    // RVA   : 0x10E6CF0   Offset: 0x10E54F0   Length: 0x58
+    // Token : 0x60004C8
+    // RVA   : 0x12BD650   Offset: 0x12BCA50   Length: 0x58
     private void OnTooltip(bool show)
     {
         long lVar1;
@@ -298,8 +298,8 @@ public class UIEventListener
         }
     }
 
-    // Token : 0x60004B1
-    // RVA   : 0x10E66D0   Offset: 0x10E4ED0   Length: 0xF4
+    // Token : 0x60004C9
+    // RVA   : 0x12BD030   Offset: 0x12BC430   Length: 0xF4
     public void Clear()
     {
         this.onSubmit = 0;
@@ -319,26 +319,28 @@ public class UIEventListener
         this.onTooltip = 0;
     }
 
-    // Token : 0x60004B2
-    // RVA   : 0x10E67D0   Offset: 0x10E4FD0   Length: 0xAD
+    // Token : 0x60004CA
+    // RVA   : 0x12BD130   Offset: 0x12BC530   Length: 0xAD
     public static UIEventListener Get(GameObject go)
     {
         bool cVar1;
         ulong uVar2;
         if (go != null) {
-          uVar2 = GameObject.GetComponent(go,DAT_181da2530);
+          uVar2 = GameObject.GetComponent(go,DAT_181d747f0);
           cVar1 = Object.op_Equality(uVar2,0,0);
           if (cVar1) {
-            uVar2 = GameObject.AddComponent(go,DAT_181d9dcd8);
+            uVar2 = GameObject.AddComponent(go,DAT_181dc6a78);
           }
           return uVar2;
         }
     }
 
-    // Token : 0x60004B3
-    // RVA   : 0x10E6D50   Offset: 0x10E5550   Length: 0xE
+    // Token : 0x60004CB
+    // RVA   : 0x12BD6B0   Offset: 0x12BCAB0   Length: 0xE
     public void /*ctor*/()
     {
+        void FUN_1812bd6b0(int64 this)
+        {
         this.needsActiveCollider = 1;
         FUN_18044ef50(this,0);
     }

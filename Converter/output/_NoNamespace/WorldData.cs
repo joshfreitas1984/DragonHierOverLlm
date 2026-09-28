@@ -1,374 +1,378 @@
 // ============================================================
 // Type  : WorldData
-// Token : 0x20001DE
+// Token : 0x20001E4
 // ============================================================
 
 public class WorldData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000C4C
+    // Token: 0x4000CD9
     public int chapter;
 
-    // Token: 0x4000C4D
+    // Token: 0x4000CDA
     public List<int> cityAreaID;
 
-    // Token: 0x4000C4E
+    // Token: 0x4000CDB
     public List<int> villageAreaID;
 
-    // Token: 0x4000C4F
+    // Token: 0x4000CDC
     public List<int> forceAreaID;
 
-    // Token: 0x4000C50
+    // Token: 0x4000CDD
     public List<AreaData> Areas;
 
-    // Token: 0x4000C51
+    // Token: 0x4000CDE
     public List<InnData> Inns;
 
-    // Token: 0x4000C52
+    // Token: 0x4000CDF
     public List<ResourcePointData> ResourcePoints;
 
-    // Token: 0x4000C53
+    // Token: 0x4000CE0
     public List<ForceData> Forces;
 
-    // Token: 0x4000C54
+    // Token: 0x4000CE1
     public List<HeroData> Heros;
 
-    // Token: 0x4000C55
+    // Token: 0x4000CE2
     public List<HeroData> TempHeros;
 
-    // Token: 0x4000C56
+    // Token: 0x4000CE3
     public List<EventData> BigMapRandomEventDatas;
 
-    // Token: 0x4000C57
+    // Token: 0x4000CE4
     public List<EventData> AreaMapRandomEventDatas;
 
-    // Token: 0x4000C58
+    // Token: 0x4000CE5
     public int lastRandomWorldEventDay;
 
-    // Token: 0x4000C59
+    // Token: 0x4000CE6
     public List<int> WorldEventDatasSaveRecord;
 
-    // Token: 0x4000C5A
+    // Token: 0x4000CE7
     public List<EventData> WorldEventDatas;
 
-    // Token: 0x4000C5B
+    // Token: 0x4000CE8
     public List<WorldNewsData> WorldNewsDatas;
 
-    // Token: 0x4000C5C
+    // Token: 0x4000CE9
     public List<MailData> MailDatas;
 
-    // Token: 0x4000C5D
+    // Token: 0x4000CEA
     public bool cheating;
 
-    // Token: 0x4000C5E
+    // Token: 0x4000CEB
     public bool cheated;
 
-    // Token: 0x4000C5F
+    // Token: 0x4000CEC
     public GameMode gameMode;
 
-    // Token: 0x4000C60
+    // Token: 0x4000CED
     public int gameDifficulty;
 
-    // Token: 0x4000C61
+    // Token: 0x4000CEE
     public bool relaxMode;
 
-    // Token: 0x4000C62
+    // Token: 0x4000CEF
     public TimeData worldTime;
 
-    // Token: 0x4000C63
+    // Token: 0x4000CF0
     public float TimeDifficulty;
 
-    // Token: 0x4000C64
+    // Token: 0x4000CF1
     public float hour;
 
-    // Token: 0x4000C65
+    // Token: 0x4000CF2
     public bool forceMeetingStarted;
 
-    // Token: 0x4000C66
+    // Token: 0x4000CF3
     public bool forcePartyStarted;
 
-    // Token: 0x4000C67
+    // Token: 0x4000CF4
     public int forceMeetingMissedTime;
 
-    // Token: 0x4000C68
+    // Token: 0x4000CF5
     public int playerBetrayForceBadTime;
 
-    // Token: 0x4000C69
+    // Token: 0x4000CF6
     public int playerGetTeacherTime;
 
-    // Token: 0x4000C6A
+    // Token: 0x4000CF7
     public int playerServantForceTime;
 
-    // Token: 0x4000C6B
+    // Token: 0x4000CF8
+    public int playerReplaceForceTime;
+
+    // Token: 0x4000CF9
     public List<InfoData> infos;
 
-    // Token: 0x4000C6C
+    // Token: 0x4000CFA
     public Dictionary<int, TimeData> plotHappened;
 
-    // Token: 0x4000C6D
+    // Token: 0x4000CFB
     public List<int> missionFinished;
 
-    // Token: 0x4000C6E
+    // Token: 0x4000CFC
     public PlotEventLogData PlotEventLog;
 
-    // Token: 0x4000C6F
+    // Token: 0x4000CFD
     public List<WorldPlotEventStartData> worldPlotEventStartData;
 
-    // Token: 0x4000C70
+    // Token: 0x4000CFE
     public Dictionary<int, TimeData> worldPlotEventStartTime;
 
-    // Token: 0x4000C71
+    // Token: 0x4000CFF
     public List<string> tutorialFinished;
 
-    // Token: 0x4000C72
+    // Token: 0x4000D00
     public bool openLeaveForce;
 
-    // Token: 0x4000C73
+    // Token: 0x4000D01
     public bool openForceBuilding;
 
-    // Token: 0x4000C74
+    // Token: 0x4000D02
     public bool openForceAttackResource;
 
-    // Token: 0x4000C75
+    // Token: 0x4000D03
     public bool openForceAttackArea;
 
-    // Token: 0x4000C76
+    // Token: 0x4000D04
     public bool openForceAttackBasement;
 
-    // Token: 0x4000C77
+    // Token: 0x4000D05
     public int monthCatchBadFamePlayerTime;
 
-    // Token: 0x4000C78
+    // Token: 0x4000D06
     public int monthGambleTime;
 
-    // Token: 0x4000C79
+    // Token: 0x4000D07
     public int monthPartyTime;
 
-    // Token: 0x4000C7A
+    // Token: 0x4000D08
     public int monthForcePartyTime;
 
-    // Token: 0x4000C7B
+    // Token: 0x4000D09
     public int monthDoctorTime;
 
-    // Token: 0x4000C7C
+    // Token: 0x4000D0A
     public int monthPerformForMoneyTime;
 
-    // Token: 0x4000C7D
+    // Token: 0x4000D0B
     public int monthCoachTime;
 
-    // Token: 0x4000C7E
+    // Token: 0x4000D0C
     public int monthAttackMartialClubTime;
 
-    // Token: 0x4000C7F
+    // Token: 0x4000D0D
     public int monthSpeReduceBadFameTime;
 
-    // Token: 0x4000C80
+    // Token: 0x4000D0E
     public int monthSpeAddFameTime;
 
-    // Token: 0x4000C81
+    // Token: 0x4000D0F
     public int monthSpeGetTalentPointTime;
 
-    // Token: 0x4000C82
+    // Token: 0x4000D10
     public int monthChallengeTime;
 
-    // Token: 0x4000C83
+    // Token: 0x4000D11
     public int monthBuyAreaInfoTime;
 
-    // Token: 0x4000C84
+    // Token: 0x4000D12
     public int monthGiveMoneyToGovernTime;
 
-    // Token: 0x4000C85
+    // Token: 0x4000D13
     public int monthBreakEquipTime;
 
-    // Token: 0x4000C86
+    // Token: 0x4000D14
     public int monthKillTime;
 
-    // Token: 0x4000C87
+    // Token: 0x4000D15
     public int monthFreshBountyTime;
 
-    // Token: 0x4000C88
+    // Token: 0x4000D16
     public int monthFreshAuctionTime;
 
-    // Token: 0x4000C89
+    // Token: 0x4000D17
     public int monthLeaderInteractOtherForceTime;
 
-    // Token: 0x4000C8A
+    // Token: 0x4000D18
     public List<List<ItemData>> showRoomItems;
 
-    // Token: 0x4000C8B
+    // Token: 0x4000D19
     public float showRoomChangeFame;
 
-    // Token: 0x4000C8C
+    // Token: 0x4000D1A
     public int nowWeather;
 
-    // Token: 0x4000C8D
+    // Token: 0x4000D1B
     public float weatherLastTime;
 
-    // Token: 0x4000C8E
+    // Token: 0x4000D1C
     public List<SkinUnlockData> skinUnlockData;
 
-    // Token: 0x4000C8F
+    // Token: 0x4000D1D
     public List<int> speBuildingUnlocked;
 
-    // Token: 0x4000C90
+    // Token: 0x4000D1E
     public int finishForceMissionCount;
 
-    // Token: 0x4000C91
+    // Token: 0x4000D1F
     public int totalFightCount;
 
-    // Token: 0x4000C92
+    // Token: 0x4000D20
     public int totalWinFightCount;
 
-    // Token: 0x4000C93
+    // Token: 0x4000D21
     public int totalEnemyKilled;
 
-    // Token: 0x4000C94
+    // Token: 0x4000D22
     public float totalBadFame;
 
-    // Token: 0x4000C95
+    // Token: 0x4000D23
     public int studyFightWithGreatHeroSingleWinNum;
 
-    // Token: 0x4000C96
+    // Token: 0x4000D24
     public int studyFightWithGreatHeroMultiWinNum;
 
-    // Token: 0x4000C97
+    // Token: 0x4000D25
     public int studyFightWithGreatHeroFinalWinNum;
 
-    // Token: 0x4000C98
+    // Token: 0x4000D26
     public int totalHeroMeet;
 
-    // Token: 0x4000C99
+    // Token: 0x4000D27
     public PrisonData prisonData;
 
-    // Token: 0x4000C9A
+    // Token: 0x4000D28
     public List<int> gameResultTriggered;
 
-    // Token: 0x4000C9B
+    // Token: 0x4000D29
     public List<BookWriterData> playerBookWriter;
 
-    // Token: 0x4000C9C
+    // Token: 0x4000D2A
     public int thisYearExploreSpeEventNum;
 
-    // Token: 0x4000C9D
+    // Token: 0x4000D2B
     public int thisYearExploreBigSpeEventNum;
 
-    // Token: 0x4000C9E
+    // Token: 0x4000D2C
     public ItemListData governStorage;
 
-    // Token: 0x4000C9F
+    // Token: 0x4000D2D
     public float battleTimeScale;
 
-    // Token: 0x4000CA0
+    // Token: 0x4000D2E
     public List<HeroTagDataBase> tempTagDataBase;
 
-    // Token: 0x4000CA1
+    // Token: 0x4000D2F
     public WeaponResearchData weaponResearchData;
 
-    // Token: 0x4000CA2
+    // Token: 0x4000D30
     public MeditationData meditationData;
 
-    // Token: 0x4000CA3
+    // Token: 0x4000D31
     public ForceSpeResearchData forceSpeResearchData;
 
-    // Token: 0x4000CA4
+    // Token: 0x4000D32
     public HeroSpeAddData forceSpeFunctionAddData;
 
-    // Token: 0x4000CA5
+    // Token: 0x4000D33
     public SpePoisonData getSpePoisonData;
 
-    // Token: 0x4000CA6
+    // Token: 0x4000D34
     public SpePoisonData combineSpePoisonData;
 
-    // Token: 0x4000CA7
+    // Token: 0x4000D35
     public ItemListData speBookStorage;
 
-    // Token: 0x4000CA8
+    // Token: 0x4000D36
     public HeroSpeAddData speBookStorageSpeAdd;
 
-    // Token: 0x4000CA9
+    // Token: 0x4000D37
     public SpeSummonResearchData speSummonResearchData;
 
-    // Token: 0x4000CAA
+    // Token: 0x4000D38
     public int speEnhanceStone;
 
-    // Token: 0x4000CAB
+    // Token: 0x4000D39
     public List<float> speSpellRate;
 
-    // Token: 0x4000CAC
+    // Token: 0x4000D3A
     public bool autoResearch;
 
-    // Token: 0x4000CAD
+    // Token: 0x4000D3B
     private ItemData playerAuctionItem;
 
-    // Token: 0x4000CAE
+    // Token: 0x4000D3C
     public ItemSortType itemSortType;
 
-    // Token: 0x4000CAF
+    // Token: 0x4000D3D
     public bool itemReverseOrder;
 
-    // Token: 0x4000CB0
+    // Token: 0x4000D3E
     public SkillSortType skillSortType;
 
-    // Token: 0x4000CB1
+    // Token: 0x4000D3F
     public bool skillReverseOrder;
 
-    // Token: 0x4000CB2
+    // Token: 0x4000D40
     public CustomDifficultyData customDifficultyData;
 
-    // Token: 0x4000CB3
+    // Token: 0x4000D41
     public Dictionary<int, HeroData> HerosDict;
 
-    // Token: 0x4000CB4
+    // Token: 0x4000D42
     private readonly object herosDictLock;
 
-    // Token: 0x4000CB5
+    // Token: 0x4000D43
     public Dictionary<int, HeroData> TempHerosDict;
 
-    // Token: 0x4000CB6
+    // Token: 0x4000D44
     private readonly object tempHerosDictLock;
 
-    // Token: 0x4000CB7
+    // Token: 0x4000D45
     public Dictionary<int, ForceData> ForcesDict;
 
-    // Token: 0x4000CB8
+    // Token: 0x4000D46
     public Dictionary<int, AreaData> AreasDict;
 
-    // Token: 0x4000CB9
+    // Token: 0x4000D47
     public Dictionary<int, ResourcePointData> resourcePointDict;
 
-    // Token: 0x4000CBA
+    // Token: 0x4000D48
     public Dictionary<int, InnData> innDict;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000EC1
-    // RVA   : 0x9EE100   Offset: 0x9EC900   Length: 0x8
+    // Token : 0x6000EF6
+    // RVA   : 0x9D06D0   Offset: 0x9CFAD0   Length: 0x8
     public ItemData get_PlayerAuctionItem()
     {
+        uint64 FUN_1809d06d0(int64 this)
+        {
         return this.playerAuctionItem;
     }
 
-    // Token : 0x6000EC2
-    // RVA   : 0x9EE110   Offset: 0x9EC910   Length: 0x46
+    // Token : 0x6000EF7
+    // RVA   : 0x9D06E0   Offset: 0x9CFAE0   Length: 0xF
     public void set_PlayerAuctionItem(ItemData value)
     {
+        void FUN_1809d06e0(int64 this,uint64 value)
+        {
         this.playerAuctionItem = value;
     }
 
-    // Token : 0x6000EC3
-    // RVA   : 0x9ED7A0   Offset: 0x9EBFA0   Length: 0x95C
+    // Token : 0x6000EF8
+    // RVA   : 0x9CFDB0   Offset: 0x9CF1B0   Length: 0x918
     public void /*ctor*/()
     {
         ulong uVar1;
         long lVar2;
         long lVar3;
         this.battleTimeScale = 0x3f800000;
-        uVar1 = il2cpp_internal(DAT_181d6e930);
-        FUN_180f58a90(uVar1,DAT_181d64ff8);
+        uVar1 = il2cpp_internal(DAT_181d935d0);
+        FUN_18132faf0(uVar1,DAT_181d8c798);
         this.tempTagDataBase = uVar1;
-        lVar2 = new ZhSegment(0);
-        uVar1 = new HeroSpeAddData(0);
-        *(uint64 *)(lVar2 + 32) = uVar1;
-        this.weaponResearchData = lVar2;
+        this.weaponResearchData = new WeaponResearchData(0);
         this.meditationData = new MeditationData(0);
         this.forceSpeResearchData = new ForceSpeResearchData(0);
         this.forceSpeFunctionAddData = new HeroSpeAddData(0);
@@ -376,92 +380,88 @@ public class WorldData
         this.combineSpePoisonData = new SpePoisonData(0);
         this.speBookStorage = new ItemListData(0);
         this.speBookStorageSpeAdd = new HeroSpeAddData(0);
-        uVar1 = il2cpp_internal(GameController_StaticsPtr);
-        SpeSummonResearchData.ctor(uVar1,0);
-        this.speSummonResearchData = uVar1;
-        lVar2 = il2cpp_internal(DAT_181d721b0);
-        FUN_180f58a90(lVar2,DAT_181d79358);
+        this.speSummonResearchData = new SpeSummonResearchData(0);
+        lVar2 = il2cpp_internal(DAT_181d96ed0);
+        FUN_18132faf0(lVar2,DAT_181da0cf8);
         if (lVar2 != null) {
-          FUN_181805690(lVar2,0,DAT_181d79458);
-          FUN_181805690(lVar2,0,DAT_181d79458);
-          FUN_181805690(lVar2,0,DAT_181d79458);
-          FUN_181805690(lVar2,0,DAT_181d79458);
-          FUN_181805690(lVar2,0,DAT_181d79458);
-          FUN_181805690(lVar2,0,DAT_181d79458);
-          FUN_181805690(lVar2,0,DAT_181d79458);
-          FUN_181805690(lVar2,0,DAT_181d79458);
-          FUN_181805690(lVar2,0,DAT_181d79458);
-          FUN_181805690(lVar2,0,DAT_181d79458);
+          FUN_18181de10(lVar2,0,DAT_181da0df8);
+          FUN_18181de10(lVar2,0,DAT_181da0df8);
+          FUN_18181de10(lVar2,0,DAT_181da0df8);
+          FUN_18181de10(lVar2,0,DAT_181da0df8);
+          FUN_18181de10(lVar2,0,DAT_181da0df8);
+          FUN_18181de10(lVar2,0,DAT_181da0df8);
+          FUN_18181de10(lVar2,0,DAT_181da0df8);
+          FUN_18181de10(lVar2,0,DAT_181da0df8);
+          FUN_18181de10(lVar2,0,DAT_181da0df8);
+          FUN_18181de10(lVar2,0,DAT_181da0df8);
           this.speSpellRate = lVar2;
-          uVar1 = il2cpp_internal(CustomDifficultyData_StaticsPtr);
-          CustomDifficultyData.ctor(uVar1,0);
-          this.customDifficultyData = uVar1;
+          this.customDifficultyData = new CustomDifficultyData(0);
           this.herosDictLock = new ZhSegment(0);
           this.tempHerosDictLock = new ZhSegment(0);
           ZhSegment.Initialize(this,0);
-          uVar1 = il2cpp_internal(DAT_181d6c1b0);
-          FUN_180f58a90(uVar1,DAT_181d54fe0);
+          uVar1 = il2cpp_internal(DAT_181d90de0);
+          FUN_18132faf0(uVar1,DAT_181d7c560);
           this.Areas = uVar1;
-          uVar1 = il2cpp_internal(DAT_181d6ef30);
-          FUN_180f58a90(uVar1,DAT_181d672f8);
+          uVar1 = il2cpp_internal(DAT_181d93bd0);
+          FUN_18132faf0(uVar1,DAT_181d8ea98);
           this.Inns = uVar1;
-          uVar1 = il2cpp_internal(DAT_181d71d30);
-          FUN_180f58a90(uVar1,DAT_181d77fd8);
+          uVar1 = il2cpp_internal(DAT_181d96a50);
+          FUN_18132faf0(uVar1,DAT_181d9f978);
           this.ResourcePoints = uVar1;
-          uVar1 = il2cpp_internal(DAT_181d6dfb0);
-          FUN_180f58a90(uVar1,DAT_181d60778);
+          uVar1 = il2cpp_internal(DAT_181d92c58);
+          FUN_18132faf0(uVar1,DAT_181d87f20);
           this.Forces = uVar1;
-          uVar1 = il2cpp_internal(DAT_181d6e6b0);
-          FUN_180f58a90(uVar1,DAT_181d63c78);
+          uVar1 = il2cpp_internal(DAT_181d93350);
+          FUN_18132faf0(uVar1,DAT_181d8b418);
           this.Heros = uVar1;
-          uVar1 = il2cpp_internal(DAT_181d6ee30);
-          FUN_180f58a90(uVar1,DAT_181d66d78);
+          uVar1 = il2cpp_internal(DAT_181d93ad0);
+          FUN_18132faf0(uVar1,DAT_181d8e518);
           this.infos = uVar1;
-          uVar1 = il2cpp_internal(DAT_181d6e6b0);
-          FUN_180f58a90(uVar1,DAT_181d63c78);
+          uVar1 = il2cpp_internal(DAT_181d93350);
+          FUN_18132faf0(uVar1,DAT_181d8b418);
           this.TempHeros = uVar1;
-          lVar2 = il2cpp_internal(DAT_181d6b630);
-          FUN_180f58a90(lVar2,DAT_181d51708);
-          lVar3 = il2cpp_internal(DAT_181d6f430);
-          FUN_180f58a90(lVar3,DAT_181d691f0);
+          lVar2 = il2cpp_internal(DAT_181d901e0);
+          FUN_18132faf0(lVar2,DAT_181d78a28);
+          lVar3 = il2cpp_internal(DAT_181d940d0);
+          FUN_18132faf0(lVar3,DAT_181d90998);
           if (lVar3 != null) {
-            FUN_181827900(lVar3,0,DAT_181d692f0);
-            FUN_181827900(lVar3,0,DAT_181d692f0);
-            FUN_181827900(lVar3,0,DAT_181d692f0);
-            FUN_181827900(lVar3,0,DAT_181d692f0);
-            FUN_181827900(lVar3,0,DAT_181d692f0);
+            FUN_18181e0a0(lVar3,0,DAT_181d90a98);
+            FUN_18181e0a0(lVar3,0,DAT_181d90a98);
+            FUN_18181e0a0(lVar3,0,DAT_181d90a98);
+            FUN_18181e0a0(lVar3,0,DAT_181d90a98);
+            FUN_18181e0a0(lVar3,0,DAT_181d90a98);
             if (lVar2 != null) {
-              FUN_181827900(lVar2,lVar3,DAT_181d51788);
-              lVar3 = il2cpp_internal(DAT_181d6f430);
-              FUN_180f58a90(lVar3,DAT_181d691f0);
+              FUN_18181e0a0(lVar2,lVar3,DAT_181d78aa8);
+              lVar3 = il2cpp_internal(DAT_181d940d0);
+              FUN_18132faf0(lVar3,DAT_181d90998);
               if (lVar3 != null) {
-                FUN_181827900(lVar3,0,DAT_181d692f0);
-                FUN_181827900(lVar3,0,DAT_181d692f0);
-                FUN_181827900(lVar3,0,DAT_181d692f0);
-                FUN_181827900(lVar3,0,DAT_181d692f0);
-                FUN_181827900(lVar3,0,DAT_181d692f0);
-                FUN_181827900(lVar2,lVar3,DAT_181d51788);
-                lVar3 = il2cpp_internal(DAT_181d6f430);
-                FUN_180f58a90(lVar3,DAT_181d691f0);
+                FUN_18181e0a0(lVar3,0,DAT_181d90a98);
+                FUN_18181e0a0(lVar3,0,DAT_181d90a98);
+                FUN_18181e0a0(lVar3,0,DAT_181d90a98);
+                FUN_18181e0a0(lVar3,0,DAT_181d90a98);
+                FUN_18181e0a0(lVar3,0,DAT_181d90a98);
+                FUN_18181e0a0(lVar2,lVar3,DAT_181d78aa8);
+                lVar3 = il2cpp_internal(DAT_181d940d0);
+                FUN_18132faf0(lVar3,DAT_181d90998);
                 if (lVar3 != null) {
-                  FUN_181827900(lVar3,0,DAT_181d692f0);
-                  FUN_181827900(lVar3,0,DAT_181d692f0);
-                  FUN_181827900(lVar3,0,DAT_181d692f0);
-                  FUN_181827900(lVar3,0,DAT_181d692f0);
-                  FUN_181827900(lVar3,0,DAT_181d692f0);
-                  FUN_181827900(lVar2,lVar3,DAT_181d51788);
+                  FUN_18181e0a0(lVar3,0,DAT_181d90a98);
+                  FUN_18181e0a0(lVar3,0,DAT_181d90a98);
+                  FUN_18181e0a0(lVar3,0,DAT_181d90a98);
+                  FUN_18181e0a0(lVar3,0,DAT_181d90a98);
+                  FUN_18181e0a0(lVar3,0,DAT_181d90a98);
+                  FUN_18181e0a0(lVar2,lVar3,DAT_181d78aa8);
                   this.showRoomItems = lVar2;
-                  uVar1 = il2cpp_internal(DAT_181d5d0c8);
-                  FUN_1808ae540(uVar1,DAT_181d99d20);
+                  uVar1 = il2cpp_internal(DAT_181d81a68);
+                  FUN_1808b1370(uVar1,DAT_181dbf6c8);
                   this.plotHappened = uVar1;
-                  uVar1 = il2cpp_internal(DAT_181d5d0c8);
-                  FUN_1808ae540(uVar1,DAT_181d99d20);
+                  uVar1 = il2cpp_internal(DAT_181d81a68);
+                  FUN_1808b1370(uVar1,DAT_181dbf6c8);
                   this.worldPlotEventStartTime = uVar1;
-                  uVar1 = il2cpp_internal(DAT_181d72a30);
-                  FUN_180f58a90(uVar1,DAT_181d7c250);
+                  uVar1 = il2cpp_internal(DAT_181d97750);
+                  FUN_18132faf0(uVar1,DAT_181da3bd8);
                   this.tutorialFinished = uVar1;
-                  uVar1 = il2cpp_internal(DAT_181d6d930);
-                  FUN_180f58a90(uVar1,DAT_181d5e300);
+                  uVar1 = il2cpp_internal(DAT_181d925d8);
+                  FUN_18132faf0(uVar1,DAT_181d85aa0);
                   this.WorldEventDatas = uVar1;
                   return;
                 }
@@ -471,10 +471,11 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000EC4
-    // RVA   : 0x9EB640   Offset: 0x9E9E40   Length: 0x2FF
+    // Token : 0x6000EF9
+    // RVA   : 0x9CDC50   Offset: 0x9CD050   Length: 0x2FF
     public int GetPlayerForceTotalArea()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         bool cVar2;
         long lVar3;
@@ -501,17 +502,17 @@ public class WorldData
             iVar5 = 0;
             if (lVar3 != null) {
               iVar5 = 0;
-              if (((GameController._instance == null) ||
-                  (lVar3 = GameController._instance.worldData,
-                  lVar3 == null)) || (lVar3 = lVar3.Areas) == null) throw; // [null/range check failed]
-              FUN_1817ff240(&local_38,lVar3,DAT_181d550e0);
+              if (((*pStatics == 0) ||
+                  (lVar3 = *(int64 *)(*pStatics + 32)) == null) ||
+                 (lVar3 = *(int64 *)(lVar3 + 48)) == null) throw; // [null/range check failed]
+              FUN_1817eb420(&local_38,lVar3,DAT_181d7c660);
               local_50 = local_38;
               uStack_4c = uStack_34;
               uStack_48 = uStack_30;
               uStack_44 = uStack_2c;
               local_40 = local_28;
               while( true ) {
-                cVar2 = FUN_180d197a0(&local_50,DAT_181d639c8);
+                cVar2 = FUN_180c74f00(&local_50,DAT_181d89e68);
                 lVar3 = local_40;
                 if (!cVar2) break;
                 if (local_40 == 0) {
@@ -532,7 +533,7 @@ public class WorldData
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                if (iVar1 == *(int *)(lVar4 + 132)) goto LAB_1809eb8ad;
+                if (iVar1 == *(int *)(lVar4 + 132)) goto LAB_1809cdebd;
                 lVar4 = AreaData.GetForce(lVar3,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
@@ -544,7 +545,7 @@ public class WorldData
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                if (iVar1 == *(int *)(lVar4 + 132)) goto LAB_1809eb8ad;
+                if (iVar1 == *(int *)(lVar4 + 132)) goto LAB_1809cdebd;
                 lVar3 = AreaData.GetForce(lVar3,0);
                 lVar4 = WorldData.Player(this,0);
                 if (lVar4 == null) {
@@ -557,19 +558,19 @@ public class WorldData
                 }
                 cVar2 = ForceData.IsAllyForce(lVar3,*(uint32 *)(lVar4 + 132),0);
                 if (cVar2) {
-        LAB_1809eb8ad:
+        LAB_1809cdebd:
                   iVar5 = iVar5 + 1;
                 }
               }
-              ZhSegment.Initialize(&local_50,DAT_181d63948);
+              ZhSegment.Initialize(&local_50,DAT_181d89de8);
             }
             return iVar5;
           }
         }
     }
 
-    // Token : 0x6000EC5
-    // RVA   : 0x9EB610   Offset: 0x9E9E10   Length: 0x2B
+    // Token : 0x6000EFA
+    // RVA   : 0x9CDC20   Offset: 0x9CD020   Length: 0x2B
     public int GetPlayerForceMaxAttackTime()
     {
         int iVar1;
@@ -580,8 +581,8 @@ public class WorldData
         return '\x03';
     }
 
-    // Token : 0x6000EC6
-    // RVA   : 0x9EA370   Offset: 0x9E8B70   Length: 0x60
+    // Token : 0x6000EFB
+    // RVA   : 0x9CC960   Offset: 0x9CBD60   Length: 0x60
     public float GetAIForceDevelopSpeed()
     {
         float fVar1;
@@ -595,8 +596,8 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000EC7
-    // RVA   : 0x9EA800   Offset: 0x9E9000   Length: 0xBF
+    // Token : 0x6000EFC
+    // RVA   : 0x9CCDF0   Offset: 0x9CC1F0   Length: 0xBF
     public string GetDifficlutyName()
     {
         uint uVar1;
@@ -604,7 +605,7 @@ public class WorldData
         if (this.relaxMode) {
           return "轻松休闲";
         }
-        lVar2 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 192);
+        lVar2 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 192);
         if (lVar2 != null) {
           uVar1 = this.gameDifficulty;
           if (*(uint32 *)(lVar2 + 24) <= uVar1) {
@@ -614,8 +615,8 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000EC8
-    // RVA   : 0x9E9310   Offset: 0x9E7B10   Length: 0x15C
+    // Token : 0x6000EFD
+    // RVA   : 0x9CB950   Offset: 0x9CAD50   Length: 0x15C
     public bool AddTempTag(HeroTagDataBase tempTag)
     {
         bool cVar1;
@@ -628,7 +629,7 @@ public class WorldData
           lVar3 = 32;
           do {
             if (lVar2.Count <= (int)uVar4) {
-              FUN_181827900(lVar2,tempTag,DAT_181d65078);
+              FUN_18181e0a0(lVar2,tempTag,DAT_181d8c818);
               return true;
             }
             if (lVar2 == null) break;
@@ -637,15 +638,15 @@ public class WorldData
             }
             lVar2 = *(int64 *)(lVar3 + lVar2._items);
             if ((lVar2 == null) || (tempTag == null)) break;
-            cVar1 = FUN_1816fd990(lVar2.Count,*(uint64 *)(tempTag + 24),0);
+            cVar1 = FUN_18171e540(lVar2.Count,*(uint64 *)(tempTag + 24),0);
             lVar2 = this.tempTagDataBase;
             if (cVar1) {
-              if ((lVar2 != null) && (lVar2 = FUN_180002f80(lVar2,uVar4,DAT_181d65178)) != null) {
+              if ((lVar2 != null) && (lVar2 = FUN_180002f80(lVar2,uVar4,DAT_181d8c918)) != null) {
                 if (*(int *)(tempTag + 32) < *(int *)(lVar2 + 32)) {
                   return false;
                 }
                 if (this.tempTagDataBase != null) {
-                  FUN_18182f280(this.tempTagDataBase,uVar4,tempTag,DAT_181d651f8);
+                  FUN_181829cd0(this.tempTagDataBase,uVar4,tempTag,DAT_181d8c998);
                   return true;
                 }
               }
@@ -657,8 +658,8 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000EC9
-    // RVA   : 0x9EA010   Offset: 0x9E8810   Length: 0xE8
+    // Token : 0x6000EFE
+    // RVA   : 0x9CC600   Offset: 0x9CBA00   Length: 0xE8
     public HeroTagDataBase FindTempTag(string tagName)
     {
         bool cVar1;
@@ -680,11 +681,11 @@ public class WorldData
             }
             lVar3 = *(int64 *)(lVar4 + lVar3._items);
             if (lVar3 == null) break;
-            cVar1 = FUN_1816fd990(lVar3.Count,tagName,0);
+            cVar1 = FUN_18171e540(lVar3.Count,tagName,0);
             lVar3 = this.tempTagDataBase;
             if (cVar1) {
               if (lVar3 != null) {
-                uVar2 = FUN_180002f80(lVar3,uVar5,DAT_181d65178);
+                uVar2 = FUN_180002f80(lVar3,uVar5,DAT_181d8c918);
                 return uVar2;
               }
               break;
@@ -695,8 +696,8 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000ECA
-    // RVA   : 0x9E9F30   Offset: 0x9E8730   Length: 0xDC
+    // Token : 0x6000EFF
+    // RVA   : 0x9CC520   Offset: 0x9CB920   Length: 0xDC
     public int FindTempTagID(string tagName)
     {
         bool cVar1;
@@ -717,7 +718,7 @@ public class WorldData
             }
             lVar2 = *(int64 *)(lVar3 + lVar2._items);
             if (lVar2 == null) break;
-            cVar1 = FUN_1816fd990(lVar2.Count,tagName,0);
+            cVar1 = FUN_18171e540(lVar2.Count,tagName,0);
             if (cVar1) {
               return uVar4 + 10000;
             }
@@ -728,10 +729,11 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000ECB
-    // RVA   : 0x9E9790   Offset: 0x9E7F90   Length: 0x26A
+    // Token : 0x6000F00
+    // RVA   : 0x9CBDE0   Offset: 0x9CB1E0   Length: 0x26A
     public void ClearTempTag(string tagName)
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         bool cVar1;
         long lVar2;
         uint uVar3;
@@ -750,15 +752,14 @@ public class WorldData
             }
             lVar2 = *(int64 *)(lVar4 + lVar2._items);
             if (lVar2 == null) break;
-            cVar1 = FUN_1816fd990(lVar2.Count,tagName,0);
+            cVar1 = FUN_18171e540(lVar2.Count,tagName,0);
             if (cVar1) {
               if (uVar3 + 10000 == -1) {
                 return;
               }
-              if ((GameController._instance != null) &&
-                 (lVar2 = GameController._instance.worldData,
-                 lVar2 != null)) {
-                lVar2 = lVar2.Heros;
+              if ((*pStatics != 0) &&
+                 (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+                lVar2 = *(int64 *)(lVar2 + 80);
                 if (lVar2 != null) {
                   if (lVar2.Count == null) {
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -774,14 +775,14 @@ public class WorldData
                       lVar4 = (int64)(int)uVar3 * 8 + 32;
                       lVar2 = *(int64 *)(lVar4 + lVar2._items);
                       if (lVar2 != null) {
-                        lVar2.villageAreaID = 0;
+                        *(uint32 *)(lVar2 + 32) = 0;
                         lVar2 = this.tempTagDataBase;
                         if (lVar2 != null) {
                           if (lVar2.Count <= uVar3) {
                             ThrowHelper.ThrowArgumentOutOfRangeException(0);
                           }
                           lVar2 = *(int64 *)(lVar4 + lVar2._items);
-                          if ((lVar2 = lVar2?.TempHeros) != null) {
+                          if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 88)) != null) {
                             HeroSpeAddData.Reset(lVar2,0);
                             return;
                           }
@@ -800,8 +801,8 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000ECC
-    // RVA   : 0x9E8E70   Offset: 0x9E7670   Length: 0xE1
+    // Token : 0x6000F01
+    // RVA   : 0x9CB4B0   Offset: 0x9CA8B0   Length: 0xE1
     public void AddGameResultTriggered(int resultID)
     {
         bool cVar1;
@@ -809,26 +810,26 @@ public class WorldData
         long lVar3;
         lVar3 = this.gameResultTriggered;
         if (lVar3 == null) {
-          uVar2 = il2cpp_internal(DAT_181d6f030);
-          FUN_180f58a90(uVar2,DAT_181d678f8);
+          uVar2 = il2cpp_internal(DAT_181d93cd0);
+          FUN_18132faf0(uVar2,DAT_181d8f098);
           this.gameResultTriggered = uVar2;
           lVar3 = this.gameResultTriggered;
           if (lVar3 != null)
           {
             }
-            cVar1 = FUN_181815240(lVar3,resultID,DAT_181d67bf8);
+            cVar1 = FUN_18182a3a0(lVar3,resultID,DAT_181d8f398);
             if (!cVar1) {
             if (this.gameResultTriggered == null) {
           }
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          FUN_181814fa0(this.gameResultTriggered,resultID,DAT_181d67a78);
+          FUN_18182a0b0(this.gameResultTriggered,resultID,DAT_181d8f218);
         }
     }
 
-    // Token : 0x6000ECD
-    // RVA   : 0x9EBE90   Offset: 0x9EA690   Length: 0x5C
+    // Token : 0x6000F02
+    // RVA   : 0x9CE4A0   Offset: 0x9CD8A0   Length: 0x5C
     public bool HaveGameResultTriggered(int resultID)
     {
         long lVar1;
@@ -839,8 +840,8 @@ public class WorldData
         return CONCAT71((int7)((uint64)lVar1 >> 8),0 < lVar1.Count);
     }
 
-    // Token : 0x6000ECE
-    // RVA   : 0x9EBE40   Offset: 0x9EA640   Length: 0x44
+    // Token : 0x6000F03
+    // RVA   : 0x9CE450   Offset: 0x9CD850   Length: 0x44
     public bool HaveGameResultTriggered()
     {
         long lVar1;
@@ -851,8 +852,8 @@ public class WorldData
         return CONCAT71((int7)((uint64)lVar1 >> 8),0 < lVar1.Count);
     }
 
-    // Token : 0x6000ECF
-    // RVA   : 0x9EC470   Offset: 0x9EAC70   Length: 0x4E
+    // Token : 0x6000F04
+    // RVA   : 0x9CEA80   Offset: 0x9CDE80   Length: 0x4E
     public HeroData Player()
     {
         long lVar1;
@@ -865,8 +866,8 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000ED0
-    // RVA   : 0x9EA980   Offset: 0x9E9180   Length: 0xB9
+    // Token : 0x6000F05
+    // RVA   : 0x9CCF70   Offset: 0x9CC370   Length: 0xB9
     public int GetEventSaveID(EventData targetEvent)
     {
         int iVar1;
@@ -877,14 +878,14 @@ public class WorldData
           lVar2 = this.BigMapRandomEventDatas;
           if (*(char *)(targetEvent + 56) == false) {
             if (lVar2 != null) {
-              uVar4 = FUN_1817ff280(lVar2,targetEvent,DAT_181d5e480);
+              uVar4 = FUN_1817eb4e0(lVar2,targetEvent,DAT_181d85c20);
               return uVar4;
             }
           }
           else if (lVar2 != null) {
             iVar1 = lVar2.Count;
             if (this.AreaMapRandomEventDatas != null) {
-              iVar3 = FUN_1817ff280(this.AreaMapRandomEventDatas,targetEvent,DAT_181d5e480);
+              iVar3 = FUN_1817eb4e0(this.AreaMapRandomEventDatas,targetEvent,DAT_181d85c20);
               return (uint64)(uint32)(iVar3 + iVar1);
             }
           }
@@ -894,8 +895,8 @@ public class WorldData
         return 0xffffffff;
     }
 
-    // Token : 0x6000ED1
-    // RVA   : 0x9EA8C0   Offset: 0x9E90C0   Length: 0xB8
+    // Token : 0x6000F06
+    // RVA   : 0x9CCEB0   Offset: 0x9CC2B0   Length: 0xB8
     public EventData GetEventSaveIDEvent(int eventSaveID)
     {
         uint uVar1;
@@ -923,8 +924,8 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000ED2
-    // RVA   : 0x9EC170   Offset: 0x9EA970   Length: 0x2F7
+    // Token : 0x6000F07
+    // RVA   : 0x9CE780   Offset: 0x9CDB80   Length: 0x2F7
     internal void OnSerializingMethod(StreamingContext context)
     {
         int iVar1;
@@ -937,8 +938,8 @@ public class WorldData
         long lVar8;
         long lVar9;
         uint uVar10;
-        uVar5 = il2cpp_internal(DAT_181d6f030);
-        FUN_180f58a90(uVar5,DAT_181d678f8);
+        uVar5 = il2cpp_internal(DAT_181d93cd0);
+        FUN_18132faf0(uVar5,DAT_181d8f098);
         this.WorldEventDatasSaveRecord = uVar5;
         lVar6 = this.WorldEventDatas;
         uVar7 = 0;
@@ -949,7 +950,7 @@ public class WorldData
           do {
             if (lVar6.Count <= (int)uVar10) {
               lVar6 = this.worldPlotEventStartData;
-              if (lVar6 != null) goto LAB_1809ec350;
+              if (lVar6 != null) goto LAB_1809ce960;
               break;
             }
             lVar2 = this.WorldEventDatasSaveRecord;
@@ -965,18 +966,18 @@ public class WorldData
               lVar3 = this.BigMapRandomEventDatas;
               if (*(char *)(lVar6 + 56) == false) {
                 if (lVar3 == null) break;
-                iVar4 = FUN_1817ff280(lVar3,lVar6,DAT_181d5e480);
+                iVar4 = FUN_1817eb4e0(lVar3,lVar6,DAT_181d85c20);
               }
               else {
                 if (lVar3 == null) break;
                 iVar1 = lVar3.Count;
                 if (this.AreaMapRandomEventDatas == null) break;
-                iVar4 = FUN_1817ff280(this.AreaMapRandomEventDatas,lVar6,DAT_181d5e480);
+                iVar4 = FUN_1817eb4e0(this.AreaMapRandomEventDatas,lVar6,DAT_181d85c20);
                 iVar4 = iVar4 + iVar1;
               }
             }
             if (lVar2 == null) break;
-            FUN_181814fa0(lVar2,iVar4,DAT_181d67a78);
+            FUN_18182a0b0(lVar2,iVar4,DAT_181d8f218);
             lVar6 = this.WorldEventDatas;
             uVar10 = uVar10 + 1;
             lVar9 = lVar9 + 8;
@@ -1004,13 +1005,13 @@ public class WorldData
             lVar2 = this.BigMapRandomEventDatas;
             if (*(char *)(lVar9 + 56) == false) {
               if (lVar2 == null) break;
-              iVar4 = FUN_1817ff280(lVar2,lVar9,DAT_181d5e480);
+              iVar4 = FUN_1817eb4e0(lVar2,lVar9,DAT_181d85c20);
             }
             else {
               if (lVar2 == null) break;
               iVar1 = lVar2.Count;
               if (this.AreaMapRandomEventDatas == null) break;
-              iVar4 = FUN_1817ff280(this.AreaMapRandomEventDatas,lVar9,DAT_181d5e480);
+              iVar4 = FUN_1817eb4e0(this.AreaMapRandomEventDatas,lVar9,DAT_181d85c20);
               iVar4 = iVar4 + iVar1;
             }
           }
@@ -1020,7 +1021,7 @@ public class WorldData
           lVar6 = this.worldPlotEventStartData;
           lVar8 = lVar8 + 8;
           if (lVar6 == null) break;
-        LAB_1809ec350:
+        LAB_1809ce960:
           if (lVar6.Count <= (int)uVar7) {
             return;
           }
@@ -1028,8 +1029,8 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000ED3
-    // RVA   : 0x9EBF70   Offset: 0x9EA770   Length: 0x1FF
+    // Token : 0x6000F08
+    // RVA   : 0x9CE580   Offset: 0x9CD980   Length: 0x1FF
     internal void OnDeserializedMethod(StreamingContext context)
     {
         uint uVar1;
@@ -1048,7 +1049,7 @@ public class WorldData
           do {
             if (lVar3.Count <= (int)uVar4) {
               lVar3 = this.worldPlotEventStartData;
-              if (lVar3 != null) goto LAB_1809ec0a0;
+              if (lVar3 != null) goto LAB_1809ce6b0;
               break;
             }
             if (lVar3 == null) break;
@@ -1058,10 +1059,10 @@ public class WorldData
             if (-1 < *(int *)(lVar6 + lVar3._items)) {
               lVar3 = this.WorldEventDatas;
               if (this.WorldEventDatasSaveRecord == null) break;
-              uVar1 = FUN_1800d6750(this.WorldEventDatasSaveRecord,uVar4,DAT_181d68270);
+              uVar1 = FUN_1800d6760(this.WorldEventDatasSaveRecord,uVar4,DAT_181d8fa18);
               uVar2 = WorldData.GetEventSaveIDEvent(this,uVar1,0);
               if (lVar3 == null) break;
-              FUN_181827900(lVar3,uVar2,DAT_181d5e380);
+              FUN_18181e0a0(lVar3,uVar2,DAT_181d85b20);
             }
             lVar3 = this.WorldEventDatasSaveRecord;
             uVar4 = uVar4 + 1;
@@ -1074,7 +1075,7 @@ public class WorldData
           uVar5 = uVar5 + 1;
           lVar7 = lVar7 + 8;
           if (lVar3 == null) break;
-        LAB_1809ec0a0:
+        LAB_1809ce6b0:
           if (lVar3.Count <= (int)uVar5) {
             return;
           }
@@ -1086,9 +1087,9 @@ public class WorldData
           if (lVar3 == null) break;
           if (-1 < *(int *)(lVar3 + 52)) {
             if (this.worldPlotEventStartData == null) break;
-            lVar3 = FUN_180002f80(this.worldPlotEventStartData,uVar5,DAT_181d855f8);
+            lVar3 = FUN_180002f80(this.worldPlotEventStartData,uVar5,DAT_181dacf88);
             if (((this.worldPlotEventStartData == null) ||
-                (lVar6 = FUN_180002f80(this.worldPlotEventStartData,uVar5,DAT_181d855f8)) == null) ||
+                (lVar6 = FUN_180002f80(this.worldPlotEventStartData,uVar5,DAT_181dacf88)) == null) ||
                (uVar2 = WorldData.GetEventSaveIDEvent(this,*(uint32 *)(lVar6 + 52),0),
                lVar3 == null)) break;
             *(uint64 *)(lVar3 + 56) = uVar2;
@@ -1096,8 +1097,8 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000ED4
-    // RVA   : 0x9ECD10   Offset: 0x9EB510   Length: 0x419
+    // Token : 0x6000F09
+    // RVA   : 0x9CF320   Offset: 0x9CE720   Length: 0x419
     public void SetPlayerMissionEventData()
     {
         uint uVar1;
@@ -1180,7 +1181,7 @@ public class WorldData
               if (0 < lVar2.Count) {
                 lVar2 = WorldData.Player(this,0);
                 if ((lVar2 == null) || (*(int64 *)(lVar2 + 0x2e8) == 0)) break;
-                lVar2 = FUN_180002f80(*(int64 *)(lVar2 + 0x2e8),uVar4,DAT_181d6d4e8);
+                lVar2 = FUN_180002f80(*(int64 *)(lVar2 + 0x2e8),uVar4,DAT_181d94c88);
                 if ((lVar2 == null) || (lVar2 = *(int64 *)(lVar2 + 120)) == null) break;
                 if (lVar2.Count == null) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1188,7 +1189,7 @@ public class WorldData
                 lVar2 = *(int64 *)(lVar2._items + 32);
                 lVar3 = WorldData.Player(this,0);
                 if ((lVar3 == null) || (*(int64 *)(lVar3 + 0x2e8) == 0)) break;
-                lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 0x2e8),uVar4,DAT_181d6d4e8);
+                lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 0x2e8),uVar4,DAT_181d94c88);
                 if ((lVar3 == null) || (lVar3 = *(int64 *)(lVar3 + 120)) == null) break;
                 if (*(int *)(lVar3 + 24) == 0) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1206,8 +1207,8 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000ED5
-    // RVA   : 0x9EC4C0   Offset: 0x9EACC0   Length: 0x53C
+    // Token : 0x6000F0A
+    // RVA   : 0x9CEAD0   Offset: 0x9CDED0   Length: 0x53C
     public void RecoverPlayerMissionEventData()
     {
         long lVar2;
@@ -1304,12 +1305,12 @@ public class WorldData
               if (*(int64 *)(lVar3 + 120) != 0) {
                 lVar3 = WorldData.Player(this,0);
                 if ((lVar3 == null) || (*(int64 *)(lVar3 + 0x2e8) == 0)) break;
-                lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 0x2e8),uVar6,DAT_181d6d4e8);
+                lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 0x2e8),uVar6,DAT_181d94c88);
                 if ((lVar3 == null) || (*(int64 *)(lVar3 + 120) == 0)) break;
                 if (0 < *(int *)(*(int64 *)(lVar3 + 120) + 24)) {
                   lVar3 = WorldData.Player(this,0);
                   if ((lVar3 == null) || (*(int64 *)(lVar3 + 0x2e8) == 0)) break;
-                  lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 0x2e8),uVar6,DAT_181d6d4e8);
+                  lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 0x2e8),uVar6,DAT_181d94c88);
                   if ((lVar3 == null) || (lVar3 = *(int64 *)(lVar3 + 120)) == null) break;
                   if (lVar3.Count == null) {
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1319,7 +1320,7 @@ public class WorldData
                   if (-1 < lVar3.Count) {
                     lVar3 = WorldData.Player(this,0);
                     if ((lVar3 == null) || (*(int64 *)(lVar3 + 0x2e8) == 0)) break;
-                    lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 0x2e8),uVar6,DAT_181d6d4e8);
+                    lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 0x2e8),uVar6,DAT_181d94c88);
                     if ((lVar3 == null) || (lVar3 = *(int64 *)(lVar3 + 120)) == null) break;
                     if (lVar3.Count == null) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1327,7 +1328,7 @@ public class WorldData
                     lVar3 = *(int64 *)(lVar3._items + 32);
                     lVar5 = WorldData.Player(this,0);
                     if ((lVar5 == null) || (*(int64 *)(lVar5 + 0x2e8) == 0)) break;
-                    lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 0x2e8),uVar6,DAT_181d6d4e8);
+                    lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 0x2e8),uVar6,DAT_181d94c88);
                     if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 120)) == null) break;
                     if (*(int *)(lVar5 + 24) == 0) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1347,15 +1348,15 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000ED6
-    // RVA   : 0x9EA7D0   Offset: 0x9E8FD0   Length: 0x27
+    // Token : 0x6000F0B
+    // RVA   : 0x9CCDC0   Offset: 0x9CC1C0   Length: 0x27
     public float GetChapterBadFameRate()
     {
         Mathf.Min(0x3f800000,1.0 - (float)this.chapter * 0.1,0);
     }
 
-    // Token : 0x6000ED7
-    // RVA   : 0x9ED3E0   Offset: 0x9EBBE0   Length: 0x3BE
+    // Token : 0x6000F0C
+    // RVA   : 0x9CF9F0   Offset: 0x9CEDF0   Length: 0x3BE
     public void UnlockSkin(int _skinID, int _skinLv, bool showInfo)
     {
         long lVar1;
@@ -1374,7 +1375,7 @@ public class WorldData
             if (lVar3.Count <= (int)uVar6) {
               uVar4 = new SkinUnlockData(_skinID,0);
               if (lVar3 != null) {
-                FUN_181827900(lVar3,uVar4,DAT_181d7b658);
+                FUN_18181e0a0(lVar3,uVar4,DAT_181da2fd8);
                 lVar3 = this.skinUnlockData;
                 if (lVar3 != null) {
                   uVar6 = lVar3.Count;
@@ -1384,14 +1385,14 @@ public class WorldData
                   lVar3 = *(int64 *)(lVar3._items + 24 + (int64)(int)uVar6 * 8);
                   if (lVar3 != null) {
                     lVar3 = lVar3.Count;
-        LAB_1809ed606:
+        LAB_1809cfc16:
                     if (lVar3 != null) {
-                      FUN_181814bb0(lVar3,_skinLv,1,DAT_181d58f90);
+                      FUN_1817f42f0(lVar3,_skinLv,1,DAT_181d80720);
                       if (!showInfo) {
                         return;
                       }
-                      lVar3 = **(int64 **)(DAT_181d5a578 + 184);
-                      lVar5 = GameController.lockObj;
+                      lVar3 = **(int64 **)(DAT_181d7f6a8 + 184);
+                      lVar5 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
                       if ((lVar5 != null) &&
                          (lVar5 = GameDataController.FindSkinDataBase(lVar5,_skinID,0)) != null) {
                         uVar4 = SkinDataBase.GetSkinFullName(lVar5,_skinLv,0,1,0);
@@ -1419,17 +1420,17 @@ public class WorldData
             if (lVar1 == null) break;
             lVar3 = this.skinUnlockData;
             if (*(int *)(lVar1 + 16) == _skinID) {
-              if (((lVar3 != null) && (lVar3 = FUN_180002f80(lVar3,uVar6,DAT_181d7b758)) != null) &&
+              if (((lVar3 != null) && (lVar3 = FUN_180002f80(lVar3,uVar6,DAT_181da30d8)) != null) &&
                  (lVar3.Count != null)) {
-                cVar2 = FUN_180132d10(lVar3.Count,_skinLv,DAT_181d58f10);
+                cVar2 = FUN_180133a50(lVar3.Count,_skinLv,DAT_181d806a0);
                 if (cVar2) {
                   return;
                 }
                 if ((this.skinUnlockData != null) &&
-                   (lVar3 = FUN_180002f80(this.skinUnlockData,uVar6,DAT_181d7b758)) != null
+                   (lVar3 = FUN_180002f80(this.skinUnlockData,uVar6,DAT_181da30d8)) != null
                    ) {
                   lVar3 = lVar3.Count;
-                  goto LAB_1809ed606;
+                  goto LAB_1809cfc16;
                 }
               }
               break;
@@ -1440,10 +1441,11 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000ED8
-    // RVA   : 0x9ED130   Offset: 0x9EB930   Length: 0x2AA
+    // Token : 0x6000F0D
+    // RVA   : 0x9CF740   Offset: 0x9CEB40   Length: 0x2AA
     public bool SkinUnlocked(int _skinID, int _skinLv)
     {
+        var pStatics = *(int64*)(DAT_181d72d50 + 184);
         long lVar1;
         byte uVar2;
         int iVar3;
@@ -1451,7 +1453,7 @@ public class WorldData
         ulong uVar5;
         long lVar6;
         uint uVar7;
-        lVar4 = GameController.lockObj;
+        lVar4 = *(int64 *)(pStatics + 32);
         if ((lVar4 != null) && (lVar4 = GameDataController.FindSkinDataBase(lVar4,_skinID,0)) != null) {
           if (*(int *)(lVar4 + 40) < 0) {
             lVar4 = this.skinUnlockData;
@@ -1470,9 +1472,9 @@ public class WorldData
                 if (lVar1 == null) break;
                 lVar4 = this.skinUnlockData;
                 if (*(int *)(lVar1 + 16) == _skinID) {
-                  if (((lVar4 != null) && (lVar4 = FUN_180002f80(lVar4,uVar7,DAT_181d7b758)) != null) &&
+                  if (((lVar4 != null) && (lVar4 = FUN_180002f80(lVar4,uVar7,DAT_181da30d8)) != null) &&
                      (lVar4.Count != null)) {
-                    uVar2 = FUN_180132d10(lVar4.Count,_skinLv,DAT_181d58f10);
+                    uVar2 = FUN_180133a50(lVar4.Count,_skinLv,DAT_181d806a0);
                     return (bool)uVar2;
                   }
                   break;
@@ -1483,10 +1485,10 @@ public class WorldData
             }
           }
           else {
-            lVar4 = GameController.difficultyExtraPoint;
+            lVar4 = *(int64 *)(pStatics + 8);
             if (lVar4 != null) {
               lVar4 = lVar4._items;
-              lVar6 = GameController.lockObj;
+              lVar6 = *(int64 *)(pStatics + 32);
               if ((lVar6 != null) &&
                  (lVar6 = GameDataController.FindSkinDataBase(lVar6,_skinID,0)) != null) {
                 uVar5 = Int32.ToString(lVar6 + 40,0);
@@ -1501,8 +1503,8 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000ED9
-    // RVA   : 0x9E9510   Offset: 0x9E7D10   Length: 0x139
+    // Token : 0x6000F0E
+    // RVA   : 0x9CBB60   Offset: 0x9CAF60   Length: 0x139
     public bool CanQuickTravel()
     {
         long lVar1;
@@ -1542,8 +1544,8 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000EDA
-    // RVA   : 0x9E9650   Offset: 0x9E7E50   Length: 0x139
+    // Token : 0x6000F0F
+    // RVA   : 0x9CBCA0   Offset: 0x9CB0A0   Length: 0x139
     public void ChangeSpeEnhanceStoneNum(int num, bool showInfo)
     {
         long lVar1;
@@ -1554,7 +1556,7 @@ public class WorldData
         local_res10[0] = num;
         this.speEnhanceStone = this.speEnhanceStone + local_res10[0];
         if (showInfo) {
-          lVar1 = **(int64 **)(DAT_181d5a578 + 184);
+          lVar1 = **(int64 **)(DAT_181d7f6a8 + 184);
           uVar2 = Int32.ToString(local_res10,"+0;-0;0",0);
           uVar2 = String.Format("陨铁{0}",uVar2,0);
           if (lVar1 == null) {
@@ -1569,22 +1571,24 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000EDB
-    // RVA   : 0x9E9470   Offset: 0x9E7C70   Length: 0x9C
+    // Token : 0x6000F10
+    // RVA   : 0x9CBAB0   Offset: 0x9CAEB0   Length: 0xA7
     public void AddWorldNews(string text, int time)
     {
         long lVar1;
-        ulong uVar2;
+        long lVar2;
         lVar1 = this.WorldNewsDatas;
-        uVar2 = new WorldNewsData(text,time,0);
+        lVar2 = new ZhSegment(0);
+        *(uint64 *)(lVar2 + 16) = text;
+        *(uint32 *)(lVar2 + 24) = time;
         if (lVar1 != null) {
-          FUN_181827900(lVar1,uVar2,DAT_181d85078);
+          FUN_18181e0a0(lVar1,lVar2,DAT_181daca08);
           return;
         }
     }
 
-    // Token : 0x6000EDC
-    // RVA   : 0x9EBEF0   Offset: 0x9EA6F0   Length: 0x7F
+    // Token : 0x6000F11
+    // RVA   : 0x9CE500   Offset: 0x9CD900   Length: 0x7F
     public bool HaveWorldNews(bool includeWorldNews)
     {
         long lVar1;
@@ -1601,8 +1605,8 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000EDD
-    // RVA   : 0x9EBA50   Offset: 0x9EA250   Length: 0x15F
+    // Token : 0x6000F12
+    // RVA   : 0x9CE060   Offset: 0x9CD460   Length: 0x15F
     public string GetRandomWorldNews(bool includeWorldNews)
     {
         int iVar1;
@@ -1655,8 +1659,8 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000EDE
-    // RVA   : 0x9EB940   Offset: 0x9EA140   Length: 0x10F
+    // Token : 0x6000F13
+    // RVA   : 0x9CDF50   Offset: 0x9CD350   Length: 0x10F
     public int GetRandomEnemyCount()
     {
         long lVar1;
@@ -1678,11 +1682,11 @@ public class WorldData
             }
             if (*(int64 *)(lVar4 + lVar1._items) != 0) {
               if ((this.TempHeros == null) ||
-                 (lVar1 = FUN_180002f80(this.TempHeros,uVar3,DAT_181d643f8)) == null)
+                 (lVar1 = FUN_180002f80(this.TempHeros,uVar3,DAT_181d8bb98)) == null)
               break;
-              if (*(char *)(lVar1 + 0x386) != false) {
+              if (*(char *)(lVar1 + 0x3cd) != false) {
                 if ((this.TempHeros == null) ||
-                   (lVar1 = FUN_180002f80(this.TempHeros,uVar3,DAT_181d643f8)) == null)
+                   (lVar1 = FUN_180002f80(this.TempHeros,uVar3,DAT_181d8bb98)) == null)
                 break;
                 if (*(char *)(lVar1 + 0x2f0) == false) {
                   iVar2 = iVar2 + 1;
@@ -1696,8 +1700,8 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000EDF
-    // RVA   : 0x9E9BE0   Offset: 0x9E83E0   Length: 0x178
+    // Token : 0x6000F14
+    // RVA   : 0x9CC1D0   Offset: 0x9CB5D0   Length: 0x178
     public int FindAvailableHeroID()
     {
         bool cVar1;
@@ -1706,8 +1710,8 @@ public class WorldData
         uint uVar4;
         uint uVar5;
         long lVar6;
-        lVar2 = il2cpp_internal(DAT_181d6f030);
-        FUN_180f58a90(lVar2,DAT_181d678f8);
+        lVar2 = il2cpp_internal(DAT_181d93cd0);
+        FUN_18132faf0(lVar2,DAT_181d8f098);
         lVar3 = this.Heros;
         uVar5 = 0;
         if (lVar3 != null) {
@@ -1720,9 +1724,9 @@ public class WorldData
             }
             if (*(int64 *)(lVar6 + lVar3._items) != 0) {
               if (((this.Heros == null) ||
-                  (lVar3 = FUN_180002f80(this.Heros,uVar4,DAT_181d643f8)) == null)
+                  (lVar3 = FUN_180002f80(this.Heros,uVar4,DAT_181d8bb98)) == null)
                  || (lVar2 == null)) throw; // [null/range check failed]
-              FUN_181814fa0(lVar2,*(uint32 *)(lVar3 + 88),DAT_181d67a78);
+              FUN_18182a0b0(lVar2,*(uint32 *)(lVar3 + 88),DAT_181d8f218);
             }
             lVar3 = this.Heros;
             uVar4 = uVar4 + 1;
@@ -1730,8 +1734,8 @@ public class WorldData
             if (lVar3 == null) throw; // [null/range check failed]
           }
           if (lVar2 != null) {
-            List_1.Sort(lVar2,DAT_181d67ff0);
-            while (cVar1 = FUN_181815240(lVar2,uVar5,DAT_181d67bf8), cVar1) {
+            List_1.Sort(lVar2,DAT_181d8f798);
+            while (cVar1 = FUN_18182a3a0(lVar2,uVar5,DAT_181d8f398), cVar1) {
               uVar5 = uVar5 + 1;
             }
             return uVar5;
@@ -1739,8 +1743,8 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000EE0
-    // RVA   : 0x9E9D60   Offset: 0x9E8560   Length: 0x1CB
+    // Token : 0x6000F15
+    // RVA   : 0x9CC350   Offset: 0x9CB750   Length: 0x1CB
     public int FindAvailableTempHeroID()
     {
         bool cVar1;
@@ -1749,8 +1753,8 @@ public class WorldData
         int iVar4;
         long lVar5;
         uint uVar6;
-        lVar2 = il2cpp_internal(DAT_181d6f030);
-        FUN_180f58a90(lVar2,DAT_181d678f8);
+        lVar2 = il2cpp_internal(DAT_181d93cd0);
+        FUN_18132faf0(lVar2,DAT_181d8f098);
         lVar3 = this.TempHeros;
         uVar6 = 0;
         if (lVar3 != null) {
@@ -1762,9 +1766,9 @@ public class WorldData
             }
             if (*(int64 *)(lVar3._items + lVar5) != 0) {
               if (((this.TempHeros == null) ||
-                  (lVar3 = FUN_180002f80(this.TempHeros,uVar6,DAT_181d643f8)) == null)
+                  (lVar3 = FUN_180002f80(this.TempHeros,uVar6,DAT_181d8bb98)) == null)
                  || (lVar2 == null)) throw; // [null/range check failed]
-              FUN_181814fa0(lVar2,*(uint32 *)(lVar3 + 88),DAT_181d67a78);
+              FUN_18182a0b0(lVar2,*(uint32 *)(lVar3 + 88),DAT_181d8f218);
             }
             lVar3 = this.TempHeros;
             uVar6 = uVar6 + 1;
@@ -1772,9 +1776,9 @@ public class WorldData
             if (lVar3 == null) throw; // [null/range check failed]
           }
           if (lVar2 != null) {
-            List_1.Sort(lVar2,DAT_181d67ff0);
-            iVar4 = *(int *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x118);
-            while (cVar1 = FUN_181815240(lVar2,iVar4,DAT_181d67bf8), cVar1) {
+            List_1.Sort(lVar2,DAT_181d8f798);
+            iVar4 = *(int *)(*(int64 *)(DAT_181d73d40 + 184) + 0x118);
+            while (cVar1 = FUN_18182a3a0(lVar2,iVar4,DAT_181d8f398), cVar1) {
               iVar4 = iVar4 + 1;
             }
             return iVar4;
@@ -1782,8 +1786,8 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000EE1
-    // RVA   : 0x9E9120   Offset: 0x9E7920   Length: 0x1E9
+    // Token : 0x6000F16
+    // RVA   : 0x9CB760   Offset: 0x9CAB60   Length: 0x1E9
     public void AddTempHero(HeroData target)
     {
         ulong uVar1;
@@ -1816,14 +1820,14 @@ public class WorldData
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            FUN_18182f280(this.TempHeros,uVar4,target,DAT_181d64478);
+            FUN_181829cd0(this.TempHeros,uVar4,target,DAT_181d8bc18);
             if (this.TempHerosDict == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            FUN_1808ab680(this.TempHerosDict,*(uint32 *)(target + 88),target,
-                          DAT_181d94860);
-            goto LAB_1809e92b2;
+            FUN_1808ab370(this.TempHerosDict,*(uint32 *)(target + 88),target,
+                          DAT_181db9fe0);
+            goto LAB_1809cb8f2;
           }
           uVar4 = uVar4 + 1;
         }
@@ -1833,26 +1837,26 @@ public class WorldData
           FUN_1800d6620();
         }
         HeroData.SetHeroID(target,uVar3,0);
-        *(uint8 *)(target + 0x385) = 1;
+        *(uint8 *)(target + 0x3cc) = 1;
         if (this.TempHeros == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        FUN_181827900(this.TempHeros,target,DAT_181d63d78);
+        FUN_18181e0a0(this.TempHeros,target,DAT_181d8b518);
         if (this.TempHerosDict == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        FUN_1808ab680(this.TempHerosDict,*(uint32 *)(target + 88),target,DAT_181d94860
+        FUN_1808ab370(this.TempHerosDict,*(uint32 *)(target + 88),target,DAT_181db9fe0
                      );
-        LAB_1809e92b2:
+        LAB_1809cb8f2:
         if (local_res8[0] != false) {
           Monitor.Exit(uVar1,0);
         }
     }
 
-    // Token : 0x6000EE2
-    // RVA   : 0x9ECB90   Offset: 0x9EB390   Length: 0x176
+    // Token : 0x6000F17
+    // RVA   : 0x9CF1A0   Offset: 0x9CE5A0   Length: 0x176
     public void RemoveTempHero(HeroData target)
     {
         ulong uVar1;
@@ -1868,7 +1872,7 @@ public class WorldData
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        *(uint8 *)(target + 0x387) = 0;
+        *(uint8 *)(target + 0x3ce) = 0;
         while( true ) {
           lVar2 = this.TempHeros;
           if (lVar2 == null) {
@@ -1885,7 +1889,7 @@ public class WorldData
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            lVar3 = FUN_180002f80(this.TempHeros,uVar4,DAT_181d643f8);
+            lVar3 = FUN_180002f80(this.TempHeros,uVar4,DAT_181d8bb98);
             if (lVar3 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -1894,12 +1898,12 @@ public class WorldData
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            FUN_18173cb80(lVar2,*(uint32 *)(lVar3 + 88),DAT_181d94970);
+            FUN_18175d7a0(lVar2,*(uint32 *)(lVar3 + 88),DAT_181dba0f0);
             if (this.TempHeros == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            FUN_18182f280(this.TempHeros,uVar4,0,DAT_181d64478);
+            FUN_181829cd0(this.TempHeros,uVar4,0,DAT_181d8bc18);
             break;
           }
           uVar4 = uVar4 + 1;
@@ -1909,8 +1913,8 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000EE3
-    // RVA   : 0x9EBD70   Offset: 0x9EA570   Length: 0xC5
+    // Token : 0x6000F18
+    // RVA   : 0x9CE380   Offset: 0x9CD780   Length: 0xC5
     public int GetTempHeroCount()
     {
         int iVar1;
@@ -1947,8 +1951,8 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000EE4
-    // RVA   : 0x9E8F60   Offset: 0x9E7760   Length: 0x1BD
+    // Token : 0x6000F19
+    // RVA   : 0x9CB5A0   Offset: 0x9CA9A0   Length: 0x1BD
     public void AddNewHero(HeroData target)
     {
         ulong uVar1;
@@ -1981,8 +1985,8 @@ public class WorldData
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            FUN_18182f280(this.Heros,uVar4,target,DAT_181d64478);
-            goto LAB_1809e9096;
+            FUN_181829cd0(this.Heros,uVar4,target,DAT_181d8bc18);
+            goto LAB_1809cb6d6;
           }
           uVar4 = uVar4 + 1;
         }
@@ -1996,12 +2000,12 @@ public class WorldData
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        FUN_181827900(this.Heros,target,DAT_181d63d78);
-        LAB_1809e9096:
+        FUN_18181e0a0(this.Heros,target,DAT_181d8b518);
+        LAB_1809cb6d6:
         if (this.HerosDict != null) {
-          FUN_1808ab680(this.HerosDict,*(uint32 *)(target + 88),target,
-                        DAT_181d94860);
-          *(uint16 *)(target + 0x385) = 0;
+          FUN_1808ab370(this.HerosDict,*(uint32 *)(target + 88),target,
+                        DAT_181db9fe0);
+          *(uint16 *)(target + 0x3cc) = 0;
           if (local_res8[0] != false) {
             Monitor.Exit(uVar1,0);
           }
@@ -2009,8 +2013,8 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000EE5
-    // RVA   : 0x9ECA00   Offset: 0x9EB200   Length: 0x186
+    // Token : 0x6000F1A
+    // RVA   : 0x9CF010   Offset: 0x9CE410   Length: 0x186
     public void RemoveHero(HeroData target)
     {
         ulong uVar1;
@@ -2025,7 +2029,7 @@ public class WorldData
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        *(uint8 *)(target + 0x387) = 0;
+        *(uint8 *)(target + 0x3ce) = 0;
         *(uint8 *)(target + 96) = 1;
         if (*(char *)(target + 92) == false) {
           uVar4 = 0;
@@ -2036,7 +2040,7 @@ public class WorldData
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            if ((int)lVar2.Count <= (int)uVar4) goto LAB_1809ecb34;
+            if ((int)lVar2.Count <= (int)uVar4) goto LAB_1809cf144;
             if (lVar2.Count <= uVar4) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
@@ -2047,7 +2051,7 @@ public class WorldData
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          lVar3 = FUN_180002f80(this.Heros,uVar4,DAT_181d643f8);
+          lVar3 = FUN_180002f80(this.Heros,uVar4,DAT_181d8bb98);
           if (lVar3 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
@@ -2056,21 +2060,21 @@ public class WorldData
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          FUN_18173cb80(lVar2,*(uint32 *)(lVar3 + 88),DAT_181d94970);
+          FUN_18175d7a0(lVar2,*(uint32 *)(lVar3 + 88),DAT_181dba0f0);
           if (this.Heros == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          FUN_18182f280(this.Heros,uVar4,0,DAT_181d64478);
+          FUN_181829cd0(this.Heros,uVar4,0,DAT_181d8bc18);
         }
-        LAB_1809ecb34:
+        LAB_1809cf144:
         if (local_res8[0] != false) {
           Monitor.Exit(uVar1,0);
         }
     }
 
-    // Token : 0x6000EE6
-    // RVA   : 0x9EADA0   Offset: 0x9E95A0   Length: 0xC5
+    // Token : 0x6000F1B
+    // RVA   : 0x9CD3B0   Offset: 0x9CC7B0   Length: 0xC5
     public int GetHeroCount()
     {
         int iVar1;
@@ -2107,8 +2111,8 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000EE7
-    // RVA   : 0x9EA5A0   Offset: 0x9E8DA0   Length: 0x224
+    // Token : 0x6000F1C
+    // RVA   : 0x9CCB90   Offset: 0x9CBF90   Length: 0x224
     public AreaData GetArea(string areaName)
     {
         uint uVar1;
@@ -2119,25 +2123,25 @@ public class WorldData
         uint uVar6;
         long lVar7;
         if (this.AreasDict != null) {
-        LAB_1809ea54b:
-          if (areaName < 0) {
+        LAB_1809ccb3b:
+          if (areaName == -1) {
             uVar4 = 0;
           }
           else {
             if (this.AreasDict == null) throw; // [null/range check failed]
-            uVar4 = FUN_1817cc780(this.AreasDict,areaName,DAT_181d92810);
+            uVar4 = FUN_1817d9e10(this.AreasDict,areaName,DAT_181db7df8);
           }
           return uVar4;
         }
-        uVar4 = il2cpp_internal(DAT_181d5c0c8);
-        FUN_1808ae540(uVar4,DAT_181d92700);
+        uVar4 = il2cpp_internal(DAT_181d809e8);
+        FUN_1808b1370(uVar4,DAT_181db7ce8);
         this.AreasDict = uVar4;
         lVar5 = this.Areas;
         uVar6 = 0;
         if (lVar5 != null) {
           lVar7 = 32;
           do {
-            if (lVar5.Count <= (int)uVar6) goto LAB_1809ea54b;
+            if (lVar5.Count <= (int)uVar6) goto LAB_1809ccb3b;
             lVar2 = this.AreasDict;
             if (lVar5 == null) break;
             if (lVar5.Count <= uVar6) {
@@ -2152,7 +2156,7 @@ public class WorldData
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             if (lVar2 == null) break;
-            FUN_1808ab680(lVar2,uVar1,*(uint64 *)(lVar3._items + lVar7),DAT_181d92788);
+            FUN_1808ab370(lVar2,uVar1,*(uint64 *)(lVar3._items + lVar7),DAT_181db7d70);
             lVar5 = this.Areas;
             uVar6 = uVar6 + 1;
             lVar7 = lVar7 + 8;
@@ -2160,8 +2164,8 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000EE8
-    // RVA   : 0x9EAA40   Offset: 0x9E9240   Length: 0x19D
+    // Token : 0x6000F1D
+    // RVA   : 0x9CD030   Offset: 0x9CC430   Length: 0x1A9
     public ForceData GetForce(string forceName)
     {
         uint uVar1;
@@ -2172,25 +2176,25 @@ public class WorldData
         uint uVar6;
         long lVar7;
         if (this.ForcesDict != null) {
-        LAB_1809ead4b:
-          if (forceName < 0) {
+        LAB_1809cd34f:
+          if ((forceName == -1) || (forceName == -2)) {
             uVar4 = 0;
           }
           else {
             if (this.ForcesDict == null) throw; // [null/range check failed]
-            uVar4 = FUN_1817cc780(this.ForcesDict,forceName,DAT_181d94178);
+            uVar4 = FUN_1817d9e10(this.ForcesDict,forceName,DAT_181db9760);
           }
           return uVar4;
         }
-        uVar4 = il2cpp_internal(DAT_181d5c3c8);
-        FUN_1808ae540(uVar4,DAT_181d94068);
+        uVar4 = il2cpp_internal(DAT_181d80ce8);
+        FUN_1808b1370(uVar4,DAT_181db9650);
         this.ForcesDict = uVar4;
         lVar5 = this.Forces;
         uVar6 = 0;
         if (lVar5 != null) {
           lVar7 = 32;
           do {
-            if (lVar5.Count <= (int)uVar6) goto LAB_1809ead4b;
+            if (lVar5.Count <= (int)uVar6) goto LAB_1809cd34f;
             lVar2 = this.ForcesDict;
             if (lVar5 == null) break;
             if (lVar5.Count <= uVar6) {
@@ -2205,7 +2209,7 @@ public class WorldData
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             if (lVar2 == null) break;
-            FUN_1808ab680(lVar2,uVar1,*(uint64 *)(lVar3._items + lVar7),DAT_181d940f0);
+            FUN_1808ab370(lVar2,uVar1,*(uint64 *)(lVar3._items + lVar7),DAT_181db96d8);
             lVar5 = this.Forces;
             uVar6 = uVar6 + 1;
             lVar7 = lVar7 + 8;
@@ -2213,27 +2217,29 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000EE9
-    // RVA   : 0x9EAE70   Offset: 0x9E9670   Length: 0x60
+    // Token : 0x6000F1E
+    // RVA   : 0x9CD480   Offset: 0x9CC880   Length: 0x65
     public ForceData GetHeroForce(int heroID)
     {
-        long lVar1;
-        ulong uVar2;
-        lVar1 = WorldData.GetHero(this,heroID,0);
-        if (lVar1 != null) {
-          if (*(int *)(lVar1 + 132) < 0) {
+        bool cVar1;
+        long lVar2;
+        ulong uVar3;
+        lVar2 = WorldData.GetHero(this,heroID,0);
+        if (lVar2 != null) {
+          cVar1 = HeroData.HaveForce(lVar2,0);
+          if (!cVar1) {
             return 0;
           }
-          lVar1 = WorldData.GetHero(this,heroID & 0xffffffff,0);
-          if (lVar1 != null) {
-            uVar2 = HeroData.GetForce(lVar1,0,0);
-            return uVar2;
+          lVar2 = WorldData.GetHero(this,heroID & 0xffffffff,0);
+          if (lVar2 != null) {
+            uVar3 = HeroData.GetForce(lVar2,0,0);
+            return uVar3;
           }
         }
     }
 
-    // Token : 0x6000EEA
-    // RVA   : 0x9EAFE0   Offset: 0x9E97E0   Length: 0x465
+    // Token : 0x6000F1F
+    // RVA   : 0x9CD5F0   Offset: 0x9CC9F0   Length: 0x466
     public HeroData GetHero(string heroName)
     {
         bool cVar1;
@@ -2242,9 +2248,9 @@ public class WorldData
         if (heroName < 0) {
           return 0;
         }
-        if (heroName < *(int *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x118)) {
+        if (heroName < *(int *)(*(int64 *)(DAT_181d73d40 + 184) + 0x118)) {
           if (this.HerosDict == null) throw; // [null/range check failed]
-          cVar1 = FUN_1808ab750(this.HerosDict,heroName,DAT_181d948e8);
+          cVar1 = FUN_1808ab490(this.HerosDict,heroName,DAT_181dba068);
           if (!cVar1) {
             return 0;
           }
@@ -2252,20 +2258,20 @@ public class WorldData
         }
         else {
           if (this.TempHerosDict == null) throw; // [null/range check failed]
-          cVar1 = FUN_1808ab750(this.TempHerosDict,heroName,DAT_181d948e8);
+          cVar1 = FUN_1808ab490(this.TempHerosDict,heroName,DAT_181dba068);
           if (!cVar1) {
             return 0;
           }
           lVar3 = this.TempHerosDict;
         }
         if (lVar3 != null) {
-          uVar2 = FUN_1817cc780(lVar3,heroName,DAT_181d949f8);
+          uVar2 = FUN_1817d9e10(lVar3,heroName,DAT_181dba178);
           return uVar2;
         }
     }
 
-    // Token : 0x6000EEB
-    // RVA   : 0x9EA100   Offset: 0x9E8900   Length: 0x26A
+    // Token : 0x6000F20
+    // RVA   : 0x9CC6F0   Offset: 0x9CBAF0   Length: 0x26A
     public void GenerateHeroDict()
     {
         uint uVar1;
@@ -2276,8 +2282,8 @@ public class WorldData
         uint uVar6;
         long lVar7;
         long lVar8;
-        uVar2 = il2cpp_internal(DAT_181d5c548);
-        FUN_1808ae540(uVar2,DAT_181d947d8);
+        uVar2 = il2cpp_internal(DAT_181d80e68);
+        FUN_1808b1370(uVar2,DAT_181db9f58);
         this.HerosDict = uVar2;
         lVar4 = this.Heros;
         uVar6 = 0;
@@ -2293,21 +2299,21 @@ public class WorldData
             if (*(int64 *)(lVar7 + lVar4._items) != 0) {
               lVar4 = this.HerosDict;
               if ((this.Heros == null) ||
-                 (lVar3 = FUN_180002f80(this.Heros,uVar5,DAT_181d643f8)) == null)
+                 (lVar3 = FUN_180002f80(this.Heros,uVar5,DAT_181d8bb98)) == null)
               throw; // [null/range check failed]
               uVar1 = *(uint32 *)(lVar3 + 88);
               if ((this.Heros == null) ||
-                 (uVar2 = FUN_180002f80(this.Heros,uVar5,DAT_181d643f8), lVar4 == null))
+                 (uVar2 = FUN_180002f80(this.Heros,uVar5,DAT_181d8bb98), lVar4 == null))
               throw; // [null/range check failed]
-              FUN_1808ab680(lVar4,uVar1,uVar2,DAT_181d94860);
+              FUN_1808ab370(lVar4,uVar1,uVar2,DAT_181db9fe0);
             }
             lVar4 = this.Heros;
             uVar5 = uVar5 + 1;
             lVar7 = lVar7 + 8;
             if (lVar4 == null) throw; // [null/range check failed]
           }
-          uVar2 = il2cpp_internal(DAT_181d5c548);
-          FUN_1808ae540(uVar2,DAT_181d947d8);
+          uVar2 = il2cpp_internal(DAT_181d80e68);
+          FUN_1808b1370(uVar2,DAT_181db9f58);
           this.TempHerosDict = uVar2;
           lVar4 = this.TempHeros;
           if (lVar4 == null)
@@ -2330,19 +2336,19 @@ public class WorldData
           if (*(int64 *)(lVar8 + lVar4._items) != 0) {
             lVar4 = this.TempHerosDict;
             if ((this.TempHeros == null) ||
-               (lVar7 = FUN_180002f80(this.TempHeros,uVar6,DAT_181d643f8)) == null)
+               (lVar7 = FUN_180002f80(this.TempHeros,uVar6,DAT_181d8bb98)) == null)
             break;
             uVar1 = *(uint32 *)(lVar7 + 88);
             if ((this.TempHeros == null) ||
-               (uVar2 = FUN_180002f80(this.TempHeros,uVar6,DAT_181d643f8), lVar4 == null))
+               (uVar2 = FUN_180002f80(this.TempHeros,uVar6,DAT_181d8bb98), lVar4 == null))
             break;
-            FUN_1808ab680(lVar4,uVar1,uVar2,DAT_181d94860);
+            FUN_1808ab370(lVar4,uVar1,uVar2,DAT_181db9fe0);
           }
         }
     }
 
-    // Token : 0x6000EEC
-    // RVA   : 0x9EAEE0   Offset: 0x9E96E0   Length: 0xFD
+    // Token : 0x6000F21
+    // RVA   : 0x9CD4F0   Offset: 0x9CC8F0   Length: 0xFD
     public HeroData GetHero(int heroID)
     {
         bool cVar1;
@@ -2351,9 +2357,9 @@ public class WorldData
         if (heroID < 0) {
           return 0;
         }
-        if (heroID < *(int *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x118)) {
+        if (heroID < *(int *)(*(int64 *)(DAT_181d73d40 + 184) + 0x118)) {
           if (this.HerosDict == null) throw; // [null/range check failed]
-          cVar1 = FUN_1808ab750(this.HerosDict,heroID,DAT_181d948e8);
+          cVar1 = FUN_1808ab490(this.HerosDict,heroID,DAT_181dba068);
           if (!cVar1) {
             return 0;
           }
@@ -2361,20 +2367,20 @@ public class WorldData
         }
         else {
           if (this.TempHerosDict == null) throw; // [null/range check failed]
-          cVar1 = FUN_1808ab750(this.TempHerosDict,heroID,DAT_181d948e8);
+          cVar1 = FUN_1808ab490(this.TempHerosDict,heroID,DAT_181dba068);
           if (!cVar1) {
             return 0;
           }
           lVar3 = this.TempHerosDict;
         }
         if (lVar3 != null) {
-          uVar2 = FUN_1817cc780(lVar3,heroID,DAT_181d949f8);
+          uVar2 = FUN_1817d9e10(lVar3,heroID,DAT_181dba178);
           return uVar2;
         }
     }
 
-    // Token : 0x6000EED
-    // RVA   : 0x9EABE0   Offset: 0x9E93E0   Length: 0x1B7
+    // Token : 0x6000F22
+    // RVA   : 0x9CD1E0   Offset: 0x9CC5E0   Length: 0x1C2
     public ForceData GetForce(int forceID)
     {
         uint uVar1;
@@ -2385,25 +2391,25 @@ public class WorldData
         uint uVar6;
         long lVar7;
         if (this.ForcesDict != null) {
-        LAB_1809ead4b:
-          if (forceID < 0) {
+        LAB_1809cd34f:
+          if ((forceID == -1) || (forceID == -2)) {
             uVar4 = 0;
           }
           else {
             if (this.ForcesDict == null) throw; // [null/range check failed]
-            uVar4 = FUN_1817cc780(this.ForcesDict,forceID,DAT_181d94178);
+            uVar4 = FUN_1817d9e10(this.ForcesDict,forceID,DAT_181db9760);
           }
           return uVar4;
         }
-        uVar4 = il2cpp_internal(DAT_181d5c3c8);
-        FUN_1808ae540(uVar4,DAT_181d94068);
+        uVar4 = il2cpp_internal(DAT_181d80ce8);
+        FUN_1808b1370(uVar4,DAT_181db9650);
         this.ForcesDict = uVar4;
         lVar5 = this.Forces;
         uVar6 = 0;
         if (lVar5 != null) {
           lVar7 = 32;
           do {
-            if (lVar5.Count <= (int)uVar6) goto LAB_1809ead4b;
+            if (lVar5.Count <= (int)uVar6) goto LAB_1809cd34f;
             lVar2 = this.ForcesDict;
             if (lVar5 == null) break;
             if (lVar5.Count <= uVar6) {
@@ -2418,7 +2424,7 @@ public class WorldData
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             if (lVar2 == null) break;
-            FUN_1808ab680(lVar2,uVar1,*(uint64 *)(lVar3._items + lVar7),DAT_181d940f0);
+            FUN_1808ab370(lVar2,uVar1,*(uint64 *)(lVar3._items + lVar7),DAT_181db96d8);
             lVar5 = this.Forces;
             uVar6 = uVar6 + 1;
             lVar7 = lVar7 + 8;
@@ -2426,8 +2432,8 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000EEE
-    // RVA   : 0x9EA3E0   Offset: 0x9E8BE0   Length: 0x1B7
+    // Token : 0x6000F23
+    // RVA   : 0x9CC9D0   Offset: 0x9CBDD0   Length: 0x1B8
     public AreaData GetArea(int areaID)
     {
         uint uVar1;
@@ -2438,25 +2444,25 @@ public class WorldData
         uint uVar6;
         long lVar7;
         if (this.AreasDict != null) {
-        LAB_1809ea54b:
-          if (areaID < 0) {
+        LAB_1809ccb3b:
+          if (areaID == -1) {
             uVar4 = 0;
           }
           else {
             if (this.AreasDict == null) throw; // [null/range check failed]
-            uVar4 = FUN_1817cc780(this.AreasDict,areaID,DAT_181d92810);
+            uVar4 = FUN_1817d9e10(this.AreasDict,areaID,DAT_181db7df8);
           }
           return uVar4;
         }
-        uVar4 = il2cpp_internal(DAT_181d5c0c8);
-        FUN_1808ae540(uVar4,DAT_181d92700);
+        uVar4 = il2cpp_internal(DAT_181d809e8);
+        FUN_1808b1370(uVar4,DAT_181db7ce8);
         this.AreasDict = uVar4;
         lVar5 = this.Areas;
         uVar6 = 0;
         if (lVar5 != null) {
           lVar7 = 32;
           do {
-            if (lVar5.Count <= (int)uVar6) goto LAB_1809ea54b;
+            if (lVar5.Count <= (int)uVar6) goto LAB_1809ccb3b;
             lVar2 = this.AreasDict;
             if (lVar5 == null) break;
             if (lVar5.Count <= uVar6) {
@@ -2471,7 +2477,7 @@ public class WorldData
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             if (lVar2 == null) break;
-            FUN_1808ab680(lVar2,uVar1,*(uint64 *)(lVar3._items + lVar7),DAT_181d92788);
+            FUN_1808ab370(lVar2,uVar1,*(uint64 *)(lVar3._items + lVar7),DAT_181db7d70);
             lVar5 = this.Areas;
             uVar6 = uVar6 + 1;
             lVar7 = lVar7 + 8;
@@ -2479,8 +2485,8 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000EEF
-    // RVA   : 0x9EBBB0   Offset: 0x9EA3B0   Length: 0x1B7
+    // Token : 0x6000F24
+    // RVA   : 0x9CE1C0   Offset: 0x9CD5C0   Length: 0x1B7
     public ResourcePointData GetResourcePoint(int resourcePointID)
     {
         uint uVar1;
@@ -2491,25 +2497,25 @@ public class WorldData
         uint uVar6;
         long lVar7;
         if (this.resourcePointDict != null) {
-        LAB_1809ebd1b:
+        LAB_1809ce32b:
           if (resourcePointID < 0) {
             uVar4 = 0;
           }
           else {
             if (this.resourcePointDict == null) throw; // [null/range check failed]
-            uVar4 = FUN_1817cc780(this.resourcePointDict,resourcePointID,DAT_181d97ee8);
+            uVar4 = FUN_1817d9e10(this.resourcePointDict,resourcePointID,DAT_181dbd888);
           }
           return uVar4;
         }
-        uVar4 = il2cpp_internal(DAT_181d5cb48);
-        FUN_1808ae540(uVar4,DAT_181d97dd8);
+        uVar4 = il2cpp_internal(DAT_181d814e8);
+        FUN_1808b1370(uVar4,DAT_181dbd778);
         this.resourcePointDict = uVar4;
         lVar5 = this.ResourcePoints;
         uVar6 = 0;
         if (lVar5 != null) {
           lVar7 = 32;
           do {
-            if (lVar5.Count <= (int)uVar6) goto LAB_1809ebd1b;
+            if (lVar5.Count <= (int)uVar6) goto LAB_1809ce32b;
             lVar2 = this.resourcePointDict;
             if (lVar5 == null) break;
             if (lVar5.Count <= uVar6) {
@@ -2524,7 +2530,7 @@ public class WorldData
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             if (lVar2 == null) break;
-            FUN_1808ab680(lVar2,uVar1,*(uint64 *)(lVar3._items + lVar7),DAT_181d97e60);
+            FUN_1808ab370(lVar2,uVar1,*(uint64 *)(lVar3._items + lVar7),DAT_181dbd800);
             lVar5 = this.ResourcePoints;
             uVar6 = uVar6 + 1;
             lVar7 = lVar7 + 8;
@@ -2532,8 +2538,8 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000EF0
-    // RVA   : 0x9EB450   Offset: 0x9E9C50   Length: 0x1B7
+    // Token : 0x6000F25
+    // RVA   : 0x9CDA60   Offset: 0x9CCE60   Length: 0x1B7
     public InnData GetInn(int innID)
     {
         uint uVar1;
@@ -2544,25 +2550,25 @@ public class WorldData
         uint uVar6;
         long lVar7;
         if (this.innDict != null) {
-        LAB_1809eb5bb:
+        LAB_1809cdbcb:
           if (innID < 0) {
             uVar4 = 0;
           }
           else {
             if (this.innDict == null) throw; // [null/range check failed]
-            uVar4 = FUN_1817cc780(this.innDict,innID,DAT_181d94ec0);
+            uVar4 = FUN_1817d9e10(this.innDict,innID,DAT_181dba640);
           }
           return uVar4;
         }
-        uVar4 = il2cpp_internal(DAT_181d5c648);
-        FUN_1808ae540(uVar4,DAT_181d94db0);
+        uVar4 = il2cpp_internal(DAT_181d80f68);
+        FUN_1808b1370(uVar4,DAT_181dba530);
         this.innDict = uVar4;
         lVar5 = this.Inns;
         uVar6 = 0;
         if (lVar5 != null) {
           lVar7 = 32;
           do {
-            if (lVar5.Count <= (int)uVar6) goto LAB_1809eb5bb;
+            if (lVar5.Count <= (int)uVar6) goto LAB_1809cdbcb;
             lVar2 = this.innDict;
             if (lVar5 == null) break;
             if (lVar5.Count <= uVar6) {
@@ -2577,7 +2583,7 @@ public class WorldData
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             if (lVar2 == null) break;
-            FUN_1808ab680(lVar2,uVar1,*(uint64 *)(lVar3._items + lVar7),DAT_181d94e38);
+            FUN_1808ab370(lVar2,uVar1,*(uint64 *)(lVar3._items + lVar7),DAT_181dba5b8);
             lVar5 = this.Inns;
             uVar6 = uVar6 + 1;
             lVar7 = lVar7 + 8;
@@ -2585,62 +2591,42 @@ public class WorldData
         }
     }
 
-    // Token : 0x6000EF1
-    // RVA   : 0x9E9A00   Offset: 0x9E8200   Length: 0x1DD
+    // Token : 0x6000F26
+    // RVA   : 0x9CC050   Offset: 0x9CB450   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
         ulong uVar3;
-        ushort uVar5;
         ulong local_38;
         ulong uStack_30;
         uint local_28;
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        uint64 uVar6;
-        uVar6 = 0;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
-        plVar7 = plVar1;
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
+        plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
         uStack_1c = uStack_30._4_4_;
-        BinaryFormatter.ctor(lVar2,0,&local_28,0,plVar7);
-        if (lVar2 == null) {
+        BinaryFormatter.ctor(lVar2,0,&local_28,0,plVar4);
+        if (lVar2 != null) {
+          BinaryFormatter.Serialize(lVar2,plVar1,this,0);
+          if (plVar1 != (int64 *)0) {
+            (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
+            uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
+            (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
+            FUN_180002970(0,DAT_181d78da0,plVar1);
+            return uVar3;
+          }
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        BinaryFormatter.Serialize(lVar2,plVar1,this,0);
-        if (plVar1 == (int64 *)0) {
-                          // WARNING: Subroutine does not return
-          FUN_1800d6620();
-        }
-        (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
-        uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
-        (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-        lVar2 = *plVar1;
-        if (*(uint16 *)(lVar2 + 0x12a) != 0) {
-          do {
-            if (*(int64 *)(*(int64 *)(lVar2 + 176) + uVar6 * 16) == DAT_181d53c70) {
-              puVar4 = (uint64 *)
-                       ((int64)*(int *)(*(int64 *)(lVar2 + 176) + 8 + uVar6 * 16) * 16 + 0x138
-                       + lVar2);
-              goto LAB_1809e9b84;
-            }
-            uVar5 = (short)uVar6 + 1;
-            uVar6 = (uint64)uVar5;
-          } while (uVar5 < *(uint16 *)(lVar2 + 0x12a));
-        }
-        puVar4 = (uint64 *)FUN_1800914f0(plVar1,DAT_181d53c70,0);
-        LAB_1809e9b84:
-        (*(code *)*puVar4)(plVar1,puVar4[1]);
-        return uVar3;
     }
 
 }

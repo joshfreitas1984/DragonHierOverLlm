@@ -1,13 +1,13 @@
 // ============================================================
 // Type  : SpeEffectController
-// Token : 0x200035C
+// Token : 0x2000363
 // ============================================================
 
 public class SpeEffectController
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60020CE
-    // RVA   : 0x97B9E0   Offset: 0x97A1E0   Length: 0xDB
+    // Token : 0x600214F
+    // RVA   : 0x98E730   Offset: 0x98DB30   Length: 0xDB
     public void SmoothStart()
     {
         int iVar1;
@@ -24,7 +24,7 @@ public class SpeEffectController
           }
           lVar2 = Component.get_transform(this,0);
           if (((lVar2 == null) || (lVar2 = Transform.GetChild(lVar2,iVar3,0)) == null) ||
-             (lVar2 = Component.GetComponent(lVar2,DAT_181d6c340)) == null) break;
+             (lVar2 = Component.GetComponent(lVar2,DAT_181d94b60)) == null) break;
           local_res18[0] = FUN_1804651e0(lVar2,0);
           FUN_180464730(local_res18);
           iVar3 = iVar3 + 1;
@@ -32,8 +32,8 @@ public class SpeEffectController
         }
     }
 
-    // Token : 0x60020CF
-    // RVA   : 0x97B900   Offset: 0x97A100   Length: 0xDB
+    // Token : 0x6002150
+    // RVA   : 0x98E650   Offset: 0x98DA50   Length: 0xDB
     public void SmoothEnd()
     {
         int iVar1;
@@ -58,8 +58,8 @@ public class SpeEffectController
         }
     }
 
-    // Token : 0x60020D0
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x6002151
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

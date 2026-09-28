@@ -1,47 +1,47 @@
 // ============================================================
 // Type  : ChainLightning
-// Token : 0x20001AF
+// Token : 0x20001B5
 // ============================================================
 
 public class ChainLightning
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000B46
+    // Token: 0x4000BD2
     public float detail;
 
-    // Token: 0x4000B47
+    // Token: 0x4000BD3
     public float displacement;
 
-    // Token: 0x4000B48
+    // Token: 0x4000BD4
     public Vector3 EndPostion;
 
-    // Token: 0x4000B49
+    // Token: 0x4000BD5
     public Vector3 StartPosition;
 
-    // Token: 0x4000B4A
+    // Token: 0x4000BD6
     public float yOffset;
 
-    // Token: 0x4000B4B
+    // Token: 0x4000BD7
     private LineRenderer _lineRender;
 
-    // Token: 0x4000B4C
+    // Token: 0x4000BD8
     private List<Vector3> _linePosList;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000E3D
-    // RVA   : 0x9F0040   Offset: 0x9EE840   Length: 0x96
+    // Token : 0x6000E72
+    // RVA   : 0x992740   Offset: 0x991B40   Length: 0x96
     private void Awake()
     {
         ulong uVar1;
-        uVar1 = Component.GetComponent(this,DAT_181d6c040);
+        uVar1 = Component.GetComponent(this,DAT_181d94860);
         this._lineRender = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d73eb0);
-        FUN_180f58a90(uVar1,DAT_181d841f8);
+        uVar1 = il2cpp_internal(DAT_181d98bd0);
+        FUN_18132faf0(uVar1,DAT_181dabb98);
         this._linePosList = uVar1;
     }
 
-    // Token : 0x6000E3E
-    // RVA   : 0x9F0330   Offset: 0x9EEB30   Length: 0x32F
+    // Token : 0x6000E73
+    // RVA   : 0x992A30   Offset: 0x991E30   Length: 0x32F
     private void Update()
     {
         ulong uVar1;
@@ -69,7 +69,7 @@ public class ChainLightning
           return;
         }
         if (this._linePosList != null) {
-          FUN_180f56130(this._linePosList,DAT_181d84378);
+          FUN_1812f9a10(this._linePosList,DAT_181dabd18);
           Vector3.get_zero(local_88,0);
           Vector3.get_zero(local_88,0);
           local_a0 = *(float *)(this + 40);
@@ -98,7 +98,7 @@ public class ChainLightning
           if (this._linePosList != null) {
             local_a8 = CONCAT44(fVar12,fVar13);
             local_a0 = fVar5;
-            FUN_181805a40(this._linePosList,&local_a8,DAT_181d84278);
+            FUN_181816b80(this._linePosList,&local_a8,DAT_181dabc18);
             if ((this._linePosList != null) && (this._lineRender != null)) {
               LineRenderer.set_positionCount
                         (this._lineRender,
@@ -134,8 +134,8 @@ public class ChainLightning
         }
     }
 
-    // Token : 0x6000E3F
-    // RVA   : 0x9F00E0   Offset: 0x9EE8E0   Length: 0x241
+    // Token : 0x6000E74
+    // RVA   : 0x9927E0   Offset: 0x991BE0   Length: 0x241
     private void CollectLinPos(Vector3 startPos, Vector3 destPos, float displace)
     {
         ulong uVar1;
@@ -154,7 +154,7 @@ public class ChainLightning
           }
           local_98 = *(uint64 *)startPos;
           local_90 = startPos[2];
-          FUN_181805a40(this._linePosList,&local_98,DAT_181d84278);
+          FUN_181816b80(this._linePosList,&local_98,DAT_181dabc18);
         }
         else {
           local_a0 = startPos[2];
@@ -183,10 +183,12 @@ public class ChainLightning
         }
     }
 
-    // Token : 0x6000E40
-    // RVA   : 0x9F0660   Offset: 0x9EEE60   Length: 0x15
+    // Token : 0x6000E75
+    // RVA   : 0x992D60   Offset: 0x992160   Length: 0x15
     public void /*ctor*/()
     {
+        void FUN_180992d60(int64 this)
+        {
         this.detail = 0x3f800000;
         this.displacement = 0x41700000;
         FUN_18044ef50(this,0);

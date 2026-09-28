@@ -1,24 +1,24 @@
 // ============================================================
 // Type  : ForceFocusType
-// Token : 0x200020A
+// Token : 0x2000210
 // ============================================================
 
 public class ForceFocusType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000E57
+    // Token: 0x4000EE7
     public int value__;
 
-    // Token: 0x4000E58
+    // Token: 0x4000EE8
     public const ForceFocusType InternalAffair;
 
-    // Token: 0x4000E59
+    // Token: 0x4000EE9
     public const ForceFocusType StudySkill;
 
-    // Token: 0x4000E5A
+    // Token: 0x4000EEA
     public const ForceFocusType UseStrategy;
 
-    // Token: 0x4000E5B
+    // Token: 0x4000EEB
     public const ForceFocusType AttackArea;
 
 }

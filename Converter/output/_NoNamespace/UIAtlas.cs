@@ -1,44 +1,44 @@
 // ============================================================
 // Type  : UIAtlas
-// Token : 0x20000D3
+// Token : 0x20000D4
 // ============================================================
 
 public class UIAtlas
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000500
+    // Token: 0x400051C
     private Material material;
 
-    // Token: 0x4000501
+    // Token: 0x400051D
     private List<UISpriteData> mSprites;
 
-    // Token: 0x4000502
+    // Token: 0x400051E
     private float mPixelSize;
 
-    // Token: 0x4000503
+    // Token: 0x400051F
     private object mReplacement;
 
-    // Token: 0x4000504
+    // Token: 0x4000520
     private Coordinates mCoordinates;
 
-    // Token: 0x4000505
+    // Token: 0x4000521
     private List<Sprite> sprites;
 
-    // Token: 0x4000506
+    // Token: 0x4000522
     private int mPMA;
 
-    // Token: 0x4000507
+    // Token: 0x4000523
     private Dictionary<string, int> mSpriteIndices;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60006C0
-    // RVA   : 0xA79FD0   Offset: 0xA787D0   Length: 0xDF
+    // Token : 0x60006D8
+    // RVA   : 0x15283F0   Offset: 0x15277F0   Length: 0xDF
     public virtual Material get_spriteMaterial()
     {
         long lVar1;
         ulong uVar4;
         ushort uVar5;
-        plVar2 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d55650);
+        plVar2 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d7a788);
         if (plVar2 == (int64 *)0) {
           return this.material;
         }
@@ -46,32 +46,32 @@ public class UIAtlas
         uVar5 = 0;
         if (*(uint16 *)(lVar1 + 0x12a) != 0) {
           do {
-            if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar5 * 16) == DAT_181d55650) {
+            if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar5 * 16) == DAT_181d7a788) {
               puVar3 = (uint64 *)
                        ((int64)*(int *)(*(int64 *)(lVar1 + 176) + 8 + (uint64)uVar5 * 16) *
                         16 + 0x138 + lVar1);
-              goto LAB_180a7a075;
+              goto LAB_181528495;
             }
             uVar5 = uVar5 + 1;
           } while (uVar5 < *(uint16 *)(lVar1 + 0x12a));
         }
-        puVar3 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d55650,0);
-        LAB_180a7a075:
-                          // WARNING: Could not recover jumptable at 0x000180a7a086. Too many branches
+        puVar3 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d7a788,0);
+        LAB_181528495:
+                          // WARNING: Could not recover jumptable at 0x0001815284a6. Too many branches
                           // WARNING: Treating indirect jump as call
         uVar4 = (*(code *)*puVar3)(plVar2,puVar3[1]);
         return uVar4;
     }
 
-    // Token : 0x60006C1
-    // RVA   : 0xA7A670   Offset: 0xA78E70   Length: 0x18B
+    // Token : 0x60006D9
+    // RVA   : 0x1528A90   Offset: 0x1527E90   Length: 0x18B
     public virtual void set_spriteMaterial(Material value)
     {
         ulong uVar1;
         long lVar2;
         bool cVar3;
         ushort uVar6;
-        plVar4 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d55650);
+        plVar4 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d7a788);
         if (plVar4 == (int64 *)0) {
           uVar1 = this.material;
           cVar3 = Object.op_Equality(uVar1,0,0);
@@ -90,24 +90,24 @@ public class UIAtlas
         uVar6 = 0;
         if (*(uint16 *)(lVar2 + 0x12a) != 0) {
           do {
-            if (*(int64 *)(*(int64 *)(lVar2 + 176) + (uint64)uVar6 * 16) == DAT_181d55650) {
+            if (*(int64 *)(*(int64 *)(lVar2 + 176) + (uint64)uVar6 * 16) == DAT_181d7a788) {
               puVar5 = (uint64 *)
                        ((int64)*(int *)(*(int64 *)(lVar2 + 176) + 8 + (uint64)uVar6 * 16) *
                         16 + 0x148 + lVar2);
-              goto LAB_180a7a7c8;
+              goto LAB_181528be8;
             }
             uVar6 = uVar6 + 1;
           } while (uVar6 < *(uint16 *)(lVar2 + 0x12a));
         }
-        puVar5 = (uint64 *)FUN_1800914f0(plVar4,DAT_181d55650,1);
-        LAB_180a7a7c8:
-                          // WARNING: Could not recover jumptable at 0x000180a7a7e1. Too many branches
+        puVar5 = (uint64 *)FUN_1800914f0(plVar4,DAT_181d7a788,1);
+        LAB_181528be8:
+                          // WARNING: Could not recover jumptable at 0x000181528c01. Too many branches
                           // WARNING: Treating indirect jump as call
         (*(code *)*puVar5)(plVar4,value,puVar5[1]);
     }
 
-    // Token : 0x60006C2
-    // RVA   : 0xA79BB0   Offset: 0xA783B0   Length: 0x2BC
+    // Token : 0x60006DA
+    // RVA   : 0x1527FD0   Offset: 0x15273D0   Length: 0x2BC
     public virtual bool get_premultipliedAlpha()
     {
         bool cVar1;
@@ -117,31 +117,31 @@ public class UIAtlas
         ushort uVar7;
         int iVar9;
         ulong uVar8;
-        plVar3 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d55650);
+        plVar3 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d7a788);
         if (plVar3 != (int64 *)0) {
           lVar5 = *plVar3;
           uVar7 = 0;
           if (*(uint16 *)(lVar5 + 0x12a) != 0) {
             do {
-              if (*(int64 *)(*(int64 *)(lVar5 + 176) + (uint64)uVar7 * 16) == DAT_181d55650) {
+              if (*(int64 *)(*(int64 *)(lVar5 + 176) + (uint64)uVar7 * 16) == DAT_181d7a788) {
                 puVar4 = (uint64 *)
                          ((int64)*(int *)(*(int64 *)(lVar5 + 176) + 8 + (uint64)uVar7 * 16) *
                           16 + 0x1a8 + lVar5);
-                goto LAB_180a79e37;
+                goto LAB_181528257;
               }
               uVar7 = uVar7 + 1;
             } while (uVar7 < *(uint16 *)(lVar5 + 0x12a));
           }
-          puVar4 = (uint64 *)FUN_1800914f0(plVar3,DAT_181d55650,7);
-        LAB_180a79e37:
-                          // WARNING: Could not recover jumptable at 0x000180a79e4d. Too many branches
+          puVar4 = (uint64 *)FUN_1800914f0(plVar3,DAT_181d7a788,7);
+        LAB_181528257:
+                          // WARNING: Could not recover jumptable at 0x00018152826d. Too many branches
                           // WARNING: Treating indirect jump as call
           uVar2 = (*(code *)*puVar4)(plVar3,puVar4[1]);
           return (bool)uVar2;
         }
         iVar9 = this.mPMA;
         if (iVar9 == -1) {
-          plVar3 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d55650);
+          plVar3 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d7a788);
           iVar9 = 0;
           if (plVar3 == (int64 *)0) {
             lVar5 = this.material;
@@ -151,35 +151,35 @@ public class UIAtlas
             uVar8 = 0;
             if (*(uint16 *)(lVar5 + 0x12a) != 0) {
               do {
-                if (*(int64 *)(*(int64 *)(lVar5 + 176) + uVar8 * 16) == DAT_181d55650) {
+                if (*(int64 *)(*(int64 *)(lVar5 + 176) + uVar8 * 16) == DAT_181d7a788) {
                   puVar4 = (uint64 *)
                            ((int64)*(int *)(*(int64 *)(lVar5 + 176) + 8 + uVar8 * 16) * 16 +
                             0x138 + lVar5);
                   lVar5 = (*(code *)*puVar4)(plVar3,puVar4[1]);
-                  goto LAB_180a79d0b;
+                  goto LAB_18152812b;
                 }
                 uVar7 = (short)uVar8 + 1;
                 uVar8 = (uint64)uVar7;
               } while (uVar7 < *(uint16 *)(lVar5 + 0x12a));
             }
-            puVar4 = (uint64 *)FUN_1800914f0(plVar3,DAT_181d55650,0);
+            puVar4 = (uint64 *)FUN_1800914f0(plVar3,DAT_181d7a788,0);
             lVar5 = (*(code *)*puVar4)(plVar3,puVar4[1]);
           }
-        LAB_180a79d0b:
+        LAB_18152812b:
           cVar1 = Object.op_Inequality(lVar5,0,0);
           if (cVar1) {
-            if (lVar5 == null) goto LAB_180a79e67;
+            if (lVar5 == null) goto LAB_181528287;
             uVar6 = Material.get_shader(lVar5,0);
             cVar1 = Object.op_Inequality(uVar6,0,0);
             if (cVar1) {
               lVar5 = Material.get_shader(lVar5,0);
               if (lVar5 == null) {
-        LAB_180a79e67:
+        LAB_181528287:
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
               lVar5 = Object.get_name(lVar5,0);
-              if (lVar5 == null) goto LAB_180a79e67;
+              if (lVar5 == null) goto LAB_181528287;
               cVar1 = String.Contains(lVar5,"Premultiplied",0);
               if (cVar1) {
                 iVar9 = 1;
@@ -191,13 +191,13 @@ public class UIAtlas
         return iVar9 == 1;
     }
 
-    // Token : 0x60006C3
-    // RVA   : 0xA79EB0   Offset: 0xA786B0   Length: 0x118
+    // Token : 0x60006DB
+    // RVA   : 0x15282D0   Offset: 0x15276D0   Length: 0x118
     public virtual List<UISpriteData> get_spriteList()
     {
         long lVar3;
         ushort uVar4;
-        plVar1 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d55650);
+        plVar1 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d7a788);
         if (plVar1 == (int64 *)0) {
           lVar3 = this.mSprites;
           if (lVar3 == null) {
@@ -214,29 +214,29 @@ public class UIAtlas
           uVar4 = 0;
           if (*(uint16 *)(lVar3 + 0x12a) != 0) {
             do {
-              if (*(int64 *)(*(int64 *)(lVar3 + 176) + (uint64)uVar4 * 16) == DAT_181d55650) {
+              if (*(int64 *)(*(int64 *)(lVar3 + 176) + (uint64)uVar4 * 16) == DAT_181d7a788) {
                 puVar2 = (uint64 *)
                          ((int64)*(int *)(*(int64 *)(lVar3 + 176) + 8 + (uint64)uVar4 * 16) *
                           16 + 0x158 + lVar3);
-                goto LAB_180a79f98;
+                goto LAB_1815283b8;
               }
               uVar4 = uVar4 + 1;
             } while (uVar4 < *(uint16 *)(lVar3 + 0x12a));
           }
-          puVar2 = (uint64 *)FUN_1800914f0(plVar1,DAT_181d55650,2);
-        LAB_180a79f98:
+          puVar2 = (uint64 *)FUN_1800914f0(plVar1,DAT_181d7a788,2);
+        LAB_1815283b8:
           lVar3 = (*(code *)*puVar2)(plVar1,puVar2[1]);
         }
         return lVar3;
     }
 
-    // Token : 0x60006C4
-    // RVA   : 0xA7A560   Offset: 0xA78D60   Length: 0x10B
+    // Token : 0x60006DC
+    // RVA   : 0x1528980   Offset: 0x1527D80   Length: 0x10B
     public virtual void set_spriteList(List<UISpriteData> value)
     {
         long lVar1;
         ushort uVar4;
-        plVar2 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d55650);
+        plVar2 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d7a788);
         if (plVar2 == (int64 *)0) {
           this.mSprites = value;
           return;
@@ -245,31 +245,31 @@ public class UIAtlas
         uVar4 = 0;
         if (*(uint16 *)(lVar1 + 0x12a) != 0) {
           do {
-            if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar4 * 16) == DAT_181d55650) {
+            if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar4 * 16) == DAT_181d7a788) {
               puVar3 = (uint64 *)
                        ((int64)*(int *)(*(int64 *)(lVar1 + 176) + 8 + (uint64)uVar4 * 16) *
                         16 + 0x168 + lVar1);
-              goto LAB_180a7a638;
+              goto LAB_181528a58;
             }
             uVar4 = uVar4 + 1;
           } while (uVar4 < *(uint16 *)(lVar1 + 0x12a));
         }
-        puVar3 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d55650,3);
-        LAB_180a7a638:
-                          // WARNING: Could not recover jumptable at 0x000180a7a651. Too many branches
+        puVar3 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d7a788,3);
+        LAB_181528a58:
+                          // WARNING: Could not recover jumptable at 0x000181528a71. Too many branches
                           // WARNING: Treating indirect jump as call
         (*(code *)*puVar3)(plVar2,value,puVar3[1]);
     }
 
-    // Token : 0x60006C5
-    // RVA   : 0xA7A0B0   Offset: 0xA788B0   Length: 0x142
+    // Token : 0x60006DD
+    // RVA   : 0x15284D0   Offset: 0x15278D0   Length: 0x142
     public virtual Texture get_texture()
     {
         long lVar1;
         bool cVar2;
         ulong uVar5;
         ushort uVar6;
-        plVar3 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d55650);
+        plVar3 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d7a788);
         if (plVar3 == (int64 *)0) {
           uVar5 = this.material;
           cVar2 = Object.op_Inequality(uVar5,0,0);
@@ -287,31 +287,31 @@ public class UIAtlas
         uVar6 = 0;
         if (*(uint16 *)(lVar1 + 0x12a) != 0) {
           do {
-            if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar6 * 16) == DAT_181d55650) {
+            if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar6 * 16) == DAT_181d7a788) {
               puVar4 = (uint64 *)
                        ((int64)*(int *)(*(int64 *)(lVar1 + 176) + 8 + (uint64)uVar6 * 16) *
                         16 + 0x178 + lVar1);
-              goto LAB_180a7a168;
+              goto LAB_181528588;
             }
             uVar6 = uVar6 + 1;
           } while (uVar6 < *(uint16 *)(lVar1 + 0x12a));
         }
-        puVar4 = (uint64 *)FUN_1800914f0(plVar3,DAT_181d55650,4);
-        LAB_180a7a168:
-                          // WARNING: Could not recover jumptable at 0x000180a7a179. Too many branches
+        puVar4 = (uint64 *)FUN_1800914f0(plVar3,DAT_181d7a788,4);
+        LAB_181528588:
+                          // WARNING: Could not recover jumptable at 0x000181528599. Too many branches
                           // WARNING: Treating indirect jump as call
         uVar5 = (*(code *)*puVar4)(plVar3,puVar4[1]);
         return uVar5;
     }
 
-    // Token : 0x60006C6
-    // RVA   : 0xA79AC0   Offset: 0xA782C0   Length: 0xE3
+    // Token : 0x60006DE
+    // RVA   : 0x1527EE0   Offset: 0x15272E0   Length: 0xE3
     public virtual float get_pixelSize()
     {
         long lVar1;
         ushort uVar4;
         ulong uVar5;
-        plVar2 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d55650);
+        plVar2 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d7a788);
         if (plVar2 == (int64 *)0) {
           return (uint64)this.mPixelSize;
         }
@@ -319,33 +319,33 @@ public class UIAtlas
         uVar4 = 0;
         if (*(uint16 *)(lVar1 + 0x12a) != 0) {
           do {
-            if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar4 * 16) == DAT_181d55650) {
+            if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar4 * 16) == DAT_181d7a788) {
               puVar3 = (uint64 *)
                        ((int64)*(int *)(*(int64 *)(lVar1 + 176) + 8 + (uint64)uVar4 * 16) *
                         16 + 0x188 + lVar1);
-              goto LAB_180a79b68;
+              goto LAB_181527f88;
             }
             uVar4 = uVar4 + 1;
           } while (uVar4 < *(uint16 *)(lVar1 + 0x12a));
         }
-        puVar3 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d55650,5);
-        LAB_180a79b68:
-                          // WARNING: Could not recover jumptable at 0x000180a79b79. Too many branches
+        puVar3 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d7a788,5);
+        LAB_181527f88:
+                          // WARNING: Could not recover jumptable at 0x000181527f99. Too many branches
                           // WARNING: Treating indirect jump as call
         uVar5 = (*(code *)*puVar3)(plVar2,puVar3[1]);
         return uVar5;
     }
 
-    // Token : 0x60006C7
-    // RVA   : 0xA7A200   Offset: 0xA78A00   Length: 0x12B
+    // Token : 0x60006DF
+    // RVA   : 0x1528620   Offset: 0x1527A20   Length: 0x12B
     public virtual void set_pixelSize(float value)
     {
         long lVar1;
         ushort uVar4;
         float fVar5;
-        plVar2 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d55650);
+        plVar2 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d7a788);
         if (plVar2 == (int64 *)0) {
-          fVar5 = (float)FUN_1810a8ba0(value,0x3e800000,0x40800000,0);
+          fVar5 = (float)FUN_1810e36c0(value,0x3e800000,0x40800000,0);
           if (this.mPixelSize != fVar5) {
             this.mPixelSize = fVar5;
             UIAtlas.MarkAsChanged(this,0);
@@ -357,30 +357,30 @@ public class UIAtlas
           uVar4 = 0;
           if (*(uint16 *)(lVar1 + 0x12a) != 0) {
             do {
-              if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar4 * 16) == DAT_181d55650) {
+              if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar4 * 16) == DAT_181d7a788) {
                 puVar3 = (uint64 *)
                          ((int64)*(int *)(*(int64 *)(lVar1 + 176) + 8 + (uint64)uVar4 * 16) *
                           16 + 0x198 + lVar1);
-                goto LAB_180a7a2f8;
+                goto LAB_181528718;
               }
               uVar4 = uVar4 + 1;
             } while (uVar4 < *(uint16 *)(lVar1 + 0x12a));
           }
-          puVar3 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d55650,6);
-        LAB_180a7a2f8:
+          puVar3 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d7a788,6);
+        LAB_181528718:
           (*(code *)*puVar3)(plVar2,value,puVar3[1]);
         }
     }
 
-    // Token : 0x60006C8
-    // RVA   : 0xA79E70   Offset: 0xA78670   Length: 0x3A
+    // Token : 0x60006E0
+    // RVA   : 0x1528290   Offset: 0x1527690   Length: 0x3A
     public virtual INGUIAtlas get_replacement()
     {
-        il2cpp_internal(this.mReplacement,DAT_181d55650);
+        il2cpp_internal(this.mReplacement,DAT_181d7a788);
     }
 
-    // Token : 0x60006C9
-    // RVA   : 0xA7A330   Offset: 0xA78B30   Length: 0x223
+    // Token : 0x60006E1
+    // RVA   : 0x1528750   Offset: 0x1527B50   Length: 0x223
     public virtual void set_replacement(INGUIAtlas value)
     {
         long lVar1;
@@ -392,7 +392,7 @@ public class UIAtlas
         if (value != this) {
           plVar8 = value;
         }
-        plVar4 = (int64 *)il2cpp_internal(*plVar9,DAT_181d55650);
+        plVar4 = (int64 *)il2cpp_internal(*plVar9,DAT_181d7a788);
         if (plVar4 != plVar8) {
           if (plVar8 != (int64 *)0) {
             lVar1 = *plVar8;
@@ -400,36 +400,36 @@ public class UIAtlas
             if (*(uint16 *)(lVar1 + 0x12a) != 0) {
               uVar6 = uVar7;
               do {
-                if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar6 * 16) == DAT_181d55650)
+                if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar6 * 16) == DAT_181d7a788)
                 {
                   puVar5 = (uint64 *)
                            ((int64)*(int *)(*(int64 *)(lVar1 + 176) + 8 + (uint64)uVar6 * 16)
                             * 16 + 0x1b8 + lVar1);
-                  goto LAB_180a7a3fc;
+                  goto LAB_18152881c;
                 }
                 uVar6 = uVar6 + 1;
               } while (uVar6 < *(uint16 *)(lVar1 + 0x12a));
             }
-            puVar5 = (uint64 *)FUN_1800914f0(plVar8,DAT_181d55650,8);
-        LAB_180a7a3fc:
+            puVar5 = (uint64 *)FUN_1800914f0(plVar8,DAT_181d7a788,8);
+        LAB_18152881c:
             plVar4 = (int64 *)(*(code *)*puVar5)(plVar8,puVar5[1]);
             if (plVar4 == this) {
               lVar1 = *plVar8;
               if (*(uint16 *)(lVar1 + 0x12a) != 0) {
                 do {
                   if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar7 * 16) ==
-                      DAT_181d55650) {
+                      DAT_181d7a788) {
                     puVar5 = (uint64 *)
                              ((int64)
                               *(int *)(*(int64 *)(lVar1 + 176) + 8 + (uint64)uVar7 * 16) * 16 +
                               0x1c8 + lVar1);
-                    goto LAB_180a7a45c;
+                    goto LAB_18152887c;
                   }
                   uVar7 = uVar7 + 1;
                 } while (uVar7 < *(uint16 *)(lVar1 + 0x12a));
               }
-              puVar5 = (uint64 *)FUN_1800914f0(plVar8,DAT_181d55650,9);
-        LAB_180a7a45c:
+              puVar5 = (uint64 *)FUN_1800914f0(plVar8,DAT_181d7a788,9);
+        LAB_18152887c:
               (*(code *)*puVar5)(plVar8,0,puVar5[1]);
             }
           }
@@ -450,8 +450,8 @@ public class UIAtlas
         }
     }
 
-    // Token : 0x60006CA
-    // RVA   : 0xA78990   Offset: 0xA77190   Length: 0x2FA
+    // Token : 0x60006E2
+    // RVA   : 0x1526D40   Offset: 0x1526140   Length: 0x2FA
     public virtual UISpriteData GetSprite(string name)
     {
         long lVar1;
@@ -465,27 +465,27 @@ public class UIAtlas
         ulong uVar7;
         uVar7 = 0;
         local_res8[0] = 0;
-        plVar4 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d55650);
+        plVar4 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d7a788);
         if (plVar4 != (int64 *)0) {
           lVar10 = *plVar4;
           if (*(uint16 *)(lVar10 + 0x12a) != 0) {
             do {
-              if (*(int64 *)(*(int64 *)(lVar10 + 176) + uVar7 * 16) == DAT_181d55650) {
+              if (*(int64 *)(*(int64 *)(lVar10 + 176) + uVar7 * 16) == DAT_181d7a788) {
                 puVar5 = (uint64 *)
                          ((int64)*(int *)(*(int64 *)(lVar10 + 176) + 8 + uVar7 * 16) * 16 +
                           0x1d8 + lVar10);
-                goto LAB_180a78c58;
+                goto LAB_181527008;
               }
               uVar6 = (short)uVar7 + 1;
               uVar7 = (uint64)uVar6;
             } while (uVar6 < *(uint16 *)(lVar10 + 0x12a));
           }
-          puVar5 = (uint64 *)FUN_1800914f0(plVar4,DAT_181d55650,10);
-        LAB_180a78c58:
+          puVar5 = (uint64 *)FUN_1800914f0(plVar4,DAT_181d7a788,10);
+        LAB_181527008:
           lVar10 = (*(code *)*puVar5)(plVar4,name,puVar5[1]);
           return lVar10;
         }
-        cVar2 = FUN_180d6ca90(name,0);
+        cVar2 = FUN_180d755b0(name,0);
         if (cVar2) {
           return 0;
         }
@@ -498,13 +498,13 @@ public class UIAtlas
             }
           }
           if (this.mSpriteIndices != null) {
-            iVar3 = Dictionary_2.get_Count(this.mSpriteIndices,DAT_181d4dde8);
+            iVar3 = Dictionary_2.get_Count(this.mSpriteIndices,DAT_181d73eb0);
             if (this.mSprites != null) {
               if (iVar3 != this.mSprites.Count) {
                 UIAtlas.MarkSpriteListAsChanged(this,0);
               }
               if (this.mSpriteIndices != null) {
-                cVar2 = FUN_181783810(this.mSpriteIndices,name,local_res8,DAT_181d4dd68);
+                cVar2 = FUN_1817c0490(this.mSpriteIndices,name,local_res8,DAT_181d73e28);
                 if (!cVar2) {
                   if (this.mSprites != null) {
                     lVar10 = (int64)this.mSprites.Count;
@@ -519,9 +519,9 @@ public class UIAtlas
                       }
                       lVar1 = *(int64 *)(lVar9 + *(int64 *)(lVar1 + 16));
                       if (lVar1 == null) break;
-                      cVar2 = FUN_180d6ca90(*(uint64 *)(lVar1 + 16),0);
+                      cVar2 = FUN_180d755b0(*(uint64 *)(lVar1 + 16),0);
                       if ((!cVar2) &&
-                         (cVar2 = FUN_1816fd990(name,*(uint64 *)(lVar1 + 16),0), cVar2))
+                         (cVar2 = FUN_18171e540(name,*(uint64 *)(lVar1 + 16),0), cVar2))
                       {
                         UIAtlas.MarkSpriteListAsChanged(this,0);
                         return lVar1;
@@ -549,7 +549,7 @@ public class UIAtlas
                   }
                   UIAtlas.MarkSpriteListAsChanged(this,0);
                   if (this.mSpriteIndices != null) {
-                    cVar2 = FUN_181783810(this.mSpriteIndices,name,local_res8,DAT_181d4dd68);
+                    cVar2 = FUN_1817c0490(this.mSpriteIndices,name,local_res8,DAT_181d73e28);
                     if (!cVar2) {
                       return 0;
                     }
@@ -569,8 +569,8 @@ public class UIAtlas
         }
     }
 
-    // Token : 0x60006CB
-    // RVA   : 0xA790E0   Offset: 0xA778E0   Length: 0x118
+    // Token : 0x60006E3
+    // RVA   : 0x1527500   Offset: 0x1526900   Length: 0x118
     public void MarkSpriteListAsChanged()
     {
         long lVar1;
@@ -580,7 +580,7 @@ public class UIAtlas
         long lVar5;
         long lVar6;
         if (this.mSpriteIndices != null) {
-          Dictionary_2.Clear(this.mSpriteIndices,DAT_181d4db68);
+          Dictionary_2.Clear(this.mSpriteIndices,DAT_181d73c08);
           uVar3 = 0;
           if (this.mSprites != null) {
             lVar4 = (int64)this.mSprites.Count;
@@ -596,7 +596,7 @@ public class UIAtlas
                 }
                 lVar1 = *(int64 *)(lVar5 + lVar1._items);
                 if ((lVar1 == null) || (lVar2 == null)) throw; // [null/range check failed]
-                FUN_1808aec90(lVar2,lVar1._items,uVar3,DAT_181d4dee8);
+                FUN_1808b2160(lVar2,lVar1._items,uVar3,DAT_181d73fc0);
                 uVar3 = uVar3 + 1;
                 lVar6 = lVar6 + 1;
                 lVar5 = lVar5 + 8;
@@ -607,31 +607,31 @@ public class UIAtlas
         }
     }
 
-    // Token : 0x60006CC
-    // RVA   : 0xA79310   Offset: 0xA77B10   Length: 0x12E
+    // Token : 0x60006E4
+    // RVA   : 0x1527730   Offset: 0x1526B30   Length: 0x12E
     public virtual void SortAlphabetically()
     {
-        var pUIAtlas = *(int64*)(UIAtlas_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d8d138 + 184);
         long lVar1;
         ulong uVar2;
         long lVar3;
         lVar1 = this.mSprites;
-        lVar3 = *(int64 *)(pUIAtlas + 8);
+        lVar3 = *(int64 *)(pStatics + 8);
         if (lVar3 == null) {
-          uVar2 = **(uint64 **)(UIAtlas_StaticsPtr + 184);
-          lVar3 = new OnTooltipCB(uVar2,DAT_181d8e188,DAT_181d86598);
-          plVar4 = (int64 *)(pUIAtlas + 8);
+          uVar2 = **(uint64 **)(DAT_181d8d138 + 184);
+          lVar3 = new OnTooltipCB(uVar2,DAT_181db7500,DAT_181dab938);
+          plVar4 = (int64 *)(pStatics + 8);
           *plVar4 = lVar3;
           il2cpp_internal(plVar4,lVar3);
         }
         if (lVar1 != null) {
-          List_1.Sort(lVar1,lVar3,DAT_181d82ef8);
+          List_1.Sort(lVar1,lVar3,DAT_181daa898);
           return;
         }
     }
 
-    // Token : 0x60006CD
-    // RVA   : 0xA782A0   Offset: 0xA76AA0   Length: 0x219
+    // Token : 0x60006E5
+    // RVA   : 0x1526650   Offset: 0x1525A50   Length: 0x219
     public virtual BetterList<string> GetListOfSprites()
     {
         int iVar1;
@@ -650,30 +650,30 @@ public class UIAtlas
         ushort uVar16;
         ulong uVar17;
         long local_48;
-        plVar4 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d55650);
+        plVar4 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d7a788);
         if (plVar4 != (int64 *)0) {
           lVar5 = *plVar4;
           uVar16 = 0;
           if (*(uint16 *)(lVar5 + 0x12a) != 0) {
             do {
-              if (*(int64 *)(*(int64 *)(lVar5 + 176) + (uint64)uVar16 * 16) == DAT_181d55650)
+              if (*(int64 *)(*(int64 *)(lVar5 + 176) + (uint64)uVar16 * 16) == DAT_181d7a788)
               {
                 puVar6 = (uint64 *)
                          ((int64)*(int *)(*(int64 *)(lVar5 + 176) + 8 + (uint64)uVar16 * 16) *
                           16 + 0x1f8 + lVar5);
-                goto LAB_180a788fa;
+                goto LAB_181526caa;
               }
               uVar16 = uVar16 + 1;
             } while (uVar16 < *(uint16 *)(lVar5 + 0x12a));
           }
-          puVar6 = (uint64 *)FUN_1800914f0(plVar4,DAT_181d55650,12);
-        LAB_180a788fa:
-                          // WARNING: Could not recover jumptable at 0x000180a78911. Too many branches
+          puVar6 = (uint64 *)FUN_1800914f0(plVar4,DAT_181d7a788,12);
+        LAB_181526caa:
+                          // WARNING: Could not recover jumptable at 0x000181526cc1. Too many branches
                           // WARNING: Treating indirect jump as call
           lVar5 = (*(code *)*puVar6)(plVar4,param_2,puVar6[1]);
           return lVar5;
         }
-        cVar3 = FUN_180d6ca90(param_2,0);
+        cVar3 = FUN_180d755b0(param_2,0);
         if (cVar3) {
           lVar5 = UIAtlas.GetListOfSprites(this,0);
           return lVar5;
@@ -682,7 +682,7 @@ public class UIAtlas
           if (this.mSprites.Count == null) {
             UIAtlas.Upgrade(this,0);
           }
-          lVar5 = new BetterList_1(DAT_181d81118);
+          lVar5 = new BetterList_1(DAT_181da64b8);
           uVar17 = 0;
           if (this.mSprites != null) {
             lVar12 = (int64)this.mSprites.Count;
@@ -699,10 +699,10 @@ public class UIAtlas
                 }
                 lVar2 = *(int64 *)(lVar15 + lVar2._items);
                 if (((lVar2 != null) &&
-                    (cVar3 = FUN_180d6ca90(lVar2._items,0), !cVar3)) &&
+                    (cVar3 = FUN_180d755b0(lVar2._items,0), !cVar3)) &&
                    (cVar3 = String.Equals(param_2,lVar2._items,5), cVar3)) {
                   if (lVar5 != null) {
-                    FUN_18154cb60(lVar5,lVar2._items,DAT_181d81198);
+                    FUN_181583c60(lVar5,lVar2._items,DAT_181da6538);
                     return lVar5;
                   }
                   throw; // [null/range check failed]
@@ -712,7 +712,7 @@ public class UIAtlas
                 uVar10 = (uint64)((uint32)uVar10 + 1);
               } while ((int64)uVar13 < lVar12);
             }
-            lVar12 = FUN_1800d60b0(DAT_181d7c118,1);
+            lVar12 = FUN_1800d60b0(DAT_181da1040,1);
             if (lVar12 != null) {
               if (lVar12.Count == null) {
                 uVar7 = il2cpp_internal();
@@ -762,7 +762,7 @@ public class UIAtlas
                       }
                       lVar12 = *(int64 *)(local_48 + lVar12._items);
                       if ((lVar12 != null) &&
-                         (cVar3 = FUN_180d6ca90(lVar12._items,0), !cVar3)) {
+                         (cVar3 = FUN_180d755b0(lVar12._items,0), !cVar3)) {
                         if (lVar12._items == null) throw; // [null/range check failed]
                         lVar15 = String.ToLower();
                         uVar11 = uVar17;
@@ -785,7 +785,7 @@ public class UIAtlas
                         }
                         if ((uint32)uVar14 == uVar8) {
                           if (lVar5 == null) throw; // [null/range check failed]
-                          FUN_18154cb60(lVar5,lVar12._items,DAT_181d81198);
+                          FUN_181583c60(lVar5,lVar12._items,DAT_181da6538);
                         }
                       }
                       local_48 = local_48 + 8;
@@ -801,8 +801,8 @@ public class UIAtlas
         }
     }
 
-    // Token : 0x60006CE
-    // RVA   : 0xA784C0   Offset: 0xA76CC0   Length: 0x4C0
+    // Token : 0x60006E6
+    // RVA   : 0x1526870   Offset: 0x1525C70   Length: 0x4C0
     public virtual BetterList<string> GetListOfSprites(string match)
     {
         int iVar1;
@@ -821,30 +821,30 @@ public class UIAtlas
         ushort uVar16;
         ulong uVar17;
         long local_48;
-        plVar4 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d55650);
+        plVar4 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d7a788);
         if (plVar4 != (int64 *)0) {
           lVar5 = *plVar4;
           uVar16 = 0;
           if (*(uint16 *)(lVar5 + 0x12a) != 0) {
             do {
-              if (*(int64 *)(*(int64 *)(lVar5 + 176) + (uint64)uVar16 * 16) == DAT_181d55650)
+              if (*(int64 *)(*(int64 *)(lVar5 + 176) + (uint64)uVar16 * 16) == DAT_181d7a788)
               {
                 puVar6 = (uint64 *)
                          ((int64)*(int *)(*(int64 *)(lVar5 + 176) + 8 + (uint64)uVar16 * 16) *
                           16 + 0x1f8 + lVar5);
-                goto LAB_180a788fa;
+                goto LAB_181526caa;
               }
               uVar16 = uVar16 + 1;
             } while (uVar16 < *(uint16 *)(lVar5 + 0x12a));
           }
-          puVar6 = (uint64 *)FUN_1800914f0(plVar4,DAT_181d55650,12);
-        LAB_180a788fa:
-                          // WARNING: Could not recover jumptable at 0x000180a78911. Too many branches
+          puVar6 = (uint64 *)FUN_1800914f0(plVar4,DAT_181d7a788,12);
+        LAB_181526caa:
+                          // WARNING: Could not recover jumptable at 0x000181526cc1. Too many branches
                           // WARNING: Treating indirect jump as call
           lVar5 = (*(code *)*puVar6)(plVar4,match,puVar6[1]);
           return lVar5;
         }
-        cVar3 = FUN_180d6ca90(match,0);
+        cVar3 = FUN_180d755b0(match,0);
         if (cVar3) {
           lVar5 = UIAtlas.GetListOfSprites(this,0);
           return lVar5;
@@ -853,7 +853,7 @@ public class UIAtlas
           if (this.mSprites.Count == null) {
             UIAtlas.Upgrade(this,0);
           }
-          lVar5 = new BetterList_1(DAT_181d81118);
+          lVar5 = new BetterList_1(DAT_181da64b8);
           uVar17 = 0;
           if (this.mSprites != null) {
             lVar12 = (int64)this.mSprites.Count;
@@ -870,10 +870,10 @@ public class UIAtlas
                 }
                 lVar2 = *(int64 *)(lVar15 + lVar2._items);
                 if (((lVar2 != null) &&
-                    (cVar3 = FUN_180d6ca90(lVar2._items,0), !cVar3)) &&
+                    (cVar3 = FUN_180d755b0(lVar2._items,0), !cVar3)) &&
                    (cVar3 = String.Equals(match,lVar2._items,5), cVar3)) {
                   if (lVar5 != null) {
-                    FUN_18154cb60(lVar5,lVar2._items,DAT_181d81198);
+                    FUN_181583c60(lVar5,lVar2._items,DAT_181da6538);
                     return lVar5;
                   }
                   throw; // [null/range check failed]
@@ -883,7 +883,7 @@ public class UIAtlas
                 uVar10 = (uint64)((uint32)uVar10 + 1);
               } while ((int64)uVar13 < lVar12);
             }
-            lVar12 = FUN_1800d60b0(DAT_181d7c118,1);
+            lVar12 = FUN_1800d60b0(DAT_181da1040,1);
             if (lVar12 != null) {
               if (lVar12.Count == null) {
                 uVar7 = il2cpp_internal();
@@ -933,7 +933,7 @@ public class UIAtlas
                       }
                       lVar12 = *(int64 *)(local_48 + lVar12._items);
                       if ((lVar12 != null) &&
-                         (cVar3 = FUN_180d6ca90(lVar12._items,0), !cVar3)) {
+                         (cVar3 = FUN_180d755b0(lVar12._items,0), !cVar3)) {
                         if (lVar12._items == null) throw; // [null/range check failed]
                         lVar15 = String.ToLower();
                         uVar11 = uVar17;
@@ -956,7 +956,7 @@ public class UIAtlas
                         }
                         if ((uint32)uVar14 == uVar8) {
                           if (lVar5 == null) throw; // [null/range check failed]
-                          FUN_18154cb60(lVar5,lVar12._items,DAT_181d81198);
+                          FUN_181583c60(lVar5,lVar12._items,DAT_181da6538);
                         }
                       }
                       local_48 = local_48 + 8;
@@ -972,8 +972,8 @@ public class UIAtlas
         }
     }
 
-    // Token : 0x60006CF
-    // RVA   : 0xA79200   Offset: 0xA77A00   Length: 0x110
+    // Token : 0x60006E7
+    // RVA   : 0x1527620   Offset: 0x1526A20   Length: 0x110
     public virtual bool References(INGUIAtlas atlas)
     {
         long lVar1;
@@ -983,25 +983,25 @@ public class UIAtlas
           if (atlas == this) {
             return true;
           }
-          plVar2 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d55650);
+          plVar2 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d7a788);
           if (plVar2 != (int64 *)0) {
             lVar1 = *plVar2;
             uVar5 = 0;
             if (*(uint16 *)(lVar1 + 0x12a) != 0) {
               do {
-                if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar5 * 16) == DAT_181d55650)
+                if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar5 * 16) == DAT_181d7a788)
                 {
                   puVar3 = (uint64 *)
                            ((int64)*(int *)(*(int64 *)(lVar1 + 176) + 8 + (uint64)uVar5 * 16)
                             * 16 + 0x208 + lVar1);
-                  goto LAB_180a792c8;
+                  goto LAB_1815276e8;
                 }
                 uVar5 = uVar5 + 1;
               } while (uVar5 < *(uint16 *)(lVar1 + 0x12a));
             }
-            puVar3 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d55650,13);
-        LAB_180a792c8:
-                          // WARNING: Could not recover jumptable at 0x000180a792dc. Too many branches
+            puVar3 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d7a788,13);
+        LAB_1815276e8:
+                          // WARNING: Could not recover jumptable at 0x0001815276fc. Too many branches
                           // WARNING: Treating indirect jump as call
             uVar4 = (*(code *)*puVar3)(plVar2,atlas,puVar3[1]);
             return uVar4;
@@ -1010,111 +1010,127 @@ public class UIAtlas
         return false;
     }
 
-    // Token : 0x60006D0
-    // RVA   : 0xA78C90   Offset: 0xA77490   Length: 0x447
+    // Token : 0x60006E8
+    // RVA   : 0x1527040   Offset: 0x1526440   Length: 0x4B0
     public virtual void MarkAsChanged()
     {
         int iVar1;
         long lVar2;
         bool cVar3;
-        long lVar4;
-        ulong uVar5;
         long lVar6;
-        uint uVar7;
-        uint uVar8;
-        lVar4 = il2cpp_internal(this.mReplacement,DAT_181d55650);
-        if (lVar4 != null) {
-          FUN_180002970(14,DAT_181d55650,lVar4);
+        ulong uVar7;
+        long lVar8;
+        ushort uVar9;
+        uint uVar10;
+        uint uVar11;
+        plVar4 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d7a788);
+        uVar10 = 0;
+        if (plVar4 != (int64 *)0) {
+          lVar6 = *plVar4;
+          uVar9 = 0;
+          if (*(uint16 *)(lVar6 + 0x12a) != 0) {
+            do {
+              if (*(int64 *)(*(int64 *)(lVar6 + 176) + (uint64)uVar9 * 16) == DAT_181d7a788) {
+                puVar5 = (uint64 *)
+                         ((int64)*(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar9 * 16) *
+                          16 + 0x218 + lVar6);
+                goto LAB_18152713c;
+              }
+              uVar9 = uVar9 + 1;
+            } while (uVar9 < *(uint16 *)(lVar6 + 0x12a));
+          }
+          puVar5 = (uint64 *)FUN_1800914f0(plVar4,DAT_181d7a788,14);
+        LAB_18152713c:
+          (*(code *)*puVar5)(plVar4,puVar5[1]);
         }
-        lVar4 = NGUITools.FindActive(DAT_181d66500);
-        uVar7 = 0;
-        uVar8 = 0;
-        if (lVar4 != null) {
-          iVar1 = *(int *)(lVar4 + 24);
+        lVar6 = NGUITools.FindActive(DAT_181d8f220);
+        uVar11 = 0;
+        if (lVar6 != null) {
+          iVar1 = *(int *)(lVar6 + 24);
           if (0 < iVar1) {
             do {
-              if (*(uint32 *)(lVar4 + 24) <= uVar8) {
-                uVar5 = il2cpp_internal();
+              if (*(uint32 *)(lVar6 + 24) <= uVar11) {
+                uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar5,0);
+                FUN_1800d65f0(uVar7,0);
               }
-              lVar2 = lVar4[uVar8];
+              lVar2 = lVar6[uVar11];
               if (lVar2 == null) throw; // [null/range check failed]
-              uVar5 = UISprite.get_atlas(lVar2,0);
-              cVar3 = NGUITools.CheckIfRelated(this,uVar5,0);
+              uVar7 = UISprite.get_atlas(lVar2,0);
+              cVar3 = NGUITools.CheckIfRelated(this,uVar7,0);
               if (cVar3) {
                 UISprite.get_atlas(lVar2,0);
                 UISprite.set_atlas(lVar2,0);
                 UISprite.set_atlas(lVar2);
               }
-              uVar8 = uVar8 + 1;
-            } while ((int)uVar8 < iVar1);
+              uVar11 = uVar11 + 1;
+            } while ((int)uVar11 < iVar1);
           }
-          lVar4 = Resources.FindObjectsOfTypeAll(DAT_181d76f60);
-          uVar8 = 0;
-          if (lVar4 != null) {
-            iVar1 = *(int *)(lVar4 + 24);
+          lVar6 = Resources.FindObjectsOfTypeAll(DAT_181d9fe00);
+          uVar11 = 0;
+          if (lVar6 != null) {
+            iVar1 = *(int *)(lVar6 + 24);
             if (0 < iVar1) {
               do {
-                if (*(uint32 *)(lVar4 + 24) <= uVar8) {
-                  uVar5 = il2cpp_internal();
+                if (*(uint32 *)(lVar6 + 24) <= uVar11) {
+                  uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar5,0);
+                  FUN_1800d65f0(uVar7,0);
                 }
-                lVar2 = lVar4[uVar8];
+                lVar2 = lVar6[uVar11];
                 if (lVar2 == null) throw; // [null/range check failed]
-                lVar6 = NGUIFont.get_atlas(lVar2);
-                if (lVar6 != null) {
-                  uVar5 = NGUIFont.get_atlas(lVar2,0);
-                  cVar3 = NGUITools.CheckIfRelated(this,uVar5,0);
+                lVar8 = NGUIFont.get_atlas(lVar2);
+                if (lVar8 != null) {
+                  uVar7 = NGUIFont.get_atlas(lVar2,0);
+                  cVar3 = NGUITools.CheckIfRelated(this,uVar7,0);
                   if (cVar3) {
                     NGUIFont.get_atlas(lVar2,0);
                     NGUIFont.set_atlas(lVar2,0);
                     NGUIFont.set_atlas(lVar2);
                   }
                 }
-                uVar8 = uVar8 + 1;
-              } while ((int)uVar8 < iVar1);
+                uVar11 = uVar11 + 1;
+              } while ((int)uVar11 < iVar1);
             }
-            lVar4 = Resources.FindObjectsOfTypeAll(DAT_181d76fe0);
-            uVar8 = 0;
-            if (lVar4 != null) {
-              iVar1 = *(int *)(lVar4 + 24);
+            lVar6 = Resources.FindObjectsOfTypeAll(DAT_181d9fe80);
+            uVar11 = 0;
+            if (lVar6 != null) {
+              iVar1 = *(int *)(lVar6 + 24);
               if (0 < iVar1) {
                 do {
-                  if (*(uint32 *)(lVar4 + 24) <= uVar8) {
-                    uVar5 = il2cpp_internal();
+                  if (*(uint32 *)(lVar6 + 24) <= uVar11) {
+                    uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar5,0);
+                    FUN_1800d65f0(uVar7,0);
                   }
-                  lVar2 = lVar4[uVar8];
+                  lVar2 = lVar6[uVar11];
                   if (lVar2 == null) throw; // [null/range check failed]
-                  uVar5 = UIFont.get_atlas(lVar2,0);
-                  cVar3 = NGUITools.CheckIfRelated(this,uVar5,0);
+                  uVar7 = UIFont.get_atlas(lVar2,0);
+                  cVar3 = NGUITools.CheckIfRelated(this,uVar7,0);
                   if (cVar3) {
                     UIFont.get_atlas(lVar2,0);
                     UIFont.set_atlas(lVar2,0);
                     UIFont.set_atlas(lVar2);
                   }
-                  uVar8 = uVar8 + 1;
-                } while ((int)uVar8 < iVar1);
+                  uVar11 = uVar11 + 1;
+                } while ((int)uVar11 < iVar1);
               }
-              lVar4 = NGUITools.FindActive(DAT_181d66400);
-              if (lVar4 != null) {
-                iVar1 = *(int *)(lVar4 + 24);
+              lVar6 = NGUITools.FindActive(DAT_181d8f120);
+              if (lVar6 != null) {
+                iVar1 = *(int *)(lVar6 + 24);
                 if (0 < iVar1) {
                   do {
-                    if (*(uint32 *)(lVar4 + 24) <= uVar7) {
-                      uVar5 = il2cpp_internal();
+                    if (*(uint32 *)(lVar6 + 24) <= uVar10) {
+                      uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar5,0);
+                      FUN_1800d65f0(uVar7,0);
                     }
-                    lVar2 = lVar4[uVar7];
+                    lVar2 = lVar6[uVar10];
                     if (lVar2 == null) throw; // [null/range check failed]
-                    lVar6 = UILabel.get_atlas(lVar2);
-                    if (lVar6 != null) {
-                      uVar5 = UILabel.get_atlas(lVar2,0);
-                      cVar3 = NGUITools.CheckIfRelated(this,uVar5,0);
+                    lVar8 = UILabel.get_atlas(lVar2);
+                    if (lVar8 != null) {
+                      uVar7 = UILabel.get_atlas(lVar2,0);
+                      cVar3 = NGUITools.CheckIfRelated(this,uVar7,0);
                       if (cVar3) {
                         UILabel.get_atlas(lVar2,0);
                         UILabel.get_bitmapFont(lVar2,0);
@@ -1122,8 +1138,8 @@ public class UIAtlas
                         UILabel.set_bitmapFont(lVar2);
                       }
                     }
-                    uVar7 = uVar7 + 1;
-                  } while ((int)uVar7 < iVar1);
+                    uVar10 = uVar10 + 1;
+                  } while ((int)uVar10 < iVar1);
                 }
                 return;
               }
@@ -1132,8 +1148,8 @@ public class UIAtlas
         }
     }
 
-    // Token : 0x60006D1
-    // RVA   : 0xA79440   Offset: 0xA77C40   Length: 0x56E
+    // Token : 0x60006E9
+    // RVA   : 0x1527860   Offset: 0x1526C60   Length: 0x56E
     private bool Upgrade()
     {
         bool cVar2;
@@ -1165,13 +1181,13 @@ public class UIAtlas
         uStack_74 = 0;
         uStack_70 = 0;
         uStack_6c = 0;
-        plVar5 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d55650);
+        plVar5 = (int64 *)il2cpp_internal(this.mReplacement,DAT_181d7a788);
         plVar11 = (int64 *)0;
         if (plVar5 != (int64 *)0) {
-          if ((*(byte *)(*plVar5 + 300) < *(byte *)(DAT_181d8a2d8 + 300)) ||
+          if ((*(byte *)(*plVar5 + 300) < *(byte *)(DAT_181daf4f8 + 300)) ||
              (*(int64 *)
-               (*(int64 *)(*plVar5 + 200) + -8 + (uint64)*(byte *)(DAT_181d8a2d8 + 300) * 8) !=
-              DAT_181d8a2d8)) {
+               (*(int64 *)(*plVar5 + 200) + -8 + (uint64)*(byte *)(DAT_181daf4f8 + 300) * 8) !=
+              DAT_181daf4f8)) {
             bVar1 = false;
           }
           else {
@@ -1187,16 +1203,16 @@ public class UIAtlas
               uVar6 = UIAtlas.Upgrade(plVar10,0);
               return uVar6;
             }
-            goto LAB_180a799a9;
+            goto LAB_181527dc9;
           }
         }
         if (this.mSprites == null) {
-        LAB_180a799a9:
+        LAB_181527dc9:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         if (this.mSprites.Count == null) {
-          if (this.sprites == null) goto LAB_180a799a9;
+          if (this.sprites == null) goto LAB_181527dc9;
           if (0 < this.sprites.Count) {
             uVar6 = this.material;
             cVar2 = Object.op_Implicit(uVar6,0);
@@ -1209,12 +1225,12 @@ public class UIAtlas
                   uVar3 = 0x200;
                 }
                 else {
-                  if (plVar5 == (int64 *)0) goto LAB_180a799a9;
+                  if (plVar5 == (int64 *)0) goto LAB_181527dc9;
                   uVar3 = (**(code **)(*plVar5 + 0x178))(plVar5,*(uint64 *)(*plVar5 + 0x180));
                 }
                 cVar2 = Object.op_Inequality(plVar5,0,0);
                 if (cVar2) {
-                  if (plVar5 == (int64 *)0) goto LAB_180a799a9;
+                  if (plVar5 == (int64 *)0) goto LAB_181527dc9;
                   uVar4 = (**(code **)(*plVar5 + 0x198))(plVar5,*(uint64 *)(*plVar5 + 0x1a0));
                 }
                 lVar7 = this.sprites;
@@ -1223,7 +1239,7 @@ public class UIAtlas
                   do {
                     uVar9 = (uint32)plVar11;
                     if (lVar7.Count <= (int)uVar9) {
-                      FUN_180f56130(lVar7,DAT_181d8c160);
+                      FUN_1812f9a10(lVar7,DAT_181db3d98);
                       return true;
                     }
                     if (lVar7 == null) break;
@@ -1253,24 +1269,24 @@ public class UIAtlas
                     lVar8 = new UISpriteData(0);
                     if (lVar8 == null) break;
                     *(uint64 *)(lVar8 + 16) = lVar7._items;
-                    uVar13 = FUN_180d904a0(&local_88,0);
+                    uVar13 = FUN_180d98fc0(&local_88,0);
                     uVar13 = Mathf.RoundToInt(uVar13,0);
                     *(uint32 *)(lVar8 + 24) = uVar13;
                     uVar13 = FUN_18044df60(&local_88,0);
                     uVar13 = Mathf.RoundToInt(uVar13,0);
                     *(uint32 *)(lVar8 + 28) = uVar13;
-                    uVar13 = FUN_180d90480(&local_88,0);
+                    uVar13 = FUN_180d98fa0(&local_88,0);
                     uVar13 = Mathf.RoundToInt(uVar13,0);
                     *(uint32 *)(lVar8 + 32) = uVar13;
                     uVar13 = FUN_18044e2b0(&local_88,0);
                     uVar13 = Mathf.RoundToInt(uVar13,0);
                     *(uint32 *)(lVar8 + 36) = uVar13;
                     fVar15 = *(float *)(lVar7 + 60);
-                    fVar14 = (float)FUN_180d90480(&local_88,0);
+                    fVar14 = (float)FUN_180d98fa0(&local_88,0);
                     uVar13 = Mathf.RoundToInt(fVar14 * fVar15,0);
                     *(uint32 *)(lVar8 + 56) = uVar13;
                     fVar15 = *(float *)(lVar7 + 64);
-                    fVar14 = (float)FUN_180d90480(&local_88,0);
+                    fVar14 = (float)FUN_180d98fa0(&local_88,0);
                     uVar13 = Mathf.RoundToInt(fVar14 * fVar15,0);
                     *(uint32 *)(lVar8 + 60) = uVar13;
                     fVar15 = *(float *)(lVar7 + 72);
@@ -1281,8 +1297,8 @@ public class UIAtlas
                     fVar14 = (float)FUN_18044e2b0(&local_88,0);
                     uVar13 = Mathf.RoundToInt(fVar14 * fVar15,0);
                     *(uint32 *)(lVar8 + 64) = uVar13;
-                    fVar15 = (float)FUN_180d904a0(&local_78,0);
-                    fVar14 = (float)FUN_180d904a0(&local_88,0);
+                    fVar15 = (float)FUN_180d98fc0(&local_78,0);
+                    fVar14 = (float)FUN_180d98fc0(&local_88,0);
                     uVar13 = Mathf.RoundToInt(fVar15 - fVar14,0);
                     *(uint32 *)(lVar8 + 40) = uVar13;
                     fVar15 = (float)Rect.get_xMax(&local_88,0);
@@ -1298,35 +1314,35 @@ public class UIAtlas
                     uVar13 = Mathf.RoundToInt(fVar15 - fVar14,0);
                     *(uint32 *)(lVar8 + 48) = uVar13;
                     if (this.mSprites == null) break;
-                    FUN_181827900(this.mSprites,lVar8,DAT_181d82e78);
+                    FUN_18181e0a0(this.mSprites,lVar8,DAT_181daa818);
                     lVar7 = this.sprites;
                     plVar11 = (int64 *)(uint64)(uVar9 + 1);
                     lVar12 = lVar12 + 8;
                   } while (lVar7 != null);
                 }
               }
-              goto LAB_180a799a9;
+              goto LAB_181527dc9;
             }
           }
         }
         return false;
     }
 
-    // Token : 0x60006D2
-    // RVA   : 0xA799B0   Offset: 0xA781B0   Length: 0x10E
+    // Token : 0x60006EA
+    // RVA   : 0x1527DD0   Offset: 0x15271D0   Length: 0x10E
     public void /*ctor*/()
     {
         ulong uVar1;
-        uVar1 = il2cpp_internal(DAT_181d73bb0);
-        FUN_180f58a90(uVar1,DAT_181d82df8);
+        uVar1 = il2cpp_internal(DAT_181d988d0);
+        FUN_18132faf0(uVar1,DAT_181daa798);
         this.mSprites = uVar1;
         this.mPixelSize = 0x3f800000;
-        uVar1 = il2cpp_internal(DAT_181d75a30);
-        FUN_180f58a90(uVar1,DAT_181d8c0e0);
+        uVar1 = il2cpp_internal(DAT_181d9a750);
+        FUN_18132faf0(uVar1,DAT_181db3d10);
         this.sprites = uVar1;
         this.mPMA = 0xffffffff;
-        uVar1 = il2cpp_internal(DAT_181d5e248);
-        FUN_1808ae540(uVar1,DAT_181d4d968);
+        uVar1 = il2cpp_internal(DAT_181d82d68);
+        FUN_1808b1370(uVar1,DAT_181d739e8);
         this.mSpriteIndices = uVar1;
         FUN_18044ef50(this,0);
     }

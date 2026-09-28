@@ -1,13 +1,13 @@
 // ============================================================
 // Type  : OnInitFunc`1
-// Token : 0x200008C
+// Token : 0x200008D
 // ============================================================
 
 public class OnInitFunc`1
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600041F
-    // RVA   : 0x210320   Offset: 0x20EB20   Length: 0x6A
+    // Token : 0x6000437
+    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
@@ -25,8 +25,8 @@ public class OnInitFunc`1
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x6000420
-    // RVA   : 0x8AF540   Offset: 0x8ADD40   Length: 0x3CA
+    // Token : 0x6000438
+    // RVA   : 0x8B2A10   Offset: 0x8B1E10   Length: 0x3CA
     public virtual void Invoke(T w)
     {
         long lVar1;
@@ -66,7 +66,7 @@ public class OnInitFunc`1
             if (*(char *)(lVar1 + 74) == true) {
               if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                   ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-              goto LAB_1808af8ce;
+              goto LAB_1808b2d9e;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
                 cVar4 = FUN_1800d65c0(lVar1);
@@ -90,7 +90,7 @@ public class OnInitFunc`1
                                        *(int *)(*(int64 *)(lVar5 + 176) + 8 + (uint64)uVar10 * 16
                                                )) * 16 + 0x138 + lVar5);
                         (*(code *)*puVar6)(plVar3,w,puVar6[1]);
-                        goto LAB_1808af8d9;
+                        goto LAB_1808b2da9;
                       }
                       uVar10 = uVar10 + 1;
                     } while (uVar10 < *(uint16 *)(lVar5 + 0x12a));
@@ -119,13 +119,13 @@ public class OnInitFunc`1
                                 (int)((uint32)uVar10 +
                                      *(int *)(*(int64 *)(lVar5 + 176) + 8 + (uint64)uVar9 * 16))
                                 * 16 + 0x138 + lVar5;
-                        goto LAB_1808af7a6;
+                        goto LAB_1808b2c76;
                       }
                       uVar9 = uVar9 + 1;
                     } while (uVar9 < *(uint16 *)(lVar5 + 0x12a));
                   }
                   lVar5 = FUN_1800914f0(plVar3,*(int64 *)(lVar1 + 24),uVar10);
-        LAB_1808af7a6:
+        LAB_1808b2c76:
                   puVar6 = (uint64 *)il2cpp_internal(*(uint64 *)(lVar5 + 8),lVar1);
                   (*(code *)*puVar6)(plVar3,w,puVar6);
                 }
@@ -133,7 +133,7 @@ public class OnInitFunc`1
             }
             else {
               if ((*(short *)(lVar1 + 72) == -1) || (*(int64 *)(this + 24) == 0))
-              goto LAB_1808af5d8;
+              goto LAB_1808b2aa8;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
                 cVar4 = FUN_1800d65c0(lVar1);
@@ -165,7 +165,7 @@ public class OnInitFunc`1
                                   (int)((uint32)uVar10 +
                                        *(int *)(*(int64 *)(lVar5 + 176) + 8 + (uint64)uVar9 * 16)
                                        ) * 16 + lVar5 + 0x140);
-                        goto LAB_1808af69a;
+                        goto LAB_1808b2b6a;
                       }
                       uVar9 = uVar9 + 1;
                     } while (uVar9 < *(uint16 *)(lVar5 + 0x12a));
@@ -173,21 +173,21 @@ public class OnInitFunc`1
                   lVar5 = FUN_1800914f0(w,*(int64 *)(lVar1 + 24),uVar10);
                   uVar7 = *(uint64 *)(lVar5 + 8);
                 }
-        LAB_1808af69a:
+        LAB_1808b2b6a:
                 puVar6 = (uint64 *)il2cpp_internal(uVar7,lVar1);
                 (*(code *)*puVar6)(w,puVar6);
               }
             }
           }
           else if (*(char *)(lVar1 + 74) == true) {
-        LAB_1808af5d8:
+        LAB_1808b2aa8:
             (*pcVar2)(w,lVar1);
           }
           else {
-        LAB_1808af8ce:
+        LAB_1808b2d9e:
             (*pcVar2)(plVar3,w,lVar1);
           }
-        LAB_1808af8d9:
+        LAB_1808b2da9:
           uVar13 = uVar13 + 1;
           if (uVar11 <= uVar13) {
             return;
@@ -195,8 +195,8 @@ public class OnInitFunc`1
         } while( true );
     }
 
-    // Token : 0x6000421
-    // RVA   : 0x216660   Offset: 0x214E60   Length: 0x21
+    // Token : 0x6000439
+    // RVA   : 0x216660   Offset: 0x215A60   Length: 0x21
     public virtual IAsyncResult BeginInvoke(T w, AsyncCallback callback, object object)
     {
         ulong local_18;
@@ -206,8 +206,8 @@ public class OnInitFunc`1
         il2cpp_internal(this,&local_18);
     }
 
-    // Token : 0x6000422
-    // RVA   : 0x210040   Offset: 0x20E840   Length: 0xA
+    // Token : 0x600043A
+    // RVA   : 0x210040   Offset: 0x20F440   Length: 0xA
     public virtual void EndInvoke(IAsyncResult result)
     {
         il2cpp_internal(result,0);

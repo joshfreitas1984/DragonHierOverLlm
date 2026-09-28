@@ -1,149 +1,149 @@
 // ============================================================
 // Type  : UIInput
-// Token : 0x20000F4
+// Token : 0x20000F5
 // ============================================================
 
 public class UIInput
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40005C6
+    // Token: 0x40005E2
     public static UIInput current;
 
-    // Token: 0x40005C7
+    // Token: 0x40005E3
     public static UIInput selection;
 
-    // Token: 0x40005C8
+    // Token: 0x40005E4
     public UILabel label;
 
-    // Token: 0x40005C9
+    // Token: 0x40005E5
     public InputType inputType;
 
-    // Token: 0x40005CA
+    // Token: 0x40005E6
     public OnReturnKey onReturnKey;
 
-    // Token: 0x40005CB
+    // Token: 0x40005E7
     public KeyboardType keyboardType;
 
-    // Token: 0x40005CC
+    // Token: 0x40005E8
     public bool hideInput;
 
-    // Token: 0x40005CD
+    // Token: 0x40005E9
     public bool selectAllTextOnFocus;
 
-    // Token: 0x40005CE
+    // Token: 0x40005EA
     public bool submitOnUnselect;
 
-    // Token: 0x40005CF
+    // Token: 0x40005EB
     public Validation validation;
 
-    // Token: 0x40005D0
+    // Token: 0x40005EC
     public int characterLimit;
 
-    // Token: 0x40005D1
+    // Token: 0x40005ED
     public string savedAs;
 
-    // Token: 0x40005D2
+    // Token: 0x40005EE
     private GameObject selectOnTab;
 
-    // Token: 0x40005D3
+    // Token: 0x40005EF
     public Color activeTextColor;
 
-    // Token: 0x40005D4
+    // Token: 0x40005F0
     public Color caretColor;
 
-    // Token: 0x40005D5
+    // Token: 0x40005F1
     public Color selectionColor;
 
-    // Token: 0x40005D6
+    // Token: 0x40005F2
     public List<EventDelegate> onSubmit;
 
-    // Token: 0x40005D7
+    // Token: 0x40005F3
     public List<EventDelegate> onChange;
 
-    // Token: 0x40005D8
+    // Token: 0x40005F4
     public OnValidate onValidate;
 
-    // Token: 0x40005D9
+    // Token: 0x40005F5
     protected string mValue;
 
-    // Token: 0x40005DA
+    // Token: 0x40005F6
     protected string mDefaultText;
 
-    // Token: 0x40005DB
+    // Token: 0x40005F7
     protected Color mDefaultColor;
 
-    // Token: 0x40005DC
+    // Token: 0x40005F8
     protected float mPosition;
 
-    // Token: 0x40005DD
+    // Token: 0x40005F9
     protected bool mDoInit;
 
-    // Token: 0x40005DE
+    // Token: 0x40005FA
     protected Alignment mAlignment;
 
-    // Token: 0x40005DF
+    // Token: 0x40005FB
     protected bool mLoadSavedValue;
 
-    // Token: 0x40005E0
+    // Token: 0x40005FC
     protected static int mDrawStart;
 
-    // Token: 0x40005E1
+    // Token: 0x40005FD
     protected static string mLastIME;
 
-    // Token: 0x40005E2
+    // Token: 0x40005FE
     protected int mSelectionStart;
 
-    // Token: 0x40005E3
+    // Token: 0x40005FF
     protected int mSelectionEnd;
 
-    // Token: 0x40005E4
+    // Token: 0x4000600
     protected UITexture mHighlight;
 
-    // Token: 0x40005E5
+    // Token: 0x4000601
     protected UITexture mCaret;
 
-    // Token: 0x40005E6
+    // Token: 0x4000602
     protected Texture2D mBlankTex;
 
-    // Token: 0x40005E7
+    // Token: 0x4000603
     protected float mNextBlink;
 
-    // Token: 0x40005E8
+    // Token: 0x4000604
     protected float mLastAlpha;
 
-    // Token: 0x40005E9
+    // Token: 0x4000605
     protected string mCached;
 
-    // Token: 0x40005EA
+    // Token: 0x4000606
     protected int mSelectMe;
 
-    // Token: 0x40005EB
+    // Token: 0x4000607
     protected int mSelectTime;
 
-    // Token: 0x40005EC
+    // Token: 0x4000608
     protected bool mStarted;
 
-    // Token: 0x40005ED
+    // Token: 0x4000609
     private UIInputOnGUI mOnGUI;
 
-    // Token: 0x40005EE
+    // Token: 0x400060A
     private UICamera mCam;
 
-    // Token: 0x40005EF
+    // Token: 0x400060B
     private bool mEllipsis;
 
-    // Token: 0x40005F0
+    // Token: 0x400060C
     private static int mIgnoreKey;
 
-    // Token: 0x40005F1
+    // Token: 0x400060D
     public Action onUpArrow;
 
-    // Token: 0x40005F2
+    // Token: 0x400060E
     public Action onDownArrow;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60007B3
-    // RVA   : 0x10F2040   Offset: 0x10F0840   Length: 0x33
+    // Token : 0x60007CB
+    // RVA   : 0x12C87B0   Offset: 0x12C7BB0   Length: 0x33
     public string get_defaultText()
     {
         if (this.mDoInit) {
@@ -153,8 +153,8 @@ public class UIInput
         return this.mDefaultText;
     }
 
-    // Token : 0x60007B4
-    // RVA   : 0x10F2300   Offset: 0x10F0B00   Length: 0x46
+    // Token : 0x60007CC
+    // RVA   : 0x12C8A70   Offset: 0x12C7E70   Length: 0x46
     public void set_defaultText(string value)
     {
         if (this.mDoInit) {
@@ -164,8 +164,8 @@ public class UIInput
         UIInput.UpdateLabel(this,0);
     }
 
-    // Token : 0x60007B5
-    // RVA   : 0x10F2000   Offset: 0x10F0800   Length: 0x3B
+    // Token : 0x60007CD
+    // RVA   : 0x12C8770   Offset: 0x12C7B70   Length: 0x3B
     public Color get_defaultColor()
     {
         ulong uVar1;
@@ -178,8 +178,8 @@ public class UIInput
         return this;
     }
 
-    // Token : 0x60007B6
-    // RVA   : 0x10F22A0   Offset: 0x10F0AA0   Length: 0x53
+    // Token : 0x60007CE
+    // RVA   : 0x12C8A10   Offset: 0x12C7E10   Length: 0x53
     public void set_defaultColor(Color value)
     {
         uint uVar1;
@@ -213,31 +213,31 @@ public class UIInput
         }
     }
 
-    // Token : 0x60007B7
-    // RVA   : 0x10F2080   Offset: 0x10F0880   Length: 0x94
+    // Token : 0x60007CF
+    // RVA   : 0x12C87F0   Offset: 0x12C7BF0   Length: 0x96
     public bool get_inputShouldBeHidden()
     {
         ulong uVar1;
-        ulong in_RAX;
+        bool cVar2;
         if (this.hideInput) {
           uVar1 = this.label;
-          in_RAX = Object.op_Inequality(uVar1,0,0);
-          if ((char)in_RAX) {
-            in_RAX = this.label;
-            if (in_RAX == 0) {
+          cVar2 = Object.op_Inequality(uVar1,0,0);
+          if (cVar2) {
+            if (this.label == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            if (in_RAX.mMaxLineCount == 1) {
-              return CONCAT71((int7)(in_RAX >> 8),this.inputType != 2);
+            cVar2 = UILabel.get_multiLine(this.label,0);
+            if (!cVar2) {
+              return this.inputType != 2;
             }
           }
         }
-        return in_RAX & 0xffffffffffffff00;
+        return false;
     }
 
-    // Token : 0x60007B8
-    // RVA   : 0x10F2220   Offset: 0x10F0A20   Length: 0x33
+    // Token : 0x60007D0
+    // RVA   : 0x12C8990   Offset: 0x12C7D90   Length: 0x33
     public string get_text()
     {
         if (this.mDoInit) {
@@ -247,15 +247,17 @@ public class UIInput
         return this.mValue;
     }
 
-    // Token : 0x60007B9
-    // RVA   : 0x10F2450   Offset: 0x10F0C50   Length: 0x8
+    // Token : 0x60007D1
+    // RVA   : 0x12C8BC0   Offset: 0x12C7FC0   Length: 0x8
     public void set_text(string value)
     {
+        void FUN_1812c8bc0(uint64 this,uint64 value)
+        {
         UIInput.set_value(this,value,0);
     }
 
-    // Token : 0x60007BA
-    // RVA   : 0x10F2220   Offset: 0x10F0A20   Length: 0x33
+    // Token : 0x60007D2
+    // RVA   : 0x12C8990   Offset: 0x12C7D90   Length: 0x33
     public string get_value()
     {
         if (this.mDoInit) {
@@ -265,8 +267,8 @@ public class UIInput
         return this.mValue;
     }
 
-    // Token : 0x60007BB
-    // RVA   : 0x10F2460   Offset: 0x10F0C60   Length: 0x171
+    // Token : 0x60007D3
+    // RVA   : 0x12C8BD0   Offset: 0x12C7FD0   Length: 0x171
     public void set_value(string value)
     {
         uint uVar1;
@@ -278,9 +280,9 @@ public class UIInput
             UIInput.Init(this,0);
           }
         }
-        cVar2 = FUN_1816fd990(value,this.mValue,0);
+        cVar2 = FUN_18171e540(value,this.mValue,0);
         if (!cVar2) {
-          UIInput.mDrawStart = 0;
+          *(uint32 *)(*(int64 *)(DAT_181dafb78 + 184) + 16) = 0;
           lVar3 = UIInput.Validate(this,value,0);
           cVar2 = String.op_Inequality(this.mValue,lVar3,0);
           if (cVar2) {
@@ -293,7 +295,7 @@ public class UIInput
               }
             }
             else {
-              cVar2 = FUN_180d6ca90(lVar3,0);
+              cVar2 = FUN_180d755b0(lVar3,0);
               if (!cVar2) {
                 if (lVar3 == null) {
                           // WARNING: Subroutine does not return
@@ -313,8 +315,8 @@ public class UIInput
         }
     }
 
-    // Token : 0x60007BC
-    // RVA   : 0x10EF8C0   Offset: 0x10EE0C0   Length: 0x184
+    // Token : 0x60007D4
+    // RVA   : 0x12C61C0   Offset: 0x12C55C0   Length: 0x184
     public void Set(string value, bool notify)
     {
         uint uVar1;
@@ -326,9 +328,9 @@ public class UIInput
             UIInput.Init(this,0);
           }
         }
-        cVar2 = FUN_1816fd990(value,this.mValue,0);
+        cVar2 = FUN_18171e540(value,this.mValue,0);
         if (!cVar2) {
-          UIInput.mDrawStart = 0;
+          *(uint32 *)(*(int64 *)(DAT_181dafb78 + 184) + 16) = 0;
           lVar3 = UIInput.Validate(this,value,0);
           cVar2 = String.op_Inequality(this.mValue,lVar3,0);
           if (cVar2) {
@@ -341,7 +343,7 @@ public class UIInput
               }
             }
             else {
-              cVar2 = FUN_180d6ca90(lVar3,0);
+              cVar2 = FUN_180d755b0(lVar3,0);
               if (!cVar2) {
                 if (lVar3 == null) {
                           // WARNING: Subroutine does not return
@@ -363,31 +365,35 @@ public class UIInput
         }
     }
 
-    // Token : 0x60007BD
-    // RVA   : 0x10F21C0   Offset: 0x10F09C0   Length: 0x7
+    // Token : 0x60007D5
+    // RVA   : 0x12C8930   Offset: 0x12C7D30   Length: 0x7
     public bool get_selected()
     {
+        void FUN_1812c8930(uint64 this)
+        {
         UIInput.get_isSelected(this,0);
     }
 
-    // Token : 0x60007BE
-    // RVA   : 0x10F2400   Offset: 0x10F0C00   Length: 0x8
+    // Token : 0x60007D6
+    // RVA   : 0x12C8B70   Offset: 0x12C7F70   Length: 0x8
     public void set_selected(bool value)
     {
+        void FUN_1812c8b70(uint64 this,uint64 value)
+        {
         UIInput.set_isSelected(this,value,0);
     }
 
-    // Token : 0x60007BF
-    // RVA   : 0x10F2120   Offset: 0x10F0920   Length: 0x9E
+    // Token : 0x60007D7
+    // RVA   : 0x12C8890   Offset: 0x12C7C90   Length: 0x9E
     public bool get_isSelected()
     {
         ulong uVar1;
-        uVar1 = UIInput.selection;
+        uVar1 = *(uint64 *)(*(int64 *)(DAT_181dafb78 + 184) + 8);
         Object.op_Equality(uVar1,this,0);
     }
 
-    // Token : 0x60007C0
-    // RVA   : 0x10F2350   Offset: 0x10F0B50   Length: 0xAB
+    // Token : 0x60007D8
+    // RVA   : 0x12C8AC0   Offset: 0x12C7EC0   Length: 0xAB
     public void set_isSelected(bool value)
     {
         ulong uVar1;
@@ -403,8 +409,8 @@ public class UIInput
         }
     }
 
-    // Token : 0x60007C1
-    // RVA   : 0x10F1FB0   Offset: 0x10F07B0   Length: 0x4D
+    // Token : 0x60007D9
+    // RVA   : 0x12C8720   Offset: 0x12C7B20   Length: 0x4D
     public int get_cursorPosition()
     {
         bool cVar1;
@@ -420,8 +426,8 @@ public class UIInput
         }
     }
 
-    // Token : 0x60007C2
-    // RVA   : 0x10F2260   Offset: 0x10F0A60   Length: 0x35
+    // Token : 0x60007DA
+    // RVA   : 0x12C89D0   Offset: 0x12C7DD0   Length: 0x35
     public void set_cursorPosition(int value)
     {
         bool cVar1;
@@ -432,8 +438,8 @@ public class UIInput
         }
     }
 
-    // Token : 0x60007C3
-    // RVA   : 0x10F21D0   Offset: 0x10F09D0   Length: 0x4D
+    // Token : 0x60007DB
+    // RVA   : 0x12C8940   Offset: 0x12C7D40   Length: 0x4D
     public int get_selectionStart()
     {
         bool cVar1;
@@ -449,8 +455,8 @@ public class UIInput
         }
     }
 
-    // Token : 0x60007C4
-    // RVA   : 0x10F2410   Offset: 0x10F0C10   Length: 0x35
+    // Token : 0x60007DC
+    // RVA   : 0x12C8B80   Offset: 0x12C7F80   Length: 0x35
     public void set_selectionStart(int value)
     {
         bool cVar1;
@@ -461,8 +467,8 @@ public class UIInput
         }
     }
 
-    // Token : 0x60007C5
-    // RVA   : 0x10F1FB0   Offset: 0x10F07B0   Length: 0x4D
+    // Token : 0x60007DD
+    // RVA   : 0x12C8720   Offset: 0x12C7B20   Length: 0x4D
     public int get_selectionEnd()
     {
         bool cVar1;
@@ -478,8 +484,8 @@ public class UIInput
         }
     }
 
-    // Token : 0x60007C6
-    // RVA   : 0x10F2260   Offset: 0x10F0A60   Length: 0x35
+    // Token : 0x60007DE
+    // RVA   : 0x12C89D0   Offset: 0x12C7DD0   Length: 0x35
     public void set_selectionEnd(int value)
     {
         bool cVar1;
@@ -490,15 +496,17 @@ public class UIInput
         }
     }
 
-    // Token : 0x60007C7
-    // RVA   : 0x2A2F90   Offset: 0x2A1790   Length: 0x8
+    // Token : 0x60007DF
+    // RVA   : 0x2A2F90   Offset: 0x2A2390   Length: 0x8
     public UITexture get_caret()
     {
+        uint64 FUN_1802a2f90(int64 this)
+        {
         return this.mCaret;
     }
 
-    // Token : 0x60007C8
-    // RVA   : 0x10F1880   Offset: 0x10F0080   Length: 0x1FC
+    // Token : 0x60007E0
+    // RVA   : 0x12C7FF0   Offset: 0x12C73F0   Length: 0x1FC
     public string Validate(string val)
     {
         int iVar1;
@@ -531,7 +539,7 @@ public class UIInput
             }
             return 45;
           }
-        LAB_1810f1d5d:
+        LAB_1812c84cd:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -563,13 +571,13 @@ public class UIInput
               return 46;
             }
           }
-          goto LAB_1810f1d5d;
+          goto LAB_1812c84cd;
         }
         if (iVar1 == 3) {
           if ((uint16)(param_4 - 65) < 26) {
             return uVar6;
           }
-        LAB_1810f1c95:
+        LAB_1812c8405:
           if ((uint16)(param_4 - 97) < 26) {
             return uVar6;
           }
@@ -579,8 +587,8 @@ public class UIInput
           return uVar6;
         }
         if (iVar1 == 4) {
-          if (25 < (uint16)(param_4 - 65)) goto LAB_1810f1c95;
-          goto LAB_1810f1c87;
+          if (25 < (uint16)(param_4 - 65)) goto LAB_1812c8405;
+          goto LAB_1812c83f7;
         }
         if (iVar1 == 6) {
           if (((uint16)(uVar6 - 34) < 63) &&
@@ -598,16 +606,16 @@ public class UIInput
         if (iVar1 != 5) {
           return 0;
         }
-        if (val == null) goto LAB_1810f1d5d;
+        if (val == null) goto LAB_1812c84cd;
         sVar3 = 32;
         if (*(int *)(val + 16) < 1) {
-        LAB_1810f1b92:
+        LAB_1812c8302:
           sVar4 = 10;
         }
         else {
           uVar5 = Mathf.Clamp(param_3,0,*(int *)(val + 16) + -1,0);
           sVar3 = String.get_Chars(val,uVar5,0);
-          if (*(int *)(val + 16) < 1) goto LAB_1810f1b92;
+          if (*(int *)(val + 16) < 1) goto LAB_1812c8302;
           uVar5 = Mathf.Clamp(param_3 + 1,0,*(int *)(val + 16) + -1,0);
           sVar4 = String.get_Chars(val,uVar5,0);
         }
@@ -657,12 +665,12 @@ public class UIInput
         if (sVar3 == 39) {
           return uVar6;
         }
-        LAB_1810f1c87:
+        LAB_1812c83f7:
         return uVar6 + 32;
     }
 
-    // Token : 0x60007C9
-    // RVA   : 0x10EFA50   Offset: 0x10EE250   Length: 0x291
+    // Token : 0x60007E1
+    // RVA   : 0x12C6350   Offset: 0x12C5750   Length: 0x291
     public void Start()
     {
         bool cVar1;
@@ -674,31 +682,31 @@ public class UIInput
         uVar3 = this.selectOnTab;
         cVar1 = Object.op_Inequality(uVar3,0,0);
         if (cVar1) {
-          uVar3 = Component.GetComponent(this,DAT_181d6e1c0);
+          uVar3 = Component.GetComponent(this,DAT_181d96a60);
           cVar1 = Object.op_Equality(uVar3,0,0);
           if (cVar1) {
             lVar2 = Component.get_gameObject(this,0);
-            if (lVar2 == null) goto LAB_1810efcdc;
-            lVar2 = GameObject.AddComponent(lVar2,DAT_181d9dde8);
-            if (lVar2 == null) goto LAB_1810efcdc;
+            if (lVar2 == null) goto LAB_1812c65dc;
+            lVar2 = GameObject.AddComponent(lVar2,DAT_181dc6b88);
+            if (lVar2 == null) goto LAB_1812c65dc;
             *(uint64 *)(lVar2 + 40) = this.selectOnTab;
           }
           this.selectOnTab = 0;
           ZhSegment.Initialize(this,"last change",0);
         }
         if ((!this.mLoadSavedValue) ||
-           (cVar1 = FUN_180d6ca90(this.savedAs,0), cVar1)) {
+           (cVar1 = FUN_180d755b0(this.savedAs,0), cVar1)) {
           if (this.mValue == null) {
-        LAB_1810efcdc:
+        LAB_1812c65dc:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           uVar3 = String.Replace(this.mValue,"\\n","\n",0);
         }
         else {
-          cVar1 = FUN_180d6ca90(this.savedAs,0);
-          if (cVar1) goto LAB_1810efcc5;
-          if (this.mValue == null) goto LAB_1810efcdc;
+          cVar1 = FUN_180d755b0(this.savedAs,0);
+          if (cVar1) goto LAB_1812c65c5;
+          if (this.mValue == null) goto LAB_1812c65dc;
           uVar3 = String.Replace(this.mValue,"\\n","\n",0);
           this.mValue = "";
           cVar1 = PlayerPrefs.HasKey(this.savedAs,0);
@@ -707,12 +715,12 @@ public class UIInput
           }
         }
         UIInput.set_value(this,uVar3,0);
-        LAB_1810efcc5:
+        LAB_1812c65c5:
         this.mStarted = 1;
     }
 
-    // Token : 0x60007CA
-    // RVA   : 0x10EDDD0   Offset: 0x10EC5D0   Length: 0x185
+    // Token : 0x60007E2
+    // RVA   : 0x12C4720   Offset: 0x12C3B20   Length: 0x175
     protected void Init()
     {
         ulong uVar1;
@@ -740,39 +748,36 @@ public class UIInput
                 *(uint32 *)(this + 172) = uVar4;
                 this.mEllipsis = lVar6.mOverflowEllipsis;
                 if (lVar6.mAlignment == 4) {
-                  lVar6.mAlignment = 1;
-                  *(uint8 *)(lVar6 + 88) = 1;
-                  lVar6.mShouldBeProcessed = 1;
-                  UILabel.ProcessAndRequest(lVar6,0);
+                  UILabel.set_alignment(lVar6,1);
                   Debug.LogWarning("Input fields using labels with justified alignment are not supported at this time",this,0);
                   lVar6 = this.label;
+                  if (lVar6 == null) goto LAB_1812c4890;
                 }
+                this.mAlignment = lVar6.mAlignment;
+                lVar6 = UIRect.get_cachedTransform(lVar6,0);
                 if (lVar6 != null) {
-                  this.mAlignment = lVar6.mAlignment;
-                  lVar6 = UIRect.get_cachedTransform(lVar6,0);
-                  if (lVar6 != null) {
-                    puVar7 = (uint32 *)Transform.get_localPosition(local_18,lVar6,0);
-                    this.mPosition = *puVar7;
-                    UIInput.UpdateLabel(this,0);
-                    return;
-                  }
+                  puVar7 = (uint32 *)Transform.get_localPosition(local_18,lVar6,0);
+                  this.mPosition = *puVar7;
+                  UIInput.UpdateLabel(this,0);
+                  return;
                 }
               }
             }
+        LAB_1812c4890:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
         }
     }
 
-    // Token : 0x60007CB
-    // RVA   : 0x10EF800   Offset: 0x10EE000   Length: 0x58
+    // Token : 0x60007E3
+    // RVA   : 0x12C6100   Offset: 0x12C5500   Length: 0x58
     protected void SaveToPlayerPrefs(string val)
     {
         bool cVar1;
-        cVar1 = FUN_180d6ca90(this.savedAs,0);
+        cVar1 = FUN_180d755b0(this.savedAs,0);
         if (!cVar1) {
-          cVar1 = FUN_180d6ca90(val,0);
+          cVar1 = FUN_180d755b0(val,0);
           if (!cVar1) {
             PlayerPrefs.SetString(this.savedAs,val,0);
             return;
@@ -781,8 +786,8 @@ public class UIInput
         }
     }
 
-    // Token : 0x60007CC
-    // RVA   : 0x10EEDA0   Offset: 0x10ED5A0   Length: 0x31F
+    // Token : 0x60007E4
+    // RVA   : 0x12C56A0   Offset: 0x12C4AA0   Length: 0x2F8
     protected virtual void OnSelect(bool isSelected)
     {
         bool cVar1;
@@ -803,42 +808,36 @@ public class UIInput
         uVar4 = this.label;
         cVar1 = Object.op_Inequality(uVar4,0,0);
         if (cVar1) {
-          lVar3 = this.label;
-          if (lVar3 == null) goto LAB_1810ef0ba;
-          if (lVar3.mEncoding) {
-            lVar3.mEncoding = 0;
-            *(uint8 *)(lVar3 + 88) = 1;
-            lVar3.mShouldBeProcessed = 1;
-          }
+          if (this.label == null) goto LAB_1812c5993;
+          UILabel.set_supportEncoding(this.label,0,0);
         }
         uVar4 = this.mOnGUI;
         cVar1 = Object.op_Equality(uVar4,0,0);
         if (cVar1) {
           lVar3 = Component.get_gameObject(this,0);
-          if (lVar3 == null) goto LAB_1810ef0ba;
-          uVar4 = GameObject.AddComponent(lVar3,DAT_181d9dd60);
+          if (lVar3 == null) goto LAB_1812c5993;
+          uVar4 = GameObject.AddComponent(lVar3,DAT_181dc6b00);
           this.mOnGUI = uVar4;
         }
         uVar2 = Time.get_frameCount(0);
         this.mSelectTime = uVar2;
-        UIInput.selection = this;
+        plVar5 = (int64 *)(*(int64 *)(DAT_181dafb78 + 184) + 8);
+        *plVar5 = this;
+        il2cpp_internal(plVar5,this);
         if (this.mDoInit) {
           UIInput.Init(this,0);
         }
         uVar4 = this.label;
         cVar1 = Object.op_Inequality(uVar4,0,0);
         if (cVar1) {
-          plVar5 = this.label;
-          if (plVar5 == (int64 *)0) {
-        LAB_1810ef0ba:
+          lVar3 = this.label;
+          if (lVar3 == null) {
+        LAB_1812c5993:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          this.mEllipsis = (char)plVar5[67];
-          if ((char)plVar5[67] != false) {
-            *(uint8 *)(plVar5 + 67) = 0;
-            (**(code **)(*plVar5 + 0x328))(plVar5,*(uint64 *)(*plVar5 + 0x330));
-          }
+          this.mEllipsis = lVar3.mOverflowEllipsis;
+          UILabel.set_overflowEllipsis(lVar3,0,0);
         }
         uVar4 = this.label;
         cVar1 = Object.op_Inequality(uVar4,0,0);
@@ -851,51 +850,51 @@ public class UIInput
         }
     }
 
-    // Token : 0x60007CD
-    // RVA   : 0x10EEC10   Offset: 0x10ED410   Length: 0x188
+    // Token : 0x60007E5
+    // RVA   : 0x12C5520   Offset: 0x12C4920   Length: 0x172
     protected void OnSelectEvent()
     {
         ulong uVar1;
-        bool cVar2;
-        uint uVar3;
-        uVar3 = Time.get_frameCount(0);
-        this.mSelectTime = uVar3;
-        UIInput.selection = this;
+        long lVar2;
+        bool cVar3;
+        uint uVar4;
+        uVar4 = Time.get_frameCount(0);
+        this.mSelectTime = uVar4;
+        plVar5 = (int64 *)(*(int64 *)(DAT_181dafb78 + 184) + 8);
+        *plVar5 = this;
+        il2cpp_internal(plVar5,this);
         if (this.mDoInit) {
           UIInput.Init(this,0);
         }
         uVar1 = this.label;
-        cVar2 = Object.op_Inequality(uVar1,0,0);
-        if (cVar2) {
-          plVar4 = this.label;
-          if (plVar4 == (int64 *)0) {
+        cVar3 = Object.op_Inequality(uVar1,0,0);
+        if (cVar3) {
+          lVar2 = this.label;
+          if (lVar2 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          this.mEllipsis = (char)plVar4[67];
-          if ((char)plVar4[67] != false) {
-            *(uint8 *)(plVar4 + 67) = 0;
-            (**(code **)(*plVar4 + 0x328))(plVar4,*(uint64 *)(*plVar4 + 0x330));
-          }
+          this.mEllipsis = lVar2.mOverflowEllipsis;
+          UILabel.set_overflowEllipsis(lVar2,0,0);
         }
         uVar1 = this.label;
-        cVar2 = Object.op_Inequality(uVar1,0,0);
-        if (cVar2) {
-          cVar2 = NGUITools.GetActive(this,0);
-          if (cVar2) {
-            uVar3 = Time.get_frameCount(0);
-            this.mSelectMe = uVar3;
+        cVar3 = Object.op_Inequality(uVar1,0,0);
+        if (cVar3) {
+          cVar3 = NGUITools.GetActive(this,0);
+          if (cVar3) {
+            uVar4 = Time.get_frameCount(0);
+            this.mSelectMe = uVar4;
           }
         }
     }
 
-    // Token : 0x60007CE
-    // RVA   : 0x10EE4D0   Offset: 0x10ECCD0   Length: 0x25B
+    // Token : 0x60007E6
+    // RVA   : 0x12C4E10   Offset: 0x12C4210   Length: 0x229
     protected void OnDeselectEvent()
     {
         ulong uVar1;
-        long lVar3;
-        bool cVar4;
+        long lVar2;
+        bool cVar3;
         uint local_18;
         uint uStack_14;
         uint uStack_10;
@@ -904,34 +903,30 @@ public class UIInput
           UIInput.Init(this,0);
         }
         uVar1 = this.label;
-        cVar4 = Object.op_Inequality(uVar1,0,0);
-        if (cVar4) {
-          plVar2 = this.label;
-          if (plVar2 == (int64 *)0) goto LAB_1810ee726;
-          if ((char)plVar2[67] != this.mEllipsis) {
-            *(char *)(plVar2 + 67) = this.mEllipsis;
-            (**(code **)(*plVar2 + 0x328))(plVar2,*(uint64 *)(*plVar2 + 0x330));
-          }
+        cVar3 = Object.op_Inequality(uVar1,0,0);
+        if (cVar3) {
+          if (this.label == null) goto LAB_1812c5034;
+          UILabel.set_overflowEllipsis(this.label,this.mEllipsis,0);
         }
         uVar1 = this.label;
-        cVar4 = Object.op_Inequality(uVar1,0,0);
-        if (cVar4) {
-          cVar4 = NGUITools.GetActive(this,0);
-          if (!cVar4) goto LAB_1810ee6c0;
+        cVar3 = Object.op_Inequality(uVar1,0,0);
+        if (cVar3) {
+          cVar3 = NGUITools.GetActive(this,0);
+          if (!cVar3) goto LAB_1812c4fce;
           if (this.mDoInit) {
             UIInput.Init(this,0);
           }
           il2cpp_internal(this + 144,this.mValue);
-          cVar4 = FUN_180d6ca90(this.mValue,0);
-          lVar3 = this.label;
-          if (!cVar4) {
-            if (lVar3 == null) goto LAB_1810ee726;
-            UILabel.set_text(lVar3,this.mValue,0);
+          cVar3 = FUN_180d755b0(this.mValue,0);
+          lVar2 = this.label;
+          if (!cVar3) {
+            if (lVar2 == null) goto LAB_1812c5034;
+            UILabel.set_text(lVar2,this.mValue,0);
           }
           else {
-            if (lVar3 == null) goto LAB_1810ee726;
-            UILabel.set_text(lVar3,this.mDefaultText,0);
-            if (this.label == null) goto LAB_1810ee726;
+            if (lVar2 == null) goto LAB_1812c5034;
+            UILabel.set_text(lVar2,this.mDefaultText,0);
+            if (this.label == null) goto LAB_1812c5034;
             local_18 = this.mDefaultColor;
             uStack_14 = *(uint32 *)(this + 164);
             uStack_10 = *(uint32 *)(this + 168);
@@ -939,31 +934,29 @@ public class UIInput
             UIWidget.set_color(this.label,&local_18,0);
           }
           Input.set_imeCompositionMode(0,0);
-          lVar3 = this.label;
-          if (lVar3 == null) {
-        LAB_1810ee726:
+          if (this.label == null) {
+        LAB_1812c5034:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          if (lVar3.mAlignment != this.mAlignment) {
-            lVar3.mAlignment = this.mAlignment;
-            *(uint8 *)(lVar3 + 88) = 1;
-            lVar3.mShouldBeProcessed = 1;
-            UILabel.ProcessAndRequest(lVar3,0);
-          }
+          UILabel.set_alignment(this.label,this.mAlignment,0);
         }
-        LAB_1810ee6c0:
-        UIInput.selection = 0;
+        LAB_1812c4fce:
+        puVar4 = (uint64 *)(*(int64 *)(DAT_181dafb78 + 184) + 8);
+        *puVar4 = 0;
+        il2cpp_internal(puVar4,0);
         UIInput.UpdateLabel(this,0);
         if (this.submitOnUnselect) {
           UIInput.Submit(this,0);
         }
     }
 
-    // Token : 0x60007CF
-    // RVA   : 0x10F0D10   Offset: 0x10EF510   Length: 0xB63
+    // Token : 0x60007E7
+    // RVA   : 0x12C7480   Offset: 0x12C6880   Length: 0xB65
     protected virtual void Update()
     {
+        var pStatics_f678 = *(int64*)(DAT_181daf678 + 184);
+        var pStatics_fb78 = *(int64*)(DAT_181dafb78 + 184);
         bool cVar1;
         int iVar2;
         int iVar3;
@@ -997,35 +990,35 @@ public class UIInput
         lVar6 = this[30];
         if (((int)lVar6 != -1) && (iVar3 = Time.get_frameCount(0), (int)lVar6 != iVar3)) {
           *(uint32 *)(this + 30) = 0xffffffff;
-          cVar1 = FUN_180d6ca90(this[18],0);
+          cVar1 = FUN_180d755b0(this[18],0);
           if (!cVar1) {
-            if (this[18] == 0) goto LAB_1810f184e;
+            if (this[18] == 0) goto LAB_1812c7fc0;
             uVar4 = *(uint32 *)(this[18] + 16);
           }
           else {
             uVar4 = 0;
           }
           *(uint32 *)((int64)this + 196) = uVar4;
-          UIInput.mDrawStart = 0;
+          *(uint32 *)(pStatics_fb78 + 16) = 0;
           uVar4 = 0;
           if (*(char *)((int64)this + 45) == false) {
             uVar4 = *(uint32 *)((int64)this + 196);
           }
           this.label = uVar4;
-          if (this[3] == 0) goto LAB_1810f184e;
+          if (this[3] == 0) goto LAB_1812c7fc0;
           local_48 = (uint32)this[9];
           uStack_44 = *(uint32 *)((int64)this + 76);
           uStack_40 = (uint32)this[10];
           uStack_3c = *(uint32 *)((int64)this + 84);
           UIWidget.set_color(this[3],&local_48,0);
-          uVar5 = UICamera.current;
+          uVar5 = *(uint64 *)(pStatics_f678 + 184);
           cVar1 = Object.op_Inequality(uVar5,0,0);
           if (!cVar1) {
-        LAB_1810f1013:
+        LAB_1812c7783:
             plVar9 = (int64 *)this[3];
             if ((plVar9 == (int64 *)0) ||
                (lVar6 = (**(code **)(*plVar9 + 0x1e8))(plVar9,*(uint64 *)(*plVar9 + 0x1f0)),
-               lVar6 == null)) goto LAB_1810f184e;
+               lVar6 == null)) goto LAB_1812c7fc0;
             if (*(int *)(lVar6 + 24) == 0) {
               uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -1035,24 +1028,24 @@ public class UIInput
             uVar12 = (uint32)((uint64)*(uint64 *)(lVar6 + 32) >> 32);
           }
           else {
-            lVar6 = UICamera.current;
-            if (lVar6 == null) goto LAB_1810f184e;
+            lVar6 = *(int64 *)(pStatics_f678 + 184);
+            if (lVar6 == null) goto LAB_1812c7fc0;
             uVar5 = UICamera.get_cachedCamera(lVar6,0);
             cVar1 = Object.op_Inequality(uVar5,0,0);
-            if (!cVar1) goto LAB_1810f1013;
-            lVar6 = UICamera.current;
-            if (lVar6 == null) goto LAB_1810f184e;
+            if (!cVar1) goto LAB_1812c7783;
+            lVar6 = *(int64 *)(pStatics_f678 + 184);
+            if (lVar6 == null) goto LAB_1812c7fc0;
             lVar6 = UICamera.get_cachedCamera(lVar6,0);
             plVar9 = (int64 *)this[3];
             if ((plVar9 == (int64 *)0) ||
                (lVar7 = (**(code **)(*plVar9 + 0x1e8))(plVar9,*(uint64 *)(*plVar9 + 0x1f0)),
-               lVar7 == null)) goto LAB_1810f184e;
+               lVar7 == null)) goto LAB_1812c7fc0;
             if (*(int *)(lVar7 + 24) == 0) {
               uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
               FUN_1800d65f0(uVar5,0);
             }
-            if (lVar6 == null) goto LAB_1810f184e;
+            if (lVar6 == null) goto LAB_1812c7fc0;
             local_58 = *(uint64 *)(lVar7 + 32);
             local_50 = *(uint32 *)(lVar7 + 40);
             puVar8 = (uint64 *)Camera.WorldToScreenPoint(&local_48,lVar6,&local_58,0);
@@ -1066,20 +1059,20 @@ public class UIInput
           Input.set_compositionCursorPos(CONCAT44(fVar13,(uint32)local_58),0);
           UIInput.UpdateLabel(this,0);
           uVar5 = Input.get_inputString(0);
-          cVar1 = FUN_180d6ca90(uVar5,0);
+          cVar1 = FUN_180d755b0(uVar5,0);
           if (cVar1) {
             return;
           }
         }
         lVar6 = Input.get_compositionString(0);
-        cVar1 = FUN_180d6ca90(lVar6,0);
+        cVar1 = FUN_180d755b0(lVar6,0);
         if (cVar1) {
           uVar5 = Input.get_inputString(0);
-          cVar1 = FUN_180d6ca90(uVar5,0);
+          cVar1 = FUN_180d755b0(uVar5,0);
           if (!cVar1) {
             lVar7 = Input.get_inputString(0);
             iVar3 = 0;
-            if (lVar7 == null) goto LAB_1810f184e;
+            if (lVar7 == null) goto LAB_1812c7fc0;
             for (; iVar3 < *(int *)(lVar7 + 16); iVar3 = iVar3 + 1) {
               local_res18[0] = String.get_Chars(lVar7,iVar3);
               if (((31 < local_res18[0]) && (3 < (uint16)(local_res18[0] + 0x900))) &&
@@ -1090,19 +1083,21 @@ public class UIInput
             }
           }
         }
-        cVar1 = String.op_Inequality
-                          (UIInput.mLastIME,lVar6,0);
+        cVar1 = String.op_Inequality(*(uint64 *)(pStatics_fb78 + 24),lVar6,0)
+        ;
         if (cVar1) {
-          cVar1 = FUN_180d6ca90(lVar6,0);
+          cVar1 = FUN_180d755b0(lVar6,0);
           if (!cVar1) {
-            if ((this[18] == 0) || (lVar6 == null)) goto LAB_1810f184e;
-            iVar3 = *(int *)(this[18] + 16) + lVar6.key;
+            if ((this[18] == 0) || (lVar6 == null)) goto LAB_1812c7fc0;
+            iVar3 = *(int *)(this[18] + 16) + *(int *)(lVar6 + 16);
           }
           else {
             iVar3 = (int)this[24];
           }
           *(int *)((int64)this + 196) = iVar3;
-          UIInput.mLastIME = lVar6;
+          plVar9 = (int64 *)(pStatics_fb78 + 24);
+          *plVar9 = lVar6;
+          il2cpp_internal(plVar9,lVar6);
           UIInput.UpdateLabel(this,0);
           UIInput.ExecuteOnChange(this,0);
         }
@@ -1114,13 +1109,13 @@ public class UIInput
           fVar13 = (float)RealTime.get_time(0);
           lVar6 = this[26];
           *(float *)(this + 28) = fVar13 + 0.5;
-          if (lVar6 == null) goto LAB_1810f184e;
+          if (lVar6 == null) goto LAB_1812c7fc0;
           cVar1 = Behaviour.get_enabled(lVar6,0);
           Behaviour.set_enabled(lVar6,!cVar1,0);
         }
         cVar1 = UIInput.get_isSelected(this,0);
         if (cVar1) {
-          if (this[3] == 0) goto LAB_1810f184e;
+          if (this[3] == 0) goto LAB_1812c7fc0;
           if (*(float *)((int64)this + 228) != *(float *)(this[3] + 140)) {
             UIInput.UpdateLabel(this,0);
           }
@@ -1130,7 +1125,7 @@ public class UIInput
         cVar1 = Object.op_Equality(lVar6,0,0);
         if (cVar1) {
           lVar6 = Component.get_gameObject(this,0);
-          if (lVar6 == null) goto LAB_1810f184e;
+          if (lVar6 == null) goto LAB_1812c7fc0;
           uVar4 = GameObject.get_layer(lVar6,0);
           lVar6 = UICamera.FindCameraForLayer(uVar4,0);
           *plVar9 = lVar6;
@@ -1142,8 +1137,9 @@ public class UIInput
           return;
         }
         bVar10 = 0;
-        if (this[3] == 0) goto LAB_1810f184e;
-        if (*(int *)(this[3] + 0x1b8) != 1) {
+        if (this[3] == 0) goto LAB_1812c7fc0;
+        cVar1 = UILabel.get_multiLine(this[3],0);
+        if (cVar1) {
           cVar1 = FUN_1804625f0(0x132,0);
           if (!cVar1) {
             bVar10 = FUN_1804625f0(0x131,0);
@@ -1155,14 +1151,14 @@ public class UIInput
             bVar10 = bVar10 ^ 1;
           }
         }
-        lVar6 = UICamera.GetKeyDown;
-        if ((*plVar9 == 0) || (lVar6 == null)) goto LAB_1810f184e;
+        lVar6 = *(int64 *)(pStatics_f678 + 8);
+        if ((*plVar9 == 0) || (lVar6 == null)) goto LAB_1812c7fc0;
         cVar1 = GetKeyStateFunc.Invoke(lVar6,*(uint32 *)(*plVar9 + 124),0);
         if (!cVar1) {
-          if (*plVar9 == 0) goto LAB_1810f184e;
+          if (*plVar9 == 0) goto LAB_1812c7fc0;
           if (*(int *)(*plVar9 + 124) == 13) {
-            lVar6 = UICamera.GetKeyDown;
-            if (lVar6 == null) goto LAB_1810f184e;
+            lVar6 = *(int64 *)(pStatics_f678 + 8);
+            if (lVar6 == null) goto LAB_1812c7fc0;
             cVar1 = GetKeyStateFunc.Invoke(lVar6,0x10f,0);
             if (!(cVar1))
             {
@@ -1171,16 +1167,16 @@ public class UIInput
               else {
             }
           if (bVar10 == 0) {
-            lVar6 = UICamera.controller;
-            if (lVar6 == null) goto LAB_1810f184e;
-            uVar5 = lVar6.current;
+            lVar6 = *(int64 *)(pStatics_f678 + 400);
+            if (lVar6 == null) goto LAB_1812c7fc0;
+            uVar5 = *(uint64 *)(lVar6 + 72);
             cVar1 = Object.op_Inequality(uVar5,0,0);
             if (cVar1) {
-              lVar6 = UICamera.controller;
-              if (lVar6 == null) goto LAB_1810f184e;
-              lVar6.clickNotification = 0;
+              lVar6 = *(int64 *)(pStatics_f678 + 400);
+              if (lVar6 == null) goto LAB_1812c7fc0;
+              *(uint32 *)(lVar6 + 112) = 0;
             }
-            if (*plVar9 == 0) goto LAB_1810f184e;
+            if (*plVar9 == 0) goto LAB_1812c7fc0;
             uVar4 = *(uint32 *)(*plVar9 + 124);
             UICamera.set_currentKey(uVar4,0);
             UIInput.Submit(this,0);
@@ -1189,14 +1185,14 @@ public class UIInput
             (**(code **)(*this + 0x1a8))(this,"\n",*(uint64 *)(*this + 0x1b0));
           }
         }
-        lVar6 = UICamera.GetKeyDown;
-        if ((*plVar9 == 0) || (lVar6 == null)) goto LAB_1810f184e;
+        lVar6 = *(int64 *)(pStatics_f678 + 8);
+        if ((*plVar9 == 0) || (lVar6 == null)) goto LAB_1812c7fc0;
         cVar1 = GetKeyStateFunc.Invoke(lVar6,*(uint32 *)(*plVar9 + 128),0);
         if (!cVar1) {
-          if (*plVar9 == 0) goto LAB_1810f184e;
+          if (*plVar9 == 0) goto LAB_1812c7fc0;
           if (*(int *)(*plVar9 + 128) == 13) {
-            lVar6 = UICamera.GetKeyDown;
-            if (lVar6 == null) goto LAB_1810f184e;
+            lVar6 = *(int64 *)(pStatics_f678 + 8);
+            if (lVar6 == null) goto LAB_1812c7fc0;
             cVar1 = GetKeyStateFunc.Invoke(lVar6,0x10f,0);
             if (!(cVar1))
             {
@@ -1205,16 +1201,16 @@ public class UIInput
               else {
             }
           if (bVar10 == 0) {
-            lVar6 = UICamera.controller;
-            if (lVar6 == null) goto LAB_1810f184e;
-            uVar5 = lVar6.current;
+            lVar6 = *(int64 *)(pStatics_f678 + 400);
+            if (lVar6 == null) goto LAB_1812c7fc0;
+            uVar5 = *(uint64 *)(lVar6 + 72);
             cVar1 = Object.op_Inequality(uVar5,0,0);
             if (cVar1) {
-              lVar6 = UICamera.controller;
-              if (lVar6 == null) goto LAB_1810f184e;
-              lVar6.clickNotification = 0;
+              lVar6 = *(int64 *)(pStatics_f678 + 400);
+              if (lVar6 == null) goto LAB_1812c7fc0;
+              *(uint32 *)(lVar6 + 112) = 0;
             }
-            if (*plVar9 == 0) goto LAB_1810f184e;
+            if (*plVar9 == 0) goto LAB_1812c7fc0;
             uVar4 = *(uint32 *)(*plVar9 + 128);
             UICamera.set_currentKey(uVar4,0);
             UIInput.Submit(this,0);
@@ -1224,13 +1220,13 @@ public class UIInput
           }
         }
         if (*plVar9 == 0) {
-        LAB_1810f184e:
+        LAB_1812c7fc0:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         if (*(char *)(*plVar9 + 44) == false) {
-          lVar6 = UICamera.GetKeyUp;
-          if (lVar6 == null) goto LAB_1810f184e;
+          lVar6 = *(int64 *)(pStatics_f678 + 16);
+          if (lVar6 == null) goto LAB_1812c7fc0;
           cVar1 = GetKeyStateFunc.Invoke(lVar6,9);
           if (cVar1) {
             UIInput.OnKey(this,9);
@@ -1238,27 +1234,28 @@ public class UIInput
         }
     }
 
-    // Token : 0x60007D0
-    // RVA   : 0x10EE820   Offset: 0x10ED020   Length: 0x280
+    // Token : 0x60007E8
+    // RVA   : 0x12C5130   Offset: 0x12C4530   Length: 0x280
     private void OnKey(KeyCode key)
     {
+        var pStatics = *(int64*)(DAT_181dafb78 + 184);
         ulong uVar1;
         long lVar2;
         bool cVar3;
         int iVar4;
         iVar4 = Time.get_frameCount(0);
-        if (UIInput.mIgnoreKey != iVar4) {
+        if (*(int *)(pStatics + 32) != iVar4) {
           uVar1 = this.mCam;
           cVar3 = Object.op_Inequality(uVar1,0,0);
           if (cVar3) {
             lVar2 = this.mCam;
-            if (lVar2 == null) goto LAB_1810eea9b;
+            if (lVar2 == null) goto LAB_1812c53ab;
             if ((key == lVar2.cancelKey0) || (key == lVar2.cancelKey1)) {
-              bVar6 = !DAT_181e7c2eb;
-              UIInput.mIgnoreKey = iVar4;
+              bVar6 = !DAT_181ea25d5;
+              *(int *)(pStatics + 32) = iVar4;
               if (bVar6) {
-                il2cpp_internal(&UICamera_StaticsPtr);
-                DAT_181e7c2eb = true;
+                il2cpp_runtime_class_init(&DAT_181daf678);
+                DAT_181ea25d5 = true;
               }
               cVar3 = UIInput.get_isSelected(this,0);
               if (!cVar3) {
@@ -1269,26 +1266,26 @@ public class UIInput
             }
           }
           if (key == 9) {
-            bVar6 = !DAT_181e7c2eb;
-            UIInput.mIgnoreKey = iVar4;
+            bVar6 = !DAT_181ea25d5;
+            *(int *)(pStatics + 32) = iVar4;
             if (bVar6) {
-              il2cpp_internal(&UICamera_StaticsPtr);
-              DAT_181e7c2eb = true;
+              il2cpp_runtime_class_init(&DAT_181daf678);
+              DAT_181ea25d5 = true;
             }
             cVar3 = UIInput.get_isSelected(this,0);
             if (cVar3) {
               UICamera.set_selectedObject(0,0);
             }
-            plVar5 = (int64 *)Component.GetComponent(this,DAT_181d6e1c0);
+            plVar5 = (int64 *)Component.GetComponent(this,DAT_181d96a60);
             cVar3 = Object.op_Inequality(plVar5,0,0);
             if (cVar3) {
               if (plVar5 != (int64 *)0) {
-                          // WARNING: Could not recover jumptable at 0x0001810eea94. Too many branches
+                          // WARNING: Could not recover jumptable at 0x0001812c53a4. Too many branches
                           // WARNING: Treating indirect jump as call
                 (**(code **)(*plVar5 + 0x1a8))(plVar5,9,*(uint64 *)(*plVar5 + 0x1b0));
                 return;
               }
-        LAB_1810eea9b:
+        LAB_1812c53ab:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -1296,12 +1293,12 @@ public class UIInput
         }
     }
 
-    // Token : 0x60007D1
-    // RVA   : 0x10ED710   Offset: 0x10EBF10   Length: 0x7B
+    // Token : 0x60007E9
+    // RVA   : 0x12C40A0   Offset: 0x12C34A0   Length: 0x7B
     protected void DoBackspace()
     {
         bool cVar1;
-        cVar1 = FUN_180d6ca90(this[18],0);
+        cVar1 = FUN_180d755b0(this[18],0);
         if (cVar1) {
           return;
         }
@@ -1311,15 +1308,16 @@ public class UIInput
           }
           *(int *)((int64)this + 196) = *(int *)((int64)this + 196) + -1;
         }
-                          // WARNING: Could not recover jumptable at 0x0001810ed77e. Too many branches
+                          // WARNING: Could not recover jumptable at 0x0001812c410e. Too many branches
                           // WARNING: Treating indirect jump as call
         (**(code **)(*this + 0x1a8))(this,"",*(uint64 *)(*this + 0x1b0));
     }
 
-    // Token : 0x60007D2
-    // RVA   : 0x10EF0C0   Offset: 0x10ED8C0   Length: 0x6A8
+    // Token : 0x60007EA
+    // RVA   : 0x12C59A0   Offset: 0x12C4DA0   Length: 0x6CC
     public virtual bool ProcessEvent(Event ev)
     {
+        var pStatics = *(int64*)(DAT_181dafb78 + 184);
         bool cVar1;
         int iVar2;
         uint uVar3;
@@ -1330,17 +1328,17 @@ public class UIInput
         lVar6 = this[3];
         cVar1 = Object.op_Equality(lVar6,0,0);
         if (cVar1) {
-        switchD_1810ef275_caseD_4:
+        switchD_1812c5b55_caseD_4:
           return false;
         }
         iVar2 = Application.get_platform(0);
         if ((iVar2 == 0) || (iVar2 == 1)) {
-          if (ev == null) goto LAB_1810ef761;
+          if (ev == null) goto LAB_1812c6063;
           uVar5 = Event.get_modifiers(ev,0);
           uVar5 = uVar5 & 8;
         }
         else {
-          if (ev == null) goto LAB_1810ef761;
+          if (ev == null) goto LAB_1812c6063;
           uVar5 = Event.get_modifiers(ev,0);
           uVar5 = uVar5 & 2;
         }
@@ -1379,7 +1377,7 @@ public class UIInput
             UIInput.UpdateLabel(this,0);
             return true;
           }
-          goto LAB_1810ef761;
+          goto LAB_1812c6063;
         }
         if (iVar2 < 121) {
           if (iVar2 == 118) {
@@ -1405,12 +1403,12 @@ public class UIInput
         }
         if (iVar2 == 127) {
           Event.Use(ev,0);
-          cVar1 = FUN_180d6ca90(this[18],0);
+          cVar1 = FUN_180d755b0(this[18],0);
           if (cVar1) {
             return true;
           }
           if ((int)this[24] == *(int *)((int64)this + 196)) {
-            if (this[18] == 0) goto LAB_1810ef761;
+            if (this[18] == 0) goto LAB_1812c6063;
             if (*(int *)(this[18] + 16) <= (int)this[24]) {
               return true;
             }
@@ -1424,78 +1422,78 @@ public class UIInput
           Event.Use(ev,0);
           lVar6 = this[35];
           if (lVar6 != null) {
-        LAB_1810ef3e9:
+        LAB_1812c5cc9:
             FUN_18043cbb0(lVar6,0);
             return true;
           }
-          cVar1 = FUN_180d6ca90(this[18]);
+          cVar1 = FUN_180d755b0(this[18]);
           if (cVar1) {
             return true;
           }
-          if (this[3] != 0) {
-            iVar2 = UILabel.GetCharacterIndex
-                              (this[3],*(uint32 *)((int64)this + 196),0x111,0);
+          if (this[3] == 0) goto LAB_1812c6063;
+          iVar2 = UILabel.GetCharacterIndex(this[3],*(uint32 *)((int64)this + 196),0x111,0)
+          ;
+          *(int *)((int64)this + 196) = iVar2;
+          if (iVar2 != 0) {
+            iVar2 = iVar2 + *(int *)(pStatics + 16);
             *(int *)((int64)this + 196) = iVar2;
-            if (iVar2 != 0) {
-              iVar2 = iVar2 + UIInput.mDrawStart;
-              *(int *)((int64)this + 196) = iVar2;
-            }
-            if (uVar3 == 0) {
-              this.label = iVar2;
-              UIInput.UpdateLabel(this,0);
-              return true;
-            }
-            goto LAB_1810ef5b5;
           }
-          goto LAB_1810ef761;
+          if (uVar3 == 0) {
+            this.label = iVar2;
+            UIInput.UpdateLabel(this,0);
+            return true;
+          }
+          goto LAB_1812c5eb7;
         case 1:
           Event.Use(ev,0);
           lVar6 = this[36];
-          if (lVar6 != null) goto LAB_1810ef3e9;
-          cVar1 = FUN_180d6ca90(this[18],0);
+          if (lVar6 != null) goto LAB_1812c5cc9;
+          cVar1 = FUN_180d755b0(this[18],0);
           if (cVar1) {
             return true;
           }
-          if (this[3] == 0) goto LAB_1810ef761;
+          if (this[3] == 0) goto LAB_1812c6063;
           iVar2 = UILabel.GetCharacterIndex(this[3],*(uint32 *)((int64)this + 196),0x112,0)
           ;
           *(int *)((int64)this + 196) = iVar2;
           if ((this[3] == 0) || (lVar6 = UILabel.get_processedText(this[3],0)) == null)
-          goto LAB_1810ef761;
-          if (iVar2 == *(int *)(lVar6 + 16)) goto LAB_1810ef592;
+          goto LAB_1812c6063;
+          if (iVar2 == *(int *)(lVar6 + 16)) goto LAB_1812c5e94;
           iVar2 = *(int *)((int64)this + 196);
-          iVar2 = UIInput.mDrawStart + iVar2;
+          iVar2 = *(int *)(pStatics + 16) + iVar2;
           break;
         case 2:
           Event.Use(ev,0);
-          cVar1 = FUN_180d6ca90(this[18],0);
+          cVar1 = FUN_180d755b0(this[18],0);
           if (cVar1) {
             return true;
           }
-          if (this[18] == 0) goto LAB_1810ef761;
+          if (this[18] == 0) goto LAB_1812c6063;
           iVar2 = Mathf.Min(*(int *)((int64)this + 196) + 1,*(uint32 *)(this[18] + 16),
                              0);
           break;
         case 3:
           Event.Use(ev,0);
-          cVar1 = FUN_180d6ca90(this[18],0);
+          cVar1 = FUN_180d755b0(this[18],0);
           if (cVar1) {
             return true;
           }
           iVar2 = Mathf.Max(*(int *)((int64)this + 196) + -1,0,0);
           break;
         default:
-          goto switchD_1810ef275_caseD_4;
+          goto switchD_1812c5b55_caseD_4;
         case 5:
           Event.Use(ev,0);
-          cVar1 = FUN_180d6ca90(this[18],0);
+          cVar1 = FUN_180d755b0(this[18],0);
           if (cVar1) {
             return true;
           }
-          lVar6 = this[3];
-          if (lVar6 == null) goto LAB_1810ef761;
-          if (*(int *)(lVar6 + 0x1b8) != 1) {
-            uVar4 = UILabel.GetCharacterIndex(lVar6,*(uint32 *)((int64)this + 196),0x116,0);
+          if (this[3] == 0) goto LAB_1812c6063;
+          cVar1 = UILabel.get_multiLine(this[3],0);
+          if (cVar1) {
+            if (this[3] == 0) goto LAB_1812c6063;
+            uVar4 = UILabel.GetCharacterIndex
+                              (this[3],*(uint32 *)((int64)this + 196),0x116,0);
           }
           *(uint32 *)((int64)this + 196) = uVar4;
           if (uVar3 == 0) {
@@ -1503,21 +1501,23 @@ public class UIInput
             UIInput.UpdateLabel(this,0);
             return true;
           }
-          goto LAB_1810ef5b5;
+          goto LAB_1812c5eb7;
         case 6:
           Event.Use(ev,0);
-          cVar1 = FUN_180d6ca90(this[18],0);
+          cVar1 = FUN_180d755b0(this[18],0);
           if (cVar1) {
             return true;
           }
-          lVar6 = this[3];
-          if (lVar6 == null) goto LAB_1810ef761;
-          if (*(int *)(lVar6 + 0x1b8) == 1) goto LAB_1810ef592;
-          iVar2 = UILabel.GetCharacterIndex(lVar6,*(uint32 *)((int64)this + 196),0x117,0);
+          if (this[3] == 0) goto LAB_1812c6063;
+          cVar1 = UILabel.get_multiLine(this[3],0);
+          if (!cVar1) goto LAB_1812c5e94;
+          if (this[3] == 0) goto LAB_1812c6063;
+          iVar2 = UILabel.GetCharacterIndex(this[3],*(uint32 *)((int64)this + 196),0x117,0)
+          ;
           break;
         case 7:
           Event.Use(ev,0);
-          cVar1 = FUN_180d6ca90(this[18],0);
+          cVar1 = FUN_180d755b0(this[18],0);
           if (cVar1) {
             return true;
           }
@@ -1529,13 +1529,13 @@ public class UIInput
           return true;
         case 8:
           Event.Use(ev,0);
-          cVar1 = FUN_180d6ca90(this[18],0);
+          cVar1 = FUN_180d755b0(this[18],0);
           if (cVar1) {
             return true;
           }
-        LAB_1810ef592:
+        LAB_1812c5e94:
           if (this[18] == 0) {
-        LAB_1810ef761:
+        LAB_1812c6063:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -1545,13 +1545,13 @@ public class UIInput
         if (uVar3 == 0) {
           this.label = iVar2;
         }
-        LAB_1810ef5b5:
+        LAB_1812c5eb7:
         UIInput.UpdateLabel(this,0);
         return true;
     }
 
-    // Token : 0x60007D3
-    // RVA   : 0x10EDF60   Offset: 0x10EC760   Length: 0x482
+    // Token : 0x60007EB
+    // RVA   : 0x12C48A0   Offset: 0x12C3CA0   Length: 0x482
     protected virtual void Insert(string text)
     {
         uint uVar1;
@@ -1565,7 +1565,7 @@ public class UIInput
         ulong uVar11;
         int iVar12;
         int iVar13;
-        lVar8 = FUN_1800d60b0(DAT_181d7e600,3);
+        lVar8 = FUN_1800d60b0(DAT_181da35a0,3);
         if (lVar8 != null) {
           uVar1 = *(uint32 *)(lVar8 + 24);
           if (uVar1 == 0) {
@@ -1588,14 +1588,14 @@ public class UIInput
             }
             *(uint32 *)(lVar8 + 40) = *(uint32 *)(this.mValue + 16);
             iVar5 = Mathf.Min(lVar8,0);
-            cVar3 = FUN_180d6ca90(this.mValue,0);
+            cVar3 = FUN_180d755b0(this.mValue,0);
             lVar8 = "";
             if ((!cVar3) && (-1 < iVar5)) {
               if (this.mValue == null) throw; // [null/range check failed]
               lVar8 = String.Substring(this.mValue,0,iVar5,0);
             }
             iVar5 = Mathf.Max(this.mSelectionStart,this.mSelectionEnd,0);
-            cVar3 = FUN_180d6ca90(this.mValue,0);
+            cVar3 = FUN_180d755b0(this.mValue,0);
             lVar9 = "";
             if (!cVar3) {
               lVar2 = this.mValue;
@@ -1607,7 +1607,7 @@ public class UIInput
             if (((lVar9 != null) && (iVar5 = *(int *)(lVar9 + 16), lVar8 != null)) &&
                (iVar13 = *(int *)(lVar8 + 16), text != null)) {
               iVar12 = *(int *)(text + 16);
-              plVar10 = (int64 *)il2cpp_internal(DAT_181d824f0);
+              plVar10 = (int64 *)il2cpp_internal(DAT_181da7710);
               StringBuilder.ctor(plVar10,iVar5 + iVar12 + iVar13,0);
               if (plVar10 != (int64 *)0) {
                 StringBuilder.Append(plVar10,lVar8,0);
@@ -1621,21 +1621,21 @@ public class UIInput
                     }
                     else {
                       if ((0 < this.characterLimit) &&
-                         (iVar6 = FUN_18123bdd0(plVar10,0), this.characterLimit <= iVar6 + iVar5))
+                         (iVar6 = FUN_181259800(plVar10,0), this.characterLimit <= iVar6 + iVar5))
                       break;
                       lVar8 = this.onValidate;
                       if (lVar8 == null) {
                         if (this.validation != null) {
                           uVar11 = (**(code **)(*plVar10 + 0x168))
                                              (plVar10,*(uint64 *)(*plVar10 + 0x170));
-                          uVar7 = FUN_18123bdd0(plVar10,0);
+                          uVar7 = FUN_181259800(plVar10,0);
                           sVar4 = UIInput.Validate(this,uVar11,uVar7,sVar4,0);
                         }
                       }
                       else {
                         uVar11 = (**(code **)(*plVar10 + 0x168))
                                            (plVar10,*(uint64 *)(*plVar10 + 0x170));
-                        uVar7 = FUN_18123bdd0(plVar10,0);
+                        uVar7 = FUN_181259800(plVar10,0);
                         sVar4 = OnValidate.Invoke(lVar8,uVar11,uVar7,sVar4,0);
                       }
                       if (sVar4 != 0) {
@@ -1645,7 +1645,7 @@ public class UIInput
                     iVar12 = iVar12 + 1;
                   } while (iVar12 < iVar13);
                 }
-                uVar7 = FUN_18123bdd0(plVar10,0);
+                uVar7 = FUN_181259800(plVar10,0);
                 this.mSelectionStart = uVar7;
                 iVar13 = 0;
                 this.mSelectionEnd = uVar7;
@@ -1658,13 +1658,13 @@ public class UIInput
                       if (this.validation != null) {
                         uVar11 = (**(code **)(*plVar10 + 0x168))
                                            (plVar10,*(uint64 *)(*plVar10 + 0x170));
-                        uVar7 = FUN_18123bdd0(plVar10,0);
+                        uVar7 = FUN_181259800(plVar10,0);
                         sVar4 = UIInput.Validate(this,uVar11,uVar7,sVar4,0);
                       }
                     }
                     else {
                       uVar11 = (**(code **)(*plVar10 + 0x168))(plVar10,*(uint64 *)(*plVar10 + 0x170));
-                      uVar7 = FUN_18123bdd0(plVar10,0);
+                      uVar7 = FUN_181259800(plVar10,0);
                       sVar4 = OnValidate.Invoke(lVar8,uVar11,uVar7,sVar4,0);
                     }
                     if (sVar4 != 0) {
@@ -1684,8 +1684,8 @@ public class UIInput
         }
     }
 
-    // Token : 0x60007D4
-    // RVA   : 0x10EDB70   Offset: 0x10EC370   Length: 0x11F
+    // Token : 0x60007EC
+    // RVA   : 0x12C44C0   Offset: 0x12C38C0   Length: 0x11F
     protected string GetLeftText()
     {
         uint uVar1;
@@ -1693,7 +1693,7 @@ public class UIInput
         int iVar3;
         long lVar4;
         ulong uVar5;
-        lVar4 = FUN_1800d60b0(DAT_181d7e600,3);
+        lVar4 = FUN_1800d60b0(DAT_181da35a0,3);
         if (lVar4 != null) {
           uVar1 = *(uint32 *)(lVar4 + 24);
           if (uVar1 == 0) {
@@ -1716,7 +1716,7 @@ public class UIInput
             }
             *(uint32 *)(lVar4 + 40) = *(uint32 *)(this.mValue + 16);
             iVar3 = Mathf.Min(lVar4,0);
-            cVar2 = FUN_180d6ca90(this.mValue,0);
+            cVar2 = FUN_180d755b0(this.mValue,0);
             if ((cVar2) || (iVar3 < 0)) {
               return "";
             }
@@ -1728,8 +1728,8 @@ public class UIInput
         }
     }
 
-    // Token : 0x60007D5
-    // RVA   : 0x10EDC90   Offset: 0x10EC490   Length: 0x8D
+    // Token : 0x60007ED
+    // RVA   : 0x12C45E0   Offset: 0x12C39E0   Length: 0x8D
     protected string GetRightText()
     {
         long lVar1;
@@ -1737,7 +1737,7 @@ public class UIInput
         int iVar3;
         ulong uVar4;
         iVar3 = Mathf.Max(this.mSelectionStart,this.mSelectionEnd,0);
-        cVar2 = FUN_180d6ca90(this.mValue,0);
+        cVar2 = FUN_180d755b0(this.mValue,0);
         if (!cVar2) {
           lVar1 = this.mValue;
           if (lVar1 == null) {
@@ -1752,15 +1752,15 @@ public class UIInput
         return "";
     }
 
-    // Token : 0x60007D6
-    // RVA   : 0x10EDD20   Offset: 0x10EC520   Length: 0xA1
+    // Token : 0x60007EE
+    // RVA   : 0x12C4670   Offset: 0x12C3A70   Length: 0xA1
     protected string GetSelection()
     {
         bool cVar1;
         int iVar2;
         int iVar3;
         ulong uVar4;
-        cVar1 = FUN_180d6ca90(this.mValue,0);
+        cVar1 = FUN_180d755b0(this.mValue,0);
         if (!cVar1) {
           if (this.mSelectionStart != this.mSelectionEnd) {
             iVar2 = Mathf.Min(this.mSelectionStart,this.mSelectionEnd,0);
@@ -1776,99 +1776,93 @@ public class UIInput
         return "";
     }
 
-    // Token : 0x60007D7
-    // RVA   : 0x10ED900   Offset: 0x10EC100   Length: 0x26D
+    // Token : 0x60007EF
+    // RVA   : 0x12C4290   Offset: 0x12C3690   Length: 0x225
     protected int GetCharUnderMouse()
     {
         uint uVar1;
         int iVar2;
-        uint uVar3;
-        bool cVar5;
-        int iVar6;
-        long lVar7;
-        long lVar10;
-        ulong uVar11;
+        bool cVar4;
+        int iVar5;
+        long lVar6;
+        ulong uVar9;
         uint[] local_res8 = new uint[2];
-        ulong local_88;
-        uint local_80;
         ulong local_78;
         uint local_70;
         ulong local_68;
-        uint uStack_60;
-        uint32 uStack_5c;
-        uint64 local_58;
+        uint local_60;
+        ulong local_58;
+        uint uStack_50;
+        uint32 uStack_4c;
         uint64 local_48;
-        uint64 uStack_40;
-        uint32 local_38;
-        uint32 uStack_34;
-        uint32 uStack_30;
-        uint32 uStack_2c;
-        uint64 local_28;
-        plVar4 = this.label;
+        uint64 local_38;
+        uint64 uStack_30;
+        uint32 local_28;
+        uint32 uStack_24;
+        uint32 uStack_20;
+        uint32 uStack_1c;
+        uint64 local_18;
+        plVar3 = this.label;
         local_res8[0] = 0;
-        local_48 = 0;
-        uStack_40 = 0;
-        if (plVar4 != (int64 *)0) {
-          lVar7 = (**(code **)(*plVar4 + 0x1e8))(plVar4,*(uint64 *)(*plVar4 + 0x1f0));
-          puVar8 = (uint32 *)UICamera.get_currentRay(&local_68,0);
-          local_38 = *puVar8;
-          uStack_34 = puVar8[1];
-          uStack_30 = puVar8[2];
-          uStack_2c = puVar8[3];
-          local_28 = *(uint64 *)(puVar8 + 4);
-          if (lVar7 != null) {
-            uVar1 = *(uint32 *)(lVar7 + 24);
+        local_38 = 0;
+        uStack_30 = 0;
+        if (plVar3 != (int64 *)0) {
+          lVar6 = (**(code **)(*plVar3 + 0x1e8))(plVar3,*(uint64 *)(*plVar3 + 0x1f0));
+          puVar7 = (uint32 *)UICamera.get_currentRay(&local_58,0);
+          local_28 = *puVar7;
+          uStack_24 = puVar7[1];
+          uStack_20 = puVar7[2];
+          uStack_1c = puVar7[3];
+          local_18 = *(uint64 *)(puVar7 + 4);
+          if (lVar6 != null) {
+            uVar1 = *(uint32 *)(lVar6 + 24);
             if (uVar1 == 0) {
-              uVar11 = il2cpp_internal();
+              uVar9 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar11,0);
+              FUN_1800d65f0(uVar9,0);
             }
             if (uVar1 < 2) {
-              uVar11 = il2cpp_internal();
+              uVar9 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar11,0);
+              FUN_1800d65f0(uVar9,0);
             }
             if (uVar1 < 3) {
-              uVar11 = il2cpp_internal();
+              uVar9 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar11,0);
+              FUN_1800d65f0(uVar9,0);
             }
-            local_88 = *(uint64 *)(lVar7 + 56);
-            local_80 = *(uint32 *)(lVar7 + 64);
-            local_78 = *(uint64 *)(lVar7 + 44);
-            local_70 = *(uint32 *)(lVar7 + 52);
-            local_68 = *(uint64 *)(lVar7 + 32);
-            uStack_60 = *(uint32 *)(lVar7 + 40);
-            Plane.ctor(&local_48,&local_68,&local_78,&local_88,0);
-            local_68 = CONCAT44(uStack_34,local_38);
-            uStack_60 = uStack_30;
-            uStack_5c = uStack_2c;
-            local_58 = local_28;
-            cVar5 = Plane.Raycast(&local_48,&local_68,local_res8,0);
-            if (!cVar5) {
-              return 0;
+            local_78 = *(uint64 *)(lVar6 + 56);
+            local_70 = *(uint32 *)(lVar6 + 64);
+            local_68 = *(uint64 *)(lVar6 + 44);
+            local_60 = *(uint32 *)(lVar6 + 52);
+            local_58 = *(uint64 *)(lVar6 + 32);
+            uStack_50 = *(uint32 *)(lVar6 + 40);
+            Plane.ctor(&local_38,&local_58,&local_68,&local_78,0);
+            local_58 = CONCAT44(uStack_24,local_28);
+            uStack_50 = uStack_20;
+            uStack_4c = uStack_1c;
+            local_48 = local_18;
+            cVar4 = Plane.Raycast(&local_38,&local_58,local_res8,0);
+            if (!cVar4) {
+              iVar5 = 0;
             }
-            lVar7 = this.label;
-            iVar2 = UIInput.mDrawStart;
-            puVar9 = (uint64 *)Ray.GetPoint(&local_68,&local_38,local_res8[0],0);
-            if (lVar7 != null) {
-              uVar11 = *puVar9;
-              uVar3 = *(uint32 *)(puVar9 + 1);
-              lVar10 = UIRect.get_cachedTransform(lVar7,0);
-              if (lVar10 != null) {
-                local_68 = uVar11;
-                uStack_60 = uVar3;
-                puVar9 = (uint64 *)Transform.InverseTransformPoint(&local_78,lVar10,&local_68,0);
-                iVar6 = UILabel.GetCharacterIndexAtPosition(lVar7,*puVar9,0,0);
-                return iVar6 + iVar2;
-              }
+            else {
+              lVar6 = this.label;
+              iVar2 = *(int *)(*(int64 *)(DAT_181dafb78 + 184) + 16);
+              puVar8 = (uint64 *)Ray.GetPoint(&local_68,&local_28,local_res8[0],0);
+              if (lVar6 == null) throw; // [null/range check failed]
+              local_58 = *puVar8;
+              uStack_50 = *(uint32 *)(puVar8 + 1);
+              iVar5 = UILabel.GetCharacterIndexAtPosition(lVar6,&local_58,0,0);
+              iVar5 = iVar5 + iVar2;
             }
+            return iVar5;
           }
         }
     }
 
-    // Token : 0x60007D8
-    // RVA   : 0x10EEAB0   Offset: 0x10ED2B0   Length: 0x156
+    // Token : 0x60007F0
+    // RVA   : 0x12C53C0   Offset: 0x12C47C0   Length: 0x156
     protected virtual void OnPress(bool isPressed)
     {
         ulong uVar1;
@@ -1905,8 +1899,8 @@ public class UIInput
         }
     }
 
-    // Token : 0x60007D9
-    // RVA   : 0x10EE730   Offset: 0x10ECF30   Length: 0xF0
+    // Token : 0x60007F1
+    // RVA   : 0x12C5040   Offset: 0x12C4440   Length: 0xF0
     protected virtual void OnDrag(Vector2 delta)
     {
         ulong uVar1;
@@ -1932,17 +1926,17 @@ public class UIInput
         }
     }
 
-    // Token : 0x60007DA
-    // RVA   : 0xEDF830   Offset: 0xEDE030   Length: 0x11
+    // Token : 0x60007F2
+    // RVA   : 0xEE5C30   Offset: 0xEE5030   Length: 0x11
     private void OnDisable()
     {
-                          // WARNING: Could not recover jumptable at 0x000180edf83a. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000180ee5c3a. Too many branches
                           // WARNING: Treating indirect jump as call
         (**(code **)(*this + 0x1d8))(this,*(uint64 *)(*this + 0x1e0));
     }
 
-    // Token : 0x60007DB
-    // RVA   : 0x10ED5B0   Offset: 0x10EBDB0   Length: 0x15A
+    // Token : 0x60007F3
+    // RVA   : 0x12C3F40   Offset: 0x12C3340   Length: 0x15A
     protected virtual void Cleanup()
     {
         ulong uVar1;
@@ -1973,8 +1967,8 @@ public class UIInput
         }
     }
 
-    // Token : 0x60007DC
-    // RVA   : 0x10EFCF0   Offset: 0x10EE4F0   Length: 0x1DD
+    // Token : 0x60007F4
+    // RVA   : 0x12C65F0   Offset: 0x12C59F0   Length: 0x1DD
     public void Submit()
     {
         ulong uVar1;
@@ -1985,22 +1979,22 @@ public class UIInput
             UIInput.Init(this,0);
           }
           il2cpp_internal(this + 144,this.mValue);
-          uVar1 = UIInput.current;
+          uVar1 = **(uint64 **)(DAT_181dafb78 + 184);
           cVar4 = Object.op_Equality(uVar1,0,0);
           if (cVar4) {
-            plVar2 = *(int64 **)(UIInput_StaticsPtr + 184);
+            plVar2 = *(int64 **)(DAT_181dafb78 + 184);
             *plVar2 = this;
             il2cpp_internal(plVar2,this);
             uVar1 = this.onSubmit;
             EventDelegate.Execute(uVar1,0);
-            puVar3 = *(uint64 **)(UIInput_StaticsPtr + 184);
+            puVar3 = *(uint64 **)(DAT_181dafb78 + 184);
             *puVar3 = 0;
             il2cpp_internal(puVar3,0);
           }
           uVar1 = this.mValue;
-          cVar4 = FUN_180d6ca90(this.savedAs,0);
+          cVar4 = FUN_180d755b0(this.savedAs,0);
           if (!cVar4) {
-            cVar4 = FUN_180d6ca90(uVar1,0);
+            cVar4 = FUN_180d755b0(uVar1,0);
             if (!cVar4) {
               PlayerPrefs.SetString(this.savedAs,uVar1,0);
               return;
@@ -2010,10 +2004,11 @@ public class UIInput
         }
     }
 
-    // Token : 0x60007DD
-    // RVA   : 0x10EFED0   Offset: 0x10EE6D0   Length: 0xE32
+    // Token : 0x60007F5
+    // RVA   : 0x12C67D0   Offset: 0x12C5BD0   Length: 0xCA2
     public void UpdateLabel()
     {
+        var pStatics = *(int64*)(DAT_181dafb78 + 184);
         bool cVar5;
         bool cVar6;
         int iVar7;
@@ -2055,11 +2050,11 @@ public class UIInput
           UIInput.Init(this,0);
         }
         lVar13 = this[18];
-        cVar6 = FUN_180d6ca90(lVar13,0);
+        cVar6 = FUN_180d755b0(lVar13,0);
         if (!cVar6) {
           lVar15 = this[3];
           cVar6 = false;
-        LAB_1810f0002:
+        LAB_1812c6902:
           uVar21 = (uint32)this[9];
           uVar23 = *(uint32 *)((int64)this + 76);
           uVar24 = (uint32)this[10];
@@ -2067,9 +2062,9 @@ public class UIInput
         }
         else {
           uVar11 = Input.get_compositionString(0);
-          cVar6 = FUN_180d6ca90(uVar11,0);
+          cVar6 = FUN_180d755b0(uVar11,0);
           lVar15 = this[3];
-          if ((!cVar6) || (cVar5)) goto LAB_1810f0002;
+          if ((!cVar6) || (cVar5)) goto LAB_1812c6902;
           uVar21 = (uint32)this[20];
           uVar23 = *(uint32 *)((int64)this + 164);
           uVar24 = (uint32)this[21];
@@ -2087,11 +2082,10 @@ public class UIInput
         iVar7 = 0;
         if (!cVar6) {
           if ((int)this[4] == 2) {
-            lVar9 = this[3];
-            if (lVar9 == null) throw; // [null/range check failed]
-            lVar9 = il2cpp_internal(*(uint64 *)(lVar9 + 0x198),DAT_181d556d0);
-            if ((lVar9 != null) && (lVar10 = FUN_180002970(0,DAT_181d556d0,lVar9)) != null) {
-              lVar9 = FUN_180002970(0,DAT_181d556d0,lVar9);
+            if (this[3] == 0) throw; // [null/range check failed]
+            lVar9 = UILabel.get_bitmapFont(this[3],0);
+            if ((lVar9 != null) && (lVar10 = FUN_180002970(0,DAT_181d7a800,lVar9)) != null) {
+              lVar9 = FUN_180002970(0,DAT_181d7a800,lVar9);
               if (lVar9 == null) throw; // [null/range check failed]
               lVar9 = BMFont.GetGlyph(lVar9,42);
               if (lVar9 == null) {
@@ -2134,87 +2128,52 @@ public class UIInput
           }
           uVar12 = String.Substring(lVar13,iVar7,*(int *)(lVar13 + 16) - iVar7,0);
           lVar13 = String.Concat(uVar11,uVar12,0);
-          if (cVar5) {
-            lVar15 = this[3];
-            if (lVar15 == null) throw; // [null/range check failed]
-            if ((*(int *)(lVar15 + 0x1dc) == 1) && (*(int *)(lVar15 + 0x1b8) == 1)) {
-              iVar8 = UILabel.CalculateOffsetToFit(lVar15,lVar13,0);
-              if (iVar8 == 0) {
-                UIInput.mDrawStart = 0;
-                lVar15 = this[3];
-                if (lVar15 == null) throw; // [null/range check failed]
-                if (*(int *)(lVar15 + 0x1b0) != (int)this[23]) {
-                  *(int *)(lVar15 + 0x1b0) = (int)this[23];
-        LAB_1810f0468:
-                  *(uint8 *)(lVar15 + 88) = 1;
-                  *(uint8 *)(lVar15 + 0x24c) = 1;
-                  UILabel.ProcessAndRequest(lVar15,0);
-                }
-              }
-              else {
-                if (iVar7 < UIInput.mDrawStart) {
-                  UIInput.mDrawStart = iVar7;
-                  lVar15 = this[3];
-                  if (lVar15 == null) throw; // [null/range check failed]
-                  if (*(int *)(lVar15 + 0x1b0) != 1) {
-                    *(uint32 *)(lVar15 + 0x1b0) = 1;
-                    goto LAB_1810f0468;
-                  }
-                }
-                else {
-                  if (iVar8 < UIInput.mDrawStart) {
-                    UIInput.mDrawStart = iVar8;
-                    lVar15 = this[3];
-                    if (lVar15 == null) throw; // [null/range check failed]
-                    if (*(int *)(lVar15 + 0x1b0) != 1) {
-                      *(uint32 *)(lVar15 + 0x1b0) = 1;
-                      goto LAB_1810f0468;
-                    }
-                  }
-                  else {
-                    lVar15 = this[3];
-                    if ((lVar13 == null) || (uVar11 = String.Substring(lVar13,0,iVar7,0), lVar15 == null))
-                    throw; // [null/range check failed]
-                    iVar7 = UILabel.CalculateOffsetToFit(lVar15,uVar11,0);
-                    if (UIInput.mDrawStart < iVar7) {
-                      UIInput.mDrawStart = iVar7;
-                      lVar15 = this[3];
-                      if (lVar15 == null) throw; // [null/range check failed]
-                      if (*(int *)(lVar15 + 0x1b0) != 3) {
-                        *(uint32 *)(lVar15 + 0x1b0) = 3;
-                        goto LAB_1810f0468;
-                      }
-                    }
-                  }
-                }
-              }
-              if (UIInput.mDrawStart != null) {
-                iVar7 = UIInput.mDrawStart;
-                if (lVar13 == null) throw; // [null/range check failed]
-                lVar13 = String.Substring(lVar13,iVar7,*(int *)(lVar13 + 16) - iVar7,0);
-              }
-              goto LAB_1810f0669;
-            }
+          if (!cVar5) {
+        LAB_1812c6d7e:
+            *(uint32 *)(pStatics + 16) = 0;
+            goto LAB_1812c6dc6;
           }
-          UIInput.mDrawStart = 0;
           lVar15 = this[3];
           if (lVar15 == null) throw; // [null/range check failed]
-          if (*(int *)(lVar15 + 0x1b0) != (int)this[23]) {
-            *(int *)(lVar15 + 0x1b0) = (int)this[23];
-            *(uint8 *)(lVar15 + 88) = 1;
-            *(uint8 *)(lVar15 + 0x24c) = 1;
-            uVar11 = *(uint64 *)(lVar15 + 0x198);
-            cVar6 = Object.op_Inequality(uVar11,0,0);
-            if (!cVar6) {
-              uVar11 = *(uint64 *)(lVar15 + 400);
+          if ((*(int *)(lVar15 + 0x1dc) != 1) || (*(int *)(lVar15 + 0x1b8) != 1)) goto LAB_1812c6d7e;
+          iVar8 = UILabel.CalculateOffsetToFit(lVar15,lVar13,0);
+          if (iVar8 == 0) {
+            *(uint32 *)(pStatics + 16) = 0;
+            lVar15 = this[3];
+            if (lVar15 == null) throw; // [null/range check failed]
+            uVar21 = (uint32)this[23];
+        LAB_1812c6cf2:
+            UILabel.set_alignment(lVar15,uVar21,0);
+          }
+          else {
+            if (iVar7 < *(int *)(pStatics + 16)) {
+              *(int *)(pStatics + 16) = iVar7;
+        LAB_1812c6c6e:
+              lVar15 = this[3];
+              if (lVar15 == null) throw; // [null/range check failed]
+              uVar21 = 1;
+              goto LAB_1812c6cf2;
             }
-            else {
-              uVar11 = *(uint64 *)(lVar15 + 0x198);
+            if (iVar8 < *(int *)(pStatics + 16)) {
+              *(int *)(pStatics + 16) = iVar8;
+              goto LAB_1812c6c6e;
             }
-            cVar6 = Object.op_Inequality(uVar11,0,0);
-            if (cVar6) {
-              UILabel.ProcessText(lVar15,0,1,0);
+            lVar15 = this[3];
+            if ((lVar13 == null) || (uVar11 = String.Substring(lVar13,0,iVar7,0), lVar15 == null))
+            throw; // [null/range check failed]
+            iVar7 = UILabel.CalculateOffsetToFit(lVar15,uVar11,0);
+            if (*(int *)(pStatics + 16) < iVar7) {
+              *(int *)(pStatics + 16) = iVar7;
+              lVar15 = this[3];
+              if (lVar15 == null) throw; // [null/range check failed]
+              uVar21 = 3;
+              goto LAB_1812c6cf2;
             }
+          }
+          if (*(int *)(pStatics + 16) != 0) {
+            iVar7 = *(int *)(pStatics + 16);
+            if (lVar13 == null) throw; // [null/range check failed]
+            lVar13 = String.Substring(lVar13,iVar7,*(int *)(lVar13 + 16) - iVar7,0);
           }
         }
         else {
@@ -2222,16 +2181,10 @@ public class UIInput
           if (!cVar5) {
             lVar13 = this[19];
           }
-          lVar15 = this[3];
-          if (lVar15 == null) throw; // [null/range check failed]
-          if (*(int *)(lVar15 + 0x1b0) != (int)this[23]) {
-            *(int *)(lVar15 + 0x1b0) = (int)this[23];
-            *(uint8 *)(lVar15 + 88) = 1;
-            *(uint8 *)(lVar15 + 0x24c) = 1;
-            UILabel.ProcessAndRequest(lVar15,0);
-          }
+        LAB_1812c6dc6:
+          if (this[3] == 0) throw; // [null/range check failed]
+          UILabel.set_alignment(this[3],(int)this[23],0);
         }
-        LAB_1810f0669:
         if (this[3] == 0) throw; // [null/range check failed]
         UILabel.set_text(this[3],lVar13,0);
         if (!cVar5) {
@@ -2241,9 +2194,8 @@ public class UIInput
         lVar13 = this[24];
         plVar4 = this + 27;
         lVar15 = *plVar4;
-        iVar8 = (int)lVar13 - UIInput.mDrawStart;
-        iVar7 = *(int *)((int64)this + 196) -
-                UIInput.mDrawStart;
+        iVar8 = (int)lVar13 - *(int *)(pStatics + 16);
+        iVar7 = *(int *)((int64)this + 196) - *(int *)(pStatics + 16);
         cVar5 = Object.op_Equality(lVar15,0,0);
         if (cVar5) {
           lVar13 = new Texture2D(2,2,5,in_stack_ffffffffffffff98 & 0xffffffffffffff00,0);
@@ -2253,7 +2205,7 @@ public class UIInput
           iVar19 = iVar20;
           do {
             lVar13 = *plVar4;
-            puVar14 = (uint32 *)FUN_181098a50(&local_38,0);
+            puVar14 = (uint32 *)FUN_1810d3570(&local_38,0);
             if (lVar13 == null) throw; // [null/range check failed]
             local_48 = *puVar14;
             uStack_44 = puVar14[1];
@@ -2285,7 +2237,7 @@ public class UIInput
           else {
             if (lVar13 == null) throw; // [null/range check failed]
             uVar11 = UIRect.get_cachedGameObject(lVar13,0);
-            lVar13 = NGUITools.AddWidget(uVar11,0x7fffffff,DAT_181d66100);
+            lVar13 = NGUITools.AddWidget(uVar11,0x7fffffff,DAT_181d8ee20);
             *plVar2 = lVar13;
             il2cpp_internal(plVar2,lVar13);
             if (*plVar2 == 0) throw; // [null/range check failed]
@@ -2322,7 +2274,7 @@ public class UIInput
         else {
           if (lVar13 == null) throw; // [null/range check failed]
           uVar11 = UIRect.get_cachedGameObject(lVar13,0);
-          lVar13 = NGUITools.AddWidget(uVar11,0x7fffffff,DAT_181d66100);
+          lVar13 = NGUITools.AddWidget(uVar11,0x7fffffff,DAT_181d8ee20);
           *plVar2 = lVar13;
           il2cpp_internal(plVar2,lVar13);
           if (*plVar2 == 0) throw; // [null/range check failed]
@@ -2359,7 +2311,7 @@ public class UIInput
             lVar13 = this[25];
             if (lVar13 == null) throw; // [null/range check failed]
             bVar16 = false;
-            goto LAB_1810f0cc4;
+            goto LAB_1812c7434;
           }
         }
         else {
@@ -2380,7 +2332,7 @@ public class UIInput
           lVar15 = *(int64 *)(lVar15 + 16);
           if (lVar15 == null) throw; // [null/range check failed]
           bVar16 = 0 < *(int *)(lVar15 + 24);
-        LAB_1810f0cc4:
+        LAB_1812c7434:
           Behaviour.set_enabled(lVar13,bVar16,0);
         }
         fVar22 = (float)RealTime.get_time(0);
@@ -2391,8 +2343,8 @@ public class UIInput
         }
     }
 
-    // Token : 0x60007DE
-    // RVA   : 0x10F1A80   Offset: 0x10F0280   Length: 0x2E2
+    // Token : 0x60007F6
+    // RVA   : 0x12C81F0   Offset: 0x12C75F0   Length: 0xA0
     protected char Validate(string text, int pos, char ch)
     {
         int iVar1;
@@ -2425,7 +2377,7 @@ public class UIInput
             }
             return 45;
           }
-        LAB_1810f1d5d:
+        LAB_1812c84cd:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -2457,13 +2409,13 @@ public class UIInput
               return 46;
             }
           }
-          goto LAB_1810f1d5d;
+          goto LAB_1812c84cd;
         }
         if (iVar1 == 3) {
           if ((uint16)(ch - 65) < 26) {
             return uVar6;
           }
-        LAB_1810f1c95:
+        LAB_1812c8405:
           if ((uint16)(ch - 97) < 26) {
             return uVar6;
           }
@@ -2473,8 +2425,8 @@ public class UIInput
           return uVar6;
         }
         if (iVar1 == 4) {
-          if (25 < (uint16)(ch - 65)) goto LAB_1810f1c95;
-          goto LAB_1810f1c87;
+          if (25 < (uint16)(ch - 65)) goto LAB_1812c8405;
+          goto LAB_1812c83f7;
         }
         if (iVar1 == 6) {
           if (((uint16)(uVar6 - 34) < 63) &&
@@ -2492,16 +2444,16 @@ public class UIInput
         if (iVar1 != 5) {
           return 0;
         }
-        if (text == null) goto LAB_1810f1d5d;
+        if (text == null) goto LAB_1812c84cd;
         sVar3 = 32;
         if (*(int *)(text + 16) < 1) {
-        LAB_1810f1b92:
+        LAB_1812c8302:
           sVar4 = 10;
         }
         else {
           uVar5 = Mathf.Clamp(pos,0,*(int *)(text + 16) + -1,0);
           sVar3 = String.get_Chars(text,uVar5,0);
-          if (*(int *)(text + 16) < 1) goto LAB_1810f1b92;
+          if (*(int *)(text + 16) < 1) goto LAB_1812c8302;
           uVar5 = Mathf.Clamp(pos + 1,0,*(int *)(text + 16) + -1,0);
           sVar4 = String.get_Chars(text,uVar5,0);
         }
@@ -2551,36 +2503,36 @@ public class UIInput
         if (sVar3 == 39) {
           return uVar6;
         }
-        LAB_1810f1c87:
+        LAB_1812c83f7:
         return uVar6 + 32;
     }
 
-    // Token : 0x60007DF
-    // RVA   : 0x10ED790   Offset: 0x10EBF90   Length: 0x16A
+    // Token : 0x60007F7
+    // RVA   : 0x12C4120   Offset: 0x12C3520   Length: 0x16A
     protected void ExecuteOnChange()
     {
         ulong uVar1;
         bool cVar4;
-        uVar1 = UIInput.current;
+        uVar1 = **(uint64 **)(DAT_181dafb78 + 184);
         cVar4 = Object.op_Equality(uVar1,0,0);
         if (cVar4) {
           uVar1 = this.onChange;
           cVar4 = EventDelegate.IsValid(uVar1,0);
           if (cVar4) {
-            plVar2 = *(int64 **)(UIInput_StaticsPtr + 184);
+            plVar2 = *(int64 **)(DAT_181dafb78 + 184);
             *plVar2 = this;
             il2cpp_internal(plVar2,this);
             uVar1 = this.onChange;
             EventDelegate.Execute(uVar1,0);
-            puVar3 = *(uint64 **)(UIInput_StaticsPtr + 184);
+            puVar3 = *(uint64 **)(DAT_181dafb78 + 184);
             *puVar3 = 0;
             il2cpp_internal(puVar3,0);
           }
         }
     }
 
-    // Token : 0x60007E0
-    // RVA   : 0x10EF790   Offset: 0x10EDF90   Length: 0x65
+    // Token : 0x60007F8
+    // RVA   : 0x12C6090   Offset: 0x12C5490   Length: 0x65
     public void RemoveFocus()
     {
         bool cVar1;
@@ -2591,16 +2543,16 @@ public class UIInput
         }
     }
 
-    // Token : 0x60007E1
-    // RVA   : 0x10EF860   Offset: 0x10EE060   Length: 0x5C
+    // Token : 0x60007F9
+    // RVA   : 0x12C6160   Offset: 0x12C5560   Length: 0x5C
     public void SaveValue()
     {
         ulong uVar1;
         bool cVar2;
         uVar1 = this.mValue;
-        cVar2 = FUN_180d6ca90(this.savedAs,0);
+        cVar2 = FUN_180d755b0(this.savedAs,0);
         if (!cVar2) {
-          cVar2 = FUN_180d6ca90(uVar1,0);
+          cVar2 = FUN_180d755b0(uVar1,0);
           if (!cVar2) {
             PlayerPrefs.SetString(this.savedAs,uVar1,0);
             return;
@@ -2609,13 +2561,13 @@ public class UIInput
         }
     }
 
-    // Token : 0x60007E2
-    // RVA   : 0x10EE3F0   Offset: 0x10ECBF0   Length: 0xD5
+    // Token : 0x60007FA
+    // RVA   : 0x12C4D30   Offset: 0x12C4130   Length: 0xD5
     public void LoadValue()
     {
         bool cVar1;
         ulong uVar2;
-        cVar1 = FUN_180d6ca90(this.savedAs,0);
+        cVar1 = FUN_180d755b0(this.savedAs,0);
         if (!cVar1) {
           if (this.mValue == null) {
                           // WARNING: Subroutine does not return
@@ -2631,8 +2583,8 @@ public class UIInput
         }
     }
 
-    // Token : 0x60007E3
-    // RVA   : 0x10F1DF0   Offset: 0x10F05F0   Length: 0x1BE
+    // Token : 0x60007FB
+    // RVA   : 0x12C8560   Offset: 0x12C7960   Length: 0x1BE
     public void /*ctor*/()
     {
         uint uVar1;
@@ -2646,30 +2598,30 @@ public class UIInput
         ulong uStack_30;
         byte[] local_28 = new byte[32];
         this.selectAllTextOnFocus = 1;
-        puVar5 = (uint64 *)FUN_181098a50(local_28,0);
+        puVar5 = (uint64 *)FUN_1810d3570(local_28,0);
         uVar6 = puVar5[1];
         local_48 = 0;
         uStack_40 = 0;
         this.activeTextColor = *puVar5;
         *(uint64 *)(this + 80) = uVar6;
-        FUN_1809981e0(&local_48,0x3f800000,0x3f800000,0x3f800000,0x3f4ccccd,0);
+        FUN_1809dc910(&local_48,0x3f800000,0x3f800000,0x3f800000,0x3f4ccccd,0);
         this.caretColor = local_48;
         *(uint64 *)(this + 96) = uStack_40;
         local_38 = 0;
         uStack_30 = 0;
-        FUN_1809981e0(&local_38,0x3f800000,0x3f5fdfe0,0x3f0d8d8e,0x3f000000,0);
+        FUN_1809dc910(&local_38,0x3f800000,0x3f5fdfe0,0x3f0d8d8e,0x3f000000,0);
         this.selectionColor = (uint32)local_38;
         *(uint32 *)(this + 108) = local_38._4_4_;
         *(uint32 *)(this + 112) = (uint32)uStack_30;
         *(uint32 *)(this + 116) = uStack_30._4_4_;
-        uVar6 = il2cpp_internal(DAT_181d6d9b0);
-        FUN_180f58a90(uVar6,DAT_181d5e700);
+        uVar6 = il2cpp_internal(DAT_181d92658);
+        FUN_18132faf0(uVar6,DAT_181d85ea0);
         this.onSubmit = uVar6;
-        uVar6 = il2cpp_internal(DAT_181d6d9b0);
-        FUN_180f58a90(uVar6,DAT_181d5e700);
+        uVar6 = il2cpp_internal(DAT_181d92658);
+        FUN_18132faf0(uVar6,DAT_181d85ea0);
         this.onChange = uVar6;
         this.mDefaultText = "";
-        puVar7 = (uint32 *)FUN_181098a50(local_28,0);
+        puVar7 = (uint32 *)FUN_1810d3570(local_28,0);
         uVar1 = *puVar7;
         uVar2 = puVar7[1];
         uVar3 = puVar7[2];
@@ -2686,13 +2638,14 @@ public class UIInput
         FUN_18044ef50(this,0);
     }
 
-    // Token : 0x60007E4
-    // RVA   : 0x10F1D70   Offset: 0x10F0570   Length: 0x7C
+    // Token : 0x60007FC
+    // RVA   : 0x12C84E0   Offset: 0x12C78E0   Length: 0x7C
     private static void /*cctor*/()
     {
-        UIInput.mDrawStart = 0;
-        UIInput.mLastIME = "";
-        UIInput.mIgnoreKey = 0;
+        var pStatics = *(int64*)(DAT_181dafb78 + 184);
+        *(uint32 *)(pStatics + 16) = 0;
+        *(uint64 *)(pStatics + 24) = "";
+        *(uint32 *)(pStatics + 32) = 0;
     }
 
 }

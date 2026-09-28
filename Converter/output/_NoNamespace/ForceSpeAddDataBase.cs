@@ -1,33 +1,33 @@
 // ============================================================
 // Type  : ForceSpeAddDataBase
-// Token : 0x20001E4
+// Token : 0x20001EA
 // ============================================================
 
 public class ForceSpeAddDataBase
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000D12
+    // Token: 0x4000DA0
     public string name;
 
-    // Token: 0x4000D13
+    // Token: 0x4000DA1
     public string describe;
 
-    // Token: 0x4000D14
+    // Token: 0x4000DA2
     public bool showPercent;
 
-    // Token: 0x4000D15
+    // Token: 0x4000DA3
     public float value;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000F02
-    // RVA   : 0x782460   Offset: 0x780C60   Length: 0x41
+    // Token : 0x6000F37
+    // RVA   : 0x77EDA0   Offset: 0x77E1A0   Length: 0x41
     public string GetDescribe()
     {
         String.Concat(this.name,":",this.describe,0);
     }
 
-    // Token : 0x6000F03
-    // RVA   : 0x7822E0   Offset: 0x780AE0   Length: 0x175
+    // Token : 0x6000F38
+    // RVA   : 0x77EC20   Offset: 0x77E020   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -38,13 +38,13 @@ public class ForceSpeAddDataBase
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -56,7 +56,7 @@ public class ForceSpeAddDataBase
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d53c70,plVar1);
+            FUN_180002970(0,DAT_181d78da0,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return
@@ -64,8 +64,8 @@ public class ForceSpeAddDataBase
         }
     }
 
-    // Token : 0x6000F04
-    // RVA   : 0x210B70   Offset: 0x20F370   Length: 0x7
+    // Token : 0x6000F39
+    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);

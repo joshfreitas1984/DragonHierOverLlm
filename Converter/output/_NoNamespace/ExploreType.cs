@@ -1,18 +1,18 @@
 // ============================================================
 // Type  : ExploreType
-// Token : 0x2000267
+// Token : 0x200026D
 // ============================================================
 
 public class ExploreType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40012DA
+    // Token: 0x400137D
     public int value__;
 
-    // Token: 0x40012DB
+    // Token: 0x400137E
     public const ExploreType Wild;
 
-    // Token: 0x40012DC
+    // Token: 0x400137F
     public const ExploreType Maze;
 
 }

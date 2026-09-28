@@ -1,29 +1,29 @@
 // ============================================================
 // Type  : CFX_Demo_RandomDirectionTranslate
-// Token : 0x20003B6
+// Token : 0x20003BD
 // ============================================================
 
 public class CFX_Demo_RandomDirectionTranslate
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001D2A
+    // Token: 0x4001E34
     public float speed;
 
-    // Token: 0x4001D2B
+    // Token: 0x4001E35
     public Vector3 baseDir;
 
-    // Token: 0x4001D2C
+    // Token: 0x4001E36
     public Vector3 axis;
 
-    // Token: 0x4001D2D
+    // Token: 0x4001E37
     public bool gravity;
 
-    // Token: 0x4001D2E
+    // Token: 0x4001E38
     private Vector3 dir;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002358
-    // RVA   : 0xBD4590   Offset: 0xBD2D90   Length: 0x137
+    // Token : 0x60023DB
+    // RVA   : 0xB7EE20   Offset: 0xB7E220   Length: 0x137
     private void Start()
     {
         uint uVar2;
@@ -50,8 +50,8 @@ public class CFX_Demo_RandomDirectionTranslate
         *(float *)(this + 64) = *(float *)(this + 64) + *(float *)(this + 36);
     }
 
-    // Token : 0x6002359
-    // RVA   : 0xBD46D0   Offset: 0xBD2ED0   Length: 0x16E
+    // Token : 0x60023DC
+    // RVA   : 0xB7EF60   Offset: 0xB7E360   Length: 0x16E
     private void Update()
     {
         void CFX_Demo_RandomDirectionTranslate.Update
@@ -107,8 +107,8 @@ public class CFX_Demo_RandomDirectionTranslate
         }
     }
 
-    // Token : 0x600235A
-    // RVA   : 0xBD4840   Offset: 0xBD3040   Length: 0x55
+    // Token : 0x60023DD
+    // RVA   : 0xB7F0D0   Offset: 0xB7E4D0   Length: 0x55
     public void /*ctor*/()
     {
         byte[] local_18 = new byte[16];

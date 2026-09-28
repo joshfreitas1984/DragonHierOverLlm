@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : TweenOrthoSize
-// Token : 0x20000BF
+// Token : 0x20000C0
 // ============================================================
 
 public class TweenOrthoSize
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000483
+    // Token: 0x400049F
     public float from;
 
-    // Token: 0x4000484
+    // Token: 0x40004A0
     public float to;
 
-    // Token: 0x4000485
+    // Token: 0x40004A1
     private Camera mCam;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60005BA
-    // RVA   : 0xA71C60   Offset: 0xA70460   Length: 0xAC
+    // Token : 0x60005D2
+    // RVA   : 0xAEB930   Offset: 0xAEAD30   Length: 0xAC
     public Camera get_cachedCamera()
     {
         bool cVar1;
@@ -25,14 +25,14 @@ public class TweenOrthoSize
         uVar2 = this.mCam;
         cVar1 = Object.op_Equality(uVar2,0,0);
         if (cVar1) {
-          uVar2 = Component.GetComponent(this,DAT_181d6afc0);
+          uVar2 = Component.GetComponent(this,DAT_181d937e0);
           this.mCam = uVar2;
         }
         return this.mCam;
     }
 
-    // Token : 0x60005BB
-    // RVA   : 0xA71D10   Offset: 0xA70510   Length: 0x23
+    // Token : 0x60005D3
+    // RVA   : 0xAEB9E0   Offset: 0xAEADE0   Length: 0x23
     public float get_orthoSize()
     {
         long lVar1;
@@ -43,8 +43,8 @@ public class TweenOrthoSize
         }
     }
 
-    // Token : 0x60005BC
-    // RVA   : 0xA71D40   Offset: 0xA70540   Length: 0x34
+    // Token : 0x60005D4
+    // RVA   : 0xAEBA10   Offset: 0xAEAE10   Length: 0x34
     public void set_orthoSize(float value)
     {
         long lVar1;
@@ -55,8 +55,8 @@ public class TweenOrthoSize
         }
     }
 
-    // Token : 0x60005BD
-    // RVA   : 0xA71D10   Offset: 0xA70510   Length: 0x23
+    // Token : 0x60005D5
+    // RVA   : 0xAEB9E0   Offset: 0xAEADE0   Length: 0x23
     public float get_value()
     {
         long lVar1;
@@ -67,8 +67,8 @@ public class TweenOrthoSize
         }
     }
 
-    // Token : 0x60005BE
-    // RVA   : 0xA71D40   Offset: 0xA70540   Length: 0x34
+    // Token : 0x60005D6
+    // RVA   : 0xAEBA10   Offset: 0xAEAE10   Length: 0x34
     public void set_value(float value)
     {
         long lVar1;
@@ -79,8 +79,8 @@ public class TweenOrthoSize
         }
     }
 
-    // Token : 0x60005BF
-    // RVA   : 0xA71B90   Offset: 0xA70390   Length: 0x6B
+    // Token : 0x60005D7
+    // RVA   : 0xAEB860   Offset: 0xAEAC60   Length: 0x6B
     protected override void OnUpdate(float factor, bool isFinished)
     {
         float fVar1;
@@ -95,14 +95,14 @@ public class TweenOrthoSize
         }
     }
 
-    // Token : 0x60005C0
-    // RVA   : 0xA71AC0   Offset: 0xA702C0   Length: 0xC6
+    // Token : 0x60005D8
+    // RVA   : 0xAEB790   Offset: 0xAEAB90   Length: 0xC6
     public static TweenOrthoSize Begin(GameObject go, float duration, float to)
     {
         long lVar1;
         long lVar2;
         uint uVar3;
-        lVar1 = UITweener.Begin(go,duration,0,DAT_181d9da60);
+        lVar1 = UITweener.Begin(go,duration,0,DAT_181dc6d50);
         if (lVar1 != null) {
           lVar2 = TweenOrthoSize.get_cachedCamera(lVar1,0);
           if (lVar2 != null) {
@@ -118,8 +118,8 @@ public class TweenOrthoSize
         }
     }
 
-    // Token : 0x60005C1
-    // RVA   : 0xA71C30   Offset: 0xA70430   Length: 0x2F
+    // Token : 0x60005D9
+    // RVA   : 0xAEB900   Offset: 0xAEAD00   Length: 0x2F
     public override void SetStartToCurrentValue()
     {
         long lVar1;
@@ -132,8 +132,8 @@ public class TweenOrthoSize
         }
     }
 
-    // Token : 0x60005C2
-    // RVA   : 0xA71C00   Offset: 0xA70400   Length: 0x2F
+    // Token : 0x60005DA
+    // RVA   : 0xAEB8D0   Offset: 0xAEACD0   Length: 0x2F
     public override void SetEndToCurrentValue()
     {
         long lVar1;
@@ -146,10 +146,12 @@ public class TweenOrthoSize
         }
     }
 
-    // Token : 0x60005C3
-    // RVA   : 0xA70070   Offset: 0xA6E870   Length: 0x15
+    // Token : 0x60005DB
+    // RVA   : 0xAE9D50   Offset: 0xAE9150   Length: 0x15
     public void /*ctor*/()
     {
+        void FUN_180ae9d50(int64 this)
+        {
         this.from = 0x3f800000;
         this.to = 0x3f800000;
         UITweener.ctor(this,0);

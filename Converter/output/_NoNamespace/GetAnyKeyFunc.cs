@@ -1,13 +1,13 @@
 // ============================================================
 // Type  : GetAnyKeyFunc
-// Token : 0x20000DE
+// Token : 0x20000DF
 // ============================================================
 
 public class GetAnyKeyFunc
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600072E
-    // RVA   : 0x210320   Offset: 0x20EB20   Length: 0x6A
+    // Token : 0x6000746
+    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
@@ -25,108 +25,129 @@ public class GetAnyKeyFunc
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x600072F
-    // RVA   : 0xB058F0   Offset: 0xB040F0   Length: 0x215
+    // Token : 0x6000747
+    // RVA   : 0x8E4D90   Offset: 0x8E4190   Length: 0x292
     public virtual bool Invoke()
     {
-        ushort uVar1;
-        long lVar2;
-        bool cVar5;
+        long lVar1;
+        bool cVar4;
         ulong in_RAX;
-        ulong uVar6;
-        long lVar7;
-        ulong uVar9;
+        ulong uVar5;
+        long lVar6;
+        long lVar8;
+        ushort uVar9;
         ushort uVar10;
         ulong uVar11;
-        ulong uVar13;
+        ulong uVar12;
+        ulong uVar14;
         long local_res8;
         local_res8 = this;
-        lVar2 = *(int64 *)(this + 104);
-        if (lVar2 == null) {
-          uVar13 = 1;
-          plVar12 = &local_res8;
+        lVar6 = *(int64 *)(this + 104);
+        if (lVar6 == null) {
+          uVar14 = 1;
+          plVar13 = &local_res8;
         }
         else {
-          uVar13 = *(uint64 *)(lVar2 + 24);
-          plVar12 = (int64 *)(lVar2 + 32);
-          if (uVar13 == 0) {
+          uVar14 = *(uint64 *)(lVar6 + 24);
+          plVar13 = (int64 *)(lVar6 + 32);
+          if (uVar14 == 0) {
             return in_RAX & 0xffffffffffffff00;
           }
         }
-        uVar11 = 0;
+        uVar12 = 0;
         do {
-          lVar2 = plVar12[uVar11];
-          pcVar3 = *(code **)(lVar2 + 16);
-          plVar4 = *(int64 **)(lVar2 + 32);
-          lVar2 = *(int64 *)(lVar2 + 40);
-          if (*(short *)(lVar2 + 72) == -1) {
-            il2cpp_internal(lVar2);
+          lVar6 = plVar13[uVar12];
+          lVar1 = *(int64 *)(lVar6 + 40);
+          pcVar2 = *(code **)(lVar6 + 16);
+          plVar3 = *(int64 **)(lVar6 + 32);
+          if (*(short *)(lVar1 + 72) == -1) {
+            il2cpp_internal(lVar1);
           }
-          cVar5 = FUN_1800d6050(lVar2);
-          if (!cVar5) {
-            if ((((plVar4 == (int64 *)0) || (*(short *)(lVar2 + 72) == -1)) ||
-                ((*(uint32 *)(*plVar4 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-            goto LAB_180b05acd;
-            cVar5 = il2cpp_internal(lVar2);
-            if (!cVar5) {
-              cVar5 = FUN_1800d65c0(lVar2);
-              if (!cVar5) {
-                uVar6 = (**(code **)(*plVar4 + 0x138 + (uint64)*(uint16 *)(lVar2 + 72) * 16))
-                                  (plVar4,*(uint64 *)
-                                           (*plVar4 + 0x140 + (uint64)*(uint16 *)(lVar2 + 72) * 16)
+          cVar4 = FUN_1800d6050(lVar1);
+          if (!cVar4) {
+            if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
+                ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
+            goto LAB_1808e4fe5;
+            cVar4 = il2cpp_internal(lVar1);
+            if (!cVar4) {
+              cVar4 = FUN_1800d65c0(lVar1);
+              if (!cVar4) {
+                uVar5 = (**(code **)(*plVar3 + 0x138 + (uint64)*(uint16 *)(lVar1 + 72) * 16))
+                                  (plVar3,*(uint64 *)
+                                           (*plVar3 + 0x140 + (uint64)*(uint16 *)(lVar1 + 72) * 16)
                                   );
               }
               else {
-                uVar9 = il2cpp_class_get_namespace(lVar2);
-                uVar6 = FUN_180002970(*(uint16 *)(lVar2 + 72),uVar9,plVar4);
+                lVar8 = il2cpp_class_get_namespace(lVar1);
+                lVar6 = *plVar3;
+                uVar5 = 0;
+                if (*(uint16 *)(lVar6 + 0x12a) != 0) {
+                  do {
+                    if (*(int64 *)(*(int64 *)(lVar6 + 176) + uVar5 * 16) == lVar8) {
+                      puVar7 = (uint64 *)
+                               ((int64)
+                                (int)((uint32)*(uint16 *)(lVar1 + 72) +
+                                     *(int *)(*(int64 *)(lVar6 + 176) + 8 + uVar5 * 16)) * 16 +
+                                0x138 + lVar6);
+                      uVar5 = (*(code *)*puVar7)(plVar3,puVar7[1]);
+                      goto LAB_1808e4fed;
+                    }
+                    uVar10 = (short)uVar5 + 1;
+                    uVar5 = (uint64)uVar10;
+                  } while (uVar10 < *(uint16 *)(lVar6 + 0x12a));
+                }
+                puVar7 = (uint64 *)FUN_1800914f0(plVar3,lVar8,*(uint16 *)(lVar1 + 72));
+                uVar5 = (*(code *)*puVar7)(plVar3,puVar7[1]);
               }
             }
             else {
-              cVar5 = FUN_1800d65c0(lVar2);
-              uVar1 = *(uint16 *)(lVar2 + 72);
-              if (!cVar5) {
-                uVar9 = *(uint64 *)(*plVar4 + ((uint64)uVar1 + 20) * 16);
+              cVar4 = FUN_1800d65c0(lVar1);
+              uVar10 = *(uint16 *)(lVar1 + 72);
+              if (!cVar4) {
+                uVar11 = *(uint64 *)(*plVar3 + ((uint64)uVar10 + 20) * 16);
               }
               else {
-                lVar7 = *plVar4;
-                uVar10 = 0;
-                if (*(uint16 *)(lVar7 + 0x12a) != 0) {
+                lVar6 = *plVar3;
+                uVar5 = 0;
+                if (*(uint16 *)(lVar6 + 0x12a) != 0) {
                   do {
-                    if (*(int64 *)(*(int64 *)(lVar7 + 176) + (uint64)uVar10 * 16) ==
-                        *(int64 *)(lVar2 + 24)) {
-                      lVar7 = (int64)
-                              (int)((uint32)uVar1 +
-                                   *(int *)(*(int64 *)(lVar7 + 176) + 8 + (uint64)uVar10 * 16)) *
-                              16 + 0x138 + lVar7;
-                      goto LAB_180b05a46;
+                    if (*(int64 *)(*(int64 *)(lVar6 + 176) + uVar5 * 16) ==
+                        *(int64 *)(lVar1 + 24)) {
+                      lVar6 = (int64)
+                              (int)((uint32)uVar10 +
+                                   *(int *)(*(int64 *)(lVar6 + 176) + 8 + uVar5 * 16)) * 16 +
+                              0x138 + lVar6;
+                      goto LAB_1808e4ee6;
                     }
-                    uVar10 = uVar10 + 1;
-                  } while (uVar10 < *(uint16 *)(lVar7 + 0x12a));
+                    uVar9 = (short)uVar5 + 1;
+                    uVar5 = (uint64)uVar9;
+                  } while (uVar9 < *(uint16 *)(lVar6 + 0x12a));
                 }
-                lVar7 = FUN_1800914f0(plVar4,*(int64 *)(lVar2 + 24),uVar1);
-        LAB_180b05a46:
-                uVar9 = *(uint64 *)(lVar7 + 8);
+                lVar6 = FUN_1800914f0(plVar3,*(int64 *)(lVar1 + 24),uVar10);
+        LAB_1808e4ee6:
+                uVar11 = *(uint64 *)(lVar6 + 8);
               }
-              puVar8 = (uint64 *)il2cpp_internal(uVar9,lVar2);
-              uVar6 = (*(code *)*puVar8)(plVar4,puVar8);
+              puVar7 = (uint64 *)il2cpp_internal(uVar11,lVar1);
+              uVar5 = (*(code *)*puVar7)(plVar3,puVar7);
             }
           }
-          else if (*(char *)(lVar2 + 74) == false) {
-            uVar6 = (*pcVar3)(lVar2);
+          else if (*(char *)(lVar1 + 74) == false) {
+            uVar5 = (*pcVar2)(lVar1);
           }
           else {
-        LAB_180b05acd:
-            uVar6 = (*pcVar3)(plVar4,lVar2);
+        LAB_1808e4fe5:
+            uVar5 = (*pcVar2)(plVar3,lVar1);
           }
-          uVar11 = uVar11 + 1;
-          if (uVar13 <= uVar11) {
-            return uVar6;
+        LAB_1808e4fed:
+          uVar12 = uVar12 + 1;
+          if (uVar14 <= uVar12) {
+            return uVar5;
           }
         } while( true );
     }
 
-    // Token : 0x6000730
-    // RVA   : 0x2F7010   Offset: 0x2F5810   Length: 0x22
+    // Token : 0x6000748
+    // RVA   : 0x2F7010   Offset: 0x2F6410   Length: 0x22
     public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object)
     {
         ulong[] local_18 = new ulong[3];
@@ -134,8 +155,8 @@ public class GetAnyKeyFunc
         il2cpp_internal(this,local_18,callback,object);
     }
 
-    // Token : 0x6000731
-    // RVA   : 0x28D420   Offset: 0x28BC20   Length: 0x28
+    // Token : 0x6000749
+    // RVA   : 0x28D420   Offset: 0x28C820   Length: 0x28
     public virtual bool EndInvoke(IAsyncResult result)
     {
         long lVar1;

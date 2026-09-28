@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : SkillAttackRangeData
-// Token : 0x200022D
+// Token : 0x2000233
 // ============================================================
 
 public class SkillAttackRangeData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001105
+    // Token: 0x40011A8
     public AttackRangeType rangeType;
 
-    // Token: 0x4001106
+    // Token: 0x40011A9
     public int minRange;
 
-    // Token: 0x4001107
+    // Token: 0x40011AA
     public int maxRange;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600126B
-    // RVA   : 0x971270   Offset: 0x96FA70   Length: 0x44
+    // Token : 0x60012AC
+    // RVA   : 0x983D80   Offset: 0x983180   Length: 0x44
     public void /*ctor*/(int type, int min, int max)
     {
         void SkillDamageRangeData.ctor
@@ -29,8 +29,8 @@ public class SkillAttackRangeData
         this.maxRange = max;
     }
 
-    // Token : 0x600126C
-    // RVA   : 0x9710F0   Offset: 0x96F8F0   Length: 0x175
+    // Token : 0x60012AD
+    // RVA   : 0x983C00   Offset: 0x983000   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -41,13 +41,13 @@ public class SkillAttackRangeData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -59,7 +59,7 @@ public class SkillAttackRangeData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d53c70,plVar1);
+            FUN_180002970(0,DAT_181d78da0,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

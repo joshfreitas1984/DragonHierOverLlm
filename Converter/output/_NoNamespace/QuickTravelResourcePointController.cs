@@ -1,41 +1,41 @@
 // ============================================================
 // Type  : QuickTravelResourcePointController
-// Token : 0x200032A
+// Token : 0x2000331
 // ============================================================
 
 public class QuickTravelResourcePointController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001989
+    // Token: 0x4001A80
     public ResourcePointData resourcePointData;
 
-    // Token: 0x400198A
+    // Token: 0x4001A81
     public QuickTravelAreaIconType resourcePointIconType;
 
-    // Token: 0x400198B
+    // Token: 0x4001A82
     private bool hightLight;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001FA7
-    // RVA   : 0xC50340   Offset: 0xC4EB40   Length: 0x348
+    // Token : 0x6002027
+    // RVA   : 0xD011E0   Offset: 0xD005E0   Length: 0x348
     private void Update()
     {
+        var pStatics = *(int64*)(DAT_181d8b790 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
         this.hightLight = 0;
-        uVar2 = MouseController.hoveredUI;
+        uVar2 = *(uint64 *)(pStatics + 72);
         cVar1 = Object.op_Inequality(uVar2,0,0);
         if (cVar1) {
-          if (MouseController.hoveredUI == null)
-          throw; // [null/range check failed]
+          if (*(int64 *)(pStatics + 72) == 0) throw; // [null/range check failed]
           uVar2 = GameObject.GetComponent();
           cVar1 = Object.op_Inequality(uVar2,0,0);
           if (cVar1) {
-            if ((MouseController.hoveredUI == null) ||
+            if ((*(int64 *)(pStatics + 72) == 0) ||
                (lVar3 = GameObject.GetComponent()) == null) throw; // [null/range check failed]
             if (*(int64 *)(lVar3 + 24) != 0) {
-              if ((((MouseController.hoveredUI == null) ||
+              if ((((*(int64 *)(pStatics + 72) == 0) ||
                    (lVar3 = GameObject.GetComponent()) == null) || (*(int64 *)(lVar3 + 24) == 0)
                   ) || (this.resourcePointData == null)) throw; // [null/range check failed]
               if (*(int *)(*(int64 *)(lVar3 + 24) + 60) ==
@@ -81,42 +81,43 @@ public class QuickTravelResourcePointController
         }
     }
 
-    // Token : 0x6001FA8
-    // RVA   : 0xC4FE00   Offset: 0xC4E600   Length: 0x533
+    // Token : 0x6002028
+    // RVA   : 0xD00CA0   Offset: 0xD000A0   Length: 0x533
     public void RefreshState()
     {
-        var pStatics = *(int64*)(DAT_181d6ede0 + 184);
+        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics_4000 = *(int64*)(DAT_181d94000 + 184);
         bool cVar1;
         long lVar3;
         ulong local_38;
         uint local_30;
         ulong local_28;
         ulong uStack_20;
-        if (PlotController.LeftFaceHideOffset == 1) {
-          lVar3 = PlotController.CheckHideChoice;
+        if (*(int *)(pStatics_3d40 + 8) == 1) {
+          lVar3 = *(int64 *)(pStatics_3d40 + 24);
           if ((this.resourcePointData == null) || (lVar3 == null)) throw; // [null/range check failed]
-          cVar1 = FUN_181815240(lVar3,this.resourcePointData.connectAreaID,DAT_181d67bf8)
+          cVar1 = FUN_18182a3a0(lVar3,this.resourcePointData.connectAreaID,DAT_181d8f398)
           ;
           if (!(cVar1))
           {
-            plVar2 = (int64 *)Component.GetComponent(this,DAT_181d6bc40);
+            plVar2 = (int64 *)Component.GetComponent(this,DAT_181d94460);
             if (plVar2 == (int64 *)0) throw; // [null/range check failed]
             (**(code **)(*plVar2 + 0x2c8))(plVar2,0,*(uint64 *)(*plVar2 + 0x2d0));
             }
             else {
           }
-          plVar2 = (int64 *)Component.GetComponent(this,DAT_181d6bc40);
-          if ((*pStatics == 0) || (plVar2 == (int64 *)0))
+          plVar2 = (int64 *)Component.GetComponent(this,DAT_181d94460);
+          if ((*pStatics_4000 == 0) || (plVar2 == (int64 *)0))
           throw; // [null/range check failed]
           (**(code **)(*plVar2 + 0x2c8))
-                    (plVar2,*(uint8 *)(*pStatics + 128),
+                    (plVar2,*(uint8 *)(*pStatics_4000 + 128),
                      *(uint64 *)(*plVar2 + 0x2d0));
         }
-        plVar2 = (int64 *)Component.GetComponent(this,DAT_181d6bc40);
+        plVar2 = (int64 *)Component.GetComponent(this,DAT_181d94460);
         if (plVar2 == (int64 *)0) throw; // [null/range check failed]
         cVar1 = (**(code **)(*plVar2 + 0x2b8))(plVar2,*(uint64 *)(*plVar2 + 0x2c0));
         if (!cVar1) {
-        LAB_180c501b2:
+        LAB_180d01052:
           lVar3 = Component.get_transform(this,0);
           if (lVar3 == null) throw; // [null/range check failed]
           lVar3 = Transform.Find(lVar3,"AreaNameBack",0);
@@ -133,8 +134,8 @@ public class QuickTravelResourcePointController
             if (lVar3 == null) throw; // [null/range check failed]
             GameObject.SetActive(lVar3,0,0);
           }
-          plVar2 = (int64 *)Component.GetComponent(this,DAT_181d6bc40);
-          plVar4 = (int64 *)Component.GetComponent(this,DAT_181d6bc40);
+          plVar2 = (int64 *)Component.GetComponent(this,DAT_181d94460);
+          plVar4 = (int64 *)Component.GetComponent(this,DAT_181d94460);
           if (plVar4 == (int64 *)0) throw; // [null/range check failed]
           puVar5 = (uint64 *)
                    (**(code **)(*plVar4 + 0x298))(&local_28,plVar4,*(uint64 *)(*plVar4 + 0x2a0));
@@ -151,8 +152,8 @@ public class QuickTravelResourcePointController
           puVar5 = (uint64 *)Vector3.get_zero(&local_28,0);
         }
         else {
-          if (*pStatics == 0) throw; // [null/range check failed]
-          if (*(char *)(*pStatics + 128) == false) goto LAB_180c501b2;
+          if (*pStatics_4000 == 0) throw; // [null/range check failed]
+          if (*(char *)(*pStatics_4000 + 128) == false) goto LAB_180d01052;
           lVar3 = Component.get_transform(this,0);
           if (lVar3 == null) throw; // [null/range check failed]
           lVar3 = Transform.Find(lVar3,"AreaNameBack",0);
@@ -169,8 +170,8 @@ public class QuickTravelResourcePointController
             if (lVar3 == null) throw; // [null/range check failed]
             GameObject.SetActive(lVar3,1,0);
           }
-          plVar2 = (int64 *)Component.GetComponent(this,DAT_181d6bc40);
-          plVar4 = (int64 *)Component.GetComponent(this,DAT_181d6bc40);
+          plVar2 = (int64 *)Component.GetComponent(this,DAT_181d94460);
+          plVar4 = (int64 *)Component.GetComponent(this,DAT_181d94460);
           if (plVar4 == (int64 *)0) throw; // [null/range check failed]
           puVar5 = (uint64 *)
                    (**(code **)(*plVar4 + 0x298))(&local_28,plVar4,*(uint64 *)(*plVar4 + 0x2a0));
@@ -194,11 +195,11 @@ public class QuickTravelResourcePointController
         }
     }
 
-    // Token : 0x6001FA9
-    // RVA   : 0xC4FCE0   Offset: 0xC4E4E0   Length: 0x118
+    // Token : 0x6002029
+    // RVA   : 0xD00B80   Offset: 0xCFFF80   Length: 0x118
     public void RefreshNameScale()
     {
-        var pStatics = *(int64*)(DAT_181d6ede0 + 184);
+        var pStatics = *(int64*)(DAT_181d94000 + 184);
         long lVar1;
         ulong local_28;
         float local_20;
@@ -226,51 +227,61 @@ public class QuickTravelResourcePointController
         }
     }
 
-    // Token : 0x6001FAA
-    // RVA   : 0xBEEC30   Offset: 0xBED430   Length: 0x50
+    // Token : 0x600202A
+    // RVA   : 0xB23BF0   Offset: 0xB22FF0   Length: 0x50
     public virtual void OnDrag(PointerEventData eventData)
     {
-        var pStatics = *(int64*)(DAT_181d6ed60 + 184);
+        var pStatics = *(int64*)(DAT_181d93f80 + 184);
         if (*pStatics != 0) {
           QuickTravelBigMapSpriteController.OnDrag(*pStatics,eventData,0);
           return;
         }
     }
 
-    // Token : 0x6001FAB
-    // RVA   : 0xBEEC90   Offset: 0xBED490   Length: 0x50
+    // Token : 0x600202B
+    // RVA   : 0xB23C50   Offset: 0xB23050   Length: 0x50
     public virtual void OnScroll(PointerEventData eventData)
     {
-        var pStatics = *(int64*)(DAT_181d6ed60 + 184);
+        var pStatics = *(int64*)(DAT_181d93f80 + 184);
         if (*pStatics != 0) {
           QuickTravelBigMapSpriteController.OnScroll(*pStatics,eventData,0);
           return;
         }
     }
 
-    // Token : 0x6001FAC
-    // RVA   : 0xC4FBE0   Offset: 0xC4E3E0   Length: 0xFA
+    // Token : 0x600202C
+    // RVA   : 0xD009A0   Offset: 0xCFFDA0   Length: 0x1D2
     public void OnClick()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
-        ulong uVar2;
-        ulong uVar3;
+        long lVar2;
+        long lVar3;
+        ulong uVar4;
+        ulong uVar5;
         if (this.resourcePointIconType != 2) {
           return;
         }
-        lVar1 = **(int64 **)(DAT_181d834f0 + 184);
-        if (this.resourcePointData != null) {
-          uVar2 = String.Format("确认前往{0}吗？",this.resourcePointData.resourcePointFullName,0);
-          if ((this.resourcePointData != null) &&
-             (uVar3 = Int32.ToString(this.resourcePointData + 16,0), lVar1 != null)) {
-            SureMenu.CallSureMenu(lVar1,uVar2,"SetPlayerMoveTargetResourcePoint",uVar3,"BigMapController",1,0);
-            return;
+        lVar1 = this.resourcePointData;
+        lVar2 = **(int64 **)(DAT_181da8710 + 184);
+        if (lVar1 != null) {
+          if (((*pStatics != 0) &&
+              (lVar3 = *(int64 *)(*pStatics + 32)) != null) &&
+             (lVar3 = WorldData.GetArea(lVar3,lVar1.connectAreaID,0)) != null) {
+            uVar4 = AreaData.GetAreaName(lVar3,0);
+            uVar4 = String.Concat(uVar4,lVar1.resourcePointName,0);
+            uVar4 = String.Format("确认前往{0}吗？",uVar4,0);
+            if ((this.resourcePointData != null) &&
+               (uVar5 = Int32.ToString(this.resourcePointData + 16,0), lVar2 != null)) {
+              SureMenu.CallSureMenu(lVar2,uVar4,"SetPlayerMoveTargetResourcePoint",uVar5,"BigMapController",1,0);
+              return;
+            }
           }
         }
     }
 
-    // Token : 0x6001FAD
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x600202D
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

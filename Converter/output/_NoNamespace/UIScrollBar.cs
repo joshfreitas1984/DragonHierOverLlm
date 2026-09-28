@@ -1,44 +1,56 @@
 // ============================================================
 // Type  : UIScrollBar
-// Token : 0x200005F
+// Token : 0x2000060
 // ============================================================
 
 public class UIScrollBar
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400023F
+    // Token: 0x400025B
     protected float mSize;
 
-    // Token: 0x4000240
+    // Token: 0x400025C
     private float mScroll;
 
-    // Token: 0x4000241
+    // Token: 0x400025D
     private Direction mDir;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600022E
-    // RVA   : 0x1689B50   Offset: 0x1688350   Length: 0x7
+    // Token : 0x6000246
+    // RVA   : 0x16FBF80   Offset: 0x16FB380   Length: 0x47
     public float get_scrollValue()
     {
-        UIProgressBar.get_value(this,0);
+        byte[] auVar1 = new byte[16];
+        byte[] auVar2 = new byte[16];
+        uint64 extraout_XMM0_Qb;
+        if (*(int *)(this + 100) < 2) {
+          return (uint64)(uint32)*(float *)(this + 56);
+        }
+        auVar1._0_8_ = FUN_18000d7c0((float)(*(int *)(this + 100) + -1) * *(float *)(this + 56));
+        auVar1._8_8_ = extraout_XMM0_Qb;
+        auVar2._4_12_ = auVar1._4_12_;
+        auVar2._0_4_ = (float)auVar1._0_8_ / (float)(*(int *)(this + 100) + -1);
+        return auVar2._0_8_;
     }
 
-    // Token : 0x600022F
-    // RVA   : 0x1689CE0   Offset: 0x16884E0   Length: 0x8
+    // Token : 0x6000247
+    // RVA   : 0x16FC690   Offset: 0x16FBA90   Length: 0xB
     public void set_scrollValue(float value)
     {
-        UIProgressBar.set_value(this,value,0);
+        UIProgressBar.Set(this,value,1,0);
     }
 
-    // Token : 0x6000230
-    // RVA   : 0x15DE190   Offset: 0x15DC990   Length: 0x9
+    // Token : 0x6000248
+    // RVA   : 0x15EF4E0   Offset: 0x15EE8E0   Length: 0x9
     public float get_barSize()
     {
+        uint32 FUN_1815ef4e0(int64 this)
+        {
         return this.mSize;
     }
 
-    // Token : 0x6000231
-    // RVA   : 0x1689B60   Offset: 0x1688360   Length: 0x17A
+    // Token : 0x6000249
+    // RVA   : 0x1701660   Offset: 0x1700A60   Length: 0x17A
     public void set_barSize(float value)
     {
         ulong uVar1;
@@ -51,15 +63,15 @@ public class UIScrollBar
           *(uint8 *)(this + 10) = 1;
           cVar4 = NGUITools.GetActive(this,0);
           if (cVar4) {
-            uVar1 = **(uint64 **)(DAT_181d8ae58 + 184);
+            uVar1 = **(uint64 **)(DAT_181db0078 + 184);
             cVar4 = Object.op_Equality(uVar1,0,0);
             if ((cVar4) && (this[13] != 0)) {
-              puVar2 = *(uint64 **)(DAT_181d8ae58 + 184);
+              puVar2 = *(uint64 **)(DAT_181db0078 + 184);
               *puVar2 = this;
               il2cpp_internal(puVar2,this);
               lVar3 = this[13];
               EventDelegate.Execute(lVar3,0);
-              puVar2 = *(uint64 **)(DAT_181d8ae58 + 184);
+              puVar2 = *(uint64 **)(DAT_181db0078 + 184);
               *puVar2 = 0;
               il2cpp_internal(puVar2,0);
             }
@@ -68,10 +80,12 @@ public class UIScrollBar
         }
     }
 
-    // Token : 0x6000232
-    // RVA   : 0x1689AD0   Offset: 0x16882D0   Length: 0x4C
+    // Token : 0x600024A
+    // RVA   : 0x1701570   Offset: 0x1700970   Length: 0x4C
     protected override void Upgrade()
     {
+        void FUN_181701570(int64 this)
+        {
         if (this.mDir != 2) {
           *(uint32 *)(this + 56) = this.mScroll;
           if (this.mDir != null) {
@@ -84,8 +98,8 @@ public class UIScrollBar
         }
     }
 
-    // Token : 0x6000233
-    // RVA   : 0x16897E0   Offset: 0x1687FE0   Length: 0x2E8
+    // Token : 0x600024B
+    // RVA   : 0x1701280   Offset: 0x1700680   Length: 0x2E8
     protected override void OnStart()
     {
         bool cVar1;
@@ -106,11 +120,11 @@ public class UIScrollBar
             return;
           }
           if (*(int64 *)(this + 48) != 0) {
-            uVar2 = Component.GetComponent(*(int64 *)(this + 48),DAT_181d6b340);
+            uVar2 = Component.GetComponent(*(int64 *)(this + 48),DAT_181d93b60);
             cVar1 = Object.op_Inequality(uVar2,0,0);
             if (!cVar1) {
               if (*(int64 *)(this + 48) == 0) throw; // [null/range check failed]
-              uVar2 = Component.GetComponent(*(int64 *)(this + 48),DAT_181d6b3c0);
+              uVar2 = Component.GetComponent(*(int64 *)(this + 48),DAT_181d93be0);
               cVar1 = Object.op_Inequality(uVar2,0,0);
               if (!cVar1) {
                 return;
@@ -121,25 +135,25 @@ public class UIScrollBar
               lVar4 = UIEventListener.Get(uVar2,0);
               if (lVar4 != null) {
                 uVar2 = *(uint64 *)(lVar4 + 64);
-                uVar3 = new OnTooltipCB(this,DAT_181d9d400,0);
+                uVar3 = new OnTooltipCB(this,DAT_181dc66f0,0);
                 plVar5 = (int64 *)Delegate.Combine(uVar2,uVar3,0);
                 plVar7 = (int64 *)0;
                 plVar6 = plVar7;
                 if (plVar5 != (int64 *)0) {
-                  if (*plVar5 == DAT_181d68590) {
+                  if (*plVar5 == DAT_181d8d938) {
                     plVar6 = plVar5;
                   }
                   if (plVar6 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6070(plVar5,DAT_181d68590);
+                    FUN_1800d6070(plVar5,DAT_181d8d938);
                   }
                 }
                 *(int64 **)(lVar4 + 64) = plVar6;
                 uVar2 = *(uint64 *)(lVar4 + 96);
-                uVar3 = new OnTooltipCB(this,DAT_181d9d2f0,0);
+                uVar3 = new OnTooltipCB(this,DAT_181dc65e0,0);
                 plVar6 = (int64 *)Delegate.Combine(uVar2,uVar3,0);
                 if (plVar6 != (int64 *)0) {
-                  if (*plVar6 == DAT_181d68610) {
+                  if (*plVar6 == DAT_181d8d9b8) {
                     plVar7 = plVar6;
                   }
                   if (plVar7 == (int64 *)0) {
@@ -158,206 +172,191 @@ public class UIScrollBar
         }
     }
 
-    // Token : 0x6000234
-    // RVA   : 0x1689520   Offset: 0x1687D20   Length: 0x2BA
+    // Token : 0x600024C
+    // RVA   : 0x1700FB0   Offset: 0x17003B0   Length: 0x2CC
     protected override float LocalToValue(Vector2 localPos)
     {
-        uint uVar1;
-        bool cVar3;
-        long lVar4;
-        ulong uVar5;
+        void UIScrollBar.LocalToValue
+                     (int64 this,uint64 localPos,uint64 param_3,uint64 param_4)
+        {
+        int64 *plVar1;
+        char cVar2;
+        int64 lVar3;
+        uint64 uVar4;
+        float fVar5;
         float fVar6;
-        float fVar7;
-        float fVar8;
-        float local_48;
-        float fStack_44;
-        uVar5 = *(uint64 *)(this + 48);
-        cVar3 = Object.op_Inequality(uVar5,0,0);
-        if (!cVar3) {
-          fVar6 = (float)UIProgressBar.LocalToValue(this,localPos,0);
-          return fVar6;
+        uVar4 = *(uint64 *)(this + 48);
+        cVar2 = Object.op_Inequality(uVar4,0,0);
+        if (!cVar2) {
+          UIProgressBar.LocalToValue(this,localPos,0);
+          return;
         }
-        fVar6 = (float)Mathf.Clamp01(this.mSize,0);
-        plVar2 = *(int64 **)(this + 48);
-        fVar6 = fVar6 * 0.5;
-        if (plVar2 != (int64 *)0) {
-          lVar4 = (**(code **)(*plVar2 + 0x1d8))(plVar2,*(uint64 *)(*plVar2 + 0x1e0));
-          cVar3 = UIProgressBar.get_isHorizontal(this,0);
-          if (lVar4 != null) {
-            uVar1 = *(uint32 *)(lVar4 + 24);
-            if (!cVar3) {
-              if (uVar1 == 0) {
-                uVar5 = il2cpp_internal();
+        Mathf.Clamp01();
+        plVar1 = *(int64 **)(this + 48);
+        if (plVar1 != (int64 *)0) {
+          lVar3 = (**(code **)(*plVar1 + 0x1d8))(plVar1,*(uint64 *)(*plVar1 + 0x1e0));
+          if ((*(int *)(this + 60) == 0) || (*(int *)(this + 60) == 1)) {
+            if (lVar3 == null) throw; // [null/range check failed]
+            if (*(uint32 *)(lVar3 + 24) == 0) {
+              uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar5,0);
-              }
-              if (uVar1 < 2) {
-                uVar5 = il2cpp_internal();
-                          // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar5,0);
-              }
-              fVar7 = (float)Mathf.Lerp(*(uint32 *)(lVar4 + 36),*(uint32 *)(lVar4 + 48),fVar6
-                                         ,0);
-              if (*(uint32 *)(lVar4 + 24) < 4) {
-                uVar5 = il2cpp_internal();
-                          // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar5,0);
-              }
-              fVar6 = (float)Mathf.Lerp(*(uint32 *)(lVar4 + 72),*(uint32 *)(lVar4 + 60),
-                                         1.0 - fVar6,0);
-              fVar8 = fVar6 - fVar7;
-              if (fVar8 == 0.0) {
-        LAB_18168972b:
-                fVar6 = (float)UIProgressBar.get_value(this,0);
-                return fVar6;
-              }
-              cVar3 = UIProgressBar.get_isInverted(this,0);
-              fStack_44 = (float)((uint64)localPos >> 32);
-              local_48 = fStack_44;
-              if (cVar3) {
-                return (fVar6 - fStack_44) / fVar8;
-              }
+              FUN_1800d65f0(uVar4,0);
             }
-            else {
-              if (uVar1 == 0) {
-                uVar5 = il2cpp_internal();
+            if (*(uint32 *)(lVar3 + 24) < 3) {
+              uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar5,0);
-              }
-              if (uVar1 < 3) {
-                uVar5 = il2cpp_internal();
-                          // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar5,0);
-              }
-              fVar7 = (float)Mathf.Lerp(*(uint32 *)(lVar4 + 32),*(uint32 *)(lVar4 + 56),fVar6
-                                         ,0);
-              if (*(uint32 *)(lVar4 + 24) == 0) {
-                uVar5 = il2cpp_internal();
-                          // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar5,0);
-              }
-              if (*(uint32 *)(lVar4 + 24) < 3) {
-                uVar5 = il2cpp_internal();
-                          // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar5,0);
-              }
-              fVar6 = (float)Mathf.Lerp(*(uint32 *)(lVar4 + 32),*(uint32 *)(lVar4 + 56),
-                                         1.0 - fVar6,0);
-              fVar8 = fVar6 - fVar7;
-              if (fVar8 == 0.0) goto LAB_18168972b;
-              cVar3 = UIProgressBar.get_isInverted(this,0);
-              local_48 = (float)localPos;
-              if (cVar3) {
-                return (fVar6 - local_48) / fVar8;
-              }
+              FUN_1800d65f0(uVar4,0);
             }
-            return (local_48 - fVar7) / fVar8;
+            fVar5 = (float)Mathf.Lerp();
+            if (*(uint32 *)(lVar3 + 24) == 0) {
+              uVar4 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+              FUN_1800d65f0(uVar4,0);
+            }
+            if (*(uint32 *)(lVar3 + 24) < 3) {
+              uVar4 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+              FUN_1800d65f0(uVar4,0);
+            }
+            fVar6 = (float)Mathf.Lerp();
+            fVar6 = fVar6 - fVar5;
           }
+          else {
+            if (lVar3 == null) throw; // [null/range check failed]
+            if (*(uint32 *)(lVar3 + 24) == 0) {
+              uVar4 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+              FUN_1800d65f0(uVar4,0);
+            }
+            if (*(uint32 *)(lVar3 + 24) < 2) {
+              uVar4 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+              FUN_1800d65f0(uVar4,0);
+            }
+            fVar5 = (float)Mathf.Lerp();
+            if (*(uint32 *)(lVar3 + 24) < 4) {
+              uVar4 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+              FUN_1800d65f0(uVar4,0);
+            }
+            fVar6 = (float)Mathf.Lerp();
+            fVar6 = fVar6 - fVar5;
+          }
+          if (fVar6 == 0.0) {
+            if (1 < *(int *)(this + 100)) {
+              FUN_18000d7c0((float)(*(int *)(this + 100) + -1) * *(float *)(this + 56));
+            }
+          }
+          return;
         }
     }
 
-    // Token : 0x6000235
-    // RVA   : 0x1689240   Offset: 0x1687A40   Length: 0x2DB
+    // Token : 0x600024D
+    // RVA   : 0x1700CE0   Offset: 0x17000E0   Length: 0x2C3
     public override void ForceUpdate()
     {
-        ulong uVar1;
-        uint uVar3;
+        int iVar1;
+        ulong uVar2;
         bool cVar4;
-        long lVar6;
+        long lVar5;
+        float fVar7;
         float fVar8;
-        uint uVar9;
+        float fVar9;
         float fVar10;
         float fVar11;
-        float fVar12;
-        float fVar13;
-        float fVar14;
-        uint local_68;
-        uint uStack_64;
-        uint local_60;
-        ulong local_58;
-        ulong uStack_50;
-        uVar1 = *(uint64 *)(this + 48);
-        cVar4 = Object.op_Inequality(uVar1,0,0);
+        uint local_48;
+        uint uStack_44;
+        uint local_40;
+        ulong local_38;
+        ulong uStack_30;
+        uVar2 = *(uint64 *)(this + 48);
+        cVar4 = Object.op_Inequality(uVar2,0,0);
         if (!cVar4) {
           UIProgressBar.ForceUpdate(this);
           return;
         }
         *(uint8 *)(this + 80) = 0;
-        fVar8 = (float)Mathf.Clamp01(this.mSize,0);
-        fVar8 = fVar8 * 0.5;
-        uVar9 = UIProgressBar.get_value(this,0);
-        fVar10 = (float)Mathf.Lerp(fVar8,1.0 - fVar8,uVar9,0);
-        fVar13 = fVar10 - fVar8;
-        fVar10 = fVar10 + fVar8;
-        cVar4 = UIProgressBar.get_isHorizontal(this,0);
-        lVar6 = *(int64 *)(this + 48);
-        if (!cVar4) {
-          cVar4 = UIProgressBar.get_isInverted(this,0);
-          fVar12 = 1.0;
-          if (!cVar4) {
-            fVar8 = 0.0;
-            fVar11 = fVar13;
-            fVar14 = fVar10;
-          }
-          else {
-            fVar8 = 0.0;
-            fVar11 = 1.0 - fVar10;
-            fVar14 = 1.0 - fVar13;
-          }
+        fVar7 = (float)Mathf.Clamp01();
+        if (1 < *(int *)(this + 100)) {
+          FUN_18000d7c0((float)(*(int *)(this + 100) + -1) * *(float *)(this + 56));
         }
-        else {
-          cVar4 = UIProgressBar.get_isInverted(this,0);
-          fVar14 = 1.0;
-          fVar11 = 0.0;
-          fVar8 = fVar13;
-          fVar12 = fVar10;
-          if (cVar4) {
-            fVar8 = 1.0 - fVar10;
-            fVar12 = 1.0 - fVar13;
+        fVar8 = (float)Mathf.Lerp();
+        iVar1 = *(int *)(this + 60);
+        fVar11 = fVar8 + fVar7 * 0.5;
+        fVar8 = fVar8 - fVar7 * 0.5;
+        lVar5 = *(int64 *)(this + 48);
+        fVar7 = fVar8;
+        if (iVar1 != 0) {
+          fVar10 = 1.0;
+          if (iVar1 != 1) {
+            if (iVar1 == 3) {
+              fVar9 = 1.0 - fVar8;
+              fVar8 = 1.0 - fVar11;
+              fVar7 = 0.0;
+              fVar11 = fVar9;
+            }
+            else {
+              fVar7 = 0.0;
+            }
+            goto LAB_181700e67;
           }
+          fVar7 = 1.0 - fVar11;
+          fVar11 = 1.0 - fVar8;
         }
-        uStack_50 = 0;
-        local_58 = 0;
-        FUN_1809981e0(&local_58,fVar8,fVar11,fVar12,fVar14,0);
-        if (lVar6 != null) {
-          UIWidget.set_drawRegion(lVar6,&local_58,0);
-          uVar1 = *(uint64 *)(this + 32);
-          cVar4 = Object.op_Inequality(uVar1,0,0);
+        fVar8 = 0.0;
+        fVar10 = fVar11;
+        fVar11 = 1.0;
+        LAB_181700e67:
+        uStack_30 = 0;
+        local_38 = 0;
+        FUN_1809dc910(&local_38,fVar7,fVar8,fVar10,fVar11,0);
+        if (lVar5 != null) {
+          UIWidget.set_drawRegion(lVar5,&local_38,0);
+          uVar2 = *(uint64 *)(this + 32);
+          cVar4 = Object.op_Inequality(uVar2,0,0);
           if (!cVar4) {
             return;
           }
-          plVar2 = *(int64 **)(this + 48);
-          if (plVar2 != (int64 *)0) {
-            puVar5 = (uint32 *)
-                     (**(code **)(*plVar2 + 0x2b8))(&local_58,plVar2,*(uint64 *)(*plVar2 + 0x2c0));
-            uVar9 = puVar5[1];
-            uVar3 = puVar5[3];
-            local_68 = Mathf.Lerp(*puVar5,puVar5[2],0x3f000000,0);
-            uStack_64 = Mathf.Lerp(uVar9,uVar3,0x3f000000,0);
-            local_60 = 0;
+          plVar3 = *(int64 **)(this + 48);
+          if (plVar3 != (int64 *)0) {
+            (**(code **)(*plVar3 + 0x2b8))(&local_38,plVar3,*(uint64 *)(*plVar3 + 0x2c0));
+            local_48 = Mathf.Lerp();
+            uStack_44 = Mathf.Lerp();
+            local_40 = 0;
             if ((*(int64 *)(this + 48) != 0) &&
-               (lVar6 = UIRect.get_cachedTransform(*(int64 *)(this + 48),0)) != null) {
-              local_58 = CONCAT44(uStack_64,local_68);
-              uStack_50._0_4_ = local_60;
-              puVar7 = (uint64 *)Transform.TransformPoint(&local_68,lVar6,&local_58,0);
-              local_58 = *puVar7;
-              uStack_50 = CONCAT44(uStack_50._4_4_,*(uint32 *)(puVar7 + 1));
-              UIProgressBar.SetThumbPosition(this,&local_58,0);
+               (lVar5 = UIRect.get_cachedTransform(*(int64 *)(this + 48),0)) != null) {
+              local_38 = CONCAT44(uStack_44,local_48);
+              uStack_30._0_4_ = local_40;
+              puVar6 = (uint64 *)Transform.TransformPoint(&local_48,lVar5,&local_38,0);
+              local_38 = *puVar6;
+              uStack_30 = CONCAT44(uStack_30._4_4_,*(uint32 *)(puVar6 + 1));
+              UIProgressBar.SetThumbPosition(this,&local_38,0);
               return;
             }
           }
         }
     }
 
-    // Token : 0x6000236
-    // RVA   : 0x1689B20   Offset: 0x1688320   Length: 0x29
+    // Token : 0x600024E
+    // RVA   : 0x17015C0   Offset: 0x17009C0   Length: 0x9F
     public void /*ctor*/()
     {
+        ulong uVar1;
+        bVar2 = !DAT_181ea3d22;
         this.mSize = 0x3f800000;
         this.mDir = 2;
         *(uint32 *)(this + 120) = 0x3f800000;
         *(uint32 *)(this + 124) = 2;
-        UIProgressBar.ctor(this,0);
+        if (bVar2) {
+          il2cpp_runtime_class_init(&DAT_181d85ea0);
+          il2cpp_runtime_class_init(&DAT_181d92658);
+          DAT_181ea3d22 = true;
+        }
+        *(uint32 *)(this + 56) = 0x3f800000;
+        uVar1 = il2cpp_internal(DAT_181d92658);
+        FUN_18132faf0(uVar1,DAT_181d85ea0);
+        *(uint64 *)(this + 104) = uVar1;
+        TrailRenderer_Base.ctor(this,0);
     }
 
 }

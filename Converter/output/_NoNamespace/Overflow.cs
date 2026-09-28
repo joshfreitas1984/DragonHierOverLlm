@@ -1,24 +1,24 @@
 // ============================================================
 // Type  : Overflow
-// Token : 0x20000FD
+// Token : 0x20000FE
 // ============================================================
 
 public class Overflow
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000642
+    // Token: 0x400065E
     public int value__;
 
-    // Token: 0x4000643
+    // Token: 0x400065F
     public const Overflow ShrinkContent;
 
-    // Token: 0x4000644
+    // Token: 0x4000660
     public const Overflow ClampContent;
 
-    // Token: 0x4000645
+    // Token: 0x4000661
     public const Overflow ResizeFreely;
 
-    // Token: 0x4000646
+    // Token: 0x4000662
     public const Overflow ResizeHeight;
 
 }

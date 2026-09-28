@@ -1,33 +1,34 @@
 // ============================================================
 // Type  : <>c__DisplayClass327_0
-// Token : 0x20002B3
+// Token : 0x20002B8
 // ============================================================
 
 public class <>c__DisplayClass327_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001607
-    public SkeletonAnimation targetSkeleton;
+    // Token: 0x40016BA
+    public Text targetText;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600171D
-    // RVA   : 0x210B70   Offset: 0x20F370   Length: 0x7
+    // Token : 0x600175F
+    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);
     }
 
-    // Token : 0x600171E
-    // RVA   : 0x8D6F70   Offset: 0x8D5770   Length: 0x35
-    internal void <DoTweenSkeletonAlpha>b__0(float value)
+    // Token : 0x6001760
+    // RVA   : 0x9393F0   Offset: 0x9387F0   Length: 0x69
+    internal void <DoTweenTextValue>b__0(float value)
     {
-        long lVar1;
-        if (this.targetSkeleton != null) {
-          lVar1 = SkeletonRenderer.get_Skeleton(this.targetSkeleton,0);
-          if (lVar1 != null) {
-            *(uint32 *)(lVar1 + 108) = value;
-            return;
-          }
+        ulong uVar2;
+        uint[] local_res10 = new uint[6];
+        local_res10[0] = value;
+        plVar1 = this.targetText;
+        uVar2 = Single.ToString(local_res10,"f0",0);
+        if (plVar1 != (int64 *)0) {
+          (**(code **)(*plVar1 + 0x5e8))(plVar1,uVar2,*(uint64 *)(*plVar1 + 0x5f0));
+          return;
         }
     }
 

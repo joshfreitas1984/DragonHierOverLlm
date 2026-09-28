@@ -1,84 +1,84 @@
 // ============================================================
 // Type  : BaseAttriType
-// Token : 0x2000258
+// Token : 0x200025E
 // ============================================================
 
 public class BaseAttriType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001242
+    // Token: 0x40012E5
     public int value__;
 
-    // Token: 0x4001243
+    // Token: 0x40012E6
     public const BaseAttriType Str;
 
-    // Token: 0x4001244
+    // Token: 0x40012E7
     public const BaseAttriType Agl;
 
-    // Token: 0x4001245
+    // Token: 0x40012E8
     public const BaseAttriType Inte;
 
-    // Token: 0x4001246
+    // Token: 0x40012E9
     public const BaseAttriType Wil;
 
-    // Token: 0x4001247
+    // Token: 0x40012EA
     public const BaseAttriType Con;
 
-    // Token: 0x4001248
+    // Token: 0x40012EB
     public const BaseAttriType Mag;
 
-    // Token: 0x4001249
+    // Token: 0x40012EC
     public const BaseAttriType Internal;
 
-    // Token: 0x400124A
+    // Token: 0x40012ED
     public const BaseAttriType Dodge;
 
-    // Token: 0x400124B
+    // Token: 0x40012EE
     public const BaseAttriType Unique;
 
-    // Token: 0x400124C
+    // Token: 0x40012EF
     public const BaseAttriType Fist;
 
-    // Token: 0x400124D
+    // Token: 0x40012F0
     public const BaseAttriType Sword;
 
-    // Token: 0x400124E
+    // Token: 0x40012F1
     public const BaseAttriType Knife;
 
-    // Token: 0x400124F
+    // Token: 0x40012F2
     public const BaseAttriType Long;
 
-    // Token: 0x4001250
+    // Token: 0x40012F3
     public const BaseAttriType Strange;
 
-    // Token: 0x4001251
+    // Token: 0x40012F4
     public const BaseAttriType Shoot;
 
-    // Token: 0x4001252
+    // Token: 0x40012F5
     public const BaseAttriType Med;
 
-    // Token: 0x4001253
+    // Token: 0x40012F6
     public const BaseAttriType Poison;
 
-    // Token: 0x4001254
+    // Token: 0x40012F7
     public const BaseAttriType Knowledge;
 
-    // Token: 0x4001255
+    // Token: 0x40012F8
     public const BaseAttriType Speech;
 
-    // Token: 0x4001256
+    // Token: 0x40012F9
     public const BaseAttriType DigAndCut;
 
-    // Token: 0x4001257
+    // Token: 0x40012FA
     public const BaseAttriType Plant;
 
-    // Token: 0x4001258
+    // Token: 0x40012FB
     public const BaseAttriType CraftEquip;
 
-    // Token: 0x4001259
+    // Token: 0x40012FC
     public const BaseAttriType CraftMed;
 
-    // Token: 0x400125A
+    // Token: 0x40012FD
     public const BaseAttriType CraftFood;
 
 }

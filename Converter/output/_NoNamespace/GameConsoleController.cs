@@ -1,29 +1,29 @@
 // ============================================================
 // Type  : GameConsoleController
-// Token : 0x2000297
+// Token : 0x200029D
 // ============================================================
 
 public class GameConsoleController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400143E
+    // Token: 0x40014EF
     private GameObject gameConsole;
 
-    // Token: 0x400143F
+    // Token: 0x40014F0
     private InputField inputField;
 
-    // Token: 0x4001440
+    // Token: 0x40014F1
     private Text ouputText;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60014FE
-    // RVA   : 0x245810   Offset: 0x244010   Length: 0x3
+    // Token : 0x6001542
+    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
     private void Start()
     {
     }
 
-    // Token : 0x60014FF
-    // RVA   : 0x7905A0   Offset: 0x78EDA0   Length: 0x33B
+    // Token : 0x6001543
+    // RVA   : 0x78D0A0   Offset: 0x78C4A0   Length: 0x33B
     private void Update()
     {
         bool cVar2;
@@ -109,8 +109,8 @@ public class GameConsoleController
         }
     }
 
-    // Token : 0x6001500
-    // RVA   : 0x790570   Offset: 0x78ED70   Length: 0x20
+    // Token : 0x6001544
+    // RVA   : 0x78D070   Offset: 0x78C470   Length: 0x20
     public void CloseButtonClicked()
     {
         if (this.gameConsole != null) {
@@ -119,8 +119,8 @@ public class GameConsoleController
         }
     }
 
-    // Token : 0x6001501
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x6001545
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

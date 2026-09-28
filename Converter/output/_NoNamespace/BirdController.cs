@@ -1,26 +1,26 @@
 // ============================================================
 // Type  : BirdController
-// Token : 0x2000198
+// Token : 0x200019E
 // ============================================================
 
 public class BirdController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000AD5
+    // Token: 0x4000B61
     public SkyObjType skyObjType;
 
-    // Token: 0x4000AD6
+    // Token: 0x4000B62
     public bool moveRight;
 
-    // Token: 0x4000AD7
+    // Token: 0x4000B63
     public float moveSpeed;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000D24
-    // RVA   : 0xCDD350   Offset: 0xCDBB50   Length: 0x398
+    // Token : 0x6000D58
+    // RVA   : 0xC83230   Offset: 0xC82630   Length: 0x398
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d7e3b0 + 184);
+        var pStatics = *(int64*)(DAT_181da35d0 + 184);
         ulong uVar1;
         long lVar2;
         long lVar4;
@@ -54,8 +54,8 @@ public class BirdController
           local_38 = CONCAT44(local_48._4_4_ * fVar9 * fVar7 + local_38._4_4_,
                               (float)local_48 * fVar9 * fVar7 + (float)local_38);
           Transform.set_localPosition(lVar2,&local_38,0);
-          lVar2 = Component.GetComponent(this,DAT_181d6d540);
-          lVar4 = Component.GetComponent(this,DAT_181d6d540);
+          lVar2 = Component.GetComponent(this,DAT_181d95de0);
+          lVar4 = Component.GetComponent(this,DAT_181d95de0);
           if (lVar4 != null) {
             puVar3 = (uint64 *)SpriteRenderer.get_color(&local_38,lVar4,0);
             uVar6 = *puVar3;
@@ -110,8 +110,8 @@ public class BirdController
         }
     }
 
-    // Token : 0x6000D25
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x6000D59
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

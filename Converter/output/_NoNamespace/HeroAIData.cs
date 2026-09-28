@@ -1,50 +1,50 @@
 // ============================================================
 // Type  : HeroAIData
-// Token : 0x2000130
+// Token : 0x2000134
 // ============================================================
 
 public class HeroAIData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400076D
+    // Token: 0x400078C
     public AIStuffType aiStuffType;
 
-    // Token: 0x400076E
+    // Token: 0x400078D
     public bool isPassiveTarget;
 
-    // Token: 0x400076F
+    // Token: 0x400078E
     public string aiStuffTarget;
 
-    // Token: 0x4000770
+    // Token: 0x400078F
     public int keepWorkingTimeLeft;
 
-    // Token: 0x4000771
+    // Token: 0x4000790
     public int keepWorkingTimeContine;
 
-    // Token: 0x4000772
+    // Token: 0x4000791
     public float leaveForceTime;
 
-    // Token: 0x4000773
+    // Token: 0x4000792
     public bool needCheckEquipment;
 
-    // Token: 0x4000774
+    // Token: 0x4000793
     public bool needCheckSkill;
 
-    // Token: 0x4000775
+    // Token: 0x4000794
     public bool needCheckSpeMed;
 
-    // Token: 0x4000776
+    // Token: 0x4000795
     public int bigMapTargetID;
 
-    // Token: 0x4000777
+    // Token: 0x4000796
     public BigMapPos bigMapTargetPos;
 
-    // Token: 0x4000778
+    // Token: 0x4000797
     public float bigmapWaitTime;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60009B9
-    // RVA   : 0x877490   Offset: 0x875C90   Length: 0x6C
+    // Token : 0x60009D9
+    // RVA   : 0x8767A0   Offset: 0x875BA0   Length: 0x6C
     public void /*ctor*/()
     {
                            uint8 param_5)
@@ -58,14 +58,13 @@ public class HeroAIData
         this.bigMapTargetPos = new c.DisplayClass9_0(0);
         ZhSegment.Initialize(this,0);
         this.aiStuffType = param_2;
-        if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0) &&
-           (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
-          il2cpp_runtime_class_init(PlotController_StaticsPtr);
+        if (((*(byte *)(DAT_181da9de0 + 0x133) & 4) != 0) && (*(int *)(DAT_181da9de0 + 224) == 0)) {
+          il2cpp_runtime_class_init(DAT_181da9de0);
           param_2 = this.aiStuffType;
         }
-        lVar4 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 16);
-        if (lVar4 == null) goto LAB_1808776f0;
-        cVar1 = FUN_181815240(lVar4,param_2,DAT_181d53900);
+        lVar4 = *(int64 *)(*(int64 *)(DAT_181da9de0 + 184) + 16);
+        if (lVar4 == null) goto LAB_180876a00;
+        cVar1 = FUN_18182a3a0(lVar4,param_2,DAT_181d7ae88);
         if (cVar1) {
           iVar2 = Int32.Parse(param_3,0);
           this.bigMapTargetID = iVar2;
@@ -81,23 +80,23 @@ public class HeroAIData
                 else {
                   this.bigMapTargetPos = plVar5;
                 }
-                goto LAB_18087760c;
+                goto LAB_18087691c;
               }
             }
-        LAB_1808776f0:
+        LAB_180876a00:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           HeroAIData.WandererLoseTarget(this,0);
         }
-        LAB_18087760c:
+        LAB_18087691c:
         this.aiStuffTarget = param_3;
         this.isPassiveTarget = param_5;
         this.keepWorkingTimeLeft = param_4;
     }
 
-    // Token : 0x60009BA
-    // RVA   : 0x877200   Offset: 0x875A00   Length: 0x8C
+    // Token : 0x60009DA
+    // RVA   : 0x876510   Offset: 0x875910   Length: 0x8C
     public void /*ctor*/(AIStuffType _aiStuffType, int _keepWorkingTimeLeft)
     {
                            uint8 param_5)
@@ -111,14 +110,13 @@ public class HeroAIData
         this.bigMapTargetPos = new c.DisplayClass9_0(0);
         ZhSegment.Initialize(this,0);
         this.aiStuffType = _aiStuffType;
-        if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0) &&
-           (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
-          il2cpp_runtime_class_init(PlotController_StaticsPtr);
+        if (((*(byte *)(DAT_181da9de0 + 0x133) & 4) != 0) && (*(int *)(DAT_181da9de0 + 224) == 0)) {
+          il2cpp_runtime_class_init(DAT_181da9de0);
           _aiStuffType = this.aiStuffType;
         }
-        lVar4 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 16);
-        if (lVar4 == null) goto LAB_1808776f0;
-        cVar1 = FUN_181815240(lVar4,_aiStuffType,DAT_181d53900);
+        lVar4 = *(int64 *)(*(int64 *)(DAT_181da9de0 + 184) + 16);
+        if (lVar4 == null) goto LAB_180876a00;
+        cVar1 = FUN_18182a3a0(lVar4,_aiStuffType,DAT_181d7ae88);
         if (cVar1) {
           iVar2 = Int32.Parse(_keepWorkingTimeLeft,0);
           this.bigMapTargetID = iVar2;
@@ -134,23 +132,23 @@ public class HeroAIData
                 else {
                   this.bigMapTargetPos = plVar5;
                 }
-                goto LAB_18087760c;
+                goto LAB_18087691c;
               }
             }
-        LAB_1808776f0:
+        LAB_180876a00:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           HeroAIData.WandererLoseTarget(this,0);
         }
-        LAB_18087760c:
+        LAB_18087691c:
         this.aiStuffTarget = _keepWorkingTimeLeft;
         this.isPassiveTarget = param_5;
         this.keepWorkingTimeLeft = param_4;
     }
 
-    // Token : 0x60009BB
-    // RVA   : 0x877290   Offset: 0x875A90   Length: 0x1F6
+    // Token : 0x60009DB
+    // RVA   : 0x8765A0   Offset: 0x8759A0   Length: 0x1F6
     public void /*ctor*/(AIStuffType _aiStuffType, string _aiStuffTarget, int _keepWorkingTimeLeft)
     {
                            uint8 param_5)
@@ -164,14 +162,13 @@ public class HeroAIData
         this.bigMapTargetPos = new c.DisplayClass9_0(0);
         ZhSegment.Initialize(this,0);
         this.aiStuffType = _aiStuffType;
-        if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0) &&
-           (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
-          il2cpp_runtime_class_init(PlotController_StaticsPtr);
+        if (((*(byte *)(DAT_181da9de0 + 0x133) & 4) != 0) && (*(int *)(DAT_181da9de0 + 224) == 0)) {
+          il2cpp_runtime_class_init(DAT_181da9de0);
           _aiStuffType = this.aiStuffType;
         }
-        lVar4 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 16);
-        if (lVar4 == null) goto LAB_1808776f0;
-        cVar1 = FUN_181815240(lVar4,_aiStuffType,DAT_181d53900);
+        lVar4 = *(int64 *)(*(int64 *)(DAT_181da9de0 + 184) + 16);
+        if (lVar4 == null) goto LAB_180876a00;
+        cVar1 = FUN_18182a3a0(lVar4,_aiStuffType,DAT_181d7ae88);
         if (cVar1) {
           iVar2 = Int32.Parse(_aiStuffTarget,0);
           this.bigMapTargetID = iVar2;
@@ -187,23 +184,23 @@ public class HeroAIData
                 else {
                   this.bigMapTargetPos = plVar5;
                 }
-                goto LAB_18087760c;
+                goto LAB_18087691c;
               }
             }
-        LAB_1808776f0:
+        LAB_180876a00:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           HeroAIData.WandererLoseTarget(this,0);
         }
-        LAB_18087760c:
+        LAB_18087691c:
         this.aiStuffTarget = _aiStuffTarget;
         this.isPassiveTarget = param_5;
         this.keepWorkingTimeLeft = _keepWorkingTimeLeft;
     }
 
-    // Token : 0x60009BC
-    // RVA   : 0x877500   Offset: 0x875D00   Length: 0x1FE
+    // Token : 0x60009DC
+    // RVA   : 0x876810   Offset: 0x875C10   Length: 0x1FE
     public void /*ctor*/(AIStuffType _aiStuffType, string _aiStuffTarget, int _keepWorkingTimeLeft, bool _isPassiveTarget)
     {
                            uint8 _isPassiveTarget)
@@ -217,14 +214,13 @@ public class HeroAIData
         this.bigMapTargetPos = new c.DisplayClass9_0(0);
         ZhSegment.Initialize(this,0);
         this.aiStuffType = _aiStuffType;
-        if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0) &&
-           (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
-          il2cpp_runtime_class_init(PlotController_StaticsPtr);
+        if (((*(byte *)(DAT_181da9de0 + 0x133) & 4) != 0) && (*(int *)(DAT_181da9de0 + 224) == 0)) {
+          il2cpp_runtime_class_init(DAT_181da9de0);
           _aiStuffType = this.aiStuffType;
         }
-        lVar4 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 16);
-        if (lVar4 == null) goto LAB_1808776f0;
-        cVar1 = FUN_181815240(lVar4,_aiStuffType,DAT_181d53900);
+        lVar4 = *(int64 *)(*(int64 *)(DAT_181da9de0 + 184) + 16);
+        if (lVar4 == null) goto LAB_180876a00;
+        cVar1 = FUN_18182a3a0(lVar4,_aiStuffType,DAT_181d7ae88);
         if (cVar1) {
           iVar2 = Int32.Parse(_aiStuffTarget,0);
           this.bigMapTargetID = iVar2;
@@ -240,23 +236,23 @@ public class HeroAIData
                 else {
                   this.bigMapTargetPos = plVar5;
                 }
-                goto LAB_18087760c;
+                goto LAB_18087691c;
               }
             }
-        LAB_1808776f0:
+        LAB_180876a00:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           HeroAIData.WandererLoseTarget(this,0);
         }
-        LAB_18087760c:
+        LAB_18087691c:
         this.aiStuffTarget = _aiStuffTarget;
         this.isPassiveTarget = _isPassiveTarget;
         this.keepWorkingTimeLeft = _keepWorkingTimeLeft;
     }
 
-    // Token : 0x60009BD
-    // RVA   : 0x8770A0   Offset: 0x8758A0   Length: 0x24
+    // Token : 0x60009DD
+    // RVA   : 0x8763B0   Offset: 0x8757B0   Length: 0x24
     public void ResetBigmapTarget()
     {
         this.bigMapTargetID = 0xffffffff;
@@ -266,11 +262,11 @@ public class HeroAIData
         }
     }
 
-    // Token : 0x60009BE
-    // RVA   : 0x876CD0   Offset: 0x8754D0   Length: 0x398
+    // Token : 0x60009DE
+    // RVA   : 0x875FD0   Offset: 0x8753D0   Length: 0x3A0
     public string GetDescribe()
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d73d40 + 184);
         uint uVar1;
         long lVar2;
         ulong uVar3;
@@ -279,9 +275,9 @@ public class HeroAIData
         long lVar6;
         uVar5 = this.aiStuffType;
         lVar6 = (int64)(int)uVar5;
-        lVar2 = PlotController._instance;
-        if (lVar2 == null) goto LAB_180877061;
-        if (lVar2.plotHappen <= uVar5) {
+        lVar2 = **(int64 **)(DAT_181da9de0 + 184);
+        if (lVar2 == null) goto LAB_180876367;
+        if (*(uint32 *)(lVar2 + 24) <= uVar5) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
           uVar5 = this.aiStuffType;
         }
@@ -295,10 +291,10 @@ public class HeroAIData
             return "休息";
           }
           lVar2 = FUN_18046c0a0(0);
-          if (((lVar2 == null) || (lVar2.plotPanel == null)) ||
-             (lVar2 = WorldData.GetArea(lVar2.plotPanel,this.bigMapTargetID,0),
-             lVar2 == null)) goto LAB_180877061;
-          uVar3 = lVar2.plotHappen;
+          if (((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) ||
+             (lVar2 = WorldData.GetArea(*(int64 *)(lVar2 + 32),this.bigMapTargetID,0),
+             lVar2 == null)) goto LAB_180876367;
+          uVar3 = AreaData.GetAreaName(lVar2,0);
           break;
         case 2:
         case 3:
@@ -306,23 +302,23 @@ public class HeroAIData
         case 8:
         case 9:
         case 10:
-          goto switchD_180876ddc_caseD_2;
+          goto switchD_1808760dc_caseD_2;
         case 6:
-          lVar2 = *(int64 *)(pPlotController + 0x4a8);
-          goto LAB_180876e91;
+          lVar2 = *(int64 *)(pStatics + 0x4b0);
+          goto LAB_180876197;
         case 7:
-          lVar2 = *(int64 *)(pPlotController + 0x430);
-        LAB_180876e91:
+          lVar2 = *(int64 *)(pStatics + 0x438);
+        LAB_180876197:
           uVar1 = Int32.Parse(this.aiStuffTarget,0);
-          if (lVar2 == null) goto LAB_180877061;
-          uVar3 = FUN_180002f80(lVar2,uVar1,DAT_181d7c9c0);
+          if (lVar2 == null) goto LAB_180876367;
+          uVar3 = FUN_180002f80(lVar2,uVar1,DAT_181da4358);
           break;
         case 11:
         case 12:
         case 13:
           lVar2 = FUN_18046c0a0(0);
           if (lVar2 != null) {
-            lVar2 = lVar2.plotPanel;
+            lVar2 = *(int64 *)(lVar2 + 32);
             uVar1 = Int32.Parse(this.aiStuffTarget,0);
             if (lVar2 != null) {
               lVar2 = WorldData.GetHero(lVar2,uVar1,0);
@@ -333,16 +329,16 @@ public class HeroAIData
               }
               lVar2 = FUN_18046c0a0(0);
               if (lVar2 != null) {
-                lVar2 = lVar2.plotPanel;
+                lVar2 = *(int64 *)(lVar2 + 32);
                 uVar1 = Int32.Parse(this.aiStuffTarget,0);
                 if ((lVar2 != null) && (lVar2 = WorldData.GetHero(lVar2,uVar1,0)) != null) {
-                  uVar4 = String.Concat(uVar3,lVar2.sourceInteractHero,uVar4,0);
+                  uVar4 = String.Concat(uVar3,*(uint64 *)(lVar2 + 104),uVar4,0);
                   return uVar4;
                 }
               }
             }
           }
-          goto LAB_180877061;
+          goto LAB_180876367;
         default:
           if (uVar5 != 18) {
             return uVar4;
@@ -351,19 +347,19 @@ public class HeroAIData
           lVar2 = FUN_18046c100(0);
           uVar1 = Int32.Parse(this.aiStuffTarget,0);
           if ((lVar2 == null) || (lVar2 = GameDataController.GetSkillDataBase(lVar2,uVar1,0)) == null) {
-        LAB_180877061:
+        LAB_180876367:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           uVar3 = KungfuSkillData.Name(lVar2,1,0);
         }
         uVar4 = String.Concat(uVar4,uVar3,0);
-        switchD_180876ddc_caseD_2:
+        switchD_1808760dc_caseD_2:
         return uVar4;
     }
 
-    // Token : 0x60009BF
-    // RVA   : 0x877140   Offset: 0x875940   Length: 0xBF
+    // Token : 0x60009DF
+    // RVA   : 0x876450   Offset: 0x875850   Length: 0xBF
     public void WandererLoseTarget()
     {
         int iVar1;
@@ -386,8 +382,8 @@ public class HeroAIData
         }
     }
 
-    // Token : 0x60009C0
-    // RVA   : 0x8770D0   Offset: 0x8758D0   Length: 0x69
+    // Token : 0x60009E0
+    // RVA   : 0x8763E0   Offset: 0x8757E0   Length: 0x69
     public void ResetBigmapWaitTime()
     {
         uint uVar1;
@@ -395,8 +391,8 @@ public class HeroAIData
         this.bigmapWaitTime = uVar1;
     }
 
-    // Token : 0x60009C1
-    // RVA   : 0x876B50   Offset: 0x875350   Length: 0x175
+    // Token : 0x60009E1
+    // RVA   : 0x875E50   Offset: 0x875250   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -407,13 +403,13 @@ public class HeroAIData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -425,7 +421,7 @@ public class HeroAIData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d53c70,plVar1);
+            FUN_180002970(0,DAT_181d78da0,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

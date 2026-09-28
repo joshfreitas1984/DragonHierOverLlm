@@ -1,21 +1,21 @@
 // ============================================================
 // Type  : AdvancedType
-// Token : 0x2000097
+// Token : 0x2000098
 // ============================================================
 
 public class AdvancedType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000391
+    // Token: 0x40003AD
     public int value__;
 
-    // Token: 0x4000392
+    // Token: 0x40003AE
     public const AdvancedType Invisible;
 
-    // Token: 0x4000393
+    // Token: 0x40003AF
     public const AdvancedType Sliced;
 
-    // Token: 0x4000394
+    // Token: 0x40003B0
     public const AdvancedType Tiled;
 
 }

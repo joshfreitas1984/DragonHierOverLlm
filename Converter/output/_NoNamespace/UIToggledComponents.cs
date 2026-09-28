@@ -1,26 +1,26 @@
 // ============================================================
 // Type  : UIToggledComponents
-// Token : 0x2000070
+// Token : 0x2000071
 // ============================================================
 
 public class UIToggledComponents
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40002AF
+    // Token: 0x40002CB
     public List<MonoBehaviour> activate;
 
-    // Token: 0x40002B0
+    // Token: 0x40002CC
     public List<MonoBehaviour> deactivate;
 
-    // Token: 0x40002B1
+    // Token: 0x40002CD
     private MonoBehaviour target;
 
-    // Token: 0x40002B2
+    // Token: 0x40002CE
     private bool inverse;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000291
-    // RVA   : 0x1699800   Offset: 0x1698000   Length: 0x180
+    // Token : 0x60002A9
+    // RVA   : 0xC07200   Offset: 0xC06600   Length: 0x180
     private void Awake()
     {
         ulong uVar1;
@@ -38,31 +38,31 @@ public class UIToggledComponents
             if (lVar2 == null) throw; // [null/range check failed]
             if (lVar2.Count == null) {
               if (!this.inverse) {
-                FUN_181827900(lVar4,this.target,DAT_181d6de68);
+                FUN_18181e0a0(lVar4,this.target,DAT_181d95608);
               }
               else {
-                FUN_181827900(lVar2,this.target,DAT_181d6de68);
+                FUN_18181e0a0(lVar2,this.target,DAT_181d95608);
               }
-              goto LAB_181699904;
+              goto LAB_180c07304;
             }
           }
           this.target = 0;
         }
-        LAB_181699904:
-        lVar4 = Component.GetComponent(this,DAT_181d6e740);
+        LAB_180c07304:
+        lVar4 = Component.GetComponent(this,DAT_181d96fe0);
         if (lVar4 != null) {
           uVar1 = *(uint64 *)(lVar4 + 80);
-          uVar5 = new OnTooltipCB(this,DAT_181d9d6a8,0);
+          uVar5 = new OnTooltipCB(this,DAT_181dc6998,0);
           EventDelegate.Add(uVar1,uVar5,0);
           return;
         }
     }
 
-    // Token : 0x6000292
-    // RVA   : 0x1699990   Offset: 0x1698190   Length: 0x207
+    // Token : 0x60002AA
+    // RVA   : 0xC07390   Offset: 0xC06790   Length: 0x207
     public void Toggle()
     {
-        var pUIPlayAnimation = *(int64*)(UIPlayAnimation_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181db04f8 + 184);
         byte uVar1;
         long lVar2;
         bool cVar3;
@@ -84,7 +84,7 @@ public class UIToggledComponents
           do {
             if (lVar4.Count <= (int)uVar5) {
               lVar4 = this.deactivate;
-              if (lVar4 != null) goto LAB_181699ad1;
+              if (lVar4 != null) goto LAB_180c074d1;
               break;
             }
             if (lVar4 == null) break;
@@ -92,7 +92,7 @@ public class UIToggledComponents
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar4 = *(int64 *)(lVar7 + lVar4._items);
-            lVar2 = *(int64 *)(pUIPlayAnimation + 8);
+            lVar2 = *(int64 *)(pStatics + 8);
             if (lVar2 == null) break;
             if (*(char *)(lVar2 + 130) == false) {
               uVar1 = *(uint8 *)(lVar2 + 72);
@@ -113,7 +113,7 @@ public class UIToggledComponents
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar4 = *(int64 *)(lVar8 + lVar4._items);
-          lVar7 = *(int64 *)(pUIPlayAnimation + 8);
+          lVar7 = *(int64 *)(pStatics + 8);
           if (lVar7 == null) break;
           if (*(char *)(lVar7 + 130) == false) {
             cVar3 = *(char *)(lVar7 + 72);
@@ -127,7 +127,7 @@ public class UIToggledComponents
           uVar6 = uVar6 + 1;
           lVar8 = lVar8 + 8;
           if (lVar4 == null) break;
-        LAB_181699ad1:
+        LAB_180c074d1:
           if (lVar4.Count <= (int)uVar6) {
             return;
           }
@@ -135,8 +135,8 @@ public class UIToggledComponents
         }
     }
 
-    // Token : 0x6000293
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x60002AB
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

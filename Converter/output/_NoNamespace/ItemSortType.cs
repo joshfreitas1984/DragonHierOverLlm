@@ -1,30 +1,30 @@
 // ============================================================
 // Type  : ItemSortType
-// Token : 0x20002E8
+// Token : 0x20002EE
 // ============================================================
 
 public class ItemSortType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001764
+    // Token: 0x400181C
     public int value__;
 
-    // Token: 0x4001765
+    // Token: 0x400181D
     public const ItemSortType GetTime;
 
-    // Token: 0x4001766
+    // Token: 0x400181E
     public const ItemSortType ItemType;
 
-    // Token: 0x4001767
+    // Token: 0x400181F
     public const ItemSortType ItemLv;
 
-    // Token: 0x4001768
+    // Token: 0x4001820
     public const ItemSortType RareLv;
 
-    // Token: 0x4001769
+    // Token: 0x4001821
     public const ItemSortType Value;
 
-    // Token: 0x400176A
+    // Token: 0x4001822
     public const ItemSortType Weight;
 
 }

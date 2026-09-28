@@ -1,46 +1,48 @@
 // ============================================================
 // Type  : UICenterOnChild
-// Token : 0x2000037
+// Token : 0x2000038
 // ============================================================
 
 public class UICenterOnChild
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000102
+    // Token: 0x400011E
     public float springStrength;
 
-    // Token: 0x4000103
+    // Token: 0x400011F
     public float nextPageThreshold;
 
-    // Token: 0x4000104
+    // Token: 0x4000120
     public OnFinished onFinished;
 
-    // Token: 0x4000105
+    // Token: 0x4000121
     public OnCenterCallback onCenter;
 
-    // Token: 0x4000106
+    // Token: 0x4000122
     private UIScrollView mScrollView;
 
-    // Token: 0x4000107
+    // Token: 0x4000123
     private GameObject mCenteredObject;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60000E3
-    // RVA   : 0x21B660   Offset: 0x219E60   Length: 0x5
+    // Token : 0x60000FB
+    // RVA   : 0x21B660   Offset: 0x21AA60   Length: 0x5
     public GameObject get_centeredObject()
     {
         return this.mCenteredObject;
     }
 
-    // Token : 0x60000E4
-    // RVA   : 0x13D2CC0   Offset: 0x13D14C0   Length: 0x7
+    // Token : 0x60000FC
+    // RVA   : 0x12AF020   Offset: 0x12AE420   Length: 0x7
     private void Start()
     {
+        void FUN_1812af020(uint64 this)
+        {
         UICenterOnChild.Recenter(this,0);
     }
 
-    // Token : 0x60000E5
-    // RVA   : 0x13D1D40   Offset: 0x13D0540   Length: 0x8E
+    // Token : 0x60000FD
+    // RVA   : 0x12AE0A0   Offset: 0x12AD4A0   Length: 0x8E
     private void OnEnable()
     {
         ulong uVar1;
@@ -57,8 +59,8 @@ public class UICenterOnChild
         }
     }
 
-    // Token : 0x60000E6
-    // RVA   : 0x13D1C80   Offset: 0x13D0480   Length: 0x87
+    // Token : 0x60000FE
+    // RVA   : 0x12ADFE0   Offset: 0x12AD3E0   Length: 0x87
     private void OnDisable()
     {
         ulong uVar1;
@@ -74,8 +76,8 @@ public class UICenterOnChild
         }
     }
 
-    // Token : 0x60000E7
-    // RVA   : 0x13D1D10   Offset: 0x13D0510   Length: 0x29
+    // Token : 0x60000FF
+    // RVA   : 0x12AE070   Offset: 0x12AD470   Length: 0x29
     private void OnDragFinished()
     {
         bool cVar1;
@@ -86,17 +88,20 @@ public class UICenterOnChild
         }
     }
 
-    // Token : 0x60000E8
-    // RVA   : 0x13D1DD0   Offset: 0x13D05D0   Length: 0x12
+    // Token : 0x6000100
+    // RVA   : 0x12AE130   Offset: 0x12AD530   Length: 0x12
     private void OnValidate()
     {
+        void FUN_1812ae130(int64 this)
+        {
         this.nextPageThreshold = this.nextPageThreshold & 0x7fffffff;
     }
 
-    // Token : 0x60000E9
-    // RVA   : 0x13D1DF0   Offset: 0x13D05F0   Length: 0xECF
+    // Token : 0x6000101
+    // RVA   : 0x12AE150   Offset: 0x12AD550   Length: 0xECF
     public void Recenter()
     {
+        var pStatics = *(int64*)(DAT_181daf678 + 184);
         ulong uVar1;
         bool cVar2;
         int iVar3;
@@ -143,7 +148,7 @@ public class UICenterOnChild
         iVar5 = 0;
         if (cVar2) {
           uVar6 = Component.get_gameObject(this,0);
-          uVar6 = NGUITools.FindInParents(uVar6,DAT_181d66c00);
+          uVar6 = NGUITools.FindInParents(uVar6,DAT_181d8f920);
           this.mScrollView = uVar6;
           uVar6 = this.mScrollView;
           cVar2 = Object.op_Equality(uVar6,0,0);
@@ -154,7 +159,7 @@ public class UICenterOnChild
               plVar15 = (int64 *)
                         (**(code **)(*plVar8 + 0x168))(plVar8,*(uint64 *)(*plVar8 + 0x170));
             }
-            uVar6 = DAT_181d9f590;
+            uVar6 = DAT_181dc3e28;
             plVar8 = (int64 *)Type.GetTypeFromHandle(uVar6,0);
             uVar6 = " requires ";
             if (plVar8 != (int64 *)0) {
@@ -170,53 +175,53 @@ public class UICenterOnChild
           cVar2 = Object.op_Implicit(uVar6,0);
           if (cVar2) {
             uVar21 = local_128;
-            if (this.mScrollView == null) goto LAB_1813d2c9e;
+            if (this.mScrollView == null) goto LAB_1812aeffe;
             this.mScrollView.centerOnChild = this;
           }
           uVar21 = local_128;
-          if (this.mScrollView == null) goto LAB_1813d2c9e;
+          if (this.mScrollView == null) goto LAB_1812aeffe;
           uVar6 = this.mScrollView.horizontalScrollBar;
           cVar2 = Object.op_Inequality(uVar6,0,0);
           if (cVar2) {
             uVar21 = local_128;
             if ((this.mScrollView == null) ||
                (lVar9 = this.mScrollView.horizontalScrollBar) == null)
-            goto LAB_1813d2c9e;
+            goto LAB_1812aeffe;
             uVar6 = *(uint64 *)(lVar9 + 24);
-            uVar7 = new OnTooltipCB(this,DAT_181d9c850,0);
+            uVar7 = new OnTooltipCB(this,DAT_181dc5b40,0);
             plVar8 = (int64 *)Delegate.Combine(uVar6,uVar7,0);
             plVar15 = plVar12;
             if (plVar8 != (int64 *)0) {
-              if (*plVar8 == DAT_181d68910) {
+              if (*plVar8 == DAT_181d8dcb8) {
                 plVar15 = plVar8;
               }
               if (plVar15 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6070(plVar8,DAT_181d68910);
+                FUN_1800d6070(plVar8,DAT_181d8dcb8);
               }
             }
             *(int64 **)(lVar9 + 24) = plVar15;
           }
           uVar21 = local_128;
-          if (this.mScrollView == null) goto LAB_1813d2c9e;
+          if (this.mScrollView == null) goto LAB_1812aeffe;
           uVar6 = this.mScrollView.verticalScrollBar;
           cVar2 = Object.op_Inequality(uVar6,0,0);
           if (cVar2) {
             uVar21 = local_128;
             if ((this.mScrollView == null) ||
                (lVar9 = this.mScrollView.verticalScrollBar) == null)
-            goto LAB_1813d2c9e;
+            goto LAB_1812aeffe;
             uVar6 = *(uint64 *)(lVar9 + 24);
-            uVar7 = new OnTooltipCB(this,DAT_181d9c850,0);
+            uVar7 = new OnTooltipCB(this,DAT_181dc5b40,0);
             plVar8 = (int64 *)Delegate.Combine(uVar6,uVar7,0);
             plVar15 = plVar12;
             if (plVar8 != (int64 *)0) {
-              if (*plVar8 == DAT_181d68910) {
+              if (*plVar8 == DAT_181d8dcb8) {
                 plVar15 = plVar8;
               }
               if (plVar15 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6070(plVar8,DAT_181d68910);
+                FUN_1800d6070(plVar8,DAT_181d8dcb8);
               }
             }
             *(int64 **)(lVar9 + 24) = plVar15;
@@ -224,7 +229,7 @@ public class UICenterOnChild
         }
         uVar21 = local_128;
         if (this.mScrollView == null) {
-        LAB_1813d2c9e:
+        LAB_1812aeffe:
           local_128 = uVar21;
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
@@ -237,7 +242,7 @@ public class UICenterOnChild
         lVar9 = Component.get_transform(this,0);
         uVar21 = local_128;
         local_108 = lVar9;
-        if (lVar9 == null) goto LAB_1813d2c9e;
+        if (lVar9 == null) goto LAB_1812aeffe;
         iVar3 = Transform.get_childCount(lVar9,0);
         if (iVar3 == 0) {
           return;
@@ -246,7 +251,7 @@ public class UICenterOnChild
         if (((this.mScrollView == null) ||
             (plVar15 = this.mScrollView.mPanel, plVar15 == (int64 *)0))
            || (lVar10 = (**(code **)(*plVar15 + 0x1e8))(plVar15,*(uint64 *)(*plVar15 + 0x1f0)),
-              uVar21 = local_128, lVar10 == null)) goto LAB_1813d2c9e;
+              uVar21 = local_128, lVar10 == null)) goto LAB_1812aeffe;
         if (lVar10.movement < 3) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -265,7 +270,7 @@ public class UICenterOnChild
         local_d8 = fVar25;
         fStack_d4 = fVar24;
         local_d0 = fVar26;
-        if (lVar10 == null) goto LAB_1813d2c9e;
+        if (lVar10 == null) goto LAB_1812aeffe;
         local_138 = lVar10.mMomentum;
         fVar23 = lVar10.momentumAmount;
         local_120 = *(float *)(lVar10 + 200);
@@ -283,7 +288,7 @@ public class UICenterOnChild
         local_res8 = (int64 *)0;
         local_128 = local_138;
         local_120 = local_130;
-        lVar10 = Component.GetComponent(this,DAT_181d6e0c0);
+        lVar10 = Component.GetComponent(this,DAT_181d96960);
         cVar2 = Object.op_Inequality(lVar10,0,0);
         plVar15 = plVar12;
         plVar8 = plVar12;
@@ -299,7 +304,7 @@ public class UICenterOnChild
               uVar21 = local_128;
               if ((plVar8 == (int64 *)0) ||
                  (lVar9 = Component.get_gameObject(plVar8,0), uVar21 = local_128) == null)
-              goto LAB_1813d2c9e;
+              goto LAB_1812aeffe;
               cVar2 = GameObject.get_activeInHierarchy(lVar9,0);
               fVar19 = fVar23;
               if (cVar2) {
@@ -341,7 +346,7 @@ public class UICenterOnChild
           uVar21 = local_128;
           if ((lVar10 == null) ||
              (plVar13 = (int64 *)UIGrid.GetChildList(lVar10,0), uVar21 = local_128,
-             plVar13 == (int64 *)0)) goto LAB_1813d2c9e;
+             plVar13 == (int64 *)0)) goto LAB_1812aeffe;
           uVar14 = 0;
           lVar9 = local_108;
           iVar5 = 0;
@@ -360,7 +365,7 @@ public class UICenterOnChild
               uVar21 = local_128;
               if ((plVar8 == (int64 *)0) ||
                  (lVar9 = Component.get_gameObject(plVar8,0), uVar21 = local_128) == null)
-              goto LAB_1813d2c9e;
+              goto LAB_1812aeffe;
               cVar2 = GameObject.get_activeInHierarchy(lVar9);
               uVar4 = (uint32)local_res8;
               if (cVar2) {
@@ -399,13 +404,13 @@ public class UICenterOnChild
             } while ((int64)local_100 < (int64)local_128);
           }
         }
-        if (this.nextPageThreshold <= 0.0) goto LAB_1813d2c68;
-        if (UICamera.currentTouch == null) goto LAB_1813d2c68;
+        if (this.nextPageThreshold <= 0.0) goto LAB_1812aefc8;
+        if (*(int64 *)(pStatics + 224) == 0) goto LAB_1812aefc8;
         uVar6 = this.mCenteredObject;
         cVar2 = Object.op_Inequality(uVar6,0,0);
-        if (!cVar2) goto LAB_1813d2c68;
+        if (!cVar2) goto LAB_1812aefc8;
         uVar21 = local_128;
-        if (this.mCenteredObject == null) goto LAB_1813d2c9e;
+        if (this.mCenteredObject == null) goto LAB_1812aeffe;
         uVar6 = GameObject.get_transform(this.mCenteredObject,0);
         if (plVar13 == (int64 *)0) {
           uVar7 = Transform.GetChild(lVar9,plVar8,0);
@@ -417,15 +422,15 @@ public class UICenterOnChild
           uVar7 = *(uint64 *)(plVar13[2] + 32 + (int64)(int)(uint32)plVar8 * 8);
         }
         cVar2 = Object.op_Equality(uVar6,uVar7,0);
-        if (!cVar2) goto LAB_1813d2c68;
-        lVar10 = UICamera.currentTouch;
+        if (!cVar2) goto LAB_1812aefc8;
+        lVar10 = *(int64 *)(pStatics + 224);
         uVar21 = local_128;
-        if (lVar10 == null) goto LAB_1813d2c9e;
+        if (lVar10 == null) goto LAB_1812aeffe;
         local_118 = lVar10.momentumAmount;
         local_110 = 0.0;
         lVar10 = Component.get_transform(this,0);
         uVar21 = local_128;
-        if (lVar10 == null) goto LAB_1813d2c9e;
+        if (lVar10 == null) goto LAB_1812aeffe;
         local_130 = local_110;
         local_138 = local_118;
         puVar11 = (uint64 *)Transform.get_rotation(local_b8,lVar10,0);
@@ -438,7 +443,7 @@ public class UICenterOnChild
         local_128._4_4_ = (uint32)(local_118 >> 32);
         uVar21 = local_118;
         local_110 = local_120;
-        if (this.mScrollView == null) goto LAB_1813d2c9e;
+        if (this.mScrollView == null) goto LAB_1812aeffe;
         iVar3 = this.mScrollView.movement;
         uVar1 = local_118;
         if (iVar3 != 0) {
@@ -455,72 +460,72 @@ public class UICenterOnChild
         local_128 = uVar1;
         fVar24 = this.nextPageThreshold;
         fVar25 = (float)uVar21;
-        if (ABS(fVar25) <= fVar24) goto LAB_1813d2c68;
+        if (ABS(fVar25) <= fVar24) goto LAB_1812aefc8;
         if (fVar24 < fVar25) {
           if (plVar13 != (int64 *)0) {
             if (iVar5 < 1) {
-              uVar6 = Component.GetComponent(this,DAT_181d6e840);
+              uVar6 = Component.GetComponent(this,DAT_181d970e0);
               cVar2 = Object.op_Equality(uVar6,0,0);
               if (cVar2) {
-        LAB_1813d2c3b:
+        LAB_1812aef9b:
                 if ((int)plVar13[3] == 0) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 plVar15 = *(int64 **)(plVar13[2] + 32);
-                goto LAB_1813d2c68;
+                goto LAB_1812aefc8;
               }
-        LAB_1813d2b79:
+        LAB_1812aeed9:
               iVar5 = (int)plVar13[3] + -1;
             }
             else {
               iVar5 = iVar5 + -1;
             }
-        LAB_1813d2c56:
-            plVar15 = (int64 *)FUN_180002f80(plVar13,iVar5,DAT_181d806f8);
-            goto LAB_1813d2c68;
+        LAB_1812aefb6:
+            plVar15 = (int64 *)FUN_180002f80(plVar13,iVar5,DAT_181da8098);
+            goto LAB_1812aefc8;
           }
           if (0 < iVar5) {
             plVar15 = (int64 *)Transform.GetChild(lVar9,iVar5 + -1,0);
-            goto LAB_1813d2c68;
+            goto LAB_1812aefc8;
           }
-          uVar6 = Component.GetComponent(this,DAT_181d6e840);
+          uVar6 = Component.GetComponent(this,DAT_181d970e0);
           cVar2 = Object.op_Equality(uVar6,0,0);
           if (!cVar2) {
-        LAB_1813d2af5:
+        LAB_1812aee55:
             iVar5 = Transform.get_childCount(lVar9,0);
             plVar12 = (int64 *)(uint64)(iVar5 - 1);
           }
         }
         else {
-          if (-fVar24 <= fVar25) goto LAB_1813d2c68;
+          if (-fVar24 <= fVar25) goto LAB_1812aefc8;
           if (plVar13 != (int64 *)0) {
             if ((int)plVar13[3] + -1 <= iVar5) {
-              uVar6 = Component.GetComponent(this,DAT_181d6e840);
+              uVar6 = Component.GetComponent(this,DAT_181d970e0);
               cVar2 = Object.op_Equality(uVar6,0,0);
-              if (!cVar2) goto LAB_1813d2c3b;
-              goto LAB_1813d2b79;
+              if (!cVar2) goto LAB_1812aef9b;
+              goto LAB_1812aeed9;
             }
             iVar5 = iVar5 + 1;
-            goto LAB_1813d2c56;
+            goto LAB_1812aefb6;
           }
           iVar3 = Transform.get_childCount(lVar9,0);
           if (iVar5 < iVar3 + -1) {
             plVar15 = (int64 *)Transform.GetChild(lVar9,iVar5 + 1,0);
-            goto LAB_1813d2c68;
+            goto LAB_1812aefc8;
           }
-          uVar6 = Component.GetComponent(this,DAT_181d6e840);
+          uVar6 = Component.GetComponent(this,DAT_181d970e0);
           cVar2 = Object.op_Equality(uVar6,0,0);
-          if (cVar2) goto LAB_1813d2af5;
+          if (cVar2) goto LAB_1812aee55;
         }
         plVar15 = (int64 *)Transform.GetChild(lVar9,plVar12,0);
-        LAB_1813d2c68:
+        LAB_1812aefc8:
         local_138 = CONCAT44(fStack_d4,local_d8);
         local_130 = local_d0;
         UICenterOnChild.CenterOn(this,plVar15,&local_138,0);
     }
 
-    // Token : 0x60000EA
-    // RVA   : 0x13D1910   Offset: 0x13D0110   Length: 0x36E
+    // Token : 0x6000102
+    // RVA   : 0x12ADC70   Offset: 0x12AD070   Length: 0x36E
     private void CenterOn(Transform target, Vector3 panelCenter)
     {
         bool cVar2;
@@ -561,8 +566,8 @@ public class UICenterOnChild
         }
     }
 
-    // Token : 0x60000EB
-    // RVA   : 0x13D1750   Offset: 0x13CFF50   Length: 0x1B4
+    // Token : 0x6000103
+    // RVA   : 0x12ADAB0   Offset: 0x12ACEB0   Length: 0x1B4
     public void CenterOn(Transform target)
     {
         bool cVar2;
@@ -603,10 +608,12 @@ public class UICenterOnChild
         }
     }
 
-    // Token : 0x60000EC
-    // RVA   : 0x13D2CD0   Offset: 0x13D14D0   Length: 0xE
+    // Token : 0x6000104
+    // RVA   : 0x12AF030   Offset: 0x12AE430   Length: 0xE
     public void /*ctor*/()
     {
+        void FUN_1812af030(int64 this)
+        {
         this.springStrength = 0x41000000;
         FUN_18044ef50(this,0);
     }

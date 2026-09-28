@@ -1,13 +1,13 @@
 // ============================================================
 // Type  : HitCheck
-// Token : 0x20000B0
+// Token : 0x20000B1
 // ============================================================
 
 public class HitCheck
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000560
-    // RVA   : 0x210320   Offset: 0x20EB20   Length: 0x6A
+    // Token : 0x6000578
+    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
@@ -25,8 +25,8 @@ public class HitCheck
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x6000561
-    // RVA   : 0xB06A60   Offset: 0xB05260   Length: 0x3B3
+    // Token : 0x6000579
+    // RVA   : 0xFAEAB0   Offset: 0xFADEB0   Length: 0x3B3
     public virtual bool Invoke(Vector3 worldPos)
     {
         uint uVar1;
@@ -86,7 +86,7 @@ public class HitCheck
                 local_48 = *worldPos;
                 puVar7 = &local_48;
                 local_40 = *(uint32 *)(worldPos + 1);
-                goto LAB_180b06dbd;
+                goto LAB_180faee0d;
               }
               uVar5 = (*pcVar2)(worldPos + -2,lVar12);
             }
@@ -115,13 +115,13 @@ public class HitCheck
                                   (int)((uint32)*(uint16 *)(lVar12 + 72) +
                                        *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar10 * 16
                                                )) * 16 + 0x138 + lVar6);
-                        goto LAB_180b06d16;
+                        goto LAB_180faed66;
                       }
                       uVar10 = uVar10 + 1;
                     } while (uVar10 < *(uint16 *)(lVar6 + 0x12a));
                   }
                   puVar7 = (uint64 *)FUN_1800914f0(plVar3,lVar8,*(uint16 *)(lVar12 + 72));
-        LAB_180b06d16:
+        LAB_180faed66:
                   local_68 = uVar15;
                   local_60 = uVar1;
                   uVar5 = (*(code *)*puVar7)(plVar3,&local_68,puVar7[1]);
@@ -154,14 +154,14 @@ public class HitCheck
                                 (int)((uint32)*(uint16 *)(lVar12 + 72) +
                                      *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar9 * 16))
                                 * 16 + 0x138 + lVar6;
-                        goto LAB_180b06c16;
+                        goto LAB_180faec66;
                       }
                       uVar9 = uVar9 + 1;
                     } while (uVar9 < uVar10);
                   }
                   lVar6 = FUN_1800914f0(plVar3,*(int64 *)(lVar12 + 24),*(uint16 *)(lVar12 + 72),
                                         uVar10,uVar15);
-        LAB_180b06c16:
+        LAB_180faec66:
                   puVar7 = (uint64 *)il2cpp_internal(*(uint64 *)(lVar6 + 8),lVar12);
                   local_88 = uVar15;
                   local_80 = uVar1;
@@ -179,7 +179,7 @@ public class HitCheck
             puVar7 = &local_98;
             local_98 = *worldPos;
             local_90 = *(uint32 *)(worldPos + 1);
-        LAB_180b06dbd:
+        LAB_180faee0d:
             uVar5 = (*pcVar2)(plVar3,puVar7,lVar12);
           }
           uVar14 = uVar14 + 1;
@@ -189,8 +189,8 @@ public class HitCheck
         } while( true );
     }
 
-    // Token : 0x6000562
-    // RVA   : 0xB069D0   Offset: 0xB051D0   Length: 0x81
+    // Token : 0x600057A
+    // RVA   : 0x183D100   Offset: 0x183C500   Length: 0x81
     public virtual IAsyncResult BeginInvoke(Vector3 worldPos, AsyncCallback callback, object object)
     {
         void HitCheck.BeginInvoke
@@ -199,12 +199,12 @@ public class HitCheck
         uint64 local_18;
         uint64 local_10;
         local_10 = 0;
-        local_18 = il2cpp_value_box(DAT_181d8e8b8,worldPos);
+        local_18 = il2cpp_value_box(DAT_181db3b70,worldPos);
         il2cpp_internal(this,&local_18,callback,object);
     }
 
-    // Token : 0x6000563
-    // RVA   : 0x28D420   Offset: 0x28BC20   Length: 0x28
+    // Token : 0x600057B
+    // RVA   : 0x28D420   Offset: 0x28C820   Length: 0x28
     public virtual bool EndInvoke(IAsyncResult result)
     {
         long lVar1;

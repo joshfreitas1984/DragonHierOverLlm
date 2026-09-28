@@ -1,13 +1,13 @@
 // ============================================================
 // Type  : GetMouseDelegate
-// Token : 0x20000DF
+// Token : 0x20000E0
 // ============================================================
 
 public class GetMouseDelegate
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000732
-    // RVA   : 0x210320   Offset: 0x20EB20   Length: 0x6A
+    // Token : 0x600074A
+    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
@@ -25,8 +25,8 @@ public class GetMouseDelegate
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x6000733
-    // RVA   : 0xB06350   Offset: 0xB04B50   Length: 0x286
+    // Token : 0x600074B
+    // RVA   : 0x8E5870   Offset: 0x8E4C70   Length: 0x286
     public virtual MouseOrTouch Invoke(int button)
     {
         long lVar1;
@@ -65,7 +65,7 @@ public class GetMouseDelegate
           if (!cVar4) {
             if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                 ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-            goto LAB_180b0659b;
+            goto LAB_1808e5abb;
             cVar4 = il2cpp_internal(lVar1);
             if (!cVar4) {
               cVar4 = FUN_1800d65c0(lVar1);
@@ -88,7 +88,7 @@ public class GetMouseDelegate
                                      *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar10 * 16))
                                 * 16 + 0x138 + lVar6);
                       uVar5 = (*(code *)*puVar7)(plVar3,button,puVar7[1]);
-                      goto LAB_180b065a5;
+                      goto LAB_1808e5ac5;
                     }
                     uVar10 = uVar10 + 1;
                   } while (uVar10 < *(uint16 *)(lVar6 + 0x12a));
@@ -114,13 +114,13 @@ public class GetMouseDelegate
                               (int)((uint32)uVar10 +
                                    *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar9 * 16)) *
                               16 + 0x138 + lVar6;
-                      goto LAB_180b06496;
+                      goto LAB_1808e59b6;
                     }
                     uVar9 = uVar9 + 1;
                   } while (uVar9 < *(uint16 *)(lVar6 + 0x12a));
                 }
                 lVar6 = FUN_1800914f0(plVar3,*(int64 *)(lVar1 + 24),uVar10);
-        LAB_180b06496:
+        LAB_1808e59b6:
                 uVar5 = *(uint64 *)(lVar6 + 8);
               }
               puVar7 = (uint64 *)il2cpp_internal(uVar5,lVar1);
@@ -131,10 +131,10 @@ public class GetMouseDelegate
             uVar5 = (*pcVar2)(button,lVar1);
           }
           else {
-        LAB_180b0659b:
+        LAB_1808e5abb:
             uVar5 = (*pcVar2)(plVar3,button,lVar1);
           }
-        LAB_180b065a5:
+        LAB_1808e5ac5:
           uVar12 = uVar12 + 1;
           if (uVar13 <= uVar12) {
             return uVar5;
@@ -142,8 +142,8 @@ public class GetMouseDelegate
         } while( true );
     }
 
-    // Token : 0x6000734
-    // RVA   : 0xB062D0   Offset: 0xB04AD0   Length: 0x7A
+    // Token : 0x600074C
+    // RVA   : 0x8E57F0   Offset: 0x8E4BF0   Length: 0x7A
     public virtual IAsyncResult BeginInvoke(int button, AsyncCallback callback, object object)
     {
         void GetMouseDelegate.BeginInvoke
@@ -154,12 +154,12 @@ public class GetMouseDelegate
         uint64 local_10;
         local_res10[0] = button;
         local_10 = 0;
-        local_18 = il2cpp_value_box(DAT_181d5b2f8,local_res10);
+        local_18 = il2cpp_value_box(DAT_181d80418,local_res10);
         il2cpp_internal(this,&local_18,callback,object);
     }
 
-    // Token : 0x6000735
-    // RVA   : 0x210040   Offset: 0x20E840   Length: 0xA
+    // Token : 0x600074D
+    // RVA   : 0x210040   Offset: 0x20F440   Length: 0xA
     public virtual MouseOrTouch EndInvoke(IAsyncResult result)
     {
         il2cpp_internal(result,0);

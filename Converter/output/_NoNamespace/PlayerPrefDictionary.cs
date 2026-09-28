@@ -1,17 +1,17 @@
 // ============================================================
 // Type  : PlayerPrefDictionary
-// Token : 0x20001C4
+// Token : 0x20001CA
 // ============================================================
 
 public class PlayerPrefDictionary
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000BD3
+    // Token: 0x4000C60
     public List<PlayerPrefDictionaryCell> playerPrefDictionary;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000E68
-    // RVA   : 0x479750   Offset: 0x477F50   Length: 0xFC
+    // Token : 0x6000E9D
+    // RVA   : 0x46D820   Offset: 0x46CC20   Length: 0xFC
     public float GetFloat(string key)
     {
         bool cVar1;
@@ -33,10 +33,10 @@ public class PlayerPrefDictionary
             }
             lVar2 = *(int64 *)(lVar3 + lVar2._items);
             if (lVar2 == null) break;
-            cVar1 = FUN_1816fd990(lVar2._items,key,0);
+            cVar1 = FUN_18171e540(lVar2._items,key,0);
             lVar2 = this.playerPrefDictionary;
             if (cVar1) {
-              if ((lVar2 != null) && (lVar2 = FUN_180002f80(lVar2,uVar4,DAT_181d6f6e8)) != null) {
+              if ((lVar2 != null) && (lVar2 = FUN_180002f80(lVar2,uVar4,DAT_181d97088)) != null) {
                 uVar5 = Single.Parse(lVar2.Count,0);
                 return uVar5;
               }
@@ -48,8 +48,8 @@ public class PlayerPrefDictionary
         }
     }
 
-    // Token : 0x6000E69
-    // RVA   : 0x479850   Offset: 0x478050   Length: 0xFB
+    // Token : 0x6000E9E
+    // RVA   : 0x46D920   Offset: 0x46CD20   Length: 0xFB
     public int GetInt(string key)
     {
         bool cVar1;
@@ -71,10 +71,10 @@ public class PlayerPrefDictionary
             }
             lVar2 = *(int64 *)(lVar4 + lVar2._items);
             if (lVar2 == null) break;
-            cVar1 = FUN_1816fd990(lVar2._items,key,0);
+            cVar1 = FUN_18171e540(lVar2._items,key,0);
             lVar2 = this.playerPrefDictionary;
             if (cVar1) {
-              if ((lVar2 != null) && (lVar2 = FUN_180002f80(lVar2,uVar5,DAT_181d6f6e8)) != null) {
+              if ((lVar2 != null) && (lVar2 = FUN_180002f80(lVar2,uVar5,DAT_181d97088)) != null) {
                 uVar3 = Int32.Parse(lVar2.Count,0);
                 return uVar3;
               }
@@ -86,8 +86,8 @@ public class PlayerPrefDictionary
         }
     }
 
-    // Token : 0x6000E6A
-    // RVA   : 0x479950   Offset: 0x478150   Length: 0x109
+    // Token : 0x6000E9F
+    // RVA   : 0x46DA20   Offset: 0x46CE20   Length: 0x109
     public string GetString(string key)
     {
         bool cVar1;
@@ -108,10 +108,10 @@ public class PlayerPrefDictionary
             }
             lVar2 = *(int64 *)(lVar3 + lVar2._items);
             if (lVar2 == null) break;
-            cVar1 = FUN_1816fd990(lVar2._items,key,0);
+            cVar1 = FUN_18171e540(lVar2._items,key,0);
             lVar2 = this.playerPrefDictionary;
             if (cVar1) {
-              if ((lVar2 != null) && (lVar2 = FUN_180002f80(lVar2,uVar4,DAT_181d6f6e8)) != null) {
+              if ((lVar2 != null) && (lVar2 = FUN_180002f80(lVar2,uVar4,DAT_181d97088)) != null) {
                 return lVar2.Count;
               }
               break;
@@ -122,8 +122,8 @@ public class PlayerPrefDictionary
         }
     }
 
-    // Token : 0x6000E6B
-    // RVA   : 0x479B70   Offset: 0x478370   Length: 0x186
+    // Token : 0x6000EA0
+    // RVA   : 0x46DC40   Offset: 0x46D040   Length: 0x186
     public void SetKey(string key, float value)
     {
         bool cVar1;
@@ -140,7 +140,7 @@ public class PlayerPrefDictionary
               *(uint64 *)(lVar3 + 16) = key;
               *(uint64 *)(lVar3 + 24) = value;
               if (lVar2 != null) {
-                FUN_181827900(lVar2,lVar3,DAT_181d6f4e8);
+                FUN_18181e0a0(lVar2,lVar3,DAT_181d96e88);
                 return;
               }
               break;
@@ -151,10 +151,10 @@ public class PlayerPrefDictionary
             }
             lVar2 = *(int64 *)(lVar3 + lVar2._items);
             if (lVar2 == null) break;
-            cVar1 = FUN_1816fd990(lVar2._items,key,0);
+            cVar1 = FUN_18171e540(lVar2._items,key,0);
             lVar2 = this.playerPrefDictionary;
             if (cVar1) {
-              if ((lVar2 != null) && (lVar2 = FUN_180002f80(lVar2,uVar4,DAT_181d6f6e8)) != null) {
+              if ((lVar2 != null) && (lVar2 = FUN_180002f80(lVar2,uVar4,DAT_181d97088)) != null) {
                 lVar2.Count = value;
                 return;
               }
@@ -166,8 +166,8 @@ public class PlayerPrefDictionary
         }
     }
 
-    // Token : 0x6000E6C
-    // RVA   : 0x479E80   Offset: 0x478680   Length: 0x185
+    // Token : 0x6000EA1
+    // RVA   : 0x46DF50   Offset: 0x46D350   Length: 0x185
     public void SetKey(string key, int value)
     {
         bool cVar1;
@@ -184,7 +184,7 @@ public class PlayerPrefDictionary
               *(uint64 *)(lVar3 + 16) = key;
               *(uint64 *)(lVar3 + 24) = value;
               if (lVar2 != null) {
-                FUN_181827900(lVar2,lVar3,DAT_181d6f4e8);
+                FUN_18181e0a0(lVar2,lVar3,DAT_181d96e88);
                 return;
               }
               break;
@@ -195,10 +195,10 @@ public class PlayerPrefDictionary
             }
             lVar2 = *(int64 *)(lVar3 + lVar2._items);
             if (lVar2 == null) break;
-            cVar1 = FUN_1816fd990(lVar2._items,key,0);
+            cVar1 = FUN_18171e540(lVar2._items,key,0);
             lVar2 = this.playerPrefDictionary;
             if (cVar1) {
-              if ((lVar2 != null) && (lVar2 = FUN_180002f80(lVar2,uVar4,DAT_181d6f6e8)) != null) {
+              if ((lVar2 != null) && (lVar2 = FUN_180002f80(lVar2,uVar4,DAT_181d97088)) != null) {
                 lVar2.Count = value;
                 return;
               }
@@ -210,8 +210,8 @@ public class PlayerPrefDictionary
         }
     }
 
-    // Token : 0x6000E6D
-    // RVA   : 0x479D00   Offset: 0x478500   Length: 0x175
+    // Token : 0x6000EA2
+    // RVA   : 0x46DDD0   Offset: 0x46D1D0   Length: 0x175
     public void SetKey(string key, string value)
     {
         bool cVar1;
@@ -228,7 +228,7 @@ public class PlayerPrefDictionary
               *(uint64 *)(lVar3 + 16) = key;
               *(uint64 *)(lVar3 + 24) = value;
               if (lVar2 != null) {
-                FUN_181827900(lVar2,lVar3,DAT_181d6f4e8);
+                FUN_18181e0a0(lVar2,lVar3,DAT_181d96e88);
                 return;
               }
               break;
@@ -239,10 +239,10 @@ public class PlayerPrefDictionary
             }
             lVar2 = *(int64 *)(lVar3 + lVar2._items);
             if (lVar2 == null) break;
-            cVar1 = FUN_1816fd990(lVar2._items,key,0);
+            cVar1 = FUN_18171e540(lVar2._items,key,0);
             lVar2 = this.playerPrefDictionary;
             if (cVar1) {
-              if ((lVar2 != null) && (lVar2 = FUN_180002f80(lVar2,uVar4,DAT_181d6f6e8)) != null) {
+              if ((lVar2 != null) && (lVar2 = FUN_180002f80(lVar2,uVar4,DAT_181d97088)) != null) {
                 lVar2.Count = value;
                 return;
               }
@@ -254,8 +254,8 @@ public class PlayerPrefDictionary
         }
     }
 
-    // Token : 0x6000E6E
-    // RVA   : 0x479670   Offset: 0x477E70   Length: 0xD2
+    // Token : 0x6000EA3
+    // RVA   : 0x46D740   Offset: 0x46CB40   Length: 0xD2
     public bool ContainsKey(string key)
     {
         bool cVar1;
@@ -276,7 +276,7 @@ public class PlayerPrefDictionary
             }
             lVar2 = *(int64 *)(lVar3 + lVar2._items);
             if (lVar2 == null) break;
-            cVar1 = FUN_1816fd990(lVar2._items,key,0);
+            cVar1 = FUN_18171e540(lVar2._items,key,0);
             if (cVar1) {
               return true;
             }
@@ -287,8 +287,8 @@ public class PlayerPrefDictionary
         }
     }
 
-    // Token : 0x6000E6F
-    // RVA   : 0x479A60   Offset: 0x478260   Length: 0x105
+    // Token : 0x6000EA4
+    // RVA   : 0x46DB30   Offset: 0x46CF30   Length: 0x105
     public void RemoveKey(string key)
     {
         bool cVar1;
@@ -310,12 +310,12 @@ public class PlayerPrefDictionary
             }
             lVar3 = *(int64 *)(lVar5 + lVar3._items);
             if (lVar3 == null) break;
-            cVar1 = FUN_1816fd990(lVar3._items,key,0);
+            cVar1 = FUN_18171e540(lVar3._items,key,0);
             lVar3 = this.playerPrefDictionary;
             if (cVar1) {
               if (lVar3 != null) {
-                uVar2 = FUN_180002f80(lVar3,uVar4,DAT_181d6f6e8);
-                FUN_181801c10(lVar3,uVar2,DAT_181d6f5e8);
+                uVar2 = FUN_180002f80(lVar3,uVar4,DAT_181d97088);
+                FUN_1817eee00(lVar3,uVar2,DAT_181d96f88);
                 return;
               }
               break;
@@ -326,24 +326,24 @@ public class PlayerPrefDictionary
         }
     }
 
-    // Token : 0x6000E70
-    // RVA   : 0x479620   Offset: 0x477E20   Length: 0x44
+    // Token : 0x6000EA5
+    // RVA   : 0x46D6F0   Offset: 0x46CAF0   Length: 0x44
     public void Clear()
     {
         if (this.playerPrefDictionary != null) {
-          FUN_180f56130(this.playerPrefDictionary,DAT_181d6f568);
+          FUN_1812f9a10(this.playerPrefDictionary,DAT_181d96f08);
           return;
         }
     }
 
-    // Token : 0x6000E71
-    // RVA   : 0x47A010   Offset: 0x478810   Length: 0x76
+    // Token : 0x6000EA6
+    // RVA   : 0x46E0E0   Offset: 0x46D4E0   Length: 0x76
     public void /*ctor*/()
     {
         ulong uVar1;
         ZhSegment.Initialize(this,0);
-        uVar1 = il2cpp_internal(DAT_181d704b0);
-        FUN_180f58a90(uVar1,DAT_181d6f468);
+        uVar1 = il2cpp_internal(DAT_181d951d0);
+        FUN_18132faf0(uVar1,DAT_181d96e08);
         this.playerPrefDictionary = uVar1;
     }
 

@@ -1,21 +1,21 @@
 // ============================================================
 // Type  : MotionType
-// Token : 0x20003EE
+// Token : 0x20003F5
 // ============================================================
 
 public class MotionType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E5F
+    // Token: 0x4001F69
     public int value__;
 
-    // Token: 0x4001E60
+    // Token: 0x4001F6A
     public const MotionType Rotation;
 
-    // Token: 0x4001E61
+    // Token: 0x4001F6B
     public const MotionType BackAndForth;
 
-    // Token: 0x4001E62
+    // Token: 0x4001F6C
     public const MotionType Translation;
 
 }

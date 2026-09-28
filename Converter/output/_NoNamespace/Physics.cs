@@ -1,13 +1,13 @@
 // ============================================================
 // Type  : Physics
-// Token : 0x200048B
+// Token : 0x2000492
 // ============================================================
 
 public class Physics
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60026F4
-    // RVA   : 0x8C7400   Offset: 0x8C5C00   Length: 0xE0
+    // Token : 0x6002777
+    // RVA   : 0x92ACD0   Offset: 0x92A0D0   Length: 0xE0
     public static void SetOrientationOnPath(PathOptions options, Tween t, Quaternion newRot, Transform trans)
     {
         void Physics.SetOrientationOnPath
@@ -29,10 +29,10 @@ public class Physics
           }
         }
         else if ((t != null) && (plVar1 = *(int64 **)(t + 72), plVar1 != (int64 *)0)) {
-          if ((*(byte *)(DAT_181d77b50 + 300) <= *(byte *)(*plVar1 + 300)) &&
+          if ((*(byte *)(DAT_181d9cd80 + 300) <= *(byte *)(*plVar1 + 300)) &&
              (*(int64 *)
-               (*(int64 *)(*plVar1 + 200) + -8 + (uint64)*(byte *)(DAT_181d77b50 + 300) * 8) ==
-              DAT_181d77b50)) {
+               (*(int64 *)(*plVar1 + 200) + -8 + (uint64)*(byte *)(DAT_181d9cd80 + 300) * 8) ==
+              DAT_181d9cd80)) {
             local_88 = *newRot;
             uStack_84 = newRot[1];
             uStack_80 = newRot[2];
@@ -45,32 +45,32 @@ public class Physics
         }
     }
 
-    // Token : 0x60026F5
-    // RVA   : 0x8C7300   Offset: 0x8C5B00   Length: 0x7D
+    // Token : 0x6002778
+    // RVA   : 0x92ABD0   Offset: 0x929FD0   Length: 0x7D
     public static bool HasRigidbody2D(Component target)
     {
         ulong uVar1;
         if (target != null) {
-          uVar1 = Component.GetComponent(target,DAT_181d6c8c0);
+          uVar1 = Component.GetComponent(target,DAT_181d95160);
           Object.op_Inequality(uVar1,0,0);
           return;
         }
     }
 
-    // Token : 0x60026F6
-    // RVA   : 0x8C7380   Offset: 0x8C5B80   Length: 0x7D
+    // Token : 0x6002779
+    // RVA   : 0x92AC50   Offset: 0x92A050   Length: 0x7D
     public static bool HasRigidbody(Component target)
     {
         ulong uVar1;
         if (target != null) {
-          uVar1 = Component.GetComponent(target,DAT_181d6c840);
+          uVar1 = Component.GetComponent(target,DAT_181d950e0);
           Object.op_Inequality(uVar1,0,0);
           return;
         }
     }
 
-    // Token : 0x60026F7
-    // RVA   : 0x8C7130   Offset: 0x8C5930   Length: 0x1CE
+    // Token : 0x600277A
+    // RVA   : 0x92AA00   Offset: 0x929E00   Length: 0x1CE
     public static TweenerCore<Vector3, Path, PathOptions> CreateDOTweenPathTween(MonoBehaviour target, bool tweenRigidbody, bool isLocal, Path path, float duration, PathMode pathMode)
     {
         uint64
@@ -86,7 +86,7 @@ public class Physics
         bVar4 = 0;
         if (tweenRigidbody != null) {
           if (target == null) throw; // [null/range check failed]
-          uVar2 = Component.GetComponent(target,DAT_181d6c840);
+          uVar2 = Component.GetComponent(target,DAT_181d950e0);
           cVar1 = Object.op_Inequality(uVar2,0,0);
           if (cVar1) {
             bVar4 = 1;
@@ -98,7 +98,7 @@ public class Physics
             }
           }
           if ((tweenRigidbody & (bVar4 ^ 1)) != 0) {
-            uVar2 = Component.GetComponent(target,DAT_181d6c8c0);
+            uVar2 = Component.GetComponent(target,DAT_181d95160);
             cVar1 = Object.op_Inequality(uVar2,0,0);
             if (cVar1) {
               if (isLocal) {

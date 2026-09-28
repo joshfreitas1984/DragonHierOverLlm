@@ -1,18 +1,18 @@
 // ============================================================
 // Type  : FreeTradeUIType
-// Token : 0x200028C
+// Token : 0x2000292
 // ============================================================
 
 public class FreeTradeUIType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40013ED
+    // Token: 0x400149E
     public int value__;
 
-    // Token: 0x40013EE
+    // Token: 0x400149F
     public const FreeTradeUIType Normal;
 
-    // Token: 0x40013EF
+    // Token: 0x40014A0
     public const FreeTradeUIType Leader;
 
 }

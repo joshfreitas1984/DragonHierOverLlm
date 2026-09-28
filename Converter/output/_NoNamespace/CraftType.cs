@@ -1,21 +1,21 @@
 // ============================================================
 // Type  : CraftType
-// Token : 0x2000251
+// Token : 0x2000257
 // ============================================================
 
 public class CraftType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001214
+    // Token: 0x40012B7
     public int value__;
 
-    // Token: 0x4001215
+    // Token: 0x40012B8
     public const CraftType Equipment;
 
-    // Token: 0x4001216
+    // Token: 0x40012B9
     public const CraftType Med;
 
-    // Token: 0x4001217
+    // Token: 0x40012BA
     public const CraftType Food;
 
 }

@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : PointConnection
-// Token : 0x2000382
+// Token : 0x2000389
 // ============================================================
 
 public class PointConnection
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001BEA
+    // Token: 0x4001CEF
     public int pointID;
 
-    // Token: 0x4001BEB
+    // Token: 0x4001CF0
     public int nextPoint;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002203
-    // RVA   : 0x248060   Offset: 0x246860   Length: 0x34
+    // Token : 0x6002285
+    // RVA   : 0x248060   Offset: 0x247460   Length: 0x34
     public void /*ctor*/(int _pointID, int _nextPoint)
     {
         ZhSegment.Initialize(this,0);

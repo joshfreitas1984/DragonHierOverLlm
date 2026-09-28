@@ -1,27 +1,27 @@
 // ============================================================
 // Type  : ShakeStrengthType
-// Token : 0x2000348
+// Token : 0x200034F
 // ============================================================
 
 public class ShakeStrengthType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001A5E
+    // Token: 0x4001B5F
     public int value__;
 
-    // Token: 0x4001A5F
+    // Token: 0x4001B60
     public const ShakeStrengthType None;
 
-    // Token: 0x4001A60
+    // Token: 0x4001B61
     public const ShakeStrengthType Min;
 
-    // Token: 0x4001A61
+    // Token: 0x4001B62
     public const ShakeStrengthType Small;
 
-    // Token: 0x4001A62
+    // Token: 0x4001B63
     public const ShakeStrengthType Middle;
 
-    // Token: 0x4001A63
+    // Token: 0x4001B64
     public const ShakeStrengthType Big;
 
 }

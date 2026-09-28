@@ -1,13 +1,13 @@
 // ============================================================
 // Type  : GetTouchDelegate
-// Token : 0x20000E0
+// Token : 0x20000E1
 // ============================================================
 
 public class GetTouchDelegate
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000736
-    // RVA   : 0x210320   Offset: 0x20EB20   Length: 0x6A
+    // Token : 0x600074E
+    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
@@ -25,8 +25,8 @@ public class GetTouchDelegate
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x6000737
-    // RVA   : 0xB06700   Offset: 0xB04F00   Length: 0x2CF
+    // Token : 0x600074F
+    // RVA   : 0x8E5C20   Offset: 0x8E5020   Length: 0x2CF
     public virtual MouseOrTouch Invoke(int id, bool createIfMissing)
     {
         long lVar1;
@@ -65,7 +65,7 @@ public class GetTouchDelegate
           if (!cVar4) {
             if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                 ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-            goto LAB_180b0698a;
+            goto LAB_1808e5eaa;
             cVar4 = il2cpp_internal(lVar1);
             if (!cVar4) {
               cVar4 = FUN_1800d65c0(lVar1);
@@ -88,7 +88,7 @@ public class GetTouchDelegate
                                      *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar10 * 16))
                                 * 16 + 0x138 + lVar6);
                       uVar5 = (*(code *)*puVar7)(plVar3,id,createIfMissing,puVar7[1]);
-                      goto LAB_180b06999;
+                      goto LAB_1808e5eb9;
                     }
                     uVar10 = uVar10 + 1;
                   } while (uVar10 < *(uint16 *)(lVar6 + 0x12a));
@@ -117,13 +117,13 @@ public class GetTouchDelegate
                               (int)((uint32)uVar10 +
                                    *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar9 * 16)) *
                               16 + 0x138 + lVar6;
-                      goto LAB_180b06858;
+                      goto LAB_1808e5d78;
                     }
                     uVar9 = uVar9 + 1;
                   } while (uVar9 < *(uint16 *)(lVar6 + 0x12a));
                 }
                 lVar6 = FUN_1800914f0(plVar3,*(int64 *)(lVar1 + 24),uVar10);
-        LAB_180b06858:
+        LAB_1808e5d78:
                 puVar7 = (uint64 *)il2cpp_internal(*(uint64 *)(lVar6 + 8),lVar1);
                 uVar5 = (*(code *)*puVar7)(plVar3,id,createIfMissing,puVar7);
               }
@@ -133,10 +133,10 @@ public class GetTouchDelegate
             uVar5 = (*pcVar2)(id,createIfMissing,lVar1);
           }
           else {
-        LAB_180b0698a:
+        LAB_1808e5eaa:
             uVar5 = (*pcVar2)(plVar3,id,createIfMissing,lVar1);
           }
-        LAB_180b06999:
+        LAB_1808e5eb9:
           uVar13 = uVar13 + 1;
           if (uVar12 <= uVar13) {
             return uVar5;
@@ -144,8 +144,8 @@ public class GetTouchDelegate
         } while( true );
     }
 
-    // Token : 0x6000738
-    // RVA   : 0xB06660   Offset: 0xB04E60   Length: 0x96
+    // Token : 0x6000750
+    // RVA   : 0x8E5B80   Offset: 0x8E4F80   Length: 0x96
     public virtual IAsyncResult BeginInvoke(int id, bool createIfMissing, AsyncCallback callback, object object)
     {
         void GetTouchDelegate.BeginInvoke
@@ -160,13 +160,13 @@ public class GetTouchDelegate
         local_res10[0] = id;
         local_res18[0] = createIfMissing;
         local_18 = 0;
-        local_28 = il2cpp_value_box(DAT_181d5b2f8,local_res10);
-        local_20 = il2cpp_value_box(DAT_181d8d920,local_res18);
+        local_28 = il2cpp_value_box(DAT_181d80418,local_res10);
+        local_20 = il2cpp_value_box(DAT_181db2ac8,local_res18);
         il2cpp_internal(this,&local_28,callback,object);
     }
 
-    // Token : 0x6000739
-    // RVA   : 0x210040   Offset: 0x20E840   Length: 0xA
+    // Token : 0x6000751
+    // RVA   : 0x210040   Offset: 0x20F440   Length: 0xA
     public virtual MouseOrTouch EndInvoke(IAsyncResult result)
     {
         il2cpp_internal(result,0);

@@ -1,63 +1,63 @@
 // ============================================================
 // Type  : InvDatabase
-// Token : 0x200000D
+// Token : 0x200000E
 // ============================================================
 
 public class InvDatabase
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400003B
+    // Token: 0x4000057
     private static InvDatabase[] mList;
 
-    // Token: 0x400003C
+    // Token: 0x4000058
     private static bool mIsDirty;
 
-    // Token: 0x400003D
+    // Token: 0x4000059
     public int databaseID;
 
-    // Token: 0x400003E
+    // Token: 0x400005A
     public List<InvBaseItem> items;
 
-    // Token: 0x400003F
+    // Token: 0x400005B
     public object iconAtlas;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000027
-    // RVA   : 0xB71EC0   Offset: 0xB706C0   Length: 0x119
+    // Token : 0x600003F
+    // RVA   : 0xC9BE20   Offset: 0xC9B220   Length: 0x119
     public static InvDatabase[] get_list()
     {
+        var pStatics = *(int64*)(DAT_181d81518 + 184);
         ulong uVar2;
-        if (InvDatabase.mIsDirty) {
-          InvDatabase.mIsDirty = 0;
-          uVar2 = NGUITools.FindActive(DAT_181d66380);
-          puVar1 = *(uint64 **)(InvDatabase_StaticsPtr + 184);
+        if (*(char *)(pStatics + 8) != false) {
+          *(uint8 *)(pStatics + 8) = 0;
+          uVar2 = NGUITools.FindActive(DAT_181d8f0a0);
+          puVar1 = *(uint64 **)(DAT_181d81518 + 184);
           *puVar1 = uVar2;
           il2cpp_internal(puVar1,uVar2);
         }
-        if (((*(byte *)(InvDatabase_StaticsPtr + 0x133) & 4) != 0) &&
-           (*(int *)(InvDatabase_StaticsPtr + 224) == 0)) {
+        if (((*(byte *)(DAT_181d81518 + 0x133) & 4) != 0) && (*(int *)(DAT_181d81518 + 224) == 0)) {
           il2cpp_runtime_class_init();
-          return InvDatabase.mList;
+          return **(uint64 **)(DAT_181d81518 + 184);
         }
-        return InvDatabase.mList;
+        return **(uint64 **)(DAT_181d81518 + 184);
     }
 
-    // Token : 0x6000028
-    // RVA   : 0xB71DA0   Offset: 0xB705A0   Length: 0x58
+    // Token : 0x6000040
+    // RVA   : 0xC9BD00   Offset: 0xC9B100   Length: 0x58
     private void OnEnable()
     {
-        InvDatabase.mIsDirty = 1;
+        *(uint8 *)(*(int64 *)(DAT_181d81518 + 184) + 8) = 1;
     }
 
-    // Token : 0x6000029
-    // RVA   : 0xB71D40   Offset: 0xB70540   Length: 0x58
+    // Token : 0x6000041
+    // RVA   : 0xC9BCA0   Offset: 0xC9B0A0   Length: 0x58
     private void OnDisable()
     {
-        InvDatabase.mIsDirty = 1;
+        *(uint8 *)(*(int64 *)(DAT_181d81518 + 184) + 8) = 1;
     }
 
-    // Token : 0x600002A
-    // RVA   : 0xB71C70   Offset: 0xB70470   Length: 0xC1
+    // Token : 0x6000042
+    // RVA   : 0xC9BBD0   Offset: 0xC9AFD0   Length: 0xC1
     private InvBaseItem GetItem(int id16)
     {
         long lVar1;
@@ -67,7 +67,7 @@ public class InvDatabase
         long lVar5;
         uVar3 = 0;
         if (this.items == null) {
-        LAB_180b71d2c:
+        LAB_180c9bc8c:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -77,12 +77,12 @@ public class InvDatabase
           uVar4 = uVar3;
           do {
             lVar1 = this.items;
-            if (lVar1 == null) goto LAB_180b71d2c;
+            if (lVar1 == null) goto LAB_180c9bc8c;
             if (lVar1.Count <= (uint32)uVar4) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar1 = *(int64 *)(lVar5 + lVar1._items);
-            if (lVar1 == null) goto LAB_180b71d2c;
+            if (lVar1 == null) goto LAB_180c9bc8c;
             if (lVar1._items == id16) {
               return lVar1;
             }
@@ -94,8 +94,8 @@ public class InvDatabase
         return 0;
     }
 
-    // Token : 0x600002B
-    // RVA   : 0xB71BA0   Offset: 0xB703A0   Length: 0xCE
+    // Token : 0x6000043
+    // RVA   : 0xC9BB00   Offset: 0xC9AF00   Length: 0xCE
     private static InvDatabase GetDatabase(int dbID)
     {
         int iVar1;
@@ -105,7 +105,7 @@ public class InvDatabase
         uVar4 = 0;
         lVar2 = InvDatabase.get_list(0);
         if (lVar2 == null) {
-        LAB_180b71c59:
+        LAB_180c9bbb9:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -113,14 +113,14 @@ public class InvDatabase
         if (0 < iVar1) {
           do {
             lVar2 = InvDatabase.get_list(0);
-            if (lVar2 == null) goto LAB_180b71c59;
+            if (lVar2 == null) goto LAB_180c9bbb9;
             if (*(uint32 *)(lVar2 + 24) <= uVar4) {
               uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
               FUN_1800d65f0(uVar3,0);
             }
             lVar2 = lVar2[uVar4];
-            if (lVar2 == null) goto LAB_180b71c59;
+            if (lVar2 == null) goto LAB_180c9bbb9;
             if (*(int *)(lVar2 + 24) == dbID) {
               return lVar2;
             }
@@ -130,8 +130,8 @@ public class InvDatabase
         return 0;
     }
 
-    // Token : 0x600002C
-    // RVA   : 0xB716D0   Offset: 0xB6FED0   Length: 0x228
+    // Token : 0x6000044
+    // RVA   : 0xC9B630   Offset: 0xC9AA30   Length: 0x228
     public static InvBaseItem FindByID(int id32)
     {
         int iVar1;
@@ -198,8 +198,8 @@ public class InvDatabase
         }
     }
 
-    // Token : 0x600002D
-    // RVA   : 0xB71900   Offset: 0xB70100   Length: 0x179
+    // Token : 0x6000045
+    // RVA   : 0xC9B860   Offset: 0xC9AC60   Length: 0x179
     public static InvBaseItem FindByName(string exact)
     {
         int iVar1;
@@ -213,7 +213,7 @@ public class InvDatabase
         uVar8 = 0;
         lVar4 = InvDatabase.get_list(0);
         if (lVar4 == null) {
-        LAB_180b71a64:
+        LAB_180c9b9c4:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -221,7 +221,7 @@ public class InvDatabase
         if (0 < iVar1) {
           do {
             lVar4 = InvDatabase.get_list(0);
-            if (lVar4 == null) goto LAB_180b71a64;
+            if (lVar4 == null) goto LAB_180c9b9c4;
             if (*(uint32 *)(lVar4 + 24) <= uVar8) {
               uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -229,14 +229,14 @@ public class InvDatabase
             }
             iVar7 = 0;
             lVar4 = lVar4[uVar8];
-            if ((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) goto LAB_180b71a64;
+            if ((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) goto LAB_180c9b9c4;
             iVar2 = *(int *)(*(int64 *)(lVar4 + 32) + 24);
             if (0 < iVar2) {
               do {
                 if ((*(int64 *)(lVar4 + 32) == 0) ||
-                   (lVar5 = FUN_180002f80(*(int64 *)(lVar4 + 32),iVar7,DAT_181d68c70)) == null)
-                goto LAB_180b71a64;
-                cVar3 = FUN_1816fd990(*(uint64 *)(lVar5 + 24),exact,0);
+                   (lVar5 = FUN_180002f80(*(int64 *)(lVar4 + 32),iVar7,DAT_181d90418)) == null)
+                goto LAB_180c9b9c4;
+                cVar3 = FUN_18171e540(*(uint64 *)(lVar5 + 24),exact,0);
                 if (cVar3) {
                   return lVar5;
                 }
@@ -249,8 +249,8 @@ public class InvDatabase
         return 0;
     }
 
-    // Token : 0x600002E
-    // RVA   : 0xB71A80   Offset: 0xB70280   Length: 0x11D
+    // Token : 0x6000046
+    // RVA   : 0xC9B9E0   Offset: 0xC9ADE0   Length: 0x11D
     public static int FindItemID(InvBaseItem item)
     {
         int iVar1;
@@ -261,7 +261,7 @@ public class InvDatabase
         uVar5 = 0;
         lVar3 = InvDatabase.get_list(0);
         if (lVar3 == null) {
-        LAB_180b71b88:
+        LAB_180c9bae8:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -269,20 +269,20 @@ public class InvDatabase
         if (0 < iVar1) {
           do {
             lVar3 = InvDatabase.get_list(0);
-            if (lVar3 == null) goto LAB_180b71b88;
+            if (lVar3 == null) goto LAB_180c9bae8;
             if (*(uint32 *)(lVar3 + 24) <= uVar5) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
               FUN_1800d65f0(uVar4,0);
             }
             lVar3 = lVar3[uVar5];
-            if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) goto LAB_180b71b88;
-            cVar2 = FUN_1818279a0(*(int64 *)(lVar3 + 32),item,DAT_181d68b70);
+            if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) goto LAB_180c9bae8;
+            cVar2 = FUN_18181e400(*(int64 *)(lVar3 + 32),item,DAT_181d90318);
             if (cVar2) {
               if (item != null) {
                 return *(int *)(lVar3 + 24) << 16 | *(uint32 *)(item + 16);
               }
-              goto LAB_180b71b88;
+              goto LAB_180c9bae8;
             }
             uVar5 = uVar5 + 1;
           } while ((int)uVar5 < iVar1);
@@ -290,22 +290,22 @@ public class InvDatabase
         return 0xffffffff;
     }
 
-    // Token : 0x600002F
-    // RVA   : 0xB71E40   Offset: 0xB70640   Length: 0x76
+    // Token : 0x6000047
+    // RVA   : 0xC9BDA0   Offset: 0xC9B1A0   Length: 0x76
     public void /*ctor*/()
     {
         ulong uVar1;
-        uVar1 = il2cpp_internal(DAT_181d6f2b0);
-        FUN_180f58a90(uVar1,DAT_181d68af0);
+        uVar1 = il2cpp_internal(DAT_181d93f50);
+        FUN_18132faf0(uVar1,DAT_181d90298);
         this.items = uVar1;
         FUN_18044ef50(this,0);
     }
 
-    // Token : 0x6000030
-    // RVA   : 0xB71E00   Offset: 0xB70600   Length: 0x37
+    // Token : 0x6000048
+    // RVA   : 0xC9BD60   Offset: 0xC9B160   Length: 0x37
     private static void /*cctor*/()
     {
-        InvDatabase.mIsDirty = 1;
+        *(uint8 *)(*(int64 *)(DAT_181d81518 + 184) + 8) = 1;
     }
 
 }

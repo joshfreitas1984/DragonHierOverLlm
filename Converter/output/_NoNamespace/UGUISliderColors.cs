@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : UGUISliderColors
-// Token : 0x20003A3
+// Token : 0x20003AA
 // ============================================================
 
 public class UGUISliderColors
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001CC8
+    // Token: 0x4001DCD
     public Image image;
 
-    // Token: 0x4001CC9
+    // Token: 0x4001DCE
     public Color[] colors;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60022DD
-    // RVA   : 0xA74F10   Offset: 0xA73710   Length: 0xE6
+    // Token : 0x600235F
+    // RVA   : 0xAEEBE0   Offset: 0xAEDFE0   Length: 0xE6
     private void Start()
     {
         bool cVar1;
@@ -22,18 +22,18 @@ public class UGUISliderColors
         uVar2 = this.image;
         cVar1 = Object.op_Equality(uVar2,0,0);
         if (cVar1) {
-          uVar2 = Component.GetComponent(this,DAT_181d6bc40);
+          uVar2 = Component.GetComponent(this,DAT_181d94460);
           cVar1 = Object.op_Inequality(uVar2,0,0);
           if (cVar1) {
-            uVar2 = Component.GetComponent(this,DAT_181d6bc40);
+            uVar2 = Component.GetComponent(this,DAT_181d94460);
             this.image = uVar2;
           }
         }
         UGUISliderColors.Update(this,0);
     }
 
-    // Token : 0x60022DE
-    // RVA   : 0xA75000   Offset: 0xA73800   Length: 0x22E
+    // Token : 0x6002360
+    // RVA   : 0xAEECD0   Offset: 0xAEE0D0   Length: 0x22E
     private void Update()
     {
         float fVar1;
@@ -138,8 +138,8 @@ public class UGUISliderColors
         }
     }
 
-    // Token : 0x60022DF
-    // RVA   : 0xA75230   Offset: 0xA73A30   Length: 0xE5
+    // Token : 0x6002361
+    // RVA   : 0xAEEF00   Offset: 0xAEE300   Length: 0xE5
     public void /*ctor*/()
     {
         uint uVar1;
@@ -148,7 +148,7 @@ public class UGUISliderColors
         long lVar4;
         ulong uVar6;
         byte[] local_18 = new byte[16];
-        lVar4 = FUN_1800d60b0(DAT_181d7c218,3);
+        lVar4 = FUN_1800d60b0(DAT_181da1140,3);
         puVar5 = (uint32 *)Color.get_red(local_18,0);
         if (lVar4 == null) {
                           // WARNING: Subroutine does not return

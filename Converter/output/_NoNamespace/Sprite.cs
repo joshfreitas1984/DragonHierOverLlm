@@ -1,44 +1,44 @@
 // ============================================================
 // Type  : Sprite
-// Token : 0x200010E
+// Token : 0x200010F
 // ============================================================
 
 public class Sprite
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40006B4
+    // Token: 0x40006D0
     public UISpriteData sprite;
 
-    // Token: 0x40006B5
+    // Token: 0x40006D1
     public Vector2 pos;
 
-    // Token: 0x40006B6
+    // Token: 0x40006D2
     public float rot;
 
-    // Token: 0x40006B7
+    // Token: 0x40006D3
     public float width;
 
-    // Token: 0x40006B8
+    // Token: 0x40006D4
     public float height;
 
-    // Token: 0x40006B9
+    // Token: 0x40006D5
     public Color32 color;
 
-    // Token: 0x40006BA
+    // Token: 0x40006D6
     public Vector2 pivot;
 
-    // Token: 0x40006BB
+    // Token: 0x40006D7
     public Type type;
 
-    // Token: 0x40006BC
+    // Token: 0x40006D8
     public Flip flip;
 
-    // Token: 0x40006BD
+    // Token: 0x40006D9
     public bool enabled;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000935
-    // RVA   : 0xB09EC0   Offset: 0xB086C0   Length: 0x25C
+    // Token : 0x600094D
+    // RVA   : 0x183DE80   Offset: 0x183D280   Length: 0x25C
     public Vector4 GetDrawingDimensions(float pixelSize)
     {
         int iVar1;
@@ -63,7 +63,7 @@ public class Sprite
         }
         *this = 0;
         this[1] = 0;
-        FUN_1809981e0(this);
+        FUN_1809dc910(this);
         return this;
     }
 

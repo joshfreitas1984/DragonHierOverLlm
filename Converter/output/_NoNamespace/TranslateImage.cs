@@ -1,103 +1,89 @@
 // ============================================================
 // Type  : TranslateImage
-// Token : 0x200039E
+// Token : 0x20003A5
 // ============================================================
 
 public class TranslateImage
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001CA9
+    // Token: 0x4001DAE
     public List<Sprite> targetSprite;
 
-    // Token: 0x4001CAA
+    // Token: 0x4001DAF
     private bool inited;
 
-    // Token: 0x4001CAB
-    private string nowLanguage;
+    // Token: 0x4001DB0
+    private int nowLanguageVersion;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600228F
-    // RVA   : 0x245810   Offset: 0x244010   Length: 0x3
+    // Token : 0x6002311
+    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
     private void Start()
     {
     }
 
-    // Token : 0x6002290
-    // RVA   : 0xA654C0   Offset: 0xA63CC0   Length: 0x1A9
+    // Token : 0x6002312
+    // RVA   : 0xADF0F0   Offset: 0xADE4F0   Length: 0x1A5
     private void Update()
     {
-        long lVar1;
+        var pStatics = *(int64*)(DAT_181d84898 + 184);
+        int iVar1;
         bool cVar2;
         ulong uVar3;
-        ulong uVar4;
         uint[] local_res18 = new uint[4];
         local_res18[0] = SceneManager.GetActiveScene(0);
         uVar3 = Scene.get_name(local_res18,0);
         cVar2 = String.op_Inequality(uVar3,"TitleScene",0);
         if (!cVar2) {
-          uVar3 = this.nowLanguage;
-          lVar1 = GameController.difficultyExtraPoint;
-          if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 16)) == null) {
-        LAB_180a65664:
-                          // WARNING: Subroutine does not return
-            FUN_1800d6620();
-          }
-          uVar4 = PlayerPrefDictionary.GetString(lVar1,"Language",0);
-          cVar2 = String.op_Inequality(uVar3,uVar4,0);
-          if (cVar2) {
-            lVar1 = GameController.difficultyExtraPoint;
-            if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 16)) == null) goto LAB_180a65664;
-            uVar3 = PlayerPrefDictionary.GetString(lVar1,"Language",0);
-            this.nowLanguage = uVar3;
+          iVar1 = this.nowLanguageVersion;
+          if (iVar1 != *(int *)(pStatics + 8)) {
+            this.nowLanguageVersion = *(uint32 *)(pStatics + 8);
             TranslateImage.AutoTranslateImage(this,0);
+            return;
           }
         }
         else if (!this.inited) {
           this.inited = 1;
           TranslateImage.AutoTranslateImage(this,0);
-          return;
         }
     }
 
-    // Token : 0x6002291
-    // RVA   : 0xA65340   Offset: 0xA63B40   Length: 0x170
+    // Token : 0x6002313
+    // RVA   : 0xADEFD0   Offset: 0xADE3D0   Length: 0x116
     private void AutoTranslateImage()
     {
         long lVar1;
-        long lVar2;
-        bool cVar3;
-        ulong uVar4;
-        long lVar5;
-        uVar4 = Component.GetComponent(this,DAT_181d6bc40);
-        cVar3 = Object.op_Inequality(uVar4,0,0);
-        if (!cVar3) {
+        bool cVar2;
+        ulong uVar3;
+        long lVar4;
+        uVar3 = Component.GetComponent(this,DAT_181d94460);
+        cVar2 = Object.op_Inequality(uVar3,0,0);
+        if (!cVar2) {
           return;
         }
-        lVar5 = Component.GetComponent(this,DAT_181d6bc40);
+        lVar4 = Component.GetComponent(this,DAT_181d94460);
         lVar1 = this.targetSprite;
-        lVar2 = GameController.difficultyExtraPoint;
-        if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 16)) != null) {
-          uVar4 = PlayerPrefDictionary.GetString(lVar2,"Language",0);
-          cVar3 = FUN_1816fd990(uVar4,"CN",0);
-          if (lVar1 != null) {
-            if (lVar1.Count <= (uint32)(!cVar3)) {
-              ThrowHelper.ThrowArgumentOutOfRangeException(0);
-            }
-            if (lVar5 != null) {
-              Image.set_sprite(lVar5,*(uint64 *)
-                                       (lVar1._items + 32 +
-                                       (uint64)(!cVar3) * 8),0);
-              return;
-            }
+        cVar2 = LTLocalization.get_IsChinese(0);
+        if (lVar1 != null) {
+          if (lVar1.Count <= (uint32)(!cVar2)) {
+            ThrowHelper.ThrowArgumentOutOfRangeException(0);
+          }
+          if (lVar4 != null) {
+            Image.set_sprite(lVar4,*(uint64 *)
+                                     (lVar1._items + 32 + (uint64)(!cVar2) * 8)
+                              ,0);
+            return;
           }
         }
     }
 
-    // Token : 0x6002292
-    // RVA   : 0xA65670   Offset: 0xA63E70   Length: 0x47
+    // Token : 0x6002314
+    // RVA   : 0xADF2A0   Offset: 0xADE6A0   Length: 0xE
     public void /*ctor*/()
     {
-        this.nowLanguage = "CN";
+        void FUN_180adf2a0(int64 this)
+        {
+        this.nowLanguageVersion = 0xffffffff;
         FUN_18044ef50(this,0);
     }
 

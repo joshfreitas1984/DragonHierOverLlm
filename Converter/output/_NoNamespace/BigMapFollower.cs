@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : BigMapFollower
-// Token : 0x2000194
+// Token : 0x200019A
 // ============================================================
 
 public class BigMapFollower
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000AA2
+    // Token: 0x4000B29
     public GameObject followerGameobj;
 
-    // Token: 0x4000AA3
+    // Token: 0x4000B2A
     public float range;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000CFC
-    // RVA   : 0xA1A590   Offset: 0xA18D90   Length: 0x43
+    // Token : 0x6000D2B
+    // RVA   : 0xA2C180   Offset: 0xA2B580   Length: 0x43
     public void /*ctor*/(GameObject _targetObj, float _range)
     {
         ZhSegment.Initialize(this,0);

@@ -1,61 +1,60 @@
 // ============================================================
 // Type  : <>c
-// Token : 0x200042A
+// Token : 0x2000431
 // ============================================================
 
 public class <>c
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001FB3
+    // Token: 0x40020BD
     public static readonly <>c <>9;
 
-    // Token: 0x4001FB4
+    // Token: 0x40020BE
     public static Action<IList<string>, Dictionary<string, string>> <>9__66_0;
 
-    // Token: 0x4001FB5
+    // Token: 0x40020BF
     public static Action<IList<string>, Dictionary<string, string>> <>9__67_0;
 
-    // Token: 0x4001FB6
+    // Token: 0x40020C0
     public static Func<string, string> <>9__68_0;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600259F
-    // RVA   : 0xB15FF0   Offset: 0xB147F0   Length: 0x59
+    // Token : 0x6002622
+    // RVA   : 0x1843A20   Offset: 0x1842E20   Length: 0x59
     private static void /*cctor*/()
     {
         ulong uVar2;
-        uVar2 = il2cpp_internal(ZhDictionary_StaticsPtr);
-        ZhSegment.Initialize(uVar2,0);
-        puVar1 = *(uint64 **)(ZhDictionary_StaticsPtr + 184);
+        uVar2 = new ZhSegment(0);
+        puVar1 = *(uint64 **)(DAT_181d93628 + 184);
         *puVar1 = uVar2;
         il2cpp_internal(puVar1,uVar2);
     }
 
-    // Token : 0x60025A0
-    // RVA   : 0x210B70   Offset: 0x20F370   Length: 0x7
+    // Token : 0x6002623
+    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);
     }
 
-    // Token : 0x60025A1
-    // RVA   : 0xB154C0   Offset: 0xB13CC0   Length: 0x9C
+    // Token : 0x6002624
+    // RVA   : 0x18437F0   Offset: 0x1842BF0   Length: 0x9C
     internal void <LoadDictionary>b__66_0(IList<string> items, Dictionary<string, string> dictionary)
     {
         ulong uVar1;
         ulong uVar2;
         if (items != null) {
-          uVar1 = FUN_180002a00(0,DAT_181d6a138,items,0);
-          uVar2 = FUN_180002a00(0,DAT_181d6a138,items,1);
+          uVar1 = FUN_180002a00(0,DAT_181d8ece0,items,0);
+          uVar2 = FUN_180002a00(0,DAT_181d8ece0,items,1);
           if (dictionary != null) {
-            FUN_1808aec90(dictionary,uVar1,uVar2,DAT_181d4fbd8);
+            FUN_1808b2160(dictionary,uVar1,uVar2,DAT_181d75e90);
             return;
           }
         }
     }
 
-    // Token : 0x60025A2
-    // RVA   : 0xB152A0   Offset: 0xB13AA0   Length: 0x215
+    // Token : 0x6002625
+    // RVA   : 0x18435D0   Offset: 0x18429D0   Length: 0x215
     internal void <LoadDictionaryReversed>b__67_0(IList<string> items, Dictionary<string, string> dictionary)
     {
         long lVar1;
@@ -72,18 +71,18 @@ public class <>c
             if (*(uint16 *)(lVar1 + 0x12a) != 0) {
               uVar7 = 0;
               do {
-                if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar7 * 16) == DAT_181d67040)
+                if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar7 * 16) == DAT_181d8bbe0)
                 {
                   puVar3 = (uint64 *)
                            ((int64)*(int *)(*(int64 *)(lVar1 + 176) + 8 + (uint64)uVar7 * 16)
                             * 16 + 0x138 + lVar1);
-                  goto LAB_180b1535c;
+                  goto LAB_18184368c;
                 }
                 uVar7 = uVar7 + 1;
               } while (uVar7 < *(uint16 *)(lVar1 + 0x12a));
             }
-            puVar3 = (uint64 *)FUN_1800914f0(items,DAT_181d67040,0);
-        LAB_180b1535c:
+            puVar3 = (uint64 *)FUN_1800914f0(items,DAT_181d8bbe0,0);
+        LAB_18184368c:
             iVar2 = (*(code *)*puVar3)(items,puVar3[1]);
             if (iVar2 <= iVar8) {
               return;
@@ -92,52 +91,52 @@ public class <>c
             uVar4 = 0;
             if (*(uint16 *)(lVar1 + 0x12a) != 0) {
               do {
-                if (*(int64 *)(*(int64 *)(lVar1 + 176) + uVar4 * 16) == DAT_181d6a138) {
+                if (*(int64 *)(*(int64 *)(lVar1 + 176) + uVar4 * 16) == DAT_181d8ece0) {
                   puVar3 = (uint64 *)
                            ((int64)*(int *)(*(int64 *)(lVar1 + 176) + 8 + uVar4 * 16) * 16 +
                             0x138 + lVar1);
-                  goto LAB_180b153b9;
+                  goto LAB_1818436e9;
                 }
                 uVar7 = (short)uVar4 + 1;
                 uVar4 = (uint64)uVar7;
               } while (uVar7 < *(uint16 *)(lVar1 + 0x12a));
             }
-            puVar3 = (uint64 *)FUN_1800914f0(items,DAT_181d6a138,0);
-        LAB_180b153b9:
+            puVar3 = (uint64 *)FUN_1800914f0(items,DAT_181d8ece0,0);
+        LAB_1818436e9:
             uVar5 = (*(code *)*puVar3)(items,iVar8,puVar3[1]);
             lVar1 = *items;
             uVar4 = 0;
             if (*(uint16 *)(lVar1 + 0x12a) != 0) {
               do {
-                if (*(int64 *)(*(int64 *)(lVar1 + 176) + uVar4 * 16) == DAT_181d6a138) {
+                if (*(int64 *)(*(int64 *)(lVar1 + 176) + uVar4 * 16) == DAT_181d8ece0) {
                   puVar3 = (uint64 *)
                            ((int64)*(int *)(*(int64 *)(lVar1 + 176) + 8 + uVar4 * 16) * 16 +
                             0x138 + lVar1);
-                  goto LAB_180b15419;
+                  goto LAB_181843749;
                 }
                 uVar7 = (short)uVar4 + 1;
                 uVar4 = (uint64)uVar7;
               } while (uVar7 < *(uint16 *)(lVar1 + 0x12a));
             }
-            puVar3 = (uint64 *)FUN_1800914f0(items,DAT_181d6a138,0);
-        LAB_180b15419:
+            puVar3 = (uint64 *)FUN_1800914f0(items,DAT_181d8ece0,0);
+        LAB_181843749:
             uVar6 = (*(code *)*puVar3)(items,0,puVar3[1]);
             if (dictionary == null) break;
-            FUN_1808aec90(dictionary,uVar5,uVar6,DAT_181d4fbd8);
+            FUN_1808b2160(dictionary,uVar5,uVar6,DAT_181d75e90);
             iVar8 = iVar8 + 1;
           } while( true );
         }
     }
 
-    // Token : 0x60025A3
-    // RVA   : 0xB151E0   Offset: 0xB139E0   Length: 0xB4
+    // Token : 0x6002626
+    // RVA   : 0x1843510   Offset: 0x1842910   Length: 0xB4
     internal string <LoadDictionaryInternal>b__68_0(string name)
     {
         ulong uVar1;
         ulong uVar2;
         ulong uVar3;
         uVar2 = Application.get_streamingAssetsPath(0);
-        uVar1 = ZhDictionary._dictionaryDirectory;
+        uVar1 = **(uint64 **)(DAT_181d918b0 + 184);
         uVar3 = String.Concat(name,".txt",0);
         Path.Combine(uVar2,uVar1,uVar3,0);
     }

@@ -1,33 +1,33 @@
 // ============================================================
 // Type  : ItemListInteractType
-// Token : 0x20002EA
+// Token : 0x20002F0
 // ============================================================
 
 public class ItemListInteractType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001779
+    // Token: 0x400184C
     public int value__;
 
-    // Token: 0x400177A
+    // Token: 0x400184D
     public const ItemListInteractType None;
 
-    // Token: 0x400177B
+    // Token: 0x400184E
     public const ItemListInteractType Player;
 
-    // Token: 0x400177C
+    // Token: 0x400184F
     public const ItemListInteractType Show;
 
-    // Token: 0x400177D
+    // Token: 0x4001850
     public const ItemListInteractType TradeLeft;
 
-    // Token: 0x400177E
+    // Token: 0x4001851
     public const ItemListInteractType TradeLeftOut;
 
-    // Token: 0x400177F
+    // Token: 0x4001852
     public const ItemListInteractType TradeRight;
 
-    // Token: 0x4001780
+    // Token: 0x4001853
     public const ItemListInteractType TradeRightOut;
 
 }

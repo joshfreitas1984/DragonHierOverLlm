@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : TweenVolume
-// Token : 0x20000C4
+// Token : 0x20000C5
 // ============================================================
 
 public class TweenVolume
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400049B
+    // Token: 0x40004B7
     public float from;
 
-    // Token: 0x400049C
+    // Token: 0x40004B8
     public float to;
 
-    // Token: 0x400049D
+    // Token: 0x40004B9
     private AudioSource mSource;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60005EE
-    // RVA   : 0xA73B30   Offset: 0xA72330   Length: 0x181
+    // Token : 0x6000606
+    // RVA   : 0xAED800   Offset: 0xAECC00   Length: 0x181
     public AudioSource get_audioSource()
     {
         bool cVar2;
@@ -25,13 +25,13 @@ public class TweenVolume
         uVar3 = this.mSource;
         cVar2 = Object.op_Equality(uVar3,0,0);
         if (cVar2) {
-          uVar3 = Component.GetComponent(this,DAT_181d6ab40);
+          uVar3 = Component.GetComponent(this,DAT_181d93360);
           *puVar1 = uVar3;
           il2cpp_internal(puVar1,uVar3);
           uVar3 = *puVar1;
           cVar2 = Object.op_Equality(uVar3,0,0);
           if (cVar2) {
-            uVar3 = Component.GetComponent(this,DAT_181d6ab40);
+            uVar3 = Component.GetComponent(this,DAT_181d93360);
             *puVar1 = uVar3;
             il2cpp_internal(puVar1,uVar3);
             uVar3 = *puVar1;
@@ -45,22 +45,26 @@ public class TweenVolume
         return *puVar1;
     }
 
-    // Token : 0x60005EF
-    // RVA   : 0xA73D60   Offset: 0xA72560   Length: 0x7
+    // Token : 0x6000607
+    // RVA   : 0xAEDA30   Offset: 0xAECE30   Length: 0x7
     public float get_volume()
     {
+        void FUN_180aeda30(uint64 this)
+        {
         TweenVolume.get_value(this,0);
     }
 
-    // Token : 0x60005F0
-    // RVA   : 0xA73E10   Offset: 0xA72610   Length: 0x8
+    // Token : 0x6000608
+    // RVA   : 0xAEDAE0   Offset: 0xAECEE0   Length: 0x8
     public void set_volume(float value)
     {
+        void FUN_180aedae0(uint64 this,uint64 value)
+        {
         TweenVolume.set_value(this,value,0);
     }
 
-    // Token : 0x60005F1
-    // RVA   : 0xA73CC0   Offset: 0xA724C0   Length: 0x95
+    // Token : 0x6000609
+    // RVA   : 0xAED990   Offset: 0xAECD90   Length: 0x95
     public float get_value()
     {
         bool cVar1;
@@ -78,8 +82,8 @@ public class TweenVolume
         return 0;
     }
 
-    // Token : 0x60005F2
-    // RVA   : 0xA73D70   Offset: 0xA72570   Length: 0x99
+    // Token : 0x600060A
+    // RVA   : 0xAEDA40   Offset: 0xAECE40   Length: 0x99
     public void set_value(float value)
     {
         ulong uVar1;
@@ -95,8 +99,8 @@ public class TweenVolume
         }
     }
 
-    // Token : 0x60005F3
-    // RVA   : 0xA73A80   Offset: 0xA72280   Length: 0x63
+    // Token : 0x600060B
+    // RVA   : 0xAED750   Offset: 0xAECB50   Length: 0x63
     protected override void OnUpdate(float factor, bool isFinished)
     {
         long lVar1;
@@ -111,14 +115,14 @@ public class TweenVolume
         }
     }
 
-    // Token : 0x60005F4
-    // RVA   : 0xA739B0   Offset: 0xA721B0   Length: 0xC7
+    // Token : 0x600060C
+    // RVA   : 0xAED680   Offset: 0xAECA80   Length: 0xC7
     public static TweenVolume Begin(GameObject go, float duration, float targetVolume)
     {
         long lVar1;
         long lVar2;
         uint uVar3;
-        lVar1 = UITweener.Begin(go,duration,0,DAT_181d9dd08);
+        lVar1 = UITweener.Begin(go,duration,0,DAT_181dc6ff8);
         if (lVar1 != null) {
           uVar3 = TweenVolume.get_value(lVar1,0);
           *(uint32 *)(lVar1 + 120) = uVar3;
@@ -133,8 +137,8 @@ public class TweenVolume
         }
     }
 
-    // Token : 0x60005F5
-    // RVA   : 0xA73B10   Offset: 0xA72310   Length: 0x1B
+    // Token : 0x600060D
+    // RVA   : 0xAED7E0   Offset: 0xAECBE0   Length: 0x1B
     public override void SetStartToCurrentValue()
     {
         uint uVar1;
@@ -142,8 +146,8 @@ public class TweenVolume
         this.from = uVar1;
     }
 
-    // Token : 0x60005F6
-    // RVA   : 0xA73AF0   Offset: 0xA722F0   Length: 0x1B
+    // Token : 0x600060E
+    // RVA   : 0xAED7C0   Offset: 0xAECBC0   Length: 0x1B
     public override void SetEndToCurrentValue()
     {
         uint uVar1;
@@ -151,10 +155,12 @@ public class TweenVolume
         this.to = uVar1;
     }
 
-    // Token : 0x60005F7
-    // RVA   : 0xA70070   Offset: 0xA6E870   Length: 0x15
+    // Token : 0x600060F
+    // RVA   : 0xAE9D50   Offset: 0xAE9150   Length: 0x15
     public void /*ctor*/()
     {
+        void FUN_180ae9d50(int64 this)
+        {
         this.from = 0x3f800000;
         this.to = 0x3f800000;
         UITweener.ctor(this,0);

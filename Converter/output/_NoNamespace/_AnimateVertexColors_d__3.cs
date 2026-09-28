@@ -1,43 +1,43 @@
 // ============================================================
 // Type  : <AnimateVertexColors>d__3
-// Token : 0x200040A
+// Token : 0x2000411
 // ============================================================
 
 public class <AnimateVertexColors>d__3
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001EFB
+    // Token: 0x4002005
     private int <>1__state;
 
-    // Token: 0x4001EFC
+    // Token: 0x4002006
     private object <>2__current;
 
-    // Token: 0x4001EFD
+    // Token: 0x4002007
     public VertexColorCycler <>4__this;
 
-    // Token: 0x4001EFE
+    // Token: 0x4002008
     private TMP_TextInfo <textInfo>5__2;
 
-    // Token: 0x4001EFF
+    // Token: 0x4002009
     private int <currentCharacter>5__3;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60024A0
-    // RVA   : 0x219070   Offset: 0x217870   Length: 0x24
+    // Token : 0x6002523
+    // RVA   : 0x219070   Offset: 0x218470   Length: 0x24
     public void /*ctor*/(int <>1__state)
     {
         ZhSegment.Initialize(this,0);
         this.<>1__state = <>1__state;
     }
 
-    // Token : 0x60024A1
-    // RVA   : 0x245810   Offset: 0x244010   Length: 0x3
+    // Token : 0x6002524
+    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
     private virtual void System.IDisposable.Dispose()
     {
     }
 
-    // Token : 0x60024A2
-    // RVA   : 0xB0F470   Offset: 0xB0DC70   Length: 0x36A
+    // Token : 0x6002525
+    // RVA   : 0x1843160   Offset: 0x1842560   Length: 0x36A
     private virtual bool MoveNext()
     {
         int iVar1;
@@ -115,16 +115,16 @@ public class <AnimateVertexColors>d__3
               lVar15 = (int64)(int)uVar3;
               lVar5 = *(int64 *)(lVar5 + 88 + (int64)(int)uVar2 * 80);
               if (*(char *)(lVar14 + 0x194 + lVar6) == false) {
-        LAB_180b0f6d7:
+        LAB_1818433c7:
                 this.<currentCharacter>5__3 = (int)(uVar13 + 1) % iVar1;
                 uVar12 = new WaitForSeconds(0x3d4ccccd,0);
                 this.<>2__current = uVar12;
                 this.<>1__state = 2;
                 return true;
               }
-              uVar8 = FUN_180d8cf10(0,255,0);
-              uVar9 = FUN_180d8cf10(0,255,0);
-              uVar10 = FUN_180d8cf10(0,255,0);
+              uVar8 = FUN_180d95a30(0,255,0);
+              uVar9 = FUN_180d95a30(0,255,0);
+              uVar10 = FUN_180d95a30(0,255,0);
               Color32.ctor(local_res8,uVar8,uVar9,uVar10,255,0);
               if (lVar5 != null) {
                 if (*(uint32 *)(lVar5 + 24) <= uVar3) {
@@ -154,7 +154,7 @@ public class <AnimateVertexColors>d__3
                 if ((lVar4 != null) && (plVar7 = *(int64 **)(lVar4 + 24), plVar7 != (int64 *)0)) {
                   (**(code **)(*plVar7 + 0x7f8))(plVar7,16,*(uint64 *)(*plVar7 + 0x800));
                   uVar13 = this.<currentCharacter>5__3;
-                  goto LAB_180b0f6d7;
+                  goto LAB_1818433c7;
                 }
               }
             }
@@ -162,27 +162,27 @@ public class <AnimateVertexColors>d__3
         }
     }
 
-    // Token : 0x60024A3
-    // RVA   : 0x20F140   Offset: 0x20D940   Length: 0x5
+    // Token : 0x6002526
+    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
     private virtual object System.Collections.Generic.IEnumerator<System.object>.get_Current()
     {
         return this.<>2__current;
     }
 
-    // Token : 0x60024A4
-    // RVA   : 0xB0F7E0   Offset: 0xB0DFE0   Length: 0x3E
+    // Token : 0x6002527
+    // RVA   : 0x18434D0   Offset: 0x18428D0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d682e8);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d8eed0);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181db8248);
     }
 
-    // Token : 0x60024A5
-    // RVA   : 0x20F140   Offset: 0x20D940   Length: 0x5
+    // Token : 0x6002528
+    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
     private virtual object System.Collections.IEnumerator.get_Current()
     {
         return this.<>2__current;

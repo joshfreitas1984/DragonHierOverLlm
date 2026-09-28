@@ -1,21 +1,21 @@
 // ============================================================
 // Type  : CraftPoisonType
-// Token : 0x200024F
+// Token : 0x2000255
 // ============================================================
 
 public class CraftPoisonType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001202
+    // Token: 0x40012A5
     public int value__;
 
-    // Token: 0x4001203
+    // Token: 0x40012A6
     public const CraftPoisonType EquipPoison;
 
-    // Token: 0x4001204
+    // Token: 0x40012A7
     public const CraftPoisonType AddPoison;
 
-    // Token: 0x4001205
+    // Token: 0x40012A8
     public const CraftPoisonType ReducePoison;
 
 }

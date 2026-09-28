@@ -1,34 +1,34 @@
 // ============================================================
 // Type  : UISlider
-// Token : 0x2000067
+// Token : 0x2000068
 // ============================================================
 
 public class UISlider
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400027D
+    // Token: 0x4000299
     private Transform foreground;
 
-    // Token: 0x400027E
+    // Token: 0x400029A
     private float rawValue;
 
-    // Token: 0x400027F
+    // Token: 0x400029B
     private Direction direction;
 
-    // Token: 0x4000280
+    // Token: 0x400029C
     protected bool mInverted;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000262
-    // RVA   : 0x168EA70   Offset: 0x168D270   Length: 0x105
+    // Token : 0x600027A
+    // RVA   : 0x1706890   Offset: 0x1705C90   Length: 0x105
     public bool get_isColliderEnabled()
     {
         long lVar1;
         bool cVar2;
-        lVar1 = Component.GetComponent(this,DAT_181d6b340);
+        lVar1 = Component.GetComponent(this,DAT_181d93b60);
         cVar2 = Object.op_Inequality(lVar1,0,0);
         if (!cVar2) {
-          lVar1 = Component.GetComponent(this,DAT_181d6b3c0);
+          lVar1 = Component.GetComponent(this,DAT_181d93be0);
           cVar2 = Object.op_Inequality(lVar1,0,0);
           if (!cVar2) {
             return;
@@ -44,35 +44,52 @@ public class UISlider
         }
     }
 
-    // Token : 0x6000263
-    // RVA   : 0x1689B50   Offset: 0x1688350   Length: 0x7
+    // Token : 0x600027B
+    // RVA   : 0x16FBF80   Offset: 0x16FB380   Length: 0x47
     public float get_sliderValue()
     {
-        UIProgressBar.get_value(this,0);
+        byte[] auVar1 = new byte[16];
+        byte[] auVar2 = new byte[16];
+        uint64 extraout_XMM0_Qb;
+        if (*(int *)(this + 100) < 2) {
+          return (uint64)(uint32)*(float *)(this + 56);
+        }
+        auVar1._0_8_ = FUN_18000d7c0((float)(*(int *)(this + 100) + -1) * *(float *)(this + 56));
+        auVar1._8_8_ = extraout_XMM0_Qb;
+        auVar2._4_12_ = auVar1._4_12_;
+        auVar2._0_4_ = (float)auVar1._0_8_ / (float)(*(int *)(this + 100) + -1);
+        return auVar2._0_8_;
     }
 
-    // Token : 0x6000264
-    // RVA   : 0x1689CE0   Offset: 0x16884E0   Length: 0x8
+    // Token : 0x600027C
+    // RVA   : 0x16FC690   Offset: 0x16FBA90   Length: 0xB
     public void set_sliderValue(float value)
     {
-        UIProgressBar.set_value(this,value,0);
+        UIProgressBar.Set(this,value,1,0);
     }
 
-    // Token : 0x6000265
-    // RVA   : 0x168EA60   Offset: 0x168D260   Length: 0x7
+    // Token : 0x600027D
+    // RVA   : 0x16FBF70   Offset: 0x16FB370   Length: 0x10
     public bool get_inverted()
     {
-        UIProgressBar.get_isInverted(this,0);
+        uint32 FUN_1816fbf70(int64 this)
+        {
+        int iVar1;
+        iVar1 = *(int *)(this + 60);
+        if (iVar1 == 1) {
+          return true;
+        }
+        return CONCAT31((int3)((uint32)iVar1 >> 8),iVar1 == 3);
     }
 
-    // Token : 0x6000266
-    // RVA   : 0x245810   Offset: 0x244010   Length: 0x3
+    // Token : 0x600027E
+    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
     public void set_inverted(bool value)
     {
     }
 
-    // Token : 0x6000267
-    // RVA   : 0x168E950   Offset: 0x168D150   Length: 0xE2
+    // Token : 0x600027F
+    // RVA   : 0x1706710   Offset: 0x1705B10   Length: 0xE2
     protected override void Upgrade()
     {
         bool cVar1;
@@ -86,7 +103,7 @@ public class UISlider
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            uVar2 = Component.GetComponent(this.foreground,DAT_181d6e7c0);
+            uVar2 = Component.GetComponent(this.foreground,DAT_181d97060);
             *(uint64 *)(this + 48) = uVar2;
           }
           if (this.direction != null) {
@@ -99,8 +116,8 @@ public class UISlider
         }
     }
 
-    // Token : 0x6000268
-    // RVA   : 0x168E460   Offset: 0x168CC60   Length: 0x4E5
+    // Token : 0x6000280
+    // RVA   : 0x1706220   Offset: 0x1705620   Length: 0x4E5
     protected override void OnStart()
     {
         ulong uVar1;
@@ -112,11 +129,11 @@ public class UISlider
         lVar3 = this;
         if (cVar2) {
           if (*(int64 *)(this + 40) == 0) throw; // [null/range check failed]
-          uVar1 = Component.GetComponent(*(int64 *)(this + 40),DAT_181d6b340);
+          uVar1 = Component.GetComponent(*(int64 *)(this + 40),DAT_181d93b60);
           cVar2 = Object.op_Inequality(uVar1,0,0);
           if (!cVar2) {
             if (*(int64 *)(this + 40) == 0) throw; // [null/range check failed]
-            uVar1 = Component.GetComponent(*(int64 *)(this + 40),DAT_181d6b3c0);
+            uVar1 = Component.GetComponent(*(int64 *)(this + 40),DAT_181d93be0);
             cVar2 = Object.op_Inequality(uVar1,0,0);
             if (!(!cVar2))
             {
@@ -129,31 +146,31 @@ public class UISlider
         lVar3 = UIEventListener.Get(uVar1,0);
         if (lVar3 != null) {
           uVar1 = *(uint64 *)(lVar3 + 64);
-          uVar4 = new OnTooltipCB(this,DAT_181d9d378,0);
+          uVar4 = new OnTooltipCB(this,DAT_181dc6668,0);
           plVar5 = (int64 *)Delegate.Combine(uVar1,uVar4,0);
           plVar7 = (int64 *)0;
           plVar6 = plVar7;
           if (plVar5 != (int64 *)0) {
-            if (*plVar5 == DAT_181d68590) {
+            if (*plVar5 == DAT_181d8d938) {
               plVar6 = plVar5;
             }
             if (plVar6 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar5,DAT_181d68590);
+              FUN_1800d6070(plVar5,DAT_181d8d938);
             }
           }
           *(int64 **)(lVar3 + 64) = plVar6;
           uVar1 = *(uint64 *)(lVar3 + 96);
-          uVar4 = new OnTooltipCB(this,DAT_181d9d268,0);
+          uVar4 = new OnTooltipCB(this,DAT_181dc6558,0);
           plVar5 = (int64 *)Delegate.Combine(uVar1,uVar4,0);
           plVar6 = plVar7;
           if (plVar5 != (int64 *)0) {
-            if (*plVar5 == DAT_181d68610) {
+            if (*plVar5 == DAT_181d8d9b8) {
               plVar6 = plVar5;
             }
             if (plVar6 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar5,DAT_181d68610);
+              FUN_1800d6070(plVar5,DAT_181d8d9b8);
             }
           }
           *(int64 **)(lVar3 + 96) = plVar6;
@@ -163,11 +180,11 @@ public class UISlider
             return;
           }
           if (*(int64 *)(this + 32) != 0) {
-            uVar1 = Component.GetComponent(*(int64 *)(this + 32),DAT_181d6b340);
+            uVar1 = Component.GetComponent(*(int64 *)(this + 32),DAT_181d93b60);
             cVar2 = Object.op_Inequality(uVar1,0,0);
             if (!cVar2) {
               if (*(int64 *)(this + 32) == 0) throw; // [null/range check failed]
-              uVar1 = Component.GetComponent(*(int64 *)(this + 32),DAT_181d6b3c0);
+              uVar1 = Component.GetComponent(*(int64 *)(this + 32),DAT_181d93be0);
               cVar2 = Object.op_Inequality(uVar1,0,0);
               if (!cVar2) {
                 return;
@@ -189,24 +206,24 @@ public class UISlider
               lVar3 = UIEventListener.Get(uVar1,0);
               if (lVar3 != null) {
                 uVar1 = *(uint64 *)(lVar3 + 64);
-                uVar4 = new OnTooltipCB(this,DAT_181d9d400,0);
+                uVar4 = new OnTooltipCB(this,DAT_181dc66f0,0);
                 plVar5 = (int64 *)Delegate.Combine(uVar1,uVar4,0);
                 plVar6 = plVar7;
                 if (plVar5 != (int64 *)0) {
-                  if (*plVar5 == DAT_181d68590) {
+                  if (*plVar5 == DAT_181d8d938) {
                     plVar6 = plVar5;
                   }
                   if (plVar6 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6070(plVar5,DAT_181d68590);
+                    FUN_1800d6070(plVar5,DAT_181d8d938);
                   }
                 }
                 *(int64 **)(lVar3 + 64) = plVar6;
                 uVar1 = *(uint64 *)(lVar3 + 96);
-                uVar4 = new OnTooltipCB(this,DAT_181d9d2f0,0);
+                uVar4 = new OnTooltipCB(this,DAT_181dc65e0,0);
                 plVar6 = (int64 *)Delegate.Combine(uVar1,uVar4,0);
                 if (plVar6 != (int64 *)0) {
-                  if (*plVar6 == DAT_181d68610) {
+                  if (*plVar6 == DAT_181d8d9b8) {
                     plVar7 = plVar6;
                   }
                   if (plVar7 == (int64 *)0) {
@@ -222,8 +239,8 @@ public class UISlider
         }
     }
 
-    // Token : 0x6000269
-    // RVA   : 0x168E210   Offset: 0x168CA10   Length: 0xDC
+    // Token : 0x6000281
+    // RVA   : 0x1705FB0   Offset: 0x17053B0   Length: 0xDF
     protected void OnPressBackground(GameObject go, bool isPressed)
     {
         int iVar1;
@@ -231,20 +248,18 @@ public class UISlider
         uint uVar3;
         iVar1 = UICamera.get_currentScheme(0);
         if (iVar1 != 2) {
-          *(uint64 *)(this + 88) =
-               UICamera.currentCamera;
-          il2cpp_internal();
+          *(uint64 *)(this + 88) = *(uint64 *)(*(int64 *)(DAT_181daf678 + 184) + 192);
           uVar2 = UICamera.get_lastEventPosition(0);
           uVar3 = UIProgressBar.ScreenToValue(this,uVar2,0);
-          UIProgressBar.set_value(this,uVar3,0);
+          UIProgressBar.Set(this,uVar3,1,0);
           if ((!isPressed) && (*(int64 *)(this + 24) != 0)) {
             OnGeometryUpdated.Invoke(*(int64 *)(this + 24),0);
           }
         }
     }
 
-    // Token : 0x600026A
-    // RVA   : 0x168DF50   Offset: 0x168C750   Length: 0xBF
+    // Token : 0x6000282
+    // RVA   : 0x1705C70   Offset: 0x1705070   Length: 0xC2
     protected void OnDragBackground(GameObject go, Vector2 delta)
     {
         int iVar1;
@@ -252,18 +267,16 @@ public class UISlider
         uint uVar3;
         iVar1 = UICamera.get_currentScheme(0);
         if (iVar1 != 2) {
-          *(uint64 *)(this + 88) =
-               UICamera.currentCamera;
-          il2cpp_internal();
+          *(uint64 *)(this + 88) = *(uint64 *)(*(int64 *)(DAT_181daf678 + 184) + 192);
           uVar2 = UICamera.get_lastEventPosition(0);
           uVar3 = UIProgressBar.ScreenToValue(this,uVar2,0);
-          UIProgressBar.set_value(this,uVar3,0);
+          UIProgressBar.Set(this,uVar3,1,0);
           return;
         }
     }
 
-    // Token : 0x600026B
-    // RVA   : 0x168E2F0   Offset: 0x168CAF0   Length: 0x162
+    // Token : 0x6000283
+    // RVA   : 0x1706090   Offset: 0x1705490   Length: 0x187
     protected void OnPressForeground(GameObject go, bool isPressed)
     {
         bool cVar1;
@@ -273,9 +286,7 @@ public class UISlider
         float fVar5;
         iVar2 = UICamera.get_currentScheme(0);
         if (iVar2 != 2) {
-          *(uint64 *)(this + 88) =
-               UICamera.currentCamera;
-          il2cpp_internal();
+          *(uint64 *)(this + 88) = *(uint64 *)(*(int64 *)(DAT_181daf678 + 184) + 192);
           if (!isPressed) {
             if (*(int64 *)(this + 24) != 0) {
               OnGeometryUpdated.Invoke(*(int64 *)(this + 24),0);
@@ -286,7 +297,11 @@ public class UISlider
             uVar3 = *(uint64 *)(this + 48);
             cVar1 = Object.op_Equality(uVar3,0,0);
             if (!cVar1) {
-              fVar5 = (float)UIProgressBar.get_value(this,0);
+              fVar5 = *(float *)(this + 56);
+              if (1 < *(int *)(this + 100)) {
+                fVar5 = (float)FUN_18000d7c0((float)(*(int *)(this + 100) + -1) * fVar5);
+                fVar5 = fVar5 / (float)(*(int *)(this + 100) + -1);
+              }
               uVar3 = UICamera.get_lastEventPosition(0);
               fVar4 = (float)UIProgressBar.ScreenToValue(this,uVar3,0);
               fVar5 = fVar5 - fVar4;
@@ -299,8 +314,8 @@ public class UISlider
         }
     }
 
-    // Token : 0x600026C
-    // RVA   : 0x168E010   Offset: 0x168C810   Length: 0xCD
+    // Token : 0x6000284
+    // RVA   : 0x1705D40   Offset: 0x1705140   Length: 0xD0
     protected void OnDragForeground(GameObject go, Vector2 delta)
     {
         float fVar1;
@@ -309,56 +324,91 @@ public class UISlider
         float fVar4;
         iVar2 = UICamera.get_currentScheme(0);
         if (iVar2 != 2) {
-          *(uint64 *)(this + 88) =
-               UICamera.currentCamera;
-          il2cpp_internal();
+          *(uint64 *)(this + 88) = *(uint64 *)(*(int64 *)(DAT_181daf678 + 184) + 192);
           fVar1 = *(float *)(this + 96);
           uVar3 = UICamera.get_lastEventPosition(0);
           fVar4 = (float)UIProgressBar.ScreenToValue(this,uVar3,0);
-          UIProgressBar.set_value(this,fVar4 + fVar1,0);
+          UIProgressBar.Set(this,fVar4 + fVar1,1,0);
         }
     }
 
-    // Token : 0x600026D
-    // RVA   : 0x168E0E0   Offset: 0x168C8E0   Length: 0x126
+    // Token : 0x6000285
+    // RVA   : 0x1705E10   Offset: 0x1705210   Length: 0x198
     public override void OnPan(Vector2 delta)
     {
-        long lVar1;
-        bool cVar2;
-        cVar2 = Behaviour.get_enabled(this,0);
-        if (cVar2) {
-          lVar1 = Component.GetComponent(this,DAT_181d6b340);
-          cVar2 = Object.op_Inequality(lVar1,0,0);
-          if (!cVar2) {
-            lVar1 = Component.GetComponent(this,DAT_181d6b3c0);
-            cVar2 = Object.op_Inequality(lVar1,0,0);
-            if (!cVar2) {
+        int iVar1;
+        long lVar2;
+        bool cVar3;
+        uint uVar4;
+        float local_28;
+        float fStack_24;
+        cVar3 = Behaviour.get_enabled(this,0);
+        if (cVar3) {
+          lVar2 = Component.GetComponent(this,DAT_181d93b60);
+          cVar3 = Object.op_Inequality(lVar2,0,0);
+          if (!cVar3) {
+            lVar2 = Component.GetComponent(this,DAT_181d93be0);
+            cVar3 = Object.op_Inequality(lVar2,0,0);
+            if (!cVar3) {
               return;
             }
-            if (lVar1 == null) {
-        LAB_18168e201:
+            if (lVar2 == null) {
+        LAB_181705fa3:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            cVar2 = Behaviour.get_enabled(lVar1,0);
+            cVar3 = Behaviour.get_enabled(lVar2,0);
           }
           else {
-            if (lVar1 == null) goto LAB_18168e201;
-            cVar2 = Collider.get_enabled(lVar1,0);
+            if (lVar2 == null) goto LAB_181705fa3;
+            cVar3 = Collider.get_enabled(lVar2,0);
           }
-          if (cVar2) {
-            UIProgressBar.OnPan(this,delta,0);
+          if ((cVar3) && (cVar3 = Behaviour.get_enabled(this,0), cVar3)) {
+            iVar1 = *(int *)(this + 60);
+            local_28 = (float)delta;
+            if (iVar1 == 0) {
+              fStack_24 = local_28 + *(float *)(this + 56);
+            }
+            else if (iVar1 == 1) {
+              fStack_24 = *(float *)(this + 56) - local_28;
+            }
+            else {
+              fStack_24 = (float)((uint64)delta >> 32);
+              if (iVar1 == 2) {
+                fStack_24 = fStack_24 + *(float *)(this + 56);
+              }
+              else {
+                if (iVar1 != 3) {
+                  return;
+                }
+                fStack_24 = *(float *)(this + 56) - fStack_24;
+              }
+            }
+            uVar4 = Mathf.Clamp01(fStack_24,0);
+            UIProgressBar.Set(this,uVar4,1,0);
+            *(uint32 *)(this + 56) = uVar4;
           }
         }
     }
 
-    // Token : 0x600026E
-    // RVA   : 0x168EA40   Offset: 0x168D240   Length: 0x15
+    // Token : 0x6000286
+    // RVA   : 0x1706800   Offset: 0x1705C00   Length: 0x8B
     public void /*ctor*/()
     {
+        ulong uVar1;
+        bVar2 = !DAT_181ea3d22;
         this.rawValue = 0x3f800000;
         this.direction = 2;
-        UIProgressBar.ctor(this,0);
+        if (bVar2) {
+          il2cpp_runtime_class_init(&DAT_181d85ea0);
+          il2cpp_runtime_class_init(&DAT_181d92658);
+          DAT_181ea3d22 = true;
+        }
+        *(uint32 *)(this + 56) = 0x3f800000;
+        uVar1 = il2cpp_internal(DAT_181d92658);
+        FUN_18132faf0(uVar1,DAT_181d85ea0);
+        *(uint64 *)(this + 104) = uVar1;
+        TrailRenderer_Base.ctor(this,0);
     }
 
 }

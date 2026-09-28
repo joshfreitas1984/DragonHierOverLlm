@@ -1,46 +1,46 @@
 // ============================================================
 // Type  : <WarpText>d__7
-// Token : 0x20003F3
+// Token : 0x20003FA
 // ============================================================
 
 public class <WarpText>d__7
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E71
+    // Token: 0x4001F7B
     private int <>1__state;
 
-    // Token: 0x4001E72
+    // Token: 0x4001F7C
     private object <>2__current;
 
-    // Token: 0x4001E73
+    // Token: 0x4001F7D
     public SkewTextExample <>4__this;
 
-    // Token: 0x4001E74
+    // Token: 0x4001F7E
     private float <old_CurveScale>5__2;
 
-    // Token: 0x4001E75
+    // Token: 0x4001F7F
     private float <old_ShearValue>5__3;
 
-    // Token: 0x4001E76
+    // Token: 0x4001F80
     private AnimationCurve <old_curve>5__4;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600243C
-    // RVA   : 0x219070   Offset: 0x217870   Length: 0x24
+    // Token : 0x60024BF
+    // RVA   : 0x219070   Offset: 0x218470   Length: 0x24
     public void /*ctor*/(int <>1__state)
     {
         ZhSegment.Initialize(this,0);
         this.<>1__state = <>1__state;
     }
 
-    // Token : 0x600243D
-    // RVA   : 0x245810   Offset: 0x244010   Length: 0x3
+    // Token : 0x60024C0
+    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
     private virtual void System.IDisposable.Dispose()
     {
     }
 
-    // Token : 0x600243E
-    // RVA   : 0xB16480   Offset: 0xB14C80   Length: 0xF5E
+    // Token : 0x60024C1
+    // RVA   : 0x8F6990   Offset: 0x8F5D90   Length: 0xF5E
     private virtual bool MoveNext()
     {
         long lVar1;
@@ -181,7 +181,7 @@ public class <WarpText>d__7
           if ((*(char *)(*(int64 *)(lVar5 + 24) + 0x370) == false) &&
              (this.<old_CurveScale>5__2 == *(float *)(lVar5 + 40))) {
             if ((this.<old_curve>5__4 == 0) ||
-               (lVar9 = FUN_181092110(this.<old_curve>5__4,0)) == null) throw; // [null/range check failed]
+               (lVar9 = FUN_1810ccc30(this.<old_curve>5__4,0)) == null) throw; // [null/range check failed]
             if (*(uint32 *)(lVar9 + 24) < 2) {
               uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -189,7 +189,7 @@ public class <WarpText>d__7
             }
             fVar21 = (float)FUN_18044df60(lVar9 + 60,0);
             if ((*(int64 *)(lVar5 + 32) == 0) ||
-               (lVar9 = FUN_181092110(*(int64 *)(lVar5 + 32),0)) == null) throw; // [null/range check failed]
+               (lVar9 = FUN_1810ccc30(*(int64 *)(lVar5 + 32),0)) == null) throw; // [null/range check failed]
             if (*(uint32 *)(lVar9 + 24) < 2) {
               uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -392,7 +392,7 @@ public class <WarpText>d__7
                 local_3a8 = *(float *)(puVar11 + 1);
                 local_478 = *puVar11;
                 uStack_470 = CONCAT44((int)((uint64)uStack_470 >> 32),local_3a8);
-                uVar10 = FUN_1801f98e8((float)((uint64)local_478 >> 32) * 0.0 + (float)local_478 +
+                uVar10 = FUN_1801fa0a0((float)((uint64)local_478 >> 32) * 0.0 + (float)local_478 +
                                        local_3a8 * 0.0);
                 uVar26 = (uint32)((uint64)uVar10 >> 32);
                 local_390 = local_460;
@@ -551,27 +551,27 @@ public class <WarpText>d__7
         }
     }
 
-    // Token : 0x600243F
-    // RVA   : 0x20F140   Offset: 0x20D940   Length: 0x5
+    // Token : 0x60024C2
+    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
     private virtual object System.Collections.Generic.IEnumerator<System.object>.get_Current()
     {
         return this.<>2__current;
     }
 
-    // Token : 0x6002440
-    // RVA   : 0xB173E0   Offset: 0xB15BE0   Length: 0x3E
+    // Token : 0x60024C3
+    // RVA   : 0x8F78F0   Offset: 0x8F6CF0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d682e8);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d89490);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181db24d8);
     }
 
-    // Token : 0x6002441
-    // RVA   : 0x20F140   Offset: 0x20D940   Length: 0x5
+    // Token : 0x60024C4
+    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
     private virtual object System.Collections.IEnumerator.get_Current()
     {
         return this.<>2__current;

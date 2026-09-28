@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : PopInfoTabController
-// Token : 0x2000322
+// Token : 0x2000329
 // ============================================================
 
 public class PopInfoTabController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400194B
+    // Token: 0x4001A42
     public GameObject inkLine;
 
-    // Token: 0x400194C
+    // Token: 0x4001A43
     public bool rightInfo;
 
-    // Token: 0x400194D
+    // Token: 0x4001A44
     private bool destroying;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001F5C
-    // RVA   : 0xBD9E90   Offset: 0xBD8690   Length: 0xE6
+    // Token : 0x6001FDC
+    // RVA   : 0xB0E310   Offset: 0xB0D710   Length: 0xE6
     public void Start()
     {
         ulong uVar1;
@@ -52,8 +52,8 @@ public class PopInfoTabController
         }
     }
 
-    // Token : 0x6001F5D
-    // RVA   : 0xBD9C10   Offset: 0xBD8410   Length: 0x278
+    // Token : 0x6001FDD
+    // RVA   : 0xB0E090   Offset: 0xB0D490   Length: 0x278
     public void OnClick()
     {
         long lVar1;
@@ -74,24 +74,24 @@ public class PopInfoTabController
           return;
         }
         this.destroying = 1;
-        lVar1 = Component.GetComponent(this,DAT_181d6ca40);
+        lVar1 = Component.GetComponent(this,DAT_181d952e0);
         if (lVar1 != null) {
           *(uint32 *)(lVar1 + 24) = 0xbf800000;
           lVar1 = Component.get_transform(this,0);
           lVar2 = Component.get_transform(this,0);
-          if (((lVar2 != null) && (lVar2 = FUN_180da0f00(lVar2,0)) != null) &&
-             (uVar3 = FUN_180da0f00(lVar2,0), lVar1 != null)) {
-            FUN_180da1d00(lVar1,uVar3,0);
+          if (((lVar2 != null) && (lVar2 = FUN_180da9a20(lVar2,0)) != null) &&
+             (uVar3 = FUN_180da9a20(lVar2,0), lVar1 != null)) {
+            FUN_180daa820(lVar1,uVar3,0);
             uVar3 = Component.get_transform(this,0);
             lVar1 = Component.get_transform(this,0);
             if (((lVar1 != null) && (lVar1 = Transform.Find(lVar1,"Back",0)) != null) &&
-               (lVar1 = Component.GetComponent(lVar1,DAT_181d6c740)) != null) {
+               (lVar1 = Component.GetComponent(lVar1,DAT_181d94f60)) != null) {
               puVar4 = (uint32 *)RectTransform.get_rect(local_48,lVar1,0);
               local_38 = *puVar4;
               uStack_34 = puVar4[1];
               uStack_30 = puVar4[2];
               uStack_2c = puVar4[3];
-              fVar7 = (float)FUN_180d90480(&local_38,0);
+              fVar7 = (float)FUN_180d98fa0(&local_38,0);
               if (!this.rightInfo) {
                 fVar8 = 1.0;
               }
@@ -105,8 +105,8 @@ public class PopInfoTabController
                 local_58 = CONCAT44((int)((uint64)*puVar5 >> 32),(-960.0 - fVar7) * fVar8);
                 local_50 = 0;
                 uVar3 = ShortcutExtensions.DOLocalMove(uVar3,&local_58,0x3e800000,0,0);
-                uVar6 = new OnTooltipCB(this,DAT_181d6ecf0,0);
-                TweenSettingsExtensions.OnComplete(uVar3,uVar6,DAT_181d96ee8);
+                uVar6 = new OnTooltipCB(this,DAT_181d97b90,0);
+                TweenSettingsExtensions.OnComplete(uVar3,uVar6,DAT_181dc01d0);
                 return;
               }
             }
@@ -114,15 +114,15 @@ public class PopInfoTabController
         }
     }
 
-    // Token : 0x6001F5E
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x6001FDE
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);
     }
 
-    // Token : 0x6001F5F
-    // RVA   : 0xBD9F80   Offset: 0xBD8780   Length: 0x5F
+    // Token : 0x6001FDF
+    // RVA   : 0xB0E400   Offset: 0xB0D800   Length: 0x5F
     private void <OnClick>b__4_0()
     {
         ulong uVar1;

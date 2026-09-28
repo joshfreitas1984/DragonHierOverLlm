@@ -1,74 +1,74 @@
 // ============================================================
 // Type  : UIToggle
-// Token : 0x200006E
+// Token : 0x200006F
 // ============================================================
 
 public class UIToggle
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400029B
+    // Token: 0x40002B7
     public static BetterList<UIToggle> list;
 
-    // Token: 0x400029C
+    // Token: 0x40002B8
     public static UIToggle current;
 
-    // Token: 0x400029D
+    // Token: 0x40002B9
     public int group;
 
-    // Token: 0x400029E
+    // Token: 0x40002BA
     public UIWidget activeSprite;
 
-    // Token: 0x400029F
+    // Token: 0x40002BB
     public bool invertSpriteState;
 
-    // Token: 0x40002A0
+    // Token: 0x40002BC
     public Animation activeAnimation;
 
-    // Token: 0x40002A1
+    // Token: 0x40002BD
     public Animator animator;
 
-    // Token: 0x40002A2
+    // Token: 0x40002BE
     public UITweener tween;
 
-    // Token: 0x40002A3
+    // Token: 0x40002BF
     public bool startsActive;
 
-    // Token: 0x40002A4
+    // Token: 0x40002C0
     public bool instantTween;
 
-    // Token: 0x40002A5
+    // Token: 0x40002C1
     public bool optionCanBeNone;
 
-    // Token: 0x40002A6
+    // Token: 0x40002C2
     public List<EventDelegate> onChange;
 
-    // Token: 0x40002A7
+    // Token: 0x40002C3
     public Validate validator;
 
-    // Token: 0x40002A8
+    // Token: 0x40002C4
     private UISprite checkSprite;
 
-    // Token: 0x40002A9
+    // Token: 0x40002C5
     private Animation checkAnimation;
 
-    // Token: 0x40002AA
+    // Token: 0x40002C6
     private GameObject eventReceiver;
 
-    // Token: 0x40002AB
+    // Token: 0x40002C7
     private string functionName;
 
-    // Token: 0x40002AC
+    // Token: 0x40002C8
     private bool startsChecked;
 
-    // Token: 0x40002AD
+    // Token: 0x40002C9
     private bool mIsActive;
 
-    // Token: 0x40002AE
+    // Token: 0x40002CA
     private bool mStarted;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000280
-    // RVA   : 0x16996A0   Offset: 0x1697EA0   Length: 0x16
+    // Token : 0x6000298
+    // RVA   : 0xC070A0   Offset: 0xC064A0   Length: 0x16
     public bool get_value()
     {
         if (this.mStarted) {
@@ -77,8 +77,8 @@ public class UIToggle
         return this.startsActive;
     }
 
-    // Token : 0x6000281
-    // RVA   : 0x16997D0   Offset: 0x1697FD0   Length: 0x2F
+    // Token : 0x6000299
+    // RVA   : 0xC071D0   Offset: 0xC065D0   Length: 0x2F
     public void set_value(bool value)
     {
         if (!this.mStarted) {
@@ -95,16 +95,16 @@ public class UIToggle
         }
     }
 
-    // Token : 0x6000282
-    // RVA   : 0x16996C0   Offset: 0x1697EC0   Length: 0x105
+    // Token : 0x600029A
+    // RVA   : 0xC070C0   Offset: 0xC064C0   Length: 0x105
     public bool get_isColliderEnabled()
     {
         long lVar1;
         bool cVar2;
-        lVar1 = Component.GetComponent(this,DAT_181d6b340);
+        lVar1 = Component.GetComponent(this,DAT_181d93b60);
         cVar2 = Object.op_Inequality(lVar1,0,0);
         if (!cVar2) {
-          lVar1 = Component.GetComponent(this,DAT_181d6b3c0);
+          lVar1 = Component.GetComponent(this,DAT_181d93be0);
           cVar2 = Object.op_Inequality(lVar1,0,0);
           if (!cVar2) {
             return;
@@ -120,8 +120,8 @@ public class UIToggle
         }
     }
 
-    // Token : 0x6000283
-    // RVA   : 0x16996A0   Offset: 0x1697EA0   Length: 0x16
+    // Token : 0x600029B
+    // RVA   : 0xC070A0   Offset: 0xC064A0   Length: 0x16
     public bool get_isChecked()
     {
         if (this.mStarted) {
@@ -130,8 +130,8 @@ public class UIToggle
         return this.startsActive;
     }
 
-    // Token : 0x6000284
-    // RVA   : 0x16997D0   Offset: 0x1697FD0   Length: 0x2F
+    // Token : 0x600029C
+    // RVA   : 0xC071D0   Offset: 0xC065D0   Length: 0x2F
     public void set_isChecked(bool value)
     {
         if (!this.mStarted) {
@@ -148,23 +148,23 @@ public class UIToggle
         }
     }
 
-    // Token : 0x6000285
-    // RVA   : 0x1698610   Offset: 0x1696E10   Length: 0x14B
+    // Token : 0x600029D
+    // RVA   : 0xC06000   Offset: 0xC05400   Length: 0x14B
     public static UIToggle GetActiveToggle(int group)
     {
+        var pStatics = *(int64*)(DAT_181db04f8 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
         uint uVar4;
         uVar4 = 0;
         while( true ) {
-          if (UIPlayAnimation.current == null) break;
-          if (UIPlayAnimation.current.target <= (int)uVar4) {
+          if (*pStatics == 0) break;
+          if (*(int *)(*pStatics + 24) <= (int)uVar4) {
             return 0;
           }
-          if ((UIPlayAnimation.current == null) ||
-             (lVar1 = *(int64 *)(UIPlayAnimation.current + 16), lVar1 == null
-             )) break;
+          if ((*pStatics == 0) ||
+             (lVar1 = *(int64 *)(*pStatics + 16)) == null) break;
           if (*(uint32 *)(lVar1 + 24) <= uVar4) {
             uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -182,28 +182,30 @@ public class UIToggle
         }
     }
 
-    // Token : 0x6000286
-    // RVA   : 0x16989B0   Offset: 0x16971B0   Length: 0x81
+    // Token : 0x600029E
+    // RVA   : 0xC063A0   Offset: 0xC057A0   Length: 0x81
     private void OnEnable()
     {
-        if (UIPlayAnimation.current != null) {
-          FUN_18154cb60(UIPlayAnimation.current,this,DAT_181d81f18);
+        var pStatics = *(int64*)(DAT_181db04f8 + 184);
+        if (*pStatics != 0) {
+          FUN_181583c60(*pStatics,this,DAT_181da72b8);
           return;
         }
     }
 
-    // Token : 0x6000287
-    // RVA   : 0x1698920   Offset: 0x1697120   Length: 0x81
+    // Token : 0x600029F
+    // RVA   : 0xC06310   Offset: 0xC05710   Length: 0x81
     private void OnDisable()
     {
-        if (UIPlayAnimation.current != null) {
-          FUN_18154eb70(UIPlayAnimation.current,this,DAT_181d81f98);
+        var pStatics = *(int64*)(DAT_181db04f8 + 184);
+        if (*pStatics != 0) {
+          FUN_181585c70(*pStatics,this,DAT_181da7338);
           return;
         }
     }
 
-    // Token : 0x6000288
-    // RVA   : 0x16992D0   Offset: 0x1697AD0   Length: 0x2A5
+    // Token : 0x60002A0
+    // RVA   : 0xC06CD0   Offset: 0xC060D0   Length: 0x2A5
     public void Start()
     {
         byte uVar1;
@@ -248,10 +250,10 @@ public class UIToggle
           }
         }
         cVar4 = Application.get_isPlaying(0);
-        if (!cVar4) goto LAB_181699514;
+        if (!cVar4) goto LAB_180c06f14;
         uVar2 = this.activeSprite;
         cVar4 = Object.op_Inequality(uVar2,0,0);
-        if (!cVar4) goto LAB_181699514;
+        if (!cVar4) goto LAB_180c06f14;
         plVar3 = this.activeSprite;
         if (!this.invertSpriteState) {
           if (!(!this.startsActive))
@@ -270,7 +272,7 @@ public class UIToggle
           FUN_1800d6620(0,uVar5);
         }
         (**(code **)(*plVar3 + 0x1b8))(plVar3,uVar5,*(uint64 *)(*plVar3 + 0x1c0));
-        LAB_181699514:
+        LAB_180c06f14:
         uVar2 = this.onChange;
         cVar4 = EventDelegate.IsValid(uVar2,0);
         if (cVar4) {
@@ -279,35 +281,35 @@ public class UIToggle
         }
     }
 
-    // Token : 0x6000289
-    // RVA   : 0x1698760   Offset: 0x1696F60   Length: 0x1B9
+    // Token : 0x60002A1
+    // RVA   : 0xC06150   Offset: 0xC05550   Length: 0x1B9
     private void OnClick()
     {
         bool cVar1;
         long lVar2;
         cVar1 = Behaviour.get_enabled(this,0);
         if (cVar1) {
-          lVar2 = Component.GetComponent(this,DAT_181d6b340);
+          lVar2 = Component.GetComponent(this,DAT_181d93b60);
           cVar1 = Object.op_Inequality(lVar2,0,0);
           if (!cVar1) {
-            lVar2 = Component.GetComponent(this,DAT_181d6b3c0);
+            lVar2 = Component.GetComponent(this,DAT_181d93be0);
             cVar1 = Object.op_Inequality(lVar2,0,0);
             if (!cVar1) {
               return;
             }
             if (lVar2 == null) {
-        LAB_181698914:
+        LAB_180c06304:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             cVar1 = Behaviour.get_enabled(lVar2,0);
           }
           else {
-            if (lVar2 == null) goto LAB_181698914;
+            if (lVar2 == null) goto LAB_180c06304;
             cVar1 = Collider.get_enabled(lVar2,0);
           }
           if (cVar1) {
-            if (UICamera.currentTouchID != -2) {
+            if (*(int *)(*(int64 *)(DAT_181daf678 + 184) + 212) != -2) {
               if (!this.mStarted) {
                 this.startsActive = !this.startsActive;
                 return;
@@ -321,11 +323,11 @@ public class UIToggle
         }
     }
 
-    // Token : 0x600028A
-    // RVA   : 0x1698A40   Offset: 0x1697240   Length: 0x886
+    // Token : 0x60002A2
+    // RVA   : 0xC06430   Offset: 0xC05830   Length: 0x892
     public void Set(bool state, bool notify)
     {
-        var pUIPlayAnimation = *(int64*)(UIPlayAnimation_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181db04f8 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar4;
@@ -352,15 +354,15 @@ public class UIToggle
             bVar3 = state;
           }
           if (bVar3 != 0) {
-            if (UIPlayAnimation.current == null) throw; // [null/range check failed]
-            iVar8 = UIPlayAnimation.current.target;
+            if (*pStatics == 0) throw; // [null/range check failed]
+            iVar8 = *(int *)(*pStatics + 24);
             uVar9 = uVar10;
             if (0 < iVar8) {
               do {
-                if ((UIPlayAnimation.current == null) ||
-                   (lVar6 = *(int64 *)(UIPlayAnimation.current + 16),
-                   lVar6 == null)) throw; // [null/range check failed]
-                if (*(uint32 *)(lVar6 + 24) <= uVar9) {
+                if ((*pStatics == 0) ||
+                   (lVar6 = *(int64 *)(*pStatics + 16)) == null)
+                throw; // [null/range check failed]
+                if (lVar6.method <= uVar9) {
                   uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                   FUN_1800d65f0(uVar4,0);
@@ -369,17 +371,17 @@ public class UIToggle
                 cVar2 = Object.op_Inequality(lVar6,this,0);
                 if (cVar2) {
                   if (lVar6 == null) throw; // [null/range check failed]
-                  if (*(int *)(lVar6 + 24) == this.group) {
+                  if (lVar6.method == this.group) {
                     UIToggle.Set(lVar6,0,1,0);
                   }
                 }
-                if (UIPlayAnimation.current == null) throw; // [null/range check failed]
-                if (UIPlayAnimation.current.target == iVar8) {
+                if (*pStatics == 0) throw; // [null/range check failed]
+                if (*(int *)(*pStatics + 24) == iVar8) {
                   uVar9 = uVar9 + 1;
                 }
                 else {
-                  if (UIPlayAnimation.current == null) throw; // [null/range check failed]
-                  iVar8 = UIPlayAnimation.current.target;
+                  if (*pStatics == 0) throw; // [null/range check failed]
+                  iVar8 = *(int *)(*pStatics + 24);
                   uVar9 = uVar10;
                 }
               } while ((int)uVar9 < iVar8);
@@ -409,7 +411,7 @@ public class UIToggle
                 }
                 in_stack_ffffffffffffffb8 = 0;
                 TweenAlpha.Begin(uVar4,0x3e19999a,uVar11,0,0);
-                goto LAB_181698d8a;
+                goto LAB_180c0677a;
               }
             }
             plVar7 = this.activeSprite;
@@ -428,12 +430,12 @@ public class UIToggle
             if (plVar7 == (int64 *)0) throw; // [null/range check failed]
             (**(code **)(*plVar7 + 0x1b8))(plVar7,uVar11,*(uint64 *)(*plVar7 + 0x1c0));
           }
-        LAB_181698d8a:
+        LAB_180c0677a:
           if (notify) {
-            uVar4 = *(uint64 *)(pUIPlayAnimation + 8);
+            uVar4 = *(uint64 *)(pStatics + 8);
             cVar2 = Object.op_Equality(uVar4,0,0);
             if (cVar2) {
-              plVar7 = (int64 *)(pUIPlayAnimation + 8);
+              plVar7 = (int64 *)(pStatics + 8);
               lVar6 = *plVar7;
               *plVar7 = this;
               il2cpp_internal(plVar7,this);
@@ -443,11 +445,11 @@ public class UIToggle
                 uVar4 = this.eventReceiver;
                 cVar2 = Object.op_Inequality(uVar4,0,0);
                 if ((cVar2) &&
-                   (cVar2 = FUN_180d6ca90(this.functionName,0), !cVar2)) {
+                   (cVar2 = FUN_180d755b0(this.functionName,0), !cVar2)) {
                   local_res8[0] = this.mIsActive;
                   lVar1 = this.eventReceiver;
                   uVar4 = this.functionName;
-                  uVar5 = il2cpp_value_box(DAT_181d8d920,local_res8);
+                  uVar5 = il2cpp_value_box(DAT_181db2ac8,local_res8);
                   if (lVar1 == null) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
@@ -460,7 +462,7 @@ public class UIToggle
                 uVar4 = this.onChange;
                 EventDelegate.Execute(uVar4,0);
               }
-              plVar7 = (int64 *)(pUIPlayAnimation + 8);
+              plVar7 = (int64 *)(pStatics + 8);
               *plVar7 = lVar6;
               il2cpp_internal(plVar7,lVar6);
             }
@@ -484,23 +486,25 @@ public class UIToggle
                   if ((!this.instantTween) && (cVar2)) {
                     return;
                   }
+                  lVar6 = this.tween;
                   if (state == null) {
                     uVar12 = 0;
                   }
-                  if (this.tween != null) {
-                    UITweener.set_tweenFactor(this.tween,uVar12,0);
+                  if (lVar6 != null) {
+                    uVar12 = Mathf.Clamp01(uVar12,0);
+                    lVar6.mFactor = uVar12;
                     return;
                   }
                 }
                 else {
-                  lVar6 = FUN_180956ba0(plVar7,1,DAT_181d70340);
+                  lVar6 = FUN_180967490(plVar7,1,DAT_181d98c60);
                   if (lVar6 != null) {
-                    iVar8 = *(int *)(lVar6 + 24);
+                    iVar8 = lVar6.method;
                     if (iVar8 < 1) {
                       return;
                     }
                     while( true ) {
-                      if (*(uint32 *)(lVar6 + 24) <= uVar10) {
+                      if (lVar6.method <= uVar10) {
                         uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                         FUN_1800d65f0(uVar4,0);
@@ -516,7 +520,8 @@ public class UIToggle
                         else {
                           uVar12 = 0x3f800000;
                         }
-                        UITweener.set_tweenFactor(plVar7,uVar12,0);
+                        uVar12 = Mathf.Clamp01(uVar12);
+                        *(uint32 *)((int64)plVar7 + 108) = uVar12;
                       }
                       uVar10 = uVar10 + 1;
                       if (iVar8 <= (int)uVar10) {
@@ -579,26 +584,26 @@ public class UIToggle
         }
     }
 
-    // Token : 0x600028B
-    // RVA   : 0x1699600   Offset: 0x1697E00   Length: 0x9C
+    // Token : 0x60002A3
+    // RVA   : 0xC07000   Offset: 0xC06400   Length: 0x9C
     public void /*ctor*/()
     {
         ulong uVar1;
-        uVar1 = il2cpp_internal(DAT_181d6d9b0);
-        FUN_180f58a90(uVar1,DAT_181d5e700);
+        uVar1 = il2cpp_internal(DAT_181d92658);
+        FUN_18132faf0(uVar1,DAT_181d85ea0);
         this.onChange = uVar1;
         this.functionName = "OnActivate";
         this.mIsActive = 1;
-        TrailRenderer_Base.ctor(this,0);
+        FUN_18044ef50(this,0);
     }
 
-    // Token : 0x600028C
-    // RVA   : 0x1699580   Offset: 0x1697D80   Length: 0x76
+    // Token : 0x60002A4
+    // RVA   : 0xC06F80   Offset: 0xC06380   Length: 0x76
     private static void /*cctor*/()
     {
         ulong uVar2;
-        uVar2 = new BetterList_1(DAT_181d81e98);
-        puVar1 = *(uint64 **)(UIPlayAnimation_StaticsPtr + 184);
+        uVar2 = new BetterList_1(DAT_181da7238);
+        puVar1 = *(uint64 **)(DAT_181db04f8 + 184);
         *puVar1 = uVar2;
         il2cpp_internal(puVar1,uVar2);
     }

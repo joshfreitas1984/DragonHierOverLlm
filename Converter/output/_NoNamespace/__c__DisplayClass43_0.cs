@@ -1,27 +1,27 @@
 // ============================================================
 // Type  : <>c__DisplayClass43_0
-// Token : 0x2000293
+// Token : 0x2000299
 // ============================================================
 
 public class <>c__DisplayClass43_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001428
+    // Token: 0x40014D9
     public GambleUIController <>4__this;
 
-    // Token: 0x4001429
+    // Token: 0x40014DA
     public int rerollID;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60014DD
-    // RVA   : 0x210B70   Offset: 0x20F370   Length: 0x7
+    // Token : 0x6001521
+    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);
     }
 
-    // Token : 0x60014DE
-    // RVA   : 0x8D73B0   Offset: 0x8D5BB0   Length: 0x24
+    // Token : 0x6001522
+    // RVA   : 0x9398A0   Offset: 0x938CA0   Length: 0x24
     internal void <RerollButtonClicked>b__1()
     {
         if (this.<>4__this != 0) {
@@ -31,8 +31,8 @@ public class <>c__DisplayClass43_0
         }
     }
 
-    // Token : 0x60014DF
-    // RVA   : 0x8D73E0   Offset: 0x8D5BE0   Length: 0x1D
+    // Token : 0x6001523
+    // RVA   : 0x9398D0   Offset: 0x938CD0   Length: 0x1D
     internal void <RerollButtonClicked>b__2()
     {
         if (this.<>4__this != 0) {
@@ -41,8 +41,8 @@ public class <>c__DisplayClass43_0
         }
     }
 
-    // Token : 0x60014E0
-    // RVA   : 0x8D73B0   Offset: 0x8D5BB0   Length: 0x24
+    // Token : 0x6001524
+    // RVA   : 0x9398A0   Offset: 0x938CA0   Length: 0x24
     internal void <RerollButtonClicked>b__4()
     {
         if (this.<>4__this != 0) {
@@ -52,8 +52,8 @@ public class <>c__DisplayClass43_0
         }
     }
 
-    // Token : 0x60014E1
-    // RVA   : 0x8D73E0   Offset: 0x8D5BE0   Length: 0x1D
+    // Token : 0x6001525
+    // RVA   : 0x9398D0   Offset: 0x938CD0   Length: 0x1D
     internal void <RerollButtonClicked>b__5()
     {
         if (this.<>4__this != 0) {

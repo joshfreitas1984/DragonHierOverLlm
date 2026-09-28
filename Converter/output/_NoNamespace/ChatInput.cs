@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : ChatInput
-// Token : 0x2000014
+// Token : 0x2000015
 // ============================================================
 
 public class ChatInput
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000065
+    // Token: 0x4000081
     public UITextList textList;
 
-    // Token: 0x4000066
+    // Token: 0x4000082
     public bool fillWithDummyData;
 
-    // Token: 0x4000067
+    // Token: 0x4000083
     private UIInput mInput;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000047
-    // RVA   : 0x9F3910   Offset: 0x9F2110   Length: 0x17B
+    // Token : 0x600005F
+    // RVA   : 0x996040   Offset: 0x995440   Length: 0x17B
     private void Start()
     {
         long lVar1;
@@ -25,7 +25,7 @@ public class ChatInput
         ulong uVar3;
         ulong uVar4;
         uint[] local_res8 = new uint[2];
-        uVar3 = Component.GetComponent(this,DAT_181d6e140);
+        uVar3 = Component.GetComponent(this,DAT_181d969e0);
         this.mInput = uVar3;
         if ((this.mInput != null) &&
            (lVar1 = this.mInput.label) != null) {
@@ -53,8 +53,8 @@ public class ChatInput
         }
     }
 
-    // Token : 0x6000048
-    // RVA   : 0x9F37F0   Offset: 0x9F1FF0   Length: 0x117
+    // Token : 0x6000060
+    // RVA   : 0x995F20   Offset: 0x995320   Length: 0x117
     public void OnSubmit()
     {
         bool cVar1;
@@ -67,7 +67,7 @@ public class ChatInput
         if (this.mInput != null) {
           uVar2 = UIInput.get_value(this.mInput,0);
           uVar2 = NGUIText.StripSymbols(uVar2,0);
-          cVar1 = FUN_180d6ca90(uVar2,0);
+          cVar1 = FUN_180d755b0(uVar2,0);
           if (cVar1) {
             return;
           }
@@ -84,8 +84,8 @@ public class ChatInput
         }
     }
 
-    // Token : 0x6000049
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x6000061
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

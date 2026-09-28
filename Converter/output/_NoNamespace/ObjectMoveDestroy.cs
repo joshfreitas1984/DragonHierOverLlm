@@ -1,78 +1,78 @@
 // ============================================================
 // Type  : ObjectMoveDestroy
-// Token : 0x20003CA
+// Token : 0x20003D1
 // ============================================================
 
 public class ObjectMoveDestroy
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001D8F
+    // Token: 0x4001E99
     public GameObject m_gameObjectMain;
 
-    // Token: 0x4001D90
+    // Token: 0x4001E9A
     public GameObject m_gameObjectTail;
 
-    // Token: 0x4001D91
+    // Token: 0x4001E9B
     private GameObject m_makedObject;
 
-    // Token: 0x4001D92
+    // Token: 0x4001E9C
     public Transform m_hitObject;
 
-    // Token: 0x4001D93
+    // Token: 0x4001E9D
     public float maxLength;
 
-    // Token: 0x4001D94
+    // Token: 0x4001E9E
     public bool isDestroy;
 
-    // Token: 0x4001D95
+    // Token: 0x4001E9F
     public float ObjectDestroyTime;
 
-    // Token: 0x4001D96
+    // Token: 0x4001EA0
     public float TailDestroyTime;
 
-    // Token: 0x4001D97
+    // Token: 0x4001EA1
     public float HitObjectDestroyTime;
 
-    // Token: 0x4001D98
+    // Token: 0x4001EA2
     public float maxTime;
 
-    // Token: 0x4001D99
+    // Token: 0x4001EA3
     public float MoveSpeed;
 
-    // Token: 0x4001D9A
+    // Token: 0x4001EA4
     public bool isCheckHitTag;
 
-    // Token: 0x4001D9B
+    // Token: 0x4001EA5
     public string mtag;
 
-    // Token: 0x4001D9C
+    // Token: 0x4001EA6
     public bool isShieldActive;
 
-    // Token: 0x4001D9D
+    // Token: 0x4001EA7
     public bool isHitMake;
 
-    // Token: 0x4001D9E
+    // Token: 0x4001EA8
     private float time;
 
-    // Token: 0x4001D9F
+    // Token: 0x4001EA9
     private bool ishit;
 
-    // Token: 0x4001DA0
+    // Token: 0x4001EAA
     private float m_scalefactor;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60023A1
-    // RVA   : 0x46D920   Offset: 0x46C120   Length: 0x6B
+    // Token : 0x6002424
+    // RVA   : 0xB8FAF0   Offset: 0xB8EEF0   Length: 0x6B
     private void Start()
     {
         uint uVar1;
-        this.m_scalefactor = **(uint32 **)(DAT_181d8e610 + 184);
+        this.m_scalefactor = **(uint32 **)(DAT_181db38c8 + 184);
         uVar1 = Time.get_time(0);
         *(uint32 *)(this + 100) = uVar1;
     }
 
-    // Token : 0x60023A2
-    // RVA   : 0x46D1C0   Offset: 0x46B9C0   Length: 0x3D6
+    // Token : 0x6002425
+    // RVA   : 0xB8F390   Offset: 0xB8E790   Length: 0x3D6
     private void LateUpdate()
     {
         float fVar1;
@@ -124,18 +124,18 @@ public class ObjectMoveDestroy
                             (float)uVar11 * fVar12 * fVar14 * fVar1);
         uStack_90 = CONCAT44(uStack_90._4_4_,fVar13);
         local_a8 = uVar11;
-        if (lVar8 == null) goto LAB_18046d591;
+        if (lVar8 == null) goto LAB_180b8f761;
         local_a8 = local_98;
         local_a0 = fVar13;
         Transform.Translate(lVar8,&local_a8,0);
         if (!this.ishit) {
           lVar8 = Component.get_transform(this,0);
-          if (lVar8 == null) goto LAB_18046d591;
+          if (lVar8 == null) goto LAB_180b8f761;
           puVar9 = (uint64 *)Transform.get_position(&local_a8,lVar8,0);
           uVar11 = *puVar9;
           uVar4 = *(uint32 *)(puVar9 + 1);
           lVar8 = Component.get_transform(this,0);
-          if (lVar8 == null) goto LAB_18046d591;
+          if (lVar8 == null) goto LAB_180b8f761;
           uVar2 = this.maxLength;
           puVar9 = (uint64 *)Transform.get_forward(&local_98,lVar8,0);
           local_a8 = *puVar9;
@@ -162,12 +162,12 @@ public class ObjectMoveDestroy
             if (this.isHitMake) {
               uVar11 = this.m_hitObject;
               if (lVar8 == null) {
-        LAB_18046d591:
+        LAB_180b8f761:
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
               lVar10 = Component.get_transform(lVar8,0);
-              if (lVar10 == null) goto LAB_18046d591;
+              if (lVar10 == null) goto LAB_180b8f761;
               puVar9 = (uint64 *)Transform.get_position(&local_a8,lVar10,0);
               uVar3 = *puVar9;
               fVar14 = *(float *)(puVar9 + 1);
@@ -178,20 +178,20 @@ public class ObjectMoveDestroy
               local_a0 = fVar14;
               local_98 = uVar5;
               uStack_90 = uVar6;
-              lVar8 = Object.Instantiate(uVar11,&local_a8,&local_98,DAT_181d6a1f8);
-              if (lVar8 == null) goto LAB_18046d591;
+              lVar8 = Object.Instantiate(uVar11,&local_a8,&local_98,DAT_181d92f18);
+              if (lVar8 == null) goto LAB_180b8f761;
               uVar11 = Component.get_gameObject(lVar8,0);
               this.m_makedObject = uVar11;
-              if (this.m_makedObject == null) goto LAB_18046d591;
+              if (this.m_makedObject == null) goto LAB_180b8f761;
               lVar8 = GameObject.get_transform(this.m_makedObject,0);
               lVar10 = Component.get_transform(this,0);
-              if (lVar10 == null) goto LAB_18046d591;
-              uVar11 = FUN_180da0f00(lVar10,0);
-              if (lVar8 == null) goto LAB_18046d591;
+              if (lVar10 == null) goto LAB_180b8f761;
+              uVar11 = FUN_180da9a20(lVar10,0);
+              if (lVar8 == null) goto LAB_180b8f761;
               Transform.set_parent(lVar8,uVar11,0);
-              if (this.m_makedObject == null) goto LAB_18046d591;
+              if (this.m_makedObject == null) goto LAB_180b8f761;
               lVar8 = GameObject.get_transform(this.m_makedObject,0);
-              if (lVar8 == null) goto LAB_18046d591;
+              if (lVar8 == null) goto LAB_180b8f761;
               local_98 = 0x3f8000003f800000;
               uStack_90 = CONCAT44(uStack_90._4_4_,0x3f800000);
               Transform.set_localScale(lVar8,&local_98,0);
@@ -202,8 +202,8 @@ public class ObjectMoveDestroy
         }
     }
 
-    // Token : 0x60023A3
-    // RVA   : 0x46D5A0   Offset: 0x46BDA0   Length: 0x1B8
+    // Token : 0x6002426
+    // RVA   : 0xB8F770   Offset: 0xB8EB70   Length: 0x1B8
     private void MakeHitObject(RaycastHit hit)
     {
         ulong uVar1;
@@ -228,14 +228,14 @@ public class ObjectMoveDestroy
           uStack_30 = puVar4[1];
           local_48 = uVar1;
           local_40 = uVar2;
-          lVar3 = Object.Instantiate(uVar5,&local_48,&local_38,DAT_181d6a1f8);
+          lVar3 = Object.Instantiate(uVar5,&local_48,&local_38,DAT_181d92f18);
           if (lVar3 != null) {
             uVar5 = Component.get_gameObject(lVar3,0);
             this.m_makedObject = uVar5;
             if (this.m_makedObject != null) {
               lVar3 = GameObject.get_transform(this.m_makedObject,0);
               lVar6 = Component.get_transform(this,0);
-              if ((lVar6 != null) && (uVar5 = FUN_180da0f00(lVar6,0), lVar3 != null)) {
+              if ((lVar6 != null) && (uVar5 = FUN_180da9a20(lVar6,0), lVar3 != null)) {
                 Transform.set_parent(lVar3,uVar5,0);
                 if ((this.m_makedObject != null) &&
                    (lVar3 = GameObject.get_transform(this.m_makedObject,0)) != null) {
@@ -250,8 +250,8 @@ public class ObjectMoveDestroy
         }
     }
 
-    // Token : 0x60023A4
-    // RVA   : 0x46D760   Offset: 0x46BF60   Length: 0x1B1
+    // Token : 0x6002427
+    // RVA   : 0xB8F930   Offset: 0xB8ED30   Length: 0x1B1
     private void MakeHitObject(Transform point)
     {
         ulong uVar1;
@@ -276,14 +276,14 @@ public class ObjectMoveDestroy
           uStack_30 = puVar4[1];
           local_48 = uVar1;
           local_40 = uVar2;
-          lVar3 = Object.Instantiate(uVar5,&local_48,&local_38,DAT_181d6a1f8);
+          lVar3 = Object.Instantiate(uVar5,&local_48,&local_38,DAT_181d92f18);
           if (lVar3 != null) {
             uVar5 = Component.get_gameObject(lVar3,0);
             this.m_makedObject = uVar5;
             if (this.m_makedObject != null) {
               lVar3 = GameObject.get_transform(this.m_makedObject,0);
               lVar6 = Component.get_transform(this,0);
-              if ((lVar6 != null) && (uVar5 = FUN_180da0f00(lVar6,0), lVar3 != null)) {
+              if ((lVar6 != null) && (uVar5 = FUN_180da9a20(lVar6,0), lVar3 != null)) {
                 Transform.set_parent(lVar3,uVar5,0);
                 if ((this.m_makedObject != null) &&
                    (lVar3 = GameObject.get_transform(this.m_makedObject,0)) != null) {
@@ -298,8 +298,8 @@ public class ObjectMoveDestroy
         }
     }
 
-    // Token : 0x60023A5
-    // RVA   : 0x46CE10   Offset: 0x46B610   Length: 0x3A0
+    // Token : 0x6002428
+    // RVA   : 0xB8EFE0   Offset: 0xB8E3E0   Length: 0x3A0
     private void HitObj(RaycastHit hit)
     {
         uint uVar1;
@@ -322,7 +322,7 @@ public class ObjectMoveDestroy
         uint32 local_30;
         if (this.isCheckHitTag) {
           lVar4 = RaycastHit.get_transform(hit,0);
-          if (lVar4 == null) goto LAB_18046d1ab;
+          if (lVar4 == null) goto LAB_180b8f37b;
           cVar3 = Component.CompareTag(lVar4,this.mtag,0);
           if (!cVar3) {
             return;
@@ -334,7 +334,7 @@ public class ObjectMoveDestroy
         if (cVar3) {
           if ((this.m_gameObjectTail == null) ||
              (lVar4 = GameObject.get_transform(this.m_gameObjectTail,0)) == null)
-          goto LAB_18046d1ab;
+          goto LAB_180b8f37b;
           Transform.set_parent(lVar4,0,0);
         }
         local_58 = *hit;
@@ -358,18 +358,18 @@ public class ObjectMoveDestroy
           uStack_60 = puVar5[1];
           local_78 = uVar6;
           local_70 = uVar1;
-          lVar4 = Object.Instantiate(uVar2,&local_78,&local_68,DAT_181d6a1f8);
-          if (lVar4 == null) goto LAB_18046d1ab;
+          lVar4 = Object.Instantiate(uVar2,&local_78,&local_68,DAT_181d92f18);
+          if (lVar4 == null) goto LAB_180b8f37b;
           uVar6 = Component.get_gameObject(lVar4,0);
           this.m_makedObject = uVar6;
-          if (this.m_makedObject == null) goto LAB_18046d1ab;
+          if (this.m_makedObject == null) goto LAB_180b8f37b;
           lVar4 = GameObject.get_transform(this.m_makedObject,0);
           lVar7 = Component.get_transform(this,0);
-          if ((lVar7 == null) || (uVar6 = FUN_180da0f00(lVar7,0), lVar4 == null)) goto LAB_18046d1ab;
+          if ((lVar7 == null) || (uVar6 = FUN_180da9a20(lVar7,0), lVar4 == null)) goto LAB_180b8f37b;
           Transform.set_parent(lVar4,uVar6,0);
           if ((this.m_makedObject == null) ||
              (lVar4 = GameObject.get_transform(this.m_makedObject,0)) == null)
-          goto LAB_18046d1ab;
+          goto LAB_180b8f37b;
           local_78 = 0x3f8000003f800000;
           local_70 = 0x3f800000;
           Transform.set_localScale(lVar4,&local_78,0);
@@ -377,15 +377,15 @@ public class ObjectMoveDestroy
         if (this.isShieldActive) {
           lVar4 = RaycastHit.get_transform(hit,0);
           if (lVar4 == null) {
-        LAB_18046d1ab:
+        LAB_180b8f37b:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          lVar4 = Component.GetComponent(lVar4,DAT_181d6cac0);
+          lVar4 = Component.GetComponent(lVar4,DAT_181d95360);
           cVar3 = Object.op_Implicit(lVar4,0);
           if (cVar3) {
             puVar5 = (uint64 *)FUN_18045e0a0(&local_68,hit,0);
-            if (lVar4 == null) goto LAB_18046d1ab;
+            if (lVar4 == null) goto LAB_180b8f37b;
             local_78 = *puVar5;
             local_70 = *(uint32 *)(puVar5 + 1);
             ShieldActivate.AddHitObject(lVar4,&local_78,0);
@@ -397,10 +397,12 @@ public class ObjectMoveDestroy
         Object.Destroy(this.m_makedObject,this.HitObjectDestroyTime,0);
     }
 
-    // Token : 0x60023A6
-    // RVA   : 0x46D990   Offset: 0x46C190   Length: 0x19
+    // Token : 0x6002429
+    // RVA   : 0xB8FB60   Offset: 0xB8EF60   Length: 0x19
     public void /*ctor*/()
     {
+        void FUN_180b8fb60(int64 this)
+        {
         this.maxTime = 0x3f800000;
         this.MoveSpeed = 0x41200000;
         this.isHitMake = 1;

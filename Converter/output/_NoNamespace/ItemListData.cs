@@ -1,35 +1,35 @@
 // ============================================================
 // Type  : ItemListData
-// Token : 0x2000210
+// Token : 0x2000216
 // ============================================================
 
 public class ItemListData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000EA7
+    // Token: 0x4000F3A
     public int heroID;
 
-    // Token: 0x4000EA8
+    // Token: 0x4000F3B
     public int forceID;
 
-    // Token: 0x4000EA9
+    // Token: 0x4000F3C
     public int money;
 
-    // Token: 0x4000EAA
+    // Token: 0x4000F3D
     public float weight;
 
-    // Token: 0x4000EAB
+    // Token: 0x4000F3E
     public float maxWeight;
 
-    // Token: 0x4000EAC
+    // Token: 0x4000F3F
     public List<ItemData> allItem;
 
-    // Token: 0x4000EAD
+    // Token: 0x4000F40
     public List<List<ItemData>> itemTypeList;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001019
-    // RVA   : 0xB7E450   Offset: 0xB7CC50   Length: 0x23E
+    // Token : 0x6001055
+    // RVA   : 0xCAA5A0   Offset: 0xCA99A0   Length: 0x23E
     public void /*ctor*/()
     {
         ulong uVar1;
@@ -37,90 +37,139 @@ public class ItemListData
         this.heroID = 0xffffffffffffffff;
         this.maxWeight = 0xbf800000;
         ZhSegment.Initialize(this,0);
-        uVar1 = il2cpp_internal(DAT_181d6f430);
-        FUN_180f58a90(uVar1,DAT_181d691f0);
+        uVar1 = il2cpp_internal(DAT_181d940d0);
+        FUN_18132faf0(uVar1,DAT_181d90998);
         this.allItem = uVar1;
-        lVar2 = il2cpp_internal(DAT_181d6b630);
-        FUN_180f58a90(lVar2,DAT_181d51708);
-        uVar1 = il2cpp_internal(DAT_181d6f430);
-        FUN_180f58a90(uVar1,DAT_181d691f0);
+        lVar2 = il2cpp_internal(DAT_181d901e0);
+        FUN_18132faf0(lVar2,DAT_181d78a28);
+        uVar1 = il2cpp_internal(DAT_181d940d0);
+        FUN_18132faf0(uVar1,DAT_181d90998);
         if (lVar2 != null) {
-          FUN_181827900(lVar2,uVar1,DAT_181d51788);
-          uVar1 = il2cpp_internal(DAT_181d6f430);
-          FUN_180f58a90(uVar1,DAT_181d691f0);
-          FUN_181827900(lVar2,uVar1,DAT_181d51788);
-          uVar1 = il2cpp_internal(DAT_181d6f430);
-          FUN_180f58a90(uVar1,DAT_181d691f0);
-          FUN_181827900(lVar2,uVar1,DAT_181d51788);
-          uVar1 = il2cpp_internal(DAT_181d6f430);
-          FUN_180f58a90(uVar1,DAT_181d691f0);
-          FUN_181827900(lVar2,uVar1,DAT_181d51788);
-          uVar1 = il2cpp_internal(DAT_181d6f430);
-          FUN_180f58a90(uVar1,DAT_181d691f0);
-          FUN_181827900(lVar2,uVar1,DAT_181d51788);
-          uVar1 = il2cpp_internal(DAT_181d6f430);
-          FUN_180f58a90(uVar1,DAT_181d691f0);
-          FUN_181827900(lVar2,uVar1,DAT_181d51788);
-          uVar1 = il2cpp_internal(DAT_181d6f430);
-          FUN_180f58a90(uVar1,DAT_181d691f0);
-          FUN_181827900(lVar2,uVar1,DAT_181d51788);
+          FUN_18181e0a0(lVar2,uVar1,DAT_181d78aa8);
+          uVar1 = il2cpp_internal(DAT_181d940d0);
+          FUN_18132faf0(uVar1,DAT_181d90998);
+          FUN_18181e0a0(lVar2,uVar1,DAT_181d78aa8);
+          uVar1 = il2cpp_internal(DAT_181d940d0);
+          FUN_18132faf0(uVar1,DAT_181d90998);
+          FUN_18181e0a0(lVar2,uVar1,DAT_181d78aa8);
+          uVar1 = il2cpp_internal(DAT_181d940d0);
+          FUN_18132faf0(uVar1,DAT_181d90998);
+          FUN_18181e0a0(lVar2,uVar1,DAT_181d78aa8);
+          uVar1 = il2cpp_internal(DAT_181d940d0);
+          FUN_18132faf0(uVar1,DAT_181d90998);
+          FUN_18181e0a0(lVar2,uVar1,DAT_181d78aa8);
+          uVar1 = il2cpp_internal(DAT_181d940d0);
+          FUN_18132faf0(uVar1,DAT_181d90998);
+          FUN_18181e0a0(lVar2,uVar1,DAT_181d78aa8);
+          uVar1 = il2cpp_internal(DAT_181d940d0);
+          FUN_18132faf0(uVar1,DAT_181d90998);
+          FUN_18181e0a0(lVar2,uVar1,DAT_181d78aa8);
           this.itemTypeList = lVar2;
           return;
         }
     }
 
-    // Token : 0x600101A
-    // RVA   : 0xB7E2F0   Offset: 0xB7CAF0   Length: 0x15C
+    // Token : 0x6001056
+    // RVA   : 0xCAA270   Offset: 0xCA9670   Length: 0x32A
     internal void OnDeserializedMethod(StreamingContext context)
     {
-        long lVar1;
-        long lVar2;
-        ulong uVar3;
-        uint uVar4;
-        long lVar5;
-        if (this.allItem != null) {
-          uVar4 = this.allItem.Count - 1;
-          if (-1 < (int)uVar4) {
-            lVar5 = (int64)(int)uVar4 * 8 + 32;
-            do {
-              lVar2 = this.allItem;
-              if (lVar2 == null) throw; // [null/range check failed]
-              if (lVar2.Count <= uVar4) {
-                ThrowHelper.ThrowArgumentOutOfRangeException(0);
-              }
-              lVar1 = this.allItem;
-              if (*(int64 *)(lVar2._items + lVar5) == 0) {
-                if (lVar1 == null) throw; // [null/range check failed]
-                FUN_18182b220(lVar1,uVar4,DAT_181d695f0);
-              }
-              else {
-                lVar2 = this.itemTypeList;
-                if (lVar1 == null) throw; // [null/range check failed]
-                lVar1 = FUN_180002f80(lVar1,uVar4,DAT_181d69770);
-                if ((lVar1 == null) || (lVar2 == null)) throw; // [null/range check failed]
-                lVar2 = FUN_180002f80(lVar2,*(uint32 *)(lVar1 + 20),DAT_181d51888);
-                if (this.allItem == null) throw; // [null/range check failed]
-                uVar3 = FUN_180002f80(this.allItem,uVar4,DAT_181d69770);
-                if (lVar2 == null) throw; // [null/range check failed]
-                FUN_181827900(lVar2,uVar3,DAT_181d692f0);
-              }
-              lVar5 = lVar5 + -8;
-              uVar4 = uVar4 - 1;
-            } while (-1 < (int)uVar4);
+        int iVar1;
+        ulong uVar2;
+        long lVar3;
+        long lVar4;
+        uint uVar5;
+        long lVar6;
+        lVar6 = this.itemTypeList;
+        if (lVar6 == null) {
+          uVar2 = il2cpp_internal(DAT_181d901e0);
+          FUN_18132faf0(uVar2,DAT_181d78a28);
+          this.itemTypeList = uVar2;
+          lVar6 = this.itemTypeList;
+        }
+        while (lVar6 != null) {
+          iVar1 = lVar6.Count;
+          lVar6 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x4d0);
+          if (lVar6 == null) break;
+          lVar4 = this.itemTypeList;
+          if (lVar6.Count <= iVar1) {
+            uVar5 = 0;
+            if (lVar4 != null) {
+              lVar6 = 32;
+              goto LAB_180caa440;
+            }
+            break;
           }
+          uVar2 = il2cpp_internal(DAT_181d940d0);
+          FUN_18132faf0(uVar2,DAT_181d90998);
+          if (lVar4 == null) break;
+          FUN_18181e0a0(lVar4,uVar2,DAT_181d78aa8);
+          lVar6 = this.itemTypeList;
+        }
+        throw; // [null/range check failed]
+        LAB_180caa4c0:
+        lVar4 = this.allItem;
+        if (lVar4 == null) throw; // [null/range check failed]
+        lVar3 = lVar4;
+        if (lVar4.Count <= uVar5) {
+          ThrowHelper.ThrowArgumentOutOfRangeException(0);
+          lVar3 = this.allItem;
+        }
+        if (*(int64 *)(lVar6 + lVar4._items) == 0) {
+          if (lVar3 == null) throw; // [null/range check failed]
+          FUN_181823590(lVar3,uVar5,DAT_181d90d98);
+        }
+        else {
+          lVar4 = this.itemTypeList;
+          if (((lVar3 == null) || (lVar3 = FUN_180002f80(lVar3,uVar5,DAT_181d90f18)) == null) ||
+             (lVar4 == null)) throw; // [null/range check failed]
+          lVar4 = FUN_180002f80(lVar4,*(uint32 *)(lVar3 + 20),DAT_181d78ba8);
+          if ((this.allItem == null) ||
+             (uVar2 = FUN_180002f80(this.allItem,uVar5,DAT_181d90f18), lVar4 == null))
+          throw; // [null/range check failed]
+          FUN_18181e0a0(lVar4,uVar2,DAT_181d90a98);
+        }
+        lVar6 = lVar6 + -8;
+        uVar5 = uVar5 - 1;
+        if ((int)uVar5 < 0) {
           return;
+        }
+        goto LAB_180caa4c0;
+        while( true ) {
+          if (lVar4 == null) break;
+          if (lVar4.Count <= uVar5) {
+            ThrowHelper.ThrowArgumentOutOfRangeException(0);
+          }
+          lVar4 = *(int64 *)(lVar6 + lVar4._items);
+          if (lVar4 == null) break;
+          FUN_1812f9a10(lVar4,DAT_181d90b18);
+          lVar4 = this.itemTypeList;
+          uVar5 = uVar5 + 1;
+          lVar6 = lVar6 + 8;
+          if (lVar4 == null) break;
+        LAB_180caa440:
+          if (lVar4.Count <= (int)uVar5) {
+            if (this.allItem != null) {
+              uVar5 = this.allItem.Count - 1;
+              if ((int)uVar5 < 0) {
+                return;
+              }
+              lVar6 = (int64)(int)uVar5 * 8 + 32;
+              goto LAB_180caa4c0;
+            }
+            break;
+          }
         }
     }
 
-    // Token : 0x600101B
-    // RVA   : 0xB7CF30   Offset: 0xB7B730   Length: 0xDE
+    // Token : 0x6001057
+    // RVA   : 0xCA8EB0   Offset: 0xCA82B0   Length: 0xDE
     public void ClearAllItem()
     {
         long lVar1;
         long lVar2;
         uint uVar3;
         if (this.allItem != null) {
-          FUN_180f56130(this.allItem,DAT_181d69370);
+          FUN_1812f9a10(this.allItem,DAT_181d90b18);
           lVar1 = this.itemTypeList;
           uVar3 = 0;
           if (lVar1 != null) {
@@ -136,7 +185,7 @@ public class ItemListData
               }
               lVar1 = *(int64 *)(lVar2 + lVar1._items);
               if (lVar1 == null) break;
-              FUN_180f56130(lVar1,DAT_181d69370);
+              FUN_1812f9a10(lVar1,DAT_181d90b18);
               lVar1 = this.itemTypeList;
               uVar3 = uVar3 + 1;
               lVar2 = lVar2 + 8;
@@ -145,8 +194,8 @@ public class ItemListData
         }
     }
 
-    // Token : 0x600101C
-    // RVA   : 0xB7D7A0   Offset: 0xB7BFA0   Length: 0x146
+    // Token : 0x6001058
+    // RVA   : 0xCA9720   Offset: 0xCA8B20   Length: 0x146
     public string GetItemName()
     {
         bool cVar1;
@@ -160,20 +209,20 @@ public class ItemListData
         uVar4 = "";
         do {
           if (lVar2 == null) {
-        LAB_180b7d8e1:
+        LAB_180ca9861:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           if (lVar2.Count <= iVar5) {
-        LAB_180b7d8ad:
+        LAB_180ca982d:
             if (5 < lVar2.Count) {
               uVar4 = String.Concat(uVar4,"……",0);
             }
             return uVar4;
           }
           if (4 < iVar5) {
-            if (lVar2 != null) goto LAB_180b7d8ad;
-            goto LAB_180b7d8e1;
+            if (lVar2 != null) goto LAB_180ca982d;
+            goto LAB_180ca9861;
           }
           cVar1 = String.op_Inequality(uVar4,"",0);
           uVar6 = "";
@@ -181,8 +230,8 @@ public class ItemListData
             uVar6 = "/";
           }
           if ((this.allItem == null) ||
-             (lVar2 = FUN_180002f80(this.allItem,iVar5,DAT_181d69770)) == null)
-          goto LAB_180b7d8e1;
+             (lVar2 = FUN_180002f80(this.allItem,iVar5,DAT_181d90f18)) == null)
+          goto LAB_180ca9861;
           uVar3 = ItemData.Name(lVar2,1,0);
           uVar4 = String.Concat(uVar4,uVar6,uVar3,0);
           iVar5 = iVar5 + 1;
@@ -190,8 +239,8 @@ public class ItemListData
         } while( true );
     }
 
-    // Token : 0x600101D
-    // RVA   : 0xB7D8F0   Offset: 0xB7C0F0   Length: 0xC7
+    // Token : 0x6001059
+    // RVA   : 0xCA9870   Offset: 0xCA8C70   Length: 0xC7
     public float GetItemValue()
     {
         long lVar1;
@@ -217,8 +266,8 @@ public class ItemListData
         }
     }
 
-    // Token : 0x600101E
-    // RVA   : 0xB7D9C0   Offset: 0xB7C1C0   Length: 0xAD
+    // Token : 0x600105A
+    // RVA   : 0xCA9940   Offset: 0xCA8D40   Length: 0xAD
     private void MergeList(ItemListData target)
     {
         long lVar1;
@@ -244,8 +293,8 @@ public class ItemListData
         }
     }
 
-    // Token : 0x600101F
-    // RVA   : 0xB7E240   Offset: 0xB7CA40   Length: 0xAD
+    // Token : 0x600105B
+    // RVA   : 0xCAA1C0   Offset: 0xCA95C0   Length: 0xAD
     private void RemoveList(ItemListData target)
     {
         long lVar1;
@@ -271,10 +320,11 @@ public class ItemListData
         }
     }
 
-    // Token : 0x6001020
-    // RVA   : 0xB7D9C0   Offset: 0xB7C1C0   Length: 0xAD
+    // Token : 0x600105C
+    // RVA   : 0xCA9940   Offset: 0xCA8D40   Length: 0xAD
     public void GetItem(ItemListData target)
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         uint uVar2;
         long lVar3;
@@ -285,33 +335,33 @@ public class ItemListData
         ulong local_18;
         ulong uStack_10;
         if (-1 < this.heroID) {
-          if ((GameController._instance == null) ||
-             (lVar3 = GameController._instance.worldData) == null
-             ) throw; // [null/range check failed]
+          if ((*pStatics == 0) ||
+             (lVar3 = *(int64 *)(*pStatics + 32)) == null)
+          throw; // [null/range check failed]
           lVar3 = WorldData.GetHero(lVar3,this.heroID,0);
           if (lVar3 != null) {
             if (target == null) throw; // [null/range check failed]
             iVar1 = *(int *)(target + 20);
             if ((iVar1 == 0) || (iVar1 == 6)) {
               lVar3 = FUN_18046c0a0(0);
-              if ((((lVar3 == null) || (lVar3.villageAreaID == null)) ||
-                  (lVar3 = WorldData.GetHero(lVar3.villageAreaID,this.heroID,
-                                              0), lVar3 == null)) || (lVar3.ResourcePoints == null))
+              if ((((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
+                  (lVar3 = WorldData.GetHero(*(int64 *)(lVar3 + 32),this.heroID,
+                                              0), lVar3 == null)) || (*(int64 *)(lVar3 + 64) == 0))
               throw; // [null/range check failed]
-              *(uint8 *)(lVar3.ResourcePoints + 44) = 1;
+              *(uint8 *)(*(int64 *)(lVar3 + 64) + 44) = 1;
             }
             else if (iVar1 - 1U < 2) {
               lVar3 = FUN_18046c0a0(0);
-              if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
-                 ((lVar3 = WorldData.GetHero(lVar3.villageAreaID,this.heroID,
-                                              0), lVar3 == null || (lVar3.ResourcePoints == null))))
+              if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
+                 ((lVar3 = WorldData.GetHero(*(int64 *)(lVar3 + 32),this.heroID,
+                                              0), lVar3 == null || (*(int64 *)(lVar3 + 64) == 0))))
               throw; // [null/range check failed]
-              *(uint8 *)(lVar3.ResourcePoints + 46) = 1;
+              *(uint8 *)(*(int64 *)(lVar3 + 64) + 46) = 1;
             }
           }
         }
         if ((this.allItem != null) &&
-           (FUN_181827900(this.allItem,target,DAT_181d692f0), target != null)) {
+           (FUN_18181e0a0(this.allItem,target,DAT_181d90a98), target != null)) {
           lVar3 = this.itemTypeList;
           this.weight = *(float *)(target + 68) + this.weight;
           if (lVar3 != null) {
@@ -321,10 +371,10 @@ public class ItemListData
             }
             lVar3 = lVar3._items[uVar2];
             if (lVar3 != null) {
-              FUN_181827900(lVar3,target,DAT_181d692f0);
+              FUN_18181e0a0(lVar3,target,DAT_181d90a98);
               if (param_3) {
                 uVar7 = "{0}仓库添加了 {1}";
-                lVar3 = **(int64 **)(DAT_181d5a578 + 184);
+                lVar3 = **(int64 **)(DAT_181d7f6a8 + 184);
                 uVar5 = "";
                 if (-1 < this.heroID) {
                   lVar4 = FUN_18046c0a0(0);
@@ -357,8 +407,8 @@ public class ItemListData
         }
     }
 
-    // Token : 0x6001021
-    // RVA   : 0xB7E240   Offset: 0xB7CA40   Length: 0xAD
+    // Token : 0x600105D
+    // RVA   : 0xCAA1C0   Offset: 0xCA95C0   Length: 0xAD
     public void LoseItem(ItemListData target)
     {
         bool cVar1;
@@ -383,7 +433,7 @@ public class ItemListData
               cVar1 = *(char *)(*(int64 *)(target + 96) + 48);
             }
             else {
-              if (*(int *)(target + 20) != 6) goto LAB_180b7e01f;
+              if (*(int *)(target + 20) != 6) goto LAB_180ca9f9f;
               if (*(int64 *)(target + 136) == 0) throw; // [null/range check failed]
               cVar1 = *(char *)(*(int64 *)(target + 136) + 16);
             }
@@ -397,9 +447,9 @@ public class ItemListData
             }
           }
         }
-        LAB_180b7e01f:
+        LAB_180ca9f9f:
         if (this.allItem != null) {
-          FUN_181801c10(this.allItem,target,DAT_181d69570);
+          FUN_1817eee00(this.allItem,target,DAT_181d90d18);
           lVar3 = this.itemTypeList;
           this.weight = this.weight - *(float *)(target + 68);
           if (lVar3 != null) {
@@ -409,10 +459,10 @@ public class ItemListData
             }
             lVar3 = lVar3._items[uVar2];
             if (lVar3 != null) {
-              FUN_181801c10(lVar3,target,DAT_181d69570);
+              FUN_1817eee00(lVar3,target,DAT_181d90d18);
               if (param_3) {
                 uVar7 = "{0}仓库移除了 {1}";
-                lVar3 = **(int64 **)(DAT_181d5a578 + 184);
+                lVar3 = **(int64 **)(DAT_181d7f6a8 + 184);
                 uVar5 = "";
                 if (-1 < this.heroID) {
                   lVar4 = FUN_18046c0a0(0);
@@ -446,10 +496,11 @@ public class ItemListData
         }
     }
 
-    // Token : 0x6001022
-    // RVA   : 0xB7DA70   Offset: 0xB7C270   Length: 0x42B
+    // Token : 0x600105E
+    // RVA   : 0xCA99F0   Offset: 0xCA8DF0   Length: 0x42B
     public void GetItem(ItemData targetItem, bool showPopInfo)
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         uint uVar2;
         long lVar3;
@@ -460,33 +511,33 @@ public class ItemListData
         ulong local_18;
         ulong uStack_10;
         if (-1 < this.heroID) {
-          if ((GameController._instance == null) ||
-             (lVar3 = GameController._instance.worldData) == null
-             ) throw; // [null/range check failed]
+          if ((*pStatics == 0) ||
+             (lVar3 = *(int64 *)(*pStatics + 32)) == null)
+          throw; // [null/range check failed]
           lVar3 = WorldData.GetHero(lVar3,this.heroID,0);
           if (lVar3 != null) {
             if (targetItem == null) throw; // [null/range check failed]
             iVar1 = *(int *)(targetItem + 20);
             if ((iVar1 == 0) || (iVar1 == 6)) {
               lVar3 = FUN_18046c0a0(0);
-              if ((((lVar3 == null) || (lVar3.villageAreaID == null)) ||
-                  (lVar3 = WorldData.GetHero(lVar3.villageAreaID,this.heroID,
-                                              0), lVar3 == null)) || (lVar3.ResourcePoints == null))
+              if ((((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
+                  (lVar3 = WorldData.GetHero(*(int64 *)(lVar3 + 32),this.heroID,
+                                              0), lVar3 == null)) || (*(int64 *)(lVar3 + 64) == 0))
               throw; // [null/range check failed]
-              *(uint8 *)(lVar3.ResourcePoints + 44) = 1;
+              *(uint8 *)(*(int64 *)(lVar3 + 64) + 44) = 1;
             }
             else if (iVar1 - 1U < 2) {
               lVar3 = FUN_18046c0a0(0);
-              if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
-                 ((lVar3 = WorldData.GetHero(lVar3.villageAreaID,this.heroID,
-                                              0), lVar3 == null || (lVar3.ResourcePoints == null))))
+              if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
+                 ((lVar3 = WorldData.GetHero(*(int64 *)(lVar3 + 32),this.heroID,
+                                              0), lVar3 == null || (*(int64 *)(lVar3 + 64) == 0))))
               throw; // [null/range check failed]
-              *(uint8 *)(lVar3.ResourcePoints + 46) = 1;
+              *(uint8 *)(*(int64 *)(lVar3 + 64) + 46) = 1;
             }
           }
         }
         if ((this.allItem != null) &&
-           (FUN_181827900(this.allItem,targetItem,DAT_181d692f0), targetItem != null)) {
+           (FUN_18181e0a0(this.allItem,targetItem,DAT_181d90a98), targetItem != null)) {
           lVar3 = this.itemTypeList;
           this.weight = *(float *)(targetItem + 68) + this.weight;
           if (lVar3 != null) {
@@ -496,10 +547,10 @@ public class ItemListData
             }
             lVar3 = lVar3._items[uVar2];
             if (lVar3 != null) {
-              FUN_181827900(lVar3,targetItem,DAT_181d692f0);
+              FUN_18181e0a0(lVar3,targetItem,DAT_181d90a98);
               if (showPopInfo) {
                 uVar7 = "{0}仓库添加了 {1}";
-                lVar3 = **(int64 **)(DAT_181d5a578 + 184);
+                lVar3 = **(int64 **)(DAT_181d7f6a8 + 184);
                 uVar5 = "";
                 if (-1 < this.heroID) {
                   lVar4 = FUN_18046c0a0(0);
@@ -532,8 +583,8 @@ public class ItemListData
         }
     }
 
-    // Token : 0x6001023
-    // RVA   : 0xB7DEA0   Offset: 0xB7C6A0   Length: 0x39B
+    // Token : 0x600105F
+    // RVA   : 0xCA9E20   Offset: 0xCA9220   Length: 0x39B
     public void LoseItem(ItemData targetItem, bool showPopInfo)
     {
         bool cVar1;
@@ -558,7 +609,7 @@ public class ItemListData
               cVar1 = *(char *)(*(int64 *)(targetItem + 96) + 48);
             }
             else {
-              if (*(int *)(targetItem + 20) != 6) goto LAB_180b7e01f;
+              if (*(int *)(targetItem + 20) != 6) goto LAB_180ca9f9f;
               if (*(int64 *)(targetItem + 136) == 0) throw; // [null/range check failed]
               cVar1 = *(char *)(*(int64 *)(targetItem + 136) + 16);
             }
@@ -572,9 +623,9 @@ public class ItemListData
             }
           }
         }
-        LAB_180b7e01f:
+        LAB_180ca9f9f:
         if (this.allItem != null) {
-          FUN_181801c10(this.allItem,targetItem,DAT_181d69570);
+          FUN_1817eee00(this.allItem,targetItem,DAT_181d90d18);
           lVar3 = this.itemTypeList;
           this.weight = this.weight - *(float *)(targetItem + 68);
           if (lVar3 != null) {
@@ -584,10 +635,10 @@ public class ItemListData
             }
             lVar3 = lVar3._items[uVar2];
             if (lVar3 != null) {
-              FUN_181801c10(lVar3,targetItem,DAT_181d69570);
+              FUN_1817eee00(lVar3,targetItem,DAT_181d90d18);
               if (showPopInfo) {
                 uVar7 = "{0}仓库移除了 {1}";
-                lVar3 = **(int64 **)(DAT_181d5a578 + 184);
+                lVar3 = **(int64 **)(DAT_181d7f6a8 + 184);
                 uVar5 = "";
                 if (-1 < this.heroID) {
                   lVar4 = FUN_18046c0a0(0);
@@ -621,8 +672,8 @@ public class ItemListData
         }
     }
 
-    // Token : 0x6001024
-    // RVA   : 0xB7D190   Offset: 0xB7B990   Length: 0x440
+    // Token : 0x6001060
+    // RVA   : 0xCA9110   Offset: 0xCA8510   Length: 0x440
     public ItemData FindRandomItem(int minItemLv, int maxItemLv, bool includeEquipment, int targetItemType, List<int> subType, int littleType, float minValue, float maxValue)
     {
         uint64
@@ -639,8 +690,8 @@ public class ItemListData
         if (maxValue == null.0) {
           return false;
         }
-        lVar3 = il2cpp_internal(DAT_181d6f030);
-        FUN_180f58a90(lVar3,DAT_181d678f8);
+        lVar3 = il2cpp_internal(DAT_181d93cd0);
+        FUN_18132faf0(lVar3,DAT_181d8f098);
         lVar4 = this.allItem;
         uVar5 = 0;
         if (lVar4 != null) {
@@ -662,37 +713,37 @@ public class ItemListData
                      (lVar4 = FUN_180002f80(this.allItem,uVar5)) == null)
                   throw; // [null/range check failed]
                   cVar2 = ItemData.Equiped(lVar4,0);
-                  if (cVar2) goto LAB_180b7d4f8;
+                  if (cVar2) goto LAB_180ca9478;
                 }
                 if (targetItemType != -1) {
                   if ((this.allItem == null) ||
                      (lVar4 = FUN_180002f80(this.allItem,uVar5)) == null)
                   throw; // [null/range check failed]
-                  if (*(int *)(lVar4 + 20) != targetItemType) goto LAB_180b7d4f8;
+                  if (*(int *)(lVar4 + 20) != targetItemType) goto LAB_180ca9478;
                 }
                 if (subType != null) {
                   if ((this.allItem == null) ||
-                     (lVar4 = FUN_180002f80(this.allItem,uVar5,DAT_181d69770), lVar4 == null
+                     (lVar4 = FUN_180002f80(this.allItem,uVar5,DAT_181d90f18), lVar4 == null
                      )) throw; // [null/range check failed]
-                  cVar2 = FUN_181815240(subType,lVar4.Count);
-                  if (!cVar2) goto LAB_180b7d4f8;
+                  cVar2 = FUN_18182a3a0(subType,lVar4.Count);
+                  if (!cVar2) goto LAB_180ca9478;
                 }
                 if (littleType == -1) {
-        LAB_180b7d46c:
+        LAB_180ca93ec:
                   if (minValue != -1.0) {
                     if ((this.allItem == null) ||
                        (lVar4 = FUN_180002f80(this.allItem,uVar5)) == null)
                     throw; // [null/range check failed]
-                    if ((float)*(int *)(lVar4 + 56) < minValue) goto LAB_180b7d4f8;
+                    if ((float)*(int *)(lVar4 + 56) < minValue) goto LAB_180ca9478;
                   }
                   if (maxValue != -1.0) {
                     if ((this.allItem == null) ||
                        (lVar4 = FUN_180002f80(this.allItem,uVar5)) == null)
                     throw; // [null/range check failed]
-                    if (maxValue < (float)*(int *)(lVar4 + 56)) goto LAB_180b7d4f8;
+                    if (maxValue < (float)*(int *)(lVar4 + 56)) goto LAB_180ca9478;
                   }
                   if (lVar3 == null) throw; // [null/range check failed]
-                  FUN_181814fa0(lVar3,uVar5);
+                  FUN_18182a0b0(lVar3,uVar5);
                 }
                 else {
                   if ((this.allItem == null) ||
@@ -702,12 +753,12 @@ public class ItemListData
                     if (((this.allItem == null) ||
                         (lVar4 = FUN_180002f80(this.allItem,uVar5)) == null) ||
                        (*(int64 *)(lVar4 + 96) == 0)) throw; // [null/range check failed]
-                    if (*(int *)(*(int64 *)(lVar4 + 96) + 20) == littleType) goto LAB_180b7d46c;
+                    if (*(int *)(*(int64 *)(lVar4 + 96) + 20) == littleType) goto LAB_180ca93ec;
                   }
                 }
               }
             }
-        LAB_180b7d4f8:
+        LAB_180ca9478:
             lVar4 = this.allItem;
             uVar5 = uVar5 + 1;
             lVar6 = lVar6 + 8;
@@ -733,56 +784,56 @@ public class ItemListData
         }
     }
 
-    // Token : 0x6001025
-    // RVA   : 0xB7CF20   Offset: 0xB7B720   Length: 0x9
+    // Token : 0x6001061
+    // RVA   : 0xCA8EA0   Offset: 0xCA82A0   Length: 0x9
     public bool BelongHero()
     {
         return this.heroID >> 31 ^ 1;
     }
 
-    // Token : 0x6001026
-    // RVA   : 0xB7D6C0   Offset: 0xB7BEC0   Length: 0xD0
+    // Token : 0x6001062
+    // RVA   : 0xCA9640   Offset: 0xCA8A40   Length: 0xD0
     public HeroData GetHero()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         ulong uVar2;
         if (this.heroID < 0) {
           return 0;
         }
-        if ((GameController._instance != null) &&
-           (lVar1 = GameController._instance.worldData) != null)
-        {
+        if ((*pStatics != 0) &&
+           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
           uVar2 = WorldData.GetHero(lVar1,this.heroID,0);
           return uVar2;
         }
     }
 
-    // Token : 0x6001027
-    // RVA   : 0xB7CF10   Offset: 0xB7B710   Length: 0x9
+    // Token : 0x6001063
+    // RVA   : 0xCA8E90   Offset: 0xCA8290   Length: 0x8
     public bool BelongForce()
     {
-        return this.forceID >> 31 ^ 1;
+        return this.forceID != -1;
     }
 
-    // Token : 0x6001028
-    // RVA   : 0xB7D5E0   Offset: 0xB7BDE0   Length: 0xD0
+    // Token : 0x6001064
+    // RVA   : 0xCA9560   Offset: 0xCA8960   Length: 0xD0
     public ForceData GetForce()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         ulong uVar2;
-        if (this.forceID < 0) {
+        if (this.forceID == -1) {
           return 0;
         }
-        if ((GameController._instance != null) &&
-           (lVar1 = GameController._instance.worldData) != null)
-        {
+        if ((*pStatics != 0) &&
+           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
           uVar2 = WorldData.GetForce(lVar1,this.forceID,0);
           return uVar2;
         }
     }
 
-    // Token : 0x6001029
-    // RVA   : 0xB7D010   Offset: 0xB7B810   Length: 0x175
+    // Token : 0x6001065
+    // RVA   : 0xCA8F90   Offset: 0xCA8390   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -793,13 +844,13 @@ public class ItemListData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -811,7 +862,7 @@ public class ItemListData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d53c70,plVar1);
+            FUN_180002970(0,DAT_181d78da0,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

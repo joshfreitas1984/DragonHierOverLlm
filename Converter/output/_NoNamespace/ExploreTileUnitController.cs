@@ -1,53 +1,89 @@
 // ============================================================
 // Type  : ExploreTileUnitController
-// Token : 0x2000274
+// Token : 0x200027A
 // ============================================================
 
 public class ExploreTileUnitController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001353
+    // Token: 0x4001401
     public ExploreTileData exploreTileData;
 
-    // Token: 0x4001354
+    // Token: 0x4001402
     public GameObject groundTypeSkeleton;
 
-    // Token: 0x4001355
+    // Token: 0x4001403
     private bool been;
 
-    // Token: 0x4001356
+    // Token: 0x4001404
     private bool finalTile;
 
-    // Token: 0x4001357
+    // Token: 0x4001405
     private SpriteRenderer tileRenderer;
 
-    // Token: 0x4001358
+    // Token: 0x4001406
     private bool needRefreshColor;
 
-    // Token: 0x4001359
+    // Token: 0x4001407
     private bool needFade;
 
-    // Token: 0x400135A
+    // Token: 0x4001408
     public bool needCheckFade;
 
-    // Token: 0x400135B
+    // Token: 0x4001409
     public static float fadeAlpha;
 
-    // Token: 0x400135C
+    // Token: 0x400140A
     private static Color WhiteCoverColor;
 
-    // Token: 0x400135D
+    // Token: 0x400140B
     private static Color BlackCoverColor;
 
-    // Token: 0x400135E
+    // Token: 0x400140C
     private static List<string> UseBlackCoverColorBackgroundType;
 
+    // Token: 0x400140D
+    private const float ObstacleColorRefreshInterval;
+
+    // Token: 0x400140E
+    private SpriteRenderer exploreEventRenderer;
+
+    // Token: 0x400140F
+    private float nextObstacleColorTime;
+
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001403
-    // RVA   : 0xBA06B0   Offset: 0xB9EEB0   Length: 0x9BC
+    // Token : 0x6001445
+    // RVA   : 0xB28E30   Offset: 0xB28230   Length: 0xD7
+    private SpriteRenderer get_ExploreEventRenderer()
+    {
+        bool cVar1;
+        long lVar2;
+        ulong uVar3;
+        uVar3 = this.exploreEventRenderer;
+        cVar1 = Object.op_Equality(uVar3,0,0);
+        if (cVar1) {
+          lVar2 = Component.get_transform(this,0);
+          if (lVar2 != null) {
+            lVar2 = Transform.Find(lVar2,"ExploreEvent",0);
+            if (lVar2 != null) {
+              uVar3 = Component.GetComponent(lVar2,DAT_181d95de0);
+              this.exploreEventRenderer = uVar3;
+              goto LAB_180b28eee;
+            }
+          }
+                          // WARNING: Subroutine does not return
+          FUN_1800d6620();
+        }
+        LAB_180b28eee:
+        return this.exploreEventRenderer;
+    }
+
+    // Token : 0x6001446
+    // RVA   : 0xB28FA0   Offset: 0xB283A0   Length: 0x9BC
     public void set_Seen(bool value)
     {
-        var pExploreTileUnitController = *(int64*)(ExploreTileUnitController_StaticsPtr + 184);
+        var pStatics_5e30 = *(int64*)(DAT_181dc5e30 + 184);
+        var pStatics_60d8 = *(int64*)(DAT_181dc60d8 + 184);
         int iVar1;
         long lVar2;
         long lVar3;
@@ -72,40 +108,40 @@ public class ExploreTileUnitController
         if (!value) {
           lVar6 = Component.get_transform(this,0);
           fVar4 = local_60;
-          if (lVar6 == null) goto LAB_180ba1061;
+          if (lVar6 == null) goto LAB_180b29951;
           lVar6 = Transform.Find(lVar6,"BlackCover",0);
           fVar4 = local_60;
-          if (lVar6 == null) goto LAB_180ba1061;
-          lVar6 = Component.GetComponent(lVar6,DAT_181d6d540);
-          lVar2 = BattleController.AttackAreaTypeStartMovePower;
+          if (lVar6 == null) goto LAB_180b29951;
+          lVar6 = Component.GetComponent(lVar6,DAT_181d95de0);
+          lVar2 = *(int64 *)(pStatics_5e30 + 8);
           fVar4 = local_60;
-          if ((lVar2 == null) || (lVar2 = *(int64 *)(lVar2 + 120)) == null) goto LAB_180ba1061;
+          if ((lVar2 == null) || (lVar2 = *(int64 *)(lVar2 + 120)) == null) goto LAB_180b29951;
           if (*(int *)(lVar2 + 16) == 1) {
-        LAB_180ba08a3:
-            lVar2 = pExploreTileUnitController;
+        LAB_180b29193:
+            lVar2 = pStatics_60d8;
             uVar12 = *(uint32 *)(lVar2 + 20);
             uVar9 = *(uint32 *)(lVar2 + 24);
             uVar10 = *(uint32 *)(lVar2 + 28);
             uVar11 = *(uint32 *)(lVar2 + 32);
           }
           else {
-            lVar2 = ExploreTileUnitController.UseBlackCoverColorBackgroundType;
-            lVar3 = BattleController.AttackAreaTypeStartMovePower;
+            lVar2 = *(int64 *)(pStatics_60d8 + 40);
+            lVar3 = *(int64 *)(pStatics_5e30 + 8);
             fVar4 = local_60;
-            if ((lVar3 == null) || (lVar2 == null)) goto LAB_180ba1061;
-            cVar5 = FUN_1818279a0(lVar2,*(uint64 *)(lVar3 + 88),DAT_181d7c4d0);
+            if ((lVar3 == null) || (lVar2 == null)) goto LAB_180b29951;
+            cVar5 = FUN_18181e400(lVar2,*(uint64 *)(lVar3 + 88),DAT_181da3e58);
             if (!cVar5) {
-              lVar2 = pExploreTileUnitController;
+              lVar2 = pStatics_60d8;
               uVar12 = *(uint32 *)(lVar2 + 4);
               uVar9 = *(uint32 *)(lVar2 + 8);
               uVar10 = *(uint32 *)(lVar2 + 12);
               uVar11 = *(uint32 *)(lVar2 + 16);
             }
             else {
-              if (((*(byte *)(ExploreTileUnitController_StaticsPtr + 0x133) & 4) == 0) ||
-                 (*(int *)(ExploreTileUnitController_StaticsPtr + 224) != 0)) goto LAB_180ba08a3;
-              il2cpp_runtime_class_init(ExploreTileUnitController_StaticsPtr);
-              lVar2 = pExploreTileUnitController;
+              if (((*(byte *)(DAT_181dc60d8 + 0x133) & 4) == 0) || (*(int *)(DAT_181dc60d8 + 224) != 0))
+              goto LAB_180b29193;
+              il2cpp_runtime_class_init(DAT_181dc60d8);
+              lVar2 = pStatics_60d8;
               uVar12 = *(uint32 *)(lVar2 + 20);
               uVar9 = *(uint32 *)(lVar2 + 24);
               uVar10 = *(uint32 *)(lVar2 + 28);
@@ -113,138 +149,138 @@ public class ExploreTileUnitController
             }
           }
           fVar4 = local_60;
-          if (lVar6 == null) goto LAB_180ba1061;
+          if (lVar6 == null) goto LAB_180b29951;
           local_48 = CONCAT44(uVar9,uVar12);
           uStack_40 = CONCAT44(uVar11,uVar10);
           SpriteRenderer.set_color(lVar6,&local_48,0);
           lVar6 = Component.get_transform(this,0);
           fVar4 = local_60;
-          if (lVar6 == null) goto LAB_180ba1061;
+          if (lVar6 == null) goto LAB_180b29951;
           lVar6 = Transform.Find(lVar6,"BlackCover",0);
           puVar7 = (uint64 *)Vector3.get_one(&local_48,0);
           local_68 = *puVar7;
           local_60 = *(float *)(puVar7 + 1) * 0.55;
           local_78 = CONCAT44((float)((uint64)local_68 >> 32) * 0.55,(float)local_68 * 0.55);
           fVar4 = *(float *)(puVar7 + 1);
-          if (lVar6 == null) goto LAB_180ba1061;
+          if (lVar6 == null) goto LAB_180b29951;
           local_68 = local_78;
           Transform.set_localScale(lVar6,&local_68,0);
           uVar8 = this.groundTypeSkeleton;
           cVar5 = Object.op_Inequality(uVar8,0,0);
           if (cVar5) {
             fVar4 = local_60;
-            if (this.groundTypeSkeleton == null) goto LAB_180ba1061;
-            lVar6 = GameObject.GetComponent(this.groundTypeSkeleton,DAT_181da1330);
+            if (this.groundTypeSkeleton == null) goto LAB_180b29951;
+            lVar6 = GameObject.GetComponent(this.groundTypeSkeleton,DAT_181d734d0);
             fVar4 = local_60;
-            if (lVar6 == null) goto LAB_180ba1061;
+            if (lVar6 == null) goto LAB_180b29951;
             lVar6 = SkeletonRenderer.get_Skeleton(lVar6,0);
             fVar4 = local_60;
-            if (lVar6 == null) goto LAB_180ba1061;
+            if (lVar6 == null) goto LAB_180b29951;
             *(uint32 *)(lVar6 + 108) = 0;
           }
         }
         else {
           fVar4 = local_60;
-          if (this.exploreTileData == null) goto LAB_180ba1061;
+          if (this.exploreTileData == null) goto LAB_180b29951;
           if (!this.exploreTileData.seen) {
             ExploreTileUnitController.CheckNeedFade(this,0,0);
             fVar4 = local_60;
-            if (this.exploreTileData == null) goto LAB_180ba1061;
+            if (this.exploreTileData == null) goto LAB_180b29951;
             if (0 < this.exploreTileData.row) {
               lVar6 = FUN_18046be80(0);
               fVar4 = local_60;
               if ((((lVar6 == null) || (*(int64 *)(lVar6 + 120) == 0)) ||
                   (lVar2 = this.exploreTileData) == null) ||
                  (lVar6 = *(int64 *)(*(int64 *)(lVar6 + 120) + 40)) == null)
-              goto LAB_180ba1061;
-              lVar6 = FUN_180127f50(lVar6,(int64)*(int *)(lVar2 + 36),
+              goto LAB_180b29951;
+              lVar6 = FUN_180127f90(lVar6,(int64)*(int *)(lVar2 + 36),
                                     (int64)*(int *)(lVar2 + 32) + -1);
               fVar4 = local_60;
-              if (lVar6 == null) goto LAB_180ba1061;
+              if (lVar6 == null) goto LAB_180b29951;
               if (*(char *)(lVar6 + 88) != false) {
                 lVar6 = FUN_18046be80(0);
                 fVar4 = local_60;
                 if (((lVar6 == null) || (lVar2 = this.exploreTileData) == null) ||
-                   (*(int64 *)(lVar6 + 128) == 0)) goto LAB_180ba1061;
-                lVar6 = FUN_180127f50(*(int64 *)(lVar6 + 128),(int64)*(int *)(lVar2 + 36),
+                   (*(int64 *)(lVar6 + 128) == 0)) goto LAB_180b29951;
+                lVar6 = FUN_180127f90(*(int64 *)(lVar6 + 128),(int64)*(int *)(lVar2 + 36),
                                       (int64)*(int *)(lVar2 + 32) + -1);
                 fVar4 = local_60;
-                if (lVar6 == null) goto LAB_180ba1061;
-                lVar6 = GameObject.GetComponent(lVar6,DAT_181d9f5d0);
+                if (lVar6 == null) goto LAB_180b29951;
+                lVar6 = GameObject.GetComponent(lVar6,DAT_181d71578);
                 fVar4 = local_60;
-                if (lVar6 == null) goto LAB_180ba1061;
+                if (lVar6 == null) goto LAB_180b29951;
                 *(uint8 *)(lVar6 + 58) = 1;
               }
             }
             lVar6 = Component.get_transform(this,0);
             fVar4 = local_60;
-            if (lVar6 == null) goto LAB_180ba1061;
+            if (lVar6 == null) goto LAB_180b29951;
             lVar6 = Transform.Find(lVar6,"BlackCover",0);
             fVar4 = local_60;
-            if (lVar6 == null) goto LAB_180ba1061;
-            uVar8 = Component.GetComponent(lVar6,DAT_181d6d540);
+            if (lVar6 == null) goto LAB_180b29951;
+            uVar8 = Component.GetComponent(lVar6,DAT_181d95de0);
             uVar8 = DOTweenModuleSprite.DOFade(uVar8,0,0x3f000000,0);
-            TweenSettingsExtensions.SetUpdate(uVar8,1,DAT_181d98958);
+            TweenSettingsExtensions.SetUpdate(uVar8,1,DAT_181dc1c20);
             lVar6 = Component.get_transform(this,0);
             fVar4 = local_60;
-            if (lVar6 == null) goto LAB_180ba1061;
+            if (lVar6 == null) goto LAB_180b29951;
             uVar8 = Transform.Find(lVar6,"BlackCover",0);
             uVar12 = 0x3f800000;
             uVar8 = ShortcutExtensions.DOScale(uVar8,0x3f800000,0x3f000000,0);
-            TweenSettingsExtensions.SetUpdate(uVar8,1,DAT_181d98af0);
+            TweenSettingsExtensions.SetUpdate(uVar8,1,DAT_181dc1db0);
             uVar8 = this.groundTypeSkeleton;
             cVar5 = Object.op_Inequality(uVar8,0,0);
             if (cVar5) {
               fVar4 = local_60;
-              if (this.groundTypeSkeleton == null) goto LAB_180ba1061;
-              uVar8 = GameObject.GetComponent(this.groundTypeSkeleton,DAT_181da1330);
+              if (this.groundTypeSkeleton == null) goto LAB_180b29951;
+              uVar8 = GameObject.GetComponent(this.groundTypeSkeleton,DAT_181d734d0);
               in_stack_ffffffffffffff78 = 0;
               GlobalData.DoTweenSkeletonAlpha(uVar8,0,0x3f800000,0x3f000000,0);
             }
             fVar4 = local_60;
-            if (this.exploreTileData == null) goto LAB_180ba1061;
+            if (this.exploreTileData == null) goto LAB_180b29951;
             iVar1 = this.exploreTileData.wallType;
             if (iVar1 == 1) {
               lVar6 = Component.get_transform(this,0);
               if (lVar6 == null) {
-        LAB_180ba1067:
+        LAB_180b29957:
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
               lVar6 = Transform.Find(lVar6,"Wall",0);
-              if (lVar6 == null) goto LAB_180ba1067;
-              lVar6 = Component.GetComponent(lVar6,DAT_181d6d540);
+              if (lVar6 == null) goto LAB_180b29957;
+              lVar6 = Component.GetComponent(lVar6,DAT_181d95de0);
               local_48 = 0;
               uStack_40 = 0;
-              FUN_1809981e0(&local_48,0x3f800000,0x3f800000,0x3f800000,
+              FUN_1809dc910(&local_48,0x3f800000,0x3f800000,0x3f800000,
                             in_stack_ffffffffffffff78 & 0xffffffff00000000,0);
-              if (lVar6 == null) goto LAB_180ba1067;
+              if (lVar6 == null) goto LAB_180b29957;
               local_58 = (uint32)local_48;
               uStack_54 = local_48._4_4_;
               uStack_50 = (uint32)uStack_40;
               uStack_4c = uStack_40._4_4_;
               SpriteRenderer.set_color(lVar6,&local_58,0);
               lVar6 = Component.get_transform(this,0);
-              if (lVar6 == null) goto LAB_180ba1067;
+              if (lVar6 == null) goto LAB_180b29957;
               lVar6 = Transform.Find(lVar6,"Wall",0);
-              if (lVar6 == null) goto LAB_180ba1067;
-              uVar8 = Component.GetComponent(lVar6,DAT_181d6d540);
+              if (lVar6 == null) goto LAB_180b29957;
+              uVar8 = Component.GetComponent(lVar6,DAT_181d95de0);
               if (this.needFade) {
-                uVar12 = ExploreTileUnitController.fadeAlpha;
+                uVar12 = **(uint32 **)(DAT_181dc60d8 + 184);
               }
               uVar8 = DOTweenModuleSprite.DOFade(uVar8,uVar12,0x3f000000,0);
-              TweenSettingsExtensions.SetUpdate(uVar8,1,DAT_181d98958);
+              TweenSettingsExtensions.SetUpdate(uVar8,1,DAT_181dc1c20);
             }
             else if (iVar1 == 2) {
               lVar6 = Component.get_transform(this,0);
               fVar4 = local_60;
-              if (lVar6 == null) goto LAB_180ba1061;
+              if (lVar6 == null) goto LAB_180b29951;
               lVar6 = Transform.Find(lVar6,"Door",0);
               fVar4 = local_60;
-              if (lVar6 == null) goto LAB_180ba1061;
-              uVar8 = Component.GetComponent(lVar6,DAT_181d6cd40);
+              if (lVar6 == null) goto LAB_180b29951;
+              uVar8 = Component.GetComponent(lVar6,DAT_181d955e0);
               if (this.needFade) {
-                uVar12 = ExploreTileUnitController.fadeAlpha;
+                uVar12 = **(uint32 **)(DAT_181dc60d8 + 184);
               }
               GlobalData.DoTweenSkeletonAlpha(uVar8,0,uVar12,0x3f000000,0);
             }
@@ -254,19 +290,19 @@ public class ExploreTileUnitController
         if (this.exploreTileData != null) {
           this.exploreTileData.seen = value;
           this.needRefreshColor = 1;
-          lVar6 = BattleController.AttackAreaTypeStartMovePower;
+          lVar6 = *(int64 *)(pStatics_5e30 + 8);
           fVar4 = local_60;
           if (lVar6 != null) {
             *(uint8 *)(lVar6 + 0x108) = 1;
             return;
           }
         }
-        LAB_180ba1061:
+        LAB_180b29951:
         local_60 = fVar4;
     }
 
-    // Token : 0x6001404
-    // RVA   : 0xBA0650   Offset: 0xB9EE50   Length: 0x1B
+    // Token : 0x6001447
+    // RVA   : 0xB28F40   Offset: 0xB28340   Length: 0x1B
     public bool get_Seen()
     {
         if (this.exploreTileData != null) {
@@ -274,23 +310,25 @@ public class ExploreTileUnitController
         }
     }
 
-    // Token : 0x6001405
-    // RVA   : 0xBA0670   Offset: 0xB9EE70   Length: 0x8
+    // Token : 0x6001448
+    // RVA   : 0xB28F60   Offset: 0xB28360   Length: 0x8
     public void set_Been(bool value)
     {
         this.been = value;
         this.needRefreshColor = 1;
     }
 
-    // Token : 0x6001406
-    // RVA   : 0x23F610   Offset: 0x23DE10   Length: 0x5
+    // Token : 0x6001449
+    // RVA   : 0x23F610   Offset: 0x23EA10   Length: 0x5
     public bool get_Been()
     {
+        uint8 FUN_18023f610(int64 this)
+        {
         return this.been;
     }
 
-    // Token : 0x6001407
-    // RVA   : 0xBA0690   Offset: 0xB9EE90   Length: 0x1E
+    // Token : 0x600144A
+    // RVA   : 0xB28F80   Offset: 0xB28380   Length: 0x1E
     public void set_MoveAble(bool value)
     {
         if (this.exploreTileData != null) {
@@ -300,8 +338,8 @@ public class ExploreTileUnitController
         }
     }
 
-    // Token : 0x6001408
-    // RVA   : 0xBA0630   Offset: 0xB9EE30   Length: 0x1B
+    // Token : 0x600144B
+    // RVA   : 0xB28F20   Offset: 0xB28320   Length: 0x1B
     public bool get_MoveAble()
     {
         if (this.exploreTileData != null) {
@@ -309,25 +347,28 @@ public class ExploreTileUnitController
         }
     }
 
-    // Token : 0x6001409
-    // RVA   : 0xBA0680   Offset: 0xB9EE80   Length: 0x8
+    // Token : 0x600144C
+    // RVA   : 0xB28F70   Offset: 0xB28370   Length: 0x8
     public void set_FinalTile(bool value)
     {
         this.finalTile = value;
         this.needRefreshColor = 1;
     }
 
-    // Token : 0x600140A
-    // RVA   : 0xBA0620   Offset: 0xB9EE20   Length: 0x5
+    // Token : 0x600144D
+    // RVA   : 0xB28F10   Offset: 0xB28310   Length: 0x5
     public bool get_FinalTile()
     {
+        uint8 FUN_180b28f10(int64 this)
+        {
         return this.finalTile;
     }
 
-    // Token : 0x600140B
-    // RVA   : 0xB9ED80   Offset: 0xB9D580   Length: 0x876
+    // Token : 0x600144E
+    // RVA   : 0xB27510   Offset: 0xB26910   Length: 0x876
     public void CheckNeedFade(bool anim)
     {
+        var pStatics = *(int64*)(DAT_181dc5e30 + 184);
         int iVar1;
         long lVar2;
         long lVar3;
@@ -342,10 +383,10 @@ public class ExploreTileUnitController
         cVar5 = false;
         if (this.exploreTileData == null) throw; // [null/range check failed]
         iVar1 = this.exploreTileData.row;
-        lVar7 = BattleController.AttackAreaTypeStartMovePower;
+        lVar7 = *(int64 *)(pStatics + 8);
         if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 120)) == null) throw; // [null/range check failed]
         if (iVar1 < *(int *)(lVar7 + 28) + -1) {
-          lVar7 = BattleController.AttackAreaTypeStartMovePower;
+          lVar7 = *(int64 *)(pStatics + 8);
           if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 120)) == null) throw; // [null/range check failed]
           lVar7 = *(int64 *)(lVar7 + 40);
           lVar2 = this.exploreTileData;
@@ -385,7 +426,7 @@ public class ExploreTileUnitController
             lVar7 = *(int64 *)(lVar7 + 32 + ((int)lVar2.column * lVar3 + lVar9) * 8);
             if (lVar7 == null) throw; // [null/range check failed]
             if (*(int *)(lVar7 + 56) == 0) {
-        LAB_180b9f0a7:
+        LAB_180b27837:
               lVar7 = FUN_18046be80(0);
               if ((lVar7 == null) || (*(int64 *)(lVar7 + 120) == 0)) throw; // [null/range check failed]
               lVar2 = this.exploreTileData;
@@ -410,13 +451,13 @@ public class ExploreTileUnitController
                 if (lVar7 == null) throw; // [null/range check failed]
                 lVar2 = this.exploreTileData;
                 if ((lVar2 == null) || (*(int64 *)(lVar7 + 128) == 0)) throw; // [null/range check failed]
-                uVar8 = FUN_180127f50(*(int64 *)(lVar7 + 128),(int64)lVar2.column,
+                uVar8 = FUN_180127f90(*(int64 *)(lVar7 + 128),(int64)lVar2.column,
                                       (int64)(lVar2.row + 1));
                 lVar7 = FUN_18046be80(0);
                 if (lVar7 == null) throw; // [null/range check failed]
                 uVar4 = *(uint64 *)(lVar7 + 144);
                 cVar5 = Object.op_Equality(uVar8,uVar4,0);
-                goto LAB_180b9f1ed;
+                goto LAB_180b2797d;
               }
             }
             else {
@@ -425,16 +466,16 @@ public class ExploreTileUnitController
               lVar2 = this.exploreTileData;
               lVar7 = *(int64 *)(*(int64 *)(lVar7 + 120) + 40);
               if ((lVar2 == null) || (lVar7 == null)) throw; // [null/range check failed]
-              lVar7 = FUN_180127f50(lVar7,(int64)lVar2.column,
+              lVar7 = FUN_180127f90(lVar7,(int64)lVar2.column,
                                     (int64)lVar2.row + 1);
               if (lVar7 == null) throw; // [null/range check failed]
-              if (*(char *)(lVar7 + 53) != false) goto LAB_180b9f0a7;
+              if (*(char *)(lVar7 + 53) != false) goto LAB_180b27837;
             }
             cVar5 = true;
           }
         }
-        LAB_180b9f1ed:
-        if ((!anim) || (cVar5 == this.needFade)) goto LAB_180b9f578;
+        LAB_180b2797d:
+        if ((!anim) || (cVar5 == this.needFade)) goto LAB_180b27d08;
         if (this.exploreTileData != null) {
           iVar1 = this.exploreTileData.wallType;
           if (iVar1 == 1) {
@@ -442,28 +483,28 @@ public class ExploreTileUnitController
             if (lVar7 != null) {
               uVar8 = Transform.Find(lVar7,"Wall",0);
               cVar6 = Object.op_Inequality(uVar8,0,0);
-              if (!cVar6) goto LAB_180b9f578;
+              if (!cVar6) goto LAB_180b27d08;
               lVar7 = Component.get_transform(this,0);
               if (lVar7 != null) {
                 lVar7 = Transform.Find(lVar7,"Wall",0);
                 if (lVar7 != null) {
-                  uVar8 = Component.GetComponent(lVar7,DAT_181d6d540);
+                  uVar8 = Component.GetComponent(lVar7,DAT_181d95de0);
                   if (!cVar5) {
                     uVar10 = 0x3f800000;
                   }
                   else {
-                    uVar10 = ExploreTileUnitController.fadeAlpha;
+                    uVar10 = **(uint32 **)(DAT_181dc60d8 + 184);
                   }
                   uVar8 = DOTweenModuleSprite.DOFade(uVar8,uVar10,0x3f000000,0);
-                  TweenSettingsExtensions.SetUpdate(uVar8,1,DAT_181d98958);
-                  goto LAB_180b9f578;
+                  TweenSettingsExtensions.SetUpdate(uVar8,1,DAT_181dc1c20);
+                  goto LAB_180b27d08;
                 }
               }
             }
           }
           else {
             if (iVar1 != 2) {
-        LAB_180b9f578:
+        LAB_180b27d08:
               this.needFade = cVar5;
               return;
             }
@@ -471,42 +512,41 @@ public class ExploreTileUnitController
             if (lVar7 != null) {
               uVar8 = Transform.Find(lVar7,"Door",0);
               cVar6 = Object.op_Inequality(uVar8,0,0);
-              if (!cVar6) goto LAB_180b9f578;
+              if (!cVar6) goto LAB_180b27d08;
               lVar7 = Component.get_transform(this,0);
               if (lVar7 != null) {
                 lVar7 = Transform.Find(lVar7,"Door",0);
                 if (lVar7 != null) {
-                  uVar8 = Component.GetComponent(lVar7,DAT_181d6cd40);
+                  uVar8 = Component.GetComponent(lVar7,DAT_181d955e0);
                   cVar6 = Object.op_Inequality(uVar8,0,0);
-                  if (!cVar6) goto LAB_180b9f578;
+                  if (!cVar6) goto LAB_180b27d08;
                   lVar7 = Component.get_transform(this,0);
                   if (lVar7 != null) {
                     lVar7 = Transform.Find(lVar7,"Door",0);
                     if (lVar7 != null) {
-                      lVar7 = Component.GetComponent(lVar7,DAT_181d6cd40);
+                      lVar7 = Component.GetComponent(lVar7,DAT_181d955e0);
                       if (lVar7 != null) {
-                        if (*(int64 *)(lVar7 + 192) == 0) goto LAB_180b9f578;
+                        if (*(int64 *)(lVar7 + 192) == 0) goto LAB_180b27d08;
                         lVar7 = Component.get_transform(this,0);
                         if (lVar7 != null) {
                           lVar7 = Transform.Find(lVar7,"Door",0);
                           if (lVar7 != null) {
-                            uVar8 = Component.GetComponent(lVar7,DAT_181d6cd40);
+                            uVar8 = Component.GetComponent(lVar7,DAT_181d955e0);
                             lVar7 = Component.get_transform(this,0);
                             if (lVar7 != null) {
                               lVar7 = Transform.Find(lVar7,"Door",0);
                               if (lVar7 != null) {
-                                lVar7 = Component.GetComponent(lVar7,DAT_181d6cd40);
+                                lVar7 = Component.GetComponent(lVar7,DAT_181d955e0);
                                 if ((lVar7 != null) && (*(int64 *)(lVar7 + 192) != 0)) {
                                   uVar10 = *(uint32 *)(*(int64 *)(lVar7 + 192) + 108);
                                   if (!cVar5) {
                                     uVar11 = 0x3f800000;
                                   }
                                   else {
-                                    uVar11 = **(uint32 **)
-                                               (ExploreTileUnitController_StaticsPtr + 184);
+                                    uVar11 = **(uint32 **)(DAT_181dc60d8 + 184);
                                   }
                                   GlobalData.DoTweenSkeletonAlpha(uVar8,uVar10,uVar11,0x3f000000,0);
-                                  goto LAB_180b9f578;
+                                  goto LAB_180b27d08;
                                 }
                               }
                             }
@@ -522,11 +562,11 @@ public class ExploreTileUnitController
         }
     }
 
-    // Token : 0x600140C
-    // RVA   : 0xB9F8F0   Offset: 0xB9E0F0   Length: 0x8EF
+    // Token : 0x600144F
+    // RVA   : 0xB28080   Offset: 0xB27480   Length: 0x8EF
     public void RefreshColor()
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181db0248 + 184);
         float fVar1;
         uint uVar2;
         ulong uVar3;
@@ -542,34 +582,34 @@ public class ExploreTileUnitController
         uint uStack_30;
         uint32 uStack_2c;
         fVar5 = local_50;
-        if (this.exploreTileData == null) goto LAB_180ba01da;
+        if (this.exploreTileData == null) goto LAB_180b2896a;
         if (!this.exploreTileData.eventHappen) {
           lVar6 = Component.get_transform(this,0);
           fVar5 = local_50;
-          if (lVar6 == null) goto LAB_180ba01da;
+          if (lVar6 == null) goto LAB_180b2896a;
           lVar6 = Transform.Find(lVar6,"ExploreEvent",0);
           puVar7 = (uint64 *)Vector3.get_one(&local_38,0);
           local_58 = *puVar7;
           local_50 = *(float *)(puVar7 + 1) * 0.6;
           local_68 = CONCAT44((float)((uint64)local_58 >> 32) * 0.6,(float)local_58 * 0.6);
           fVar5 = *(float *)(puVar7 + 1);
-          if (lVar6 == null) goto LAB_180ba01da;
+          if (lVar6 == null) goto LAB_180b2896a;
           local_58 = local_68;
           Transform.set_localScale(lVar6,&local_58,0);
           lVar6 = this.exploreTileData;
           fVar5 = local_50;
-          if (lVar6 == null) goto LAB_180ba01da;
+          if (lVar6 == null) goto LAB_180b2896a;
           if ((!lVar6.seen) ||
              ((lVar6.exploreTileEventType == null && (lVar6.exploreTileObstacleData == null)))) {
             lVar6 = Component.get_transform(this,0);
             fVar5 = local_50;
             if ((lVar6 == null) ||
                (lVar6 = Transform.Find(lVar6,"ExploreEvent",0), fVar5 = local_50) == null)
-            goto LAB_180ba01da;
-            lVar6 = Component.GetComponent(lVar6,DAT_181d6d540);
-            puVar8 = (uint32 *)FUN_180d904c0(&local_38,0);
+            goto LAB_180b2896a;
+            lVar6 = Component.GetComponent(lVar6,DAT_181d95de0);
+            puVar8 = (uint32 *)FUN_180d98fe0(&local_38,0);
             fVar5 = local_50;
-            if (lVar6 == null) goto LAB_180ba01da;
+            if (lVar6 == null) goto LAB_180b2896a;
             local_38 = *puVar8;
             uStack_34 = puVar8[1];
             uStack_30 = puVar8[2];
@@ -582,18 +622,18 @@ public class ExploreTileUnitController
         }
         lVar6 = this.exploreTileData;
         fVar5 = local_50;
-        if (lVar6 == null) goto LAB_180ba01da;
+        if (lVar6 == null) goto LAB_180b2896a;
         if (!lVar6.moveAble) {
           if ((!lVar6.seen) || (lVar6.eventHappen)) {
-        LAB_180b9fccf:
+        LAB_180b2845f:
             lVar6 = Component.get_transform(this,0);
             fVar5 = local_50;
             if ((lVar6 == null) ||
                (lVar6 = Transform.Find(lVar6,"HighLight",0), fVar5 = local_50) == null)
-            goto LAB_180ba01da;
-            lVar6 = Component.GetComponent(lVar6,DAT_181d6d540);
-            puVar8 = (uint32 *)FUN_180d904c0(&local_38,0);
-            goto LAB_180b9fd62;
+            goto LAB_180b2896a;
+            lVar6 = Component.GetComponent(lVar6,DAT_181d95de0);
+            puVar8 = (uint32 *)FUN_180d98fe0(&local_38,0);
+            goto LAB_180b284f2;
           }
           iVar4 = lVar6.exploreTileEventType;
           if (iVar4 == -1) {
@@ -601,44 +641,44 @@ public class ExploreTileUnitController
             fVar5 = local_50;
             if ((lVar6 == null) ||
                (lVar6 = Transform.Find(lVar6,"HighLight",0), fVar5 = local_50) == null)
-            goto LAB_180ba01da;
-            lVar6 = Component.GetComponent(lVar6,DAT_181d6d540);
+            goto LAB_180b2896a;
+            lVar6 = Component.GetComponent(lVar6,DAT_181d95de0);
             puVar8 = (uint32 *)Color.get_red(&local_38,0);
-            goto LAB_180b9fd62;
+            goto LAB_180b284f2;
           }
           if (iVar4 == 24) {
             lVar6 = Component.get_transform(this,0);
             fVar5 = local_50;
             if ((lVar6 == null) ||
                (lVar6 = Transform.Find(lVar6,"HighLight",0), fVar5 = local_50) == null)
-            goto LAB_180ba01da;
-            lVar6 = Component.GetComponent(lVar6,DAT_181d6d540);
+            goto LAB_180b2896a;
+            lVar6 = Component.GetComponent(lVar6,DAT_181d95de0);
             lVar9 = FUN_18046c100(0);
             fVar5 = local_50;
-            if ((lVar9 == null) || (lVar9 = *(int64 *)(lVar9 + 56)) == null) goto LAB_180ba01da;
+            if ((lVar9 == null) || (lVar9 = *(int64 *)(lVar9 + 56)) == null) goto LAB_180b2896a;
             if (*(uint32 *)(lVar9 + 24) < 5) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar9 = *(int64 *)(*(int64 *)(lVar9 + 16) + 64);
           }
           else {
-            if (iVar4 != 25) goto LAB_180b9fccf;
+            if (iVar4 != 25) goto LAB_180b2845f;
             lVar6 = Component.get_transform(this,0);
             fVar5 = local_50;
             if ((lVar6 == null) ||
                (lVar6 = Transform.Find(lVar6,"HighLight",0), fVar5 = local_50) == null)
-            goto LAB_180ba01da;
-            lVar6 = Component.GetComponent(lVar6,DAT_181d6d540);
+            goto LAB_180b2896a;
+            lVar6 = Component.GetComponent(lVar6,DAT_181d95de0);
             lVar9 = FUN_18046c100(0);
             fVar5 = local_50;
-            if ((lVar9 == null) || (lVar9 = *(int64 *)(lVar9 + 56)) == null) goto LAB_180ba01da;
+            if ((lVar9 == null) || (lVar9 = *(int64 *)(lVar9 + 56)) == null) goto LAB_180b2896a;
             if (*(uint32 *)(lVar9 + 24) < 4) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar9 = *(int64 *)(*(int64 *)(lVar9 + 16) + 56);
           }
           fVar5 = local_50;
-          if ((lVar9 == null) || (lVar6 == null)) goto LAB_180ba01da;
+          if ((lVar9 == null) || (lVar6 == null)) goto LAB_180b2896a;
           local_38 = *(uint32 *)(lVar9 + 24);
           uStack_34 = *(uint32 *)(lVar9 + 28);
           uStack_30 = *(uint32 *)(lVar9 + 32);
@@ -649,12 +689,12 @@ public class ExploreTileUnitController
           fVar5 = local_50;
           if ((lVar6 == null) ||
              (lVar6 = Transform.Find(lVar6,"HighLight",0), fVar5 = local_50) == null)
-          goto LAB_180ba01da;
-          lVar6 = Component.GetComponent(lVar6,DAT_181d6d540);
+          goto LAB_180b2896a;
+          lVar6 = Component.GetComponent(lVar6,DAT_181d95de0);
           puVar8 = (uint32 *)Color.get_green(&local_38,0);
-        LAB_180b9fd62:
+        LAB_180b284f2:
           fVar5 = local_50;
-          if (lVar6 == null) goto LAB_180ba01da;
+          if (lVar6 == null) goto LAB_180b2896a;
           local_38 = *puVar8;
           uStack_34 = puVar8[1];
           uStack_30 = puVar8[2];
@@ -663,14 +703,14 @@ public class ExploreTileUnitController
         SpriteRenderer.set_color(lVar6,&local_38,0);
         lVar6 = this.exploreTileData;
         fVar5 = local_50;
-        if (lVar6 == null) goto LAB_180ba01da;
+        if (lVar6 == null) goto LAB_180b2896a;
         if ((lVar6.wallType == null) || (!lVar6.seen)) {
           lVar6 = Component.get_transform(this,0);
           fVar5 = local_50;
           if ((lVar6 == null) ||
              ((lVar6 = Transform.Find(lVar6,"Wall",0), fVar5 = local_50, lVar6 == null ||
               (lVar6 = Component.get_gameObject(lVar6,0), fVar5 = local_50) == null)))
-          goto LAB_180ba01da;
+          goto LAB_180b2896a;
           GameObject.SetActive(lVar6,0,0);
         }
         else {
@@ -692,7 +732,7 @@ public class ExploreTileUnitController
                   puVar7 = (uint64 *)Transform.get_localPosition(&local_38,lVar9,0);
                   uVar3 = *puVar7;
                   fVar5 = *(float *)(puVar7 + 1);
-                  fVar1 = *(float *)(pPlotController + 36);
+                  fVar1 = *(float *)(pStatics + 36);
                   local_58 = uVar3;
                   local_50 = fVar5;
                   puVar7 = (uint64 *)GlobalData.SetZ(&local_38,&local_58,fVar1 + 0.001,0);
@@ -716,7 +756,7 @@ public class ExploreTileUnitController
                         fVar5 = local_50;
                         if (((lVar6 != null) &&
                             (lVar6 = Transform.Find(lVar6,"Door",0), fVar5 = local_50) != null
-                            ) && ((lVar6 = Component.GetComponent(lVar6,DAT_181d6cd40), fVar5 = local_50,
+                            ) && ((lVar6 = Component.GetComponent(lVar6,DAT_181d955e0), fVar5 = local_50,
                                   lVar6 != null &&
                                   (lVar6 = SkeletonAnimation.get_AnimationState(lVar6,0),
                                   fVar5 = local_50, lVar6 != null)))) {
@@ -729,33 +769,33 @@ public class ExploreTileUnitController
                 }
               }
             }
-            goto LAB_180ba01da;
+            goto LAB_180b2896a;
           }
           lVar6 = Component.get_transform(this,0);
           fVar5 = local_50;
           if (((lVar6 == null) ||
               (lVar6 = Transform.Find(lVar6,"Wall",0), fVar5 = local_50) == null) ||
              (lVar6 = Component.get_gameObject(lVar6,0), fVar5 = local_50) == null)
-          goto LAB_180ba01da;
+          goto LAB_180b2896a;
           GameObject.SetActive(lVar6,1,0);
           lVar6 = Component.get_transform(this,0);
           fVar5 = local_50;
-          if (lVar6 == null) goto LAB_180ba01da;
+          if (lVar6 == null) goto LAB_180b2896a;
           lVar6 = Transform.Find(lVar6,"Wall",0);
           lVar9 = Component.get_transform(this,0);
           fVar5 = local_50;
           if ((lVar9 == null) ||
              (lVar9 = Transform.Find(lVar9,"Wall",0), fVar5 = local_50) == null)
-          goto LAB_180ba01da;
+          goto LAB_180b2896a;
           puVar7 = (uint64 *)Transform.get_localPosition(&local_38,lVar9,0);
           uVar3 = *puVar7;
           fVar5 = *(float *)(puVar7 + 1);
-          uVar2 = *(uint32 *)(pPlotController + 36);
+          uVar2 = *(uint32 *)(pStatics + 36);
           local_58 = uVar3;
           local_50 = fVar5;
           puVar7 = (uint64 *)GlobalData.SetZ(&local_38,&local_58,uVar2,0);
           fVar5 = local_50;
-          if (lVar6 == null) goto LAB_180ba01da;
+          if (lVar6 == null) goto LAB_180b2896a;
           local_58 = *puVar7;
           local_50 = *(float *)(puVar7 + 1);
           Transform.set_localPosition(lVar6,&local_58,0);
@@ -768,50 +808,58 @@ public class ExploreTileUnitController
           GameObject.SetActive(lVar6,0,0);
           return;
         }
-        LAB_180ba01da:
+        LAB_180b2896a:
         local_50 = fVar5;
     }
 
-    // Token : 0x600140D
-    // RVA   : 0xBA01E0   Offset: 0xB9E9E0   Length: 0x237
+    // Token : 0x6001450
+    // RVA   : 0xB28970   Offset: 0xB27D70   Length: 0x2A0
     public void SetObstacleColor()
     {
+        var pStatics = *(int64*)(DAT_181dc5e30 + 184);
         long lVar1;
         bool cVar2;
         long lVar3;
+        ulong uVar4;
         uint local_18;
         uint uStack_14;
         uint uStack_10;
         uint32 uStack_c;
-        lVar3 = Component.get_transform(this,0);
-        if (lVar3 == null) throw; // [null/range check failed]
-        lVar3 = Transform.Find(lVar3,"ExploreEvent",0);
-        if (lVar3 == null) throw; // [null/range check failed]
-        lVar3 = Component.GetComponent(lVar3,DAT_181d6d540);
-        lVar1 = BattleController.AttackAreaTypeStartMovePower;
+        uVar4 = this.exploreEventRenderer;
+        cVar2 = Object.op_Equality(uVar4,0,0);
+        if (cVar2) {
+          lVar3 = Component.get_transform(this,0);
+          if (lVar3 == null) throw; // [null/range check failed]
+          lVar3 = Transform.Find(lVar3,"ExploreEvent",0);
+          if (lVar3 == null) throw; // [null/range check failed]
+          uVar4 = Component.GetComponent(lVar3,DAT_181d95de0);
+          this.exploreEventRenderer = uVar4;
+        }
+        lVar3 = this.exploreEventRenderer;
+        lVar1 = *(int64 *)(pStatics + 8);
         if (lVar1 == null) throw; // [null/range check failed]
         cVar2 = ExploreController.PlayerCanPassObstacle(lVar1,this.exploreTileData,0,0);
         if (!cVar2) {
-          lVar1 = BattleController.AttackAreaTypeStartMovePower;
+          lVar1 = *(int64 *)(pStatics + 8);
           if (lVar1 == null) throw; // [null/range check failed]
           cVar2 = ExploreController.PlayerCanPassObstacle(lVar1,this.exploreTileData,1,0);
           if (!cVar2) {
-            puVar4 = (uint32 *)Color.get_red(&local_18,0);
-            goto LAB_180ba03e9;
+            puVar5 = (uint32 *)Color.get_red(&local_18,0);
+            goto LAB_180b28bdd;
           }
-          lVar1 = *(int64 *)(PlotController_StaticsPtr + 184);
-          local_18 = *(uint32 *)(lVar1 + 0x318);
-          uStack_14 = *(uint32 *)(lVar1 + 0x31c);
-          uStack_10 = *(uint32 *)(lVar1 + 800);
-          uStack_c = *(uint32 *)(lVar1 + 0x324);
+          lVar1 = *(int64 *)(DAT_181d73d40 + 184);
+          local_18 = *(uint32 *)(lVar1 + 800);
+          uStack_14 = *(uint32 *)(lVar1 + 0x324);
+          uStack_10 = *(uint32 *)(lVar1 + 0x328);
+          uStack_c = *(uint32 *)(lVar1 + 0x32c);
         }
         else {
-          puVar4 = (uint32 *)FUN_181098a50(&local_18,0);
-        LAB_180ba03e9:
-          local_18 = *puVar4;
-          uStack_14 = puVar4[1];
-          uStack_10 = puVar4[2];
-          uStack_c = puVar4[3];
+          puVar5 = (uint32 *)FUN_1810d3570(&local_18,0);
+        LAB_180b28bdd:
+          local_18 = *puVar5;
+          uStack_14 = puVar5[1];
+          uStack_10 = puVar5[2];
+          uStack_c = puVar5[3];
         }
         if (lVar3 != null) {
           SpriteRenderer.set_color(lVar3,&local_18,0);
@@ -819,18 +867,34 @@ public class ExploreTileUnitController
         }
     }
 
-    // Token : 0x600140E
-    // RVA   : 0xBA0420   Offset: 0xB9EC20   Length: 0x61
+    // Token : 0x6001451
+    // RVA   : 0xB274D0   Offset: 0xB268D0   Length: 0x3B
+    private void Awake()
+    {
+        float fVar1;
+        float fVar2;
+        fVar1 = (float)Time.get_unscaledTime(0);
+        fVar2 = (float)Random.get_value(0);
+        this.nextObstacleColorTime = fVar2 * 0.3 + fVar1;
+    }
+
+    // Token : 0x6001452
+    // RVA   : 0xB28C20   Offset: 0xB28020   Length: 0x7E
     private void Update()
     {
         long lVar1;
+        float fVar2;
         lVar1 = this.exploreTileData;
         if (lVar1 == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         if ((lVar1.seen) && (lVar1.exploreTileObstacleData != null)) {
-          ExploreTileUnitController.SetObstacleColor(this,0);
+          fVar2 = (float)Time.get_unscaledTime(0);
+          if (this.nextObstacleColorTime <= fVar2) {
+            this.nextObstacleColorTime = fVar2 + 0.3;
+            ExploreTileUnitController.SetObstacleColor(this,0);
+          }
         }
         if (this.needRefreshColor) {
           this.needRefreshColor = 0;
@@ -843,13 +907,13 @@ public class ExploreTileUnitController
         }
     }
 
-    // Token : 0x600140F
-    // RVA   : 0xB9F600   Offset: 0xB9DE00   Length: 0xCC
+    // Token : 0x6001453
+    // RVA   : 0xB27D90   Offset: 0xB27190   Length: 0xCC
     public void OnClick()
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = BattleController.AttackAreaTypeStartMovePower;
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181dc5e30 + 184) + 8);
         uVar2 = Component.get_gameObject(this,0);
         if (lVar1 != null) {
           ExploreController.ExploreTileClicked(lVar1,uVar2,0);
@@ -857,8 +921,8 @@ public class ExploreTileUnitController
         }
     }
 
-    // Token : 0x6001410
-    // RVA   : 0xB9F7A0   Offset: 0xB9DFA0   Length: 0x82
+    // Token : 0x6001454
+    // RVA   : 0xB27F30   Offset: 0xB27330   Length: 0x82
     public void OnHover(bool isOver)
     {
         long lVar1;
@@ -866,12 +930,12 @@ public class ExploreTileUnitController
         uint uStack_14;
         uint uStack_10;
         uint32 uStack_c;
-        lVar1 = Component.GetComponent(this,DAT_181d6d540);
+        lVar1 = Component.GetComponent(this,DAT_181d95de0);
         if (!isOver) {
-          puVar2 = (uint32 *)FUN_181098a50();
+          puVar2 = (uint32 *)FUN_1810d3570();
         }
         else {
-          puVar2 = (uint32 *)FUN_1810988d0(&local_18,0);
+          puVar2 = (uint32 *)FUN_1810d33f0(&local_18,0);
         }
         if (lVar1 != null) {
           local_18 = *puVar2;
@@ -883,70 +947,72 @@ public class ExploreTileUnitController
         }
     }
 
-    // Token : 0x6001411
-    // RVA   : 0xB9F6D0   Offset: 0xB9DED0   Length: 0xC1
+    // Token : 0x6001455
+    // RVA   : 0xB27E60   Offset: 0xB27260   Length: 0xC1
     public void OnDrag(Vector2 delta)
     {
         long lVar1;
-        lVar1 = BattleController.AttackAreaTypeStartMovePower;
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181dc5e30 + 184) + 8);
         if (lVar1 != null) {
           ExploreController.OnDrag(lVar1,delta,0);
           return;
         }
     }
 
-    // Token : 0x6001412
-    // RVA   : 0xB9F830   Offset: 0xB9E030   Length: 0xBD
+    // Token : 0x6001456
+    // RVA   : 0xB27FC0   Offset: 0xB273C0   Length: 0xBD
     public void OnScroll(float delta)
     {
         long lVar1;
-        lVar1 = BattleController.AttackAreaTypeStartMovePower;
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181dc5e30 + 184) + 8);
         if (lVar1 != null) {
           ExploreController.OnScroll(lVar1,delta,0);
           return;
         }
     }
 
-    // Token : 0x6001413
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x6001457
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);
     }
 
-    // Token : 0x6001414
-    // RVA   : 0xBA0490   Offset: 0xB9EC90   Length: 0x181
+    // Token : 0x6001458
+    // RVA   : 0xB28CA0   Offset: 0xB280A0   Length: 0x181
     private static void /*cctor*/()
     {
-        var pExploreTileUnitController = *(int64*)(ExploreTileUnitController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181dc60d8 + 184);
         long lVar1;
         ulong local_38;
         ulong uStack_30;
         ulong local_28;
         ulong uStack_20;
-        ExploreTileUnitController.fadeAlpha = 0x3f19999a;
+        **(uint32 **)(DAT_181dc60d8 + 184) = 0x3f19999a;
         local_38 = 0;
         uStack_30 = 0;
-        FUN_1809981e0(&local_38,0x3f800000,0x3f800000,0x3f800000,0x3f4ccccd,0);
-        lVar1 = pExploreTileUnitController;
+        FUN_1809dc910(&local_38,0x3f800000,0x3f800000,0x3f800000,0x3f4ccccd,0);
+        lVar1 = pStatics;
         *(uint32 *)(lVar1 + 4) = (uint32)local_38;
         *(uint32 *)(lVar1 + 8) = local_38._4_4_;
         *(uint32 *)(lVar1 + 12) = (uint32)uStack_30;
         *(uint32 *)(lVar1 + 16) = uStack_30._4_4_;
         local_28 = 0;
         uStack_20 = 0;
-        FUN_1809981e0(&local_28,0x3e99999a,0x3e99999a,0x3e99999a,0x3f4ccccd,0);
-        lVar1 = pExploreTileUnitController;
+        FUN_1809dc910(&local_28,0x3e99999a,0x3e99999a,0x3e99999a,0x3f4ccccd,0);
+        lVar1 = pStatics;
         *(uint32 *)(lVar1 + 20) = (uint32)local_28;
         *(uint32 *)(lVar1 + 24) = local_28._4_4_;
         *(uint32 *)(lVar1 + 28) = (uint32)uStack_20;
         *(uint32 *)(lVar1 + 32) = uStack_20._4_4_;
-        lVar1 = il2cpp_internal(DAT_181d72a30);
-        FUN_180f58a90(lVar1,DAT_181d7c250);
+        lVar1 = il2cpp_internal(DAT_181d97750);
+        FUN_18132faf0(lVar1,DAT_181da3bd8);
         if (lVar1 != null) {
-          FUN_181827900(lVar1,"2",DAT_181d7c3d0);
-          FUN_181827900(lVar1,"6",DAT_181d7c3d0);
-          ExploreTileUnitController.UseBlackCoverColorBackgroundType = lVar1;
+          FUN_18181e0a0(lVar1,"2",DAT_181da3d58);
+          FUN_18181e0a0(lVar1,"6",DAT_181da3d58);
+          plVar2 = (int64 *)(pStatics + 40);
+          *plVar2 = lVar1;
+          il2cpp_internal(plVar2,lVar1);
           return;
         }
     }

@@ -1,42 +1,44 @@
 // ============================================================
 // Type  : UI2DSprite
-// Token : 0x20000CF
+// Token : 0x20000D0
 // ============================================================
 
 public class UI2DSprite
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40004DB
+    // Token: 0x40004F7
     private Sprite mSprite;
 
-    // Token: 0x40004DC
+    // Token: 0x40004F8
     private Shader mShader;
 
-    // Token: 0x40004DD
+    // Token: 0x40004F9
     private Vector4 mBorder;
 
-    // Token: 0x40004DE
+    // Token: 0x40004FA
     private bool mFixedAspect;
 
-    // Token: 0x40004DF
+    // Token: 0x40004FB
     private float mPixelSize;
 
-    // Token: 0x40004E0
+    // Token: 0x40004FC
     public Sprite nextSprite;
 
-    // Token: 0x40004E1
+    // Token: 0x40004FD
     private int mPMA;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600069E
-    // RVA   : 0xA76E30   Offset: 0xA75630   Length: 0x8
+    // Token : 0x60006B6
+    // RVA   : 0xAF0850   Offset: 0xAEFC50   Length: 0x8
     public Sprite get_sprite2D()
     {
+        uint64 FUN_180af0850(int64 this)
+        {
         return this.mSprite;
     }
 
-    // Token : 0x600069F
-    // RVA   : 0xA77100   Offset: 0xA75900   Length: 0xC1
+    // Token : 0x60006B7
+    // RVA   : 0xAF0B20   Offset: 0xAEFF20   Length: 0xC1
     public void set_sprite2D(Sprite value)
     {
         ulong uVar1;
@@ -51,15 +53,15 @@ public class UI2DSprite
         }
     }
 
-    // Token : 0x60006A0
-    // RVA   : 0x2A5C70   Offset: 0x2A4470   Length: 0x8
+    // Token : 0x60006B8
+    // RVA   : 0x2A5C70   Offset: 0x2A5070   Length: 0x8
     public override Material get_material()
     {
         return *(uint64 *)(this + 176);
     }
 
-    // Token : 0x60006A1
-    // RVA   : 0xA76F40   Offset: 0xA75740   Length: 0xBF
+    // Token : 0x60006B9
+    // RVA   : 0xAF0960   Offset: 0xAEFD60   Length: 0xBF
     public override void set_material(Material value)
     {
         long lVar1;
@@ -75,8 +77,8 @@ public class UI2DSprite
         }
     }
 
-    // Token : 0x60006A2
-    // RVA   : 0xA76D30   Offset: 0xA75530   Length: 0xF9
+    // Token : 0x60006BA
+    // RVA   : 0xAF0750   Offset: 0xAEFB50   Length: 0xF9
     public override Shader get_shader()
     {
         bool cVar1;
@@ -98,8 +100,8 @@ public class UI2DSprite
         }
     }
 
-    // Token : 0x60006A3
-    // RVA   : 0xA77000   Offset: 0xA75800   Length: 0xF5
+    // Token : 0x60006BB
+    // RVA   : 0xAF0A20   Offset: 0xAEFE20   Length: 0xF5
     public override void set_shader(Shader value)
     {
         long lVar1;
@@ -119,8 +121,8 @@ public class UI2DSprite
         }
     }
 
-    // Token : 0x60006A4
-    // RVA   : 0xA76B50   Offset: 0xA75350   Length: 0xE1
+    // Token : 0x60006BC
+    // RVA   : 0xAF0570   Offset: 0xAEF970   Length: 0xE1
     public override Texture get_mainTexture()
     {
         bool cVar1;
@@ -144,15 +146,17 @@ public class UI2DSprite
         }
     }
 
-    // Token : 0x60006A5
-    // RVA   : 0xA76B40   Offset: 0xA75340   Length: 0x8
+    // Token : 0x60006BD
+    // RVA   : 0xAF0560   Offset: 0xAEF960   Length: 0x8
     public bool get_fixedAspect()
     {
+        uint8 FUN_180af0560(int64 this)
+        {
         return this.mFixedAspect;
     }
 
-    // Token : 0x60006A6
-    // RVA   : 0xA76ED0   Offset: 0xA756D0   Length: 0x6B
+    // Token : 0x60006BE
+    // RVA   : 0xAF08F0   Offset: 0xAEFCF0   Length: 0x6B
     public void set_fixedAspect(bool value)
     {
         ulong local_18;
@@ -161,7 +165,7 @@ public class UI2DSprite
           *(char *)(this + 67) = value;
           local_18 = 0;
           uStack_10 = 0;
-          FUN_1809981e0(&local_18,0,0,0x3f800000,0x3f800000,0);
+          FUN_1809dc910(&local_18,0,0,0x3f800000,0x3f800000,0);
           *(uint32 *)((int64)this + 252) = (uint32)local_18;
           *(uint32 *)(this + 32) = local_18._4_4_;
           *(uint32 *)((int64)this + 0x104) = (uint32)uStack_10;
@@ -170,47 +174,49 @@ public class UI2DSprite
         }
     }
 
-    // Token : 0x60006A7
-    // RVA   : 0xA76C50   Offset: 0xA75450   Length: 0xD5
+    // Token : 0x60006BF
+    // RVA   : 0xAF0670   Offset: 0xAEFA70   Length: 0xD5
     public override bool get_premultipliedAlpha()
     {
         bool cVar1;
         long lVar2;
         ulong uVar3;
         uVar3 = (uint64)*(uint32 *)(this + 69);
-        if (*(uint32 *)(this + 69) != 0xffffffff) goto LAB_180a76d0f;
+        if (*(uint32 *)(this + 69) != 0xffffffff) goto LAB_180af072f;
         lVar2 = (**(code **)(*this + 0x308))(this,*(uint64 *)(*this + 0x310));
         cVar1 = Object.op_Inequality(lVar2,0,0);
         if (!cVar1) {
-        LAB_180a76d07:
+        LAB_180af0727:
           uVar3 = 0;
         }
         else {
           if (lVar2 == null) {
-        LAB_180a76d20:
+        LAB_180af0740:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           lVar2 = Object.get_name(lVar2,0);
-          if (lVar2 == null) goto LAB_180a76d20;
+          if (lVar2 == null) goto LAB_180af0740;
           cVar1 = String.Contains(lVar2,"Premultiplied",0);
-          if (!cVar1) goto LAB_180a76d07;
+          if (!cVar1) goto LAB_180af0727;
           uVar3 = 1;
         }
         *(int *)(this + 69) = (int)uVar3;
-        LAB_180a76d0f:
+        LAB_180af072f:
         return CONCAT71((int7)(uVar3 >> 8),(int)uVar3 == 1);
     }
 
-    // Token : 0x60006A8
-    // RVA   : 0xA76C40   Offset: 0xA75440   Length: 0x9
+    // Token : 0x60006C0
+    // RVA   : 0xAF0660   Offset: 0xAEFA60   Length: 0x9
     public override float get_pixelSize()
     {
+        uint32 FUN_180af0660(int64 this)
+        {
         return this.mPixelSize;
     }
 
-    // Token : 0x60006A9
-    // RVA   : 0xA76580   Offset: 0xA74D80   Length: 0x5BA
+    // Token : 0x60006C1
+    // RVA   : 0xAEFFA0   Offset: 0xAEF3A0   Length: 0x5BA
     public override Vector4 get_drawingDimensions()
     {
         long lVar1;
@@ -230,7 +236,7 @@ public class UI2DSprite
             puVar3 = (uint64 *)Sprite.get_rect(&local_b8,param_2[63],0);
             local_c8 = *puVar3;
             uStack_c0 = puVar3[1];
-            uVar4 = FUN_180d90480(&local_c8,0);
+            uVar4 = FUN_180d98fa0(&local_c8,0);
             Mathf.RoundToInt(uVar4,0);
             if (param_2[63] != 0) {
               puVar3 = (uint64 *)Sprite.get_rect(&local_b8,param_2[63],0);
@@ -248,12 +254,12 @@ public class UI2DSprite
                     puVar3 = (uint64 *)Sprite.get_rect(&local_b8,param_2[63],0);
                     local_c8 = *puVar3;
                     uStack_c0 = puVar3[1];
-                    FUN_180d90480(&local_c8,0);
+                    FUN_180d98fa0(&local_c8,0);
                     if (param_2[63] != 0) {
                       puVar3 = (uint64 *)Sprite.get_textureRect(&local_b8,param_2[63],0);
                       local_c8 = *puVar3;
                       uStack_c0 = puVar3[1];
-                      FUN_180d90480(&local_c8,0);
+                      FUN_180d98fa0(&local_c8,0);
                       if (param_2[63] != 0) {
                         Sprite.get_textureRectOffset(param_2[63],0);
                         Mathf.RoundToInt();
@@ -270,7 +276,7 @@ public class UI2DSprite
                             if (param_2[63] != 0) {
                               Sprite.get_textureRectOffset(param_2[63],0);
                               Mathf.RoundToInt();
-                              goto LAB_180a76960;
+                              goto LAB_180af0380;
                             }
                           }
                         }
@@ -284,13 +290,13 @@ public class UI2DSprite
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        LAB_180a76960:
+        LAB_180af0380:
         if ((char)param_2[67] == false) {
           (**(code **)(*param_2 + 0x378))(&local_b8,param_2,*(uint64 *)(*param_2 + 0x380));
           (**(code **)(*param_2 + 0x3d8))(param_2,*(uint64 *)(*param_2 + 0x3e0));
           local_b8 = 0;
           uStack_b0 = 0;
-          FUN_1809981e0(&local_b8);
+          FUN_1809dc910(&local_b8);
         }
         Mathf.Lerp();
         Mathf.Lerp();
@@ -298,25 +304,29 @@ public class UI2DSprite
         Mathf.Lerp();
         *this = 0;
         this[1] = 0;
-        FUN_1809981e0(this);
+        FUN_1809dc910(this);
         return this;
     }
 
-    // Token : 0x60006AA
-    // RVA   : 0xA76570   Offset: 0xA74D70   Length: 0xE
+    // Token : 0x60006C2
+    // RVA   : 0xAEFF90   Offset: 0xAEF390   Length: 0xE
     public override Vector4 get_border()
     {
-        ulong uVar1;
+        uint64 * FUN_180aeff90(uint64 *this,int64 param_2)
+        {
+        uint64 uVar1;
         uVar1 = *(uint64 *)(param_2 + 0x210);
         *this = *(uint64 *)(param_2 + 0x208);
         this[1] = uVar1;
         return this;
     }
 
-    // Token : 0x60006AB
-    // RVA   : 0xA76E40   Offset: 0xA75640   Length: 0x86
+    // Token : 0x60006C3
+    // RVA   : 0xAF0860   Offset: 0xAEFC60   Length: 0x86
     public override void set_border(Vector4 value)
     {
+        void FUN_180af0860(int64 *this,float *value)
+        {
         float fVar1;
         float fVar2;
         float fVar3;
@@ -336,15 +346,15 @@ public class UI2DSprite
           *(float *)((int64)this + 0x20c) = fVar4;
           *(float *)(this + 66) = fVar1;
           *(float *)((int64)this + 0x214) = fVar2;
-                          // WARNING: Could not recover jumptable at 0x000180a76ebe. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000180af08de. Too many branches
                           // WARNING: Treating indirect jump as call
           (**(code **)(*this + 0x328))(fVar3,*(uint64 *)(*this + 0x330));
           return;
         }
     }
 
-    // Token : 0x60006AC
-    // RVA   : 0xA75FA0   Offset: 0xA747A0   Length: 0x4B1
+    // Token : 0x60006C4
+    // RVA   : 0xAEFA50   Offset: 0xAEEE50   Length: 0x4B1
     protected override void OnUpdate()
     {
         long lVar2;
@@ -397,7 +407,7 @@ public class UI2DSprite
               puVar12 = (uint64 *)Sprite.get_rect(&local_58,this[63],0);
               local_78 = *puVar12;
               uStack_70 = puVar12[1];
-              uVar11 = FUN_180d90480(&local_78,0);
+              uVar11 = FUN_180d98fa0(&local_78,0);
               iVar5 = Mathf.RoundToInt(uVar11,0);
               if (this[63] != 0) {
                 puVar12 = (uint64 *)Sprite.get_rect(&local_58,this[63],0);
@@ -415,12 +425,12 @@ public class UI2DSprite
                       puVar12 = (uint64 *)Sprite.get_rect(&local_58,this[63],0);
                       local_78 = *puVar12;
                       uStack_70 = puVar12[1];
-                      FUN_180d90480(&local_78,0);
+                      FUN_180d98fa0(&local_78,0);
                       if (this[63] != 0) {
                         puVar12 = (uint64 *)Sprite.get_textureRect(&local_58,this[63],0);
                         local_78 = *puVar12;
                         uStack_70 = puVar12[1];
-                        FUN_180d90480(&local_78,0);
+                        FUN_180d98fa0(&local_78,0);
                         if (this[63] != 0) {
                           Sprite.get_textureRectOffset(this[63],0);
                           iVar9 = Mathf.RoundToInt();
@@ -447,7 +457,7 @@ public class UI2DSprite
                                 else {
                                   fVar13 = 0.0;
                                 }
-                                FUN_1809981e0(&local_68,fVar13);
+                                FUN_1809dc910(&local_68,fVar13);
                                 local_58 = local_68;
                                 uStack_50 = uStack_60;
                                 UIWidget.set_drawRegion(this,&local_58,0);
@@ -468,66 +478,45 @@ public class UI2DSprite
         }
     }
 
-    // Token : 0x60006AD
-    // RVA   : 0xA757A0   Offset: 0xA73FA0   Length: 0x20F
+    // Token : 0x60006C5
+    // RVA   : 0xAEF470   Offset: 0xAEE870   Length: 0x1B0
     public override void MakePixelPerfect()
     {
         bool cVar1;
         uint uVar2;
         uint uVar3;
         ulong uVar4;
+        float fVar6;
         float fVar7;
-        float fVar8;
-        float local_38;
-        float fStack_34;
-        float fStack_30;
-        float fStack_2c;
-        uint32 local_28;
-        uint32 uStack_24;
-        uint32 uStack_20;
-        uint32 uStack_1c;
+        uint local_38;
+        uint uStack_34;
+        uint uStack_30;
+        uint32 uStack_2c;
+        uint8 local_28 [32];
         UIWidget.MakePixelPerfect(this,0);
         if ((int)this[49] != 2) {
           uVar4 = (**(code **)(*this + 0x2e8))(this,*(uint64 *)(*this + 0x2f0));
           cVar1 = Object.op_Equality(uVar4,0,0);
-          if (!cVar1) {
-            if (((int)this[49] != 0) && ((int)this[49] != 3)) {
-              pfVar5 = (float *)(**(code **)(*this + 0x378))
-                                          (&local_38,this,*(uint64 *)(*this + 0x380));
-              local_38 = *pfVar5;
-              fStack_34 = pfVar5[1];
-              fStack_30 = pfVar5[2];
-              fStack_2c = pfVar5[3];
-              if (local_38 != 0.0) {
-                return;
-              }
-              if (fStack_34 != 0.0) {
-                return;
-              }
-              if (fStack_30 != 0.0) {
-                return;
-              }
-              if (fStack_2c != 0.0) {
-                return;
-              }
-            }
+          if ((!cVar1) &&
+             ((((int)this[49] == 0 || ((int)this[49] == 3)) ||
+              (cVar1 = UIBasicSprite.get_hasBorder(this,0), !cVar1)))) {
             cVar1 = Object.op_Inequality(uVar4,0,0);
             if (cVar1) {
               if (this[63] == 0) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              puVar6 = (uint32 *)Sprite.get_rect(&local_38,this[63],0);
-              local_28 = *puVar6;
-              uStack_24 = puVar6[1];
-              uStack_20 = puVar6[2];
-              uStack_1c = puVar6[3];
-              fVar7 = (float)(**(code **)(*this + 0x3d8))(this,*(uint64 *)(*this + 0x3e0));
-              fVar8 = (float)FUN_180d90480(&local_28,0);
-              uVar2 = Mathf.RoundToInt(fVar8 * fVar7,0);
-              fVar7 = (float)(**(code **)(*this + 0x3d8))(this,*(uint64 *)(*this + 0x3e0));
-              fVar8 = (float)FUN_18044e2b0(&local_28,0);
-              uVar3 = Mathf.RoundToInt(fVar8 * fVar7,0);
+              puVar5 = (uint32 *)Sprite.get_rect(local_28,this[63],0);
+              local_38 = *puVar5;
+              uStack_34 = puVar5[1];
+              uStack_30 = puVar5[2];
+              uStack_2c = puVar5[3];
+              fVar6 = (float)(**(code **)(*this + 0x3d8))(this,*(uint64 *)(*this + 0x3e0));
+              fVar7 = (float)FUN_180d98fa0(&local_38,0);
+              uVar2 = Mathf.RoundToInt(fVar7 * fVar6,0);
+              fVar6 = (float)(**(code **)(*this + 0x3d8))(this,*(uint64 *)(*this + 0x3e0));
+              fVar7 = (float)FUN_18044e2b0(&local_38,0);
+              uVar3 = Mathf.RoundToInt(fVar7 * fVar6,0);
               if ((uVar2 & 1) != 0) {
                 uVar2 = uVar2 + 1;
               }
@@ -541,136 +530,100 @@ public class UI2DSprite
         }
     }
 
-    // Token : 0x60006AE
-    // RVA   : 0xA759B0   Offset: 0xA741B0   Length: 0x5E0
+    // Token : 0x60006C6
+    // RVA   : 0xAEF630   Offset: 0xAEEA30   Length: 0x416
     public override void OnFill(List<Vector3> verts, List<Vector2> uvs, List<Color> cols)
     {
         uint uVar1;
         long lVar2;
         float fVar3;
         bool cVar4;
-        int iVar5;
-        uint8 (*pauVar8) [16];
-        uint64 *puVar9;
-        float fVar10;
+        uint8 (*pauVar7) [16];
+        float fVar8;
+        uint8 auVar9 [16];
+        uint8 auVar10 [16];
         uint8 auVar11 [16];
-        uint8 auVar12 [16];
-        uint8 auVar13 [16];
-        int64 local_a8;
-        int64 lStack_a0;
-        int64 local_98;
-        int64 lStack_90;
-        int64 local_88;
-        uint64 uStack_80;
         uint64 local_78;
         uint64 uStack_70;
-        int64 local_68;
-        int64 lStack_60;
-        uint8 local_58 [48];
-        plVar6 = (int64 *)(**(code **)(*this + 0x2e8))(this,*(uint64 *)(*this + 0x2f0));
-        cVar4 = Object.op_Equality(plVar6,0,0);
+        uint64 local_68;
+        uint64 uStack_60;
+        uint64 local_58;
+        uint64 uStack_50;
+        uint64 local_48;
+        uint64 uStack_40;
+        plVar5 = (int64 *)(**(code **)(*this + 0x2e8))(this,*(uint64 *)(*this + 0x2f0));
+        cVar4 = Object.op_Equality(plVar5,0,0);
         if (cVar4) {
           return;
         }
         lVar2 = this[63];
         cVar4 = Object.op_Inequality(lVar2,0,0);
         if (!cVar4) {
-          if (plVar6 == (int64 *)0) {
+          if (plVar5 == (int64 *)0) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          (**(code **)(*plVar6 + 0x178))(plVar6,*(uint64 *)(*plVar6 + 0x180));
-          (**(code **)(*plVar6 + 0x198))(plVar6,*(uint64 *)(*plVar6 + 0x1a0));
-          local_68 = 0;
-          lStack_60 = 0;
-          FUN_1809981e0(&local_68);
-          local_a8 = local_68;
-          lStack_a0 = lStack_60;
+          (**(code **)(*plVar5 + 0x178))(plVar5,*(uint64 *)(*plVar5 + 0x180));
+          (**(code **)(*plVar5 + 0x198))(plVar5,*(uint64 *)(*plVar5 + 0x1a0));
+          local_58 = 0;
+          uStack_50 = 0;
+          FUN_1809dc910(&local_58);
+          local_78 = local_58;
+          uStack_70 = uStack_50;
         }
         else {
           if (this[63] == 0) throw; // [null/range check failed]
-          plVar7 = (int64 *)Sprite.get_textureRect(&local_68,this[63],0);
-          local_a8 = *plVar7;
-          lStack_a0 = plVar7[1];
+          puVar6 = (uint64 *)Sprite.get_textureRect(&local_48,this[63],0);
+          local_78 = *puVar6;
+          uStack_70 = puVar6[1];
         }
-        local_98 = local_a8;
-        lStack_90 = lStack_a0;
-        pauVar8 = (uint8 (*) [16])
-                  (**(code **)(*this + 0x378))(&local_68,this,*(uint64 *)(*this + 0x380));
-        auVar11 = *pauVar8;
-        fVar3 = auVar11._4_4_;
-        fVar10 = (float)FUN_180d904a0(&local_a8,0);
-        auVar11._0_4_ = auVar11._0_4_ + fVar10;
-        Rect.set_xMin(&local_a8,auVar11._0_8_,0);
-        fVar10 = (float)FUN_18044df60(&local_a8,0);
-        auVar12._4_4_ = fVar3;
-        auVar12._0_4_ = fVar3;
-        auVar12._8_4_ = fVar3;
-        auVar12._12_4_ = fVar3;
-        auVar13._4_12_ = auVar12._4_12_;
-        auVar13._0_4_ = fVar3 + fVar10;
-        Rect.set_yMin(&local_a8,auVar13._0_8_,0);
-        Rect.get_xMax(&local_a8,0);
-        Rect.set_xMax(&local_a8);
-        Rect.get_yMax(&local_a8,0);
-        Rect.set_yMax(&local_a8);
-        if (plVar6 != (int64 *)0) {
-          (**(code **)(*plVar6 + 0x178))(plVar6,*(uint64 *)(*plVar6 + 0x180));
-          (**(code **)(*plVar6 + 0x198))(plVar6,*(uint64 *)(*plVar6 + 0x1a0));
-          FUN_180d904a0(&local_98,0);
-          Rect.set_xMin(&local_98);
-          Rect.get_xMax(&local_98,0);
-          Rect.set_xMax(&local_98);
-          FUN_18044df60(&local_98,0);
-          Rect.set_yMin(&local_98);
-          Rect.get_yMax(&local_98,0);
-          Rect.set_yMax(&local_98);
-          FUN_180d904a0(&local_a8,0);
-          Rect.set_xMin(&local_a8);
-          Rect.get_xMax(&local_a8,0);
-          Rect.set_xMax(&local_a8);
-          FUN_18044df60(&local_a8,0);
-          Rect.set_yMin(&local_a8);
-          Rect.get_yMax(&local_a8,0);
-          Rect.set_yMax(&local_a8);
+        local_68 = local_78;
+        uStack_60 = uStack_70;
+        pauVar7 = (uint8 (*) [16])
+                  (**(code **)(*this + 0x378))(&local_48,this,*(uint64 *)(*this + 0x380));
+        auVar9 = *pauVar7;
+        fVar3 = auVar9._4_4_;
+        fVar8 = (float)FUN_180d98fc0(&local_78,0);
+        auVar9._0_4_ = auVar9._0_4_ + fVar8;
+        Rect.set_xMin(&local_78,auVar9._0_8_,0);
+        fVar8 = (float)FUN_18044df60(&local_78,0);
+        auVar10._4_4_ = fVar3;
+        auVar10._0_4_ = fVar3;
+        auVar10._8_4_ = fVar3;
+        auVar10._12_4_ = fVar3;
+        auVar11._4_12_ = auVar10._4_12_;
+        auVar11._0_4_ = fVar3 + fVar8;
+        Rect.set_yMin(&local_78,auVar11._0_8_,0);
+        Rect.get_xMax(&local_78,0);
+        Rect.set_xMax(&local_78);
+        Rect.get_yMax(&local_78,0);
+        Rect.set_yMax(&local_78);
+        if (plVar5 != (int64 *)0) {
+          (**(code **)(*plVar5 + 0x178))(plVar5,*(uint64 *)(*plVar5 + 0x180));
+          (**(code **)(*plVar5 + 0x198))(plVar5,*(uint64 *)(*plVar5 + 0x1a0));
+          FUN_180d98fc0(&local_68,0);
+          Rect.set_xMin(&local_68);
+          Rect.get_xMax(&local_68,0);
+          Rect.set_xMax(&local_68);
+          FUN_18044df60(&local_68,0);
+          Rect.set_yMin(&local_68);
+          Rect.get_yMax(&local_68,0);
+          Rect.set_yMax(&local_68);
+          FUN_180d98fc0(&local_78,0);
+          Rect.set_xMin(&local_78);
+          Rect.get_xMax(&local_78,0);
+          Rect.set_xMax(&local_78);
+          FUN_18044df60(&local_78,0);
+          Rect.set_yMin(&local_78);
+          Rect.get_yMax(&local_78,0);
+          Rect.set_yMax(&local_78);
           if (verts != null) {
             uVar1 = *(uint32 *)(verts + 24);
-            this[58] = local_98;
-            this[59] = lStack_90;
-            this[56] = local_a8;
-            this[57] = lStack_a0;
-            puVar9 = (uint64 *)
-                     (**(code **)(*this + 0x2b8))(&local_68,this,*(uint64 *)(*this + 0x2c0));
-            local_78 = *puVar9;
-            uStack_70 = puVar9[1];
-            plVar6 = (int64 *)UIBasicSprite.get_drawingUVs(&local_68,this,0);
-            local_68 = *plVar6;
-            lStack_60 = plVar6[1];
-            local_88 = this[18];
-            uStack_80 = CONCAT44(*(uint32 *)((int64)this + 140),(int)this[19]);
-            cVar4 = (**(code **)(*this + 0x3c8))(this,*(uint64 *)(*this + 0x3d0));
-            if (cVar4) {
-              plVar6 = (int64 *)NGUITools.ApplyPMA(local_58,&local_88,0);
-              local_88 = *plVar6;
-              uStack_80 = plVar6[1];
-            }
-            iVar5 = (**(code **)(*this + 0x3a8))(this,*(uint64 *)(*this + 0x3b0));
-            if (iVar5 == 0) {
-              UIBasicSprite.SimpleFill(this,verts,uvs,cols,&local_78,&local_68,&local_88,0);
-            }
-            else if (iVar5 == 1) {
-              UIBasicSprite.SlicedFill(this,verts,uvs,cols,&local_78,&local_68,&local_88,0);
-            }
-            else if (iVar5 == 2) {
-              UIBasicSprite.TiledFill(this,verts,uvs,cols,&local_78,&local_88,0);
-            }
-            else if (iVar5 == 3) {
-              UIBasicSprite.FilledFill(this,verts,uvs,cols,&local_78,&local_68,&local_88,0);
-            }
-            else if (iVar5 == 4) {
-              UIBasicSprite.AdvancedFill(this,verts,uvs,cols,&local_78,&local_68,&local_88,0)
-              ;
-            }
+            local_58 = local_78;
+            uStack_50 = uStack_70;
+            local_48 = local_68;
+            uStack_40 = uStack_60;
+            UIBasicSprite.Fill(this,verts,uvs,cols,&local_48,&local_58,0);
             if (this[24] == 0) {
               return;
             }
@@ -680,18 +633,16 @@ public class UI2DSprite
         }
     }
 
-    // Token : 0x60006AF
-    // RVA   : 0xA76460   Offset: 0xA74C60   Length: 0x10E
+    // Token : 0x60006C7
+    // RVA   : 0xAEFF10   Offset: 0xAEF310   Length: 0x7C
     public void /*ctor*/()
     {
         uint uVar1;
         uint uVar2;
         uint uVar3;
         uint uVar4;
-        ulong local_28;
-        ulong uStack_20;
         byte[] local_18 = new byte[16];
-        puVar5 = (uint32 *)Vector4.get_zero(&local_28,0);
+        puVar5 = (uint32 *)Vector4.get_zero(local_18,0);
         uVar1 = *puVar5;
         uVar2 = puVar5[1];
         uVar3 = puVar5[2];
@@ -702,29 +653,7 @@ public class UI2DSprite
         *(uint32 *)(this + 0x20c) = uVar2;
         *(uint32 *)(this + 0x210) = uVar3;
         *(uint32 *)(this + 0x214) = uVar4;
-        *(uint32 *)(this + 0x18c) = 4;
-        *(uint32 *)(this + 400) = 0x3f800000;
-        puVar5 = (uint32 *)FUN_181098a50(local_18,0);
-        uVar1 = puVar5[1];
-        uVar2 = puVar5[2];
-        uVar3 = puVar5[3];
-        local_28 = 0;
-        uStack_20 = 0;
-        *(uint32 *)(this + 0x1a0) = *puVar5;
-        *(uint32 *)(this + 0x1a4) = uVar1;
-        *(uint32 *)(this + 0x1a8) = uVar2;
-        *(uint32 *)(this + 0x1ac) = uVar3;
-        Color.ctor(&local_28,0x3f333333,0x3f333333,0x3f333333,0);
-        *(uint32 *)(this + 0x1e0) = 1;
-        *(uint32 *)(this + 0x1e4) = 1;
-        *(uint32 *)(this + 0x1b0) = (uint32)local_28;
-        *(uint32 *)(this + 0x1b4) = local_28._4_4_;
-        *(uint32 *)(this + 0x1b8) = (uint32)uStack_20;
-        *(uint32 *)(this + 0x1bc) = uStack_20._4_4_;
-        *(uint32 *)(this + 0x1e8) = 1;
-        *(uint32 *)(this + 0x1ec) = 1;
-        *(uint32 *)(this + 0x1f0) = 1;
-        UIWidget.ctor(this,0);
+        UIBasicSprite.ctor(this,0);
     }
 
 }

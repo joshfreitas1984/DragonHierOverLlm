@@ -1,34 +1,34 @@
 // ============================================================
 // Type  : MedFoodData
-// Token : 0x2000239
+// Token : 0x200023F
 // ============================================================
 
 public class MedFoodData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001164
+    // Token: 0x4001207
     public int enhanceLv;
 
-    // Token: 0x4001165
+    // Token: 0x4001208
     public ChangeHeroStateData changeHeroState;
 
-    // Token: 0x4001166
+    // Token: 0x4001209
     public int randomSpeAddValue;
 
-    // Token: 0x4001167
+    // Token: 0x400120A
     public HeroSpeAddData extraAddData;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60012AA
-    // RVA   : 0xA8EA10   Offset: 0xA8D210   Length: 0x24
+    // Token : 0x60012EB
+    // RVA   : 0xA8DA30   Offset: 0xA8CE30   Length: 0x24
     public ChangeHeroStateData GetChangeHeroStateData()
     {
         ChangeHeroStateData.op_Multiply
                   (this.changeHeroState,(float)this.enhanceLv * 0.1 + 1.0,0);
     }
 
-    // Token : 0x60012AB
-    // RVA   : 0xA8EA40   Offset: 0xA8D240   Length: 0x99
+    // Token : 0x60012EC
+    // RVA   : 0xA8DA60   Offset: 0xA8CE60   Length: 0x99
     public void /*ctor*/()
     {
         ulong uVar1;

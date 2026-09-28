@@ -1,47 +1,47 @@
 // ============================================================
 // Type  : HorseMatchHeroController
-// Token : 0x20002D9
+// Token : 0x20002DF
 // ============================================================
 
 public class HorseMatchHeroController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40016EF
+    // Token: 0x40017A3
     public HeroData hero;
 
-    // Token: 0x40016F0
+    // Token: 0x40017A4
     public SkeletonAnimation skeletonAnimation;
 
-    // Token: 0x40016F1
+    // Token: 0x40017A5
     public bool finished;
 
-    // Token: 0x40016F2
+    // Token: 0x40017A6
     public SpriteRenderer circleSprite;
 
-    // Token: 0x40016F3
+    // Token: 0x40017A7
     public bool startMoving;
 
-    // Token: 0x40016F4
+    // Token: 0x40017A8
     public float AISprintTimeStart;
 
-    // Token: 0x40016F5
+    // Token: 0x40017A9
     public HorseMatchRoadType nowRoad;
 
-    // Token: 0x40016F6
+    // Token: 0x40017AA
     public HorseMatchRoadType nowRoadBuffer;
 
-    // Token: 0x40016F7
+    // Token: 0x40017AB
     public float nowRoadRefreshTime;
 
-    // Token: 0x40016F8
+    // Token: 0x40017AC
     private GameObject newObj;
 
-    // Token: 0x40016F9
+    // Token: 0x40017AD
     private bool inited;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60017ED
-    // RVA   : 0xB45FF0   Offset: 0xB447F0   Length: 0x192
+    // Token : 0x6001831
+    // RVA   : 0xB07110   Offset: 0xB06510   Length: 0x192
     private void Start()
     {
         long lVar1;
@@ -60,18 +60,18 @@ public class HorseMatchHeroController
             }
             this.inited = 1;
             lVar1 = Component.get_gameObject(this,0);
-            if ((lVar1 != null) && (lVar1 = GameObject.AddComponent(lVar1,DAT_181d9c4f0)) != null) {
+            if ((lVar1 != null) && (lVar1 = GameObject.AddComponent(lVar1,DAT_181dc5290)) != null) {
               FootStepController.Init(lVar1,this.skeletonAnimation,0);
               if (this.hero != null) {
                 if (this.hero.heroID == null) {
                   return;
                 }
-                lVar1 = Component.GetComponent(this,DAT_181d6b640);
-                lVar3 = il2cpp_internal(DAT_181d721b0);
-                FUN_180f58a90(lVar3,DAT_181d79358);
+                lVar1 = Component.GetComponent(this,DAT_181d93e60);
+                lVar3 = il2cpp_internal(DAT_181d96ed0);
+                FUN_18132faf0(lVar3,DAT_181da0cf8);
                 if (lVar3 != null) {
-                  FUN_181805690(lVar3,0,DAT_181d79458);
-                  FUN_181805690(lVar3,0,DAT_181d79458);
+                  FUN_18181de10(lVar3,0,DAT_181da0df8);
+                  FUN_18181de10(lVar3,0,DAT_181da0df8);
                   if (lVar1 != null) {
                     *(int64 *)(lVar1 + 32) = lVar3;
                     return;
@@ -83,8 +83,8 @@ public class HorseMatchHeroController
         }
     }
 
-    // Token : 0x60017EE
-    // RVA   : 0xB45A30   Offset: 0xB44230   Length: 0x12E
+    // Token : 0x6001832
+    // RVA   : 0xB06B50   Offset: 0xB05F50   Length: 0x12E
     private void Init()
     {
         long lVar1;
@@ -92,18 +92,18 @@ public class HorseMatchHeroController
         if (!this.inited) {
           this.inited = 1;
           lVar1 = Component.get_gameObject(this,0);
-          if ((lVar1 != null) && (lVar1 = GameObject.AddComponent(lVar1,DAT_181d9c4f0)) != null) {
+          if ((lVar1 != null) && (lVar1 = GameObject.AddComponent(lVar1,DAT_181dc5290)) != null) {
             FootStepController.Init(lVar1,this.skeletonAnimation,0);
             if (this.hero != null) {
               if (this.hero.heroID == null) {
                 return;
               }
-              lVar1 = Component.GetComponent(this,DAT_181d6b640);
-              lVar2 = il2cpp_internal(DAT_181d721b0);
-              FUN_180f58a90(lVar2,DAT_181d79358);
+              lVar1 = Component.GetComponent(this,DAT_181d93e60);
+              lVar2 = il2cpp_internal(DAT_181d96ed0);
+              FUN_18132faf0(lVar2,DAT_181da0cf8);
               if (lVar2 != null) {
-                FUN_181805690(lVar2,0,DAT_181d79458);
-                FUN_181805690(lVar2,0,DAT_181d79458);
+                FUN_18181de10(lVar2,0,DAT_181da0df8);
+                FUN_18181de10(lVar2,0,DAT_181da0df8);
                 if (lVar1 != null) {
                   *(int64 *)(lVar1 + 32) = lVar2;
                   return;
@@ -116,8 +116,8 @@ public class HorseMatchHeroController
         }
     }
 
-    // Token : 0x60017EF
-    // RVA   : 0xB45960   Offset: 0xB44160   Length: 0xC4
+    // Token : 0x6001833
+    // RVA   : 0xB06A80   Offset: 0xB05E80   Length: 0xC4
     public float GetFinalTravelSpeed()
     {
         long lVar1;
@@ -146,8 +146,8 @@ public class HorseMatchHeroController
         }
     }
 
-    // Token : 0x60017F0
-    // RVA   : 0xB46190   Offset: 0xB44990   Length: 0x62D
+    // Token : 0x6001834
+    // RVA   : 0xB072B0   Offset: 0xB066B0   Length: 0x62D
     private void Update()
     {
         bool cVar1;
@@ -209,7 +209,7 @@ public class HorseMatchHeroController
         throw; // [null/range check failed]
         lVar2 = AnimationState.GetCurrent(lVar2,0,0);
         if (lVar2 == null) {
-        LAB_180b46403:
+        LAB_180b07523:
           if (this.skeletonAnimation == null) throw; // [null/range check failed]
           lVar2 = SkeletonAnimation.get_AnimationState(this.skeletonAnimation,0);
           if ((this.hero == null) ||
@@ -226,7 +226,7 @@ public class HorseMatchHeroController
           if (this.hero == null) throw; // [null/range check failed]
           uVar5 = HeroData.GetSkeletonHorseRunAnim(this.hero,0);
           cVar1 = String.op_Inequality(uVar6,uVar5,0);
-          if (cVar1) goto LAB_180b46403;
+          if (cVar1) goto LAB_180b07523;
         }
         if (!this.finished) {
           lVar2 = this.hero;
@@ -269,12 +269,12 @@ public class HorseMatchHeroController
         if (lVar2 != null) {
           pfVar3 = (float *)Transform.get_localPosition(local_68,lVar2,0);
           fVar9 = *pfVar3;
-          lVar2 = FUN_18046c260(0);
+          lVar2 = FUN_18046c220(0);
           if (((lVar2 != null) && (*(int64 *)(lVar2 + 136) != 0)) &&
              (lVar2 = GameObject.get_transform(*(int64 *)(lVar2 + 136),0)) != null) {
             pfVar3 = (float *)Transform.get_localPosition(local_68,lVar2,0);
             if ((*pfVar3 <= fVar9) && (!this.finished)) {
-              lVar2 = FUN_18046c260(0);
+              lVar2 = FUN_18046c220(0);
               uVar6 = Component.get_gameObject(this,0);
               if (lVar2 == null) throw; // [null/range check failed]
               HorseMatchController.FinishMatch(lVar2,uVar6,0);
@@ -289,10 +289,10 @@ public class HorseMatchHeroController
                 if (this.nowRoadBuffer == null) {
                   this.nowRoad = 0;
                   if (this.hero != null) {
-                    *(uint8 *)(this.hero + 0x388) = 0;
+                    *(uint8 *)(this.hero + 0x3cf) = 0;
                     lVar2 = Component.get_gameObject(this,0);
                     if ((lVar2 != null) &&
-                       (lVar2 = GameObject.GetComponent(lVar2,DAT_181d9f6e0)) != null) {
+                       (lVar2 = GameObject.GetComponent(lVar2,DAT_181d71688)) != null) {
                       *(uint8 *)(lVar2 + 40) = 0;
                       return;
                     }
@@ -307,8 +307,8 @@ public class HorseMatchHeroController
         }
     }
 
-    // Token : 0x60017F1
-    // RVA   : 0xB45B60   Offset: 0xB44360   Length: 0x483
+    // Token : 0x6001835
+    // RVA   : 0xB06C80   Offset: 0xB06080   Length: 0x483
     public void InteractRangeObjStay(GameObject target)
     {
         uint uVar1;
@@ -325,7 +325,7 @@ public class HorseMatchHeroController
         uint uStack_20;
         uint32 uStack_1c;
         if (target == null) {
-        LAB_180b45fde:
+        LAB_180b070fe:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -341,7 +341,7 @@ public class HorseMatchHeroController
             {
               plVar9 = (int64 *)Resources.Load("Sound/SoundEffect/SpeEffect/加速旋转",0);
               plVar10 = (int64 *)0;
-              if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181d8a228)) {
+              if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181daf348)) {
                 plVar10 = plVar9;
               }
               NGUITools.PlaySound(plVar10,0);
@@ -350,7 +350,7 @@ public class HorseMatchHeroController
             this.nowRoadBuffer = 1;
             return;
           }
-          goto LAB_180b45fde;
+          goto LAB_180b070fe;
         }
         if (iVar3 == 1) {
           this.nowRoad = 2;
@@ -358,31 +358,31 @@ public class HorseMatchHeroController
           if (this.hero != null) {
             this.hero.inWater = 1;
             lVar5 = Component.get_gameObject(this,0);
-            if ((lVar5 != null) && (lVar5 = GameObject.GetComponent(lVar5,DAT_181d9f6e0)) != null) {
+            if ((lVar5 != null) && (lVar5 = GameObject.GetComponent(lVar5,DAT_181d71688)) != null) {
               *(uint8 *)(lVar5 + 40) = 1;
               return;
             }
           }
-          goto LAB_180b45fde;
+          goto LAB_180b070fe;
         }
         if (iVar3 == 2) {
-          if (this.hero == null) goto LAB_180b45fde;
+          if (this.hero == null) goto LAB_180b070fe;
           lVar5 = this.hero.horse;
-          if (lVar5 == null) goto LAB_180b45ed4;
+          if (lVar5 == null) goto LAB_180b06ff4;
           lVar5 = *(int64 *)(lVar5 + 136);
-          if (lVar5 == null) goto LAB_180b45fde;
+          if (lVar5 == null) goto LAB_180b070fe;
           fVar11 = (float)HorseData.MaxPower(lVar5,0);
           HorseData.ChangeNowPower(lVar5,fVar11 * 0.3,0);
-          if (this.hero == null) goto LAB_180b45fde;
-          if (this.hero.heroID != null) goto LAB_180b45ed4;
+          if (this.hero == null) goto LAB_180b070fe;
+          if (this.hero.heroID != null) goto LAB_180b06ff4;
           lVar5 = FUN_18046c0a0(0);
           lVar6 = Component.get_transform(this,0);
-          if (lVar6 == null) goto LAB_180b45fde;
+          if (lVar6 == null) goto LAB_180b070fe;
           puVar7 = (uint64 *)Transform.get_position(&local_38,lVar6,0);
           uVar4 = *puVar7;
           uVar1 = *(uint32 *)(puVar7 + 1);
           puVar8 = (uint32 *)Color.get_green(&local_28,0);
-          if (lVar5 == null) goto LAB_180b45fde;
+          if (lVar5 == null) goto LAB_180b070fe;
           local_28 = *puVar8;
           uStack_24 = puVar8[1];
           uStack_20 = puVar8[2];
@@ -396,23 +396,23 @@ public class HorseMatchHeroController
           if (iVar3 != 3) {
             return;
           }
-          if (this.hero == null) goto LAB_180b45fde;
+          if (this.hero == null) goto LAB_180b070fe;
           lVar5 = this.hero.horse;
-          if (lVar5 == null) goto LAB_180b45ed4;
+          if (lVar5 == null) goto LAB_180b06ff4;
           lVar5 = *(int64 *)(lVar5 + 136);
-          if (lVar5 == null) goto LAB_180b45fde;
+          if (lVar5 == null) goto LAB_180b070fe;
           fVar11 = (float)HorseData.MaxPower(lVar5,0);
           HorseData.ChangeNowPower(lVar5,fVar11 * -0.15,0);
-          if (this.hero == null) goto LAB_180b45fde;
-          if (this.hero.heroID != null) goto LAB_180b45ed4;
+          if (this.hero == null) goto LAB_180b070fe;
+          if (this.hero.heroID != null) goto LAB_180b06ff4;
           lVar5 = FUN_18046c0a0(0);
           lVar6 = Component.get_transform(this,0);
-          if (lVar6 == null) goto LAB_180b45fde;
+          if (lVar6 == null) goto LAB_180b070fe;
           puVar7 = (uint64 *)Transform.get_position(&local_38,lVar6,0);
           uVar4 = *puVar7;
           uVar1 = *(uint32 *)(puVar7 + 1);
           puVar8 = (uint32 *)Color.get_red(&local_28,0);
-          if (lVar5 == null) goto LAB_180b45fde;
+          if (lVar5 == null) goto LAB_180b070fe;
           local_28 = *puVar8;
           uStack_24 = puVar8[1];
           uStack_20 = puVar8[2];
@@ -424,16 +424,16 @@ public class HorseMatchHeroController
         }
         plVar9 = (int64 *)Resources.Load(uVar4,0);
         plVar10 = (int64 *)0;
-        if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181d8a228)) {
+        if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181daf348)) {
           plVar10 = plVar9;
         }
         NGUITools.PlaySound(plVar10,0);
-        LAB_180b45ed4:
+        LAB_180b06ff4:
         Object.Destroy(target,0);
     }
 
-    // Token : 0x60017F2
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x6001836
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

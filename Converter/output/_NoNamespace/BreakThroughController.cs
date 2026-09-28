@@ -1,100 +1,102 @@
 // ============================================================
 // Type  : BreakThroughController
-// Token : 0x20001A2
+// Token : 0x20001A8
 // ============================================================
 
 public class BreakThroughController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000B05
+    // Token: 0x4000B91
     public KungfuSkillLvData targetSkill;
 
-    // Token: 0x4000B06
+    // Token: 0x4000B92
     public GameObject breakThroughPanel;
 
-    // Token: 0x4000B07
+    // Token: 0x4000B93
     public GameObject breakThroughChoiceIconPrefab;
 
-    // Token: 0x4000B08
+    // Token: 0x4000B94
     public GameObject targetSkillSlot;
 
-    // Token: 0x4000B09
+    // Token: 0x4000B95
     public int breakThroughType;
 
-    // Token: 0x4000B0A
+    // Token: 0x4000B96
     public bool useMoney;
 
-    // Token: 0x4000B0B
+    // Token: 0x4000B97
     public float baseScore;
 
-    // Token: 0x4000B0C
+    // Token: 0x4000B98
     public float medScore;
 
-    // Token: 0x4000B0D
+    // Token: 0x4000B99
     public float foodScore;
 
-    // Token: 0x4000B0E
+    // Token: 0x4000B9A
     public float bookScore;
 
-    // Token: 0x4000B0F
+    // Token: 0x4000B9B
     public float baseScoreRate;
 
-    // Token: 0x4000B10
+    // Token: 0x4000B9C
     public GameObject medIcon;
 
-    // Token: 0x4000B11
+    // Token: 0x4000B9D
     public GameObject medCancel;
 
-    // Token: 0x4000B12
+    // Token: 0x4000B9E
     private ItemData medData;
 
-    // Token: 0x4000B13
+    // Token: 0x4000B9F
     public GameObject foodIcon;
 
-    // Token: 0x4000B14
+    // Token: 0x4000BA0
     public GameObject foodCancel;
 
-    // Token: 0x4000B15
+    // Token: 0x4000BA1
     private ItemData foodData;
 
-    // Token: 0x4000B16
+    // Token: 0x4000BA2
     public GameObject bookIcon;
 
-    // Token: 0x4000B17
+    // Token: 0x4000BA3
     public GameObject bookCancel;
 
-    // Token: 0x4000B18
+    // Token: 0x4000BA4
     private ItemData bookData;
 
-    // Token: 0x4000B19
+    // Token: 0x4000BA5
     public GameObject breakThroughPos;
 
-    // Token: 0x4000B1A
+    // Token: 0x4000BA6
     public static Dictionary<int, List<int>> BreakThroughChoiceListDictionary;
 
-    // Token: 0x4000B1B
+    // Token: 0x4000BA7
     private GameObject newObj;
 
-    // Token: 0x4000B1C
+    // Token: 0x4000BA8
     private static BreakThroughController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000D63
-    // RVA   : 0xCEF650   Offset: 0xCEDE50   Length: 0x58
+    // Token : 0x6000D97
+    // RVA   : 0xC95A40   Offset: 0xC94E40   Length: 0xB7
     public static BreakThroughController get_Instance()
     {
-        return PlotController.LeftFaceHideOffset;
+        return *(uint64 *)(*(int64 *)(DAT_181db34e0 + 184) + 8);
     }
 
-    // Token : 0x6000D64
-    // RVA   : 0xCE9D30   Offset: 0xCE8530   Length: 0x68
+    // Token : 0x6000D98
+    // RVA   : 0xC90030   Offset: 0xC8F430   Length: 0x68
     private void Awake()
     {
-        PlotController.LeftFaceHideOffset = this;
+        puVar1 = (uint64 *)(*(int64 *)(DAT_181db34e0 + 184) + 8);
+        *puVar1 = this;
+        il2cpp_internal(puVar1,this);
     }
 
-    // Token : 0x6000D65
-    // RVA   : 0xCEF2C0   Offset: 0xCEDAC0   Length: 0x30F
+    // Token : 0x6000D99
+    // RVA   : 0xC956B0   Offset: 0xC94AB0   Length: 0x30F
     public void UnshowBreakThroughPanel()
     {
         bool cVar1;
@@ -154,11 +156,13 @@ public class BreakThroughController
         }
     }
 
-    // Token : 0x6000D66
-    // RVA   : 0xCED850   Offset: 0xCEC050   Length: 0x831
+    // Token : 0x6000D9A
+    // RVA   : 0xC93BF0   Offset: 0xC92FF0   Length: 0x85E
     public void StartBreakThrough(KungfuSkillLvData _targetSkill, bool _useMoney)
     {
-        var pStatics = *(int64*)(DAT_181d4e188 + 184);
+        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
+        var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
+        var pStatics_4008 = *(int64*)(DAT_181db4008 + 184);
         void BreakThroughController.StartBreakThrough
                      (int64 this,uint64 _targetSkill,uint8 _useMoney)
         {
@@ -180,40 +184,39 @@ public class BreakThroughController
         uint64 uStack_40;
         plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/Armor",0);
         plVar9 = (int64 *)0;
-        if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181d8a228)) {
+        if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
           plVar9 = plVar4;
         }
         NGUITools.PlaySound(plVar9,0);
         this.targetSkill = _targetSkill;
         this.useMoney = _useMoney;
-        lVar5 = PlotController.LeftFaceHideOffset;
+        lVar5 = *(int64 *)(pStatics_4008 + 8);
         fVar2 = local_60;
         if (lVar5 != null) {
-          if (lVar5.cityAreaID == null) {
+          if (*(int64 *)(lVar5 + 24) == 0) {
             fVar10 = 0.0;
           }
           else {
-            lVar5 = PlotController.LeftFaceHideOffset;
+            lVar5 = *(int64 *)(pStatics_4008 + 8);
             fVar2 = local_60;
-            if ((lVar5 = lVar5?.cityAreaID) == null) goto LAB_180cee07c;
+            if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 24)) == null) goto LAB_180c94449;
             fVar10 = (float)*(int *)(lVar5 + 20) * 0.05;
           }
           fVar2 = local_60;
-          if ((GameController._instance != null) &&
-             (lVar5 = GameController._instance.worldData) != null
-             ) {
+          if ((*pStatics_2cc8 != 0) &&
+             (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
             lVar5 = WorldData.Player(lVar5,0);
             fVar2 = local_60;
             if (lVar5 != null) {
-              lVar5 = lVar5.monthFreshBountyTime;
+              lVar5 = *(int64 *)(lVar5 + 0x150);
               if (this.targetSkill != null) {
                 uVar3 = KungfuSkillLvData.Type(this.targetSkill,0);
                 fVar2 = local_60;
                 if (lVar5 != null) {
-                  if (lVar5.cityAreaID <= uVar3) {
+                  if (*(uint32 *)(lVar5 + 24) <= uVar3) {
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
                   }
-                  fVar1 = lVar5.chapter[uVar3];
+                  fVar1 = lVar5[uVar3];
                   fVar2 = local_60;
                   if (this.targetSkill != null) {
                     lVar5 = KungfuSkillLvData.DataBase(this.targetSkill,0);
@@ -226,23 +229,23 @@ public class BreakThroughController
                         BreakThroughController.RefreshExtraRateInfo(this,0);
                         uVar6 = this.targetSkillSlot;
                         fVar2 = local_60;
-                        if (*pStatics != 0) {
-                          uVar8 = *(uint64 *)(*pStatics + 168);
+                        if (*pStatics_2ee8 != 0) {
+                          uVar8 = *(uint64 *)(*pStatics_2ee8 + 168);
                           uVar6 = GlobalData.AddChild(uVar6,uVar8,0);
                           this.newObj = uVar6;
                           fVar2 = local_60;
                           if (this.newObj != null) {
-                            lVar5 = GameObject.GetComponent(this.newObj,DAT_181da1630);
+                            lVar5 = GameObject.GetComponent(this.newObj,DAT_181d73800);
                             fVar2 = local_60;
                             if (lVar5 != null) {
-                              lVar5.villageAreaID = this.targetSkill;
+                              *(uint64 *)(lVar5 + 32) = this.targetSkill;
                               fVar2 = local_60;
                               if (this.newObj != null) {
                                 lVar5 = GameObject.GetComponent
-                                                  (this.newObj,DAT_181da1630);
+                                                  (this.newObj,DAT_181d73800);
                                 fVar2 = local_60;
                                 if (lVar5 != null) {
-                                  lVar5.forceAreaID = 2;
+                                  *(uint32 *)(lVar5 + 40) = 2;
                                   if (this.newObj != null) {
                                     lVar5 = GameObject.get_transform(this.newObj,0);
                                     puVar7 = (uint64 *)Vector3.get_one(&local_48,0);
@@ -276,7 +279,7 @@ public class BreakThroughController
                                                   lVar5 = Transform.Find(lVar5,"StartButton",0);
                                                   fVar2 = local_60;
                                                   if (lVar5 != null) {
-                                                    lVar5 = Component.GetComponent(lVar5,DAT_181d6af40);
+                                                    lVar5 = Component.GetComponent(lVar5,DAT_181d93760);
                                                     fVar2 = local_60;
                                                     if (lVar5 != null) {
                                                       Selectable.set_interactable(lVar5,0,0);
@@ -291,7 +294,7 @@ public class BreakThroughController
                                                           fVar2 = local_60;
                                                           if (lVar5 != null) {
                                                             lVar5 = Component.GetComponent
-                                                                              (lVar5,DAT_181d6af40);
+                                                                              (lVar5,DAT_181d93760);
                                                             fVar2 = local_60;
                                                             if (lVar5 != null) {
                                                               Selectable.set_interactable(lVar5,1,0);
@@ -325,7 +328,7 @@ public class BreakThroughController
                                                           fVar2 = local_60;
                                                           if (lVar5 != null) {
                                                             uVar6 = Component.GetComponent
-                                                                              (lVar5,DAT_181d6d8c0);
+                                                                              (lVar5,DAT_181d96160);
                                                             fVar2 = local_60;
                                                             if (this.targetSkill != null) {
                                                               lVar5 = KungfuSkillLvData.DataBase
@@ -333,11 +336,17 @@ public class BreakThroughController
                                                                                   (this + 24),0);
                                                               fVar2 = local_60;
                                                               if (lVar5 != null) {
-                                                                local_res18[0] = (float)FUN_1801f7f00();
+                                                                local_res18[0] = (float)FUN_1801f8ab0();
                                                                 local_res18[0] = local_res18[0] * 50.0;
                                                                 uVar8 = Single.ToString(local_res18,0);
                                                                 uVar8 = String.Concat("最低要求 ",uVar8
                                                                                        ,0);
+                                                                if (((*(byte *)(DAT_181d84898 + 0x133) & 4
+                                                                     ) != 0) &&
+                                                                   (*(int *)(DAT_181d84898 + 224) == 0))
+                                                                {
+                                                                  il2cpp_runtime_class_init();
+                                                                }
                                                                 LTLocalization.SetText(uVar6,uVar8,0);
                                                                 fVar2 = local_60;
                                                                 if (this.breakThroughPanel != null) {
@@ -355,7 +364,7 @@ public class BreakThroughController
                                                           if (lVar5 != null) {
                                                             plVar4 = (int64 *)
                                                                      Component.GetComponent
-                                                                               (lVar5,DAT_181d6d8c0);
+                                                                               (lVar5,DAT_181d96160);
                                                             puVar7 = (uint64 *)
                                                                      Color.get_red(&local_48,0);
                                                             fVar2 = local_60;
@@ -409,12 +418,12 @@ public class BreakThroughController
             }
           }
         }
-        LAB_180cee07c:
+        LAB_180c94449:
         local_60 = fVar2;
     }
 
-    // Token : 0x6000D67
-    // RVA   : 0xCEA6C0   Offset: 0xCE8EC0   Length: 0x17F
+    // Token : 0x6000D9B
+    // RVA   : 0xC909C0   Offset: 0xC8FDC0   Length: 0x17F
     public void BreakMedChoose()
     {
         long lVar1;
@@ -425,16 +434,16 @@ public class BreakThroughController
         if (this.medData != null) {
           return;
         }
-        lVar1 = **(int64 **)(DAT_181d92370 + 184);
-        lVar2 = il2cpp_internal(DAT_181d701b0);
-        FUN_180f58a90(lVar2,DAT_181d6dfe8);
+        lVar1 = **(int64 **)(DAT_181db7518 + 184);
+        lVar2 = il2cpp_internal(DAT_181d94e50);
+        FUN_18132faf0(lVar2,DAT_181d95788);
         local_res8[0] = 0;
-        uVar3 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
+        uVar3 = il2cpp_value_box(DAT_181d80418,local_res8);
         if (lVar2 != null) {
-          FUN_181827900(lVar2,uVar3,DAT_181d6e0e8);
+          FUN_18181e0a0(lVar2,uVar3,DAT_181d95888);
           local_res18[0] = 1;
-          uVar3 = il2cpp_value_box(DAT_181d5b2f8,local_res18);
-          FUN_181827900(lVar2,uVar3,DAT_181d6e0e8);
+          uVar3 = il2cpp_value_box(DAT_181d80418,local_res18);
+          FUN_18181e0a0(lVar2,uVar3,DAT_181d95888);
           uVar3 = Component.get_gameObject(this,0);
           if (lVar1 != null) {
             ChooseController.ShowChoosePanel(lVar1,1,lVar2,uVar3,"BreakMedChoosen",0,25,0,0,0);
@@ -443,33 +452,33 @@ public class BreakThroughController
         }
     }
 
-    // Token : 0x6000D68
-    // RVA   : 0xCEA840   Offset: 0xCE9040   Length: 0x1E6
+    // Token : 0x6000D9C
+    // RVA   : 0xC90B40   Offset: 0xC8FF40   Length: 0x1E6
     public void BreakMedChoosen()
     {
-        var pStatics_2370 = *(int64*)(DAT_181d92370 + 184);
-        var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
+        var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
+        var pStatics_7518 = *(int64*)(DAT_181db7518 + 184);
         ulong uVar1;
         long lVar2;
         ulong uVar3;
         long lVar4;
-        if ((*pStatics_2370 != 0) &&
-           (lVar2 = *(int64 *)(*pStatics_2370 + 72)) != null) {
-          lVar2 = GameObject.GetComponent(lVar2,DAT_181da0070);
+        if ((*pStatics_7518 != 0) &&
+           (lVar2 = *(int64 *)(*pStatics_7518 + 72)) != null) {
+          lVar2 = GameObject.GetComponent(lVar2,DAT_181d720a0);
           if (lVar2 != null) {
             lVar2 = *(int64 *)(lVar2 + 32);
             this.medData = lVar2;
             uVar3 = this.medIcon;
-            if (*pStatics_e188 != 0) {
-              uVar1 = *(uint64 *)(*pStatics_e188 + 160);
+            if (*pStatics_2ee8 != 0) {
+              uVar1 = *(uint64 *)(*pStatics_2ee8 + 160);
               uVar3 = GlobalData.AddChild(uVar3,uVar1,0);
               this.newObj = uVar3;
               if (this.newObj != null) {
-                lVar4 = GameObject.GetComponent(this.newObj,DAT_181da0070);
+                lVar4 = GameObject.GetComponent(this.newObj,DAT_181d720a0);
                 if (lVar4 != null) {
                   *(int64 *)(lVar4 + 32) = lVar2;
                   if (this.newObj != null) {
-                    lVar4 = GameObject.GetComponent(this.newObj,DAT_181da0070);
+                    lVar4 = GameObject.GetComponent(this.newObj,DAT_181d720a0);
                     if ((lVar4 != null) && (*(uint32 *)(lVar4 + 40) = 1, lVar2 != null)) {
                       this.medScore = (float)*(int *)(lVar2 + 56);
                       BreakThroughController.RefreshExtraRateInfo(this,0);
@@ -486,11 +495,11 @@ public class BreakThroughController
         }
     }
 
-    // Token : 0x6000D69
-    // RVA   : 0xCED330   Offset: 0xCEBB30   Length: 0x170
+    // Token : 0x6000D9D
+    // RVA   : 0xC936D0   Offset: 0xC92AD0   Length: 0x170
     public void SetBreakMed(ItemData targetMed)
     {
-        var pStatics = *(int64*)(DAT_181d4e188 + 184);
+        var pStatics = *(int64*)(DAT_181d72ee8 + 184);
         ulong uVar1;
         ulong uVar2;
         long lVar3;
@@ -501,11 +510,11 @@ public class BreakThroughController
           uVar2 = GlobalData.AddChild(uVar2,uVar1,0);
           this.newObj = uVar2;
           if (this.newObj != null) {
-            lVar3 = GameObject.GetComponent(this.newObj,DAT_181da0070);
+            lVar3 = GameObject.GetComponent(this.newObj,DAT_181d720a0);
             if (lVar3 != null) {
               *(int64 *)(lVar3 + 32) = targetMed;
               if (this.newObj != null) {
-                lVar3 = GameObject.GetComponent(this.newObj,DAT_181da0070);
+                lVar3 = GameObject.GetComponent(this.newObj,DAT_181d720a0);
                 if ((lVar3 != null) && (*(uint32 *)(lVar3 + 40) = 1, targetMed != null)) {
                   this.medScore = (float)*(int *)(targetMed + 56);
                   BreakThroughController.RefreshExtraRateInfo(this,0);
@@ -520,8 +529,8 @@ public class BreakThroughController
         }
     }
 
-    // Token : 0x6000D6A
-    // RVA   : 0xCEA620   Offset: 0xCE8E20   Length: 0x9A
+    // Token : 0x6000D9E
+    // RVA   : 0xC90920   Offset: 0xC8FD20   Length: 0x9A
     public void BreakMedCancel()
     {
         ulong uVar1;
@@ -536,8 +545,8 @@ public class BreakThroughController
         }
     }
 
-    // Token : 0x6000D6B
-    // RVA   : 0xCEA290   Offset: 0xCE8A90   Length: 0x182
+    // Token : 0x6000D9F
+    // RVA   : 0xC90590   Offset: 0xC8F990   Length: 0x182
     public void BreakFoodChoose()
     {
         long lVar1;
@@ -548,16 +557,16 @@ public class BreakThroughController
         if (this.foodData != null) {
           return;
         }
-        lVar1 = **(int64 **)(DAT_181d92370 + 184);
-        lVar2 = il2cpp_internal(DAT_181d701b0);
-        FUN_180f58a90(lVar2,DAT_181d6dfe8);
+        lVar1 = **(int64 **)(DAT_181db7518 + 184);
+        lVar2 = il2cpp_internal(DAT_181d94e50);
+        FUN_18132faf0(lVar2,DAT_181d95788);
         local_res8[0] = 0;
-        uVar3 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
+        uVar3 = il2cpp_value_box(DAT_181d80418,local_res8);
         if (lVar2 != null) {
-          FUN_181827900(lVar2,uVar3,DAT_181d6e0e8);
+          FUN_18181e0a0(lVar2,uVar3,DAT_181d95888);
           local_res18[0] = 2;
-          uVar3 = il2cpp_value_box(DAT_181d5b2f8,local_res18);
-          FUN_181827900(lVar2,uVar3,DAT_181d6e0e8);
+          uVar3 = il2cpp_value_box(DAT_181d80418,local_res18);
+          FUN_18181e0a0(lVar2,uVar3,DAT_181d95888);
           uVar3 = Component.get_gameObject(this,0);
           if (lVar1 != null) {
             ChooseController.ShowChoosePanel(lVar1,1,lVar2,uVar3,"BreakFoodChoosen",0,25,0,0,0);
@@ -566,32 +575,32 @@ public class BreakThroughController
         }
     }
 
-    // Token : 0x6000D6C
-    // RVA   : 0xCEA420   Offset: 0xCE8C20   Length: 0x1F8
+    // Token : 0x6000DA0
+    // RVA   : 0xC90720   Offset: 0xC8FB20   Length: 0x1F8
     public void BreakFoodChoosen()
     {
-        var pStatics_2370 = *(int64*)(DAT_181d92370 + 184);
-        var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
+        var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
+        var pStatics_7518 = *(int64*)(DAT_181db7518 + 184);
         ulong uVar1;
         long lVar2;
         ulong uVar3;
-        if ((*pStatics_2370 != 0) &&
-           (lVar2 = *(int64 *)(*pStatics_2370 + 72)) != null) {
-          lVar2 = GameObject.GetComponent(lVar2,DAT_181da0070);
+        if ((*pStatics_7518 != 0) &&
+           (lVar2 = *(int64 *)(*pStatics_7518 + 72)) != null) {
+          lVar2 = GameObject.GetComponent(lVar2,DAT_181d720a0);
           if (lVar2 != null) {
             uVar3 = *(uint64 *)(lVar2 + 32);
             this.foodData = uVar3;
             uVar3 = this.foodIcon;
-            if (*pStatics_e188 != 0) {
-              uVar1 = *(uint64 *)(*pStatics_e188 + 160);
+            if (*pStatics_2ee8 != 0) {
+              uVar1 = *(uint64 *)(*pStatics_2ee8 + 160);
               uVar3 = GlobalData.AddChild(uVar3,uVar1,0);
               this.newObj = uVar3;
               if (this.newObj != null) {
-                lVar2 = GameObject.GetComponent(this.newObj,DAT_181da0070);
+                lVar2 = GameObject.GetComponent(this.newObj,DAT_181d720a0);
                 if (lVar2 != null) {
                   *(uint64 *)(lVar2 + 32) = this.foodData;
                   if (this.newObj != null) {
-                    lVar2 = GameObject.GetComponent(this.newObj,DAT_181da0070);
+                    lVar2 = GameObject.GetComponent(this.newObj,DAT_181d720a0);
                     if (lVar2 != null) {
                       *(uint32 *)(lVar2 + 40) = 1;
                       if (this.foodData != null) {
@@ -612,11 +621,11 @@ public class BreakThroughController
         }
     }
 
-    // Token : 0x6000D6D
-    // RVA   : 0xCED1A0   Offset: 0xCEB9A0   Length: 0x182
+    // Token : 0x6000DA1
+    // RVA   : 0xC93540   Offset: 0xC92940   Length: 0x182
     public void SetBreakFood(ItemData targetFood)
     {
-        var pStatics = *(int64*)(DAT_181d4e188 + 184);
+        var pStatics = *(int64*)(DAT_181d72ee8 + 184);
         ulong uVar1;
         ulong uVar2;
         long lVar3;
@@ -627,11 +636,11 @@ public class BreakThroughController
           uVar2 = GlobalData.AddChild(uVar2,uVar1,0);
           this.newObj = uVar2;
           if (this.newObj != null) {
-            lVar3 = GameObject.GetComponent(this.newObj,DAT_181da0070);
+            lVar3 = GameObject.GetComponent(this.newObj,DAT_181d720a0);
             if (lVar3 != null) {
               *(uint64 *)(lVar3 + 32) = this.foodData;
               if (this.newObj != null) {
-                lVar3 = GameObject.GetComponent(this.newObj,DAT_181da0070);
+                lVar3 = GameObject.GetComponent(this.newObj,DAT_181d720a0);
                 if (lVar3 != null) {
                   *(uint32 *)(lVar3 + 40) = 1;
                   if (this.foodData != null) {
@@ -649,8 +658,8 @@ public class BreakThroughController
         }
     }
 
-    // Token : 0x6000D6E
-    // RVA   : 0xCEA1F0   Offset: 0xCE89F0   Length: 0x9D
+    // Token : 0x6000DA2
+    // RVA   : 0xC904F0   Offset: 0xC8F8F0   Length: 0x9D
     public void BreakFoodCancel()
     {
         ulong uVar1;
@@ -665,8 +674,8 @@ public class BreakThroughController
         }
     }
 
-    // Token : 0x6000D6F
-    // RVA   : 0xCE9E50   Offset: 0xCE8650   Length: 0x182
+    // Token : 0x6000DA3
+    // RVA   : 0xC90150   Offset: 0xC8F550   Length: 0x182
     public void BreakBookChoose()
     {
         long lVar1;
@@ -677,16 +686,16 @@ public class BreakThroughController
         if (this.bookData != null) {
           return;
         }
-        lVar1 = **(int64 **)(DAT_181d92370 + 184);
-        lVar2 = il2cpp_internal(DAT_181d701b0);
-        FUN_180f58a90(lVar2,DAT_181d6dfe8);
+        lVar1 = **(int64 **)(DAT_181db7518 + 184);
+        lVar2 = il2cpp_internal(DAT_181d94e50);
+        FUN_18132faf0(lVar2,DAT_181d95788);
         local_res8[0] = 0;
-        uVar3 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
+        uVar3 = il2cpp_value_box(DAT_181d80418,local_res8);
         if (lVar2 != null) {
-          FUN_181827900(lVar2,uVar3,DAT_181d6e0e8);
+          FUN_18181e0a0(lVar2,uVar3,DAT_181d95888);
           local_res18[0] = 3;
-          uVar3 = il2cpp_value_box(DAT_181d5b2f8,local_res18);
-          FUN_181827900(lVar2,uVar3,DAT_181d6e0e8);
+          uVar3 = il2cpp_value_box(DAT_181d80418,local_res18);
+          FUN_18181e0a0(lVar2,uVar3,DAT_181d95888);
           uVar3 = Component.get_gameObject(this,0);
           if (lVar1 != null) {
             ChooseController.ShowChoosePanel(lVar1,1,lVar2,uVar3,"BreakBookChoosen",0,14,0,0,0);
@@ -695,32 +704,32 @@ public class BreakThroughController
         }
     }
 
-    // Token : 0x6000D70
-    // RVA   : 0xCE9FE0   Offset: 0xCE87E0   Length: 0x20A
+    // Token : 0x6000DA4
+    // RVA   : 0xC902E0   Offset: 0xC8F6E0   Length: 0x20A
     public void BreakBookChoosen()
     {
-        var pStatics_2370 = *(int64*)(DAT_181d92370 + 184);
-        var pStatics_e188 = *(int64*)(DAT_181d4e188 + 184);
+        var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
+        var pStatics_7518 = *(int64*)(DAT_181db7518 + 184);
         ulong uVar1;
         long lVar2;
         ulong uVar3;
-        if ((*pStatics_2370 != 0) &&
-           (lVar2 = *(int64 *)(*pStatics_2370 + 72)) != null) {
-          lVar2 = GameObject.GetComponent(lVar2,DAT_181da0070);
+        if ((*pStatics_7518 != 0) &&
+           (lVar2 = *(int64 *)(*pStatics_7518 + 72)) != null) {
+          lVar2 = GameObject.GetComponent(lVar2,DAT_181d720a0);
           if (lVar2 != null) {
             uVar3 = *(uint64 *)(lVar2 + 32);
             this.bookData = uVar3;
             uVar3 = this.bookIcon;
-            if (*pStatics_e188 != 0) {
-              uVar1 = *(uint64 *)(*pStatics_e188 + 160);
+            if (*pStatics_2ee8 != 0) {
+              uVar1 = *(uint64 *)(*pStatics_2ee8 + 160);
               uVar3 = GlobalData.AddChild(uVar3,uVar1,0);
               this.newObj = uVar3;
               if (this.newObj != null) {
-                lVar2 = GameObject.GetComponent(this.newObj,DAT_181da0070);
+                lVar2 = GameObject.GetComponent(this.newObj,DAT_181d720a0);
                 if (lVar2 != null) {
                   *(uint64 *)(lVar2 + 32) = this.bookData;
                   if (this.newObj != null) {
-                    lVar2 = GameObject.GetComponent(this.newObj,DAT_181da0070);
+                    lVar2 = GameObject.GetComponent(this.newObj,DAT_181d720a0);
                     if (lVar2 != null) {
                       *(uint32 *)(lVar2 + 40) = 1;
                       if (this.bookData != null) {
@@ -741,11 +750,11 @@ public class BreakThroughController
         }
     }
 
-    // Token : 0x6000D71
-    // RVA   : 0xCED000   Offset: 0xCEB800   Length: 0x194
+    // Token : 0x6000DA5
+    // RVA   : 0xC933A0   Offset: 0xC927A0   Length: 0x194
     public void SetBreakBook(ItemData targetBook)
     {
-        var pStatics = *(int64*)(DAT_181d4e188 + 184);
+        var pStatics = *(int64*)(DAT_181d72ee8 + 184);
         ulong uVar1;
         ulong uVar2;
         long lVar3;
@@ -756,11 +765,11 @@ public class BreakThroughController
           uVar2 = GlobalData.AddChild(uVar2,uVar1,0);
           this.newObj = uVar2;
           if (this.newObj != null) {
-            lVar3 = GameObject.GetComponent(this.newObj,DAT_181da0070);
+            lVar3 = GameObject.GetComponent(this.newObj,DAT_181d720a0);
             if (lVar3 != null) {
               *(uint64 *)(lVar3 + 32) = this.bookData;
               if (this.newObj != null) {
-                lVar3 = GameObject.GetComponent(this.newObj,DAT_181da0070);
+                lVar3 = GameObject.GetComponent(this.newObj,DAT_181d720a0);
                 if (lVar3 != null) {
                   *(uint32 *)(lVar3 + 40) = 1;
                   if (this.bookData != null) {
@@ -779,8 +788,8 @@ public class BreakThroughController
         }
     }
 
-    // Token : 0x6000D72
-    // RVA   : 0xCE9DA0   Offset: 0xCE85A0   Length: 0xA3
+    // Token : 0x6000DA6
+    // RVA   : 0xC900A0   Offset: 0xC8F4A0   Length: 0xA3
     public void BreakBookCancel()
     {
         ulong uVar1;
@@ -795,10 +804,11 @@ public class BreakThroughController
         }
     }
 
-    // Token : 0x6000D73
-    // RVA   : 0xCEC2D0   Offset: 0xCEAAD0   Length: 0x877
+    // Token : 0x6000DA7
+    // RVA   : 0xC925D0   Offset: 0xC919D0   Length: 0x8E6
     public void RefreshExtraRateInfo()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         float fVar1;
         float fVar2;
         float fVar3;
@@ -821,7 +831,7 @@ public class BreakThroughController
              (lVar7 = GameObject.get_transform(this.breakThroughPanel,0)) != null) &&
             (lVar7 = Transform.Find(lVar7,"RateInfo",0)) != null) &&
            (lVar7 = Transform.Find(lVar7,"ExtraRateInfo",0)) != null) {
-          uVar8 = Component.GetComponent(lVar7,DAT_181d6d8c0);
+          uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
           local_res8[0] = (float)BreakThroughController.GetScoreRate(this,0);
           local_res8[0] = local_res8[0] * 100.0;
           uVar9 = Single.ToString(local_res8,"f0",0);
@@ -831,7 +841,7 @@ public class BreakThroughController
               (lVar7 = GameObject.get_transform(this.breakThroughPanel,0)) != null) &&
              ((lVar7 = Transform.Find(lVar7,"RateInfo",0), lVar7 != null &&
               (lVar7 = Transform.Find(lVar7,"Rate",0)) != null))) {
-            uVar8 = Component.GetComponent(lVar7,DAT_181d6d8c0);
+            uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
             fVar14 = this.baseScore;
             fVar1 = this.medScore;
             fVar2 = this.foodScore;
@@ -846,7 +856,7 @@ public class BreakThroughController
                  (lVar7 = GameObject.get_transform(this.breakThroughPanel,0)) != null) &&
                 (lVar7 = Transform.Find(lVar7,"RateInfo",0)) != null) &&
                (lVar7 = Transform.Find(lVar7,"MinScore",0)) != null) {
-              plVar10 = (int64 *)Component.GetComponent(lVar7,DAT_181d6d8c0);
+              plVar10 = (int64 *)Component.GetComponent(lVar7,DAT_181d96160);
               fVar14 = this.baseScore;
               fVar1 = this.medScore;
               fVar2 = this.foodScore;
@@ -854,7 +864,7 @@ public class BreakThroughController
               fVar15 = (float)BreakThroughController.GetScoreRate(this,0);
               if ((this.targetSkill != null) &&
                  (lVar7 = KungfuSkillLvData.DataBase(this.targetSkill,0)) != null) {
-                fVar16 = (float)FUN_1801f7f00();
+                fVar16 = (float)FUN_1801f8ab0();
                 if ((fVar1 + fVar14 + fVar2 + fVar3) * fVar15 < fVar16 * 50.0) {
                   puVar11 = (uint64 *)Color.get_red(&local_78,0);
                 }
@@ -868,7 +878,7 @@ public class BreakThroughController
                   if (((this.breakThroughPanel != null) &&
                       (lVar7 = GameObject.get_transform(this.breakThroughPanel,0)) != null) &&
                      (lVar7 = Transform.Find(lVar7,"StartButton",0)) != null) {
-                    lVar7 = Component.GetComponent(lVar7,DAT_181d6af40);
+                    lVar7 = Component.GetComponent(lVar7,DAT_181d93760);
                     fVar14 = this.baseScore;
                     fVar1 = this.medScore;
                     fVar2 = this.foodScore;
@@ -877,7 +887,7 @@ public class BreakThroughController
                     if ((this.targetSkill != null) &&
                        (lVar12 = KungfuSkillLvData.DataBase(this.targetSkill,0), lVar12 != null
                        )) {
-                      fVar16 = (float)FUN_1801f7f00();
+                      fVar16 = (float)FUN_1801f8ab0();
                       if (fVar16 * 50.0 <= (fVar1 + fVar14 + fVar2 + fVar3) * fVar15) {
                         if (!this.useMoney) {
                           bVar4 = true;
@@ -905,7 +915,7 @@ public class BreakThroughController
                             lVar7 != null)) &&
                            ((lVar7 = Transform.Find(lVar7,"StartButton",0), lVar7 != null &&
                             (lVar7 = Transform.Find(lVar7,"CostTime",0)) != null))) {
-                          uVar8 = Component.GetComponent(lVar7,DAT_181d6d8c0);
+                          uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
                           if (this.targetSkill != null) {
                             iVar5 = KungfuSkillLvData.BreakThroughDayCost
                                               (this.targetSkill,0);
@@ -918,15 +928,14 @@ public class BreakThroughController
                             if (!this.useMoney) {
                               return;
                             }
-                            if (((this.breakThroughPanel != null) &&
-                                (lVar7 = GameObject.get_transform(this.breakThroughPanel,0),
-                                lVar7 != null)) &&
-                               ((lVar7 = Transform.Find(lVar7,"StartButton",0), lVar7 != null &&
-                                (lVar7 = Transform.Find(lVar7,"CostTime",0)) != null))) {
-                              uVar8 = Component.GetComponent(lVar7,DAT_181d6d8c0);
-                              if ((((GameController._instance != null) &&
-                                   (lVar7 = *(int64 *)
-                                             (GameController._instance + 32),
+                            if ((((this.breakThroughPanel != null) &&
+                                 (lVar7 = GameObject.get_transform(this.breakThroughPanel,0),
+                                 lVar7 != null)) &&
+                                (lVar7 = Transform.Find(lVar7,"StartButton",0)) != null) &&
+                               (lVar7 = Transform.Find(lVar7,"CostTime",0)) != null) {
+                              uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
+                              if ((((*pStatics != 0) &&
+                                   (lVar7 = *(int64 *)(*pStatics + 32),
                                    lVar7 != null)) && (lVar7 = WorldData.Player(lVar7,0)) != null) &&
                                  (*(int64 *)(lVar7 + 0x220) != 0)) {
                                 iVar5 = *(int *)(*(int64 *)(lVar7 + 0x220) + 24);
@@ -946,7 +955,7 @@ public class BreakThroughController
                                          Mathf.RoundToInt(((float)this.breakThroughType * 0.5 + 1.0) *
                                                            (float)iVar5,0);
                                     local_res20[0] = local_res20[0] * 50;
-                                    uVar13 = il2cpp_value_box(DAT_181d5b2f8,local_res20);
+                                    uVar13 = il2cpp_value_box(DAT_181d80418,local_res20);
                                     uVar9 = String.Format(uVar9,uVar13,0);
                                     LTLocalization.AddText(uVar8,uVar9,0);
                                     return;
@@ -968,8 +977,8 @@ public class BreakThroughController
         }
     }
 
-    // Token : 0x6000D74
-    // RVA   : 0xCEB170   Offset: 0xCE9970   Length: 0x51
+    // Token : 0x6000DA8
+    // RVA   : 0xC91470   Offset: 0xC90870   Length: 0x51
     public int GetCostMoney()
     {
         int iVar1;
@@ -980,10 +989,11 @@ public class BreakThroughController
         }
     }
 
-    // Token : 0x6000D75
-    // RVA   : 0xCEB340   Offset: 0xCE9B40   Length: 0x116
+    // Token : 0x6000DA9
+    // RVA   : 0xC91640   Offset: 0xC90A40   Length: 0x116
     public float GetScoreRate()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         float fVar1;
         int iVar2;
         bool cVar3;
@@ -991,9 +1001,8 @@ public class BreakThroughController
         float fVar5;
         fVar1 = this.baseScoreRate;
         iVar2 = this.breakThroughType;
-        if ((GameController._instance != null) &&
-           (lVar4 = GameController._instance.worldData) != null)
-        {
+        if ((*pStatics != 0) &&
+           (lVar4 = *(int64 *)(*pStatics + 32)) != null) {
           lVar4 = WorldData.Player(lVar4,0);
           if (lVar4 != null) {
             cVar3 = HeroData.HaveForceFunction(lVar4,14);
@@ -1008,8 +1017,8 @@ public class BreakThroughController
         }
     }
 
-    // Token : 0x6000D76
-    // RVA   : 0xCEB1D0   Offset: 0xCE99D0   Length: 0x4D
+    // Token : 0x6000DAA
+    // RVA   : 0xC914D0   Offset: 0xC908D0   Length: 0x4D
     public int GetCostTime()
     {
         int iVar1;
@@ -1020,8 +1029,8 @@ public class BreakThroughController
         }
     }
 
-    // Token : 0x6000D77
-    // RVA   : 0xCEB460   Offset: 0xCE9C60   Length: 0x66
+    // Token : 0x6000DAB
+    // RVA   : 0xC91760   Offset: 0xC90B60   Length: 0x66
     public float GetTotalScore()
     {
         float fVar1;
@@ -1037,8 +1046,8 @@ public class BreakThroughController
         return fVar5 * (fVar4 + fVar1 + fVar2 + fVar3);
     }
 
-    // Token : 0x6000D78
-    // RVA   : 0xCEB2F0   Offset: 0xCE9AF0   Length: 0x40
+    // Token : 0x6000DAC
+    // RVA   : 0xC915F0   Offset: 0xC909F0   Length: 0x40
     public float GetMinScore()
     {
         long lVar1;
@@ -1046,14 +1055,14 @@ public class BreakThroughController
         if (this.targetSkill != null) {
           lVar1 = KungfuSkillLvData.DataBase(this.targetSkill,0);
           if (lVar1 != null) {
-            fVar2 = (float)FUN_1801f7f00(0x40000000);
+            fVar2 = (float)FUN_1801f8ab0(0x40000000);
             return fVar2 * 50.0;
           }
         }
     }
 
-    // Token : 0x6000D79
-    // RVA   : 0xCEB220   Offset: 0xCE9A20   Length: 0xCB
+    // Token : 0x6000DAD
+    // RVA   : 0xC91520   Offset: 0xC90920   Length: 0xCB
     public float GetMaxRareLv()
     {
         float fVar1;
@@ -1071,22 +1080,22 @@ public class BreakThroughController
         if (this.targetSkill != null) {
           lVar5 = KungfuSkillLvData.DataBase(this.targetSkill,0);
           if (lVar5 != null) {
-            fVar7 = (float)FUN_1801f7f00(0x40000000,(float)*(int *)(lVar5 + 52));
-            FUN_1810a8ba0(((fVar1 + fVar2 + fVar3 + fVar4) * fVar6 * 0.01) / fVar7,0,0x40a00000,0);
+            fVar7 = (float)FUN_1801f8ab0(0x40000000,(float)*(int *)(lVar5 + 52));
+            FUN_1810e36c0(((fVar1 + fVar2 + fVar3 + fVar4) * fVar6 * 0.01) / fVar7,0,0x40a00000,0);
             return;
           }
         }
     }
 
-    // Token : 0x6000D7A
-    // RVA   : 0xCEAF90   Offset: 0xCE9790   Length: 0xF6
+    // Token : 0x6000DAE
+    // RVA   : 0xC91290   Offset: 0xC90690   Length: 0xF6
     public void BreakThroughTypeButtonClicked(GameObject buttonClicked)
     {
         uint uVar1;
         long lVar2;
         ulong uVar3;
         if (buttonClicked != null) {
-          lVar2 = GameObject.GetComponent(buttonClicked,DAT_181da2130);
+          lVar2 = GameObject.GetComponent(buttonClicked,DAT_181d743b0);
           if (lVar2 != null) {
             if (*(char *)(lVar2 + 0x118) != false) {
               uVar3 = Object.get_name(buttonClicked,0);
@@ -1095,7 +1104,7 @@ public class BreakThroughController
               BreakThroughController.RefreshExtraRateInfo(this,0);
               plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/Button/TabButton",0);
               plVar5 = (int64 *)0;
-              if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181d8a228)) {
+              if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
                 plVar5 = plVar4;
               }
               NGUITools.PlaySound(plVar5,0);
@@ -1105,18 +1114,19 @@ public class BreakThroughController
         }
     }
 
-    // Token : 0x6000D7B
-    // RVA   : 0xCED560   Offset: 0xCEBD60   Length: 0x2E6
+    // Token : 0x6000DAF
+    // RVA   : 0xC93900   Offset: 0xC92D00   Length: 0x2E6
     public void StartBreakThroughButtonClicked()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         uint uVar2;
         long lVar3;
         ulong uVar4;
         if (this.useMoney) {
-          if ((GameController._instance == null) ||
-             (lVar3 = GameController._instance.worldData) == null
-             ) throw; // [null/range check failed]
+          if ((*pStatics == 0) ||
+             (lVar3 = *(int64 *)(*pStatics + 32)) == null)
+          throw; // [null/range check failed]
           lVar3 = WorldData.Player(lVar3,0);
           if (this.targetSkill == null) throw; // [null/range check failed]
           iVar1 = KungfuSkillLvData.BreakThroughDayCost(this.targetSkill,0);
@@ -1124,7 +1134,7 @@ public class BreakThroughController
           if (lVar3 == null) throw; // [null/range check failed]
           HeroData.ChangeMoney(lVar3,iVar1 * -50,1,0);
         }
-        lVar3 = PlotController.LeftFaceHideOffset;
+        lVar3 = *(int64 *)(*(int64 *)(DAT_181db5de8 + 184) + 8);
         if (this.targetSkill != null) {
           uVar4 = KungfuSkillLvData.Name(this.targetSkill,1,0);
           uVar4 = String.Format("突破{0}",uVar4,0);
@@ -1135,7 +1145,7 @@ public class BreakThroughController
               WorkingUIController.StartWorking(lVar3,uVar4,uVar2,0,0,"RealStartBreakThrough",0,0);
               plVar5 = (int64 *)Resources.Load("Sound/SoundEffect/Button/BigButton",0);
               plVar6 = (int64 *)0;
-              if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181d8a228)) {
+              if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf348)) {
                 plVar6 = plVar5;
               }
               NGUITools.PlaySound(plVar6,0);
@@ -1145,10 +1155,12 @@ public class BreakThroughController
         }
     }
 
-    // Token : 0x6000D7C
-    // RVA   : 0xCEB4D0   Offset: 0xCE9CD0   Length: 0xDFB
+    // Token : 0x6000DB0
+    // RVA   : 0xC917D0   Offset: 0xC90BD0   Length: 0xDFB
     public void RealStartBreakThrough()
     {
+        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
+        var pStatics_4450 = *(int64*)(DAT_181da4450 + 184);
         bool cVar1;
         int iVar2;
         long lVar3;
@@ -1186,25 +1198,24 @@ public class BreakThroughController
                           if (lVar3 != null) {
                             lVar3 = Transform.Find(lVar3,"BlackBackground",0);
                             if (lVar3 != null) {
-                              lVar3 = Component.GetComponent(lVar3,DAT_181d6af40);
+                              lVar3 = Component.GetComponent(lVar3,DAT_181d93760);
                               if (lVar3 != null) {
                                 Selectable.set_interactable(lVar3,0,0);
-                                if ((GameController._instance != null) &&
-                                   (lVar3 = *(int64 *)
-                                             (GameController._instance + 32),
+                                if ((*pStatics_2cc8 != 0) &&
+                                   (lVar3 = *(int64 *)(*pStatics_2cc8 + 32),
                                    lVar3 != null)) {
                                   lVar3 = WorldData.Player(lVar3,0);
                                   if ((lVar3 != null) &&
                                      ((*(int64 *)(lVar3 + 0x220) != 0 &&
                                       (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 0x220) + 40),
                                       lVar3 != null)))) {
-                                    cVar1 = FUN_1818279a0(lVar3,this.medData,
-                                                          DAT_181d693f0);
+                                    cVar1 = FUN_18181e400(lVar3,this.medData,
+                                                          DAT_181d90b98);
                                     if (!cVar1) {
-                                      if ((GameController._instance == null) ||
+                                      if ((*pStatics_2cc8 == 0) ||
                                          (lVar3 = *(int64 *)
-                                                   (GameController._instance +
-                                                   32), lVar3 == null)) throw; // [null/range check failed]
+                                                   (*pStatics_2cc8 + 32),
+                                         lVar3 == null)) throw; // [null/range check failed]
                                       lVar3 = WorldData.Player(lVar3,0);
                                       if ((lVar3 == null) || (*(int64 *)(lVar3 + 0x228) == 0))
                                       throw; // [null/range check failed]
@@ -1213,30 +1224,30 @@ public class BreakThroughController
                                                  this.medData,1,0);
                                     }
                                     else {
-                                      if ((GameController._instance == null) ||
+                                      if ((*pStatics_2cc8 == 0) ||
                                          (lVar3 = *(int64 *)
-                                                   (GameController._instance +
-                                                   32), lVar3 == null)) throw; // [null/range check failed]
+                                                   (*pStatics_2cc8 + 32),
+                                         lVar3 == null)) throw; // [null/range check failed]
                                       lVar3 = WorldData.Player(lVar3,0);
                                       if (lVar3 == null) throw; // [null/range check failed]
                                       HeroData.LoseItem(lVar3,this.medData,1,0);
                                     }
-                                    if ((GameController._instance != null) &&
+                                    if ((*pStatics_2cc8 != 0) &&
                                        (lVar3 = *(int64 *)
-                                                 (GameController._instance + 32
-                                                 ), lVar3 != null)) {
+                                                 (*pStatics_2cc8 + 32),
+                                       lVar3 != null)) {
                                       lVar3 = WorldData.Player(lVar3,0);
                                       if ((lVar3 != null) &&
                                          ((*(int64 *)(lVar3 + 0x220) != 0 &&
                                           (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 0x220) + 40),
                                           lVar3 != null)))) {
-                                        cVar1 = FUN_1818279a0(lVar3,this.foodData,
-                                                              DAT_181d693f0);
+                                        cVar1 = FUN_18181e400(lVar3,this.foodData,
+                                                              DAT_181d90b98);
                                         if (!cVar1) {
-                                          if ((GameController._instance == null) ||
+                                          if ((*pStatics_2cc8 == 0) ||
                                              (lVar3 = *(int64 *)
-                                                       (GameController._instance
-                                                       + 32), lVar3 == null)) throw; // [null/range check failed]
+                                                       (*pStatics_2cc8 + 32),
+                                             lVar3 == null)) throw; // [null/range check failed]
                                           lVar3 = WorldData.Player(lVar3,0);
                                           if ((lVar3 == null) || (*(int64 *)(lVar3 + 0x228) == 0))
                                           throw; // [null/range check failed]
@@ -1245,10 +1256,10 @@ public class BreakThroughController
                                                      this.foodData,1,0);
                                         }
                                         else {
-                                          if ((GameController._instance == null) ||
+                                          if ((*pStatics_2cc8 == 0) ||
                                              (lVar3 = *(int64 *)
-                                                       (GameController._instance
-                                                       + 32), lVar3 == null)) throw; // [null/range check failed]
+                                                       (*pStatics_2cc8 + 32),
+                                             lVar3 == null)) throw; // [null/range check failed]
                                           lVar3 = WorldData.Player(lVar3,0);
                                           if (lVar3 == null) throw; // [null/range check failed]
                                           HeroData.LoseItem(lVar3,this.foodData,1,0);
@@ -1262,7 +1273,7 @@ public class BreakThroughController
                                               plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/BigSkill0",0);
                                               plVar9 = (int64 *)0;
                                               if ((plVar4 != (int64 *)0) &&
-                                                 (plVar9 = (int64 *)0, *plVar4 == DAT_181d8a228)) {
+                                                 (plVar9 = (int64 *)0, *plVar4 == DAT_181daf348)) {
                                                 plVar9 = plVar4;
                                               }
                                               NGUITools.PlaySound(plVar9,0);
@@ -1291,7 +1302,7 @@ public class BreakThroughController
                                                     uVar5 = ShortcutExtensions.DOMove
                                                                       (uVar5,&local_48,0x3f800000,0,0);
                                                     TweenSettingsExtensions.SetEase
-                                                              (uVar5,9,DAT_181d97ca8);
+                                                              (uVar5,9,DAT_181dc0f80);
                                                     if (this.medIcon == null)
                                                     throw; // [null/range check failed]
                                                     lVar3 = GameObject.get_transform
@@ -1301,9 +1312,9 @@ public class BreakThroughController
                                                     uVar5 = ShortcutExtensions.DOScale
                                                                       (uVar5,0,0x3f000000,0);
                                                     uVar5 = TweenSettingsExtensions.SetDelay
-                                                                      (uVar5,0x3f000000,DAT_181d97978);
+                                                                      (uVar5,0x3f000000,DAT_181dc0c60);
                                                     TweenSettingsExtensions.SetEase
-                                                              (uVar5,8,DAT_181d97ca8);
+                                                              (uVar5,8,DAT_181dc0f80);
                                                   }
                                                   if (this.foodIcon != null) {
                                                     lVar3 = GameObject.get_transform
@@ -1334,7 +1345,7 @@ public class BreakThroughController
                                                                           (uVar5,&local_48,0x3f800000,0,0)
                                                         ;
                                                         TweenSettingsExtensions.SetEase
-                                                                  (uVar5,9,DAT_181d97ca8);
+                                                                  (uVar5,9,DAT_181dc0f80);
                                                         if (this.foodIcon == null)
                                                         throw; // [null/range check failed]
                                                         lVar3 = GameObject.get_transform
@@ -1345,10 +1356,10 @@ public class BreakThroughController
                                                         uVar5 = ShortcutExtensions.DOScale
                                                                           (uVar5,0,0x3f000000,0);
                                                         uVar5 = TweenSettingsExtensions.SetDelay
-                                                                          (uVar5,0x3f000000,DAT_181d97978)
+                                                                          (uVar5,0x3f000000,DAT_181dc0c60)
                                                         ;
                                                         TweenSettingsExtensions.SetEase
-                                                                  (uVar5,8,DAT_181d97ca8);
+                                                                  (uVar5,8,DAT_181dc0f80);
                                                       }
                                                       if (this.bookIcon != null) {
                                                         lVar3 = GameObject.get_transform
@@ -1380,7 +1391,7 @@ public class BreakThroughController
                                                                               (uVar5,&local_48,0x3f800000,
                                                                                0,0);
                                                             TweenSettingsExtensions.SetEase
-                                                                      (uVar5,9,DAT_181d97ca8);
+                                                                      (uVar5,9,DAT_181dc0f80);
                                                             if (this.bookIcon == null)
                                                             throw; // [null/range check failed]
                                                             lVar3 = GameObject.get_transform
@@ -1392,69 +1403,34 @@ public class BreakThroughController
                                                                               (uVar5,0,0x3f000000,0);
                                                             uVar5 = TweenSettingsExtensions.SetDelay
                                                                               (uVar5,0x3f000000,
-                                                                               DAT_181d97978);
+                                                                               DAT_181dc0c60);
                                                             TweenSettingsExtensions.SetEase
-                                                                      (uVar5,8,DAT_181d97ca8);
+                                                                      (uVar5,8,DAT_181dc0f80);
                                                           }
-                                                          if (((*(byte *)(_ShowItemAnim_d__32_StaticsPtr +
-                                                                         0x133) & 4) != 0) &&
-                                                             (*(int *)(_ShowItemAnim_d__32_StaticsPtr +
-                                                                      224) == 0)) {
-                                                            il2cpp_runtime_class_init
-                                                                      (_ShowItemAnim_d__32_StaticsPtr);
-                                                          }
-                                                          if (!DAT_181e6a73e) {
-                                                            il2cpp_internal(&
-                                                        _ShowItemAnim_d__32_StaticsPtr);
-                                                        DAT_181e6a73e = true;
-                                                        }
-                                                        if (((*(byte *)(_ShowItemAnim_d__32_StaticsPtr +
-                                                                       0x133) & 4) != 0) &&
-                                                           (*(int *)(_ShowItemAnim_d__32_StaticsPtr + 224
-                                                                    ) == 0)) {
-                                                          il2cpp_runtime_class_init
-                                                                    (_ShowItemAnim_d__32_StaticsPtr);
-                                                        }
-                                                        if (**(int64 **)
-                                                              (_ShowItemAnim_d__32_StaticsPtr + 184) != 0
-                                                           ) {
-                                                          uVar5 = *(uint64 *)
-                                                                   (**(int64 **)
-                                                                      (_ShowItemAnim_d__32_StaticsPtr +
-                                                                      184) + 152);
-                                                          if (this.targetSkillSlot != null) {
-                                                            lVar3 = GameObject.get_transform
-                                                                              (*(int64 *)
-                                                                                (this + 48),0);
-                                                            if (lVar3 != null) {
-                                                              uVar7 = Component.get_gameObject(lVar3,0);
-                                                              fVar10 = (float)
+                                                          if (*pStatics_4450 != 0)
+                                                          {
+                                                            uVar5 = *(uint64 *)
+                                                                     (**(int64 **)
+                                                                        (DAT_181da4450 + 184) + 152);
+                                                            if (this.targetSkillSlot != null) {
+                                                              lVar3 = GameObject.get_transform
+                                                                                (*(int64 *)
+                                                                                  (this + 48),0);
+                                                              if (lVar3 != null) {
+                                                                uVar7 = Component.get_gameObject(lVar3,0)
+                                                                ;
+                                                                fVar10 = (float)
                                                         BreakThroughController.GetMaxRareLv(this,0);
                                                         uVar11 = CONCAT44(uVar12,0x40000000);
                                                         uVar5 = BreakThroughController.ShowItemParticle
                                                                           (this,uVar5,uVar7,0x3f333333,
                                                                            uVar11,(int)fVar10,0);
                                                         uVar12 = (uint32)((uint64)uVar11 >> 32);
-                                                        FUN_180d837c0(this,uVar5,0);
-                                                        if (!DAT_181e6a73e) {
-                                                          il2cpp_internal(&
-                                                        _ShowItemAnim_d__32_StaticsPtr);
-                                                        DAT_181e6a73e = true;
-                                                        }
-                                                        if (((*(byte *)(_ShowItemAnim_d__32_StaticsPtr +
-                                                                       0x133) & 4) != 0) &&
-                                                           (*(int *)(_ShowItemAnim_d__32_StaticsPtr + 224
-                                                                    ) == 0)) {
-                                                          il2cpp_runtime_class_init
-                                                                    (_ShowItemAnim_d__32_StaticsPtr);
-                                                        }
-                                                        if (**(int64 **)
-                                                              (_ShowItemAnim_d__32_StaticsPtr + 184) != 0
-                                                           ) {
+                                                        FUN_180d8c2e0(this,uVar5,0);
+                                                        if (*pStatics_4450 != 0) {
                                                           uVar5 = *(uint64 *)
-                                                                   (**(int64 **)
-                                                                      (_ShowItemAnim_d__32_StaticsPtr +
-                                                                      184) + 144);
+                                                                   (*pStatics_4450
+                                                                   + 144);
                                                           if (this.targetSkillSlot != null) {
                                                             lVar3 = GameObject.get_transform
                                                                               (*(int64 *)
@@ -1467,7 +1443,7 @@ public class BreakThroughController
                                                                           (this,uVar5,uVar7,0x3f333333,
                                                                            CONCAT44(uVar12,0x3f800000),
                                                                            (int)fVar10,0);
-                                                        FUN_180d837c0(this,uVar5,0);
+                                                        FUN_180d8c2e0(this,uVar5,0);
                                                         if (this.breakThroughPos != null) {
                                                           lVar3 = GameObject.get_transform
                                                                             (this.breakThroughPos
@@ -1489,9 +1465,9 @@ public class BreakThroughController
                                                         if (lVar3 != null) {
                                                           plVar4 = (int64 *)
                                                                    Component.GetComponent
-                                                                             (lVar3,DAT_181d6bc40);
+                                                                             (lVar3,DAT_181d94460);
                                                           puVar8 = (uint32 *)
-                                                                   FUN_180d904c0(&local_38,0);
+                                                                   FUN_180d98fe0(&local_38,0);
                                                           if (plVar4 != (int64 *)0) {
                                                             local_38 = *puVar8;
                                                             uStack_34 = puVar8[1];
@@ -1509,12 +1485,12 @@ public class BreakThroughController
                                                         "Background",0);
                                                         if (lVar3 != null) {
                                                           uVar5 = Component.GetComponent
-                                                                            (lVar3,DAT_181d6bc40);
+                                                                            (lVar3,DAT_181d94460);
                                                           uVar5 = DOTweenModuleUI.DOFade
                                                                             (uVar5,0x3f666666,0x3f800000,0
                                                                             );
                                                           TweenSettingsExtensions.SetDelay
-                                                                    (uVar5,0x3f800000,DAT_181d977e0);
+                                                                    (uVar5,0x3f800000,DAT_181dc0ac8);
                                                           MonoBehaviour.Invoke
                                                                     (this,"StartShowBreakChoice",0x3f800000,0);
                                                           return;
@@ -1562,15 +1538,15 @@ public class BreakThroughController
         }
     }
 
-    // Token : 0x6000D7D
-    // RVA   : 0xCEB090   Offset: 0xCE9890   Length: 0xD3
+    // Token : 0x6000DB1
+    // RVA   : 0xC91390   Offset: 0xC90790   Length: 0xD3
     public int ChoiceNum()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         bool cVar1;
         long lVar2;
-        if ((GameController._instance != null) &&
-           (lVar2 = GameController._instance.worldData) != null)
-        {
+        if ((*pStatics != 0) &&
+           (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
           lVar2 = WorldData.Player(lVar2,0);
           if (lVar2 != null) {
             cVar1 = HeroData.HaveForceFunction(lVar2,14);
@@ -1579,11 +1555,11 @@ public class BreakThroughController
         }
     }
 
-    // Token : 0x6000D7E
-    // RVA   : 0xCEE090   Offset: 0xCEC890   Length: 0x122F
+    // Token : 0x6000DB2
+    // RVA   : 0xC94450   Offset: 0xC93850   Length: 0x125C
     public void StartShowBreakChoice()
     {
-        var pBreakThroughController = *(int64*)(BreakThroughController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181dc3f98 + 184);
         uint uVar1;
         int iVar2;
         uint uVar3;
@@ -1608,7 +1584,7 @@ public class BreakThroughController
         uint8 local_c8 [144];
         plVar6 = (int64 *)Resources.Load("Sound/SoundEffect/FameUp",0);
         plVar13 = (int64 *)0;
-        if ((plVar6 != (int64 *)0) && (plVar13 = (int64 *)0, *plVar6 == DAT_181d8a228)) {
+        if ((plVar6 != (int64 *)0) && (plVar13 = (int64 *)0, *plVar6 == DAT_181daf348)) {
           plVar13 = plVar6;
         }
         NGUITools.PlaySound(plVar13);
@@ -1623,7 +1599,7 @@ public class BreakThroughController
               uVar9 = GameObject.get_transform(this.targetSkillSlot,0);
               uVar16 = 0;
               uVar9 = ShortcutExtensions.DOLocalMoveY(uVar9);
-              TweenSettingsExtensions.SetUpdate(uVar9,1,DAT_181d98af0);
+              TweenSettingsExtensions.SetUpdate(uVar9,1,DAT_181dc1db0);
               if (this.targetSkill != null) {
                 lVar7 = KungfuSkillLvData.GetBreakThroughAvailableChoice(this.targetSkill,0)
                 ;
@@ -1636,15 +1612,15 @@ public class BreakThroughController
                     lVar8 = new c.DisplayClass9_0(0);
                     fVar15 = (float)BreakThroughController.GetMaxRareLv(this,0);
                     iVar2 = (int)fVar15;
-                    uVar3 = FUN_180d8cf10(0,*(uint32 *)(lVar7 + 24),0);
+                    uVar3 = FUN_180d95a30(0,*(uint32 *)(lVar7 + 24),0);
                     if (*(uint32 *)(lVar7 + 24) <= uVar3) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
                     }
                     if (lVar8 == null) throw; // [null/range check failed]
                     *(uint32 *)(lVar8 + 16) =
                          lVar7[uVar3];
-                    uVar9 = new OnTooltipCB(lVar8,DAT_181d6f998,DAT_181d95e70);
-                    FUN_181818fa0(lVar7,uVar9,DAT_181d67ef0);
+                    uVar9 = new OnTooltipCB(lVar8,DAT_181d98838,DAT_181dbdb08);
+                    FUN_18182e030(lVar7,uVar9,DAT_181d8f698);
                     if (this.breakThroughPos == null) throw; // [null/range check failed]
                     lVar10 = GameObject.get_transform(this.breakThroughPos,0);
                     uVar9 = Int32.ToString(local_res8,0);
@@ -1657,26 +1633,26 @@ public class BreakThroughController
                     lVar10 = FUN_18046c100(0);
                     if (((lVar10 == null) || (*(int64 *)(lVar10 + 144) == 0)) ||
                        (lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 144),*(uint32 *)(lVar8 + 16),
-                                               DAT_181d64878), lVar10 == null)) throw; // [null/range check failed]
+                                               DAT_181d8c018), lVar10 == null)) throw; // [null/range check failed]
                     if (((*(char *)(lVar10 + 89) != false) || (*(uint32 *)(lVar8 + 16) < 15)) ||
                        (*(uint32 *)(lVar8 + 16) - 24 < 9)) {
                       if (*plVar6 == 0) throw; // [null/range check failed]
-                      lVar10 = GameObject.GetComponent(*plVar6,DAT_181da12b0);
+                      lVar10 = GameObject.GetComponent(*plVar6,DAT_181d73448);
                       lVar12 = FUN_18046c100(0);
                       if ((((lVar12 == null) || (*(int64 *)(lVar12 + 144) == 0)) ||
                           (lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 144),
-                                                  *(uint32 *)(lVar8 + 16),DAT_181d64878),
+                                                  *(uint32 *)(lVar8 + 16),DAT_181d8c018),
                           lVar12 == null)) ||
                          (uVar9 = HeroSpeAddDataBase.GetDescribe(lVar12,0), lVar10 == null))
                       throw; // [null/range check failed]
                       *(uint64 *)(lVar10 + 24) = uVar9;
                     }
                     if ((*plVar6 == 0) ||
-                       (lVar10 = GameObject.GetComponent(*plVar6,DAT_181d9ec40)) == null)
+                       (lVar10 = GameObject.GetComponent(*plVar6,DAT_181dc79e0)) == null)
                     throw; // [null/range check failed]
                     *(int *)(lVar10 + 32) = iVar2;
                     if ((*plVar6 == 0) ||
-                       (lVar10 = GameObject.GetComponent(*plVar6,DAT_181d9ec40)) == null)
+                       (lVar10 = GameObject.GetComponent(*plVar6,DAT_181dc79e0)) == null)
                     throw; // [null/range check failed]
                     lVar10 = *(int64 *)(lVar10 + 40);
                     uVar5 = *(uint32 *)(lVar8 + 16);
@@ -1689,19 +1665,19 @@ public class BreakThroughController
                     lVar12 = FUN_18046c100(0);
                     if (((lVar12 == null) || (*(int64 *)(lVar12 + 144) == 0)) ||
                        ((lVar8 = FUN_180002f80(*(int64 *)(lVar12 + 144),*(uint32 *)(lVar8 + 16),
-                                               DAT_181d64878), lVar8 == null || (lVar10 == null))))
+                                               DAT_181d8c018), lVar8 == null || (lVar10 == null))))
                     throw; // [null/range check failed]
                     HeroSpeAddData.Set(lVar10,uVar5);
                     if (*plVar6 == 0) throw; // [null/range check failed]
-                    lVar8 = GameObject.GetComponent(*plVar6,DAT_181d9ec40);
+                    lVar8 = GameObject.GetComponent(*plVar6,DAT_181dc79e0);
                     iVar4 = local_res8[0];
                     if (2 < local_res8[0]) {
                       iVar4 = GlobalData.RandomRange(0,3,0);
                     }
                     if (lVar8 == null) throw; // [null/range check failed]
-                    lVar8.targetSkillSlot = iVar4;
+                    *(int *)(lVar8 + 48) = iVar4;
                     if (*plVar6 == 0) throw; // [null/range check failed]
-                    lVar8 = GameObject.GetComponent(*plVar6,DAT_181d9ec40);
+                    lVar8 = GameObject.GetComponent(*plVar6,DAT_181dc79e0);
                     if ((this.targetSkill == null) ||
                        (lVar10 = KungfuSkillLvData.DataBase(this.targetSkill,0), lVar10 == null
                        )) throw; // [null/range check failed]
@@ -1713,45 +1689,45 @@ public class BreakThroughController
                     if (lVar8 == null) throw; // [null/range check failed]
                     *(uint32 *)(lVar8 + 52) = uVar5;
                     if (*plVar6 == 0) throw; // [null/range check failed]
-                    plVar13 = (int64 *)GameObject.GetComponent(*plVar6,DAT_181d9fe50);
+                    plVar13 = (int64 *)GameObject.GetComponent(*plVar6,DAT_181d71e80);
                     lVar8 = FUN_18046c100(0);
-                    if ((((lVar8 == null) || (lVar8.breakThroughType == null)) ||
-                        (lVar8 = FUN_180002f80(lVar8.breakThroughType,iVar2,DAT_181d76758),
+                    if ((((lVar8 == null) || (*(int64 *)(lVar8 + 56) == 0)) ||
+                        (lVar8 = FUN_180002f80(*(int64 *)(lVar8 + 56),iVar2,DAT_181d9e108),
                         lVar8 == null)) || (plVar13 == (int64 *)0)) throw; // [null/range check failed]
-                    local_d8 = lVar8.targetSkill;
-                    fStack_d0 = lVar8.breakThroughPanel;
+                    local_d8 = *(uint64 *)(lVar8 + 24);
+                    fStack_d0 = *(float *)(lVar8 + 32);
                     uStack_cc = *(uint32 *)(lVar8 + 36);
                     (**(code **)(*plVar13 + 0x2a8))(plVar13,&local_d8,*(uint64 *)(*plVar13 + 0x2b0));
                     if (((*plVar6 == 0) || (lVar8 = GameObject.get_transform(*plVar6,0)) == null) ||
                        (lVar8 = Transform.Find(lVar8,"Text",0)) == null) throw; // [null/range check failed]
-                    uVar9 = Component.GetComponent(lVar8,DAT_181d6d8c0);
+                    uVar9 = Component.GetComponent(lVar8,DAT_181d96160);
                     if (((*plVar6 == 0) ||
-                        (lVar8 = GameObject.GetComponent(*plVar6,DAT_181d9ec40)) == null) ||
-                       (lVar8.breakThroughChoiceIconPrefab == null)) throw; // [null/range check failed]
+                        (lVar8 = GameObject.GetComponent(*plVar6,DAT_181dc79e0)) == null) ||
+                       (*(int64 *)(lVar8 + 40) == 0)) throw; // [null/range check failed]
                     uVar18 = 0;
                     uVar16 = uVar16 & 0xffffffffffffff00;
-                    uVar11 = HeroSpeAddData.GetDescribe(lVar8.breakThroughChoiceIconPrefab,0,1,1,uVar16,0);
+                    uVar11 = HeroSpeAddData.GetDescribe(*(int64 *)(lVar8 + 40),0,1,1,uVar16,0);
                     uVar5 = (uint32)(uVar16 >> 32);
                     LTLocalization.SetText(uVar9,uVar11,0);
                     if (((*plVar6 == 0) || (lVar8 = GameObject.get_transform(*plVar6,0)) == null) ||
                        (lVar8 = Transform.Find(lVar8,"Icon",0)) == null) throw; // [null/range check failed]
-                    lVar8 = Component.GetComponent(lVar8,DAT_181d6bc40);
+                    lVar8 = Component.GetComponent(lVar8,DAT_181d94460);
                     if ((*plVar6 == 0) ||
-                       (lVar10 = GameObject.GetComponent(*plVar6,DAT_181d9ec40)) == null)
+                       (lVar10 = GameObject.GetComponent(*plVar6,DAT_181dc79e0)) == null)
                     throw; // [null/range check failed]
                     lVar10 = *(int64 *)(lVar10 + 24);
                     if (((*plVar6 == 0) ||
-                        ((lVar12 = GameObject.GetComponent(*plVar6,DAT_181d9ec40), lVar12 == null ||
+                        ((lVar12 = GameObject.GetComponent(*plVar6,DAT_181dc79e0), lVar12 == null ||
                          (lVar10 == null)))) ||
-                       (uVar9 = FUN_180002f80(lVar10,*(uint32 *)(lVar12 + 48),DAT_181d7c050),
+                       (uVar9 = FUN_180002f80(lVar10,*(uint32 *)(lVar12 + 48),DAT_181da39d8),
                        lVar8 == null)) throw; // [null/range check failed]
                     Image.set_sprite(lVar8,uVar9,0);
                     if (((*plVar6 == 0) || (lVar8 = GameObject.get_transform(*plVar6,0)) == null) ||
                        (lVar8 = Transform.Find(lVar8,"CostIcon",0)) == null) throw; // [null/range check failed]
-                    lVar8 = Component.GetComponent(lVar8,DAT_181d6bc40);
-                    lVar10 = FUN_18046c6c0(0);
+                    lVar8 = Component.GetComponent(lVar8,DAT_181d94460);
+                    lVar10 = FUN_18046c680(0);
                     if ((*plVar6 == 0) ||
-                       (lVar12 = GameObject.GetComponent(*plVar6,DAT_181d9ec40)) == null)
+                       (lVar12 = GameObject.GetComponent(*plVar6,DAT_181dc79e0)) == null)
                     throw; // [null/range check failed]
                     uVar1 = *(uint32 *)(lVar12 + 48);
                     uVar9 = GlobalData.GetInjuryIconName(uVar1,0);
@@ -1763,21 +1739,21 @@ public class BreakThroughController
                        ((lVar8 = GameObject.get_transform(*plVar6,0), lVar8 == null ||
                         (lVar8 = Transform.Find(lVar8,"Cost",0)) == null)))
                     throw; // [null/range check failed]
-                    uVar9 = Component.GetComponent(lVar8,DAT_181d6d8c0);
+                    uVar9 = Component.GetComponent(lVar8,DAT_181d96160);
                     if ((*plVar6 == 0) ||
-                       (lVar8 = GameObject.GetComponent(*plVar6,DAT_181d9ec40)) == null)
+                       (lVar8 = GameObject.GetComponent(*plVar6,DAT_181dc79e0)) == null)
                     throw; // [null/range check failed]
                     uVar11 = Int32.ToString(lVar8 + 52,0);
                     LTLocalization.SetText(uVar9,uVar11,0);
                     if (((*plVar6 == 0) || (lVar8 = GameObject.get_transform(*plVar6,0)) == null) ||
                        (lVar8 = Transform.Find(lVar8,"Cost",0)) == null) throw; // [null/range check failed]
-                    plVar13 = (int64 *)Component.GetComponent(lVar8,DAT_181d6d8c0);
-                    lVar8 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x3b8);
+                    plVar13 = (int64 *)Component.GetComponent(lVar8,DAT_181d96160);
+                    lVar8 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x3c0);
                     if (((*plVar6 == 0) ||
-                        (lVar10 = GameObject.GetComponent(*plVar6,DAT_181d9ec40)) == null) ||
+                        (lVar10 = GameObject.GetComponent(*plVar6,DAT_181dc79e0)) == null) ||
                        (lVar8 == null)) throw; // [null/range check failed]
                     uVar3 = *(uint32 *)(lVar10 + 48);
-                    if (lVar8.targetSkill <= uVar3) {
+                    if (*(uint32 *)(lVar8 + 24) <= uVar3) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
                     }
                     if (plVar13 == (int64 *)0) throw; // [null/range check failed]
@@ -1800,79 +1776,80 @@ public class BreakThroughController
                     uVar9 = GameObject.get_transform(*plVar6,0);
                     uVar9 = ShortcutExtensions.DOScale(uVar9);
                     uVar9 = TweenSettingsExtensions.SetDelay
-                                      (uVar9,(float)local_res8[0] + 1.0,DAT_181d97978);
-                    lVar8 = BreakThroughController._instance;
+                                      (uVar9,(float)local_res8[0] + 1.0,DAT_181dc0c60);
+                    lVar8 = *(int64 *)(pStatics + 8);
                     if (lVar8 == null) {
-                      uVar11 = BreakThroughController.BreakThroughChoiceListDictionary;
-                      lVar8 = new OnTooltipCB(uVar11,DAT_181d6f898,0);
-                      BreakThroughController._instance = lVar8;
-                    }
-                    uVar9 = TweenSettingsExtensions.OnStart(uVar9,lVar8,DAT_181d97210);
-                    lVar8 = *(int64 *)(pBreakThroughController + 16);
-                    if (lVar8 == null) {
-                      uVar11 = BreakThroughController.BreakThroughChoiceListDictionary;
-                      lVar8 = new OnTooltipCB(uVar11,DAT_181d6f918,0);
-                      plVar13 = (int64 *)
-                                (pBreakThroughController + 16);
+                      uVar11 = **(uint64 **)(DAT_181dc3f98 + 184);
+                      lVar8 = new OnTooltipCB(uVar11,DAT_181d98738,0);
+                      plVar13 = (int64 *)(pStatics + 8);
                       *plVar13 = lVar8;
                       il2cpp_internal(plVar13,lVar8);
                     }
-                    TweenSettingsExtensions.OnComplete(uVar9,lVar8,DAT_181d96ee8);
+                    uVar9 = TweenSettingsExtensions.OnStart(uVar9,lVar8,DAT_181dc0500);
+                    lVar8 = *(int64 *)(pStatics + 16);
+                    if (lVar8 == null) {
+                      uVar11 = **(uint64 **)(DAT_181dc3f98 + 184);
+                      lVar8 = new OnTooltipCB(uVar11,DAT_181d987b8,0);
+                      plVar13 = (int64 *)(pStatics + 16);
+                      *plVar13 = lVar8;
+                      il2cpp_internal(plVar13,lVar8);
+                    }
+                    TweenSettingsExtensions.OnComplete(uVar9,lVar8,DAT_181dc01d0);
                     if (((*plVar6 == 0) || (lVar8 = GameObject.get_transform(*plVar6,0)) == null) ||
-                       (lVar8 = Component.GetComponent(lVar8,DAT_181d6b0c0)) == null)
+                       (lVar8 = Component.GetComponent(lVar8,DAT_181d938e0)) == null)
                     throw; // [null/range check failed]
                     CanvasGroup.set_alpha(lVar8);
                     if ((*plVar6 == 0) || (lVar8 = GameObject.get_transform(*plVar6,0)) == null)
                     throw; // [null/range check failed]
-                    uVar9 = Component.GetComponent(lVar8,DAT_181d6b0c0);
+                    uVar9 = Component.GetComponent(lVar8,DAT_181d938e0);
                     uVar9 = DOTweenModuleUI.DOFade(uVar9);
-                    TweenSettingsExtensions.SetDelay(uVar9,(float)local_res8[0] + 1.0,DAT_181d97868);
+                    TweenSettingsExtensions.SetDelay(uVar9,(float)local_res8[0] + 1.0,DAT_181dc0b50);
                     if ((*plVar6 == 0) ||
-                       (plVar13 = (int64 *)GameObject.GetComponent(*plVar6,DAT_181d9fe50),
+                       (plVar13 = (int64 *)GameObject.GetComponent(*plVar6,DAT_181d71e80),
                        plVar13 == (int64 *)0)) throw; // [null/range check failed]
                     (**(code **)(*plVar13 + 0x2c8))(plVar13,0,*(uint64 *)(*plVar13 + 0x2d0));
                     if ((*plVar6 == 0) ||
-                       (lVar8 = GameObject.GetComponent(*plVar6,DAT_181d9ee60)) == null)
+                       (lVar8 = GameObject.GetComponent(*plVar6,DAT_181dc7c00)) == null)
                     throw; // [null/range check failed]
                     Selectable.set_interactable(lVar8,0,0);
-                    lVar8 = FUN_18046c600(0);
+                    lVar8 = FUN_18046c5c0(0);
                     if (lVar8 == null) throw; // [null/range check failed]
                     uVar17 = CONCAT44(uVar18,0xffffffff);
                     uVar11 = CONCAT44(uVar5,0x3fc00000);
                     uVar9 = BreakThroughController.ShowItemParticle
-                                      (this,lVar8.foodData,*plVar6,
+                                      (this,*(uint64 *)(lVar8 + 128),*plVar6,
                                        (float)local_res8[0] + 1.0,uVar11,uVar17,0);
                     uVar5 = (uint32)((uint64)uVar11 >> 32);
                     uVar18 = (uint32)((uint64)uVar17 >> 32);
-                    FUN_180d837c0(this,uVar9,0);
-                    lVar8 = FUN_18046c600(0);
+                    FUN_180d8c2e0(this,uVar9,0);
+                    lVar8 = FUN_18046c5c0(0);
                     if (lVar8 == null) throw; // [null/range check failed]
                     uVar17 = CONCAT44(uVar18,0xffffffff);
                     uVar11 = CONCAT44(uVar5,0x3fc00000);
                     uVar9 = BreakThroughController.ShowItemParticle
-                                      (this,lVar8.bookIcon,*plVar6,
+                                      (this,*(uint64 *)(lVar8 + 136),*plVar6,
                                        (float)local_res8[0] + 1.0,uVar11,uVar17,0);
                     uVar5 = (uint32)((uint64)uVar11 >> 32);
                     uVar18 = (uint32)((uint64)uVar17 >> 32);
-                    FUN_180d837c0(this,uVar9,0);
-                    lVar8 = FUN_18046c600(0);
+                    FUN_180d8c2e0(this,uVar9,0);
+                    lVar8 = FUN_18046c5c0(0);
                     if (lVar8 == null) throw; // [null/range check failed]
                     uVar9 = CONCAT44(uVar18,0xffffffff);
                     uVar16 = CONCAT44(uVar5,0x3fc00000);
                     BreakThroughController.ShowItemParticle
-                              (this,lVar8.bookData,*plVar6,(float)local_res8[0] + 1.2,
+                              (this,*(uint64 *)(lVar8 + 152),*plVar6,(float)local_res8[0] + 1.2,
                                uVar16,uVar9,0);
                     uVar5 = (uint32)((uint64)uVar9 >> 32);
-                    FUN_180d837c0(this);
+                    FUN_180d8c2e0(this);
                     if (4 < iVar2) {
                       uVar18 = (uint32)(uVar16 >> 32);
-                      lVar8 = FUN_18046c600(0);
+                      lVar8 = FUN_18046c5c0(0);
                       if (lVar8 == null) throw; // [null/range check failed]
                       uVar16 = CONCAT44(uVar18,0x3fc00000);
                       BreakThroughController.ShowItemParticle
-                                (this,lVar8.bookCancel,*plVar6,(float)local_res8[0] + 1.0,
+                                (this,*(uint64 *)(lVar8 + 144),*plVar6,(float)local_res8[0] + 1.0,
                                  uVar16,CONCAT44(uVar5,0xffffffff),0);
-                      FUN_180d837c0(this);
+                      FUN_180d8c2e0(this);
                     }
                     iVar4 = local_res8[0] + 1;
                     local_res8[0] = iVar4;
@@ -1888,8 +1865,8 @@ public class BreakThroughController
         }
     }
 
-    // Token : 0x6000D7F
-    // RVA   : 0xCECB50   Offset: 0xCEB350   Length: 0x4AB
+    // Token : 0x6000DB3
+    // RVA   : 0xC92EC0   Offset: 0xC922C0   Length: 0x4DB
     public void SetAllBreakChoiceAvailable()
     {
         int iVar1;
@@ -1915,10 +1892,10 @@ public class BreakThroughController
             if (((this.breakThroughPanel != null) &&
                 (lVar3 = GameObject.get_transform(this.breakThroughPanel,0)) != null) &&
                (lVar3 = Transform.Find(lVar3,"BreakThroughQuestion",0)) != null) {
-              plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d6d8c0);
+              plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d96160);
               local_48 = 0;
               uStack_40 = 0;
-              FUN_1809981e0(&local_48,0x3f800000,0x3f800000,0x3f800000,0,0);
+              FUN_1809dc910(&local_48,0x3f800000,0x3f800000,0x3f800000,0,0);
               if (plVar4 != (int64 *)0) {
                 local_38 = (uint32)local_48;
                 uStack_34 = local_48._4_4_;
@@ -1928,40 +1905,40 @@ public class BreakThroughController
                 if (((this.breakThroughPanel != null) &&
                     (lVar3 = GameObject.get_transform(this.breakThroughPanel,0)) != null) &&
                    (lVar3 = Transform.Find(lVar3,"BreakThroughQuestion",0)) != null) {
-                  uVar5 = Component.GetComponent(lVar3,DAT_181d6d8c0);
+                  uVar5 = Component.GetComponent(lVar3,DAT_181d96160);
                   uVar5 = DOTweenModuleUI.DOFade(uVar5,0x3f800000,0x3e4ccccd,0);
-                  TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181d98958);
+                  TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1c20);
                   if (((this.breakThroughPanel != null) &&
                       (lVar3 = GameObject.get_transform(this.breakThroughPanel,0)) != null) &&
                      (lVar3 = Transform.Find(lVar3,"BreakThroughQuestion",0)) != null) {
-                    uVar5 = Component.GetComponent(lVar3,DAT_181d6d8c0);
+                    uVar5 = Component.GetComponent(lVar3,DAT_181d96160);
                     if (this.targetSkill != null) {
                       iVar1 = KungfuSkillLvData.Type(this.targetSkill,0);
                       uVar7 = "♦突破加成仅作用于该武学之上\n♦{0}";
                       uVar6 = "外功的突破加成仅在战斗中使用时生效";
                       if (2 < iVar1) {
-        LAB_180cece5b:
+        LAB_180c931db:
                         uVar7 = String.Format(uVar7,uVar6,0);
                         LTLocalization.SetText(uVar5,uVar7,0);
                         local_res8[0] = 0;
                         iVar1 = BreakThroughController.ChoiceNum(this,0);
                         if (0 < iVar1) {
                           do {
-                            if (this.breakThroughPos == null) goto LAB_180cecff6;
+                            if (this.breakThroughPos == null) goto LAB_180c93396;
                             lVar3 = GameObject.get_transform(this.breakThroughPos,0);
                             uVar5 = Int32.ToString(local_res8,0);
-                            if (((lVar3 == null) || (lVar3 = Transform.Find(lVar3,uVar5,0)) == null) ||
-                               ((lVar3 = Transform.GetChild(lVar3,0,0), lVar3 == null ||
-                                (plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d6bc40),
-                                plVar4 == (int64 *)0)))) goto LAB_180cecff6;
+                            if ((((lVar3 == null) || (lVar3 = Transform.Find(lVar3,uVar5,0)) == null) ||
+                                (lVar3 = Transform.GetChild(lVar3,0,0)) == null) ||
+                               (plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460),
+                               plVar4 == (int64 *)0)) goto LAB_180c93396;
                             (**(code **)(*plVar4 + 0x2c8))(plVar4,1);
-                            if (this.breakThroughPos == null) goto LAB_180cecff6;
+                            if (this.breakThroughPos == null) goto LAB_180c93396;
                             lVar3 = GameObject.get_transform(this.breakThroughPos,0);
                             uVar5 = Int32.ToString(local_res8,0);
-                            if ((((lVar3 == null) || (lVar3 = Transform.Find(lVar3,uVar5)) == null) ||
-                                (lVar3 = Transform.GetChild(lVar3,0)) == null) ||
-                               (lVar3 = Component.GetComponent(lVar3,DAT_181d6af40)) == null)
-                            goto LAB_180cecff6;
+                            if (((lVar3 == null) || (lVar3 = Transform.Find(lVar3,uVar5)) == null) ||
+                               ((lVar3 = Transform.GetChild(lVar3,0), lVar3 == null ||
+                                (lVar3 = Component.GetComponent(lVar3,DAT_181d93760)) == null)))
+                            goto LAB_180c93396;
                             Selectable.set_interactable(lVar3);
                             iVar8 = local_res8[0] + 1;
                             local_res8[0] = iVar8;
@@ -1970,7 +1947,7 @@ public class BreakThroughController
                         }
                         return;
                       }
-                      lVar3 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x498);
+                      lVar3 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x4a0);
                       if (this.targetSkill != null) {
                         uVar2 = KungfuSkillLvData.Type(this.targetSkill,0);
                         if (lVar3 != null) {
@@ -1981,10 +1958,10 @@ public class BreakThroughController
                                                  *(uint64 *)
                                                   (*(int64 *)(lVar3 + 16) + 32 +
                                                   (int64)(int)uVar2 * 8),0);
-                          goto LAB_180cece5b;
+                          goto LAB_180c931db;
                         }
                       }
-        LAB_180cecff6:
+        LAB_180c93396:
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
@@ -1996,8 +1973,8 @@ public class BreakThroughController
         }
     }
 
-    // Token : 0x6000D80
-    // RVA   : 0xCED4B0   Offset: 0xCEBCB0   Length: 0xAC
+    // Token : 0x6000DB4
+    // RVA   : 0xC93850   Offset: 0xC92C50   Length: 0xAC
     public IEnumerator ShowItemParticle(GameObject targetParticle, GameObject targetItemIcon, float delayTime, float scale, int rareLv)
     {
         int64 BreakThroughController.ShowItemParticle
@@ -2016,10 +1993,11 @@ public class BreakThroughController
         }
     }
 
-    // Token : 0x6000D81
-    // RVA   : 0xCEAA30   Offset: 0xCE9230   Length: 0x55B
+    // Token : 0x6000DB5
+    // RVA   : 0xC90D30   Offset: 0xC90130   Length: 0x55B
     public void BreakThroughChoiceClicked(BreakThroughChoiceController targetChoice)
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         uint uVar2;
         long lVar3;
@@ -2093,27 +2071,16 @@ public class BreakThroughController
                                           KungfuSkillLvData.ChangeExtraAddData
                                                     (this.targetSkill,
                                                      *(uint64 *)(targetChoice + 40),1,0);
-                                          if ((GameController._instance != null) &&
+                                          if ((*pStatics != 0) &&
                                              (lVar3 = *(int64 *)
-                                                       (GameController._instance
-                                                       + 32), lVar3 != null)) {
+                                                       (*pStatics + 32),
+                                             lVar3 != null)) {
                                             lVar3 = WorldData.Player(lVar3,0);
                                             if (lVar3 != null) {
                                               HeroData.UpgradeSkill
                                                         (lVar3,this.targetSkill,0);
-                                              if (((*(byte *)(_ShowItemAnim_d__32_StaticsPtr + 0x133) & 4)
-                                                   != 0) &&
-                                                 (*(int *)(_ShowItemAnim_d__32_StaticsPtr + 224) == 0)) {
-                                                il2cpp_runtime_class_init(_ShowItemAnim_d__32_StaticsPtr);
-                                              }
-                                              if (((*(byte *)(_ShowItemAnim_d__32_StaticsPtr + 0x133) & 4)
-                                                   != 0) &&
-                                                 (*(int *)(_ShowItemAnim_d__32_StaticsPtr + 224) == 0)) {
-                                                il2cpp_runtime_class_init(_ShowItemAnim_d__32_StaticsPtr);
-                                              }
                                               lVar3 = this.targetSkill;
-                                              lVar4 = **(int64 **)
-                                                        (_ShowItemAnim_d__32_StaticsPtr + 184);
+                                              lVar4 = **(int64 **)(DAT_181da4450 + 184);
                                               if (lVar3 != null) {
                                                 lVar6 = KungfuSkillLvData.DataBase(lVar3,0);
                                                 if (lVar6 != null) {
@@ -2121,12 +2088,6 @@ public class BreakThroughController
                                                   if (this.targetSkill != null) {
                                                     uVar2 = *(uint32 *)
                                                              (this.targetSkill + 20);
-                                                    if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4
-                                                         ) != 0) &&
-                                                       (*(int *)(PlotController_StaticsPtr + 224) == 0))
-                                                    {
-                                                      il2cpp_runtime_class_init();
-                                                    }
                                                     uVar8 = GlobalData.GetNumText(uVar2,0);
                                                     uVar7 = String.Format("{0}突破至第{1}重！",uVar7,uVar8,0);
                                                     if (lVar4 != null) {
@@ -2160,21 +2121,21 @@ public class BreakThroughController
         }
     }
 
-    // Token : 0x6000D82
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x6000DB6
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);
     }
 
-    // Token : 0x6000D83
-    // RVA   : 0xCEF5D0   Offset: 0xCEDDD0   Length: 0x76
+    // Token : 0x6000DB7
+    // RVA   : 0xC959C0   Offset: 0xC94DC0   Length: 0x76
     private static void /*cctor*/()
     {
         ulong uVar2;
-        uVar2 = il2cpp_internal(DAT_181d5bdc8);
-        FUN_1808ae540(uVar2,DAT_181d91a40);
-        puVar1 = *(uint64 **)(PlotController_StaticsPtr + 184);
+        uVar2 = il2cpp_internal(DAT_181d806e8);
+        FUN_1808b1370(uVar2,DAT_181db7028);
+        puVar1 = *(uint64 **)(DAT_181db34e0 + 184);
         *puVar1 = uVar2;
         il2cpp_internal(puVar1,uVar2);
     }

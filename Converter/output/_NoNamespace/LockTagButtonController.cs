@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : LockTagButtonController
-// Token : 0x20002F8
+// Token : 0x20002FF
 // ============================================================
 
 public class LockTagButtonController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40017C7
+    // Token: 0x40018B5
     public HeroTagData targetHeroTag;
 
-    // Token: 0x40017C8
+    // Token: 0x40018B6
     public Sprite unlockSprite;
 
-    // Token: 0x40017C9
+    // Token: 0x40018B7
     public Sprite lockSprite;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001884
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x60018E1
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

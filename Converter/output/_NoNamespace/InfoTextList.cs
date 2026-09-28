@@ -1,68 +1,69 @@
 // ============================================================
 // Type  : InfoTextList
-// Token : 0x20002E2
+// Token : 0x20002E8
 // ============================================================
 
 public class InfoTextList
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400173D
+    // Token: 0x40017F1
     public List<bool> hideInfoType;
 
-    // Token: 0x400173E
+    // Token: 0x40017F2
     public Text textLabel;
 
-    // Token: 0x400173F
+    // Token: 0x40017F3
     public Scrollbar scrollBar;
 
-    // Token: 0x4001740
+    // Token: 0x40017F4
     public Style style;
 
-    // Token: 0x4001741
+    // Token: 0x40017F5
     public static int paragraphHistory;
 
-    // Token: 0x4001742
+    // Token: 0x40017F6
     protected char[] mSeparator;
 
-    // Token: 0x4001743
+    // Token: 0x40017F7
     private BetterList<Paragraph> mParagraphs;
 
-    // Token: 0x4001744
+    // Token: 0x40017F8
     private static Dictionary<string, BetterList<Paragraph>> mHistory;
 
-    // Token: 0x4001745
+    // Token: 0x40017F9
     public bool needRebuild;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001820
-    // RVA   : 0xB6FBB0   Offset: 0xB6E3B0   Length: 0x16C
+    // Token : 0x6001864
+    // RVA   : 0xC999E0   Offset: 0xC98DE0   Length: 0x16C
     protected BetterList<Paragraph> get_paragraphs()
     {
+        var pStatics = *(int64*)(DAT_181d7f828 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
         if (this.mParagraphs == null) {
-          lVar1 = InfoTextList.mHistory;
+          lVar1 = *(int64 *)(pStatics + 8);
           uVar3 = Object.get_name(this,0);
           if (lVar1 == null) {
-        LAB_180b6fd17:
+        LAB_180c99b47:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          cVar2 = FUN_1808addd0(lVar1,uVar3,this + 64,DAT_181da20f8);
+          cVar2 = FUN_1808b04c0(lVar1,uVar3,this + 64,DAT_181d71760);
           if (!cVar2) {
-            this.mParagraphs = new BetterList_1(DAT_181d82218);
-            lVar1 = InfoTextList.mHistory;
+            this.mParagraphs = new BetterList_1(DAT_181da75b8);
+            lVar1 = *(int64 *)(pStatics + 8);
             uVar3 = Object.get_name(this,0);
-            if (lVar1 == null) goto LAB_180b6fd17;
-            FUN_1808ab680(lVar1,uVar3,this.mParagraphs,DAT_181da2078);
+            if (lVar1 == null) goto LAB_180c99b47;
+            FUN_1808ab370(lVar1,uVar3,this.mParagraphs,DAT_181d716d8);
           }
         }
         return this.mParagraphs;
     }
 
-    // Token : 0x6001821
-    // RVA   : 0xB6FB90   Offset: 0xB6E390   Length: 0x1D
+    // Token : 0x6001865
+    // RVA   : 0xC999C0   Offset: 0xC98DC0   Length: 0x1D
     public int get_paragraphCount()
     {
         long lVar1;
@@ -72,8 +73,8 @@ public class InfoTextList
         }
     }
 
-    // Token : 0x6001822
-    // RVA   : 0xB6FB30   Offset: 0xB6E330   Length: 0x59
+    // Token : 0x6001866
+    // RVA   : 0xC99960   Offset: 0xC98D60   Length: 0x59
     public bool get_isValid()
     {
         ulong uVar1;
@@ -81,20 +82,20 @@ public class InfoTextList
         Object.op_Inequality(uVar1,0,0);
     }
 
-    // Token : 0x6001823
-    // RVA   : 0xB6F540   Offset: 0xB6DD40   Length: 0x4D
+    // Token : 0x6001867
+    // RVA   : 0xC99340   Offset: 0xC98740   Length: 0x4D
     public void Clear()
     {
         long lVar1;
         lVar1 = InfoTextList.get_paragraphs(this,0);
         if (lVar1 != null) {
-          BetterList_1.Clear(lVar1,DAT_181d82318);
+          BetterList_1.Clear(lVar1,DAT_181da76b8);
           return;
         }
     }
 
-    // Token : 0x6001824
-    // RVA   : 0xB6FA00   Offset: 0xB6E200   Length: 0x20
+    // Token : 0x6001868
+    // RVA   : 0xC99830   Offset: 0xC98C30   Length: 0x20
     private void Update()
     {
         if (this.needRebuild) {
@@ -103,8 +104,8 @@ public class InfoTextList
         }
     }
 
-    // Token : 0x6001825
-    // RVA   : 0xB6EF90   Offset: 0xB6D790   Length: 0x144
+    // Token : 0x6001869
+    // RVA   : 0xC98D90   Offset: 0xC98190   Length: 0x144
     public void Add(int type, string text)
     {
         int iVar1;
@@ -115,7 +116,7 @@ public class InfoTextList
         lVar2 = InfoTextList.get_paragraphs(this,0);
         if (lVar2 != null) {
           iVar1 = *(int *)(lVar2 + 24);
-          if (iVar1 < InfoTextList.paragraphHistory) {
+          if (iVar1 < **(int **)(DAT_181d7f828 + 184)) {
             lVar2 = new c.DisplayClass9_0(0);
           }
           else {
@@ -127,13 +128,13 @@ public class InfoTextList
               FUN_1800d65f0(uVar6,0);
             }
             lVar2 = *(int64 *)(lVar2 + 32);
-            FUN_18154e570(lVar5,0,DAT_181d82398);
+            FUN_181585670(lVar5,0,DAT_181da7738);
           }
           if (lVar2 != null) {
             *(int64 *)(lVar2 + 40) = text;
             *(uint32 *)(lVar2 + 32) = type;
-            plVar3 = (int64 *)FUN_1800d60b0(DAT_181d7f180,5);
-            lVar5 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x418);
+            plVar3 = (int64 *)FUN_1800d60b0(DAT_181da4120,5);
+            lVar5 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x420);
             if (lVar5 != null) {
               if (lVar5.size <= type) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -222,7 +223,7 @@ public class InfoTextList
                   uVar6 = String.Format("[{0}{1}.{2}.{3}]{4}",plVar3,0);
                   *(uint64 *)(lVar2 + 16) = uVar6;
                   if (this.mParagraphs != null) {
-                    FUN_18154cb60(this.mParagraphs,lVar2,DAT_181d82298);
+                    FUN_181583c60(this.mParagraphs,lVar2,DAT_181da7638);
                     this.needRebuild = 1;
                     return;
                   }
@@ -233,8 +234,8 @@ public class InfoTextList
         }
     }
 
-    // Token : 0x6001826
-    // RVA   : 0xB6F500   Offset: 0xB6DD00   Length: 0x31
+    // Token : 0x600186A
+    // RVA   : 0xC99300   Offset: 0xC98700   Length: 0x31
     public void Add(InfoData info)
     {
         int iVar1;
@@ -245,7 +246,7 @@ public class InfoTextList
         lVar2 = InfoTextList.get_paragraphs(this,0);
         if (lVar2 != null) {
           iVar1 = *(int *)(lVar2 + 24);
-          if (iVar1 < InfoTextList.paragraphHistory) {
+          if (iVar1 < **(int **)(DAT_181d7f828 + 184)) {
             lVar2 = new c.DisplayClass9_0(0);
           }
           else {
@@ -257,13 +258,13 @@ public class InfoTextList
               FUN_1800d65f0(uVar6,0);
             }
             lVar2 = *(int64 *)(lVar2 + 32);
-            FUN_18154e570(lVar5,0,DAT_181d82398);
+            FUN_181585670(lVar5,0,DAT_181da7738);
           }
           if (lVar2 != null) {
             *(int64 *)(lVar2 + 40) = param_3;
             *(uint32 *)(lVar2 + 32) = info;
-            plVar3 = (int64 *)FUN_1800d60b0(DAT_181d7f180,5);
-            lVar5 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x418);
+            plVar3 = (int64 *)FUN_1800d60b0(DAT_181da4120,5);
+            lVar5 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x420);
             if (lVar5 != null) {
               if (lVar5.size <= info) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -352,7 +353,7 @@ public class InfoTextList
                   uVar6 = String.Format("[{0}{1}.{2}.{3}]{4}",plVar3,0);
                   *(uint64 *)(lVar2 + 16) = uVar6;
                   if (this.mParagraphs != null) {
-                    FUN_18154cb60(this.mParagraphs,lVar2,DAT_181d82298);
+                    FUN_181583c60(this.mParagraphs,lVar2,DAT_181da7638);
                     this.needRebuild = 1;
                     return;
                   }
@@ -363,8 +364,8 @@ public class InfoTextList
         }
     }
 
-    // Token : 0x6001827
-    // RVA   : 0xB6F0E0   Offset: 0xB6D8E0   Length: 0x412
+    // Token : 0x600186B
+    // RVA   : 0xC98EE0   Offset: 0xC982E0   Length: 0x412
     protected void Add(int type, TimeData time, string text, bool updateVisible)
     {
         int iVar1;
@@ -375,7 +376,7 @@ public class InfoTextList
         lVar2 = InfoTextList.get_paragraphs(this,0);
         if (lVar2 != null) {
           iVar1 = *(int *)(lVar2 + 24);
-          if (iVar1 < InfoTextList.paragraphHistory) {
+          if (iVar1 < **(int **)(DAT_181d7f828 + 184)) {
             lVar2 = new c.DisplayClass9_0(0);
           }
           else {
@@ -387,13 +388,13 @@ public class InfoTextList
               FUN_1800d65f0(uVar6,0);
             }
             lVar2 = *(int64 *)(lVar2 + 32);
-            FUN_18154e570(lVar5,0,DAT_181d82398);
+            FUN_181585670(lVar5,0,DAT_181da7738);
           }
           if (lVar2 != null) {
             *(int64 *)(lVar2 + 40) = time;
             *(uint32 *)(lVar2 + 32) = type;
-            plVar3 = (int64 *)FUN_1800d60b0(DAT_181d7f180,5);
-            lVar5 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x418);
+            plVar3 = (int64 *)FUN_1800d60b0(DAT_181da4120,5);
+            lVar5 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x420);
             if (lVar5 != null) {
               if (lVar5.size <= type) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -482,7 +483,7 @@ public class InfoTextList
                   uVar6 = String.Format("[{0}{1}.{2}.{3}]{4}",plVar3,0);
                   *(uint64 *)(lVar2 + 16) = uVar6;
                   if (this.mParagraphs != null) {
-                    FUN_18154cb60(this.mParagraphs,lVar2,DAT_181d82298);
+                    FUN_181583c60(this.mParagraphs,lVar2,DAT_181da7638);
                     this.needRebuild = 1;
                     return;
                   }
@@ -493,8 +494,8 @@ public class InfoTextList
         }
     }
 
-    // Token : 0x6001828
-    // RVA   : 0xB6F590   Offset: 0xB6DD90   Length: 0x1E9
+    // Token : 0x600186C
+    // RVA   : 0xC99390   Offset: 0xC98790   Length: 0x21E
     protected void Rebuild()
     {
         long lVar1;
@@ -511,7 +512,7 @@ public class InfoTextList
         if (cVar5) {
           lVar6 = InfoTextList.get_paragraphs(this,0);
           if (lVar6 == null) {
-        LAB_180b6f754:
+        LAB_180c99589:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -519,7 +520,7 @@ public class InfoTextList
           while (uVar2 = uVar2 - 1, -1 < (int)uVar2) {
             if ((this.mParagraphs == null) ||
                (lVar6 = this.mParagraphs.buffer) == null)
-            goto LAB_180b6f754;
+            goto LAB_180c99589;
             if (*(uint32 *)(lVar6 + 24) <= uVar2) {
               uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -527,35 +528,36 @@ public class InfoTextList
             }
             lVar1 = (int64)(int)uVar2 * 8 + 32;
             lVar6 = *(int64 *)(lVar1 + lVar6);
-            if ((lVar6 == null) || (lVar4 = this.hideInfoType) == null) goto LAB_180b6f754;
+            if ((lVar6 == null) || (lVar4 = this.hideInfoType) == null) goto LAB_180c99589;
             uVar3 = *(uint32 *)(lVar6 + 32);
             if (*(uint32 *)(lVar4 + 24) <= uVar3) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             if (*(char *)(*(int64 *)(lVar4 + 16) + 32 + (int64)(int)uVar3) == false) {
-              cVar5 = FUN_1816fd990(uVar7,"",0);
+              cVar5 = FUN_18171e540(uVar7,"",0);
               uVar8 = "\n";
               if (cVar5) {
                 uVar8 = "";
               }
               lVar6 = InfoTextList.get_paragraphs(this,0);
-              if ((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 16)) == null) goto LAB_180b6f754;
+              if ((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 16)) == null) goto LAB_180c99589;
               if (*(uint32 *)(lVar6 + 24) <= uVar2) {
                 uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                 FUN_1800d65f0(uVar7,0);
               }
               lVar6 = *(int64 *)(lVar1 + lVar6);
-              if (lVar6 == null) goto LAB_180b6f754;
+              if (lVar6 == null) goto LAB_180c99589;
               uVar7 = String.Concat(uVar7,uVar8,*(uint64 *)(lVar6 + 16),0);
             }
           }
-          LTLocalization.SetText(this.textLabel,uVar7,0);
+          uVar8 = this.textLabel;
+          LTLocalization.SetText(uVar8,uVar7,0);
         }
     }
 
-    // Token : 0x6001829
-    // RVA   : 0xB6F780   Offset: 0xB6DF80   Length: 0x279
+    // Token : 0x600186D
+    // RVA   : 0xC995B0   Offset: 0xC989B0   Length: 0x279
     public void TypeTabClicked(GameObject tab)
     {
         long lVar1;
@@ -579,9 +581,9 @@ public class InfoTextList
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             if (lVar5 != null) {
-              FUN_181814bb0(lVar5,uVar2,
+              FUN_1817f42f0(lVar5,uVar2,
                             *(char *)(lVar1._items + 32 + (int64)(int)uVar3) == false,
-                            DAT_181d58f90);
+                            DAT_181d80720);
               lVar5 = GameObject.get_transform(tab,0);
               if (lVar5 != null) {
                 lVar5 = Transform.Find(lVar5,"Text",0);
@@ -595,10 +597,10 @@ public class InfoTextList
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
                     }
                     if (*(char *)(lVar5._items + 32 + (int64)(int)uVar3) == false) {
-                      puVar7 = (uint32 *)FUN_181098a50(&local_28);
+                      puVar7 = (uint32 *)FUN_1810d3570(&local_28);
                     }
                     else {
-                      puVar7 = (uint32 *)FUN_1810988d0();
+                      puVar7 = (uint32 *)FUN_1810d33f0();
                     }
                     if (plVar6 != (int64 *)0) {
                       local_28 = *puVar7;
@@ -620,10 +622,10 @@ public class InfoTextList
                             }
                             if (*(char *)(lVar5._items + 32 + (int64)(int)uVar3) ==
                                 false) {
-                              puVar7 = (uint32 *)FUN_181098a50(&local_28);
+                              puVar7 = (uint32 *)FUN_1810d3570(&local_28);
                             }
                             else {
-                              puVar7 = (uint32 *)FUN_1810988d0();
+                              puVar7 = (uint32 *)FUN_1810d33f0();
                             }
                             if (plVar6 != (int64 *)0) {
                               local_28 = *puVar7;
@@ -647,13 +649,13 @@ public class InfoTextList
         }
     }
 
-    // Token : 0x600182A
-    // RVA   : 0xB6FAB0   Offset: 0xB6E2B0   Length: 0x7D
+    // Token : 0x600186E
+    // RVA   : 0xC998E0   Offset: 0xC98CE0   Length: 0x7D
     public void /*ctor*/()
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = FUN_1800d60b0(DAT_181d7c118,1);
+        lVar1 = FUN_1800d60b0(DAT_181da1040,1);
         if (lVar1 != null) {
           if (*(int *)(lVar1 + 24) != 0) {
             *(uint16 *)(lVar1 + 32) = 10;
@@ -667,15 +669,17 @@ public class InfoTextList
         }
     }
 
-    // Token : 0x600182B
-    // RVA   : 0xB6FA20   Offset: 0xB6E220   Length: 0x8E
+    // Token : 0x600186F
+    // RVA   : 0xC99850   Offset: 0xC98C50   Length: 0x8E
     private static void /*cctor*/()
     {
         ulong uVar1;
-        InfoTextList.paragraphHistory = 100;
-        uVar1 = il2cpp_internal(DAT_181d5db48);
-        FUN_1808ae540(uVar1,DAT_181da1ff8);
-        InfoTextList.mHistory = uVar1;
+        **(uint32 **)(DAT_181d7f828 + 184) = 100;
+        uVar1 = il2cpp_internal(DAT_181d825e8);
+        FUN_1808b1370(uVar1,DAT_181d71650);
+        puVar2 = (uint64 *)(*(int64 *)(DAT_181d7f828 + 184) + 8);
+        *puVar2 = uVar1;
+        il2cpp_internal(puVar2,uVar1);
     }
 
 }

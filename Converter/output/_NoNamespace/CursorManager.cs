@@ -1,50 +1,50 @@
 // ============================================================
 // Type  : CursorManager
-// Token : 0x2000256
+// Token : 0x200025C
 // ============================================================
 
 public class CursorManager
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400123D
+    // Token: 0x40012E0
     public CursorType cursorType;
 
-    // Token: 0x400123E
+    // Token: 0x40012E1
     public Texture2D[] cursorTexture;
 
-    // Token: 0x400123F
+    // Token: 0x40012E2
     private static CursorManager _instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600133B
-    // RVA   : 0xA50490   Offset: 0xA4EC90   Length: 0x36
+    // Token : 0x600137C
+    // RVA   : 0xA43330   Offset: 0xA42730   Length: 0x36
     public static CursorManager get_Instance()
     {
-        return **(uint64 **)(DAT_181d96278 + 184);
+        return **(uint64 **)(DAT_181dbb428 + 184);
     }
 
-    // Token : 0x600133C
-    // RVA   : 0xA50040   Offset: 0xA4E840   Length: 0x10C
+    // Token : 0x600137D
+    // RVA   : 0xA42EE0   Offset: 0xA422E0   Length: 0x10C
     private void Awake()
     {
         bool cVar2;
         ulong uVar3;
-        uVar3 = **(uint64 **)(DAT_181d96278 + 184);
+        uVar3 = **(uint64 **)(DAT_181dbb428 + 184);
         cVar2 = Object.op_Equality(uVar3,0,0);
         if (!cVar2) {
           uVar3 = Component.get_gameObject(this,0);
           Object.Destroy(uVar3,0);
           return;
         }
-        puVar1 = *(uint64 **)(DAT_181d96278 + 184);
+        puVar1 = *(uint64 **)(DAT_181dbb428 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
         uVar3 = Component.get_gameObject(this,0);
         Object.DontDestroyOnLoad(uVar3,0);
     }
 
-    // Token : 0x600133D
-    // RVA   : 0xA50290   Offset: 0xA4EA90   Length: 0x52
+    // Token : 0x600137E
+    // RVA   : 0xA43130   Offset: 0xA42530   Length: 0x52
     private void Start()
     {
         long lVar1;
@@ -65,10 +65,11 @@ public class CursorManager
         uVar3 = il2cpp_internal();
     }
 
-    // Token : 0x600133E
-    // RVA   : 0xA502F0   Offset: 0xA4EAF0   Length: 0x19D
+    // Token : 0x600137F
+    // RVA   : 0xA43190   Offset: 0xA42590   Length: 0x19D
     private void Update()
     {
+        var pStatics = *(int64*)(DAT_181d8b790 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
@@ -78,21 +79,21 @@ public class CursorManager
         }
         cVar2 = Input.GetMouseButton(0,0);
         if (!cVar2) {
-        LAB_180a5042d:
+        LAB_180a432cd:
           cVar2 = Input.GetMouseButton(1);
           if (!cVar2) {
             return;
           }
         }
         else {
-          uVar3 = MouseController.hoveredUI;
+          uVar3 = *(uint64 *)(pStatics + 72);
           cVar2 = Object.op_Equality(uVar3,0,0);
           if (!cVar2) {
-            lVar1 = MouseController.hoveredUI;
+            lVar1 = *(int64 *)(pStatics + 72);
             if (lVar1 == null) throw; // [null/range check failed]
-            uVar3 = GameObject.GetComponent(lVar1,DAT_181da0070);
+            uVar3 = GameObject.GetComponent(lVar1,DAT_181d720a0);
             cVar2 = Object.op_Equality(uVar3,0,0);
-            if (!cVar2) goto LAB_180a5042d;
+            if (!cVar2) goto LAB_180a432cd;
           }
         }
         this.cursorType = 0;
@@ -110,8 +111,8 @@ public class CursorManager
         }
     }
 
-    // Token : 0x600133F
-    // RVA   : 0xA50290   Offset: 0xA4EA90   Length: 0x52
+    // Token : 0x6001380
+    // RVA   : 0xA43130   Offset: 0xA42530   Length: 0x52
     public void Reset()
     {
         long lVar1;
@@ -132,8 +133,8 @@ public class CursorManager
         uVar3 = il2cpp_internal();
     }
 
-    // Token : 0x6001340
-    // RVA   : 0xA50150   Offset: 0xA4E950   Length: 0x8
+    // Token : 0x6001381
+    // RVA   : 0xA42FF0   Offset: 0xA423F0   Length: 0x8
     public void ChangeCursorType(CursorType changeType)
     {
         long lVar1;
@@ -151,7 +152,7 @@ public class CursorManager
           plVar2 = lVar1[changeType];
           if (changeType == null) {
             uVar6 = Vector2.get_zero(0);
-        LAB_180a50239:
+        LAB_180a430d9:
             Cursor.SetCursor(plVar2,uVar6,0,0);
             return;
           }
@@ -168,15 +169,15 @@ public class CursorManager
               if (plVar3 != (int64 *)0) {
                 iVar5 = (**(code **)(*plVar3 + 0x198))(plVar3,*(uint64 *)(*plVar3 + 0x1a0));
                 uVar6 = CONCAT44((float)iVar5 * 0.5,(float)iVar4 * 0.5);
-                goto LAB_180a50239;
+                goto LAB_180a430d9;
               }
             }
           }
         }
     }
 
-    // Token : 0x6001341
-    // RVA   : 0xA50160   Offset: 0xA4E960   Length: 0x125
+    // Token : 0x6001382
+    // RVA   : 0xA43000   Offset: 0xA42400   Length: 0x125
     public void ChangeCursorType(int changeType)
     {
         long lVar1;
@@ -194,7 +195,7 @@ public class CursorManager
           plVar2 = lVar1[changeType];
           if (changeType == null) {
             uVar6 = Vector2.get_zero(0);
-        LAB_180a50239:
+        LAB_180a430d9:
             Cursor.SetCursor(plVar2,uVar6,0,0);
             return;
           }
@@ -211,15 +212,15 @@ public class CursorManager
               if (plVar3 != (int64 *)0) {
                 iVar5 = (**(code **)(*plVar3 + 0x198))(plVar3,*(uint64 *)(*plVar3 + 0x1a0));
                 uVar6 = CONCAT44((float)iVar5 * 0.5,(float)iVar4 * 0.5);
-                goto LAB_180a50239;
+                goto LAB_180a430d9;
               }
             }
           }
         }
     }
 
-    // Token : 0x6001342
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x6001383
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

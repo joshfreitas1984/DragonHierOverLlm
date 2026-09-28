@@ -1,76 +1,76 @@
 // ============================================================
 // Type  : ExploreTileData
-// Token : 0x2000270
+// Token : 0x2000276
 // ============================================================
 
 public class ExploreTileData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001318
+    // Token: 0x40013BB
     public string name;
 
-    // Token: 0x4001319
+    // Token: 0x40013BC
     public string spriteName;
 
-    // Token: 0x400131A
+    // Token: 0x40013BD
     public int row;
 
-    // Token: 0x400131B
+    // Token: 0x40013BE
     public int column;
 
-    // Token: 0x400131C
+    // Token: 0x40013BF
     public SpriteRotateType spriteRotateType;
 
-    // Token: 0x400131D
+    // Token: 0x40013C0
     public bool spriteFlipX;
 
-    // Token: 0x400131E
+    // Token: 0x40013C1
     public bool spriteFlipY;
 
-    // Token: 0x400131F
+    // Token: 0x40013C2
     public ExploreTileWallType wallType;
 
-    // Token: 0x4001320
+    // Token: 0x40013C3
     public bool doorOpen;
 
-    // Token: 0x4001321
+    // Token: 0x40013C4
     public bool eventHappen;
 
-    // Token: 0x4001322
+    // Token: 0x40013C5
     public int exploreTileEventType;
 
-    // Token: 0x4001323
+    // Token: 0x40013C6
     public float enemyDifficulty;
 
-    // Token: 0x4001324
+    // Token: 0x40013C7
     public int enemyNum;
 
-    // Token: 0x4001325
+    // Token: 0x40013C8
     public int targetResource;
 
-    // Token: 0x4001326
+    // Token: 0x40013C9
     public ExploreTileGroundType exploreTileGroundType;
 
-    // Token: 0x4001327
+    // Token: 0x40013CA
     public ExploreTileObstacleData exploreTileObstacleData;
 
-    // Token: 0x4001328
+    // Token: 0x40013CB
     public bool seen;
 
-    // Token: 0x4001329
+    // Token: 0x40013CC
     public bool moveAble;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60013D0
-    // RVA   : 0xB2A540   Offset: 0xB28D40   Length: 0xE
+    // Token : 0x6001411
+    // RVA   : 0x9D2500   Offset: 0x9D1900   Length: 0xE
     public void /*ctor*/()
     {
         this.targetResource = 0xffffffff;
         ZhSegment.Initialize(this,0);
     }
 
-    // Token : 0x60013D1
-    // RVA   : 0xB9E900   Offset: 0xB9D100   Length: 0x175
+    // Token : 0x6001412
+    // RVA   : 0xB27050   Offset: 0xB26450   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -81,13 +81,13 @@ public class ExploreTileData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -99,7 +99,7 @@ public class ExploreTileData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d53c70,plVar1);
+            FUN_180002970(0,DAT_181d78da0,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

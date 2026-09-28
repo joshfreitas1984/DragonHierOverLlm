@@ -1,29 +1,29 @@
 // ============================================================
 // Type  : NGUIPanWithMouse
-// Token : 0x200001E
+// Token : 0x200001F
 // ============================================================
 
 public class NGUIPanWithMouse
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000081
+    // Token: 0x400009D
     public Vector2 degrees;
 
-    // Token: 0x4000082
+    // Token: 0x400009E
     public float range;
 
-    // Token: 0x4000083
+    // Token: 0x400009F
     private Transform mTrans;
 
-    // Token: 0x4000084
+    // Token: 0x40000A0
     private Quaternion mStart;
 
-    // Token: 0x4000085
+    // Token: 0x40000A1
     private Vector2 mRot;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600006A
-    // RVA   : 0x4734C0   Offset: 0x471CC0   Length: 0x51
+    // Token : 0x6000082
+    // RVA   : 0xB957B0   Offset: 0xB94BB0   Length: 0x51
     private void Start()
     {
         ulong uVar1;
@@ -39,8 +39,8 @@ public class NGUIPanWithMouse
         }
     }
 
-    // Token : 0x600006B
-    // RVA   : 0x1585F40   Offset: 0x1584740   Length: 0x21A
+    // Token : 0x6000083
+    // RVA   : 0xDFEDF0   Offset: 0xDFE1F0   Length: 0x21A
     private void Update()
     {
         long lVar1;
@@ -72,10 +72,10 @@ public class NGUIPanWithMouse
           fVar11 = 0.1;
         }
         local_res8 = (float)uVar5;
-        fVar9 = (float)FUN_1810a8ba0(((local_res8 - (float)iVar3 * 0.5) / ((float)iVar3 * 0.5)) / fVar11,
+        fVar9 = (float)FUN_1810e36c0(((local_res8 - (float)iVar3 * 0.5) / ((float)iVar3 * 0.5)) / fVar11,
                                      0xbf800000,0x3f800000,0);
         fStackX_c = (float)((uint64)uVar5 >> 32);
-        fVar10 = (float)FUN_1810a8ba0(((fStackX_c - (float)iVar4 * 0.5) / ((float)iVar4 * 0.5)) /
+        fVar10 = (float)FUN_1810e36c0(((fStackX_c - (float)iVar4 * 0.5) / ((float)iVar4 * 0.5)) /
                                       this.range,0xbf800000,0x3f800000,0);
         fVar11 = this.mRot;
         fVar12 = *(float *)(this + 68);
@@ -105,8 +105,8 @@ public class NGUIPanWithMouse
         }
     }
 
-    // Token : 0x600006C
-    // RVA   : 0x473710   Offset: 0x471F10   Length: 0x4F
+    // Token : 0x6000084
+    // RVA   : 0xB95A00   Offset: 0xB94E00   Length: 0x4F
     public void /*ctor*/()
     {
         ulong uVar1;

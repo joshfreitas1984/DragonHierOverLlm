@@ -1,53 +1,53 @@
 // ============================================================
 // Type  : UIDragResize
-// Token : 0x2000041
+// Token : 0x2000042
 // ============================================================
 
 public class UIDragResize
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400013A
+    // Token: 0x4000156
     public UIWidget target;
 
-    // Token: 0x400013B
+    // Token: 0x4000157
     public Pivot pivot;
 
-    // Token: 0x400013C
+    // Token: 0x4000158
     public int minWidth;
 
-    // Token: 0x400013D
+    // Token: 0x4000159
     public int minHeight;
 
-    // Token: 0x400013E
+    // Token: 0x400015A
     public int maxWidth;
 
-    // Token: 0x400013F
+    // Token: 0x400015B
     public int maxHeight;
 
-    // Token: 0x4000140
+    // Token: 0x400015C
     public bool updateAnchors;
 
-    // Token: 0x4000141
+    // Token: 0x400015D
     private Plane mPlane;
 
-    // Token: 0x4000142
+    // Token: 0x400015E
     private Vector3 mRayPos;
 
-    // Token: 0x4000143
+    // Token: 0x400015F
     private Vector3 mLocalPos;
 
-    // Token: 0x4000144
+    // Token: 0x4000160
     private int mWidth;
 
-    // Token: 0x4000145
+    // Token: 0x4000161
     private int mHeight;
 
-    // Token: 0x4000146
+    // Token: 0x4000162
     private bool mDragging;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000124
-    // RVA   : 0x10DFFF0   Offset: 0x10DE7F0   Length: 0x254
+    // Token : 0x600013C
+    // RVA   : 0x12B6990   Offset: 0x12B5D90   Length: 0x254
     private void OnDragStart()
     {
         uint uVar1;
@@ -140,8 +140,8 @@ public class UIDragResize
         uVar6 = il2cpp_internal();
     }
 
-    // Token : 0x6000125
-    // RVA   : 0x10E0250   Offset: 0x10DEA50   Length: 0x3E1
+    // Token : 0x600013D
+    // RVA   : 0x12B6BF0   Offset: 0x12B5FF0   Length: 0x3E1
     private void OnDrag(Vector2 delta)
     {
         ulong uVar1;
@@ -250,17 +250,21 @@ public class UIDragResize
         }
     }
 
-    // Token : 0x6000126
-    // RVA   : 0x10DFFE0   Offset: 0x10DE7E0   Length: 0x5
+    // Token : 0x600013E
+    // RVA   : 0x12B6980   Offset: 0x12B5D80   Length: 0x5
     private void OnDragEnd()
     {
+        void FUN_1812b6980(int64 this)
+        {
         this.mDragging = 0;
     }
 
-    // Token : 0x6000127
-    // RVA   : 0x10E0640   Offset: 0x10DEE40   Length: 0x2A
+    // Token : 0x600013F
+    // RVA   : 0x12B6FE0   Offset: 0x12B63E0   Length: 0x2A
     public void /*ctor*/()
     {
+        void FUN_1812b6fe0(int64 this)
+        {
         this.pivot = 8;
         this.minWidth = 100;
         this.minHeight = 100;

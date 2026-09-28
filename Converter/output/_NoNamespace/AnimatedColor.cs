@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : AnimatedColor
-// Token : 0x20000B2
+// Token : 0x20000B3
 // ============================================================
 
 public class AnimatedColor
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400043A
+    // Token: 0x4000456
     public Color color;
 
-    // Token: 0x400043B
+    // Token: 0x4000457
     private UIWidget mWidget;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000567
-    // RVA   : 0xA0D160   Offset: 0xA0B960   Length: 0x77
+    // Token : 0x600057F
+    // RVA   : 0xA1EA30   Offset: 0xA1DE30   Length: 0x77
     private void OnEnable()
     {
         ulong uVar1;
@@ -22,7 +22,7 @@ public class AnimatedColor
         uint uStack_14;
         uint uStack_10;
         uint32 uStack_c;
-        uVar1 = Component.GetComponent(this,DAT_181d6e7c0);
+        uVar1 = Component.GetComponent(this,DAT_181d97060);
         this.mWidget = uVar1;
         if (this.mWidget != null) {
           local_18 = this.color;
@@ -34,8 +34,8 @@ public class AnimatedColor
         }
     }
 
-    // Token : 0x6000568
-    // RVA   : 0xA0D120   Offset: 0xA0B920   Length: 0x30
+    // Token : 0x6000580
+    // RVA   : 0xA1E9F0   Offset: 0xA1DDF0   Length: 0x30
     private void LateUpdate()
     {
         uint local_18;
@@ -52,15 +52,15 @@ public class AnimatedColor
         }
     }
 
-    // Token : 0x6000569
-    // RVA   : 0xA0D1E0   Offset: 0xA0B9E0   Length: 0x2B
+    // Token : 0x6000581
+    // RVA   : 0xA1EAB0   Offset: 0xA1DEB0   Length: 0x2B
     public void /*ctor*/()
     {
         uint uVar1;
         uint uVar2;
         uint uVar3;
         byte[] local_18 = new byte[16];
-        puVar4 = (uint32 *)FUN_181098a50(local_18,0);
+        puVar4 = (uint32 *)FUN_1810d3570(local_18,0);
         uVar1 = puVar4[1];
         uVar2 = puVar4[2];
         uVar3 = puVar4[3];

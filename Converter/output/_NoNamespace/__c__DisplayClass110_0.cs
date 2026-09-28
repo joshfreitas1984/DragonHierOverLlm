@@ -1,27 +1,27 @@
 // ============================================================
 // Type  : <>c__DisplayClass110_0
-// Token : 0x20002A0
+// Token : 0x20002A6
 // ============================================================
 
 public class <>c__DisplayClass110_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40014AC
+    // Token: 0x400155E
     public GameDataController <>4__this;
 
-    // Token: 0x40014AD
+    // Token: 0x400155F
     public int saveID;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001649
-    // RVA   : 0x210B70   Offset: 0x20F370   Length: 0x7
+    // Token : 0x600168D
+    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);
     }
 
-    // Token : 0x600164A
-    // RVA   : 0x8D4D00   Offset: 0x8D3500   Length: 0x1ED
+    // Token : 0x600168E
+    // RVA   : 0x9372B0   Offset: 0x9366B0   Length: 0x1ED
     internal void <Load>b__0()
     {
         long lVar2;
@@ -41,7 +41,7 @@ public class <>c__DisplayClass110_0
           FUN_1800d6620();
         }
         JsonSerializerSettings.set_ObjectCreationHandling(lVar4,2);
-        uVar3 = JsonConvert.DeserializeObject(uVar3,lVar4,DAT_181d57740);
+        uVar3 = JsonConvert.DeserializeObject(uVar3,lVar4,DAT_181d803a8);
         if (lVar2 != null) {
           puVar1 = (uint64 *)(lVar2 + 32);
           *puVar1 = uVar3;
@@ -60,8 +60,8 @@ public class <>c__DisplayClass110_0
         }
     }
 
-    // Token : 0x600164B
-    // RVA   : 0x8D4EF0   Offset: 0x8D36F0   Length: 0x1EE
+    // Token : 0x600168F
+    // RVA   : 0x9374A0   Offset: 0x9368A0   Length: 0x1EE
     internal void <Load>b__1()
     {
         long lVar2;
@@ -81,7 +81,7 @@ public class <>c__DisplayClass110_0
           FUN_1800d6620();
         }
         JsonSerializerSettings.set_ObjectCreationHandling(lVar4,2);
-        uVar3 = JsonConvert.DeserializeObject(uVar3,lVar4,DAT_181d57548);
+        uVar3 = JsonConvert.DeserializeObject(uVar3,lVar4,DAT_181d801a8);
         if (lVar2 != null) {
           puVar1 = (uint64 *)(lVar2 + 40);
           *puVar1 = uVar3;
@@ -100,8 +100,8 @@ public class <>c__DisplayClass110_0
         }
     }
 
-    // Token : 0x600164C
-    // RVA   : 0x8D50E0   Offset: 0x8D38E0   Length: 0x1EE
+    // Token : 0x6001690
+    // RVA   : 0x937690   Offset: 0x936A90   Length: 0x1EE
     internal void <Load>b__2()
     {
         long lVar2;
@@ -121,7 +121,7 @@ public class <>c__DisplayClass110_0
           FUN_1800d6620();
         }
         JsonSerializerSettings.set_ObjectCreationHandling(lVar4,2);
-        uVar3 = JsonConvert.DeserializeObject(uVar3,lVar4,DAT_181d57548);
+        uVar3 = JsonConvert.DeserializeObject(uVar3,lVar4,DAT_181d801a8);
         if (lVar2 != null) {
           puVar1 = (uint64 *)(lVar2 + 48);
           *puVar1 = uVar3;

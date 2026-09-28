@@ -1,57 +1,61 @@
 // ============================================================
 // Type  : SaveLoadMenuController
-// Token : 0x2000344
+// Token : 0x200034B
 // ============================================================
 
 public class SaveLoadMenuController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001A40
+    // Token: 0x4001B41
     public SaveLoadType saveLoadType;
 
-    // Token: 0x4001A41
+    // Token: 0x4001B42
     public GameObject saveLoadMenu;
 
-    // Token: 0x4001A42
+    // Token: 0x4001B43
     public List<Sprite> seasonSprite;
 
-    // Token: 0x4001A43
+    // Token: 0x4001B44
     private GameObject saveSlot;
 
-    // Token: 0x4001A44
+    // Token: 0x4001B45
     public static int saveSlotNum;
 
-    // Token: 0x4001A45
+    // Token: 0x4001B46
     private static SaveLoadMenuController _instance;
 
-    // Token: 0x4001A46
+    // Token: 0x4001B47
     private bool showing;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600204B
-    // RVA   : 0xC68D40   Offset: 0xC67540   Length: 0x58
+    // Token : 0x60020CC
+    // RVA   : 0x97ADD0   Offset: 0x97A1D0   Length: 0x58
     public static SaveLoadMenuController get_Instance()
     {
-        return SaveLoadMenuController._instance;
+        return *(uint64 *)(*(int64 *)(DAT_181d9ecf0 + 184) + 8);
     }
 
-    // Token : 0x600204C
-    // RVA   : 0xC665E0   Offset: 0xC64DE0   Length: 0xE0
+    // Token : 0x60020CD
+    // RVA   : 0x978590   Offset: 0x977990   Length: 0xE0
     private void Awake()
     {
+        var pStatics = *(int64*)(DAT_181d9ecf0 + 184);
         ulong uVar1;
         bool cVar2;
-        uVar1 = SaveLoadMenuController._instance;
+        uVar1 = *(uint64 *)(pStatics + 8);
         cVar2 = Object.op_Equality(uVar1,0,0);
         if (cVar2) {
-          SaveLoadMenuController._instance = this;
+          puVar3 = (uint64 *)(pStatics + 8);
+          *puVar3 = this;
+          il2cpp_internal(puVar3,this);
         }
     }
 
-    // Token : 0x600204D
-    // RVA   : 0xC66DD0   Offset: 0xC655D0   Length: 0xD70
+    // Token : 0x60020CE
+    // RVA   : 0x978D80   Offset: 0x978180   Length: 0xE2B
     public void RefreshSlot(int slotID)
     {
+        var pStatics = *(int64*)(DAT_181d72d50 + 184);
         bool cVar1;
         int iVar2;
         long lVar3;
@@ -65,7 +69,7 @@ public class SaveLoadMenuController
         ulong local_28;
         ulong uStack_20;
         local_res10[0] = slotID;
-        lVar3 = GameController.lockObj;
+        lVar3 = *(int64 *)(pStatics + 32);
         if (lVar3 == null) throw; // [null/range check failed]
         cVar1 = GameDataController.HaveSave(lVar3,local_res10[0],0);
         if (!cVar1) {
@@ -74,50 +78,50 @@ public class SaveLoadMenuController
           uVar4 = Int32.ToString(local_res10,0);
           if (((lVar3 == null) || (lVar3 = Transform.Find(lVar3,uVar4,0)) == null) ||
              (lVar3 = Transform.Find(lVar3,"Name",0)) == null) throw; // [null/range check failed]
-          uVar4 = Component.GetComponent(lVar3,DAT_181d6d8c0);
+          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
           LTLocalization.SetText(uVar4,"空",0);
           if (this.saveSlot == null) throw; // [null/range check failed]
           lVar3 = GameObject.get_transform(this.saveSlot,0);
           uVar4 = Int32.ToString(local_res10,0);
           if (((lVar3 == null) || (lVar3 = Transform.Find(lVar3,uVar4,0)) == null) ||
              (lVar3 = Transform.Find(lVar3,"Info",0)) == null) throw; // [null/range check failed]
-          uVar4 = Component.GetComponent(lVar3,DAT_181d6d8c0);
+          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
           LTLocalization.SetText(uVar4,"",0);
           if (this.saveSlot == null) throw; // [null/range check failed]
           lVar3 = GameObject.get_transform(this.saveSlot,0);
           uVar4 = Int32.ToString(local_res10,0);
           if (((lVar3 == null) || (lVar3 = Transform.Find(lVar3,uVar4,0)) == null) ||
              (lVar3 = Transform.Find(lVar3,"Mode",0)) == null) throw; // [null/range check failed]
-          uVar4 = Component.GetComponent(lVar3,DAT_181d6d8c0);
+          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
           LTLocalization.SetText(uVar4,"",0);
           if (this.saveSlot == null) throw; // [null/range check failed]
           lVar3 = GameObject.get_transform(this.saveSlot,0);
           uVar4 = Int32.ToString(local_res10,0);
           if (((lVar3 == null) || (lVar3 = Transform.Find(lVar3,uVar4,0)) == null) ||
              (lVar3 = Transform.Find(lVar3,"ForceLv",0)) == null) throw; // [null/range check failed]
-          uVar4 = Component.GetComponent(lVar3,DAT_181d6d8c0);
+          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
           LTLocalization.SetText(uVar4,"",0);
           if (this.saveSlot == null) throw; // [null/range check failed]
           lVar3 = GameObject.get_transform(this.saveSlot,0);
           uVar4 = Int32.ToString(local_res10,0);
           if (((lVar3 == null) || (lVar3 = Transform.Find(lVar3,uVar4,0)) == null) ||
              (lVar3 = Transform.Find(lVar3,"Difficulty",0)) == null) throw; // [null/range check failed]
-          uVar4 = Component.GetComponent(lVar3,DAT_181d6d8c0);
+          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
           LTLocalization.SetText(uVar4,"",0);
           if (this.saveSlot == null) throw; // [null/range check failed]
           lVar3 = GameObject.get_transform(this.saveSlot,0);
           uVar4 = Int32.ToString(local_res10,0);
           if (((lVar3 == null) || (lVar3 = Transform.Find(lVar3,uVar4,0)) == null) ||
              (lVar3 = Transform.Find(lVar3,"Time",0)) == null) throw; // [null/range check failed]
-          uVar4 = Component.GetComponent(lVar3,DAT_181d6d8c0);
+          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
           LTLocalization.SetText(uVar4,"",0);
           if (this.saveSlot == null) throw; // [null/range check failed]
           lVar3 = GameObject.get_transform(this.saveSlot,0);
           uVar4 = Int32.ToString(local_res10,0);
           if (((lVar3 == null) || (lVar3 = Transform.Find(lVar3,uVar4,0)) == null) ||
              (lVar3 = Transform.Find(lVar3,"Season",0)) == null) throw; // [null/range check failed]
-          plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d6bc40);
-          puVar6 = (uint64 *)FUN_180d904c0(&local_28,0);
+          plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
+          puVar6 = (uint64 *)FUN_180d98fe0(&local_28,0);
           if (plVar5 == (int64 *)0) throw; // [null/range check failed]
           local_28 = *puVar6;
           uStack_20 = puVar6[1];
@@ -130,12 +134,12 @@ public class SaveLoadMenuController
           puVar6 = (uint64 *)Vector3.get_zero(&local_28,0);
         }
         else {
-          lVar3 = GameController.lockObj;
+          lVar3 = *(int64 *)(pStatics + 32);
           if ((lVar3 == null) ||
              (lVar3 = GameDataController.GetSaveInfo(lVar3,local_res10[0],0)) == null)
           throw; // [null/range check failed]
           lVar9 = lVar3.Count;
-          lVar7 = FUN_1800d60b0(DAT_181d7c118,1);
+          lVar7 = FUN_1800d60b0(DAT_181da1040,1);
           if (lVar7 == null) throw; // [null/range check failed]
           if (*(int *)(lVar7 + 24) == 0) {
             uVar4 = il2cpp_internal();
@@ -145,25 +149,26 @@ public class SaveLoadMenuController
           *(uint16 *)(lVar7 + 32) = 10;
           if (lVar9 == null) throw; // [null/range check failed]
           uVar4 = String.Split(lVar9,lVar7,0);
-          uVar8 = il2cpp_internal(DAT_181d72a30);
-          FUN_18182cc20(uVar8,uVar4,DAT_181d7c2d0);
+          uVar8 = il2cpp_internal(DAT_181d97750);
+          FUN_181827480(uVar8,uVar4,DAT_181da3c58);
           lVar9 = GlobalData.RemoveEmptyString(uVar8,0);
           if (this.saveSlot == null) throw; // [null/range check failed]
           lVar7 = GameObject.get_transform(this.saveSlot,0);
           uVar4 = Int32.ToString(local_res10,0);
           if ((((lVar7 == null) || (lVar7 = Transform.Find(lVar7,uVar4,0)) == null) ||
               (lVar7 = Transform.Find(lVar7,"Name",0)) == null) ||
-             (uVar4 = Component.GetComponent(lVar7,DAT_181d6d8c0), lVar9 == null)) throw; // [null/range check failed]
+             (uVar4 = Component.GetComponent(lVar7,DAT_181d96160), lVar9 == null)) throw; // [null/range check failed]
           if (*(int *)(lVar9 + 24) == 0) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          LTLocalization.SetText(uVar4,*(uint64 *)(*(int64 *)(lVar9 + 16) + 32),0);
+          uVar8 = *(uint64 *)(*(int64 *)(lVar9 + 16) + 32);
+          LTLocalization.SetText(uVar4,uVar8,0);
           if (this.saveSlot == null) throw; // [null/range check failed]
           lVar7 = GameObject.get_transform(this.saveSlot,0);
           uVar4 = Int32.ToString(local_res10,0);
           if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,uVar4,0)) == null) ||
              (lVar7 = Transform.Find(lVar7,"Info",0)) == null) throw; // [null/range check failed]
-          uVar4 = Component.GetComponent(lVar7,DAT_181d6d8c0);
+          uVar4 = Component.GetComponent(lVar7,DAT_181d96160);
           if (*(uint32 *)(lVar9 + 24) < 2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -173,7 +178,7 @@ public class SaveLoadMenuController
           uVar4 = Int32.ToString(local_res10,0);
           if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,uVar4,0)) == null) ||
              (lVar7 = Transform.Find(lVar7,"Mode",0)) == null) throw; // [null/range check failed]
-          uVar8 = Component.GetComponent(lVar7,DAT_181d6d8c0);
+          uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
           uVar4 = "";
           if (2 < (int)*(uint32 *)(lVar9 + 24)) {
             if (*(uint32 *)(lVar9 + 24) < 3) {
@@ -187,7 +192,7 @@ public class SaveLoadMenuController
           uVar4 = Int32.ToString(local_res10,0);
           if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,uVar4,0)) == null) ||
              (lVar7 = Transform.Find(lVar7,"ForceLv",0)) == null) throw; // [null/range check failed]
-          uVar8 = Component.GetComponent(lVar7,DAT_181d6d8c0);
+          uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
           uVar4 = "";
           if (3 < (int)*(uint32 *)(lVar9 + 24)) {
             if (*(uint32 *)(lVar9 + 24) < 4) {
@@ -201,7 +206,7 @@ public class SaveLoadMenuController
           uVar4 = Int32.ToString(local_res10,0);
           if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,uVar4,0)) == null) ||
              (lVar7 = Transform.Find(lVar7,"Difficulty",0)) == null) throw; // [null/range check failed]
-          uVar8 = Component.GetComponent(lVar7,DAT_181d6d8c0);
+          uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
           uVar4 = "";
           if (4 < (int)*(uint32 *)(lVar9 + 24)) {
             if (*(uint32 *)(lVar9 + 24) < 5) {
@@ -215,15 +220,15 @@ public class SaveLoadMenuController
           uVar4 = Int32.ToString(local_res10,0);
           if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,uVar4,0)) == null) ||
              (lVar7 = Transform.Find(lVar7,"Time",0)) == null) throw; // [null/range check failed]
-          uVar4 = Component.GetComponent(lVar7,DAT_181d6d8c0);
+          uVar4 = Component.GetComponent(lVar7,DAT_181d96160);
           LTLocalization.SetText(uVar4,*(uint64 *)(lVar3 + 32),0);
           if (this.saveSlot == null) throw; // [null/range check failed]
           lVar3 = GameObject.get_transform(this.saveSlot,0);
           uVar4 = Int32.ToString(local_res10,0);
           if (((lVar3 == null) || (lVar3 = Transform.Find(lVar3,uVar4,0)) == null) ||
              (lVar3 = Transform.Find(lVar3,"Season",0)) == null) throw; // [null/range check failed]
-          plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d6bc40);
-          puVar6 = (uint64 *)FUN_181098a50(&local_28,0);
+          plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
+          puVar6 = (uint64 *)FUN_1810d3570(&local_28,0);
           if (plVar5 == (int64 *)0) throw; // [null/range check failed]
           local_28 = *puVar6;
           uStack_20 = puVar6[1];
@@ -232,7 +237,7 @@ public class SaveLoadMenuController
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar3 = *(int64 *)(*(int64 *)(lVar9 + 16) + 40);
-          lVar9 = FUN_1800d60b0(DAT_181d7c118,1);
+          lVar9 = FUN_1800d60b0(DAT_181da1040,1);
           if (lVar9 == null) throw; // [null/range check failed]
           if (*(int *)(lVar9 + 24) == 0) {
             uVar4 = il2cpp_internal();
@@ -247,7 +252,7 @@ public class SaveLoadMenuController
             FUN_1800d65f0(uVar4,0);
           }
           lVar3 = *(int64 *)(lVar3 + 40);
-          lVar9 = FUN_1800d60b0(DAT_181d7c118,1);
+          lVar9 = FUN_1800d60b0(DAT_181da1040,1);
           if (lVar9 == null) throw; // [null/range check failed]
           if (*(int *)(lVar9 + 24) == 0) {
             uVar4 = il2cpp_internal();
@@ -267,7 +272,7 @@ public class SaveLoadMenuController
           uVar4 = Int32.ToString(local_res10,0);
           if (((lVar3 == null) || (lVar3 = Transform.Find(lVar3,uVar4,0)) == null) ||
              (lVar3 = Transform.Find(lVar3,"Season",0)) == null) throw; // [null/range check failed]
-          lVar9 = Component.GetComponent(lVar3,DAT_181d6bc40);
+          lVar9 = Component.GetComponent(lVar3,DAT_181d94460);
           lVar3 = this.seasonSprite;
           iVar2 = Mathf.CeilToInt((float)iVar2 / 3.0,0);
           if (lVar3 == null) throw; // [null/range check failed]
@@ -293,8 +298,8 @@ public class SaveLoadMenuController
         }
     }
 
-    // Token : 0x600204E
-    // RVA   : 0xC67FB0   Offset: 0xC667B0   Length: 0x859
+    // Token : 0x60020CF
+    // RVA   : 0x97A010   Offset: 0x979410   Length: 0x889
     public void ShowLoadMenu(SaveLoadType _saveLoadType)
     {
         int iVar1;
@@ -326,13 +331,13 @@ public class SaveLoadMenuController
                     if (lVar2 != null) {
                       lVar2 = Transform.Find(lVar2,"BlackBackground",0);
                       if (lVar2 != null) {
-                        plVar4 = (int64 *)Component.GetComponent(lVar2,DAT_181d6bc40);
+                        plVar4 = (int64 *)Component.GetComponent(lVar2,DAT_181d94460);
                         if (this.saveLoadMenu != null) {
                           lVar2 = GameObject.get_transform(this.saveLoadMenu,0);
                           if (lVar2 != null) {
                             lVar2 = Transform.Find(lVar2,"BlackBackground",0);
                             if (lVar2 != null) {
-                              plVar5 = (int64 *)Component.GetComponent(lVar2,DAT_181d6bc40);
+                              plVar5 = (int64 *)Component.GetComponent(lVar2,DAT_181d94460);
                               if (plVar5 != (int64 *)0) {
                                 puVar6 = (uint64 *)
                                          (**(code **)(*plVar5 + 0x298))
@@ -350,9 +355,9 @@ public class SaveLoadMenuController
                                     if (lVar2 != null) {
                                       lVar2 = Transform.Find(lVar2,"BlackBackground",0);
                                       if (lVar2 != null) {
-                                        uVar3 = Component.GetComponent(lVar2,DAT_181d6bc40);
+                                        uVar3 = Component.GetComponent(lVar2,DAT_181d94460);
                                         uVar3 = DOTweenModuleUI.DOFade(uVar3);
-                                        TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181d98958);
+                                        TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1c20);
                                         if (this.saveLoadMenu != null) {
                                           lVar2 = GameObject.get_transform
                                                             (this.saveLoadMenu,0);
@@ -369,19 +374,11 @@ public class SaveLoadMenuController
                                                   uVar3 = Transform.Find(lVar2,"SaveLoadRoot",0);
                                                   uVar3 = ShortcutExtensions.DOScale(uVar3);
                                                   TweenSettingsExtensions.SetUpdate
-                                                            (uVar3,1,DAT_181d98af0);
+                                                            (uVar3,1,DAT_181dc1db0);
                                                   local_res20[0] = 0;
                                                   while( true ) {
                                                     iVar1 = local_res20[0];
-                                                    if (((*(byte *)(SaveLoadMenuController_StaticsPtr +
-                                                                   0x133) & 4) != 0) &&
-                                                       (*(int *)(SaveLoadMenuController_StaticsPtr + 224)
-                                                        == 0)) {
-                                                      il2cpp_runtime_class_init
-                                                                (SaveLoadMenuController_StaticsPtr);
-                                                    }
-                                                    if (**(int **)(SaveLoadMenuController_StaticsPtr +
-                                                                  184) <= iVar1) break;
+                                                    if (**(int **)(DAT_181d9ecf0 + 184) <= iVar1) break;
                                                     if (this.saveSlot == null)
                                                     throw; // [null/range check failed]
                                                     lVar2 = GameObject.get_transform
@@ -402,16 +399,8 @@ public class SaveLoadMenuController
                                                     uStack_80 = CONCAT44(uStack_80._4_4_,0x3f800000);
                                                     Transform.set_localScale(lVar2,&local_88,0);
                                                     iVar1 = local_res20[0];
-                                                    if (((*(byte *)(SaveLoadMenuController_StaticsPtr +
-                                                                   0x133) & 4) != 0) &&
-                                                       (*(int *)(SaveLoadMenuController_StaticsPtr + 224)
-                                                        == 0)) {
-                                                      il2cpp_runtime_class_init
-                                                                (SaveLoadMenuController_StaticsPtr);
-                                                    }
                                                     lVar2 = this.saveSlot;
-                                                    if (iVar1 == **(int **)(
-                                                        SaveLoadMenuController_StaticsPtr + 184) + -1) {
+                                                    if (iVar1 == **(int **)(DAT_181d9ecf0 + 184) + -1) {
                                                       if (lVar2 == null) throw; // [null/range check failed]
                                                       lVar2 = GameObject.get_transform(lVar2,0);
                                                       uVar3 = Int32.ToString(local_res20,0);
@@ -420,8 +409,8 @@ public class SaveLoadMenuController
                                                       uVar3 = ShortcutExtensions.DOScale(uVar3);
                                                       uVar3 = TweenSettingsExtensions.SetDelay
                                                                         (uVar3,(float)local_res20[0] *
-                                                                               0.03 + 0.1,DAT_181d97978);
-                                                      uVar7 = new OnTooltipCB(this,DAT_181d7b3e0);
+                                                                               0.03 + 0.1,DAT_181dc0c60);
+                                                      uVar7 = new OnTooltipCB(this,DAT_181da4260);
                                                       TweenSettingsExtensions.OnComplete(uVar3);
                                                       local_res20[0] = local_res20[0] + 1;
                                                     }
@@ -448,27 +437,20 @@ public class SaveLoadMenuController
                                                         lVar2 = Transform.Find(lVar2,"Title",0);
                                                         if (lVar2 != null) {
                                                           uVar7 = Component.GetComponent
-                                                                            (lVar2,DAT_181d6d8c0);
+                                                                            (lVar2,DAT_181d96160);
                                                           uVar3 = "读取";
                                                           if (this.saveLoadType == null) {
                                                             uVar3 = "存档";
                                                           }
                                                           LTLocalization.SetText(uVar7,uVar3,0);
                                                           while( true ) {
-                                                            if (((*(byte *)(
-                                                        SaveLoadMenuController_StaticsPtr + 0x133) & 4) !=
-                                                        0) && (*(int *)(SaveLoadMenuController_StaticsPtr
-                                                                       + 224) == 0)) {
-                                                          il2cpp_runtime_class_init
-                                                                    (SaveLoadMenuController_StaticsPtr);
-                                                        }
-                                                        if (**(int **)(SaveLoadMenuController_StaticsPtr +
-                                                                      184) <= iVar8) break;
-                                                        SaveLoadMenuController.RefreshSlot
-                                                                  (this,iVar8,0);
-                                                        iVar8 = iVar8 + 1;
-                                                        }
-                                                        return;
+                                                            if (**(int **)(DAT_181d9ecf0 + 184) <= iVar8)
+                                                            break;
+                                                            SaveLoadMenuController.RefreshSlot
+                                                                      (this,iVar8,0);
+                                                            iVar8 = iVar8 + 1;
+                                                          }
+                                                          return;
                                                         }
                                                       }
                                                     }
@@ -496,8 +478,8 @@ public class SaveLoadMenuController
         }
     }
 
-    // Token : 0x600204F
-    // RVA   : 0xC68AD0   Offset: 0xC672D0   Length: 0x224
+    // Token : 0x60020D0
+    // RVA   : 0x97AB60   Offset: 0x979F60   Length: 0x224
     public void UnshowLoadMenu()
     {
         long lVar2;
@@ -509,7 +491,7 @@ public class SaveLoadMenuController
         this.showing = 1;
         plVar1 = (int64 *)Resources.Load("Sound/SoundEffect/PaperQuick",0);
         plVar5 = (int64 *)0;
-        if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181d8a228)) {
+        if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf348)) {
           plVar5 = plVar1;
         }
         NGUITools.PlaySound(plVar5,0);
@@ -518,9 +500,9 @@ public class SaveLoadMenuController
           if (lVar2 != null) {
             lVar2 = Transform.Find(lVar2,"BlackBackground",0);
             if (lVar2 != null) {
-              uVar3 = Component.GetComponent(lVar2,DAT_181d6bc40);
+              uVar3 = Component.GetComponent(lVar2,DAT_181d94460);
               uVar3 = DOTweenModuleUI.DOFade(uVar3,0,0x3e4ccccd,0);
-              TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181d98958);
+              TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1c20);
               if (this.saveLoadMenu != null) {
                 lVar2 = GameObject.get_transform(this.saveLoadMenu,0);
                 if (lVar2 != null) {
@@ -529,9 +511,9 @@ public class SaveLoadMenuController
                   local_14 = 0x3f800000;
                   local_10 = 0x3f800000;
                   uVar3 = ShortcutExtensions.DOScale(uVar3,&local_18,0x3e4ccccd,0);
-                  uVar3 = TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181d98af0);
-                  uVar4 = new OnTooltipCB(this,DAT_181d7b460,0);
-                  TweenSettingsExtensions.OnComplete(uVar3,uVar4,DAT_181d96ee8);
+                  uVar3 = TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1db0);
+                  uVar4 = new OnTooltipCB(this,DAT_181da42e0,0);
+                  TweenSettingsExtensions.OnComplete(uVar3,uVar4,DAT_181dc01d0);
                   return;
                 }
               }
@@ -540,11 +522,11 @@ public class SaveLoadMenuController
         }
     }
 
-    // Token : 0x6002050
-    // RVA   : 0xC67B50   Offset: 0xC66350   Length: 0x45A
+    // Token : 0x60020D1
+    // RVA   : 0x979BB0   Offset: 0x978FB0   Length: 0x45A
     public void SaveSlotButtonClicked(int saveID)
     {
-        var pStatics = *(int64*)(DAT_181d4e090 + 184);
+        var pStatics = *(int64*)(DAT_181d72dd8 + 184);
         int iVar1;
         bool cVar2;
         uint uVar3;
@@ -562,7 +544,7 @@ public class SaveLoadMenuController
             if (local_res10[0] == 0) {
               plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
               plVar10 = (int64 *)0;
-              if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181d8a228)) {
+              if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
                 plVar10 = plVar4;
               }
               NGUITools.PlaySound(plVar10,0);
@@ -574,7 +556,7 @@ public class SaveLoadMenuController
               if (!cVar2) {
                 uVar6 = Int32.ToString(local_res10,0);
                 uVar3 = Int32.Parse(uVar6,0);
-                lVar5 = GameController.lockObj;
+                lVar5 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
                 if (lVar5 != null) {
                   GameDataController.Save(lVar5,uVar3,0);
                   SaveLoadMenuController.UnshowLoadMenu(this,0);
@@ -590,7 +572,7 @@ public class SaveLoadMenuController
                   lVar5 = GameDataController.GetSaveInfo(lVar5,local_res10[0],0);
                   if (lVar5 != null) {
                     lVar5 = *(int64 *)(lVar5 + 24);
-                    lVar7 = FUN_1800d60b0(DAT_181d7c118,1);
+                    lVar7 = FUN_1800d60b0(DAT_181da1040,1);
                     if (lVar7 != null) {
                       if (*(int *)(lVar7 + 24) == 0) {
                         uVar6 = il2cpp_internal();
@@ -600,10 +582,10 @@ public class SaveLoadMenuController
                       *(uint16 *)(lVar7 + 32) = 10;
                       if (lVar5 != null) {
                         uVar6 = String.Split(lVar5,lVar7,0);
-                        uVar8 = il2cpp_internal(DAT_181d72a30);
-                        FUN_18182cc20(uVar8,uVar6,DAT_181d7c2d0);
+                        uVar8 = il2cpp_internal(DAT_181d97750);
+                        FUN_181827480(uVar8,uVar6,DAT_181da3c58);
                         lVar5 = GlobalData.RemoveEmptyString(uVar8,0);
-                        lVar7 = FUN_18077c2c0(0);
+                        lVar7 = FUN_180778ae0(0);
                         if (lVar5 != null) {
                           uVar9 = *(uint32 *)(lVar5 + 24);
                           if (uVar9 == 0) {
@@ -638,15 +620,15 @@ public class SaveLoadMenuController
         }
     }
 
-    // Token : 0x6002051
-    // RVA   : 0xC68970   Offset: 0xC67170   Length: 0x110
+    // Token : 0x60020D2
+    // RVA   : 0x97AA00   Offset: 0x979E00   Length: 0x110
     public void SureSave(string param)
     {
-        var pStatics = *(int64*)(DAT_181d4e090 + 184);
+        var pStatics = *(int64*)(DAT_181d72dd8 + 184);
         long lVar1;
         uint uVar2;
         uVar2 = Int32.Parse(param,0);
-        lVar1 = GameController.lockObj;
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
         if (lVar1 != null) {
           GameDataController.Save(lVar1,uVar2,0);
           SaveLoadMenuController.UnshowLoadMenu(this,0);
@@ -657,8 +639,8 @@ public class SaveLoadMenuController
         }
     }
 
-    // Token : 0x6002052
-    // RVA   : 0xC667F0   Offset: 0xC64FF0   Length: 0x107
+    // Token : 0x60020D3
+    // RVA   : 0x9787A0   Offset: 0x977BA0   Length: 0x107
     public string GetRecentSaveSlotDescribe()
     {
         int iVar1;
@@ -668,7 +650,7 @@ public class SaveLoadMenuController
         if (iVar1 == -1) {
           return "";
         }
-        lVar2 = GameController.lockObj;
+        lVar2 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
         if (lVar2 != null) {
           lVar2 = GameDataController.GetSaveInfo(lVar2,iVar1,0);
           if (lVar2 != null) {
@@ -679,8 +661,8 @@ public class SaveLoadMenuController
         }
     }
 
-    // Token : 0x6002053
-    // RVA   : 0xC66900   Offset: 0xC65100   Length: 0x1AF
+    // Token : 0x60020D4
+    // RVA   : 0x9788B0   Offset: 0x977CB0   Length: 0x1AF
     public int GetRecentSaveSlotID()
     {
         bool cVar1;
@@ -691,23 +673,23 @@ public class SaveLoadMenuController
         ulong uVar6;
         iVar4 = -1;
         iVar5 = 0;
-        uVar6 = *(uint64 *)(*(int64 *)(SaveLoadMenuController_StaticsPtr + 184) + 16);
+        uVar6 = *(uint64 *)(*(int64 *)(DAT_181dbf3c0 + 184) + 16);
         do {
-          if (SaveLoadMenuController.saveSlotNum <= iVar5) {
+          if (**(int **)(DAT_181d9ecf0 + 184) <= iVar5) {
             return iVar4;
           }
           lVar2 = FUN_18046c100(0);
-          if (lVar2 == null) goto LAB_180c66aaa;
+          if (lVar2 == null) goto LAB_180978a5a;
           cVar1 = GameDataController.HaveSave(lVar2,iVar5,0);
           if (cVar1) {
             lVar2 = FUN_18046c100(0);
             if (lVar2 == null) {
-        LAB_180c66aaa:
+        LAB_180978a5a:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             lVar2 = GameDataController.GetSaveInfo(lVar2,iVar5);
-            if (lVar2 == null) goto LAB_180c66aaa;
+            if (lVar2 == null) goto LAB_180978a5a;
             uVar3 = *(uint64 *)(lVar2 + 32);
             uVar3 = DateTime.Parse(uVar3,0);
             cVar1 = DateTime.op_GreaterThan(uVar3,uVar6);
@@ -720,8 +702,8 @@ public class SaveLoadMenuController
         } while( true );
     }
 
-    // Token : 0x6002054
-    // RVA   : 0xC66D70   Offset: 0xC65570   Length: 0x5D
+    // Token : 0x60020D5
+    // RVA   : 0x978D20   Offset: 0x978120   Length: 0x5D
     public void LoadRecentGame()
     {
         uint uVar1;
@@ -729,23 +711,23 @@ public class SaveLoadMenuController
         SaveLoadMenuController.LoadGame(uVar1,0);
     }
 
-    // Token : 0x6002055
-    // RVA   : 0xC66AB0   Offset: 0xC652B0   Length: 0x2BE
+    // Token : 0x60020D6
+    // RVA   : 0x978A60   Offset: 0x977E60   Length: 0x2BE
     public static void LoadGame(int saveID)
     {
-        var pStatics = *(int64*)(DAT_181d81570 + 184);
+        var pStatics = *(int64*)(DAT_181da6790 + 184);
         bool cVar1;
         long lVar3;
         ulong uVar4;
         uint[] local_res8 = new uint[8];
         local_res8[0] = saveID;
-        lVar3 = GameController.lockObj;
+        lVar3 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
         if (lVar3 != null) {
           cVar1 = GameDataController.HaveSave(lVar3,local_res8[0],0);
           if (!cVar1) {
             plVar2 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
             plVar5 = (int64 *)0;
-            if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181d8a228)) {
+            if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf348)) {
               plVar5 = plVar2;
             }
             NGUITools.PlaySound(plVar5,0);
@@ -757,7 +739,7 @@ public class SaveLoadMenuController
             Object.set_name(lVar3,uVar4,0);
             GameObject.set_tag(lVar3,"LoadSaveIDTag",0);
             Object.DontDestroyOnLoad(lVar3,0);
-            cVar1 = Object.op_Inequality(**(uint64 **)(DAT_181d81570 + 184),0,0);
+            cVar1 = Object.op_Inequality(**(uint64 **)(DAT_181da6790 + 184),0,0);
             if (cVar1) {
               if (*pStatics == 0) throw; // [null/range check failed]
               uVar4 = Component.get_gameObject(*pStatics,0);
@@ -769,8 +751,8 @@ public class SaveLoadMenuController
         }
     }
 
-    // Token : 0x6002056
-    // RVA   : 0xC666C0   Offset: 0xC64EC0   Length: 0x123
+    // Token : 0x60020D7
+    // RVA   : 0x978670   Offset: 0x977A70   Length: 0x123
     public void DeleteButtonClicked(int saveID)
     {
         long lVar1;
@@ -779,11 +761,11 @@ public class SaveLoadMenuController
         local_res10[0] = saveID;
         plVar2 = (int64 *)Resources.Load("Sound/SoundEffect/PaperQuick",0);
         plVar4 = (int64 *)0;
-        if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181d8a228)) {
+        if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf348)) {
           plVar4 = plVar2;
         }
         NGUITools.PlaySound(plVar4,0);
-        lVar1 = **(int64 **)(DAT_181d834f0 + 184);
+        lVar1 = **(int64 **)(DAT_181da8710 + 184);
         uVar3 = Int32.ToString(local_res10,0);
         if (lVar1 != null) {
           SureMenu.CallSureMenu(lVar1,"确认要删除该存档吗？\n<color=red>(存档一经删除无法恢复，请谨慎选择)</color>","SureDeleteSave",uVar3,"SaveLoadMenu",0);
@@ -791,20 +773,20 @@ public class SaveLoadMenuController
         }
     }
 
-    // Token : 0x6002057
-    // RVA   : 0xC68810   Offset: 0xC67010   Length: 0x153
+    // Token : 0x60020D8
+    // RVA   : 0x97A8A0   Offset: 0x979CA0   Length: 0x153
     public void SureDeleteSave(string param)
     {
         long lVar1;
         uint uVar2;
         plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/Med",0);
         plVar4 = (int64 *)0;
-        if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181d8a228)) {
+        if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {
           plVar4 = plVar3;
         }
         NGUITools.PlaySound(plVar4,0);
         uVar2 = Int32.Parse(param,0);
-        lVar1 = GameController.lockObj;
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
         if (lVar1 != null) {
           GameDataController.DeleteSave(lVar1,uVar2,0);
           SaveLoadMenuController.RefreshSlot(this,uVar2,0);
@@ -812,29 +794,31 @@ public class SaveLoadMenuController
         }
     }
 
-    // Token : 0x6002058
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x60020D9
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);
     }
 
-    // Token : 0x6002059
-    // RVA   : 0xC68D00   Offset: 0xC67500   Length: 0x39
+    // Token : 0x60020DA
+    // RVA   : 0x97AD90   Offset: 0x97A190   Length: 0x39
     private static void /*cctor*/()
     {
-        SaveLoadMenuController.saveSlotNum = 11;
+        **(uint32 **)(DAT_181d9ecf0 + 184) = 11;
     }
 
-    // Token : 0x600205A
-    // RVA   : 0xC68A90   Offset: 0xC67290   Length: 0x5
+    // Token : 0x60020DB
+    // RVA   : 0x97AB20   Offset: 0x979F20   Length: 0x5
     private void <ShowLoadMenu>b__11_0()
     {
+        void FUN_18097ab20(int64 this)
+        {
         this.showing = 0;
     }
 
-    // Token : 0x600205B
-    // RVA   : 0xC68AA0   Offset: 0xC672A0   Length: 0x2B
+    // Token : 0x60020DC
+    // RVA   : 0x97AB30   Offset: 0x979F30   Length: 0x2B
     private void <UnshowLoadMenu>b__12_0()
     {
         if (this.saveLoadMenu != null) {

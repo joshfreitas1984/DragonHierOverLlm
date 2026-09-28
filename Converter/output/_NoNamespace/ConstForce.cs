@@ -1,17 +1,17 @@
 // ============================================================
 // Type  : ConstForce
-// Token : 0x200011E
+// Token : 0x200011F
 // ============================================================
 
 public class ConstForce
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400070E
+    // Token: 0x400072A
     public float speed;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600098E
-    // RVA   : 0xA488A0   Offset: 0xA470A0   Length: 0x12D
+    // Token : 0x60009A6
+    // RVA   : 0xA3B640   Offset: 0xA3AA40   Length: 0x12D
     private void Update()
     {
         float fVar1;
@@ -22,7 +22,7 @@ public class ConstForce
         ulong uVar7;
         uint uVar8;
         byte[] local_28 = new byte[32];
-        lVar4 = Component.GetComponents(this,DAT_181d6f740);
+        lVar4 = Component.GetComponents(this,DAT_181d98060);
         uVar8 = 0;
         if (lVar4 != null) {
           while( true ) {
@@ -49,8 +49,8 @@ public class ConstForce
         }
     }
 
-    // Token : 0x600098F
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x60009A7
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

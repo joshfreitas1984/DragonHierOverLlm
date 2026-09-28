@@ -1,56 +1,56 @@
 // ============================================================
 // Type  : UIColorPicker
-// Token : 0x20000F2
+// Token : 0x20000F3
 // ============================================================
 
 public class UIColorPicker
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40005AC
+    // Token: 0x40005C8
     public static UIColorPicker current;
 
-    // Token: 0x40005AD
+    // Token: 0x40005C9
     public Color value;
 
-    // Token: 0x40005AE
+    // Token: 0x40005CA
     public UIWidget selectionWidget;
 
-    // Token: 0x40005AF
+    // Token: 0x40005CB
     public List<EventDelegate> onChange;
 
-    // Token: 0x40005B0
+    // Token: 0x40005CC
     private Transform mTrans;
 
-    // Token: 0x40005B1
+    // Token: 0x40005CD
     private UITexture mUITex;
 
-    // Token: 0x40005B2
+    // Token: 0x40005CE
     private Texture2D mTex;
 
-    // Token: 0x40005B3
+    // Token: 0x40005CF
     private UICamera mCam;
 
-    // Token: 0x40005B4
+    // Token: 0x40005D0
     private Vector2 mPos;
 
-    // Token: 0x40005B5
+    // Token: 0x40005D1
     private int mWidth;
 
-    // Token: 0x40005B6
+    // Token: 0x40005D2
     private int mHeight;
 
-    // Token: 0x40005B7
+    // Token: 0x40005D3
     private static AnimationCurve mRed;
 
-    // Token: 0x40005B8
+    // Token: 0x40005D4
     private static AnimationCurve mGreen;
 
-    // Token: 0x40005B9
+    // Token: 0x40005D5
     private static AnimationCurve mBlue;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600077A
-    // RVA   : 0x13D4BA0   Offset: 0x13D33A0   Length: 0x306
+    // Token : 0x6000792
+    // RVA   : 0x12B0F00   Offset: 0x12B0300   Length: 0x306
     private void Start()
     {
         uint uVar3;
@@ -65,7 +65,7 @@ public class UIColorPicker
         ulong uStack_40;
         uVar4 = Component.get_transform(this,0);
         this.mTrans = uVar4;
-        uVar4 = Component.GetComponent(this,DAT_181d6e6c0);
+        uVar4 = Component.GetComponent(this,DAT_181d96f60);
         this.mUITex = uVar4;
         lVar5 = Component.get_gameObject(this,0);
         if (lVar5 != null) {
@@ -78,7 +78,7 @@ public class UIColorPicker
             this.mWidth = iVar9;
             iVar11 = *(int *)(lVar5 + 168);
             *(int *)(this + 100) = iVar11;
-            lVar5 = FUN_1800d60b0(DAT_181d7c218,iVar11 * iVar9);
+            lVar5 = FUN_1800d60b0(DAT_181da1140,iVar11 * iVar9);
             iVar9 = *(int *)(this + 100);
             iVar11 = 0;
             if (iVar9 < 1) {
@@ -139,8 +139,8 @@ public class UIColorPicker
         }
     }
 
-    // Token : 0x600077B
-    // RVA   : 0x13D3210   Offset: 0x13D1A10   Length: 0x72
+    // Token : 0x6000793
+    // RVA   : 0x12AF570   Offset: 0x12AE970   Length: 0x72
     private void OnDestroy()
     {
         ulong uVar1;
@@ -149,8 +149,8 @@ public class UIColorPicker
         this.mTex = 0;
     }
 
-    // Token : 0x600077C
-    // RVA   : 0x13D3330   Offset: 0x13D1B30   Length: 0x7A
+    // Token : 0x6000794
+    // RVA   : 0x12AF690   Offset: 0x12AEA90   Length: 0x7A
     private void OnPress(bool pressed)
     {
         int iVar2;
@@ -163,8 +163,8 @@ public class UIColorPicker
         }
     }
 
-    // Token : 0x600077D
-    // RVA   : 0x13D3290   Offset: 0x13D1A90   Length: 0x29
+    // Token : 0x6000795
+    // RVA   : 0x12AF5F0   Offset: 0x12AE9F0   Length: 0x29
     private void OnDrag(Vector2 delta)
     {
         bool cVar1;
@@ -175,8 +175,8 @@ public class UIColorPicker
         }
     }
 
-    // Token : 0x600077E
-    // RVA   : 0x13D32C0   Offset: 0x13D1AC0   Length: 0x6D
+    // Token : 0x6000796
+    // RVA   : 0x12AF620   Offset: 0x12AEA20   Length: 0x6D
     private void OnPan(Vector2 delta)
     {
         bool cVar1;
@@ -196,10 +196,11 @@ public class UIColorPicker
         }
     }
 
-    // Token : 0x600077F
-    // RVA   : 0x13D40E0   Offset: 0x13D28E0   Length: 0x3A1
+    // Token : 0x6000797
+    // RVA   : 0x12B0440   Offset: 0x12AF840   Length: 0x3A1
     private void Sample()
     {
+        var pStatics = *(int64*)(DAT_181daf778 + 184);
         long lVar1;
         ulong uVar2;
         float fVar4;
@@ -304,15 +305,15 @@ public class UIColorPicker
         uint64 uStack_90;
         uint64 local_88;
         uint32 local_80;
-        if (UIColorPicker.mRed != null) {
-        LAB_1813d3dda:
-          lVar1 = UIColorPicker.mRed;
+        if (*(int64 *)(pStatics + 8) != 0) {
+        LAB_1812b013a:
+          lVar1 = *(int64 *)(pStatics + 8);
           if (lVar1 != null) {
             fVar4 = (float)AnimationCurve.Evaluate(lVar1,param_2,0);
-            lVar1 = UIColorPicker.mGreen;
+            lVar1 = *(int64 *)(pStatics + 16);
             if (lVar1 != null) {
               fVar5 = (float)AnimationCurve.Evaluate(lVar1,param_2,0);
-              lVar1 = UIColorPicker.mBlue;
+              lVar1 = *(int64 *)(pStatics + 24);
               if (lVar1 != null) {
                 fVar6 = (float)AnimationCurve.Evaluate(lVar1,param_2,0);
                 fVar7 = param_3 + param_3;
@@ -332,7 +333,7 @@ public class UIColorPicker
                 }
                 *this = 0;
                 this[1] = 0;
-                FUN_1809981e0(this,fVar4,fVar5,fVar6,0x3f800000,0);
+                FUN_1809dc910(this,fVar4,fVar5,fVar6,0x3f800000,0);
                 return this;
               }
             }
@@ -340,7 +341,7 @@ public class UIColorPicker
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        lVar1 = FUN_1800d60b0(DAT_181d7ec00,8);
+        lVar1 = FUN_1800d60b0(DAT_181da3ba0,8);
         local_368 = 0;
         local_360 = 0;
         local_378 = 0;
@@ -457,8 +458,10 @@ public class UIColorPicker
           *(uint64 *)(lVar1 + 244) = local_288;
           *(uint32 *)(lVar1 + 252) = local_280;
           uVar2 = new AnimationCurve(lVar1,0);
-          UIColorPicker.mRed = uVar2;
-          lVar1 = FUN_1800d60b0(DAT_181d7ec00,8);
+          puVar3 = (uint64 *)(pStatics + 8);
+          *puVar3 = uVar2;
+          il2cpp_internal(puVar3,uVar2);
+          lVar1 = FUN_1800d60b0(DAT_181da3ba0,8);
           local_268 = 0;
           local_260 = 0;
           local_278 = 0;
@@ -575,8 +578,10 @@ public class UIColorPicker
             *(uint64 *)(lVar1 + 244) = local_188;
             *(uint32 *)(lVar1 + 252) = local_180;
             uVar2 = new AnimationCurve(lVar1,0);
-            UIColorPicker.mGreen = uVar2;
-            lVar1 = FUN_1800d60b0(DAT_181d7ec00,8);
+            puVar3 = (uint64 *)(pStatics + 16);
+            *puVar3 = uVar2;
+            il2cpp_internal(puVar3,uVar2);
+            lVar1 = FUN_1800d60b0(DAT_181da3ba0,8);
             local_168 = 0;
             local_160 = 0;
             local_178 = 0;
@@ -693,15 +698,17 @@ public class UIColorPicker
               *(uint64 *)(lVar1 + 244) = local_88;
               *(uint32 *)(lVar1 + 252) = local_80;
               uVar2 = new AnimationCurve(lVar1,0);
-              UIColorPicker.mBlue = uVar2;
-              goto LAB_1813d3dda;
+              puVar3 = (uint64 *)(pStatics + 24);
+              *puVar3 = uVar2;
+              il2cpp_internal(puVar3,uVar2);
+              goto LAB_1812b013a;
             }
           }
         }
     }
 
-    // Token : 0x6000780
-    // RVA   : 0x13D4490   Offset: 0x13D2C90   Length: 0x2C4
+    // Token : 0x6000798
+    // RVA   : 0x12B07F0   Offset: 0x12AFBF0   Length: 0x2C4
     public void Select(Vector2 v)
     {
         float fVar1;
@@ -772,7 +779,7 @@ public class UIColorPicker
             if ((plVar2 == (int64 *)0) ||
                (lVar9 = (**(code **)(*plVar2 + 0x1d8))(plVar2,*(uint64 *)(*plVar2 + 0x1e0)),
                lVar9 == null)) {
-        LAB_1813d4b4d:
+        LAB_1812b0ead:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -801,16 +808,16 @@ public class UIColorPicker
             uVar16 = Mathf.Lerp();
             local_a8 = CONCAT44(uVar16,(uint32)local_a8);
             uStack_a0 = uStack_a0 & 0xffffffff00000000;
-            if (this.mTrans == null) goto LAB_1813d4b4d;
+            if (this.mTrans == null) goto LAB_1812b0ead;
             local_98 = local_a8;
             uStack_90 = uStack_90 & 0xffffffff00000000;
             puVar10 = (uint64 *)
                       Transform.TransformPoint(&local_a8,this.mTrans,&local_98,0);
             uVar13 = *puVar10;
             uVar16 = *(uint32 *)(puVar10 + 1);
-            if (this.selectionWidget == null) goto LAB_1813d4b4d;
+            if (this.selectionWidget == null) goto LAB_1812b0ead;
             uVar11 = Component.get_transform(this.selectionWidget,0);
-            if (this.mCam == null) goto LAB_1813d4b4d;
+            if (this.mCam == null) goto LAB_1812b0ead;
             uVar12 = UICamera.get_cachedCamera(this.mCam,0);
             uStack_90 = CONCAT44(uStack_90._4_4_,uVar16);
             local_98 = uVar13;
@@ -819,12 +826,12 @@ public class UIColorPicker
           uVar13 = *(uint64 *)(v + 2);
           this.value = *(uint64 *)v;
           *(uint64 *)(this + 32) = uVar13;
-          plVar2 = *(int64 **)(UIColorPicker_StaticsPtr + 184);
+          plVar2 = *(int64 **)(DAT_181daf778 + 184);
           *plVar2 = this;
           il2cpp_internal(plVar2,this);
           uVar13 = this.onChange;
           EventDelegate.Execute(uVar13,0);
-          puVar10 = *(uint64 **)(UIColorPicker_StaticsPtr + 184);
+          puVar10 = *(uint64 **)(DAT_181daf778 + 184);
           *puVar10 = 0;
           il2cpp_internal(puVar10,0);
           uVar13 = this.mPos;
@@ -838,8 +845,8 @@ public class UIColorPicker
         return uVar13;
     }
 
-    // Token : 0x6000781
-    // RVA   : 0x13D4760   Offset: 0x13D2F60   Length: 0x432
+    // Token : 0x6000799
+    // RVA   : 0x12B0AC0   Offset: 0x12AFEC0   Length: 0x432
     public Vector2 Select(Color c)
     {
         float fVar1;
@@ -910,7 +917,7 @@ public class UIColorPicker
             if ((plVar2 == (int64 *)0) ||
                (lVar9 = (**(code **)(*plVar2 + 0x1d8))(plVar2,*(uint64 *)(*plVar2 + 0x1e0)),
                lVar9 == null)) {
-        LAB_1813d4b4d:
+        LAB_1812b0ead:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -939,16 +946,16 @@ public class UIColorPicker
             uVar16 = Mathf.Lerp();
             local_a8 = CONCAT44(uVar16,(uint32)local_a8);
             uStack_a0 = uStack_a0 & 0xffffffff00000000;
-            if (this.mTrans == null) goto LAB_1813d4b4d;
+            if (this.mTrans == null) goto LAB_1812b0ead;
             local_98 = local_a8;
             uStack_90 = uStack_90 & 0xffffffff00000000;
             puVar10 = (uint64 *)
                       Transform.TransformPoint(&local_a8,this.mTrans,&local_98,0);
             uVar13 = *puVar10;
             uVar16 = *(uint32 *)(puVar10 + 1);
-            if (this.selectionWidget == null) goto LAB_1813d4b4d;
+            if (this.selectionWidget == null) goto LAB_1812b0ead;
             uVar11 = Component.get_transform(this.selectionWidget,0);
-            if (this.mCam == null) goto LAB_1813d4b4d;
+            if (this.mCam == null) goto LAB_1812b0ead;
             uVar12 = UICamera.get_cachedCamera(this.mCam,0);
             uStack_90 = CONCAT44(uStack_90._4_4_,uVar16);
             local_98 = uVar13;
@@ -957,12 +964,12 @@ public class UIColorPicker
           uVar13 = *(uint64 *)(c + 2);
           this.value = *(uint64 *)c;
           *(uint64 *)(this + 32) = uVar13;
-          plVar2 = *(int64 **)(UIColorPicker_StaticsPtr + 184);
+          plVar2 = *(int64 **)(DAT_181daf778 + 184);
           *plVar2 = this;
           il2cpp_internal(plVar2,this);
           uVar13 = this.onChange;
           EventDelegate.Execute(uVar13,0);
-          puVar10 = *(uint64 **)(UIColorPicker_StaticsPtr + 184);
+          puVar10 = *(uint64 **)(DAT_181daf778 + 184);
           *puVar10 = 0;
           il2cpp_internal(puVar10,0);
           uVar13 = this.mPos;
@@ -976,10 +983,11 @@ public class UIColorPicker
         return uVar13;
     }
 
-    // Token : 0x6000782
-    // RVA   : 0x13D33B0   Offset: 0x13D1BB0   Length: 0xD2C
+    // Token : 0x600079A
+    // RVA   : 0x12AF710   Offset: 0x12AEB10   Length: 0xD2C
     public static Color Sample(float x, float y)
     {
+        var pStatics = *(int64*)(DAT_181daf778 + 184);
         long lVar1;
         ulong uVar2;
         float fVar4;
@@ -1084,15 +1092,15 @@ public class UIColorPicker
         uint64 uStack_90;
         uint64 local_88;
         uint32 local_80;
-        if (UIColorPicker.mRed != null) {
-        LAB_1813d3dda:
-          lVar1 = UIColorPicker.mRed;
+        if (*(int64 *)(pStatics + 8) != 0) {
+        LAB_1812b013a:
+          lVar1 = *(int64 *)(pStatics + 8);
           if (lVar1 != null) {
             fVar4 = (float)AnimationCurve.Evaluate(lVar1,y,0);
-            lVar1 = UIColorPicker.mGreen;
+            lVar1 = *(int64 *)(pStatics + 16);
             if (lVar1 != null) {
               fVar5 = (float)AnimationCurve.Evaluate(lVar1,y,0);
-              lVar1 = UIColorPicker.mBlue;
+              lVar1 = *(int64 *)(pStatics + 24);
               if (lVar1 != null) {
                 fVar6 = (float)AnimationCurve.Evaluate(lVar1,y,0);
                 fVar7 = param_3 + param_3;
@@ -1112,7 +1120,7 @@ public class UIColorPicker
                 }
                 *x = 0;
                 x[1] = 0;
-                FUN_1809981e0(x,fVar4,fVar5,fVar6,0x3f800000,0);
+                FUN_1809dc910(x,fVar4,fVar5,fVar6,0x3f800000,0);
                 return x;
               }
             }
@@ -1120,7 +1128,7 @@ public class UIColorPicker
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        lVar1 = FUN_1800d60b0(DAT_181d7ec00,8);
+        lVar1 = FUN_1800d60b0(DAT_181da3ba0,8);
         local_368 = 0;
         local_360 = 0;
         local_378 = 0;
@@ -1237,8 +1245,10 @@ public class UIColorPicker
           *(uint64 *)(lVar1 + 244) = local_288;
           *(uint32 *)(lVar1 + 252) = local_280;
           uVar2 = new AnimationCurve(lVar1,0);
-          UIColorPicker.mRed = uVar2;
-          lVar1 = FUN_1800d60b0(DAT_181d7ec00,8);
+          puVar3 = (uint64 *)(pStatics + 8);
+          *puVar3 = uVar2;
+          il2cpp_internal(puVar3,uVar2);
+          lVar1 = FUN_1800d60b0(DAT_181da3ba0,8);
           local_268 = 0;
           local_260 = 0;
           local_278 = 0;
@@ -1355,8 +1365,10 @@ public class UIColorPicker
             *(uint64 *)(lVar1 + 244) = local_188;
             *(uint32 *)(lVar1 + 252) = local_180;
             uVar2 = new AnimationCurve(lVar1,0);
-            UIColorPicker.mGreen = uVar2;
-            lVar1 = FUN_1800d60b0(DAT_181d7ec00,8);
+            puVar3 = (uint64 *)(pStatics + 16);
+            *puVar3 = uVar2;
+            il2cpp_internal(puVar3,uVar2);
+            lVar1 = FUN_1800d60b0(DAT_181da3ba0,8);
             local_168 = 0;
             local_160 = 0;
             local_178 = 0;
@@ -1473,15 +1485,17 @@ public class UIColorPicker
               *(uint64 *)(lVar1 + 244) = local_88;
               *(uint32 *)(lVar1 + 252) = local_80;
               uVar2 = new AnimationCurve(lVar1,0);
-              UIColorPicker.mBlue = uVar2;
-              goto LAB_1813d3dda;
+              puVar3 = (uint64 *)(pStatics + 24);
+              *puVar3 = uVar2;
+              il2cpp_internal(puVar3,uVar2);
+              goto LAB_1812b013a;
             }
           }
         }
     }
 
-    // Token : 0x6000783
-    // RVA   : 0x13D4EB0   Offset: 0x13D36B0   Length: 0x89
+    // Token : 0x600079B
+    // RVA   : 0x12B1210   Offset: 0x12B0610   Length: 0x89
     public void /*ctor*/()
     {
         uint uVar1;
@@ -1489,7 +1503,7 @@ public class UIColorPicker
         uint uVar3;
         ulong uVar5;
         byte[] local_18 = new byte[16];
-        puVar4 = (uint32 *)FUN_181098a50(local_18,0);
+        puVar4 = (uint32 *)FUN_1810d3570(local_18,0);
         uVar1 = puVar4[1];
         uVar2 = puVar4[2];
         uVar3 = puVar4[3];
@@ -1497,8 +1511,8 @@ public class UIColorPicker
         *(uint32 *)(this + 28) = uVar1;
         *(uint32 *)(this + 32) = uVar2;
         *(uint32 *)(this + 36) = uVar3;
-        uVar5 = il2cpp_internal(DAT_181d6d9b0);
-        FUN_180f58a90(uVar5,DAT_181d5e700);
+        uVar5 = il2cpp_internal(DAT_181d92658);
+        FUN_18132faf0(uVar5,DAT_181d85ea0);
         this.onChange = uVar5;
         FUN_18044ef50(this,0);
     }

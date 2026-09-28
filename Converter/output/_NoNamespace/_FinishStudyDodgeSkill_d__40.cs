@@ -1,40 +1,40 @@
 // ============================================================
 // Type  : <FinishStudyDodgeSkill>d__40
-// Token : 0x200037A
+// Token : 0x2000381
 // ============================================================
 
 public class <FinishStudyDodgeSkill>d__40
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001BAC
+    // Token: 0x4001CB1
     private int <>1__state;
 
-    // Token: 0x4001BAD
+    // Token: 0x4001CB2
     private object <>2__current;
 
-    // Token: 0x4001BAE
+    // Token: 0x4001CB3
     public StudyDodgeSkillController <>4__this;
 
-    // Token: 0x4001BAF
+    // Token: 0x4001CB4
     public StudySkillResult studyDodgeResult;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60021D1
-    // RVA   : 0x219070   Offset: 0x217870   Length: 0x24
+    // Token : 0x6002253
+    // RVA   : 0x219070   Offset: 0x218470   Length: 0x24
     public void /*ctor*/(int <>1__state)
     {
         ZhSegment.Initialize(this,0);
         this.<>1__state = <>1__state;
     }
 
-    // Token : 0x60021D2
-    // RVA   : 0x245810   Offset: 0x244010   Length: 0x3
+    // Token : 0x6002254
+    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
     private virtual void System.IDisposable.Dispose()
     {
     }
 
-    // Token : 0x60021D3
-    // RVA   : 0xB10670   Offset: 0xB0EE70   Length: 0x9CA
+    // Token : 0x6002255
+    // RVA   : 0x8EB610   Offset: 0x8EAA10   Length: 0x9CA
     private virtual bool MoveNext()
     {
         int iVar1;
@@ -63,7 +63,7 @@ public class <FinishStudyDodgeSkill>d__40
             iVar1 = this.studyDodgeResult;
             if (iVar1 == 0) {
               lVar4 = FUN_18046c0a0(0);
-              lVar5 = FUN_180b04900(0);
+              lVar5 = FUN_1808e3da0(0);
               if ((lVar5 == null) || (lVar5 = Component.get_transform(lVar5,0)) == null)
               throw; // [null/range check failed]
               puVar6 = (uint64 *)Transform.get_position(&local_48,lVar5,0);
@@ -100,7 +100,7 @@ public class <FinishStudyDodgeSkill>d__40
             }
             else if (iVar1 == 1) {
               lVar4 = FUN_18046c0a0(0);
-              lVar5 = FUN_180b04900(0);
+              lVar5 = FUN_1808e3da0(0);
               if ((lVar5 == null) || (lVar5 = Component.get_transform(lVar5,0)) == null)
               throw; // [null/range check failed]
               puVar6 = (uint64 *)Transform.get_position(&local_48,lVar5,0);
@@ -120,7 +120,7 @@ public class <FinishStudyDodgeSkill>d__40
               iVar1 = *(int *)(lVar3 + 84);
               if (iVar1 < 1) {
                 lVar4 = FUN_18046c0a0(0);
-                lVar5 = FUN_180b04900(0);
+                lVar5 = FUN_1808e3da0(0);
                 if ((lVar5 == null) || (lVar5 = Component.get_transform(lVar5,0)) == null)
                 throw; // [null/range check failed]
                 puVar6 = (uint64 *)Transform.get_position(&local_48,lVar5,0);
@@ -138,7 +138,7 @@ public class <FinishStudyDodgeSkill>d__40
               }
               else if (iVar1 < 3) {
                 lVar4 = FUN_18046c0a0(0);
-                lVar5 = FUN_180b04900(0);
+                lVar5 = FUN_1808e3da0(0);
                 if ((lVar5 == null) || (lVar5 = Component.get_transform(lVar5,0)) == null)
                 throw; // [null/range check failed]
                 puVar6 = (uint64 *)Transform.get_position(&local_48,lVar5,0);
@@ -156,7 +156,7 @@ public class <FinishStudyDodgeSkill>d__40
               }
               else if (iVar1 < 5) {
                 lVar4 = FUN_18046c0a0(0);
-                lVar5 = FUN_180b04900(0);
+                lVar5 = FUN_1808e3da0(0);
                 if ((lVar5 == null) || (lVar5 = Component.get_transform(lVar5,0)) == null)
                 throw; // [null/range check failed]
                 puVar6 = (uint64 *)Transform.get_position(&local_48,lVar5,0);
@@ -174,7 +174,7 @@ public class <FinishStudyDodgeSkill>d__40
               }
               else if (iVar1 < 7) {
                 lVar4 = FUN_18046c0a0(0);
-                lVar5 = FUN_180b04900(0);
+                lVar5 = FUN_1808e3da0(0);
                 if ((lVar5 == null) || (lVar5 = Component.get_transform(lVar5,0)) == null)
                 throw; // [null/range check failed]
                 puVar6 = (uint64 *)Transform.get_position(&local_48,lVar5,0);
@@ -192,7 +192,7 @@ public class <FinishStudyDodgeSkill>d__40
               }
               else {
                 lVar4 = FUN_18046c0a0(0);
-                lVar5 = FUN_180b04900(0);
+                lVar5 = FUN_1808e3da0(0);
                 if ((lVar5 == null) || (lVar5 = Component.get_transform(lVar5,0)) == null)
                 throw; // [null/range check failed]
                 puVar6 = (uint64 *)Transform.get_position(&local_48,lVar5,0);
@@ -211,7 +211,7 @@ public class <FinishStudyDodgeSkill>d__40
             }
             uVar8 = *(uint64 *)(lVar3 + 112);
             GlobalData.DestroyAll(uVar8,0);
-            if (**(int64 **)(DAT_181d82df0 + 184) != 0) {
+            if (**(int64 **)(DAT_181da8010 + 184) != 0) {
               StudyDodgePlayer.SetShieldTime();
               lVar4 = 32;
               while (lVar5 = *(int64 *)(lVar3 + 104)) != null {
@@ -225,7 +225,7 @@ public class <FinishStudyDodgeSkill>d__40
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 lVar5 = *(int64 *)(lVar4 + *(int64 *)(lVar5 + 16));
-                if ((lVar5 == null) || (lVar5 = GameObject.GetComponent(lVar5,DAT_181da1bb0)) == null)
+                if ((lVar5 == null) || (lVar5 = GameObject.GetComponent(lVar5,DAT_181d73dd8)) == null)
                 break;
                 *(uint8 *)(lVar5 + 32) = 0;
                 lVar5 = *(int64 *)(lVar3 + 104);
@@ -234,7 +234,7 @@ public class <FinishStudyDodgeSkill>d__40
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 lVar5 = *(int64 *)(lVar4 + *(int64 *)(lVar5 + 16));
-                if ((lVar5 == null) || (lVar5 = GameObject.GetComponent(lVar5,DAT_181da1bb0)) == null)
+                if ((lVar5 == null) || (lVar5 = GameObject.GetComponent(lVar5,DAT_181d73dd8)) == null)
                 break;
                 uVar9 = uVar9 + 1;
                 *(uint8 *)(lVar5 + 44) = 0;
@@ -258,8 +258,8 @@ public class <FinishStudyDodgeSkill>d__40
                 lVar4 = 32;
                 while (lVar5 = *(int64 *)(lVar3 + 152)) != null {
                   if ((int)*(uint32 *)(lVar5 + 24) <= (int)uVar9) {
-                    FUN_180f56130(lVar5,DAT_181d61c78);
-                    if (StudySkillController._instance != null) {
+                    FUN_1812f9a10(lVar5,DAT_181d89418);
+                    if (**(int64 **)(DAT_181da8190 + 184) != 0) {
                       StudySkillController.FinishStudySkill();
                       return false;
                     }
@@ -280,27 +280,27 @@ public class <FinishStudyDodgeSkill>d__40
         }
     }
 
-    // Token : 0x60021D4
-    // RVA   : 0x20F140   Offset: 0x20D940   Length: 0x5
+    // Token : 0x6002256
+    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
     private virtual object System.Collections.Generic.IEnumerator<System.object>.get_Current()
     {
         return this.<>2__current;
     }
 
-    // Token : 0x60021D5
-    // RVA   : 0xB11040   Offset: 0xB0F840   Length: 0x3E
+    // Token : 0x6002257
+    // RVA   : 0x8EBFE0   Offset: 0x8EB3E0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d682e8);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d8b790);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181db4a08);
     }
 
-    // Token : 0x60021D6
-    // RVA   : 0x20F140   Offset: 0x20D940   Length: 0x5
+    // Token : 0x6002258
+    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
     private virtual object System.Collections.IEnumerator.get_Current()
     {
         return this.<>2__current;

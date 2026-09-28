@@ -1,35 +1,35 @@
 // ============================================================
 // Type  : UIDragScrollView
-// Token : 0x2000042
+// Token : 0x2000043
 // ============================================================
 
 public class UIDragScrollView
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000147
+    // Token: 0x4000163
     public UIScrollView scrollView;
 
-    // Token: 0x4000148
+    // Token: 0x4000164
     private UIScrollView draggablePanel;
 
-    // Token: 0x4000149
+    // Token: 0x4000165
     private Transform mTrans;
 
-    // Token: 0x400014A
+    // Token: 0x4000166
     private UIScrollView mScroll;
 
-    // Token: 0x400014B
+    // Token: 0x4000167
     private bool mAutoFind;
 
-    // Token: 0x400014C
+    // Token: 0x4000168
     private bool mStarted;
 
-    // Token: 0x400014D
+    // Token: 0x4000169
     private bool mPressed;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000128
-    // RVA   : 0x10E0990   Offset: 0x10DF190   Length: 0x134
+    // Token : 0x6000140
+    // RVA   : 0x12B7330   Offset: 0x12B6730   Length: 0x134
     private void OnEnable()
     {
         bool cVar1;
@@ -58,23 +58,25 @@ public class UIDragScrollView
         }
     }
 
-    // Token : 0x6000129
-    // RVA   : 0x10E0E30   Offset: 0x10DF630   Length: 0xB
+    // Token : 0x6000141
+    // RVA   : 0x12B77D0   Offset: 0x12B6BD0   Length: 0xB
     private void Start()
     {
+        void FUN_1812b77d0(int64 this)
+        {
         this.mStarted = 1;
         UIDragScrollView.FindScrollView(this,0);
     }
 
-    // Token : 0x600012A
-    // RVA   : 0x10E0670   Offset: 0x10DEE70   Length: 0x159
+    // Token : 0x6000142
+    // RVA   : 0x12B7010   Offset: 0x12B6410   Length: 0x159
     private void FindScrollView()
     {
         ulong uVar1;
         ulong uVar2;
         bool cVar3;
         uVar1 = this.mTrans;
-        uVar2 = NGUITools.FindInParents(uVar1,DAT_181d66c80);
+        uVar2 = NGUITools.FindInParents(uVar1,DAT_181d8f9a0);
         uVar1 = this.scrollView;
         cVar3 = Object.op_Equality(uVar1,0,0);
         if (!cVar3) {
@@ -86,19 +88,19 @@ public class UIDragScrollView
               }
               uVar1 = this.scrollView;
               cVar3 = Object.op_Equality(uVar1,uVar2,0);
-              if (!cVar3) goto LAB_1810e07a5;
+              if (!cVar3) goto LAB_1812b7145;
               }
               else {
             }
           this.scrollView = uVar2;
         }
         this.mAutoFind = 1;
-        LAB_1810e07a5:
+        LAB_1812b7145:
         this.mScroll = this.scrollView;
     }
 
-    // Token : 0x600012B
-    // RVA   : 0x10E07D0   Offset: 0x10DEFD0   Length: 0xF0
+    // Token : 0x6000143
+    // RVA   : 0x12B7170   Offset: 0x12B6570   Length: 0xF0
     private void OnDisable()
     {
         ulong uVar1;
@@ -108,14 +110,14 @@ public class UIDragScrollView
           cVar2 = Object.op_Inequality(uVar1,0,0);
           if (cVar2) {
             if (this.mScroll == null) {
-        LAB_1810e08bb:
+        LAB_1812b725b:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            uVar1 = Component.GetComponentInChildren(this.mScroll,DAT_181d6efc0);
+            uVar1 = Component.GetComponentInChildren(this.mScroll,DAT_181d97860);
             cVar2 = Object.op_Equality(uVar1,0,0);
             if (cVar2) {
-              if (this.mScroll == null) goto LAB_1810e08bb;
+              if (this.mScroll == null) goto LAB_1812b725b;
               UIScrollView.Press(this.mScroll,0,0);
               this.mScroll = 0;
             }
@@ -123,8 +125,8 @@ public class UIDragScrollView
         }
     }
 
-    // Token : 0x600012C
-    // RVA   : 0x10E0BA0   Offset: 0x10DF3A0   Length: 0x1B9
+    // Token : 0x6000144
+    // RVA   : 0x12B7540   Offset: 0x12B6940   Length: 0x1B9
     private void OnPress(bool pressed)
     {
         ulong uVar1;
@@ -155,7 +157,7 @@ public class UIDragScrollView
               UIScrollView.Press(this.scrollView,pressed,0);
               if ((!pressed) && (this.mAutoFind)) {
                 uVar3 = this.mTrans;
-                uVar3 = NGUITools.FindInParents(uVar3,DAT_181d66c80);
+                uVar3 = NGUITools.FindInParents(uVar3,DAT_181d8f9a0);
                 this.scrollView = uVar3;
                 this.mScroll = this.scrollView;
               }
@@ -164,8 +166,8 @@ public class UIDragScrollView
         }
     }
 
-    // Token : 0x600012D
-    // RVA   : 0x10E08D0   Offset: 0x10DF0D0   Length: 0xB1
+    // Token : 0x6000145
+    // RVA   : 0x12B7270   Offset: 0x12B6670   Length: 0xB1
     private void OnDrag(Vector2 delta)
     {
         ulong uVar1;
@@ -184,8 +186,8 @@ public class UIDragScrollView
         }
     }
 
-    // Token : 0x600012E
-    // RVA   : 0x10E0D60   Offset: 0x10DF560   Length: 0xC2
+    // Token : 0x6000146
+    // RVA   : 0x12B7700   Offset: 0x12B6B00   Length: 0xC2
     private void OnScroll(float delta)
     {
         ulong uVar1;
@@ -204,8 +206,8 @@ public class UIDragScrollView
         }
     }
 
-    // Token : 0x600012F
-    // RVA   : 0x10E0AD0   Offset: 0x10DF2D0   Length: 0xC6
+    // Token : 0x6000147
+    // RVA   : 0x12B7470   Offset: 0x12B6870   Length: 0xC6
     public void OnPan(Vector2 delta)
     {
         ulong uVar1;
@@ -224,8 +226,8 @@ public class UIDragScrollView
         }
     }
 
-    // Token : 0x6000130
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x6000148
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

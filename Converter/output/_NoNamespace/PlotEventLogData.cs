@@ -1,54 +1,54 @@
 // ============================================================
 // Type  : PlotEventLogData
-// Token : 0x20001C6
+// Token : 0x20001CC
 // ============================================================
 
 public class PlotEventLogData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000BD5
+    // Token: 0x4000C62
     public Dictionary<string, string> plotEventLogData;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000E73
-    // RVA   : 0xBD85B0   Offset: 0xBD6DB0   Length: 0x76
+    // Token : 0x6000EA8
+    // RVA   : 0xB0C9E0   Offset: 0xB0BDE0   Length: 0x76
     public void /*ctor*/()
     {
         ulong uVar1;
         ZhSegment.Initialize(this,0);
-        uVar1 = il2cpp_internal(DAT_181d5e848);
-        FUN_1808ae540(uVar1,DAT_181d4f5d8);
+        uVar1 = il2cpp_internal(DAT_181d83368);
+        FUN_1808b1370(uVar1,DAT_181d75830);
         this.plotEventLogData = uVar1;
     }
 
-    // Token : 0x6000E74
-    // RVA   : 0xBD8400   Offset: 0xBD6C00   Length: 0x94
+    // Token : 0x6000EA9
+    // RVA   : 0xB0C830   Offset: 0xB0BC30   Length: 0x94
     public void Reset()
     {
         ulong uVar1;
         if (this.plotEventLogData != null) {
-          Dictionary_2.Clear(this.plotEventLogData,DAT_181d4f7d8);
+          Dictionary_2.Clear(this.plotEventLogData,DAT_181d75a50);
           return;
         }
-        uVar1 = il2cpp_internal(DAT_181d5e848);
-        FUN_1808ae540(uVar1,DAT_181d4f5d8);
+        uVar1 = il2cpp_internal(DAT_181d83368);
+        FUN_1808b1370(uVar1,DAT_181d75830);
         this.plotEventLogData = uVar1;
     }
 
-    // Token : 0x6000E75
-    // RVA   : 0xBD84A0   Offset: 0xBD6CA0   Length: 0x10A
+    // Token : 0x6000EAA
+    // RVA   : 0xB0C8D0   Offset: 0xB0BCD0   Length: 0x10A
     public PlotEventLogData Set(string key, string value)
     {
         long lVar1;
         bool cVar2;
         if (this.plotEventLogData != null) {
-          cVar2 = FUN_1808ab750(this.plotEventLogData,key,DAT_181d4f858);
+          cVar2 = FUN_1808ab490(this.plotEventLogData,key,DAT_181d75ad8);
           if (!cVar2) {
             if (value == null) {
               return this;
             }
             if (this.plotEventLogData != null) {
-              FUN_1808ab680(this.plotEventLogData,key,value,DAT_181d4f758);
+              FUN_1808ab370(this.plotEventLogData,key,value,DAT_181d759c8);
               return this;
             }
           }
@@ -56,98 +56,98 @@ public class PlotEventLogData
             lVar1 = this.plotEventLogData;
             if (value == null) {
               if (lVar1 != null) {
-                FUN_18177a010(lVar1,key,DAT_181d4f958);
+                FUN_1817b7250(lVar1,key,DAT_181d75be8);
                 return this;
               }
             }
             else if (lVar1 != null) {
-              FUN_1808aec90(lVar1,key,value,DAT_181d4fbd8);
+              FUN_1808b2160(lVar1,key,value,DAT_181d75e90);
               return this;
             }
           }
         }
     }
 
-    // Token : 0x6000E76
-    // RVA   : 0xBD8310   Offset: 0xBD6B10   Length: 0x88
+    // Token : 0x6000EAB
+    // RVA   : 0xB0C740   Offset: 0xB0BB40   Length: 0x88
     public string Get(string key)
     {
         bool cVar1;
         ulong uVar2;
         if (this.plotEventLogData != null) {
-          cVar1 = FUN_1808ab750(this.plotEventLogData,key,DAT_181d4f858);
+          cVar1 = FUN_1808ab490(this.plotEventLogData,key,DAT_181d75ad8);
           if (!cVar1) {
             return 0;
           }
           if (this.plotEventLogData != null) {
-            uVar2 = FUN_1817897a0(this.plotEventLogData,key,DAT_181d4fad8);
+            uVar2 = FUN_1817c63a0(this.plotEventLogData,key,DAT_181d75d80);
             return uVar2;
           }
         }
     }
 
-    // Token : 0x6000E77
-    // RVA   : 0xBD8210   Offset: 0xBD6A10   Length: 0x92
+    // Token : 0x6000EAC
+    // RVA   : 0xB0C640   Offset: 0xB0BA40   Length: 0x92
     public int GetInt(string key)
     {
         bool cVar1;
         ulong uVar2;
         if (this.plotEventLogData != null) {
-          cVar1 = FUN_1808ab750(this.plotEventLogData,key,DAT_181d4f858);
+          cVar1 = FUN_1808ab490(this.plotEventLogData,key,DAT_181d75ad8);
           if (!cVar1) {
             return 0;
           }
           if (this.plotEventLogData != null) {
-            uVar2 = FUN_1817897a0(this.plotEventLogData,key,DAT_181d4fad8);
+            uVar2 = FUN_1817c63a0(this.plotEventLogData,key,DAT_181d75d80);
             uVar2 = Int32.Parse(uVar2,0);
             return uVar2;
           }
         }
     }
 
-    // Token : 0x6000E78
-    // RVA   : 0xBD8170   Offset: 0xBD6970   Length: 0x93
+    // Token : 0x6000EAD
+    // RVA   : 0xB0C5A0   Offset: 0xB0B9A0   Length: 0x93
     public float GetFloat(string key)
     {
         bool cVar1;
         ulong uVar2;
         if (this.plotEventLogData != null) {
-          cVar1 = FUN_1808ab750(this.plotEventLogData,key,DAT_181d4f858);
+          cVar1 = FUN_1808ab490(this.plotEventLogData,key,DAT_181d75ad8);
           if (!cVar1) {
             return 0;
           }
           if (this.plotEventLogData != null) {
-            uVar2 = FUN_1817897a0(this.plotEventLogData,key,DAT_181d4fad8);
+            uVar2 = FUN_1817c63a0(this.plotEventLogData,key,DAT_181d75d80);
             uVar2 = Single.Parse(uVar2,0);
             return uVar2;
           }
         }
     }
 
-    // Token : 0x6000E79
-    // RVA   : 0xBD82B0   Offset: 0xBD6AB0   Length: 0x5F
+    // Token : 0x6000EAE
+    // RVA   : 0xB0C6E0   Offset: 0xB0BAE0   Length: 0x5F
     public List<string> GetKeys()
     {
         ulong uVar1;
         if (this.plotEventLogData != null) {
-          uVar1 = Dictionary_2.get_Keys(this.plotEventLogData,DAT_181d4fb58);
-          Enumerable.ToList(uVar1,DAT_181d8c9d8);
+          uVar1 = Dictionary_2.get_Keys(this.plotEventLogData,DAT_181d75e08);
+          Enumerable.ToList(uVar1,DAT_181db5778);
           return;
         }
     }
 
-    // Token : 0x6000E7A
-    // RVA   : 0xBD83A0   Offset: 0xBD6BA0   Length: 0x53
+    // Token : 0x6000EAF
+    // RVA   : 0xB0C7D0   Offset: 0xB0BBD0   Length: 0x53
     public bool HaveKey(string key)
     {
         if (this.plotEventLogData != null) {
-          FUN_1808ab750(this.plotEventLogData,key,DAT_181d4f858);
+          FUN_1808ab490(this.plotEventLogData,key,DAT_181d75ad8);
           return;
         }
     }
 
-    // Token : 0x6000E7B
-    // RVA   : 0xBD8630   Offset: 0xBD6E30   Length: 0x1D8
+    // Token : 0x6000EB0
+    // RVA   : 0xB0CA60   Offset: 0xB0BE60   Length: 0x1D8
     public bool isEmpty()
     {
         bool cVar1;
@@ -166,34 +166,34 @@ public class PlotEventLogData
         uint64 local_18;
         aiStack_54[3] = 0;
         if (this.plotEventLogData != null) {
-          lVar2 = Dictionary_2.get_Keys(this.plotEventLogData,DAT_181d4fb58);
+          lVar2 = Dictionary_2.get_Keys(this.plotEventLogData,DAT_181d75e08);
           if (lVar2 != null) {
-            ValueCollection.GetEnumerator(&local_28,lVar2,DAT_181d9f078);
+            ValueCollection.GetEnumerator(&local_28,lVar2,DAT_181dc6520);
             local_40 = local_28;
             uStack_3c = uStack_24;
             uStack_38 = uStack_20;
             uStack_34 = uStack_1c;
             local_30 = local_18;
             do {
-              cVar1 = FUN_1811d5c70(&local_40,DAT_181d7afa8);
+              cVar1 = FUN_1811c2720(&local_40,DAT_181da1bb8);
               if (!cVar1) {
                 aiStack_54[1] = 70;
                 iVar3 = aiStack_54[3] + 1;
                 aiStack_54[3] = iVar3;
-                ZhSegment.Initialize(&local_40,DAT_181d7af28);
-                goto LAB_180bd87bd;
+                ZhSegment.Initialize(&local_40,DAT_181da1b38);
+                goto LAB_180b0cbed;
               }
               if (this.plotEventLogData == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              lVar2 = FUN_1817897a0(this.plotEventLogData,local_30,DAT_181d4fad8);
+              lVar2 = FUN_1817c63a0(this.plotEventLogData,local_30,DAT_181d75d80);
             } while (lVar2 == null);
             aiStack_54[1] = 72;
             iVar3 = aiStack_54[3] + 1;
             aiStack_54[3] = iVar3;
-            ZhSegment.Initialize(&local_40,DAT_181d7af28);
-        LAB_180bd87bd:
+            ZhSegment.Initialize(&local_40,DAT_181da1b38);
+        LAB_180b0cbed:
             if ((iVar3 != 0) && (aiStack_54[iVar3] == 72)) {
               return false;
             }
@@ -202,8 +202,8 @@ public class PlotEventLogData
         }
     }
 
-    // Token : 0x6000E7C
-    // RVA   : 0xBD7FF0   Offset: 0xBD67F0   Length: 0x175
+    // Token : 0x6000EB1
+    // RVA   : 0xB0C420   Offset: 0xB0B820   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -214,13 +214,13 @@ public class PlotEventLogData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -232,7 +232,7 @@ public class PlotEventLogData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d53c70,plVar1);
+            FUN_180002970(0,DAT_181d78da0,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

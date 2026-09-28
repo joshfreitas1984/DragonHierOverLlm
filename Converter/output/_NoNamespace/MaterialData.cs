@@ -1,17 +1,17 @@
 // ============================================================
 // Type  : MaterialData
-// Token : 0x200023C
+// Token : 0x2000242
 // ============================================================
 
 public class MaterialData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400116F
+    // Token: 0x4001212
     public HeroSpeAddData extraAddData;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60012B1
-    // RVA   : 0xA8E9A0   Offset: 0xA8D1A0   Length: 0x65
+    // Token : 0x60012F2
+    // RVA   : 0xA8D9C0   Offset: 0xA8CDC0   Length: 0x65
     public void /*ctor*/()
     {
         ulong uVar1;

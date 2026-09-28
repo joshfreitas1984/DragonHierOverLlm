@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : BountyIconController
-// Token : 0x200019C
+// Token : 0x20001A2
 // ============================================================
 
 public class BountyIconController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000AE7
+    // Token: 0x4000B73
     public MissionData bountyData;
 
-    // Token: 0x4000AE8
+    // Token: 0x4000B74
     public bool inited;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000D40
-    // RVA   : 0xCE4F20   Offset: 0xCE3720   Length: 0xB9D
+    // Token : 0x6000D74
+    // RVA   : 0xC8AF70   Offset: 0xC8A370   Length: 0xCC8
     private void Update()
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d73d40 + 184);
         uint uVar1;
         int iVar2;
         uint uVar3;
@@ -36,12 +36,13 @@ public class BountyIconController
         this.inited = 1;
         lVar5 = Component.get_transform(this,0);
         if ((lVar5 != null) && (lVar5 = Transform.Find(lVar5,"Title",0)) != null) {
-          uVar6 = Component.GetComponent(lVar5,DAT_181d6d8c0);
+          uVar6 = Component.GetComponent(lVar5,DAT_181d96160);
           if (this.bountyData != null) {
-            LTLocalization.SetText(uVar6,this.bountyData.name,0);
+            uVar7 = this.bountyData.name;
+            LTLocalization.SetText(uVar6,uVar7,0);
             lVar5 = Component.get_transform(this,0);
             if ((lVar5 != null) && (lVar5 = Transform.Find(lVar5,"Describe",0)) != null) {
-              uVar6 = Component.GetComponent(lVar5,DAT_181d6d8c0);
+              uVar6 = Component.GetComponent(lVar5,DAT_181d96160);
               if (this.bountyData != null) {
                 uVar7 = MissionData.GetMissionBaseDescribe(this.bountyData,1,0);
                 LTLocalization.SetText(uVar6,uVar7,0);
@@ -55,54 +56,54 @@ public class BountyIconController
                     if (0.0 < lVar5.missionSourceType) {
                       lVar5 = Component.get_transform(this,0);
                       if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Describe",0)) == null) {
-        LAB_180ce5ab2:
+        LAB_180c8bc2d:
                           // WARNING: Subroutine does not return
                         FUN_1800d6620();
                       }
-                      uVar6 = Component.GetComponent(lVar5,DAT_181d6d8c0);
+                      uVar6 = Component.GetComponent(lVar5,DAT_181d96160);
                       if ((this.bountyData == null) ||
                          (lVar5 = this.bountyData.missionTargetDatas) == null)
-                      goto LAB_180ce5ab2;
+                      goto LAB_180c8bc2d;
                       if (lVar5.name == null) {
                         ThrowHelper.ThrowArgumentOutOfRangeException(0);
                       }
                       lVar5 = *(int64 *)(lVar5.id + 32);
-                      if (lVar5 == null) goto LAB_180ce5ab2;
+                      if (lVar5 == null) goto LAB_180c8bc2d;
                       uVar1 = lVar5.minForceLv;
                       uVar7 = GlobalData.GetRequireTypeText(uVar1,0);
                       if ((this.bountyData == null) ||
                          (lVar5 = this.bountyData.missionTargetDatas) == null)
-                      goto LAB_180ce5ab2;
+                      goto LAB_180c8bc2d;
                       if (lVar5.name == null) {
                         ThrowHelper.ThrowArgumentOutOfRangeException(0);
                       }
                       lVar5 = *(int64 *)(lVar5.id + 32);
-                      if (lVar5 == null) goto LAB_180ce5ab2;
+                      if (lVar5 == null) goto LAB_180c8bc2d;
                       local_res8[0] = lVar5.missionSourceType;
-                      uVar8 = il2cpp_value_box(DAT_181d7d0b8,local_res8);
-                      lVar5 = FUN_18046c440(0);
+                      uVar8 = il2cpp_value_box(DAT_181da22d8,local_res8);
+                      lVar5 = FUN_18046c400(0);
                       if ((this.bountyData == null) ||
                          (lVar9 = this.bountyData.missionTargetDatas) == null)
-                      goto LAB_180ce5ab2;
+                      goto LAB_180c8bc2d;
                       if (*(int *)(lVar9 + 24) == 0) {
                         ThrowHelper.ThrowArgumentOutOfRangeException(0);
                       }
                       lVar9 = *(int64 *)(*(int64 *)(lVar9 + 16) + 32);
-                      if (lVar9 == null) goto LAB_180ce5ab2;
+                      if (lVar9 == null) goto LAB_180c8bc2d;
                       uVar1 = *(uint32 *)(lVar9 + 72);
                       if ((this.bountyData == null) ||
                          (lVar9 = this.bountyData.missionTargetDatas) == null)
-                      goto LAB_180ce5ab2;
+                      goto LAB_180c8bc2d;
                       if (*(int *)(lVar9 + 24) == 0) {
                         ThrowHelper.ThrowArgumentOutOfRangeException(0);
                       }
                       lVar9 = *(int64 *)(*(int64 *)(lVar9 + 16) + 32);
-                      if ((lVar9 == null) || (lVar5 == null)) goto LAB_180ce5ab2;
+                      if ((lVar9 == null) || (lVar5 == null)) goto LAB_180c8bc2d;
                       cVar4 = PlotController.CheckMeetRequire
                                         (lVar5,uVar1,*(uint32 *)(lVar9 + 76),0,0);
                       uVar10 = "\n需要:{2}{0}{1}</color>";
                       if (!cVar4) {
-                        lVar5 = FUN_18046c440(0);
+                        lVar5 = FUN_18046c400(0);
                         if ((this.bountyData == null) ||
                            (lVar9 = this.bountyData.missionTargetDatas) == null)
                         throw; // [null/range check failed]
@@ -123,16 +124,14 @@ public class BountyIconController
                         cVar4 = PlotController.CheckMeetRequire
                                           (lVar5,uVar1,*(uint32 *)(lVar9 + 76),1,0);
                         if (!cVar4) {
-                          uVar12 = *(uint64 *)
-                                    (pPlotController + 0x2c8);
+                          uVar12 = *(uint64 *)(pStatics + 0x2d0);
                         }
                         else {
-                          uVar12 = *(uint64 *)
-                                    (pPlotController + 0x240);
+                          uVar12 = *(uint64 *)(pStatics + 0x248);
                         }
                       }
                       else {
-                        uVar12 = *(uint64 *)(pPlotController + 0x260);
+                        uVar12 = *(uint64 *)(pStatics + 0x268);
                       }
                       uVar7 = String.Format(uVar10,uVar7,uVar8,uVar12,0);
                       LTLocalization.AddText(uVar6,uVar7,0);
@@ -154,7 +153,7 @@ public class BountyIconController
                             if ((lVar5 == null) ||
                                (lVar5 = Transform.Find(lVar5,"Describe",0)) == null)
                             throw; // [null/range check failed]
-                            uVar6 = Component.GetComponent(lVar5,DAT_181d6d8c0);
+                            uVar6 = Component.GetComponent(lVar5,DAT_181d96160);
                             if (this.bountyData == null) throw; // [null/range check failed]
                             uVar7 = MissionData.GetMissionTargetDescribe
                                               (this.bountyData,1,0);
@@ -164,7 +163,7 @@ public class BountyIconController
                           lVar5 = Component.get_transform(this,0);
                           if ((lVar5 != null) && (lVar5 = Transform.Find(lVar5,"Difficulty",0)) != null
                              ) {
-                            uVar6 = Component.GetComponent(lVar5,DAT_181d6d8c0);
+                            uVar6 = Component.GetComponent(lVar5,DAT_181d96160);
                             if (this.bountyData != null) {
                               uVar1 = this.bountyData.difficulty;
                               uVar7 = GlobalData.GetDifficultyStarString(uVar1,0);
@@ -173,13 +172,13 @@ public class BountyIconController
                               lVar5 = Component.get_transform(this,0);
                               if ((lVar5 != null) &&
                                  (lVar5 = Transform.Find(lVar5,"Money",0)) != null) {
-                                uVar6 = Component.GetComponent(lVar5,DAT_181d6d8c0);
+                                uVar6 = Component.GetComponent(lVar5,DAT_181d96160);
                                 if (this.bountyData != null) {
                                   iVar2 = this.bountyData.missionMoneyReward;
                                   uVar7 = "";
                                   if (iVar2 != 0) {
                                     local_res8[0] = iVar2;
-                                    uVar7 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
+                                    uVar7 = il2cpp_value_box(DAT_181d80418,local_res8);
                                     uVar7 = String.Format("银两:{0}",uVar7,0);
                                   }
                                   LTLocalization.SetText(uVar6,uVar7,0);
@@ -189,26 +188,31 @@ public class BountyIconController
                                       if ((lVar5 == null) ||
                                          (lVar5 = Transform.Find(lVar5,"Fame",0)) == null)
                                       throw; // [null/range check failed]
-                                      uVar7 = Component.GetComponent(lVar5,DAT_181d6d8c0);
+                                      uVar7 = Component.GetComponent(lVar5,DAT_181d96160);
                                       uVar6 = "";
+                                      if (((*(byte *)(DAT_181d84898 + 0x133) & 4) != 0) &&
+                                         (*(int *)(DAT_181d84898 + 224) == 0)) {
+                                        il2cpp_runtime_class_init();
+                                        uVar6 = "";
+                                      }
                                     }
                                     else {
                                       lVar5 = Component.get_transform(this,0);
                                       if ((lVar5 == null) ||
                                          (lVar5 = Transform.Find(lVar5,"Fame",0)) == null)
                                       throw; // [null/range check failed]
-                                      uVar7 = Component.GetComponent(lVar5,DAT_181d6d8c0);
+                                      uVar7 = Component.GetComponent(lVar5,DAT_181d96160);
                                       uVar6 = "{0}:{1}";
                                       lVar5 = this.bountyData;
                                       if (lVar5 == null) throw; // [null/range check failed]
                                       lVar9 = "声望";
                                       if (lVar5.missionSourceType == 3) {
-                                        if (((*(byte *)(MissionData_StaticsPtr + 0x133) & 4) != 0) &&
-                                           (*(int *)(MissionData_StaticsPtr + 224) == 0)) {
-                                          il2cpp_runtime_class_init(MissionData_StaticsPtr);
+                                        if (((*(byte *)(DAT_181d8a990 + 0x133) & 4) != 0) &&
+                                           (*(int *)(DAT_181d8a990 + 224) == 0)) {
+                                          il2cpp_runtime_class_init(DAT_181d8a990);
                                           lVar5 = this.bountyData;
                                         }
-                                        lVar9 = MissionData.MissionBountyTypeRewardType;
+                                        lVar9 = **(int64 **)(DAT_181d8a990 + 184);
                                         if ((lVar5 == null) || (lVar9 == null)) throw; // [null/range check failed]
                                         uVar3 = lVar5.missionBountyType;
                                         if (*(uint32 *)(lVar9 + 24) <= uVar3) {
@@ -238,7 +242,7 @@ public class BountyIconController
                                       uVar8 = "#SourceForceName#";
                                       if (this.bountyData == null) throw; // [null/range check failed]
                                       uVar10 = "本门";
-                                      if (-1 < this.bountyData.sourceForceID) {
+                                      if (this.bountyData.sourceForceID != -1) {
                                         lVar9 = FUN_18046c0a0(0);
                                         if (((lVar9 == null) || (this.bountyData == null)) ||
                                            ((*(int64 *)(lVar9 + 32) == 0 ||
@@ -247,24 +251,24 @@ public class BountyIconController
                                                                           (this.bountyData +
                                                                           88),0), lVar9 == null))))
                                         throw; // [null/range check failed]
-                                        uVar10 = *(uint64 *)(lVar9 + 24);
+                                        uVar10 = ForceData.GetForceName(lVar9,1,0);
                                       }
                                       if (lVar5 == null) {
-        LAB_180ce5aac:
+        LAB_180c8bc27:
                           // WARNING: Subroutine does not return
                                         FUN_1800d6620();
                                       }
                                       uVar8 = String.Replace(lVar5,uVar8,uVar10,0);
-                                      if (this.bountyData == null) goto LAB_180ce5aac;
+                                      if (this.bountyData == null) goto LAB_180c8bc27;
                                       local_res8[0] = this.bountyData.missionFameReward;
-                                      uVar10 = il2cpp_value_box(DAT_181d7d0b8,local_res8);
+                                      uVar10 = il2cpp_value_box(DAT_181da22d8,local_res8);
                                       uVar6 = String.Format(uVar6,uVar8,uVar10,0);
                                     }
                                     LTLocalization.SetText(uVar7,uVar6,0);
                                     lVar5 = Component.get_transform(this,0);
                                     if ((lVar5 != null) &&
                                        (lVar5 = Transform.Find(lVar5,"Time",0)) != null) {
-                                      uVar6 = Component.GetComponent(lVar5,DAT_181d6d8c0);
+                                      uVar6 = Component.GetComponent(lVar5,DAT_181d96160);
                                       if (this.bountyData != null) {
                                         piVar11 = &this.bountyData.leftTime;
                                         uVar7 = "";
@@ -292,52 +296,50 @@ public class BountyIconController
         }
     }
 
-    // Token : 0x6000D41
-    // RVA   : 0xCE4AE0   Offset: 0xCE32E0   Length: 0x43A
+    // Token : 0x6000D75
+    // RVA   : 0xC8AB30   Offset: 0xC89F30   Length: 0x43A
     public void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181d8def8 + 184);
+        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
+        var pStatics_30a0 = *(int64*)(DAT_181db30a0 + 184);
         int iVar1;
         int iVar2;
         long lVar3;
         ulong uVar4;
-        if ((GameController._instance != null) &&
-           (lVar3 = GameController._instance.worldData) != null)
-        {
+        if ((*pStatics_2cc8 != 0) &&
+           (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
           lVar3 = WorldData.Player(lVar3,0);
           if (lVar3 != null) {
             iVar1 = HeroData.GetBountyMissionNum(lVar3,0);
-            if ((GameController._instance != null) &&
-               (lVar3 = GameController._instance.worldData,
-               lVar3 != null)) {
+            if ((*pStatics_2cc8 != 0) &&
+               (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
               lVar3 = WorldData.Player(lVar3,0);
               if (lVar3 != null) {
                 iVar2 = HeroData.GetMaxBountyMissionNum(lVar3,0);
                 if (iVar1 < iVar2) {
-                  if (GameController._instance != null) {
+                  if (*pStatics_2cc8 != 0) {
                     GameController.GetFullMission
-                              (GameController._instance,
-                               this.bountyData,0);
-
-                    if (((lVar3 = PlotController.LeftFaceHideOffset?.cityAreaID) != null) &&
-                       (lVar3 = lVar3.Areas) != null) {
-                      FUN_181801c10(lVar3,this.bountyData,DAT_181d6d2e8);
+                              (*pStatics_2cc8,this.bountyData,0);
+                    lVar3 = *(int64 *)(*(int64 *)(DAT_181db4008 + 184) + 8);
+                    if (((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 24)) != null) &&
+                       (lVar3 = *(int64 *)(lVar3 + 48)) != null) {
+                      FUN_1817eee00(lVar3,this.bountyData,DAT_181d94a88);
                       uVar4 = Component.get_gameObject(this,0);
                       Object.Destroy(uVar4,0);
-                      if (*pStatics != 0) {
-                        BountyUIController.FreshBountyNum(*pStatics,0);
+                      if (*pStatics_30a0 != 0) {
+                        BountyUIController.FreshBountyNum(*pStatics_30a0,0);
                         return;
                       }
                     }
                   }
                 }
                 else {
-                  if (GameController._instance != null) {
-                    GameController.ShowTextOnMouse
-                              (GameController._instance,"无法领取更多委托",0);
+                  if (*pStatics_2cc8 != 0) {
+                    GameController.ShowTextOnMouse(*pStatics_2cc8,"无法领取更多委托",0)
+                    ;
                     plVar5 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
                     plVar6 = (int64 *)0;
-                    if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181d8a228)) {
+                    if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf348)) {
                       plVar6 = plVar5;
                     }
                     NGUITools.PlaySound(plVar6,0);
@@ -350,8 +352,8 @@ public class BountyIconController
         }
     }
 
-    // Token : 0x6000D42
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x6000D76
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

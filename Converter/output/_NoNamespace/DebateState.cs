@@ -1,36 +1,36 @@
 // ============================================================
 // Type  : DebateState
-// Token : 0x2000259
+// Token : 0x200025F
 // ============================================================
 
 public class DebateState
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400125B
+    // Token: 0x40012FE
     public int value__;
 
-    // Token: 0x400125C
+    // Token: 0x40012FF
     public const DebateState None;
 
-    // Token: 0x400125D
+    // Token: 0x4001300
     public const DebateState Prepare;
 
-    // Token: 0x400125E
+    // Token: 0x4001301
     public const DebateState ActiveRound;
 
-    // Token: 0x400125F
+    // Token: 0x4001302
     public const DebateState PassiveRound;
 
-    // Token: 0x4001260
+    // Token: 0x4001303
     public const DebateState Result;
 
-    // Token: 0x4001261
+    // Token: 0x4001304
     public const DebateState Finish;
 
-    // Token: 0x4001262
+    // Token: 0x4001305
     public const DebateState End;
 
-    // Token: 0x4001263
+    // Token: 0x4001306
     public const DebateState RealEnd;
 
 }

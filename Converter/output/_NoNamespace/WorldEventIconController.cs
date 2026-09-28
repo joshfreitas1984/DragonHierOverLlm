@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : WorldEventIconController
-// Token : 0x20003B1
+// Token : 0x20003B8
 // ============================================================
 
 public class WorldEventIconController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001D15
+    // Token: 0x4001E1F
     public EventData worldEventData;
 
-    // Token: 0x4001D16
+    // Token: 0x4001E20
     public bool inited;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600233C
-    // RVA   : 0xB2A940   Offset: 0xB29140   Length: 0x61B
+    // Token : 0x60023BF
+    // RVA   : 0x9D2900   Offset: 0x9D1D00   Length: 0x669
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d65970 + 184);
+        var pStatics = *(int64*)(DAT_181d8ab90 + 184);
         uint uVar1;
         bool cVar2;
         long lVar3;
@@ -36,7 +36,7 @@ public class WorldEventIconController
           lVar3 = Component.get_transform(this,0);
           if ((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"Title",0)) == null)
           throw; // [null/range check failed]
-          uVar4 = Component.GetComponent(lVar3,DAT_181d6d8c0);
+          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
           lVar3 = this.worldEventData;
           if (lVar3 == null) throw; // [null/range check failed]
           uVar6 = lVar3.eventName;
@@ -46,7 +46,7 @@ public class WorldEventIconController
           LTLocalization.SetText(uVar4,uVar6,0);
           lVar3 = Component.get_transform(this,0);
           if (lVar3 == null) throw; // [null/range check failed]
-          lVar7 = Component.GetComponent(lVar3,DAT_181d6ccc0);
+          lVar7 = Component.GetComponent(lVar3,DAT_181d95560);
           lVar3 = this.worldEventData;
           if (lVar3 == null) throw; // [null/range check failed]
           uVar4 = "";
@@ -83,7 +83,7 @@ public class WorldEventIconController
               puVar10 = (uint32 *)Color.get_yellow(&local_28);
             }
             else {
-              puVar10 = (uint32 *)FUN_181098a50();
+              puVar10 = (uint32 *)FUN_1810d3570();
             }
             if (plVar9 == (int64 *)0) throw; // [null/range check failed]
             local_28 = *puVar10;
@@ -110,7 +110,7 @@ public class WorldEventIconController
           lVar3 = Component.get_transform(this,0);
           if ((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"RareLv",0)) == null)
           throw; // [null/range check failed]
-          plVar9 = (int64 *)Component.GetComponent(lVar3,DAT_181d6bc40);
+          plVar9 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
           if (this.worldEventData == null) throw; // [null/range check failed]
           uVar1 = this.worldEventData.difficulty;
           puVar10 = (uint32 *)GlobalData.GetDifficultyColor(&local_28,uVar1,0);
@@ -123,7 +123,7 @@ public class WorldEventIconController
         }
         lVar3 = Component.get_transform(this,0);
         if ((lVar3 != null) && (lVar3 = Transform.Find(lVar3,"LeftTime",0)) != null) {
-          uVar4 = Component.GetComponent(lVar3,DAT_181d6d8c0);
+          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
           if (this.worldEventData != null) {
             piVar11 = &this.worldEventData.leftTime;
             uVar6 = "";
@@ -132,7 +132,7 @@ public class WorldEventIconController
               uVar6 = String.Format("{0}天",uVar6,0);
             }
             LTLocalization.SetText(uVar4,uVar6,0);
-            uVar4 = MouseController.hoveredUI;
+            uVar4 = *(uint64 *)(*(int64 *)(DAT_181d8b790 + 184) + 72);
             uVar6 = Component.get_gameObject(this,0);
             cVar2 = Object.op_Equality(uVar4,uVar6,0);
             if (!cVar2) {
@@ -164,11 +164,12 @@ public class WorldEventIconController
         }
     }
 
-    // Token : 0x600233D
-    // RVA   : 0xB2A550   Offset: 0xB28D50   Length: 0x3EA
+    // Token : 0x60023C0
+    // RVA   : 0x9D2510   Offset: 0x9D1910   Length: 0x3EA
     public void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181d4e188 + 184);
+        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
+        var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
         uint uVar1;
         long lVar2;
         bool cVar3;
@@ -179,83 +180,83 @@ public class WorldEventIconController
         uint local_28;
         uint uStack_24;
         byte[] local_18 = new byte[16];
-        if (GameController._instance == null) goto LAB_180b2a935;
-        cVar3 = GameController.HaveSpeUI(GameController._instance,1,0);
+        if (*pStatics_2cc8 == 0) goto LAB_1809d28f5;
+        cVar3 = GameController.HaveSpeUI(*pStatics_2cc8,1,0);
         if (cVar3) {
           return;
         }
-        if ((*pStatics == 0) ||
-           (lVar4 = *(int64 *)(*pStatics + 32)) == null)
-        goto LAB_180b2a935;
+        if ((*pStatics_2ee8 == 0) ||
+           (lVar4 = *(int64 *)(*pStatics_2ee8 + 32)) == null)
+        goto LAB_1809d28f5;
         cVar3 = GameObject.get_activeSelf(lVar4,0);
         if (!cVar3) {
           return;
         }
         lVar4 = this.worldEventData;
-        if ((lVar4 == null) || (lVar4.areaID == null)) goto LAB_180b2a935;
+        if ((lVar4 == null) || (lVar4.areaID == null)) goto LAB_1809d28f5;
         if (*(int *)(lVar4.areaID + 24) < 1) {
-          if (-1 < lVar4.nearAreaID) {
+          if (lVar4.nearAreaID != -1) {
             lVar4 = FUN_18046bbe0(0);
             lVar5 = FUN_18046bbe0(0);
             if (((lVar5 == null) || (this.worldEventData == null)) ||
-               (lVar5 = *(int64 *)(lVar5 + 96)) == null) goto LAB_180b2a935;
+               (lVar5 = *(int64 *)(lVar5 + 96)) == null) goto LAB_1809d28f5;
             uVar1 = this.worldEventData.nearAreaID;
-            goto LAB_180b2a871;
+            goto LAB_1809d2831;
           }
-          if (lVar4.resourcePointID < 0) goto LAB_180b2a8da;
+          if (lVar4.resourcePointID < 0) goto LAB_1809d289a;
           lVar4 = FUN_18046bbe0(0);
           lVar5 = FUN_18046bbe0(0);
           if ((((lVar5 == null) || (this.worldEventData == null)) ||
               (*(int64 *)(lVar5 + 104) == 0)) ||
-             ((lVar5 = FUN_1817cc780(*(int64 *)(lVar5 + 104),
-                                     this.worldEventData.resourcePointID,DAT_181d946c8),
+             ((lVar5 = FUN_1817d9e10(*(int64 *)(lVar5 + 104),
+                                     this.worldEventData.resourcePointID,DAT_181db9ed0),
               lVar5 == null || (lVar5 = GameObject.get_transform(lVar5,0)) == null)))
-          goto LAB_180b2a935;
+          goto LAB_1809d28f5;
           puVar6 = (uint64 *)Transform.get_localPosition(local_18,lVar5,0);
-          if (lVar4 == null) goto LAB_180b2a935;
+          if (lVar4 == null) goto LAB_1809d28f5;
           local_38 = (uint32)*puVar6;
           uStack_24 = (uint32)((uint64)*puVar6 >> 32);
         }
         else {
           lVar4 = FUN_18046bbe0(0);
           lVar5 = FUN_18046bbe0(0);
-          if (lVar5 == null) goto LAB_180b2a935;
+          if (lVar5 == null) goto LAB_1809d28f5;
           lVar5 = *(int64 *)(lVar5 + 96);
           if ((this.worldEventData == null) ||
              (lVar2 = this.worldEventData.areaID) == null)
-          goto LAB_180b2a935;
+          goto LAB_1809d28f5;
           if (*(int *)(lVar2 + 24) == 0) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          if (lVar5 == null) goto LAB_180b2a935;
+          if (lVar5 == null) goto LAB_1809d28f5;
           uVar1 = *(uint32 *)(*(int64 *)(lVar2 + 16) + 32);
-        LAB_180b2a871:
-          lVar5 = FUN_1817cc780(lVar5,uVar1,DAT_181d946c8);
+        LAB_1809d2831:
+          lVar5 = FUN_1817d9e10(lVar5,uVar1,DAT_181db9ed0);
           if ((lVar5 == null) || (lVar5 = GameObject.get_transform(lVar5,0)) == null) {
-        LAB_180b2a935:
+        LAB_1809d28f5:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           puVar6 = (uint64 *)Transform.get_localPosition(local_18,lVar5,0);
-          if (lVar4 == null) goto LAB_180b2a935;
+          if (lVar4 == null) goto LAB_1809d28f5;
           uStack_34 = (uint32)((uint64)*puVar6 >> 32);
           local_28 = (uint32)*puVar6;
           uStack_24 = uStack_34;
           local_38 = local_28;
         }
-        *(uint32 *)(lVar4 + 164) = uStack_24;
-        lVar4.inaccuracyPosText = local_38;
-        LAB_180b2a8da:
+        *(uint32 *)(lVar4 + 172) = uStack_24;
+        *(uint32 *)(lVar4 + 168) = local_38;
+        LAB_1809d289a:
         plVar7 = (int64 *)Resources.Load("Sound/SoundEffect/Woosh",0);
         plVar8 = (int64 *)0;
-        if ((plVar7 != (int64 *)0) && (*plVar7 == DAT_181d8a228)) {
+        if ((plVar7 != (int64 *)0) && (*plVar7 == DAT_181daf348)) {
           plVar8 = plVar7;
         }
         NGUITools.PlaySound(plVar8,0);
     }
 
-    // Token : 0x600233E
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x60023C1
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

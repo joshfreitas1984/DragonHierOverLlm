@@ -1,29 +1,29 @@
 // ============================================================
 // Type  : WindowDragTilt
-// Token : 0x2000027
+// Token : 0x2000028
 // ============================================================
 
 public class WindowDragTilt
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400009C
+    // Token: 0x40000B8
     public int updateOrder;
 
-    // Token: 0x400009D
+    // Token: 0x40000B9
     public float degrees;
 
-    // Token: 0x400009E
+    // Token: 0x40000BA
     private Vector3 mLastPos;
 
-    // Token: 0x400009F
+    // Token: 0x40000BB
     private Transform mTrans;
 
-    // Token: 0x40000A0
+    // Token: 0x40000BC
     private float mAngle;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000085
-    // RVA   : 0x9E72F0   Offset: 0x9E5AF0   Length: 0x59
+    // Token : 0x600009D
+    // RVA   : 0x9C98D0   Offset: 0x9C8CD0   Length: 0x59
     private void OnEnable()
     {
         ulong uVar1;
@@ -38,8 +38,8 @@ public class WindowDragTilt
         }
     }
 
-    // Token : 0x6000086
-    // RVA   : 0x9E7350   Offset: 0x9E5B50   Length: 0x110
+    // Token : 0x600009E
+    // RVA   : 0x9C9930   Offset: 0x9C8D30   Length: 0x110
     private void Update()
     {
         ulong uVar1;
@@ -81,10 +81,12 @@ public class WindowDragTilt
         }
     }
 
-    // Token : 0x6000087
-    // RVA   : 0x9E7470   Offset: 0x9E5C70   Length: 0xE
+    // Token : 0x600009F
+    // RVA   : 0x9C9A50   Offset: 0x9C8E50   Length: 0xE
     public void /*ctor*/()
     {
+        void FUN_1809c9a50(int64 this)
+        {
         this.degrees = 0x41f00000;
         FUN_18044ef50(this,0);
     }

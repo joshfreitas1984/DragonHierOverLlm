@@ -1,30 +1,30 @@
 // ============================================================
 // Type  : AnimatedWidget
-// Token : 0x20000B3
+// Token : 0x20000B4
 // ============================================================
 
 public class AnimatedWidget
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400043C
+    // Token: 0x4000458
     public float width;
 
-    // Token: 0x400043D
+    // Token: 0x4000459
     public float height;
 
-    // Token: 0x400043E
+    // Token: 0x400045A
     private UIWidget mWidget;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600056A
-    // RVA   : 0xA0D2D0   Offset: 0xA0BAD0   Length: 0xF5
+    // Token : 0x6000582
+    // RVA   : 0xA1EBA0   Offset: 0xA1DFA0   Length: 0xF5
     private void OnEnable()
     {
         long lVar1;
         bool cVar2;
         uint uVar3;
         ulong uVar4;
-        uVar4 = Component.GetComponent(this,DAT_181d6e7c0);
+        uVar4 = Component.GetComponent(this,DAT_181d97060);
         this.mWidget = uVar4;
         uVar4 = this.mWidget;
         cVar2 = Object.op_Inequality(uVar4,0,0);
@@ -44,8 +44,8 @@ public class AnimatedWidget
         }
     }
 
-    // Token : 0x600056B
-    // RVA   : 0xA0D210   Offset: 0xA0BA10   Length: 0xB0
+    // Token : 0x6000583
+    // RVA   : 0xA1EAE0   Offset: 0xA1DEE0   Length: 0xB0
     private void LateUpdate()
     {
         ulong uVar1;
@@ -70,10 +70,12 @@ public class AnimatedWidget
         }
     }
 
-    // Token : 0x600056C
-    // RVA   : 0xA0D3D0   Offset: 0xA0BBD0   Length: 0x15
+    // Token : 0x6000584
+    // RVA   : 0xA1ECA0   Offset: 0xA1E0A0   Length: 0x15
     public void /*ctor*/()
     {
+        void FUN_180a1eca0(int64 this)
+        {
         this.width = 0x3f800000;
         this.height = 0x3f800000;
         FUN_18044ef50(this,0);

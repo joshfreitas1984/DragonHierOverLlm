@@ -1,32 +1,32 @@
 // ============================================================
 // Type  : StudyDodgeArrowController
-// Token : 0x2000374
+// Token : 0x200037B
 // ============================================================
 
 public class StudyDodgeArrowController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001B7A
+    // Token: 0x4001C7B
     public GameObject barBack;
 
-    // Token: 0x4001B7B
+    // Token: 0x4001C7C
     public GameObject bar;
 
-    // Token: 0x4001B7C
+    // Token: 0x4001C7D
     public Vector3 direction;
 
-    // Token: 0x4001B7D
+    // Token: 0x4001C7E
     public float generateTime;
 
-    // Token: 0x4001B7E
+    // Token: 0x4001C7F
     public float lifeTime;
 
-    // Token: 0x4001B7F
+    // Token: 0x4001C80
     private float speed;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60021A9
-    // RVA   : 0xB866A0   Offset: 0xB84EA0   Length: 0x6B
+    // Token : 0x600222A
+    // RVA   : 0xFD4B20   Offset: 0xFD3F20   Length: 0x6B
     private void Start()
     {
         long lVar1;
@@ -34,8 +34,8 @@ public class StudyDodgeArrowController
         uint uStack_14;
         uint uStack_10;
         uint32 uStack_c;
-        lVar1 = Component.GetComponent(this,DAT_181d6d540);
-        puVar2 = (uint32 *)FUN_180d904c0(&local_18,0);
+        lVar1 = Component.GetComponent(this,DAT_181d95de0);
+        puVar2 = (uint32 *)FUN_180d98fe0(&local_18,0);
         if (lVar1 != null) {
           local_18 = *puVar2;
           uStack_14 = puVar2[1];
@@ -46,8 +46,8 @@ public class StudyDodgeArrowController
         }
     }
 
-    // Token : 0x60021AA
-    // RVA   : 0xB86710   Offset: 0xB84F10   Length: 0x2A6
+    // Token : 0x600222B
+    // RVA   : 0xFD4B90   Offset: 0xFD3F90   Length: 0x2A6
     private void Update()
     {
         long lVar1;
@@ -75,30 +75,29 @@ public class StudyDodgeArrowController
           if (0.0 < fVar6 - fVar5) {
             return;
           }
-          if (this.barBack == null) goto LAB_180b869b1;
+          if (this.barBack == null) goto LAB_180fd4e31;
           GameObject.SetActive(this.barBack,0,0);
-          lVar1 = Component.GetComponent(this,DAT_181d6d540);
-          puVar2 = (uint32 *)FUN_181098a50(&local_38,0);
-          if (lVar1 == null) goto LAB_180b869b1;
+          lVar1 = Component.GetComponent(this,DAT_181d95de0);
+          puVar2 = (uint32 *)FUN_1810d3570(&local_38,0);
+          if (lVar1 == null) goto LAB_180fd4e31;
           local_38 = *puVar2;
           uStack_34 = puVar2[1];
           fStack_30 = (float)puVar2[2];
           uStack_2c = puVar2[3];
           SpriteRenderer.set_color(lVar1,&local_38,0);
-          lVar1 = Component.GetComponent(this,DAT_181d6ab40);
-          if (lVar1 == null) goto LAB_180b869b1;
+          lVar1 = Component.GetComponent(this,DAT_181d93360);
+          if (lVar1 == null) goto LAB_180fd4e31;
           fVar6 = (float)AudioSource.get_volume(lVar1,0);
-          AudioSource.set_volume
-                    (lVar1,fVar6 * GameController.CheckShowSpeHero,0);
-          lVar1 = Component.GetComponent(this,DAT_181d6ab40);
-          if (lVar1 == null) goto LAB_180b869b1;
+          AudioSource.set_volume(lVar1,fVar6 * *(float *)(*(int64 *)(DAT_181d72d50 + 184) + 16),0);
+          lVar1 = Component.GetComponent(this,DAT_181d93360);
+          if (lVar1 == null) goto LAB_180fd4e31;
           AudioSource.Play(lVar1,0);
           fVar6 = this.generateTime;
         }
         if (fVar6 <= 0.0) {
           lVar1 = Component.get_transform(this,0);
           if (lVar1 == null) {
-        LAB_180b869b1:
+        LAB_180fd4e31:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -116,27 +115,29 @@ public class StudyDodgeArrowController
         }
     }
 
-    // Token : 0x60021AB
-    // RVA   : 0xB865B0   Offset: 0xB84DB0   Length: 0xE6
+    // Token : 0x600222C
+    // RVA   : 0xFD4A30   Offset: 0xFD3E30   Length: 0xE6
     private void OnDestroy()
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(StudyDodgePlayer_StaticsPtr + 184) + 8);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181da8090 + 184) + 8);
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 112);
           uVar2 = Component.get_gameObject(this,0);
           if (lVar1 != null) {
-            FUN_181801c10(lVar1,uVar2,DAT_181d61e78);
+            FUN_1817eee00(lVar1,uVar2,DAT_181d89618);
             return;
           }
         }
     }
 
-    // Token : 0x60021AC
-    // RVA   : 0xB869C0   Offset: 0xB851C0   Length: 0x1C
+    // Token : 0x600222D
+    // RVA   : 0xFD4E40   Offset: 0xFD4240   Length: 0x1C
     public void /*ctor*/()
     {
+        void FUN_180fd4e40(int64 this)
+        {
         this.generateTime = 0x3f800000;
         this.lifeTime = 0x40a00000;
         this.speed = 0x40a00000;

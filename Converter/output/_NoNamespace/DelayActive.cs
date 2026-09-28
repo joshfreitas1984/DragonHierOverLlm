@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : DelayActive
-// Token : 0x20003C6
+// Token : 0x20003CD
 // ============================================================
 
 public class DelayActive
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001D74
+    // Token: 0x4001E7E
     public GameObject[] m_activeObj;
 
-    // Token: 0x4001D75
+    // Token: 0x4001E7F
     public float m_delayTime;
 
-    // Token: 0x4001D76
+    // Token: 0x4001E80
     private float m_time;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002395
-    // RVA   : 0x92B880   Offset: 0x92A080   Length: 0x1B
+    // Token : 0x6002418
+    // RVA   : 0x93B120   Offset: 0x93A520   Length: 0x1B
     private void Start()
     {
         uint uVar1;
@@ -25,8 +25,8 @@ public class DelayActive
         this.m_time = uVar1;
     }
 
-    // Token : 0x6002396
-    // RVA   : 0x92B8A0   Offset: 0x92A0A0   Length: 0x125
+    // Token : 0x6002419
+    // RVA   : 0x93B140   Offset: 0x93A540   Length: 0x125
     private void Update()
     {
         long lVar1;
@@ -69,8 +69,8 @@ public class DelayActive
         }
     }
 
-    // Token : 0x6002397
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x600241A
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

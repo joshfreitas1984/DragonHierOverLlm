@@ -79,7 +79,21 @@ apply at runtime.
 ### 3. Re-decompile (Converter)
 
 Full run - **no** `--skip-decompile`, so `_string_map.csv` is regenerated rather than loaded from
-cache. From `G:\DragonHierOverLlm\Converter`:
+cache.
+
+**First, delete the stale Ghidra project.** If `Converter/output/_ghidra_project` exists, the
+Converter reuses it (`-process`) instead of re-importing (`-import`) the updated
+`GameAssembly.dll` (see `Decompilers/GhidraDecompiler.cs`). After a game update that project
+holds the *old* binary, so method addresses no longer line up and most methods come back
+`NO_FUNC` (seen 2026-09-28: OK=3358 / FAIL=6278, with methods that decompiled fine before now
+empty). The folder is a regenerable cache (~1 GB, not tracked in git). Confirm it is untracked
+(`git ls-files Converter/output/_ghidra_project` is empty), explain why, ask, then delete it:
+
+```powershell
+Remove-Item -Recurse -Force "G:\DragonHierOverLlm\Converter\output\_ghidra_project" -Confirm:$false
+```
+
+Then from `G:\DragonHierOverLlm\Converter`:
 
 ```powershell
 dotnet build
@@ -91,7 +105,21 @@ dotnet run --no-build -- `
   --unity-version "2020.3.48f1"
 ```
 
-This is long-running - run it in the background and wait for completion. Check
+This is long-running - run it in the background (redirect output to a log in the scratchpad) and
+wait for completion. When it finishes, verify it before moving on:
+
+- the logged `analyzeHeadless.bat` command should contain `-import "…GameAssembly.dll"` (followed
+  by `ANALYZING all memory and code`), not `-process … -noanalysis` / `Opening existing project`
+  - the latter means the stale project was reused. The import run does full Ghidra
+  auto-analysis first, so expect it to take much longer than a `-process` run;
+- read the `GhidraDecompile: done. OK=… FAIL=…` line. `FAIL` should be a small minority. If it's
+  most of the methods, stop and diagnose rather than continuing;
+- `_string_map.csv` comes from metadata + binary directly (not Ghidra), so it can be fine even
+  when the decompile isn't. Step 5's `ExtractDrinkQuoteCandidates` reads decompiled code, though.
+- `Converter/output` is tracked in git, so report `git status --short Converter/output` counts
+  and spot-check a known class against `HEAD` to confirm the method bodies are present.
+
+Check
 [`converter.instructions.md`](../../../.github/instructions/converter.instructions.md) if it
 stalls or produces no types/strings.
 

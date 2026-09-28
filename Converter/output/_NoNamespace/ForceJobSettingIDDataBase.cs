@@ -1,26 +1,26 @@
 // ============================================================
 // Type  : ForceJobSettingIDDataBase
-// Token : 0x200020E
+// Token : 0x2000214
 // ============================================================
 
 public class ForceJobSettingIDDataBase
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000E63
+    // Token: 0x4000EF3
     public string jobName;
 
-    // Token: 0x4000E64
+    // Token: 0x4000EF4
     public string jobDescribe;
 
-    // Token: 0x4000E65
+    // Token: 0x4000EF5
     public List<LivingSkillType> effectSkill;
 
-    // Token: 0x4000E66
+    // Token: 0x4000EF6
     public List<ForceSpeAddDataType> effectForceSpeAdd;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000FD3
-    // RVA   : 0x77EC30   Offset: 0x77D430   Length: 0x168
+    // Token : 0x600100B
+    // RVA   : 0x77B540   Offset: 0x77A940   Length: 0x168
     public string GetEffectSkillText()
     {
         long lVar1;
@@ -37,24 +37,24 @@ public class ForceJobSettingIDDataBase
           if (lVar1.Count <= iVar6) {
             return uVar5;
           }
-          cVar2 = FUN_1816fd990(uVar5,"",0);
+          cVar2 = FUN_18171e540(uVar5,"",0);
           uVar7 = "/";
           if (cVar2) {
             uVar7 = "";
           }
-          lVar1 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x4a8);
+          lVar1 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x4b0);
           if ((this.effectSkill == null) ||
-             (uVar3 = FUN_1800d6750(this.effectSkill,iVar6,DAT_181d6b9e8), lVar1 == null))
+             (uVar3 = FUN_1800d6760(this.effectSkill,iVar6,DAT_181d93190), lVar1 == null))
           break;
-          uVar4 = FUN_180002f80(lVar1,uVar3,DAT_181d7c9c0);
+          uVar4 = FUN_180002f80(lVar1,uVar3,DAT_181da4358);
           uVar5 = String.Concat(uVar5,uVar7,uVar4,0);
           iVar6 = iVar6 + 1;
           lVar1 = this.effectSkill;
         }
     }
 
-    // Token : 0x6000FD4
-    // RVA   : 0x210B70   Offset: 0x20F370   Length: 0x7
+    // Token : 0x600100C
+    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);

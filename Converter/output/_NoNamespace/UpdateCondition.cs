@@ -1,24 +1,24 @@
 // ============================================================
 // Type  : UpdateCondition
-// Token : 0x200008E
+// Token : 0x200008F
 // ============================================================
 
 public class UpdateCondition
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400035E
+    // Token: 0x400037A
     public int value__;
 
-    // Token: 0x400035F
+    // Token: 0x400037B
     public const UpdateCondition OnStart;
 
-    // Token: 0x4000360
+    // Token: 0x400037C
     public const UpdateCondition OnUpdate;
 
-    // Token: 0x4000361
+    // Token: 0x400037D
     public const UpdateCondition OnLateUpdate;
 
-    // Token: 0x4000362
+    // Token: 0x400037E
     public const UpdateCondition OnFixedUpdate;
 
 }

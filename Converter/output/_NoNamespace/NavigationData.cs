@@ -1,32 +1,32 @@
 // ============================================================
 // Type  : NavigationData
-// Token : 0x2000188
+// Token : 0x200018E
 // ============================================================
 
 public class NavigationData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000A50
+    // Token: 0x4000AD6
     public bool open;
 
-    // Token: 0x4000A51
+    // Token: 0x4000AD7
     public int F;
 
-    // Token: 0x4000A52
+    // Token: 0x4000AD8
     public int G;
 
-    // Token: 0x4000A53
+    // Token: 0x4000AD9
     public int H;
 
-    // Token: 0x4000A54
+    // Token: 0x4000ADA
     public GridUnitData thisGrid;
 
-    // Token: 0x4000A55
+    // Token: 0x4000ADB
     public NavigationData preGrid;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000C91
-    // RVA   : 0x8C6B60   Offset: 0x8C5360   Length: 0x6D
+    // Token : 0x6000CC0
+    // RVA   : 0x8E6C10   Offset: 0x8E6010   Length: 0x6D
     public void /*ctor*/()
     {
         this.open = 1;
@@ -41,8 +41,8 @@ public class NavigationData
         this.preGrid = 0;
     }
 
-    // Token : 0x6000C92
-    // RVA   : 0x8C6AF0   Offset: 0x8C52F0   Length: 0x62
+    // Token : 0x6000CC1
+    // RVA   : 0x8E6BA0   Offset: 0x8E5FA0   Length: 0x62
     public void Reset()
     {
         this.open = 1;

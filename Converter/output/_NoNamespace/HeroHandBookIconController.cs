@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : HeroHandBookIconController
-// Token : 0x20002C4
+// Token : 0x20002CA
 // ============================================================
 
 public class HeroHandBookIconController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400166E
+    // Token: 0x4001722
     public HeroData heroData;
 
-    // Token: 0x400166F
+    // Token: 0x4001723
     public SkeletonGraphic skeletonGraphic;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600178C
-    // RVA   : 0xB33540   Offset: 0xB31D40   Length: 0x370
+    // Token : 0x60017D0
+    // RVA   : 0xAF4370   Offset: 0xAF3770   Length: 0x39D
     public void Init()
     {
         uint uVar3;
@@ -33,7 +33,7 @@ public class HeroHandBookIconController
           if (lVar5 != null) {
             lVar5 = Transform.Find(lVar5,"Text",0);
             if (lVar5 != null) {
-              uVar6 = Component.GetComponent(lVar5,DAT_181d6d8c0);
+              uVar6 = Component.GetComponent(lVar5,DAT_181d96160);
               if (this.heroData != null) {
                 uVar7 = HeroData.HeroName(this.heroData,0,0);
                 LTLocalization.SetText(uVar6,uVar7,0);
@@ -43,7 +43,7 @@ public class HeroHandBookIconController
                   if (lVar5 != null) {
                     lVar5 = Transform.Find(lVar5,"Text",0);
                     if (lVar5 != null) {
-                      uVar6 = Component.GetComponent(lVar5,DAT_181d6d8c0);
+                      uVar6 = Component.GetComponent(lVar5,DAT_181d96160);
                       if (this.heroData != null) {
                         uVar7 = HeroData.GetHeroForceLvDescribe(this.heroData,1,0);
                         LTLocalization.SetText(uVar6,uVar7,0);
@@ -64,8 +64,7 @@ public class HeroHandBookIconController
                                 if (lVar5 != null) {
                                   lVar5 = HeroData.GetSkeletonGraphic(lVar5,uVar6,0);
                                   this.skeletonGraphic = lVar5;
-                                  lVar5 = *(int64 *)
-                                           (*(int64 *)(GameController_StaticsPtr + 184) + 8);
+                                  lVar5 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 8);
                                   if (lVar5 != null) {
                                     lVar5 = lVar5.isSummon;
                                     if (this.heroData != null) {
@@ -118,8 +117,8 @@ public class HeroHandBookIconController
         }
     }
 
-    // Token : 0x600178D
-    // RVA   : 0xB338C0   Offset: 0xB320C0   Length: 0x171
+    // Token : 0x60017D1
+    // RVA   : 0xAF4710   Offset: 0xAF3B10   Length: 0x171
     public void Update()
     {
         long lVar1;
@@ -129,11 +128,11 @@ public class HeroHandBookIconController
         ulong uVar5;
         ulong uVar6;
         lVar1 = this.skeletonGraphic;
-        uVar6 = MouseController.hoveredUI;
+        uVar6 = *(uint64 *)(*(int64 *)(DAT_181d8b790 + 184) + 72);
         uVar5 = Component.get_gameObject(this,0);
         cVar3 = Object.op_Inequality(uVar6,uVar5,0);
         if (!cVar3) {
-          lVar2 = GameController.difficultyExtraPoint;
+          lVar2 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 8);
           if (lVar2 == null) throw; // [null/range check failed]
           lVar2 = *(int64 *)(lVar2 + 16);
           if (this.heroData == null) throw; // [null/range check failed]
@@ -152,8 +151,8 @@ public class HeroHandBookIconController
         }
     }
 
-    // Token : 0x600178E
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x60017D2
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

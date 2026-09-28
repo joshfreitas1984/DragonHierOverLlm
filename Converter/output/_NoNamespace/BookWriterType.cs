@@ -1,21 +1,21 @@
 // ============================================================
 // Type  : BookWriterType
-// Token : 0x2000207
+// Token : 0x200020D
 // ============================================================
 
 public class BookWriterType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000E4A
+    // Token: 0x4000EDA
     public int value__;
 
-    // Token: 0x4000E4B
+    // Token: 0x4000EDB
     public const BookWriterType Combine;
 
-    // Token: 0x4000E4C
+    // Token: 0x4000EDC
     public const BookWriterType Copy;
 
-    // Token: 0x4000E4D
+    // Token: 0x4000EDD
     public const BookWriterType Memory;
 
 }

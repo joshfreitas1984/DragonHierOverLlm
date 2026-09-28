@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : EquipPoisonData
-// Token : 0x2000234
+// Token : 0x200023A
 // ============================================================
 
 public class EquipPoisonData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001137
+    // Token: 0x40011DA
     public float poisonNum;
 
-    // Token: 0x4001138
+    // Token: 0x40011DB
     public HeroSpeAddData poisonBuffData;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001282
-    // RVA   : 0x935210   Offset: 0x933A10   Length: 0x65
+    // Token : 0x60012C3
+    // RVA   : 0x944C90   Offset: 0x944090   Length: 0x65
     public void /*ctor*/()
     {
         ulong uVar1;
@@ -22,15 +22,15 @@ public class EquipPoisonData
         this.poisonBuffData = new HeroSpeAddData(0);
     }
 
-    // Token : 0x6001283
-    // RVA   : 0x9351F0   Offset: 0x9339F0   Length: 0x19
+    // Token : 0x60012C4
+    // RVA   : 0x944C70   Offset: 0x944070   Length: 0x19
     public HeroSpeAddData GetPoisonBuffData()
     {
         HeroSpeAddData.op_Multiply(this.poisonBuffData,this.poisonNum / 100.0,0);
     }
 
-    // Token : 0x6001284
-    // RVA   : 0x935070   Offset: 0x933870   Length: 0x175
+    // Token : 0x60012C5
+    // RVA   : 0x944AF0   Offset: 0x943EF0   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -41,13 +41,13 @@ public class EquipPoisonData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -59,7 +59,7 @@ public class EquipPoisonData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d53c70,plVar1);
+            FUN_180002970(0,DAT_181d78da0,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

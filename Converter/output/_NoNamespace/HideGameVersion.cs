@@ -1,24 +1,24 @@
 // ============================================================
 // Type  : HideGameVersion
-// Token : 0x20002D2
+// Token : 0x20002D8
 // ============================================================
 
 public class HideGameVersion
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40016B0
+    // Token: 0x4001764
     public Version targetVersion;
 
-    // Token: 0x40016B1
+    // Token: 0x4001765
     public bool activeMode;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60017D3
-    // RVA   : 0xB3E8D0   Offset: 0xB3D0D0   Length: 0x86
+    // Token : 0x6001817
+    // RVA   : 0xAFF880   Offset: 0xAFEC80   Length: 0x86
     private void Awake()
     {
         long lVar1;
-        if (PlotController._instance == this.targetVersion) {
+        if (**(int **)(DAT_181d73d40 + 184) == this.targetVersion) {
           lVar1 = Component.get_gameObject(this,0);
           if (lVar1 != null) {
             GameObject.SetActive(lVar1,this.activeMode,0);
@@ -29,8 +29,8 @@ public class HideGameVersion
         }
     }
 
-    // Token : 0x60017D4
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x6001818
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

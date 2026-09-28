@@ -1,108 +1,112 @@
 // ============================================================
 // Type  : UIAnchor
-// Token : 0x20000D1
+// Token : 0x20000D2
 // ============================================================
 
 public class UIAnchor
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40004EA
+    // Token: 0x4000506
     public Camera uiCamera;
 
-    // Token: 0x40004EB
+    // Token: 0x4000507
     public GameObject container;
 
-    // Token: 0x40004EC
+    // Token: 0x4000508
     public Side side;
 
-    // Token: 0x40004ED
+    // Token: 0x4000509
     public bool runOnlyOnce;
 
-    // Token: 0x40004EE
+    // Token: 0x400050A
     public Vector2 relativeOffset;
 
-    // Token: 0x40004EF
+    // Token: 0x400050B
     public Vector2 pixelOffset;
 
-    // Token: 0x40004F0
+    // Token: 0x400050C
     private UIWidget widgetContainer;
 
-    // Token: 0x40004F1
+    // Token: 0x400050D
     private Transform mTrans;
 
-    // Token: 0x40004F2
+    // Token: 0x400050E
     private Animation mAnim;
 
-    // Token: 0x40004F3
+    // Token: 0x400050F
     private Rect mRect;
 
-    // Token: 0x40004F4
+    // Token: 0x4000510
     private UIRoot mRoot;
 
-    // Token: 0x40004F5
+    // Token: 0x4000511
     private bool mStarted;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60006BA
-    // RVA   : 0xA772D0   Offset: 0xA75AD0   Length: 0x13C
+    // Token : 0x60006D2
+    // RVA   : 0xAF0CF0   Offset: 0xAF00F0   Length: 0x13C
     private void OnEnable()
     {
+        var pStatics = *(int64*)(DAT_181daf678 + 184);
         ulong uVar1;
         ulong uVar2;
         uVar1 = Component.get_transform(this,0);
         this.mTrans = uVar1;
-        uVar1 = Component.GetComponent(this,DAT_181d6a940);
+        uVar1 = Component.GetComponent(this,DAT_181d93168);
         this.mAnim = uVar1;
-        uVar1 = UICamera.onScreenResize;
-        uVar2 = new OnTooltipCB(this,DAT_181d9c740,0);
+        uVar1 = *(uint64 *)(pStatics + 72);
+        uVar2 = new OnTooltipCB(this,DAT_181dc5a30,0);
         plVar3 = (int64 *)Delegate.Combine(uVar1,uVar2,0);
         plVar4 = (int64 *)0;
         if (plVar3 != (int64 *)0) {
-          if (*plVar3 == DAT_181d68390) {
+          if (*plVar3 == DAT_181d8d738) {
             plVar4 = plVar3;
           }
           if (plVar4 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar3,DAT_181d68390);
+            FUN_1800d6070(plVar3,DAT_181d8d738);
           }
         }
-        UICamera.onScreenResize = plVar4;
+        *(int64 **)(pStatics + 72) = plVar4;
     }
 
-    // Token : 0x60006BB
-    // RVA   : 0xA771D0   Offset: 0xA759D0   Length: 0xF9
+    // Token : 0x60006D3
+    // RVA   : 0xAF0BF0   Offset: 0xAEFFF0   Length: 0xF9
     private void OnDisable()
     {
+        var pStatics = *(int64*)(DAT_181daf678 + 184);
         ulong uVar1;
         ulong uVar2;
-        uVar1 = UICamera.onScreenResize;
-        uVar2 = new OnTooltipCB(this,DAT_181d9c740,0);
+        uVar1 = *(uint64 *)(pStatics + 72);
+        uVar2 = new OnTooltipCB(this,DAT_181dc5a30,0);
         plVar3 = (int64 *)Delegate.Remove(uVar1,uVar2,0);
         plVar4 = (int64 *)0;
         if (plVar3 != (int64 *)0) {
-          if (*plVar3 == DAT_181d68390) {
+          if (*plVar3 == DAT_181d8d738) {
             plVar4 = plVar3;
           }
           if (plVar4 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar3,DAT_181d68390);
+            FUN_1800d6070(plVar3,DAT_181d8d738);
           }
         }
-        UICamera.onScreenResize = plVar4;
+        *(int64 **)(pStatics + 72) = plVar4;
     }
 
-    // Token : 0x60006BC
-    // RVA   : 0xA77410   Offset: 0xA75C10   Length: 0x14
+    // Token : 0x60006D4
+    // RVA   : 0xAF0E30   Offset: 0xAF0230   Length: 0x14
     private void ScreenSizeChanged()
     {
+        void FUN_180af0e30(int64 this)
+        {
         if ((this.mStarted) && (this.runOnlyOnce)) {
           UIAnchor.Update(this,0);
           return;
         }
     }
 
-    // Token : 0x60006BD
-    // RVA   : 0xA77430   Offset: 0xA75C30   Length: 0x1DE
+    // Token : 0x60006D5
+    // RVA   : 0xAF0E50   Offset: 0xAF0250   Length: 0x1DE
     private void Start()
     {
         bool cVar1;
@@ -115,21 +119,21 @@ public class UIAnchor
           uVar3 = this.widgetContainer;
           cVar1 = Object.op_Inequality(uVar3,0,0);
           if (cVar1) {
-            if (this.widgetContainer == null) goto LAB_180a77609;
+            if (this.widgetContainer == null) goto LAB_180af1029;
             uVar3 = Component.get_gameObject(this.widgetContainer,0);
             this.container = uVar3;
             this.widgetContainer = 0;
           }
         }
         uVar3 = Component.get_gameObject(this,0);
-        uVar3 = NGUITools.FindInParents(uVar3,DAT_181d66b00);
+        uVar3 = NGUITools.FindInParents(uVar3,DAT_181d8f820);
         this.mRoot = uVar3;
         uVar3 = this.uiCamera;
         cVar1 = Object.op_Equality(uVar3,0,0);
         if (cVar1) {
           lVar4 = Component.get_gameObject(this,0);
           if (lVar4 == null) {
-        LAB_180a77609:
+        LAB_180af1029:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -141,8 +145,8 @@ public class UIAnchor
         this.mStarted = 1;
     }
 
-    // Token : 0x60006BE
-    // RVA   : 0xA77610   Offset: 0xA75E10   Length: 0xC12
+    // Token : 0x60006D6
+    // RVA   : 0xAF1030   Offset: 0xAF0430   Length: 0xC12
     private void Update()
     {
         uint uVar1;
@@ -186,12 +190,12 @@ public class UIAnchor
         if (cVar3) {
           uVar12 = local_d8;
           uVar17 = local_d0;
-          if (this.mAnim == null) goto LAB_180a7821d;
+          if (this.mAnim == null) goto LAB_180af1c3d;
           cVar3 = Behaviour.get_enabled(this.mAnim,0);
           if (cVar3) {
             uVar12 = local_d8;
             uVar17 = local_d0;
-            if (this.mAnim == null) goto LAB_180a7821d;
+            if (this.mAnim == null) goto LAB_180af1c3d;
             cVar3 = Animation.get_isPlaying(this.mAnim,0);
             if (cVar3) {
               return;
@@ -210,21 +214,21 @@ public class UIAnchor
         if (!cVar3) {
           uVar12 = local_d8;
           uVar17 = local_d0;
-          if (this.container == null) goto LAB_180a7821d;
-          lVar8 = GameObject.GetComponent(this.container,DAT_181da2930);
+          if (this.container == null) goto LAB_180af1c3d;
+          lVar8 = GameObject.GetComponent(this.container,DAT_181d74c30);
         }
         uVar12 = this.container;
         cVar3 = Object.op_Equality(uVar12,0,0);
         if (!cVar3) {
-        LAB_180a77805:
+        LAB_180af1225:
           uVar12 = local_d8;
           uVar17 = local_d0;
-          if (this.container == null) goto LAB_180a7821d;
-          lVar6 = GameObject.GetComponent(this.container,DAT_181da2830);
+          if (this.container == null) goto LAB_180af1c3d;
+          lVar6 = GameObject.GetComponent(this.container,DAT_181d74b20);
         }
         else {
           cVar3 = Object.op_Equality(lVar8,0,0);
-          if (!cVar3) goto LAB_180a77805;
+          if (!cVar3) goto LAB_180af1225;
         }
         cVar3 = Object.op_Inequality(lVar8,0,0);
         if (!cVar3) {
@@ -232,7 +236,7 @@ public class UIAnchor
           if (cVar3) {
             uVar12 = local_d8;
             uVar17 = local_d0;
-            if (lVar6 == null) goto LAB_180a7821d;
+            if (lVar6 == null) goto LAB_180af1c3d;
             if (*(int *)(lVar6 + 0x134) == 0) {
               uVar12 = this.mRoot;
               cVar3 = Object.op_Inequality(uVar12,0,0);
@@ -242,7 +246,7 @@ public class UIAnchor
               else {
                 uVar12 = local_d8;
                 uVar17 = local_d0;
-                if (this.mRoot == null) goto LAB_180a7821d;
+                if (this.mRoot == null) goto LAB_180af1c3d;
                 iVar5 = UIRoot.get_activeHeight(this.mRoot,0);
                 iVar4 = Screen.get_height(0);
                 fVar14 = ((float)iVar5 / (float)iVar4) * 0.5;
@@ -252,11 +256,11 @@ public class UIAnchor
               Rect.set_xMin(lVar8,(float)-iVar5 * fVar14,0);
               iVar5 = Screen.get_height(0);
               Rect.set_yMin(lVar8,(float)-iVar5 * fVar14,0);
-              FUN_180d904a0(lVar8,0);
+              FUN_180d98fc0(lVar8,0);
               Rect.set_xMax(lVar8);
               FUN_18044df60(lVar8,0);
               Rect.set_yMax(lVar8);
-              goto LAB_180a77cca;
+              goto LAB_180af16ea;
             }
             pauVar10 = (uint8 (*) [16])UIPanel.get_finalClipRegion(local_b8,lVar6,0);
             lVar8 = this + 88;
@@ -264,8 +268,8 @@ public class UIAnchor
             auVar18._0_4_ = auVar18._0_4_ - auVar18._8_4_ * 0.5;
             FUN_18044f4c0(lVar8,auVar18._0_8_,0);
             FUN_18044f4b0(lVar8);
-            FUN_180998400(lVar8);
-            goto LAB_180a77cbf;
+            FUN_1809dcb30(lVar8);
+            goto LAB_180af16df;
           }
           uVar12 = this.container;
           cVar3 = Object.op_Inequality(uVar12,0,0);
@@ -274,19 +278,19 @@ public class UIAnchor
             uVar17 = local_d0;
             if ((this.container == null) ||
                (lVar8 = GameObject.get_transform(this.container,0), uVar12 = local_d8,
-               uVar17 = local_d0, lVar8 == null)) goto LAB_180a7821d;
-            uVar9 = FUN_180da0f00(lVar8,0);
+               uVar17 = local_d0, lVar8 == null)) goto LAB_180af1c3d;
+            uVar9 = FUN_180da9a20(lVar8,0);
             cVar3 = Object.op_Inequality(uVar9,0,0);
             lVar8 = this.container;
             uVar12 = local_d8;
             uVar17 = local_d0;
             if (!cVar3) {
-              if (lVar8 == null) goto LAB_180a7821d;
+              if (lVar8 == null) goto LAB_180af1c3d;
               uVar12 = GameObject.get_transform(lVar8,0);
               puVar7 = (uint64 *)NGUIMath.CalculateRelativeWidgetBounds(local_b8,uVar12,0);
             }
             else {
-              if (lVar8 == null) goto LAB_180a7821d;
+              if (lVar8 == null) goto LAB_180af1c3d;
               uVar12 = GameObject.get_transform(lVar8,0);
               puVar7 = (uint64 *)NGUIMath.CalculateRelativeWidgetBounds(local_b8,uVar9,uVar12,0);
             }
@@ -301,9 +305,9 @@ public class UIAnchor
             local_d0 = *(uint32 *)(puVar7 + 1);
             FUN_18044f4b0(lVar8);
             Bounds.get_size(&local_d8,&local_a0,0);
-            FUN_180998400(lVar8);
+            FUN_1809dcb30(lVar8);
             puVar7 = &local_a0;
-            goto LAB_180a77c9a;
+            goto LAB_180af16ba;
           }
           uVar12 = this.uiCamera;
           cVar3 = Object.op_Inequality(uVar12,0,0);
@@ -313,7 +317,7 @@ public class UIAnchor
           bVar2 = true;
           uVar12 = local_d8;
           uVar17 = local_d0;
-          if (this.uiCamera == null) goto LAB_180a7821d;
+          if (this.uiCamera == null) goto LAB_180af1c3d;
           puVar7 = (uint64 *)Camera.get_pixelRect(local_b8,this.uiCamera,0);
           uVar12 = puVar7[1];
           this.mRect = *puVar7;
@@ -325,8 +329,8 @@ public class UIAnchor
           if (((this.container == null) ||
               (lVar11 = GameObject.get_transform(this.container,0), uVar12 = local_d8,
               uVar17 = local_d0, lVar11 == null)) ||
-             (uVar9 = FUN_180da0f00(lVar11,0), uVar12 = local_d8, uVar17 = local_d0, lVar8 == null))
-          goto LAB_180a7821d;
+             (uVar9 = FUN_180da9a20(lVar11,0), uVar12 = local_d8, uVar17 = local_d0, lVar8 == null))
+          goto LAB_180af1c3d;
           puVar7 = (uint64 *)UIWidget.CalculateBounds(local_b8,lVar8,uVar9,0);
           local_88 = *puVar7;
           uStack_80 = puVar7[1];
@@ -339,18 +343,18 @@ public class UIAnchor
           local_d0 = *(uint32 *)(puVar7 + 1);
           FUN_18044f4b0(lVar8);
           Bounds.get_size(&local_d8,&local_88,0);
-          FUN_180998400(lVar8);
+          FUN_1809dcb30(lVar8);
           puVar7 = &local_88;
-        LAB_180a77c9a:
+        LAB_180af16ba:
           puVar7 = (uint64 *)Bounds.get_size(&local_d8,puVar7,0);
           local_d8 = *puVar7;
           local_d0 = *(uint32 *)(puVar7 + 1);
-        LAB_180a77cbf:
-          FUN_1809983e0(this + 88);
+        LAB_180af16df:
+          FUN_1809dcb10(this + 88);
         }
-        LAB_180a77cca:
+        LAB_180af16ea:
         lVar8 = this + 88;
-        fVar14 = (float)FUN_180d904a0(lVar8,0);
+        fVar14 = (float)FUN_180d98fc0(lVar8,0);
         fVar15 = (float)Rect.get_xMax(lVar8,0);
         fVar19 = (fVar15 + fVar14) * 0.5;
         fVar14 = (float)FUN_18044df60(lVar8,0);
@@ -363,7 +367,7 @@ public class UIAnchor
             fVar19 = (float)Rect.get_xMax(lVar8,0);
           }
           else if ((iVar5 - 3U & 0xfffffffb) != 0) {
-            fVar19 = (float)FUN_180d904a0(lVar8,0);
+            fVar19 = (float)FUN_180d98fc0(lVar8,0);
           }
           uVar1 = this.side;
           if (uVar1 - 2 < 3) {
@@ -373,14 +377,14 @@ public class UIAnchor
             fVar14 = (float)FUN_18044df60(lVar8,0);
           }
         }
-        fVar15 = (float)FUN_180d90480(lVar8,0);
+        fVar15 = (float)FUN_180d98fa0(lVar8,0);
         fVar16 = (float)FUN_18044e2b0(lVar8,0);
         local_c8 = CONCAT44(fVar16 * *(float *)(this + 52) + *(float *)(this + 60) + fVar14,
                             fVar15 * this.relativeOffset + this.pixelOffset + fVar19);
         if (bVar2) {
           uVar12 = local_d8;
           uVar17 = local_d0;
-          if (this.uiCamera == null) goto LAB_180a7821d;
+          if (this.uiCamera == null) goto LAB_180af1c3d;
           cVar3 = Camera.get_orthographic(this.uiCamera,0);
           if (cVar3) {
             uVar17 = FUN_18000d7c0();
@@ -393,7 +397,7 @@ public class UIAnchor
           uVar17 = local_d0;
           if ((this.mTrans == null) ||
              (puVar7 = (uint64 *)Transform.get_position(local_b8,this.mTrans,0),
-             uVar12 = local_d8, uVar17 = local_d0, lVar6 == null)) goto LAB_180a7821d;
+             uVar12 = local_d8, uVar17 = local_d0, lVar6 == null)) goto LAB_180af1c3d;
           local_d8 = *puVar7;
           local_d0 = *(uint32 *)(puVar7 + 1);
           puVar7 = (uint64 *)Camera.WorldToScreenPoint(local_b8,lVar6,&local_d8,0);
@@ -401,7 +405,7 @@ public class UIAnchor
           uVar12 = *puVar7;
           uVar17 = local_d0;
           local_c0 = local_d0;
-          if (this.uiCamera == null) goto LAB_180a7821d;
+          if (this.uiCamera == null) goto LAB_180af1c3d;
           local_d8 = local_c8;
           puVar7 = (uint64 *)
                    Camera.ScreenToWorldPoint(local_b8,this.uiCamera,&local_d8,0);
@@ -409,20 +413,20 @@ public class UIAnchor
           uVar13 = *(uint32 *)(puVar7 + 1);
           uVar12 = local_d8;
           uVar17 = local_d0;
-          if (this.uiCamera == null) goto LAB_180a7821d;
+          if (this.uiCamera == null) goto LAB_180af1c3d;
           cVar3 = Camera.get_orthographic(this.uiCamera,0);
           if (cVar3) {
             uVar12 = local_d8;
             uVar17 = local_d0;
-            if (this.mTrans == null) goto LAB_180a7821d;
-            uVar12 = FUN_180da0f00(this.mTrans,0);
+            if (this.mTrans == null) goto LAB_180af1c3d;
+            uVar12 = FUN_180da9a20(this.mTrans,0);
             cVar3 = Object.op_Inequality(uVar12,0,0);
             if (cVar3) {
               uVar12 = local_d8;
               uVar17 = local_d0;
               if ((this.mTrans == null) ||
-                 (lVar6 = FUN_180da0f00(this.mTrans,0), uVar12 = local_d8,
-                 uVar17 = local_d0, lVar6 == null)) goto LAB_180a7821d;
+                 (lVar6 = FUN_180da9a20(this.mTrans,0), uVar12 = local_d8,
+                 uVar17 = local_d0, lVar6 == null)) goto LAB_180af1c3d;
               local_d8 = uVar9;
               local_d0 = uVar13;
               puVar7 = (uint64 *)Transform.InverseTransformPoint(local_b8,lVar6,&local_d8,0);
@@ -435,7 +439,7 @@ public class UIAnchor
               uVar9 = local_c8;
               uVar12 = local_d8;
               uVar17 = local_d0;
-              if (this.mTrans == null) goto LAB_180a7821d;
+              if (this.mTrans == null) goto LAB_180af1c3d;
               local_d8 = local_c8;
               local_d0 = uVar13;
               puVar7 = (uint64 *)
@@ -446,12 +450,12 @@ public class UIAnchor
               if (cVar3) {
                 uVar12 = local_d8;
                 uVar17 = local_d0;
-                if (this.mTrans == null) goto LAB_180a7821d;
+                if (this.mTrans == null) goto LAB_180af1c3d;
                 local_d8 = uVar9;
                 local_d0 = uVar13;
                 Transform.set_localPosition(this.mTrans,&local_d8,0);
               }
-              goto LAB_180a77fb8;
+              goto LAB_180af19d8;
             }
           }
         }
@@ -470,38 +474,38 @@ public class UIAnchor
               uVar17 = local_d0;
               if ((this.container == null) ||
                  (lVar6 = GameObject.get_transform(this.container,0), uVar12 = local_d8,
-                 uVar17 = local_d0, lVar6 == null)) goto LAB_180a7821d;
-              lVar6 = FUN_180da0f00(lVar6,0);
+                 uVar17 = local_d0, lVar6 == null)) goto LAB_180af1c3d;
+              lVar6 = FUN_180da9a20(lVar6,0);
               cVar3 = Object.op_Inequality(lVar6,0,0);
               uVar9 = local_c8;
               uVar12 = local_d8;
               uVar17 = local_d0;
               uVar13 = local_c0;
-              if (cVar3) goto joined_r0x000180a77eeb;
+              if (cVar3) goto joined_r0x000180af190b;
             }
           }
           else {
             uVar12 = local_d8;
             uVar17 = local_d0;
-            if (lVar6 == null) goto LAB_180a7821d;
+            if (lVar6 == null) goto LAB_180af1c3d;
             lVar6 = UIRect.get_cachedTransform(lVar6,0);
             uVar12 = local_d8;
             uVar17 = local_d0;
             uVar9 = local_c8;
             uVar13 = local_c0;
-        joined_r0x000180a77eeb:
+        joined_r0x000180af190b:
             local_d0 = uVar13;
             local_d8 = uVar9;
             local_c8 = local_d8;
             local_c0 = local_d0;
-            if (lVar6 == null) goto LAB_180a7821d;
+            if (lVar6 == null) goto LAB_180af1c3d;
             puVar7 = (uint64 *)Transform.TransformPoint(local_b8,lVar6,&local_d8,0);
             local_c0 = *(uint32 *)(puVar7 + 1);
             uVar9 = *puVar7;
           }
           uVar12 = local_d8;
           uVar17 = local_d0;
-          if (this.mTrans == null) goto LAB_180a7821d;
+          if (this.mTrans == null) goto LAB_180af1c3d;
           puVar7 = (uint64 *)Transform.get_position(local_b8,this.mTrans,0);
           local_d8 = *puVar7;
           uVar13 = *(uint32 *)(puVar7 + 1);
@@ -520,25 +524,25 @@ public class UIAnchor
           if (cVar3) {
             uVar12 = local_d8;
             uVar17 = local_d0;
-            if (this.mTrans == null) goto LAB_180a7821d;
+            if (this.mTrans == null) goto LAB_180af1c3d;
             local_d8 = uVar9;
             local_d0 = uVar13;
             Transform.set_position(this.mTrans,&local_d8,0);
           }
-        LAB_180a77fb8:
+        LAB_180af19d8:
           if ((this.runOnlyOnce) &&
              (cVar3 = Application.get_isPlaying(0), cVar3)) {
             Behaviour.set_enabled(this,0,0);
           }
           return;
         }
-        LAB_180a7821d:
+        LAB_180af1c3d:
         local_d0 = uVar17;
         local_d8 = uVar12;
     }
 
-    // Token : 0x60006BF
-    // RVA   : 0xA78230   Offset: 0xA76A30   Length: 0x67
+    // Token : 0x60006D7
+    // RVA   : 0xAF1C50   Offset: 0xAF1050   Length: 0xA6
     public void /*ctor*/()
     {
         ulong uVar1;

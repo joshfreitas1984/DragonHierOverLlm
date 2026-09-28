@@ -1,44 +1,44 @@
 // ============================================================
 // Type  : UIForwardEvents
-// Token : 0x2000045
+// Token : 0x2000046
 // ============================================================
 
 public class UIForwardEvents
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400016A
+    // Token: 0x4000186
     public GameObject target;
 
-    // Token: 0x400016B
+    // Token: 0x4000187
     public bool onHover;
 
-    // Token: 0x400016C
+    // Token: 0x4000188
     public bool onPress;
 
-    // Token: 0x400016D
+    // Token: 0x4000189
     public bool onClick;
 
-    // Token: 0x400016E
+    // Token: 0x400018A
     public bool onDoubleClick;
 
-    // Token: 0x400016F
+    // Token: 0x400018B
     public bool onSelect;
 
-    // Token: 0x4000170
+    // Token: 0x400018C
     public bool onDrag;
 
-    // Token: 0x4000171
+    // Token: 0x400018D
     public bool onDrop;
 
-    // Token: 0x4000172
+    // Token: 0x400018E
     public bool onSubmit;
 
-    // Token: 0x4000173
+    // Token: 0x400018F
     public bool onScroll;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000147
-    // RVA   : 0x10EAF70   Offset: 0x10E9770   Length: 0xD7
+    // Token : 0x600015F
+    // RVA   : 0x12C19B0   Offset: 0x12C0DB0   Length: 0xD7
     private void OnHover(bool isOver)
     {
         ulong uVar1;
@@ -51,7 +51,7 @@ public class UIForwardEvents
           if (cVar3) {
             lVar2 = this.target;
             local_res8[0] = isOver;
-            uVar1 = il2cpp_value_box(DAT_181d8d920,local_res8);
+            uVar1 = il2cpp_value_box(DAT_181db2ac8,local_res8);
             if (lVar2 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -61,8 +61,8 @@ public class UIForwardEvents
         }
     }
 
-    // Token : 0x6000148
-    // RVA   : 0x10EB050   Offset: 0x10E9850   Length: 0xD7
+    // Token : 0x6000160
+    // RVA   : 0x12C1A90   Offset: 0x12C0E90   Length: 0xD7
     private void OnPress(bool pressed)
     {
         ulong uVar1;
@@ -75,7 +75,7 @@ public class UIForwardEvents
           if (cVar3) {
             lVar2 = this.target;
             local_res8[0] = pressed;
-            uVar1 = il2cpp_value_box(DAT_181d8d920,local_res8);
+            uVar1 = il2cpp_value_box(DAT_181db2ac8,local_res8);
             if (lVar2 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -85,8 +85,8 @@ public class UIForwardEvents
         }
     }
 
-    // Token : 0x6000149
-    // RVA   : 0x10EAC70   Offset: 0x10E9470   Length: 0xA0
+    // Token : 0x6000161
+    // RVA   : 0x12C16B0   Offset: 0x12C0AB0   Length: 0xA0
     private void OnClick()
     {
         ulong uVar1;
@@ -105,8 +105,8 @@ public class UIForwardEvents
         }
     }
 
-    // Token : 0x600014A
-    // RVA   : 0x10EAD20   Offset: 0x10E9520   Length: 0xA0
+    // Token : 0x6000162
+    // RVA   : 0x12C1760   Offset: 0x12C0B60   Length: 0xA0
     private void OnDoubleClick()
     {
         ulong uVar1;
@@ -125,8 +125,8 @@ public class UIForwardEvents
         }
     }
 
-    // Token : 0x600014B
-    // RVA   : 0x10EB210   Offset: 0x10E9A10   Length: 0xD7
+    // Token : 0x6000163
+    // RVA   : 0x12C1C50   Offset: 0x12C1050   Length: 0xD7
     private void OnSelect(bool selected)
     {
         ulong uVar1;
@@ -139,7 +139,7 @@ public class UIForwardEvents
           if (cVar3) {
             lVar2 = this.target;
             local_res8[0] = selected;
-            uVar1 = il2cpp_value_box(DAT_181d8d920,local_res8);
+            uVar1 = il2cpp_value_box(DAT_181db2ac8,local_res8);
             if (lVar2 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -149,8 +149,8 @@ public class UIForwardEvents
         }
     }
 
-    // Token : 0x600014C
-    // RVA   : 0x10EADD0   Offset: 0x10E95D0   Length: 0xDB
+    // Token : 0x6000164
+    // RVA   : 0x12C1810   Offset: 0x12C0C10   Length: 0xDB
     private void OnDrag(Vector2 delta)
     {
         ulong uVar1;
@@ -163,7 +163,7 @@ public class UIForwardEvents
           if (cVar3) {
             lVar2 = this.target;
             local_res8 = delta;
-            uVar1 = il2cpp_value_box(DAT_181d8e698,&local_res8);
+            uVar1 = il2cpp_value_box(DAT_181db3950,&local_res8);
             if (lVar2 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -173,8 +173,8 @@ public class UIForwardEvents
         }
     }
 
-    // Token : 0x600014D
-    // RVA   : 0x10EAEB0   Offset: 0x10E96B0   Length: 0xB2
+    // Token : 0x6000165
+    // RVA   : 0x12C18F0   Offset: 0x12C0CF0   Length: 0xB2
     private void OnDrop(GameObject go)
     {
         ulong uVar1;
@@ -192,8 +192,8 @@ public class UIForwardEvents
         }
     }
 
-    // Token : 0x600014E
-    // RVA   : 0x10EB2F0   Offset: 0x10E9AF0   Length: 0xA0
+    // Token : 0x6000166
+    // RVA   : 0x12C1D30   Offset: 0x12C1130   Length: 0xA0
     private void OnSubmit()
     {
         ulong uVar1;
@@ -212,8 +212,8 @@ public class UIForwardEvents
         }
     }
 
-    // Token : 0x600014F
-    // RVA   : 0x10EB130   Offset: 0x10E9930   Length: 0xD9
+    // Token : 0x6000167
+    // RVA   : 0x12C1B70   Offset: 0x12C0F70   Length: 0xD9
     private void OnScroll(float delta)
     {
         ulong uVar1;
@@ -226,7 +226,7 @@ public class UIForwardEvents
           if (cVar3) {
             lVar2 = this.target;
             local_res8[0] = delta;
-            uVar1 = il2cpp_value_box(DAT_181d7d0b8,local_res8);
+            uVar1 = il2cpp_value_box(DAT_181da22d8,local_res8);
             if (lVar2 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -236,8 +236,8 @@ public class UIForwardEvents
         }
     }
 
-    // Token : 0x6000150
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x6000168
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);

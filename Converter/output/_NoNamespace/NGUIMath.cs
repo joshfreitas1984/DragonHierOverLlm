@@ -1,22 +1,24 @@
 // ============================================================
 // Type  : NGUIMath
-// Token : 0x2000085
+// Token : 0x2000086
 // ============================================================
 
 public class NGUIMath
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000355
-    // RVA   : 0xB02EB0   Offset: 0xB016B0   Length: 0x1C
+    // Token : 0x600036D
+    // RVA   : 0xDFD3A0   Offset: 0xDFC7A0   Length: 0x1C
     public static float Lerp(float from, float to, float factor)
     {
         return (1.0 - factor) * from + to * factor;
     }
 
-    // Token : 0x6000356
-    // RVA   : 0xB01E90   Offset: 0xB00690   Length: 0x11
+    // Token : 0x600036E
+    // RVA   : 0xDFC490   Offset: 0xDFB890   Length: 0x11
     public static int ClampIndex(int val, int max)
     {
+        int FUN_180dfc490(int val,int max)
+        {
         if (val < 0) {
           return 0;
         }
@@ -26,8 +28,8 @@ public class NGUIMath
         return val;
     }
 
-    // Token : 0x6000357
-    // RVA   : 0xB038B0   Offset: 0xB020B0   Length: 0x24
+    // Token : 0x600036F
+    // RVA   : 0xDFDDA0   Offset: 0xDFD1A0   Length: 0x24
     public static int RepeatIndex(int val, int max)
     {
         if (0 < max) {
@@ -40,8 +42,8 @@ public class NGUIMath
         return 0;
     }
 
-    // Token : 0x6000358
-    // RVA   : 0xB048C0   Offset: 0xB030C0   Length: 0xF6
+    // Token : 0x6000370
+    // RVA   : 0xDFEDB0   Offset: 0xDFE1B0   Length: 0x3D
     public static float WrapAngle(float angle)
     {
         for (; 180.0 < angle; angle = angle + -360.0) {
@@ -50,8 +52,8 @@ public class NGUIMath
         }
     }
 
-    // Token : 0x6000359
-    // RVA   : 0xB04890   Offset: 0xB03090   Length: 0x2B
+    // Token : 0x6000371
+    // RVA   : 0xDFED80   Offset: 0xDFE180   Length: 0x2B
     public static float Wrap01(float val)
     {
         int iVar1;
@@ -59,8 +61,8 @@ public class NGUIMath
         return val - (float)iVar1;
     }
 
-    // Token : 0x600035A
-    // RVA   : 0xB02C20   Offset: 0xB01420   Length: 0x18
+    // Token : 0x6000372
+    // RVA   : 0xDB3F90   Offset: 0xDB3390   Length: 0x18
     public static int HexToDecimal(char ch)
     {
         switch(ch) {
@@ -92,44 +94,46 @@ public class NGUIMath
         case 63:
         case 64:
         case 70:
-          goto switchD_180b02c3f_caseD_3a;
+          goto switchD_180db3faf_caseD_3a;
         case 65:
-        switchD_180b02c3f_caseD_41:
+        switchD_180db3faf_caseD_41:
           return 10;
         case 66:
-        switchD_180b02c3f_caseD_42:
+        switchD_180db3faf_caseD_42:
           return 11;
         case 67:
-        switchD_180b02c3f_caseD_43:
+        switchD_180db3faf_caseD_43:
           return 12;
         case 68:
-        switchD_180b02c3f_caseD_44:
+        switchD_180db3faf_caseD_44:
           return 13;
         case 69:
-        switchD_180b02c3f_caseD_45:
+        switchD_180db3faf_caseD_45:
           return 14;
         default:
           switch(ch) {
           case 97:
-            goto switchD_180b02c3f_caseD_41;
+            goto switchD_180db3faf_caseD_41;
           case 98:
-            goto switchD_180b02c3f_caseD_42;
+            goto switchD_180db3faf_caseD_42;
           case 99:
-            goto switchD_180b02c3f_caseD_43;
+            goto switchD_180db3faf_caseD_43;
           case 100:
-            goto switchD_180b02c3f_caseD_44;
+            goto switchD_180db3faf_caseD_44;
           case 101:
-            goto switchD_180b02c3f_caseD_45;
+            goto switchD_180db3faf_caseD_45;
           }
-        switchD_180b02c3f_caseD_3a:
+        switchD_180db3faf_caseD_3a:
           return 15;
         }
     }
 
-    // Token : 0x600035B
-    // RVA   : 0xB023F0   Offset: 0xB00BF0   Length: 0x18
+    // Token : 0x6000373
+    // RVA   : 0xDFC9F0   Offset: 0xDFBDF0   Length: 0x18
     public static char DecimalToHexChar(int num)
     {
+        int FUN_180dfc9f0(int num)
+        {
         if (15 < num) {
           return 70;
         }
@@ -139,38 +143,38 @@ public class NGUIMath
         return num + 48;
     }
 
-    // Token : 0x600035C
-    // RVA   : 0xB023A0   Offset: 0xB00BA0   Length: 0x48
+    // Token : 0x6000374
+    // RVA   : 0xDFC9A0   Offset: 0xDFBDA0   Length: 0x48
     public static string DecimalToHex8(int num)
     {
         uint[] local_res8 = new uint[8];
-        if (!DAT_181e787fe) {
+        if (!DAT_181e9fb67) {
           local_res8[0] = num;
           il2cpp_internal(&"X2");
-          DAT_181e787fe = true;
+          DAT_181e9fb67 = true;
           num = local_res8[0];
         }
         local_res8[0] = num & 255;
         Int32.ToString(local_res8,"X2",0);
     }
 
-    // Token : 0x600035D
-    // RVA   : 0xB02310   Offset: 0xB00B10   Length: 0x4B
+    // Token : 0x6000375
+    // RVA   : 0xDFC910   Offset: 0xDFBD10   Length: 0x4B
     public static string DecimalToHex24(int num)
     {
         uint[] local_res8 = new uint[8];
-        if (!DAT_181e787ff) {
+        if (!DAT_181e9fb68) {
           local_res8[0] = num;
           il2cpp_internal(&"X6");
-          DAT_181e787ff = true;
+          DAT_181e9fb68 = true;
           num = local_res8[0];
         }
         local_res8[0] = num & 0xffffff;
         Int32.ToString(local_res8,"X6",0);
     }
 
-    // Token : 0x600035E
-    // RVA   : 0xB02360   Offset: 0xB00B60   Length: 0x3D
+    // Token : 0x6000376
+    // RVA   : 0xDFC960   Offset: 0xDFBD60   Length: 0x3D
     public static string DecimalToHex32(int num)
     {
         uint[] local_res8 = new uint[8];
@@ -178,8 +182,8 @@ public class NGUIMath
         Int32.ToString(local_res8,"X8",0);
     }
 
-    // Token : 0x600035F
-    // RVA   : 0xB01EB0   Offset: 0xB006B0   Length: 0x92
+    // Token : 0x6000377
+    // RVA   : 0xDFC4B0   Offset: 0xDFB8B0   Length: 0x92
     public static int ColorToInt(Color c)
     {
         int iVar1;
@@ -193,8 +197,8 @@ public class NGUIMath
         return uVar4 | ((iVar1 << 8 | uVar2) << 8 | uVar3) << 8;
     }
 
-    // Token : 0x6000360
-    // RVA   : 0xB02E10   Offset: 0xB01610   Length: 0x91
+    // Token : 0x6000378
+    // RVA   : 0xDFD300   Offset: 0xDFC700   Length: 0x91
     public static Color IntToColor(int val)
     {
         byte[] local_18 = new byte[16];
@@ -210,8 +214,8 @@ public class NGUIMath
         return val;
     }
 
-    // Token : 0x6000361
-    // RVA   : 0xB02D30   Offset: 0xB01530   Length: 0xD7
+    // Token : 0x6000379
+    // RVA   : 0xDFD220   Offset: 0xDFC620   Length: 0xD7
     public static string IntToBinary(int val, int bits)
     {
         ulong uVar1;
@@ -233,8 +237,8 @@ public class NGUIMath
         return uVar1;
     }
 
-    // Token : 0x6000362
-    // RVA   : 0xB02B80   Offset: 0xB01380   Length: 0x97
+    // Token : 0x600037A
+    // RVA   : 0xDFD180   Offset: 0xDFC580   Length: 0x97
     public static Color HexToColor(uint val)
     {
         byte[] local_18 = new byte[16];
@@ -246,8 +250,8 @@ public class NGUIMath
         return val;
     }
 
-    // Token : 0x6000363
-    // RVA   : 0xB02220   Offset: 0xB00A20   Length: 0xE1
+    // Token : 0x600037B
+    // RVA   : 0xDFC820   Offset: 0xDFBC20   Length: 0xE1
     public static Rect ConvertToTexCoords(Rect rect, int width, int height)
     {
         uint32 *
@@ -268,7 +272,7 @@ public class NGUIMath
         rect[2] = uVar2;
         rect[3] = uVar3;
         if ((fVar5 != 0.0) && (fVar6 = (float)param_4, fVar6 != 0.0)) {
-          fVar4 = (float)FUN_180d904a0(width,0);
+          fVar4 = (float)FUN_180d98fc0(width,0);
           Rect.set_xMin(rect,fVar4 / fVar5,0);
           fVar4 = (float)Rect.get_xMax(width,0);
           Rect.set_xMax(rect,fVar4 / fVar5,0);
@@ -280,8 +284,8 @@ public class NGUIMath
         return rect;
     }
 
-    // Token : 0x6000364
-    // RVA   : 0xB020A0   Offset: 0xB008A0   Length: 0x176
+    // Token : 0x600037C
+    // RVA   : 0xDFC6A0   Offset: 0xDFBAA0   Length: 0x176
     public static Rect ConvertToPixels(Rect rect, int width, int height, bool round)
     {
         uint32 *
@@ -301,7 +305,7 @@ public class NGUIMath
         rect[2] = uVar2;
         rect[3] = uVar3;
         fVar5 = (float)round;
-        fVar4 = (float)FUN_180d904a0(width,0);
+        fVar4 = (float)FUN_180d98fc0(width,0);
         fVar4 = (float)height * fVar4;
         if (!param_5) {
           Rect.set_xMin(rect,fVar4,0);
@@ -327,8 +331,8 @@ public class NGUIMath
         return rect;
     }
 
-    // Token : 0x6000365
-    // RVA   : 0xB02ED0   Offset: 0xB016D0   Length: 0xB0
+    // Token : 0x600037D
+    // RVA   : 0xDFD3C0   Offset: 0xDFC7C0   Length: 0xB0
     public static Rect MakePixelPerfect(Rect rect)
     {
         uint64 *
@@ -350,7 +354,7 @@ public class NGUIMath
         uStack_40 = param_2[1];
         fVar4 = (float)param_3;
         fVar3 = (float)param_4;
-        fVar1 = (float)FUN_180d904a0(&local_48,0);
+        fVar1 = (float)FUN_180d98fc0(&local_48,0);
         Mathf.RoundToInt(fVar4 * fVar1,0);
         Rect.set_xMin(&local_58);
         fVar1 = (float)Rect.get_xMax(&local_48,0);
@@ -366,7 +370,7 @@ public class NGUIMath
         *(uint32 *)((int64)param_2 + 4) = local_58._4_4_;
         *(uint32 *)(param_2 + 1) = (uint32)uStack_50;
         *(uint32 *)((int64)param_2 + 12) = uStack_50._4_4_;
-        uVar2 = FUN_180d904a0(param_2,0);
+        uVar2 = FUN_180d98fc0(param_2,0);
         Mathf.RoundToInt(uVar2,0);
         Rect.set_xMin(param_2);
         uVar2 = FUN_18044df60(param_2,0);
@@ -383,7 +387,7 @@ public class NGUIMath
         if ((fVar4 != 0.0) && (fVar3 != 0.0)) {
           local_48 = local_58;
           uStack_40 = uStack_50;
-          FUN_180d904a0(&local_48,0);
+          FUN_180d98fc0(&local_48,0);
           Rect.set_xMin(&local_58);
           Rect.get_xMax(&local_48,0);
           Rect.set_xMax(&local_58);
@@ -397,8 +401,8 @@ public class NGUIMath
         return rect;
     }
 
-    // Token : 0x6000366
-    // RVA   : 0xB02F80   Offset: 0xB01780   Length: 0x281
+    // Token : 0x600037E
+    // RVA   : 0xDFD470   Offset: 0xDFC870   Length: 0x281
     public static Rect MakePixelPerfect(Rect rect, int width, int height)
     {
         uint64 *
@@ -420,7 +424,7 @@ public class NGUIMath
         uStack_40 = width[1];
         fVar4 = (float)height;
         fVar3 = (float)param_4;
-        fVar1 = (float)FUN_180d904a0(&local_48,0);
+        fVar1 = (float)FUN_180d98fc0(&local_48,0);
         Mathf.RoundToInt(fVar4 * fVar1,0);
         Rect.set_xMin(&local_58);
         fVar1 = (float)Rect.get_xMax(&local_48,0);
@@ -436,7 +440,7 @@ public class NGUIMath
         *(uint32 *)((int64)width + 4) = local_58._4_4_;
         *(uint32 *)(width + 1) = (uint32)uStack_50;
         *(uint32 *)((int64)width + 12) = uStack_50._4_4_;
-        uVar2 = FUN_180d904a0(width,0);
+        uVar2 = FUN_180d98fc0(width,0);
         Mathf.RoundToInt(uVar2,0);
         Rect.set_xMin(width);
         uVar2 = FUN_18044df60(width,0);
@@ -453,7 +457,7 @@ public class NGUIMath
         if ((fVar4 != 0.0) && (fVar3 != 0.0)) {
           local_48 = local_58;
           uStack_40 = uStack_50;
-          FUN_180d904a0(&local_48,0);
+          FUN_180d98fc0(&local_48,0);
           Rect.set_xMin(&local_58);
           Rect.get_xMax(&local_48,0);
           Rect.set_xMax(&local_58);
@@ -467,8 +471,8 @@ public class NGUIMath
         return rect;
     }
 
-    // Token : 0x6000367
-    // RVA   : 0xB01F50   Offset: 0xB00750   Length: 0x14B
+    // Token : 0x600037F
+    // RVA   : 0xDFC550   Offset: 0xDFB950   Length: 0x14B
     public static Vector2 ConstrainRect(Vector2 minRect, Vector2 maxRect, Vector2 minArea, Vector2 maxArea)
     {
         uint64
@@ -522,8 +526,8 @@ public class NGUIMath
         return CONCAT44(uStack_9c,local_a0);
     }
 
-    // Token : 0x6000368
-    // RVA   : 0xB01120   Offset: 0xAFF920   Length: 0x4A3
+    // Token : 0x6000380
+    // RVA   : 0xDFB720   Offset: 0xDFAB20   Length: 0x4A3
     public static Bounds CalculateAbsoluteWidgetBounds(Transform trans)
     {
         uint uVar1;
@@ -585,8 +589,8 @@ public class NGUIMath
           trans[1] = uStack_d0;
         }
         else {
-          if ((param_2 == 0) || (lVar5 = FUN_180956bf0(param_2,DAT_181d70140)) == null) {
-        LAB_180b015ae:
+          if ((param_2 == 0) || (lVar5 = FUN_1809674e0(param_2,DAT_181d98a60)) == null) {
+        LAB_180dfbbae:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -628,13 +632,13 @@ public class NGUIMath
                   FUN_1800d65f0(uVar7,0);
                 }
                 plVar2 = lVar5[uVar8];
-                if (plVar2 == (int64 *)0) goto LAB_180b015ae;
+                if (plVar2 == (int64 *)0) goto LAB_180dfbbae;
                 cVar3 = Behaviour.get_enabled(plVar2);
                 if (cVar3) {
                   lVar6 = (**(code **)(*plVar2 + 0x1e8))(plVar2,*(uint64 *)(*plVar2 + 0x1f0));
                   uVar9 = 0;
                   do {
-                    if (lVar6 == null) goto LAB_180b015ae;
+                    if (lVar6 == null) goto LAB_180dfbbae;
                     if (*(uint32 *)(lVar6 + 24) <= uVar9) {
                       uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -698,8 +702,8 @@ public class NGUIMath
         return trans;
     }
 
-    // Token : 0x6000369
-    // RVA   : 0xB015D0   Offset: 0xAFFDD0   Length: 0x75
+    // Token : 0x6000381
+    // RVA   : 0xDFBBD0   Offset: 0xDFAFD0   Length: 0x75
     public static Bounds CalculateRelativeWidgetBounds(Transform trans)
     {
         void NGUIMath.CalculateRelativeWidgetBounds
@@ -723,7 +727,7 @@ public class NGUIMath
         cVar2 = Object.op_Equality(trans,0,0);
         if (!cVar2) {
           if (!param_2) {
-            if (trans == null) goto LAB_180b01dd9;
+            if (trans == null) goto LAB_180dfc3d9;
             uVar4 = Component.get_gameObject(trans,0);
             cVar2 = NGUITools.GetActive(uVar4,0);
             if (!cVar2) {
@@ -733,12 +737,12 @@ public class NGUIMath
           plVar9 = (int64 *)0;
           plVar7 = plVar9;
           if (!param_3) {
-            if (trans == null) goto LAB_180b01dd9;
-            plVar7 = (int64 *)Component.GetComponent(trans,DAT_181d6e2c0);
+            if (trans == null) goto LAB_180dfc3d9;
+            plVar7 = (int64 *)Component.GetComponent(trans,DAT_181d96b60);
           }
           cVar2 = Object.op_Inequality(plVar7,0,0);
           if (cVar2) {
-            if (plVar7 == (int64 *)0) goto LAB_180b01dd9;
+            if (plVar7 == (int64 *)0) goto LAB_180dfc3d9;
             cVar2 = Behaviour.get_enabled(plVar7,0);
             if (!cVar2) {
               return;
@@ -746,7 +750,7 @@ public class NGUIMath
           }
           cVar2 = Object.op_Inequality(plVar7,0,0);
           if (cVar2) {
-            if (plVar7 == (int64 *)0) goto LAB_180b01dd9;
+            if (plVar7 == (int64 *)0) goto LAB_180dfc3d9;
             if (*(int *)((int64)plVar7 + 0x134) != 0) {
               lVar5 = (**(code **)(*plVar7 + 0x1e8))(plVar7,*(uint64 *)(*plVar7 + 0x1f0));
               while (lVar5 != null) {
@@ -787,24 +791,24 @@ public class NGUIMath
                   return;
                 }
               }
-              goto LAB_180b01dd9;
+              goto LAB_180dfc3d9;
             }
           }
           if (trans == null) {
-        LAB_180b01dd9:
+        LAB_180dfc3d9:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          plVar7 = (int64 *)Component.GetComponent(trans,DAT_181d6e7c0);
+          plVar7 = (int64 *)Component.GetComponent(trans,DAT_181d97060);
           cVar2 = Object.op_Inequality(plVar7,0,0);
           if (cVar2) {
-            if (plVar7 == (int64 *)0) goto LAB_180b01dd9;
+            if (plVar7 == (int64 *)0) goto LAB_180dfc3d9;
             cVar2 = Behaviour.get_enabled(plVar7,0);
             if (cVar2) {
               lVar5 = (**(code **)(*plVar7 + 0x1e8))(plVar7,*(uint64 *)(*plVar7 + 0x1f0));
               plVar7 = plVar9;
               do {
-                if (lVar5 == null) goto LAB_180b01dd9;
+                if (lVar5 == null) goto LAB_180dfc3d9;
                 uVar8 = (uint32)plVar7;
                 if (*(uint32 *)(lVar5 + 24) <= uVar8) {
                   uVar4 = il2cpp_internal();
@@ -857,8 +861,8 @@ public class NGUIMath
         }
     }
 
-    // Token : 0x600036A
-    // RVA   : 0xB018F0   Offset: 0xB000F0   Length: 0x41
+    // Token : 0x6000382
+    // RVA   : 0xDFBEF0   Offset: 0xDFB2F0   Length: 0x41
     public static Bounds CalculateRelativeWidgetBounds(Transform trans, bool considerInactive)
     {
         void NGUIMath.CalculateRelativeWidgetBounds
@@ -882,7 +886,7 @@ public class NGUIMath
         cVar2 = Object.op_Equality(trans,0,0);
         if (!cVar2) {
           if (!considerInactive) {
-            if (trans == null) goto LAB_180b01dd9;
+            if (trans == null) goto LAB_180dfc3d9;
             uVar4 = Component.get_gameObject(trans,0);
             cVar2 = NGUITools.GetActive(uVar4,0);
             if (!cVar2) {
@@ -892,12 +896,12 @@ public class NGUIMath
           plVar9 = (int64 *)0;
           plVar7 = plVar9;
           if (!param_3) {
-            if (trans == null) goto LAB_180b01dd9;
-            plVar7 = (int64 *)Component.GetComponent(trans,DAT_181d6e2c0);
+            if (trans == null) goto LAB_180dfc3d9;
+            plVar7 = (int64 *)Component.GetComponent(trans,DAT_181d96b60);
           }
           cVar2 = Object.op_Inequality(plVar7,0,0);
           if (cVar2) {
-            if (plVar7 == (int64 *)0) goto LAB_180b01dd9;
+            if (plVar7 == (int64 *)0) goto LAB_180dfc3d9;
             cVar2 = Behaviour.get_enabled(plVar7,0);
             if (!cVar2) {
               return;
@@ -905,7 +909,7 @@ public class NGUIMath
           }
           cVar2 = Object.op_Inequality(plVar7,0,0);
           if (cVar2) {
-            if (plVar7 == (int64 *)0) goto LAB_180b01dd9;
+            if (plVar7 == (int64 *)0) goto LAB_180dfc3d9;
             if (*(int *)((int64)plVar7 + 0x134) != 0) {
               lVar5 = (**(code **)(*plVar7 + 0x1e8))(plVar7,*(uint64 *)(*plVar7 + 0x1f0));
               while (lVar5 != null) {
@@ -946,24 +950,24 @@ public class NGUIMath
                   return;
                 }
               }
-              goto LAB_180b01dd9;
+              goto LAB_180dfc3d9;
             }
           }
           if (trans == null) {
-        LAB_180b01dd9:
+        LAB_180dfc3d9:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          plVar7 = (int64 *)Component.GetComponent(trans,DAT_181d6e7c0);
+          plVar7 = (int64 *)Component.GetComponent(trans,DAT_181d97060);
           cVar2 = Object.op_Inequality(plVar7,0,0);
           if (cVar2) {
-            if (plVar7 == (int64 *)0) goto LAB_180b01dd9;
+            if (plVar7 == (int64 *)0) goto LAB_180dfc3d9;
             cVar2 = Behaviour.get_enabled(plVar7,0);
             if (cVar2) {
               lVar5 = (**(code **)(*plVar7 + 0x1e8))(plVar7,*(uint64 *)(*plVar7 + 0x1f0));
               plVar7 = plVar9;
               do {
-                if (lVar5 == null) goto LAB_180b01dd9;
+                if (lVar5 == null) goto LAB_180dfc3d9;
                 uVar8 = (uint32)plVar7;
                 if (*(uint32 *)(lVar5 + 24) <= uVar8) {
                   uVar4 = il2cpp_internal();
@@ -1016,8 +1020,8 @@ public class NGUIMath
         }
     }
 
-    // Token : 0x600036B
-    // RVA   : 0xB01E00   Offset: 0xB00600   Length: 0x82
+    // Token : 0x6000383
+    // RVA   : 0xDFC400   Offset: 0xDFB800   Length: 0x82
     public static Bounds CalculateRelativeWidgetBounds(Transform relativeTo, Transform content)
     {
         void NGUIMath.CalculateRelativeWidgetBounds
@@ -1041,7 +1045,7 @@ public class NGUIMath
         cVar2 = Object.op_Equality(relativeTo,0,0);
         if (!cVar2) {
           if (!content) {
-            if (relativeTo == null) goto LAB_180b01dd9;
+            if (relativeTo == null) goto LAB_180dfc3d9;
             uVar4 = Component.get_gameObject(relativeTo,0);
             cVar2 = NGUITools.GetActive(uVar4,0);
             if (!cVar2) {
@@ -1051,12 +1055,12 @@ public class NGUIMath
           plVar9 = (int64 *)0;
           plVar7 = plVar9;
           if (!param_3) {
-            if (relativeTo == null) goto LAB_180b01dd9;
-            plVar7 = (int64 *)Component.GetComponent(relativeTo,DAT_181d6e2c0);
+            if (relativeTo == null) goto LAB_180dfc3d9;
+            plVar7 = (int64 *)Component.GetComponent(relativeTo,DAT_181d96b60);
           }
           cVar2 = Object.op_Inequality(plVar7,0,0);
           if (cVar2) {
-            if (plVar7 == (int64 *)0) goto LAB_180b01dd9;
+            if (plVar7 == (int64 *)0) goto LAB_180dfc3d9;
             cVar2 = Behaviour.get_enabled(plVar7,0);
             if (!cVar2) {
               return;
@@ -1064,7 +1068,7 @@ public class NGUIMath
           }
           cVar2 = Object.op_Inequality(plVar7,0,0);
           if (cVar2) {
-            if (plVar7 == (int64 *)0) goto LAB_180b01dd9;
+            if (plVar7 == (int64 *)0) goto LAB_180dfc3d9;
             if (*(int *)((int64)plVar7 + 0x134) != 0) {
               lVar5 = (**(code **)(*plVar7 + 0x1e8))(plVar7,*(uint64 *)(*plVar7 + 0x1f0));
               while (lVar5 != null) {
@@ -1105,24 +1109,24 @@ public class NGUIMath
                   return;
                 }
               }
-              goto LAB_180b01dd9;
+              goto LAB_180dfc3d9;
             }
           }
           if (relativeTo == null) {
-        LAB_180b01dd9:
+        LAB_180dfc3d9:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          plVar7 = (int64 *)Component.GetComponent(relativeTo,DAT_181d6e7c0);
+          plVar7 = (int64 *)Component.GetComponent(relativeTo,DAT_181d97060);
           cVar2 = Object.op_Inequality(plVar7,0,0);
           if (cVar2) {
-            if (plVar7 == (int64 *)0) goto LAB_180b01dd9;
+            if (plVar7 == (int64 *)0) goto LAB_180dfc3d9;
             cVar2 = Behaviour.get_enabled(plVar7,0);
             if (cVar2) {
               lVar5 = (**(code **)(*plVar7 + 0x1e8))(plVar7,*(uint64 *)(*plVar7 + 0x1f0));
               plVar7 = plVar9;
               do {
-                if (lVar5 == null) goto LAB_180b01dd9;
+                if (lVar5 == null) goto LAB_180dfc3d9;
                 uVar8 = (uint32)plVar7;
                 if (*(uint32 *)(lVar5 + 24) <= uVar8) {
                   uVar4 = il2cpp_internal();
@@ -1175,8 +1179,8 @@ public class NGUIMath
         }
     }
 
-    // Token : 0x600036C
-    // RVA   : 0xB01650   Offset: 0xAFFE50   Length: 0x29B
+    // Token : 0x6000384
+    // RVA   : 0xDFBC50   Offset: 0xDFB050   Length: 0x29B
     public static Bounds CalculateRelativeWidgetBounds(Transform relativeTo, Transform content, bool considerInactive, bool considerChildren)
     {
         void NGUIMath.CalculateRelativeWidgetBounds
@@ -1200,7 +1204,7 @@ public class NGUIMath
         cVar2 = Object.op_Equality(relativeTo,0,0);
         if (!cVar2) {
           if (!content) {
-            if (relativeTo == null) goto LAB_180b01dd9;
+            if (relativeTo == null) goto LAB_180dfc3d9;
             uVar4 = Component.get_gameObject(relativeTo,0);
             cVar2 = NGUITools.GetActive(uVar4,0);
             if (!cVar2) {
@@ -1210,12 +1214,12 @@ public class NGUIMath
           plVar9 = (int64 *)0;
           plVar7 = plVar9;
           if (!considerInactive) {
-            if (relativeTo == null) goto LAB_180b01dd9;
-            plVar7 = (int64 *)Component.GetComponent(relativeTo,DAT_181d6e2c0);
+            if (relativeTo == null) goto LAB_180dfc3d9;
+            plVar7 = (int64 *)Component.GetComponent(relativeTo,DAT_181d96b60);
           }
           cVar2 = Object.op_Inequality(plVar7,0,0);
           if (cVar2) {
-            if (plVar7 == (int64 *)0) goto LAB_180b01dd9;
+            if (plVar7 == (int64 *)0) goto LAB_180dfc3d9;
             cVar2 = Behaviour.get_enabled(plVar7,0);
             if (!cVar2) {
               return;
@@ -1223,7 +1227,7 @@ public class NGUIMath
           }
           cVar2 = Object.op_Inequality(plVar7,0,0);
           if (cVar2) {
-            if (plVar7 == (int64 *)0) goto LAB_180b01dd9;
+            if (plVar7 == (int64 *)0) goto LAB_180dfc3d9;
             if (*(int *)((int64)plVar7 + 0x134) != 0) {
               lVar5 = (**(code **)(*plVar7 + 0x1e8))(plVar7,*(uint64 *)(*plVar7 + 0x1f0));
               while (lVar5 != null) {
@@ -1264,24 +1268,24 @@ public class NGUIMath
                   return;
                 }
               }
-              goto LAB_180b01dd9;
+              goto LAB_180dfc3d9;
             }
           }
           if (relativeTo == null) {
-        LAB_180b01dd9:
+        LAB_180dfc3d9:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          plVar7 = (int64 *)Component.GetComponent(relativeTo,DAT_181d6e7c0);
+          plVar7 = (int64 *)Component.GetComponent(relativeTo,DAT_181d97060);
           cVar2 = Object.op_Inequality(plVar7,0,0);
           if (cVar2) {
-            if (plVar7 == (int64 *)0) goto LAB_180b01dd9;
+            if (plVar7 == (int64 *)0) goto LAB_180dfc3d9;
             cVar2 = Behaviour.get_enabled(plVar7,0);
             if (cVar2) {
               lVar5 = (**(code **)(*plVar7 + 0x1e8))(plVar7,*(uint64 *)(*plVar7 + 0x1f0));
               plVar7 = plVar9;
               do {
-                if (lVar5 == null) goto LAB_180b01dd9;
+                if (lVar5 == null) goto LAB_180dfc3d9;
                 uVar8 = (uint32)plVar7;
                 if (*(uint32 *)(lVar5 + 24) <= uVar8) {
                   uVar4 = il2cpp_internal();
@@ -1334,8 +1338,8 @@ public class NGUIMath
         }
     }
 
-    // Token : 0x600036D
-    // RVA   : 0xB01940   Offset: 0xB00140   Length: 0x4BE
+    // Token : 0x6000385
+    // RVA   : 0xDFBF40   Offset: 0xDFB340   Length: 0x4BE
     private static void CalculateRelativeWidgetBounds(Transform content, bool considerInactive, bool isRoot, ref Matrix4x4 toLocal, ref Vector3 vMin, ref Vector3 vMax, ref bool isSet, bool considerChildren)
     {
         void NGUIMath.CalculateRelativeWidgetBounds
@@ -1359,7 +1363,7 @@ public class NGUIMath
         cVar2 = Object.op_Equality(content,0,0);
         if (!cVar2) {
           if (!considerInactive) {
-            if (content == null) goto LAB_180b01dd9;
+            if (content == null) goto LAB_180dfc3d9;
             uVar4 = Component.get_gameObject(content,0);
             cVar2 = NGUITools.GetActive(uVar4,0);
             if (!cVar2) {
@@ -1369,12 +1373,12 @@ public class NGUIMath
           plVar9 = (int64 *)0;
           plVar7 = plVar9;
           if (!isRoot) {
-            if (content == null) goto LAB_180b01dd9;
-            plVar7 = (int64 *)Component.GetComponent(content,DAT_181d6e2c0);
+            if (content == null) goto LAB_180dfc3d9;
+            plVar7 = (int64 *)Component.GetComponent(content,DAT_181d96b60);
           }
           cVar2 = Object.op_Inequality(plVar7,0,0);
           if (cVar2) {
-            if (plVar7 == (int64 *)0) goto LAB_180b01dd9;
+            if (plVar7 == (int64 *)0) goto LAB_180dfc3d9;
             cVar2 = Behaviour.get_enabled(plVar7,0);
             if (!cVar2) {
               return;
@@ -1382,7 +1386,7 @@ public class NGUIMath
           }
           cVar2 = Object.op_Inequality(plVar7,0,0);
           if (cVar2) {
-            if (plVar7 == (int64 *)0) goto LAB_180b01dd9;
+            if (plVar7 == (int64 *)0) goto LAB_180dfc3d9;
             if (*(int *)((int64)plVar7 + 0x134) != 0) {
               lVar5 = (**(code **)(*plVar7 + 0x1e8))(plVar7,*(uint64 *)(*plVar7 + 0x1f0));
               while (lVar5 != null) {
@@ -1423,24 +1427,24 @@ public class NGUIMath
                   return;
                 }
               }
-              goto LAB_180b01dd9;
+              goto LAB_180dfc3d9;
             }
           }
           if (content == null) {
-        LAB_180b01dd9:
+        LAB_180dfc3d9:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          plVar7 = (int64 *)Component.GetComponent(content,DAT_181d6e7c0);
+          plVar7 = (int64 *)Component.GetComponent(content,DAT_181d97060);
           cVar2 = Object.op_Inequality(plVar7,0,0);
           if (cVar2) {
-            if (plVar7 == (int64 *)0) goto LAB_180b01dd9;
+            if (plVar7 == (int64 *)0) goto LAB_180dfc3d9;
             cVar2 = Behaviour.get_enabled(plVar7,0);
             if (cVar2) {
               lVar5 = (**(code **)(*plVar7 + 0x1e8))(plVar7,*(uint64 *)(*plVar7 + 0x1f0));
               plVar7 = plVar9;
               do {
-                if (lVar5 == null) goto LAB_180b01dd9;
+                if (lVar5 == null) goto LAB_180dfc3d9;
                 uVar8 = (uint32)plVar7;
                 if (*(uint32 *)(lVar5 + 24) <= uVar8) {
                   uVar4 = il2cpp_internal();
@@ -1493,8 +1497,8 @@ public class NGUIMath
         }
     }
 
-    // Token : 0x600036E
-    // RVA   : 0xB041A0   Offset: 0xB029A0   Length: 0x169
+    // Token : 0x6000386
+    // RVA   : 0xDFE690   Offset: 0xDFDA90   Length: 0x169
     public static Vector3 SpringDampen(ref Vector3 velocity, float strength, float deltaTime)
     {
         float fVar1;
@@ -1507,17 +1511,17 @@ public class NGUIMath
         }
         fVar4 = 1.0 - strength * 0.001;
         Mathf.RoundToInt(fVar1 * 1000.0,0);
-        fVar1 = (float)FUN_1801f7f00(fVar4);
+        fVar1 = (float)FUN_1801f8ab0(fVar4);
         fVar2 = (float)*velocity;
         fVar3 = (float)((uint64)*velocity >> 32);
-        fVar4 = (float)FUN_1801f94f0(fVar4);
+        fVar4 = (float)FUN_1801fa300(fVar4);
         fVar4 = (fVar1 - 1.0) / fVar4;
         *velocity = CONCAT44(fVar3 * fVar1,fVar2 * fVar1);
         return CONCAT44(fVar3 * fVar4 * 0.06,fVar2 * fVar4 * 0.06);
     }
 
-    // Token : 0x600036F
-    // RVA   : 0xB04310   Offset: 0xB02B10   Length: 0xE4
+    // Token : 0x6000387
+    // RVA   : 0xDFE800   Offset: 0xDFDC00   Length: 0xE4
     public static Vector2 SpringDampen(ref Vector2 velocity, float strength, float deltaTime)
     {
         float fVar1;
@@ -1530,17 +1534,17 @@ public class NGUIMath
         }
         fVar4 = 1.0 - strength * 0.001;
         Mathf.RoundToInt(fVar1 * 1000.0,0);
-        fVar1 = (float)FUN_1801f7f00(fVar4);
+        fVar1 = (float)FUN_1801f8ab0(fVar4);
         fVar2 = (float)*velocity;
         fVar3 = (float)((uint64)*velocity >> 32);
-        fVar4 = (float)FUN_1801f94f0(fVar4);
+        fVar4 = (float)FUN_1801fa300(fVar4);
         fVar4 = (fVar1 - 1.0) / fVar4;
         *velocity = CONCAT44(fVar3 * fVar1,fVar2 * fVar1);
         return CONCAT44(fVar3 * fVar4 * 0.06,fVar2 * fVar4 * 0.06);
     }
 
-    // Token : 0x6000370
-    // RVA   : 0xB04620   Offset: 0xB02E20   Length: 0x78
+    // Token : 0x6000388
+    // RVA   : 0xDFEB10   Offset: 0xDFDF10   Length: 0x78
     public static float SpringLerp(float strength, float deltaTime)
     {
         uint64 *
@@ -1576,8 +1580,8 @@ public class NGUIMath
         return strength;
     }
 
-    // Token : 0x6000371
-    // RVA   : 0xB04480   Offset: 0xB02C80   Length: 0x8D
+    // Token : 0x6000389
+    // RVA   : 0xDFE970   Offset: 0xDFDD70   Length: 0x8D
     public static float SpringLerp(float from, float to, float strength, float deltaTime)
     {
         uint64 *
@@ -1613,8 +1617,8 @@ public class NGUIMath
         return from;
     }
 
-    // Token : 0x6000372
-    // RVA   : 0xB046A0   Offset: 0xB02EA0   Length: 0x5F
+    // Token : 0x600038A
+    // RVA   : 0xDFEB90   Offset: 0xDFDF90   Length: 0x5F
     public static Vector2 SpringLerp(Vector2 from, Vector2 to, float strength, float deltaTime)
     {
         uint64 *
@@ -1650,8 +1654,8 @@ public class NGUIMath
         return from;
     }
 
-    // Token : 0x6000373
-    // RVA   : 0xB04510   Offset: 0xB02D10   Length: 0x10C
+    // Token : 0x600038B
+    // RVA   : 0xDFEA00   Offset: 0xDFDE00   Length: 0x10C
     public static Vector3 SpringLerp(Vector3 from, Vector3 to, float strength, float deltaTime)
     {
         uint64 *
@@ -1687,8 +1691,8 @@ public class NGUIMath
         return from;
     }
 
-    // Token : 0x6000374
-    // RVA   : 0xB04400   Offset: 0xB02C00   Length: 0x75
+    // Token : 0x600038C
+    // RVA   : 0xDFE8F0   Offset: 0xDFDCF0   Length: 0x75
     public static Quaternion SpringLerp(Quaternion from, Quaternion to, float strength, float deltaTime)
     {
         uint64 *
@@ -1724,8 +1728,8 @@ public class NGUIMath
         return from;
     }
 
-    // Token : 0x6000375
-    // RVA   : 0xB03C80   Offset: 0xB02480   Length: 0x8F
+    // Token : 0x600038D
+    // RVA   : 0xDFE170   Offset: 0xDFD570   Length: 0x8F
     public static float RotateTowards(float from, float to, float maxAngle)
     {
         ulong uVar1;
@@ -1744,8 +1748,8 @@ public class NGUIMath
         return CONCAT44(uVar3,fVar2 + from);
     }
 
-    // Token : 0x6000376
-    // RVA   : 0xB02410   Offset: 0xB00C10   Length: 0x162
+    // Token : 0x600038E
+    // RVA   : 0xDFCA10   Offset: 0xDFBE10   Length: 0x162
     private static float DistancePointToLineSegment(Vector2 point, Vector2 a, Vector2 b)
     {
         float fVar1;
@@ -1786,8 +1790,8 @@ public class NGUIMath
         Vector2.get_magnitude(&local_88,0);
     }
 
-    // Token : 0x6000377
-    // RVA   : 0xB026D0   Offset: 0xB00ED0   Length: 0x366
+    // Token : 0x600038F
+    // RVA   : 0xDFCCD0   Offset: 0xDFC0D0   Length: 0x366
     public static float DistanceToRectangle(Vector2[] screenPoints, Vector2 mousePos)
     {
         long lVar1;
@@ -1799,7 +1803,7 @@ public class NGUIMath
         ulong local_48;
         ulong local_38;
         byte[] local_28 = new byte[32];
-        lVar1 = FUN_1800d60b0(DAT_181d81bc0,4);
+        lVar1 = FUN_1800d60b0(DAT_181da6ce0,4);
         uVar4 = 0;
         while (screenPoints != null) {
           lVar5 = (int64)(int)uVar4;
@@ -1831,8 +1835,8 @@ public class NGUIMath
         }
     }
 
-    // Token : 0x6000378
-    // RVA   : 0xB02580   Offset: 0xB00D80   Length: 0x140
+    // Token : 0x6000390
+    // RVA   : 0xDFCB80   Offset: 0xDFBF80   Length: 0x140
     public static float DistanceToRectangle(Vector3[] worldPoints, Vector2 mousePos, Camera cam)
     {
         long lVar1;
@@ -1844,7 +1848,7 @@ public class NGUIMath
         ulong local_48;
         ulong local_38;
         byte[] local_28 = new byte[32];
-        lVar1 = FUN_1800d60b0(DAT_181d81bc0,4);
+        lVar1 = FUN_1800d60b0(DAT_181da6ce0,4);
         uVar4 = 0;
         while (worldPoints != null) {
           lVar5 = (int64)(int)uVar4;
@@ -1876,8 +1880,8 @@ public class NGUIMath
         }
     }
 
-    // Token : 0x6000379
-    // RVA   : 0xB02A40   Offset: 0xB01240   Length: 0x99
+    // Token : 0x6000391
+    // RVA   : 0xDFD040   Offset: 0xDFC440   Length: 0x99
     public static Vector2 GetPivotOffset(Pivot pv)
     {
         uint local_res18;
@@ -1900,8 +1904,8 @@ public class NGUIMath
         return CONCAT44(0x3f000000,local_res18);
     }
 
-    // Token : 0x600037A
-    // RVA   : 0xB02AE0   Offset: 0xB012E0   Length: 0x96
+    // Token : 0x6000392
+    // RVA   : 0xDFD0E0   Offset: 0xDFC4E0   Length: 0x96
     public static Pivot GetPivot(Vector2 offset)
     {
         ulong uVar1;
@@ -1937,15 +1941,17 @@ public class NGUIMath
         return 8;
     }
 
-    // Token : 0x600037B
-    // RVA   : 0xB034A0   Offset: 0xB01CA0   Length: 0x8
+    // Token : 0x6000393
+    // RVA   : 0xDFD990   Offset: 0xDFCD90   Length: 0x8
     public static void MoveWidget(UIRect w, float x, float y)
     {
+        void FUN_180dfd990(void)
+        {
         NGUIMath.MoveRect();
     }
 
-    // Token : 0x600037C
-    // RVA   : 0xB03210   Offset: 0xB01A10   Length: 0x28A
+    // Token : 0x6000394
+    // RVA   : 0xDFD700   Offset: 0xDFCB00   Length: 0x28A
     public static void MoveRect(UIRect rect, float x, float y)
     {
         ulong uVar2;
@@ -2018,8 +2024,8 @@ public class NGUIMath
         }
     }
 
-    // Token : 0x600037D
-    // RVA   : 0xB038E0   Offset: 0xB020E0   Length: 0x37
+    // Token : 0x6000395
+    // RVA   : 0xDFDDD0   Offset: 0xDFD1D0   Length: 0x37
     public static void ResizeWidget(UIWidget w, Pivot pivot, float x, float y, int minWidth, int minHeight)
     {
         uint uVar1;
@@ -2032,7 +2038,7 @@ public class NGUIMath
         ulong local_38;
         ulong uStack_30;
         if (w == null) {
-        LAB_180b03c52:
+        LAB_180dfe142:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -2045,7 +2051,7 @@ public class NGUIMath
         }
         else {
           lVar3 = UIRect.get_cachedTransform();
-          if (lVar3 == null) goto LAB_180b03c52;
+          if (lVar3 == null) goto LAB_180dfe142;
           puVar4 = (uint64 *)Transform.get_localRotation(&local_38,lVar3,0);
           local_58 = CONCAT44(y,x);
           local_50 = 0;
@@ -2066,7 +2072,7 @@ public class NGUIMath
           case 3:
             break;
           default:
-            goto switchD_180b039e6_caseD_4;
+            goto switchD_180dfded6_caseD_4;
           case 5:
             break;
           case 6:
@@ -2077,11 +2083,11 @@ public class NGUIMath
           }
         }
         NGUIMath.AdjustWidget(w);
-        switchD_180b039e6_caseD_4:
+        switchD_180dfded6_caseD_4:
     }
 
-    // Token : 0x600037E
-    // RVA   : 0xB03920   Offset: 0xB02120   Length: 0x338
+    // Token : 0x6000396
+    // RVA   : 0xDFDE10   Offset: 0xDFD210   Length: 0x338
     public static void ResizeWidget(UIWidget w, Pivot pivot, float x, float y, int minWidth, int minHeight, int maxWidth, int maxHeight)
     {
         uint uVar1;
@@ -2094,7 +2100,7 @@ public class NGUIMath
         ulong local_38;
         ulong uStack_30;
         if (w == null) {
-        LAB_180b03c52:
+        LAB_180dfe142:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -2107,7 +2113,7 @@ public class NGUIMath
         }
         else {
           lVar3 = UIRect.get_cachedTransform();
-          if (lVar3 == null) goto LAB_180b03c52;
+          if (lVar3 == null) goto LAB_180dfe142;
           puVar4 = (uint64 *)Transform.get_localRotation(&local_38,lVar3,0);
           local_58 = CONCAT44(y,x);
           local_50 = 0;
@@ -2128,7 +2134,7 @@ public class NGUIMath
           case 3:
             break;
           default:
-            goto switchD_180b039e6_caseD_4;
+            goto switchD_180dfded6_caseD_4;
           case 5:
             break;
           case 6:
@@ -2139,11 +2145,11 @@ public class NGUIMath
           }
         }
         NGUIMath.AdjustWidget(w);
-        switchD_180b039e6_caseD_4:
+        switchD_180dfded6_caseD_4:
     }
 
-    // Token : 0x600037F
-    // RVA   : 0xB010D0   Offset: 0xAFF8D0   Length: 0x46
+    // Token : 0x6000397
+    // RVA   : 0xDFB6D0   Offset: 0xDFAAD0   Length: 0x46
     public static void AdjustWidget(UIWidget w, float left, float bottom, float right, float top)
     {
         ulong uVar1;
@@ -2377,7 +2383,7 @@ public class NGUIMath
             if (!cVar6) {
               return;
             }
-            uVar14 = FUN_180da0f00(lVar5,0);
+            uVar14 = FUN_180da9a20(lVar5,0);
             fVar16 = fVar16 - fVar3 * (float)(int)uVar9;
             fVar15 = fVar15 - fVar4 * (float)(int)local_res8;
             if (w[3] != 0) {
@@ -2417,8 +2423,8 @@ public class NGUIMath
         }
     }
 
-    // Token : 0x6000380
-    // RVA   : 0xB01080   Offset: 0xAFF880   Length: 0x4C
+    // Token : 0x6000398
+    // RVA   : 0xDFB680   Offset: 0xDFAA80   Length: 0x4C
     public static void AdjustWidget(UIWidget w, float left, float bottom, float right, float top, int minWidth, int minHeight)
     {
         ulong uVar1;
@@ -2652,7 +2658,7 @@ public class NGUIMath
             if (!cVar6) {
               return;
             }
-            uVar14 = FUN_180da0f00(lVar5,0);
+            uVar14 = FUN_180da9a20(lVar5,0);
             fVar16 = fVar16 - fVar3 * (float)(int)uVar9;
             fVar15 = fVar15 - fVar4 * (float)(int)local_res8;
             if (w[3] != 0) {
@@ -2692,8 +2698,8 @@ public class NGUIMath
         }
     }
 
-    // Token : 0x6000381
-    // RVA   : 0xB00670   Offset: 0xAFEE70   Length: 0xA07
+    // Token : 0x6000399
+    // RVA   : 0xDFAC70   Offset: 0xDFA070   Length: 0xA07
     public static void AdjustWidget(UIWidget w, float left, float bottom, float right, float top, int minWidth, int minHeight, int maxWidth, int maxHeight)
     {
         ulong uVar1;
@@ -2927,7 +2933,7 @@ public class NGUIMath
             if (!cVar6) {
               return;
             }
-            uVar14 = FUN_180da0f00(lVar5,0);
+            uVar14 = FUN_180da9a20(lVar5,0);
             fVar16 = fVar16 - fVar3 * (float)(int)uVar9;
             fVar15 = fVar15 - fVar4 * (float)(int)local_res8;
             if (w[3] != 0) {
@@ -2967,8 +2973,8 @@ public class NGUIMath
         }
     }
 
-    // Token : 0x6000382
-    // RVA   : 0xB00600   Offset: 0xAFEE00   Length: 0x6F
+    // Token : 0x600039A
+    // RVA   : 0xDFAC00   Offset: 0xDFA000   Length: 0x6F
     public static int AdjustByDPI(float height)
     {
         int iVar1;
@@ -2991,8 +2997,8 @@ public class NGUIMath
         return uVar2;
     }
 
-    // Token : 0x6000383
-    // RVA   : 0xB03FA0   Offset: 0xB027A0   Length: 0x1F2
+    // Token : 0x600039B
+    // RVA   : 0xDFE490   Offset: 0xDFD890   Length: 0x1F2
     public static Vector2 ScreenToPixels(Vector2 pos, Transform relativeTo)
     {
         uint64
@@ -3040,8 +3046,8 @@ public class NGUIMath
         }
     }
 
-    // Token : 0x6000384
-    // RVA   : 0xB03D10   Offset: 0xB02510   Length: 0x28E
+    // Token : 0x600039C
+    // RVA   : 0xDFE200   Offset: 0xDFD600   Length: 0x28E
     public static Vector2 ScreenToParentPixels(Vector2 pos, Transform relativeTo)
     {
         uint uVar1;
@@ -3056,10 +3062,10 @@ public class NGUIMath
         byte[] local_28 = new byte[32];
         if ((relativeTo != null) && (lVar3 = Component.get_gameObject(relativeTo,0)) != null) {
           local_res10[0] = GameObject.get_layer(lVar3,0);
-          uVar4 = FUN_180da0f00(relativeTo,0);
+          uVar4 = FUN_180da9a20(relativeTo,0);
           cVar2 = Object.op_Inequality(uVar4,0,0);
           if (cVar2) {
-            relativeTo = FUN_180da0f00(relativeTo,0);
+            relativeTo = FUN_180da9a20(relativeTo,0);
           }
           uVar1 = local_res10[0];
           lVar3 = NGUITools.FindCameraForLayer(uVar1,0);
@@ -3092,8 +3098,8 @@ public class NGUIMath
         }
     }
 
-    // Token : 0x6000385
-    // RVA   : 0xB04700   Offset: 0xB02F00   Length: 0x18F
+    // Token : 0x600039D
+    // RVA   : 0xDFEBF0   Offset: 0xDFDFF0   Length: 0x18F
     public static Vector3 WorldToLocalPoint(Vector3 worldPos, Camera worldCam, Camera uiCam, Transform relativeTo)
     {
         uint64 *
@@ -3111,7 +3117,7 @@ public class NGUIMath
         uint32 local_20;
         uint8 local_18 [16];
         if (uiCam == null) {
-        LAB_180b0488a:
+        LAB_180dfed7a:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -3122,12 +3128,12 @@ public class NGUIMath
         uVar4 = *(uint32 *)(puVar5 + 1);
         *worldCam = uVar1;
         *(uint32 *)(worldCam + 1) = uVar4;
-        if (relativeTo == null) goto LAB_180b0488a;
+        if (relativeTo == null) goto LAB_180dfed7a;
         local_28 = uVar1;
         local_20 = uVar4;
         puVar5 = (uint64 *)Camera.ViewportToWorldPoint(local_18,relativeTo,&local_28,0);
-        lVar6 = DAT_181d68fe8;
-        bVar2 = *(byte *)(DAT_181d68fe8 + 0x133);
+        lVar6 = DAT_181d8e210;
+        bVar2 = *(byte *)(DAT_181d8e210 + 0x133);
         uVar4 = *(uint32 *)(puVar5 + 1);
         *worldCam = *puVar5;
         *(uint32 *)(worldCam + 1) = uVar4;
@@ -3136,28 +3142,28 @@ public class NGUIMath
         }
         cVar3 = Object.op_Equality(param_5,0,0);
         if (!cVar3) {
-          if (param_5 == 0) goto LAB_180b0488a;
-          lVar6 = FUN_180da0f00(param_5,0);
+          if (param_5 == 0) goto LAB_180dfed7a;
+          lVar6 = FUN_180da9a20(param_5,0);
           cVar3 = Object.op_Equality(lVar6,0,0);
           if (!cVar3) {
-            if (lVar6 == null) goto LAB_180b0488a;
+            if (lVar6 == null) goto LAB_180dfed7a;
             local_28 = *worldCam;
             local_20 = *(uint32 *)(worldCam + 1);
             puVar5 = (uint64 *)Transform.InverseTransformPoint(local_18,lVar6,&local_28,0);
             uVar4 = *(uint32 *)(puVar5 + 1);
             *worldPos = *puVar5;
-            goto LAB_180b04862;
+            goto LAB_180dfed52;
           }
         }
         uVar4 = *(uint32 *)(worldCam + 1);
         *worldPos = *worldCam;
-        LAB_180b04862:
+        LAB_180dfed52:
         *(uint32 *)(worldPos + 1) = uVar4;
         return worldPos;
     }
 
-    // Token : 0x6000386
-    // RVA   : 0xB03740   Offset: 0xB01F40   Length: 0x163
+    // Token : 0x600039E
+    // RVA   : 0xDFDC30   Offset: 0xDFD030   Length: 0x163
     public static void OverlayPosition(Transform trans, Vector3 worldPos, Camera worldCam, Camera myCam)
     {
         bool cVar1;
@@ -3195,8 +3201,8 @@ public class NGUIMath
         }
     }
 
-    // Token : 0x6000387
-    // RVA   : 0xB034B0   Offset: 0xB01CB0   Length: 0x10D
+    // Token : 0x600039F
+    // RVA   : 0xDFD9A0   Offset: 0xDFCDA0   Length: 0x10D
     public static void OverlayPosition(Transform trans, Vector3 worldPos, Camera worldCam)
     {
         bool cVar1;
@@ -3234,8 +3240,8 @@ public class NGUIMath
         }
     }
 
-    // Token : 0x6000388
-    // RVA   : 0xB035C0   Offset: 0xB01DC0   Length: 0x17B
+    // Token : 0x60003A0
+    // RVA   : 0xDFDAB0   Offset: 0xDFCEB0   Length: 0x17B
     public static void OverlayPosition(Transform trans, Transform target)
     {
         bool cVar1;

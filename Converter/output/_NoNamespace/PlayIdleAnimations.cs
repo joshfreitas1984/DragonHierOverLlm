@@ -1,29 +1,29 @@
 // ============================================================
 // Type  : PlayIdleAnimations
-// Token : 0x2000020
+// Token : 0x2000021
 // ============================================================
 
 public class PlayIdleAnimations
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000087
+    // Token: 0x40000A3
     private Animation mAnim;
 
-    // Token: 0x4000088
+    // Token: 0x40000A4
     private AnimationClip mIdle;
 
-    // Token: 0x4000089
+    // Token: 0x40000A5
     private List<AnimationClip> mBreaks;
 
-    // Token: 0x400008A
+    // Token: 0x40000A6
     private float mNextBreak;
 
-    // Token: 0x400008B
+    // Token: 0x40000A7
     private int mLastIndex;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600006F
-    // RVA   : 0x478950   Offset: 0x477150   Length: 0x49D
+    // Token : 0x6000087
+    // RVA   : 0x46CA20   Offset: 0x46BE20   Length: 0x49D
     private void Start()
     {
         int iVar1;
@@ -32,7 +32,7 @@ public class PlayIdleAnimations
         long lVar7;
         ushort uVar8;
         ushort uVar9;
-        uVar3 = Component.GetComponentInChildren(this,DAT_181d6ea40);
+        uVar3 = Component.GetComponentInChildren(this,DAT_181d972e0);
         this.mAnim = uVar3;
         uVar3 = this.mAnim;
         cVar2 = Object.op_Equality(uVar3,0,0);
@@ -41,19 +41,19 @@ public class PlayIdleAnimations
           uVar3 = NGUITools.GetHierarchy(uVar3,0);
           uVar3 = String.Concat(uVar3," has no Animation component",0);
           Debug.LogWarning(uVar3,0);
-          if ((*(byte *)(DAT_181d68fe8 + 0x133) & 4) != 0) {
-            iVar1 = *(int *)(DAT_181d68fe8 + 224);
-        LAB_180478d8e:
+          if ((*(byte *)(DAT_181d8e210 + 0x133) & 4) != 0) {
+            iVar1 = *(int *)(DAT_181d8e210 + 224);
+        LAB_18046ce5e:
             if (iVar1 == 0) {
               il2cpp_runtime_class_init();
             }
           }
-        LAB_180478d95:
+        LAB_18046ce65:
           Object.Destroy(this,0);
           return;
         }
         if (this.mAnim == null) {
-        LAB_180478de8:
+        LAB_18046ceb8:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -68,52 +68,52 @@ public class PlayIdleAnimations
           if (*(uint16 *)(lVar7 + 0x12a) != 0) {
             uVar8 = uVar9;
             do {
-              if (*(int64 *)(*(int64 *)(lVar7 + 176) + (uint64)uVar8 * 16) == DAT_181d544d8) {
+              if (*(int64 *)(*(int64 *)(lVar7 + 176) + (uint64)uVar8 * 16) == DAT_181d79620) {
                 puVar5 = (uint64 *)
                          ((int64)*(int *)(*(int64 *)(lVar7 + 176) + 8 + (uint64)uVar8 * 16) *
                           16 + 0x138 + lVar7);
-                goto LAB_180478ac9;
+                goto LAB_18046cb99;
               }
               uVar8 = uVar8 + 1;
             } while (uVar8 < *(uint16 *)(lVar7 + 0x12a));
           }
-          puVar5 = (uint64 *)FUN_1800914f0(plVar4,DAT_181d544d8,0);
-        LAB_180478ac9:
+          puVar5 = (uint64 *)FUN_1800914f0(plVar4,DAT_181d79620,0);
+        LAB_18046cb99:
           cVar2 = (*(code *)*puVar5)(plVar4,puVar5[1]);
           if (!cVar2) {
-            lVar7 = il2cpp_internal(plVar4,DAT_181d53c70);
+            lVar7 = il2cpp_internal(plVar4,DAT_181d78da0);
             if (lVar7 != null) {
-              FUN_180002970(0,DAT_181d53c70,lVar7);
+              FUN_180002970(0,DAT_181d78da0,lVar7);
             }
-            if (this.mBreaks == null) goto LAB_180478de8;
+            if (this.mBreaks == null) goto LAB_18046ceb8;
             if (this.mBreaks.Count != null) {
               return;
             }
-            if ((*(byte *)(DAT_181d68fe8 + 0x133) & 4) == 0) goto LAB_180478d95;
-            iVar1 = *(int *)(DAT_181d68fe8 + 224);
-            goto LAB_180478d8e;
+            if ((*(byte *)(DAT_181d8e210 + 0x133) & 4) == 0) goto LAB_18046ce65;
+            iVar1 = *(int *)(DAT_181d8e210 + 224);
+            goto LAB_18046ce5e;
           }
           lVar7 = *plVar4;
           if (*(uint16 *)(lVar7 + 0x12a) != 0) {
             do {
-              if (*(int64 *)(*(int64 *)(lVar7 + 176) + (uint64)uVar9 * 16) == DAT_181d544d8) {
+              if (*(int64 *)(*(int64 *)(lVar7 + 176) + (uint64)uVar9 * 16) == DAT_181d79620) {
                 puVar5 = (uint64 *)
                          ((int64)*(int *)(*(int64 *)(lVar7 + 176) + 8 + (uint64)uVar9 * 16) *
                           16 + 0x148 + lVar7);
-                goto LAB_180478b28;
+                goto LAB_18046cbf8;
               }
               uVar9 = uVar9 + 1;
             } while (uVar9 < *(uint16 *)(lVar7 + 0x12a));
           }
-          puVar5 = (uint64 *)FUN_1800914f0(plVar4,DAT_181d544d8,1);
-        LAB_180478b28:
+          puVar5 = (uint64 *)FUN_1800914f0(plVar4,DAT_181d79620,1);
+        LAB_18046cbf8:
           plVar6 = (int64 *)(*(code *)*puVar5)(plVar4,puVar5[1]);
           if (plVar6 == (int64 *)0) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           plVar10 = (int64 *)0;
-          if (*plVar6 == DAT_181d86d38) {
+          if (*plVar6 == DAT_181dabe58) {
             plVar10 = plVar6;
           }
           if (plVar10 == (int64 *)0) {
@@ -126,7 +126,7 @@ public class PlayIdleAnimations
             FUN_1800d6620();
           }
           uVar3 = Object.get_name(lVar7,0);
-          cVar2 = FUN_1816fd990(uVar3,"idle",0);
+          cVar2 = FUN_18171e540(uVar3,"idle",0);
           if (!cVar2) {
             lVar7 = AnimationState.get_clip(plVar10,0);
             if (lVar7 == null) {
@@ -147,7 +147,7 @@ public class PlayIdleAnimations
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              FUN_181827900(lVar7,uVar3,DAT_181d54460);
+              FUN_18181e0a0(lVar7,uVar3,DAT_181d7ba00);
             }
           }
           else {
@@ -169,8 +169,8 @@ public class PlayIdleAnimations
         } while( true );
     }
 
-    // Token : 0x6000070
-    // RVA   : 0x478DF0   Offset: 0x4775F0   Length: 0x180
+    // Token : 0x6000088
+    // RVA   : 0x46CEC0   Offset: 0x46C2C0   Length: 0x180
     private void Update()
     {
         long lVar1;
@@ -186,33 +186,33 @@ public class PlayIdleAnimations
         fVar5 = (float)Time.get_time();
         if (fVar6 < fVar5) {
           lVar4 = this.mBreaks;
-          if (lVar4 == null) goto LAB_180478f6b;
+          if (lVar4 == null) goto LAB_18046d03b;
           if (lVar4.Count == 1) {
             lVar4 = *(int64 *)(lVar4._items + 32);
             fVar6 = (float)Time.get_time(0);
-            if (lVar4 == null) goto LAB_180478f6b;
+            if (lVar4 == null) goto LAB_18046d03b;
             fVar5 = (float)AnimationClip.get_length(lVar4,0);
             uVar9 = 0x41700000;
             uVar7 = 0x40a00000;
           }
           else {
-            uVar2 = FUN_180d8cf10(0,lVar4.Count + -1,0);
+            uVar2 = FUN_180d95a30(0,lVar4.Count + -1,0);
             if (this.mLastIndex == uVar2) {
               uVar2 = uVar2 + 1;
-              if (this.mBreaks == null) goto LAB_180478f6b;
+              if (this.mBreaks == null) goto LAB_18046d03b;
               if (this.mBreaks.Count <= (int)uVar2) {
                 uVar2 = 0;
               }
             }
             lVar4 = this.mBreaks;
             this.mLastIndex = uVar2;
-            if (lVar4 == null) goto LAB_180478f6b;
+            if (lVar4 == null) goto LAB_18046d03b;
             if (lVar4.Count <= uVar2) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar4 = lVar4._items[uVar2];
             fVar6 = (float)Time.get_time(0);
-            if (lVar4 == null) goto LAB_180478f6b;
+            if (lVar4 == null) goto LAB_18046d03b;
             fVar5 = (float)AnimationClip.get_length(lVar4,0);
             uVar9 = 0x41000000;
             uVar7 = 0x40000000;
@@ -222,7 +222,7 @@ public class PlayIdleAnimations
           lVar1 = this.mAnim;
           uVar3 = Object.get_name(lVar4,0);
           if (lVar1 == null) {
-        LAB_180478f6b:
+        LAB_18046d03b:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -230,13 +230,13 @@ public class PlayIdleAnimations
         }
     }
 
-    // Token : 0x6000071
-    // RVA   : 0x478F80   Offset: 0x477780   Length: 0x76
+    // Token : 0x6000089
+    // RVA   : 0x46D050   Offset: 0x46C450   Length: 0x76
     public void /*ctor*/()
     {
         ulong uVar1;
-        uVar1 = il2cpp_internal(DAT_181d6bf30);
-        FUN_180f58a90(uVar1,DAT_181d543e8);
+        uVar1 = il2cpp_internal(DAT_181d90b60);
+        FUN_18132faf0(uVar1,DAT_181d7b980);
         this.mBreaks = uVar1;
         FUN_18044ef50(this,0);
     }

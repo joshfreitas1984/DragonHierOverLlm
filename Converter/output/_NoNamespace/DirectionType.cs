@@ -1,24 +1,24 @@
 // ============================================================
 // Type  : DirectionType
-// Token : 0x20001B8
+// Token : 0x20001BE
 // ============================================================
 
 public class DirectionType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000B8B
+    // Token: 0x4000C18
     public int value__;
 
-    // Token: 0x4000B8C
+    // Token: 0x4000C19
     public const DirectionType left;
 
-    // Token: 0x4000B8D
+    // Token: 0x4000C1A
     public const DirectionType right;
 
-    // Token: 0x4000B8E
+    // Token: 0x4000C1B
     public const DirectionType down;
 
-    // Token: 0x4000B8F
+    // Token: 0x4000C1C
     public const DirectionType up;
 
 }

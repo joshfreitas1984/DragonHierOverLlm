@@ -1,40 +1,40 @@
 // ============================================================
 // Type  : HeroFaceData
-// Token : 0x200021E
+// Token : 0x2000224
 // ============================================================
 
 public class HeroFaceData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400109A
+    // Token: 0x400113D
     public List<int> faceID;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001212
-    // RVA   : 0xB31890   Offset: 0xB30090   Length: 0x144
+    // Token : 0x6001252
+    // RVA   : 0xAF2730   Offset: 0xAF1B30   Length: 0x144
     public void /*ctor*/()
     {
         long lVar1;
         ZhSegment.Initialize(this,0);
-        lVar1 = il2cpp_internal(DAT_181d6f030);
-        FUN_180f58a90(lVar1,DAT_181d678f8);
+        lVar1 = il2cpp_internal(DAT_181d93cd0);
+        FUN_18132faf0(lVar1,DAT_181d8f098);
         if (lVar1 != null) {
-          FUN_181814fa0(lVar1,0xffffffff,DAT_181d67a78);
-          FUN_181814fa0(lVar1,0xffffffff,DAT_181d67a78);
-          FUN_181814fa0(lVar1,0xffffffff,DAT_181d67a78);
-          FUN_181814fa0(lVar1,0xffffffff,DAT_181d67a78);
-          FUN_181814fa0(lVar1,0xffffffff,DAT_181d67a78);
-          FUN_181814fa0(lVar1,0xffffffff,DAT_181d67a78);
-          FUN_181814fa0(lVar1,0xffffffff,DAT_181d67a78);
-          FUN_181814fa0(lVar1,0xffffffff,DAT_181d67a78);
-          FUN_181814fa0(lVar1,0xffffffff,DAT_181d67a78);
+          FUN_18182a0b0(lVar1,0xffffffff,DAT_181d8f218);
+          FUN_18182a0b0(lVar1,0xffffffff,DAT_181d8f218);
+          FUN_18182a0b0(lVar1,0xffffffff,DAT_181d8f218);
+          FUN_18182a0b0(lVar1,0xffffffff,DAT_181d8f218);
+          FUN_18182a0b0(lVar1,0xffffffff,DAT_181d8f218);
+          FUN_18182a0b0(lVar1,0xffffffff,DAT_181d8f218);
+          FUN_18182a0b0(lVar1,0xffffffff,DAT_181d8f218);
+          FUN_18182a0b0(lVar1,0xffffffff,DAT_181d8f218);
+          FUN_18182a0b0(lVar1,0xffffffff,DAT_181d8f218);
           this.faceID = lVar1;
           return;
         }
     }
 
-    // Token : 0x6001213
-    // RVA   : 0xB316F0   Offset: 0xB2FEF0   Length: 0xD8
+    // Token : 0x6001253
+    // RVA   : 0xAF2590   Offset: 0xAF1990   Length: 0xD8
     internal void OnDeserializedMethod(StreamingContext context)
     {
         int iVar1;
@@ -42,19 +42,19 @@ public class HeroFaceData
         lVar2 = this.faceID;
         while (lVar2 != null) {
           iVar1 = lVar2.Count;
-          lVar2 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x1e0);
+          lVar2 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x1e8);
           if (lVar2 == null) break;
           if (lVar2.Count <= iVar1) {
             return;
           }
           if (this.faceID == null) break;
-          FUN_181814fa0(this.faceID,0xffffffff,DAT_181d67a78);
+          FUN_18182a0b0(this.faceID,0xffffffff,DAT_181d8f218);
           lVar2 = this.faceID;
         }
     }
 
-    // Token : 0x6001214
-    // RVA   : 0xB317D0   Offset: 0xB2FFD0   Length: 0xB4
+    // Token : 0x6001254
+    // RVA   : 0xAF2670   Offset: 0xAF1A70   Length: 0xB4
     public void Reset()
     {
         long lVar1;
@@ -63,20 +63,20 @@ public class HeroFaceData
         iVar2 = 0;
         do {
           if (lVar1 == null) {
-        LAB_180b3187f:
+        LAB_180af271f:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           if (lVar1.Count <= iVar2) {
-            FUN_18181e970(lVar1,7,0xffffffff,DAT_181d68370);
+            FUN_181833d40(lVar1,7,0xffffffff,DAT_181d8fb18);
             if (this.faceID != null) {
-              FUN_18181e970(this.faceID,8,0xffffffff,DAT_181d68370);
+              FUN_181833d40(this.faceID,8,0xffffffff,DAT_181d8fb18);
               return;
             }
-            goto LAB_180b3187f;
+            goto LAB_180af271f;
           }
-          if (lVar1 == null) goto LAB_180b3187f;
-          FUN_18181e970(lVar1,iVar2,0,DAT_181d68370);
+          if (lVar1 == null) goto LAB_180af271f;
+          FUN_181833d40(lVar1,iVar2,0,DAT_181d8fb18);
           lVar1 = this.faceID;
           iVar2 = iVar2 + 1;
         } while( true );

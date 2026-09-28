@@ -1,107 +1,114 @@
 // ============================================================
 // Type  : KungfuSkillData
-// Token : 0x200022C
+// Token : 0x2000232
 // ============================================================
 
 public class KungfuSkillData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40010E6
+    // Token: 0x4001189
     public bool summonSkill;
 
-    // Token: 0x40010E7
+    // Token: 0x400118A
     public int skillID;
 
-    // Token: 0x40010E8
+    // Token: 0x400118B
     public int belongForceID;
 
-    // Token: 0x40010E9
+    // Token: 0x400118C
     public SkillTargetType targetType;
 
-    // Token: 0x40010EA
+    // Token: 0x400118D
     public string name;
 
-    // Token: 0x40010EB
+    // Token: 0x400118E
     public string describe;
 
-    // Token: 0x40010EC
+    // Token: 0x400118F
     public int type;
 
-    // Token: 0x40010ED
+    // Token: 0x4001190
     public int rareLv;
 
-    // Token: 0x40010EE
+    // Token: 0x4001191
     public float manaCost;
 
-    // Token: 0x40010EF
+    // Token: 0x4001192
     public float baseDamage;
 
-    // Token: 0x40010F0
+    // Token: 0x4001193
     public float expRatio;
 
-    // Token: 0x40010F1
+    // Token: 0x4001194
     public AttriNumData addDamageRatio;
 
-    // Token: 0x40010F2
+    // Token: 0x4001195
     public AttriNumData skillNeeds;
 
-    // Token: 0x40010F3
+    // Token: 0x4001196
     public HeroSpeAddData upgradeAddData;
 
-    // Token: 0x40010F4
+    // Token: 0x4001197
     public HeroSpeAddData equipAddData;
 
-    // Token: 0x40010F5
+    // Token: 0x4001198
     public HeroSpeAddData useAddData;
 
-    // Token: 0x40010F6
+    // Token: 0x4001199
     public List<SkillAttackRangeData> attackRangeData;
 
-    // Token: 0x40010F7
+    // Token: 0x400119A
     public SkillDamageRangeData damageRangeData;
 
-    // Token: 0x40010F8
+    // Token: 0x400119B
     public int summonID;
 
-    // Token: 0x40010F9
+    // Token: 0x400119C
     public int battleMaxUseTime;
 
-    // Token: 0x40010FA
+    // Token: 0x400119D
     public PartPostureData atkPartPosture;
 
-    // Token: 0x40010FB
+    // Token: 0x400119E
     public PartPostureData defPartPosture;
 
-    // Token: 0x40010FC
+    // Token: 0x400119F
     public string weaponName;
 
-    // Token: 0x40010FD
+    // Token: 0x40011A0
     public string animationName;
 
-    // Token: 0x40010FE
+    // Token: 0x40011A1
     public SkillBulletData skillBullet;
 
-    // Token: 0x40010FF
+    // Token: 0x40011A2
     public List<SkillSpeEffectData> skillSpeEffects;
 
-    // Token: 0x4001100
+    // Token: 0x40011A3
     public SkillDamageOrder skillDamageOrder;
 
-    // Token: 0x4001101
+    // Token: 0x40011A4
     public bool autoHeroMove;
 
-    // Token: 0x4001102
+    // Token: 0x40011A5
     public int trailID;
 
-    // Token: 0x4001103
+    // Token: 0x40011A6
     public int maxAttackRange;
 
-    // Token: 0x4001104
+    // Token: 0x40011A7
     public bool hide;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600125A
-    // RVA   : 0xB7FA60   Offset: 0xB7E260   Length: 0x23
+    // Token : 0x600129A
+    // RVA   : 0xCABE40   Offset: 0xCAB240   Length: 0x8
+    public bool HaveForce()
+    {
+        return this.belongForceID != -1;
+    }
+
+    // Token : 0x600129B
+    // RVA   : 0xCABBE0   Offset: 0xCAAFE0   Length: 0x23
     public int GetDodgeRange()
     {
         int iVar1;
@@ -109,11 +116,11 @@ public class KungfuSkillData
         return iVar1 + 2;
     }
 
-    // Token : 0x600125B
-    // RVA   : 0xB7F4B0   Offset: 0xB7DCB0   Length: 0x359
+    // Token : 0x600129C
+    // RVA   : 0xCAB630   Offset: 0xCAAA30   Length: 0x359
     public string GetAttackRangeDescribe()
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d73d40 + 184);
         int iVar1;
         ulong uVar2;
         long lVar3;
@@ -137,45 +144,45 @@ public class KungfuSkillData
           if (0 < iVar9) {
             uVar10 = "|";
           }
-          if ((lVar3 == null) || (lVar3 = FUN_180002f80(lVar3,iVar9,DAT_181d7afd8)) == null) break;
+          if ((lVar3 == null) || (lVar3 = FUN_180002f80(lVar3,iVar9,DAT_181da2958)) == null) break;
           if (lVar3._items == 4) {
-            lVar3 = *(int64 *)(pPlotController + 0x468);
+            lVar3 = *(int64 *)(pStatics + 0x470);
             if (((this.attackRangeData == null) ||
-                (lVar4 = FUN_180002f80(this.attackRangeData,iVar9,DAT_181d7afd8)) == null) ||
+                (lVar4 = FUN_180002f80(this.attackRangeData,iVar9,DAT_181da2958)) == null) ||
                (lVar3 == null)) break;
-            uVar5 = FUN_180002f80(lVar3,lVar4._items,DAT_181d7c9c0);
+            uVar5 = FUN_180002f80(lVar3,lVar4._items,DAT_181da4358);
           }
           else {
-            lVar3 = *(int64 *)(pPlotController + 0x468);
+            lVar3 = *(int64 *)(pStatics + 0x470);
             if (((this.attackRangeData == null) ||
-                (lVar4 = FUN_180002f80(this.attackRangeData,iVar9,DAT_181d7afd8)) == null) ||
+                (lVar4 = FUN_180002f80(this.attackRangeData,iVar9,DAT_181da2958)) == null) ||
                (lVar3 == null)) break;
-            uVar5 = FUN_180002f80(lVar3,lVar4._items,DAT_181d7c9c0);
+            uVar5 = FUN_180002f80(lVar3,lVar4._items,DAT_181da4358);
             if ((this.attackRangeData == null) ||
-               (lVar3 = FUN_180002f80(this.attackRangeData,iVar9,DAT_181d7afd8)) == null)
+               (lVar3 = FUN_180002f80(this.attackRangeData,iVar9,DAT_181da2958)) == null)
             break;
             iVar1 = *(int *)(lVar3 + 20);
             if ((this.attackRangeData == null) ||
-               (lVar3 = FUN_180002f80(this.attackRangeData,iVar9,DAT_181d7afd8),
+               (lVar3 = FUN_180002f80(this.attackRangeData,iVar9,DAT_181da2958),
                uVar2 = "{0}{1}格", lVar3 == null)) break;
             lVar4 = this.attackRangeData;
             if (iVar1 == lVar3.Count) {
-              if ((lVar4 == null) || (lVar3 = FUN_180002f80(lVar4,iVar9,DAT_181d7afd8)) == null) break;
+              if ((lVar4 == null) || (lVar3 = FUN_180002f80(lVar4,iVar9,DAT_181da2958)) == null) break;
               uVar6 = Int32.ToString(lVar3 + 20,0);
             }
             else {
-              if ((lVar4 == null) || (lVar3 = FUN_180002f80(lVar4,iVar9,DAT_181d7afd8)) == null) {
-        LAB_180b7f804:
+              if ((lVar4 == null) || (lVar3 = FUN_180002f80(lVar4,iVar9,DAT_181da2958)) == null) {
+        LAB_180cab984:
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
               local_res8[0] = *(uint32 *)(lVar3 + 20);
-              uVar6 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
+              uVar6 = il2cpp_value_box(DAT_181d80418,local_res8);
               if ((this.attackRangeData == null) ||
-                 (lVar3 = FUN_180002f80(this.attackRangeData,iVar9,DAT_181d7afd8)) == null)
-              goto LAB_180b7f804;
+                 (lVar3 = FUN_180002f80(this.attackRangeData,iVar9,DAT_181da2958)) == null)
+              goto LAB_180cab984;
               local_res18[0] = lVar3.Count;
-              uVar7 = il2cpp_value_box(DAT_181d5b2f8,local_res18);
+              uVar7 = il2cpp_value_box(DAT_181d80418,local_res18);
               uVar6 = String.Format("{0}~{1}",uVar6,uVar7,0);
             }
             uVar5 = String.Format(uVar2,uVar5,uVar6,0);
@@ -186,11 +193,11 @@ public class KungfuSkillData
         }
     }
 
-    // Token : 0x600125C
-    // RVA   : 0xB7F830   Offset: 0xB7E030   Length: 0x228
+    // Token : 0x600129D
+    // RVA   : 0xCAB9B0   Offset: 0xCAADB0   Length: 0x228
     public string GetDamageRangeDescribe()
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d73d40 + 184);
         uint uVar1;
         int iVar2;
         long lVar3;
@@ -203,15 +210,14 @@ public class KungfuSkillData
         uint[] local_res18 = new uint[4];
         uVar6 = "{0}{1}格";
         lVar7 = this.damageRangeData;
-        if (lVar7 == null) goto LAB_180b7fa4d;
+        if (lVar7 == null) goto LAB_180cabbcd;
         if (lVar7.rangeType == 7) {
-          if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0) &&
-             (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
-            il2cpp_runtime_class_init(PlotController_StaticsPtr);
+          if (((*(byte *)(DAT_181d73d40 + 0x133) & 4) != 0) && (*(int *)(DAT_181d73d40 + 224) == 0)) {
+            il2cpp_runtime_class_init(DAT_181d73d40);
             lVar7 = this.damageRangeData;
           }
-          lVar3 = *(int64 *)(pPlotController + 0x470);
-          if ((lVar7 == null) || (lVar3 == null)) goto LAB_180b7fa4d;
+          lVar3 = *(int64 *)(pStatics + 0x478);
+          if ((lVar7 == null) || (lVar3 == null)) goto LAB_180cabbcd;
           uVar1 = lVar7.rangeType;
           if (*(uint32 *)(lVar3 + 24) <= uVar1) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -221,14 +227,13 @@ public class KungfuSkillData
         else {
           uVar8 = "";
           if (lVar7.maxRange != null) {
-            if (((*(byte *)(PlotController_StaticsPtr + 0x133) & 4) != 0) &&
-               (*(int *)(PlotController_StaticsPtr + 224) == 0)) {
-              il2cpp_runtime_class_init(PlotController_StaticsPtr);
+            if (((*(byte *)(DAT_181d73d40 + 0x133) & 4) != 0) && (*(int *)(DAT_181d73d40 + 224) == 0)) {
+              il2cpp_runtime_class_init(DAT_181d73d40);
               lVar7 = this.damageRangeData;
             }
-            lVar3 = *(int64 *)(pPlotController + 0x470);
+            lVar3 = *(int64 *)(pStatics + 0x478);
             if ((lVar7 == null) || (lVar3 == null)) {
-        LAB_180b7fa4d:
+        LAB_180cabbcd:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -238,7 +243,7 @@ public class KungfuSkillData
               lVar7 = this.damageRangeData;
             }
             uVar8 = lVar3[uVar1];
-            if (lVar7 == null) goto LAB_180b7fa4d;
+            if (lVar7 == null) goto LAB_180cabbcd;
           }
           iVar2 = lVar7.minRange;
           if (iVar2 == lVar7.maxRange) {
@@ -249,13 +254,13 @@ public class KungfuSkillData
           }
           else {
             local_res8[0] = iVar2;
-            uVar4 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
+            uVar4 = il2cpp_value_box(DAT_181d80418,local_res8);
             if (this.damageRangeData == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             local_res18[0] = this.damageRangeData.maxRange;
-            uVar5 = il2cpp_value_box(DAT_181d5b2f8,local_res18);
+            uVar5 = il2cpp_value_box(DAT_181d80418,local_res18);
             uVar4 = String.Format("{0}~{1}",uVar4,uVar5,0);
           }
           uVar6 = String.Format(uVar6,uVar8,uVar4,0);
@@ -263,32 +268,32 @@ public class KungfuSkillData
         return uVar6;
     }
 
-    // Token : 0x600125D
-    // RVA   : 0xB7FB20   Offset: 0xB7E320   Length: 0x76
+    // Token : 0x600129E
+    // RVA   : 0xCABCA0   Offset: 0xCAB0A0   Length: 0x76
     public string GetSkillIcon()
     {
         ulong uVar1;
         uint[] local_res8 = new uint[8];
         if (this.summonSkill) {
           local_res8[0] = this.skillID;
-          uVar1 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
+          uVar1 = il2cpp_value_box(DAT_181d80418,local_res8);
           String.Format("summonskill{0}",uVar1,0);
           return;
         }
         Int32.ToString((uint32 *)(this + 20),0);
     }
 
-    // Token : 0x600125E
-    // RVA   : 0xB7F300   Offset: 0xB7DB00   Length: 0x26
+    // Token : 0x600129F
+    // RVA   : 0xCAB480   Offset: 0xCAA880   Length: 0x26
     public float BadFame()
     {
         float fVar1;
-        fVar1 = (float)FUN_1801f7f00(0x40000000);
+        fVar1 = (float)FUN_1801f8ab0(0x40000000);
         return fVar1 * 5.0;
     }
 
-    // Token : 0x600125F
-    // RVA   : 0xB7FCC0   Offset: 0xB7E4C0   Length: 0x8A
+    // Token : 0x60012A0
+    // RVA   : 0xCABE50   Offset: 0xCAB250   Length: 0x8A
     public string Name(bool colored)
     {
         uint uVar1;
@@ -302,69 +307,71 @@ public class KungfuSkillData
         return uVar2;
     }
 
-    // Token : 0x6001260
-    // RVA   : 0xB7FD50   Offset: 0xB7E550   Length: 0x1F7
+    // Token : 0x60012A1
+    // RVA   : 0xCABEE0   Offset: 0xCAB2E0   Length: 0x203
     public string TypeDescribe()
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d73d40 + 184);
         uint uVar1;
         long lVar2;
         ulong uVar3;
         ulong uVar4;
-        uVar4 = "江湖";
+        uVar3 = "江湖";
         if (this.belongForceID != -1) {
-          lVar2 = GameController.lockObj;
-          if (((lVar2 == null) || (lVar2 = *(int64 *)(lVar2 + 208)) == null) ||
-             (lVar2 = FUN_1817cc780(lVar2,this.belongForceID,DAT_181d94178)) == null)
-          throw; // [null/range check failed]
-          uVar4 = *(uint64 *)(lVar2 + 24);
+          lVar2 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
+          if ((lVar2 == null) || (lVar2 = *(int64 *)(lVar2 + 208)) == null) throw; // [null/range check failed]
+          lVar2 = FUN_1817d9e10(lVar2,this.belongForceID,DAT_181db9760);
+          if (lVar2 == null) throw; // [null/range check failed]
+          uVar3 = ForceData.GetForceName(lVar2,1,0);
         }
-        lVar2 = *(int64 *)(pPlotController + 0x4f0);
+        lVar2 = *(int64 *)(pStatics + 0x4f8);
         if (lVar2 != null) {
           uVar1 = this.rareLv;
           if (*(uint32 *)(lVar2 + 24) <= uVar1) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          uVar3 = lVar2[uVar1];
-          lVar2 = *(int64 *)(pPlotController + 0x498);
+          uVar4 = lVar2[uVar1];
+          lVar2 = *(int64 *)(pStatics + 0x4a0);
           if (lVar2 != null) {
             uVar1 = this.type;
             if (*(uint32 *)(lVar2 + 24) <= uVar1) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
-            uVar3 = String.Concat(uVar3,*(uint64 *)
+            uVar4 = String.Concat(uVar4,*(uint64 *)
                                           (*(int64 *)(lVar2 + 16) + 32 + (int64)(int)uVar1 * 8),
                                    0);
-            uVar3 = GlobalData.GenerateRareLvColorText(uVar3,this.rareLv,0);
-            String.Concat(uVar4,uVar3,0);
+            uVar4 = GlobalData.GenerateRareLvColorText(uVar4,this.rareLv,0);
+            String.Concat(uVar3,uVar4,0);
             return;
           }
         }
     }
 
-    // Token : 0x6001261
-    // RVA   : 0xB7FB10   Offset: 0xB7E310   Length: 0x10
+    // Token : 0x60012A2
+    // RVA   : 0xCABC90   Offset: 0xCAB090   Length: 0x10
     public float GetRealUpgradeRatio(int targetLv)
     {
+        float FUN_180cabc90(uint64 this,int targetLv)
+        {
         return (float)targetLv * 0.1;
     }
 
-    // Token : 0x6001262
-    // RVA   : 0xB7F810   Offset: 0xB7E010   Length: 0x1D
+    // Token : 0x60012A3
+    // RVA   : 0xCAB990   Offset: 0xCAAD90   Length: 0x1D
     public float GetBaseDamage(int targetLv)
     {
         return ((float)targetLv * 0.1 + 1.0) * this.baseDamage;
     }
 
-    // Token : 0x6001263
-    // RVA   : 0xB7FA90   Offset: 0xB7E290   Length: 0x1D
+    // Token : 0x60012A4
+    // RVA   : 0xCABC10   Offset: 0xCAB010   Length: 0x1D
     public float GetManaCost(int targetLv)
     {
         return ((float)targetLv * 0.1 + 1.0) * this.manaCost;
     }
 
-    // Token : 0x6001264
-    // RVA   : 0xB7FBA0   Offset: 0xB7E3A0   Length: 0x84
+    // Token : 0x60012A5
+    // RVA   : 0xCABD20   Offset: 0xCAB120   Length: 0x84
     public HeroSpeAddData GetSpeEquipData(int targetLv)
     {
         ulong uVar1;
@@ -376,8 +383,8 @@ public class KungfuSkillData
         return uVar1;
     }
 
-    // Token : 0x6001265
-    // RVA   : 0xB7FC30   Offset: 0xB7E430   Length: 0x84
+    // Token : 0x60012A6
+    // RVA   : 0xCABDB0   Offset: 0xCAB1B0   Length: 0x84
     public HeroSpeAddData GetSpeUseData(int targetLv)
     {
         ulong uVar1;
@@ -389,43 +396,45 @@ public class KungfuSkillData
         return uVar1;
     }
 
-    // Token : 0x6001266
-    // RVA   : 0xB7FAB0   Offset: 0xB7E2B0   Length: 0x5B
+    // Token : 0x60012A7
+    // RVA   : 0xCABC30   Offset: 0xCAB030   Length: 0x5B
     public float GetMaxExp(int targetLv, int expType)
     {
-        FUN_1801f7f00();
+        FUN_1801f8ab0();
         Mathf.RoundToInt();
     }
 
-    // Token : 0x6001267
-    // RVA   : 0x21B010   Offset: 0x219810   Length: 0x8
+    // Token : 0x60012A8
+    // RVA   : 0x21B010   Offset: 0x21A410   Length: 0x8
     public PartPostureData GetAtkPartPosture(int targetLv)
     {
+        uint64 FUN_18021b010(int64 this)
+        {
         return this.atkPartPosture;
     }
 
-    // Token : 0x6001268
-    // RVA   : 0x21B0B0   Offset: 0x2198B0   Length: 0x8
+    // Token : 0x60012A9
+    // RVA   : 0x21B0B0   Offset: 0x21A4B0   Length: 0x8
     public PartPostureData GetDefPartPosture(int targetLv)
     {
         return this.defPartPosture;
     }
 
-    // Token : 0x6001269
-    // RVA   : 0xB7FF50   Offset: 0xB7E750   Length: 0xB7
+    // Token : 0x60012AA
+    // RVA   : 0xCAC0F0   Offset: 0xCAB4F0   Length: 0xB7
     public void /*ctor*/()
     {
         ulong uVar1;
         this.summonID = 0xffffffff;
         ZhSegment.Initialize(this,0);
         this.addDamageRatio = new AttriNumData(0);
-        uVar1 = il2cpp_internal(DAT_181d727b0);
-        FUN_180f58a90(uVar1,DAT_181d7b2d8);
+        uVar1 = il2cpp_internal(DAT_181d974d0);
+        FUN_18132faf0(uVar1,DAT_181da2c58);
         this.skillSpeEffects = uVar1;
     }
 
-    // Token : 0x600126A
-    // RVA   : 0xB7F330   Offset: 0xB7DB30   Length: 0x175
+    // Token : 0x60012AB
+    // RVA   : 0xCAB4B0   Offset: 0xCAA8B0   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -436,13 +445,13 @@ public class KungfuSkillData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -454,7 +463,7 @@ public class KungfuSkillData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d53c70,plVar1);
+            FUN_180002970(0,DAT_181d78da0,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

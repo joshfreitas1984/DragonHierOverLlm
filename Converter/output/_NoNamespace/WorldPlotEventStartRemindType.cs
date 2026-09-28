@@ -1,21 +1,21 @@
 // ============================================================
 // Type  : WorldPlotEventStartRemindType
-// Token : 0x2000201
+// Token : 0x2000207
 // ============================================================
 
 public class WorldPlotEventStartRemindType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000E12
+    // Token: 0x4000EA2
     public int value__;
 
-    // Token: 0x4000E13
+    // Token: 0x4000EA3
     public const WorldPlotEventStartRemindType NoRemind;
 
-    // Token: 0x4000E14
+    // Token: 0x4000EA4
     public const WorldPlotEventStartRemindType Mail;
 
-    // Token: 0x4000E15
+    // Token: 0x4000EA5
     public const WorldPlotEventStartRemindType WorldEvent;
 
 }

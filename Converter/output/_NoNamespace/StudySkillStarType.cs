@@ -1,21 +1,21 @@
 // ============================================================
 // Type  : StudySkillStarType
-// Token : 0x2000388
+// Token : 0x200038F
 // ============================================================
 
 public class StudySkillStarType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001C29
+    // Token: 0x4001D2E
     public int value__;
 
-    // Token: 0x4001C2A
+    // Token: 0x4001D2F
     public const StudySkillStarType Star;
 
-    // Token: 0x4001C2B
+    // Token: 0x4001D30
     public const StudySkillStarType Food;
 
-    // Token: 0x4001C2C
+    // Token: 0x4001D31
     public const StudySkillStarType Shield;
 
 }

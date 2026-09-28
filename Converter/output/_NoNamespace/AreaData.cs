@@ -1,152 +1,158 @@
 // ============================================================
 // Type  : AreaData
-// Token : 0x20001F3
+// Token : 0x20001F9
 // ============================================================
 
 public class AreaData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000D7F
+    // Token: 0x4000E0D
     public int areaID;
 
-    // Token: 0x4000D80
+    // Token: 0x4000E0E
     public string areaName;
 
-    // Token: 0x4000D81
+    // Token: 0x4000E0F
     public int areaStartLv;
 
-    // Token: 0x4000D82
+    // Token: 0x4000E10
     public string spriteName;
 
-    // Token: 0x4000D83
+    // Token: 0x4000E11
     public string backgroundType;
 
-    // Token: 0x4000D84
+    // Token: 0x4000E12
     public int backgroundSkinID;
 
-    // Token: 0x4000D85
+    // Token: 0x4000E13
     public float xScale;
 
-    // Token: 0x4000D86
+    // Token: 0x4000E14
     public BigMapPos bigMapPos;
 
-    // Token: 0x4000D87
+    // Token: 0x4000E15
     public int areaType;
 
-    // Token: 0x4000D88
+    // Token: 0x4000E16
     public float maxPeople;
 
-    // Token: 0x4000D89
+    // Token: 0x4000E17
     public float people;
 
-    // Token: 0x4000D8A
+    // Token: 0x4000E18
     public float safe;
 
-    // Token: 0x4000D8B
+    // Token: 0x4000E19
     public float support;
 
-    // Token: 0x4000D8C
+    // Token: 0x4000E1A
     public float defence;
 
-    // Token: 0x4000D8D
+    // Token: 0x4000E1B
     public List<float> changeAreaState;
 
-    // Token: 0x4000D8E
+    // Token: 0x4000E1C
     public List<float> changeAllAreaState;
 
-    // Token: 0x4000D8F
+    // Token: 0x4000E1D
     public int belongForceID;
 
-    // Token: 0x4000D90
+    // Token: 0x4000E1E
     public List<int> insideHeros;
 
-    // Token: 0x4000D91
+    // Token: 0x4000E1F
     public List<float> changeResource;
 
-    // Token: 0x4000D92
+    // Token: 0x4000E20
     public List<float> resourceValueRateBase;
 
-    // Token: 0x4000D93
+    // Token: 0x4000E21
     public List<float> resourceValueRateTemp;
 
-    // Token: 0x4000D94
+    // Token: 0x4000E22
     public List<int> connectAreaID;
 
-    // Token: 0x4000D95
+    // Token: 0x4000E23
     public List<int> nearAreaID;
 
-    // Token: 0x4000D96
+    // Token: 0x4000E24
     public List<int> connectResourcePointID;
 
-    // Token: 0x4000D97
+    // Token: 0x4000E25
     public ForceSpeAddData areaSpeAddData;
 
-    // Token: 0x4000D98
+    // Token: 0x4000E26
     public int mapWidth;
 
-    // Token: 0x4000D99
+    // Token: 0x4000E27
     public int mapHeight;
 
-    // Token: 0x4000D9A
+    // Token: 0x4000E28
     public List<AreaTileData> areaTiles;
 
-    // Token: 0x4000D9B
+    // Token: 0x4000E29
     public List<int> roadTiles;
 
-    // Token: 0x4000D9C
+    // Token: 0x4000E2A
     public List<int> areaBranchDefenceLv;
 
-    // Token: 0x4000D9D
+    // Token: 0x4000E2B
     public List<int> areaBranchDefenceUpgradeLeftTime;
 
-    // Token: 0x4000D9E
+    // Token: 0x4000E2C
     public List<AreaTreasurePriceData> areaTreasurePriceData;
 
-    // Token: 0x4000D9F
+    // Token: 0x4000E2D
     public List<string> recordLog;
 
-    // Token: 0x4000DA0
+    // Token: 0x4000E2E
     public bool areaDetailDirty;
 
-    // Token: 0x4000DA1
+    // Token: 0x4000E2F
     public bool areaInfoDirty;
 
-    // Token: 0x4000DA2
+    // Token: 0x4000E30
     public int thisMonthManaged;
 
-    // Token: 0x4000DA3
+    // Token: 0x4000E31
     public int missionNumCount;
 
-    // Token: 0x4000DA4
+    // Token: 0x4000E32
     public int plotNumCount;
 
-    // Token: 0x4000DA5
+    // Token: 0x4000E33
     public AreaInteractionTimeData areaInteractionTimeData;
 
-    // Token: 0x4000DA6
+    // Token: 0x4000E34
     public List<string> speProduct;
 
-    // Token: 0x4000DA7
+    // Token: 0x4000E35
     public List<float> speBoxColliderSize;
 
-    // Token: 0x4000DA8
+    // Token: 0x4000E36
     public int branchLeaderID;
 
-    // Token: 0x4000DA9
+    // Token: 0x4000E37
     public bool autoBuild;
 
-    // Token: 0x4000DAA
+    // Token: 0x4000E38
     public float autoBuildResourceRateLimit;
 
-    // Token: 0x4000DAB
+    // Token: 0x4000E39
     public int autoBuildPriority;
 
-    // Token: 0x4000DAC
+    // Token: 0x4000E3A
+    public string setAreaName;
+
+    // Token: 0x4000E3B
+    public bool areaIconDirty;
+
+    // Token: 0x4000E3C
     private static List<int> UpgradeDefenceLvResourceID;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000F74
-    // RVA   : 0x7EC220   Offset: 0x7EAA20   Length: 0x675
+    // Token : 0x6000FAB
+    // RVA   : 0x7EA0D0   Offset: 0x7E94D0   Length: 0x675
     public void /*ctor*/()
     {
         ulong uVar1;
@@ -154,89 +160,89 @@ public class AreaData
         this.branchLeaderID = 0xffffffff;
         ZhSegment.Initialize(this,0);
         this.bigMapPos = new c.DisplayClass9_0(0);
-        lVar2 = il2cpp_internal(DAT_181d721b0);
-        FUN_180f58a90(lVar2,DAT_181d79358);
+        lVar2 = il2cpp_internal(DAT_181d96ed0);
+        FUN_18132faf0(lVar2,DAT_181da0cf8);
         if (lVar2 != null) {
-          FUN_181805690(lVar2,0,DAT_181d79458);
-          FUN_181805690(lVar2,0,DAT_181d79458);
-          FUN_181805690(lVar2,0,DAT_181d79458);
-          FUN_181805690(lVar2,0,DAT_181d79458);
-          FUN_181805690(lVar2,0,DAT_181d79458);
-          FUN_181805690(lVar2,0,DAT_181d79458);
+          FUN_18181de10(lVar2,0,DAT_181da0df8);
+          FUN_18181de10(lVar2,0,DAT_181da0df8);
+          FUN_18181de10(lVar2,0,DAT_181da0df8);
+          FUN_18181de10(lVar2,0,DAT_181da0df8);
+          FUN_18181de10(lVar2,0,DAT_181da0df8);
+          FUN_18181de10(lVar2,0,DAT_181da0df8);
           this.changeResource = lVar2;
-          lVar2 = il2cpp_internal(DAT_181d721b0);
-          FUN_180f58a90(lVar2,DAT_181d79358);
+          lVar2 = il2cpp_internal(DAT_181d96ed0);
+          FUN_18132faf0(lVar2,DAT_181da0cf8);
           if (lVar2 != null) {
-            FUN_181805690(lVar2,0x3f800000,DAT_181d79458);
-            FUN_181805690(lVar2,0x3f800000,DAT_181d79458);
-            FUN_181805690(lVar2,0x3f800000,DAT_181d79458);
-            FUN_181805690(lVar2,0x3f800000,DAT_181d79458);
-            FUN_181805690(lVar2,0x3f800000,DAT_181d79458);
-            FUN_181805690(lVar2,0x3f800000,DAT_181d79458);
+            FUN_18181de10(lVar2,0x3f800000,DAT_181da0df8);
+            FUN_18181de10(lVar2,0x3f800000,DAT_181da0df8);
+            FUN_18181de10(lVar2,0x3f800000,DAT_181da0df8);
+            FUN_18181de10(lVar2,0x3f800000,DAT_181da0df8);
+            FUN_18181de10(lVar2,0x3f800000,DAT_181da0df8);
+            FUN_18181de10(lVar2,0x3f800000,DAT_181da0df8);
             this.resourceValueRateBase = lVar2;
-            lVar2 = il2cpp_internal(DAT_181d721b0);
-            FUN_180f58a90(lVar2,DAT_181d79358);
+            lVar2 = il2cpp_internal(DAT_181d96ed0);
+            FUN_18132faf0(lVar2,DAT_181da0cf8);
             if (lVar2 != null) {
-              FUN_181805690(lVar2,0,DAT_181d79458);
-              FUN_181805690(lVar2,0,DAT_181d79458);
-              FUN_181805690(lVar2,0,DAT_181d79458);
-              FUN_181805690(lVar2,0,DAT_181d79458);
-              FUN_181805690(lVar2,0,DAT_181d79458);
-              FUN_181805690(lVar2,0,DAT_181d79458);
+              FUN_18181de10(lVar2,0,DAT_181da0df8);
+              FUN_18181de10(lVar2,0,DAT_181da0df8);
+              FUN_18181de10(lVar2,0,DAT_181da0df8);
+              FUN_18181de10(lVar2,0,DAT_181da0df8);
+              FUN_18181de10(lVar2,0,DAT_181da0df8);
+              FUN_18181de10(lVar2,0,DAT_181da0df8);
               this.resourceValueRateTemp = lVar2;
-              lVar2 = il2cpp_internal(DAT_181d721b0);
-              FUN_180f58a90(lVar2,DAT_181d79358);
+              lVar2 = il2cpp_internal(DAT_181d96ed0);
+              FUN_18132faf0(lVar2,DAT_181da0cf8);
               if (lVar2 != null) {
-                FUN_181805690(lVar2,0,DAT_181d79458);
-                FUN_181805690(lVar2,0,DAT_181d79458);
-                FUN_181805690(lVar2,0,DAT_181d79458);
-                FUN_181805690(lVar2,0,DAT_181d79458);
+                FUN_18181de10(lVar2,0,DAT_181da0df8);
+                FUN_18181de10(lVar2,0,DAT_181da0df8);
+                FUN_18181de10(lVar2,0,DAT_181da0df8);
+                FUN_18181de10(lVar2,0,DAT_181da0df8);
                 this.changeAreaState = lVar2;
-                lVar2 = il2cpp_internal(DAT_181d721b0);
-                FUN_180f58a90(lVar2,DAT_181d79358);
+                lVar2 = il2cpp_internal(DAT_181d96ed0);
+                FUN_18132faf0(lVar2,DAT_181da0cf8);
                 if (lVar2 != null) {
-                  FUN_181805690(lVar2,0,DAT_181d79458);
-                  FUN_181805690(lVar2,0,DAT_181d79458);
-                  FUN_181805690(lVar2,0,DAT_181d79458);
-                  FUN_181805690(lVar2,0,DAT_181d79458);
+                  FUN_18181de10(lVar2,0,DAT_181da0df8);
+                  FUN_18181de10(lVar2,0,DAT_181da0df8);
+                  FUN_18181de10(lVar2,0,DAT_181da0df8);
+                  FUN_18181de10(lVar2,0,DAT_181da0df8);
                   this.changeAllAreaState = lVar2;
-                  uVar1 = il2cpp_internal(DAT_181d6f030);
-                  FUN_180f58a90(uVar1,DAT_181d678f8);
+                  uVar1 = il2cpp_internal(DAT_181d93cd0);
+                  FUN_18132faf0(uVar1,DAT_181d8f098);
                   this.connectAreaID = uVar1;
-                  uVar1 = il2cpp_internal(DAT_181d6f030);
-                  FUN_180f58a90(uVar1,DAT_181d678f8);
+                  uVar1 = il2cpp_internal(DAT_181d93cd0);
+                  FUN_18132faf0(uVar1,DAT_181d8f098);
                   this.nearAreaID = uVar1;
-                  uVar1 = il2cpp_internal(DAT_181d6f030);
-                  FUN_180f58a90(uVar1,DAT_181d678f8);
+                  uVar1 = il2cpp_internal(DAT_181d93cd0);
+                  FUN_18132faf0(uVar1,DAT_181d8f098);
                   this.connectResourcePointID = uVar1;
                   this.areaSpeAddData = new ForceSpeAddData(0);
-                  lVar2 = il2cpp_internal(DAT_181d6f030);
-                  FUN_180f58a90(lVar2,DAT_181d678f8);
+                  lVar2 = il2cpp_internal(DAT_181d93cd0);
+                  FUN_18132faf0(lVar2,DAT_181d8f098);
                   if (lVar2 != null) {
-                    FUN_181814fa0(lVar2,0,DAT_181d67a78);
-                    FUN_181814fa0(lVar2,0,DAT_181d67a78);
-                    FUN_181814fa0(lVar2,0,DAT_181d67a78);
-                    FUN_181814fa0(lVar2,0,DAT_181d67a78);
-                    FUN_181814fa0(lVar2,0,DAT_181d67a78);
+                    FUN_18182a0b0(lVar2,0,DAT_181d8f218);
+                    FUN_18182a0b0(lVar2,0,DAT_181d8f218);
+                    FUN_18182a0b0(lVar2,0,DAT_181d8f218);
+                    FUN_18182a0b0(lVar2,0,DAT_181d8f218);
+                    FUN_18182a0b0(lVar2,0,DAT_181d8f218);
                     this.areaBranchDefenceLv = lVar2;
-                    lVar2 = il2cpp_internal(DAT_181d6f030);
-                    FUN_180f58a90(lVar2,DAT_181d678f8);
+                    lVar2 = il2cpp_internal(DAT_181d93cd0);
+                    FUN_18132faf0(lVar2,DAT_181d8f098);
                     if (lVar2 != null) {
-                      FUN_181814fa0(lVar2,0,DAT_181d67a78);
-                      FUN_181814fa0(lVar2,0,DAT_181d67a78);
-                      FUN_181814fa0(lVar2,0,DAT_181d67a78);
-                      FUN_181814fa0(lVar2,0,DAT_181d67a78);
-                      FUN_181814fa0(lVar2,0,DAT_181d67a78);
+                      FUN_18182a0b0(lVar2,0,DAT_181d8f218);
+                      FUN_18182a0b0(lVar2,0,DAT_181d8f218);
+                      FUN_18182a0b0(lVar2,0,DAT_181d8f218);
+                      FUN_18182a0b0(lVar2,0,DAT_181d8f218);
+                      FUN_18182a0b0(lVar2,0,DAT_181d8f218);
                       this.areaBranchDefenceUpgradeLeftTime = lVar2;
-                      uVar1 = il2cpp_internal(DAT_181d6c2b0);
-                      FUN_180f58a90(uVar1,DAT_181d55560);
+                      uVar1 = il2cpp_internal(DAT_181d90ee0);
+                      FUN_18132faf0(uVar1,DAT_181d7cae0);
                       this.areaTreasurePriceData = uVar1;
                       lVar2 = new ZhSegment(0);
                       *(uint32 *)(lVar2 + 16) = 1;
                       *(uint32 *)(lVar2 + 20) = 1;
                       this.areaInteractionTimeData = lVar2;
-                      uVar1 = il2cpp_internal(DAT_181d72a30);
-                      FUN_180f58a90(uVar1,DAT_181d7c250);
+                      uVar1 = il2cpp_internal(DAT_181d97750);
+                      FUN_18132faf0(uVar1,DAT_181da3bd8);
                       this.recordLog = uVar1;
                       return;
                     }
@@ -248,20 +254,20 @@ public class AreaData
         }
     }
 
-    // Token : 0x6000F75
-    // RVA   : 0x7E9C20   Offset: 0x7E8420   Length: 0xD2
+    // Token : 0x6000FAC
+    // RVA   : 0x7E7A50   Offset: 0x7E6E50   Length: 0xD2
     public AreaData DataBase()
     {
         long lVar1;
-        lVar1 = GameController.lockObj;
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
         if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 200)) != null) {
-          FUN_1817cc780(lVar1,this.areaID,DAT_181d92810);
+          FUN_1817d9e10(lVar1,this.areaID,DAT_181db7df8);
           return;
         }
     }
 
-    // Token : 0x6000F76
-    // RVA   : 0x7EB4F0   Offset: 0x7E9CF0   Length: 0x168
+    // Token : 0x6000FAD
+    // RVA   : 0x7E9350   Offset: 0x7E8750   Length: 0x168
     public ResourceData GetUpgradeDefenceLvCost(int defenceType)
     {
         uint uVar1;
@@ -270,7 +276,7 @@ public class AreaData
         long lVar4;
         ulong uVar5;
         float fVar6;
-        lVar4 = **(int64 **)(DAT_181d876b0 + 184);
+        lVar4 = **(int64 **)(DAT_181dac7d8 + 184);
         if (lVar4 != null) {
           if (*(uint32 *)(lVar4 + 24) <= defenceType) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -297,8 +303,8 @@ public class AreaData
         }
     }
 
-    // Token : 0x6000F77
-    // RVA   : 0x7EB660   Offset: 0x7E9E60   Length: 0x63
+    // Token : 0x6000FAE
+    // RVA   : 0x7E94C0   Offset: 0x7E88C0   Length: 0x63
     public int GetUpgradeDefenceLvDay(int defenceType)
     {
         long lVar1;
@@ -311,164 +317,177 @@ public class AreaData
         }
     }
 
-    // Token : 0x6000F78
-    // RVA   : 0x7EBAE0   Offset: 0x7EA2E0   Length: 0x63A
+    // Token : 0x6000FAF
+    // RVA   : 0x7E9950   Offset: 0x7E8D50   Length: 0x67B
     public void StartUpgradeDefenceLv(int defenceType)
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         uint uVar1;
         int iVar2;
         long lVar3;
-        long lVar4;
+        bool cVar4;
         long lVar5;
-        ulong uVar6;
-        ulong uVar8;
+        long lVar6;
+        ulong uVar7;
         long lVar9;
-        float fVar10;
+        float fVar11;
         lVar9 = (int64)(int)defenceType;
-        lVar4 = AreaData.GetForce(this,0);
-        if (lVar4 != null) {
-          lVar4 = AreaData.GetForce(this,0);
-          lVar5 = **(int64 **)(DAT_181d876b0 + 184);
-          if (lVar5 == null) throw; // [null/range check failed]
-          if (lVar5.Count <= defenceType) {
+        lVar5 = AreaData.GetForce(this,0);
+        if (lVar5 != null) {
+          lVar5 = AreaData.GetForce(this,0);
+          lVar6 = **(int64 **)(DAT_181dac7d8 + 184);
+          if (lVar6 == null) throw; // [null/range check failed]
+          if (lVar6.Count <= defenceType) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar3 = this.areaBranchDefenceLv;
-          uVar1 = *(uint32 *)(lVar5._items + 32 + lVar9 * 4);
+          uVar1 = *(uint32 *)(lVar6._items + 32 + lVar9 * 4);
           if (lVar3 == null) throw; // [null/range check failed]
           if (lVar3.Count <= defenceType) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           iVar2 = *(int *)(lVar3._items + 32 + lVar9 * 4);
-          lVar5 = AreaData.GetForce(this,0);
-          if (lVar5 == null) {
-            fVar10 = 1.0;
+          lVar6 = AreaData.GetForce(this,0);
+          if (lVar6 == null) {
+            fVar11 = 1.0;
           }
           else {
-            lVar5 = AreaData.GetForce(this,0);
-            if (lVar5 == null) throw; // [null/range check failed]
-            fVar10 = (float)ForceData.GetBuildCostRate(lVar5,0);
+            lVar6 = AreaData.GetForce(this,0);
+            if (lVar6 == null) throw; // [null/range check failed]
+            fVar11 = (float)ForceData.GetBuildCostRate(lVar6,0);
           }
-          uVar6 = new PlotChoiceRequirement(uVar1,(float)(iVar2 + 1) * 200.0 * fVar10,0);
+          uVar7 = new PlotChoiceRequirement(uVar1,(float)(iVar2 + 1) * 200.0 * fVar11,0);
           iVar2 = this.belongForceID;
-          if ((GameController._instance == null) ||
-             (lVar5 = GameController._instance.worldData) == null
-             ) throw; // [null/range check failed]
-          lVar5 = WorldData.Player(lVar5,0);
-          if ((lVar5 == null) || (lVar4 == null)) throw; // [null/range check failed]
-          ForceData.CostResource(lVar4,uVar6,iVar2 == *(int *)(lVar5 + 132),0);
+          if ((*pStatics == 0) ||
+             (lVar6 = *(int64 *)(*pStatics + 32)) == null)
+          throw; // [null/range check failed]
+          lVar6 = WorldData.Player(lVar6,0);
+          if ((lVar6 == null) || (lVar5 == null)) throw; // [null/range check failed]
+          ForceData.CostResource(lVar5,uVar7,iVar2 == *(int *)(lVar6 + 132),0);
         }
-        lVar4 = this.areaBranchDefenceUpgradeLeftTime;
-        lVar5 = this.areaBranchDefenceLv;
-        if (lVar5 == null) throw; // [null/range check failed]
-        if (lVar5.Count <= defenceType) {
-          ThrowHelper.ThrowArgumentOutOfRangeException(0);
-        }
-        if (lVar4 == null) throw; // [null/range check failed]
-        FUN_18181e970(lVar4,defenceType,*(int *)(lVar5._items + 32 + lVar9 * 4) * 2 + 5,
-                      DAT_181d68370);
-        plVar7 = (int64 *)FUN_1800d60b0(DAT_181d7f180,4);
-        lVar4 = AreaData.GetForce(this,0);
-        if ((lVar4 == null) || (lVar4 = lVar4.Count, plVar7 == (int64 *)0))
-        throw; // [null/range check failed]
-        if (lVar4 != null) {
-          lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar7 + 64));
-          if (lVar5 == null) {
-            uVar6 = il2cpp_internal();
-                          // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar6,0);
+        lVar5 = this.areaBranchDefenceUpgradeLeftTime;
+        lVar6 = this.areaBranchDefenceLv;
+        if (lVar6 != null) {
+          if (lVar6.Count <= defenceType) {
+            ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-        }
-        if ((int)plVar7[3] == 0) {
-          uVar6 = il2cpp_internal();
+          if (lVar5 != null) {
+            FUN_181833d40(lVar5,defenceType,*(int *)(lVar6._items + 32 + lVar9 * 4) * 2 + 5,
+                          DAT_181d8fb18);
+            plVar8 = (int64 *)FUN_1800d60b0(DAT_181da4120,4);
+            lVar5 = AreaData.GetForce(this,0);
+            if (lVar5 != null) {
+              lVar5 = ForceData.GetForceName(lVar5,1,0);
+              if (plVar8 != (int64 *)0) {
+                if (lVar5 != null) {
+                  lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar8 + 64));
+                  if (lVar6 == null) {
+                    uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
-        }
-        plVar7[4] = lVar4;
-        il2cpp_internal(plVar7 + 4,lVar4);
-        lVar4 = this.areaName;
-        if (lVar4 != null) {
-          lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar7 + 64));
-          if (lVar5 == null) {
-            uVar6 = il2cpp_internal();
+                    FUN_1800d65f0(uVar7,0);
+                  }
+                }
+                if ((int)plVar8[3] == 0) {
+                  uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar6,0);
+                  FUN_1800d65f0(uVar7,0);
+                }
+                plVar8[4] = lVar5;
+                il2cpp_internal(plVar8 + 4,lVar5);
+                cVar4 = FUN_180d755b0(this.setAreaName,0);
+                if (!cVar4) {
+                  lVar5 = this.setAreaName;
+                }
+                else {
+                  lVar5 = this.areaName;
+                }
+                if (lVar5 != null) {
+                  lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar8 + 64));
+                  if (lVar6 == null) {
+                    uVar7 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+                    FUN_1800d65f0(uVar7,0);
+                  }
+                }
+                if (*(uint32 *)(plVar8 + 3) < 2) {
+                  uVar7 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+                  FUN_1800d65f0(uVar7,0);
+                }
+                plVar8[5] = lVar5;
+                il2cpp_internal(plVar8 + 5,lVar5);
+                lVar5 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x5c8);
+                if (lVar5 != null) {
+                  if (lVar5.Count <= defenceType) {
+                    ThrowHelper.ThrowArgumentOutOfRangeException(0);
+                  }
+                  lVar5 = *(int64 *)(lVar5._items + 32 + lVar9 * 8);
+                  if (lVar5 != null) {
+                    lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar8 + 64));
+                    if (lVar6 == null) {
+                      uVar7 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+                      FUN_1800d65f0(uVar7,0);
+                    }
+                  }
+                  if (*(uint32 *)(plVar8 + 3) < 3) {
+                    uVar7 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+                    FUN_1800d65f0(uVar7,0);
+                  }
+                  plVar8[6] = lVar5;
+                  il2cpp_internal(plVar8 + 6,lVar5);
+                  lVar5 = this.areaBranchDefenceLv;
+                  if (lVar5 != null) {
+                    if (lVar5.Count <= defenceType) {
+                      ThrowHelper.ThrowArgumentOutOfRangeException(0);
+                    }
+                    lVar9 = GlobalData.GetNumText
+                                      (*(uint32 *)(lVar5._items + 32 + lVar9 * 4),0);
+                    if (lVar9 != null) {
+                      lVar5 = il2cpp_internal(lVar9,*(uint64 *)(*plVar8 + 64));
+                      if (lVar5 == null) {
+                        uVar7 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+                        FUN_1800d65f0(uVar7,0);
+                      }
+                    }
+                    if (*(uint32 *)(plVar8 + 3) < 4) {
+                      uVar7 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+                      FUN_1800d65f0(uVar7,0);
+                    }
+                    plVar8[7] = lVar9;
+                    il2cpp_internal(plVar8 + 7,lVar9);
+                    uVar7 = String.Format("{0}近日开始加强{1}分舵之{2}防御等级({3}级)",plVar8,0);
+                    AreaData.AddLog(this,uVar7,0);
+                    lVar9 = **(int64 **)(DAT_181d7f6a8 + 184);
+                    iVar2 = this.belongForceID;
+                    if (iVar2 == -1) {
+                      bVar10 = false;
+                    }
+                    else {
+                      if ((*pStatics == 0) ||
+                         (lVar5 = *(int64 *)(*pStatics + 32)) == null
+                         ) throw; // [null/range check failed]
+                      lVar5 = WorldData.Player(lVar5,0);
+                      if (lVar5 == null) throw; // [null/range check failed]
+                      bVar10 = iVar2 == *(int *)(lVar5 + 132);
+                    }
+                    if (lVar9 != null) {
+                      InfoController.AddInfo(lVar9,bVar10,uVar7,0);
+                      return;
+                    }
+                  }
+                }
+              }
+            }
           }
-        }
-        if (*(uint32 *)(plVar7 + 3) < 2) {
-          uVar6 = il2cpp_internal();
-                          // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
-        }
-        plVar7[5] = lVar4;
-        il2cpp_internal(plVar7 + 5,lVar4);
-        lVar4 = *(int64 *)(*(int64 *)(PlotController_StaticsPtr + 184) + 0x5c0);
-        if (lVar4 == null) throw; // [null/range check failed]
-        if (lVar4.Count <= defenceType) {
-          ThrowHelper.ThrowArgumentOutOfRangeException(0);
-        }
-        lVar4 = *(int64 *)(lVar4._items + 32 + lVar9 * 8);
-        if (lVar4 != null) {
-          lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar7 + 64));
-          if (lVar5 == null) {
-            uVar6 = il2cpp_internal();
-                          // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar6,0);
-          }
-        }
-        if (*(uint32 *)(plVar7 + 3) < 3) {
-          uVar6 = il2cpp_internal();
-                          // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
-        }
-        plVar7[6] = lVar4;
-        il2cpp_internal(plVar7 + 6,lVar4);
-        lVar4 = this.areaBranchDefenceLv;
-        if (lVar4 == null) throw; // [null/range check failed]
-        if (lVar4.Count <= defenceType) {
-          ThrowHelper.ThrowArgumentOutOfRangeException(0);
-        }
-        lVar9 = GlobalData.GetNumText(*(uint32 *)(lVar4._items + 32 + lVar9 * 4),0);
-        if (lVar9 != null) {
-          lVar4 = il2cpp_internal(lVar9,*(uint64 *)(*plVar7 + 64));
-          if (lVar4 == null) {
-            uVar6 = il2cpp_internal();
-                          // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar6,0);
-          }
-        }
-        if (*(uint32 *)(plVar7 + 3) < 4) {
-          uVar6 = il2cpp_internal();
-                          // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
-        }
-        plVar7[7] = lVar9;
-        il2cpp_internal(plVar7 + 7,lVar9);
-        uVar6 = String.Format("{0}近日开始加强{1}分舵之{2}防御等级({3}级)",plVar7,0);
-        AreaData.AddLog(this,uVar6,0);
-        iVar2 = this.belongForceID;
-        lVar9 = **(int64 **)(DAT_181d5a578 + 184);
-        if (iVar2 < 0) {
-        LAB_1807ec05c:
-          uVar8 = 0;
-        }
-        else {
-          if ((GameController._instance == null) ||
-             (lVar4 = GameController._instance.worldData) == null
-             ) throw; // [null/range check failed]
-          lVar4 = WorldData.Player(lVar4,0);
-          if (lVar4 == null) throw; // [null/range check failed]
-          if (iVar2 != *(int *)(lVar4 + 132)) goto LAB_1807ec05c;
-          uVar8 = 1;
-        }
-        if (lVar9 != null) {
-          InfoController.AddInfo(lVar9,uVar8,uVar6,0);
-          return;
         }
     }
 
-    // Token : 0x6000F79
-    // RVA   : 0x7E8BF0   Offset: 0x7E73F0   Length: 0x162
+    // Token : 0x6000FB0
+    // RVA   : 0x7E69E0   Offset: 0x7E5DE0   Length: 0x162
     public void AreaConquerReduceDefenceLv()
     {
         int iVar1;
@@ -499,9 +518,9 @@ public class AreaData
             }
             uVar2 = Mathf.CeilToInt((float)*(int *)(lVar7 + lVar6._items) / 5.0,0);
             iVar3 = Mathf.Clamp(uVar2,0,3);
-            FUN_18181e970(lVar4,uVar5,iVar1 - iVar3,DAT_181d68370);
+            FUN_181833d40(lVar4,uVar5,iVar1 - iVar3,DAT_181d8fb18);
             if (this.areaBranchDefenceUpgradeLeftTime == null) break;
-            FUN_18181e970(this.areaBranchDefenceUpgradeLeftTime,uVar5,0);
+            FUN_181833d40(this.areaBranchDefenceUpgradeLeftTime,uVar5,0);
             lVar4 = this.areaBranchDefenceLv;
             uVar5 = uVar5 + 1;
             lVar7 = lVar7 + 4;
@@ -509,8 +528,8 @@ public class AreaData
         }
     }
 
-    // Token : 0x6000F7A
-    // RVA   : 0x7EA7C0   Offset: 0x7E8FC0   Length: 0x462
+    // Token : 0x6000FB1
+    // RVA   : 0x7E8630   Offset: 0x7E7A30   Length: 0x462
     public float GetDefenceFightScoreRate()
     {
         uint uVar1;
@@ -530,23 +549,23 @@ public class AreaData
               }
               if (*(int64 *)(lVar2._items + lVar3) != 0) {
                 if ((this.areaTiles == null) ||
-                   (lVar2 = FUN_180002f80(this.areaTiles,uVar4,DAT_181d554e0)) == null)
+                   (lVar2 = FUN_180002f80(this.areaTiles,uVar4,DAT_181d7ca60)) == null)
                 break;
                 if (*(int64 *)(lVar2 + 40) != 0) {
                   if (((this.areaTiles == null) ||
-                      (lVar2 = FUN_180002f80(this.areaTiles,uVar4,DAT_181d554e0),
+                      (lVar2 = FUN_180002f80(this.areaTiles,uVar4,DAT_181d7ca60),
                       lVar2 == null)) || (*(int64 *)(lVar2 + 40) == 0)) break;
                   if (-1 < *(int *)(*(int64 *)(lVar2 + 40) + 16)) {
                     if (((this.areaTiles == null) ||
-                        (lVar2 = FUN_180002f80(this.areaTiles,uVar4,DAT_181d554e0),
+                        (lVar2 = FUN_180002f80(this.areaTiles,uVar4,DAT_181d7ca60),
                         lVar2 == null)) ||
                        ((*(int64 *)(lVar2 + 40) == 0 ||
                         (lVar2 = AreaBuildingData.DataBase(*(int64 *)(lVar2 + 40),0)) == null)))
                     break;
                     if (*(char *)(lVar2 + 53) != false) {
                       if (((this.areaTiles != null) &&
-                          (lVar2 = FUN_180002f80(this.areaTiles,uVar4,DAT_181d554e0),
-                          lVar2 != null)) && (*(int64 *)(lVar2 + 40) != 0)) goto LAB_1807eaab5;
+                          (lVar2 = FUN_180002f80(this.areaTiles,uVar4,DAT_181d7ca60),
+                          lVar2 != null)) && (*(int64 *)(lVar2 + 40) != 0)) goto LAB_1807e8925;
                       break;
                     }
                   }
@@ -574,7 +593,7 @@ public class AreaData
                 if (lVar2 == null) throw; // [null/range check failed]
               }
               Mathf.Max(lVar2,this.defence / 100.0,0);
-        LAB_1807eaab5:
+        LAB_1807e8925:
               iVar5 = 0;
               lVar2 = this.connectResourcePointID;
               while (lVar2 != null) {
@@ -585,14 +604,14 @@ public class AreaData
                 if (lVar2 == null) break;
                 lVar2 = *(int64 *)(lVar2 + 32);
                 if (((this.connectResourcePointID == null) ||
-                    (uVar1 = FUN_1800d6750(this.connectResourcePointID,iVar5,DAT_181d68270), lVar2 == null)
+                    (uVar1 = FUN_1800d6760(this.connectResourcePointID,iVar5,DAT_181d8fa18), lVar2 == null)
                     ) || (lVar2 = WorldData.GetResourcePoint(lVar2,uVar1,0)) == null) break;
-                if (*(int *)(lVar2 + 56) == this.belongForceID) {
+                if (*(int *)(lVar2 + 48) == this.belongForceID) {
                   lVar2 = FUN_18046c0a0(0);
                   if (lVar2 == null) break;
                   lVar2 = *(int64 *)(lVar2 + 32);
                   if (((this.connectResourcePointID == null) ||
-                      (uVar1 = FUN_1800d6750(this.connectResourcePointID,iVar5,DAT_181d68270),
+                      (uVar1 = FUN_1800d6760(this.connectResourcePointID,iVar5,DAT_181d8fa18),
                       lVar2 == null)) ||
                      ((lVar2 = WorldData.GetResourcePoint(lVar2,uVar1,0), lVar2 == null ||
                       (lVar2 = ResourcePointData.GetDefenceSpeAddData(lVar2,0)) == null))) break;
@@ -606,19 +625,19 @@ public class AreaData
         }
     }
 
-    // Token : 0x6000F7B
-    // RVA   : 0x7E9060   Offset: 0x7E7860   Length: 0xD8
+    // Token : 0x6000FB2
+    // RVA   : 0x7E6E50   Offset: 0x7E6250   Length: 0xD9
     public bool BelongPlayer()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         long lVar2;
         iVar1 = this.belongForceID;
-        if (iVar1 < 0) {
+        if (iVar1 == -1) {
           return false;
         }
-        if ((GameController._instance != null) &&
-           (lVar2 = GameController._instance.worldData) != null)
-        {
+        if ((*pStatics != 0) &&
+           (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
           lVar2 = WorldData.Player(lVar2,0);
           if (lVar2 != null) {
             return iVar1 == *(int *)(lVar2 + 132);
@@ -626,51 +645,53 @@ public class AreaData
         }
     }
 
-    // Token : 0x6000F7C
-    // RVA   : 0x7E8D60   Offset: 0x7E7560   Length: 0x2FC
+    // Token : 0x6000FB3
+    // RVA   : 0x7E6B50   Offset: 0x7E5F50   Length: 0x2FF
     public bool BelongPlayerOrAlley()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         bool cVar2;
-        long lVar3;
-        ulong uVar4;
-        if (((GameController._instance != null) &&
-            (lVar3 = GameController._instance.worldData) != null)
-           && (lVar3 = WorldData.Player(lVar3,0)) != null) {
-          if (*(int *)(lVar3 + 132) < 0) {
+        byte uVar3;
+        long lVar4;
+        if (((*pStatics != 0) &&
+            (lVar4 = *(int64 *)(*pStatics + 32)) != null) &&
+           (lVar4 = WorldData.Player(lVar4,0)) != null) {
+          cVar2 = HeroData.HaveForce(lVar4,0);
+          if (!cVar2) {
             return false;
           }
           iVar1 = this.belongForceID;
-          if (((GameController._instance != null) &&
-              (lVar3 = GameController._instance.worldData, lVar3 != null
-              )) && (lVar3 = WorldData.Player(lVar3,0)) != null) {
-            if (iVar1 == *(int *)(lVar3 + 132)) {
+          if (((*pStatics != 0) &&
+              (lVar4 = *(int64 *)(*pStatics + 32)) != null) &&
+             (lVar4 = WorldData.Player(lVar4,0)) != null) {
+            if (iVar1 == *(int *)(lVar4 + 132)) {
               return true;
             }
             iVar1 = this.belongForceID;
-            lVar3 = FUN_18046c0a0(0);
-            if (((lVar3 != null) && (lVar3.villageAreaID != null)) &&
-               ((lVar3 = WorldData.Player(lVar3.villageAreaID,0), lVar3 != null &&
-                (lVar3 = HeroData.GetForce(lVar3,0,0)) != null))) {
-              if (iVar1 == *(int *)(lVar3 + 60)) {
+            lVar4 = FUN_18046c0a0(0);
+            if (((lVar4 != null) && (*(int64 *)(lVar4 + 32) != 0)) &&
+               ((lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0), lVar4 != null &&
+                (lVar4 = HeroData.GetForce(lVar4,0,0)) != null))) {
+              if (iVar1 == *(int *)(lVar4 + 60)) {
                 return true;
               }
-              lVar3 = FUN_18046c0a0(0);
-              if ((((lVar3 != null) && (lVar3.villageAreaID != null)) &&
-                  (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) != null) &&
-                 ((lVar3 = HeroData.GetForce(lVar3,0,0), lVar3 != null && (lVar3.ResourcePoints != null)
+              lVar4 = FUN_18046c0a0(0);
+              if ((((lVar4 != null) && (*(int64 *)(lVar4 + 32) != 0)) &&
+                  (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) != null) &&
+                 ((lVar4 = HeroData.GetForce(lVar4,0,0), lVar4 != null && (*(int64 *)(lVar4 + 64) != 0)
                   ))) {
-                cVar2 = FUN_181815240(lVar3.ResourcePoints,this.belongForceID,
-                                      DAT_181d67bf8);
+                cVar2 = FUN_18182a3a0(*(int64 *)(lVar4 + 64),this.belongForceID,
+                                      DAT_181d8f398);
                 if (cVar2) {
                   return true;
                 }
-                lVar3 = FUN_18046c0a0(0);
-                if ((((lVar3 != null) && (lVar3.villageAreaID != null)) &&
-                    (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) != null) &&
-                   (lVar3 = HeroData.GetForce(lVar3,0,0)) != null) {
-                  uVar4 = ForceData.IsAllyForce(lVar3,this.belongForceID,0);
-                  return uVar4;
+                lVar4 = FUN_18046c0a0(0);
+                if ((((lVar4 != null) && (*(int64 *)(lVar4 + 32) != 0)) &&
+                    (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) != null) &&
+                   (lVar4 = HeroData.GetForce(lVar4,0,0)) != null) {
+                  uVar3 = ForceData.IsAllyForce(lVar4,this.belongForceID,0);
+                  return uVar3;
                 }
               }
             }
@@ -678,17 +699,23 @@ public class AreaData
         }
     }
 
-    // Token : 0x6000F7D
-    // RVA   : 0x20F140   Offset: 0x20D940   Length: 0x5
+    // Token : 0x6000FB4
+    // RVA   : 0x7E7FF0   Offset: 0x7E73F0   Length: 0x32
     public string GetAreaName()
     {
-        return this.areaName;
+        bool cVar1;
+        cVar1 = FUN_180d755b0(this.setAreaName,0);
+        if (cVar1) {
+          return this.areaName;
+        }
+        return this.setAreaName;
     }
 
-    // Token : 0x6000F7E
-    // RVA   : 0x7EA040   Offset: 0x7E8840   Length: 0x17C
+    // Token : 0x6000FB5
+    // RVA   : 0x7E7E70   Offset: 0x7E7270   Length: 0x17C
     public int GetAreaMapRandomEventCount()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         bool cVar1;
         long lVar2;
         int iVar3;
@@ -696,18 +723,18 @@ public class AreaData
         iVar4 = 0;
         iVar3 = 0;
         while( true ) {
-          if (((GameController._instance == null) ||
-              (lVar2 = GameController._instance.worldData, lVar2 == null
-              )) || (lVar2 = lVar2.AreaMapRandomEventDatas) == null) break;
-          if (lVar2.cityAreaID <= iVar3) {
+          if (((*pStatics == 0) ||
+              (lVar2 = *(int64 *)(*pStatics + 32)) == null) ||
+             (lVar2 = *(int64 *)(lVar2 + 104)) == null) break;
+          if (*(int *)(lVar2 + 24) <= iVar3) {
             return iVar4;
           }
           lVar2 = FUN_18046c0a0(0);
-          if (((lVar2 == null) || (lVar2.villageAreaID == null)) ||
-             (lVar2 = *(int64 *)(lVar2.villageAreaID + 104)) == null) break;
-          lVar2 = FUN_180002f80(lVar2,iVar3,DAT_181d5e680);
-          if ((lVar2 == null) || (lVar2.ResourcePoints == null)) break;
-          cVar1 = FUN_181815240(lVar2.ResourcePoints,this.areaID,DAT_181d67bf8)
+          if (((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) ||
+             (lVar2 = *(int64 *)(*(int64 *)(lVar2 + 32) + 104)) == null) break;
+          lVar2 = FUN_180002f80(lVar2,iVar3,DAT_181d85e20);
+          if ((lVar2 == null) || (*(int64 *)(lVar2 + 64) == 0)) break;
+          cVar1 = FUN_18182a3a0(*(int64 *)(lVar2 + 64),this.areaID,DAT_181d8f398)
           ;
           if (cVar1) {
             iVar4 = iVar4 + 1;
@@ -716,8 +743,8 @@ public class AreaData
         }
     }
 
-    // Token : 0x6000F7F
-    // RVA   : 0x7EB2C0   Offset: 0x7E9AC0   Length: 0x16B
+    // Token : 0x6000FB6
+    // RVA   : 0x7E9120   Offset: 0x7E8520   Length: 0x16B
     public int GetSpeBuildingNum()
     {
         long lVar1;
@@ -739,15 +766,15 @@ public class AreaData
             }
             if (*(int64 *)(lVar4 + lVar1._items) != 0) {
               if ((this.areaTiles == null) ||
-                 (lVar1 = FUN_180002f80(this.areaTiles,uVar3,DAT_181d554e0)) == null)
+                 (lVar1 = FUN_180002f80(this.areaTiles,uVar3,DAT_181d7ca60)) == null)
               break;
               if (*(int64 *)(lVar1 + 40) != 0) {
                 if (((this.areaTiles == null) ||
-                    (lVar1 = FUN_180002f80(this.areaTiles,uVar3,DAT_181d554e0)) == null
+                    (lVar1 = FUN_180002f80(this.areaTiles,uVar3,DAT_181d7ca60)) == null
                     ) || (*(int64 *)(lVar1 + 40) == 0)) break;
                 if (-1 < *(int *)(*(int64 *)(lVar1 + 40) + 16)) {
                   if (((this.areaTiles == null) ||
-                      (lVar1 = FUN_180002f80(this.areaTiles,uVar3,DAT_181d554e0),
+                      (lVar1 = FUN_180002f80(this.areaTiles,uVar3,DAT_181d7ca60),
                       lVar1 == null)) ||
                      ((*(int64 *)(lVar1 + 40) == 0 ||
                       (lVar1 = AreaBuildingData.DataBase(*(int64 *)(lVar1 + 40),0)) == null)))
@@ -765,8 +792,8 @@ public class AreaData
         }
     }
 
-    // Token : 0x6000F80
-    // RVA   : 0x7EA560   Offset: 0x7E8D60   Length: 0x190
+    // Token : 0x6000FB7
+    // RVA   : 0x7E83D0   Offset: 0x7E77D0   Length: 0x190
     public AreaBuildingData GetCenterBuilding()
     {
         long lVar1;
@@ -786,22 +813,22 @@ public class AreaData
             }
             if (*(int64 *)(lVar1._items + lVar3) != 0) {
               if ((this.areaTiles == null) ||
-                 (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d554e0)) == null)
+                 (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca60)) == null)
               break;
               if (*(int64 *)(lVar1 + 40) != 0) {
                 if (((this.areaTiles == null) ||
-                    (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d554e0)) == null
+                    (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca60)) == null
                     ) || (*(int64 *)(lVar1 + 40) == 0)) break;
                 if (-1 < *(int *)(*(int64 *)(lVar1 + 40) + 16)) {
                   if (((this.areaTiles == null) ||
-                      (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d554e0),
+                      (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca60),
                       lVar1 == null)) ||
                      ((*(int64 *)(lVar1 + 40) == 0 ||
                       (lVar1 = AreaBuildingData.DataBase(*(int64 *)(lVar1 + 40),0)) == null)))
                   break;
                   if (*(char *)(lVar1 + 53) != false) {
                     if ((this.areaTiles != null) &&
-                       (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d554e0),
+                       (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca60),
                        lVar1 != null)) {
                       return *(uint64 *)(lVar1 + 40);
                     }
@@ -817,18 +844,19 @@ public class AreaData
         }
     }
 
-    // Token : 0x6000F81
-    // RVA   : 0x7EAF50   Offset: 0x7E9750   Length: 0x1BA
+    // Token : 0x6000FB8
+    // RVA   : 0x7E8DB0   Offset: 0x7E81B0   Length: 0x1BA
     public List<HeroData> GetInsideHeros()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
         long lVar4;
         uint uVar5;
         long lVar6;
-        lVar2 = il2cpp_internal(DAT_181d6e6b0);
-        FUN_180f58a90(lVar2,DAT_181d63c78);
+        lVar2 = il2cpp_internal(DAT_181d93350);
+        FUN_18132faf0(lVar2,DAT_181d8b418);
         lVar4 = this.insideHeros;
         uVar5 = 0;
         if (lVar4 != null) {
@@ -837,9 +865,9 @@ public class AreaData
             if (lVar4.Count <= (int)uVar5) {
               return lVar2;
             }
-            if (GameController._instance == null) break;
+            if (*pStatics == 0) break;
             lVar4 = this.insideHeros;
-            lVar1 = GameController._instance.worldData;
+            lVar1 = *(int64 *)(*pStatics + 32);
             if (lVar4 == null) break;
             if (lVar4.Count <= uVar5) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -847,7 +875,7 @@ public class AreaData
             if ((lVar1 == null) ||
                (uVar3 = WorldData.GetHero(lVar1,*(uint32 *)(lVar6 + lVar4._items),0),
                lVar2 == null)) break;
-            FUN_181827900(lVar2,uVar3);
+            FUN_18181e0a0(lVar2,uVar3);
             lVar4 = this.insideHeros;
             uVar5 = uVar5 + 1;
             lVar6 = lVar6 + 4;
@@ -856,15 +884,16 @@ public class AreaData
         }
     }
 
-    // Token : 0x6000F82
-    // RVA   : 0x7EAE50   Offset: 0x7E9650   Length: 0xFD
+    // Token : 0x6000FB9
+    // RVA   : 0x7E8CB0   Offset: 0x7E80B0   Length: 0xFD
     public HeroData GetInsideHero(int id)
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         long lVar2;
-        if (GameController._instance != null) {
+        if (*pStatics != 0) {
           lVar1 = this.insideHeros;
-          lVar2 = GameController._instance.worldData;
+          lVar2 = *(int64 *)(*pStatics + 32);
           if (lVar1 != null) {
             if (lVar1.Count <= id) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -879,25 +908,25 @@ public class AreaData
         }
     }
 
-    // Token : 0x6000F83
-    // RVA   : 0x7EB9B0   Offset: 0x7EA1B0   Length: 0x12E
+    // Token : 0x6000FBA
+    // RVA   : 0x7E9820   Offset: 0x7E8C20   Length: 0x12E
     public void SetBranchLeader(HeroData targetHero)
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         if (-1 < this.branchLeaderID) {
-          if ((GameController._instance != null) &&
-             (lVar1 = GameController._instance.worldData) != null
-             ) {
+          if ((*pStatics != 0) &&
+             (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
             lVar1 = WorldData.GetHero(lVar1,this.branchLeaderID,0);
             if (lVar1 != null) {
-              lVar1.gameMode = 0xffffffff;
-              goto LAB_1807eba8a;
+              *(uint32 *)(lVar1 + 156) = 0xffffffff;
+              goto LAB_1807e98fa;
             }
           }
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        LAB_1807eba8a:
+        LAB_1807e98fa:
         if (targetHero != null) {
           this.branchLeaderID = *(uint32 *)(targetHero + 88);
           *(uint32 *)(targetHero + 156) = this.areaID;
@@ -909,16 +938,16 @@ public class AreaData
         this.areaDetailDirty = 1;
     }
 
-    // Token : 0x6000F84
-    // RVA   : 0x7EB990   Offset: 0x7EA190   Length: 0x11
+    // Token : 0x6000FBB
+    // RVA   : 0x7E9800   Offset: 0x7E8C00   Length: 0x11
     public void ResetAutoSetting()
     {
         this.autoBuild = 0;
         this.autoBuildResourceRateLimit = 0;
     }
 
-    // Token : 0x6000F85
-    // RVA   : 0x7E9140   Offset: 0x7E7940   Length: 0x32
+    // Token : 0x6000FBC
+    // RVA   : 0x7E6F30   Offset: 0x7E6330   Length: 0x32
     public bool CanAddState()
     {
         float fVar1;
@@ -931,8 +960,8 @@ public class AreaData
         return true;
     }
 
-    // Token : 0x6000F86
-    // RVA   : 0x7E9180   Offset: 0x7E7980   Length: 0x42
+    // Token : 0x6000FBD
+    // RVA   : 0x7E6F70   Offset: 0x7E6370   Length: 0x42
     public bool CanReduceState()
     {
         if (((this.safe <= 15.0) && (this.support <= 15.0)) &&
@@ -942,8 +971,8 @@ public class AreaData
         return true;
     }
 
-    // Token : 0x6000F87
-    // RVA   : 0x7EB190   Offset: 0x7E9990   Length: 0xFA
+    // Token : 0x6000FBE
+    // RVA   : 0x7E8FF0   Offset: 0x7E83F0   Length: 0xFA
     public string GetRecordLog()
     {
         long lVar1;
@@ -975,10 +1004,11 @@ public class AreaData
         }
     }
 
-    // Token : 0x6000F88
-    // RVA   : 0x7E8740   Offset: 0x7E6F40   Length: 0x4A5
+    // Token : 0x6000FBF
+    // RVA   : 0x7E6530   Offset: 0x7E5930   Length: 0x4A5
     public void AddLog(string newLog)
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         long lVar2;
         long lVar4;
@@ -988,12 +1018,12 @@ public class AreaData
         uint[] local_res20 = new uint[2];
         uint[] local_28 = new uint[4];
         lVar2 = this.recordLog;
-        plVar3 = (int64 *)FUN_1800d60b0(DAT_181d7f180,4);
-        if (((GameController._instance != null) &&
-            (lVar4 = GameController._instance.worldData) != null)
-           && (lVar4 = lVar4.worldTime) != null) {
-          local_res8[0] = lVar4.chapter;
-          lVar4 = il2cpp_value_box(DAT_181d5b2f8,local_res8);
+        plVar3 = (int64 *)FUN_1800d60b0(DAT_181da4120,4);
+        if (((*pStatics != 0) &&
+            (lVar4 = *(int64 *)(*pStatics + 32)) != null) &&
+           (lVar4 = *(int64 *)(lVar4 + 168)) != null) {
+          local_res8[0] = *(uint32 *)(lVar4 + 16);
+          lVar4 = il2cpp_value_box(DAT_181d80418,local_res8);
           if (plVar3 != (int64 *)0) {
             if ((lVar4 != null) &&
                (lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar3 + 64))) == null) {
@@ -1008,11 +1038,11 @@ public class AreaData
             }
             plVar3[4] = lVar4;
             il2cpp_internal(plVar3 + 4,lVar4);
-            if (((GameController._instance != null) &&
-                (lVar4 = GameController._instance.worldData,
-                lVar4 != null)) && (lVar4 = lVar4.worldTime) != null) {
+            if (((*pStatics != 0) &&
+                (lVar4 = *(int64 *)(*pStatics + 32)) != null) &&
+               (lVar4 = *(int64 *)(lVar4 + 168)) != null) {
               local_res20[0] = *(uint32 *)(lVar4 + 20);
-              lVar4 = il2cpp_value_box(DAT_181d5b2f8,local_res20);
+              lVar4 = il2cpp_value_box(DAT_181d80418,local_res20);
               if ((lVar4 != null) &&
                  (lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar3 + 64))) == null) {
                 uVar6 = il2cpp_internal();
@@ -1026,11 +1056,11 @@ public class AreaData
               }
               plVar3[5] = lVar4;
               il2cpp_internal(plVar3 + 5,lVar4);
-              if (((GameController._instance != null) &&
-                  (lVar4 = GameController._instance.worldData,
-                  lVar4 != null)) && (lVar4 = lVar4.worldTime) != null) {
-                local_28[0] = lVar4.cityAreaID;
-                lVar4 = il2cpp_value_box(DAT_181d5b2f8,local_28);
+              if (((*pStatics != 0) &&
+                  (lVar4 = *(int64 *)(*pStatics + 32)) != null) &&
+                 (lVar4 = *(int64 *)(lVar4 + 168)) != null) {
+                local_28[0] = *(uint32 *)(lVar4 + 24);
+                lVar4 = il2cpp_value_box(DAT_181d80418,local_28);
                 if ((lVar4 != null) &&
                    (lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar3 + 64))) == null) {
                   uVar6 = il2cpp_internal();
@@ -1059,16 +1089,16 @@ public class AreaData
                 il2cpp_internal(plVar3 + 7,newLog);
                 uVar6 = String.Format("[{0}.{1}.{2}]{3}",plVar3,0);
                 if (lVar2 != null) {
-                  FUN_181827900(lVar2,uVar6,DAT_181d7c3d0);
+                  FUN_18181e0a0(lVar2,uVar6,DAT_181da3d58);
                   lVar2 = this.recordLog;
                   while (lVar2 != null) {
                     iVar1 = lVar2.Count;
-                    if (iVar1 <= *(int *)(*(int64 *)(PlotController_StaticsPtr + 184) + 232)) {
+                    if (iVar1 <= *(int *)(*(int64 *)(DAT_181d73d40 + 184) + 232)) {
                       this.areaInfoDirty = 1;
                       return;
                     }
                     if (this.recordLog == null) break;
-                    FUN_18182b220(this.recordLog,0,DAT_181d7c7c8);
+                    FUN_181823590(this.recordLog,0,DAT_181da4158);
                     lVar2 = this.recordLog;
                   }
                           // WARNING: Subroutine does not return
@@ -1080,8 +1110,8 @@ public class AreaData
         }
     }
 
-    // Token : 0x6000F89
-    // RVA   : 0x7E91D0   Offset: 0x7E79D0   Length: 0x44
+    // Token : 0x6000FC0
+    // RVA   : 0x7E6FC0   Offset: 0x7E63C0   Length: 0x44
     public void ChangeAreaState(int areaStateType, float result, bool showInfo)
     {
         if (areaStateType == null) {
@@ -1102,8 +1132,8 @@ public class AreaData
         }
     }
 
-    // Token : 0x6000F8A
-    // RVA   : 0x7EA1C0   Offset: 0x7E89C0   Length: 0x51
+    // Token : 0x6000FC1
+    // RVA   : 0x7E8030   Offset: 0x7E7430   Length: 0x51
     public float GetAreaStatePercent(int areaStateType)
     {
         if (areaStateType == null) {
@@ -1121,8 +1151,8 @@ public class AreaData
         return this.people / this.maxPeople;
     }
 
-    // Token : 0x6000F8B
-    // RVA   : 0x7EA310   Offset: 0x7E8B10   Length: 0x34
+    // Token : 0x6000FC2
+    // RVA   : 0x7E8180   Offset: 0x7E7580   Length: 0x34
     public float GetAreaState(int areaStateType)
     {
         if (areaStateType == null) {
@@ -1140,8 +1170,8 @@ public class AreaData
         return this.people;
     }
 
-    // Token : 0x6000F8C
-    // RVA   : 0x7EB110   Offset: 0x7E9910   Length: 0x14
+    // Token : 0x6000FC3
+    // RVA   : 0x7E8F70   Offset: 0x7E8370   Length: 0x14
     public float GetMaxAreaState(int areaStateType)
     {
         if (areaStateType != 3) {
@@ -1150,8 +1180,8 @@ public class AreaData
         return this.maxPeople;
     }
 
-    // Token : 0x6000F8D
-    // RVA   : 0x7EB430   Offset: 0x7E9C30   Length: 0x15
+    // Token : 0x6000FC4
+    // RVA   : 0x7E9290   Offset: 0x7E8690   Length: 0x15
     public float GetSupport()
     {
         if (this.areaType != 2) {
@@ -1160,8 +1190,8 @@ public class AreaData
         return 0x42480000;
     }
 
-    // Token : 0x6000F8E
-    // RVA   : 0x7EB2A0   Offset: 0x7E9AA0   Length: 0x15
+    // Token : 0x6000FC5
+    // RVA   : 0x7E9100   Offset: 0x7E8500   Length: 0x15
     public float GetSafe()
     {
         if (this.areaType != 2) {
@@ -1170,8 +1200,8 @@ public class AreaData
         return 0x42480000;
     }
 
-    // Token : 0x6000F8F
-    // RVA   : 0x7E9E90   Offset: 0x7E8690   Length: 0x1AD
+    // Token : 0x6000FC6
+    // RVA   : 0x7E7CC0   Offset: 0x7E70C0   Length: 0x1AD
     public AreaBuildingData FindBuilding(string buildingName)
     {
         long lVar1;
@@ -1191,19 +1221,19 @@ public class AreaData
             }
             if (*(int64 *)(lVar1._items + lVar3) != 0) {
               if ((this.areaTiles == null) ||
-                 (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d554e0)) == null)
+                 (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca60)) == null)
               break;
               if (*(int64 *)(lVar1 + 40) != 0) {
                 if (((this.areaTiles == null) ||
-                    (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d554e0)) == null
+                    (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca60)) == null
                     ) || (*(int64 *)(lVar1 + 40) == 0)) break;
                 if (-1 < *(int *)(*(int64 *)(lVar1 + 40) + 16)) {
                   if (((this.areaTiles == null) ||
-                      (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d554e0),
+                      (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca60),
                       lVar1 == null)) || (*(int64 *)(lVar1 + 40) == 0)) break;
                   if (*(int *)(*(int64 *)(lVar1 + 40) + 16) == buildingName) {
                     if ((this.areaTiles != null) &&
-                       (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d554e0),
+                       (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca60),
                        lVar1 != null)) {
                       return *(uint64 *)(lVar1 + 40);
                     }
@@ -1219,8 +1249,8 @@ public class AreaData
         }
     }
 
-    // Token : 0x6000F90
-    // RVA   : 0x7E9D00   Offset: 0x7E8500   Length: 0x18C
+    // Token : 0x6000FC7
+    // RVA   : 0x7E7B30   Offset: 0x7E6F30   Length: 0x18C
     public AreaBuildingData FindBuilding(int buildingID)
     {
         long lVar1;
@@ -1240,19 +1270,19 @@ public class AreaData
             }
             if (*(int64 *)(lVar1._items + lVar3) != 0) {
               if ((this.areaTiles == null) ||
-                 (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d554e0)) == null)
+                 (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca60)) == null)
               break;
               if (*(int64 *)(lVar1 + 40) != 0) {
                 if (((this.areaTiles == null) ||
-                    (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d554e0)) == null
+                    (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca60)) == null
                     ) || (*(int64 *)(lVar1 + 40) == 0)) break;
                 if (-1 < *(int *)(*(int64 *)(lVar1 + 40) + 16)) {
                   if (((this.areaTiles == null) ||
-                      (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d554e0),
+                      (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca60),
                       lVar1 == null)) || (*(int64 *)(lVar1 + 40) == 0)) break;
                   if (*(int *)(*(int64 *)(lVar1 + 40) + 16) == buildingID) {
                     if ((this.areaTiles != null) &&
-                       (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d554e0),
+                       (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca60),
                        lVar1 != null)) {
                       return *(uint64 *)(lVar1 + 40);
                     }
@@ -1268,8 +1298,8 @@ public class AreaData
         }
     }
 
-    // Token : 0x6000F91
-    // RVA   : 0x7EA700   Offset: 0x7E8F00   Length: 0xA6
+    // Token : 0x6000FC8
+    // RVA   : 0x7E8570   Offset: 0x7E7970   Length: 0xA6
     public float GetChangeAreaState(AreaStateType areaStateType)
     {
         float fVar1;
@@ -1294,8 +1324,8 @@ public class AreaData
         }
     }
 
-    // Token : 0x6000F92
-    // RVA   : 0x7EA700   Offset: 0x7E8F00   Length: 0xA6
+    // Token : 0x6000FC9
+    // RVA   : 0x7E8570   Offset: 0x7E7970   Length: 0xA6
     public float GetChangeAreaState(int id)
     {
         float fVar1;
@@ -1320,108 +1350,122 @@ public class AreaData
         }
     }
 
-    // Token : 0x6000F93
-    // RVA   : 0x7EAC30   Offset: 0x7E9430   Length: 0x13E
+    // Token : 0x6000FCA
+    // RVA   : 0x7E9530   Offset: 0x7E8930   Length: 0x8
+    public bool HaveForce()
+    {
+        return this.belongForceID != -1;
+    }
+
+    // Token : 0x6000FCB
+    // RVA   : 0x7E8AA0   Offset: 0x7E7EA0   Length: 0x133
     public Color GetForceColor()
     {
-        long lVar1;
         long lVar2;
-        ulong uVar3;
+        long lVar3;
+        ulong uVar4;
         ulong local_28;
         ulong uStack_20;
         byte[] local_18 = new byte[16];
         local_28 = 0;
         uStack_20 = 0;
-        if (*(int *)(param_2 + 112) < 0) {
-          puVar4 = (uint64 *)FUN_180d904c0(local_18);
-          uVar3 = puVar4[1];
-          *this = *puVar4;
-          this[1] = uVar3;
+        if (*(int *)(param_2 + 112) == -1) {
+          puVar1 = (uint64 *)FUN_180d98fe0(local_18);
+          uVar4 = puVar1[1];
+          *this = *puVar1;
+          this[1] = uVar4;
           return this;
         }
-        lVar1 = AreaData.GetForce(param_2);
-        uVar3 = "#";
-        if (lVar1 == null) throw; // [null/range check failed]
-        if (*(int *)(lVar1 + 60) < 0) {
-          lVar1 = AreaData.GetForce(param_2,0);
+        lVar2 = AreaData.GetForce(param_2,0);
+        uVar4 = "#";
+        if (lVar2 == null) throw; // [null/range check failed]
+        if (*(int *)(lVar2 + 60) < 0) {
+          lVar2 = AreaData.GetForce(param_2,0);
         }
         else {
-          lVar1 = FUN_18046c0a0(0);
-          if (lVar1 == null) throw; // [null/range check failed]
-          lVar1 = *(int64 *)(lVar1 + 32);
-          lVar2 = AreaData.GetForce(param_2,0);
-          if ((lVar2 == null) || (lVar1 == null)) throw; // [null/range check failed]
-          lVar1 = WorldData.GetForce(lVar1,*(uint32 *)(lVar2 + 60),0);
+          lVar2 = FUN_18046c0a0(0);
+          if (lVar2 == null) throw; // [null/range check failed]
+          lVar2 = *(int64 *)(lVar2 + 32);
+          lVar3 = AreaData.GetForce(param_2,0);
+          if ((lVar3 == null) || (lVar2 == null)) throw; // [null/range check failed]
+          lVar2 = WorldData.GetForce(lVar2,*(uint32 *)(lVar3 + 60),0);
         }
-        if (lVar1 != null) {
-          uVar3 = String.Concat(uVar3,*(uint64 *)(lVar1 + 80),0);
-          ColorUtility.TryParseHtmlString(uVar3,&local_28,0);
+        if (lVar2 != null) {
+          uVar4 = String.Concat(uVar4,*(uint64 *)(lVar2 + 80),0);
+          ColorUtility.TryParseHtmlString(uVar4,&local_28,0);
           *this = local_28;
           this[1] = uStack_20;
           return this;
         }
     }
 
-    // Token : 0x6000F94
-    // RVA   : 0x7EAD70   Offset: 0x7E9570   Length: 0xD0
+    // Token : 0x6000FCC
+    // RVA   : 0x7E8BE0   Offset: 0x7E7FE0   Length: 0xCC
     public ForceData GetForce()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         ulong uVar2;
-        if (this.belongForceID < 0) {
+        if (this.belongForceID == -1) {
           return 0;
         }
-        if ((GameController._instance != null) &&
-           (lVar1 = GameController._instance.worldData) != null)
-        {
+        if ((*pStatics != 0) &&
+           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
           uVar2 = WorldData.GetForce(lVar1,this.belongForceID,0);
           return uVar2;
         }
     }
 
-    // Token : 0x6000F95
-    // RVA   : 0x7EB170   Offset: 0x7E9970   Length: 0x16
+    // Token : 0x6000FCD
+    // RVA   : 0x7E8FD0   Offset: 0x7E83D0   Length: 0x16
     public float GetMonthChangeSupport()
     {
         return (50.0 - this.support) * 0.2;
     }
 
-    // Token : 0x6000F96
-    // RVA   : 0x7EB150   Offset: 0x7E9950   Length: 0x16
+    // Token : 0x6000FCE
+    // RVA   : 0x7E8FB0   Offset: 0x7E83B0   Length: 0x16
     public float GetMonthChangeSafe()
     {
         return (50.0 - this.safe) * 0.2;
     }
 
-    // Token : 0x6000F97
-    // RVA   : 0x7EB130   Offset: 0x7E9930   Length: 0x16
+    // Token : 0x6000FCF
+    // RVA   : 0x7E8F90   Offset: 0x7E8390   Length: 0x16
     public float GetMonthChangeDefence()
     {
         return (50.0 - this.defence) * 0.2;
     }
 
-    // Token : 0x6000F98
-    // RVA   : 0x7E9440   Offset: 0x7E7C40   Length: 0x94
+    // Token : 0x6000FD0
+    // RVA   : 0x7E7240   Offset: 0x7E6640   Length: 0x94
     public void ChangePeople(float num)
     {
         long lVar1;
-        ulong uVar2;
+        bool cVar2;
         ulong uVar3;
-        uint uVar4;
+        ulong uVar4;
+        uint uVar5;
         float[] local_res10 = new float[6];
         ulong local_18;
         ulong uStack_10;
         local_res10[0] = num;
         if (local_res10[0] != 0.0) {
-          uVar4 = FUN_1810a8ba0(this.people + local_res10[0],0,
+          uVar5 = FUN_1810e36c0(this.people + local_res10[0],0,
                                 this.maxPeople,0);
-          this.people = uVar4;
+          this.people = uVar5;
           this.areaDetailDirty = 1;
           if (param_3) {
-            uVar3 = this.areaName;
-            lVar1 = **(int64 **)(DAT_181d5a578 + 184);
-            uVar2 = Single.ToString(local_res10,"+0;-0;0",0);
-            uVar3 = String.Concat(uVar3,"人口",uVar2,0);
+            lVar1 = **(int64 **)(DAT_181d7f6a8 + 184);
+            cVar2 = FUN_180d755b0(this.setAreaName,0);
+            if (!cVar2) {
+              uVar4 = this.setAreaName;
+            }
+            else {
+              uVar4 = this.areaName;
+            }
+            uVar3 = Single.ToString(local_res10,"+0;-0;0",0);
+            uVar4 = String.Concat(uVar4,"人口",uVar3,0);
             if (lVar1 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -1429,33 +1473,40 @@ public class AreaData
             local_18 = 0;
             uStack_10 = 0;
             InfoController.AddInfoTab
-                      (lVar1,uVar3,"UIAtlas","地区_人口","NoticeLittle",0x3f800000,0x40a00000,
+                      (lVar1,uVar4,"UIAtlas","地区_人口","NoticeLittle",0x3f800000,0x40a00000,
                        &local_18,0);
           }
         }
     }
 
-    // Token : 0x6000F99
-    // RVA   : 0x7E9880   Offset: 0x7E8080   Length: 0x97
+    // Token : 0x6000FD1
+    // RVA   : 0x7E76A0   Offset: 0x7E6AA0   Length: 0x97
     public void ChangeSupport(float num)
     {
         long lVar1;
-        ulong uVar2;
+        bool cVar2;
         ulong uVar3;
-        uint uVar4;
+        ulong uVar4;
+        uint uVar5;
         float[] local_res10 = new float[6];
         ulong local_18;
         ulong uStack_10;
         local_res10[0] = num;
         if (local_res10[0] != 0.0) {
-          uVar4 = FUN_1810a8ba0(this.support + local_res10[0],0,0x42c80000,0);
-          this.support = uVar4;
+          uVar5 = FUN_1810e36c0(this.support + local_res10[0],0,0x42c80000,0);
+          this.support = uVar5;
           this.areaDetailDirty = 1;
           if (param_3) {
-            uVar3 = this.areaName;
-            lVar1 = **(int64 **)(DAT_181d5a578 + 184);
-            uVar2 = Single.ToString(local_res10,"+0;-0;0",0);
-            uVar3 = String.Concat(uVar3,"民心",uVar2,0);
+            lVar1 = **(int64 **)(DAT_181d7f6a8 + 184);
+            cVar2 = FUN_180d755b0(this.setAreaName,0);
+            if (!cVar2) {
+              uVar4 = this.setAreaName;
+            }
+            else {
+              uVar4 = this.areaName;
+            }
+            uVar3 = Single.ToString(local_res10,"+0;-0;0",0);
+            uVar4 = String.Concat(uVar4,"民心",uVar3,0);
             if (lVar1 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -1463,33 +1514,40 @@ public class AreaData
             local_18 = 0;
             uStack_10 = 0;
             InfoController.AddInfoTab
-                      (lVar1,uVar3,"UIAtlas","地区_民心","NoticeLittle",0x3f800000,0x40a00000,
+                      (lVar1,uVar4,"UIAtlas","地区_民心","NoticeLittle",0x3f800000,0x40a00000,
                        &local_18,0);
           }
         }
     }
 
-    // Token : 0x6000F9A
-    // RVA   : 0x7E97E0   Offset: 0x7E7FE0   Length: 0x97
+    // Token : 0x6000FD2
+    // RVA   : 0x7E7600   Offset: 0x7E6A00   Length: 0x97
     public void ChangeSafe(float num)
     {
         long lVar1;
-        ulong uVar2;
+        bool cVar2;
         ulong uVar3;
-        uint uVar4;
+        ulong uVar4;
+        uint uVar5;
         float[] local_res10 = new float[6];
         ulong local_18;
         ulong uStack_10;
         local_res10[0] = num;
         if (local_res10[0] != 0.0) {
-          uVar4 = FUN_1810a8ba0(this.safe + local_res10[0],0,0x42c80000,0);
-          this.safe = uVar4;
+          uVar5 = FUN_1810e36c0(this.safe + local_res10[0],0,0x42c80000,0);
+          this.safe = uVar5;
           this.areaDetailDirty = 1;
           if (param_3) {
-            uVar3 = this.areaName;
-            lVar1 = **(int64 **)(DAT_181d5a578 + 184);
-            uVar2 = Single.ToString(local_res10,"+0;-0;0",0);
-            uVar3 = String.Concat(uVar3,"治安",uVar2,0);
+            lVar1 = **(int64 **)(DAT_181d7f6a8 + 184);
+            cVar2 = FUN_180d755b0(this.setAreaName,0);
+            if (!cVar2) {
+              uVar4 = this.setAreaName;
+            }
+            else {
+              uVar4 = this.areaName;
+            }
+            uVar3 = Single.ToString(local_res10,"+0;-0;0",0);
+            uVar4 = String.Concat(uVar4,"治安",uVar3,0);
             if (lVar1 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -1497,33 +1555,40 @@ public class AreaData
             local_18 = 0;
             uStack_10 = 0;
             InfoController.AddInfoTab
-                      (lVar1,uVar3,"UIAtlas","地区_治安","NoticeLittle",0x3f800000,0x40a00000,
+                      (lVar1,uVar4,"UIAtlas","地区_治安","NoticeLittle",0x3f800000,0x40a00000,
                        &local_18,0);
           }
         }
     }
 
-    // Token : 0x6000F9B
-    // RVA   : 0x7E9220   Offset: 0x7E7A20   Length: 0x97
+    // Token : 0x6000FD3
+    // RVA   : 0x7E7010   Offset: 0x7E6410   Length: 0x97
     public void ChangeDefence(float num)
     {
         long lVar1;
-        ulong uVar2;
+        bool cVar2;
         ulong uVar3;
-        uint uVar4;
+        ulong uVar4;
+        uint uVar5;
         float[] local_res10 = new float[6];
         ulong local_18;
         ulong uStack_10;
         local_res10[0] = num;
         if (local_res10[0] != 0.0) {
-          uVar4 = FUN_1810a8ba0(this.defence + local_res10[0],0,0x42c80000,0);
-          this.defence = uVar4;
+          uVar5 = FUN_1810e36c0(this.defence + local_res10[0],0,0x42c80000,0);
+          this.defence = uVar5;
           this.areaDetailDirty = 1;
           if (param_3) {
-            uVar3 = this.areaName;
-            lVar1 = **(int64 **)(DAT_181d5a578 + 184);
-            uVar2 = Single.ToString(local_res10,"+0;-0;0",0);
-            uVar3 = String.Concat(uVar3,"防御",uVar2,0);
+            lVar1 = **(int64 **)(DAT_181d7f6a8 + 184);
+            cVar2 = FUN_180d755b0(this.setAreaName,0);
+            if (!cVar2) {
+              uVar4 = this.setAreaName;
+            }
+            else {
+              uVar4 = this.areaName;
+            }
+            uVar3 = Single.ToString(local_res10,"+0;-0;0",0);
+            uVar4 = String.Concat(uVar4,"防御",uVar3,0);
             if (lVar1 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -1531,34 +1596,41 @@ public class AreaData
             local_18 = 0;
             uStack_10 = 0;
             InfoController.AddInfoTab
-                      (lVar1,uVar3,"UIAtlas","地区_防御","NoticeLittle",0x3f800000,0x40a00000,
+                      (lVar1,uVar4,"UIAtlas","地区_防御","NoticeLittle",0x3f800000,0x40a00000,
                        &local_18,0);
           }
         }
     }
 
-    // Token : 0x6000F9C
-    // RVA   : 0x7E94E0   Offset: 0x7E7CE0   Length: 0x171
+    // Token : 0x6000FD4
+    // RVA   : 0x7E72E0   Offset: 0x7E66E0   Length: 0x18C
     public void ChangePeople(float num, bool showInfo)
     {
         long lVar1;
-        ulong uVar2;
+        bool cVar2;
         ulong uVar3;
-        uint uVar4;
+        ulong uVar4;
+        uint uVar5;
         float[] local_res10 = new float[6];
         ulong local_18;
         ulong uStack_10;
         local_res10[0] = num;
         if (local_res10[0] != 0.0) {
-          uVar4 = FUN_1810a8ba0(this.people + local_res10[0],0,
+          uVar5 = FUN_1810e36c0(this.people + local_res10[0],0,
                                 this.maxPeople,0);
-          this.people = uVar4;
+          this.people = uVar5;
           this.areaDetailDirty = 1;
           if (showInfo) {
-            uVar3 = this.areaName;
-            lVar1 = **(int64 **)(DAT_181d5a578 + 184);
-            uVar2 = Single.ToString(local_res10,"+0;-0;0",0);
-            uVar3 = String.Concat(uVar3,"人口",uVar2,0);
+            lVar1 = **(int64 **)(DAT_181d7f6a8 + 184);
+            cVar2 = FUN_180d755b0(this.setAreaName,0);
+            if (!cVar2) {
+              uVar4 = this.setAreaName;
+            }
+            else {
+              uVar4 = this.areaName;
+            }
+            uVar3 = Single.ToString(local_res10,"+0;-0;0",0);
+            uVar4 = String.Concat(uVar4,"人口",uVar3,0);
             if (lVar1 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -1566,33 +1638,40 @@ public class AreaData
             local_18 = 0;
             uStack_10 = 0;
             InfoController.AddInfoTab
-                      (lVar1,uVar3,"UIAtlas","地区_人口","NoticeLittle",0x3f800000,0x40a00000,
+                      (lVar1,uVar4,"UIAtlas","地区_人口","NoticeLittle",0x3f800000,0x40a00000,
                        &local_18,0);
           }
         }
     }
 
-    // Token : 0x6000F9D
-    // RVA   : 0x7E9920   Offset: 0x7E8120   Length: 0x174
+    // Token : 0x6000FD5
+    // RVA   : 0x7E7740   Offset: 0x7E6B40   Length: 0x18F
     public void ChangeSupport(float num, bool showInfo)
     {
         long lVar1;
-        ulong uVar2;
+        bool cVar2;
         ulong uVar3;
-        uint uVar4;
+        ulong uVar4;
+        uint uVar5;
         float[] local_res10 = new float[6];
         ulong local_18;
         ulong uStack_10;
         local_res10[0] = num;
         if (local_res10[0] != 0.0) {
-          uVar4 = FUN_1810a8ba0(this.support + local_res10[0],0,0x42c80000,0);
-          this.support = uVar4;
+          uVar5 = FUN_1810e36c0(this.support + local_res10[0],0,0x42c80000,0);
+          this.support = uVar5;
           this.areaDetailDirty = 1;
           if (showInfo) {
-            uVar3 = this.areaName;
-            lVar1 = **(int64 **)(DAT_181d5a578 + 184);
-            uVar2 = Single.ToString(local_res10,"+0;-0;0",0);
-            uVar3 = String.Concat(uVar3,"民心",uVar2,0);
+            lVar1 = **(int64 **)(DAT_181d7f6a8 + 184);
+            cVar2 = FUN_180d755b0(this.setAreaName,0);
+            if (!cVar2) {
+              uVar4 = this.setAreaName;
+            }
+            else {
+              uVar4 = this.areaName;
+            }
+            uVar3 = Single.ToString(local_res10,"+0;-0;0",0);
+            uVar4 = String.Concat(uVar4,"民心",uVar3,0);
             if (lVar1 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -1600,33 +1679,40 @@ public class AreaData
             local_18 = 0;
             uStack_10 = 0;
             InfoController.AddInfoTab
-                      (lVar1,uVar3,"UIAtlas","地区_民心","NoticeLittle",0x3f800000,0x40a00000,
+                      (lVar1,uVar4,"UIAtlas","地区_民心","NoticeLittle",0x3f800000,0x40a00000,
                        &local_18,0);
           }
         }
     }
 
-    // Token : 0x6000F9E
-    // RVA   : 0x7E9660   Offset: 0x7E7E60   Length: 0x174
+    // Token : 0x6000FD6
+    // RVA   : 0x7E7470   Offset: 0x7E6870   Length: 0x18F
     public void ChangeSafe(float num, bool showInfo)
     {
         long lVar1;
-        ulong uVar2;
+        bool cVar2;
         ulong uVar3;
-        uint uVar4;
+        ulong uVar4;
+        uint uVar5;
         float[] local_res10 = new float[6];
         ulong local_18;
         ulong uStack_10;
         local_res10[0] = num;
         if (local_res10[0] != 0.0) {
-          uVar4 = FUN_1810a8ba0(this.safe + local_res10[0],0,0x42c80000,0);
-          this.safe = uVar4;
+          uVar5 = FUN_1810e36c0(this.safe + local_res10[0],0,0x42c80000,0);
+          this.safe = uVar5;
           this.areaDetailDirty = 1;
           if (showInfo) {
-            uVar3 = this.areaName;
-            lVar1 = **(int64 **)(DAT_181d5a578 + 184);
-            uVar2 = Single.ToString(local_res10,"+0;-0;0",0);
-            uVar3 = String.Concat(uVar3,"治安",uVar2,0);
+            lVar1 = **(int64 **)(DAT_181d7f6a8 + 184);
+            cVar2 = FUN_180d755b0(this.setAreaName,0);
+            if (!cVar2) {
+              uVar4 = this.setAreaName;
+            }
+            else {
+              uVar4 = this.areaName;
+            }
+            uVar3 = Single.ToString(local_res10,"+0;-0;0",0);
+            uVar4 = String.Concat(uVar4,"治安",uVar3,0);
             if (lVar1 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -1634,33 +1720,40 @@ public class AreaData
             local_18 = 0;
             uStack_10 = 0;
             InfoController.AddInfoTab
-                      (lVar1,uVar3,"UIAtlas","地区_治安","NoticeLittle",0x3f800000,0x40a00000,
+                      (lVar1,uVar4,"UIAtlas","地区_治安","NoticeLittle",0x3f800000,0x40a00000,
                        &local_18,0);
           }
         }
     }
 
-    // Token : 0x6000F9F
-    // RVA   : 0x7E92C0   Offset: 0x7E7AC0   Length: 0x174
+    // Token : 0x6000FD7
+    // RVA   : 0x7E70B0   Offset: 0x7E64B0   Length: 0x18F
     public void ChangeDefence(float num, bool showInfo)
     {
         long lVar1;
-        ulong uVar2;
+        bool cVar2;
         ulong uVar3;
-        uint uVar4;
+        ulong uVar4;
+        uint uVar5;
         float[] local_res10 = new float[6];
         ulong local_18;
         ulong uStack_10;
         local_res10[0] = num;
         if (local_res10[0] != 0.0) {
-          uVar4 = FUN_1810a8ba0(this.defence + local_res10[0],0,0x42c80000,0);
-          this.defence = uVar4;
+          uVar5 = FUN_1810e36c0(this.defence + local_res10[0],0,0x42c80000,0);
+          this.defence = uVar5;
           this.areaDetailDirty = 1;
           if (showInfo) {
-            uVar3 = this.areaName;
-            lVar1 = **(int64 **)(DAT_181d5a578 + 184);
-            uVar2 = Single.ToString(local_res10,"+0;-0;0",0);
-            uVar3 = String.Concat(uVar3,"防御",uVar2,0);
+            lVar1 = **(int64 **)(DAT_181d7f6a8 + 184);
+            cVar2 = FUN_180d755b0(this.setAreaName,0);
+            if (!cVar2) {
+              uVar4 = this.setAreaName;
+            }
+            else {
+              uVar4 = this.areaName;
+            }
+            uVar3 = Single.ToString(local_res10,"+0;-0;0",0);
+            uVar4 = String.Concat(uVar4,"防御",uVar3,0);
             if (lVar1 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -1668,41 +1761,41 @@ public class AreaData
             local_18 = 0;
             uStack_10 = 0;
             InfoController.AddInfoTab
-                      (lVar1,uVar3,"UIAtlas","地区_防御","NoticeLittle",0x3f800000,0x40a00000,
+                      (lVar1,uVar4,"UIAtlas","地区_防御","NoticeLittle",0x3f800000,0x40a00000,
                        &local_18,0);
           }
         }
     }
 
-    // Token : 0x6000FA0
-    // RVA   : 0x7EC120   Offset: 0x7EA920   Length: 0x10
+    // Token : 0x6000FD8
+    // RVA   : 0x7E9FD0   Offset: 0x7E93D0   Length: 0x10
     public float TotalState()
     {
         return this.support + this.safe + this.defence;
     }
 
-    // Token : 0x6000FA1
-    // RVA   : 0x7EB890   Offset: 0x7EA090   Length: 0xF5
+    // Token : 0x6000FD9
+    // RVA   : 0x7E9700   Offset: 0x7E8B00   Length: 0xF5
     public void ResetAllState()
     {
         uint uVar1;
         uint uVar2;
         uVar2 = this.safe;
         GlobalData.RandomRange(25,36,0);
-        uVar1 = FUN_1810a8ba0(uVar2);
+        uVar1 = FUN_1810e36c0(uVar2);
         uVar2 = this.support;
         this.safe = uVar1;
         GlobalData.RandomRange(25,36,0);
-        uVar1 = FUN_1810a8ba0(uVar2);
+        uVar1 = FUN_1810e36c0(uVar2);
         uVar2 = this.defence;
         this.support = uVar1;
         GlobalData.RandomRange(25,36,0);
-        uVar2 = FUN_1810a8ba0(uVar2);
+        uVar2 = FUN_1810e36c0(uVar2);
         this.defence = uVar2;
     }
 
-    // Token : 0x6000FA2
-    // RVA   : 0x7EB6D0   Offset: 0x7E9ED0   Length: 0x1B2
+    // Token : 0x6000FDA
+    // RVA   : 0x7E9540   Offset: 0x7E8940   Length: 0x1B2
     public void ManageTempResourceValueRate()
     {
         long lVar1;
@@ -1727,20 +1820,20 @@ public class AreaData
             }
             if (0.0 < *(float *)(lVar4 + lVar1._items)) {
               if (lVar3 == null) break;
-              fVar5 = (float)FUN_1800d6780(lVar3,uVar2,DAT_181d796d8);
+              fVar5 = (float)FUN_1800d6790(lVar3,uVar2,DAT_181da1078);
               uVar6 = Mathf.Max(0,fVar5 * 0.8 - 0.1,0);
-        LAB_1807eb820:
-              FUN_181814d10(lVar3,uVar2,uVar6,DAT_181d79758);
+        LAB_1807e9690:
+              FUN_181829d40(lVar3,uVar2,uVar6,DAT_181da10f8);
             }
             else {
               if (lVar3 == null) break;
-              fVar5 = (float)FUN_1800d6780(lVar3,uVar2,DAT_181d796d8);
+              fVar5 = (float)FUN_1800d6790(lVar3,uVar2,DAT_181da1078);
               if (fVar5 < 0.0) {
                 lVar3 = this.resourceValueRateTemp;
                 if (lVar3 != null) {
-                  fVar5 = (float)FUN_1800d6780(lVar3,uVar2,DAT_181d796d8);
+                  fVar5 = (float)FUN_1800d6790(lVar3,uVar2,DAT_181da1078);
                   uVar6 = Mathf.Min(0,fVar5 * 0.8 + 0.1,0);
-                  goto LAB_1807eb820;
+                  goto LAB_1807e9690;
                 }
                 break;
               }
@@ -1752,8 +1845,8 @@ public class AreaData
         }
     }
 
-    // Token : 0x6000FA3
-    // RVA   : 0x7EA220   Offset: 0x7E8A20   Length: 0xE6
+    // Token : 0x6000FDB
+    // RVA   : 0x7E8090   Offset: 0x7E7490   Length: 0xE6
     public float GetAreaStateProduceRate()
     {
         float fVar1;
@@ -1768,22 +1861,26 @@ public class AreaData
         }
     }
 
-    // Token : 0x6000FA4
-    // RVA   : 0x7EA7B0   Offset: 0x7E8FB0   Length: 0xC
+    // Token : 0x6000FDC
+    // RVA   : 0x7E8620   Offset: 0x7E7A20   Length: 0xC
     public int GetColumn(int tileID)
     {
+        uint64 FUN_1807e8620(int64 this,int tileID)
+        {
         return (int64)tileID % (int64)this.mapWidth & 0xffffffff;
     }
 
-    // Token : 0x6000FA5
-    // RVA   : 0x7EB290   Offset: 0x7E9A90   Length: 0xA
+    // Token : 0x6000FDD
+    // RVA   : 0x7E90F0   Offset: 0x7E84F0   Length: 0xA
     public int GetRow(int tileID)
     {
+        uint64 FUN_1807e90f0(int64 this,int tileID)
+        {
         return (int64)tileID / (int64)this.mapWidth & 0xffffffff;
     }
 
-    // Token : 0x6000FA6
-    // RVA   : 0x7EA350   Offset: 0x7E8B50   Length: 0x200
+    // Token : 0x6000FDE
+    // RVA   : 0x7E81C0   Offset: 0x7E75C0   Length: 0x200
     public List<AreaTileData> GetAroundTiles(int tileID)
     {
         ulong uVar1;
@@ -1795,8 +1892,8 @@ public class AreaData
         int iVar7;
         int iVar8;
         int iVar9;
-        lVar3 = il2cpp_internal(DAT_181d6c230);
-        FUN_180f58a90(lVar3,DAT_181d55260);
+        lVar3 = il2cpp_internal(DAT_181d90e60);
+        FUN_18132faf0(lVar3,DAT_181d7c7e0);
         iVar6 = this.mapWidth;
         uVar1 = (int64)tileID / (int64)iVar6;
         uVar2 = (int64)tileID % (int64)iVar6;
@@ -1804,8 +1901,8 @@ public class AreaData
         iVar9 = (int)uVar1;
         if (-1 < iVar7 + -1) {
           uVar4 = AreaData.GetTile(this,iVar7 + -1,uVar1 & 0xffffffff,0);
-          if (lVar3 == null) goto LAB_1807ea54b;
-          FUN_181827900(lVar3,uVar4,DAT_181d552e0);
+          if (lVar3 == null) goto LAB_1807e83bb;
+          FUN_18181e0a0(lVar3,uVar4,DAT_181d7c860);
           iVar6 = this.mapWidth;
         }
         iVar8 = iVar7 + 1;
@@ -1814,38 +1911,38 @@ public class AreaData
           uVar5 = uVar4;
           if ((((-1 < iVar8) && (iVar8 < this.mapWidth)) && (-1 < iVar9)) &&
              (iVar9 < this.mapHeight)) {
-            if (this.areaTiles == null) goto LAB_1807ea54b;
+            if (this.areaTiles == null) goto LAB_1807e83bb;
             uVar5 = FUN_180002f80(this.areaTiles,this.mapWidth * iVar9 + iVar8,
-                                  DAT_181d554e0);
+                                  DAT_181d7ca60);
           }
-          if (lVar3 == null) goto LAB_1807ea54b;
-          FUN_181827900(lVar3,uVar5,DAT_181d552e0);
+          if (lVar3 == null) goto LAB_1807e83bb;
+          FUN_18181e0a0(lVar3,uVar5,DAT_181d7c860);
         }
         if (-1 < iVar9 + -1) {
           uVar5 = AreaData.GetTile(this,uVar2 & 0xffffffff,iVar9 + -1,0);
-          if (lVar3 == null) goto LAB_1807ea54b;
-          FUN_181827900(lVar3,uVar5,DAT_181d552e0);
+          if (lVar3 == null) goto LAB_1807e83bb;
+          FUN_18181e0a0(lVar3,uVar5,DAT_181d7c860);
         }
         iVar9 = iVar9 + 1;
         if (iVar9 < this.mapHeight) {
           if (((-1 < iVar7) && (iVar7 < this.mapWidth)) &&
              ((-1 < iVar9 && (uVar4 = 0, iVar9 < this.mapHeight)))) {
-            if (this.areaTiles == null) goto LAB_1807ea54b;
+            if (this.areaTiles == null) goto LAB_1807e83bb;
             uVar4 = FUN_180002f80(this.areaTiles,this.mapWidth * iVar9 + iVar7,
-                                  DAT_181d554e0);
+                                  DAT_181d7ca60);
           }
           if (lVar3 == null) {
-        LAB_1807ea54b:
+        LAB_1807e83bb:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          FUN_181827900(lVar3,uVar4,DAT_181d552e0);
+          FUN_18181e0a0(lVar3,uVar4,DAT_181d7c860);
         }
         return lVar3;
     }
 
-    // Token : 0x6000FA7
-    // RVA   : 0x7EB450   Offset: 0x7E9C50   Length: 0x90
+    // Token : 0x6000FDF
+    // RVA   : 0x7E92B0   Offset: 0x7E86B0   Length: 0x90
     public AreaTileData GetTile(int column, int row)
     {
         ulong uVar1;
@@ -1854,7 +1951,7 @@ public class AreaData
              (row < this.mapHeight)) {
             if (this.areaTiles != null) {
               uVar1 = FUN_180002f80(this.areaTiles,
-                                    this.mapWidth * row + column,DAT_181d554e0);
+                                    this.mapWidth * row + column,DAT_181d7ca60);
               return uVar1;
             }
                           // WARNING: Subroutine does not return
@@ -1864,8 +1961,8 @@ public class AreaData
         return 0;
     }
 
-    // Token : 0x6000FA8
-    // RVA   : 0x7E9AA0   Offset: 0x7E82A0   Length: 0x175
+    // Token : 0x6000FE0
+    // RVA   : 0x7E78D0   Offset: 0x7E6CD0   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -1876,13 +1973,13 @@ public class AreaData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -1894,7 +1991,7 @@ public class AreaData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d53c70,plVar1);
+            FUN_180002970(0,DAT_181d78da0,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return
@@ -1902,20 +1999,20 @@ public class AreaData
         }
     }
 
-    // Token : 0x6000FA9
-    // RVA   : 0x7EC130   Offset: 0x7EA930   Length: 0xED
+    // Token : 0x6000FE1
+    // RVA   : 0x7E9FE0   Offset: 0x7E93E0   Length: 0xED
     private static void /*cctor*/()
     {
         long lVar2;
-        lVar2 = il2cpp_internal(DAT_181d6f030);
-        FUN_180f58a90(lVar2,DAT_181d678f8);
+        lVar2 = il2cpp_internal(DAT_181d93cd0);
+        FUN_18132faf0(lVar2,DAT_181d8f098);
         if (lVar2 != null) {
-          FUN_181814fa0(lVar2,0,DAT_181d67a78);
-          FUN_181814fa0(lVar2,1,DAT_181d67a78);
-          FUN_181814fa0(lVar2,2,DAT_181d67a78);
-          FUN_181814fa0(lVar2,3,DAT_181d67a78);
-          FUN_181814fa0(lVar2,4,DAT_181d67a78);
-          plVar1 = *(int64 **)(DAT_181d876b0 + 184);
+          FUN_18182a0b0(lVar2,0,DAT_181d8f218);
+          FUN_18182a0b0(lVar2,1,DAT_181d8f218);
+          FUN_18182a0b0(lVar2,2,DAT_181d8f218);
+          FUN_18182a0b0(lVar2,3,DAT_181d8f218);
+          FUN_18182a0b0(lVar2,4,DAT_181d8f218);
+          plVar1 = *(int64 **)(DAT_181dac7d8 + 184);
           *plVar1 = lVar2;
           il2cpp_internal(plVar1,lVar2);
           return;

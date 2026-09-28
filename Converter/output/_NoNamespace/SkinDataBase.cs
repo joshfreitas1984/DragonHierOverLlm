@@ -1,26 +1,26 @@
 // ============================================================
 // Type  : SkinDataBase
-// Token : 0x20001D4
+// Token : 0x20001DA
 // ============================================================
 
 public class SkinDataBase
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000C0D
+    // Token: 0x4000C9A
     public int skinID;
 
-    // Token: 0x4000C0E
+    // Token: 0x4000C9B
     public string skinName;
 
-    // Token: 0x4000C0F
+    // Token: 0x4000C9C
     public HeroSpeAddData skinSpeAdd;
 
-    // Token: 0x4000C10
+    // Token: 0x4000C9D
     public int DLC;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000E95
-    // RVA   : 0x976580   Offset: 0x974D80   Length: 0x34
+    // Token : 0x6000ECA
+    // RVA   : 0x989210   Offset: 0x988610   Length: 0x34
     public HeroSpeAddData GetSkinSpeAdd(int lv)
     {
         ulong uVar1;
@@ -29,71 +29,72 @@ public class SkinDataBase
         HeroSpeAddData.op_Multiply(uVar1);
     }
 
-    // Token : 0x6000E96
-    // RVA   : 0x9765C0   Offset: 0x974DC0   Length: 0xE
+    // Token : 0x6000ECB
+    // RVA   : 0x989250   Offset: 0x988650   Length: 0xE
     public void /*ctor*/()
     {
         this.DLC = 0xffffffff;
         ZhSegment.Initialize(this,0);
     }
 
-    // Token : 0x6000E97
-    // RVA   : 0x976290   Offset: 0x974A90   Length: 0x2E7
+    // Token : 0x6000ECC
+    // RVA   : 0x988F30   Offset: 0x988330   Length: 0x2DF
     public string GetSkinFullName(int _skinLv, bool changeLine, bool changeColor)
     {
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
+        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
+        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
         long lVar1;
         ulong uVar2;
         ulong uVar3;
         if (this.skinID < 0) {
-          lVar1 = *(int64 *)(pPlotController + 0x400);
+          lVar1 = *(int64 *)(pStatics_3d40 + 0x408);
           if (lVar1 != null) {
             if (*(uint32 *)(lVar1 + 24) <= _skinLv) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
-            uVar2 = "";
+            uVar3 = "";
             if (changeLine) {
-              uVar2 = "\n";
+              uVar3 = "\n";
             }
-            uVar2 = String.Concat(*(uint64 *)
+            uVar3 = String.Concat(*(uint64 *)
                                     (*(int64 *)(lVar1 + 16) + 32 + (int64)(int)_skinLv * 8),
-                                   uVar2,0);
-            goto LAB_180976512;
+                                   uVar3,0);
+            goto LAB_1809891aa;
           }
         }
         else {
-          lVar1 = GameController.lockObj;
-          if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 208)) != null) {
-            lVar1 = FUN_1817cc780(lVar1,this.skinID,DAT_181d94178);
+          if ((*pStatics_2cc8 != 0) &&
+             (lVar1 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
+            lVar1 = WorldData.GetForce(lVar1,this.skinID,0);
             if (lVar1 != null) {
-              uVar2 = *(uint64 *)(lVar1 + 24);
+              uVar2 = ForceData.GetForceName(lVar1,1,0);
               uVar3 = "";
               if (changeLine) {
                 uVar3 = "\n";
               }
               if ((int)_skinLv < 5) {
-                lVar1 = *(int64 *)(pPlotController + 0x3d0);
+                lVar1 = *(int64 *)(pStatics_3d40 + 0x3d8);
                 if (lVar1 == null) throw; // [null/range check failed]
                 if (*(uint32 *)(lVar1 + 24) <= _skinLv) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
-                uVar2 = String.Concat(uVar2,uVar3,
+                uVar3 = String.Concat(uVar2,uVar3,
                                        *(uint64 *)
                                         (*(int64 *)(lVar1 + 16) + 32 + (int64)(int)_skinLv * 8),
                                        0);
               }
               else {
-                lVar1 = *(int64 *)(pPlotController + 0x3d0);
+                lVar1 = *(int64 *)(pStatics_3d40 + 0x3d8);
                 if (lVar1 == null) throw; // [null/range check failed]
                 if (*(uint32 *)(lVar1 + 24) < 7) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
-                uVar2 = String.Concat(uVar2,uVar3,*(uint64 *)(*(int64 *)(lVar1 + 16) + 80),0);
+                uVar3 = String.Concat(uVar2,uVar3,*(uint64 *)(*(int64 *)(lVar1 + 16) + 80),0);
               }
-        LAB_180976512:
-              uVar2 = String.Concat(uVar2,this.skinName,0);
+        LAB_1809891aa:
+              uVar3 = String.Concat(uVar3,this.skinName,0);
               if (changeColor) {
-                GlobalData.GenerateRareLvColorText(uVar2,_skinLv,0);
+                GlobalData.GenerateRareLvColorText(uVar3,_skinLv,0);
               }
               return;
             }

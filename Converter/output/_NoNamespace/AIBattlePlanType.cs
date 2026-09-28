@@ -1,27 +1,27 @@
 // ============================================================
 // Type  : AIBattlePlanType
-// Token : 0x200023E
+// Token : 0x2000244
 // ============================================================
 
 public class AIBattlePlanType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400117E
+    // Token: 0x4001221
     public int value__;
 
-    // Token: 0x400117F
+    // Token: 0x4001222
     public const AIBattlePlanType UseSkill;
 
-    // Token: 0x4001180
+    // Token: 0x4001223
     public const AIBattlePlanType UseItem;
 
-    // Token: 0x4001181
+    // Token: 0x4001224
     public const AIBattlePlanType SelfCure;
 
-    // Token: 0x4001182
+    // Token: 0x4001225
     public const AIBattlePlanType Posture;
 
-    // Token: 0x4001183
+    // Token: 0x4001226
     public const AIBattlePlanType Rest;
 
 }

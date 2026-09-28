@@ -1,102 +1,105 @@
 // ============================================================
 // Type  : BGMController
-// Token : 0x200014D
+// Token : 0x2000151
 // ============================================================
 
 public class BGMController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000853
+    // Token: 0x400087A
     public AudioSource gameBGM;
 
-    // Token: 0x4000854
+    // Token: 0x400087B
     public AudioSource environmentSound;
 
-    // Token: 0x4000855
+    // Token: 0x400087C
     public List<AudioClipPrefab> AllBGM;
 
-    // Token: 0x4000856
+    // Token: 0x400087D
     public List<AudioClipPrefab> bigMapBGM;
 
-    // Token: 0x4000857
+    // Token: 0x400087E
     public List<AudioClipPrefab> areaBGM;
 
-    // Token: 0x4000858
+    // Token: 0x400087F
     public List<AudioClipPrefab> fightBGM;
 
-    // Token: 0x4000859
+    // Token: 0x4000880
     public List<AudioClipPrefab> bossBGM;
 
-    // Token: 0x400085A
+    // Token: 0x4000881
     private bool fightBGMStarted;
 
-    // Token: 0x400085B
+    // Token: 0x4000882
     public AudioClipPrefab nowBgm;
 
-    // Token: 0x400085C
+    // Token: 0x4000883
     public AudioClipPrefab plotBgm;
 
-    // Token: 0x400085D
+    // Token: 0x4000884
     public bool noBgm;
 
-    // Token: 0x400085E
+    // Token: 0x4000885
     public AudioClip bigMapEnvironmentSoundClip;
 
-    // Token: 0x400085F
+    // Token: 0x4000886
     public AudioClip[] environmentSoundClips;
 
-    // Token: 0x4000860
+    // Token: 0x4000887
     private string MusicPath;
 
-    // Token: 0x4000861
+    // Token: 0x4000888
     public float quietTime;
 
-    // Token: 0x4000862
+    // Token: 0x4000889
     private bool inited;
 
-    // Token: 0x4000863
+    // Token: 0x400088A
     private static Dictionary<string, AudioClip> audioCache;
 
-    // Token: 0x4000864
+    // Token: 0x400088B
     private static BGMController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000ABE
-    // RVA   : 0x7F6BC0   Offset: 0x7F53C0   Length: 0x155
+    // Token : 0x6000AE1
+    // RVA   : 0x7F4FF0   Offset: 0x7F43F0   Length: 0x155
     public static AudioClip LoadAudio(string path)
     {
+        var pStatics = *(int64*)(DAT_181dafac8 + 184);
         bool cVar1;
         ulong uVar2;
-        if (BGMController.audioCache != null) {
-          cVar1 = FUN_1808ab750(BGMController.audioCache,path,DAT_181da3178);
+        if (*pStatics != 0) {
+          cVar1 = FUN_1808ab490(*pStatics,path,DAT_181d728e8);
           if (!cVar1) {
-            uVar2 = Resources.Load(path,DAT_181d770e0);
-            if (BGMController.audioCache == null) throw; // [null/range check failed]
-            FUN_1808aec90(BGMController.audioCache,path,uVar2,DAT_181da3278);
+            uVar2 = Resources.Load(path,DAT_181d9ff80);
+            if (*pStatics == 0) throw; // [null/range check failed]
+            FUN_1808b2160(*pStatics,path,uVar2,DAT_181d729f8);
           }
-          if (BGMController.audioCache != null) {
-            FUN_1817897a0(BGMController.audioCache,path,DAT_181da31f8);
+          if (*pStatics != 0) {
+            FUN_1817c63a0(*pStatics,path,DAT_181d72970);
             return;
           }
         }
     }
 
-    // Token : 0x6000ABF
-    // RVA   : 0x7F8260   Offset: 0x7F6A60   Length: 0x58
+    // Token : 0x6000AE2
+    // RVA   : 0x7F66A0   Offset: 0x7F5AA0   Length: 0x58
     public static BGMController get_Instance()
     {
-        return BGMController._instance;
+        return *(uint64 *)(*(int64 *)(DAT_181dafac8 + 184) + 8);
     }
 
-    // Token : 0x6000AC0
-    // RVA   : 0x7F6240   Offset: 0x7F4A40   Length: 0x26E
+    // Token : 0x6000AE3
+    // RVA   : 0x7F4670   Offset: 0x7F3A70   Length: 0x26E
     private void Awake()
     {
         ulong uVar1;
         long lVar2;
         uint uVar4;
         long lVar5;
-        BGMController._instance = this;
+        plVar3 = (int64 *)(*(int64 *)(DAT_181dafac8 + 184) + 8);
+        *plVar3 = this;
+        il2cpp_internal(plVar3,this);
         lVar2 = this.AllBGM;
         uVar4 = 0;
         if (lVar2 != null) {
@@ -114,39 +117,39 @@ public class BGMController
             if (lVar2._version) {
               lVar2 = this.bigMapBGM;
               if ((this.AllBGM == null) ||
-                 (uVar1 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d567c0), lVar2 == null))
+                 (uVar1 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd50), lVar2 == null))
               break;
-              FUN_181827900(lVar2,uVar1,DAT_181d56640);
+              FUN_18181e0a0(lVar2,uVar1,DAT_181d7dbd8);
             }
             if ((this.AllBGM == null) ||
-               (lVar2 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d567c0)) == null)
+               (lVar2 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd50)) == null)
             break;
             if (*(char *)(lVar2 + 29) != false) {
               lVar2 = this.areaBGM;
               if ((this.AllBGM == null) ||
-                 (uVar1 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d567c0), lVar2 == null))
+                 (uVar1 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd50), lVar2 == null))
               break;
-              FUN_181827900(lVar2,uVar1,DAT_181d56640);
+              FUN_18181e0a0(lVar2,uVar1,DAT_181d7dbd8);
             }
             if ((this.AllBGM == null) ||
-               (lVar2 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d567c0)) == null)
+               (lVar2 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd50)) == null)
             break;
             if (*(char *)(lVar2 + 40) != false) {
               lVar2 = this.fightBGM;
               if ((this.AllBGM == null) ||
-                 (uVar1 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d567c0), lVar2 == null))
+                 (uVar1 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd50), lVar2 == null))
               break;
-              FUN_181827900(lVar2,uVar1,DAT_181d56640);
+              FUN_18181e0a0(lVar2,uVar1,DAT_181d7dbd8);
             }
             if ((this.AllBGM == null) ||
-               (lVar2 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d567c0)) == null)
+               (lVar2 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd50)) == null)
             break;
             if (*(char *)(lVar2 + 41) != false) {
               lVar2 = this.bossBGM;
               if ((this.AllBGM == null) ||
-                 (uVar1 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d567c0), lVar2 == null))
+                 (uVar1 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd50), lVar2 == null))
               break;
-              FUN_181827900(lVar2,uVar1,DAT_181d56640);
+              FUN_18181e0a0(lVar2,uVar1,DAT_181d7dbd8);
             }
             lVar2 = this.AllBGM;
             uVar4 = uVar4 + 1;
@@ -156,22 +159,24 @@ public class BGMController
         }
     }
 
-    // Token : 0x6000AC1
-    // RVA   : 0x7F69D0   Offset: 0x7F51D0   Length: 0x1EA
+    // Token : 0x6000AE4
+    // RVA   : 0x7F4E00   Offset: 0x7F4200   Length: 0x1EF
     private void Init()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
         if (this.plotBgm == null) {
-        LAB_1807f6a26:
+        LAB_1807f4e56:
           this.plotBgm = 0;
-          if ((GameController._instance == null) ||
-             (lVar2 = GameController._instance.worldData) == null
-             ) throw; // [null/range check failed]
+          if ((*pStatics == 0) ||
+             (lVar2 = *(int64 *)(*pStatics + 32)) == null)
+          throw; // [null/range check failed]
           lVar2 = WorldData.Player(lVar2,0);
           if (lVar2 == null) throw; // [null/range check failed]
-          if (lVar2.playerBetrayForceBadTime == -1) {
+          cVar1 = HeroData.HaveArea(lVar2,0);
+          if (!cVar1) {
             uVar3 = this.bigMapBGM;
           }
           else {
@@ -190,8 +195,8 @@ public class BGMController
           AudioSource.Play(this.gameBGM,0);
         }
         else {
-          cVar1 = FUN_180d6ca90(this.plotBgm.audioClip,0);
-          if (cVar1) goto LAB_1807f6a26;
+          cVar1 = FUN_180d755b0(this.plotBgm.audioClip,0);
+          if (cVar1) goto LAB_1807f4e56;
         }
         lVar2 = this.environmentSound;
         uVar3 = BGMController.GetEnvironmentSoundClip(this,0);
@@ -204,61 +209,64 @@ public class BGMController
         }
     }
 
-    // Token : 0x6000AC2
-    // RVA   : 0x7F64B0   Offset: 0x7F4CB0   Length: 0x304
+    // Token : 0x6000AE5
+    // RVA   : 0x7F48E0   Offset: 0x7F3CE0   Length: 0x309
     private AudioClip GetEnvironmentSoundClip()
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         uint uVar1;
-        long lVar2;
+        bool cVar2;
         long lVar3;
-        ulong uVar4;
-        if (((GameController._instance != null) &&
-            (lVar2 = GameController._instance.worldData) != null)
-           && (lVar2 = WorldData.Player(lVar2,0)) != null) {
-          if (lVar2.playerBetrayForceBadTime == -1) {
+        long lVar4;
+        ulong uVar5;
+        if (((*pStatics != 0) &&
+            (lVar3 = *(int64 *)(*pStatics + 32)) != null) &&
+           (lVar3 = WorldData.Player(lVar3,0)) != null) {
+          cVar2 = HeroData.HaveArea(lVar3,0);
+          if (!cVar2) {
             return this.bigMapEnvironmentSoundClip;
           }
-          lVar2 = PlotController.LeftFaceHideOffset;
-          if (lVar2 == null) throw; // [null/range check failed]
-          if (lVar2.cityAreaID != null) {
-            lVar2 = FUN_18046bca0(0);
-            if (((lVar2 == null) || (lVar2.cityAreaID == null)) ||
-               (lVar2 = AreaBuildingData.DataBase(lVar2.cityAreaID,0)) == null)
+          lVar3 = *(int64 *)(*(int64 *)(DAT_181db4008 + 184) + 8);
+          if (lVar3 == null) throw; // [null/range check failed]
+          if (*(int64 *)(lVar3 + 24) != 0) {
+            lVar3 = FUN_18046bca0(0);
+            if (((lVar3 == null) || (*(int64 *)(lVar3 + 24) == 0)) ||
+               (lVar3 = AreaBuildingData.DataBase(*(int64 *)(lVar3 + 24),0)) == null)
             throw; // [null/range check failed]
-            if (lVar2.MailDatas != -1) {
-              lVar2 = this.environmentSoundClips;
-              lVar3 = FUN_18046bca0(0);
-              if (((lVar3 == null) || (lVar3.cityAreaID == null)) ||
-                 ((lVar3 = AreaBuildingData.DataBase(lVar3.cityAreaID,0), lVar3 == null ||
-                  (lVar2 == null)))) throw; // [null/range check failed]
-              uVar1 = lVar3.MailDatas;
-              if (lVar2.cityAreaID <= uVar1) {
-                uVar4 = il2cpp_internal();
+            if (*(int *)(lVar3 + 144) != -1) {
+              lVar3 = this.environmentSoundClips;
+              lVar4 = FUN_18046bca0(0);
+              if (((lVar4 == null) || (*(int64 *)(lVar4 + 24) == 0)) ||
+                 ((lVar4 = AreaBuildingData.DataBase(*(int64 *)(lVar4 + 24),0), lVar4 == null ||
+                  (lVar3 == null)))) throw; // [null/range check failed]
+              uVar1 = *(uint32 *)(lVar4 + 144);
+              if (*(uint32 *)(lVar3 + 24) <= uVar1) {
+                uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar4,0);
+                FUN_1800d65f0(uVar5,0);
               }
-              goto LAB_1807f66c4;
+              goto LAB_1807f4af9;
             }
           }
-          lVar2 = this.environmentSoundClips;
-          if ((((GameController._instance != null) &&
-               (lVar3 = GameController._instance.worldData,
-               lVar3 != null)) && (lVar3 = WorldData.Player(lVar3,0)) != null) &&
-             ((lVar3 = HeroData.GetArea(lVar3,0), lVar3 != null && (lVar2 != null)))) {
-            uVar1 = lVar3.Forces;
-            if (lVar2.cityAreaID <= uVar1) {
-              uVar4 = il2cpp_internal();
+          lVar3 = this.environmentSoundClips;
+          if ((((*pStatics != 0) &&
+               (lVar4 = *(int64 *)(*pStatics + 32)) != null) &&
+              (lVar4 = WorldData.Player(lVar4,0)) != null) &&
+             ((lVar4 = HeroData.GetArea(lVar4,0), lVar4 != null && (lVar3 != null)))) {
+            uVar1 = *(uint32 *)(lVar4 + 72);
+            if (*(uint32 *)(lVar3 + 24) <= uVar1) {
+              uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar4,0);
+              FUN_1800d65f0(uVar5,0);
             }
-        LAB_1807f66c4:
-            return lVar2[uVar1];
+        LAB_1807f4af9:
+            return lVar3[uVar1];
           }
         }
     }
 
-    // Token : 0x6000AC3
-    // RVA   : 0x7F6DF0   Offset: 0x7F55F0   Length: 0x4A
+    // Token : 0x6000AE6
+    // RVA   : 0x7F5220   Offset: 0x7F4620   Length: 0x4A
     private void ResetEnvironmentSound()
     {
         long lVar1;
@@ -274,10 +282,13 @@ public class BGMController
         }
     }
 
-    // Token : 0x6000AC4
-    // RVA   : 0x7F71E0   Offset: 0x7F59E0   Length: 0xFA3
+    // Token : 0x6000AE7
+    // RVA   : 0x7F5610   Offset: 0x7F4A10   Length: 0xFB1
     private void Update()
     {
+        var pStatics_0248 = *(int64*)(DAT_181db0248 + 184);
+        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
+        var pStatics_2d50 = *(int64*)(DAT_181d72d50 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
@@ -292,28 +303,28 @@ public class BGMController
           BGMController.Init(this,0);
         }
         bVar8 = false;
-        uVar4 = PlotController.StopWarCostFavor;
+        uVar4 = *(uint64 *)(pStatics_0248 + 80);
         cVar1 = Object.op_Inequality(uVar4,0,0);
         if (cVar1) {
-          lVar5 = PlotController.StopWarCostFavor;
+          lVar5 = *(int64 *)(pStatics_0248 + 80);
           if (lVar5 == null) throw; // [null/range check failed]
           bVar8 = false;
           if (*(int *)(lVar5 + 36) != 0) {
             bVar8 = true;
           }
         }
-        if ((GameController._instance == null) ||
-           (lVar5 = GameController._instance.worldData) == null)
+        if ((*pStatics_2cc8 == 0) ||
+           (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) == null)
         throw; // [null/range check failed]
         lVar2 = WorldData.Player(lVar5,0);
         lVar5 = this.environmentSound;
         if (lVar2 == null) {
-        LAB_1807f746e:
+        LAB_1807f589e:
           if (lVar5 == null) throw; // [null/range check failed]
           fVar9 = (float)AudioSource.get_volume(lVar5,0);
           fVar10 = (float)RealTime.get_deltaTime(0);
           fVar9 = fVar9 - fVar10 * 0.5;
-        LAB_1807f76db:
+        LAB_1807f5b0b:
           AudioSource.set_volume(lVar5,fVar9,0);
         }
         else {
@@ -325,7 +336,7 @@ public class BGMController
             lVar5 = FUN_18046bca0(0);
             if (lVar5 == null) throw; // [null/range check failed]
             if (lVar5.Count == null) {
-        LAB_1807f7612:
+        LAB_1807f5a42:
               fVar9 = 1.0;
             }
             else {
@@ -333,10 +344,10 @@ public class BGMController
               if (((lVar5 == null) || (lVar5.Count == null)) ||
                  (lVar5 = AreaBuildingData.DataBase(lVar5.Count,0)) == null)
               throw; // [null/range check failed]
-              if (lVar5.MailDatas != -1) goto LAB_1807f7612;
-              fVar9 = PlotController._instance;
+              if (*(int *)(lVar5 + 144) != -1) goto LAB_1807f5a42;
+              fVar9 = **(float **)(DAT_181db4008 + 184);
             }
-            fVar9 = fVar9 * GameController.CheckShowSpeHero;
+            fVar9 = fVar9 * *(float *)(pStatics_2d50 + 16);
             if (this.environmentSound == null) throw; // [null/range check failed]
             fVar10 = (float)AudioSource.get_volume(this.environmentSound,0);
             lVar5 = this.environmentSound;
@@ -350,10 +361,10 @@ public class BGMController
               if (lVar5 == null) throw; // [null/range check failed]
               fVar10 = (float)AudioSource.get_volume(lVar5,0);
               lVar5 = this.environmentSound;
-              if (fVar9 + 0.05 < fVar10) goto LAB_1807f746e;
+              if (fVar9 + 0.05 < fVar10) goto LAB_1807f589e;
               if (lVar5 == null) throw; // [null/range check failed]
             }
-            goto LAB_1807f76db;
+            goto LAB_1807f5b0b;
           }
           if (this.environmentSound == null) throw; // [null/range check failed]
           fVar9 = (float)AudioSource.get_volume(this.environmentSound,0);
@@ -363,7 +374,7 @@ public class BGMController
             fVar9 = (float)AudioSource.get_volume(lVar5,0);
             fVar10 = (float)RealTime.get_deltaTime(0);
             fVar9 = fVar9 - fVar10 * 0.5;
-            goto LAB_1807f76db;
+            goto LAB_1807f5b0b;
           }
           BGMController.ResetEnvironmentSound(this,0);
         }
@@ -378,10 +389,10 @@ public class BGMController
           fVar9 = (float)AudioSource.get_volume(lVar5,0);
           fVar10 = (float)RealTime.get_deltaTime(0);
           fVar10 = fVar10 * 0.15;
-          goto LAB_1807f8167;
+          goto LAB_1807f65a5;
         }
         if ((this.plotBgm != null) &&
-           (cVar1 = FUN_180d6ca90(this.plotBgm.audioClip,0), !cVar1)
+           (cVar1 = FUN_180d755b0(this.plotBgm.audioClip,0), !cVar1)
            ) {
           lVar5 = this.gameBGM;
           if (this.nowBgm == this.plotBgm) {
@@ -390,7 +401,7 @@ public class BGMController
             if (this.plotBgm == null) throw; // [null/range check failed]
             fVar10 = this.plotBgm.volume;
 
-            if ((lVar5 = GameController.difficultyExtraPoint?._items) == null) throw; // [null/range check failed]
+            if ((lVar5 = *(int64 *)(pStatics_2d50 + 8)?._items) == null) throw; // [null/range check failed]
             fVar11 = (float)PlayerPrefDictionary.GetFloat(lVar5,"BgmVolume",0);
             lVar5 = this.gameBGM;
             if (fVar9 < fVar11 * fVar10) {
@@ -407,7 +418,7 @@ public class BGMController
             if (this.plotBgm == null) throw; // [null/range check failed]
             fVar10 = this.plotBgm.volume;
 
-            if ((lVar5 = GameController.difficultyExtraPoint?._items) == null) throw; // [null/range check failed]
+            if ((lVar5 = *(int64 *)(pStatics_2d50 + 8)?._items) == null) throw; // [null/range check failed]
             fVar11 = (float)PlayerPrefDictionary.GetFloat(lVar5,"BgmVolume",0);
             if (fVar9 <= fVar11 * (fVar10 + 0.01)) {
               return;
@@ -428,7 +439,7 @@ public class BGMController
               lVar5 = this.gameBGM;
               if (lVar5 == null) throw; // [null/range check failed]
               uVar4 = 1;
-              goto LAB_1807f794e;
+              goto LAB_1807f5d7e;
             }
           }
           lVar5 = this.gameBGM;
@@ -436,7 +447,7 @@ public class BGMController
             fVar9 = (float)AudioSource.get_volume(lVar5,0);
             fVar10 = (float)RealTime.get_deltaTime(0);
             fVar10 = fVar10 * 0.2;
-        LAB_1807f8167:
+        LAB_1807f65a5:
             AudioSource.set_volume(lVar5,fVar9 - fVar10,0);
             return;
           }
@@ -445,12 +456,12 @@ public class BGMController
         lVar5 = this.fightBGM;
         if (!bVar8) {
           if (lVar5 == null) throw; // [null/range check failed]
-          cVar1 = FUN_1818279a0(lVar5,this.nowBgm,DAT_181d566c0);
+          cVar1 = FUN_18181e400(lVar5,this.nowBgm,DAT_181d7dc50);
           if (!cVar1) {
             if (this.bossBGM == null) throw; // [null/range check failed]
-            cVar1 = FUN_1818279a0(this.bossBGM,this.nowBgm,
-                                  DAT_181d566c0);
-            if (!cVar1) goto LAB_1807f7b28;
+            cVar1 = FUN_18181e400(this.bossBGM,this.nowBgm,
+                                  DAT_181d7dc50);
+            if (!cVar1) goto LAB_1807f5f58;
           }
           if (this.gameBGM == null) throw; // [null/range check failed]
           fVar9 = (float)AudioSource.get_volume(this.gameBGM,0);
@@ -460,18 +471,19 @@ public class BGMController
             fVar9 = (float)AudioSource.get_volume(lVar5,0);
             fVar10 = (float)RealTime.get_deltaTime(0);
             fVar10 = fVar10 * 0.1;
-            goto LAB_1807f8167;
+            goto LAB_1807f65a5;
           }
           lVar5 = FUN_18046c0a0(0);
-          if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
-             (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null) throw; // [null/range check failed]
-          if (lVar5.playerBetrayForceBadTime == -1) {
+          if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
+             (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null) throw; // [null/range check failed]
+          cVar1 = HeroData.HaveArea(lVar5,0);
+          if (!cVar1) {
             uVar4 = this.bigMapBGM;
           }
           else {
             uVar4 = this.areaBGM;
           }
-        LAB_1807f7a1c:
+        LAB_1807f5e4c:
           plVar6 = &this.nowBgm;
           lVar5 = BGMController.GetRandomBGM(this,uVar4,0);
           *plVar6 = lVar5;
@@ -485,7 +497,7 @@ public class BGMController
           lVar5 = this.gameBGM;
           if (lVar5 == null) throw; // [null/range check failed]
           uVar4 = 0;
-        LAB_1807f794e:
+        LAB_1807f5d7e:
           AudioSource.set_loop(lVar5,uVar4,0);
           if (this.gameBGM != null) {
             AudioSource.set_time(this.gameBGM,0,0);
@@ -497,11 +509,11 @@ public class BGMController
           throw; // [null/range check failed]
         }
         if (lVar5 == null) throw; // [null/range check failed]
-        cVar1 = FUN_1818279a0(lVar5,this.nowBgm,DAT_181d566c0);
+        cVar1 = FUN_18181e400(lVar5,this.nowBgm,DAT_181d7dc50);
         if (!cVar1) {
           if (this.bossBGM == null) throw; // [null/range check failed]
-          cVar1 = FUN_1818279a0(this.bossBGM,this.nowBgm,
-                                DAT_181d566c0);
+          cVar1 = FUN_18181e400(this.bossBGM,this.nowBgm,
+                                DAT_181d7dc50);
           if (!cVar1) {
             if (this.gameBGM == null) throw; // [null/range check failed]
             fVar9 = (float)AudioSource.get_volume(this.gameBGM,0);
@@ -511,29 +523,29 @@ public class BGMController
                 fVar9 = (float)AudioSource.get_volume(lVar5,0);
                 fVar10 = (float)RealTime.get_deltaTime(0);
                 fVar10 = fVar10 * 0.3;
-                goto LAB_1807f8167;
+                goto LAB_1807f65a5;
               }
               throw; // [null/range check failed]
             }
             uVar4 = this.fightBGM;
-            goto LAB_1807f7a1c;
+            goto LAB_1807f5e4c;
           }
         }
-        LAB_1807f7b28:
+        LAB_1807f5f58:
         plVar6 = &this.nowBgm;
         if (this.gameBGM == null) throw; // [null/range check failed]
         fVar9 = (float)AudioSource.get_volume(this.gameBGM,0);
         if (this.nowBgm == null) throw; // [null/range check failed]
         fVar10 = this.nowBgm.volume;
 
-        if ((lVar5 = GameController.difficultyExtraPoint?._items) == null) throw; // [null/range check failed]
+        if ((lVar5 = *(int64 *)(pStatics_2d50 + 8)?._items) == null) throw; // [null/range check failed]
         fVar11 = (float)PlayerPrefDictionary.GetFloat(lVar5,"BgmVolume",0);
         lVar5 = this.gameBGM;
         if (fVar9 < fVar11 * fVar10) {
           if (lVar5 == null) throw; // [null/range check failed]
           fVar9 = (float)AudioSource.get_volume(lVar5,0);
           fVar10 = (float)RealTime.get_deltaTime(0);
-          lVar2 = GameController.difficultyExtraPoint;
+          lVar2 = *(int64 *)(pStatics_2d50 + 8);
           if ((lVar2 == null) || (lVar2 = *(int64 *)(lVar2 + 16)) == null) throw; // [null/range check failed]
           fVar11 = (float)PlayerPrefDictionary.GetFloat(lVar2,"BgmVolume",0);
           AudioSource.set_volume(lVar5,fVar10 * 0.15 * fVar11 + fVar9,0);
@@ -542,19 +554,19 @@ public class BGMController
           if (this.nowBgm == null) throw; // [null/range check failed]
           fVar10 = this.nowBgm.volume;
 
-          if ((lVar5 = GameController.difficultyExtraPoint?._items) == null) throw; // [null/range check failed]
+          if ((lVar5 = *(int64 *)(pStatics_2d50 + 8)?._items) == null) throw; // [null/range check failed]
           fVar11 = (float)PlayerPrefDictionary.GetFloat(lVar5,"BgmVolume",0);
           fVar11 = fVar11 * fVar10;
           bVar8 = fVar9 == fVar11;
           bVar7 = fVar9 < fVar11;
-        LAB_1807f7eed:
+        LAB_1807f6326:
           if (bVar7 || bVar8) {
             return;
           }
           lVar5 = this.gameBGM;
           if (this.nowBgm != null) {
             fVar9 = this.nowBgm.volume;
-            lVar2 = GameController.difficultyExtraPoint;
+            lVar2 = *(int64 *)(pStatics_2d50 + 8);
             if (((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 16)) != null) &&
                (fVar10 = (float)PlayerPrefDictionary.GetFloat(lVar2,"BgmVolume",0), lVar5 != null)) {
               AudioSource.set_volume(lVar5,fVar10 * fVar9,0);
@@ -568,14 +580,14 @@ public class BGMController
         if (this.nowBgm == null) throw; // [null/range check failed]
         fVar10 = this.nowBgm.volume;
 
-        if ((lVar5 = GameController.difficultyExtraPoint?._items) == null) throw; // [null/range check failed]
+        if ((lVar5 = *(int64 *)(pStatics_2d50 + 8)?._items) == null) throw; // [null/range check failed]
         fVar11 = (float)PlayerPrefDictionary.GetFloat(lVar5,"BgmVolume",0);
         lVar5 = this.gameBGM;
         if (fVar11 * fVar10 < fVar9) {
           if (lVar5 == null) throw; // [null/range check failed]
           fVar9 = (float)AudioSource.get_volume(lVar5,0);
           fVar10 = (float)RealTime.get_deltaTime(0);
-          lVar2 = GameController.difficultyExtraPoint;
+          lVar2 = *(int64 *)(pStatics_2d50 + 8);
           if ((lVar2 == null) || (lVar2 = *(int64 *)(lVar2 + 16)) == null) throw; // [null/range check failed]
           fVar11 = (float)PlayerPrefDictionary.GetFloat(lVar2,"BgmVolume",0);
           AudioSource.set_volume(lVar5,fVar9 - fVar10 * 0.15 * fVar11,0);
@@ -584,12 +596,12 @@ public class BGMController
           if (this.nowBgm == null) throw; // [null/range check failed]
           fVar10 = this.nowBgm.volume;
 
-          if ((lVar5 = GameController.difficultyExtraPoint?._items) == null) throw; // [null/range check failed]
+          if ((lVar5 = *(int64 *)(pStatics_2d50 + 8)?._items) == null) throw; // [null/range check failed]
           fVar11 = (float)PlayerPrefDictionary.GetFloat(lVar5,"BgmVolume",0);
           fVar11 = fVar11 * fVar10;
           bVar8 = fVar11 == fVar9;
           bVar7 = fVar11 < fVar9;
-          goto LAB_1807f7eed;
+          goto LAB_1807f6326;
         }
         if (lVar5 == null) throw; // [null/range check failed]
         cVar1 = AudioSource.get_isPlaying(lVar5,0);
@@ -602,11 +614,12 @@ public class BGMController
         }
         fVar9 = this.quietTime;
         if (fVar9 <= 0.0) {
-          if (bVar8) goto LAB_1807f7d07;
+          if (bVar8) goto LAB_1807f6140;
           lVar5 = FUN_18046c0a0(0);
-          if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
-             (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null) throw; // [null/range check failed]
-          if (lVar5.playerBetrayForceBadTime == -1) {
+          if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
+             (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null) throw; // [null/range check failed]
+          cVar1 = HeroData.HaveArea(lVar5,0);
+          if (!cVar1) {
             uVar4 = this.bigMapBGM;
           }
           else {
@@ -619,7 +632,7 @@ public class BGMController
             this.quietTime = fVar9 - fVar10;
             return;
           }
-        LAB_1807f7d07:
+        LAB_1807f6140:
           uVar4 = this.fightBGM;
         }
         lVar5 = BGMController.GetRandomBGM(this,uVar4,0);
@@ -647,8 +660,8 @@ public class BGMController
         }
     }
 
-    // Token : 0x6000AC5
-    // RVA   : 0x7F6E60   Offset: 0x7F5660   Length: 0x1D
+    // Token : 0x6000AE8
+    // RVA   : 0x7F5290   Offset: 0x7F4690   Length: 0x1D
     public void SetBgm(int id)
     {
         long lVar1;
@@ -686,8 +699,8 @@ public class BGMController
         }
     }
 
-    // Token : 0x6000AC6
-    // RVA   : 0x7F6E40   Offset: 0x7F5640   Length: 0x1A
+    // Token : 0x6000AE9
+    // RVA   : 0x7F5270   Offset: 0x7F4670   Length: 0x1A
     public void SetBgm(int id, float startTime)
     {
         long lVar1;
@@ -725,8 +738,8 @@ public class BGMController
         }
     }
 
-    // Token : 0x6000AC7
-    // RVA   : 0x7F6E80   Offset: 0x7F5680   Length: 0x147
+    // Token : 0x6000AEA
+    // RVA   : 0x7F52B0   Offset: 0x7F46B0   Length: 0x147
     public void SetBgm(int id, float startTime, float startVolume)
     {
         long lVar1;
@@ -764,8 +777,8 @@ public class BGMController
         }
     }
 
-    // Token : 0x6000AC8
-    // RVA   : 0x7F7080   Offset: 0x7F5880   Length: 0x137
+    // Token : 0x6000AEB
+    // RVA   : 0x7F54B0   Offset: 0x7F48B0   Length: 0x137
     public void SetPlotBgm(string name)
     {
         long lVar1;
@@ -790,8 +803,8 @@ public class BGMController
         }
     }
 
-    // Token : 0x6000AC9
-    // RVA   : 0x7F6FD0   Offset: 0x7F57D0   Length: 0xA8
+    // Token : 0x6000AEC
+    // RVA   : 0x7F5400   Offset: 0x7F4800   Length: 0xA8
     public void SetPlotBgm(int id)
     {
         long lVar1;
@@ -816,8 +829,8 @@ public class BGMController
         }
     }
 
-    // Token : 0x6000ACA
-    // RVA   : 0x7F71C0   Offset: 0x7F59C0   Length: 0x1D
+    // Token : 0x6000AED
+    // RVA   : 0x7F55F0   Offset: 0x7F49F0   Length: 0x1D
     public void StopNowBgm()
     {
         if (this.gameBGM != null) {
@@ -826,8 +839,8 @@ public class BGMController
         }
     }
 
-    // Token : 0x6000ACB
-    // RVA   : 0x7F6D20   Offset: 0x7F5520   Length: 0xC8
+    // Token : 0x6000AEE
+    // RVA   : 0x7F5150   Offset: 0x7F4550   Length: 0xC8
     public void RefreshNowBgmVolumn()
     {
         float fVar1;
@@ -837,7 +850,7 @@ public class BGMController
         lVar2 = this.gameBGM;
         if (this.nowBgm != null) {
           fVar1 = this.nowBgm.volume;
-          lVar3 = GameController.difficultyExtraPoint;
+          lVar3 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 8);
           if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 16)) != null) {
             fVar4 = (float)PlayerPrefDictionary.GetFloat(lVar3,"BgmVolume",0);
             if (lVar2 != null) {
@@ -848,8 +861,8 @@ public class BGMController
         }
     }
 
-    // Token : 0x6000ACC
-    // RVA   : 0x7F67C0   Offset: 0x7F4FC0   Length: 0x209
+    // Token : 0x6000AEF
+    // RVA   : 0x7F4BF0   Offset: 0x7F3FF0   Length: 0x209
     public AudioClipPrefab GetRandomBGM(List<AudioClipPrefab> BGMList)
     {
         uint uVar1;
@@ -858,15 +871,15 @@ public class BGMController
         int iVar4;
         int iVar5;
         int iVar6;
-        lVar2 = il2cpp_internal(DAT_181d6f030);
-        FUN_180f58a90(lVar2,DAT_181d678f8);
+        lVar2 = il2cpp_internal(DAT_181d93cd0);
+        FUN_18132faf0(lVar2,DAT_181d8f098);
         iVar5 = 0;
         if (BGMList != null) {
           for (; iVar5 < *(int *)(BGMList + 24); iVar5 = iVar5 + 1) {
             if (BGMList == this.areaBGM) {
-              lVar3 = FUN_180002f80(BGMList,iVar5,DAT_181d567c0);
+              lVar3 = FUN_180002f80(BGMList,iVar5,DAT_181d7dd50);
               if (lVar3 == null) throw; // [null/range check failed]
-              if (*(int *)(lVar3 + 32) == -1) goto LAB_1807f693f;
+              if (*(int *)(lVar3 + 32) == -1) goto LAB_1807f4d6f;
               lVar3 = FUN_180002f80(BGMList,iVar5);
               if (lVar3 == null) throw; // [null/range check failed]
               iVar6 = *(int *)(lVar3 + 32);
@@ -878,23 +891,23 @@ public class BGMController
               if (lVar3 == null) throw; // [null/range check failed]
               if (iVar6 == *(int *)(lVar3 + 72)) {
                 iVar6 = 3;
-                goto LAB_1807f6944;
+                goto LAB_1807f4d74;
               }
             }
             else {
-        LAB_1807f693f:
+        LAB_1807f4d6f:
               iVar6 = 1;
-        LAB_1807f6944:
+        LAB_1807f4d74:
               iVar4 = 0;
               do {
                 if (lVar2 == null) throw; // [null/range check failed]
-                FUN_181814fa0(lVar2,iVar5);
+                FUN_18182a0b0(lVar2,iVar5);
                 iVar4 = iVar4 + 1;
               } while (iVar4 < iVar6);
             }
           }
           if (lVar2 != null) {
-            uVar1 = FUN_180d8cf10(0,*(uint32 *)(lVar2 + 24),0);
+            uVar1 = FUN_180d95a30(0,*(uint32 *)(lVar2 + 24),0);
             if (*(uint32 *)(lVar2 + 24) <= uVar1) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
@@ -907,22 +920,22 @@ public class BGMController
         }
     }
 
-    // Token : 0x6000ACD
-    // RVA   : 0x7F8210   Offset: 0x7F6A10   Length: 0x4A
+    // Token : 0x6000AF0
+    // RVA   : 0x7F6650   Offset: 0x7F5A50   Length: 0x4A
     public void /*ctor*/()
     {
         this.MusicPath = "Sound/Music/";
         FUN_18044ef50(this,0);
     }
 
-    // Token : 0x6000ACE
-    // RVA   : 0x7F8190   Offset: 0x7F6990   Length: 0x76
+    // Token : 0x6000AF1
+    // RVA   : 0x7F65D0   Offset: 0x7F59D0   Length: 0x76
     private static void /*cctor*/()
     {
         ulong uVar2;
-        uVar2 = il2cpp_internal(DAT_181d5dfc8);
-        FUN_1808ae540(uVar2,DAT_181da30f8);
-        puVar1 = *(uint64 **)(BGMController_StaticsPtr + 184);
+        uVar2 = il2cpp_internal(DAT_181d82a68);
+        FUN_1808b1370(uVar2,DAT_181d72860);
+        puVar1 = *(uint64 **)(DAT_181dafac8 + 184);
         *puVar1 = uVar2;
         il2cpp_internal(puVar1,uVar2);
     }

@@ -1,44 +1,44 @@
 // ============================================================
 // Type  : PlotRandomHeroData
-// Token : 0x20001FC
+// Token : 0x2000202
 // ============================================================
 
 public class PlotRandomHeroData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000DF3
+    // Token: 0x4000E83
     public SpeHeroLimit speHeroLimit;
 
-    // Token: 0x4000DF4
+    // Token: 0x4000E84
     public AreaLimit areaLimit;
 
-    // Token: 0x4000DF5
+    // Token: 0x4000E85
     public List<int> areaID;
 
-    // Token: 0x4000DF6
+    // Token: 0x4000E86
     public List<int> favorRange;
 
-    // Token: 0x4000DF7
+    // Token: 0x4000E87
     public SexLimit sexLimit;
 
-    // Token: 0x4000DF8
+    // Token: 0x4000E88
     public ForceLimit forceLimit;
 
-    // Token: 0x4000DF9
+    // Token: 0x4000E89
     public List<int> forceID;
 
-    // Token: 0x4000DFA
+    // Token: 0x4000E8A
     public ForceLvLimit forceLvLimit;
 
-    // Token: 0x4000DFB
+    // Token: 0x4000E8B
     public float forceLv;
 
-    // Token: 0x4000DFC
+    // Token: 0x4000E8C
     public LeaderLimit leaderLimit;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000FB1
-    // RVA   : 0xBD94C0   Offset: 0xBD7CC0   Length: 0x9C
+    // Token : 0x6000FE9
+    // RVA   : 0xB0D940   Offset: 0xB0CD40   Length: 0x9C
     public void /*ctor*/(SpeHeroLimit _speHeroLimit, AreaLimit _areaLimit, List<int> _areaID, List<int> _favorRange, SexLimit _sexLimit, ForceLimit _forceLimit, List<int> _forceID, ForceLvLimit _forceLvLimit, float _forceLv, LeaderLimit _leaderLimit)
     {
         void PlotRandomHeroData.ctor
@@ -59,8 +59,8 @@ public class PlotRandomHeroData
         this.forceLv = _forceLv;
     }
 
-    // Token : 0x6000FB2
-    // RVA   : 0xBD9340   Offset: 0xBD7B40   Length: 0x175
+    // Token : 0x6000FEA
+    // RVA   : 0xB0D7C0   Offset: 0xB0CBC0   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -71,13 +71,13 @@ public class PlotRandomHeroData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d63ff0);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181d8c5a8);
+        lVar2 = il2cpp_internal(DAT_181db1730);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -89,7 +89,7 @@ public class PlotRandomHeroData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d53c70,plVar1);
+            FUN_180002970(0,DAT_181d78da0,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

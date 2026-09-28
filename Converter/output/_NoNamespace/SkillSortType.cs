@@ -1,30 +1,30 @@
 // ============================================================
 // Type  : SkillSortType
-// Token : 0x2000356
+// Token : 0x200035D
 // ============================================================
 
 public class SkillSortType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001AA3
+    // Token: 0x4001BA4
     public int value__;
 
-    // Token: 0x4001AA4
+    // Token: 0x4001BA5
     public const SkillSortType GetTime;
 
-    // Token: 0x4001AA5
+    // Token: 0x4001BA6
     public const SkillSortType SkillLv;
 
-    // Token: 0x4001AA6
+    // Token: 0x4001BA7
     public const SkillSortType ExpLv;
 
-    // Token: 0x4001AA7
+    // Token: 0x4001BA8
     public const SkillSortType Force;
 
-    // Token: 0x4001AA8
+    // Token: 0x4001BA9
     public const SkillSortType Damage;
 
-    // Token: 0x4001AA9
+    // Token: 0x4001BAA
     public const SkillSortType ManaCost;
 
 }

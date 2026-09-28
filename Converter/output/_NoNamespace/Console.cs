@@ -1,122 +1,120 @@
 // ============================================================
 // Type  : Console
-// Token : 0x2000296
+// Token : 0x200029C
 // ============================================================
 
 public class Console
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001438
+    // Token: 0x40014E9
     private static readonly string[] command;
 
-    // Token: 0x4001439
+    // Token: 0x40014EA
     private static readonly string[] releaseHideCommand;
 
-    // Token: 0x400143A
+    // Token: 0x40014EB
     private static readonly string[] developCommand;
 
-    // Token: 0x400143B
+    // Token: 0x40014EC
     private static int position;
 
-    // Token: 0x400143C
+    // Token: 0x40014ED
     private static List<string> consoleHistory;
 
-    // Token: 0x400143D
+    // Token: 0x40014EE
     public static bool invincible;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60014F4
-    // RVA   : 0x9FDD80   Offset: 0x9FC580   Length: 0x6BCB
+    // Token : 0x6001538
+    // RVA   : 0x9A0820   Offset: 0x99FC20   Length: 0x7091
     public static string Input(string input)
     {
         // Decompilation failed
         // Type: Console
         // Member: Input
-        // RVA: 0x9FDD80
-        // Error: Exception while decompiling 1809fdd80: process: timeout
+        // RVA: 0x9A0820
+        // Error: Exception while decompiling 1809a0820: process: timeout
     }
 
-    // Token : 0x60014F5
-    // RVA   : 0x9FD8D0   Offset: 0x9FC0D0   Length: 0xD8
+    // Token : 0x6001539
+    // RVA   : 0x9A0370   Offset: 0x99F770   Length: 0xD8
     public static AreaData GetAreaData(string areaName)
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
-        cVar2 = FUN_180d6ca90(areaName,0);
+        cVar2 = FUN_180d755b0(areaName,0);
         if (cVar2) {
           return 0;
         }
-        if ((GameController._instance != null) &&
-           (lVar1 = GameController._instance.worldData) != null)
-        {
+        if ((*pStatics != 0) &&
+           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
           uVar3 = WorldData.GetArea(lVar1,areaName,0);
           return uVar3;
         }
     }
 
-    // Token : 0x60014F6
-    // RVA   : 0x9FDCA0   Offset: 0x9FC4A0   Length: 0xD3
+    // Token : 0x600153A
+    // RVA   : 0x9A0740   Offset: 0x99FB40   Length: 0xD3
     public static int GetSkillID(string skillName)
     {
         long lVar1;
         bool cVar2;
         ulong uVar3;
-        cVar2 = FUN_180d6ca90(skillName,0);
+        cVar2 = FUN_180d755b0(skillName,0);
         if (cVar2) {
           return 0xffffffff;
         }
-        lVar1 = GameController.lockObj;
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
         if (lVar1 != null) {
           uVar3 = GameDataController.GetSkillID(lVar1,skillName,0);
           return uVar3;
         }
     }
 
-    // Token : 0x60014F7
-    // RVA   : 0x9FDB30   Offset: 0x9FC330   Length: 0x161
+    // Token : 0x600153B
+    // RVA   : 0x9A05D0   Offset: 0x99F9D0   Length: 0x161
     public static HeroData GetHeroData(string heroName)
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         bool cVar2;
-        cVar2 = FUN_180d6ca90(heroName,0);
+        cVar2 = FUN_180d755b0(heroName,0);
         if (!cVar2) {
-          if ((GameController._instance != null) &&
-             (lVar1 = GameController._instance.worldData) != null
-             ) {
+          if ((*pStatics != 0) &&
+             (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
             WorldData.GetHero(lVar1,heroName,0);
             return;
           }
         }
         else {
-          if ((GameController._instance != null) &&
-             (lVar1 = GameController._instance.worldData) != null
-             ) {
+          if ((*pStatics != 0) &&
+             (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
             WorldData.Player(lVar1,0);
             return;
           }
         }
     }
 
-    // Token : 0x60014F8
-    // RVA   : 0x9FD9B0   Offset: 0x9FC1B0   Length: 0x173
+    // Token : 0x600153C
+    // RVA   : 0x9A0450   Offset: 0x99F850   Length: 0x173
     public static ForceData GetForceData(string forceName)
     {
+        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         bool cVar1;
         long lVar2;
-        cVar1 = FUN_180d6ca90(forceName,0);
+        cVar1 = FUN_180d755b0(forceName,0);
         if (!cVar1) {
-          if ((GameController._instance != null) &&
-             (lVar2 = GameController._instance.worldData) != null
-             ) {
+          if ((*pStatics != 0) &&
+             (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
             WorldData.GetForce(lVar2,forceName,0);
             return;
           }
         }
         else {
-          if ((GameController._instance != null) &&
-             (lVar2 = GameController._instance.worldData) != null
-             ) {
+          if ((*pStatics != 0) &&
+             (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
             lVar2 = WorldData.Player(lVar2,0);
             if (lVar2 != null) {
               HeroData.GetForce(lVar2,0,0);
@@ -126,21 +124,23 @@ public class Console
         }
     }
 
-    // Token : 0x60014F9
-    // RVA   : 0xA04950   Offset: 0xA03150   Length: 0x13D
+    // Token : 0x600153D
+    // RVA   : 0x9A78C0   Offset: 0x9A6CC0   Length: 0x13D
     public static string Last()
     {
+        var pStatics = *(int64*)(DAT_181db9458 + 184);
         uint uVar2;
         long lVar3;
-        if (Console.position == -1) {
+        if (*(int *)(pStatics + 24) == -1) {
           return 0;
         }
-        Console.position = *piVar1 + -1;
-        if (Console.position < 0) {
-          Console.position = 0;
+        piVar1 = (int *)(pStatics + 24);
+        *piVar1 = *piVar1 + -1;
+        if (*(int *)(pStatics + 24) < 0) {
+          *(uint32 *)(pStatics + 24) = 0;
         }
-        lVar3 = Console.consoleHistory;
-        uVar2 = Console.position;
+        lVar3 = *(int64 *)(pStatics + 32);
+        uVar2 = *(uint32 *)(pStatics + 24);
         if (lVar3 != null) {
           if (*(uint32 *)(lVar3 + 24) <= uVar2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -149,25 +149,27 @@ public class Console
         }
     }
 
-    // Token : 0x60014FA
-    // RVA   : 0xA04A90   Offset: 0xA03290   Length: 0x162
+    // Token : 0x600153E
+    // RVA   : 0x9A7A00   Offset: 0x9A6E00   Length: 0x162
     public static string Next()
     {
+        var pStatics = *(int64*)(DAT_181db9458 + 184);
         uint uVar2;
         long lVar3;
-        if (Console.position == -1) {
+        if (*(int *)(pStatics + 24) == -1) {
           return 0;
         }
-        Console.position = *piVar1 + 1;
-        lVar3 = Console.consoleHistory;
+        piVar1 = (int *)(pStatics + 24);
+        *piVar1 = *piVar1 + 1;
+        lVar3 = *(int64 *)(pStatics + 32);
         if (lVar3 != null) {
-          if (*(int *)(lVar3 + 24) <= Console.position) {
-            lVar3 = Console.consoleHistory;
+          if (*(int *)(lVar3 + 24) <= *(int *)(pStatics + 24)) {
+            lVar3 = *(int64 *)(pStatics + 32);
             if (lVar3 == null) throw; // [null/range check failed]
-            Console.position = *(int *)(lVar3 + 24) + -1;
+            *(int *)(pStatics + 24) = *(int *)(lVar3 + 24) + -1;
           }
-          lVar3 = Console.consoleHistory;
-          uVar2 = Console.position;
+          lVar3 = *(int64 *)(pStatics + 32);
+          uVar2 = *(uint32 *)(pStatics + 24);
           if (lVar3 != null) {
             if (*(uint32 *)(lVar3 + 24) <= uVar2) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -177,11 +179,11 @@ public class Console
         }
     }
 
-    // Token : 0x60014FB
-    // RVA   : 0xA04C00   Offset: 0xA03400   Length: 0x278
+    // Token : 0x600153F
+    // RVA   : 0x9A7B70   Offset: 0x9A6F70   Length: 0x278
     private static string Show()
     {
-        var pConsole = *(int64*)(Console_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181db9458 + 184);
         long lVar1;
         long lVar2;
         long lVar3;
@@ -193,14 +195,14 @@ public class Console
         uVar8 = 0;
         uVar5 = uVar8;
         while( true ) {
-          if (Console.command == null) break;
+          if (*pStatics == 0) break;
           uVar7 = (uint32)uVar8;
-          if (*(int *)(Console.command + 24) <= (int)uVar7) {
+          if (*(int *)(*pStatics + 24) <= (int)uVar7) {
             return uVar5;
           }
-          if (*(int *)(*(int64 *)(PlotController_StaticsPtr + 184) + 12) == 1) {
-            lVar2 = Console.command;
-            lVar3 = (pConsole)[1];
+          if (*(int *)(*(int64 *)(DAT_181d73d40 + 184) + 12) == 1) {
+            lVar2 = *pStatics;
+            lVar3 = (pStatics)[1];
             if (lVar2 == null) break;
             if (*(uint32 *)(lVar2 + 24) <= uVar7) {
               uVar6 = il2cpp_internal(lVar3);
@@ -208,24 +210,24 @@ public class Console
               FUN_1800d65f0(uVar6,0);
             }
             lVar1 = (int64)(int)uVar7 * 8 + 32;
-            cVar4 = FUN_18095def0(lVar3,*(uint64 *)(lVar1 + lVar2),DAT_181d89f38);
+            cVar4 = FUN_18096e830(lVar3,*(uint64 *)(lVar1 + lVar2),DAT_181db2a50);
             if (!cVar4) {
-              lVar2 = Console.command;
+              lVar2 = *pStatics;
               if (lVar2 == null) break;
               if (*(uint32 *)(lVar2 + 24) <= uVar7) {
                 uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                 FUN_1800d65f0(uVar6,0);
               }
-              cVar4 = FUN_18095def0((pConsole)[2],
-                                    *(uint64 *)(lVar1 + lVar2),DAT_181d89f38);
+              cVar4 = FUN_18096e830((pStatics)[2],
+                                    *(uint64 *)(lVar1 + lVar2),DAT_181db2a50);
               if (!(!cVar4))
               {
                 }
                 }
                 else {
               }
-            lVar2 = Console.command;
+            lVar2 = *pStatics;
             if (lVar2 == null) break;
             if (*(uint32 *)(lVar2 + 24) <= uVar7) {
               uVar6 = il2cpp_internal();
@@ -233,8 +235,8 @@ public class Console
               FUN_1800d65f0(uVar6,0);
             }
             uVar5 = String.Concat(uVar5,lVar2[uVar7],0);
-            if (Console.command == null) break;
-            if (uVar7 != *(int *)(Console.command + 24) - 1U) {
+            if (*pStatics == 0) break;
+            if (uVar7 != *(int *)(*pStatics + 24) - 1U) {
               uVar5 = String.Concat(uVar5,"\n",0);
             }
           }
@@ -242,26 +244,28 @@ public class Console
         }
     }
 
-    // Token : 0x60014FC
-    // RVA   : 0x9FD820   Offset: 0x9FC020   Length: 0xA2
+    // Token : 0x6001540
+    // RVA   : 0x9A02C0   Offset: 0x99F6C0   Length: 0xA2
     private static string Clear()
     {
+        var pStatics = *(int64*)(DAT_181db9458 + 184);
         long lVar1;
-        Console.position = 0xffffffff;
-        lVar1 = Console.consoleHistory;
+        *(uint32 *)(pStatics + 24) = 0xffffffff;
+        lVar1 = *(int64 *)(pStatics + 32);
         if (lVar1 != null) {
-          FUN_180f56130(lVar1,DAT_181d7c450);
+          FUN_1812f9a10(lVar1,DAT_181da3dd8);
           return "cls";
         }
     }
 
-    // Token : 0x60014FD
-    // RVA   : 0xA04E80   Offset: 0xA03680   Length: 0x30EC
+    // Token : 0x6001541
+    // RVA   : 0x9A7DF0   Offset: 0x9A71F0   Length: 0x31D2
     private static void /*cctor*/()
     {
+        var pStatics = *(int64*)(DAT_181db9458 + 184);
         long lVar2;
         ulong uVar3;
-        plVar1 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,70);
+        plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,72);
         if (plVar1 != (int64 *)0) {
           if (("help" != 0) &&
              (lVar2 = il2cpp_internal("help",*(uint64 *)(*plVar1 + 64))) == null) {
@@ -1243,10 +1247,38 @@ public class Console
           }
           plVar1[73] = "changepower";
           il2cpp_internal(plVar1 + 73,lVar2);
-          puVar4 = *(uint64 **)(Console_StaticsPtr + 184);
+          if (("unlockallhandbookskill" != 0) &&
+             (lVar2 = il2cpp_internal("unlockallhandbookskill",*(uint64 *)(*plVar1 + 64))) == null) {
+            uVar3 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+            FUN_1800d65f0(uVar3,0);
+          }
+          lVar2 = "unlockallhandbookskill";
+          if (*(uint32 *)(plVar1 + 3) < 71) {
+            uVar3 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+            FUN_1800d65f0(uVar3,0);
+          }
+          plVar1[74] = "unlockallhandbookskill";
+          il2cpp_internal(plVar1 + 74,lVar2);
+          if (("unlockallhandbookhero" != 0) &&
+             (lVar2 = il2cpp_internal("unlockallhandbookhero",*(uint64 *)(*plVar1 + 64))) == null) {
+            uVar3 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+            FUN_1800d65f0(uVar3,0);
+          }
+          lVar2 = "unlockallhandbookhero";
+          if (*(uint32 *)(plVar1 + 3) < 72) {
+            uVar3 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+            FUN_1800d65f0(uVar3,0);
+          }
+          plVar1[75] = "unlockallhandbookhero";
+          il2cpp_internal(plVar1 + 75,lVar2);
+          puVar4 = *(uint64 **)(DAT_181db9458 + 184);
           *puVar4 = plVar1;
           il2cpp_internal(puVar4,plVar1);
-          plVar1 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,23);
+          plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,23);
           if (plVar1 != (int64 *)0) {
             if (("movespeed" != 0) &&
                (lVar2 = il2cpp_internal("movespeed",*(uint64 *)(*plVar1 + 64))) == null) {
@@ -1570,8 +1602,10 @@ public class Console
             }
             plVar1[26] = "gethorsearmor";
             il2cpp_internal(plVar1 + 26,lVar2);
-            Console.releaseHideCommand = plVar1;
-            plVar1 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,18);
+            puVar4 = (uint64 *)(pStatics + 8);
+            *puVar4 = plVar1;
+            il2cpp_internal(puVar4,plVar1);
+            plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,18);
             if (plVar1 == (int64 *)0) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -1828,12 +1862,16 @@ public class Console
             }
             plVar1[21] = "triggerend";
             il2cpp_internal(plVar1 + 21,lVar2);
-            Console.developCommand = plVar1;
-            Console.position = 0xffffffff;
-            uVar3 = il2cpp_internal(DAT_181d72a30);
-            FUN_180f58a90(uVar3,DAT_181d7c250);
-            Console.consoleHistory = uVar3;
-            Console.invincible = 0;
+            puVar4 = (uint64 *)(pStatics + 16);
+            *puVar4 = plVar1;
+            il2cpp_internal(puVar4,plVar1);
+            *(uint32 *)(pStatics + 24) = 0xffffffff;
+            uVar3 = il2cpp_internal(DAT_181d97750);
+            FUN_18132faf0(uVar3,DAT_181da3bd8);
+            puVar4 = (uint64 *)(pStatics + 32);
+            *puVar4 = uVar3;
+            il2cpp_internal(puVar4,uVar3);
+            *(uint8 *)(pStatics + 40) = 0;
             return;
           }
         }

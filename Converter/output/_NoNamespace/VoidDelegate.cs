@@ -1,13 +1,13 @@
 // ============================================================
 // Type  : VoidDelegate
-// Token : 0x20000E7
+// Token : 0x20000E8
 // ============================================================
 
 public class VoidDelegate
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600074E
-    // RVA   : 0x210320   Offset: 0x20EB20   Length: 0x6A
+    // Token : 0x6000766
+    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
@@ -25,8 +25,8 @@ public class VoidDelegate
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x600074F
-    // RVA   : 0xB07940   Offset: 0xB06140   Length: 0x26A
+    // Token : 0x6000767
+    // RVA   : 0x8E6F30   Offset: 0x8E6330   Length: 0x26A
     public virtual void Invoke(GameObject go)
     {
         long lVar1;
@@ -62,7 +62,7 @@ public class VoidDelegate
             if (*(char *)(lVar1 + 74) == true) {
               if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                   ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-              goto LAB_180b07b6e;
+              goto LAB_1808e715e;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
                 cVar4 = FUN_1800d65c0(lVar1);
@@ -94,7 +94,7 @@ public class VoidDelegate
             }
             else {
               if ((*(short *)(lVar1 + 72) == -1) || (*(int64 *)(this + 24) == 0))
-              goto LAB_180b079d8;
+              goto LAB_1808e6fc8;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
                 cVar4 = FUN_1800d65c0(lVar1);
@@ -125,11 +125,11 @@ public class VoidDelegate
             }
           }
           else if (*(char *)(lVar1 + 74) == true) {
-        LAB_180b079d8:
+        LAB_1808e6fc8:
             (*pcVar2)(go,lVar1);
           }
           else {
-        LAB_180b07b6e:
+        LAB_1808e715e:
             (*pcVar2)(plVar3,go,lVar1);
           }
           uVar9 = uVar9 + 1;
@@ -139,8 +139,8 @@ public class VoidDelegate
         } while( true );
     }
 
-    // Token : 0x6000750
-    // RVA   : 0x216660   Offset: 0x214E60   Length: 0x21
+    // Token : 0x6000768
+    // RVA   : 0x216660   Offset: 0x215A60   Length: 0x21
     public virtual IAsyncResult BeginInvoke(GameObject go, AsyncCallback callback, object object)
     {
         ulong local_18;
@@ -150,8 +150,8 @@ public class VoidDelegate
         il2cpp_internal(this,&local_18);
     }
 
-    // Token : 0x6000751
-    // RVA   : 0x210040   Offset: 0x20E840   Length: 0xA
+    // Token : 0x6000769
+    // RVA   : 0x210040   Offset: 0x20F440   Length: 0xA
     public virtual void EndInvoke(IAsyncResult result)
     {
         il2cpp_internal(result,0);

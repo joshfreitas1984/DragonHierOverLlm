@@ -1,18 +1,18 @@
 // ============================================================
 // Type  : Coordinates
-// Token : 0x20000D5
+// Token : 0x20000D6
 // ============================================================
 
 public class Coordinates
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000510
+    // Token: 0x400052C
     public int value__;
 
-    // Token: 0x4000511
+    // Token: 0x400052D
     public const Coordinates Pixels;
 
-    // Token: 0x4000512
+    // Token: 0x400052E
     public const Coordinates TexCoords;
 
 }

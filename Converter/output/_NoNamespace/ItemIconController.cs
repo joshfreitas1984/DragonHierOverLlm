@@ -1,792 +1,306 @@
 // ============================================================
 // Type  : ItemIconController
-// Token : 0x20002E9
+// Token : 0x20002EF
 // ============================================================
 
 public class ItemIconController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400176B
+    // Token: 0x4001823
     public int itemListID;
 
-    // Token: 0x400176C
+    // Token: 0x4001824
     public ItemData itemData;
 
-    // Token: 0x400176D
+    // Token: 0x4001825
     public ItemIconType itemIconType;
 
-    // Token: 0x400176E
+    // Token: 0x4001826
     public TradeIconType tradeIconType;
 
-    // Token: 0x400176F
+    // Token: 0x4001827
     private float updateTime;
 
-    // Token: 0x4001770
+    // Token: 0x4001828
     private static Color PriceColor;
 
-    // Token: 0x4001771
+    // Token: 0x4001829
     private static Color ContributionColor;
 
-    // Token: 0x4001772
+    // Token: 0x400182A
     private static Color BookContributionColor;
 
-    // Token: 0x4001773
+    // Token: 0x400182B
     private static Color GovernContributionColor;
 
-    // Token: 0x4001774
+    // Token: 0x400182C
     public bool inited;
 
-    // Token: 0x4001775
+    // Token: 0x400182D
     public bool hideItemName;
 
-    // Token: 0x4001776
+    // Token: 0x400182E
     public bool hideItemBox;
 
-    // Token: 0x4001777
+    // Token: 0x400182F
     public bool needRefreshPriceIcon;
 
-    // Token: 0x4001778
+    // Token: 0x4001830
     public string fromStorage;
 
+    // Token: 0x4001831
+    private bool refsCached;
+
+    // Token: 0x4001832
+    private Transform tName;
+
+    // Token: 0x4001833
+    private Transform tBack;
+
+    // Token: 0x4001834
+    private Transform tItemLv;
+
+    // Token: 0x4001835
+    private Transform tCover;
+
+    // Token: 0x4001836
+    private Transform tRareLv;
+
+    // Token: 0x4001837
+    private Transform tIcon;
+
+    // Token: 0x4001838
+    private Transform tFromStorage;
+
+    // Token: 0x4001839
+    private Transform tForce;
+
+    // Token: 0x400183A
+    private Transform tBookType;
+
+    // Token: 0x400183B
+    private Transform tNew;
+
+    // Token: 0x400183C
+    private Transform tEquiped;
+
+    // Token: 0x400183D
+    private Transform tPrice;
+
+    // Token: 0x400183E
+    private Transform tPriceIcon;
+
+    // Token: 0x400183F
+    private Text nameText;
+
+    // Token: 0x4001840
+    private Text priceText;
+
+    // Token: 0x4001841
+    private Image backImage;
+
+    // Token: 0x4001842
+    private Image itemLvImage;
+
+    // Token: 0x4001843
+    private Image coverImage;
+
+    // Token: 0x4001844
+    private Image rareLvImage;
+
+    // Token: 0x4001845
+    private Image iconImage;
+
+    // Token: 0x4001846
+    private Image fromStorageImage;
+
+    // Token: 0x4001847
+    private Image forceImage;
+
+    // Token: 0x4001848
+    private Image bookTypeImage;
+
+    // Token: 0x4001849
+    private Image priceIconImage;
+
+    // Token: 0x400184A
+    private SimpleDetailText fromStorageDetail;
+
+    // Token: 0x400184B
+    private GameObject priceParentGameObject;
+
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001836
-    // RVA   : 0xB78B20   Offset: 0xB77320   Length: 0x2578
-    private void Update()
+    // Token : 0x600187B
+    // RVA   : 0xCA0A70   Offset: 0xC9FE70   Length: 0x7
+    private void Awake()
     {
-        var pItemIconController = *(int64*)(ItemIconController_StaticsPtr + 184);
-        var pPlotController = *(int64*)(PlotController_StaticsPtr + 184);
-        var pStatics = *(int64*)(DAT_181d86270 + 184);
-        ulong uVar1;
-        uint uVar2;
-        bool cVar3;
-        byte uVar4;
-        int iVar5;
-        long lVar6;
-        ulong uVar7;
-        ulong uVar10;
-        long lVar11;
-        long lVar12;
-        long lVar13;
-        ulong uVar16;
-        float fVar17;
-        float fVar18;
-        uint uVar19;
-        uint uVar20;
-        uint uVar21;
-        uint uVar22;
-        uint[] local_res8 = new uint[2];
-        uint[] local_res18 = new uint[2];
-        ulong local_88;
-        uint local_80;
-        byte[] local_78 = new byte[16];
-        ulong local_68;
-        ulong uStack_60;
-        if (!this.inited) {
-          this.inited = 1;
-          lVar6 = Component.get_transform(this,0);
-          if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Name",0)) == null)
-          throw; // [null/range check failed]
-          uVar7 = Component.GetComponent(lVar6,DAT_181d6d8c0);
-          uVar10 = "";
-          if (!this.hideItemName) {
-            if (this.itemData == null) throw; // [null/range check failed]
-            uVar10 = ItemData.Name(this.itemData,0,0);
-          }
-          LTLocalization.SetText(uVar7,uVar10,0);
-          if (!this.hideItemBox) {
-            lVar6 = Component.get_transform(this,0);
-            if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Back",0)) == null)
-            throw; // [null/range check failed]
-            plVar8 = (int64 *)Component.GetComponent(lVar6,DAT_181d6bc40);
-            puVar9 = (uint64 *)FUN_181098a50(&local_68,0);
-            if (plVar8 == (int64 *)0) throw; // [null/range check failed]
-            local_68 = *puVar9;
-            uStack_60 = puVar9[1];
-            (**(code **)(*plVar8 + 0x2a8))(plVar8,&local_68,*(uint64 *)(*plVar8 + 0x2b0));
-            lVar6 = Component.get_transform(this,0);
-            if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"ItemLv",0)) == null)
-            throw; // [null/range check failed]
-            plVar8 = (int64 *)Component.GetComponent(lVar6,DAT_181d6bc40);
-            if (PlotController._instance == 2) {
-              if (this.itemData == null) throw; // [null/range check failed]
-              if (this.itemData.itemLv != 5) goto LAB_180b78f2f;
-              local_68 = 0;
-              uStack_60 = 0;
-              Color.ctor(&local_68,0x3f800000,0x3ed2d2d3,0x3f34b4b5,0);
-              uVar19 = (uint32)local_68;
-              uVar20 = local_68._4_4_;
-              uVar21 = (uint32)uStack_60;
-              uVar22 = uStack_60._4_4_;
-            }
-            else {
-        LAB_180b78f2f:
-              lVar6 = FUN_18046c100(0);
-              if (((lVar6 == null) || (this.itemData == null)) ||
-                 (lVar6 = lVar6.value) == null) throw; // [null/range check failed]
-              uVar2 = this.itemData.itemLv;
-              if (lVar6.subType <= uVar2) {
-                ThrowHelper.ThrowArgumentOutOfRangeException(0);
-              }
-              lVar6 = lVar6.itemID[uVar2];
-              if (lVar6 == null) throw; // [null/range check failed]
-              uVar19 = lVar6.subType;
-              uVar20 = *(uint32 *)(lVar6 + 28);
-              uVar21 = lVar6.name;
-              uVar22 = *(uint32 *)(lVar6 + 36);
-            }
-            local_68 = CONCAT44(uVar20,uVar19);
-            uStack_60 = CONCAT44(uVar22,uVar21);
-            puVar9 = (uint64 *)GlobalData.SetColorAlpha(local_78,&local_68,0x3f666666,0);
-            if (plVar8 == (int64 *)0) throw; // [null/range check failed]
-            local_68 = *puVar9;
-            uStack_60 = puVar9[1];
-            (**(code **)(*plVar8 + 0x2a8))(plVar8,&local_68,*(uint64 *)(*plVar8 + 0x2b0));
-            lVar6 = Component.get_transform(this,0);
-            if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Cover",0)) == null)
-            throw; // [null/range check failed]
-            plVar8 = (int64 *)Component.GetComponent(lVar6,DAT_181d6bc40);
-            puVar9 = (uint64 *)FUN_181098a50(&local_68,0);
-          }
-          else {
-            lVar6 = Component.get_transform(this,0);
-            if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Back",0)) == null)
-            throw; // [null/range check failed]
-            plVar8 = (int64 *)Component.GetComponent(lVar6,DAT_181d6bc40);
-            puVar9 = (uint64 *)FUN_180d904c0(&local_68,0);
-            if (plVar8 == (int64 *)0) throw; // [null/range check failed]
-            local_68 = *puVar9;
-            uStack_60 = puVar9[1];
-            (**(code **)(*plVar8 + 0x2a8))(plVar8,&local_68,*(uint64 *)(*plVar8 + 0x2b0));
-            lVar6 = Component.get_transform(this,0);
-            if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"ItemLv",0)) == null)
-            throw; // [null/range check failed]
-            plVar8 = (int64 *)Component.GetComponent(lVar6,DAT_181d6bc40);
-            puVar9 = (uint64 *)FUN_180d904c0(&local_68,0);
-            if (plVar8 == (int64 *)0) throw; // [null/range check failed]
-            local_68 = *puVar9;
-            uStack_60 = puVar9[1];
-            (**(code **)(*plVar8 + 0x2a8))(plVar8,&local_68,*(uint64 *)(*plVar8 + 0x2b0));
-            lVar6 = Component.get_transform(this,0);
-            if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Cover",0)) == null)
-            throw; // [null/range check failed]
-            plVar8 = (int64 *)Component.GetComponent(lVar6,DAT_181d6bc40);
-            puVar9 = (uint64 *)FUN_180d904c0(&local_68,0);
-          }
-          if (plVar8 == (int64 *)0) throw; // [null/range check failed]
-          local_68 = *puVar9;
-          uStack_60 = puVar9[1];
-          (**(code **)(*plVar8 + 0x2a8))(plVar8,&local_68,*(uint64 *)(*plVar8 + 0x2b0));
-          lVar6 = Component.get_transform(this,0);
-          if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"RareLv",0)) == null)
-          throw; // [null/range check failed]
-          lVar6 = Component.GetComponent(lVar6,DAT_181d6bc40);
-          lVar11 = *pStatics;
-          if (this.itemData == null) throw; // [null/range check failed]
-          uVar10 = Int32.ToString(this.itemData + 64,0);
-          uVar10 = String.Concat("RareLv",uVar10,0);
-          if ((lVar11 == null) ||
-             (uVar10 = TextureController.LoadAtlasSprite(lVar11,"IconAtlas",uVar10,0), lVar6 == null))
-          throw; // [null/range check failed]
-          Image.set_sprite(lVar6,uVar10,0);
-          lVar6 = Component.get_transform(this,0);
-          if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"RareLv",0)) == null)
-          throw; // [null/range check failed]
-          plVar8 = (int64 *)Component.GetComponent(lVar6,DAT_181d6bc40);
-          lVar6 = this.itemData;
-          if (lVar6 == null) throw; // [null/range check failed]
-          if (lVar6.type == 4) {
-            if (lVar6.treasureData == null) throw; // [null/range check failed]
-            if (*(char *)(lVar6.treasureData + 16) == false)
-            {
-              puVar9 = (uint64 *)FUN_180d904c0(&local_68,0);
-              }
-              else {
-            }
-            puVar9 = (uint64 *)FUN_181098a50(&local_68,0);
-          }
-          if (plVar8 == (int64 *)0) throw; // [null/range check failed]
-          local_68 = *puVar9;
-          uStack_60 = puVar9[1];
-          (**(code **)(*plVar8 + 0x2a8))(plVar8,&local_68,*(uint64 *)(*plVar8 + 0x2b0));
-          lVar6 = Component.get_transform(this,0);
-          if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Icon",0)) == null)
-          throw; // [null/range check failed]
-          lVar6 = Component.GetComponent(lVar6,DAT_181d6bc40);
-          lVar11 = *pStatics;
-          if (((this.itemData == null) ||
-              (uVar10 = ItemData.GetItemIconName(this.itemData,0), lVar11 == null)) ||
-             (uVar10 = TextureController.LoadAtlasSprite(lVar11,"IconAtlas",uVar10,0), lVar6 == null))
-          throw; // [null/range check failed]
-          Image.set_sprite(lVar6,uVar10,0);
-          cVar3 = FUN_180d6ca90(this.fromStorage,0);
-          if (!cVar3) {
-            lVar6 = Component.get_transform(this,0);
-            if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"FromStorage",0)) == null) ||
-               (lVar6 = Component.get_gameObject(lVar6,0)) == null) throw; // [null/range check failed]
-            GameObject.SetActive(lVar6,1,0);
-            lVar6 = Component.get_transform(this,0);
-            if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"FromStorage",0)) == null)
-            throw; // [null/range check failed]
-            lVar6 = Component.GetComponent(lVar6,DAT_181d6ccc0);
-            if (lVar6 == null) throw; // [null/range check failed]
-            lVar6.subType = this.fromStorage;
-            if (this.fromStorage == null) throw; // [null/range check failed]
-            cVar3 = String.Contains(this.fromStorage,"藏经阁",0);
-            if (cVar3) {
-              lVar6 = Component.get_transform(this,0);
-              if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"FromStorage",0)) == null)
-              throw; // [null/range check failed]
-              lVar6 = Component.GetComponent(lVar6,DAT_181d6bc40);
-              if ((*pStatics == 0) ||
-                 (uVar10 = TextureController.LoadAtlasSprite
-                                     (*pStatics,"UIAtlas","buildingicon_1",0)
-                 , lVar6 == null)) throw; // [null/range check failed]
-              Image.set_sprite(lVar6,uVar10,0);
-            }
-          }
-          lVar6 = this.itemData;
-          if (lVar6 == null) throw; // [null/range check failed]
-          if (lVar6.type == 3) {
-            if ((lVar6.bookData == null) ||
-               (lVar6 = BookData.DataBase(lVar6.bookData,0)) == null)
-            throw; // [null/range check failed]
-            if ((lVar6.subType < 0) || (this.hideItemBox)) {
-              lVar6 = Component.get_transform(this,0);
-              if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Force",0)) == null) ||
-                 (lVar6 = Component.get_gameObject(lVar6,0)) == null) throw; // [null/range check failed]
-              cVar3 = GameObject.get_activeSelf(lVar6,0);
-              if (cVar3) {
-                lVar6 = Component.get_transform(this,0);
-                if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Force",0)) == null) ||
-                   (lVar6 = Component.get_gameObject(lVar6,0)) == null) throw; // [null/range check failed]
-                GameObject.SetActive(lVar6,0,0);
-              }
-            }
-            else {
-              lVar6 = Component.get_transform(this,0);
-              if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Force",0)) == null) ||
-                 (lVar6 = Component.get_gameObject(lVar6,0)) == null) throw; // [null/range check failed]
-              cVar3 = GameObject.get_activeSelf(lVar6,0);
-              if (!cVar3) {
-                lVar6 = Component.get_transform(this,0);
-                if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Force",0)) == null) ||
-                   (lVar6 = Component.get_gameObject(lVar6,0)) == null) throw; // [null/range check failed]
-                GameObject.SetActive(lVar6,1,0);
-              }
-              lVar6 = Component.get_transform(this,0);
-              if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Force",0)) == null)
-              throw; // [null/range check failed]
-              lVar6 = Component.GetComponent(lVar6,DAT_181d6bc40);
-              lVar11 = FUN_18046c6c0(0);
-              if ((this.itemData == null) ||
-                 ((lVar12 = this.itemData.bookData, lVar12 == null ||
-                  (lVar12 = BookData.DataBase(lVar12,0)) == null))) throw; // [null/range check failed]
-              uVar19 = *(uint32 *)(lVar12 + 24);
-              uVar10 = GlobalData.GetForceIconName(uVar19,0);
-              if ((lVar11 == null) ||
-                 (uVar10 = TextureController.LoadAtlasSprite(lVar11,"UIAtlas",uVar10,0), lVar6 == null))
-              throw; // [null/range check failed]
-              Image.set_sprite(lVar6,uVar10,0);
-            }
-            lVar6 = Component.get_transform(this,0);
-            if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"BookType",0)) == null) ||
-               (lVar6 = Component.get_gameObject(lVar6,0)) == null) {
-        LAB_180b7b08d:
-                          // WARNING: Subroutine does not return
-              FUN_1800d6620();
-            }
-            GameObject.SetActive(lVar6,1,0);
-            lVar6 = FUN_18046c100(0);
-            if (lVar6 == null) goto LAB_180b7b08d;
-            lVar6 = GameDataController.FindBookTypeIconDataBase(lVar6,this.itemData,0);
-            lVar11 = Component.get_transform(this,0);
-            if ((lVar11 == null) || (lVar11 = Transform.Find(lVar11,"BookType",0)) == null)
-            goto LAB_180b7b08d;
-            lVar11 = Component.GetComponent(lVar11,DAT_181d6bc40);
-            lVar12 = *pStatics;
-            if (((this.itemData == null) ||
-                (lVar13 = this.itemData.bookData) == null) ||
-               (lVar13 = BookData.DataBase(lVar13,0)) == null) goto LAB_180b7b08d;
-            local_res18[0] = *(uint32 *)(lVar13 + 48);
-            uVar7 = il2cpp_value_box(DAT_181d5b2f8,local_res18);
-            uVar10 = "IconAtlas";
-            if (lVar6 == null) goto LAB_180b7b08d;
-            uVar16 = "d";
-            if (!lVar6.name) {
-              uVar16 = "";
-            }
-            uVar7 = String.Format("BookType_{0}{1}",uVar7,uVar16,0);
-            if ((lVar12 == null) ||
-               (uVar10 = TextureController.LoadAtlasSprite(lVar12,uVar10,uVar7,0), lVar11 == null))
-            throw; // [null/range check failed]
-            Image.set_sprite(lVar11,uVar10,0);
-            if (!lVar6.name) {
-              lVar11 = Component.get_transform(this,0);
-              if (((lVar11 == null) || (lVar11 = Transform.Find(lVar11,"BookType",0)) == null) ||
-                 (plVar8 = (int64 *)Component.GetComponent(lVar11,DAT_181d6bc40),
-                 plVar8 == (int64 *)0)) throw; // [null/range check failed]
-              local_68 = *(uint64 *)(lVar6 + 36);
-              uStack_60 = *(uint64 *)(lVar6 + 44);
-              (**(code **)(*plVar8 + 0x2a8))(plVar8,&local_68,*(uint64 *)(*plVar8 + 0x2b0));
-            }
-            lVar11 = Component.get_transform(this,0);
-            if (lVar11 == null) throw; // [null/range check failed]
-            lVar11 = Transform.Find(lVar11,"BookType",0);
-            if (lVar11 == null) throw; // [null/range check failed]
-            local_80 = 0;
-            local_88 = lVar6.subType;
-            Transform.set_localPosition(lVar11,&local_88,0);
-          }
-        }
-        uVar10 = MouseController.hoveredUI;
-        uVar7 = Component.get_gameObject(this,0);
-        cVar3 = Object.op_Equality(uVar10,uVar7,0);
-        if (cVar3) {
-          if (this.itemData == null) throw; // [null/range check failed]
-          this.itemData.isNew = 0;
-        }
-        lVar6 = Component.get_transform(this,0);
-        if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"New",0)) == null) ||
-           (lVar6 = Component.get_gameObject(lVar6,0)) == null) throw; // [null/range check failed]
-        cVar3 = GameObject.get_activeSelf(lVar6,0);
-        if (this.itemData == null) throw; // [null/range check failed]
-        if (cVar3 != this.itemData.isNew) {
-          lVar6 = Component.get_transform(this,0);
-          if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"New",0)) == null)
-          throw; // [null/range check failed]
-          lVar6 = Component.get_gameObject(lVar6,0);
-          if ((this.itemData == null) || (lVar6 == null)) throw; // [null/range check failed]
-          GameObject.SetActive(lVar6,this.itemData.isNew,0);
-        }
-        fVar17 = this.updateTime;
-        if (0.0 < fVar17) {
-          fVar18 = (float)Time.get_deltaTime(0);
-          this.updateTime = fVar17 - fVar18;
+        void FUN_180ca0a70(uint64 this)
+        {
+        ItemIconController.CacheRefs(this,0);
+    }
+
+    // Token : 0x600187C
+    // RVA   : 0xCA1500   Offset: 0xCA0900   Length: 0x86F
+    private void CacheRefs()
+    {
+        bool cVar2;
+        long lVar3;
+        ulong uVar4;
+        if (this.refsCached) {
           return;
         }
-        this.updateTime = 0x3f000000;
-        lVar6 = Component.get_transform(this,0);
-        if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Equiped",0)) == null)
-        throw; // [null/range check failed]
-        lVar11 = Component.get_transform(lVar6,0);
-        lVar6 = this.itemData;
-        if (lVar6 == null) throw; // [null/range check failed]
-        if (lVar6.type == null) {
-          if (lVar6.equipmentData == null) throw; // [null/range check failed]
-          cVar3 = *(char *)(lVar6.equipmentData + 48);
-        LAB_180b79bef:
-          if ((!cVar3) || (this.itemIconType == 4)) goto LAB_180b79c04;
-          puVar14 = (uint64 *)Vector3.get_one(&local_88,0);
-        }
-        else {
-          if (lVar6.type == 6) {
-            if (lVar6.horseData == null) throw; // [null/range check failed]
-            cVar3 = *(char *)(lVar6.horseData + 16);
-            goto LAB_180b79bef;
-          }
-        LAB_180b79c04:
-          puVar14 = (uint64 *)Vector3.get_zero(&local_88,0);
-        }
-        if (lVar11 == null) throw; // [null/range check failed]
-        local_88 = *puVar14;
-        local_80 = (int)puVar14[1];
-        Transform.set_localScale(lVar11,&local_88,0);
-        if (this.itemIconType == 2) {
-          lVar6 = FUN_18046c700(0);
-          if (lVar6 == null) throw; // [null/range check failed]
-          if (lVar6.subType == null) {
-            lVar6 = Component.get_transform(this,0);
-            if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Price",0)) == null) ||
-               (lVar6 = Component.get_gameObject(lVar6,0)) == null) throw; // [null/range check failed]
-            cVar3 = GameObject.get_activeSelf(lVar6,0);
-            if (!cVar3) {
-              lVar6 = Component.get_transform(this,0);
-              if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Price",0)) == null) ||
-                 (lVar6 = Component.get_gameObject(lVar6,0)) == null) throw; // [null/range check failed]
-              GameObject.SetActive(lVar6,1,0);
-              this.needRefreshPriceIcon = 1;
-            }
-            if (this.needRefreshPriceIcon) {
-              this.needRefreshPriceIcon = 0;
-              lVar6 = Component.get_transform(this,0);
-              if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Price",0)) == null) ||
-                 (lVar6 = Transform.Find(lVar6,"PriceIcon",0)) == null) throw; // [null/range check failed]
-              lVar6 = Component.GetComponent(lVar6,DAT_181d6bc40);
-              lVar11 = FUN_18046c6c0(0);
-              if ((lVar11 == null) ||
-                 (uVar10 = TextureController.LoadAtlasSprite(lVar11,"UIAtlas","银钱",0),
-                 lVar6 == null)) throw; // [null/range check failed]
-              Image.set_sprite(lVar6,uVar10,0);
-            }
-            lVar6 = Component.get_transform(this,0);
-            if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Price",0)) == null)
-            throw; // [null/range check failed]
-            uVar10 = Component.GetComponent(lVar6,DAT_181d6d8c0);
-            plVar8 = (int64 *)il2cpp_value_box(DAT_181d880d8,this + 44);
-            if (plVar8 == (int64 *)0) throw; // [null/range check failed]
-            lVar6 = (**(code **)(*plVar8 + 0x168))(plVar8,*(uint64 *)(*plVar8 + 0x170));
-            puVar15 = (uint32 *)il2cpp_object_unbox(plVar8);
-            this.tradeIconType = *puVar15;
-            if (lVar6 == null) throw; // [null/range check failed]
-            uVar4 = String.Contains(lVar6,"Right",0);
-            local_res8[0] = ItemIconController.GetItemPrice(this,uVar4,0);
-            uVar7 = Int32.ToString(local_res8,0);
-            LTLocalization.SetText(uVar10,uVar7,0);
-            fVar17 = (float)ItemIconController.GetItemTreasureSpeRate(this,0);
-            if (fVar17 != 1.0) {
-              lVar6 = Component.get_transform(this,0);
-              if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Price",0)) == null)
-              throw; // [null/range check failed]
-              plVar8 = (int64 *)Component.GetComponent(lVar6,DAT_181d6d8c0);
-              fVar17 = (float)ItemIconController.GetItemTreasureSpeRate(this,0);
-              if (fVar17 <= 1.0) {
-                uVar10 = *(uint64 *)(pPlotController + 0x290);
-                uVar7 = *(uint64 *)(pPlotController + 0x298);
-              }
-              else {
-                uVar10 = *(uint64 *)(pPlotController + 0x2f8);
-                uVar7 = *(uint64 *)(pPlotController + 0x300);
-              }
-              if (plVar8 == (int64 *)0) throw; // [null/range check failed]
-              lVar6 = *plVar8;
-              local_68 = uVar10;
-              uStack_60 = uVar7;
-              goto LAB_180b7a038;
-            }
-            plVar8 = (int64 *)il2cpp_value_box(DAT_181d880d8,this + 44);
-            if (plVar8 == (int64 *)0) throw; // [null/range check failed]
-            lVar6 = (**(code **)(*plVar8 + 0x168))(plVar8,*(uint64 *)(*plVar8 + 0x170));
-            puVar15 = (uint32 *)il2cpp_object_unbox(plVar8);
-            this.tradeIconType = *puVar15;
-            if (lVar6 == null) throw; // [null/range check failed]
-            cVar3 = String.Contains(lVar6,"Right",0);
-            if (!cVar3) {
-        LAB_180b7a08b:
-              plVar8 = (int64 *)il2cpp_value_box(DAT_181d880d8,this + 44);
-              if (plVar8 == (int64 *)0) throw; // [null/range check failed]
-              lVar6 = (**(code **)(*plVar8 + 0x168))(plVar8,*(uint64 *)(*plVar8 + 0x170));
-              puVar15 = (uint32 *)il2cpp_object_unbox(plVar8);
-              this.tradeIconType = *puVar15;
-              if (lVar6 == null) throw; // [null/range check failed]
-              cVar3 = String.Contains(lVar6,"Right",0);
-              if (!cVar3) {
-                lVar6 = FUN_18046c700(0);
-                if (lVar6 == null) throw; // [null/range check failed]
-                if (*(float *)(lVar6 + 176) != 1.0) {
-                  lVar6 = Component.get_transform(this,0);
-                  if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Price",0)) == null)
-                  throw; // [null/range check failed]
-                  plVar8 = (int64 *)Component.GetComponent(lVar6,DAT_181d6d8c0);
-                  lVar6 = FUN_18046c700(0);
-                  if (lVar6 == null) throw; // [null/range check failed]
-                  fVar17 = *(float *)(lVar6 + 176);
-                  goto LAB_180b79fb8;
-                }
-              }
-              lVar6 = Component.get_transform(this,0);
-              if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Price",0)) == null)
-              throw; // [null/range check failed]
-              plVar8 = (int64 *)Component.GetComponent(lVar6,DAT_181d6d8c0);
-              if (plVar8 == (int64 *)0) throw; // [null/range check failed]
-              uVar10 = ItemIconController.PriceColor;
-              uVar7 = (*(uint64 **)(ItemIconController_StaticsPtr + 184))[1];
-            }
-            else {
-              lVar6 = FUN_18046c700(0);
-              if (lVar6 == null) throw; // [null/range check failed]
-              if (*(float *)(lVar6 + 180) == 1.0) goto LAB_180b7a08b;
-              lVar6 = Component.get_transform(this,0);
-              if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Price",0)) == null)
-              throw; // [null/range check failed]
-              plVar8 = (int64 *)Component.GetComponent(lVar6,DAT_181d6d8c0);
-              lVar6 = FUN_18046c700(0);
-              if (lVar6 == null) throw; // [null/range check failed]
-              fVar17 = *(float *)(lVar6 + 180);
-        LAB_180b79fb8:
-              if (fVar17 <= 1.0) {
-                uVar10 = *(uint64 *)(pPlotController + 0x290);
-                uVar7 = *(uint64 *)(pPlotController + 0x298);
-              }
-              else {
-                uVar10 = *(uint64 *)(pPlotController + 0x2f8);
-                uVar7 = *(uint64 *)(pPlotController + 0x300);
-              }
-              if (plVar8 == (int64 *)0) throw; // [null/range check failed]
-            }
-            uStack_60 = uVar7;
-            local_68 = uVar10;
-            lVar6 = *plVar8;
-        LAB_180b7a038:
-            (**(code **)(lVar6 + 0x2a8))(plVar8,&local_68,*(uint64 *)(lVar6 + 0x2b0));
-            return;
-          }
-          if (this.itemIconType == 2) {
-            plVar8 = (int64 *)il2cpp_value_box(DAT_181d880d8,this + 44);
-            if (plVar8 == (int64 *)0) throw; // [null/range check failed]
-            lVar6 = (**(code **)(*plVar8 + 0x168))(plVar8,*(uint64 *)(*plVar8 + 0x170));
-            puVar15 = (uint32 *)il2cpp_object_unbox(plVar8);
-            this.tradeIconType = *puVar15;
-            if (lVar6 == null) throw; // [null/range check failed]
-            cVar3 = String.Contains(lVar6,"Right",0);
-            if (cVar3) {
-              lVar6 = FUN_18046c700(0);
-              if (lVar6 == null) throw; // [null/range check failed]
-              if (lVar6.subType == 2) {
-                lVar6 = Component.get_transform(this,0);
-                if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Price",0)) == null) ||
-                   (lVar6 = Component.get_gameObject(lVar6,0)) == null) throw; // [null/range check failed]
-                cVar3 = GameObject.get_activeSelf(lVar6,0);
-                if (!cVar3) {
-                  lVar6 = Component.get_transform(this,0);
-                  if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Price",0)) == null) ||
-                     (lVar6 = Component.get_gameObject(lVar6,0)) == null) throw; // [null/range check failed]
-                  GameObject.SetActive(lVar6,1,0);
-                  this.needRefreshPriceIcon = 1;
-                }
-                if (this.needRefreshPriceIcon) {
-                  this.needRefreshPriceIcon = 0;
-                  lVar6 = Component.get_transform(this,0);
-                  if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Price",0)) == null) ||
-                     (lVar6 = Transform.Find(lVar6,"PriceIcon",0)) == null) throw; // [null/range check failed]
-                  lVar6 = Component.GetComponent(lVar6,DAT_181d6bc40);
-                  lVar11 = FUN_18046c6c0(0);
-                  if ((lVar11 == null) ||
-                     (uVar10 = TextureController.LoadAtlasSprite(lVar11,"UIAtlas","功绩",0),
-                     lVar6 == null)) throw; // [null/range check failed]
-                  Image.set_sprite(lVar6,uVar10,0);
-                }
-                lVar6 = Component.get_transform(this,0);
-                if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Price",0)) == null)
-                throw; // [null/range check failed]
-                plVar8 = (int64 *)Component.GetComponent(lVar6,DAT_181d6d8c0);
-                if (plVar8 == (int64 *)0) throw; // [null/range check failed]
-                local_68 = ItemIconController.ContributionColor;
-                uStack_60 = *(uint64 *)(pItemIconController + 24);
-                (**(code **)(*plVar8 + 0x2a8))(plVar8,&local_68,*(uint64 *)(*plVar8 + 0x2b0));
-                lVar6 = Component.get_transform(this,0);
-                if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Price",0)) == null)
-                throw; // [null/range check failed]
-                uVar10 = Component.GetComponent(lVar6,DAT_181d6d8c0);
-                lVar6 = this.itemData;
-                if (lVar6 == null) throw; // [null/range check failed]
-                if (((GameController._instance == null) ||
-                    (lVar11 = GameController._instance.worldData,
-                    lVar11 == null)) || (lVar11 = WorldData.GetHero(lVar11,0,0)) == null)
-                throw; // [null/range check failed]
-                local_res8[0] = 0;
-                if (!lVar11.hour) {
-                  local_res8[0] = Mathf.RoundToInt((float)lVar6.value * 0.1,0);
-                }
-                goto LAB_180b7a6ac;
-              }
-            }
-            if (this.itemIconType == 2) {
-              plVar8 = (int64 *)il2cpp_value_box(DAT_181d880d8,this + 44);
-              if (plVar8 == (int64 *)0) throw; // [null/range check failed]
-              lVar6 = (**(code **)(*plVar8 + 0x168))(plVar8,*(uint64 *)(*plVar8 + 0x170));
-              puVar15 = (uint32 *)il2cpp_object_unbox(plVar8);
-              this.tradeIconType = *puVar15;
-              if (lVar6 == null) throw; // [null/range check failed]
-              cVar3 = String.Contains(lVar6,"Right",0);
-              if (cVar3) {
-                lVar6 = FUN_18046c700(0);
-                if (lVar6 == null) throw; // [null/range check failed]
-                if (lVar6.subType == 4) {
-                  lVar6 = Component.get_transform(this,0);
-                  if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Price",0)) == null) ||
-                     (lVar6 = Component.get_gameObject(lVar6,0)) == null) throw; // [null/range check failed]
-                  cVar3 = GameObject.get_activeSelf(lVar6,0);
-                  if (!cVar3) {
-                    lVar6 = Component.get_transform(this,0);
-                    if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Price",0)) == null) ||
-                       (lVar6 = Component.get_gameObject(lVar6,0)) == null) throw; // [null/range check failed]
-                    GameObject.SetActive(lVar6,1,0);
-                    this.needRefreshPriceIcon = 1;
-                  }
-                  if (this.needRefreshPriceIcon) {
-                    this.needRefreshPriceIcon = 0;
-                    lVar6 = Component.get_transform(this,0);
-                    if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Price",0)) == null) ||
-                       (lVar6 = Transform.Find(lVar6,"PriceIcon",0)) == null) throw; // [null/range check failed]
-                    lVar6 = Component.GetComponent(lVar6,DAT_181d6bc40);
-                    lVar11 = FUN_18046c6c0(0);
-                    if ((lVar11 == null) ||
-                       (uVar10 = TextureController.LoadAtlasSprite(lVar11,"UIAtlas","官府功绩",0),
-                       lVar6 == null)) throw; // [null/range check failed]
-                    Image.set_sprite(lVar6,uVar10,0);
-                  }
-                  lVar6 = Component.get_transform(this,0);
-                  if ((lVar6 != null) && (lVar6 = Transform.Find(lVar6,"Price",0)) != null) {
-                    plVar8 = (int64 *)Component.GetComponent(lVar6,DAT_181d6d8c0);
-                    if (plVar8 != (int64 *)0) {
-                      local_68 = *(uint64 *)
-                                  (pItemIconController + 48);
-                      uStack_60 = *(uint64 *)
-                                   (pItemIconController + 56);
-                      (**(code **)(*plVar8 + 0x2a8))(plVar8,&local_68,*(uint64 *)(*plVar8 + 0x2b0));
-                      lVar6 = Component.get_transform(this,0);
-                      if ((lVar6 != null) && (lVar6 = Transform.Find(lVar6,"Price",0)) != null) {
-                        uVar10 = Component.GetComponent(lVar6,DAT_181d6d8c0);
-                        if (this.itemData != null) {
-                          local_res8[0] =
-                               Mathf.RoundToInt((float)this.itemData.value *
-                                                 0.1,0);
-        LAB_180b7a6ac:
-                          uVar7 = Int32.ToString(local_res8,0);
-                          LTLocalization.SetText(uVar10,uVar7,0);
-                          return;
-                        }
-                      }
-                    }
-                  }
-                  throw; // [null/range check failed]
-                }
-              }
-            }
-          }
-        }
-        if (this.itemIconType != 5) {
-          lVar6 = Component.get_transform(this,0);
-          if (((lVar6 != null) && (lVar6 = Transform.Find(lVar6,"Price",0)) != null) &&
-             (lVar6 = Component.get_gameObject(lVar6,0)) != null) {
-            cVar3 = GameObject.get_activeSelf(lVar6,0);
-            if (!cVar3) {
-              return;
-            }
-            lVar6 = Component.get_transform(this,0);
-            if (((lVar6 != null) && (lVar6 = Transform.Find(lVar6,"Price",0)) != null) &&
-               (lVar6 = Component.get_gameObject(lVar6,0)) != null) {
-              GameObject.SetActive(lVar6,0,0);
-              return;
-            }
-          }
-          goto LAB_180b7b093;
-        }
-        lVar6 = Component.get_transform(this,0);
-        if (((lVar6 != null) && (lVar6 = Transform.Find(lVar6,"Price",0)) != null) &&
-           (lVar6 = Component.get_gameObject(lVar6,0)) != null) {
-          cVar3 = GameObject.get_activeSelf(lVar6,0);
-          if (cVar3) {
-            lVar6 = Component.get_transform(this,0);
-            if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Price",0)) == null) ||
-               (lVar6 = Component.get_gameObject(lVar6,0)) == null) throw; // [null/range check failed]
-            GameObject.SetActive(lVar6,0,0);
-          }
-          lVar6 = Component.get_transform(this,0);
-          if (((lVar6 != null) && (lVar6 = FUN_180da0f00(lVar6,0)) != null) &&
-             (lVar6 = FUN_180da0f00(lVar6,0)) != null) {
-            uVar10 = Transform.Find(lVar6,"PriceBack",0);
-            cVar3 = Object.op_Inequality(uVar10,0,0);
-            if (!cVar3) {
-              return;
-            }
-            lVar6 = Component.get_transform(this,0);
-            if (((((lVar6 != null) && (lVar6 = FUN_180da0f00(lVar6,0)) != null) &&
-                 (lVar6 = FUN_180da0f00(lVar6,0)) != null) &&
-                ((lVar6 = Transform.Find(lVar6,"PriceBack",0), lVar6 != null &&
-                 (lVar6 = Transform.Find(lVar6,"Price",0)) != null))) &&
-               (lVar11 = Component.get_gameObject(lVar6,0)) != null) {
-              cVar3 = GameObject.get_activeSelf(lVar11,0);
-              if (!cVar3) {
-                lVar11 = Component.get_gameObject(lVar6,0);
-                if (lVar11 == null) throw; // [null/range check failed]
-                GameObject.SetActive(lVar11,1,0);
-                lVar11 = Transform.Find(lVar6,"PriceIcon",0);
-                if (lVar11 == null) throw; // [null/range check failed]
-                lVar11 = Component.GetComponent(lVar11,DAT_181d6bc40);
-                lVar12 = FUN_18046c6c0(0);
-                if ((lVar12 == null) ||
-                   (uVar10 = TextureController.LoadAtlasSprite(lVar12,"UIAtlas","功绩",0),
-                   lVar11 == null)) throw; // [null/range check failed]
-                Image.set_sprite(lVar11,uVar10,0);
-              }
-              lVar11 = FUN_18046c0a0(0);
-              if ((lVar11 != null) && (lVar11.villageAreaID != null)) {
-                lVar11 = WorldData.Player(lVar11.villageAreaID,0);
-                if ((this.itemData != null) &&
-                   ((lVar12 = this.itemData.bookData, lVar12 != null &&
-                    (lVar11 != null)))) {
-                  lVar11 = HeroData.FindSkill(lVar11,*(uint32 *)(lVar12 + 16),0);
-                  if (lVar11 != null) {
-                    plVar8 = (int64 *)Component.GetComponent(lVar6);
-                    puVar9 = (uint64 *)FUN_180d904c0(&local_68,0);
-                    if (plVar8 != (int64 *)0) {
-                      local_68 = *puVar9;
-                      uStack_60 = puVar9[1];
-                      (**(code **)(*plVar8 + 0x2a8))(plVar8,&local_68,*(uint64 *)(*plVar8 + 0x2b0));
-                      lVar11 = Transform.Find(lVar6,"PriceIcon",0);
-                      if ((((lVar11 != null) &&
-                           (lVar11 = Component.GetComponent(lVar11,DAT_181d6bc40)) != null) &&
-                          (lVar11.plotHappened != null)) &&
-                         (lVar11 = Object.get_name(lVar11.plotHappened,0)) != null) {
-                        cVar3 = String.Contains(lVar11,"出战_出战",0);
-                        if (cVar3) {
-                          return;
-                        }
-                        lVar11 = Transform.Find(lVar6,"PriceIcon",0);
-                        if (lVar11 != null) {
-                          lVar11 = Component.GetComponent(lVar11,DAT_181d6bc40);
-                          lVar12 = FUN_18046c6c0(0);
-                          if ((lVar12 != null) &&
-                             (uVar10 = TextureController.LoadAtlasSprite
-                                                 (lVar12,"UIAtlas","出战_出战",0), lVar11 != null)) {
-                            Image.set_sprite(lVar11,uVar10,0);
-                            puVar14 = (uint64 *)Transform.get_localPosition(&local_88,lVar6,0);
-                            uVar1 = *puVar14;
-                            lVar11 = Transform.get_localPosition(local_78,lVar6,0);
-                            local_80 = *(uint32 *)(lVar11 + 8);
-                            local_88 = uVar1 & 0xffffffff00000000;
-                            Transform.set_localPosition(lVar6,&local_88,0);
-                            lVar6 = Transform.Find(lVar6,"PriceIcon",0);
-                            puVar14 = (uint64 *)Vector3.get_zero(&local_68,0);
-                            if (lVar6 != null) {
-                              local_80 = (uint32)puVar14[1];
-                              local_88 = *puVar14;
-                              Transform.set_localPosition(lVar6,&local_88,0);
-                              return;
+        this.refsCached = 1;
+        lVar3 = Component.get_transform(this,0);
+        if (lVar3 != null) {
+          uVar4 = Transform.Find(lVar3,"Name",0);
+          this.tName = uVar4;
+          lVar3 = Component.get_transform(this,0);
+          if (lVar3 != null) {
+            uVar4 = Transform.Find(lVar3,"Back",0);
+            this.tBack = uVar4;
+            lVar3 = Component.get_transform(this,0);
+            if (lVar3 != null) {
+              uVar4 = Transform.Find(lVar3,"ItemLv",0);
+              this.tItemLv = uVar4;
+              lVar3 = Component.get_transform(this,0);
+              if (lVar3 != null) {
+                uVar4 = Transform.Find(lVar3,"Cover",0);
+                this.tCover = uVar4;
+                lVar3 = Component.get_transform(this,0);
+                if (lVar3 != null) {
+                  uVar4 = Transform.Find(lVar3,"RareLv",0);
+                  this.tRareLv = uVar4;
+                  lVar3 = Component.get_transform(this,0);
+                  if (lVar3 != null) {
+                    uVar4 = Transform.Find(lVar3,"Icon",0);
+                    this.tIcon = uVar4;
+                    lVar3 = Component.get_transform(this,0);
+                    if (lVar3 != null) {
+                      uVar4 = Transform.Find(lVar3,"FromStorage",0);
+                      this.tFromStorage = uVar4;
+                      lVar3 = Component.get_transform(this,0);
+                      if (lVar3 != null) {
+                        uVar4 = Transform.Find(lVar3,"Force",0);
+                        this.tForce = uVar4;
+                        lVar3 = Component.get_transform(this,0);
+                        if (lVar3 != null) {
+                          uVar4 = Transform.Find(lVar3,"BookType",0);
+                          this.tBookType = uVar4;
+                          lVar3 = Component.get_transform(this,0);
+                          if (lVar3 != null) {
+                            uVar4 = Transform.Find(lVar3,"New",0);
+                            this.tNew = uVar4;
+                            lVar3 = Component.get_transform(this,0);
+                            if (lVar3 != null) {
+                              uVar4 = Transform.Find(lVar3,"Equiped",0);
+                              this.tEquiped = uVar4;
+                              lVar3 = Component.get_transform(this,0);
+                              if (lVar3 != null) {
+                                lVar3 = Transform.Find(lVar3,"Price",0);
+                                this.tPrice = lVar3;
+                                lVar3 = *plVar1;
+                                cVar2 = Object.op_Inequality(lVar3,0,0);
+                                if (cVar2) {
+                                  if (*plVar1 == 0) throw; // [null/range check failed]
+                                  uVar4 = Transform.Find(*plVar1,"PriceIcon",0);
+                                  this.tPriceIcon = uVar4;
+                                }
+                                uVar4 = this.tName;
+                                cVar2 = Object.op_Inequality(uVar4,0,0);
+                                if (cVar2) {
+                                  if (this.tName == null) throw; // [null/range check failed]
+                                  uVar4 = Component.GetComponent
+                                                    (this.tName,DAT_181d96160);
+                                  this.nameText = uVar4;
+                                }
+                                lVar3 = *plVar1;
+                                cVar2 = Object.op_Inequality(lVar3,0,0);
+                                if (cVar2) {
+                                  if (*plVar1 == 0) throw; // [null/range check failed]
+                                  uVar4 = Component.GetComponent(*plVar1,DAT_181d96160);
+                                  this.priceText = uVar4;
+                                }
+                                uVar4 = this.tBack;
+                                cVar2 = Object.op_Inequality(uVar4,0,0);
+                                if (cVar2) {
+                                  if (this.tBack == null) throw; // [null/range check failed]
+                                  uVar4 = Component.GetComponent
+                                                    (this.tBack,DAT_181d94460);
+                                  this.backImage = uVar4;
+                                }
+                                uVar4 = this.tItemLv;
+                                cVar2 = Object.op_Inequality(uVar4,0,0);
+                                if (cVar2) {
+                                  if (this.tItemLv == null) throw; // [null/range check failed]
+                                  uVar4 = Component.GetComponent
+                                                    (this.tItemLv,DAT_181d94460);
+                                  *(uint64 *)(this + 200) = uVar4;
+                                }
+                                uVar4 = this.tCover;
+                                cVar2 = Object.op_Inequality(uVar4,0,0);
+                                if (cVar2) {
+                                  if (this.tCover == null) throw; // [null/range check failed]
+                                  uVar4 = Component.GetComponent
+                                                    (this.tCover,DAT_181d94460);
+                                  this.coverImage = uVar4;
+                                }
+                                uVar4 = this.tRareLv;
+                                cVar2 = Object.op_Inequality(uVar4,0,0);
+                                if (cVar2) {
+                                  if (this.tRareLv == null) throw; // [null/range check failed]
+                                  uVar4 = Component.GetComponent
+                                                    (this.tRareLv,DAT_181d94460);
+                                  this.rareLvImage = uVar4;
+                                }
+                                uVar4 = this.tIcon;
+                                cVar2 = Object.op_Inequality(uVar4,0,0);
+                                if (cVar2) {
+                                  if (this.tIcon == null) throw; // [null/range check failed]
+                                  uVar4 = Component.GetComponent
+                                                    (this.tIcon,DAT_181d94460);
+                                  this.iconImage = uVar4;
+                                }
+                                uVar4 = this.tFromStorage;
+                                cVar2 = Object.op_Inequality(uVar4,0,0);
+                                if (cVar2) {
+                                  if (this.tFromStorage == null) throw; // [null/range check failed]
+                                  uVar4 = Component.GetComponent
+                                                    (this.tFromStorage,DAT_181d94460);
+                                  this.fromStorageImage = uVar4;
+                                  if (this.tFromStorage == null) throw; // [null/range check failed]
+                                  uVar4 = Component.GetComponent
+                                                    (this.tFromStorage,DAT_181d95560);
+                                  this.fromStorageDetail = uVar4;
+                                }
+                                uVar4 = this.tForce;
+                                cVar2 = Object.op_Inequality(uVar4,0,0);
+                                if (cVar2) {
+                                  if (this.tForce == null) throw; // [null/range check failed]
+                                  uVar4 = Component.GetComponent
+                                                    (this.tForce,DAT_181d94460);
+                                  this.forceImage = uVar4;
+                                }
+                                uVar4 = this.tBookType;
+                                cVar2 = Object.op_Inequality(uVar4,0,0);
+                                if (cVar2) {
+                                  if (this.tBookType == null) throw; // [null/range check failed]
+                                  uVar4 = Component.GetComponent
+                                                    (this.tBookType,DAT_181d94460);
+                                  this.bookTypeImage = uVar4;
+                                }
+                                uVar4 = this.tPriceIcon;
+                                cVar2 = Object.op_Inequality(uVar4,0,0);
+                                if (cVar2) {
+                                  if (this.tPriceIcon == null) throw; // [null/range check failed]
+                                  uVar4 = Component.GetComponent
+                                                    (this.tPriceIcon,DAT_181d94460);
+                                  this.priceIconImage = uVar4;
+                                }
+                                return;
+                              }
                             }
                           }
                         }
-                      }
-                    }
-        LAB_180b7b093:
-                          // WARNING: Subroutine does not return
-                    FUN_1800d6620();
-                  }
-                  plVar8 = (int64 *)Component.GetComponent(lVar6,DAT_181d6d8c0);
-                  lVar11 = FUN_18046c0a0(0);
-                  if (((lVar11 != null) && (lVar11.villageAreaID != null)) &&
-                     (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) != null) {
-                    fVar17 = lVar11.playerBookWriter;
-                    if (this.itemData != null) {
-                      iVar5 = ItemData.GetReadBookContributionCost(this.itemData,0,0);
-                      if ((float)iVar5 <= fVar17) {
-                        uVar10 = *(uint64 *)
-                                  (pItemIconController + 32);
-                        uVar7 = *(uint64 *)
-                                 (pItemIconController + 40);
-                      }
-                      else {
-                        uVar10 = *(uint64 *)(pPlotController + 0x2d8);
-                        uVar7 = *(uint64 *)(pPlotController + 0x2e0);
-                      }
-                      if (plVar8 != (int64 *)0) {
-                        local_68 = uVar10;
-                        uStack_60 = uVar7;
-                        (**(code **)(*plVar8 + 0x2a8))(plVar8,&local_68,*(uint64 *)(*plVar8 + 0x2b0));
-                        lVar11 = Component.GetComponent(lVar6,DAT_181d6c2c0);
-                        if (lVar11 != null) {
-                          Behaviour.set_enabled(lVar11,0,0);
-                          uVar10 = Component.GetComponent(lVar6,DAT_181d6d8c0);
-                          if (this.itemData != null) {
-                            local_res8[0] =
-                                 ItemData.GetReadBookContributionCost(this.itemData,0,0);
-                            uVar7 = Int32.ToString(local_res8,"f0",0);
-                            LTLocalization.SetText(uVar10,uVar7,0);
-                            return;
-                          }
-                        }
-                        goto LAB_180b7b093;
                       }
                     }
                   }
@@ -797,18 +311,875 @@ public class ItemIconController
         }
     }
 
-    // Token : 0x6001837
-    // RVA   : 0xB778C0   Offset: 0xB760C0   Length: 0x14B
+    // Token : 0x600187D
+    // RVA   : 0xCA3250   Offset: 0xCA2650   Length: 0x2510
+    private void Update()
+    {
+        var pStatics_2118 = *(int64*)(DAT_181d82118 + 184);
+        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
+        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics_b490 = *(int64*)(DAT_181dab490 + 184);
+        uint uVar1;
+        bool cVar2;
+        uint uVar3;
+        int iVar4;
+        ulong uVar6;
+        long lVar7;
+        long lVar8;
+        ulong uVar9;
+        long lVar10;
+        long lVar11;
+        ulong uVar14;
+        float fVar15;
+        float fVar16;
+        ulong uVar17;
+        ulong uVar18;
+        uint uVar19;
+        uint uVar20;
+        uint uVar21;
+        uint uVar22;
+        uint[] local_res8 = new uint[2];
+        uint[] local_res18 = new uint[2];
+        ulong local_78;
+        uint local_70;
+        ulong local_68;
+        ulong uStack_60;
+        uVar3 = 0;
+        local_res8[0] = 0;
+        if (!this.refsCached) {
+          ItemIconController.CacheRefs(this,0);
+        }
+        if (!this.inited) {
+          uVar6 = this.nameText;
+          this.inited = 1;
+          this.updateTime = 0;
+          cVar2 = Object.op_Inequality(uVar6,0,0);
+          if (cVar2) {
+            uVar6 = this.nameText;
+            uVar9 = "";
+            if (!this.hideItemName) {
+              if (this.itemData == null) goto LAB_180ca575b;
+              uVar9 = ItemData.Name(this.itemData,0,0);
+            }
+            LTLocalization.SetText(uVar6,uVar9,0);
+          }
+          uVar6 = this.backImage;
+          if (!this.hideItemBox) {
+            cVar2 = Object.op_Inequality(uVar6,0,0);
+            if (cVar2) {
+              plVar12 = this.backImage;
+              puVar5 = (uint64 *)FUN_1810d3570(&local_68,0);
+              if (plVar12 == (int64 *)0) goto LAB_180ca575b;
+              local_68 = *puVar5;
+              uStack_60 = puVar5[1];
+              (**(code **)(*plVar12 + 0x2a8))(plVar12,&local_68,*(uint64 *)(*plVar12 + 0x2b0));
+            }
+            uVar6 = *(uint64 *)(this + 200);
+            cVar2 = Object.op_Inequality(uVar6,0,0);
+            if (cVar2) {
+              plVar12 = *(int64 **)(this + 200);
+              if (**(int **)(DAT_181d73d40 + 184) == 2) {
+                if (this.itemData == null) goto LAB_180ca575b;
+                if (this.itemData.itemLv != 5) goto LAB_180ca35fb;
+                local_68 = 0;
+                uStack_60 = 0;
+                Color.ctor(&local_68,0x3f800000,0x3ed2d2d3,0x3f34b4b5,0);
+                uVar19 = (uint32)local_68;
+                uVar20 = local_68._4_4_;
+                uVar21 = (uint32)uStack_60;
+                uVar22 = uStack_60._4_4_;
+              }
+              else {
+        LAB_180ca35fb:
+                lVar7 = FUN_18046c100(0);
+                if (((lVar7 == null) || (this.itemData == null)) ||
+                   (lVar7 = lVar7.value) == null) goto LAB_180ca575b;
+                uVar1 = this.itemData.itemLv;
+                if (lVar7.subType <= uVar1) {
+                  ThrowHelper.ThrowArgumentOutOfRangeException(0);
+                }
+                lVar7 = lVar7.itemID[uVar1];
+                if (lVar7 == null) goto LAB_180ca575b;
+                uVar19 = lVar7.subType;
+                uVar20 = *(uint32 *)(lVar7 + 28);
+                uVar21 = lVar7.name;
+                uVar22 = *(uint32 *)(lVar7 + 36);
+              }
+              local_68 = CONCAT44(uVar20,uVar19);
+              uStack_60 = CONCAT44(uVar22,uVar21);
+              puVar5 = (uint64 *)GlobalData.SetColorAlpha(&local_78,&local_68,0x3f666666,0);
+              if (plVar12 == (int64 *)0) goto LAB_180ca575b;
+              local_68 = *puVar5;
+              uStack_60 = puVar5[1];
+              (**(code **)(*plVar12 + 0x2a8))(plVar12,&local_68,*(uint64 *)(*plVar12 + 0x2b0));
+            }
+            uVar6 = this.coverImage;
+            cVar2 = Object.op_Inequality(uVar6,0,0);
+            if (cVar2) {
+              plVar12 = this.coverImage;
+              puVar5 = (uint64 *)FUN_1810d3570(&local_68,0);
+        LAB_180ca3838:
+              if (plVar12 == (int64 *)0) goto LAB_180ca575b;
+              local_68 = *puVar5;
+              uStack_60 = puVar5[1];
+              (**(code **)(*plVar12 + 0x2a8))(plVar12,&local_68,*(uint64 *)(*plVar12 + 0x2b0));
+            }
+          }
+          else {
+            cVar2 = Object.op_Inequality(uVar6,0,0);
+            if (cVar2) {
+              plVar12 = this.backImage;
+              puVar5 = (uint64 *)FUN_180d98fe0(&local_68,0);
+              if (plVar12 == (int64 *)0) goto LAB_180ca575b;
+              local_68 = *puVar5;
+              uStack_60 = puVar5[1];
+              (**(code **)(*plVar12 + 0x2a8))(plVar12,&local_68,*(uint64 *)(*plVar12 + 0x2b0));
+            }
+            uVar6 = *(uint64 *)(this + 200);
+            cVar2 = Object.op_Inequality(uVar6,0,0);
+            if (cVar2) {
+              plVar12 = *(int64 **)(this + 200);
+              puVar5 = (uint64 *)FUN_180d98fe0(&local_68,0);
+              if (plVar12 == (int64 *)0) goto LAB_180ca575b;
+              local_68 = *puVar5;
+              uStack_60 = puVar5[1];
+              (**(code **)(*plVar12 + 0x2a8))(plVar12,&local_68,*(uint64 *)(*plVar12 + 0x2b0));
+            }
+            uVar6 = this.coverImage;
+            cVar2 = Object.op_Inequality(uVar6,0,0);
+            if (cVar2) {
+              plVar12 = this.coverImage;
+              puVar5 = (uint64 *)FUN_180d98fe0(&local_68,0);
+              goto LAB_180ca3838;
+            }
+          }
+          uVar6 = this.rareLvImage;
+          cVar2 = Object.op_Inequality(uVar6,0,0);
+          if (cVar2) {
+            lVar7 = this.rareLvImage;
+            lVar10 = *pStatics_b490;
+            if (this.itemData == null) goto LAB_180ca575b;
+            uVar6 = Int32.ToString(this.itemData + 64,0);
+            uVar6 = String.Concat("RareLv",uVar6,0);
+            if ((lVar10 == null) ||
+               (uVar6 = TextureController.LoadAtlasSprite(lVar10,"IconAtlas",uVar6,0), lVar7 == null))
+            goto LAB_180ca575b;
+            Image.set_sprite(lVar7,uVar6,0);
+          }
+          uVar6 = this.rareLvImage;
+          cVar2 = Object.op_Inequality(uVar6,0,0);
+          if (cVar2) {
+            lVar7 = this.itemData;
+            plVar12 = this.rareLvImage;
+            if (lVar7 == null) goto LAB_180ca575b;
+            if (lVar7.type == 4) {
+              if (lVar7.treasureData == null) goto LAB_180ca575b;
+              if (*(char *)(lVar7.treasureData + 16) == false)
+              {
+                puVar5 = (uint64 *)FUN_180d98fe0(&local_68,0);
+                }
+                else {
+              }
+              puVar5 = (uint64 *)FUN_1810d3570(&local_68,0);
+            }
+            if (plVar12 == (int64 *)0) goto LAB_180ca575b;
+            local_68 = *puVar5;
+            uStack_60 = puVar5[1];
+            (**(code **)(*plVar12 + 0x2a8))(plVar12,&local_68,*(uint64 *)(*plVar12 + 0x2b0));
+          }
+          uVar6 = this.iconImage;
+          cVar2 = Object.op_Inequality(uVar6,0,0);
+          if (cVar2) {
+            lVar7 = this.iconImage;
+            lVar10 = *pStatics_b490;
+            if (((this.itemData == null) ||
+                (uVar6 = ItemData.GetItemIconName(this.itemData,0), lVar10 == null)) ||
+               (uVar6 = TextureController.LoadAtlasSprite(lVar10,"IconAtlas",uVar6,0), lVar7 == null))
+            goto LAB_180ca575b;
+            Image.set_sprite(lVar7,uVar6,0);
+          }
+          cVar2 = FUN_180d755b0(this.fromStorage,0);
+          uVar6 = this.tFromStorage;
+          if (!cVar2) {
+            cVar2 = Object.op_Inequality(uVar6,0,0);
+            if (cVar2) {
+              if ((this.tFromStorage == null) ||
+                 (lVar7 = Component.get_gameObject(this.tFromStorage,0)) == null)
+              goto LAB_180ca575b;
+              cVar2 = GameObject.get_activeSelf(lVar7,0);
+              if (!cVar2) {
+                if ((this.tFromStorage == null) ||
+                   (lVar7 = Component.get_gameObject(this.tFromStorage,0)) == null)
+                goto LAB_180ca575b;
+                GameObject.SetActive(lVar7,1,0);
+              }
+            }
+            uVar6 = this.fromStorageDetail;
+            cVar2 = Object.op_Inequality(uVar6,0,0);
+            if (cVar2) {
+              if (this.fromStorageDetail == null) goto LAB_180ca575b;
+              this.fromStorageDetail.text = this.fromStorage;
+            }
+            uVar6 = this.fromStorageImage;
+            cVar2 = Object.op_Inequality(uVar6,0,0);
+            if (cVar2) {
+              if (this.fromStorage == null) goto LAB_180ca575b;
+              cVar2 = String.Contains(this.fromStorage,"藏经阁",0);
+              if (cVar2) {
+                lVar7 = this.fromStorageImage;
+                lVar10 = FUN_18046c680(0);
+                if ((lVar10 == null) ||
+                   (uVar6 = TextureController.LoadAtlasSprite(lVar10,"UIAtlas","buildingicon_1",0),
+                   lVar7 == null)) goto LAB_180ca575b;
+                Image.set_sprite(lVar7,uVar6,0);
+              }
+            }
+          }
+          else {
+            cVar2 = Object.op_Inequality(uVar6,0,0);
+            if (cVar2) {
+              if ((this.tFromStorage == null) ||
+                 (lVar7 = Component.get_gameObject(this.tFromStorage,0)) == null)
+              goto LAB_180ca575b;
+              cVar2 = GameObject.get_activeSelf(lVar7,0);
+              if (cVar2) {
+                if ((this.tFromStorage == null) ||
+                   (lVar7 = Component.get_gameObject(this.tFromStorage,0)) == null)
+                goto LAB_180ca575b;
+                GameObject.SetActive(lVar7,0,0);
+              }
+            }
+          }
+          lVar7 = this.itemData;
+          if (lVar7 == null) goto LAB_180ca575b;
+          if (lVar7.type == 3) {
+            if ((lVar7.bookData == null) ||
+               (lVar7 = BookData.DataBase(lVar7.bookData,0)) == null)
+            goto LAB_180ca575b;
+            if ((lVar7.subType == -1) || (this.hideItemBox)) {
+              uVar6 = this.tForce;
+              cVar2 = Object.op_Inequality(uVar6,0,0);
+              if (cVar2) {
+                if ((this.tForce == null) ||
+                   (lVar7 = Component.get_gameObject(this.tForce,0)) == null)
+                goto LAB_180ca575b;
+                cVar2 = GameObject.get_activeSelf(lVar7,0);
+                if (cVar2) {
+                  if ((this.tForce == null) ||
+                     (lVar7 = Component.get_gameObject(this.tForce,0)) == null)
+                  goto LAB_180ca575b;
+                  GameObject.SetActive(lVar7,0,0);
+                }
+              }
+            }
+            else {
+              uVar6 = this.tForce;
+              cVar2 = Object.op_Inequality(uVar6,0,0);
+              if (cVar2) {
+                if ((this.tForce == null) ||
+                   (lVar7 = Component.get_gameObject(this.tForce,0)) == null)
+                goto LAB_180ca575b;
+                cVar2 = GameObject.get_activeSelf(lVar7,0);
+                if (!cVar2) {
+                  if ((this.tForce == null) ||
+                     (lVar7 = Component.get_gameObject(this.tForce,0)) == null)
+                  goto LAB_180ca575b;
+                  GameObject.SetActive(lVar7,1,0);
+                }
+              }
+              uVar6 = this.forceImage;
+              cVar2 = Object.op_Inequality(uVar6,0,0);
+              if (cVar2) {
+                lVar7 = this.forceImage;
+                lVar10 = FUN_18046c0a0(0);
+                if (lVar10 == null) goto LAB_180ca575b;
+                lVar10 = *(int64 *)(lVar10 + 32);
+                if (((((this.itemData == null) ||
+                      (lVar11 = this.itemData.bookData) == null) ||
+                     (lVar11 = BookData.DataBase(lVar11,0)) == null) ||
+                    ((lVar10 == null ||
+                     (lVar10 = WorldData.GetForce(lVar10,*(uint32 *)(lVar11 + 24),0)) == null)
+                    )) || ((lVar10 = ForceData.DataBase(lVar10,0), lVar10 == null ||
+                           (uVar6 = ForceData.GetForceIcon(lVar10,0), lVar7 == null)))) goto LAB_180ca575b;
+                Image.set_sprite(lVar7,uVar6,0);
+              }
+            }
+            uVar6 = this.tBookType;
+            cVar2 = Object.op_Inequality(uVar6,0,0);
+            if (cVar2) {
+              if ((this.tBookType == null) ||
+                 (lVar7 = Component.get_gameObject(this.tBookType,0)) == null)
+              goto LAB_180ca575b;
+              GameObject.SetActive(lVar7,1,0);
+            }
+            lVar7 = FUN_18046c100(0);
+            if (lVar7 == null) goto LAB_180ca575b;
+            lVar7 = GameDataController.FindBookTypeIconDataBase(lVar7,this.itemData,0);
+            uVar6 = this.bookTypeImage;
+            cVar2 = Object.op_Inequality(uVar6,0,0);
+            if (cVar2) {
+              lVar10 = this.bookTypeImage;
+              lVar11 = *pStatics_b490;
+              if (((this.itemData == null) ||
+                  (lVar8 = this.itemData.bookData) == null) ||
+                 (lVar8 = BookData.DataBase(lVar8,0)) == null) {
+        LAB_180ca5755:
+                          // WARNING: Subroutine does not return
+                FUN_1800d6620();
+              }
+              local_res18[0] = *(uint32 *)(lVar8 + 48);
+              uVar9 = il2cpp_value_box(DAT_181d80418,local_res18);
+              uVar6 = "IconAtlas";
+              if (lVar7 == null) goto LAB_180ca5755;
+              uVar14 = "d";
+              if (!lVar7.name) {
+                uVar14 = "";
+              }
+              uVar9 = String.Format("BookType_{0}{1}",uVar9,uVar14,0);
+              if ((lVar11 == null) ||
+                 (uVar6 = TextureController.LoadAtlasSprite(lVar11,uVar6,uVar9,0), lVar10 == null))
+              goto LAB_180ca575b;
+              Image.set_sprite(lVar10,uVar6,0);
+              plVar12 = this.bookTypeImage;
+              if (!lVar7.name) {
+                uVar17 = *(uint64 *)(lVar7 + 36);
+                uVar18 = *(uint64 *)(lVar7 + 44);
+              }
+              else {
+                puVar5 = (uint64 *)FUN_1810d3570(&local_68,0);
+                uVar17 = *puVar5;
+                uVar18 = puVar5[1];
+              }
+              if (plVar12 == (int64 *)0) goto LAB_180ca575b;
+              local_68 = uVar17;
+              uStack_60 = uVar18;
+              (**(code **)(*plVar12 + 0x2a8))(plVar12,&local_68,*(uint64 *)(*plVar12 + 0x2b0));
+            }
+            uVar6 = this.tBookType;
+            cVar2 = Object.op_Inequality(uVar6,0,0);
+            if (cVar2) {
+              if (lVar7 == null) goto LAB_180ca575b;
+              local_78 = lVar7.subType;
+              local_70 = 0;
+              if (this.tBookType == null) goto LAB_180ca575b;
+              uStack_60 = uStack_60 & 0xffffffff00000000;
+              local_68 = local_78;
+              Transform.set_localPosition(this.tBookType,&local_68,0);
+            }
+          }
+          else {
+            uVar6 = this.tForce;
+            cVar2 = Object.op_Inequality(uVar6,0,0);
+            if (cVar2) {
+              if ((this.tForce == null) ||
+                 (lVar7 = Component.get_gameObject(this.tForce,0)) == null)
+              goto LAB_180ca575b;
+              cVar2 = GameObject.get_activeSelf(lVar7,0);
+              if (cVar2) {
+                if ((this.tForce == null) ||
+                   (lVar7 = Component.get_gameObject(this.tForce,0)) == null)
+                goto LAB_180ca575b;
+                GameObject.SetActive(lVar7,0,0);
+              }
+            }
+            uVar6 = this.tBookType;
+            cVar2 = Object.op_Inequality(uVar6,0,0);
+            if (cVar2) {
+              if ((this.tBookType == null) ||
+                 (lVar7 = Component.get_gameObject(this.tBookType,0)) == null)
+              goto LAB_180ca575b;
+              cVar2 = GameObject.get_activeSelf(lVar7,0);
+              if (cVar2) {
+                if ((this.tBookType == null) ||
+                   (lVar7 = Component.get_gameObject(this.tBookType,0)) == null)
+                goto LAB_180ca575b;
+                GameObject.SetActive(lVar7,0,0);
+              }
+            }
+          }
+        }
+        uVar6 = *(uint64 *)(*(int64 *)(DAT_181d8b790 + 184) + 72);
+        uVar9 = Component.get_gameObject(this,0);
+        cVar2 = Object.op_Equality(uVar6,uVar9,0);
+        if (cVar2) {
+          if (this.itemData == null) goto LAB_180ca575b;
+          this.itemData.isNew = 0;
+        }
+        uVar6 = this.tNew;
+        cVar2 = Object.op_Inequality(uVar6,0,0);
+        if (cVar2) {
+          if ((this.tNew == null) ||
+             (lVar7 = Component.get_gameObject(this.tNew,0)) == null)
+          goto LAB_180ca575b;
+          cVar2 = GameObject.get_activeSelf(lVar7,0);
+          if (this.itemData == null) goto LAB_180ca575b;
+          if (cVar2 != this.itemData.isNew) {
+            if (this.tNew == null) goto LAB_180ca575b;
+            lVar7 = Component.get_gameObject(this.tNew,0);
+            if ((this.itemData == null) || (lVar7 == null)) goto LAB_180ca575b;
+            GameObject.SetActive(lVar7,this.itemData.isNew,0);
+          }
+        }
+        fVar15 = this.updateTime;
+        if (0.0 < fVar15) {
+          fVar16 = (float)Time.get_deltaTime(0);
+          this.updateTime = fVar15 - fVar16;
+          return;
+        }
+        uVar6 = this.tEquiped;
+        this.updateTime = 0x3f000000;
+        cVar2 = Object.op_Inequality(uVar6,0,0);
+        if (cVar2) {
+          if (this.tEquiped == null) goto LAB_180ca575b;
+          lVar10 = Component.get_transform(this.tEquiped,0);
+          lVar7 = this.itemData;
+          if (lVar7 == null) goto LAB_180ca575b;
+          if (lVar7.type == null) {
+            if (lVar7.equipmentData == null) goto LAB_180ca575b;
+            cVar2 = *(char *)(lVar7.equipmentData + 48);
+        LAB_180ca4484:
+            if ((!cVar2) || (this.itemIconType == 4)) goto LAB_180ca4499;
+            puVar5 = (uint64 *)Vector3.get_one(&local_68,0);
+          }
+          else {
+            if (lVar7.type == 6) {
+              if (lVar7.horseData == null) goto LAB_180ca575b;
+              cVar2 = *(char *)(lVar7.horseData + 16);
+              goto LAB_180ca4484;
+            }
+        LAB_180ca4499:
+            puVar5 = (uint64 *)Vector3.get_zero(&local_68,0);
+          }
+          if (lVar10 == null) goto LAB_180ca575b;
+          uStack_60 = CONCAT44(uStack_60._4_4_,(int)puVar5[1]);
+          local_68 = *puVar5;
+          Transform.set_localScale(lVar10,&local_68,0);
+        }
+        if (this.itemIconType != 2) goto LAB_180ca5072;
+        lVar7 = FUN_18046c6c0(0);
+        if (lVar7 == null) goto LAB_180ca575b;
+        if (lVar7.subType != null) {
+          if (this.itemIconType != 2) goto LAB_180ca5072;
+          if ((this.tradeIconType == 3) || (this.tradeIconType == 4)) {
+            lVar7 = FUN_18046c6c0(0);
+            if (lVar7 == null) goto LAB_180ca575b;
+            if (lVar7.subType != 2) goto LAB_180ca4dd5;
+            uVar6 = this.tPrice;
+            cVar2 = Object.op_Inequality(uVar6,0,0);
+            if (cVar2) {
+              if ((this.tPrice == null) ||
+                 (lVar7 = Component.get_gameObject(this.tPrice,0)) == null)
+              goto LAB_180ca575b;
+              cVar2 = GameObject.get_activeSelf(lVar7,0);
+              if (!cVar2) {
+                if ((this.tPrice == null) ||
+                   (lVar7 = Component.get_gameObject(this.tPrice,0)) == null)
+                goto LAB_180ca575b;
+                GameObject.SetActive(lVar7,1,0);
+                this.needRefreshPriceIcon = 1;
+              }
+            }
+            if (this.needRefreshPriceIcon) {
+              uVar6 = this.priceIconImage;
+              this.needRefreshPriceIcon = 0;
+              cVar2 = Object.op_Inequality(uVar6,0,0);
+              if (cVar2) {
+                lVar7 = this.priceIconImage;
+                lVar10 = FUN_18046c680(0);
+                if ((lVar10 == null) ||
+                   (uVar6 = TextureController.LoadAtlasSprite(lVar10,"UIAtlas","功绩",0),
+                   lVar7 == null)) goto LAB_180ca575b;
+                Image.set_sprite(lVar7,uVar6,0);
+              }
+            }
+            uVar6 = this.priceText;
+            cVar2 = Object.op_Inequality(uVar6,0,0);
+            if (cVar2) {
+              plVar12 = this.priceText;
+              if (plVar12 == (int64 *)0) goto LAB_180ca575b;
+              local_68 = *(uint64 *)(pStatics_2118 + 16);
+              uStack_60 = *(uint64 *)(pStatics_2118 + 24);
+              (**(code **)(*plVar12 + 0x2a8))(plVar12,&local_68,*(uint64 *)(*plVar12 + 0x2b0));
+            }
+            uVar6 = this.priceText;
+            cVar2 = Object.op_Inequality(uVar6,0,0);
+            if (!cVar2) {
+              return;
+            }
+            uVar6 = this.priceText;
+            lVar7 = this.itemData;
+            if (lVar7 == null) goto LAB_180ca575b;
+            if (((*pStatics_2cc8 == 0) ||
+                (lVar10 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+               (lVar10 = WorldData.GetHero(lVar10,0,0)) == null) goto LAB_180ca575b;
+            if (*(char *)(lVar10 + 180) == false) {
+              uVar3 = Mathf.RoundToInt((float)lVar7.value * 0.1,0);
+            }
+            local_res8[0] = uVar3;
+            uVar9 = Int32.ToString(local_res8,0);
+            if ((*(byte *)(DAT_181d84898 + 0x133) & 4) == 0) goto LAB_180ca4dc2;
+            iVar4 = *(int *)(DAT_181d84898 + 224);
+          }
+          else {
+        LAB_180ca4dd5:
+            if ((this.itemIconType == 2) &&
+               ((this.tradeIconType == 3 || (this.tradeIconType == 4)))) {
+              lVar7 = FUN_18046c6c0(0);
+              if (lVar7 == null) goto LAB_180ca575b;
+              if (lVar7.subType != 4) goto LAB_180ca5072;
+              uVar6 = this.tPrice;
+              cVar2 = Object.op_Inequality(uVar6,0,0);
+              if (cVar2) {
+                if ((this.tPrice == null) ||
+                   (lVar7 = Component.get_gameObject(this.tPrice,0)) == null)
+                goto LAB_180ca575b;
+                cVar2 = GameObject.get_activeSelf(lVar7,0);
+                if (!cVar2) {
+                  if ((this.tPrice == null) ||
+                     (lVar7 = Component.get_gameObject(this.tPrice,0)) == null)
+                  goto LAB_180ca575b;
+                  GameObject.SetActive(lVar7,1,0);
+                  this.needRefreshPriceIcon = 1;
+                }
+              }
+              if (this.needRefreshPriceIcon) {
+                uVar6 = this.priceIconImage;
+                this.needRefreshPriceIcon = 0;
+                cVar2 = Object.op_Inequality(uVar6,0,0);
+                if (cVar2) {
+                  lVar7 = this.priceIconImage;
+                  lVar10 = FUN_18046c680(0);
+                  if ((lVar10 == null) ||
+                     (uVar6 = TextureController.LoadAtlasSprite(lVar10,"UIAtlas","官府功绩",0),
+                     lVar7 == null)) goto LAB_180ca575b;
+                  Image.set_sprite(lVar7,uVar6,0);
+                }
+              }
+              uVar6 = this.priceText;
+              cVar2 = Object.op_Inequality(uVar6,0,0);
+              if (cVar2) {
+                plVar12 = this.priceText;
+                if (plVar12 == (int64 *)0) goto LAB_180ca575b;
+                local_68 = *(uint64 *)(pStatics_2118 + 48);
+                uStack_60 = *(uint64 *)(pStatics_2118 + 56);
+                (**(code **)(*plVar12 + 0x2a8))(plVar12,&local_68,*(uint64 *)(*plVar12 + 0x2b0));
+              }
+              uVar6 = this.priceText;
+              cVar2 = Object.op_Inequality(uVar6,0,0);
+              if (!cVar2) {
+                return;
+              }
+              uVar6 = this.priceText;
+              if (this.itemData == null) goto LAB_180ca575b;
+              local_res8[0] =
+                   Mathf.RoundToInt((float)this.itemData.value * 0.1,0);
+              uVar9 = Int32.ToString(local_res8,0);
+            }
+            else {
+        LAB_180ca5072:
+              uVar6 = this.tPrice;
+              if (this.itemIconType != 5) {
+                cVar2 = Object.op_Inequality(uVar6,0,0);
+                if (!cVar2) {
+                  return;
+                }
+                if ((this.tPrice != null) &&
+                   (lVar7 = Component.get_gameObject(this.tPrice,0)) != null) {
+                  cVar2 = GameObject.get_activeSelf(lVar7,0);
+                  if (!cVar2) {
+                    return;
+                  }
+                  if ((this.tPrice != null) &&
+                     (lVar7 = Component.get_gameObject(this.tPrice,0)) != null) {
+                    GameObject.SetActive(lVar7,0,0);
+                    return;
+                  }
+                }
+                goto LAB_180ca575b;
+              }
+              cVar2 = Object.op_Inequality(uVar6,0,0);
+              if (cVar2) {
+                if ((this.tPrice == null) ||
+                   (lVar7 = Component.get_gameObject(this.tPrice,0)) == null)
+                goto LAB_180ca575b;
+                cVar2 = GameObject.get_activeSelf(lVar7,0);
+                if (cVar2) {
+                  if ((this.tPrice == null) ||
+                     (lVar7 = Component.get_gameObject(this.tPrice,0)) == null)
+                  goto LAB_180ca575b;
+                  GameObject.SetActive(lVar7,0,0);
+                }
+              }
+              lVar7 = Component.get_transform(this,0);
+              if (((lVar7 == null) || (lVar7 = FUN_180da9a20(lVar7,0)) == null) ||
+                 (lVar7 = FUN_180da9a20(lVar7,0)) == null) goto LAB_180ca575b;
+              uVar6 = Transform.Find(lVar7,"PriceBack",0);
+              cVar2 = Object.op_Inequality(uVar6,0,0);
+              if (!cVar2) {
+                return;
+              }
+              lVar7 = Component.get_transform(this,0);
+              if (((lVar7 == null) || (lVar7 = FUN_180da9a20(lVar7,0)) == null) ||
+                 ((lVar7 = FUN_180da9a20(lVar7,0), lVar7 == null ||
+                  (((lVar7 = Transform.Find(lVar7,"PriceBack",0), lVar7 == null ||
+                    (lVar7 = Transform.Find(lVar7,"Price",0)) == null) ||
+                   (lVar10 = Component.get_gameObject(lVar7,0)) == null))))) goto LAB_180ca575b;
+              cVar2 = GameObject.get_activeSelf(lVar10,0);
+              if (!cVar2) {
+                lVar10 = Component.get_gameObject(lVar7,0);
+                if (lVar10 == null) goto LAB_180ca575b;
+                GameObject.SetActive(lVar10,1,0);
+                lVar10 = Transform.Find(lVar7,"PriceIcon",0);
+                if (lVar10 == null) goto LAB_180ca575b;
+                lVar10 = Component.GetComponent(lVar10,DAT_181d94460);
+                lVar11 = FUN_18046c680(0);
+                if ((lVar11 == null) ||
+                   (uVar6 = TextureController.LoadAtlasSprite(lVar11,"UIAtlas","功绩",0),
+                   lVar10 == null)) goto LAB_180ca575b;
+                Image.set_sprite(lVar10,uVar6,0);
+              }
+              lVar10 = FUN_18046c0a0(0);
+              if ((lVar10 == null) || (*(int64 *)(lVar10 + 32) == 0)) goto LAB_180ca575b;
+              lVar10 = WorldData.Player(*(int64 *)(lVar10 + 32),0);
+              if ((this.itemData == null) ||
+                 ((lVar11 = this.itemData.bookData, lVar11 == null ||
+                  (lVar10 == null)))) goto LAB_180ca575b;
+              lVar10 = HeroData.FindSkill(lVar10,*(uint32 *)(lVar11 + 16),0);
+              if (lVar10 != null) {
+                plVar12 = (int64 *)Component.GetComponent(lVar7);
+                puVar5 = (uint64 *)FUN_180d98fe0(&local_68,0);
+                if (plVar12 != (int64 *)0) {
+                  local_68 = *puVar5;
+                  uStack_60 = puVar5[1];
+                  (**(code **)(*plVar12 + 0x2a8))(plVar12,&local_68,*(uint64 *)(*plVar12 + 0x2b0));
+                  lVar10 = Transform.Find(lVar7,"PriceIcon",0);
+                  if ((((lVar10 != null) &&
+                       (lVar10 = Component.GetComponent(lVar10,DAT_181d94460)) != null) &&
+                      (*(int64 *)(lVar10 + 216) != 0)) &&
+                     (lVar10 = Object.get_name(*(int64 *)(lVar10 + 216),0)) != null) {
+                    cVar2 = String.Contains(lVar10,"出战_出战",0);
+                    if (cVar2) {
+                      return;
+                    }
+                    lVar10 = Transform.Find(lVar7,"PriceIcon",0);
+                    if (lVar10 != null) {
+                      lVar10 = Component.GetComponent(lVar10,DAT_181d94460);
+                      lVar11 = FUN_18046c680(0);
+                      if ((lVar11 != null) &&
+                         (uVar6 = TextureController.LoadAtlasSprite(lVar11,"UIAtlas","出战_出战",0)
+                         , lVar10 != null)) {
+                        Image.set_sprite(lVar10,uVar6,0);
+                        puVar5 = (uint64 *)Transform.get_localPosition(&local_68,lVar7,0);
+                        uVar17 = *puVar5;
+                        local_70 = (uint32)puVar5[1];
+                        lVar10 = Transform.get_localPosition(&local_78,lVar7,0);
+                        local_70 = *(uint32 *)(lVar10 + 8);
+                        uStack_60 = CONCAT44(uStack_60._4_4_,local_70);
+                        local_68 = uVar17 & 0xffffffff00000000;
+                        local_78 = uVar17;
+                        Transform.set_localPosition(lVar7,&local_68,0);
+                        lVar7 = Transform.Find(lVar7,"PriceIcon",0);
+                        puVar13 = (uint64 *)Vector3.get_zero(&local_78,0);
+                        if (lVar7 != null) {
+                          local_68 = *puVar13;
+                          uStack_60 = CONCAT44(uStack_60._4_4_,*(uint32 *)(puVar13 + 1));
+                          Transform.set_localPosition(lVar7,&local_68,0);
+                          return;
+                        }
+                      }
+                    }
+                  }
+                }
+                goto LAB_180ca575b;
+              }
+              plVar12 = (int64 *)Component.GetComponent(lVar7,DAT_181d96160);
+              lVar10 = FUN_18046c0a0(0);
+              if (((lVar10 == null) || (*(int64 *)(lVar10 + 32) == 0)) ||
+                 (lVar10 = WorldData.Player(*(int64 *)(lVar10 + 32),0)) == null)
+              goto LAB_180ca575b;
+              fVar15 = *(float *)(lVar10 + 0x1c0);
+              if (this.itemData == null) goto LAB_180ca575b;
+              iVar4 = ItemData.GetReadBookContributionCost(this.itemData,0,0);
+              if ((float)iVar4 <= fVar15) {
+                uVar17 = *(uint64 *)(pStatics_2118 + 32);
+                uVar18 = *(uint64 *)(pStatics_2118 + 40);
+              }
+              else {
+                uVar17 = *(uint64 *)(pStatics_3d40 + 0x2e0);
+                uVar18 = *(uint64 *)(pStatics_3d40 + 0x2e8);
+              }
+              if (plVar12 == (int64 *)0) goto LAB_180ca575b;
+              local_68 = uVar17;
+              uStack_60 = uVar18;
+              (**(code **)(*plVar12 + 0x2a8))(plVar12,&local_68,*(uint64 *)(*plVar12 + 0x2b0));
+              lVar10 = Component.GetComponent(lVar7,DAT_181d94ae0);
+              if (lVar10 == null) goto LAB_180ca575b;
+              Behaviour.set_enabled(lVar10,0,0);
+              uVar6 = Component.GetComponent(lVar7,DAT_181d96160);
+              if (this.itemData == null) goto LAB_180ca575b;
+              local_res8[0] = ItemData.GetReadBookContributionCost(this.itemData,0,0);
+              uVar9 = Int32.ToString(local_res8,"f0",0);
+            }
+            if ((*(byte *)(DAT_181d84898 + 0x133) & 4) == 0) goto LAB_180ca4dc2;
+            iVar4 = *(int *)(DAT_181d84898 + 224);
+          }
+          if (iVar4 == 0) {
+            il2cpp_runtime_class_init();
+          }
+        LAB_180ca4dc2:
+          LTLocalization.SetText(uVar6,uVar9,0);
+          return;
+        }
+        uVar6 = this.tPrice;
+        cVar2 = Object.op_Inequality(uVar6,0,0);
+        if (cVar2) {
+          if ((this.tPrice == null) ||
+             (lVar7 = Component.get_gameObject(this.tPrice,0)) == null)
+          goto LAB_180ca575b;
+          cVar2 = GameObject.get_activeSelf(lVar7,0);
+          if (!cVar2) {
+            if ((this.tPrice == null) ||
+               (lVar7 = Component.get_gameObject(this.tPrice,0)) == null)
+            goto LAB_180ca575b;
+            GameObject.SetActive(lVar7,1,0);
+            this.needRefreshPriceIcon = 1;
+          }
+        }
+        if (this.needRefreshPriceIcon) {
+          uVar6 = this.priceIconImage;
+          this.needRefreshPriceIcon = 0;
+          cVar2 = Object.op_Inequality(uVar6,0,0);
+          if (cVar2) {
+            lVar7 = this.priceIconImage;
+            lVar10 = FUN_18046c680(0);
+            if ((lVar10 == null) ||
+               (uVar6 = TextureController.LoadAtlasSprite(lVar10,"UIAtlas","银钱",0),
+               lVar7 == null)) goto LAB_180ca575b;
+            Image.set_sprite(lVar7,uVar6,0);
+          }
+        }
+        uVar6 = this.priceText;
+        cVar2 = Object.op_Inequality(uVar6,0,0);
+        if (cVar2) {
+          uVar6 = this.priceText;
+          local_res8[0] =
+               ItemIconController.GetItemPrice
+                         (this,this.tradeIconType == 3 || this.tradeIconType == 4,0);
+          uVar9 = Int32.ToString(local_res8,0);
+          LTLocalization.SetText(uVar6,uVar9,0);
+        }
+        fVar15 = (float)ItemIconController.GetItemTreasureSpeRate(this,0);
+        if (fVar15 != 1.0) {
+          uVar6 = this.priceText;
+          cVar2 = Object.op_Inequality(uVar6,0,0);
+          if (!cVar2) {
+            return;
+          }
+          plVar12 = this.priceText;
+          fVar15 = (float)ItemIconController.GetItemTreasureSpeRate(this,0);
+          if (fVar15 <= 1.0) {
+            uVar6 = *(uint64 *)(pStatics_3d40 + 0x298);
+            uVar9 = *(uint64 *)(pStatics_3d40 + 0x2a0);
+          }
+          else {
+            uVar6 = *(uint64 *)(pStatics_3d40 + 0x300);
+            uVar9 = *(uint64 *)(pStatics_3d40 + 0x308);
+          }
+          if (plVar12 == (int64 *)0) goto LAB_180ca575b;
+          lVar7 = *plVar12;
+          local_68 = uVar6;
+          uStack_60 = uVar9;
+          goto LAB_180ca4979;
+        }
+        if ((this.tradeIconType == 3) || (this.tradeIconType == 4)) {
+          lVar7 = FUN_18046c6c0(0);
+          if (lVar7 == null) goto LAB_180ca575b;
+          if (*(float *)(lVar7 + 180) == 1.0) goto LAB_180ca472f;
+          uVar6 = this.priceText;
+          cVar2 = Object.op_Inequality(uVar6,0,0);
+          if (!cVar2) {
+            return;
+          }
+          plVar12 = this.priceText;
+          lVar7 = FUN_18046c6c0(0);
+          if (lVar7 == null) goto LAB_180ca575b;
+          fVar15 = *(float *)(lVar7 + 180);
+        LAB_180ca48f9:
+          if (fVar15 <= 1.0) {
+            uVar6 = *(uint64 *)(pStatics_3d40 + 0x298);
+            uVar9 = *(uint64 *)(pStatics_3d40 + 0x2a0);
+          }
+          else {
+            uVar6 = *(uint64 *)(pStatics_3d40 + 0x300);
+            uVar9 = *(uint64 *)(pStatics_3d40 + 0x308);
+          }
+          if (plVar12 == (int64 *)0) goto LAB_180ca575b;
+        }
+        else {
+        LAB_180ca472f:
+          if ((this.tradeIconType != 3) && (this.tradeIconType != 4)) {
+            lVar7 = FUN_18046c6c0(0);
+            if (lVar7 == null) goto LAB_180ca575b;
+            if (*(float *)(lVar7 + 176) != 1.0) {
+              uVar6 = this.priceText;
+              cVar2 = Object.op_Inequality(uVar6,0,0);
+              if (!cVar2) {
+                return;
+              }
+              plVar12 = this.priceText;
+              lVar7 = FUN_18046c6c0(0);
+              if (lVar7 == null) goto LAB_180ca575b;
+              fVar15 = *(float *)(lVar7 + 176);
+              goto LAB_180ca48f9;
+            }
+          }
+          uVar6 = this.priceText;
+          cVar2 = Object.op_Inequality(uVar6,0,0);
+          if (!cVar2) {
+            return;
+          }
+          plVar12 = this.priceText;
+          if (plVar12 == (int64 *)0) {
+        LAB_180ca575b:
+                          // WARNING: Subroutine does not return
+            FUN_1800d6620();
+          }
+          uVar6 = **(uint64 **)(DAT_181d82118 + 184);
+          uVar9 = (*(uint64 **)(DAT_181d82118 + 184))[1];
+        }
+        uStack_60 = uVar9;
+        local_68 = uVar6;
+        lVar7 = *plVar12;
+        LAB_180ca4979:
+        (**(code **)(lVar7 + 0x2a8))(plVar12,&local_68,*(uint64 *)(lVar7 + 0x2b0));
+    }
+
+    // Token : 0x600187E
+    // RVA   : 0xCA3230   Offset: 0xCA2630   Length: 0x12
+    public bool TradeIconTypeRight()
+    {
+        uint32 FUN_180ca3230(int64 this)
+        {
+        int iVar1;
+        iVar1 = this.tradeIconType;
+        if (iVar1 == 3) {
+          return true;
+        }
+        return CONCAT31((int3)((uint32)iVar1 >> 8),iVar1 == 4);
+    }
+
+    // Token : 0x600187F
+    // RVA   : 0xCA1F80   Offset: 0xCA1380   Length: 0x14B
     public float GetItemAreaSpeRate()
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = PlotController.LeftFaceHideOffset;
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181dad378 + 184) + 8);
         if (lVar1 != null) {
           if (*(char *)(lVar1 + 32) == false) {
             return 0x3f800000;
           }
-          lVar1 = PlotController.LaBaFestivelResultTalkText;
+          lVar1 = *(int64 *)(*(int64 *)(DAT_181dac758 + 184) + 56);
           if (lVar1 != null) {
             uVar2 = AreaController.GetAreaSpePriceRate(lVar1,0);
             return uVar2;
@@ -816,18 +1187,19 @@ public class ItemIconController
         }
     }
 
-    // Token : 0x6001838
-    // RVA   : 0xB77E00   Offset: 0xB76600   Length: 0x31C
+    // Token : 0x6001880
+    // RVA   : 0xCA24C0   Offset: 0xCA18C0   Length: 0x31C
     public float GetItemTreasureSpeRate()
     {
+        var pStatics = *(int64*)(DAT_181dac758 + 184);
         long lVar1;
         int iVar2;
-        lVar1 = PlotController.LeftFaceHideOffset;
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181dad378 + 184) + 8);
         if (lVar1 != null) {
           if (*(char *)(lVar1 + 32) == false) {
             return 0x3f800000;
           }
-          lVar1 = PlotController.LaBaFestivelResultTalkText;
+          lVar1 = *(int64 *)(pStatics + 56);
           if (lVar1 != null) {
             if (*(int64 *)(lVar1 + 88) == 0) {
               return 0x3f800000;
@@ -838,7 +1210,7 @@ public class ItemIconController
               }
               iVar2 = 0;
               while( true ) {
-                lVar1 = PlotController.LaBaFestivelResultTalkText;
+                lVar1 = *(int64 *)(pStatics + 56);
                 if (((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 88)) == null) ||
                    (lVar1 = *(int64 *)(lVar1 + 224)) == null) throw; // [null/range check failed]
                 if (*(int *)(lVar1 + 24) <= iVar2) {
@@ -847,7 +1219,7 @@ public class ItemIconController
                 lVar1 = FUN_18046bac0(0);
                 if (((lVar1 == null) || (*(int64 *)(lVar1 + 88) == 0)) ||
                    ((lVar1 = *(int64 *)(*(int64 *)(lVar1 + 88) + 224), lVar1 == null ||
-                    ((lVar1 = FUN_180002f80(lVar1,iVar2,DAT_181d55758), lVar1 == null ||
+                    ((lVar1 = FUN_180002f80(lVar1,iVar2,DAT_181d7cce0), lVar1 == null ||
                      (this.itemData == null)))))) throw; // [null/range check failed]
                 if (*(int *)(lVar1 + 16) == this.itemData.subType) break;
                 iVar2 = iVar2 + 1;
@@ -855,7 +1227,7 @@ public class ItemIconController
               lVar1 = FUN_18046bac0(0);
               if ((((lVar1 != null) && (*(int64 *)(lVar1 + 88) != 0)) &&
                   (lVar1 = *(int64 *)(*(int64 *)(lVar1 + 88) + 224)) != null) &&
-                 (lVar1 = FUN_180002f80(lVar1,iVar2,DAT_181d55758)) != null) {
+                 (lVar1 = FUN_180002f80(lVar1,iVar2,DAT_181d7cce0)) != null) {
                 if (*(char *)(lVar1 + 20) == false) {
                   return 0x3f000000;
                 }
@@ -866,19 +1238,20 @@ public class ItemIconController
         }
     }
 
-    // Token : 0x6001839
-    // RVA   : 0xB776B0   Offset: 0xB75EB0   Length: 0x208
+    // Token : 0x6001881
+    // RVA   : 0xCA1D70   Offset: 0xCA1170   Length: 0x208
     public float GetHeroFavorValueRate(bool buy)
     {
+        var pStatics = *(int64*)(DAT_181dad378 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
-        lVar1 = PlotController.LeftFaceHideOffset;
+        lVar1 = *(int64 *)(pStatics + 8);
         if (lVar1 != null) {
           if (*(int *)(lVar1 + 24) != 0) {
             return 0x3f800000;
           }
-          lVar1 = PlotController.LeftFaceHideOffset;
+          lVar1 = *(int64 *)(pStatics + 8);
           if (((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 72)) != null) &&
              (lVar1 = *(int64 *)(lVar1 + 48)) != null) {
             if (*(int *)(lVar1 + 16) < 0) {
@@ -887,7 +1260,7 @@ public class ItemIconController
             lVar1 = FUN_18046c0a0(0);
             if (lVar1 != null) {
               lVar1 = *(int64 *)(lVar1 + 32);
-              lVar2 = FUN_18046c700(0);
+              lVar2 = FUN_18046c6c0(0);
               if ((((lVar2 != null) && (*(int64 *)(lVar2 + 72) != 0)) &&
                   (lVar2 = *(int64 *)(*(int64 *)(lVar2 + 72) + 48)) != null) &&
                  ((lVar1 != null &&
@@ -900,10 +1273,12 @@ public class ItemIconController
         }
     }
 
-    // Token : 0x600183A
-    // RVA   : 0xB77A10   Offset: 0xB76210   Length: 0x3EB
+    // Token : 0x6001882
+    // RVA   : 0xCA20D0   Offset: 0xCA14D0   Length: 0x3EB
     public int GetItemPrice(bool buy)
     {
+        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
+        var pStatics_d378 = *(int64*)(DAT_181dad378 + 184);
         int iVar1;
         long lVar2;
         float fVar3;
@@ -913,33 +1288,32 @@ public class ItemIconController
         float fVar7;
         if (this.itemData != null) {
           iVar1 = this.itemData.value;
-          if ((GameController._instance != null) &&
-             (lVar2 = GameController._instance.worldData) != null
-             ) {
+          if ((*pStatics_2cc8 != 0) &&
+             (lVar2 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
             lVar2 = WorldData.Player(lVar2,0);
             if (lVar2 != null) {
               fVar3 = (float)HeroData.GetTradeValueRate(lVar2,buy,0);
               fVar4 = (float)ItemIconController.GetHeroFavorValueRate(this,buy,0);
-              lVar2 = PlotController.LeftFaceHideOffset;
+              lVar2 = *(int64 *)(pStatics_d378 + 8);
               if (lVar2 != null) {
-                if (!lVar2.villageAreaID) {
+                if (*(char *)(lVar2 + 32) == false) {
                   fVar7 = 1.0;
                 }
                 else {
-                  lVar2 = PlotController.LaBaFestivelResultTalkText;
+                  lVar2 = *(int64 *)(*(int64 *)(DAT_181dac758 + 184) + 56);
                   if (lVar2 == null) throw; // [null/range check failed]
                   fVar7 = (float)AreaController.GetAreaSpePriceRate(lVar2,0);
                 }
                 fVar5 = (float)ItemIconController.GetItemTreasureSpeRate(this,0);
                 if (!buy) {
-                  lVar2 = PlotController.LeftFaceHideOffset;
+                  lVar2 = *(int64 *)(pStatics_d378 + 8);
                   if (lVar2 == null) throw; // [null/range check failed]
-                  fVar6 = lVar2.TimeDifficulty;
+                  fVar6 = *(float *)(lVar2 + 176);
                 }
                 else {
-                  lVar2 = PlotController.LeftFaceHideOffset;
+                  lVar2 = *(int64 *)(pStatics_d378 + 8);
                   if (lVar2 == null) throw; // [null/range check failed]
-                  fVar6 = lVar2.hour;
+                  fVar6 = *(float *)(lVar2 + 180);
                 }
                 return (int)(fVar5 * (float)iVar1 * fVar3 * fVar4 * fVar7 * fVar6);
               }
@@ -948,28 +1322,37 @@ public class ItemIconController
         }
     }
 
-    // Token : 0x600183B
-    // RVA   : 0xB76A60   Offset: 0xB75260   Length: 0xC18
-    public void AutoSetName(ItemSortType sortType, bool reverseOrder)
+    // Token : 0x6001883
+    // RVA   : 0xCA0A80   Offset: 0xC9FE80   Length: 0xA44
+    public static string BuildSortKey(ItemData itemData, int itemListID, ItemSortType sortType, bool reverseOrder)
     {
-        ulong uVar1;
-        ulong uVar2;
-        ulong uVar3;
-        long lVar5;
-        long lVar6;
-        ulong uVar7;
-        int[] local_res8 = new int[2];
-        float[] local_38 = new float[4];
-        local_38[0] = 0.0;
+        uint64
+        ItemIconController.BuildSortKey(int64 itemData,int itemListID,uint32 sortType,char reverseOrder)
+        {
+        uint64 uVar1;
+        uint64 uVar2;
+        uint64 uVar3;
+        int64 *plVar4;
+        int64 lVar5;
+        int64 lVar6;
+        uint64 uVar7;
+        int64 *plVar8;
+        float *pfVar9;
+        int *piVar10;
+        int local_res8 [2];
+        int local_res10 [2];
+        float local_48 [4];
+        local_res10[0] = itemListID;
+        local_48[0] = 0.0;
         local_res8[0] = 0;
-        if (this.itemData == null) goto LAB_180b77472;
-        switch(this.itemData.type) {
+        if (itemData == null) goto LAB_180ca12be;
+        uVar7 = "";
+        switch(*(uint32 *)(itemData + 20)) {
         case 0:
-          plVar4 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,6);
-          if (this.itemData == null) goto LAB_180b77472;
-          local_res8[0] = this.itemData.type;
+          plVar4 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,6);
+          local_res8[0] = *(int *)(itemData + 20);
           lVar5 = Int32.ToString(local_res8,0);
-          if (plVar4 == (int64 *)0) goto LAB_180b77472;
+          if (plVar4 == (int64 *)0) goto LAB_180ca12be;
           if ((lVar5 != null) &&
              (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
             uVar7 = il2cpp_internal();
@@ -983,8 +1366,7 @@ public class ItemIconController
           }
           plVar4[4] = lVar5;
           il2cpp_internal(plVar4 + 4,lVar5);
-          if (this.itemData == null) goto LAB_180b77472;
-          lVar5 = Int32.ToString(this.itemData + 24,0);
+          lVar5 = Int32.ToString(itemData + 24,0);
           if ((lVar5 != null) &&
              (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
             uVar7 = il2cpp_internal();
@@ -998,8 +1380,7 @@ public class ItemIconController
           }
           plVar4[5] = lVar5;
           il2cpp_internal(plVar4 + 5,lVar5);
-          if (this.itemData == null) goto LAB_180b77472;
-          lVar5 = Int32.ToString(this.itemData + 60,0);
+          lVar5 = Int32.ToString(itemData + 60,0);
           if ((lVar5 != null) &&
              (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
             uVar7 = il2cpp_internal();
@@ -1013,10 +1394,8 @@ public class ItemIconController
           }
           plVar4[6] = lVar5;
           il2cpp_internal(plVar4 + 6,lVar5);
-          if ((this.itemData == null) ||
-             (lVar5 = this.itemData.equipmentData) == null)
-          goto LAB_180b77472;
-          lVar5 = Int32.ToString(lVar5 + 20,0);
+          if (*(int64 *)(itemData + 96) == 0) goto LAB_180ca12be;
+          lVar5 = Int32.ToString(*(int64 *)(itemData + 96) + 20,0);
           if ((lVar5 != null) &&
              (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
             uVar7 = il2cpp_internal();
@@ -1030,8 +1409,7 @@ public class ItemIconController
           }
           plVar4[7] = lVar5;
           il2cpp_internal(plVar4 + 7,lVar5);
-          if (this.itemData == null) goto LAB_180b77472;
-          lVar5 = Int32.ToString(this.itemData + 16,"00",0);
+          lVar5 = Int32.ToString(itemData + 16,"00",0);
           if ((lVar5 != null) &&
              (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
             uVar7 = il2cpp_internal();
@@ -1045,8 +1423,7 @@ public class ItemIconController
           }
           plVar4[8] = lVar5;
           il2cpp_internal(plVar4 + 8,lVar5);
-          if (this.itemData == null) goto LAB_180b77472;
-          lVar5 = Int32.ToString(this.itemData + 64,0);
+          lVar5 = Int32.ToString(itemData + 64,0);
           if ((lVar5 != null) &&
              (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
             uVar7 = il2cpp_internal();
@@ -1059,7 +1436,7 @@ public class ItemIconController
             FUN_1800d65f0(uVar7,0);
           }
           plVar8 = plVar4 + 9;
-          goto LAB_180b7724b;
+          goto LAB_180ca1136;
         case 1:
           local_res8[0] = 1;
           break;
@@ -1067,11 +1444,10 @@ public class ItemIconController
           local_res8[0] = 2;
           break;
         case 3:
-          plVar4 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,5);
-          if (this.itemData == null) goto LAB_180b77472;
-          local_res8[0] = this.itemData.type;
+          plVar4 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,5);
+          local_res8[0] = *(int *)(itemData + 20);
           lVar5 = Int32.ToString(local_res8,0);
-          if (plVar4 == (int64 *)0) goto LAB_180b77472;
+          if (plVar4 == (int64 *)0) goto LAB_180ca12be;
           if ((lVar5 != null) &&
              (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
             uVar7 = il2cpp_internal();
@@ -1085,8 +1461,7 @@ public class ItemIconController
           }
           plVar4[4] = lVar5;
           il2cpp_internal(plVar4 + 4,lVar5);
-          if (this.itemData == null) goto LAB_180b77472;
-          lVar5 = Int32.ToString(this.itemData + 60,0);
+          lVar5 = Int32.ToString(itemData + 60,0);
           if ((lVar5 != null) &&
              (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
             uVar7 = il2cpp_internal();
@@ -1100,9 +1475,9 @@ public class ItemIconController
           }
           plVar4[5] = lVar5;
           il2cpp_internal(plVar4 + 5,lVar5);
-          if (((this.itemData == null) ||
-              (lVar5 = this.itemData.bookData) == null) ||
-             (lVar5 = BookData.DataBase(lVar5,0)) == null) goto LAB_180b77472;
+          if ((*(int64 *)(itemData + 112) == 0) ||
+             (lVar5 = BookData.DataBase(*(int64 *)(itemData + 112),0)) == null)
+          goto LAB_180ca12be;
           lVar5 = Int32.ToString(lVar5 + 48,0);
           if ((lVar5 != null) &&
              (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
@@ -1117,10 +1492,8 @@ public class ItemIconController
           }
           plVar4[6] = lVar5;
           il2cpp_internal(plVar4 + 6,lVar5);
-          if ((this.itemData == null) ||
-             (lVar5 = this.itemData.bookData) == null)
-          goto LAB_180b77472;
-          lVar5 = Int32.ToString(lVar5 + 16,"0000",0);
+          if (*(int64 *)(itemData + 112) == 0) goto LAB_180ca12be;
+          lVar5 = Int32.ToString(*(int64 *)(itemData + 112) + 16,"0000",0);
           if ((lVar5 != null) &&
              (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
             uVar7 = il2cpp_internal();
@@ -1134,8 +1507,7 @@ public class ItemIconController
           }
           plVar4[7] = lVar5;
           il2cpp_internal(plVar4 + 7,lVar5);
-          if (this.itemData == null) goto LAB_180b77472;
-          lVar5 = Int32.ToString(this.itemData + 64,0);
+          lVar5 = Int32.ToString(itemData + 64,0);
           if ((lVar5 != null) &&
              (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
             uVar7 = il2cpp_internal();
@@ -1147,35 +1519,29 @@ public class ItemIconController
                           // WARNING: Subroutine does not return
             FUN_1800d65f0(uVar7,0);
           }
-          goto LAB_180b77247;
+          goto LAB_180ca1132;
         case 4:
           local_res8[0] = 4;
-          uVar7 = Int32.ToString(local_res8,0);
-          if (this.itemData == null) goto LAB_180b77472;
-          uVar1 = Int32.ToString(this.itemData + 24,0);
-          if (this.itemData == null) goto LAB_180b77472;
-          uVar2 = Int32.ToString(this.itemData + 60,0);
-          lVar5 = this.itemData;
-          if ((lVar5 == null) || (lVar5.treasureData == null)) goto LAB_180b77472;
-          uVar3 = "99";
-          if (*(char *)(lVar5.treasureData + 16) == false) goto LAB_180b76dac;
-          goto LAB_180b76d9b;
+          uVar2 = Int32.ToString(local_res8,0);
+          uVar3 = Int32.ToString(itemData + 24,0);
+          uVar7 = Int32.ToString(itemData + 60,0);
+          if (*(int64 *)(itemData + 120) == 0) goto LAB_180ca12be;
+          uVar1 = "99";
+          if (*(char *)(*(int64 *)(itemData + 120) + 16) != false) {
+            uVar1 = Int32.ToString(itemData + 64,0);
+          }
+          goto LAB_180ca0d64;
         case 5:
           local_res8[0] = 5;
-          uVar7 = Int32.ToString(local_res8,0);
-          if (this.itemData == null) goto LAB_180b77472;
-          uVar1 = Int32.ToString(this.itemData + 24,0);
-          if (this.itemData == null) goto LAB_180b77472;
-          uVar2 = Int32.ToString(this.itemData + 60,0);
-          if (this.itemData == null) goto LAB_180b77472;
-          uVar3 = Int32.ToString(this.itemData + 64,0);
-          goto LAB_180b76dac;
+          uVar2 = Int32.ToString(local_res8,0);
+          uVar3 = Int32.ToString(itemData + 24,0);
+          uVar7 = Int32.ToString(itemData + 60,0);
+          goto LAB_180ca0d50;
         case 6:
-          plVar4 = (int64 *)FUN_1800d60b0(DAT_181d80cc0,5);
-          if (this.itemData == null) goto LAB_180b77472;
-          local_res8[0] = this.itemData.type;
+          plVar4 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,5);
+          local_res8[0] = *(int *)(itemData + 20);
           lVar5 = Int32.ToString(local_res8,0);
-          if (plVar4 == (int64 *)0) goto LAB_180b77472;
+          if (plVar4 == (int64 *)0) goto LAB_180ca12be;
           if ((lVar5 != null) &&
              (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
             uVar7 = il2cpp_internal();
@@ -1189,8 +1555,7 @@ public class ItemIconController
           }
           plVar4[4] = lVar5;
           il2cpp_internal(plVar4 + 4,lVar5);
-          if (this.itemData == null) goto LAB_180b77472;
-          lVar5 = Int32.ToString(this.itemData + 24,0);
+          lVar5 = Int32.ToString(itemData + 24,0);
           if ((lVar5 != null) &&
              (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
             uVar7 = il2cpp_internal();
@@ -1204,8 +1569,7 @@ public class ItemIconController
           }
           plVar4[5] = lVar5;
           il2cpp_internal(plVar4 + 5,lVar5);
-          if (this.itemData == null) goto LAB_180b77472;
-          lVar5 = Int32.ToString(this.itemData + 60,0);
+          lVar5 = Int32.ToString(itemData + 60,0);
           if ((lVar5 != null) &&
              (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
             uVar7 = il2cpp_internal();
@@ -1219,8 +1583,7 @@ public class ItemIconController
           }
           plVar4[6] = lVar5;
           il2cpp_internal(plVar4 + 6,lVar5);
-          if (this.itemData == null) goto LAB_180b77472;
-          lVar5 = Int32.ToString(this.itemData + 16,"00",0);
+          lVar5 = Int32.ToString(itemData + 16,"00",0);
           if ((lVar5 != null) &&
              (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
             uVar7 = il2cpp_internal();
@@ -1234,8 +1597,7 @@ public class ItemIconController
           }
           plVar4[7] = lVar5;
           il2cpp_internal(plVar4 + 7,lVar5);
-          if (this.itemData == null) goto LAB_180b77472;
-          lVar5 = Int32.ToString(this.itemData + 64,0);
+          lVar5 = Int32.ToString(itemData + 64,0);
           if ((lVar5 != null) &&
              (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
             uVar7 = il2cpp_internal();
@@ -1247,124 +1609,109 @@ public class ItemIconController
                           // WARNING: Subroutine does not return
             FUN_1800d65f0(uVar7,0);
           }
-        LAB_180b77247:
+        LAB_180ca1132:
           plVar8 = plVar4 + 8;
-        LAB_180b7724b:
+        LAB_180ca1136:
           *plVar8 = lVar5;
           il2cpp_internal(plVar8,lVar5);
           uVar7 = String.Concat(plVar4,0);
-          goto LAB_180b77260;
         default:
-          goto switchD_180b76b21_default;
+          goto switchD_180ca0b4d_default;
         }
-        uVar7 = Int32.ToString(local_res8,0);
-        if (this.itemData == null) {
-        LAB_180b77472:
-                          // WARNING: Subroutine does not return
-          FUN_1800d6620();
-        }
-        uVar1 = Int32.ToString(this.itemData + 60,0);
-        if (this.itemData == null) goto LAB_180b77472;
-        uVar2 = Int32.ToString(this.itemData + 16,"00",0);
-        lVar5 = this.itemData;
-        if (lVar5 == null) goto LAB_180b77472;
-        LAB_180b76d9b:
-        uVar3 = Int32.ToString(lVar5 + 64,0);
-        LAB_180b76dac:
-        uVar7 = String.Concat(uVar7,uVar1,uVar2,uVar3,0);
-        LAB_180b77260:
-        Object.set_name(this,uVar7,0);
-        switchD_180b76b21_default:
+        uVar2 = Int32.ToString(local_res8,0);
+        uVar3 = Int32.ToString(itemData + 60,0);
+        uVar7 = Int32.ToString(itemData + 16,"00",0);
+        LAB_180ca0d50:
+        uVar1 = Int32.ToString(itemData + 64,0);
+        LAB_180ca0d64:
+        uVar7 = String.Concat(uVar2,uVar3,uVar7,uVar1,0);
+        switchD_180ca0b4d_default:
         switch(sortType) {
         case 0:
-          piVar9 = &this.itemListID;
-          uVar7 = "000";
-          if (reverseOrder) {
-            local_res8[0] = 999 - *piVar9;
-            piVar9 = local_res8;
-          }
-          goto LAB_180b772a9;
-        case 1:
-          lVar5 = this.itemData;
           if (!reverseOrder) {
-            if (lVar5 == null) goto LAB_180b77472;
-            local_res8[0] = lVar5.type;
+            uVar2 = Int32.ToString(local_res10,"00000",0);
           }
           else {
-            if (lVar5 == null) goto LAB_180b77472;
-            local_res8[0] = 9 - lVar5.type;
+            local_res8[0] = 99999 - local_res10[0];
+            uVar2 = Int32.ToString(local_res8,"00000",0);
           }
-        LAB_180b77321:
-          uVar7 = Int32.ToString(local_res8,0);
+          break;
+        case 1:
+          local_res8[0] = 9 - *(int *)(itemData + 20);
+          if (!reverseOrder) {
+            local_res8[0] = *(int *)(itemData + 20);
+          }
+          uVar2 = Int32.ToString(local_res8,0);
           break;
         case 2:
-          lVar5 = this.itemData;
+          piVar10 = (int *)(itemData + 60);
           if (reverseOrder) {
-            if (lVar5 == null) goto LAB_180b77472;
-            local_res8[0] = 9 - lVar5.itemLv;
-            goto LAB_180b77321;
+            local_res8[0] = 9 - *piVar10;
+            piVar10 = local_res8;
           }
-          if (lVar5 == null) goto LAB_180b77472;
-          uVar7 = Int32.ToString(lVar5 + 60,0);
+          uVar2 = Int32.ToString(piVar10,0);
           break;
         case 3:
-          lVar5 = this.itemData;
-          if (lVar5 == null) goto LAB_180b77472;
-          if (lVar5.type == 4) {
-            if (lVar5.treasureData == null) goto LAB_180b77472;
-            uVar7 = "99";
-            if (*(char *)(lVar5.treasureData + 16) == false) break;
+          if (*(int *)(itemData + 20) == 4) {
+            if (*(int64 *)(itemData + 120) == 0) {
+        LAB_180ca12be:
+                          // WARNING: Subroutine does not return
+              FUN_1800d6620();
+            }
+            uVar2 = "99";
+            if (*(char *)(*(int64 *)(itemData + 120) + 16) == false) break;
           }
           if (!reverseOrder) {
-            uVar7 = Int32.ToString(lVar5 + 64,0);
+            uVar2 = Int32.ToString(itemData + 64,0);
           }
           else {
-            local_res8[0] = 9 - lVar5.rareLv;
-            uVar7 = Int32.ToString(local_res8,0);
+            local_res8[0] = 9 - *(int *)(itemData + 64);
+            uVar2 = Int32.ToString(local_res8,0);
           }
           break;
         case 4:
-          lVar5 = this.itemData;
-          uVar7 = "00000";
-          if (!reverseOrder) {
-            if (lVar5 == null) goto LAB_180b77472;
-            piVar9 = &lVar5.value;
+          piVar10 = (int *)(itemData + 56);
+          if (reverseOrder) {
+            local_res8[0] = 99999 - *piVar10;
+            piVar10 = local_res8;
           }
-          else {
-            if (lVar5 == null) goto LAB_180b77472;
-            local_res8[0] = 99999 - lVar5.value;
-            piVar9 = local_res8;
-          }
-        LAB_180b772a9:
-          uVar7 = Int32.ToString(piVar9,uVar7,0);
+          uVar2 = Int32.ToString(piVar10,"00000",0);
           break;
         case 5:
-          lVar5 = this.itemData;
-          if (!reverseOrder) {
-            if (lVar5 == null) goto LAB_180b77472;
-            uVar7 = Single.ToString(lVar5 + 68,"000",0);
+          pfVar9 = (float *)(itemData + 68);
+          if (reverseOrder) {
+            local_48[0] = 999.0 - *pfVar9;
+            pfVar9 = local_48;
           }
-          else {
-            if (lVar5 == null) goto LAB_180b77472;
-            local_38[0] = 999.0 - lVar5.weight;
-            uVar7 = Single.ToString(local_38,"000",0);
-          }
+          uVar2 = Single.ToString(pfVar9,"000",0);
           break;
         default:
-          goto switchD_180b77286_default;
+          goto switchD_180ca116a_default;
         }
-        uVar1 = Object.get_name(this,0);
-        uVar7 = String.Concat(uVar7,uVar1,0);
-        Object.set_name(this,uVar7,0);
-        switchD_180b77286_default:
+        uVar7 = String.Concat(uVar2,uVar7,0);
+        switchD_180ca116a_default:
+        return uVar7;
     }
 
-    // Token : 0x600183C
-    // RVA   : 0xB78120   Offset: 0xB76920   Length: 0xF4
+    // Token : 0x6001884
+    // RVA   : 0xCA09C0   Offset: 0xC9FDC0   Length: 0xA7
+    public void AutoSetName(ItemSortType sortType, bool reverseOrder)
+    {
+        uint uVar1;
+        ulong uVar2;
+        uVar2 = this.itemData;
+        uVar1 = this.itemListID;
+        uVar2 = ItemIconController.BuildSortKey(uVar2,uVar1,sortType,reverseOrder,0);
+        Object.set_name(this,uVar2,0);
+    }
+
+    // Token : 0x6001885
+    // RVA   : 0xCA27E0   Offset: 0xCA1BE0   Length: 0xF4
     public void OnClick()
     {
-        var pStatics_0f00 = *(int64*)(DAT_181d50f00 + 184);
-        var pStatics_6278 = *(int64*)(DAT_181d96278 + 184);
+        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
+        var pStatics_5f40 = *(int64*)(DAT_181d75f40 + 184);
+        var pStatics_b428 = *(int64*)(DAT_181dbb428 + 184);
         int iVar1;
         bool cVar2;
         ulong uVar3;
@@ -1376,23 +1723,23 @@ public class ItemIconController
         ulong local_28;
         uint local_20;
         byte[] local_18 = new byte[16];
-        if (this.itemData == null) goto LAB_180b78ad8;
+        if (this.itemData == null) goto LAB_180ca3148;
         ItemData.PlayItemSound(this.itemData,0);
-        if (*pStatics_6278 == 0) goto LAB_180b78ad8;
-        if (*(int *)(*pStatics_6278 + 24) != 1) {
+        if (*pStatics_b428 == 0) goto LAB_180ca3148;
+        if (*(int *)(*pStatics_b428 + 24) != 1) {
           switch(this.itemIconType) {
           case 0:
             if (this.itemData != null) {
               switch(this.itemData.type) {
               case 0:
               case 6:
-                goto switchD_180b7823d_caseD_0;
+                goto switchD_180ca28fd_caseD_0;
               case 1:
               case 2:
-                lVar6 = FUN_180b30e20(0);
-                lVar5 = FUN_18077c1c0(0);
+                lVar6 = FUN_180af1cc0(0);
+                lVar5 = FUN_1807789a0(0);
                 if (lVar5 != null) {
-                  uVar4 = lVar5.BigMapRandomEventDatas;
+                  uVar4 = *(uint64 *)(lVar5 + 96);
                   uVar3 = Component.get_gameObject(this,0);
                   if (lVar6 != null) {
                     ItemUseMenuController.Show(lVar6,uVar4,uVar3,0);
@@ -1408,7 +1755,7 @@ public class ItemIconController
           default:
             return;
           case 2:
-            lVar6 = FUN_18046c700(0);
+            lVar6 = FUN_18046c6c0(0);
             uVar4 = Component.get_gameObject(this,0);
             if (lVar6 != null) {
               TradeUIController.TradeIconClicked(lVar6,uVar4,0);
@@ -1416,7 +1763,7 @@ public class ItemIconController
             }
             break;
           case 3:
-            lVar6 = **(int64 **)(DAT_181d92370 + 184);
+            lVar6 = **(int64 **)(DAT_181db7518 + 184);
             uVar4 = Component.get_gameObject(this,0);
             if (lVar6 != null) {
               ChooseController.ChooseObj(lVar6,uVar4,0);
@@ -1424,17 +1771,17 @@ public class ItemIconController
             }
             break;
           case 4:
-            lVar6 = FUN_18077c1c0(0);
+            lVar6 = FUN_1807789a0(0);
             if ((lVar6 != null) && (lVar6.equipmentData != null)) {
               HeroData.UnequipItem(lVar6.equipmentData,this.itemData,1,0,0);
               return;
             }
             break;
           case 5:
-            lVar6 = **(int64 **)(DAT_181d74a60 + 184);
-            if (((GameController._instance != null) &&
-                (lVar5 = GameController._instance.worldData,
-                lVar5 != null)) && (uVar4 = WorldData.Player(lVar5,0), lVar6 != null)) {
+            lVar6 = **(int64 **)(DAT_181d99c80 + 184);
+            if (((*pStatics_2cc8 != 0) &&
+                (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) != null) &&
+               (uVar4 = WorldData.Player(lVar5,0), lVar6 != null)) {
               ReadBookController.StartReadBook
                         (lVar6,uVar4,this.itemData,1,
                          in_stack_ffffffffffffffc8 & 0xffffffffffffff00,0);
@@ -1442,7 +1789,7 @@ public class ItemIconController
             }
             break;
           case 6:
-            lVar6 = **(int64 **)(DAT_181d59c78 + 184);
+            lVar6 = **(int64 **)(DAT_181d7edb0 + 184);
             lVar5 = Component.get_gameObject(this,0);
             if (lVar6 != null) {
               if (lVar6.subType != 2) {
@@ -1450,7 +1797,7 @@ public class ItemIconController
               }
               lVar6.rareLv = lVar5;
               if ((lVar6.describe != null) &&
-                 (lVar5 = GameObject.GetComponent(lVar6.describe,DAT_181d9ee60)) != null
+                 (lVar5 = GameObject.GetComponent(lVar6.describe,DAT_181dc7c00)) != null
                  ) {
                 Selectable.set_interactable(lVar5,1,0);
                 if (lVar6.checkName != null) {
@@ -1469,21 +1816,21 @@ public class ItemIconController
               }
             }
           }
-          goto LAB_180b78ad8;
+          goto LAB_180ca3148;
         }
         if (this.itemIconType == null)
         {
           lVar6 = this.itemData;
-          if (lVar6 == null) goto LAB_180b78ad8;
+          if (lVar6 == null) goto LAB_180ca3148;
           if (lVar6.type == null) {
-          if (lVar6.equipmentData == null) goto LAB_180b78ad8;
+          if (lVar6.equipmentData == null) goto LAB_180ca3148;
           cVar2 = *(char *)(lVar6.equipmentData + 48);
-          joined_r0x000180b78a0b:
+          joined_r0x000180ca307b:
           if (cVar2) {
         }
             plVar8 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
             plVar9 = (int64 *)0;
-            if ((plVar8 != (int64 *)0) && (*plVar8 == DAT_181d8a228)) {
+            if ((plVar8 != (int64 *)0) && (*plVar8 == DAT_181daf348)) {
               plVar9 = plVar8;
             }
             NGUITools.PlaySound(plVar9,0);
@@ -1491,148 +1838,173 @@ public class ItemIconController
           }
         }
         else if (lVar6.type == 6) {
-          if (lVar6.horseData == null) goto LAB_180b78ad8;
+          if (lVar6.horseData == null) goto LAB_180ca3148;
           cVar2 = *(char *)(lVar6.horseData + 16);
-          goto joined_r0x000180b78a0b;
+          goto joined_r0x000180ca307b;
         }
-        if ((*pStatics_0f00 != 0) &&
-           (lVar6 = *(int64 *)(*pStatics_0f00 + 96)) != null) {
+        if ((*pStatics_5f40 != 0) &&
+           (lVar6 = *(int64 *)(*pStatics_5f40 + 96)) != null) {
           HeroData.LoseItem(lVar6,this.itemData,1,0);
-          lVar6 = *pStatics_0f00;
-          if ((*pStatics_0f00 != 0) && (lVar6 != null)) {
+          lVar6 = *pStatics_5f40;
+          if ((*pStatics_5f40 != 0) && (lVar6 != null)) {
             HeroDetailController.FreshNowHeroDetail
-                      (lVar6,*(uint64 *)(*pStatics_0f00 + 96),0,0);
+                      (lVar6,*(uint64 *)(*pStatics_5f40 + 96),0,0);
             return;
           }
         }
-        LAB_180b78ad8:
+        LAB_180ca3148:
                           // WARNING: Subroutine does not return
         FUN_1800d6620();
-        switchD_180b7823d_caseD_0:
+        switchD_180ca28fd_caseD_0:
         cVar2 = FUN_1804625f0(0x130,0);
         uVar10 = 0;
         if (cVar2) {
-          if (this.itemData == null) goto LAB_180b78ad8;
+          if (this.itemData == null) goto LAB_180ca3148;
           cVar2 = ItemData.Equiped(this.itemData,0);
           if (!cVar2) {
             lVar6 = this.itemData;
-            if (lVar6 == null) goto LAB_180b78ad8;
+            if (lVar6 == null) goto LAB_180ca3148;
             if (lVar6.type == null) {
-              lVar6 = FUN_18077c1c0(0);
+              lVar6 = FUN_1807789a0(0);
               if (((lVar6 == null) || (lVar6.equipmentData == null)) ||
                  (lVar6 = *(int64 *)(lVar6.equipmentData + 0x1f8)) == null)
-              goto LAB_180b78ad8;
+              goto LAB_180ca3148;
               lVar6 = lVar6.name;
-              if (this.itemData == null) goto LAB_180b78ad8;
+              if (this.itemData == null) goto LAB_180ca3148;
               iVar1 = this.itemData.subType;
               if (iVar1 == 0) {
-                lVar6 = FUN_18077c1c0(0);
+                lVar6 = FUN_1807789a0(0);
                 if (((lVar6 == null) || (lVar6.equipmentData == null)) ||
                    (lVar6 = *(int64 *)(lVar6.equipmentData + 0x1f8)) == null)
-                goto LAB_180b78ad8;
+                goto LAB_180ca3148;
                 lVar6 = lVar6.name;
               }
               else if (iVar1 == 1) {
-                lVar6 = FUN_18077c1c0(0);
+                lVar6 = FUN_1807789a0(0);
                 if (((lVar6 == null) || (lVar6.equipmentData == null)) ||
                    (lVar6 = *(int64 *)(lVar6.equipmentData + 0x1f8)) == null)
-                goto LAB_180b78ad8;
+                goto LAB_180ca3148;
                 lVar6 = lVar6.value;
               }
               else if (iVar1 == 2) {
-                lVar6 = FUN_18077c1c0(0);
+                lVar6 = FUN_1807789a0(0);
                 if (((lVar6 == null) || (lVar6.equipmentData == null)) ||
                    (lVar6 = *(int64 *)(lVar6.equipmentData + 0x1f8)) == null)
-                goto LAB_180b78ad8;
+                goto LAB_180ca3148;
                 lVar6 = lVar6.poisonNumDetected;
               }
               else if (iVar1 == 3) {
-                lVar6 = FUN_18077c1c0(0);
+                lVar6 = FUN_1807789a0(0);
                 if (((lVar6 == null) || (lVar6.equipmentData == null)) ||
                    (lVar6 = *(int64 *)(lVar6.equipmentData + 0x1f8)) == null)
-                goto LAB_180b78ad8;
+                goto LAB_180ca3148;
                 lVar6 = lVar6.medFoodData;
               }
               else if (iVar1 == 4) {
-                lVar6 = FUN_18077c1c0(0);
+                lVar6 = FUN_1807789a0(0);
                 if (((lVar6 == null) || (lVar6.equipmentData == null)) ||
                    (lVar6 = *(int64 *)(lVar6.equipmentData + 0x1f8)) == null)
-                goto LAB_180b78ad8;
+                goto LAB_180ca3148;
                 lVar6 = lVar6.materialData;
               }
-              if (lVar6 == null) goto LAB_180b78ad8;
+              if (lVar6 == null) goto LAB_180ca3148;
               lVar5 = 32;
               for (; (int)uVar10 < (int)lVar6.subType; uVar10 = uVar10 + 1) {
                 if (lVar6.subType <= uVar10) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
-                if (*(int64 *)(lVar6.itemID + lVar5) == 0) goto LAB_180b785c1;
+                if (*(int64 *)(lVar6.itemID + lVar5) == 0) goto LAB_180ca2c81;
                 lVar5 = lVar5 + 8;
               }
-              lVar5 = FUN_18077c1c0(0);
-              if (lVar5 == null) goto LAB_180b78ad8;
-              lVar5 = lVar5.BigMapRandomEventDatas;
+              lVar5 = FUN_1807789a0(0);
+              if (lVar5 == null) goto LAB_180ca3148;
+              lVar5 = *(int64 *)(lVar5 + 96);
               if (lVar6.subType == null) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
-              if (lVar5 == null) goto LAB_180b78ad8;
+              if (lVar5 == null) goto LAB_180ca3148;
               uVar4 = *(uint64 *)(lVar6.itemID + 32);
-        LAB_180b785b1:
+        LAB_180ca2c71:
               HeroData.UnequipItem(lVar5,uVar4,0,0,0);
             }
             else if (lVar6.subType == null) {
-              lVar6 = FUN_18077c1c0(0);
-              if ((lVar6 == null) || (lVar6.equipmentData == null)) goto LAB_180b78ad8;
+              lVar6 = FUN_1807789a0(0);
+              if ((lVar6 == null) || (lVar6.equipmentData == null)) goto LAB_180ca3148;
               if (*(int64 *)(lVar6.equipmentData + 0x208) != 0) {
-                lVar6 = FUN_18077c1c0(0);
-                if (lVar6 == null) goto LAB_180b78ad8;
+                lVar6 = FUN_1807789a0(0);
+                if (lVar6 == null) goto LAB_180ca3148;
                 lVar5 = lVar6.equipmentData;
-                lVar6 = FUN_18077c1c0(0);
+                lVar6 = FUN_1807789a0(0);
                 if (((lVar6 == null) || (lVar6.equipmentData == null)) || (lVar5 == null))
-                goto LAB_180b78ad8;
+                goto LAB_180ca3148;
                 uVar4 = *(uint64 *)(lVar6.equipmentData + 0x208);
-                goto LAB_180b785b1;
+                goto LAB_180ca2c71;
               }
             }
             else if (lVar6.subType == 1) {
-              lVar6 = FUN_18077c1c0(0);
-              if ((lVar6 == null) || (lVar6.equipmentData == null)) goto LAB_180b78ad8;
+              lVar6 = FUN_1807789a0(0);
+              if ((lVar6 == null) || (lVar6.equipmentData == null)) goto LAB_180ca3148;
               if (*(int64 *)(lVar6.equipmentData + 0x218) != 0) {
-                lVar6 = FUN_18077c1c0(0);
-                if (lVar6 == null) goto LAB_180b78ad8;
+                lVar6 = FUN_1807789a0(0);
+                if (lVar6 == null) goto LAB_180ca3148;
                 lVar5 = lVar6.equipmentData;
-                lVar6 = FUN_18077c1c0(0);
+                lVar6 = FUN_1807789a0(0);
                 if (((lVar6 == null) || (lVar6.equipmentData == null)) || (lVar5 == null))
-                goto LAB_180b78ad8;
+                goto LAB_180ca3148;
                 uVar4 = *(uint64 *)(lVar6.equipmentData + 0x218);
-                goto LAB_180b785b1;
+                goto LAB_180ca2c71;
               }
             }
-        LAB_180b785c1:
-            if (QuickDetail._instance == null) goto LAB_180b78ad8;
-            QuickDetail._instance.detailDirty = 1;
+        LAB_180ca2c81:
+            lVar6 = FUN_180c95aa0(0);
+            if (lVar6 == null) goto LAB_180ca3148;
+            *(uint8 *)(lVar6 + 192) = 1;
           }
         }
-        lVar6 = FUN_18077c1c0(0);
+        lVar6 = FUN_1807789a0(0);
         if ((lVar6 != null) && (lVar6.equipmentData != null)) {
           HeroData.EquipItem(lVar6.equipmentData,this.itemData,1,1,0);
           return;
         }
-        goto LAB_180b78ad8;
+        goto LAB_180ca3148;
     }
 
-    // Token : 0x600183D
-    // RVA   : 0x3A17B0   Offset: 0x39FFB0   Length: 0x7
+    // Token : 0x6001886
+    // RVA   : 0xCA3190   Offset: 0xCA2590   Length: 0x90
+    public void ResetForPool()
+    {
+        long lVar1;
+        ulong local_28;
+        uint local_20;
+        byte[] local_18 = new byte[16];
+        lVar1 = Component.get_transform(this,0);
+        puVar2 = (uint64 *)Vector3.get_one(local_18,0);
+        if (lVar1 != null) {
+          local_20 = *(uint32 *)(puVar2 + 1);
+          local_28 = *puVar2;
+          Transform.set_localScale(lVar1,&local_28,0);
+          this.itemData = 0;
+          this.fromStorage = 0;
+          this.itemListID = 0xffffffff;
+          this.itemIconType = 1;
+          this.inited = 0x1000000;
+          this.updateTime = 0;
+          return;
+        }
+    }
+
+    // Token : 0x6001887
+    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
     public void /*ctor*/()
     {
         FUN_18044ef50(this,0);
     }
 
-    // Token : 0x600183E
-    // RVA   : 0xB7B0A0   Offset: 0xB798A0   Length: 0x13C
+    // Token : 0x6001888
+    // RVA   : 0xCA5770   Offset: 0xCA4B70   Length: 0x13C
     private static void /*cctor*/()
     {
-        var pItemIconController = *(int64*)(ItemIconController_StaticsPtr + 184);
+        var pStatics = *(int64*)(DAT_181d82118 + 184);
         long lVar2;
         ulong local_48;
         ulong uStack_40;
@@ -1645,7 +2017,7 @@ public class ItemIconController
         local_48 = 0;
         uStack_40 = 0;
         Color.ctor(&local_48,0x3ebebebf,0x3ecacacb,0x3edadadb,0);
-        puVar1 = *(uint32 **)(ItemIconController_StaticsPtr + 184);
+        puVar1 = *(uint32 **)(DAT_181d82118 + 184);
         *puVar1 = (uint32)local_48;
         puVar1[1] = local_48._4_4_;
         puVar1[2] = (uint32)uStack_40;
@@ -1653,7 +2025,7 @@ public class ItemIconController
         local_38 = 0;
         uStack_30 = 0;
         Color.ctor(&local_38,0x3dc8c8c9,0x3ef6f6f7,0x3e9a9a9b,0);
-        lVar2 = pItemIconController;
+        lVar2 = pStatics;
         *(uint32 *)(lVar2 + 16) = (uint32)local_38;
         *(uint32 *)(lVar2 + 20) = local_38._4_4_;
         *(uint32 *)(lVar2 + 24) = (uint32)uStack_30;
@@ -1661,7 +2033,7 @@ public class ItemIconController
         local_28 = 0;
         uStack_20 = 0;
         Color.ctor(&local_28,0x3edcdcdd,0x3f47c7c8,0x3f1f9fa0,0);
-        lVar2 = pItemIconController;
+        lVar2 = pStatics;
         *(uint32 *)(lVar2 + 32) = (uint32)local_28;
         *(uint32 *)(lVar2 + 36) = local_28._4_4_;
         *(uint32 *)(lVar2 + 40) = (uint32)uStack_20;
@@ -1669,7 +2041,7 @@ public class ItemIconController
         local_18 = 0;
         uStack_10 = 0;
         Color.ctor(&local_18,0x3f2eaeaf,0x3eeaeaeb,0,0);
-        lVar2 = pItemIconController;
+        lVar2 = pStatics;
         *(uint64 *)(lVar2 + 48) = local_18;
         *(uint64 *)(lVar2 + 56) = uStack_10;
     }

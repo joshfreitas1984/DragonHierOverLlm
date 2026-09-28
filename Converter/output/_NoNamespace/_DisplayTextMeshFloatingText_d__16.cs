@@ -1,58 +1,58 @@
 // ============================================================
 // Type  : <DisplayTextMeshFloatingText>d__16
-// Token : 0x2000407
+// Token : 0x200040E
 // ============================================================
 
 public class <DisplayTextMeshFloatingText>d__16
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001EEC
+    // Token: 0x4001FF6
     private int <>1__state;
 
-    // Token: 0x4001EED
+    // Token: 0x4001FF7
     private object <>2__current;
 
-    // Token: 0x4001EEE
+    // Token: 0x4001FF8
     public TextMeshProFloatingText <>4__this;
 
-    // Token: 0x4001EEF
+    // Token: 0x4001FF9
     private float <CountDuration>5__2;
 
-    // Token: 0x4001EF0
+    // Token: 0x4001FFA
     private float <starting_Count>5__3;
 
-    // Token: 0x4001EF1
+    // Token: 0x4001FFB
     private float <current_Count>5__4;
 
-    // Token: 0x4001EF2
+    // Token: 0x4001FFC
     private Vector3 <start_pos>5__5;
 
-    // Token: 0x4001EF3
+    // Token: 0x4001FFD
     private Color32 <start_color>5__6;
 
-    // Token: 0x4001EF4
+    // Token: 0x4001FFE
     private float <alpha>5__7;
 
-    // Token: 0x4001EF5
+    // Token: 0x4001FFF
     private float <fadeDuration>5__8;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002494
-    // RVA   : 0x219070   Offset: 0x217870   Length: 0x24
+    // Token : 0x6002517
+    // RVA   : 0x219070   Offset: 0x218470   Length: 0x24
     public void /*ctor*/(int <>1__state)
     {
         ZhSegment.Initialize(this,0);
         this.<>1__state = <>1__state;
     }
 
-    // Token : 0x6002495
-    // RVA   : 0x245810   Offset: 0x244010   Length: 0x3
+    // Token : 0x6002518
+    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
     private virtual void System.IDisposable.Dispose()
     {
     }
 
-    // Token : 0x6002496
-    // RVA   : 0xB0FAC0   Offset: 0xB0E2C0   Length: 0x582
+    // Token : 0x6002519
+    // RVA   : 0x8E9530   Offset: 0x8E8930   Length: 0x582
     private virtual bool MoveNext()
     {
         ulong uVar1;
@@ -110,7 +110,7 @@ public class <DisplayTextMeshFloatingText>d__16
               local_80 = *(float *)(this + 60);
               Transform.set_position(*(int64 *)(lVar3 + 64),&local_88,0);
               uVar9 = TextMeshProFloatingText.DisplayTextMeshFloatingText(lVar3,0);
-              FUN_180d837c0(lVar3,uVar9,0);
+              FUN_180d8c2e0(lVar3,uVar9,0);
             }
             return false;
           }
@@ -118,9 +118,8 @@ public class <DisplayTextMeshFloatingText>d__16
         }
         fVar15 = this.<current_Count>5__4;
         if (fVar15 <= 0.0) {
-          lVar3 = *(int64 *)
-                   (*(int64 *)(_DisplayTextMeshProFloatingText_d__15_StaticsPtr + 184) + 8);
-          uVar8 = FUN_180d8cf10(0,20);
+          lVar3 = *(int64 *)(*(int64 *)(DAT_181dab010 + 184) + 8);
+          uVar8 = FUN_180d95a30(0,20);
           if (lVar3 != null) {
             if (uVar8 < *(uint32 *)(lVar3 + 24)) {
               this.<>2__current = lVar3[uVar8];
@@ -139,33 +138,33 @@ public class <DisplayTextMeshFloatingText>d__16
           if (fVar15 <= 3.0) {
             fVar15 = this.<alpha>5__7;
             fVar13 = (float)Time.get_deltaTime(0);
-            uVar14 = FUN_1810a8ba0(fVar15 - (fVar13 / this.<fadeDuration>5__8) * 255.0,0,0x437f0000,0);
+            uVar14 = FUN_1810e36c0(fVar15 - (fVar13 / this.<fadeDuration>5__8) * 255.0,0,0x437f0000,0);
             fVar15 = this.<current_Count>5__4;
             this.<alpha>5__7 = uVar14;
           }
           local_res8[0] = (int)fVar15;
           if (lVar3 == null) {
-        LAB_180b1002d:
+        LAB_1808e9a9d:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           lVar4 = *(int64 *)(lVar3 + 48);
           uVar9 = Int32.ToString(local_res8,0);
-          if (lVar4 == null) goto LAB_180b1002d;
+          if (lVar4 == null) goto LAB_1808e9a9d;
           TextMesh.set_text(lVar4,uVar9,0);
           lVar4 = *(int64 *)(lVar3 + 48);
           local_res18[0] = 0;
           Color32.ctor(local_res18,this.<start_color>5__6,*(uint8 *)(this + 65),
                         *(uint8 *)(this + 66),(char)(int)this.<alpha>5__7,0);
           puVar10 = (uint32 *)Color32.op_Implicit(&local_68,local_res18[0],0);
-          if (lVar4 == null) goto LAB_180b1002d;
+          if (lVar4 == null) goto LAB_1808e9a9d;
           local_68 = *puVar10;
           uStack_64 = puVar10[1];
           uStack_60 = puVar10[2];
           uStack_5c = puVar10[3];
           TextMesh.set_color(lVar4,&local_68,0);
           lVar4 = *(int64 *)(lVar3 + 64);
-          if (lVar4 == null) goto LAB_180b1002d;
+          if (lVar4 == null) goto LAB_1808e9a9d;
           puVar11 = (uint64 *)Transform.get_position(&local_68,lVar4,0);
           fVar15 = this.<starting_Count>5__3;
           uVar9 = *puVar11;
@@ -177,7 +176,7 @@ public class <DisplayTextMeshFloatingText>d__16
           Transform.set_position(lVar4,&local_88,0);
           uVar1 = *(uint64 *)(lVar3 + 80);
           uVar14 = *(uint32 *)(lVar3 + 88);
-          if (*(int64 *)(lVar3 + 72) == 0) goto LAB_180b1002d;
+          if (*(int64 *)(lVar3 + 72) == 0) goto LAB_1808e9a9d;
           puVar12 = (uint64 *)Transform.get_position(&local_68,*(int64 *)(lVar3 + 72),0);
           uStack_70 = CONCAT44(uStack_70._4_4_,uVar14);
           local_88 = *puVar12;
@@ -196,7 +195,7 @@ public class <DisplayTextMeshFloatingText>d__16
             local_78 = uVar1;
             uStack_70 = uVar9;
             cVar7 = TMPro_ExtensionMethods.Compare(&local_78,&local_68,1000,0);
-            if (cVar7) goto LAB_180b0ff4c;
+            if (cVar7) goto LAB_1808e99bc;
           }
           if (*(int64 *)(lVar3 + 72) != 0) {
             puVar11 = (uint64 *)Transform.get_position(&local_68,*(int64 *)(lVar3 + 72),0);
@@ -227,10 +226,8 @@ public class <DisplayTextMeshFloatingText>d__16
                     local_78 = local_88;
                     uStack_70 = CONCAT44(uStack_70._4_4_,local_80);
                     Transform.set_forward(*(int64 *)(lVar3 + 56),&local_78,0);
-        LAB_180b0ff4c:
-                    this.<>2__current =
-                         **(uint64 **)(_DisplayTextMeshProFloatingText_d__15_StaticsPtr + 184);
-                    il2cpp_internal();
+        LAB_1808e99bc:
+                    this.<>2__current = **(uint64 **)(DAT_181dab010 + 184);
                     this.<>1__state = 1;
                     return true;
                   }
@@ -241,27 +238,27 @@ public class <DisplayTextMeshFloatingText>d__16
         }
     }
 
-    // Token : 0x6002497
-    // RVA   : 0x20F140   Offset: 0x20D940   Length: 0x5
+    // Token : 0x600251A
+    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
     private virtual object System.Collections.Generic.IEnumerator<System.object>.get_Current()
     {
         return this.<>2__current;
     }
 
-    // Token : 0x6002498
-    // RVA   : 0xB10050   Offset: 0xB0E850   Length: 0x3E
+    // Token : 0x600251B
+    // RVA   : 0x8E9AC0   Offset: 0x8E8EC0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d682e8);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d8cef0);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181db6268);
     }
 
-    // Token : 0x6002499
-    // RVA   : 0x20F140   Offset: 0x20D940   Length: 0x5
+    // Token : 0x600251C
+    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
     private virtual object System.Collections.IEnumerator.get_Current()
     {
         return this.<>2__current;

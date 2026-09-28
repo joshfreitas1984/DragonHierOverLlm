@@ -1,30 +1,30 @@
 // ============================================================
 // Type  : SkillChangePowerType
-// Token : 0x2000220
+// Token : 0x2000226
 // ============================================================
 
 public class SkillChangePowerType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40010A2
+    // Token: 0x4001145
     public int value__;
 
-    // Token: 0x40010A3
+    // Token: 0x4001146
     public const SkillChangePowerType None;
 
-    // Token: 0x40010A4
+    // Token: 0x4001147
     public const SkillChangePowerType Attack;
 
-    // Token: 0x40010A5
+    // Token: 0x4001148
     public const SkillChangePowerType Move;
 
-    // Token: 0x40010A6
+    // Token: 0x4001149
     public const SkillChangePowerType Hit;
 
-    // Token: 0x40010A7
+    // Token: 0x400114A
     public const SkillChangePowerType Kill;
 
-    // Token: 0x40010A8
+    // Token: 0x400114B
     public const SkillChangePowerType AutoCharge;
 
 }
