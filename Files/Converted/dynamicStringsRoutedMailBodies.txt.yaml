@@ -463,14 +463,6 @@
     translated: ", Assist Senior Brother in deploying the defense"
   templates:
   - template: "{0}<b>{1}</b>{2}"
-- raw: "听闻唐门近来要与霹雳堂举行联姻大典，邀请巴蜀一带各大门派前往参与。可惜为师近来事务繁忙，还望徒儿能代为师前去道贺。"
-  splits:
-  - text: "听闻唐门近来要与霹雳堂举行联姻大典，邀请巴蜀一带各大门派前往参与。可惜为师近来事务繁忙，还望徒儿能代为师前去道贺。"
-    translated: "I heard that the Tang Clan is planning to hold a grand wedding ceremony with Thunderclap Hall and has invited all major sects in the Bashu region to attend. Unfortunately, I have been very busy lately, so I hope my disciple can go on my behalf to offer our congratulations."
-    qcReviewedText: "I heard that the Tang Clan is planning to hold a grand wedding ceremony with Thunderclap Hall and has invited all major sects in the Bashu region to attend. Unfortunately, I have been very busy lately, so I hope my disciple can go on my behalf to offer our congratulations."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
 - raw: "近来七大恶人之一雨人屠现身<b>江陵东方</b>，此人武功高强，穷凶极恶，为免当地百姓受戮，为师先去抵挡，还望仙霞派弟子速速前来支援！"
   splits:
   - text: "近来七大恶人之一雨人屠现身"

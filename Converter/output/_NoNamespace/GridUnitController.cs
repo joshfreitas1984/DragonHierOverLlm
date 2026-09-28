@@ -285,7 +285,7 @@ public class GridUnitController
           uVar2 = this.showAttackDirectionRange;
           cVar4 = Object.op_Equality(uVar2,0,0);
           if (!cVar4) {
-            lVar7 = *(int64 *)(pStatics + 176);
+            lVar7 = GridUnitController.AttackDirectionColor;
             if ((((this.showAttackDirectionRange == null) ||
                  (lVar9 = GameObject.GetComponent(this.showAttackDirectionRange,DAT_181d71820),
                  lVar9 == null)) || (*(int64 *)(lVar9 + 24) == 0)) ||
@@ -545,8 +545,8 @@ public class GridUnitController
                   }
                 }
                 else {
-                  uVar12 = *(uint64 *)(pStatics + 16);
-                  fVar11 = *(float *)(pStatics + 24);
+                  uVar12 = PlotController.livingSkillIndexCache;
+                  fVar11 = PlotController._instance;
                 }
                 if (lVar7 != null) {
                   local_38 = uVar12;
@@ -1120,7 +1120,6 @@ public class GridUnitController
     // RVA   : 0x86E5F0   Offset: 0x86D9F0   Length: 0x11E0
     public void HitObstacle(float damage)
     {
-        var pStatics = *(int64*)(DAT_181db0248 + 184);
         float fVar1;
         uint uVar2;
         bool cVar3;
@@ -1154,8 +1153,8 @@ public class GridUnitController
             if (lVar4.mapID == 1) {
               uVar5 = Component.get_gameObject(this,0);
               plVar6 = (int64 *)Resources.Load("SpeEffect/DirtSplash",0);
-              uVar9 = *(uint64 *)(pStatics + 16);
-              uVar2 = *(uint32 *)(pStatics + 24);
+              uVar9 = PlotController.livingSkillIndexCache;
+              uVar2 = PlotController._instance;
               plVar12 = plVar13;
               if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181d72e60)) {
                 plVar12 = plVar6;
@@ -1330,8 +1329,8 @@ public class GridUnitController
                   if (lVar4.mapID == 1) {
                     uVar5 = Component.get_gameObject(this,0);
                     plVar6 = (int64 *)Resources.Load("SpeEffect/DirtSplash",0);
-                    uVar9 = *(uint64 *)(pStatics + 16);
-                    uVar2 = *(uint32 *)(pStatics + 24);
+                    uVar9 = PlotController.livingSkillIndexCache;
+                    uVar2 = PlotController._instance;
                     puVar10 = (uint64 *)Vector3.get_one(local_68,0);
                     local_88 = *puVar10;
                     local_80 = *(float *)(puVar10 + 1);
@@ -1485,7 +1484,7 @@ public class GridUnitController
                       if (this.obstacleObj == null) throw; // [null/range check failed]
                       uVar5 = GameObject.get_transform(this.obstacleObj,0);
                       uVar5 = ShortcutExtensions.DOLocalMoveZ
-                                        (uVar5,*(uint32 *)(pStatics + 48)
+                                        (uVar5,PlotController.CheckHideChoice
                                          ,fVar16 * 0.2,0,0);
                       uVar5 = TweenSettingsExtensions.SetEase(uVar5,17,DAT_181dc0f80);
                       TweenSettingsExtensions.SetDelay(uVar5,fVar16 * 0.8,DAT_181dc0c60);
@@ -1507,11 +1506,11 @@ public class GridUnitController
                         if (lVar4 == null) break;
                         lVar4.gridType = 1;
                         lVar4.passes = 15;
-                        lVar14 = *(int64 *)(pStatics + 80);
+                        lVar14 = PlotController.LaBaFestivelResultTalkText;
                         if (((lVar14 == null) || (lVar14 = *(int64 *)(lVar14 + 24)) == null) ||
                            (lVar14 = *(int64 *)(lVar14 + 72)) == null) break;
                         FUN_1817eee00(lVar14,lVar4,DAT_181d8b098);
-                        lVar14 = *(int64 *)(pStatics + 80);
+                        lVar14 = PlotController.LaBaFestivelResultTalkText;
                         if (((lVar14 == null) || (lVar14 = *(int64 *)(lVar14 + 24)) == null) ||
                            (lVar14 = *(int64 *)(lVar14 + 64)) == null) break;
                         FUN_18181e0a0(lVar14,lVar4,DAT_181d8af18);
@@ -1604,16 +1603,15 @@ public class GridUnitController
     // RVA   : 0x8721B0   Offset: 0x8715B0   Length: 0x1B5
     public void SetObstacleDestroyed(GridUnitData targetGrid)
     {
-        var pStatics = *(int64*)(DAT_181db0248 + 184);
         long lVar1;
         if (targetGrid != null) {
           *(uint32 *)(targetGrid + 20) = 1;
           *(uint32 *)(targetGrid + 32) = 15;
-          lVar1 = *(int64 *)(pStatics + 80);
+          lVar1 = PlotController.LaBaFestivelResultTalkText;
           if (((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 24)) != null) &&
              (lVar1 = *(int64 *)(lVar1 + 72)) != null) {
             FUN_1817eee00(lVar1,targetGrid,DAT_181d8b098);
-            lVar1 = *(int64 *)(pStatics + 80);
+            lVar1 = PlotController.LaBaFestivelResultTalkText;
             if (((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 24)) != null) &&
                (lVar1 = *(int64 *)(lVar1 + 64)) != null) {
               FUN_18181e0a0(lVar1,targetGrid,DAT_181d8af18);
@@ -1634,7 +1632,6 @@ public class GridUnitController
     // RVA   : 0x870690   Offset: 0x86FA90   Length: 0x437
     private static void RefreshGridCache()
     {
-        var pStatics = *(int64*)(DAT_181d74868 + 184);
         int iVar1;
         long lVar2;
         bool cVar3;
@@ -1646,21 +1643,21 @@ public class GridUnitController
         ulong uVar9;
         long lVar10;
         ulong uVar12;
-        iVar1 = *(int *)(pStatics + 184);
+        iVar1 = GridUnitController.gridCacheFrame;
         iVar5 = Time.get_frameCount(0);
         if (iVar1 == iVar5) {
           return;
         }
         uVar6 = Time.get_frameCount(0);
-        *(uint32 *)(pStatics + 184) = uVar6;
+        GridUnitController.gridCacheFrame = uVar6;
         lVar8 = *(int64 *)(*(int64 *)(DAT_181db0248 + 184) + 80);
-        lVar10 = *(int64 *)(pStatics + 192);
+        lVar10 = GridUnitController.pathGridSet;
         if ((lVar10 != null) && (HashSet_1.Clear(lVar10,DAT_181db4ab0), lVar8 != null)) {
           uVar9 = 0;
           uVar12 = uVar9;
           if (*(int64 *)(lVar8 + 0x1e0) == 0) {
         LAB_1808708ec:
-            lVar10 = *(int64 *)(pStatics + 200);
+            lVar10 = GridUnitController.damageRangeGridSet;
             if (lVar10 != null) {
               HashSet_1.Clear(lVar10,DAT_181db4ab0);
               uVar12 = uVar9;
@@ -1672,11 +1669,9 @@ public class GridUnitController
                   if (lVar8 == null) throw; // [null/range check failed]
                   uVar9 = GameObject.GetComponent(lVar8,DAT_181d71820);
                 }
-                puVar11 = (uint64 *)(pStatics + 208);
-                *puVar11 = uVar9;
-                il2cpp_internal(puVar11,uVar9);
+                GridUnitController.hoveredGridCache = uVar9;
                 uVar4 = FUN_1804625f0(0x130,0);
-                *(uint8 *)(pStatics + 216) = uVar4;
+                GridUnitController.shiftKeyHeld = uVar4;
                 return;
               }
               while (lVar10 = *(int64 *)(lVar8 + 0x208)) != null {
@@ -1686,7 +1681,7 @@ public class GridUnitController
                   il2cpp_runtime_class_init(DAT_181d74868);
                   lVar10 = *(int64 *)(lVar8 + 0x208);
                 }
-                lVar2 = *(int64 *)(pStatics + 200);
+                lVar2 = GridUnitController.damageRangeGridSet;
                 if ((lVar10 == null) || (FUN_180002f80(lVar10,uVar12,DAT_181d8b398), lVar2 == null)) break;
                 FUN_180d1ced0(lVar2);
                 uVar12 = (uint64)((int)uVar12 + 1);
@@ -1701,7 +1696,7 @@ public class GridUnitController
                 il2cpp_runtime_class_init(DAT_181d74868);
                 lVar10 = *(int64 *)(lVar8 + 0x1e0);
               }
-              lVar2 = *(int64 *)(pStatics + 192);
+              lVar2 = GridUnitController.pathGridSet;
               if ((lVar10 == null) || (uVar7 = FUN_180002f80(lVar10,uVar12,DAT_181d8b398), lVar2 == null))
               break;
               FUN_180d1ced0(lVar2,uVar7);
@@ -1735,7 +1730,7 @@ public class GridUnitController
         uint uStack_40;
         uint32 uStack_3c;
         GridUnitController.RefreshGridCache(0);
-        if (*(char *)(pStatics + 216) == false) {
+        if (!GridUnitController.shiftKeyHeld) {
         LAB_180872caf:
           uVar7 = this.showAttackDirectionRange;
           cVar3 = Object.op_Inequality(uVar7,0,0);
@@ -1748,11 +1743,11 @@ public class GridUnitController
           }
         }
         else {
-          uVar7 = *(uint64 *)(pStatics + 208);
+          uVar7 = GridUnitController.hoveredGridCache;
           cVar3 = Object.op_Inequality(uVar7,0,0);
           if (!cVar3) goto LAB_180872caf;
 
-          if ((lVar8 = *(int64 *)(pStatics + 208)?.battleUnit) == null) throw; // [null/range check failed]
+          if ((lVar8 = GridUnitController.hoveredGridCache?.battleUnit) == null) throw; // [null/range check failed]
           uVar7 = lVar8.battleUnit;
           cVar3 = Object.op_Inequality(uVar7,0,0);
           if (!cVar3) goto LAB_180872caf;
@@ -1765,14 +1760,14 @@ public class GridUnitController
             goto LAB_180872cec;
           }
         }
-        lVar8 = *(int64 *)(pStatics + 192);
+        lVar8 = GridUnitController.pathGridSet;
         if (lVar8 == null) throw; // [null/range check failed]
         cVar3 = HashSet_1.Contains(lVar8,this.gridData,DAT_181db4b38);
         if (!cVar3) {
           lVar8 = *(int64 *)(*(int64 *)(DAT_181db0248 + 184) + 80);
           if (lVar8 == null) throw; // [null/range check failed]
           if (*(int *)(lVar8 + 0x124) == 10) {
-            lVar8 = *(int64 *)(pStatics + 200);
+            lVar8 = GridUnitController.damageRangeGridSet;
             if (lVar8 == null) throw; // [null/range check failed]
             cVar3 = HashSet_1.Contains(lVar8,this.gridData,DAT_181db4b38);
             if (cVar3) {
@@ -2270,20 +2265,14 @@ public class GridUnitController
           uStack_130 = (uint32)uStack_60;
           uStack_12c = uStack_60._4_4_;
           FUN_1817e9a90(lVar2,&local_138,DAT_181d82e20);
-          plVar5 = (int64 *)(pStatics + 176);
-          *plVar5 = lVar2;
-          il2cpp_internal(plVar5,lVar2);
-          *(uint32 *)(pStatics + 184) = 0xffffffff;
+          GridUnitController.AttackDirectionColor = lVar2;
+          GridUnitController.gridCacheFrame = 0xffffffff;
           uVar1 = **(uint64 **)(DAT_181d78d48 + 184);
           uVar4 = new HashSet_1(uVar1,DAT_181db49a0);
-          puVar6 = (uint64 *)(pStatics + 192);
-          *puVar6 = uVar4;
-          il2cpp_internal(puVar6,uVar4);
+          GridUnitController.pathGridSet = uVar4;
           uVar1 = **(uint64 **)(DAT_181d78d48 + 184);
           uVar4 = new HashSet_1(uVar1,DAT_181db49a0);
-          puVar6 = (uint64 *)(pStatics + 200);
-          *puVar6 = uVar4;
-          il2cpp_internal(puVar6,uVar4);
+          GridUnitController.damageRangeGridSet = uVar4;
           return;
         }
     }

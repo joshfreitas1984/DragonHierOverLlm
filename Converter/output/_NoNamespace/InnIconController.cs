@@ -50,7 +50,6 @@ public class InnIconController
     // RVA   : 0xC99F60   Offset: 0xC99360   Length: 0x701
     public void Init()
     {
-        var pStatics_0bc8 = *(int64*)(DAT_181db0bc8 + 184);
         var pStatics_b490 = *(int64*)(DAT_181dab490 + 184);
         ulong uVar1;
         long lVar2;
@@ -74,14 +73,14 @@ public class InnIconController
                                  this.innData.innName,0);
               if (lVar2 != null) {
                 SpriteRenderer.set_sprite(lVar2,uVar3,0);
-                lVar2 = *(int64 *)(pStatics_0bc8 + 16);
+                lVar2 = GameController.CheckShowSpeHero;
                 if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 216)) != null) {
                   lVar2 = GameObject.get_transform(lVar2,0);
                   if (lVar2 != null) {
                     lVar2 = Transform.Find(lVar2,"AreaUIPanel",0);
                     if (lVar2 != null) {
                       uVar3 = Component.get_gameObject(lVar2,0);
-                      lVar2 = *(int64 *)(pStatics_0bc8 + 16);
+                      lVar2 = GameController.CheckShowSpeHero;
                       if (lVar2 != null) {
                         uVar1 = *(uint64 *)(lVar2 + 224);
                         uVar3 = GlobalData.AddChild(uVar3,uVar1,0);
@@ -296,7 +295,6 @@ public class InnIconController
     // RVA   : 0xC9A9F0   Offset: 0xC99DF0   Length: 0x845
     private void Update()
     {
-        var pStatics_0bc8 = *(int64*)(DAT_181db0bc8 + 184);
         var pStatics_b490 = *(int64*)(DAT_181dab490 + 184);
         bool cVar1;
         byte uVar2;
@@ -318,7 +316,7 @@ public class InnIconController
         uint uStack_30;
         uint32 uStack_2c;
         InnIconController.EnsureRefs(this,0);
-        lVar4 = *(int64 *)(pStatics_0bc8 + 16);
+        lVar4 = GameController.CheckShowSpeHero;
         uVar8 = local_58;
         fVar12 = local_50;
         if (lVar4 == null) goto LAB_180c9b230;
@@ -468,7 +466,7 @@ public class InnIconController
         uVar8 = this.playerArmyNpc;
         cVar1 = Object.op_Equality(uVar8,0,0);
         if (cVar1) {
-          lVar4 = *(int64 *)(pStatics_0bc8 + 16);
+          lVar4 = GameController.CheckShowSpeHero;
           uVar8 = local_58;
           fVar12 = local_50;
           if (lVar4 == null) goto LAB_180c9b230;

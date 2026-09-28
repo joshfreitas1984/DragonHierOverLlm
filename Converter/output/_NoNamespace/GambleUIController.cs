@@ -134,7 +134,6 @@ public class GambleUIController
     // RVA   : 0x78A8C0   Offset: 0x789CC0   Length: 0x76F
     public void ShowGambleUI(HeroData _enemyData, string _fightEndCallFuc)
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
         var pStatics_dcf8 = *(int64*)(DAT_181dadcf8 + 184);
         long lVar2;
@@ -173,8 +172,8 @@ public class GambleUIController
                   this.temp = lVar3;
                   if (*plVar1 != 0) {
                     lVar3 = GameObject.GetComponent(*plVar1,DAT_181d71b50);
-                    if (((*pStatics_2cc8 != 0) &&
-                        (lVar2 = *(int64 *)(*pStatics_2cc8 + 32)) != null)
+                    if (((GameController._instance != null) &&
+                        (lVar2 = GameController._instance.worldData) != null)
                        && (uVar4 = WorldData.Player(lVar2,0), lVar3 != null)) {
                       *(uint64 *)(lVar3 + 32) = uVar4;
                       if ((*plVar1 != 0) &&
@@ -284,7 +283,6 @@ public class GambleUIController
     // RVA   : 0x7856A0   Offset: 0x784AA0   Length: 0x177
     public int GetBetMoney(int betLv, int enemyLv)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         bool cVar2;
         int iVar3;
@@ -295,12 +293,12 @@ public class GambleUIController
         }
         lVar4 = *(int64 *)(*(int64 *)(DAT_181d72bb8 + 184) + 8);
         if (lVar4 != null) {
-          if (*(uint32 *)(lVar4 + 24) <= betLv) {
+          if (lVar4.cityAreaID <= betLv) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          iVar1 = lVar4[betLv];
-          if ((*pStatics != 0) &&
-             (lVar4 = *(int64 *)(*pStatics + 32)) != null) {
+          iVar1 = lVar4.chapter[betLv];
+          if ((GameController._instance != null) &&
+             (lVar4 = GameController._instance.worldData) != null) {
             lVar4 = WorldData.Player(lVar4,0);
             if (lVar4 != null) {
               cVar2 = HeroData.HaveForceFunction(lVar4,0,0);
@@ -637,11 +635,8 @@ public class GambleUIController
     // RVA   : 0x785D10   Offset: 0x785110   Length: 0x32D8
     public void NextButtonClicked()
     {
-        var pStatics_2bb8 = *(int64*)(DAT_181d72bb8 + 184);
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
         var pStatics_61e8 = *(int64*)(DAT_181d761e8 + 184);
-        var pStatics_7850 = *(int64*)(DAT_181d77850 + 184);
         bool cVar1;
         int iVar2;
         int iVar3;
@@ -697,7 +692,7 @@ public class GambleUIController
             HeroLittleTalkController.ClearAll(*pStatics_61e8,0);
             uVar9 = this.playerIcon;
             lVar7 = *pStatics_61e8;
-            lVar13 = *(int64 *)(pStatics_2bb8 + 16);
+            lVar13 = GambleUIController.GambleTalkText;
             if (lVar13 != null) {
               uVar6 = FUN_180d95a30(0,lVar13.Count,0);
               if (lVar13.Count <= uVar6) {
@@ -710,7 +705,7 @@ public class GambleUIController
                            ,0xbf800000,0);
                 uVar9 = this.enemyIcon;
                 lVar7 = *pStatics_61e8;
-                lVar13 = *(int64 *)(pStatics_2bb8 + 16);
+                lVar13 = GambleUIController.GambleTalkText;
                 if (lVar13 != null) {
                   uVar6 = FUN_180d95a30(0,lVar13.Count,0);
                   if (lVar13.Count <= uVar6) {
@@ -848,13 +843,11 @@ public class GambleUIController
                         uVar9 = ShortcutExtensions.DOLocalMove(uVar9,&local_c8,0x3f000000,0,0);
                         uVar9 = TweenSettingsExtensions.SetDelay
                                           (uVar9,(float)(int)local_res18[0] * 0.5 + 1.0,DAT_181dc0c60);
-                        lVar7 = *(int64 *)(pStatics_7850 + 8);
+                        lVar7 = GambleUIController.betLvNum;
                         if (lVar7 == null) {
                           uVar10 = **(uint64 **)(DAT_181d77850 + 184);
                           lVar7 = new OnTooltipCB(uVar10,DAT_181da3c08,0);
-                          plVar11 = (int64 *)(pStatics_7850 + 8);
-                          *plVar11 = lVar7;
-                          il2cpp_internal(plVar11,lVar7);
+                          GambleUIController.betLvNum = lVar7;
                         }
                         TweenSettingsExtensions.OnPlay(uVar9,lVar7,DAT_181dc03f0);
                         lVar7 = this.gambleUIPanel;
@@ -929,13 +922,11 @@ public class GambleUIController
             uStack_a4 = 0x43070000;
             uStack_a0 = 0;
             uVar9 = ShortcutExtensions.DOLocalMove(uVar9,&local_a8,0x3f000000,0,0);
-            lVar7 = *(int64 *)(pStatics_7850 + 24);
+            lVar7 = GambleUIController.GambleWinTalkText;
             if (lVar7 == null) {
               uVar10 = **(uint64 **)(DAT_181d77850 + 184);
               lVar7 = new OnTooltipCB(uVar10,DAT_181da3b08,0);
-              plVar11 = (int64 *)(pStatics_7850 + 24);
-              *plVar11 = lVar7;
-              il2cpp_internal(plVar11,lVar7);
+              GambleUIController.GambleWinTalkText = lVar7;
             }
             TweenSettingsExtensions.OnPlay(uVar9,lVar7,DAT_181dc03f0);
             if ((((this.gambleUIPanel == null) ||
@@ -947,13 +938,11 @@ public class GambleUIController
             uStack_a4 = 0x43070000;
             uStack_a0 = 0;
             uVar9 = ShortcutExtensions.DOLocalMove(uVar9,&local_a8,0x3f000000,0,0);
-            lVar7 = *(int64 *)(pStatics_7850 + 32);
+            lVar7 = GambleUIController.GambleLoseTalkText;
             if (lVar7 == null) {
               uVar10 = **(uint64 **)(DAT_181d77850 + 184);
               lVar7 = new OnTooltipCB(uVar10,DAT_181da3b88,0);
-              plVar11 = (int64 *)(pStatics_7850 + 32);
-              *plVar11 = lVar7;
-              il2cpp_internal(plVar11,lVar7);
+              GambleUIController.GambleLoseTalkText = lVar7;
             }
             TweenSettingsExtensions.OnPlay(uVar9,lVar7,DAT_181dc03f0);
             uVar4 = GambleUIController.GetDiceResultLv(this,this.playerDiceResult,0);
@@ -966,7 +955,7 @@ public class GambleUIController
             uVar9 = Component.GetComponent(lVar7,DAT_181d96160);
             uVar6 = this.playerDiceResultLv;
             lVar13 = (int64)(int)uVar6;
-            lVar7 = *pStatics_2bb8;
+            lVar7 = GambleUIController.diceResultLvName;
             if (lVar7 == null) goto LAB_180788fda;
             if (lVar7.summonLv <= uVar6) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -992,7 +981,7 @@ public class GambleUIController
             uVar9 = Component.GetComponent(lVar7,DAT_181d96160);
             uVar6 = this.enemyDiceResultLv;
             lVar13 = (int64)(int)uVar6;
-            lVar7 = *pStatics_2bb8;
+            lVar7 = GambleUIController.diceResultLvName;
             if (lVar7 == null) goto LAB_180788fda;
             if (lVar7.summonLv <= uVar6) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1097,7 +1086,7 @@ public class GambleUIController
               this.playerWinCount = this.playerWinCount + 1;
               lVar7 = FUN_1807789e0(0);
               uVar9 = this.playerIcon;
-              lVar13 = *(int64 *)(pStatics_2bb8 + 24);
+              lVar13 = GambleUIController.GambleWinTalkText;
               if (lVar13 == null) goto LAB_180788fe0;
               uVar4 = FUN_180d95a30(0,lVar13.Count,0);
               uVar10 = FUN_180002f80(lVar13,uVar4,DAT_181da4358);
@@ -1105,7 +1094,7 @@ public class GambleUIController
               HeroLittleTalkController.HeroTalk(lVar7,uVar9,uVar10,0xbf800000,0);
               lVar13 = FUN_1807789e0(0);
               uVar9 = this.enemyIcon;
-              lVar7 = *(int64 *)(pStatics_2bb8 + 32);
+              lVar7 = GambleUIController.GambleLoseTalkText;
               if (lVar7 == null) goto LAB_180788fe0;
               uVar4 = FUN_180d95a30(0,lVar7.summonLv,0);
               uVar10 = FUN_180002f80(lVar7,uVar4,DAT_181da4358);
@@ -1172,7 +1161,7 @@ public class GambleUIController
               this.enemyWinCount = this.enemyWinCount + 1;
               lVar7 = FUN_1807789e0(0);
               uVar9 = this.playerIcon;
-              lVar13 = *(int64 *)(pStatics_2bb8 + 32);
+              lVar13 = GambleUIController.GambleLoseTalkText;
               if (lVar13 == null) goto LAB_180788fe0;
               uVar4 = FUN_180d95a30(0,lVar13.Count,0);
               uVar10 = FUN_180002f80(lVar13,uVar4,DAT_181da4358);
@@ -1180,7 +1169,7 @@ public class GambleUIController
               HeroLittleTalkController.HeroTalk(lVar7,uVar9,uVar10,0xbf800000,0);
               lVar13 = FUN_1807789e0(0);
               uVar9 = this.enemyIcon;
-              lVar7 = *(int64 *)(pStatics_2bb8 + 24);
+              lVar7 = GambleUIController.GambleWinTalkText;
               if (lVar7 == null) goto LAB_180788fe0;
               uVar4 = FUN_180d95a30(0,lVar7.summonLv,0);
               uVar10 = FUN_180002f80(lVar7,uVar4,DAT_181da4358);
@@ -1355,15 +1344,15 @@ public class GambleUIController
             }
             local_res20[0] = local_res20[0] + 1;
           } while (local_res20[0] < 4);
-          if ((((*pStatics_2cc8 == 0) ||
-               (lVar7 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+          if ((((GameController._instance == null) ||
+               (lVar7 = GameController._instance.worldData) == null) ||
               (lVar7 = WorldData.Player(lVar7,0)) == null) || (lVar7.itemListData == null))
           goto LAB_180788fe0;
           iVar3 = *(int *)(lVar7.itemListData + 24);
           iVar2 = GambleUIController.GetBetMoney(this,0,0xffffffff);
           if (iVar3 < iVar2) {
             uVar9 = "银钱不足以最低下注！";
-            lVar7 = *pStatics_2cc8;
+            lVar7 = GameController._instance;
             if (lVar7 == null) goto LAB_180788fe0;
             lVar7 = GameController.ShowTextOnMouse(lVar7,uVar9,0);
             if ((lVar7 == null) || (lVar7 = GameObject.GetComponent(lVar7,DAT_181d74108)) == null)
@@ -1377,8 +1366,8 @@ public class GambleUIController
           }
           if (this.playerWinCount < 3) {
             if (2 < this.enemyWinCount) {
-              if (((*pStatics_2cc8 == 0) ||
-                  (lVar7 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+              if (((GameController._instance == null) ||
+                  (lVar7 = GameController._instance.worldData) == null) ||
                  (lVar7 = WorldData.Player(lVar7,0)) == null) goto LAB_180788fe0;
               uVar20 = CONCAT71((int7)((uint64)uVar19 >> 8),1);
               HeroData.AddTag(lVar7,0x154,0x40c00000,0,uVar20,1,0);
@@ -1389,8 +1378,8 @@ public class GambleUIController
             }
           }
           else {
-            if (((*pStatics_2cc8 == 0) ||
-                (lVar7 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+            if (((GameController._instance == null) ||
+                (lVar7 = GameController._instance.worldData) == null) ||
                (lVar7 = WorldData.Player(lVar7,0)) == null) goto LAB_180788fe0;
             uVar20 = CONCAT71((int7)((uint64)uVar19 >> 8),1);
             HeroData.AddTag(lVar7,0x153,0x40c00000,0,uVar20,1,0);
@@ -1607,13 +1596,11 @@ public class GambleUIController
             uVar10 = ShortcutExtensions.DOShakePosition(uVar10);
             local_c8 = (uint32)uVar10;
             uStack_c4 = (uint32)((uint64)uVar10 >> 32);
-            lVar13 = *(int64 *)(pStatics_7850 + 16);
+            lVar13 = GambleUIController.GambleTalkText;
             if (lVar13 == null) {
               uVar10 = **(uint64 **)(DAT_181d77850 + 184);
               lVar13 = new OnTooltipCB(uVar10,DAT_181da3c88,0);
-              plVar11 = (int64 *)(pStatics_7850 + 16);
-              *plVar11 = lVar13;
-              il2cpp_internal(plVar11,lVar13);
+              GambleUIController.GambleTalkText = lVar13;
             }
             uVar10 = TweenSettingsExtensions.OnStart(CONCAT44(uStack_c4,local_c8),lVar13,DAT_181dc0588);
             uVar19 = new OnTooltipCB(lVar7,DAT_181da3e88,0);
@@ -2310,9 +2297,7 @@ public class GambleUIController
             FUN_18182a0b0(lVar1,10,DAT_181d8f218);
             FUN_18182a0b0(lVar1,20,DAT_181d8f218);
             FUN_18182a0b0(lVar1,30,DAT_181d8f218);
-            plVar2 = (int64 *)(pStatics + 8);
-            *plVar2 = lVar1;
-            il2cpp_internal(plVar2,lVar1);
+            GambleUIController.betLvNum = lVar1;
             lVar1 = il2cpp_internal(DAT_181d97750);
             FUN_18132faf0(lVar1,DAT_181da3bd8);
             if (lVar1 != null) {
@@ -2329,9 +2314,7 @@ public class GambleUIController
               FUN_18181e0a0(lVar1,"时来运转",DAT_181da3d58);
               FUN_18181e0a0(lVar1,"知己知彼，百战不殆",DAT_181da3d58);
               FUN_18181e0a0(lVar1,"成王败寇，在此一把",DAT_181da3d58);
-              plVar2 = (int64 *)(pStatics + 16);
-              *plVar2 = lVar1;
-              il2cpp_internal(plVar2,lVar1);
+              GambleUIController.GambleTalkText = lVar1;
               lVar1 = il2cpp_internal(DAT_181d97750);
               FUN_18132faf0(lVar1,DAT_181da3bd8);
               if (lVar1 != null) {
@@ -2340,9 +2323,7 @@ public class GambleUIController
                 FUN_18181e0a0(lVar1,"还是我技高一筹！",DAT_181da3d58);
                 FUN_18181e0a0(lVar1,"稳如泰山",DAT_181da3d58);
                 FUN_18181e0a0(lVar1,"手气来了",DAT_181da3d58);
-                plVar2 = (int64 *)(pStatics + 24);
-                *plVar2 = lVar1;
-                il2cpp_internal(plVar2,lVar1);
+                GambleUIController.GambleWinTalkText = lVar1;
                 lVar1 = il2cpp_internal(DAT_181d97750);
                 FUN_18132faf0(lVar1,DAT_181da3bd8);
                 if (lVar1 != null) {
@@ -2351,9 +2332,7 @@ public class GambleUIController
                   FUN_18181e0a0(lVar1,"愿赌服输",DAT_181da3d58);
                   FUN_18181e0a0(lVar1,"兵败如山倒",DAT_181da3d58);
                   FUN_18181e0a0(lVar1,"哼！就差一点",DAT_181da3d58);
-                  plVar2 = (int64 *)(pStatics + 32);
-                  *plVar2 = lVar1;
-                  il2cpp_internal(plVar2,lVar1);
+                  GambleUIController.GambleLoseTalkText = lVar1;
                   return;
                 }
               }

@@ -68,7 +68,6 @@ public class ResourcePointController
     // RVA   : 0xD15FE0   Offset: 0xD153E0   Length: 0x4D0
     private void Start()
     {
-        var pStatics = *(int64*)(DAT_181db0bc8 + 184);
         long lVar1;
         ulong uVar2;
         long lVar3;
@@ -85,14 +84,14 @@ public class ResourcePointController
                 uVar4 = TextureController.LoadAtlasSprite(lVar1,"ResourcePointAtlas",uVar4,0);
                 if (lVar3 != null) {
                   SpriteRenderer.set_sprite(lVar3,uVar4,0);
-                  lVar3 = *(int64 *)(pStatics + 16);
+                  lVar3 = GameController.CheckShowSpeHero;
                   if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 216)) != null) {
                     lVar3 = GameObject.get_transform(lVar3,0);
                     if (lVar3 != null) {
                       lVar3 = Transform.Find(lVar3,"AreaUIPanel",0);
                       if (lVar3 != null) {
                         uVar4 = Component.get_gameObject(lVar3,0);
-                        lVar3 = *(int64 *)(pStatics + 16);
+                        lVar3 = GameController.CheckShowSpeHero;
                         if (lVar3 != null) {
                           uVar2 = *(uint64 *)(lVar3 + 224);
                           uVar4 = GlobalData.AddChild(uVar4,uVar2,0);

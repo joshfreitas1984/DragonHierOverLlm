@@ -233,7 +233,6 @@ public class ForceSettingController
     // RVA   : 0x77D950   Offset: 0x77CD50   Length: 0xE0A
     public void RefreshForceJob(int jobType, int jobID)
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
         long lVar1;
         long lVar2;
@@ -371,9 +370,9 @@ public class ForceSettingController
                                                 lVar2 = GameObject.GetComponent
                                                                   (this.temp,
                                                                    DAT_181d71b50);
-                                                if (*pStatics_2cc8 != 0) {
+                                                if (GameController._instance != null) {
                                                   lVar6 = *(int64 *)
-                                                           (*pStatics_2cc8 + 32);
+                                                           (GameController._instance + 32);
                                                   if ((this.targetForce != null) &&
                                                      (lVar1 = *(int64 *)
                                                                (this.targetForce + 0x160),
@@ -460,7 +459,7 @@ public class ForceSettingController
                                                            , lVar2 != null)) {
                                                           lVar2 = Component.GetComponent
                                                                             (lVar2,DAT_181d93760);
-                                                          if (*pStatics_2cc8 != 0)
+                                                          if (GameController._instance != null)
                                                           {
                                                             lVar6 = *(int64 *)
                                                                      (**(int64 **)
@@ -508,7 +507,7 @@ public class ForceSettingController
                                                         "ClearButton",0), lVar2 != null)) {
                                                           lVar2 = Component.GetComponent
                                                                             (lVar2,DAT_181d95560);
-                                                          if (*pStatics_2cc8 != 0)
+                                                          if (GameController._instance != null)
                                                           {
                                                             lVar6 = *(int64 *)
                                                                      (**(int64 **)
@@ -652,7 +651,7 @@ public class ForceSettingController
         float local_34;
         long local_30;
         lVar9 = (int64)(int)jobType;
-        lVar6 = *(int64 *)(pStatics_2d50 + 32);
+        lVar6 = GameController.lockObj;
         if ((lVar6 != null) && (lVar6 = *(int64 *)(lVar6 + 96)) != null) {
           if (*(uint32 *)(lVar6 + 24) <= jobType) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -680,7 +679,7 @@ public class ForceSettingController
                     uVar5 = String.Concat(uVar5,uVar4,"%</color>",0);
                     if (lVar6 != null) {
                       local_30 = String.Replace(lVar6,"#ForceJobExpRate#",uVar5,0);
-                      lVar6 = *(int64 *)(pStatics_2d50 + 32);
+                      lVar6 = GameController.lockObj;
                       if ((lVar6 != null) && (lVar6 = *(int64 *)(lVar6 + 96)) != null) {
                         if (*(uint32 *)(lVar6 + 24) <= jobType) {
                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -719,7 +718,7 @@ public class ForceSettingController
                                                   (this,jobType,jobID,0);
                                 if (lVar6 != null) {
                                   uVar5 = String.Replace(lVar6,"#EffectForceSpeAdd#",uVar5,0);
-                                  lVar6 = *(int64 *)(pStatics_2d50 + 32);
+                                  lVar6 = GameController.lockObj;
                                   if ((lVar6 != null) && (lVar6 = *(int64 *)(lVar6 + 96)) != null) {
                                     if (*(uint32 *)(lVar6 + 24) <= jobType) {
                                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -729,7 +728,7 @@ public class ForceSettingController
                                       if (*(int *)(lVar6 + 16) != -1) {
                                         lVar6 = *(int64 *)(pStatics_3d40 + 0x3d8)
                                         ;
-                                        lVar7 = *(int64 *)(pStatics_2d50 + 32);
+                                        lVar7 = GameController.lockObj;
                                         if ((lVar7 == null) ||
                                            (lVar7 = *(int64 *)(lVar7 + 96)) == null)
                                         throw; // [null/range check failed]
@@ -746,7 +745,7 @@ public class ForceSettingController
                                         uVar4 = *(uint64 *)
                                                  (*(int64 *)(lVar6 + 16) + 32 +
                                                  (int64)(int)uVar1 * 8);
-                                        lVar6 = *(int64 *)(pStatics_2d50 + 32);
+                                        lVar6 = GameController.lockObj;
                                         if ((lVar6 == null) ||
                                            (lVar6 = *(int64 *)(lVar6 + 96)) == null)
                                         throw; // [null/range check failed]
@@ -761,7 +760,7 @@ public class ForceSettingController
                                         uVar4 = String.Format("\n\n需要{0}以上",uVar4,0);
                                         uVar5 = String.Concat(uVar5,uVar4,0);
                                       }
-                                      lVar6 = *(int64 *)(pStatics_2d50 + 32);
+                                      lVar6 = GameController.lockObj;
                                       if ((lVar6 != null) &&
                                          (lVar6 = *(int64 *)(lVar6 + 96)) != null) {
                                         if (*(uint32 *)(lVar6 + 24) <= jobType) {
@@ -835,7 +834,6 @@ public class ForceSettingController
     // RVA   : 0x77C800   Offset: 0x77BC00   Length: 0x608
     public string GetEffectForceSpeAddText(int jobType, int jobID)
     {
-        var pStatics = *(int64*)(DAT_181d72d50 + 184);
         uint64
         ForceSettingController.GetEffectForceSpeAddText(int64 this,uint32 jobType,uint32 jobID)
         {
@@ -856,7 +854,7 @@ public class ForceSettingController
         local_44[0] = 0.0;
         uVar7 = "";
         while( true ) {
-          lVar5 = *(int64 *)(pStatics + 32);
+          lVar5 = GameController.lockObj;
           if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 96)) == null) break;
           if (*(uint32 *)(lVar5 + 24) <= jobType) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -918,7 +916,7 @@ public class ForceSettingController
             if (lVar5 == null) break;
             local_48 = (float)HeroData.GetForceJobSpeAddResult(lVar5,uVar2,0);
             uVar10 = *(uint64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x268);
-            lVar5 = *(int64 *)(pStatics + 32);
+            lVar5 = GameController.lockObj;
             if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 152)) == null) break;
             lVar5 = FUN_180002f80(lVar5,uVar2);
             if (lVar5 == null) break;
@@ -940,7 +938,6 @@ public class ForceSettingController
     // RVA   : 0x77BFF0   Offset: 0x77B3F0   Length: 0x401
     public void ForceJobButtonClicked(GameObject buttonClicked)
     {
-        var pStatics = *(int64*)(DAT_181d72d50 + 184);
         uint uVar1;
         long lVar2;
         long lVar3;
@@ -971,7 +968,7 @@ public class ForceSettingController
                   lVar5 = String.Split(lVar5,lVar6,0);
                   lVar6 = this.targetForce;
                   lVar2 = **(int64 **)(DAT_181db7518 + 184);
-                  lVar3 = *(int64 *)(pStatics + 32);
+                  lVar3 = GameController.lockObj;
                   if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 96), lVar5 != null)) {
                     if (*(int *)(lVar5 + 24) == 0) {
                       uVar7 = il2cpp_internal();
@@ -987,7 +984,7 @@ public class ForceSettingController
                       ;
                       if (lVar3 != null) {
                         uVar1 = *(uint32 *)(lVar3 + 16);
-                        lVar3 = *(int64 *)(pStatics + 32);
+                        lVar3 = GameController.lockObj;
                         if (lVar3 != null) {
                           lVar3 = *(int64 *)(lVar3 + 96);
                           if (*(int *)(lVar5 + 24) == 0) {

@@ -150,8 +150,8 @@ public class AreaEventQuickButtonController
         long lVar1;
         long lVar2;
         ulong uVar3;
-        lVar1 = *(int64 *)(pStatics + 56);
-        lVar2 = *(int64 *)(pStatics + 56);
+        lVar1 = PlotController.SpringFestivelRewardLvTalkText;
+        lVar2 = PlotController.SpringFestivelRewardLvTalkText;
         if (lVar2 != null) {
           uVar3 = AreaController.GetEventObj(lVar2,this.targetEventData,0);
           if (lVar1 != null) {

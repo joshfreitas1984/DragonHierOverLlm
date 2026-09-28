@@ -71,7 +71,7 @@ public class <FinishStudyInternalSkill>d__48
                 while (lVar10 = plVar3) != null {
                   if ((int)*(uint32 *)(lVar10 + 24) <= (int)uVar13) {
                     FUN_1812f9a10(lVar10,DAT_181d89418);
-                    if (**(int64 **)(DAT_181da8190 + 184) != 0) {
+                    if (StudySkillController._instance != null) {
                       StudySkillController.FinishStudySkill();
                       return false;
                     }

@@ -1149,7 +1149,6 @@ public class ManageReplaceForceController
     // RVA   : 0xA89C60   Offset: 0xA89060   Length: 0x23A
     public void SureButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
@@ -1168,8 +1167,8 @@ public class ManageReplaceForceController
             throw; // [null/range check failed]
           }
         }
-        if (*pStatics != 0) {
-          GameController.ShowTextOnMouse(*pStatics,"请完整设置门派名称！",0);
+        if (GameController._instance != null) {
+          GameController.ShowTextOnMouse(GameController._instance,"请完整设置门派名称！",0);
           plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
           plVar5 = (int64 *)0;
           if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
@@ -1184,7 +1183,6 @@ public class ManageReplaceForceController
     // RVA   : 0xA89EA0   Offset: 0xA892A0   Length: 0x973
     public void SureReplaceForce()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar2;
         ulong uVar3;
         bool cVar4;
@@ -1246,16 +1244,16 @@ public class ManageReplaceForceController
                     uVar8 = ColorUtility.ToHtmlStringRGB(&local_58,0);
                     if (lVar7 != null) {
                       lVar7.color = uVar8;
-                      if ((*pStatics != 0) &&
-                         (lVar7 = *(int64 *)(*pStatics + 32)) != null
+                      if ((GameController._instance != null) &&
+                         (lVar7 = GameController._instance.worldData) != null
                          ) {
                         lVar7 = WorldData.Player(lVar7,0);
                         if ((this.targetForce != null) && (lVar7 != null)) {
                           HeroData.JoinForce(lVar7,this.targetForce.forceID,
                                               0,0,1,0,0);
                           lVar7 = this.targetForce;
-                          if (((*pStatics != 0) &&
-                              (lVar11 = *(int64 *)(*pStatics + 32),
+                          if (((GameController._instance != null) &&
+                              (lVar11 = GameController._instance.worldData,
                               lVar11 != null)) && (uVar8 = WorldData.Player(lVar11,0), lVar7 != null)) {
                             ForceData.SetLeader(lVar7,uVar8,1,0);
                             lVar7 = this.targetForce;

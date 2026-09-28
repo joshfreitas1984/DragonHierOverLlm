@@ -52,7 +52,7 @@
   - split: 2
     text: "疗伤管理"
     translated: "Healing Management"
-- raw: "4,恢复管理,恢复管理,0,恢复效率,0.02,FALSE,1,药材"
+- raw: "4,恢复管理,恢复管理,0,日常恢复效率,0.02,FALSE,1,药材"
   splits:
   - split: 1
     text: "恢复管理"

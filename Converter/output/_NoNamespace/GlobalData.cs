@@ -1138,7 +1138,6 @@ public class GlobalData
     public static string ReplaceSpeString(string targetText, int sourceHeroID)
     {
         var pStatics_1b88 = *(int64*)(DAT_181d91b88 + 184);
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_c758 = *(int64*)(DAT_181dac758 + 184);
         long lVar1;
         bool cVar2;
@@ -1151,19 +1150,19 @@ public class GlobalData
         ulong uVar9;
         uint[] local_res8 = new uint[2];
         uint[] local_res10 = new uint[2];
-        if ((*pStatics_2cc8 != 0) &&
-           (uVar3 = GameController.GetHeroName(*pStatics_2cc8,sourceHeroID,0,0),
+        if ((GameController._instance != null) &&
+           (uVar3 = GameController.GetHeroName(GameController._instance,sourceHeroID,0,0),
            targetText != null)) {
           lVar4 = String.Replace(targetText,"#PlayerName#",uVar3,0);
-          if (((*pStatics_2cc8 != 0) &&
-              (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) != null) &&
+          if (((GameController._instance != null) &&
+              (lVar5 = GameController._instance.worldData) != null) &&
              (lVar5 = WorldData.Player(lVar5,0)) != null) {
             lVar5 = HeroData.GetForce(lVar5,0,0);
             uVar3 = "#PlayerForceName#";
             uVar6 = "";
             if (lVar5 != null) {
-              if (((*pStatics_2cc8 == 0) ||
-                  (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+              if (((GameController._instance == null) ||
+                  (lVar5 = GameController._instance.worldData) == null) ||
                  (lVar5 = WorldData.Player(lVar5,0)) == null) throw; // [null/range check failed]
               lVar5 = HeroData.GetForce(lVar5,0,0);
               if (lVar5 == null) throw; // [null/range check failed]
@@ -1171,21 +1170,21 @@ public class GlobalData
             }
             if (lVar4 != null) {
               lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
-              if ((*pStatics_2cc8 != 0) &&
-                 (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
+              if ((GameController._instance != null) &&
+                 (lVar5 = GameController._instance.worldData) != null) {
                 lVar5 = WorldData.Player(lVar5,0);
                 if ((lVar5 != null) && (uVar3 = HeroData.GetHeroForceLvDescribe(lVar5,1,0), lVar4 != null)) {
                   lVar4 = String.Replace(lVar4,"#PlayerForceDescribe#",uVar3,0);
-                  if ((((*pStatics_2cc8 != 0) &&
-                       (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) != null)
+                  if ((((GameController._instance != null) &&
+                       (lVar5 = GameController._instance.worldData) != null)
                       && (lVar5 = WorldData.Player(lVar5,0)) != null) && (lVar4 != null)) {
                     lVar4 = String.Replace(lVar4,"#$PlayerName#",*(uint64 *)(lVar5 + 104),0);
                     uVar3 = "#SourceForceName#";
-                    lVar5 = *(int64 *)(pStatics_1b88 + 24);
+                    lVar5 = BuildingUIController.PartyLvName;
                     if (lVar5 != null) {
                       uVar6 = "";
                       if (*(int64 *)(lVar5 + 104) != 0) {
-                        lVar5 = *(int64 *)(pStatics_1b88 + 24);
+                        lVar5 = BuildingUIController.PartyLvName;
                         if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 104)) == null)
                         throw; // [null/range check failed]
                         lVar5 = HeroData.GetForce(lVar5,0,0);
@@ -1201,11 +1200,11 @@ public class GlobalData
                       if (lVar4 != null) {
                         lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
                         uVar3 = "#TargetForceName#";
-                        lVar5 = *(int64 *)(pStatics_1b88 + 24);
+                        lVar5 = BuildingUIController.PartyLvName;
                         if (lVar5 != null) {
                           uVar6 = "";
                           if (*(int64 *)(lVar5 + 112) != 0) {
-                            lVar5 = *(int64 *)(pStatics_1b88 + 24);
+                            lVar5 = BuildingUIController.PartyLvName;
                             if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 112)) == null)
                             throw; // [null/range check failed]
                             lVar5 = HeroData.GetForce(lVar5,0,0);
@@ -1221,11 +1220,11 @@ public class GlobalData
                           if (lVar4 != null) {
                             lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
                             uVar3 = "#SourceForceDescribe#";
-                            lVar5 = *(int64 *)(pStatics_1b88 + 24);
+                            lVar5 = BuildingUIController.PartyLvName;
                             if (lVar5 != null) {
                               uVar6 = "";
                               if (*(int64 *)(lVar5 + 104) != 0) {
-                                lVar5 = *(int64 *)(pStatics_1b88 + 24);
+                                lVar5 = BuildingUIController.PartyLvName;
                                 if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 104)) == null)
                                 throw; // [null/range check failed]
                                 uVar6 = HeroData.GetHeroForceLvDescribe(lVar5,1,0);
@@ -1233,11 +1232,11 @@ public class GlobalData
                               if (lVar4 != null) {
                                 lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
                                 uVar3 = "#TargetForceDescribe#";
-                                lVar5 = *(int64 *)(pStatics_1b88 + 24);
+                                lVar5 = BuildingUIController.PartyLvName;
                                 if (lVar5 != null) {
                                   uVar6 = "";
                                   if (*(int64 *)(lVar5 + 112) != 0) {
-                                    lVar5 = *(int64 *)(pStatics_1b88 + 24);
+                                    lVar5 = BuildingUIController.PartyLvName;
                                     if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 112)) == null)
                                     throw; // [null/range check failed]
                                     uVar6 = HeroData.GetHeroForceLvDescribe(lVar5,1,0);
@@ -1245,12 +1244,12 @@ public class GlobalData
                                   if (lVar4 != null) {
                                     lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
                                     uVar3 = "#SourceInteractName#";
-                                    lVar5 = *(int64 *)(pStatics_1b88 + 24);
+                                    lVar5 = BuildingUIController.PartyLvName;
                                     if (lVar5 != null) {
                                       uVar6 = "";
                                       if (*(int64 *)(lVar5 + 104) != 0) {
-                                        lVar5 = *pStatics_2cc8;
-                                        lVar1 = *(int64 *)(pStatics_1b88 + 24);
+                                        lVar5 = GameController._instance;
+                                        lVar1 = BuildingUIController.PartyLvName;
                                         if (((lVar1 == null) ||
                                             (lVar1 = *(int64 *)(lVar1 + 104)) == null) ||
                                            (lVar5 == null)) throw; // [null/range check failed]
@@ -1260,11 +1259,11 @@ public class GlobalData
                                       if (lVar4 != null) {
                                         lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
                                         uVar3 = "#TargetInteractName#";
-                                        lVar5 = *(int64 *)(pStatics_1b88 + 24);
+                                        lVar5 = BuildingUIController.PartyLvName;
                                         if (lVar5 != null) {
                                           uVar6 = "";
                                           if (*(int64 *)(lVar5 + 112) != 0) {
-                                            lVar5 = *pStatics_2cc8;
+                                            lVar5 = GameController._instance;
                                             lVar1 = *(int64 *)
                                                      (pStatics_1b88 + 24);
                                             if (((lVar1 == null) ||
@@ -1460,7 +1459,7 @@ public class GlobalData
                                                         }
                                                         if (lVar4 != null) {
                                                           lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
-                                                          if (((*pStatics_2cc8 != 0
+                                                          if (((GameController._instance != null
                                                                ) && (lVar5 = *(int64 *)
                                                                               (**(int64 **)
                                                                                  (DAT_181d72cc8 + 184) +
@@ -1481,7 +1480,7 @@ public class GlobalData
                                                                  (*(int *)(DAT_181d72cc8 + 224) == 0)) {
                                                                 il2cpp_runtime_class_init(DAT_181d72cc8);
                                                               }
-                                                              if (((*pStatics_2cc8
+                                                              if (((GameController._instance
                                                                     == 0) ||
                                                                   (lVar5 = *(int64 *)
                                                                             (**(int64 **)
@@ -1525,7 +1524,7 @@ public class GlobalData
                                                                        (*(int64 *)
                                                                          (DAT_181d73d40 + 184) + 0x2d0);
                                                             }
-                                                            if (((*pStatics_2cc8 !=
+                                                            if (((GameController._instance !=
                                                                   0) && (lVar5 = *(int64 *)
                                                                                   (**(int64 **)
                                                                                      (DAT_181d72cc8 + 184
@@ -1578,7 +1577,7 @@ public class GlobalData
                                                           if ((lVar5 == null) ||
                                                              (lVar5 = *(int64 *)(lVar5 + 120),
                                                              lVar5 == null)) throw; // [null/range check failed]
-                                                          if (*(int *)(lVar5 + 24) <= (int)uVar7) break;
+                                                          if (lVar5.TestBuildPlayer <= (int)uVar7) break;
                                                           local_res10[0] = uVar7;
                                                           uVar3 = il2cpp_value_box(DAT_181d80418,
                                                                                    local_res10);
@@ -1753,7 +1752,6 @@ public class GlobalData
     // RVA   : 0xA63A20   Offset: 0xA62E20   Length: 0x1A4
     public static string GenerateRareLvColorText(string text, int rareLv)
     {
-        var pStatics = *(int64*)(DAT_181d72d50 + 184);
         long lVar1;
         long lVar2;
         uint uVar3;
@@ -1762,10 +1760,10 @@ public class GlobalData
         uint uStack_14;
         uint uStack_10;
         uint32 uStack_c;
-        lVar1 = *(int64 *)(pStatics + 32);
+        lVar1 = GameController.lockObj;
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 56);
-          lVar2 = *(int64 *)(pStatics + 32);
+          lVar2 = GameController.lockObj;
           if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
             uVar3 = Mathf.Clamp(rareLv,0,*(int *)(lVar2 + 24) + -1,0);
             if (lVar1 != null) {
@@ -2846,17 +2844,16 @@ public class GlobalData
     // RVA   : 0xA64BE0   Offset: 0xA63FE0   Length: 0x1A5
     public static Color GetDifficultyColor(float difficulty)
     {
-        var pStatics = *(int64*)(DAT_181d72d50 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
         int iVar4;
         uint uVar5;
-        lVar1 = *(int64 *)(pStatics + 32);
+        lVar1 = GameController.lockObj;
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 56);
           iVar4 = Mathf.RoundToInt();
-          lVar2 = *(int64 *)(pStatics + 32);
+          lVar2 = GameController.lockObj;
           if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
             uVar5 = Mathf.Clamp((int)((float)iVar4 * 0.5),0,*(int *)(lVar2 + 24) + -1,0);
             if (lVar1 != null) {
@@ -2879,7 +2876,6 @@ public class GlobalData
     // RVA   : 0xA64D90   Offset: 0xA64190   Length: 0x28E
     public static string GetDifficultyStarString(float difficulty)
     {
-        var pStatics = *(int64*)(DAT_181d72d50 + 184);
         long lVar1;
         long lVar2;
         int iVar3;
@@ -2908,10 +2904,10 @@ public class GlobalData
         if (fVar8 == 1.0) {
           uVar5 = String.Concat(uVar5,"☆",0);
         }
-        lVar1 = *(int64 *)(pStatics + 32);
+        lVar1 = GameController.lockObj;
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 56);
-          lVar2 = *(int64 *)(pStatics + 32);
+          lVar2 = GameController.lockObj;
           if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
             uVar4 = Mathf.Clamp((int)fVar9,0,*(int *)(lVar2 + 24) + -1,0);
             if (lVar1 != null) {
@@ -3459,7 +3455,6 @@ public class GlobalData
     // RVA   : 0xA6BB40   Offset: 0xA6AF40   Length: 0x5A8
     public static List<HeroData> SortHeroList(List<HeroData> source, HeroListSortType sortType)
     {
-        var pStatics = *(int64*)(DAT_181d77ec8 + 184);
         int iVar1;
         uint uVar2;
         long lVar3;
@@ -3483,58 +3478,58 @@ public class GlobalData
           }
           throw; // [null/range check failed]
         case 1:
-          lVar3 = *(int64 *)(pStatics + 8);
+          lVar3 = GlobalData.DemoVersion;
           if (lVar3 == null) {
             uVar4 = **(uint64 **)(DAT_181d77ec8 + 184);
             lVar3 = new OnTooltipCB(uVar4,DAT_181da4a88,DAT_181dab2b8);
-            plVar5 = (int64 *)(pStatics + 8);
+            plVar5 = &GlobalData.DemoVersion;
         LAB_180a6bd8f:
             *plVar5 = lVar3;
             il2cpp_internal(plVar5,lVar3);
           }
           break;
         case 2:
-          lVar3 = *(int64 *)(pStatics + 16);
+          lVar3 = GlobalData.DisableAutoSave;
           if (lVar3 == null) {
             uVar4 = **(uint64 **)(DAT_181d77ec8 + 184);
             lVar3 = new OnTooltipCB(uVar4,DAT_181da4b08,DAT_181dab2b8);
-            plVar5 = (int64 *)(pStatics + 16);
+            plVar5 = &GlobalData.DisableAutoSave;
             goto LAB_180a6bd8f;
           }
           break;
         case 3:
-          lVar3 = *(int64 *)(pStatics + 24);
+          lVar3 = GlobalData.PlayTestAvailableAreaID;
           if (lVar3 == null) {
             uVar4 = **(uint64 **)(DAT_181d77ec8 + 184);
             lVar3 = new OnTooltipCB(uVar4,DAT_181da4b88,DAT_181dab2b8);
-            plVar5 = (int64 *)(pStatics + 24);
+            plVar5 = &GlobalData.PlayTestAvailableAreaID;
             goto LAB_180a6bd8f;
           }
           break;
         case 4:
-          lVar3 = *(int64 *)(pStatics + 32);
+          lVar3 = GlobalData.PlayTestAvailableForceID;
           if (lVar3 == null) {
             uVar4 = **(uint64 **)(DAT_181d77ec8 + 184);
             lVar3 = new OnTooltipCB(uVar4,DAT_181da4c08,DAT_181dab2b8);
-            plVar5 = (int64 *)(pStatics + 32);
+            plVar5 = &GlobalData.PlayTestAvailableForceID;
             goto LAB_180a6bd8f;
           }
           break;
         case 5:
-          lVar3 = *(int64 *)(pStatics + 40);
+          lVar3 = GlobalData.PlayTestAvailableInnID;
           if (lVar3 == null) {
             uVar4 = **(uint64 **)(DAT_181d77ec8 + 184);
             lVar3 = new OnTooltipCB(uVar4,DAT_181da4c88,DAT_181dab2b8);
-            plVar5 = (int64 *)(pStatics + 40);
+            plVar5 = &GlobalData.PlayTestAvailableInnID;
             goto LAB_180a6bd8f;
           }
           break;
         case 6:
-          lVar3 = *(int64 *)(pStatics + 48);
+          lVar3 = GlobalData.SteamAppID;
           if (lVar3 == null) {
             uVar4 = **(uint64 **)(DAT_181d77ec8 + 184);
             lVar3 = new OnTooltipCB(uVar4,DAT_181da4d08,DAT_181dab2b8);
-            plVar5 = (int64 *)(pStatics + 48);
+            plVar5 = &GlobalData.SteamAppID;
             goto LAB_180a6bd8f;
           }
           break;
@@ -3553,16 +3548,15 @@ public class GlobalData
     // RVA   : 0xA6B370   Offset: 0xA6A770   Length: 0x13A
     public static void SetResolution(int width, int height, bool fullScreen)
     {
-        var pStatics = *(int64*)(DAT_181d72d50 + 184);
         long lVar1;
         Screen.SetResolution(width,height,fullScreen,0);
-        lVar1 = *(int64 *)(pStatics + 8);
+        lVar1 = GameController.difficultyExtraPoint;
         if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 16)) != null) {
           PlayerPrefDictionary.SetKey(lVar1,"ScreenWidth",width,0);
-          lVar1 = *(int64 *)(pStatics + 8);
+          lVar1 = GameController.difficultyExtraPoint;
           if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 16)) != null) {
             PlayerPrefDictionary.SetKey(lVar1,"ScreenHeight",height,0);
-            lVar1 = *(int64 *)(pStatics + 8);
+            lVar1 = GameController.difficultyExtraPoint;
             if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 16)) != null) {
               PlayerPrefDictionary.SetKey(lVar1,"FullScreen",fullScreen,0);
               return;
@@ -3588,7 +3582,6 @@ public class GlobalData
     // RVA   : 0xA615B0   Offset: 0xA609B0   Length: 0xF56
     public static void AutoSetWindowResolution()
     {
-        var pStatics_2d50 = *(int64*)(DAT_181d72d50 + 184);
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
         bool cVar1;
         int iVar2;
@@ -3605,35 +3598,35 @@ public class GlobalData
         uint uVar13;
         uint uVar14;
         uint[] local_res10 = new uint[2];
-        lVar7 = *(int64 *)(pStatics_2d50 + 8);
+        lVar7 = GameController.difficultyExtraPoint;
         if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null) goto LAB_180a622c1;
         cVar1 = PlayerPrefDictionary.ContainsKey(lVar7,"ScreenWidth",0);
         if (cVar1) {
-          lVar7 = *(int64 *)(pStatics_2d50 + 8);
+          lVar7 = GameController.difficultyExtraPoint;
           if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null) goto LAB_180a622c1;
           iVar2 = PlayerPrefDictionary.GetInt(lVar7,"ScreenWidth",0);
           if (iVar2 != 0) {
-            lVar7 = *(int64 *)(pStatics_2d50 + 8);
+            lVar7 = GameController.difficultyExtraPoint;
             if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null) goto LAB_180a622c1;
             cVar1 = PlayerPrefDictionary.ContainsKey(lVar7,"ScreenHeight",0);
             if (cVar1) {
-              lVar7 = *(int64 *)(pStatics_2d50 + 8);
+              lVar7 = GameController.difficultyExtraPoint;
               if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null) goto LAB_180a622c1;
               iVar2 = PlayerPrefDictionary.GetInt(lVar7,"ScreenHeight",0);
               if (iVar2 != 0) {
-                lVar7 = *(int64 *)(pStatics_2d50 + 8);
+                lVar7 = GameController.difficultyExtraPoint;
                 if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null) goto LAB_180a622c1;
                 cVar1 = PlayerPrefDictionary.ContainsKey(lVar7,"FullScreen",0);
                 if (cVar1) {
-                  lVar7 = *(int64 *)(pStatics_2d50 + 8);
+                  lVar7 = GameController.difficultyExtraPoint;
                   if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null)
                   goto LAB_180a622c1;
                   uVar3 = PlayerPrefDictionary.GetInt(lVar7,"ScreenWidth",0);
-                  lVar7 = *(int64 *)(pStatics_2d50 + 8);
+                  lVar7 = GameController.difficultyExtraPoint;
                   if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null)
                   goto LAB_180a622c1;
                   uVar4 = PlayerPrefDictionary.GetInt(lVar7,"ScreenHeight",0);
-                  lVar7 = *(int64 *)(pStatics_2d50 + 8);
+                  lVar7 = GameController.difficultyExtraPoint;
                   if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null)
                   goto LAB_180a622c1;
                   iVar2 = PlayerPrefDictionary.GetInt(lVar7,"FullScreen",0);
@@ -3996,7 +3989,6 @@ public class GlobalData
     // RVA   : 0xA62800   Offset: 0xA61C00   Length: 0x343
     public static string ConvertNumToChinese(int input)
     {
-        var pStatics = *(int64*)(DAT_181d77ec8 + 184);
         int iVar1;
         uint uVar2;
         uint uVar3;
@@ -4032,13 +4024,11 @@ public class GlobalData
                           // WARNING: Subroutine does not return
               FUN_1800d65f0(uVar9,uVar8);
             }
-            lVar7 = *(int64 *)(pStatics + 56);
+            lVar7 = GlobalData.WegameAppID;
             if (lVar7 == null) {
               uVar8 = **(uint64 **)(DAT_181d77ec8 + 184);
               lVar7 = new OnTooltipCB(uVar8,DAT_181da4a08,DAT_181db1958);
-              plVar10 = (int64 *)(pStatics + 56);
-              *plVar10 = lVar7;
-              il2cpp_internal(plVar10,lVar7);
+              GlobalData.WegameAppID = lVar7;
               lVar6 = new OnTooltipCB(lVar5,DAT_181da4e80,DAT_181db0950);
               if (lVar7 == null) throw; // [null/range check failed]
             }
@@ -4927,10 +4917,9 @@ public class GlobalData
     // RVA   : 0xA65530   Offset: 0xA64930   Length: 0xCB
     public static string GetForceIconName(int id)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null) {
           lVar1 = WorldData.GetForce(lVar1,id,0);
           if (lVar1 != null) {
             ForceData.GetForceIconName(lVar1,0);

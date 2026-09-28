@@ -452,7 +452,7 @@ public class ReadBookController
                                                                  (*(int *)(DAT_181d72cc8 + 224) == 0)) {
                                                                 il2cpp_runtime_class_init(DAT_181d72cc8);
                                                               }
-                                                              if ((**(int64 **)(DAT_181d72cc8 + 184)
+                                                              if ((GameController._instance
                                                                    != 0) &&
                                                                  (lVar4 = *(int64 *)
                                                                            (**(int64 **)
@@ -1017,7 +1017,6 @@ public class ReadBookController
     // RVA   : 0xD0CA70   Offset: 0xD0BE70   Length: 0x91D
     public void SureFinishRead()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         uint uVar1;
         uint uVar2;
         ulong uVar4;
@@ -1056,8 +1055,8 @@ public class ReadBookController
              (lVar7 = this.targetPracticeExpData.maxReadExp) == null) throw; // [null/range check failed]
           FUN_181829d40(lVar7,this.targetBook.rareLv,
                         this.totalExp,DAT_181da10f8);
-          if (((*pStatics == 0) ||
-              (lVar7 = *(int64 *)(*pStatics + 32)) == null) ||
+          if (((GameController._instance == null) ||
+              (lVar7 = GameController._instance.worldData) == null) ||
              (lVar7 = WorldData.Player(lVar7,0)) == null) throw; // [null/range check failed]
           HeroData.AddSkillMaxPracticeExp(lVar7,this.targetPracticeExpData,0);
         LAB_180d0cdf1:
@@ -1107,7 +1106,7 @@ public class ReadBookController
               }
               lVar7 = lVar7._items[uVar2];
               if (lVar7 != null) {
-                lVar13 = *(int64 *)(lVar7 + 0x150);
+                lVar13 = lVar7.monthFreshBountyTime;
                 if (((this.targetSkill != null) &&
                     (lVar8 = KungfuSkillLvData.DataBase(this.targetSkill,0)) != null) &&
                    (lVar13 != null)) {
@@ -1119,7 +1118,7 @@ public class ReadBookController
                            0.01;
                   this.totalExp = (fVar14 + 1.0) * this.totalExp;
                   lVar8 = FUN_18046c400(0);
-                  lVar13 = *(int64 *)(lVar7 + 0x150);
+                  lVar13 = lVar7.monthFreshBountyTime;
                   if (((this.targetSkill != null) &&
                       (lVar9 = KungfuSkillLvData.DataBase(this.targetSkill,0)) != null)
                      && (lVar13 != null)) {
@@ -1243,7 +1242,6 @@ public class ReadBookController
     // RVA   : 0xD09F40   Offset: 0xD09340   Length: 0x70F
     public void GetReadExp(float targetExp)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         bool cVar2;
         int iVar3;
@@ -1252,8 +1250,8 @@ public class ReadBookController
         long lVar6;
         int iVar7;
         lVar6 = **(int64 **)(DAT_181da4450 + 184);
-        if ((*pStatics == 0) ||
-           (lVar4 = *(int64 *)(*pStatics + 32)) == null)
+        if ((GameController._instance == null) ||
+           (lVar4 = GameController._instance.worldData) == null)
         throw; // [null/range check failed]
         lVar4 = WorldData.Player(lVar4,0);
         if ((this.targetBook == null) ||
@@ -1262,7 +1260,7 @@ public class ReadBookController
         uVar5 = HeroData.FindSkill(lVar4,*(uint32 *)(lVar1 + 16),0);
         if (lVar6 == null) throw; // [null/range check failed]
         SpeShowController.ShowGetSkillExp(lVar6,uVar5);
-        lVar6 = *pStatics;
+        lVar6 = GameController._instance;
         if ((this.targetBook == null) ||
            (lVar4 = this.targetBook.bookData) == null) throw; // [null/range check failed]
         uVar5 = Int32.ToString(lVar4 + 16,0);
@@ -1274,40 +1272,40 @@ public class ReadBookController
         if (cVar2) {
           iVar7 = 0;
           do {
-            if ((*pStatics == 0) ||
-               (lVar6 = *(int64 *)(*pStatics + 32)) == null)
+            if ((GameController._instance == null) ||
+               (lVar6 = GameController._instance.worldData) == null)
             throw; // [null/range check failed]
             lVar6 = WorldData.Player(lVar6,0);
             if ((lVar6 == null) || (*(int64 *)(lVar6 + 0x2e8) == 0)) throw; // [null/range check failed]
             if (*(int *)(*(int64 *)(lVar6 + 0x2e8) + 24) <= iVar7) break;
             lVar6 = FUN_18046c0a0(0);
-            if ((lVar6 == null) || (*(int64 *)(lVar6 + 32) == 0)) throw; // [null/range check failed]
-            lVar6 = WorldData.Player(*(int64 *)(lVar6 + 32),0);
+            if ((lVar6 == null) || (lVar6.villageAreaID == null)) throw; // [null/range check failed]
+            lVar6 = WorldData.Player(lVar6.villageAreaID,0);
             if ((lVar6 == null) || (*(int64 *)(lVar6 + 0x2e8) == 0)) throw; // [null/range check failed]
             lVar6 = FUN_180002f80(*(int64 *)(lVar6 + 0x2e8),iVar7,DAT_181d94c88);
-            if ((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 120)) == null) throw; // [null/range check failed]
-            if (*(int *)(lVar6 + 24) == 0) {
+            if ((lVar6 = lVar6?.WorldEventDatasSaveRecord) == null) throw; // [null/range check failed]
+            if (lVar6.cityAreaID == null) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
-            lVar6 = *(int64 *)(*(int64 *)(lVar6 + 16) + 32);
+            lVar6 = *(int64 *)(lVar6.chapter + 32);
             if (lVar6 == null) throw; // [null/range check failed]
-            if (*(int *)(lVar6 + 40) == 7) {
+            if (lVar6.forceAreaID == 7) {
               lVar6 = FUN_18046c0a0(0);
-              if ((lVar6 == null) || (*(int64 *)(lVar6 + 32) == 0)) throw; // [null/range check failed]
-              lVar6 = WorldData.Player(*(int64 *)(lVar6 + 32),0);
+              if ((lVar6 == null) || (lVar6.villageAreaID == null)) throw; // [null/range check failed]
+              lVar6 = WorldData.Player(lVar6.villageAreaID,0);
               if ((lVar6 == null) || (*(int64 *)(lVar6 + 0x2e8) == 0)) throw; // [null/range check failed]
               lVar6 = FUN_180002f80(*(int64 *)(lVar6 + 0x2e8),iVar7,DAT_181d94c88);
-              if ((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 120)) == null) throw; // [null/range check failed]
-              if (*(int *)(lVar6 + 24) == 0) {
+              if ((lVar6 = lVar6?.WorldEventDatasSaveRecord) == null) throw; // [null/range check failed]
+              if (lVar6.cityAreaID == null) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
-              lVar6 = *(int64 *)(*(int64 *)(lVar6 + 16) + 32);
+              lVar6 = *(int64 *)(lVar6.chapter + 32);
               if (lVar6 == null) throw; // [null/range check failed]
-              iVar3 = Int32.Parse(*(uint64 *)(lVar6 + 48));
+              iVar3 = Int32.Parse(lVar6.Areas);
               if ((this.targetBook == null) ||
                  (lVar6 = this.targetBook.bookData) == null)
               throw; // [null/range check failed]
-              if (iVar3 == *(int *)(lVar6 + 16)) goto LAB_180d0a46a;
+              if (iVar3 == lVar6.chapter) goto LAB_180d0a46a;
             }
             iVar7 = iVar7 + 1;
           } while( true );
@@ -1316,20 +1314,20 @@ public class ReadBookController
         LAB_180d0a46a:
         lVar6 = FUN_18046c400(0);
         lVar4 = FUN_18046c0a0(0);
-        if ((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) throw; // [null/range check failed]
-        lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0);
+        if ((lVar4 == null) || (lVar4.villageAreaID == null)) throw; // [null/range check failed]
+        lVar4 = WorldData.Player(lVar4.villageAreaID,0);
         if ((lVar4 == null) || (*(int64 *)(lVar4 + 0x2e8) == 0)) throw; // [null/range check failed]
         lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 0x2e8),iVar7,DAT_181d94c88);
-        if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 120)) == null) throw; // [null/range check failed]
-        if (*(int *)(lVar4 + 24) == 0) {
+        if ((lVar4 = lVar4?.WorldEventDatasSaveRecord) == null) throw; // [null/range check failed]
+        if (lVar4.cityAreaID == null) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
-        lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 32);
+        lVar4 = *(int64 *)(lVar4.chapter + 32);
         if ((lVar4 == null) || (lVar6 == null)) throw; // [null/range check failed]
-        PlotController.AddPlotEvent(lVar6,*(uint64 *)(lVar4 + 32),0);
+        PlotController.AddPlotEvent(lVar6,lVar4.villageAreaID,0);
         LAB_180d0a547:
-        if ((*pStatics != 0) &&
-           (lVar6 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar6 = GameController._instance.worldData) != null) {
           lVar6 = WorldData.Player(lVar6,0);
           if ((this.targetBook != null) &&
              (lVar4 = this.targetBook.bookData) != null) {
@@ -1539,7 +1537,7 @@ public class ReadBookController
           }
         }
         else {
-          lVar6 = **(int64 **)(DAT_181d72cc8 + 184);
+          lVar6 = GameController._instance;
           uVar11 = "队友无法阅读秘籍！";
         }
         if (lVar6 != null) {
@@ -1552,7 +1550,6 @@ public class ReadBookController
     // RVA   : 0xD0D390   Offset: 0xD0C790   Length: 0x388
     public void SureStartReadBook()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         int iVar2;
         int iVar3;
@@ -1560,12 +1557,12 @@ public class ReadBookController
         long lVar5;
         ulong uVar7;
         if (this.costMoeny) {
-          if ((*pStatics == 0) ||
-             (lVar5 = *(int64 *)(*pStatics + 32)) == null)
+          if ((GameController._instance == null) ||
+             (lVar5 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
           lVar5 = WorldData.Player(lVar5,0);
-          if ((lVar5 == null) || (*(int64 *)(lVar5 + 0x220) == 0)) throw; // [null/range check failed]
-          iVar3 = *(int *)(*(int64 *)(lVar5 + 0x220) + 24);
+          if ((lVar5 == null) || (lVar5.speBookStorageSpeAdd == null)) throw; // [null/range check failed]
+          iVar3 = *(int *)(lVar5.speBookStorageSpeAdd + 24);
           if ((this.tempBookData == null) ||
              (lVar5 = this.tempBookData.bookData) == null)
           throw; // [null/range check failed]
@@ -1585,8 +1582,8 @@ public class ReadBookController
             throw; // [null/range check failed]
           }
           lVar5 = FUN_18046c0a0(0);
-          if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) throw; // [null/range check failed]
-          lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0);
+          if ((lVar5 == null) || (lVar5.villageAreaID == null)) throw; // [null/range check failed]
+          lVar5 = WorldData.Player(lVar5.villageAreaID,0);
           if ((this.tempBookData == null) ||
              (lVar1 = this.tempBookData.bookData) == null)
           throw; // [null/range check failed]
@@ -1613,7 +1610,6 @@ public class ReadBookController
     // RVA   : 0xD0AC20   Offset: 0xD0A020   Length: 0x79D
     public void RealStartReadBook()
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
         uint uVar1;
         uint uVar2;
@@ -1628,8 +1624,8 @@ public class ReadBookController
           if (!lVar3.activeTimeLeft) {
             return;
           }
-          if (((*pStatics_2cc8 != 0) &&
-              (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) != null) &&
+          if (((GameController._instance != null) &&
+              (lVar3 = GameController._instance.worldData) != null) &&
              (lVar3 = WorldData.Player(lVar3,0)) != null) {
             HeroData.ManageGetItemPoison(lVar3,this.tempBookData,1,0x3fc00000,1,0);
             lVar3 = this.targetSkill;

@@ -179,8 +179,6 @@ public class SpeSummonResearchData
     // RVA   : 0xC5C770   Offset: 0xC5BB70   Length: 0x58B
     public void ChangeExp(int id, float _exp, bool showInfo)
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
-        var pStatics_4550 = *(int64*)(DAT_181da4550 + 184);
         var pStatics_f6a8 = *(int64*)(DAT_181d7f6a8 + 184);
         float fVar1;
         long lVar2;
@@ -205,16 +203,16 @@ public class SpeSummonResearchData
                       DAT_181da10f8);
         if (showInfo) {
           lVar2 = *pStatics_f6a8;
-          lVar5 = *pStatics_4550;
+          lVar5 = GameController._instance;
           if (lVar5 == null) throw; // [null/range check failed]
-          if (*(uint32 *)(lVar5 + 24) <= id) {
+          if (lVar5.cityAreaID <= id) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          uVar4 = *(uint64 *)(*(int64 *)(lVar5 + 16) + 32 + lVar6 * 8);
+          uVar4 = *(uint64 *)(lVar5.chapter + 32 + lVar6 * 8);
           uVar3 = Single.ToString(local_res18,"+0;-0;0",0);
           uVar4 = String.Format("机关{0}经验{1}",uVar4,uVar3,0);
-          if ((((*pStatics_2cc8 == 0) ||
-               (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+          if ((((GameController._instance == null) ||
+               (lVar5 = GameController._instance.worldData) == null) ||
               (lVar5 = WorldData.Player(lVar5,0)) == null) ||
              ((lVar5 = HeroData.GetForce(lVar5,0,0), lVar5 == null ||
               (uVar3 = ForceData.GetForceIconName(lVar5,0), lVar2 == null)))) throw; // [null/range check failed]
@@ -253,15 +251,15 @@ public class SpeSummonResearchData
           FUN_181833d40(lVar2,id,*(int *)(lVar2._items + 32 + lVar6 * 4) + 1,
                         DAT_181d8fb18);
           lVar2 = *pStatics_f6a8;
-          if (*pStatics_4550 == 0) goto LAB_180c5ccf6;
-          uVar4 = FUN_180002f80(*pStatics_4550,id,DAT_181da4358);
+          if (GameController._instance == null) goto LAB_180c5ccf6;
+          uVar4 = FUN_180002f80(GameController._instance,id,DAT_181da4358);
           if (this.lv == null) goto LAB_180c5ccf6;
           local_res10[0] = FUN_1800d6760(this.lv,id,DAT_181d8fa18);
           uVar3 = il2cpp_value_box(DAT_181d80418,local_res10);
           uVar4 = String.Format("机关{0}达到{1}级",uVar4,uVar3,0);
           lVar5 = FUN_18046c0a0(0);
-          if ((((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-              (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null) ||
+          if ((((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+              (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null) ||
              ((lVar5 = HeroData.GetForce(lVar5,0,0), lVar5 == null ||
               (uVar3 = ForceData.GetForceIconName(lVar5,0), lVar2 == null)))) goto LAB_180c5ccf6;
           local_68 = 0;
@@ -293,18 +291,14 @@ public class SpeSummonResearchData
             FUN_18181e0a0(lVar1,"机关伤害",DAT_181da3d58);
             FUN_18181e0a0(lVar1,"机关耐久",DAT_181da3d58);
             FUN_18181e0a0(lVar1,"机关速度",DAT_181da3d58);
-            plVar2 = (int64 *)(pStatics + 8);
-            *plVar2 = lVar1;
-            il2cpp_internal(plVar2,lVar1);
+            GameController.difficultyExtraPoint = lVar1;
             lVar1 = il2cpp_internal(DAT_181d93450);
             FUN_18132faf0(lVar1,DAT_181d8c098);
             if (lVar1 != null) {
               FUN_18182a0b0(lVar1,208,DAT_181d8c118);
               FUN_18182a0b0(lVar1,210,DAT_181d8c118);
               FUN_18182a0b0(lVar1,209,DAT_181d8c118);
-              plVar2 = (int64 *)(pStatics + 16);
-              *plVar2 = lVar1;
-              il2cpp_internal(plVar2,lVar1);
+              GameController.CheckShowSpeHero = lVar1;
               return;
             }
           }

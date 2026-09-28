@@ -26,10 +26,9 @@ public class InvDatabase
     // RVA   : 0xC9BE20   Offset: 0xC9B220   Length: 0x119
     public static InvDatabase[] get_list()
     {
-        var pStatics = *(int64*)(DAT_181d81518 + 184);
         ulong uVar2;
-        if (*(char *)(pStatics + 8) != false) {
-          *(uint8 *)(pStatics + 8) = 0;
+        if (InvDatabase.mIsDirty) {
+          InvDatabase.mIsDirty = 0;
           uVar2 = NGUITools.FindActive(DAT_181d8f0a0);
           puVar1 = *(uint64 **)(DAT_181d81518 + 184);
           *puVar1 = uVar2;

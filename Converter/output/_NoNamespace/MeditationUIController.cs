@@ -97,7 +97,6 @@ public class MeditationUIController
     // RVA   : 0xA924C0   Offset: 0xA918C0   Length: 0x2A1
     public void ShowMeditationUI()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         ulong uVar3;
         if (this.meditationUI != null) {
@@ -108,8 +107,8 @@ public class MeditationUIController
               lVar1 = Transform.Find(lVar1,"Title",0);
               if (lVar1 != null) {
                 plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d96160);
-                if ((*pStatics != 0) &&
-                   (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+                if ((GameController._instance != null) &&
+                   (lVar1 = GameController._instance.worldData) != null) {
                   lVar1 = WorldData.Player(lVar1,0);
                   if (lVar1 != null) {
                     uVar3 = HeroData.GetMeditationTopic(lVar1,0);
@@ -139,7 +138,6 @@ public class MeditationUIController
     // RVA   : 0xA8FA10   Offset: 0xA8EE10   Length: 0x2AA3
     public void RefreshUI()
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
         int iVar1;
         long lVar2;
@@ -166,13 +164,13 @@ public class MeditationUIController
           FUN_1800d6620();
         }
         plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96160);
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+        if (((GameController._instance == null) ||
+            (lVar5 = GameController._instance.worldData) == null) ||
            (lVar5 = WorldData.Player(lVar5,0)) == null) goto LAB_180a924a2;
         uVar7 = HeroData.GetMeditationTopic(lVar5,0);
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
-           (lVar5 = *(int64 *)(lVar5 + 0x1f0)) == null) goto LAB_180a924a2;
+        if (((GameController._instance == null) ||
+            (lVar5 = GameController._instance.worldData) == null) ||
+           (lVar5 = lVar5.meditationData) == null) goto LAB_180a924a2;
         uVar8 = Int32.ToString(lVar5 + 16,0);
         uVar7 = String.Concat(uVar7,"等级",uVar8,0);
         uVar7 = LTLocalization.GetText(uVar7,0,1,0);
@@ -183,16 +181,16 @@ public class MeditationUIController
             (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
            (lVar5 = Transform.Find(lVar5,"MeditationLvAdd",0)) == null) goto LAB_180a924a2;
         plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96160);
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+        if (((GameController._instance == null) ||
+            (lVar5 = GameController._instance.worldData) == null) ||
            (lVar5 = WorldData.Player(lVar5,0)) == null) goto LAB_180a924a2;
         lVar5 = HeroData.GetForce(lVar5,0,0);
         if (lVar5 == null) goto LAB_180a924a2;
         uVar7 = ForceData.GetForceName(lVar5,1,0);
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
-           (lVar5 = *(int64 *)(lVar5 + 0x1f0)) == null) goto LAB_180a924a2;
-        local_res18[0] = *(int *)(lVar5 + 16) * 2;
+        if (((GameController._instance == null) ||
+            (lVar5 = GameController._instance.worldData) == null) ||
+           (lVar5 = lVar5.meditationData) == null) goto LAB_180a924a2;
+        local_res18[0] = lVar5.chapter * 2;
         uVar8 = il2cpp_value_box(DAT_181d80418,local_res18);
         uVar7 = String.Format("等级加成\n{0}武学威力+{1}%",uVar7,uVar8,0);
         uVar7 = LTLocalization.GetText(uVar7,0,1,0);
@@ -204,14 +202,14 @@ public class MeditationUIController
            ((lVar5 = Transform.Find(lVar5,"ExpBarBack",0), lVar5 == null ||
             (lVar5 = Transform.Find(lVar5,"ExpText",0)) == null))) goto LAB_180a924a2;
         plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96160);
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
-           (lVar5 = *(int64 *)(lVar5 + 0x1f0)) == null) goto LAB_180a924a2;
+        if (((GameController._instance == null) ||
+            (lVar5 = GameController._instance.worldData) == null) ||
+           (lVar5 = lVar5.meditationData) == null) goto LAB_180a924a2;
         uVar7 = Single.ToString(lVar5 + 20,"f0",0);
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
-           (lVar5 = *(int64 *)(lVar5 + 0x1f0)) == null) goto LAB_180a924a2;
-        iVar1 = *(int *)(lVar5 + 16);
+        if (((GameController._instance == null) ||
+            (lVar5 = GameController._instance.worldData) == null) ||
+           (lVar5 = lVar5.meditationData) == null) goto LAB_180a924a2;
+        iVar1 = lVar5.chapter;
         local_res20[0] = (float)((iVar1 + 2) * (iVar1 + 1)) * 50.0;
         uVar8 = il2cpp_value_box(DAT_181da22d8,local_res20);
         uVar7 = String.Format("{0}/{1}",uVar7,uVar8,0);
@@ -224,46 +222,46 @@ public class MeditationUIController
             (lVar5 = Transform.Find(lVar5,"ExpBarBack",0)) == null) ||
            (lVar5 = Transform.Find(lVar5,"ExpBar",0)) == null) goto LAB_180a924a2;
         lVar5 = Component.GetComponent(lVar5,DAT_181d94460);
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar2 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
-           (*(int64 *)(lVar2 + 0x1f0) == 0)) goto LAB_180a924a2;
-        if ((((*pStatics_2cc8 == 0) ||
-             (lVar2 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
-            (*(int64 *)(lVar2 + 0x1f0) == 0)) || (lVar5 == null)) goto LAB_180a924a2;
+        if (((GameController._instance == null) ||
+            (lVar2 = GameController._instance.worldData) == null) ||
+           (lVar2.meditationData == null)) goto LAB_180a924a2;
+        if ((((GameController._instance == null) ||
+             (lVar2 = GameController._instance.worldData) == null) ||
+            (lVar2.meditationData == null)) || (lVar5 == null)) goto LAB_180a924a2;
         Image.set_fillAmount(lVar5);
         if (((this.meditationUI == null) ||
             (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
            (lVar5 = Transform.Find(lVar5,"MeditationText",0)) == null) goto LAB_180a924a2;
         plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96160);
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
-           (lVar5 = *(int64 *)(lVar5 + 0x1f0)) == null) goto LAB_180a924a2;
+        if (((GameController._instance == null) ||
+            (lVar5 = GameController._instance.worldData) == null) ||
+           (lVar5 = lVar5.meditationData) == null) goto LAB_180a924a2;
         local_res8[0] = (float)MeditationData.MeditationExpRate(lVar5,0);
         local_res8[0] = local_res8[0] * 100.0;
         uVar7 = Single.ToString(local_res8,"f0",0);
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
-           (lVar5 = *(int64 *)(lVar5 + 0x1f0)) == null) goto LAB_180a924a2;
+        if (((GameController._instance == null) ||
+            (lVar5 = GameController._instance.worldData) == null) ||
+           (lVar5 = lVar5.meditationData) == null) goto LAB_180a924a2;
         fVar10 = 0.0;
-        if (*(int *)(lVar5 + 48) < 1) {
+        if (lVar5.Areas < 1) {
           fVar12 = 0.0;
         }
-        else if (*(int64 *)(lVar5 + 32) == 0) {
+        else if (lVar5.villageAreaID == null) {
           fVar12 = 0.0;
         }
         else {
           fVar12 = (float)Mathf.Max();
         }
-        if (*(int *)(lVar5 + 72) < 1) {
+        if (lVar5.Forces < 1) {
           fVar11 = 0.0;
         }
-        else if (*(int64 *)(lVar5 + 56) == 0) {
+        else if (lVar5.Inns == null) {
           fVar11 = 0.0;
         }
         else {
           fVar11 = (float)Mathf.Max();
         }
-        if ((0 < *(int *)(lVar5 + 96)) && (*(int64 *)(lVar5 + 80) != 0)) {
+        if ((0 < lVar5.BigMapRandomEventDatas) && (lVar5.Heros != null)) {
           fVar10 = (float)Mathf.Max();
         }
         local_res8[0] = fVar11 + fVar12 + fVar10;
@@ -277,18 +275,18 @@ public class MeditationUIController
             (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
            (lVar5 = Transform.Find(lVar5,"StartMeditationButton",0)) == null) goto LAB_180a924a2;
         lVar5 = Component.GetComponent(lVar5,DAT_181d95560);
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar2 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
-           (lVar2 = *(int64 *)(lVar2 + 0x1f0)) == null) goto LAB_180a924a2;
-        local_88[0] = *(uint32 *)(lVar2 + 24);
+        if (((GameController._instance == null) ||
+            (lVar2 = GameController._instance.worldData) == null) ||
+           (lVar2 = lVar2.meditationData) == null) goto LAB_180a924a2;
+        local_88[0] = lVar2.cityAreaID;
         uVar7 = il2cpp_value_box(DAT_181d80418,local_88);
         uVar7 = String.Format("本月已修行{0}日\n每修行一日，本月修行效率都会下降20%",uVar7,0);
         if (lVar5 == null) goto LAB_180a924a2;
-        *(uint64 *)(lVar5 + 24) = uVar7;
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
-           (lVar5 = *(int64 *)(lVar5 + 0x1f0)) == null) goto LAB_180a924a2;
-        if (*(int *)(lVar5 + 48) < 1) {
+        lVar5.cityAreaID = uVar7;
+        if (((GameController._instance == null) ||
+            (lVar5 = GameController._instance.worldData) == null) ||
+           (lVar5 = lVar5.meditationData) == null) goto LAB_180a924a2;
+        if (lVar5.Areas < 1) {
           if (((this.meditationUI == null) ||
               (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
              (lVar5 = Transform.Find(lVar5,"TreasureSureButton",0)) == null) goto LAB_180a924ae;
@@ -342,11 +340,11 @@ public class MeditationUIController
                (lVar5 = Transform.Find(lVar5,"Treasure",0)) == null) goto LAB_180a924ae;
             uVar7 = Component.get_gameObject(lVar5,0);
             lVar5 = FUN_18046c0a0(0);
-            if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-               (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 0x1f0)) == null)
+            if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+               (lVar5 = *(int64 *)(lVar5.villageAreaID + 0x1f0)) == null)
             goto LAB_180a924ae;
             uVar7 = MeditationUIController.CreateMeditationItemIcon
-                              (this,uVar7,*(uint64 *)(lVar5 + 32),0);
+                              (this,uVar7,lVar5.villageAreaID,0);
             *puVar9 = uVar7;
             il2cpp_internal(puVar9,uVar7);
           }
@@ -360,9 +358,9 @@ public class MeditationUIController
              ((lVar5 = Transform.Find(lVar5,"TreasureSureButton",0), lVar5 == null ||
               (lVar5 = Transform.Find(lVar5,"Text",0)) == null))) goto LAB_180a924ae;
           plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96160);
-          if (((*pStatics_2cc8 == 0) ||
-              (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
-             (lVar5 = *(int64 *)(lVar5 + 0x1f0)) == null) goto LAB_180a924ae;
+          if (((GameController._instance == null) ||
+              (lVar5 = GameController._instance.worldData) == null) ||
+             (lVar5 = lVar5.meditationData) == null) goto LAB_180a924ae;
           uVar7 = Int32.ToString(lVar5 + 48,0);
           uVar7 = String.Concat(uVar7,"日",0);
           uVar7 = LTLocalization.GetText(uVar7,0,1,0);
@@ -387,10 +385,10 @@ public class MeditationUIController
               (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
              (lVar5 = Transform.Find(lVar5,"TreasureAddText",0)) == null) goto LAB_180a924ae;
           plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96160);
-          if (((*pStatics_2cc8 == 0) ||
-              (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
-             ((lVar5 = *(int64 *)(lVar5 + 0x1f0), lVar5 == null ||
-              (lVar5 = *(int64 *)(lVar5 + 40)) == null))) goto LAB_180a924ae;
+          if (((GameController._instance == null) ||
+              (lVar5 = GameController._instance.worldData) == null) ||
+             ((lVar5 = lVar5.meditationData, lVar5 == null ||
+              (lVar5 = lVar5.forceAreaID) == null))) goto LAB_180a924ae;
           uVar7 = HeroSpeAddData.GetDescribe(lVar5,1,1,1,0,0);
         }
         uVar7 = LTLocalization.GetText(uVar7,0,1,0);
@@ -401,10 +399,10 @@ public class MeditationUIController
         }
         (**(code **)(*plVar6 + 0x5e8))(plVar6,uVar7,*(uint64 *)(*plVar6 + 0x5f0));
         LTLocalization.CheckTextFont(plVar6,0);
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
-           (lVar5 = *(int64 *)(lVar5 + 0x1f0)) == null) goto LAB_180a924ae;
-        if (*(int *)(lVar5 + 72) < 1) {
+        if (((GameController._instance == null) ||
+            (lVar5 = GameController._instance.worldData) == null) ||
+           (lVar5 = lVar5.meditationData) == null) goto LAB_180a924ae;
+        if (lVar5.Forces < 1) {
           if (((this.meditationUI == null) ||
               (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
              (lVar5 = Transform.Find(lVar5,"FoodSureButton",0)) == null) goto LAB_180a924ae;
@@ -458,11 +456,11 @@ public class MeditationUIController
                (lVar5 = Transform.Find(lVar5,"Food",0)) == null) goto LAB_180a924ae;
             uVar7 = Component.get_gameObject(lVar5,0);
             lVar5 = FUN_18046c0a0(0);
-            if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-               (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 0x1f0)) == null)
+            if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+               (lVar5 = *(int64 *)(lVar5.villageAreaID + 0x1f0)) == null)
             goto LAB_180a924ae;
             uVar7 = MeditationUIController.CreateMeditationItemIcon
-                              (this,uVar7,*(uint64 *)(lVar5 + 56),0);
+                              (this,uVar7,lVar5.Inns,0);
             *puVar9 = uVar7;
             il2cpp_internal(puVar9,uVar7);
           }
@@ -476,9 +474,9 @@ public class MeditationUIController
              ((lVar5 = Transform.Find(lVar5,"FoodSureButton",0), lVar5 == null ||
               (lVar5 = Transform.Find(lVar5,"Text",0)) == null))) goto LAB_180a924ae;
           plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96160);
-          if (((*pStatics_2cc8 == 0) ||
-              (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
-             (lVar5 = *(int64 *)(lVar5 + 0x1f0)) == null) goto LAB_180a924ae;
+          if (((GameController._instance == null) ||
+              (lVar5 = GameController._instance.worldData) == null) ||
+             (lVar5 = lVar5.meditationData) == null) goto LAB_180a924ae;
           uVar7 = Int32.ToString(lVar5 + 72,0);
           uVar7 = String.Concat(uVar7,"日",0);
           uVar7 = LTLocalization.GetText(uVar7,0,1,0);
@@ -503,20 +501,20 @@ public class MeditationUIController
               (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
              (lVar5 = Transform.Find(lVar5,"FoodAddText",0)) == null) goto LAB_180a924ae;
           plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96160);
-          if (((*pStatics_2cc8 == 0) ||
-              (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
-             ((lVar5 = *(int64 *)(lVar5 + 0x1f0), lVar5 == null ||
-              (lVar5 = *(int64 *)(lVar5 + 64)) == null))) goto LAB_180a924ae;
+          if (((GameController._instance == null) ||
+              (lVar5 = GameController._instance.worldData) == null) ||
+             ((lVar5 = lVar5.meditationData, lVar5 == null ||
+              (lVar5 = lVar5.ResourcePoints) == null))) goto LAB_180a924ae;
           uVar7 = HeroSpeAddData.GetDescribe(lVar5,1,1,1,0,0);
         }
         uVar7 = LTLocalization.GetText(uVar7,0,1,0);
         if (plVar6 == (int64 *)0) goto LAB_180a924ae;
         (**(code **)(*plVar6 + 0x5e8))(plVar6,uVar7,*(uint64 *)(*plVar6 + 0x5f0));
         LTLocalization.CheckTextFont(plVar6,0);
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
-           (lVar5 = *(int64 *)(lVar5 + 0x1f0)) == null) goto LAB_180a924ae;
-        if (*(int *)(lVar5 + 96) < 1) {
+        if (((GameController._instance == null) ||
+            (lVar5 = GameController._instance.worldData) == null) ||
+           (lVar5 = lVar5.meditationData) == null) goto LAB_180a924ae;
+        if (lVar5.BigMapRandomEventDatas < 1) {
           if (((this.meditationUI == null) ||
               (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
              (lVar5 = Transform.Find(lVar5,"MedSureButton",0)) == null) goto LAB_180a924ae;
@@ -572,11 +570,11 @@ public class MeditationUIController
                (lVar5 = Transform.Find(lVar5,"Med",0)) == null) goto LAB_180a924ae;
             uVar7 = Component.get_gameObject(lVar5,0);
             lVar5 = FUN_18046c0a0(0);
-            if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-               (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 0x1f0)) == null)
+            if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+               (lVar5 = *(int64 *)(lVar5.villageAreaID + 0x1f0)) == null)
             goto LAB_180a924ae;
             uVar7 = MeditationUIController.CreateMeditationItemIcon
-                              (this,uVar7,*(uint64 *)(lVar5 + 80),0);
+                              (this,uVar7,lVar5.Heros,0);
             *puVar9 = uVar7;
             il2cpp_internal(puVar9,uVar7);
           }
@@ -590,9 +588,9 @@ public class MeditationUIController
              ((lVar5 = Transform.Find(lVar5,"MedSureButton",0), lVar5 == null ||
               (lVar5 = Transform.Find(lVar5,"Text",0)) == null))) throw; // [null/range check failed]
           plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96160);
-          if (((*pStatics_2cc8 == 0) ||
-              (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
-             (lVar5 = *(int64 *)(lVar5 + 0x1f0)) == null) throw; // [null/range check failed]
+          if (((GameController._instance == null) ||
+              (lVar5 = GameController._instance.worldData) == null) ||
+             (lVar5 = lVar5.meditationData) == null) throw; // [null/range check failed]
           uVar7 = Int32.ToString(lVar5 + 96,0);
           uVar7 = String.Concat(uVar7,"日",0);
           uVar7 = LTLocalization.GetText(uVar7,0,1,0);
@@ -617,10 +615,10 @@ public class MeditationUIController
               (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
              (lVar5 = Transform.Find(lVar5,"MedAddText",0)) == null) throw; // [null/range check failed]
           plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96160);
-          if (((*pStatics_2cc8 == 0) ||
-              (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
-             ((lVar5 = *(int64 *)(lVar5 + 0x1f0), lVar5 == null ||
-              (lVar5 = *(int64 *)(lVar5 + 88)) == null))) throw; // [null/range check failed]
+          if (((GameController._instance == null) ||
+              (lVar5 = GameController._instance.worldData) == null) ||
+             ((lVar5 = lVar5.meditationData, lVar5 == null ||
+              (lVar5 = lVar5.TempHeros) == null))) throw; // [null/range check failed]
           uVar7 = HeroSpeAddData.GetDescribe(lVar5,1,1,1,0,0);
           uVar7 = LTLocalization.GetText(uVar7,0,1,0);
           if (plVar6 == (int64 *)0) throw; // [null/range check failed]
@@ -634,7 +632,7 @@ public class MeditationUIController
           uVar7 = MeditationUIController.GetItemMeditationEffectDescribe
                             (this,this.treasureIcon,0);
           if (lVar5 != null) {
-            *(uint64 *)(lVar5 + 24) = uVar7;
+            lVar5.cityAreaID = uVar7;
             if (((this.meditationUI != null) &&
                 (lVar5 = GameObject.get_transform(this.meditationUI,0)) != null) &&
                (lVar5 = Transform.Find(lVar5,"FoodSureButton",0)) != null) {
@@ -642,7 +640,7 @@ public class MeditationUIController
               uVar7 = MeditationUIController.GetItemMeditationEffectDescribe
                                 (this,this.foodIcon,0);
               if (lVar5 != null) {
-                *(uint64 *)(lVar5 + 24) = uVar7;
+                lVar5.cityAreaID = uVar7;
                 if (((this.meditationUI != null) &&
                     (lVar5 = GameObject.get_transform(this.meditationUI,0)) != null) &&
                    (lVar5 = Transform.Find(lVar5,"MedSureButton",0)) != null) {
@@ -650,7 +648,7 @@ public class MeditationUIController
                   uVar7 = MeditationUIController.GetItemMeditationEffectDescribe
                                     (this,this.medIcon,0);
                   if (lVar5 != null) {
-                    *(uint64 *)(lVar5 + 24) = uVar7;
+                    lVar5.cityAreaID = uVar7;
                     return;
                   }
                 }
@@ -664,7 +662,6 @@ public class MeditationUIController
     // RVA   : 0xA8ED80   Offset: 0xA8E180   Length: 0x2D7
     public string GetItemMeditationEffectDescribe(GameObject itemIcon)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         uint64
         MeditationUIController.GetItemMeditationEffectDescribe(uint64 this,int64 itemIcon)
         {
@@ -680,9 +677,9 @@ public class MeditationUIController
         if (cVar2) {
           return "";
         }
-        if (((*pStatics != 0) &&
-            (lVar1 = *(int64 *)(*pStatics + 32)) != null) &&
-           (lVar1 = *(int64 *)(lVar1 + 0x1f0), itemIcon != null)) {
+        if (((GameController._instance != null) &&
+            (lVar1 = GameController._instance.worldData) != null) &&
+           (lVar1 = lVar1.meditationData, itemIcon != null)) {
           lVar3 = GameObject.GetComponent(itemIcon,DAT_181d720a0);
           if ((lVar3 != null) && (lVar1 != null)) {
             fVar7 = 0.0;
@@ -696,9 +693,9 @@ public class MeditationUIController
             }
             local_res10[0] = local_res10[0] * 100.0;
             uVar4 = Single.ToString(local_res10,"f0",0);
-            if ((*pStatics != 0) &&
-               (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
-              lVar1 = *(int64 *)(lVar1 + 0x1f0);
+            if ((GameController._instance != null) &&
+               (lVar1 = GameController._instance.worldData) != null) {
+              lVar1 = lVar1.meditationData;
               lVar3 = GameObject.GetComponent(itemIcon,DAT_181d720a0);
               if ((lVar3 != null) && (lVar1 != null)) {
                 if (*(int64 *)(lVar3 + 32) != 0) {
@@ -984,33 +981,32 @@ public class MeditationUIController
     // RVA   : 0xA934C0   Offset: 0xA928C0   Length: 0x306
     public void TreasureSureButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         long lVar2;
-        if ((*pStatics != 0) &&
-           (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
-          lVar2 = *(int64 *)(lVar2 + 0x1f0);
+        if ((GameController._instance != null) &&
+           (lVar2 = GameController._instance.worldData) != null) {
+          lVar2 = lVar2.meditationData;
           if (this.treasureIcon != null) {
             lVar1 = GameObject.GetComponent(this.treasureIcon,DAT_181d720a0);
             if ((lVar1 != null) && (lVar2 != null)) {
-              *(uint64 *)(lVar2 + 32) = *(uint64 *)(lVar1 + 32);
-              if (((*pStatics != 0) &&
-                  (lVar2 = *(int64 *)(*pStatics + 32)) != null) &&
-                 (lVar2 = *(int64 *)(lVar2 + 0x1f0)) != null) {
-                *(uint32 *)(lVar2 + 48) = 30;
+              lVar2.villageAreaID = lVar1.villageAreaID;
+              if (((GameController._instance != null) &&
+                  (lVar2 = GameController._instance.worldData) != null) &&
+                 (lVar2 = lVar2.meditationData) != null) {
+                lVar2.Areas = 30;
                 this.needRefresh = 1;
-                if ((*pStatics != 0) &&
-                   (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+                if ((GameController._instance != null) &&
+                   (lVar2 = GameController._instance.worldData) != null) {
                   lVar2 = WorldData.Player(lVar2,0);
-                  if ((((*pStatics != 0) &&
-                       (lVar1 = *(int64 *)(*pStatics + 32)) != null)
-                      && (lVar1 = *(int64 *)(lVar1 + 0x1f0)) != null) && (lVar2 != null)) {
-                    HeroData.LoseItem(lVar2,*(uint64 *)(lVar1 + 32),1,0);
-                    if (((*pStatics != 0) &&
-                        (lVar2 = *(int64 *)(*pStatics + 32)) != null)
-                       && (lVar2 = *(int64 *)(lVar2 + 0x1f0)) != null) {
+                  if ((((GameController._instance != null) &&
+                       (lVar1 = GameController._instance.worldData) != null)
+                      && (lVar1 = lVar1.meditationData) != null) && (lVar2 != null)) {
+                    HeroData.LoseItem(lVar2,lVar1.villageAreaID,1,0);
+                    if (((GameController._instance != null) &&
+                        (lVar2 = GameController._instance.worldData) != null)
+                       && (lVar2 = lVar2.meditationData) != null) {
                       MeditationUIController.StartMeditationItemPlot
-                                (this,*(uint64 *)(lVar2 + 32),0);
+                                (this,lVar2.villageAreaID,0);
                       return;
                     }
                   }
@@ -1025,33 +1021,32 @@ public class MeditationUIController
     // RVA   : 0xA8EA70   Offset: 0xA8DE70   Length: 0x306
     public void FoodSureButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         long lVar2;
-        if ((*pStatics != 0) &&
-           (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
-          lVar2 = *(int64 *)(lVar2 + 0x1f0);
+        if ((GameController._instance != null) &&
+           (lVar2 = GameController._instance.worldData) != null) {
+          lVar2 = lVar2.meditationData;
           if (this.foodIcon != null) {
             lVar1 = GameObject.GetComponent(this.foodIcon,DAT_181d720a0);
             if ((lVar1 != null) && (lVar2 != null)) {
-              *(uint64 *)(lVar2 + 56) = *(uint64 *)(lVar1 + 32);
-              if (((*pStatics != 0) &&
-                  (lVar2 = *(int64 *)(*pStatics + 32)) != null) &&
-                 (lVar2 = *(int64 *)(lVar2 + 0x1f0)) != null) {
-                *(uint32 *)(lVar2 + 72) = 30;
+              lVar2.Inns = lVar1.villageAreaID;
+              if (((GameController._instance != null) &&
+                  (lVar2 = GameController._instance.worldData) != null) &&
+                 (lVar2 = lVar2.meditationData) != null) {
+                lVar2.Forces = 30;
                 this.needRefresh = 1;
-                if ((*pStatics != 0) &&
-                   (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+                if ((GameController._instance != null) &&
+                   (lVar2 = GameController._instance.worldData) != null) {
                   lVar2 = WorldData.Player(lVar2,0);
-                  if ((((*pStatics != 0) &&
-                       (lVar1 = *(int64 *)(*pStatics + 32)) != null)
-                      && (lVar1 = *(int64 *)(lVar1 + 0x1f0)) != null) && (lVar2 != null)) {
-                    HeroData.LoseItem(lVar2,*(uint64 *)(lVar1 + 56),1,0);
-                    if (((*pStatics != 0) &&
-                        (lVar2 = *(int64 *)(*pStatics + 32)) != null)
-                       && (lVar2 = *(int64 *)(lVar2 + 0x1f0)) != null) {
+                  if ((((GameController._instance != null) &&
+                       (lVar1 = GameController._instance.worldData) != null)
+                      && (lVar1 = lVar1.meditationData) != null) && (lVar2 != null)) {
+                    HeroData.LoseItem(lVar2,lVar1.Inns,1,0);
+                    if (((GameController._instance != null) &&
+                        (lVar2 = GameController._instance.worldData) != null)
+                       && (lVar2 = lVar2.meditationData) != null) {
                       MeditationUIController.StartMeditationItemPlot
-                                (this,*(uint64 *)(lVar2 + 56),0);
+                                (this,lVar2.Inns,0);
                       return;
                     }
                   }
@@ -1066,33 +1061,32 @@ public class MeditationUIController
     // RVA   : 0xA8F400   Offset: 0xA8E800   Length: 0x306
     public void MedSureButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         long lVar2;
-        if ((*pStatics != 0) &&
-           (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
-          lVar2 = *(int64 *)(lVar2 + 0x1f0);
+        if ((GameController._instance != null) &&
+           (lVar2 = GameController._instance.worldData) != null) {
+          lVar2 = lVar2.meditationData;
           if (this.medIcon != null) {
             lVar1 = GameObject.GetComponent(this.medIcon,DAT_181d720a0);
             if ((lVar1 != null) && (lVar2 != null)) {
-              *(uint64 *)(lVar2 + 80) = *(uint64 *)(lVar1 + 32);
-              if (((*pStatics != 0) &&
-                  (lVar2 = *(int64 *)(*pStatics + 32)) != null) &&
-                 (lVar2 = *(int64 *)(lVar2 + 0x1f0)) != null) {
-                *(uint32 *)(lVar2 + 96) = 30;
+              lVar2.Heros = lVar1.villageAreaID;
+              if (((GameController._instance != null) &&
+                  (lVar2 = GameController._instance.worldData) != null) &&
+                 (lVar2 = lVar2.meditationData) != null) {
+                lVar2.BigMapRandomEventDatas = 30;
                 this.needRefresh = 1;
-                if ((*pStatics != 0) &&
-                   (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+                if ((GameController._instance != null) &&
+                   (lVar2 = GameController._instance.worldData) != null) {
                   lVar2 = WorldData.Player(lVar2,0);
-                  if ((((*pStatics != 0) &&
-                       (lVar1 = *(int64 *)(*pStatics + 32)) != null)
-                      && (lVar1 = *(int64 *)(lVar1 + 0x1f0)) != null) && (lVar2 != null)) {
-                    HeroData.LoseItem(lVar2,*(uint64 *)(lVar1 + 80),1,0);
-                    if (((*pStatics != 0) &&
-                        (lVar2 = *(int64 *)(*pStatics + 32)) != null)
-                       && (lVar2 = *(int64 *)(lVar2 + 0x1f0)) != null) {
+                  if ((((GameController._instance != null) &&
+                       (lVar1 = GameController._instance.worldData) != null)
+                      && (lVar1 = lVar1.meditationData) != null) && (lVar2 != null)) {
+                    HeroData.LoseItem(lVar2,lVar1.Heros,1,0);
+                    if (((GameController._instance != null) &&
+                        (lVar2 = GameController._instance.worldData) != null)
+                       && (lVar2 = lVar2.meditationData) != null) {
                       MeditationUIController.StartMeditationItemPlot
-                                (this,*(uint64 *)(lVar2 + 80),0);
+                                (this,lVar2.Heros,0);
                       return;
                     }
                   }
@@ -1107,7 +1101,6 @@ public class MeditationUIController
     // RVA   : 0xA92C00   Offset: 0xA92000   Length: 0x705
     public void StartMeditationItemPlot(ItemData targetItem)
     {
-        var pStatics = *(int64*)(DAT_181d91b88 + 184);
         uint uVar1;
         long lVar2;
         long lVar3;
@@ -1120,7 +1113,7 @@ public class MeditationUIController
         uint[] local_res20 = new uint[2];
         ulong in_stack_ffffffffffffff98;
         uint uVar10;
-        lVar2 = *(int64 *)(pStatics + 24);
+        lVar2 = BuildingUIController.PartyLvName;
         if (lVar2 != null) {
           PlotController.SetPlotItem(lVar2,targetItem,1,0);
           lVar2 = new HeroSpeAddData(0);
@@ -1218,7 +1211,7 @@ public class MeditationUIController
             iVar9 = iVar9 + 1;
           } while (iVar9 < 5);
           lVar6 = DAT_181d8b140;
-          lVar2 = *(int64 *)(pStatics + 24);
+          lVar2 = BuildingUIController.PartyLvName;
           plVar5 = *(int64 **)(DAT_181d8b140 + 48);
           lVar4 = *plVar5;
           if ((*(byte *)(lVar4 + 0x132) & 1) == 0) {
@@ -1256,7 +1249,6 @@ public class MeditationUIController
     // RVA   : 0xA92770   Offset: 0xA91B70   Length: 0x480
     public void StartMeditationButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
@@ -1281,19 +1273,19 @@ public class MeditationUIController
           if (5 < iVar7) {
             FUN_18181e0a0(lVar2,"还是算了;HideInteractUI",DAT_181da3d58);
             lVar1 = *(int64 *)(*(int64 *)(DAT_181d91b88 + 184) + 24);
-            if ((*pStatics != 0) &&
-               (lVar5 = *(int64 *)(*pStatics + 32)) != null) {
+            if ((GameController._instance != null) &&
+               (lVar5 = GameController._instance.worldData) != null) {
               lVar5 = WorldData.Player(lVar5,0);
               if (lVar5 != null) {
                 uVar3 = HeroData.GetMeditationTopic(lVar5,0);
-                if (((*pStatics != 0) &&
-                    (lVar5 = *(int64 *)(*pStatics + 32)) != null) &&
-                   (lVar5 = *(int64 *)(lVar5 + 0x1f0)) != null) {
-                  local_res20[0] = *(int *)(lVar5 + 24);
+                if (((GameController._instance != null) &&
+                    (lVar5 = GameController._instance.worldData) != null) &&
+                   (lVar5 = lVar5.meditationData) != null) {
+                  local_res20[0] = lVar5.cityAreaID;
                   uVar4 = il2cpp_value_box(DAT_181d80418,local_res20);
-                  if (((*pStatics != 0) &&
-                      (lVar5 = *(int64 *)(*pStatics + 32)) != null)
-                     && (lVar5 = *(int64 *)(lVar5 + 0x1f0)) != null) {
+                  if (((GameController._instance != null) &&
+                      (lVar5 = GameController._instance.worldData) != null)
+                     && (lVar5 = lVar5.meditationData) != null) {
                     local_res18[0] = (float)MeditationData.MeditationExpRate(lVar5,0);
                     local_res18[0] = local_res18[0] * 100.0;
                     uVar6 = Single.ToString(local_res18,"f0",0);

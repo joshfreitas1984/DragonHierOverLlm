@@ -99,10 +99,7 @@ public class StudyUniqueSkillController
     // RVA   : 0xFE8250   Offset: 0xFE7650   Length: 0xDA8
     private void Update()
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
-        var pStatics_2d50 = *(int64*)(DAT_181d72d50 + 184);
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
-        var pStatics_8190 = *(int64*)(DAT_181da8190 + 184);
         var pStatics_8210 = *(int64*)(DAT_181da8210 + 184);
         bool cVar2;
         ulong uVar3;
@@ -125,21 +122,21 @@ public class StudyUniqueSkillController
         if (!this.inStudy) {
           return;
         }
-        if (*pStatics_8190 == 0) throw; // [null/range check failed]
-        uVar7 = *(uint64 *)(*pStatics_8190 + 80);
+        if (StudySkillController._instance == null) throw; // [null/range check failed]
+        uVar7 = StudySkillController._instance.expText;
         uVar3 = Single.ToString(this + 28,0);
         uVar3 = String.Concat("经验 ",uVar3,0);
         LTLocalization.SetText(uVar7,uVar3,0);
-        if (*pStatics_8190 == 0) throw; // [null/range check failed]
-        uVar7 = *(uint64 *)(*pStatics_8190 + 88);
+        if (StudySkillController._instance == null) throw; // [null/range check failed]
+        uVar7 = StudySkillController._instance.comboText;
         uVar3 = Int32.ToString(this + 32,0);
         LTLocalization.SetText(uVar7,uVar3,0);
-        if ((*pStatics_2cc8 == 0) ||
-           (lVar4 = *(int64 *)(*pStatics_2cc8 + 32)) == null)
+        if ((GameController._instance == null) ||
+           (lVar4 = GameController._instance.worldData) == null)
         throw; // [null/range check failed]
         lVar4 = WorldData.Player(lVar4,0);
-        if ((*pStatics_8190 == 0) || (lVar4 == null)) throw; // [null/range check failed]
-        HeroData.SetHpBar(lVar4,*(uint64 *)(*pStatics_8190 + 96),0);
+        if ((StudySkillController._instance == null) || (lVar4 == null)) throw; // [null/range check failed]
+        HeroData.SetHpBar(lVar4,StudySkillController._instance.hpBarRoot,0);
         if (this.finishing) {
           return;
         }
@@ -169,7 +166,7 @@ public class StudyUniqueSkillController
             if (lVar4 == null) throw; // [null/range check failed]
             lVar4 = GameObject.GetComponent(lVar4,DAT_181dc72f8);
             if (lVar4 == null) throw; // [null/range check failed]
-            AudioSource.set_volume(lVar4,*(float *)(pStatics_2d50 + 16) * 0.2,0);
+            AudioSource.set_volume(lVar4,GameController.CheckShowSpeHero * 0.2,0);
             lVar4 = this.defencePoint;
             if (lVar4 == null) throw; // [null/range check failed]
             if (lVar4.Count < 2) {
@@ -214,7 +211,7 @@ public class StudyUniqueSkillController
             if (lVar4 == null) throw; // [null/range check failed]
             lVar4 = GameObject.GetComponent(lVar4,DAT_181dc72f8);
             if (lVar4 == null) throw; // [null/range check failed]
-            AudioSource.set_volume(lVar4,*(float *)(pStatics_2d50 + 16) * 0.2,0);
+            AudioSource.set_volume(lVar4,GameController.CheckShowSpeHero * 0.2,0);
             lVar4 = this.defencePoint;
             if (lVar4 == null) throw; // [null/range check failed]
             if (lVar4.Count < 3) {
@@ -255,7 +252,7 @@ public class StudyUniqueSkillController
             if (lVar4 == null) throw; // [null/range check failed]
             lVar4 = GameObject.GetComponent(lVar4,DAT_181dc72f8);
             if (lVar4 == null) throw; // [null/range check failed]
-            AudioSource.set_volume(lVar4,*(float *)(pStatics_2d50 + 16) * 0.2,0);
+            AudioSource.set_volume(lVar4,GameController.CheckShowSpeHero * 0.2,0);
             lVar4 = this.defencePoint;
             if (lVar4 == null) throw; // [null/range check failed]
             if (lVar4.Count < 4) {
@@ -300,7 +297,7 @@ public class StudyUniqueSkillController
           if (lVar4 == null) throw; // [null/range check failed]
           lVar4 = GameObject.GetComponent(lVar4,DAT_181dc72f8);
           if (lVar4 == null) throw; // [null/range check failed]
-          AudioSource.set_volume(lVar4,*(float *)(pStatics_2d50 + 16) * 0.2,0);
+          AudioSource.set_volume(lVar4,GameController.CheckShowSpeHero * 0.2,0);
           lVar4 = this.defencePoint;
           if (lVar4 == null) throw; // [null/range check failed]
           if (lVar4.Count == null) {
@@ -754,8 +751,6 @@ public class StudyUniqueSkillController
     // RVA   : 0xFE7B00   Offset: 0xFE6F00   Length: 0x6D8
     public void StartStudyUniqueSkill(KungfuSkillLvData target)
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
-        var pStatics_8190 = *(int64*)(DAT_181da8190 + 184);
         var pStatics_8210 = *(int64*)(DAT_181da8210 + 184);
         int iVar1;
         bool cVar2;
@@ -773,8 +768,8 @@ public class StudyUniqueSkillController
           GameObject.SetActive(this.studyUniqueSkillRoot,1,0);
           if (this.studyUniqueUIPanel != null) {
             GameObject.SetActive(this.studyUniqueUIPanel,1,0);
-            if ((*pStatics_8190 != 0) &&
-               (lVar3 = *(int64 *)(*pStatics_8190 + 96)) != null) {
+            if ((StudySkillController._instance != null) &&
+               (lVar3 = StudySkillController._instance.hpBarRoot) != null) {
               GameObject.SetActive(lVar3,1,0);
               this.inStudy = 1;
               this.targetSkill = target;
@@ -782,8 +777,8 @@ public class StudyUniqueSkillController
                 uVar5 = *(uint64 *)(*pStatics_8210 + 24);
                 cVar2 = Object.op_Equality(uVar5,0,0);
                 if (!cVar2) {
-                  if ((*pStatics_2cc8 == 0) ||
-                     (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null)
+                  if ((GameController._instance == null) ||
+                     (lVar3 = GameController._instance.worldData) == null)
                   throw; // [null/range check failed]
                   lVar3 = WorldData.Player(lVar3,0);
                   if ((*pStatics_8210 == 0) || (lVar3 == null)) throw; // [null/range check failed]
@@ -792,8 +787,8 @@ public class StudyUniqueSkillController
                 }
                 else {
                   lVar3 = *pStatics_8210;
-                  if ((*pStatics_2cc8 == 0) ||
-                     (lVar4 = *(int64 *)(*pStatics_2cc8 + 32)) == null)
+                  if ((GameController._instance == null) ||
+                     (lVar4 = GameController._instance.worldData) == null)
                   throw; // [null/range check failed]
                   lVar4 = WorldData.Player(lVar4,0);
                   if (*pStatics_8210 == 0) throw; // [null/range check failed]
@@ -907,7 +902,6 @@ public class StudyUniqueSkillController
     // RVA   : 0xFE67D0   Offset: 0xFE5BD0   Length: 0x1DB
     public void ChangeCombo(int num)
     {
-        var pStatics = *(int64*)(DAT_181da8190 + 184);
         long lVar1;
         ulong uVar3;
         uint uVar4;
@@ -915,8 +909,8 @@ public class StudyUniqueSkillController
         uint local_20;
         byte[] local_18 = new byte[16];
         this.combo = this.combo + num;
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 88)) != null) {
+        if ((StudySkillController._instance != null) &&
+           (lVar1 = StudySkillController._instance.comboText) != null) {
           lVar1 = Component.get_transform(lVar1,0);
           if (lVar1 != null) {
             lVar1 = FUN_180da9a20(lVar1,0);
@@ -925,8 +919,8 @@ public class StudyUniqueSkillController
               local_20 = *(uint32 *)(puVar2 + 1);
               local_28 = *puVar2;
               Transform.set_localScale(lVar1,&local_28,0);
-              if ((*pStatics != 0) &&
-                 (lVar1 = *(int64 *)(*pStatics + 88)) != null) {
+              if ((StudySkillController._instance != null) &&
+                 (lVar1 = StudySkillController._instance.comboText) != null) {
                 lVar1 = Component.get_transform(lVar1,0);
                 if (lVar1 != null) {
                   uVar3 = FUN_180da9a20(lVar1,0);
@@ -950,14 +944,13 @@ public class StudyUniqueSkillController
     // RVA   : 0xFE79F0   Offset: 0xFE6DF0   Length: 0x106
     public void ResetCombo()
     {
-        var pStatics = *(int64*)(DAT_181da8190 + 184);
         long lVar1;
         ulong local_28;
         uint local_20;
         byte[] local_18 = new byte[16];
         this.combo = 0;
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 88)) != null) {
+        if ((StudySkillController._instance != null) &&
+           (lVar1 = StudySkillController._instance.comboText) != null) {
           lVar1 = Component.get_transform(lVar1,0);
           if (lVar1 != null) {
             lVar1 = FUN_180da9a20(lVar1,0);

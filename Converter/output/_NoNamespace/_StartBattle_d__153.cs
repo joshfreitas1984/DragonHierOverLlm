@@ -153,7 +153,7 @@ public class <StartBattle>d__153
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         uVar5 = lVar4[uVar2];
-        lVar4 = **(int64 **)(DAT_181db0248 + 184);
+        lVar4 = PlotController.attriIndexCache;
         if (lVar4 == null) goto LAB_1809346bc;
         uVar2 = *(uint32 *)(lVar9 + 32);
         if (*(uint32 *)(lVar4 + 24) <= uVar2) {

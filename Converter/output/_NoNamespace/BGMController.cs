@@ -65,18 +65,17 @@ public class BGMController
     // RVA   : 0x7F4FF0   Offset: 0x7F43F0   Length: 0x155
     public static AudioClip LoadAudio(string path)
     {
-        var pStatics = *(int64*)(DAT_181dafac8 + 184);
         bool cVar1;
         ulong uVar2;
-        if (*pStatics != 0) {
-          cVar1 = FUN_1808ab490(*pStatics,path,DAT_181d728e8);
+        if (BGMController.audioCache != null) {
+          cVar1 = FUN_1808ab490(BGMController.audioCache,path,DAT_181d728e8);
           if (!cVar1) {
             uVar2 = Resources.Load(path,DAT_181d9ff80);
-            if (*pStatics == 0) throw; // [null/range check failed]
-            FUN_1808b2160(*pStatics,path,uVar2,DAT_181d729f8);
+            if (BGMController.audioCache == null) throw; // [null/range check failed]
+            FUN_1808b2160(BGMController.audioCache,path,uVar2,DAT_181d729f8);
           }
-          if (*pStatics != 0) {
-            FUN_1817c63a0(*pStatics,path,DAT_181d72970);
+          if (BGMController.audioCache != null) {
+            FUN_1817c63a0(BGMController.audioCache,path,DAT_181d72970);
             return;
           }
         }
@@ -163,15 +162,14 @@ public class BGMController
     // RVA   : 0x7F4E00   Offset: 0x7F4200   Length: 0x1EF
     private void Init()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
         if (this.plotBgm == null) {
         LAB_1807f4e56:
           this.plotBgm = 0;
-          if ((*pStatics == 0) ||
-             (lVar2 = *(int64 *)(*pStatics + 32)) == null)
+          if ((GameController._instance == null) ||
+             (lVar2 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
           lVar2 = WorldData.Player(lVar2,0);
           if (lVar2 == null) throw; // [null/range check failed]
@@ -213,14 +211,13 @@ public class BGMController
     // RVA   : 0x7F48E0   Offset: 0x7F3CE0   Length: 0x309
     private AudioClip GetEnvironmentSoundClip()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         uint uVar1;
         bool cVar2;
         long lVar3;
         long lVar4;
         ulong uVar5;
-        if (((*pStatics != 0) &&
-            (lVar3 = *(int64 *)(*pStatics + 32)) != null) &&
+        if (((GameController._instance != null) &&
+            (lVar3 = GameController._instance.worldData) != null) &&
            (lVar3 = WorldData.Player(lVar3,0)) != null) {
           cVar2 = HeroData.HaveArea(lVar3,0);
           if (!cVar2) {
@@ -228,19 +225,19 @@ public class BGMController
           }
           lVar3 = *(int64 *)(*(int64 *)(DAT_181db4008 + 184) + 8);
           if (lVar3 == null) throw; // [null/range check failed]
-          if (*(int64 *)(lVar3 + 24) != 0) {
+          if (lVar3.cityAreaID != null) {
             lVar3 = FUN_18046bca0(0);
-            if (((lVar3 == null) || (*(int64 *)(lVar3 + 24) == 0)) ||
-               (lVar3 = AreaBuildingData.DataBase(*(int64 *)(lVar3 + 24),0)) == null)
+            if (((lVar3 == null) || (lVar3.cityAreaID == null)) ||
+               (lVar3 = AreaBuildingData.DataBase(lVar3.cityAreaID,0)) == null)
             throw; // [null/range check failed]
-            if (*(int *)(lVar3 + 144) != -1) {
+            if (lVar3.MailDatas != -1) {
               lVar3 = this.environmentSoundClips;
               lVar4 = FUN_18046bca0(0);
-              if (((lVar4 == null) || (*(int64 *)(lVar4 + 24) == 0)) ||
-                 ((lVar4 = AreaBuildingData.DataBase(*(int64 *)(lVar4 + 24),0), lVar4 == null ||
+              if (((lVar4 == null) || (lVar4.cityAreaID == null)) ||
+                 ((lVar4 = AreaBuildingData.DataBase(lVar4.cityAreaID,0), lVar4 == null ||
                   (lVar3 == null)))) throw; // [null/range check failed]
-              uVar1 = *(uint32 *)(lVar4 + 144);
-              if (*(uint32 *)(lVar3 + 24) <= uVar1) {
+              uVar1 = lVar4.MailDatas;
+              if (lVar3.cityAreaID <= uVar1) {
                 uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                 FUN_1800d65f0(uVar5,0);
@@ -249,12 +246,12 @@ public class BGMController
             }
           }
           lVar3 = this.environmentSoundClips;
-          if ((((*pStatics != 0) &&
-               (lVar4 = *(int64 *)(*pStatics + 32)) != null) &&
+          if ((((GameController._instance != null) &&
+               (lVar4 = GameController._instance.worldData) != null) &&
               (lVar4 = WorldData.Player(lVar4,0)) != null) &&
              ((lVar4 = HeroData.GetArea(lVar4,0), lVar4 != null && (lVar3 != null)))) {
-            uVar1 = *(uint32 *)(lVar4 + 72);
-            if (*(uint32 *)(lVar3 + 24) <= uVar1) {
+            uVar1 = lVar4.Forces;
+            if (lVar3.cityAreaID <= uVar1) {
               uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
               FUN_1800d65f0(uVar5,0);
@@ -286,9 +283,6 @@ public class BGMController
     // RVA   : 0x7F5610   Offset: 0x7F4A10   Length: 0xFB1
     private void Update()
     {
-        var pStatics_0248 = *(int64*)(DAT_181db0248 + 184);
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
-        var pStatics_2d50 = *(int64*)(DAT_181d72d50 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
@@ -303,18 +297,18 @@ public class BGMController
           BGMController.Init(this,0);
         }
         bVar8 = false;
-        uVar4 = *(uint64 *)(pStatics_0248 + 80);
+        uVar4 = PlotController.LaBaFestivelResultTalkText;
         cVar1 = Object.op_Inequality(uVar4,0,0);
         if (cVar1) {
-          lVar5 = *(int64 *)(pStatics_0248 + 80);
+          lVar5 = PlotController.LaBaFestivelResultTalkText;
           if (lVar5 == null) throw; // [null/range check failed]
           bVar8 = false;
           if (*(int *)(lVar5 + 36) != 0) {
             bVar8 = true;
           }
         }
-        if ((*pStatics_2cc8 == 0) ||
-           (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) == null)
+        if ((GameController._instance == null) ||
+           (lVar5 = GameController._instance.worldData) == null)
         throw; // [null/range check failed]
         lVar2 = WorldData.Player(lVar5,0);
         lVar5 = this.environmentSound;
@@ -344,10 +338,10 @@ public class BGMController
               if (((lVar5 == null) || (lVar5.Count == null)) ||
                  (lVar5 = AreaBuildingData.DataBase(lVar5.Count,0)) == null)
               throw; // [null/range check failed]
-              if (*(int *)(lVar5 + 144) != -1) goto LAB_1807f5a42;
+              if (lVar5.MailDatas != -1) goto LAB_1807f5a42;
               fVar9 = **(float **)(DAT_181db4008 + 184);
             }
-            fVar9 = fVar9 * *(float *)(pStatics_2d50 + 16);
+            fVar9 = fVar9 * GameController.CheckShowSpeHero;
             if (this.environmentSound == null) throw; // [null/range check failed]
             fVar10 = (float)AudioSource.get_volume(this.environmentSound,0);
             lVar5 = this.environmentSound;
@@ -401,7 +395,7 @@ public class BGMController
             if (this.plotBgm == null) throw; // [null/range check failed]
             fVar10 = this.plotBgm.volume;
 
-            if ((lVar5 = *(int64 *)(pStatics_2d50 + 8)?._items) == null) throw; // [null/range check failed]
+            if ((lVar5 = GameController.difficultyExtraPoint?._items) == null) throw; // [null/range check failed]
             fVar11 = (float)PlayerPrefDictionary.GetFloat(lVar5,"BgmVolume",0);
             lVar5 = this.gameBGM;
             if (fVar9 < fVar11 * fVar10) {
@@ -418,7 +412,7 @@ public class BGMController
             if (this.plotBgm == null) throw; // [null/range check failed]
             fVar10 = this.plotBgm.volume;
 
-            if ((lVar5 = *(int64 *)(pStatics_2d50 + 8)?._items) == null) throw; // [null/range check failed]
+            if ((lVar5 = GameController.difficultyExtraPoint?._items) == null) throw; // [null/range check failed]
             fVar11 = (float)PlayerPrefDictionary.GetFloat(lVar5,"BgmVolume",0);
             if (fVar9 <= fVar11 * (fVar10 + 0.01)) {
               return;
@@ -474,8 +468,8 @@ public class BGMController
             goto LAB_1807f65a5;
           }
           lVar5 = FUN_18046c0a0(0);
-          if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-             (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null) throw; // [null/range check failed]
+          if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+             (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null) throw; // [null/range check failed]
           cVar1 = HeroData.HaveArea(lVar5,0);
           if (!cVar1) {
             uVar4 = this.bigMapBGM;
@@ -538,14 +532,14 @@ public class BGMController
         if (this.nowBgm == null) throw; // [null/range check failed]
         fVar10 = this.nowBgm.volume;
 
-        if ((lVar5 = *(int64 *)(pStatics_2d50 + 8)?._items) == null) throw; // [null/range check failed]
+        if ((lVar5 = GameController.difficultyExtraPoint?._items) == null) throw; // [null/range check failed]
         fVar11 = (float)PlayerPrefDictionary.GetFloat(lVar5,"BgmVolume",0);
         lVar5 = this.gameBGM;
         if (fVar9 < fVar11 * fVar10) {
           if (lVar5 == null) throw; // [null/range check failed]
           fVar9 = (float)AudioSource.get_volume(lVar5,0);
           fVar10 = (float)RealTime.get_deltaTime(0);
-          lVar2 = *(int64 *)(pStatics_2d50 + 8);
+          lVar2 = GameController.difficultyExtraPoint;
           if ((lVar2 == null) || (lVar2 = *(int64 *)(lVar2 + 16)) == null) throw; // [null/range check failed]
           fVar11 = (float)PlayerPrefDictionary.GetFloat(lVar2,"BgmVolume",0);
           AudioSource.set_volume(lVar5,fVar10 * 0.15 * fVar11 + fVar9,0);
@@ -554,7 +548,7 @@ public class BGMController
           if (this.nowBgm == null) throw; // [null/range check failed]
           fVar10 = this.nowBgm.volume;
 
-          if ((lVar5 = *(int64 *)(pStatics_2d50 + 8)?._items) == null) throw; // [null/range check failed]
+          if ((lVar5 = GameController.difficultyExtraPoint?._items) == null) throw; // [null/range check failed]
           fVar11 = (float)PlayerPrefDictionary.GetFloat(lVar5,"BgmVolume",0);
           fVar11 = fVar11 * fVar10;
           bVar8 = fVar9 == fVar11;
@@ -566,7 +560,7 @@ public class BGMController
           lVar5 = this.gameBGM;
           if (this.nowBgm != null) {
             fVar9 = this.nowBgm.volume;
-            lVar2 = *(int64 *)(pStatics_2d50 + 8);
+            lVar2 = GameController.difficultyExtraPoint;
             if (((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 16)) != null) &&
                (fVar10 = (float)PlayerPrefDictionary.GetFloat(lVar2,"BgmVolume",0), lVar5 != null)) {
               AudioSource.set_volume(lVar5,fVar10 * fVar9,0);
@@ -580,14 +574,14 @@ public class BGMController
         if (this.nowBgm == null) throw; // [null/range check failed]
         fVar10 = this.nowBgm.volume;
 
-        if ((lVar5 = *(int64 *)(pStatics_2d50 + 8)?._items) == null) throw; // [null/range check failed]
+        if ((lVar5 = GameController.difficultyExtraPoint?._items) == null) throw; // [null/range check failed]
         fVar11 = (float)PlayerPrefDictionary.GetFloat(lVar5,"BgmVolume",0);
         lVar5 = this.gameBGM;
         if (fVar11 * fVar10 < fVar9) {
           if (lVar5 == null) throw; // [null/range check failed]
           fVar9 = (float)AudioSource.get_volume(lVar5,0);
           fVar10 = (float)RealTime.get_deltaTime(0);
-          lVar2 = *(int64 *)(pStatics_2d50 + 8);
+          lVar2 = GameController.difficultyExtraPoint;
           if ((lVar2 == null) || (lVar2 = *(int64 *)(lVar2 + 16)) == null) throw; // [null/range check failed]
           fVar11 = (float)PlayerPrefDictionary.GetFloat(lVar2,"BgmVolume",0);
           AudioSource.set_volume(lVar5,fVar9 - fVar10 * 0.15 * fVar11,0);
@@ -596,7 +590,7 @@ public class BGMController
           if (this.nowBgm == null) throw; // [null/range check failed]
           fVar10 = this.nowBgm.volume;
 
-          if ((lVar5 = *(int64 *)(pStatics_2d50 + 8)?._items) == null) throw; // [null/range check failed]
+          if ((lVar5 = GameController.difficultyExtraPoint?._items) == null) throw; // [null/range check failed]
           fVar11 = (float)PlayerPrefDictionary.GetFloat(lVar5,"BgmVolume",0);
           fVar11 = fVar11 * fVar10;
           bVar8 = fVar11 == fVar9;
@@ -616,8 +610,8 @@ public class BGMController
         if (fVar9 <= 0.0) {
           if (bVar8) goto LAB_1807f6140;
           lVar5 = FUN_18046c0a0(0);
-          if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-             (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null) throw; // [null/range check failed]
+          if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+             (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null) throw; // [null/range check failed]
           cVar1 = HeroData.HaveArea(lVar5,0);
           if (!cVar1) {
             uVar4 = this.bigMapBGM;

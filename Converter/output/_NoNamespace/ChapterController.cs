@@ -39,7 +39,6 @@ public class ChapterController
     // RVA   : 0x9939B0   Offset: 0x992DB0   Length: 0xDA5
     public void ChangeChapter(int targetChapter)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         uint uVar1;
         int iVar2;
         long lVar3;
@@ -56,15 +55,15 @@ public class ChapterController
         uint64 uStack_40;
         uint8 local_38 [48];
         if (**(int **)(DAT_181d73d40 + 184) == 2) {
-          if ((*pStatics != 0) &&
-             (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
-            *(uint8 *)(lVar3 + 0x10a) = 1;
-            if ((*pStatics != 0) &&
-               (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
-              *(uint8 *)(lVar3 + 0x10b) = 1;
-              if ((*pStatics != 0) &&
-                 (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
-                *(uint8 *)(lVar3 + 0x10c) = 1;
+          if ((GameController._instance != null) &&
+             (lVar3 = GameController._instance.worldData) != null) {
+            lVar3.openForceAttackResource = 1;
+            if ((GameController._instance != null) &&
+               (lVar3 = GameController._instance.worldData) != null) {
+              lVar3.openForceAttackArea = 1;
+              if ((GameController._instance != null) &&
+                 (lVar3 = GameController._instance.worldData) != null) {
+                lVar3.openForceAttackBasement = 1;
                 return;
               }
             }
@@ -72,46 +71,46 @@ public class ChapterController
           throw; // [null/range check failed]
         }
         uVar1 = Mathf.Clamp(targetChapter,0,3);
-        if ((*pStatics == 0) ||
-           (lVar3 = *(int64 *)(*pStatics + 32)) == null)
+        if ((GameController._instance == null) ||
+           (lVar3 = GameController._instance.worldData) == null)
         throw; // [null/range check failed]
-        *(uint32 *)(lVar3 + 16) = uVar1;
-        if ((*pStatics == 0) ||
-           (lVar3 = *(int64 *)(*pStatics + 32)) == null)
+        lVar3.chapter = uVar1;
+        if ((GameController._instance == null) ||
+           (lVar3 = GameController._instance.worldData) == null)
         throw; // [null/range check failed]
-        *(uint8 *)(lVar3 + 0x109) = 1;
+        lVar3.openForceBuilding = 1;
         if (uVar1 == 0) {
           lVar3 = FUN_18046c0a0(0);
-          if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) throw; // [null/range check failed]
-          *(uint8 *)(*(int64 *)(lVar3 + 32) + 0x10a) = 0;
+          if ((lVar3 == null) || (lVar3.villageAreaID == null)) throw; // [null/range check failed]
+          *(uint8 *)(lVar3.villageAreaID + 0x10a) = 0;
         LAB_180993dfa:
           lVar3 = FUN_18046c0a0(0);
-          if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) throw; // [null/range check failed]
-          *(uint8 *)(*(int64 *)(lVar3 + 32) + 0x10b) = 0;
+          if ((lVar3 == null) || (lVar3.villageAreaID == null)) throw; // [null/range check failed]
+          *(uint8 *)(lVar3.villageAreaID + 0x10b) = 0;
         }
         else {
           if (uVar1 == 1) {
             lVar3 = FUN_18046c0a0(0);
-            if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) throw; // [null/range check failed]
-            *(uint8 *)(*(int64 *)(lVar3 + 32) + 0x10a) = 1;
+            if ((lVar3 == null) || (lVar3.villageAreaID == null)) throw; // [null/range check failed]
+            *(uint8 *)(lVar3.villageAreaID + 0x10a) = 1;
             goto LAB_180993dfa;
           }
           if (uVar1 != 2) {
             if (uVar1 == 3) {
               lVar3 = FUN_18046c0a0(0);
-              if ((lVar3 != null) && (*(int64 *)(lVar3 + 32) != 0)) {
-                *(uint8 *)(*(int64 *)(lVar3 + 32) + 0x10a) = 1;
+              if ((lVar3 != null) && (lVar3.villageAreaID != null)) {
+                *(uint8 *)(lVar3.villageAreaID + 0x10a) = 1;
                 lVar3 = FUN_18046c0a0(0);
-                if ((lVar3 != null) && (*(int64 *)(lVar3 + 32) != 0)) {
-                  *(uint8 *)(*(int64 *)(lVar3 + 32) + 0x10b) = 1;
+                if ((lVar3 != null) && (lVar3.villageAreaID != null)) {
+                  *(uint8 *)(lVar3.villageAreaID + 0x10b) = 1;
                   lVar3 = FUN_18046c0a0(0);
                   if (lVar3 != null) {
-                    lVar3 = *(int64 *)(lVar3 + 32);
+                    lVar3 = lVar3.villageAreaID;
                     lVar4 = FUN_18046c0a0(0);
                     if ((((lVar4 != null) && (*(int64 *)(lVar4 + 32) != 0)) &&
                         (lVar4 = *(int64 *)(*(int64 *)(lVar4 + 32) + 232)) != null) &&
                        (iVar2 = PlotEventLogData.GetInt(lVar4,"FinalChapterPlotEnd",0), lVar3 != null)) {
-                      *(bool *)(lVar3 + 0x10c) = iVar2 == 1;
+                      lVar3.openForceAttackBasement = iVar2 == 1;
                       goto LAB_180993e42;
                     }
                   }
@@ -122,15 +121,15 @@ public class ChapterController
             goto LAB_180993e42;
           }
           lVar3 = FUN_18046c0a0(0);
-          if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) throw; // [null/range check failed]
-          *(uint8 *)(*(int64 *)(lVar3 + 32) + 0x10a) = 1;
+          if ((lVar3 == null) || (lVar3.villageAreaID == null)) throw; // [null/range check failed]
+          *(uint8 *)(lVar3.villageAreaID + 0x10a) = 1;
           lVar3 = FUN_18046c0a0(0);
-          if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) throw; // [null/range check failed]
-          *(uint8 *)(*(int64 *)(lVar3 + 32) + 0x10b) = 1;
+          if ((lVar3 == null) || (lVar3.villageAreaID == null)) throw; // [null/range check failed]
+          *(uint8 *)(lVar3.villageAreaID + 0x10b) = 1;
         }
         lVar3 = FUN_18046c0a0(0);
-        if ((lVar3 != null) && (*(int64 *)(lVar3 + 32) != 0)) {
-          *(uint8 *)(*(int64 *)(lVar3 + 32) + 0x10c) = 0;
+        if ((lVar3 != null) && (lVar3.villageAreaID != null)) {
+          *(uint8 *)(lVar3.villageAreaID + 0x10c) = 0;
         LAB_180993e42:
           if (this.chapterUIPanel != null) {
             GameObject.SetActive(this.chapterUIPanel,1,0);
@@ -227,14 +226,14 @@ public class ChapterController
                                                            (this.chapterUIPanel,0), lVar3 != null))
                                        && (lVar3 = Transform.Find(lVar3,"Title",0)) != null) {
                                       uVar7 = Component.GetComponent(lVar3,DAT_181d96160);
-                                      lVar3 = **(int64 **)(DAT_181db6e30 + 184);
+                                      lVar3 = ChapterController.chapterTitles;
                                       if (lVar3 != null) {
-                                        if (*(uint32 *)(lVar3 + 24) <= uVar1) {
+                                        if (lVar3.cityAreaID <= uVar1) {
                                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
                                         }
                                         LTLocalization.SetText
                                                   (uVar7,*(uint64 *)
-                                                          (*(int64 *)(lVar3 + 16) + 32 +
+                                                          (lVar3.chapter + 32 +
                                                           (int64)(int)uVar1 * 8),0);
                                         if (((this.chapterUIPanel != null) &&
                                             (lVar3 = GameObject.get_transform
@@ -349,7 +348,6 @@ public class ChapterController
     // RVA   : 0x994760   Offset: 0x993B60   Length: 0x5D4
     public string GetChapterDescribe(string newLine)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         ulong uVar2;
         long lVar3;
         long lVar4;
@@ -359,12 +357,12 @@ public class ChapterController
         local_res20[0] = 0.0;
         plVar1 = (int64 *)FUN_1800d60b0(DAT_181da4120,5);
         uVar5 = "天下大势：{4}{0}门派 {1}攻击资源{4}门派 {2}攻击城镇{4}门派 {3}攻击京城/总舵";
-        if ((*pStatics != 0) &&
-           (lVar4 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar4 = GameController._instance.worldData) != null) {
           lVar3 = "";
-          if (*(int *)(lVar4 + 156) == 0) {
-            if ((*pStatics == 0) ||
-               (lVar4 = *(int64 *)(*pStatics + 32)) == null)
+          if (lVar4.gameMode == null) {
+            if ((GameController._instance == null) ||
+               (lVar4 = GameController._instance.worldData) == null)
             throw; // [null/range check failed]
             fVar6 = (float)WorldData.GetChapterBadFameRate(lVar4,0);
             local_res20[0] = (fVar6 - 1.0) * 100.0;
@@ -385,10 +383,10 @@ public class ChapterController
             }
             plVar1[4] = lVar3;
             il2cpp_internal(plVar1 + 4,lVar3);
-            if ((*pStatics != 0) &&
-               (lVar4 = *(int64 *)(*pStatics + 32)) != null) {
+            if ((GameController._instance != null) &&
+               (lVar4 = GameController._instance.worldData) != null) {
               lVar3 = "不可";
-              if (*(char *)(lVar4 + 0x10a) != false) {
+              if (lVar4.openForceAttackResource) {
                 lVar3 = "可以";
               }
               if ((lVar3 != null) &&
@@ -404,10 +402,10 @@ public class ChapterController
               }
               plVar1[5] = lVar3;
               il2cpp_internal(plVar1 + 5,lVar3);
-              if ((*pStatics != 0) &&
-                 (lVar4 = *(int64 *)(*pStatics + 32)) != null) {
+              if ((GameController._instance != null) &&
+                 (lVar4 = GameController._instance.worldData) != null) {
                 lVar3 = "不可";
-                if (*(char *)(lVar4 + 0x10b) != false) {
+                if (lVar4.openForceAttackArea) {
                   lVar3 = "可以";
                 }
                 if ((lVar3 != null) &&
@@ -423,10 +421,10 @@ public class ChapterController
                 }
                 plVar1[6] = lVar3;
                 il2cpp_internal(plVar1 + 6,lVar3);
-                if ((*pStatics != 0) &&
-                   (lVar4 = *(int64 *)(*pStatics + 32)) != null) {
+                if ((GameController._instance != null) &&
+                   (lVar4 = GameController._instance.worldData) != null) {
                   lVar3 = "不可";
-                  if (*(char *)(lVar4 + 0x10c) != false) {
+                  if (lVar4.openForceAttackBasement) {
                     lVar3 = "可以";
                   }
                   if ((lVar3 != null) &&

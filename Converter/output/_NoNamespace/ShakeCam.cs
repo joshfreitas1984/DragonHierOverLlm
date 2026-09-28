@@ -45,7 +45,6 @@ public class ShakeCam
     // RVA   : 0x97D960   Offset: 0x97CD60   Length: 0x3C2
     public void StartShake(ShakeStrengthType targetShakeStrength, bool shakeUI)
     {
-        var pStatics = *(int64*)(DAT_181d91b88 + 184);
         long lVar1;
         int iVar2;
         ulong uVar3;
@@ -61,7 +60,7 @@ public class ShakeCam
           lVar1 = this.cam;
           while (lVar1 != null) {
             if (*(int *)(lVar1 + 24) <= (int)uVar5) {
-              lVar1 = *(int64 *)(pStatics + 24);
+              lVar1 = BuildingUIController.PartyLvName;
               if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 32)) != null) {
                 uVar4 = GameObject.get_transform(lVar1,0);
                 ShortcutExtensions.DOComplete(uVar4,0,0);
@@ -97,7 +96,7 @@ public class ShakeCam
                   if (!shakeUI) {
                     return;
                   }
-                  lVar1 = *(int64 *)(pStatics + 24);
+                  lVar1 = BuildingUIController.PartyLvName;
                   if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 32)) != null) {
                     uVar4 = GameObject.get_transform(lVar1,0);
                     ShortcutExtensions.DOShakePosition

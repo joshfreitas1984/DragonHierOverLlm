@@ -126,7 +126,6 @@ public class StudySkillController
     // RVA   : 0xFE42B0   Offset: 0xFE36B0   Length: 0x8AE
     public void StartStudySkill(StudySkillType studySkillType, KungfuSkillLvData target, string _finishCallFuc, AreaBuildingData _targetBuilding, bool _useMoney)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         void StudySkillController.StartStudySkill
                      (int64 this,int studySkillType,uint64 target,uint64 _finishCallFuc,
                      uint64 _targetBuilding,uint8 _useMoney)
@@ -149,8 +148,8 @@ public class StudySkillController
         uint64 local_50;
         local_res8[0] = 0.0;
         this.targetSkill = target;
-        if ((*pStatics != 0) &&
-           (lVar5 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar5 = GameController._instance.worldData) != null) {
           lVar5 = WorldData.Player(lVar5,0);
           if ((this.targetSkill != null) && (lVar5 != null)) {
             uVar6 = HeroData.GetSkillMaxPracticeExp
@@ -341,19 +340,18 @@ public class StudySkillController
     // RVA   : 0xFE4B60   Offset: 0xFE3F60   Length: 0x35E
     public void SureStartStudySkill()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         int iVar2;
         uint uVar3;
         long lVar4;
         ulong uVar5;
         if (this.useMoney) {
-          if ((*pStatics == 0) ||
-             (lVar4 = *(int64 *)(*pStatics + 32)) == null)
+          if ((GameController._instance == null) ||
+             (lVar4 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
           lVar4 = WorldData.Player(lVar4,0);
-          if ((lVar4 == null) || (*(int64 *)(lVar4 + 0x220) == 0)) throw; // [null/range check failed]
-          iVar2 = *(int *)(*(int64 *)(lVar4 + 0x220) + 24);
+          if ((lVar4 == null) || (lVar4.speBookStorageSpeAdd == null)) throw; // [null/range check failed]
+          iVar2 = *(int *)(lVar4.speBookStorageSpeAdd + 24);
           if (this.targetSkill == null) throw; // [null/range check failed]
           iVar1 = KungfuSkillLvData.StudyMoneyCost(this.targetSkill,0);
           if (iVar2 < iVar1) {
@@ -371,8 +369,8 @@ public class StudySkillController
             throw; // [null/range check failed]
           }
           lVar4 = FUN_18046c0a0(0);
-          if ((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) throw; // [null/range check failed]
-          lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0);
+          if ((lVar4 == null) || (lVar4.villageAreaID == null)) throw; // [null/range check failed]
+          lVar4 = WorldData.Player(lVar4.villageAreaID,0);
           if (this.targetSkill == null) throw; // [null/range check failed]
           iVar2 = KungfuSkillLvData.StudyMoneyCost(this.targetSkill,0);
           if (lVar4 == null) throw; // [null/range check failed]
@@ -549,7 +547,6 @@ public class StudySkillController
     // RVA   : 0xFE2930   Offset: 0xFE1D30   Length: 0x381
     public void AutoStudySkill()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         float fVar1;
         ulong uVar2;
         bool cVar3;
@@ -560,9 +557,9 @@ public class StudySkillController
         if (this.targetSkill != null) {
           lVar4 = KungfuSkillLvData.DataBase(this.targetSkill,0);
           if (lVar4 != null) {
-            if (*(int *)(lVar4 + 48) == 0) {
-              if ((*pStatics == 0) ||
-                 (lVar4 = *(int64 *)(*pStatics + 32)) == null)
+            if (lVar4.Areas == null) {
+              if ((GameController._instance == null) ||
+                 (lVar4 = GameController._instance.worldData) == null)
               throw; // [null/range check failed]
               lVar4 = WorldData.Player(lVar4,0);
               StudySkillController.GetAutoPracticeCost(this,0);
@@ -570,8 +567,8 @@ public class StudySkillController
               HeroData.ChangeMana(lVar4);
             }
             else {
-              if ((*pStatics == 0) ||
-                 (lVar4 = *(int64 *)(*pStatics + 32)) == null)
+              if ((GameController._instance == null) ||
+                 (lVar4 = GameController._instance.worldData) == null)
               throw; // [null/range check failed]
               lVar4 = WorldData.Player(lVar4,0);
               StudySkillController.GetAutoPracticeCost(this,0);
@@ -611,8 +608,6 @@ public class StudySkillController
     // RVA   : 0xFE3650   Offset: 0xFE2A50   Length: 0x713
     public void PlayerStudySkill()
     {
-        var pStatics_4f18 = *(int64*)(DAT_181db4f18 + 184);
-        var pStatics_7d98 = *(int64*)(DAT_181db7d98 + 184);
         var pStatics_7f90 = *(int64*)(DAT_181da7f90 + 184);
         var pStatics_8110 = *(int64*)(DAT_181da8110 + 184);
         var pStatics_8290 = *(int64*)(DAT_181da8290 + 184);
@@ -656,8 +651,8 @@ public class StudySkillController
             if (this.studySkillUIPanel != null) {
               GameObject.SetActive(this.studySkillUIPanel,1,0);
               this.inStudy = 1;
-              if (*pStatics_7d98 != 0) {
-                CloudAnimController.PlayerCloudAnim(*pStatics_7d98,0);
+              if (CloudAnimController._instance != null) {
+                CloudAnimController.PlayerCloudAnim(CloudAnimController._instance,0);
                 plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/紧张",0);
                 if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
                   plVar7 = plVar4;
@@ -666,7 +661,7 @@ public class StudySkillController
                 if (this.targetSkill != null) {
                   iVar2 = KungfuSkillLvData.Type(this.targetSkill,0);
                   if (iVar2 == 0) {
-                    lVar3 = *(int64 *)(pStatics_4f18 + 8);
+                    lVar3 = BattleController.AttackAreaTypeStartMovePower;
                     uVar5 = Component.get_gameObject(this,0);
                     if (lVar3 != null) {
                       WeatherController.SetWeatherSpeActive(lVar3,0,uVar5,0);
@@ -693,7 +688,7 @@ public class StudySkillController
                   }
                   else {
                     if (iVar2 == 1) {
-                      lVar3 = *(int64 *)(pStatics_4f18 + 8);
+                      lVar3 = BattleController.AttackAreaTypeStartMovePower;
                       uVar5 = Component.get_gameObject(this,0);
                       if (lVar3 == null) throw; // [null/range check failed]
                       WeatherController.SetWeatherSpeActive(lVar3,0,uVar5,0);
@@ -703,7 +698,7 @@ public class StudySkillController
                                 (lVar3,this.targetSkill,0);
                     }
                     else if (iVar2 == 2) {
-                      lVar3 = *(int64 *)(pStatics_4f18 + 8);
+                      lVar3 = BattleController.AttackAreaTypeStartMovePower;
                       uVar5 = Component.get_gameObject(this,0);
                       if (lVar3 == null) throw; // [null/range check failed]
                       WeatherController.SetWeatherSpeActive(lVar3,0,uVar5,0);
@@ -745,7 +740,6 @@ public class StudySkillController
     // RVA   : 0xFE2D30   Offset: 0xFE2130   Length: 0x667
     public void FinishStudySkill(float expNum)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
@@ -775,15 +769,15 @@ public class StudySkillController
               if (this.hpBarRoot == null) break;
               GameObject.SetActive(this.hpBarRoot,0,0);
               this.inStudy = 0;
-              if ((*pStatics == 0) ||
-                 (lVar3 = *(int64 *)(*pStatics + 32)) == null) break;
+              if ((GameController._instance == null) ||
+                 (lVar3 = GameController._instance.worldData) == null) break;
               lVar3 = WorldData.Player(lVar3,0);
-              if ((*pStatics == 0) ||
-                 (lVar6 = *(int64 *)(*pStatics + 32)) == null) break;
+              if ((GameController._instance == null) ||
+                 (lVar6 = GameController._instance.worldData) == null) break;
               lVar6 = WorldData.Player(lVar6,0);
               if ((lVar6 == null) ||
-                 (uVar7 = Mathf.Max(0x3f800000,*(uint32 *)(lVar6 + 0x178),0), lVar3 == null)) break;
-              *(uint32 *)(lVar3 + 0x178) = uVar7;
+                 (uVar7 = Mathf.Max(0x3f800000,lVar6.skinUnlockData,0), lVar3 == null)) break;
+              lVar3.skinUnlockData = uVar7;
               lVar3 = this.targetPracticeExpData;
               if (lVar3 == null) {
                 if (this.targetSkill == null) break;
@@ -791,8 +785,8 @@ public class StudySkillController
                 this.targetPracticeExpData = new SkillMaxPracticeExpData(uVar7,0);
                 if (this.targetPracticeExpData == null) break;
                 this.targetPracticeExpData.maxPracticeExp = local_res10[0];
-                if (((*pStatics == 0) ||
-                    (lVar3 = *(int64 *)(*pStatics + 32)) == null) ||
+                if (((GameController._instance == null) ||
+                    (lVar3 = GameController._instance.worldData) == null) ||
                    (lVar3 = WorldData.Player(lVar3,0)) == null) break;
                 HeroData.AddSkillMaxPracticeExp(lVar3,this.targetPracticeExpData,0);
         LAB_180fe31d4:

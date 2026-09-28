@@ -346,7 +346,6 @@ public class DrinkUIController
     // RVA   : 0x93F660   Offset: 0x93EA60   Length: 0xA2A
     public void ShowDrinkUI(DrinkType _drinkType, HeroData _enemyData, ItemData _wineData, string _fightEndCallFuc)
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
         void DrinkUIController.ShowDrinkUI
                      (int64 this,int _drinkType,int64 _enemyData,int64 _wineData,int64 _fightEndCallFuc)
@@ -411,8 +410,8 @@ public class DrinkUIController
               this.temp = lVar5;
               if (*plVar1 != 0) {
                 lVar5 = GameObject.GetComponent(*plVar1,DAT_181d71b50);
-                if (((*pStatics_2cc8 != 0) &&
-                    (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) != null) &&
+                if (((GameController._instance != null) &&
+                    (lVar3 = GameController._instance.worldData) != null) &&
                    (uVar6 = WorldData.Player(lVar3,0), lVar5 != null)) {
                   *(uint64 *)(lVar5 + 32) = uVar6;
                   if ((*plVar1 != 0) &&
@@ -1001,15 +1000,14 @@ public class DrinkUIController
     // RVA   : 0x93C2F0   Offset: 0x93B6F0   Length: 0x161
     public float GetDrinkCost(float fillAmount)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         float fVar2;
         ulong uVar3;
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null) {
           lVar1 = WorldData.Player(lVar1,0);
           if ((lVar1 != null) && (this.enemyData != null)) {
-            Mathf.Max(*(uint32 *)(lVar1 + 0x194));
+            Mathf.Max(lVar1.totalEnemyKilled);
             fVar2 = (float)Mathf.Max(0x41c80000);
             uVar3 = Mathf.Min(fVar2 * 4.0,(float)this.round * fVar2 + fVar2,0);
             if (1.0 < fillAmount) {
@@ -1093,7 +1091,6 @@ public class DrinkUIController
     // RVA   : 0x93CDC0   Offset: 0x93C1C0   Length: 0x1AB8
     public void NextButtonClicked()
     {
-        var pStatics_2568 = *(int64*)(DAT_181dc2568 + 184);
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
         bool cVar2;
         ulong uVar3;
@@ -1317,10 +1314,10 @@ public class DrinkUIController
               uVar7 = this.playerIcon;
               lVar9 = **(int64 **)(DAT_181d761e8 + 184);
               if (*(float *)(this + 200) <= 1.0) {
-                lVar10 = *(int64 *)(pStatics_2568 + 16);
+                lVar10 = DrinkUIController.DrinkTalkText;
               }
               else {
-                lVar10 = *(int64 *)(pStatics_2568 + 8);
+                lVar10 = DrinkUIController.DirnkOverFillText;
               }
               fVar18 = local_b0;
               if (lVar10 == null) goto LAB_18093e83f;
@@ -1332,11 +1329,11 @@ public class DrinkUIController
               lVar9 = FUN_1807789e0(0);
               uVar7 = this.enemyIcon;
               if (this.enemyFillAmount <= 1.0) {
-                lVar10 = *(int64 *)(pStatics_2568 + 16);
+                lVar10 = DrinkUIController.DrinkTalkText;
               }
               else {
         LAB_18093d9bd:
-                lVar10 = *(int64 *)(pStatics_2568 + 8);
+                lVar10 = DrinkUIController.DirnkOverFillText;
               }
               fVar18 = local_b0;
               if (lVar10 == null) goto LAB_18093e83f;
@@ -1344,7 +1341,7 @@ public class DrinkUIController
               uVar11 = FUN_180002f80(lVar10,uVar20,DAT_181da4358);
             }
             else {
-              lVar9 = *(int64 *)(pStatics_2568 + 24);
+              lVar9 = DrinkUIController.DrinkPoemText;
               fVar18 = local_b0;
               if (lVar9 == null) goto LAB_18093e83f;
               uVar20 = FUN_180d95a30(0,lVar9.subType,0);
@@ -1373,7 +1370,7 @@ public class DrinkUIController
                 uVar11 = lVar10.summonControlable;
               }
               else {
-                lVar12 = *(int64 *)(pStatics_2568 + 8);
+                lVar12 = DrinkUIController.DirnkOverFillText;
                 fVar18 = local_b0;
                 if (lVar12 == null) goto LAB_18093e83f;
                 uVar20 = FUN_180d95a30(0,*(uint32 *)(lVar12 + 24),0);
@@ -1749,48 +1746,47 @@ public class DrinkUIController
     // RVA   : 0x93C8B0   Offset: 0x93BCB0   Length: 0x50E
     public void ManageDrinkBuff()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         float fVar1;
         bool cVar2;
         long lVar3;
         long lVar4;
         lVar3 = this.enemyData;
         if (lVar3 != null) {
-          if (lVar3.mana / lVar3.maxMana < 0.8) {
-            HeroData.AddTag(lVar3,0x14d - (int)((lVar3.mana * 5.0) /
+          if (lVar3.totalWinFightCount / lVar3.maxMana < 0.8) {
+            HeroData.AddTag(lVar3,0x14d - (int)((lVar3.totalWinFightCount * 5.0) /
                                                 lVar3.maxMana),0x40800000,0,0,1,0);
           }
-          if (((*pStatics != 0) &&
-              (lVar3 = *(int64 *)(*pStatics + 32)) != null) &&
+          if (((GameController._instance != null) &&
+              (lVar3 = GameController._instance.worldData) != null) &&
              (lVar3 = WorldData.Player(lVar3,0)) != null) {
-            fVar1 = lVar3.mana;
-            if (((*pStatics != 0) &&
-                (lVar3 = *(int64 *)(*pStatics + 32)) != null) &&
+            fVar1 = lVar3.totalWinFightCount;
+            if (((GameController._instance != null) &&
+                (lVar3 = GameController._instance.worldData) != null) &&
                (lVar3 = WorldData.Player(lVar3,0)) != null) {
               if (fVar1 / lVar3.maxMana < 0.8) {
-                if ((*pStatics == 0) ||
-                   (lVar3 = *(int64 *)(*pStatics + 32)) == null)
+                if ((GameController._instance == null) ||
+                   (lVar3 = GameController._instance.worldData) == null)
                 throw; // [null/range check failed]
                 lVar3 = WorldData.Player(lVar3,0);
-                if (((*pStatics == 0) ||
-                    (lVar4 = *(int64 *)(*pStatics + 32)) == null) ||
+                if (((GameController._instance == null) ||
+                    (lVar4 = GameController._instance.worldData) == null) ||
                    (lVar4 = WorldData.Player(lVar4,0)) == null) throw; // [null/range check failed]
-                fVar1 = *(float *)(lVar4 + 400);
-                if (((*pStatics == 0) ||
-                    (lVar4 = *(int64 *)(*pStatics + 32)) == null) ||
+                fVar1 = lVar4.totalWinFightCount;
+                if (((GameController._instance == null) ||
+                    (lVar4 = GameController._instance.worldData) == null) ||
                    ((lVar4 = WorldData.Player(lVar4,0), lVar4 == null || (lVar3 == null)))) throw; // [null/range check failed]
-                HeroData.AddTag(lVar3,0x14d - (int)((fVar1 * 5.0) / *(float *)(lVar4 + 0x194)),0x40800000
+                HeroData.AddTag(lVar3,0x14d - (int)((fVar1 * 5.0) / lVar4.totalEnemyKilled),0x40800000
                                  ,0,1,1,0);
               }
-              if (((*pStatics != 0) &&
-                  (lVar3 = *(int64 *)(*pStatics + 32)) != null) &&
+              if (((GameController._instance != null) &&
+                  (lVar3 = GameController._instance.worldData) != null) &&
                  (lVar3 = WorldData.Player(lVar3,0)) != null) {
                 cVar2 = HeroData.HaveForceFunction(lVar3,0,0);
                 if (!cVar2) {
                   return;
                 }
-                if (((*pStatics != 0) &&
-                    (lVar3 = *(int64 *)(*pStatics + 32)) != null) &&
+                if (((GameController._instance != null) &&
+                    (lVar3 = GameController._instance.worldData) != null) &&
                    (lVar3 = WorldData.Player(lVar3,0)) != null) {
                   HeroData.GetWineSpeBuff(lVar3,this.wineData,0);
                   return;
@@ -1821,7 +1817,6 @@ public class DrinkUIController
     // RVA   : 0x940090   Offset: 0x93F490   Length: 0x662
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181dc2568 + 184);
         long lVar1;
         **(uint32 **)(DAT_181dc2568 + 184) = 0x3fa00000;
         lVar1 = il2cpp_internal(DAT_181d97750);
@@ -1830,9 +1825,7 @@ public class DrinkUIController
           FUN_18181e0a0(lVar1,"把酒撒出来，这杯可就不作数了",DAT_181da3d58);
           FUN_18181e0a0(lVar1,"月盈则亏，水满则溢，这杯酒喝不得",DAT_181da3d58);
           FUN_18181e0a0(lVar1,"按照规矩，这溢出来的酒可不用喝",DAT_181da3d58);
-          plVar2 = (int64 *)(pStatics + 8);
-          *plVar2 = lVar1;
-          il2cpp_internal(plVar2,lVar1);
+          DrinkUIController.DirnkOverFillText = lVar1;
           lVar1 = il2cpp_internal(DAT_181d97750);
           FUN_18132faf0(lVar1,DAT_181da3bd8);
           if (lVar1 != null) {
@@ -1857,9 +1850,7 @@ public class DrinkUIController
             FUN_18181e0a0(lVar1,"我先干为敬！",DAT_181da3d58);
             FUN_18181e0a0(lVar1,"将进酒，杯莫停！杯莫停！",DAT_181da3d58);
             FUN_18181e0a0(lVar1,"纵横酒场多年未逢对手",DAT_181da3d58);
-            plVar2 = (int64 *)(pStatics + 16);
-            *plVar2 = lVar1;
-            il2cpp_internal(plVar2,lVar1);
+            DrinkUIController.DrinkTalkText = lVar1;
             lVar1 = il2cpp_internal(DAT_181d97750);
             FUN_18132faf0(lVar1,DAT_181da3bd8);
             if (lVar1 != null) {
@@ -1878,9 +1869,7 @@ public class DrinkUIController
               FUN_18181e0a0(lVar1,"酒入愁肠，化作相思泪",DAT_181da3d58);
               FUN_18181e0a0(lVar1,"浊酒一杯家万里，燕然未勒归无计",DAT_181da3d58);
               FUN_18181e0a0(lVar1,"桃李春风一杯酒，江湖夜雨十年灯",DAT_181da3d58);
-              plVar2 = (int64 *)(pStatics + 24);
-              *plVar2 = lVar1;
-              il2cpp_internal(plVar2,lVar1);
+              DrinkUIController.DrinkPoemText = lVar1;
               return;
             }
           }

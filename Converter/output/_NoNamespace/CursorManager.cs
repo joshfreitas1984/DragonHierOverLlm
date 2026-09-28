@@ -69,7 +69,6 @@ public class CursorManager
     // RVA   : 0xA43190   Offset: 0xA42590   Length: 0x19D
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d8b790 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
@@ -86,10 +85,10 @@ public class CursorManager
           }
         }
         else {
-          uVar3 = *(uint64 *)(pStatics + 72);
+          uVar3 = MouseController.hoveredUI;
           cVar2 = Object.op_Equality(uVar3,0,0);
           if (!cVar2) {
-            lVar1 = *(int64 *)(pStatics + 72);
+            lVar1 = MouseController.hoveredUI;
             if (lVar1 == null) throw; // [null/range check failed]
             uVar3 = GameObject.GetComponent(lVar1,DAT_181d720a0);
             cVar2 = Object.op_Equality(uVar3,0,0);

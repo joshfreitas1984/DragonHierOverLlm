@@ -17,7 +17,6 @@ public class DebateCardController
     // RVA   : 0xA4F700   Offset: 0xA4EB00   Length: 0x793
     public void Init()
     {
-        var pStatics = *(int64*)(DAT_181dbfbb8 + 184);
         uint uVar1;
         uint uVar2;
         long lVar3;
@@ -140,7 +139,7 @@ public class DebateCardController
                     if (((lVar3 != null) && (lVar3 = Transform.Find(lVar3,"Back",0)) != null) &&
                        (lVar3 = Component.get_gameObject(lVar3,0)) != null) {
                       lVar3 = GameObject.AddComponent(lVar3,DAT_181dc5d30);
-                      lVar4 = *(int64 *)(pStatics + 8);
+                      lVar4 = DebateCardData.SpeCardDescribe;
                       if ((this.cardData != null) && (lVar4 != null)) {
                         uVar2 = this.cardData.rareLv;
                         if (*(uint32 *)(lVar4 + 24) <= uVar2) {
@@ -161,7 +160,7 @@ public class DebateCardController
                             if ((lVar3 != null) &&
                                (lVar3 = Transform.Find(lVar3,"Text",0)) != null) {
                               uVar6 = Component.GetComponent(lVar3,DAT_181d96160);
-                              lVar3 = *pStatics;
+                              lVar3 = DebateCardData.SpeCardName;
                               if ((this.cardData != null) && (lVar3 != null)) {
                                 uVar2 = this.cardData.rareLv;
                                 if (lVar3.targetAttriID <= uVar2) {

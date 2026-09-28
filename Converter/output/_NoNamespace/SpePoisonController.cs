@@ -61,7 +61,6 @@ public class SpePoisonController
     // RVA   : 0xC56310   Offset: 0xC55710   Length: 0x18D4
     private void RefreshUI()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         byte uVar1;
         bool cVar2;
         uint uVar3;
@@ -90,16 +89,16 @@ public class SpePoisonController
         local_res18[0] = 0;
         this.needRefresh = 0;
         if (this.spePoisonType == null) {
-          if ((*pStatics == 0) ||
-             (lVar4 = *(int64 *)(*pStatics + 32)) == null)
+          if ((GameController._instance == null) ||
+             (lVar4 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
-          uVar6 = *(uint64 *)(lVar4 + 0x208);
+          uVar6 = lVar4.getSpePoisonData;
         }
         else {
-          if ((*pStatics == 0) ||
-             (lVar4 = *(int64 *)(*pStatics + 32)) == null)
+          if ((GameController._instance == null) ||
+             (lVar4 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
-          uVar6 = *(uint64 *)(lVar4 + 0x210);
+          uVar6 = lVar4.combineSpePoisonData;
         }
         this.targetSpePoisonData = uVar6;
         if (((this.spePoisonUI != null) &&
@@ -1017,7 +1016,6 @@ public class SpePoisonController
     // RVA   : 0xC57E80   Offset: 0xC57280   Length: 0x499
     public void StartButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         ulong uVar1;
         bool cVar2;
         uint uVar3;
@@ -1076,8 +1074,8 @@ public class SpePoisonController
             }
           }
           else {
-            if ((*pStatics != 0) &&
-               (lVar5 = *(int64 *)(*pStatics + 32)) != null) {
+            if ((GameController._instance != null) &&
+               (lVar5 = GameController._instance.worldData) != null) {
               lVar5 = WorldData.Player(lVar5,0);
               if ((this.targetSpePoisonData != null) && (lVar5 != null)) {
                 HeroData.GetItem(lVar5,this.targetSpePoisonData.result,0,1,

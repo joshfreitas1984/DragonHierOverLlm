@@ -1471,7 +1471,7 @@ public class UIScrollView
         }
         if (pressed == null) {
           iVar4 = *(int *)((int64)this + 236);
-          if (iVar4 == *(int *)(pStatics + 212)) {
+          if (iVar4 == UICamera.currentTouchID) {
             *(uint32 *)((int64)this + 236) = 0xfffffff6;
           }
         }
@@ -1618,7 +1618,6 @@ public class UIScrollView
     // RVA   : 0x1701D10   Offset: 0x1701110   Length: 0x9AD
     public void Drag()
     {
-        var pStatics = *(int64*)(DAT_181daf678 + 184);
         uint uVar1;
         uint uVar2;
         long lVar3;
@@ -1683,36 +1682,36 @@ public class UIScrollView
         }
         if (*(int *)((int64)this + 236) == -10) {
           *(uint32 *)((int64)this + 236) =
-               *(uint32 *)(pStatics + 212);
+               UICamera.currentTouchID;
         }
-        lVar11 = *(int64 *)(pStatics + 224);
+        lVar11 = UICamera.currentTouch;
         if (lVar11 == null) goto LAB_1817026b8;
-        *(uint32 *)(lVar11 + 112) = 2;
+        lVar11.clickNotification = 2;
         if (*(char *)((int64)this + 35) == false) {
         LAB_181701faf:
-          lVar3 = *(int64 *)(pStatics + 224);
-          lVar11 = *(int64 *)(pStatics + 192);
+          lVar3 = UICamera.currentTouch;
+          lVar11 = UICamera.currentCamera;
           if (lVar3 == null) goto LAB_1817026b8;
-          fVar13 = *(float *)(lVar3 + 20);
+          fVar13 = lVar3.pos;
           fVar16 = *(float *)(lVar3 + 24);
         }
         else {
           if ((char)this[31] == false) {
             *(uint8 *)(this + 31) = 1;
-            lVar11 = *(int64 *)(pStatics + 224);
+            lVar11 = UICamera.currentTouch;
             if (lVar11 == null) goto LAB_1817026b8;
             uVar1 = *(uint32 *)(lVar11 + 48);
-            *(uint32 *)(this + 30) = *(uint32 *)(lVar11 + 44);
+            *(uint32 *)(this + 30) = lVar11.totalDelta;
             *(uint32 *)((int64)this + 244) = uVar1;
             if (this[11] != 0) {
               OnGeometryUpdated.Invoke(this[11],0);
             }
           }
           if (*(char *)((int64)this + 35) == false) goto LAB_181701faf;
-          lVar3 = *(int64 *)(pStatics + 224);
-          lVar11 = *(int64 *)(pStatics + 192);
+          lVar3 = UICamera.currentTouch;
+          lVar11 = UICamera.currentCamera;
           if (lVar3 == null) goto LAB_1817026b8;
-          fVar13 = *(float *)(lVar3 + 20) - *(float *)(this + 30);
+          fVar13 = lVar3.pos - *(float *)(this + 30);
           fVar16 = *(float *)(lVar3 + 24) - *(float *)((int64)this + 244);
         }
         if (lVar11 == null) goto LAB_1817026b8;

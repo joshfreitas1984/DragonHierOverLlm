@@ -46,7 +46,6 @@ public class <TeamEnterBattleField>d__160
     // RVA   : 0x935F40   Offset: 0x935340   Length: 0x479
     private virtual bool MoveNext()
     {
-        var pStatics = *(int64*)(DAT_181dc2bf8 + 184);
         long lVar1;
         uint uVar2;
         long lVar3;
@@ -84,13 +83,11 @@ public class <TeamEnterBattleField>d__160
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar4 = lVar4._items[uVar2];
-            lVar3 = *(int64 *)(pStatics + 16);
+            lVar3 = BattleController.upHeroLayerOffset;
             if (lVar3 == null) {
               uVar7 = **(uint64 **)(DAT_181dc2bf8 + 184);
               lVar3 = new OnTooltipCB(uVar7,DAT_181d972b8,DAT_181dab7b8);
-              plVar9 = (int64 *)(pStatics + 16);
-              *plVar9 = lVar3;
-              il2cpp_internal(plVar9,lVar3);
+              BattleController.upHeroLayerOffset = lVar3;
             }
             if (lVar4 == null) break;
             List_1.Sort(lVar4,lVar3,DAT_181da6798);

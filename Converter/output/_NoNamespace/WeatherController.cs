@@ -63,15 +63,12 @@ public class WeatherController
     // RVA   : 0xC165C0   Offset: 0xC159C0   Length: 0xE0
     private void Awake()
     {
-        var pStatics = *(int64*)(DAT_181db4f18 + 184);
         ulong uVar1;
         bool cVar2;
-        uVar1 = *(uint64 *)(pStatics + 8);
+        uVar1 = BattleController.AttackAreaTypeStartMovePower;
         cVar2 = Object.op_Equality(uVar1,0,0);
         if (cVar2) {
-          puVar3 = (uint64 *)(pStatics + 8);
-          *puVar3 = this;
-          il2cpp_internal(puVar3,this);
+          BattleController.AttackAreaTypeStartMovePower = this;
         }
     }
 
@@ -224,8 +221,6 @@ public class WeatherController
     // RVA   : 0xC17C40   Offset: 0xC17040   Length: 0x99A
     private void Update()
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
-        var pStatics_4f18 = *(int64*)(DAT_181db4f18 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
@@ -245,9 +240,9 @@ public class WeatherController
         uint[] local_res18 = new uint[2];
         uint local_res20;
         local_res18[0] = 0;
-        if ((*pStatics_2cc8 != 0) &&
-           (lVar11 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
-          uVar12 = *(uint32 *)(lVar11 + 0x16c);
+        if ((GameController._instance != null) &&
+           (lVar11 = GameController._instance.worldData) != null) {
+          uVar12 = lVar11.nowWeather;
           lVar11 = (int64)(int)uVar12;
           local_res20 = uVar12;
           lVar1 = *(int64 *)(*(int64 *)(DAT_181db4008 + 184) + 8);
@@ -275,7 +270,7 @@ public class WeatherController
                       }
                       lVar11 = *(int64 *)(lVar7._items + 32 + lVar11 * 8);
                       if (lVar11 == null) break;
-                      if (*(char *)(lVar11 + 80) != false) {
+                      if (lVar11.Heros) {
                         fVar18 = this.nextThunderTime;
                         fVar15 = (float)Time.get_deltaTime(0);
                         fVar18 = fVar18 - fVar15;
@@ -287,9 +282,9 @@ public class WeatherController
                           this.totalThunderTime = uVar16;
                           this.leftThunderTime = uVar16;
                           local_res18[0] = FUN_180d95a30(0,6);
-                          lVar11 = *pStatics_4f18;
+                          lVar11 = BattleController.BattleMaxTime;
                           if (lVar11 == null) break;
-                          if (*(uint32 *)(lVar11 + 24) <= local_res18[0]) {
+                          if (lVar11.cityAreaID <= local_res18[0]) {
                             uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                             FUN_1800d65f0(uVar3,0);
@@ -299,7 +294,7 @@ public class WeatherController
                           if (cVar2) {
                             uVar12 = local_res18[0];
                             lVar7 = (int64)(int)local_res18[0];
-                            lVar11 = *pStatics_4f18;
+                            lVar11 = BattleController.BattleMaxTime;
                             uVar3 = Int32.ToString(local_res18,0);
                             String.Concat("Sound/SoundEffect/Thunder/",uVar3,0);
                             plVar5 = (int64 *)Resources.Load();
@@ -323,16 +318,16 @@ public class WeatherController
                                 plVar6 = plVar5;
                               }
                             }
-                            if (*(uint32 *)(lVar11 + 24) <= uVar12) {
+                            if (lVar11.cityAreaID <= uVar12) {
                               uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                               FUN_1800d65f0(uVar3,0);
                             }
                             *(int64 **)(lVar11 + (lVar7 + 4) * 8) = plVar6;
                           }
-                          lVar11 = *pStatics_4f18;
+                          lVar11 = BattleController.BattleMaxTime;
                           if (lVar11 == null) break;
-                          if (*(uint32 *)(lVar11 + 24) <= local_res18[0]) {
+                          if (lVar11.cityAreaID <= local_res18[0]) {
                             uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                             FUN_1800d65f0(uVar3,0);
@@ -357,7 +352,7 @@ public class WeatherController
                           if ((this.colorGrading == null) ||
                              (lVar11 = *(int64 *)(this.colorGrading + 176)) == null)
                           break;
-                          *(float *)(lVar11 + 24) = fVar17;
+                          lVar11.cityAreaID = fVar17;
                           fVar18 = this.leftThunderTime;
                         }
                         fVar15 = (float)RealTime.get_deltaTime(0);
@@ -373,7 +368,7 @@ public class WeatherController
                         if ((this.colorGrading == null) ||
                            (lVar11 = *(int64 *)(this.colorGrading + 176)) == null)
                         break;
-                        *(uint32 *)(lVar11 + 24) = 0;
+                        lVar11.cityAreaID = 0;
                       }
                       return;
                     }
@@ -634,14 +629,13 @@ public class WeatherController
     // RVA   : 0xC168F0   Offset: 0xC15CF0   Length: 0x14B
     public void ChangeWeatherLastTime(float deltaTime)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
-          *(float *)(lVar1 + 0x170) = deltaTime + *(float *)(lVar1 + 0x170);
-          if ((*pStatics != 0) &&
-             (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
-            if (*(float *)(lVar1 + 0x170) <= 0.0) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null) {
+          lVar1.weatherLastTime = deltaTime + lVar1.weatherLastTime;
+          if ((GameController._instance != null) &&
+             (lVar1 = GameController._instance.worldData) != null) {
+            if (lVar1.weatherLastTime <= 0.0) {
               WeatherController.RandomChangeWeather(this,0);
             }
             return;
@@ -721,26 +715,25 @@ public class WeatherController
     // RVA   : 0xC16A40   Offset: 0xC15E40   Length: 0xA3
     public void ChangeWeather(int targetWeatherID)
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_35d0 = *(int64*)(DAT_181da35d0 + 184);
         uint uVar1;
         long lVar2;
         long lVar3;
-        if ((*pStatics_2cc8 == 0) ||
-           (lVar2 = *(int64 *)(*pStatics_2cc8 + 32)) == null)
+        if ((GameController._instance == null) ||
+           (lVar2 = GameController._instance.worldData) == null)
         throw; // [null/range check failed]
-        if (targetWeatherID != *(uint32 *)(lVar2 + 0x16c)) {
+        if (targetWeatherID != lVar2.nowWeather) {
           lVar2 = this.WeatherDataBase;
-          if (((*pStatics_2cc8 == 0) ||
-              (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+          if (((GameController._instance == null) ||
+              (lVar3 = GameController._instance.worldData) == null) ||
              (lVar2 == null)) throw; // [null/range check failed]
-          uVar1 = *(uint32 *)(lVar3 + 0x16c);
+          uVar1 = lVar3.nowWeather;
           if (lVar2.Count <= uVar1) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar2 = lVar2._items[uVar1];
           if (lVar2 == null) throw; // [null/range check failed]
-          *(uint32 *)(lVar2 + 64) = 2;
+          lVar2.ResourcePoints = 2;
           lVar2 = this.WeatherDataBase;
           if (lVar2 == null) throw; // [null/range check failed]
           if (lVar2.Count <= targetWeatherID) {
@@ -748,14 +741,14 @@ public class WeatherController
           }
           lVar2 = lVar2._items[targetWeatherID];
           if (lVar2 == null) throw; // [null/range check failed]
-          *(uint32 *)(lVar2 + 64) = 1;
+          lVar2.ResourcePoints = 1;
         }
-        if ((*pStatics_2cc8 != 0) &&
-           (lVar2 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
-          *(uint32 *)(lVar2 + 0x16c) = targetWeatherID;
-          if ((*pStatics_2cc8 != 0) &&
-             (lVar2 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
-            *(uint32 *)(lVar2 + 0x170) = param_3;
+        if ((GameController._instance != null) &&
+           (lVar2 = GameController._instance.worldData) != null) {
+          lVar2.nowWeather = targetWeatherID;
+          if ((GameController._instance != null) &&
+             (lVar2 = GameController._instance.worldData) != null) {
+            lVar2.weatherLastTime = param_3;
             if (*pStatics_35d0 != 0) {
               SkyController.RefreshCloud(*pStatics_35d0,1,0);
               return;
@@ -768,26 +761,25 @@ public class WeatherController
     // RVA   : 0xC16AF0   Offset: 0xC15EF0   Length: 0x310
     public void ChangeWeather(int targetWeatherID, float lastTime)
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_35d0 = *(int64*)(DAT_181da35d0 + 184);
         uint uVar1;
         long lVar2;
         long lVar3;
-        if ((*pStatics_2cc8 == 0) ||
-           (lVar2 = *(int64 *)(*pStatics_2cc8 + 32)) == null)
+        if ((GameController._instance == null) ||
+           (lVar2 = GameController._instance.worldData) == null)
         throw; // [null/range check failed]
-        if (targetWeatherID != *(uint32 *)(lVar2 + 0x16c)) {
+        if (targetWeatherID != lVar2.nowWeather) {
           lVar2 = this.WeatherDataBase;
-          if (((*pStatics_2cc8 == 0) ||
-              (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+          if (((GameController._instance == null) ||
+              (lVar3 = GameController._instance.worldData) == null) ||
              (lVar2 == null)) throw; // [null/range check failed]
-          uVar1 = *(uint32 *)(lVar3 + 0x16c);
+          uVar1 = lVar3.nowWeather;
           if (lVar2.Count <= uVar1) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar2 = lVar2._items[uVar1];
           if (lVar2 == null) throw; // [null/range check failed]
-          *(uint32 *)(lVar2 + 64) = 2;
+          lVar2.ResourcePoints = 2;
           lVar2 = this.WeatherDataBase;
           if (lVar2 == null) throw; // [null/range check failed]
           if (lVar2.Count <= targetWeatherID) {
@@ -795,14 +787,14 @@ public class WeatherController
           }
           lVar2 = lVar2._items[targetWeatherID];
           if (lVar2 == null) throw; // [null/range check failed]
-          *(uint32 *)(lVar2 + 64) = 1;
+          lVar2.ResourcePoints = 1;
         }
-        if ((*pStatics_2cc8 != 0) &&
-           (lVar2 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
-          *(uint32 *)(lVar2 + 0x16c) = targetWeatherID;
-          if ((*pStatics_2cc8 != 0) &&
-             (lVar2 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
-            *(uint32 *)(lVar2 + 0x170) = lastTime;
+        if ((GameController._instance != null) &&
+           (lVar2 = GameController._instance.worldData) != null) {
+          lVar2.nowWeather = targetWeatherID;
+          if ((GameController._instance != null) &&
+             (lVar2 = GameController._instance.worldData) != null) {
+            lVar2.weatherLastTime = lastTime;
             if (*pStatics_35d0 != 0) {
               SkyController.RefreshCloud(*pStatics_35d0,1,0);
               return;
@@ -815,16 +807,15 @@ public class WeatherController
     // RVA   : 0xC16E10   Offset: 0xC16210   Length: 0x13A
     public void GameStartRefreshNowWeather()
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_35d0 = *(int64*)(DAT_181da35d0 + 184);
         uint uVar1;
         long lVar2;
         long lVar3;
         lVar2 = this.WeatherDataBase;
-        if (((*pStatics_2cc8 != 0) &&
-            (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) != null) &&
+        if (((GameController._instance != null) &&
+            (lVar3 = GameController._instance.worldData) != null) &&
            (lVar2 != null)) {
-          uVar1 = *(uint32 *)(lVar3 + 0x16c);
+          uVar1 = lVar3.nowWeather;
           if (lVar2.Count <= uVar1) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -843,15 +834,14 @@ public class WeatherController
     // RVA   : 0xC17000   Offset: 0xC16400   Length: 0xEF
     public WeatherData GetNowWeather()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         uint uVar1;
         long lVar2;
         long lVar3;
         lVar2 = this.WeatherDataBase;
-        if (((*pStatics != 0) &&
-            (lVar3 = *(int64 *)(*pStatics + 32)) != null) &&
+        if (((GameController._instance != null) &&
+            (lVar3 = GameController._instance.worldData) != null) &&
            (lVar2 != null)) {
-          uVar1 = *(uint32 *)(lVar3 + 0x16c);
+          uVar1 = lVar3.nowWeather;
           if (lVar2.Count <= uVar1) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }

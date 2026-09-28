@@ -199,17 +199,16 @@ public class AreaUnitController
     // RVA   : 0x7EE530   Offset: 0x7ED930   Length: 0x2A9
     public void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181dac458 + 184);
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(pStatics + 16);
+        lVar1 = AreaBuildController._instance;
         if (lVar1 != null) {
-          if (*(char *)(lVar1 + 48) == false) {
+          if (!lVar1.buildMode) {
             return;
           }
-          lVar1 = *(int64 *)(pStatics + 16);
+          lVar1 = AreaBuildController._instance;
           if (lVar1 != null) {
-            if (*(char *)(lVar1 + 49) == false) {
+            if (!lVar1.buildModeMovingBuilding) {
               lVar1 = FUN_1807e63d0(0);
               uVar2 = Component.get_gameObject(this,0);
               if (lVar1 != null) {

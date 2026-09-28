@@ -173,7 +173,6 @@ public class BountyUIController
     // RVA   : 0xC8BE30   Offset: 0xC8B230   Length: 0x3DB
     public void FreshBountyNum()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         int iVar2;
         long lVar3;
@@ -191,14 +190,14 @@ public class BountyUIController
             lVar3 = Transform.Find(lVar3,"BountyNum",0);
             if (lVar3 != null) {
               uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
-              if ((*pStatics != 0) &&
-                 (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
+              if ((GameController._instance != null) &&
+                 (lVar3 = GameController._instance.worldData) != null) {
                 lVar3 = WorldData.Player(lVar3,0);
                 if (lVar3 != null) {
                   local_res8[0] = HeroData.GetBountyMissionNum(lVar3,0);
                   uVar5 = Int32.ToString(local_res8,0);
-                  if ((*pStatics != 0) &&
-                     (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
+                  if ((GameController._instance != null) &&
+                     (lVar3 = GameController._instance.worldData) != null) {
                     lVar3 = WorldData.Player(lVar3,0);
                     if (lVar3 != null) {
                       local_res8[0] = HeroData.GetMaxBountyMissionNum(lVar3,0);
@@ -211,14 +210,14 @@ public class BountyUIController
                           lVar3 = Transform.Find(lVar3,"BountyNum",0);
                           if (lVar3 != null) {
                             plVar7 = (int64 *)Component.GetComponent(lVar3,DAT_181d96160);
-                            if ((*pStatics != 0) &&
-                               (lVar3 = *(int64 *)(*pStatics + 32),
+                            if ((GameController._instance != null) &&
+                               (lVar3 = GameController._instance.worldData,
                                lVar3 != null)) {
                               lVar3 = WorldData.Player(lVar3,0);
                               if (lVar3 != null) {
                                 iVar1 = HeroData.GetBountyMissionNum(lVar3,0);
-                                if ((*pStatics != 0) &&
-                                   (lVar3 = *(int64 *)(*pStatics + 32),
+                                if ((GameController._instance != null) &&
+                                   (lVar3 = GameController._instance.worldData,
                                    lVar3 != null)) {
                                   lVar3 = WorldData.Player(lVar3,0);
                                   if (lVar3 != null) {
@@ -258,13 +257,12 @@ public class BountyUIController
     // RVA   : 0xC8BC90   Offset: 0xC8B090   Length: 0x198
     public void FreshBountyButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar2;
-        if (*pStatics != 0) {
+        if (GameController._instance != null) {
           GameController.ManageBuildingBounty
-                    (*pStatics,this.targetBuildingData,1,0);
-          if ((*pStatics != 0) &&
-             (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+                    (GameController._instance,this.targetBuildingData,1,0);
+          if ((GameController._instance != null) &&
+             (lVar2 = GameController._instance.worldData) != null) {
             piVar1 = (int *)(lVar2 + 0x150);
             *piVar1 = *piVar1 + 1;
             BountyUIController.FreshBounty(this,0);

@@ -2289,6 +2289,14 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "日常恢复效率"
+  splits:
+  - text: "日常恢复效率"
+    translated: "Daily recovery efficiency"
+    qcReviewedText: "Daily recovery efficiency"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "本地恢复效率"
   splits:
   - text: "本地恢复效率"
@@ -5774,6 +5782,10 @@
   splits:
   - text: "断臂"
     translated: "Severed Arm"
+    qcReviewedText: "Severed Arm"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "跛足"
   splits:
   - text: "跛足"
@@ -5975,6 +5987,22 @@
     qcDefectCategory: DroppedContent
     qcDefectCategories:
     - DroppedContent
+- raw: "合练心得"
+  splits:
+  - text: "合练心得"
+    translated: "Co‑training Insights"
+    qcReviewedText: "Co‑training Insights"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "少年英雄"
+  splits:
+  - text: "少年英雄"
+    translated: "Young Hero"
+    qcReviewedText: "Young Hero"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "吐纳法"
   splits:
   - text: "吐纳法"
@@ -8506,6 +8534,10 @@
   splits:
   - text: "断腕0.1"
     translated: "Severed Wrist 0.1"
+    qcReviewedText: "Severed Wrist 0.1"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "手15"
   splits:
   - text: "手15"
@@ -10195,6 +10227,10 @@
   splits:
   - text: "断腕0.06"
     translated: "Severed Wrist 0.06"
+    qcReviewedText: "Severed Wrist 0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "腹17"
   splits:
   - text: "腹17"
@@ -13866,6 +13902,10 @@
   splits:
   - text: "断腕0.08"
     translated: "Severed Wrist 0.08"
+    qcReviewedText: "Severed Wrist 0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "二十四路枪势"
   splits:
   - text: "二十四路枪势"
@@ -53344,6 +53384,10 @@
   splits:
   - text: "断腕"
     translated: "Severed Wrist"
+    qcReviewedText: "Severed Wrist"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "断招"
   splits:
   - text: "断招"
@@ -60906,6 +60950,1299 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "道路"
+  splits:
+  - text: "道路"
+    translated: "Road"
+    qcReviewedText: "Road"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "平原"
+  splits:
+  - text: "平原"
+    translated: "Plain"
+    qcReviewedText: "Plain"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "山脉"
+  splits:
+  - text: "山脉"
+    translated: "Mountains"
+    qcReviewedText: "Mountains"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "沼泽"
+  splits:
+  - text: "沼泽"
+    translated: "Swamp"
+    qcReviewedText: "Swamp"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "营地"
+  splits:
+  - text: "营地"
+    translated: "Campgrounds"
+    qcReviewedText: "Campgrounds"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "地图"
+  splits:
+  - text: "地图"
+    translated: "Map"
+    qcReviewedText: "Map"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "塔楼"
+  splits:
+  - text: "塔楼"
+    translated: "Tower"
+    qcReviewedText: "Tower"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "垃圾"
+  splits:
+  - text: "垃圾"
+    translated: "Trash"
+    qcReviewedText: "Trash"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "宝箱"
+  splits:
+  - text: "宝箱"
+    translated: "Treasure chest"
+    qcReviewedText: "Treasure chest"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "废屋"
+  splits:
+  - text: "废屋"
+    translated: "Abandoned house"
+    qcReviewedText: "Abandoned house"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "人烟"
+  splits:
+  - text: "人烟"
+    translated: "Habitat"
+    qcReviewedText: "Habitat"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "温泉"
+  splits:
+  - text: "温泉"
+    translated: "Hot spring"
+    qcReviewedText: "Hot spring"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "毒池"
+  splits:
+  - text: "毒池"
+    translated: "Poison Pool"
+    qcReviewedText: "Poison Pool"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "荒坟"
+  splits:
+  - text: "荒坟"
+    translated: "Desolate tomb"
+    qcReviewedText: "Desolate tomb"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "机关"
+  splits:
+  - text: "机关"
+    translated: "Mechanism"
+    qcReviewedText: "Mechanism"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "行商"
+  splits:
+  - text: "行商"
+    translated: "Merchant"
+    qcReviewedText: "Merchant"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "小屋"
+  splits:
+  - text: "小屋"
+    translated: "Cottage"
+    qcReviewedText: "Cottage"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "古迹"
+  splits:
+  - text: "古迹"
+    translated: "Ancient ruins"
+    qcReviewedText: "Ancient ruins"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "锁箱"
+  splits:
+  - text: "锁箱"
+    translated: "Locked chest"
+    qcReviewedText: "Locked chest"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "破庙"
+  splits:
+  - text: "破庙"
+    translated: "Ruined temple"
+    qcReviewedText: "Ruined temple"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "暗道"
+  splits:
+  - text: "暗道"
+    translated: "Secret passage"
+    qcReviewedText: "Secret passage"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "绝世高人"
+  splits:
+  - text: "绝世高人"
+    translated: "Peerless Expert"
+    qcReviewedText: "Peerless Expert"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "高人遗刻"
+  splits:
+  - text: "高人遗刻"
+    translated: "Ancient inscription"
+    qcReviewedText: "Ancient inscription"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "庙会"
+  splits:
+  - text: "庙会"
+    translated: "Fair"
+    qcReviewedText: "Fair"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "资源"
+  splits:
+  - text: "资源"
+    translated: "Resources"
+    qcReviewedText: "Resources"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "桃源"
+  splits:
+  - text: "桃源"
+    translated: "Peach Blossom Spring"
+    qcReviewedText: "Peach Blossom Spring"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "遗迹"
+  splits:
+  - text: "遗迹"
+    translated: "Ruins"
+    qcReviewedText: "Ruins"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "灌木"
+  splits:
+  - text: "灌木"
+    translated: "Bush"
+    qcReviewedText: "Bush"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "枯木"
+  splits:
+  - text: "枯木"
+    translated: "Withered tree"
+    qcReviewedText: "Withered tree"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "块石"
+  splits:
+  - text: "块石"
+    translated: "Stone block"
+    qcReviewedText: "Stone block"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "树木"
+  splits:
+  - text: "树木"
+    translated: "Trees"
+    qcReviewedText: "Trees"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "瓦罐"
+  splits:
+  - text: "瓦罐"
+    translated: "Earthenware pot"
+    qcReviewedText: "Earthenware pot"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "木桶"
+  splits:
+  - text: "木桶"
+    translated: "Barrel"
+    qcReviewedText: "Barrel"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "木箱"
+  splits:
+  - text: "木箱"
+    translated: "Wooden chest"
+    qcReviewedText: "Wooden chest"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "板车"
+  splits:
+  - text: "板车"
+    translated: "Handcart"
+    qcReviewedText: "Handcart"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "造景"
+  splits:
+  - text: "造景"
+    translated: "Scenery"
+    qcReviewedText: "Scenery"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "雕像"
+  splits:
+  - text: "雕像"
+    translated: "Statue"
+    qcReviewedText: "Statue"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "花瓶"
+  splits:
+  - text: "花瓶"
+    translated: "Vase"
+    qcReviewedText: "Vase"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "屏风"
+  splits:
+  - text: "屏风"
+    translated: "Screen partition"
+    qcReviewedText: "Screen partition"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "椅凳"
+  splits:
+  - text: "椅凳"
+    translated: "Chairs and stools"
+    qcReviewedText: "Chairs and stools"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "方桌"
+  splits:
+  - text: "方桌"
+    translated: "Round table"
+    qcReviewedText: "Round table"
+    qcTranslated: "Square table"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+- raw: "木柜"
+  splits:
+  - text: "木柜"
+    translated: "Wooden chest"
+    qcReviewedText: "Wooden chest"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "造像"
+  splits:
+  - text: "造像"
+    translated: "Sculpture"
+    qcReviewedText: "Sculpture"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "火焰桶"
+  splits:
+  - text: "火焰桶"
+    translated: "Flame bucket"
+    qcReviewedText: "Flame bucket"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "爆炸桶"
+  splits:
+  - text: "爆炸桶"
+    translated: "Bomb bucket"
+    qcReviewedText: "Bomb bucket"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "毒气桶"
+  splits:
+  - text: "毒气桶"
+    translated: "Poison barrel"
+    qcReviewedText: "Poison barrel"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "工事"
+  splits:
+  - text: "工事"
+    translated: "Construction"
+    qcReviewedText: "Construction"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "护甲+5"
+  splits:
+  - text: "护甲"
+    translated: "Armor"
+    qcReviewedText: "Armor+5"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "{0}+5"
+- raw: "草丛"
+  splits:
+  - text: "草丛"
+    translated: "Bushes"
+    qcReviewedText: "Bushes"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "闪避+5%"
+  splits:
+  - text: "闪避"
+    translated: "Dodge"
+    qcReviewedText: "Dodge+5%"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "{0}+5%"
+- raw: "水塘"
+  splits:
+  - text: "水塘"
+    translated: "Pond"
+    qcReviewedText: "Pond"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "速度-20%\n闪避-5%"
+  splits:
+  - text: "速度"
+    translated: "Speed"
+    qcReviewedText: "Speed-20%\nDodge-5%"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "闪避"
+    translated: "Dodge"
+  templates:
+  - template: "{0}-20%\n{1}-5%"
+- raw: "泥潭"
+  splits:
+  - text: "泥潭"
+    translated: "Quagmire"
+    qcReviewedText: "Quagmire"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "速度-40%\n闪避-10%"
+  splits:
+  - text: "速度"
+    translated: "Speed"
+    qcReviewedText: "Speed-40%\nDodge-10%"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "闪避"
+    translated: "Dodge"
+  templates:
+  - template: "{0}-40%\n{1}-10%"
+- raw: "药草"
+  splits:
+  - text: "药草"
+    translated: "Herb"
+    qcReviewedText: "Herb"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "生命+10%\n内力+10%"
+  splits:
+  - text: "生命"
+    translated: "Health"
+    qcReviewedText: "Health+10%\nInner Power+10%"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "内力"
+    translated: "Inner Power"
+  templates:
+  - template: "{0}+10%\n{1}+10%"
+- raw: "异果"
+  splits:
+  - text: "异果"
+    translated: "Strawberry"
+    qcReviewedText: "Strawberry"
+    qcTranslated: "Strange Fruit"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+- raw: "体力+30%\n内力+10%"
+  splits:
+  - text: "体力"
+    translated: "Stamina"
+    qcReviewedText: "Stamina+30%\nInner Power+10%"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "内力"
+    translated: "Inner Power"
+  templates:
+  - template: "{0}+30%\n{1}+10%"
+- raw: "奇花"
+  splits:
+  - text: "奇花"
+    translated: "Strange Blossom"
+    qcReviewedText: "Strange Blossom"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "内力+20%\n混乱2回合"
+  splits:
+  - text: "内力"
+    translated: "Inner Power"
+    qcReviewedText: "Inner Power+20%\n2 round of chaos"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "混乱2回合"
+    translated: "2 round of chaos"
+  templates:
+  - template: "{0}+20%\n{1}"
+- raw: "怪藤"
+  splits:
+  - text: "怪藤"
+    translated: "Strange Vine"
+    qcReviewedText: "Strange Vine"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "内力+10%\n疯魔2回合"
+  splits:
+  - text: "内力"
+    translated: "Inner Power"
+    qcReviewedText: "Inner Power+10%\nMad Possession Turn 2"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "疯魔2回合"
+    translated: "Mad Possession Turn 2"
+  templates:
+  - template: "{0}+10%\n{1}"
+- raw: "毒虫"
+  splits:
+  - text: "毒虫"
+    translated: "Poison insect"
+    qcReviewedText: "Poison insect"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "当前内力-20%\n中毒+20"
+  splits:
+  - text: "当前内力"
+    translated: "Current Inner Power"
+    qcReviewedText: "Current Inner Power-20%\nPoisoned+20"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "中毒"
+    translated: "Poisoned"
+  templates:
+  - template: "{0}-20%\n{1}+20"
+- raw: "持续中毒"
+  splits:
+  - text: "持续中毒"
+    translated: "Continuous poisoning"
+    qcReviewedText: "Continuous poisoning"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "飞箭"
+  splits:
+  - text: "飞箭"
+    translated: "Arrow"
+    qcReviewedText: "Arrow"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "当前生命-10%\n外伤+20"
+  splits:
+  - text: "当前生命"
+    translated: "Current Health"
+    qcReviewedText: "Current Health-10%\nExternal Injury+20"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "外伤"
+    translated: "External Injury"
+  templates:
+  - template: "{0}-10%\n{1}+20"
+- raw: "钉刺"
+  splits:
+  - text: "钉刺"
+    translated: "Spikes"
+    qcReviewedText: "Spikes"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "持续外伤"
+  splits:
+  - text: "持续外伤"
+    translated: "Continuous external injuries"
+    qcReviewedText: "Continuous external injuries"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "陷坑"
+  splits:
+  - text: "陷坑"
+    translated: "Pitfall"
+    qcReviewedText: "Pitfall"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "当前体力-30%\n内伤+20"
+  splits:
+  - text: "当前体力"
+    translated: "Current Stamina"
+    qcReviewedText: "Current Stamina-30%\nInternal Injury+20"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "内伤"
+    translated: "Internal Injury"
+  templates:
+  - template: "{0}-30%\n{1}+20"
+- raw: "热碳"
+  splits:
+  - text: "热碳"
+    translated: "Hot charcoal"
+    qcReviewedText: "Hot charcoal"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "持续内伤"
+  splits:
+  - text: "持续内伤"
+    translated: "Continuous Internal Injury"
+    qcReviewedText: "Continuous Internal Injury"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "随机获得物品"
+  splits:
+  - text: "随机获得物品"
+    translated: "Randomly obtain items"
+    qcReviewedText: "Randomly obtain items"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "清心符"
+  splits:
+  - text: "清心符"
+    translated: "Purification Charm"
+    qcReviewedText: "Purification Charm"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "智力2"
+  splits:
+  - text: "智力2"
+    translated: "2 intelligence"
+    qcReviewedText: "2 intelligence"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "安神符"
+  splits:
+  - text: "安神符"
+    translated: "Soothing Charm"
+    qcReviewedText: "Soothing Charm"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "意志2"
+  splits:
+  - text: "意志2"
+    translated: "2 will"
+    qcReviewedText: "2 will"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "跌打梅山符"
+  splits:
+  - text: "跌打梅山符"
+    translated: "Meridional MerMAID Sticker"
+    qcReviewedText: "Meridional MerMAID Sticker"
+    qcTranslated: "Bruise and Fracture Meishan Talisman"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+- raw: "闪避-0.04"
+  splits:
+  - text: "闪避"
+    translated: "Dodge"
+    qcReviewedText: "Dodge-0.04"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "{0}-0.04"
+- raw: "咽喉骨鲠符"
+  splits:
+  - text: "咽喉骨鲠符"
+    translated: "Throat‑Phlegm Sealing Symbol"
+    qcReviewedText: "Throat‑Phlegm Sealing Symbol"
+    qcTranslated: "Bone‑in‑Throat Sealing Talisman"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: LostIdiom
+    qcDefectCategories:
+    - LostIdiom
+- raw: "伤害-0.04"
+  splits:
+  - text: "伤害"
+    translated: "Damage"
+    qcReviewedText: "Damage-0.04"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "{0}-0.04"
+- raw: "勾魂符"
+  splits:
+  - text: "勾魂符"
+    translated: "Soul‑snaring charm"
+    qcReviewedText: "Soul‑snaring charm"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "反击-0.06"
+  splits:
+  - text: "反击"
+    translated: "Counterattack"
+    qcReviewedText: "Counterattack-0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "{0}-0.06"
+- raw: "天罡符"
+  splits:
+  - text: "天罡符"
+    translated: "Heavenly Warrant Symbol"
+    qcReviewedText: "Heavenly Warrant Symbol"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "卸力0.06"
+  splits:
+  - text: "卸力0.06"
+    translated: "Absorb0.06"
+    qcReviewedText: "Absorb0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "寒天符"
+  splits:
+  - text: "寒天符"
+    translated: "Cold Frost Token"
+    qcReviewedText: "Cold Frost Token"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "速度-0.08"
+  splits:
+  - text: "速度"
+    translated: "Speed"
+    qcReviewedText: "Speed-0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "{0}-0.08"
+- raw: "护甲4"
+  splits:
+  - text: "护甲4"
+    translated: "Armor 4"
+    qcReviewedText: "Armor 4"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "神兵天将符"
+  splits:
+  - text: "神兵天将符"
+    translated: "Divine Soldier Heavenly General Talisman"
+    qcReviewedText: "Divine Soldier Heavenly General Talisman"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "暴击0.1"
+  splits:
+  - text: "暴击0.1"
+    translated: "Critical hit 0.1"
+    qcReviewedText: "Critical hit 0.1"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "伤害抗性-0.1"
+  splits:
+  - text: "伤害抗性"
+    translated: "Damage resistance"
+    qcReviewedText: "Damage resistance-0.1"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "{0}-0.1"
+- raw: "晴"
+  splits:
+  - text: "晴"
+    translated: "Sunny"
+    qcReviewedText: "Sunny"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "雨"
+  splits:
+  - text: "雨"
+    translated: "Rain"
+    qcReviewedText: "Rain"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "暴雨"
+  splits:
+  - text: "暴雨"
+    translated: "Heavy rain"
+    qcReviewedText: "Heavy rain"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "雪"
+  splits:
+  - text: "雪"
+    translated: "Snow"
+    qcReviewedText: "Snow"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "暴雪"
+  splits:
+  - text: "暴雪"
+    translated: "Blizzard"
+    qcReviewedText: "Blizzard"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "门派大比"
+  splits:
+  - text: "门派大比"
+    translated: "Sect Tournament"
+    qcReviewedText: "Sect Tournament"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "比武大赛"
+  splits:
+  - text: "比武大赛"
+    translated: "Combat Tournament"
+    qcReviewedText: "Combat Tournament"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "辩才大赛"
+  splits:
+  - text: "辩才大赛"
+    translated: "Talentspeak Contest"
+    qcReviewedText: "Talentspeak Contest"
+    qcTranslated: "Debate Tournament"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: LostIdiom
+    qcDefectCategories:
+    - LostIdiom
+- raw: "春节"
+  splits:
+  - text: "春节"
+    translated: "Chinese New Year"
+    qcReviewedText: "Chinese New Year"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "元宵"
+  splits:
+  - text: "元宵"
+    translated: "M Lantern Festival"
+    qcReviewedText: "M Lantern Festival"
+    qcTranslated: "Lantern Festival"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
+- raw: "清明"
+  splits:
+  - text: "清明"
+    translated: "Qingming"
+    qcReviewedText: "Qingming"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "端午"
+  splits:
+  - text: "端午"
+    translated: "Dragon Boat Festival"
+    qcReviewedText: "Dragon Boat Festival"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "七夕"
+  splits:
+  - text: "七夕"
+    translated: "Qixi Festival"
+    qcReviewedText: "Qixi Festival"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "中秋"
+  splits:
+  - text: "中秋"
+    translated: "Mid‑Autumn Festival"
+    qcReviewedText: "Mid‑Autumn Festival"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "重阳"
+  splits:
+  - text: "重阳"
+    translated: "Double Ninth Festival"
+    qcReviewedText: "Double Ninth Festival"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "腊八"
+  splits:
+  - text: "腊八"
+    translated: "Bazhou"
+    qcReviewedText: "Bazhou"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "中元鬼市"
+  splits:
+  - text: "中元鬼市"
+    translated: "Mid‑Summer Ghost Market"
+    qcReviewedText: "Mid‑Summer Ghost Market"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "文"
+  splits:
+  - text: "文"
+    translated: "Words"
+    qcReviewedText: "Words"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "文本"
+  splits:
+  - text: "文本"
+    translated: "Text"
+    qcReviewedText: "Text"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "获得经验"
+  splits:
+  - text: "获得经验"
+    translated: "Gain experience"
+    qcReviewedText: "Gain experience"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "精要"
+  splits:
+  - text: "精要"
+    translated: "Essence"
+    qcReviewedText: "Essence"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "获得大量经验"
+  splits:
+  - text: "获得大量经验"
+    translated: "Gain a lot of experience"
+    qcReviewedText: "Gain a lot of experience"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "漏"
+  splits:
+  - text: "漏"
+    translated: "Leak"
+    qcReviewedText: "Leak"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "纰漏"
+  splits:
+  - text: "纰漏"
+    translated: "Flaw"
+    qcReviewedText: "Flaw"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "失去经验"
+  splits:
+  - text: "失去经验"
+    translated: "Lose experience points"
+    qcReviewedText: "Lose experience points"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "错"
+  splits:
+  - text: "错"
+    translated: "Wrong"
+    qcReviewedText: "Wrong"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "错误"
+  splits:
+  - text: "错误"
+    translated: "Error"
+    qcReviewedText: "Error"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "失去大量经验"
+  splits:
+  - text: "失去大量经验"
+    translated: "Lose a lot of experience points"
+    qcReviewedText: "Lose a lot of experience points"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "醒"
+  splits:
+  - text: "醒"
+    translated: "Awake"
+    qcReviewedText: "Awake"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "清醒"
+  splits:
+  - text: "清醒"
+    translated: "Awake"
+    qcReviewedText: "Awake"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "恢复耐心"
+  splits:
+  - text: "恢复耐心"
+    translated: "Recover your patience"
+    qcReviewedText: "Recover your patience"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "困"
+  splits:
+  - text: "困"
+    translated: "Trapped"
+    qcReviewedText: "Trapped"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "困倦"
+  splits:
+  - text: "困倦"
+    translated: "Drowsy"
+    qcReviewedText: "Drowsy"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "失去耐心"
+  splits:
+  - text: "失去耐心"
+    translated: "Lose patience"
+    qcReviewedText: "Lose patience"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "融"
+  splits:
+  - text: "融"
+    translated: "Merge"
+    qcReviewedText: "Merge"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "融汇"
+  splits:
+  - text: "融汇"
+    translated: "Integrating"
+    qcReviewedText: "Integrating"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "已读越多经验越高"
+  splits:
+  - text: "已读越多经验越高"
+    translated: "The more you read, the higher your experience will be."
+    qcReviewedText: "The more you read, the higher your experience will be."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "预"
+  splits:
+  - text: "预"
+    translated: "Prepare"
+    qcReviewedText: "Prepare"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "预习"
+  splits:
+  - text: "预习"
+    translated: "Preview"
+    qcReviewedText: "Preview"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "已读越少经验越高"
+  splits:
+  - text: "已读越少经验越高"
+    translated: "The less you have read, the higher the experience."
+    qcReviewedText: "The less you have read, the higher the experience."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "一列"
+  splits:
+  - text: "一列"
+    translated: "A train"
+    qcReviewedText: "A train"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "阅读整列"
+  splits:
+  - text: "阅读整列"
+    translated: "Read the entire column"
+    qcReviewedText: "Read the entire column"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "破解"
+  splits:
+  - text: "破解"
+    translated: "Hack"
+    qcReviewedText: "Hack"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "阅读周围1格"
+  splits:
+  - text: "阅读周围1格"
+    translated: "Read the surrounding 1 cells"
+    qcReviewedText: "Read the surrounding 1 cells"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "一行"
+  splits:
+  - text: "一行"
+    translated: "A row"
+    qcReviewedText: "A row"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "阅读整行"
+  splits:
+  - text: "阅读整行"
+    translated: "Read the entire line"
+    qcReviewedText: "Read the entire line"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "明朗"
+  splits:
+  - text: "明朗"
+    translated: "Bright"
+    qcReviewedText: "Bright"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "显示周围3格"
+  splits:
+  - text: "显示周围3格"
+    translated: "Display surrounding 3 cells"
+    qcReviewedText: "Display surrounding 3 cells"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "缺损"
+  splits:
+  - text: "缺损"
+    translated: "Deficiency"
+    qcReviewedText: "Deficiency"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "提纲"
+  splits:
+  - text: "提纲"
+    translated: "Outline"
+    qcReviewedText: "Outline"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "全场经验+10%"
+  splits:
+  - text: "全场经验"
+    translated: "Xp throughout the map"
+    qcReviewedText: "Xp throughout the map+10%"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "{0}+10%"
+- raw: "迷惑"
+  splits:
+  - text: "迷惑"
+    translated: "Confusion"
+    qcReviewedText: "Confusion"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "全场经验-10%"
+  splits:
+  - text: "全场经验"
+    translated: "Xp throughout the map"
+    qcReviewedText: "Xp throughout the map-10%"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "{0}-10%"
+- raw: "注释"
+  splits:
+  - text: "注释"
+    translated: "Notes"
+    qcReviewedText: "Notes"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "周围经验+100%"
+  splits:
+  - text: "周围经验"
+    translated: "Surrounding experience"
+    qcReviewedText: "Surrounding experience+100%"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "{0}+100%"
+- raw: "难点"
+  splits:
+  - text: "难点"
+    translated: "Challenge"
+    qcReviewedText: "Challenge"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "周围经验-50%"
+  splits:
+  - text: "周围经验"
+    translated: "Surrounding experience"
+    qcReviewedText: "Surrounding experience-50%"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "{0}-50%"
+- raw: "贯通"
+  splits:
+  - text: "贯通"
+    translated: "Penetrate"
+    qcReviewedText: "Penetrate"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "阅读整行整列"
+  splits:
+  - text: "阅读整行整列"
+    translated: "Read the entire row and column"
+    qcReviewedText: "Read the entire row and column"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "天赋:钢筋铁骨"
   splits:
   - text: "天赋"
@@ -62956,6 +64293,22 @@
     translated: "Special buildings"
   templates:
   - template: "{0}/{1}/{2}"
+- raw: "自立门户"
+  splits:
+  - text: "自立门户"
+    translated: "Go out on my own"
+    qcReviewedText: "Go out on my own"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "挑战该门派并取而代之"
+  splits:
+  - text: "挑战该门派并取而代之"
+    translated: "Challenge the sect and take it over"
+    qcReviewedText: "Challenge the sect and take it over"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "阅读藏经阁秘籍获取理论经验"
   splits:
   - text: "阅读藏经阁秘籍获取理论经验"
@@ -64346,14 +65699,6 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "机关"
-  splits:
-  - text: "机关"
-    translated: "Mechanism"
-    qcReviewedText: "Mechanism"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
 - raw: "提升烹饪潜力"
   splits:
   - text: "提升烹饪潜力"
@@ -64479,374 +65824,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "道路"
-  splits:
-  - text: "道路"
-    translated: "Road"
-    qcReviewedText: "Road"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "平原"
-  splits:
-  - text: "平原"
-    translated: "Plain"
-    qcReviewedText: "Plain"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "山脉"
-  splits:
-  - text: "山脉"
-    translated: "Mountains"
-    qcReviewedText: "Mountains"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "沼泽"
-  splits:
-  - text: "沼泽"
-    translated: "Swamp"
-    qcReviewedText: "Swamp"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "营地"
-  splits:
-  - text: "营地"
-    translated: "Campgrounds"
-    qcReviewedText: "Campgrounds"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "地图"
-  splits:
-  - text: "地图"
-    translated: "Map"
-    qcReviewedText: "Map"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "塔楼"
-  splits:
-  - text: "塔楼"
-    translated: "Tower"
-    qcReviewedText: "Tower"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "垃圾"
-  splits:
-  - text: "垃圾"
-    translated: "Trash"
-    qcReviewedText: "Trash"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "宝箱"
-  splits:
-  - text: "宝箱"
-    translated: "Treasure chest"
-    qcReviewedText: "Treasure chest"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "废屋"
-  splits:
-  - text: "废屋"
-    translated: "Abandoned house"
-    qcReviewedText: "Abandoned house"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "人烟"
-  splits:
-  - text: "人烟"
-    translated: "Habitat"
-    qcReviewedText: "Habitat"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "温泉"
-  splits:
-  - text: "温泉"
-    translated: "Hot spring"
-    qcReviewedText: "Hot spring"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "毒池"
-  splits:
-  - text: "毒池"
-    translated: "Poison Pool"
-    qcReviewedText: "Poison Pool"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "荒坟"
-  splits:
-  - text: "荒坟"
-    translated: "Desolate tomb"
-    qcReviewedText: "Desolate tomb"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "行商"
-  splits:
-  - text: "行商"
-    translated: "Merchant"
-    qcReviewedText: "Merchant"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "小屋"
-  splits:
-  - text: "小屋"
-    translated: "Cottage"
-    qcReviewedText: "Cottage"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "古迹"
-  splits:
-  - text: "古迹"
-    translated: "Ancient ruins"
-    qcReviewedText: "Ancient ruins"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "锁箱"
-  splits:
-  - text: "锁箱"
-    translated: "Locked chest"
-    qcReviewedText: "Locked chest"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "破庙"
-  splits:
-  - text: "破庙"
-    translated: "Ruined temple"
-    qcReviewedText: "Ruined temple"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "暗道"
-  splits:
-  - text: "暗道"
-    translated: "Secret passage"
-    qcReviewedText: "Secret passage"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "绝世高人"
-  splits:
-  - text: "绝世高人"
-    translated: "Peerless Expert"
-    qcReviewedText: "Peerless Expert"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "高人遗刻"
-  splits:
-  - text: "高人遗刻"
-    translated: "Ancient inscription"
-    qcReviewedText: "Ancient inscription"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "庙会"
-  splits:
-  - text: "庙会"
-    translated: "Fair"
-    qcReviewedText: "Fair"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "资源"
-  splits:
-  - text: "资源"
-    translated: "Resources"
-    qcReviewedText: "Resources"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "桃源"
-  splits:
-  - text: "桃源"
-    translated: "Peach Blossom Spring"
-    qcReviewedText: "Peach Blossom Spring"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "遗迹"
-  splits:
-  - text: "遗迹"
-    translated: "Ruins"
-    qcReviewedText: "Ruins"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "灌木"
-  splits:
-  - text: "灌木"
-    translated: "Bush"
-    qcReviewedText: "Bush"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "枯木"
-  splits:
-  - text: "枯木"
-    translated: "Withered tree"
-    qcReviewedText: "Withered tree"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "块石"
-  splits:
-  - text: "块石"
-    translated: "Stone block"
-    qcReviewedText: "Stone block"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "树木"
-  splits:
-  - text: "树木"
-    translated: "Trees"
-    qcReviewedText: "Trees"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "瓦罐"
-  splits:
-  - text: "瓦罐"
-    translated: "Earthenware pot"
-    qcReviewedText: "Earthenware pot"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "木桶"
-  splits:
-  - text: "木桶"
-    translated: "Barrel"
-    qcReviewedText: "Barrel"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "木箱"
-  splits:
-  - text: "木箱"
-    translated: "Wooden chest"
-    qcReviewedText: "Wooden chest"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "板车"
-  splits:
-  - text: "板车"
-    translated: "Handcart"
-    qcReviewedText: "Handcart"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "造景"
-  splits:
-  - text: "造景"
-    translated: "Scenery"
-    qcReviewedText: "Scenery"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "雕像"
-  splits:
-  - text: "雕像"
-    translated: "Statue"
-    qcReviewedText: "Statue"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "花瓶"
-  splits:
-  - text: "花瓶"
-    translated: "Vase"
-    qcReviewedText: "Vase"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "屏风"
-  splits:
-  - text: "屏风"
-    translated: "Screen partition"
-    qcReviewedText: "Screen partition"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "椅凳"
-  splits:
-  - text: "椅凳"
-    translated: "Chairs and stools"
-    qcReviewedText: "Chairs and stools"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "方桌"
-  splits:
-  - text: "方桌"
-    translated: "Round table"
-    qcReviewedText: "Round table"
-    qcTranslated: "Square table"
-    qcStatus: Corrected
-    qcQualityScore: 100
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
-- raw: "木柜"
-  splits:
-  - text: "木柜"
-    translated: "Wooden chest"
-    qcReviewedText: "Wooden chest"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "造像"
-  splits:
-  - text: "造像"
-    translated: "Sculpture"
-    qcReviewedText: "Sculpture"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "火焰桶"
-  splits:
-  - text: "火焰桶"
-    translated: "Flame bucket"
-    qcReviewedText: "Flame bucket"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "爆炸桶"
-  splits:
-  - text: "爆炸桶"
-    translated: "Bomb bucket"
-    qcReviewedText: "Bomb bucket"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "毒气桶"
-  splits:
-  - text: "毒气桶"
-    translated: "Poison barrel"
-    qcReviewedText: "Poison barrel"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
 - raw: "老农"
   splits:
   - text: "老农"
     translated: "Old farmer"
     qcReviewedText: "Old farmer"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "雷彤"
+  splits:
+  - text: "雷彤"
+    translated: "Lei Tong"
+    qcReviewedText: "Lei Tong"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -65365,936 +66355,6 @@
   - text: "少林弟子丙"
     translated: "Shaolin Disciple Bing"
     qcReviewedText: "Shaolin Disciple Bing"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "雷彤"
-  splits:
-  - text: "雷彤"
-    translated: "Lei Tong"
-    qcReviewedText: "Lei Tong"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "工事"
-  splits:
-  - text: "工事"
-    translated: "Construction"
-    qcReviewedText: "Construction"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "护甲+5"
-  splits:
-  - text: "护甲"
-    translated: "Armor"
-    qcReviewedText: "Armor+5"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-  templates:
-  - template: "{0}+5"
-- raw: "草丛"
-  splits:
-  - text: "草丛"
-    translated: "Bushes"
-    qcReviewedText: "Bushes"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "闪避+5%"
-  splits:
-  - text: "闪避"
-    translated: "Dodge"
-    qcReviewedText: "Dodge+5%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-  templates:
-  - template: "{0}+5%"
-- raw: "水塘"
-  splits:
-  - text: "水塘"
-    translated: "Pond"
-    qcReviewedText: "Pond"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "速度-20%\n闪避-5%"
-  splits:
-  - text: "速度"
-    translated: "Speed"
-    qcReviewedText: "Speed-20%\nDodge-5%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-  - subIndex: 1
-    text: "闪避"
-    translated: "Dodge"
-  templates:
-  - template: "{0}-20%\n{1}-5%"
-- raw: "泥潭"
-  splits:
-  - text: "泥潭"
-    translated: "Quagmire"
-    qcReviewedText: "Quagmire"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "速度-40%\n闪避-10%"
-  splits:
-  - text: "速度"
-    translated: "Speed"
-    qcReviewedText: "Speed-40%\nDodge-10%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-  - subIndex: 1
-    text: "闪避"
-    translated: "Dodge"
-  templates:
-  - template: "{0}-40%\n{1}-10%"
-- raw: "药草"
-  splits:
-  - text: "药草"
-    translated: "Herb"
-    qcReviewedText: "Herb"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "生命+10%\n内力+10%"
-  splits:
-  - text: "生命"
-    translated: "Health"
-    qcReviewedText: "Health+10%\nInner Power+10%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-  - subIndex: 1
-    text: "内力"
-    translated: "Inner Power"
-  templates:
-  - template: "{0}+10%\n{1}+10%"
-- raw: "异果"
-  splits:
-  - text: "异果"
-    translated: "Strawberry"
-    qcReviewedText: "Strawberry"
-    qcTranslated: "Strange Fruit"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
-- raw: "体力+30%\n内力+10%"
-  splits:
-  - text: "体力"
-    translated: "Stamina"
-    qcReviewedText: "Stamina+30%\nInner Power+10%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-  - subIndex: 1
-    text: "内力"
-    translated: "Inner Power"
-  templates:
-  - template: "{0}+30%\n{1}+10%"
-- raw: "奇花"
-  splits:
-  - text: "奇花"
-    translated: "Strange Blossom"
-    qcReviewedText: "Strange Blossom"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "内力+20%\n混乱2回合"
-  splits:
-  - text: "内力"
-    translated: "Inner Power"
-    qcReviewedText: "Inner Power+20%\n2 round of chaos"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-  - subIndex: 1
-    text: "混乱2回合"
-    translated: "2 round of chaos"
-  templates:
-  - template: "{0}+20%\n{1}"
-- raw: "怪藤"
-  splits:
-  - text: "怪藤"
-    translated: "Strange Vine"
-    qcReviewedText: "Strange Vine"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "内力+10%\n疯魔2回合"
-  splits:
-  - text: "内力"
-    translated: "Inner Power"
-    qcReviewedText: "Inner Power+10%\nMad Possession Turn 2"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-  - subIndex: 1
-    text: "疯魔2回合"
-    translated: "Mad Possession Turn 2"
-  templates:
-  - template: "{0}+10%\n{1}"
-- raw: "毒虫"
-  splits:
-  - text: "毒虫"
-    translated: "Poison insect"
-    qcReviewedText: "Poison insect"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "当前内力-20%\n中毒+20"
-  splits:
-  - text: "当前内力"
-    translated: "Current Inner Power"
-    qcReviewedText: "Current Inner Power-20%\nPoisoned+20"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-  - subIndex: 1
-    text: "中毒"
-    translated: "Poisoned"
-  templates:
-  - template: "{0}-20%\n{1}+20"
-- raw: "持续中毒"
-  splits:
-  - text: "持续中毒"
-    translated: "Continuous poisoning"
-    qcReviewedText: "Continuous poisoning"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "飞箭"
-  splits:
-  - text: "飞箭"
-    translated: "Arrow"
-    qcReviewedText: "Arrow"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "当前生命-10%\n外伤+20"
-  splits:
-  - text: "当前生命"
-    translated: "Current Health"
-    qcReviewedText: "Current Health-10%\nExternal Injury+20"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-  - subIndex: 1
-    text: "外伤"
-    translated: "External Injury"
-  templates:
-  - template: "{0}-10%\n{1}+20"
-- raw: "钉刺"
-  splits:
-  - text: "钉刺"
-    translated: "Spikes"
-    qcReviewedText: "Spikes"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "持续外伤"
-  splits:
-  - text: "持续外伤"
-    translated: "Continuous external injuries"
-    qcReviewedText: "Continuous external injuries"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "陷坑"
-  splits:
-  - text: "陷坑"
-    translated: "Pitfall"
-    qcReviewedText: "Pitfall"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "当前体力-30%\n内伤+20"
-  splits:
-  - text: "当前体力"
-    translated: "Current Stamina"
-    qcReviewedText: "Current Stamina-30%\nInternal Injury+20"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-  - subIndex: 1
-    text: "内伤"
-    translated: "Internal Injury"
-  templates:
-  - template: "{0}-30%\n{1}+20"
-- raw: "热碳"
-  splits:
-  - text: "热碳"
-    translated: "Hot charcoal"
-    qcReviewedText: "Hot charcoal"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "持续内伤"
-  splits:
-  - text: "持续内伤"
-    translated: "Continuous Internal Injury"
-    qcReviewedText: "Continuous Internal Injury"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "随机获得物品"
-  splits:
-  - text: "随机获得物品"
-    translated: "Randomly obtain items"
-    qcReviewedText: "Randomly obtain items"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "清心符"
-  splits:
-  - text: "清心符"
-    translated: "Purification Charm"
-    qcReviewedText: "Purification Charm"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "智力2"
-  splits:
-  - text: "智力2"
-    translated: "2 intelligence"
-    qcReviewedText: "2 intelligence"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "安神符"
-  splits:
-  - text: "安神符"
-    translated: "Soothing Charm"
-    qcReviewedText: "Soothing Charm"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "意志2"
-  splits:
-  - text: "意志2"
-    translated: "2 will"
-    qcReviewedText: "2 will"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "跌打梅山符"
-  splits:
-  - text: "跌打梅山符"
-    translated: "Meridional MerMAID Sticker"
-    qcReviewedText: "Meridional MerMAID Sticker"
-    qcTranslated: "Bruise and Fracture Meishan Talisman"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
-- raw: "闪避-0.04"
-  splits:
-  - text: "闪避"
-    translated: "Dodge"
-    qcReviewedText: "Dodge-0.04"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-  templates:
-  - template: "{0}-0.04"
-- raw: "咽喉骨鲠符"
-  splits:
-  - text: "咽喉骨鲠符"
-    translated: "Throat‑Phlegm Sealing Symbol"
-    qcReviewedText: "Throat‑Phlegm Sealing Symbol"
-    qcTranslated: "Bone‑in‑Throat Sealing Talisman"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: LostIdiom
-    qcDefectCategories:
-    - LostIdiom
-- raw: "伤害-0.04"
-  splits:
-  - text: "伤害"
-    translated: "Damage"
-    qcReviewedText: "Damage-0.04"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-  templates:
-  - template: "{0}-0.04"
-- raw: "勾魂符"
-  splits:
-  - text: "勾魂符"
-    translated: "Soul‑snaring charm"
-    qcReviewedText: "Soul‑snaring charm"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "反击-0.06"
-  splits:
-  - text: "反击"
-    translated: "Counterattack"
-    qcReviewedText: "Counterattack-0.06"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-  templates:
-  - template: "{0}-0.06"
-- raw: "天罡符"
-  splits:
-  - text: "天罡符"
-    translated: "Heavenly Warrant Symbol"
-    qcReviewedText: "Heavenly Warrant Symbol"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "卸力0.06"
-  splits:
-  - text: "卸力0.06"
-    translated: "Absorb0.06"
-    qcReviewedText: "Absorb0.06"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "寒天符"
-  splits:
-  - text: "寒天符"
-    translated: "Cold Frost Token"
-    qcReviewedText: "Cold Frost Token"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "速度-0.08"
-  splits:
-  - text: "速度"
-    translated: "Speed"
-    qcReviewedText: "Speed-0.08"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-  templates:
-  - template: "{0}-0.08"
-- raw: "护甲4"
-  splits:
-  - text: "护甲4"
-    translated: "Armor 4"
-    qcReviewedText: "Armor 4"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "神兵天将符"
-  splits:
-  - text: "神兵天将符"
-    translated: "Divine Soldier Heavenly General Talisman"
-    qcReviewedText: "Divine Soldier Heavenly General Talisman"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "暴击0.1"
-  splits:
-  - text: "暴击0.1"
-    translated: "Critical hit 0.1"
-    qcReviewedText: "Critical hit 0.1"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "伤害抗性-0.1"
-  splits:
-  - text: "伤害抗性"
-    translated: "Damage resistance"
-    qcReviewedText: "Damage resistance-0.1"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-  templates:
-  - template: "{0}-0.1"
-- raw: "晴"
-  splits:
-  - text: "晴"
-    translated: "Sunny"
-    qcReviewedText: "Sunny"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "雨"
-  splits:
-  - text: "雨"
-    translated: "Rain"
-    qcReviewedText: "Rain"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "暴雨"
-  splits:
-  - text: "暴雨"
-    translated: "Heavy rain"
-    qcReviewedText: "Heavy rain"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "雪"
-  splits:
-  - text: "雪"
-    translated: "Snow"
-    qcReviewedText: "Snow"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "暴雪"
-  splits:
-  - text: "暴雪"
-    translated: "Blizzard"
-    qcReviewedText: "Blizzard"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "门派大比"
-  splits:
-  - text: "门派大比"
-    translated: "Sect Tournament"
-    qcReviewedText: "Sect Tournament"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "比武大赛"
-  splits:
-  - text: "比武大赛"
-    translated: "Combat Tournament"
-    qcReviewedText: "Combat Tournament"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "辩才大赛"
-  splits:
-  - text: "辩才大赛"
-    translated: "Talentspeak Contest"
-    qcReviewedText: "Talentspeak Contest"
-    qcTranslated: "Debate Tournament"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: LostIdiom
-    qcDefectCategories:
-    - LostIdiom
-- raw: "春节"
-  splits:
-  - text: "春节"
-    translated: "Chinese New Year"
-    qcReviewedText: "Chinese New Year"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "元宵"
-  splits:
-  - text: "元宵"
-    translated: "M Lantern Festival"
-    qcReviewedText: "M Lantern Festival"
-    qcTranslated: "Lantern Festival"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: GarbledNumber
-    qcDefectCategories:
-    - GarbledNumber
-- raw: "清明"
-  splits:
-  - text: "清明"
-    translated: "Qingming"
-    qcReviewedText: "Qingming"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "端午"
-  splits:
-  - text: "端午"
-    translated: "Dragon Boat Festival"
-    qcReviewedText: "Dragon Boat Festival"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "七夕"
-  splits:
-  - text: "七夕"
-    translated: "Qixi Festival"
-    qcReviewedText: "Qixi Festival"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "中秋"
-  splits:
-  - text: "中秋"
-    translated: "Mid‑Autumn Festival"
-    qcReviewedText: "Mid‑Autumn Festival"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "重阳"
-  splits:
-  - text: "重阳"
-    translated: "Double Ninth Festival"
-    qcReviewedText: "Double Ninth Festival"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "腊八"
-  splits:
-  - text: "腊八"
-    translated: "Bazhou"
-    qcReviewedText: "Bazhou"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "中元鬼市"
-  splits:
-  - text: "中元鬼市"
-    translated: "Mid‑Summer Ghost Market"
-    qcReviewedText: "Mid‑Summer Ghost Market"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "文"
-  splits:
-  - text: "文"
-    translated: "Words"
-    qcReviewedText: "Words"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "文本"
-  splits:
-  - text: "文本"
-    translated: "Text"
-    qcReviewedText: "Text"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "获得经验"
-  splits:
-  - text: "获得经验"
-    translated: "Gain experience"
-    qcReviewedText: "Gain experience"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "精要"
-  splits:
-  - text: "精要"
-    translated: "Essence"
-    qcReviewedText: "Essence"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "获得大量经验"
-  splits:
-  - text: "获得大量经验"
-    translated: "Gain a lot of experience"
-    qcReviewedText: "Gain a lot of experience"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "漏"
-  splits:
-  - text: "漏"
-    translated: "Leak"
-    qcReviewedText: "Leak"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "纰漏"
-  splits:
-  - text: "纰漏"
-    translated: "Flaw"
-    qcReviewedText: "Flaw"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "失去经验"
-  splits:
-  - text: "失去经验"
-    translated: "Lose experience points"
-    qcReviewedText: "Lose experience points"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "错"
-  splits:
-  - text: "错"
-    translated: "Wrong"
-    qcReviewedText: "Wrong"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "错误"
-  splits:
-  - text: "错误"
-    translated: "Error"
-    qcReviewedText: "Error"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "失去大量经验"
-  splits:
-  - text: "失去大量经验"
-    translated: "Lose a lot of experience points"
-    qcReviewedText: "Lose a lot of experience points"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "醒"
-  splits:
-  - text: "醒"
-    translated: "Awake"
-    qcReviewedText: "Awake"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "清醒"
-  splits:
-  - text: "清醒"
-    translated: "Awake"
-    qcReviewedText: "Awake"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "恢复耐心"
-  splits:
-  - text: "恢复耐心"
-    translated: "Recover your patience"
-    qcReviewedText: "Recover your patience"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "困"
-  splits:
-  - text: "困"
-    translated: "Trapped"
-    qcReviewedText: "Trapped"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "困倦"
-  splits:
-  - text: "困倦"
-    translated: "Drowsy"
-    qcReviewedText: "Drowsy"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "失去耐心"
-  splits:
-  - text: "失去耐心"
-    translated: "Lose patience"
-    qcReviewedText: "Lose patience"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "融"
-  splits:
-  - text: "融"
-    translated: "Merge"
-    qcReviewedText: "Merge"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "融汇"
-  splits:
-  - text: "融汇"
-    translated: "Integrating"
-    qcReviewedText: "Integrating"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "已读越多经验越高"
-  splits:
-  - text: "已读越多经验越高"
-    translated: "The more you read, the higher your experience will be."
-    qcReviewedText: "The more you read, the higher your experience will be."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "预"
-  splits:
-  - text: "预"
-    translated: "Prepare"
-    qcReviewedText: "Prepare"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "预习"
-  splits:
-  - text: "预习"
-    translated: "Preview"
-    qcReviewedText: "Preview"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "已读越少经验越高"
-  splits:
-  - text: "已读越少经验越高"
-    translated: "The less you have read, the higher the experience."
-    qcReviewedText: "The less you have read, the higher the experience."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "一列"
-  splits:
-  - text: "一列"
-    translated: "A train"
-    qcReviewedText: "A train"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "阅读整列"
-  splits:
-  - text: "阅读整列"
-    translated: "Read the entire column"
-    qcReviewedText: "Read the entire column"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "破解"
-  splits:
-  - text: "破解"
-    translated: "Hack"
-    qcReviewedText: "Hack"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "阅读周围1格"
-  splits:
-  - text: "阅读周围1格"
-    translated: "Read the surrounding 1 cells"
-    qcReviewedText: "Read the surrounding 1 cells"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "一行"
-  splits:
-  - text: "一行"
-    translated: "A row"
-    qcReviewedText: "A row"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "阅读整行"
-  splits:
-  - text: "阅读整行"
-    translated: "Read the entire line"
-    qcReviewedText: "Read the entire line"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "明朗"
-  splits:
-  - text: "明朗"
-    translated: "Bright"
-    qcReviewedText: "Bright"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "显示周围3格"
-  splits:
-  - text: "显示周围3格"
-    translated: "Display surrounding 3 cells"
-    qcReviewedText: "Display surrounding 3 cells"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "缺损"
-  splits:
-  - text: "缺损"
-    translated: "Deficiency"
-    qcReviewedText: "Deficiency"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "提纲"
-  splits:
-  - text: "提纲"
-    translated: "Outline"
-    qcReviewedText: "Outline"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "全场经验+10%"
-  splits:
-  - text: "全场经验"
-    translated: "Xp throughout the map"
-    qcReviewedText: "Xp throughout the map+10%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-  templates:
-  - template: "{0}+10%"
-- raw: "迷惑"
-  splits:
-  - text: "迷惑"
-    translated: "Confusion"
-    qcReviewedText: "Confusion"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "全场经验-10%"
-  splits:
-  - text: "全场经验"
-    translated: "Xp throughout the map"
-    qcReviewedText: "Xp throughout the map-10%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-  templates:
-  - template: "{0}-10%"
-- raw: "注释"
-  splits:
-  - text: "注释"
-    translated: "Notes"
-    qcReviewedText: "Notes"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "周围经验+100%"
-  splits:
-  - text: "周围经验"
-    translated: "Surrounding experience"
-    qcReviewedText: "Surrounding experience+100%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-  templates:
-  - template: "{0}+100%"
-- raw: "难点"
-  splits:
-  - text: "难点"
-    translated: "Challenge"
-    qcReviewedText: "Challenge"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "周围经验-50%"
-  splits:
-  - text: "周围经验"
-    translated: "Surrounding experience"
-    qcReviewedText: "Surrounding experience-50%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-  templates:
-  - template: "{0}-50%"
-- raw: "贯通"
-  splits:
-  - text: "贯通"
-    translated: "Penetrate"
-    qcReviewedText: "Penetrate"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "阅读整行整列"
-  splits:
-  - text: "阅读整行整列"
-    translated: "Read the entire row and column"
-    qcReviewedText: "Read the entire row and column"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

@@ -39,14 +39,13 @@ public class HeroTagIconController
     public HeroData TargetHero()
     {
         var pStatics_6790 = *(int64*)(DAT_181da6790 + 184);
-        var pStatics_7a18 = *(int64*)(DAT_181d87a18 + 184);
         ulong uVar1;
         bool cVar2;
         uVar1 = **(uint64 **)(DAT_181da6790 + 184);
         cVar2 = Object.op_Inequality(uVar1,0,0);
         if (!cVar2) {
-          if (*pStatics_7a18 != 0) {
-            return *(uint64 *)(*pStatics_7a18 + 32);
+          if (ManageTagController._instance != null) {
+            return ManageTagController._instance.targetHero;
           }
         }
         else {
@@ -60,7 +59,6 @@ public class HeroTagIconController
     // RVA   : 0xAFE8F0   Offset: 0xAFDCF0   Length: 0x5BD
     public void Init()
     {
-        var pStatics = *(int64*)(DAT_181d72d50 + 184);
         int iVar1;
         uint uVar2;
         uint uVar3;
@@ -102,14 +100,14 @@ public class HeroTagIconController
         if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"ValueBack",0)) == null)
         goto LAB_180afeea8;
         plVar5 = (int64 *)Component.GetComponent(lVar4,DAT_181d94460);
-        lVar4 = *(int64 *)(pStatics + 32);
+        lVar4 = GameController.lockObj;
         if (lVar4 == null) goto LAB_180afeea8;
         lVar4 = *(int64 *)(lVar4 + 56);
         if ((this.targetTag == null) ||
            (lVar7 = HeroTagData.DataBase(this.targetTag,0)) == null)
         goto LAB_180afeea8;
         uVar2 = Mathf.Abs(*(uint32 *)(lVar7 + 32),0);
-        lVar7 = *(int64 *)(pStatics + 32);
+        lVar7 = GameController.lockObj;
         if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 56)) == null) goto LAB_180afeea8;
         uVar3 = Mathf.Clamp(uVar2,0,*(int *)(lVar7 + 24) + -1,0);
         if (lVar4 == null) goto LAB_180afeea8;
@@ -183,7 +181,6 @@ public class HeroTagIconController
     public void RefreshInfo()
     {
         var pStatics_6790 = *(int64*)(DAT_181da6790 + 184);
-        var pStatics_7a18 = *(int64*)(DAT_181d87a18 + 184);
         ulong uVar1;
         bool cVar2;
         long lVar3;
@@ -201,8 +198,8 @@ public class HeroTagIconController
           uVar1 = **(uint64 **)(DAT_181da6790 + 184);
           cVar2 = Object.op_Inequality(uVar1,0,0);
           if (!cVar2) {
-            if (*pStatics_7a18 == 0) throw; // [null/range check failed]
-            lVar7 = *(int64 *)(*pStatics_7a18 + 32);
+            if (ManageTagController._instance == null) throw; // [null/range check failed]
+            lVar7 = ManageTagController._instance.targetHero;
           }
           else {
             if (*pStatics_6790 == 0) throw; // [null/range check failed]

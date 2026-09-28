@@ -10,13 +10,6 @@
     text: "冰释前嫌，化解了二人间的仇恨。"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}与{1}情谊渐浅，断绝了好友关系。"
-  splits:
-  - text: "与"
-  - subIndex: 1
-    text: "情谊渐浅，断绝了好友关系。"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}"
 - raw: "{0}从{3}仓库购买了{1}，花费银两{2}"
   splits:
   - text: "从"
@@ -145,15 +138,6 @@
     text: "点恶名。"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦3⟧{2}⟦2⟧{3}"
-- raw: "{0}在{1}与{2}交流心得，切磋武艺，最终{3}。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "与"
-  - subIndex: 2
-    text: "交流心得，切磋武艺，最终"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧。"
 - raw: "{0}在{1}与{2}心生嫌隙，结下了深仇大恨。"
   splits:
   - text: "在"
@@ -161,15 +145,6 @@
     text: "与"
   - subIndex: 2
     text: "心生嫌隙，结下了深仇大恨。"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
-- raw: "{0}在{1}与{2}相谈盛欢，一见如故，结为知己好友。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "与"
-  - subIndex: 2
-    text: "相谈盛欢，一见如故，结为知己好友。"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
 - raw: "{0}在{1}与{2}闲聊一阵。"
@@ -317,13 +292,6 @@
     text: "的"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦5⟧⟦2⟧{2}⟦3⟧，⟦4⟧。"
-- raw: "{0}在{1}欲下毒暗害{2}，{3}。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "欲下毒暗害"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧，⟦3⟧。"
 - raw: "{0}在{1}欲偷师{2}的{3}，{4}。"
   splits:
   - text: "在"
@@ -340,15 +308,6 @@
     text: "结束关押，恢复了自由之身。"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}在{1}袭击了{2}，血战一场最终{3}。"
-  splits:
-  - text: "在"
-  - subIndex: 1
-    text: "袭击了"
-  - subIndex: 2
-    text: "，血战一场最终"
-  templates:
-  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧。"
 - raw: "{0}在{1}辛勤劳作，为门派收获了{2}。"
   splits:
   - text: "在"

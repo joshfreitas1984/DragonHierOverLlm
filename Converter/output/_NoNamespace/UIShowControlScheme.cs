@@ -23,14 +23,13 @@ public class UIShowControlScheme
     // RVA   : 0x1705570   Offset: 0x1704970   Length: 0x1D2
     private void OnEnable()
     {
-        var pStatics = *(int64*)(DAT_181daf678 + 184);
         ulong uVar1;
         bool cVar2;
         int iVar3;
         ulong uVar4;
         long lVar7;
         byte uVar8;
-        uVar1 = *(uint64 *)(pStatics + 200);
+        uVar1 = UICamera.onSchemeChange;
         uVar4 = new OnTooltipCB(this,DAT_181dc64d0,0);
         plVar5 = (int64 *)Delegate.Combine(uVar1,uVar4);
         plVar9 = (int64 *)0;
@@ -43,9 +42,7 @@ public class UIShowControlScheme
             FUN_1800d6070(plVar5);
           }
         }
-        puVar6 = (uint64 *)(pStatics + 200);
-        *puVar6 = plVar9;
-        il2cpp_internal(puVar6,plVar9);
+        UICamera.onSchemeChange = plVar9;
         uVar1 = this.target;
         cVar2 = Object.op_Inequality(uVar1,0,0);
         if (cVar2) {
@@ -80,10 +77,9 @@ public class UIShowControlScheme
     // RVA   : 0x1705470   Offset: 0x1704870   Length: 0xFF
     private void OnDisable()
     {
-        var pStatics = *(int64*)(DAT_181daf678 + 184);
         ulong uVar1;
         ulong uVar2;
-        uVar1 = *(uint64 *)(pStatics + 200);
+        uVar1 = UICamera.onSchemeChange;
         uVar2 = new OnTooltipCB(this,DAT_181dc64d0,0);
         plVar3 = (int64 *)Delegate.Remove(uVar1,uVar2,0);
         plVar4 = (int64 *)0;
@@ -96,7 +92,7 @@ public class UIShowControlScheme
             FUN_1800d6070(plVar3,DAT_181d8d6b8);
           }
         }
-        *(int64 **)(pStatics + 200) = plVar4;
+        UICamera.onSchemeChange = plVar4;
     }
 
     // Token : 0x6000278

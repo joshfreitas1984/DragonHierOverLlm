@@ -116,11 +116,10 @@ public class ItemListController
     // RVA   : 0xCA6BD0   Offset: 0xCA5FD0   Length: 0x18E
     private static Transform GetPoolRoot()
     {
-        var pStatics = *(int64*)(DAT_181d82198 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
-        uVar3 = *(uint64 *)(pStatics + 8);
+        uVar3 = ItemListController.poolRoot;
         cVar1 = Object.op_Equality(uVar3,0,0);
         if (cVar1) {
           lVar2 = new GameObject("[SharedItemIconPool]",0);
@@ -129,12 +128,10 @@ public class ItemListController
             FUN_1800d6620();
           }
           uVar3 = GameObject.get_transform(lVar2,0);
-          puVar4 = (uint64 *)(pStatics + 8);
-          *puVar4 = uVar3;
-          il2cpp_internal(puVar4,uVar3);
+          ItemListController.poolRoot = uVar3;
           Object.DontDestroyOnLoad(lVar2,0);
         }
-        return *(uint64 *)(pStatics + 8);
+        return ItemListController.poolRoot;
     }
 
     // Token : 0x600188A
@@ -334,7 +331,6 @@ public class ItemListController
     // RVA   : 0xCA6740   Offset: 0xCA5B40   Length: 0x39B
     public void ClearAllItem()
     {
-        var pStatics = *(int64*)(DAT_181d8b790 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
@@ -348,10 +344,10 @@ public class ItemListController
         ulong local_28;
         ulong uStack_20;
         ulong local_18;
-        uVar3 = *(uint64 *)(pStatics + 72);
+        uVar3 = MouseController.hoveredUI;
         cVar1 = Object.op_Inequality(uVar3,0,0);
         if (cVar1) {
-          lVar2 = *(int64 *)(pStatics + 72);
+          lVar2 = MouseController.hoveredUI;
           if (lVar2 == null) throw; // [null/range check failed]
           lVar2 = GameObject.get_transform(lVar2,0);
           if (this.itemGrid == null) throw; // [null/range check failed]
@@ -359,9 +355,7 @@ public class ItemListController
           if (lVar2 == null) throw; // [null/range check failed]
           cVar1 = Transform.IsChildOf(lVar2,uVar3,0);
           if (cVar1) {
-            puVar4 = (uint64 *)(pStatics + 72);
-            *puVar4 = 0;
-            il2cpp_internal(puVar4,0);
+            MouseController.hoveredUI = 0;
             uVar3 = FUN_180c95aa0(0);
             cVar1 = Object.op_Inequality(uVar3,0,0);
             if (cVar1) {
@@ -407,8 +401,6 @@ public class ItemListController
     // RVA   : 0xCA7310   Offset: 0xCA6710   Length: 0x485
     private void RecycleIcon(GameObject iconGo)
     {
-        var pStatics_2198 = *(int64*)(DAT_181d82198 + 184);
-        var pStatics_b790 = *(int64*)(DAT_181d8b790 + 184);
         bool cVar1;
         long lVar2;
         long lVar3;
@@ -422,12 +414,10 @@ public class ItemListController
         }
         if (iconGo == null) throw; // [null/range check failed]
         GameObject.SetActive(iconGo,0,0);
-        uVar4 = *(uint64 *)(pStatics_b790 + 72);
+        uVar4 = MouseController.hoveredUI;
         cVar1 = Object.op_Equality(uVar4,iconGo,0);
         if (cVar1) {
-          puVar5 = (uint64 *)(pStatics_b790 + 72);
-          *puVar5 = 0;
-          il2cpp_internal(puVar5,0);
+          MouseController.hoveredUI = 0;
         }
         lVar2 = GameObject.GetComponent(iconGo,DAT_181d720a0);
         cVar1 = Object.op_Inequality(lVar2,0,0);
@@ -446,27 +436,25 @@ public class ItemListController
           *(uint32 *)(lVar2 + 52) = 0x1000000;
           *(uint32 *)(lVar2 + 48) = 0;
         }
-        if (*pStatics_2198 != 0) {
-          if (59 < *(int *)(*pStatics_2198 + 32)) {
+        if (ItemListController.sharedItemIconPool != null) {
+          if (59 < ItemListController.sharedItemIconPool.itemListInteractType) {
             Object.Destroy(iconGo,0);
             return;
           }
           lVar2 = GameObject.get_transform(iconGo,0);
-          uVar4 = *(uint64 *)(pStatics_2198 + 8);
+          uVar4 = ItemListController.poolRoot;
           cVar1 = Object.op_Equality(uVar4,0,0);
           if (cVar1) {
             lVar3 = new GameObject("[SharedItemIconPool]",0);
             if (lVar3 == null) throw; // [null/range check failed]
             uVar4 = GameObject.get_transform(lVar3,0);
-            puVar5 = (uint64 *)(pStatics_2198 + 8);
-            *puVar5 = uVar4;
-            il2cpp_internal(puVar5,uVar4);
+            ItemListController.poolRoot = uVar4;
             Object.DontDestroyOnLoad(lVar3,0);
           }
           if (lVar2 != null) {
-            Transform.SetParent(lVar2,*(uint64 *)(pStatics_2198 + 8),0,0);
-            if (*pStatics_2198 != 0) {
-              FUN_181661f90(*pStatics_2198,iconGo,DAT_181dc0820);
+            Transform.SetParent(lVar2,ItemListController.poolRoot,0,0);
+            if (ItemListController.sharedItemIconPool != null) {
+              FUN_181661f90(ItemListController.sharedItemIconPool,iconGo,DAT_181dc0820);
               return;
             }
           }
@@ -477,7 +465,6 @@ public class ItemListController
     // RVA   : 0xCA7E10   Offset: 0xCA7210   Length: 0x21B
     private GameObject RentIcon()
     {
-        var pStatics_2198 = *(int64*)(DAT_181d82198 + 184);
         var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
         ulong uVar1;
         bool cVar2;
@@ -485,11 +472,11 @@ public class ItemListController
         long lVar4;
         ulong uVar5;
         do {
-          if (*pStatics_2198 == 0) throw; // [null/range check failed]
+          if (ItemListController.sharedItemIconPool == null) throw; // [null/range check failed]
           lVar3 = 0;
-          if (*(int *)(*pStatics_2198 + 32) < 1) break;
-          if (*pStatics_2198 == 0) throw; // [null/range check failed]
-          lVar3 = FUN_181661be0(*pStatics_2198,DAT_181dc07a0);
+          if (ItemListController.sharedItemIconPool.itemListInteractType < 1) break;
+          if (ItemListController.sharedItemIconPool == null) throw; // [null/range check failed]
+          lVar3 = FUN_181661be0(ItemListController.sharedItemIconPool,DAT_181dc07a0);
           cVar2 = Object.op_Inequality(lVar3,0,0);
         } while (!cVar2);
         cVar2 = Object.op_Inequality(lVar3,0,0);
@@ -1894,7 +1881,6 @@ public class ItemListController
     // RVA   : 0xCA64E0   Offset: 0xCA58E0   Length: 0x256
     public void ChangeSortType()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         ulong uVar1;
         bool cVar2;
         long lVar3;
@@ -1904,12 +1890,12 @@ public class ItemListController
           uVar1 = **(uint64 **)(DAT_181d72cc8 + 184);
           cVar2 = Object.op_Inequality(uVar1,0,0);
           if (cVar2) {
-            if (*pStatics == 0) {
+            if (GameController._instance == null) {
         LAB_180ca6731:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            if (*(int64 *)(*pStatics + 32) != 0) {
+            if (GameController._instance.worldData != null) {
               lVar3 = FUN_18046c0a0(0);
               if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) goto LAB_180ca6731;
               *(uint32 *)(*(int64 *)(lVar3 + 32) + 0x250) = this.itemSortType;
@@ -1930,7 +1916,6 @@ public class ItemListController
     // RVA   : 0xCA61A0   Offset: 0xCA55A0   Length: 0x336
     public void ChangeReverseType(GameObject ButtonClicked)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
@@ -1943,8 +1928,8 @@ public class ItemListController
           uVar3 = **(uint64 **)(DAT_181d72cc8 + 184);
           cVar1 = Object.op_Inequality(uVar3,0,0);
           if (cVar1) {
-            if (*pStatics == 0) throw; // [null/range check failed]
-            if (*(int64 *)(*pStatics + 32) != 0) {
+            if (GameController._instance == null) throw; // [null/range check failed]
+            if (GameController._instance.worldData != null) {
               lVar2 = FUN_18046c0a0(0);
               if ((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) throw; // [null/range check failed]
               *(uint8 *)(*(int64 *)(lVar2 + 32) + 0x254) = this.reverseOrder;

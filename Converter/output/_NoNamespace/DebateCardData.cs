@@ -72,9 +72,7 @@ public class DebateCardData
             FUN_18181e0a0(lVar1,"使对方出牌反作用于自身",DAT_181da3d58);
             FUN_18181e0a0(lVar1,"无视对方卡牌对我方效果",DAT_181da3d58);
             FUN_18181e0a0(lVar1,"恢复自身30耐心\n抵消愤怒效果",DAT_181da3d58);
-            plVar2 = (int64 *)(pStatics + 8);
-            *plVar2 = lVar1;
-            il2cpp_internal(plVar2,lVar1);
+            DebateCardData.SpeCardDescribe = lVar1;
             lVar1 = il2cpp_internal(DAT_181d97750);
             FUN_18132faf0(lVar1,DAT_181da3bd8);
             if (lVar1 != null) {
@@ -83,9 +81,7 @@ public class DebateCardData
               FUN_18181e0a0(lVar1,"若将你所说的话如数奉还，又该如何应对？",DAT_181da3d58);
               FUN_18181e0a0(lVar1,"你在说什么？我好像没听清...",DAT_181da3d58);
               FUN_18181e0a0(lVar1,"事已至此，需先冷静下来，稳住阵脚。",DAT_181da3d58);
-              plVar2 = (int64 *)(pStatics + 16);
-              *plVar2 = lVar1;
-              il2cpp_internal(plVar2,lVar1);
+              DebateCardData.SpeCardTalk = lVar1;
               return;
             }
           }

@@ -35,7 +35,6 @@ public class <BattleEnd>d__274
     private virtual bool MoveNext()
     {
         var pStatics_01c8 = *(int64*)(DAT_181db01c8 + 184);
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_2dd8 = *(int64*)(DAT_181d72dd8 + 184);
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
         bool cVar2;
@@ -107,7 +106,7 @@ public class <BattleEnd>d__274
             if (*(int *)(*(int64 *)(lVar11 + 128) + 24) < 1) {
               lVar4 = FUN_18046c400(0);
               if (lVar4 == null) goto LAB_1809c20e2;
-              if (*(char *)(lVar4 + 24) == false) {
+              if (!lVar4.cityAreaID) {
                 if ((*pStatics_2dd8 != 0) &&
                    (lVar4 = *(int64 *)(*pStatics_2dd8 + 24)) != null) {
                   cVar2 = GameObject.get_activeSelf(lVar4,0);
@@ -151,30 +150,30 @@ public class <BattleEnd>d__274
                         while (*(int64 *)(lVar11 + 112) != 0) {
                           if (*(int *)(*(int64 *)(lVar11 + 112) + 24) <= iVar13) {
                             lVar4 = FUN_18046c1a0(0);
-                            if ((((lVar4 == null) || (*(int64 *)(lVar4 + 56) == 0)) ||
-                                (lVar4 = GameObject.get_transform(*(int64 *)(lVar4 + 56),0),
+                            if ((((lVar4 == null) || (lVar4.Inns == null)) ||
+                                (lVar4 = GameObject.get_transform(lVar4.Inns,0),
                                 lVar4 == null)) ||
                                ((lVar4 = Transform.Find(lVar4,"BattleEndUI",0), lVar4 == null ||
                                 (lVar4 = Component.get_gameObject(lVar4,0)) == null))) break;
                             GameObject.SetActive(lVar4,1,0);
                             lVar4 = FUN_18046c1a0(0);
                             if ((((lVar4 == null) ||
-                                 ((*(int64 *)(lVar4 + 56) == 0 ||
-                                  (lVar4 = GameObject.get_transform(*(int64 *)(lVar4 + 56),0),
+                                 ((lVar4.Inns == null ||
+                                  (lVar4 = GameObject.get_transform(lVar4.Inns,0),
                                   lVar4 == null)))) ||
                                 (lVar4 = Transform.Find(lVar4,"BattleEndUI",0)) == null) ||
                                (lVar4 = Component.GetComponent(lVar4,DAT_181d938e0)) == null) break;
                             CanvasGroup.set_alpha(lVar4);
                             lVar4 = FUN_18046c1a0(0);
-                            if ((((lVar4 == null) || (*(int64 *)(lVar4 + 56) == 0)) ||
-                                (lVar4 = GameObject.get_transform(*(int64 *)(lVar4 + 56),0),
+                            if ((((lVar4 == null) || (lVar4.Inns == null)) ||
+                                (lVar4 = GameObject.get_transform(lVar4.Inns,0),
                                 lVar4 == null)) ||
                                (lVar4 = Transform.Find(lVar4,"BattleEndUI",0)) == null) break;
                             uVar5 = Component.GetComponent(lVar4,DAT_181d938e0);
                             DOTweenModuleUI.DOFade(uVar5);
                             lVar4 = FUN_18046c1a0(0);
-                            if (((lVar4 == null) || (*(int64 *)(lVar4 + 56) == 0)) ||
-                               ((lVar4 = GameObject.get_transform(*(int64 *)(lVar4 + 56),0),
+                            if (((lVar4 == null) || (lVar4.Inns == null)) ||
+                               ((lVar4 = GameObject.get_transform(lVar4.Inns,0),
                                 lVar4 == null ||
                                 ((lVar4 = Transform.Find(lVar4,"BattleEndUI",0), lVar4 == null ||
                                  (lVar4 = Transform.Find(lVar4,"Result",0)) == null))))) break;
@@ -192,8 +191,8 @@ public class <BattleEnd>d__274
                             if (lVar4 == null) break;
                             Image.set_sprite(lVar4,uVar5,0);
                             lVar4 = FUN_18046c1a0(0);
-                            if ((((lVar4 == null) || (*(int64 *)(lVar4 + 56) == 0)) ||
-                                (lVar4 = GameObject.get_transform(*(int64 *)(lVar4 + 56),0),
+                            if ((((lVar4 == null) || (lVar4.Inns == null)) ||
+                                (lVar4 = GameObject.get_transform(lVar4.Inns,0),
                                 lVar4 == null)) ||
                                (lVar4 = Transform.Find(lVar4,"BattleEndUI",0)) == null) break;
                             lVar4 = Transform.Find(lVar4,"Result",0);
@@ -208,8 +207,8 @@ public class <BattleEnd>d__274
                             local_b0 = local_c0;
                             Transform.set_localScale(lVar4,&local_b8,0);
                             lVar4 = FUN_18046c1a0(0);
-                            if (((lVar4 == null) || (*(int64 *)(lVar4 + 56) == 0)) ||
-                               ((lVar4 = GameObject.get_transform(*(int64 *)(lVar4 + 56),0),
+                            if (((lVar4 == null) || (lVar4.Inns == null)) ||
+                               ((lVar4 = GameObject.get_transform(lVar4.Inns,0),
                                 lVar4 == null || (lVar4 = Transform.Find(lVar4,"BattleEndUI",0)) == null
                                 ))) break;
                             uVar5 = Transform.Find(lVar4,"Result",0);
@@ -227,8 +226,8 @@ public class <BattleEnd>d__274
                             uVar3 = Mathf.RoundToInt(auVar21._0_8_,0);
                             lVar4 = FUN_18046c1a0(0);
                             if ((lVar4 == null) ||
-                               ((((*(int64 *)(lVar4 + 56) == 0 ||
-                                  (lVar4 = GameObject.get_transform(*(int64 *)(lVar4 + 56),0),
+                               ((((lVar4.Inns == null ||
+                                  (lVar4 = GameObject.get_transform(lVar4.Inns,0),
                                   lVar4 == null)) ||
                                  (lVar4 = Transform.Find(lVar4,"BattleEndUI",0)) == null) ||
                                 (lVar4 = Transform.Find(lVar4,"Rate",0)) == null))) break;
@@ -238,30 +237,30 @@ public class <BattleEnd>d__274
                             uVar9 = FUN_180002f80(lVar4,uVar3,DAT_181da4358);
                             LTLocalization.SetText(uVar5,uVar9,0);
                             lVar4 = FUN_18046c1a0(0);
-                            if ((((lVar4 == null) || (*(int64 *)(lVar4 + 56) == 0)) ||
-                                (lVar4 = GameObject.get_transform(*(int64 *)(lVar4 + 56),0),
+                            if ((((lVar4 == null) || (lVar4.Inns == null)) ||
+                                (lVar4 = GameObject.get_transform(lVar4.Inns,0),
                                 lVar4 == null)) ||
                                ((lVar4 = Transform.Find(lVar4,"BattleEndUI",0), lVar4 == null ||
                                 (lVar4 = Transform.Find(lVar4,"Rate",0)) == null))) break;
                             plVar6 = (int64 *)Component.GetComponent(lVar4,DAT_181d96160);
-                            lVar4 = FUN_18046c100(0);
-                            if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 56)) == null) break;
-                            if (*(uint32 *)(lVar4 + 24) <= uVar3) {
+
+                            if ((lVar4 = FUN_18046c100(0)?.Inns) == null) break;
+                            if (lVar4.cityAreaID <= uVar3) {
                               ThrowHelper.ThrowArgumentOutOfRangeException(0);
                             }
                             lVar4 = *(int64 *)
-                                     (*(int64 *)(lVar4 + 16) + 32 + (int64)(int)uVar3 * 8);
+                                     (lVar4.chapter + 32 + (int64)(int)uVar3 * 8);
                             if ((lVar4 == null) || (plVar6 == (int64 *)0)) break;
-                            local_98 = *(uint64 *)(lVar4 + 24);
-                            uStack_90 = *(uint64 *)(lVar4 + 32);
+                            local_98 = lVar4.cityAreaID;
+                            uStack_90 = lVar4.villageAreaID;
                             (**(code **)(*plVar6 + 0x2a8))
                                       (plVar6,&local_98,*(uint64 *)(*plVar6 + 0x2b0));
                             uVar5 = *(uint64 *)(lVar11 + 0x1b0);
                             cVar2 = Object.op_Inequality(uVar5,0,0);
                             if (!cVar2) {
                               lVar4 = FUN_18046c1a0(0);
-                              if (((lVar4 == null) || (*(int64 *)(lVar4 + 56) == 0)) ||
-                                 ((lVar4 = GameObject.get_transform(*(int64 *)(lVar4 + 56),0),
+                              if (((lVar4 == null) || (lVar4.Inns == null)) ||
+                                 ((lVar4 = GameObject.get_transform(lVar4.Inns,0),
                                   lVar4 == null ||
                                   ((lVar4 = Transform.Find(lVar4,"BattleEndUI",0), lVar4 == null ||
                                    (lVar4 = Transform.Find(lVar4,"Info",0)) == null)))))
@@ -271,8 +270,8 @@ public class <BattleEnd>d__274
                             }
                             else {
                               lVar4 = FUN_18046c1a0(0);
-                              if ((((lVar4 == null) || (*(int64 *)(lVar4 + 56) == 0)) ||
-                                  (lVar4 = GameObject.get_transform(*(int64 *)(lVar4 + 56),0),
+                              if ((((lVar4 == null) || (lVar4.Inns == null)) ||
+                                  (lVar4 = GameObject.get_transform(lVar4.Inns,0),
                                   lVar4 == null)) ||
                                  ((lVar4 = Transform.Find(lVar4,"BattleEndUI",0), lVar4 == null ||
                                   (lVar4 = Transform.Find(lVar4,"Info",0)) == null))) {
@@ -302,7 +301,7 @@ public class <BattleEnd>d__274
                               if ((*(int64 *)(lVar11 + 0x1b0) == 0) ||
                                  (lVar4 = *(int64 *)(*(int64 *)(lVar11 + 0x1b0) + 168)) == null
                                  ) goto LAB_1809c216e;
-                              local_res20[0] = *(uint32 *)(lVar4 + 16);
+                              local_res20[0] = lVar4.chapter;
                               lVar4 = il2cpp_value_box(DAT_181d80418,local_res20);
                               if ((lVar4 != null) &&
                                  (lVar7 = il2cpp_internal(lVar4,*(uint64 *)(*plVar6 + 64)),
@@ -359,11 +358,11 @@ public class <BattleEnd>d__274
                               uVar9 = String.Format("战斗时长 {0}    击败敌人 {1}    造成伤害 {2}    承受伤害 {3}",plVar6,0);
                               LTLocalization.SetText(uVar5,uVar9,0);
                               lVar4 = FUN_18046c0a0(0);
-                              if ((((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
+                              if ((((lVar4 == null) || (lVar4.villageAreaID == null)) ||
                                   (*(int64 *)(lVar11 + 0x1b0) == 0)) ||
                                  (lVar7 = *(int64 *)(*(int64 *)(lVar11 + 0x1b0) + 168)) == null
                                  ) goto LAB_1809c216e;
-                              piVar1 = (int *)(*(int64 *)(lVar4 + 32) + 0x194);
+                              piVar1 = (int *)(lVar4.villageAreaID + 0x194);
                               *piVar1 = *piVar1 + *(int *)(lVar7 + 16);
                               lVar4 = FUN_18046c100(0);
                               if (((*(int64 *)(lVar11 + 0x1b0) == 0) ||
@@ -373,14 +372,14 @@ public class <BattleEnd>d__274
                               if ((*(int64 *)(lVar11 + 0x1b0) == 0) ||
                                  (lVar4 = *(int64 *)(*(int64 *)(lVar11 + 0x1b0) + 168)) == null
                                  ) goto LAB_1809c216e;
-                              if (9 < *(int *)(lVar4 + 16)) {
+                              if (9 < lVar4.chapter) {
                                 lVar4 = FUN_18046c100(0);
                                 if (lVar4 == null) break;
                                 GameDataController.ChangeAchStats(lVar4,23);
                               }
                               lVar4 = FUN_18046c0a0(0);
-                              if (((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
-                                 (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null)
+                              if (((lVar4 == null) || (lVar4.villageAreaID == null)) ||
+                                 (lVar4 = WorldData.Player(lVar4.villageAreaID,0)) == null)
                               break;
                               HeroData.AddTag(lVar4,0x163);
                             }
@@ -390,8 +389,8 @@ public class <BattleEnd>d__274
                                lVar4 == null)) break;
                             if (*(char *)(lVar4 + 20) != false) {
                               lVar4 = FUN_18046c0a0(0);
-                              if ((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) break;
-                              piVar1 = (int *)(*(int64 *)(lVar4 + 32) + 400);
+                              if ((lVar4 == null) || (lVar4.villageAreaID == null)) break;
+                              piVar1 = (int *)(lVar4.villageAreaID + 400);
                               *piVar1 = *piVar1 + 1;
                               lVar4 = FUN_18046c100(0);
                               if (lVar4 == null) break;
@@ -406,8 +405,8 @@ public class <BattleEnd>d__274
                                 goto LAB_1809c0390;
                               }
                               lVar4 = FUN_18046c0a0(0);
-                              if (((lVar4 != null) && (*(int64 *)(lVar4 + 32) != 0)) &&
-                                 (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) != null) {
+                              if (((lVar4 != null) && (lVar4.villageAreaID != null)) &&
+                                 (lVar4 = WorldData.Player(lVar4.villageAreaID,0)) != null) {
                                 fVar16 = (float)Mathf.Min(*(float *)(lVar4 + 0x1c4) * -0.01);
                                 local_res8[0] = fVar16;
                                 fVar17 = (float)Mathf.Max();
@@ -425,14 +424,14 @@ public class <BattleEnd>d__274
                           while( true ) {
                             if (((*(int64 *)(lVar11 + 112) == 0) ||
                                 (lVar4 = FUN_180002f80()) == null) ||
-                               (*(int64 *)(lVar4 + 24) == 0)) goto LAB_1809c20e2;
-                            if (*(int *)(*(int64 *)(lVar4 + 24) + 24) <= iVar14) break;
+                               (lVar4.cityAreaID == null)) goto LAB_1809c20e2;
+                            if (*(int *)(lVar4.cityAreaID + 24) <= iVar14) break;
                             if ((((*(int64 *)(lVar11 + 112) == 0) ||
                                  (lVar4 = FUN_180002f80(*(int64 *)(lVar11 + 112),iVar13,DAT_181d7f830)
-                                 , lVar4 == null)) || (*(int64 *)(lVar4 + 24) == 0)) ||
-                               (lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 24),iVar14,DAT_181d7fc20),
+                                 , lVar4 == null)) || (lVar4.cityAreaID == null)) ||
+                               (lVar4 = FUN_180002f80(lVar4.cityAreaID,iVar14,DAT_181d7fc20),
                                lVar4 == null)) goto LAB_1809c20e2;
-                            lVar4 = *(int64 *)(lVar4 + 64);
+                            lVar4 = lVar4.ResourcePoints;
                             if (((*(int64 *)(lVar11 + 112) == 0) ||
                                 (lVar7 = FUN_180002f80(*(int64 *)(lVar11 + 112),iVar13,DAT_181d7f830),
                                 lVar7 == null)) || (*(int64 *)(lVar7 + 24) == 0)) goto LAB_1809c20e2;
@@ -440,7 +439,7 @@ public class <BattleEnd>d__274
                             uVar15 = BattleController.CountHeroBattleContribution
                                                (lVar11,uVar5,iVar13 == *(int *)(lVar11 + 48));
                             if (lVar4 == null) goto LAB_1809c20e2;
-                            *(uint32 *)(lVar4 + 176) = uVar15;
+                            lVar4.TimeDifficulty = uVar15;
                             if (((*(int64 *)(lVar11 + 112) == 0) ||
                                 (lVar4 = FUN_180002f80(*(int64 *)(lVar11 + 112),iVar13,DAT_181d7f830),
                                 lVar4 == null)) ||
@@ -448,9 +447,9 @@ public class <BattleEnd>d__274
                                 ((((*(int64 *)(lVar11 + 112) == 0 ||
                                    (lVar4 = FUN_180002f80(*(int64 *)(lVar11 + 112),iVar13,
                                                           DAT_181d7f830), lVar4 == null)) ||
-                                  (*(int64 *)(lVar4 + 24) == 0)) ||
-                                 ((lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 24),iVar14,DAT_181d7fc20)
-                                  , lVar4 == null || (*(int64 *)(lVar4 + 64) == 0))))))))
+                                  (lVar4.cityAreaID == null)) ||
+                                 ((lVar4 = FUN_180002f80(lVar4.cityAreaID,iVar14,DAT_181d7fc20)
+                                  , lVar4 == null || (lVar4.ResourcePoints == null))))))))
                             goto LAB_1809c20e2;
                             iVar14 = iVar14 + 1;
                           }
@@ -465,7 +464,7 @@ public class <BattleEnd>d__274
             }
             lVar4 = FUN_18046c400(0);
             if (lVar4 != null) {
-              if (*(char *)(lVar4 + 24) != false) {
+              if (lVar4.cityAreaID) {
         LAB_1809c1f2c:
                 uVar5 = new WaitForSecondsRealtime();
                 this.<>2__current = uVar5;
@@ -475,12 +474,12 @@ public class <BattleEnd>d__274
               lVar7 = FUN_18046c400(0);
               lVar4 = *(int64 *)(lVar11 + 128);
               if (lVar4 != null) {
-                if (*(int *)(lVar4 + 24) == 0) {
+                if (lVar4.cityAreaID == null) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
-                lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 32);
+                lVar4 = *(int64 *)(lVar4.chapter + 32);
                 if ((lVar4 != null) && (lVar7 != null)) {
-                  PlotController.ChangePlotDataBase(lVar7,*(uint32 *)(lVar4 + 32),0);
+                  PlotController.ChangePlotDataBase(lVar7,lVar4.villageAreaID,0);
                   if (*(int64 *)(lVar11 + 128) != 0) {
                     FUN_181823590(*(int64 *)(lVar11 + 128),0,DAT_181d7f3b0);
                     goto LAB_1809c1f2c;
@@ -504,12 +503,12 @@ public class <BattleEnd>d__274
         LAB_1809c0543:
             local_res8[0] = fVar18 * fVar17 * fVar16;
             lVar4 = FUN_18046c0a0(0);
-            if (((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
-               (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null) goto LAB_1809c20e2;
+            if (((lVar4 == null) || (lVar4.villageAreaID == null)) ||
+               (lVar4 = WorldData.Player(lVar4.villageAreaID,0)) == null) goto LAB_1809c20e2;
             HeroData.ChangeFame(lVar4);
             lVar4 = FUN_18046c1a0(0);
-            if (((lVar4 == null) || (*(int64 *)(lVar4 + 56) == 0)) ||
-               ((lVar4 = GameObject.get_transform(*(int64 *)(lVar4 + 56),0), lVar4 == null ||
+            if (((lVar4 == null) || (lVar4.Inns == null)) ||
+               ((lVar4 = GameObject.get_transform(lVar4.Inns,0), lVar4 == null ||
                 ((lVar4 = Transform.Find(lVar4,"BattleEndUI",0), lVar4 == null ||
                  (lVar4 = Transform.Find(lVar4,"Fame",0)) == null))))) goto LAB_1809c20e2;
             uVar5 = Component.GetComponent(lVar4,DAT_181d96160);
@@ -530,23 +529,23 @@ public class <BattleEnd>d__274
             uVar9 = String.Concat(uVar9,uVar10,"</color>",0);
             LTLocalization.SetText(uVar5,uVar9,0);
             lVar4 = FUN_18046c1a0(0);
-            if ((((lVar4 == null) || (*(int64 *)(lVar4 + 56) == 0)) ||
-                (lVar4 = GameObject.get_transform(*(int64 *)(lVar4 + 56),0)) == null) ||
+            if ((((lVar4 == null) || (lVar4.Inns == null)) ||
+                (lVar4 = GameObject.get_transform(lVar4.Inns,0)) == null) ||
                ((lVar4 = Transform.Find(lVar4,"BattleEndUI",0), lVar4 == null ||
                 (lVar4 = Transform.Find(lVar4,"BaseSkillGrid",0)) == null))) goto LAB_1809c20e2;
             uVar5 = Component.get_gameObject(lVar4,0);
             GlobalData.DeleteAllChild(uVar5,0);
             lVar4 = FUN_18046c1a0(0);
-            if (((lVar4 == null) || (*(int64 *)(lVar4 + 56) == 0)) ||
-               ((lVar4 = GameObject.get_transform(*(int64 *)(lVar4 + 56),0), lVar4 == null ||
+            if (((lVar4 == null) || (lVar4.Inns == null)) ||
+               ((lVar4 = GameObject.get_transform(lVar4.Inns,0), lVar4 == null ||
                 ((lVar4 = Transform.Find(lVar4,"BattleEndUI",0), lVar4 == null ||
                  (lVar4 = Transform.Find(lVar4,"SkillGrid",0)) == null))))) goto LAB_1809c20e2;
             uVar5 = Component.get_gameObject(lVar4,0);
             GlobalData.DeleteAllChild(uVar5,0);
             lVar4 = FUN_18046c1a0(0);
             if ((lVar4 == null) ||
-               ((((*(int64 *)(lVar4 + 56) == 0 ||
-                  (lVar4 = GameObject.get_transform(*(int64 *)(lVar4 + 56),0)) == null) ||
+               ((((lVar4.Inns == null ||
+                  (lVar4 = GameObject.get_transform(lVar4.Inns,0)) == null) ||
                  (lVar4 = Transform.Find(lVar4,"BattleEndUI",0)) == null) ||
                 ((lVar4 = Transform.Find(lVar4,"SkillCountInfo",0), lVar4 == null ||
                  (lVar4 = Component.GetComponent(lVar4,DAT_181d95560)) == null)))))
@@ -555,18 +554,18 @@ public class <BattleEnd>d__274
             *puVar8 = "";
             il2cpp_internal(puVar8);
             lVar4 = FUN_18046c0a0(0);
-            if (((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
-               (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null) goto LAB_1809c20e2;
-            if (*(int64 *)(lVar4 + 0x270) != 0) {
+            if (((lVar4 == null) || (lVar4.villageAreaID == null)) ||
+               (lVar4 = WorldData.Player(lVar4.villageAreaID,0)) == null) goto LAB_1809c20e2;
+            if (lVar4.herosDictLock != null) {
               lVar4 = FUN_18046c1a0(0);
-              if ((((lVar4 == null) || (*(int64 *)(lVar4 + 56) == 0)) ||
-                  (lVar4 = GameObject.get_transform(*(int64 *)(lVar4 + 56),0)) == null) ||
+              if ((((lVar4 == null) || (lVar4.Inns == null)) ||
+                  (lVar4 = GameObject.get_transform(lVar4.Inns,0)) == null) ||
                  ((lVar4 = Transform.Find(lVar4,"BattleEndUI",0), lVar4 == null ||
                   (lVar4 = Transform.Find(lVar4,"BaseSkillGrid",0)) == null))) goto LAB_1809c20e2;
               uVar5 = Component.get_gameObject(lVar4,0);
               lVar4 = FUN_18046c1a0(0);
               if (lVar4 == null) goto LAB_1809c20e2;
-              uVar9 = *(uint64 *)(lVar4 + 184);
+              uVar9 = lVar4.forceMeetingStarted;
               uVar5 = GlobalData.AddChild(uVar5,uVar9,0);
               *(uint64 *)(lVar11 + 0x280) = uVar5;
               if (*(int64 *)(lVar11 + 0x280) == 0) goto LAB_1809c20e2;
@@ -575,12 +574,12 @@ public class <BattleEnd>d__274
               if ((((lVar7 == null) || (*(int64 *)(lVar7 + 32) == 0)) ||
                   (lVar7 = WorldData.Player(*(int64 *)(lVar7 + 32),0)) == null) || (lVar4 == null))
               goto LAB_1809c20e2;
-              *(uint64 *)(lVar4 + 24) = *(uint64 *)(lVar7 + 0x270);
+              lVar4.cityAreaID = *(uint64 *)(lVar7 + 0x270);
               lVar4 = FUN_18046c0a0(0);
-              if (((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
-                 ((lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0), lVar4 == null ||
-                  (*(int64 *)(lVar4 + 0x270) == 0)))) goto LAB_1809c20e2;
-              if (0 < *(int *)(*(int64 *)(lVar4 + 0x270) + 92)) {
+              if (((lVar4 == null) || (lVar4.villageAreaID == null)) ||
+                 ((lVar4 = WorldData.Player(lVar4.villageAreaID,0), lVar4 == null ||
+                  (lVar4.herosDictLock == null)))) goto LAB_1809c20e2;
+              if (0 < *(int *)(lVar4.herosDictLock + 92)) {
                 uVar5 = *puVar8;
                 cVar2 = FUN_180d755b0(uVar5,0);
                 uVar9 = "\n";
@@ -588,28 +587,28 @@ public class <BattleEnd>d__274
                   uVar9 = "";
                 }
                 lVar4 = FUN_18046c0a0(0);
-                if ((((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
-                    (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null) ||
-                   (*(int64 *)(lVar4 + 0x270) == 0)) goto LAB_1809c20e2;
-                uVar10 = KungfuSkillLvData.GetSkillBattleCountDescribe(*(int64 *)(lVar4 + 0x270),0);
+                if ((((lVar4 == null) || (lVar4.villageAreaID == null)) ||
+                    (lVar4 = WorldData.Player(lVar4.villageAreaID,0)) == null) ||
+                   (lVar4.herosDictLock == null)) goto LAB_1809c20e2;
+                uVar10 = KungfuSkillLvData.GetSkillBattleCountDescribe(lVar4.herosDictLock,0);
                 uVar5 = String.Concat(uVar5,uVar9,uVar10,0);
                 *puVar8 = uVar5;
                 il2cpp_internal(puVar8,uVar5);
               }
             }
             lVar4 = FUN_18046c0a0(0);
-            if (((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
-               (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null) goto LAB_1809c20e2;
-            if (*(int64 *)(lVar4 + 0x280) != 0) {
+            if (((lVar4 == null) || (lVar4.villageAreaID == null)) ||
+               (lVar4 = WorldData.Player(lVar4.villageAreaID,0)) == null) goto LAB_1809c20e2;
+            if (lVar4.tempHerosDictLock != null) {
               lVar4 = FUN_18046c1a0(0);
-              if ((((lVar4 == null) || (*(int64 *)(lVar4 + 56) == 0)) ||
-                  (lVar4 = GameObject.get_transform(*(int64 *)(lVar4 + 56),0)) == null) ||
+              if ((((lVar4 == null) || (lVar4.Inns == null)) ||
+                  (lVar4 = GameObject.get_transform(lVar4.Inns,0)) == null) ||
                  ((lVar4 = Transform.Find(lVar4,"BattleEndUI",0), lVar4 == null ||
                   (lVar4 = Transform.Find(lVar4,"BaseSkillGrid",0)) == null))) goto LAB_1809c20e2;
               uVar5 = Component.get_gameObject(lVar4,0);
               lVar4 = FUN_18046c1a0(0);
               if (lVar4 == null) goto LAB_1809c20e2;
-              uVar9 = *(uint64 *)(lVar4 + 184);
+              uVar9 = lVar4.forceMeetingStarted;
               uVar5 = GlobalData.AddChild(uVar5,uVar9,0);
               *(uint64 *)(lVar11 + 0x280) = uVar5;
               if (*(int64 *)(lVar11 + 0x280) == 0) goto LAB_1809c20e2;
@@ -618,12 +617,12 @@ public class <BattleEnd>d__274
               if ((((lVar7 == null) || (*(int64 *)(lVar7 + 32) == 0)) ||
                   (lVar7 = WorldData.Player(*(int64 *)(lVar7 + 32),0)) == null) || (lVar4 == null))
               goto LAB_1809c20e2;
-              *(uint64 *)(lVar4 + 24) = *(uint64 *)(lVar7 + 0x280);
+              lVar4.cityAreaID = *(uint64 *)(lVar7 + 0x280);
               lVar4 = FUN_18046c0a0(0);
-              if (((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
-                 ((lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0), lVar4 == null ||
-                  (*(int64 *)(lVar4 + 0x280) == 0)))) goto LAB_1809c20e2;
-              if (0 < *(int *)(*(int64 *)(lVar4 + 0x280) + 92)) {
+              if (((lVar4 == null) || (lVar4.villageAreaID == null)) ||
+                 ((lVar4 = WorldData.Player(lVar4.villageAreaID,0), lVar4 == null ||
+                  (lVar4.tempHerosDictLock == null)))) goto LAB_1809c20e2;
+              if (0 < *(int *)(lVar4.tempHerosDictLock + 92)) {
                 uVar5 = *puVar8;
                 cVar2 = FUN_180d755b0(uVar5,0);
                 uVar9 = "\n";
@@ -631,28 +630,28 @@ public class <BattleEnd>d__274
                   uVar9 = "";
                 }
                 lVar4 = FUN_18046c0a0(0);
-                if ((((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
-                    (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null) ||
-                   (*(int64 *)(lVar4 + 0x280) == 0)) goto LAB_1809c20e2;
-                uVar10 = KungfuSkillLvData.GetSkillBattleCountDescribe(*(int64 *)(lVar4 + 0x280),0);
+                if ((((lVar4 == null) || (lVar4.villageAreaID == null)) ||
+                    (lVar4 = WorldData.Player(lVar4.villageAreaID,0)) == null) ||
+                   (lVar4.tempHerosDictLock == null)) goto LAB_1809c20e2;
+                uVar10 = KungfuSkillLvData.GetSkillBattleCountDescribe(lVar4.tempHerosDictLock,0);
                 uVar5 = String.Concat(uVar5,uVar9,uVar10,0);
                 *puVar8 = uVar5;
                 il2cpp_internal(puVar8,uVar5);
               }
             }
             lVar4 = FUN_18046c0a0(0);
-            if (((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
-               (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null) goto LAB_1809c20e2;
-            if (*(int64 *)(lVar4 + 0x290) != 0) {
+            if (((lVar4 == null) || (lVar4.villageAreaID == null)) ||
+               (lVar4 = WorldData.Player(lVar4.villageAreaID,0)) == null) goto LAB_1809c20e2;
+            if (lVar4.AreasDict != null) {
               lVar4 = FUN_18046c1a0(0);
-              if ((((lVar4 == null) || (*(int64 *)(lVar4 + 56) == 0)) ||
-                  (lVar4 = GameObject.get_transform(*(int64 *)(lVar4 + 56),0)) == null) ||
+              if ((((lVar4 == null) || (lVar4.Inns == null)) ||
+                  (lVar4 = GameObject.get_transform(lVar4.Inns,0)) == null) ||
                  ((lVar4 = Transform.Find(lVar4,"BattleEndUI",0), lVar4 == null ||
                   (lVar4 = Transform.Find(lVar4,"BaseSkillGrid",0)) == null))) goto LAB_1809c20e2;
               uVar5 = Component.get_gameObject(lVar4,0);
               lVar4 = FUN_18046c1a0(0);
               if (lVar4 == null) goto LAB_1809c20e2;
-              uVar9 = *(uint64 *)(lVar4 + 184);
+              uVar9 = lVar4.forceMeetingStarted;
               uVar5 = GlobalData.AddChild(uVar5,uVar9,0);
               *(uint64 *)(lVar11 + 0x280) = uVar5;
               if (*(int64 *)(lVar11 + 0x280) == 0) goto LAB_1809c20e2;
@@ -661,12 +660,12 @@ public class <BattleEnd>d__274
               if ((((lVar7 == null) || (*(int64 *)(lVar7 + 32) == 0)) ||
                   (lVar7 = WorldData.Player(*(int64 *)(lVar7 + 32),0)) == null) || (lVar4 == null))
               goto LAB_1809c20e2;
-              *(uint64 *)(lVar4 + 24) = *(uint64 *)(lVar7 + 0x290);
+              lVar4.cityAreaID = *(uint64 *)(lVar7 + 0x290);
               lVar4 = FUN_18046c0a0(0);
-              if (((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
-                 ((lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0), lVar4 == null ||
-                  (*(int64 *)(lVar4 + 0x290) == 0)))) goto LAB_1809c20e2;
-              if (0 < *(int *)(*(int64 *)(lVar4 + 0x290) + 92)) {
+              if (((lVar4 == null) || (lVar4.villageAreaID == null)) ||
+                 ((lVar4 = WorldData.Player(lVar4.villageAreaID,0), lVar4 == null ||
+                  (lVar4.AreasDict == null)))) goto LAB_1809c20e2;
+              if (0 < *(int *)(lVar4.AreasDict + 92)) {
                 uVar5 = *puVar8;
                 cVar2 = FUN_180d755b0(uVar5,0);
                 uVar9 = "\n";
@@ -674,10 +673,10 @@ public class <BattleEnd>d__274
                   uVar9 = "";
                 }
                 lVar4 = FUN_18046c0a0(0);
-                if ((((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
-                    (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null) ||
-                   (*(int64 *)(lVar4 + 0x290) == 0)) goto LAB_1809c20e2;
-                uVar10 = KungfuSkillLvData.GetSkillBattleCountDescribe(*(int64 *)(lVar4 + 0x290),0);
+                if ((((lVar4 == null) || (lVar4.villageAreaID == null)) ||
+                    (lVar4 = WorldData.Player(lVar4.villageAreaID,0)) == null) ||
+                   (lVar4.AreasDict == null)) goto LAB_1809c20e2;
+                uVar10 = KungfuSkillLvData.GetSkillBattleCountDescribe(lVar4.AreasDict,0);
                 uVar5 = String.Concat(uVar5,uVar9,uVar10,0);
                 *puVar8 = uVar5;
                 il2cpp_internal(puVar8,uVar5);
@@ -685,32 +684,32 @@ public class <BattleEnd>d__274
             }
             iVar13 = 0;
             while( true ) {
-              if ((*pStatics_2cc8 == 0) ||
-                 (lVar4 = *(int64 *)(*pStatics_2cc8 + 32)) == null)
+              if ((GameController._instance == null) ||
+                 (lVar4 = GameController._instance.worldData) == null)
               goto LAB_1809c2168;
-              lVar4 = *(int64 *)(lVar4 + 80);
+              lVar4 = lVar4.Heros;
               if (lVar4 == null) goto LAB_1809c2168;
-              if (*(int *)(lVar4 + 24) == 0) {
+              if (lVar4.cityAreaID == null) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
-              lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 32);
-              if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 0x2a0)) == null) goto LAB_1809c2168;
-              if (*(int *)(lVar4 + 24) <= iVar13) break;
+              lVar4 = *(int64 *)(lVar4.chapter + 32);
+              if ((lVar4 = lVar4?.innDict) == null) goto LAB_1809c2168;
+              if (lVar4.cityAreaID <= iVar13) break;
               lVar4 = FUN_18046c0a0(0);
-              if ((((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
-                  (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null) ||
-                 (*(int64 *)(lVar4 + 0x2a0) == 0)) goto LAB_1809c20e2;
-              lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 0x2a0),iVar13);
+              if ((((lVar4 == null) || (lVar4.villageAreaID == null)) ||
+                  (lVar4 = WorldData.Player(lVar4.villageAreaID,0)) == null) ||
+                 (lVar4.innDict == null)) goto LAB_1809c20e2;
+              lVar4 = FUN_180002f80(lVar4.innDict,iVar13);
               if (lVar4 != null) {
                 lVar4 = FUN_18046c1a0(0);
-                if (((lVar4 == null) || (*(int64 *)(lVar4 + 56) == 0)) ||
-                   ((lVar4 = GameObject.get_transform(*(int64 *)(lVar4 + 56),0), lVar4 == null ||
+                if (((lVar4 == null) || (lVar4.Inns == null)) ||
+                   ((lVar4 = GameObject.get_transform(lVar4.Inns,0), lVar4 == null ||
                     ((lVar4 = Transform.Find(lVar4,"BattleEndUI",0), lVar4 == null ||
                      (lVar4 = Transform.Find(lVar4,"SkillGrid",0)) == null))))) goto LAB_1809c20e2;
                 uVar5 = Component.get_gameObject(lVar4,0);
                 lVar4 = FUN_18046c1a0(0);
                 if (lVar4 == null) goto LAB_1809c20e2;
-                uVar9 = *(uint64 *)(lVar4 + 184);
+                uVar9 = lVar4.forceMeetingStarted;
                 uVar5 = GlobalData.AddChild(uVar5,uVar9,0);
                 *(uint64 *)(lVar11 + 0x280) = uVar5;
                 if (*(int64 *)(lVar11 + 0x280) == 0) goto LAB_1809c20e2;
@@ -721,13 +720,13 @@ public class <BattleEnd>d__274
                    ((*(int64 *)(lVar7 + 0x2a0) == 0 ||
                     (uVar5 = FUN_180002f80(*(int64 *)(lVar7 + 0x2a0),iVar13,DAT_181d92590), lVar4 == null)
                     ))) goto LAB_1809c2168;
-                *(uint64 *)(lVar4 + 24) = uVar5;
+                lVar4.cityAreaID = uVar5;
                 lVar4 = FUN_18046c0a0(0);
                 if ((((lVar4 == null) ||
-                     ((*(int64 *)(lVar4 + 32) == 0 ||
-                      (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null))) ||
-                    (*(int64 *)(lVar4 + 0x2a0) == 0)) ||
-                   (lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 0x2a0),iVar13)) == null)
+                     ((lVar4.villageAreaID == null ||
+                      (lVar4 = WorldData.Player(lVar4.villageAreaID,0)) == null))) ||
+                    (lVar4.innDict == null)) ||
+                   (lVar4 = FUN_180002f80(lVar4.innDict,iVar13)) == null)
                 goto LAB_1809c2168;
                 if (0 < *(int *)(lVar4 + 92)) {
                   uVar5 = *puVar8;
@@ -737,10 +736,10 @@ public class <BattleEnd>d__274
                     uVar9 = "";
                   }
                   lVar4 = FUN_18046c0a0(0);
-                  if ((((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
-                      (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null) ||
-                     ((*(int64 *)(lVar4 + 0x2a0) == 0 ||
-                      (lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 0x2a0),iVar13,DAT_181d92590),
+                  if ((((lVar4 == null) || (lVar4.villageAreaID == null)) ||
+                      (lVar4 = WorldData.Player(lVar4.villageAreaID,0)) == null) ||
+                     ((lVar4.innDict == null ||
+                      (lVar4 = FUN_180002f80(lVar4.innDict,iVar13,DAT_181d92590),
                       lVar4 == null)))) goto LAB_1809c2168;
                   KungfuSkillLvData.GetSkillBattleCountDescribe(lVar4,0);
                   uVar5 = String.Concat(uVar5,uVar9);
@@ -751,15 +750,15 @@ public class <BattleEnd>d__274
               iVar13 = iVar13 + 1;
             }
             lVar4 = FUN_18046c1a0(0);
-            if ((((lVar4 == null) || (*(int64 *)(lVar4 + 56) == 0)) ||
-                (lVar4 = GameObject.get_transform(*(int64 *)(lVar4 + 56),0)) == null) ||
+            if ((((lVar4 == null) || (lVar4.Inns == null)) ||
+                (lVar4 = GameObject.get_transform(lVar4.Inns,0)) == null) ||
                (((lVar4 = Transform.Find(lVar4,"BattleEndUI",0), lVar4 == null ||
                  (lVar4 = Transform.Find(lVar4,"BaseSkillGrid",0)) == null) ||
                 (lVar4 = Component.GetComponent(lVar4,DAT_181d96960)) == null))) goto LAB_1809c2168;
             UIGrid.set_repositionNow(lVar4,1,0);
             lVar4 = FUN_18046c1a0(0);
-            if (((lVar4 == null) || (*(int64 *)(lVar4 + 56) == 0)) ||
-               ((lVar4 = GameObject.get_transform(*(int64 *)(lVar4 + 56),0), lVar4 == null ||
+            if (((lVar4 == null) || (lVar4.Inns == null)) ||
+               ((lVar4 = GameObject.get_transform(lVar4.Inns,0), lVar4 == null ||
                 (((lVar4 = Transform.Find(lVar4,"BattleEndUI",0), lVar4 == null ||
                   (lVar4 = Transform.Find(lVar4,"SkillGrid",0)) == null) ||
                  (lVar4 = Component.GetComponent(lVar4,DAT_181d96960)) == null)))))
@@ -806,8 +805,8 @@ public class <BattleEnd>d__274
             else {
               plVar6 = (int64 *)(lVar11 + 0x1c0);
               lVar4 = *plVar6;
-              if ((lVar4 == null) || (*(int64 *)(lVar4 + 40) == 0)) goto LAB_1809c2168;
-              if ((*(int *)(*(int64 *)(lVar4 + 40) + 24) < 1) && (*(int *)(lVar4 + 24) < 1)) {
+              if ((lVar4 == null) || (lVar4.forceAreaID == null)) goto LAB_1809c2168;
+              if ((*(int *)(lVar4.forceAreaID + 24) < 1) && (lVar4.cityAreaID < 1)) {
                 if (*(char *)(lVar11 + 0x1b8) == false) goto LAB_1809c15c5;
                 uVar3 = 0;
                 fVar16 = 0.0;
@@ -939,20 +938,20 @@ public class <BattleEnd>d__274
           while( true ) {
             if (((*(int64 *)(lVar11 + 112) == 0) ||
                 (lVar4 = FUN_180002f80(*(int64 *)(lVar11 + 112),iVar13,DAT_181d7f830),
-                fVar16 = local_res8[0], lVar4 == null)) || (*(int64 *)(lVar4 + 24) == 0))
+                fVar16 = local_res8[0], lVar4 == null)) || (lVar4.cityAreaID == null))
             goto LAB_1809c20e2;
-            if (*(int *)(*(int64 *)(lVar4 + 24) + 24) <= iVar14) break;
+            if (*(int *)(lVar4.cityAreaID + 24) <= iVar14) break;
             if (((*(int64 *)(lVar11 + 112) == 0) ||
                 (lVar4 = FUN_180002f80(*(int64 *)(lVar11 + 112),iVar13,DAT_181d7f830)) == null) ||
-               ((*(int64 *)(lVar4 + 24) == 0 ||
-                ((lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 24),iVar14,DAT_181d7fc20), lVar4 == null ||
-                 (*(int64 *)(lVar4 + 64) == 0)))))) goto LAB_1809c20e2;
-            if (*(char *)(*(int64 *)(lVar4 + 64) + 16) == false) {
+               ((lVar4.cityAreaID == null ||
+                ((lVar4 = FUN_180002f80(lVar4.cityAreaID,iVar14,DAT_181d7fc20), lVar4 == null ||
+                 (lVar4.ResourcePoints == null)))))) goto LAB_1809c20e2;
+            if (*(char *)(lVar4.ResourcePoints + 16) == false) {
               if ((((*(int64 *)(lVar11 + 112) == 0) ||
                    (lVar4 = FUN_180002f80(*(int64 *)(lVar11 + 112),iVar13,DAT_181d7f830)) == null)
-                  || (*(int64 *)(lVar4 + 24) == 0)) ||
-                 ((lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 24),iVar14,DAT_181d7fc20), lVar4 == null ||
-                  (*(int64 *)(lVar4 + 64) == 0)))) goto LAB_1809c20e2;
+                  || (lVar4.cityAreaID == null)) ||
+                 ((lVar4 = FUN_180002f80(lVar4.cityAreaID,iVar14,DAT_181d7fc20), lVar4 == null ||
+                  (lVar4.ResourcePoints == null)))) goto LAB_1809c20e2;
               local_res8[0] = (float)Mathf.Max();
               local_res8[0] = fVar16 + local_res8[0];
               iVar14 = iVar14 + 1;

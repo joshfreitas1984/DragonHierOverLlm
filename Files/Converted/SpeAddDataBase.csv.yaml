@@ -1718,8 +1718,6 @@
   - split: 4
     text: "摧折"
     translated: "Breaking"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Shatter,摧折,"
     qcReviewedText: "Breaking"
     qcStatus: Passed
     qcQualityScore: 100
@@ -1943,6 +1941,10 @@
   - split: 3
     text: "断腕"
     translated: "Severed Wrist"
+    qcReviewedText: "Severed Wrist"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 4
     text: "顺受"
     translated: "Submit willingly"
@@ -3760,6 +3762,10 @@
   - split: 3
     text: "断腕"
     translated: "Severed Wrist"
+    qcReviewedText: "Severed Wrist"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 4
     text: "无"
     translated: "None"

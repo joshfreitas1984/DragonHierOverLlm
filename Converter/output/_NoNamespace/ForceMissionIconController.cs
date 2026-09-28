@@ -10,7 +10,6 @@ public class ForceMissionIconController
     // RVA   : 0x77B830   Offset: 0x77AC30   Length: 0x565
     public void OnClick()
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
         bool cVar1;
         long lVar2;
@@ -22,8 +21,8 @@ public class ForceMissionIconController
         uint local_28;
         uint uStack_24;
         byte[] local_18 = new byte[16];
-        if (*pStatics_2cc8 == 0) throw; // [null/range check failed]
-        cVar1 = GameController.HaveSpeUI(*pStatics_2cc8,1,0);
+        if (GameController._instance == null) throw; // [null/range check failed]
+        cVar1 = GameController.HaveSpeUI(GameController._instance,1,0);
         uVar7 = "Sound/SoundEffect/WrongClick";
         if (cVar1) {
         LAB_18077bd38:

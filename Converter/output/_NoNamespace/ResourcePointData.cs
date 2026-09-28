@@ -77,11 +77,10 @@ public class ResourcePointData
     // RVA   : 0xD174F0   Offset: 0xD168F0   Length: 0xDC
     public string GetResourcePointFullName()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         ulong uVar2;
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null) {
           lVar1 = WorldData.GetArea(lVar1,this.connectAreaID,0);
           if (lVar1 != null) {
             uVar2 = AreaData.GetAreaName(lVar1,0);
@@ -243,14 +242,13 @@ public class ResourcePointData
     // RVA   : 0xD17380   Offset: 0xD16780   Length: 0xCC
     public ForceData GetForce()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         ulong uVar2;
         if (this.belongForceID == -1) {
           return 0;
         }
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null) {
           uVar2 = WorldData.GetForce(lVar1,this.belongForceID,0);
           return uVar2;
         }
@@ -260,14 +258,13 @@ public class ResourcePointData
     // RVA   : 0xD17150   Offset: 0xD16550   Length: 0xCC
     public AreaData GetArea()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         ulong uVar2;
         if (this.connectAreaID == -1) {
           return 0;
         }
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null) {
           uVar2 = WorldData.GetArea(lVar1,this.connectAreaID,0);
           return uVar2;
         }

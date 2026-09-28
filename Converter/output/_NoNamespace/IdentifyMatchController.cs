@@ -66,7 +66,6 @@ public class IdentifyMatchController
     // RVA   : 0xC962B0   Offset: 0xC956B0   Length: 0x399
     public void ShowIdentifyMatchUI(float _difficulty, string _fightEndCallFuc)
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
         void IdentifyMatchController.ShowIdentifyMatchUI
                      (int64 this,uint32 _difficulty,uint64 _fightEndCallFuc)
@@ -97,8 +96,8 @@ public class IdentifyMatchController
           this.playerIcon = uVar5;
           if (this.playerIcon == null) throw; // [null/range check failed]
           lVar4 = GameObject.GetComponent(this.playerIcon,DAT_181d71b50);
-          if ((*pStatics_2cc8 == 0) ||
-             (lVar2 = *(int64 *)(*pStatics_2cc8 + 32)) == null)
+          if ((GameController._instance == null) ||
+             (lVar2 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
           uVar5 = WorldData.Player(lVar2,0);
           if (lVar4 == null) throw; // [null/range check failed]
@@ -133,13 +132,12 @@ public class IdentifyMatchController
     // RVA   : 0xC95B50   Offset: 0xC94F50   Length: 0x2D8
     public void HideIdentifyMatchUI()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
         ulong uVar4;
-        if ((*pStatics != 0) &&
-           (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar2 = GameController._instance.worldData) != null) {
           lVar2 = WorldData.Player(lVar2,0);
           if (lVar2 != null) {
             HeroData.ChangeLivingSkillExp

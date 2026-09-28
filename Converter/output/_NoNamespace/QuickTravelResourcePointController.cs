@@ -20,22 +20,21 @@ public class QuickTravelResourcePointController
     // RVA   : 0xD011E0   Offset: 0xD005E0   Length: 0x348
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d8b790 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
         this.hightLight = 0;
-        uVar2 = *(uint64 *)(pStatics + 72);
+        uVar2 = MouseController.hoveredUI;
         cVar1 = Object.op_Inequality(uVar2,0,0);
         if (cVar1) {
-          if (*(int64 *)(pStatics + 72) == 0) throw; // [null/range check failed]
+          if (MouseController.hoveredUI == null) throw; // [null/range check failed]
           uVar2 = GameObject.GetComponent();
           cVar1 = Object.op_Inequality(uVar2,0,0);
           if (cVar1) {
-            if ((*(int64 *)(pStatics + 72) == 0) ||
+            if ((MouseController.hoveredUI == null) ||
                (lVar3 = GameObject.GetComponent()) == null) throw; // [null/range check failed]
             if (*(int64 *)(lVar3 + 24) != 0) {
-              if ((((*(int64 *)(pStatics + 72) == 0) ||
+              if ((((MouseController.hoveredUI == null) ||
                    (lVar3 = GameObject.GetComponent()) == null) || (*(int64 *)(lVar3 + 24) == 0)
                   ) || (this.resourcePointData == null)) throw; // [null/range check failed]
               if (*(int *)(*(int64 *)(lVar3 + 24) + 60) ==
@@ -85,7 +84,6 @@ public class QuickTravelResourcePointController
     // RVA   : 0xD00CA0   Offset: 0xD000A0   Length: 0x533
     public void RefreshState()
     {
-        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
         var pStatics_4000 = *(int64*)(DAT_181d94000 + 184);
         bool cVar1;
         long lVar3;
@@ -93,8 +91,8 @@ public class QuickTravelResourcePointController
         uint local_30;
         ulong local_28;
         ulong uStack_20;
-        if (*(int *)(pStatics_3d40 + 8) == 1) {
-          lVar3 = *(int64 *)(pStatics_3d40 + 24);
+        if (PlotController.fightSkillIndexCache == 1) {
+          lVar3 = PlotController._instance;
           if ((this.resourcePointData == null) || (lVar3 == null)) throw; // [null/range check failed]
           cVar1 = FUN_18182a3a0(lVar3,this.resourcePointData.connectAreaID,DAT_181d8f398)
           ;
@@ -253,7 +251,6 @@ public class QuickTravelResourcePointController
     // RVA   : 0xD009A0   Offset: 0xCFFDA0   Length: 0x1D2
     public void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         long lVar2;
         long lVar3;
@@ -265,8 +262,8 @@ public class QuickTravelResourcePointController
         lVar1 = this.resourcePointData;
         lVar2 = **(int64 **)(DAT_181da8710 + 184);
         if (lVar1 != null) {
-          if (((*pStatics != 0) &&
-              (lVar3 = *(int64 *)(*pStatics + 32)) != null) &&
+          if (((GameController._instance != null) &&
+              (lVar3 = GameController._instance.worldData) != null) &&
              (lVar3 = WorldData.GetArea(lVar3,lVar1.connectAreaID,0)) != null) {
             uVar4 = AreaData.GetAreaName(lVar3,0);
             uVar4 = String.Concat(uVar4,lVar1.resourcePointName,0);

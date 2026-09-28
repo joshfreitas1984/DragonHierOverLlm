@@ -543,7 +543,6 @@ public class AttriNumData
     // RVA   : 0x7EFB40   Offset: 0x7EEF40   Length: 0x728
     public float GetSkillNeedExpRate(HeroData targetHero)
     {
-        var pStatics = *(int64*)(DAT_181d72d50 + 184);
         long lVar1;
         uint uVar2;
         uint uVar3;
@@ -638,7 +637,7 @@ public class AttriNumData
           if (fVar6 != 0.0) {
             if (targetHero == null) goto LAB_1807f0263;
             fVar7 = *(float *)(targetHero + 0x17c);
-            lVar1 = *(int64 *)(pStatics + 32);
+            lVar1 = GameController.lockObj;
             if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 144)) == null) goto LAB_1807f0263;
             if (lVar1.Count < 58) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -658,7 +657,7 @@ public class AttriNumData
           if (fVar6 != 0.0) {
             if (targetHero == null) goto LAB_1807f0263;
             fVar7 = *(float *)(targetHero + 0x188);
-            lVar1 = *(int64 *)(pStatics + 32);
+            lVar1 = GameController.lockObj;
             if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 144)) == null) goto LAB_1807f0263;
             if (lVar1.Count < 59) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -678,7 +677,7 @@ public class AttriNumData
           if (fVar6 != 0.0) {
             if (targetHero == null) goto LAB_1807f0263;
             fVar7 = *(float *)(targetHero + 0x194);
-            lVar1 = *(int64 *)(pStatics + 32);
+            lVar1 = GameController.lockObj;
             if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 144)) == null) goto LAB_1807f0263;
             if (lVar1.Count < 60) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);

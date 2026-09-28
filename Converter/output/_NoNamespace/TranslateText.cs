@@ -74,7 +74,6 @@ public class TranslateText
     // RVA   : 0xADF790   Offset: 0xADEB90   Length: 0x1A5
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d84898 + 184);
         int iVar1;
         bool cVar2;
         ulong uVar3;
@@ -84,8 +83,8 @@ public class TranslateText
         cVar2 = String.op_Inequality(uVar3,"TitleScene",0);
         if (!cVar2) {
           iVar1 = this.nowLanguageVersion;
-          if (iVar1 != *(int *)(pStatics + 8)) {
-            this.nowLanguageVersion = *(uint32 *)(pStatics + 8);
+          if (iVar1 != LTLocalization.languageVersion) {
+            this.nowLanguageVersion = LTLocalization.languageVersion;
             TranslateText.AutoTranslateText(this,0);
             return;
           }

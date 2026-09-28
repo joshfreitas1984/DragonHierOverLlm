@@ -7,7 +7,7 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "0,正厅,0,0,1,1,0,门派弟子?查看弟子相关信息--ShowForceHero;门派职位?管理门派特殊职位-我&长老-ManageForceSetting;弟子方针?设定弟子行动方针-我&长老-ManageForceHeroSetting;门派外交?与其他门派进行外交-非我-InteractOtherForce;门派科研?查看门派科研情况-我-ShowResearch;查看科研?查看门派科研情况-非我-ShowResearch;门派委托?完成门派委托获取银钱和门派功绩-我&入门弟子-ShowBuildingMission;挥师出征?向周遭区域发起攻击-我&掌门-LeaderManageForceAttack;外交派遣?派遣信使进行外交-我&掌门-LeaderInteractOtherForce;别派委托?完成别派委托获取银钱和别派功绩-非我-ShowOtherForceMission;功绩兑换?功绩兑换武学/服装/特殊建筑-非我-ShowContributionExchange,威望+10,,区域上限2;弟子上限20;仓储容量4,,威望400;银钱2000;粮食1000;木料1000;矿石1000,30,2,,-1,bigdoor,0;0,门派正中之厅堂，亦是一门之中最为重要之建筑，掌门往往在此安排事务，举办会议，会见宾客。"
+- raw: "0,正厅,0,0,1,1,0,门派弟子?查看弟子相关信息--ShowForceHero;门派职位?管理门派特殊职位-我&长老-ManageForceSetting;弟子方针?设定弟子行动方针-我&长老-ManageForceHeroSetting;门派外交?与其他门派进行外交-非我-InteractOtherForce;门派科研?查看门派科研情况-我-ShowResearch;查看科研?查看门派科研情况-非我-ShowResearch;门派委托?完成门派委托获取银钱和门派功绩-我&入门弟子-ShowBuildingMission;挥师出征?向周遭区域发起攻击-我&掌门-LeaderManageForceAttack;外交派遣?派遣信使进行外交-我&掌门-LeaderInteractOtherForce;别派委托?完成别派委托获取银钱和别派功绩-非我-ShowOtherForceMission;功绩兑换?功绩兑换武学/服装/特殊建筑-非我-ShowContributionExchange;自立门户?挑战该门派并取而代之-无门派-ShowReplaceOtherForce,威望+10,,区域上限2;弟子上限20;仓储容量4,,威望400;银钱2000;粮食1000;木料1000;矿石1000,30,2,,-1,bigdoor,0;0,门派正中之厅堂，亦是一门之中最为重要之建筑，掌门往往在此安排事务，举办会议，会见宾客。"
   splits:
   - split: 19
     text: "门派正中之厅堂，亦是一门之中最为重要之建筑，掌门往往在此安排事务，举办会议，会见宾客。"

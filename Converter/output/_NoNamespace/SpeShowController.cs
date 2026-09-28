@@ -587,7 +587,6 @@ public class SpeShowController
     // RVA   : 0xC59920   Offset: 0xC58D20   Length: 0x30D
     public void ShowSkillLevelUpParticle(GameObject targetObj, KungfuSkillLvData targetSkill)
     {
-        var pStatics = *(int64*)(DAT_181d72d50 + 184);
         void SpeShowController.ShowSkillLevelUpParticle
                      (int64 this,uint64 targetObj,int64 targetSkill)
         {
@@ -601,7 +600,7 @@ public class SpeShowController
         uint32 uStack_1c;
         uVar3 = this.showItemSpark;
         uVar3 = GlobalData.AddChild(targetObj,uVar3,0);
-        lVar2 = *(int64 *)(pStatics + 32);
+        lVar2 = GameController.lockObj;
         if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56), targetSkill != null)) {
           lVar4 = KungfuSkillLvData.DataBase(targetSkill,0);
           if ((lVar4 != null) && (lVar2 != null)) {
@@ -617,7 +616,7 @@ public class SpeShowController
               uStack_1c = *(uint32 *)(lVar2 + 36);
               GlobalData.SetParticleColor(uVar3,&local_28,0);
               uVar3 = GlobalData.AddChild(targetObj,this.showItemImpact,0);
-              lVar2 = *(int64 *)(pStatics + 32);
+              lVar2 = GameController.lockObj;
               if (lVar2 != null) {
                 lVar2 = *(int64 *)(lVar2 + 56);
                 lVar4 = KungfuSkillLvData.DataBase(targetSkill,0);
@@ -634,7 +633,7 @@ public class SpeShowController
                     uStack_1c = *(uint32 *)(lVar2 + 36);
                     GlobalData.SetParticleColor(uVar3,&local_28,0);
                     uVar3 = GlobalData.AddChild(targetObj,this.showItemFlash,0);
-                    lVar2 = *(int64 *)(pStatics + 32);
+                    lVar2 = GameController.lockObj;
                     if (lVar2 != null) {
                       lVar2 = *(int64 *)(lVar2 + 56);
                       lVar4 = KungfuSkillLvData.DataBase(targetSkill,0);

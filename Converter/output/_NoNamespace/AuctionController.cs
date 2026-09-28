@@ -254,12 +254,11 @@ public class AuctionController
     // RVA   : 0x7F18F0   Offset: 0x7F0CF0   Length: 0x470
     public void EndAuction()
     {
-        var pStatics = *(int64*)(DAT_181d91b88 + 184);
         long lVar1;
         ulong uVar2;
         long lVar3;
         if (this.playerSellItem != null) {
-          lVar1 = *(int64 *)(pStatics + 24);
+          lVar1 = BuildingUIController.PartyLvName;
           if (lVar1 == null) throw; // [null/range check failed]
           PlotController.ClearPlayerAuctionItem(lVar1,0);
           this.playerSellItem = 0;
@@ -306,7 +305,7 @@ public class AuctionController
                                     lVar1 = String.Split(lVar1,lVar3,0);
                                     if (lVar1 != null) {
                                       if (*(int *)(lVar1 + 24) < 2) {
-                                        lVar1 = *(int64 *)(pStatics + 24);
+                                        lVar1 = BuildingUIController.PartyLvName;
                                         if (lVar1 != null) {
                                           lVar1 = Component.get_gameObject(lVar1,0);
                                           if (lVar1 != null) {
@@ -317,7 +316,7 @@ public class AuctionController
                                         }
                                       }
                                       else {
-                                        lVar3 = *(int64 *)(pStatics + 24);
+                                        lVar3 = BuildingUIController.PartyLvName;
                                         if (lVar3 != null) {
                                           lVar3 = Component.get_gameObject(lVar3,0);
                                           if (*(uint32 *)(lVar1 + 24) == 0) {
@@ -359,8 +358,6 @@ public class AuctionController
     // RVA   : 0x7F1270   Offset: 0x7F0670   Length: 0x608
     public void AutoFinishAuction()
     {
-        var pStatics_28c8 = *(int64*)(DAT_181dc28c8 + 184);
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         bool cVar1;
         uint uVar2;
         int iVar3;
@@ -370,13 +367,11 @@ public class AuctionController
         int iVar8;
         float fVar9;
         lVar6 = this.auctionItemList;
-        lVar4 = *(int64 *)(pStatics_28c8 + 8);
+        lVar4 = AuctionController.offerHeroTalk;
         if (lVar4 == null) {
           uVar5 = **(uint64 **)(DAT_181dc28c8 + 184);
           lVar4 = new OnTooltipCB(uVar5,DAT_181d96eb8,DAT_181dab4b8);
-          plVar7 = (int64 *)(pStatics_28c8 + 8);
-          *plVar7 = lVar4;
-          il2cpp_internal(plVar7,lVar4);
+          AuctionController.offerHeroTalk = lVar4;
         }
         if (lVar6 == null) throw; // [null/range check failed]
         List_1.Sort(lVar6,lVar4,DAT_181d90e18);
@@ -392,18 +387,16 @@ public class AuctionController
           }
         }
         lVar6 = this.heroList;
-        if (((*pStatics_2cc8 != 0) &&
-            (lVar4 = *(int64 *)(*pStatics_2cc8 + 32)) != null) &&
+        if (((GameController._instance != null) &&
+            (lVar4 = GameController._instance.worldData) != null) &&
            (uVar5 = WorldData.Player(lVar4,0), lVar6 != null)) {
           FUN_1817eee00(lVar6,uVar5,DAT_181d8b898);
           lVar6 = this.heroList;
-          lVar4 = *(int64 *)(pStatics_28c8 + 16);
+          lVar4 = AuctionController.dealHeroTalk;
           if (lVar4 == null) {
             uVar5 = **(uint64 **)(DAT_181dc28c8 + 184);
             lVar4 = new OnTooltipCB(uVar5,DAT_181d96f38,DAT_181dab2b8);
-            plVar7 = (int64 *)(pStatics_28c8 + 16);
-            *plVar7 = lVar4;
-            il2cpp_internal(plVar7,lVar4);
+            AuctionController.dealHeroTalk = lVar4;
           }
           if (lVar6 != null) {
             List_1.Sort(lVar6,lVar4,DAT_181d8ba18);
@@ -1045,14 +1038,13 @@ public class AuctionController
     // RVA   : 0x7F0F80   Offset: 0x7F0380   Length: 0x2E6
     public void AddOfferMoneyButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         float fVar1;
         int iVar2;
         long lVar3;
-        if ((((*pStatics != 0) &&
-             (lVar3 = *(int64 *)(*pStatics + 32)) != null) &&
-            (lVar3 = WorldData.Player(lVar3,0)) != null) && (*(int64 *)(lVar3 + 0x220) != 0)) {
-          iVar2 = *(int *)(*(int64 *)(lVar3 + 0x220) + 24);
+        if ((((GameController._instance != null) &&
+             (lVar3 = GameController._instance.worldData) != null) &&
+            (lVar3 = WorldData.Player(lVar3,0)) != null) && (lVar3.speBookStorageSpeAdd != null)) {
+          iVar2 = *(int *)(lVar3.speBookStorageSpeAdd + 24);
           fVar1 = this.playerOfferMoney;
           lVar3 = this.auctionItemList;
           if (lVar3 != null) {
@@ -1061,9 +1053,9 @@ public class AuctionController
             }
             lVar3 = *(int64 *)(lVar3._items + 32);
             if (lVar3 != null) {
-              if ((float)iVar2 < (float)*(int *)(lVar3 + 56) * 0.1 + fVar1) {
-                if (*pStatics != 0) {
-                  GameController.ShowTextOnMouse(*pStatics,"银钱不足！",0);
+              if ((float)iVar2 < (float)lVar3.Inns * 0.1 + fVar1) {
+                if (GameController._instance != null) {
+                  GameController.ShowTextOnMouse(GameController._instance,"银钱不足！",0);
                   plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
                   plVar5 = (int64 *)0;
                   if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
@@ -1082,7 +1074,7 @@ public class AuctionController
                   }
                   lVar3 = *(int64 *)(lVar3._items + 32);
                   if (lVar3 != null) {
-                    this.playerOfferMoney = (float)*(int *)(lVar3 + 56) * 0.1 + fVar1;
+                    this.playerOfferMoney = (float)lVar3.Inns * 0.1 + fVar1;
                     return;
                   }
                 }
@@ -1096,7 +1088,6 @@ public class AuctionController
     // RVA   : 0x7F2180   Offset: 0x7F1580   Length: 0x1C5
     public void MinusOfferMoneyButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         float fVar1;
         int iVar2;
         long lVar3;
@@ -1112,8 +1103,8 @@ public class AuctionController
             iVar2 = *(int *)(lVar3 + 56);
             fVar4 = (float)AuctionController.GetNextOfferMoney(this,0);
             if (fVar1 - (float)iVar2 * 0.1 < fVar4) {
-              if (*pStatics != 0) {
-                GameController.ShowTextOnMouse(*pStatics,"已是最低出价",0);
+              if (GameController._instance != null) {
+                GameController.ShowTextOnMouse(GameController._instance,"已是最低出价",0);
                 return;
               }
             }
@@ -1139,18 +1130,17 @@ public class AuctionController
     // RVA   : 0x7F37F0   Offset: 0x7F2BF0   Length: 0x2B8
     public void SureOfferMoneyButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         float fVar1;
         long lVar2;
         ulong uVar3;
-        if ((*pStatics != 0) &&
-           (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar2 = GameController._instance.worldData) != null) {
           lVar2 = WorldData.Player(lVar2,0);
-          if ((lVar2 != null) && (*(int64 *)(lVar2 + 0x220) != 0)) {
+          if ((lVar2 != null) && (lVar2.speBookStorageSpeAdd != null)) {
             fVar1 = this.playerOfferMoney;
-            if ((float)*(int *)(*(int64 *)(lVar2 + 0x220) + 24) < fVar1) {
-              if (*pStatics != 0) {
-                GameController.ShowTextOnMouse(*pStatics,"银钱不足！",0);
+            if ((float)*(int *)(lVar2.speBookStorageSpeAdd + 24) < fVar1) {
+              if (GameController._instance != null) {
+                GameController.ShowTextOnMouse(GameController._instance,"银钱不足！",0);
                 plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
                 plVar5 = (int64 *)0;
                 if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
@@ -1161,8 +1151,8 @@ public class AuctionController
               }
             }
             else {
-              if ((*pStatics != 0) &&
-                 (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+              if ((GameController._instance != null) &&
+                 (lVar2 = GameController._instance.worldData) != null) {
                 uVar3 = WorldData.Player(lVar2,0);
                 uVar3 = AuctionController.RefreshOfferMoney(this,fVar1,uVar3,0);
                 FUN_180d8c2e0(this,uVar3,0);
@@ -1261,7 +1251,6 @@ public class AuctionController
     // RVA   : 0x7F4220   Offset: 0x7F3620   Length: 0x3DC
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181daf2c8 + 184);
         long lVar1;
         **(uint32 **)(DAT_181daf2c8 + 184) = 0x40a00000;
         lVar1 = il2cpp_internal(DAT_181d97750);
@@ -1278,9 +1267,7 @@ public class AuctionController
           FUN_18181e0a0(lVar1,"{0}两！今日不拿下此{1}誓不罢休！",DAT_181da3d58);
           FUN_18181e0a0(lVar1,"虽不想与同道相争，奈何这{1}着实诱人，我出{0}两！",DAT_181da3d58);
           FUN_18181e0a0(lVar1,"{0}两虽不是小数目，但为了此{1}也是值得",DAT_181da3d58);
-          plVar2 = (int64 *)(pStatics + 8);
-          *plVar2 = lVar1;
-          il2cpp_internal(plVar2,lVar1);
+          AuctionController.offerHeroTalk = lVar1;
           lVar1 = il2cpp_internal(DAT_181d97750);
           FUN_18132faf0(lVar1,DAT_181da3bd8);
           if (lVar1 != null) {
@@ -1295,9 +1282,7 @@ public class AuctionController
             FUN_18181e0a0(lVar1,"一分价钱一分货",DAT_181da3d58);
             FUN_18181e0a0(lVar1,"今日真是吉星高照，助我拿下此{1}",DAT_181da3d58);
             FUN_18181e0a0(lVar1,"回去后定要将此{1}好好收藏起来",DAT_181da3d58);
-            plVar2 = (int64 *)(pStatics + 16);
-            *plVar2 = lVar1;
-            il2cpp_internal(plVar2,lVar1);
+            AuctionController.dealHeroTalk = lVar1;
             return;
           }
         }

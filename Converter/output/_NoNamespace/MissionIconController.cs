@@ -128,7 +128,6 @@ public class MissionIconController
     // RVA   : 0xE696A0   Offset: 0xE68AA0   Length: 0x3A7
     public void OnClick()
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
         bool cVar1;
         int iVar2;
@@ -141,8 +140,8 @@ public class MissionIconController
         uint local_28;
         uint uStack_24;
         byte[] local_18 = new byte[16];
-        if (*pStatics_2cc8 != 0) {
-          cVar1 = GameController.HaveSpeUI(*pStatics_2cc8,1,0);
+        if (GameController._instance != null) {
+          cVar1 = GameController.HaveSpeUI(GameController._instance,1,0);
           if (cVar1) {
             return;
           }

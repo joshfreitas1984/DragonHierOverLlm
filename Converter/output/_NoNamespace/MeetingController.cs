@@ -102,37 +102,33 @@ public class MeetingController
     // RVA   : 0xE57AD0   Offset: 0xE56ED0   Length: 0x11E
     private void Awake()
     {
-        var pStatics = *(int64*)(DAT_181d88a10 + 184);
         bool cVar1;
         ulong uVar2;
-        uVar2 = *(uint64 *)(pStatics + 16);
+        uVar2 = MeetingController._instance;
         cVar1 = Object.op_Equality(uVar2,0,0);
         if (!cVar1) {
           uVar2 = Component.get_gameObject(this,0);
           Object.Destroy(uVar2,0);
           return;
         }
-        puVar3 = (uint64 *)(pStatics + 16);
-        *puVar3 = this;
-        il2cpp_internal(puVar3,this);
+        MeetingController._instance = this;
     }
 
     // Token : 0x600190B
     // RVA   : 0xE61A50   Offset: 0xE60E50   Length: 0x247
     public void SetMeetingEnd()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
         ulong local_18;
         ulong uStack_10;
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
-          *(uint8 *)(lVar1 + 184) = 0;
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null) {
+          lVar1.forceMeetingStarted = 0;
           lVar1 = **(int64 **)(DAT_181d7f6a8 + 184);
-          if ((*pStatics != 0) &&
-             (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+          if ((GameController._instance != null) &&
+             (lVar2 = GameController._instance.worldData) != null) {
             lVar2 = WorldData.Player(lVar2,0);
             if (lVar2 != null) {
               lVar2 = HeroData.GetForce(lVar2,0,0);
@@ -158,7 +154,6 @@ public class MeetingController
     // RVA   : 0xE57BF0   Offset: 0xE56FF0   Length: 0x3F1
     public void EndMeeting()
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_61e8 = *(int64*)(DAT_181d761e8 + 184);
         var pStatics_6ea8 = *(int64*)(DAT_181d76ea8 + 184);
         ulong uVar1;
@@ -184,25 +179,25 @@ public class MeetingController
                 plVar5 = plVar4;
               }
               NGUITools.PlaySound(plVar5,0);
-              if (((*pStatics_2cc8 != 0) &&
-                  (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) != null) &&
-                 (lVar3 = *(int64 *)(lVar3 + 168)) != null) {
-                if (*(int *)(lVar3 + 16) != 1) {
+              if (((GameController._instance != null) &&
+                  (lVar3 = GameController._instance.worldData) != null) &&
+                 (lVar3 = lVar3.worldTime) != null) {
+                if (lVar3.chapter != 1) {
                   return;
                 }
-                if (((*pStatics_2cc8 != 0) &&
-                    (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) != null) &&
+                if (((GameController._instance != null) &&
+                    (lVar3 = GameController._instance.worldData) != null) &&
                    (lVar3 = WorldData.Player(lVar3,0)) != null) {
                   if (*(int64 *)(lVar3 + 0x2e0) != 0) {
                     lVar3 = FUN_18046c0a0(0);
-                    if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                       (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 216)) == null)
+                    if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                       (lVar3 = *(int64 *)(lVar3.villageAreaID + 216)) == null)
                     throw; // [null/range check failed]
                     cVar2 = FUN_1808ab490(lVar3,47,DAT_181dbf7d8);
                     if (!cVar2) {
                       lVar3 = FUN_18046c0a0(0);
-                      if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) throw; // [null/range check failed]
-                      if (*(int *)(*(int64 *)(lVar3 + 32) + 156) == 0) {
+                      if ((lVar3 == null) || (lVar3.villageAreaID == null)) throw; // [null/range check failed]
+                      if (*(int *)(lVar3.villageAreaID + 156) == 0) {
                         lVar3 = FUN_18046c400(0);
                         if (lVar3 == null) throw; // [null/range check failed]
                         PlotController.AddPlotDataBase(lVar3,47);
@@ -221,7 +216,6 @@ public class MeetingController
     // RVA   : 0xE624D0   Offset: 0xE618D0   Length: 0x970
     public void StartMeeting()
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
         var pStatics_61e8 = *(int64*)(DAT_181d761e8 + 184);
         var pStatics_6ea8 = *(int64*)(DAT_181d76ea8 + 184);
@@ -235,9 +229,9 @@ public class MeetingController
         int[] local_res20 = new int[2];
         plVar8 = (int64 *)0;
         local_res20[0] = 0;
-        if ((*pStatics_2cc8 != 0) &&
-           (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
-          *(uint32 *)(lVar3 + 188) = 0;
+        if ((GameController._instance != null) &&
+           (lVar3 = GameController._instance.worldData) != null) {
+          lVar3.forceMeetingMissedTime = 0;
           if ((*pStatics_6ea8 != 0) &&
              (lVar3 = Component.get_transform(*pStatics_6ea8,0)) != null) {
             uVar1 = Transform.GetSiblingIndex(lVar3,0);
@@ -260,8 +254,8 @@ public class MeetingController
                     MeetingController.SetInfoText(this,0);
                     this.meetingStep = 1;
                     this.subMeetingStep = 0;
-                    if ((*pStatics_2cc8 != 0) &&
-                       (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) != null)
+                    if ((GameController._instance != null) &&
+                       (lVar3 = GameController._instance.worldData) != null)
                     {
                       uVar5 = WorldData.GetHeroForce(lVar3,0,0);
                       this.targetForce = uVar5;
@@ -316,7 +310,7 @@ public class MeetingController
                                     }
                                     if ((lVar3 == null) ||
                                        (lVar3 = ForceData.GetOwnHero(lVar3,plVar9,0)) == null) break;
-                                    if (*(char *)(lVar3 + 180) == false) {
+                                    if (!lVar3.hour) {
                                       if ((this.targetForce == null) ||
                                          (lVar3 = ForceData.GetOwnHero
                                                             (this.targetForce,local_res18[0],
@@ -476,12 +470,11 @@ public class MeetingController
     // RVA   : 0xE58850   Offset: 0xE57C50   Length: 0xE4
     public bool ForceCanAttackArea()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         bool cVar2;
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
-          if (*(char *)(lVar1 + 0x10b) != false) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null) {
+          if (lVar1.openForceAttackArea) {
             if (this.targetForce == null) throw; // [null/range check failed]
             cVar2 = ForceData.AreaNotFull(this.targetForce,0);
             if (cVar2) {
@@ -497,7 +490,6 @@ public class MeetingController
     public void NextStep()
     {
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
-        var pStatics_8a10 = *(int64*)(DAT_181d88a10 + 184);
         long lVar3;
         bool cVar4;
         uint uVar5;
@@ -1163,13 +1155,13 @@ public class MeetingController
         switch(this.subMeetingStep) {
         case 0:
           lVar13 = this.infoText;
-          if (((this.targetForce == null) || (*pStatics_8a10 == 0)) ||
-             (uVar14 = FUN_180002f80(*pStatics_8a10,
+          if (((this.targetForce == null) || (MeetingController.ForceLvText == null)) ||
+             (uVar14 = FUN_180002f80(MeetingController.ForceLvText,
                                      (int)((float)this.targetForce.forceLv * 0.5),
                                      DAT_181da4358), lVar13 == null)) goto LAB_180e60968;
           FUN_181829cd0(lVar13,0,uVar14,DAT_181da43d8);
           lVar13 = this.infoText;
-          lVar15 = *(int64 *)(pStatics_8a10 + 8);
+          lVar15 = MeetingController.MainFocusText;
           if (((this.targetForce == null) || (lVar15 == null)) ||
              (uVar14 = FUN_180002f80(lVar15,(int)((float)this.targetForce.forceLv *
                                                  0.5),DAT_181da4358), lVar13 == null)) goto LAB_180e60968;
@@ -1433,7 +1425,6 @@ public class MeetingController
     // RVA   : 0xE61CA0   Offset: 0xE610A0   Length: 0x82D
     public void ShowForceMission()
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_4000 = *(int64*)(DAT_181d94000 + 184);
         ulong uVar1;
         int iVar2;
@@ -1467,8 +1458,8 @@ public class MeetingController
             if (*pStatics_4000 != 0) {
               QuickTravelUIController.ShowQuickTravelUI
                         (*pStatics_4000,0,0x3f800000,1,0);
-              if ((*pStatics_2cc8 != 0) &&
-                 (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
+              if ((GameController._instance != null) &&
+                 (lVar3 = GameController._instance.worldData) != null) {
                 uVar5 = WorldData.Player(lVar3,0);
                 uVar5 = MeetingController.GetAvailableMissions(this,uVar5,0);
                 this.playerAvailableMissions = uVar5;
@@ -1495,13 +1486,13 @@ public class MeetingController
                     lVar8 = lVar8 + 8;
                     if (lVar3 == null) throw; // [null/range check failed]
                   }
-                  if ((*pStatics_2cc8 != 0) &&
-                     (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
-                    if (*(int *)(lVar3 + 156) == 0) {
-                      if ((*pStatics_2cc8 == 0) ||
-                         (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null
+                  if ((GameController._instance != null) &&
+                     (lVar3 = GameController._instance.worldData) != null) {
+                    if (lVar3.gameMode == null) {
+                      if ((GameController._instance == null) ||
+                         (lVar3 = GameController._instance.worldData) == null
                          ) throw; // [null/range check failed]
-                      if (*(int *)(lVar3 + 0x188) < 1) {
+                      if (lVar3.finishForceMissionCount < 1) {
                         if ((((this.monthMissionPanel != null) &&
                              (lVar3 = GameObject.get_transform(this.monthMissionPanel,0),
                              lVar3 != null)) && (lVar3 = Transform.Find(lVar3,"RefuseMonthMissionButton",0)) != null)
@@ -1530,8 +1521,8 @@ public class MeetingController
                           ) && (lVar3 = Transform.Find(lVar3,"RefuseMonthMissionButton",0)) != null) {
                         lVar3 = Component.GetComponent(lVar3,DAT_181d95560);
                         uVar5 = *(uint64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x2d0);
-                        if (((*pStatics_2cc8 != 0) &&
-                            (lVar8 = *(int64 *)(*pStatics_2cc8 + 32),
+                        if (((GameController._instance != null) &&
+                            (lVar8 = GameController._instance.worldData,
                             lVar8 != null)) && (lVar8 = WorldData.Player(lVar8,0)) != null) {
                           iVar2 = HeroData.GetMissMeetingReduceContribution(lVar8,0);
                           local_res8[0] = (float)iVar2 * 0.5;
@@ -1561,7 +1552,7 @@ public class MeetingController
         int iVar1;
         int iVar2;
         float fVar3;
-        if (**(int64 **)(DAT_181d72cc8 + 184) != 0) {
+        if (GameController._instance != null) {
           fVar3 = (float)GameController.GetTimeRandomDifficulty();
           if (targetHero != null) {
             iVar1 = *(int *)(targetHero + 184);
@@ -1578,9 +1569,7 @@ public class MeetingController
     // RVA   : 0xE58940   Offset: 0xE57D40   Length: 0x4B6C
     public List<MissionData> GetAvailableMissions(HeroData targetHero)
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
-        var pStatics_d580 = *(int64*)(DAT_181d7d580 + 184);
         bool cVar2;
         int iVar3;
         uint uVar4;
@@ -1749,8 +1738,8 @@ public class MeetingController
               }
             }
           }
-          if (*pStatics_2cc8 == 0) throw; // [null/range check failed]
-          lVar8 = GameController.GetRandomArea(*pStatics_2cc8,1,0);
+          if (GameController._instance == null) throw; // [null/range check failed]
+          lVar8 = GameController.GetRandomArea(GameController._instance,1,0);
           if (lVar8 != null) {
             do {
               lVar8 = new MissionData(0);
@@ -2024,8 +2013,8 @@ public class MeetingController
                   FUN_1800d6620();
                 }
                 if (*(int *)(local_f0 + 16) != this.targetForce.forceID) {
-                  if (*(int *)(pStatics_3d40 + 8) == 1) {
-                    lVar10 = *(int64 *)(pStatics_3d40 + 32);
+                  if (PlotController.fightSkillIndexCache == 1) {
+                    lVar10 = PlotController.LeftFaceHideOffset;
                     if (lVar10 == null) {
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
@@ -2079,7 +2068,7 @@ public class MeetingController
           lVar12 = MeetingController.GetSkillRarelv(this,lVar8,uVar4,0,uVar13);
           if ((lVar12 == null) || (lVar15 = *(int64 *)(lVar11 + 120)) == null) throw; // [null/range check failed]
           if (*(int *)(lVar12 + 24) < 1) {
-            lVar12 = FUN_180002f80(lVar15,0,ItemListController_StaticsPtr);
+            lVar12 = FUN_180002f80(lVar15,0,DAT_181d95108);
             if ((lVar12 == null) || (*(int64 *)(lVar12 + 56) == 0)) throw; // [null/range check failed]
             lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 56),0,DAT_181d94e88);
             uVar4 = FUN_180d95a30(0,*(uint32 *)(lVar8 + 24),0);
@@ -2089,8 +2078,8 @@ public class MeetingController
             *(uint64 *)(lVar12 + 24) = uVar14;
             lVar12 = FUN_18046c100(0);
             if (((((*(int64 *)(lVar11 + 120) == 0) ||
-                  (lVar15 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,ItemListController_StaticsPtr),
-                  lVar15 == null)) || (*(int64 *)(lVar15 + 56) == 0)) ||
+                  (lVar15 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,DAT_181d95108)) == null) ||
+                 (*(int64 *)(lVar15 + 56) == 0)) ||
                 ((lVar15 = FUN_180002f80(*(int64 *)(lVar15 + 56),0,DAT_181d94e88), lVar15 == null ||
                  (uVar4 = Int32.Parse(*(uint64 *)(lVar15 + 24),0), lVar12 == null)))) ||
                (lVar12 = GameDataController.GetSkillDataBase(lVar12,uVar4,0)) == null)
@@ -2101,7 +2090,7 @@ public class MeetingController
             *(float *)(lVar11 + 144) = (fVar20 * 0.2 + 1.0) * *(float *)(lVar11 + 140);
           }
           else {
-            lVar15 = FUN_180002f80(lVar15,0,ItemListController_StaticsPtr);
+            lVar15 = FUN_180002f80(lVar15,0,DAT_181d95108);
             if ((lVar15 == null) || (*(int64 *)(lVar15 + 56) == 0)) throw; // [null/range check failed]
             lVar15 = FUN_180002f80(*(int64 *)(lVar15 + 56),0,DAT_181d94e88);
             uVar4 = FUN_180d95a30(0,*(uint32 *)(lVar12 + 24),0);
@@ -2111,15 +2100,14 @@ public class MeetingController
             *(uint64 *)(lVar15 + 24) = uVar14;
           }
           if ((((*(int64 *)(lVar11 + 120) == 0) ||
-               (lVar12 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,ItemListController_StaticsPtr),
-               lVar12 == null)) || (*(int64 *)(lVar12 + 56) == 0)) ||
+               (lVar12 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,DAT_181d95108)) == null) ||
+              (*(int64 *)(lVar12 + 56) == 0)) ||
              (lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 56),0,DAT_181d94e88)) == null)
           throw; // [null/range check failed]
           uVar4 = Int32.Parse(*(uint64 *)(lVar12 + 24),0);
           FUN_1817eee00(lVar8,uVar4,DAT_181d8f618);
           if (((*(int64 *)(lVar11 + 120) == 0) ||
-              (lVar11 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,ItemListController_StaticsPtr),
-              lVar11 == null)) ||
+              (lVar11 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,DAT_181d95108)) == null) ||
              ((*(int64 *)(lVar11 + 56) == 0 ||
               (lVar11 = FUN_180002f80(*(int64 *)(lVar11 + 56),0,DAT_181d94e88)) == null)))
           throw; // [null/range check failed]
@@ -2474,7 +2462,7 @@ public class MeetingController
           }
           if ((lVar9 == null) || (lVar10 = *(int64 *)(lVar7 + 120)) == null) throw; // [null/range check failed]
           if (*(int *)(lVar9 + 24) < 1) {
-            lVar9 = FUN_180002f80(lVar10,0,ItemListController_StaticsPtr);
+            lVar9 = FUN_180002f80(lVar10,0,DAT_181d95108);
             if ((lVar9 == null) || (*(int64 *)(lVar9 + 56) == 0)) throw; // [null/range check failed]
             lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 56),0,DAT_181d94e88);
             uVar4 = FUN_180d95a30(0,*(uint32 *)(lVar8 + 24),0);
@@ -2487,8 +2475,7 @@ public class MeetingController
                (lVar9 = WorldData.Player(*(int64 *)(lVar9 + 32),0)) == null) throw; // [null/range check failed]
             lVar9 = *(int64 *)(lVar9 + 0x158);
             if (((*(int64 *)(lVar7 + 120) == 0) ||
-                (lVar10 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,ItemListController_StaticsPtr),
-                lVar10 == null)) ||
+                (lVar10 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,DAT_181d95108)) == null) ||
                ((*(int64 *)(lVar10 + 56) == 0 ||
                 ((lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88), lVar10 == null ||
                  (uVar4 = Int32.Parse(*(uint64 *)(lVar10 + 24),0), lVar9 == null))))))
@@ -2500,7 +2487,7 @@ public class MeetingController
             *(float *)(lVar7 + 144) = (fVar20 * 0.2 + 1.0) * *(float *)(lVar7 + 140);
           }
           else {
-            lVar10 = FUN_180002f80(lVar10,0,ItemListController_StaticsPtr);
+            lVar10 = FUN_180002f80(lVar10,0,DAT_181d95108);
             if ((lVar10 == null) || (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
             lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88);
             uVar4 = FUN_180d95a30(0,*(uint32 *)(lVar9 + 24),0);
@@ -2510,15 +2497,14 @@ public class MeetingController
             *(uint64 *)(lVar10 + 24) = uVar14;
           }
           if ((((*(int64 *)(lVar7 + 120) == 0) ||
-               (lVar9 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,ItemListController_StaticsPtr),
-               lVar9 == null)) || (*(int64 *)(lVar9 + 56) == 0)) ||
+               (lVar9 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,DAT_181d95108)) == null) ||
+              (*(int64 *)(lVar9 + 56) == 0)) ||
              (lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 56),0,DAT_181d94e88)) == null)
           throw; // [null/range check failed]
           uVar4 = Int32.Parse(*(uint64 *)(lVar9 + 24),0);
           FUN_1817eee00(lVar8,uVar4,DAT_181d8f618);
           if (((*(int64 *)(lVar7 + 120) == 0) ||
-              (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,ItemListController_StaticsPtr),
-              lVar7 == null)) ||
+              (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,DAT_181d95108)) == null) ||
              ((*(int64 *)(lVar7 + 56) == 0 ||
               (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 56),0,DAT_181d94e88)) == null)))
           throw; // [null/range check failed]
@@ -2566,7 +2552,7 @@ public class MeetingController
                             (this,lVar8,uVar4,0,uVar13,in_stack_fffffffffffffea0);
           if ((lVar9 == null) || (lVar10 = *(int64 *)(lVar7 + 120)) == null) throw; // [null/range check failed]
           if (*(int *)(lVar9 + 24) < 1) {
-            lVar9 = FUN_180002f80(lVar10,0,ItemListController_StaticsPtr);
+            lVar9 = FUN_180002f80(lVar10,0,DAT_181d95108);
             if ((lVar9 == null) || (*(int64 *)(lVar9 + 56) == 0)) throw; // [null/range check failed]
             lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 56),0,DAT_181d94e88);
             uVar4 = FUN_180d95a30(0,*(uint32 *)(lVar8 + 24),0);
@@ -2576,8 +2562,8 @@ public class MeetingController
             *(uint64 *)(lVar9 + 24) = uVar14;
             lVar9 = FUN_18046c100(0);
             if ((((*(int64 *)(lVar7 + 120) == 0) ||
-                 (lVar10 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,ItemListController_StaticsPtr),
-                 lVar10 == null)) || (*(int64 *)(lVar10 + 56) == 0)) ||
+                 (lVar10 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,DAT_181d95108)) == null) ||
+                (*(int64 *)(lVar10 + 56) == 0)) ||
                (((lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88), lVar10 == null ||
                  (uVar4 = Int32.Parse(*(uint64 *)(lVar10 + 24),0), lVar9 == null)) ||
                 (lVar9 = GameDataController.GetSkillDataBase(lVar9,uVar4,0)) == null)))
@@ -2588,7 +2574,7 @@ public class MeetingController
             *(float *)(lVar7 + 144) = (fVar20 * 0.2 + 1.0) * *(float *)(lVar7 + 140);
           }
           else {
-            lVar10 = FUN_180002f80(lVar10,0,ItemListController_StaticsPtr);
+            lVar10 = FUN_180002f80(lVar10,0,DAT_181d95108);
             if ((lVar10 == null) || (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
             lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88);
             uVar4 = FUN_180d95a30(0,*(uint32 *)(lVar9 + 24),0);
@@ -2598,15 +2584,14 @@ public class MeetingController
             *(uint64 *)(lVar10 + 24) = uVar14;
           }
           if ((((*(int64 *)(lVar7 + 120) == 0) ||
-               (lVar9 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,ItemListController_StaticsPtr),
-               lVar9 == null)) || (*(int64 *)(lVar9 + 56) == 0)) ||
+               (lVar9 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,DAT_181d95108)) == null) ||
+              (*(int64 *)(lVar9 + 56) == 0)) ||
              (lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 56),0,DAT_181d94e88)) == null)
           throw; // [null/range check failed]
           uVar4 = Int32.Parse(*(uint64 *)(lVar9 + 24),0);
           FUN_1817eee00(lVar8,uVar4,DAT_181d8f618);
           if (((*(int64 *)(lVar7 + 120) == 0) ||
-              (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,ItemListController_StaticsPtr),
-              lVar7 == null)) ||
+              (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,DAT_181d95108)) == null) ||
              ((*(int64 *)(lVar7 + 56) == 0 ||
               (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 56),0,DAT_181d94e88)) == null)))
           throw; // [null/range check failed]
@@ -2653,14 +2638,14 @@ public class MeetingController
               ;
               if ((lVar9 == null) ||
                  ((((*(int64 *)(lVar9 + 120) == 0 ||
-                    (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,ItemListController_StaticsPtr),
-                    lVar10 == null)) || (*(int64 *)(lVar10 + 56) == 0)) ||
+                    (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95108)) == null) ||
+                   (*(int64 *)(lVar10 + 56) == 0)) ||
                   (lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88)) == null)))
               throw; // [null/range check failed]
               *(uint32 *)(lVar10 + 40) = 0x3f800000;
               if (((*(int64 *)(lVar9 + 120) == 0) ||
-                  (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,ItemListController_StaticsPtr),
-                  lVar10 == null)) || (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
+                  (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95108)) == null) ||
+                 (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
               lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88);
               lVar11 = FUN_180002f80(lVar7,uVar19,DAT_181d8bb98);
               if ((lVar11 == null) || (uVar14 = Int32.ToString(lVar11 + 88,0), lVar10 == null))
@@ -2691,14 +2676,14 @@ public class MeetingController
               ;
               if (((lVar9 == null) ||
                   (((*(int64 *)(lVar9 + 120) == 0 ||
-                    (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,ItemListController_StaticsPtr),
-                    lVar10 == null)) || (*(int64 *)(lVar10 + 56) == 0)))) ||
+                    (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95108)) == null) ||
+                   (*(int64 *)(lVar10 + 56) == 0)))) ||
                  (lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88)) == null)
               throw; // [null/range check failed]
               *(uint32 *)(lVar10 + 40) = 0x3f800000;
               if (((*(int64 *)(lVar9 + 120) == 0) ||
-                  (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,ItemListController_StaticsPtr),
-                  lVar10 == null)) || (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
+                  (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95108)) == null) ||
+                 (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
               lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88);
               lVar11 = FUN_180002f80(lVar7,uVar19,DAT_181d8bb98);
               if ((lVar11 == null) || (uVar14 = Int32.ToString(lVar11 + 88,0), lVar10 == null))
@@ -2727,14 +2712,14 @@ public class MeetingController
                                  (float)*(int *)(lVar9 + 184) + (float)*(int *)(lVar9 + 184),uVar13,0);
               if (((lVar7 == null) ||
                   (((*(int64 *)(lVar7 + 120) == 0 ||
-                    (lVar9 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,ItemListController_StaticsPtr),
-                    lVar9 == null)) || (*(int64 *)(lVar9 + 56) == 0)))) ||
+                    (lVar9 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,DAT_181d95108)) == null) ||
+                   (*(int64 *)(lVar9 + 56) == 0)))) ||
                  (lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 56),0,DAT_181d94e88)) == null)
               throw; // [null/range check failed]
               *(uint32 *)(lVar9 + 40) = 0x3f800000;
               if (((*(int64 *)(lVar7 + 120) == 0) ||
-                  (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,ItemListController_StaticsPtr),
-                  lVar7 == null)) || (*(int64 *)(lVar7 + 56) == 0)) throw; // [null/range check failed]
+                  (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,DAT_181d95108)) == null) ||
+                 (*(int64 *)(lVar7 + 56) == 0)) throw; // [null/range check failed]
               lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 56),0,DAT_181d94e88);
               lVar9 = FUN_180002f80(lVar8,uVar17,DAT_181d8bb98);
               if ((lVar9 == null) || (uVar14 = Int32.ToString(lVar9 + 88,0), lVar7 == null))
@@ -2793,14 +2778,14 @@ public class MeetingController
             if (((lVar11 == null) ||
                 (lVar11 = MissionData.SetForceMission(lVar11,"进行探索",1)) == null) ||
                ((*(int64 *)(lVar11 + 120) == 0 ||
-                (((lVar12 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,ItemListController_StaticsPtr),
-                  lVar12 == null || (*(int64 *)(lVar12 + 56) == 0)) ||
+                (((lVar12 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,DAT_181d95108), lVar12 == null ||
+                  (*(int64 *)(lVar12 + 56) == 0)) ||
                  (lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 56),0,DAT_181d94e88)) == null)))))
             throw; // [null/range check failed]
             *(uint32 *)(lVar12 + 40) = 0x3f800000;
             if (((*(int64 *)(lVar11 + 120) == 0) ||
-                (lVar12 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,ItemListController_StaticsPtr),
-                lVar12 == null)) || (*(int64 *)(lVar12 + 56) == 0)) throw; // [null/range check failed]
+                (lVar12 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,DAT_181d95108)) == null) ||
+               (*(int64 *)(lVar12 + 56) == 0)) throw; // [null/range check failed]
             lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 56),0,DAT_181d94e88);
             uVar13 = Int32.ToString((uint32 *)(lVar10 + 16),0);
             if (lVar12 == null) throw; // [null/range check failed]
@@ -2824,14 +2809,14 @@ public class MeetingController
             if (((((lVar11 == null) ||
                   (lVar11 = MissionData.SetForceMission(lVar11,"岗哨巡查",21)) == null) ||
                  (*(int64 *)(lVar11 + 120) == 0)) ||
-                ((lVar12 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,ItemListController_StaticsPtr),
-                 lVar12 == null || (*(int64 *)(lVar12 + 56) == 0)))) ||
+                ((lVar12 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,DAT_181d95108), lVar12 == null ||
+                 (*(int64 *)(lVar12 + 56) == 0)))) ||
                (lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 56),0,DAT_181d94e88)) == null)
             throw; // [null/range check failed]
             *(uint32 *)(lVar12 + 40) = 0x3f800000;
             if (((*(int64 *)(lVar11 + 120) == 0) ||
-                (lVar12 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,ItemListController_StaticsPtr),
-                lVar12 == null)) || (*(int64 *)(lVar12 + 56) == 0)) throw; // [null/range check failed]
+                (lVar12 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,DAT_181d95108)) == null) ||
+               (*(int64 *)(lVar12 + 56) == 0)) throw; // [null/range check failed]
             lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 56),0,DAT_181d94e88);
             uVar13 = Int32.ToString((uint32 *)(lVar10 + 16),0);
             if (lVar12 == null) throw; // [null/range check failed]
@@ -2876,14 +2861,14 @@ public class MeetingController
               uVar4 = (uint32)((uint64)uVar13 >> 32);
               if (((lVar10 == null) ||
                   (((*(int64 *)(lVar10 + 120) == 0 ||
-                    (lVar11 = FUN_180002f80(*(int64 *)(lVar10 + 120),0,ItemListController_StaticsPtr),
-                    lVar11 == null)) || (*(int64 *)(lVar11 + 56) == 0)))) ||
+                    (lVar11 = FUN_180002f80(*(int64 *)(lVar10 + 120),0,DAT_181d95108)) == null)
+                   || (*(int64 *)(lVar11 + 56) == 0)))) ||
                  (lVar11 = FUN_180002f80(*(int64 *)(lVar11 + 56),0,DAT_181d94e88)) == null)
               throw; // [null/range check failed]
               *(uint32 *)(lVar11 + 40) = 0x3f800000;
               if (((*(int64 *)(lVar10 + 120) == 0) ||
-                  (lVar11 = FUN_180002f80(*(int64 *)(lVar10 + 120),0,ItemListController_StaticsPtr),
-                  lVar11 == null)) || (*(int64 *)(lVar11 + 56) == 0)) throw; // [null/range check failed]
+                  (lVar11 = FUN_180002f80(*(int64 *)(lVar10 + 120),0,DAT_181d95108)) == null) ||
+                 (*(int64 *)(lVar11 + 56) == 0)) throw; // [null/range check failed]
               lVar11 = FUN_180002f80(*(int64 *)(lVar11 + 56),0,DAT_181d94e88);
               lVar12 = FUN_180002f80(lVar9,uVar19,DAT_181d8bb98);
               if ((lVar12 == null) || (uVar13 = Int32.ToString(lVar12 + 88,0), lVar11 == null))
@@ -2901,16 +2886,16 @@ public class MeetingController
                                  );
               if ((lVar10 == null) ||
                  (((*(int64 *)(lVar10 + 120) == 0 ||
-                   (lVar11 = FUN_180002f80(*(int64 *)(lVar10 + 120),0,ItemListController_StaticsPtr),
-                   lVar11 == null)) || (*(int64 *)(lVar11 + 56) == 0)))) throw; // [null/range check failed]
+                   (lVar11 = FUN_180002f80(*(int64 *)(lVar10 + 120),0,DAT_181d95108)) == null) ||
+                  (*(int64 *)(lVar11 + 56) == 0)))) throw; // [null/range check failed]
               lVar11 = FUN_180002f80(*(int64 *)(lVar11 + 56),0,DAT_181d94e88);
               Random.Range();
               iVar3 = Mathf.RoundToInt();
               if (lVar11 == null) throw; // [null/range check failed]
               *(float *)(lVar11 + 40) = (float)iVar3;
               if (((*(int64 *)(lVar10 + 120) == 0) ||
-                  (lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 120),0,ItemListController_StaticsPtr),
-                  lVar10 == null)) || (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
+                  (lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 120),0,DAT_181d95108)) == null) ||
+                 (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
               lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88);
               lVar11 = FUN_180002f80(lVar9,uVar19,DAT_181d8bb98);
               if ((lVar11 == null) || (uVar14 = Int32.ToString(lVar11 + 88,0), lVar10 == null))
@@ -2934,22 +2919,22 @@ public class MeetingController
             MeetingController.GetMissionRandomDifficulty(this,targetHero,0);
             if (((((lVar9 == null) || (lVar9 = MissionData.SetForceMission(lVar9,uVar13,17)) == null)
                  || (*(int64 *)(lVar9 + 120) == 0)) ||
-                ((lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,ItemListController_StaticsPtr),
-                 lVar10 == null || (*(int64 *)(lVar10 + 56) == 0)))) ||
+                ((lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95108), lVar10 == null ||
+                 (*(int64 *)(lVar10 + 56) == 0)))) ||
                (lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88)) == null)
             throw; // [null/range check failed]
             *(uint32 *)(lVar10 + 32) = uVar19;
             if (((*(int64 *)(lVar9 + 120) == 0) ||
-                (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,ItemListController_StaticsPtr),
-                lVar10 == null)) || (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
+                (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95108)) == null) ||
+               (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
             lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88);
             Random.Range();
             iVar3 = Mathf.RoundToInt();
             if (lVar10 == null) throw; // [null/range check failed]
             *(float *)(lVar10 + 40) = (float)iVar3;
             if (((*(int64 *)(lVar9 + 120) == 0) ||
-                (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,ItemListController_StaticsPtr),
-                lVar10 == null)) || (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
+                (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95108)) == null) ||
+               (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
             lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88);
             lVar11 = FUN_18046c0a0(0);
             if (((lVar11 == null) || (lVar11 = GameController.GetRandomArea(lVar11,3,0)) == null) ||
@@ -2966,15 +2951,14 @@ public class MeetingController
         uVar24 = 0;
         lVar9 = MissionData.SetForceMission(lVar9,"搜集珍宝",22);
         if ((((lVar9 == null) || (*(int64 *)(lVar9 + 120) == 0)) ||
-            (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,ItemListController_StaticsPtr),
-            lVar10 == null)) || (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
+            (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95108)) == null) ||
+           (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
         lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88);
         uVar4 = Mathf.RoundToInt(*(float *)(lVar9 + 44) * 0.5,0);
         if (lVar10 == null) throw; // [null/range check failed]
         *(uint32 *)(lVar10 + 32) = uVar4;
         if (((*(int64 *)(lVar9 + 120) == 0) ||
-            (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,ItemListController_StaticsPtr),
-            lVar10 == null)) ||
+            (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95108)) == null) ||
            ((*(int64 *)(lVar10 + 56) == 0 ||
             (lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88)) == null)))
         throw; // [null/range check failed]
@@ -2992,8 +2976,8 @@ public class MeetingController
             uVar24 = 0;
             lVar9 = MissionData.SetForceMission(lVar9,"窃取资源",18);
             if ((((lVar9 == null) || (*(int64 *)(lVar9 + 120) == 0)) ||
-                (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,ItemListController_StaticsPtr),
-                lVar10 == null)) || (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
+                (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95108)) == null) ||
+               (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
             lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88);
             lVar11 = FUN_18046c0a0(0);
             if (lVar11 == null) throw; // [null/range check failed]
@@ -3004,8 +2988,8 @@ public class MeetingController
                (uVar13 = Int32.ToString(lVar11 + 56,0), lVar10 == null)) throw; // [null/range check failed]
             *(uint64 *)(lVar10 + 24) = uVar13;
             if ((((*(int64 *)(lVar9 + 120) == 0) ||
-                 (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,ItemListController_StaticsPtr),
-                 lVar10 == null)) || (*(int64 *)(lVar10 + 56) == 0)) ||
+                 (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95108)) == null) ||
+                (*(int64 *)(lVar10 + 56) == 0)) ||
                (lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88)) == null)
             throw; // [null/range check failed]
             *(uint32 *)(lVar10 + 40) = 0x3f800000;
@@ -3046,14 +3030,14 @@ public class MeetingController
                                (lVar10,"挑拨离间",19,(float)*(int *)(lVar11 + 184) * 2.5,uVar13,0);
             if (((lVar10 == null) ||
                 (((*(int64 *)(lVar10 + 120) == 0 ||
-                  (lVar11 = FUN_180002f80(*(int64 *)(lVar10 + 120),0,ItemListController_StaticsPtr),
-                  lVar11 == null)) || (*(int64 *)(lVar11 + 56) == 0)))) ||
+                  (lVar11 = FUN_180002f80(*(int64 *)(lVar10 + 120),0,DAT_181d95108)) == null) ||
+                 (*(int64 *)(lVar11 + 56) == 0)))) ||
                (lVar11 = FUN_180002f80(*(int64 *)(lVar11 + 56),0,DAT_181d94e88)) == null)
             throw; // [null/range check failed]
             *(uint32 *)(lVar11 + 40) = 0x40400000;
             if (((*(int64 *)(lVar10 + 120) == 0) ||
-                (lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 120),0,ItemListController_StaticsPtr),
-                lVar10 == null)) || (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
+                (lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 120),0,DAT_181d95108)) == null) ||
+               (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
             lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88);
             lVar11 = FUN_180002f80(lVar9,uVar17,DAT_181d8bb98);
             if ((lVar11 == null) || (uVar14 = Int32.ToString(lVar11 + 88,0), lVar10 == null))
@@ -3150,13 +3134,11 @@ public class MeetingController
         LAB_180e5c6b4:
         FUN_18181e0a0(lVar6,lVar8,DAT_181d94908);
         LAB_180e5d385:
-        lVar8 = *(int64 *)(pStatics_d580 + 8);
+        lVar8 = MeetingController.MainFocusText;
         if (lVar8 == null) {
           uVar13 = **(uint64 **)(DAT_181d7d580 + 184);
           lVar8 = new OnTooltipCB(uVar13,DAT_181da7d48,DAT_181dab638);
-          plVar16 = (int64 *)(pStatics_d580 + 8);
-          *plVar16 = lVar8;
-          il2cpp_internal(plVar16,lVar8);
+          MeetingController.MainFocusText = lVar8;
         }
         if (lVar6 != null) {
           List_1.Sort(lVar6,lVar8,DAT_181d94b88);
@@ -3313,33 +3295,32 @@ public class MeetingController
     // RVA   : 0xE60B60   Offset: 0xE5FF60   Length: 0xB52
     public void PlayerReciveForceMission(MissionData targetMission)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         ulong uVar2;
         uint uVar3;
         long lVar4;
         long lVar5;
-        if (((*pStatics != 0) &&
-            (lVar4 = *(int64 *)(*pStatics + 32)) != null) &&
+        if (((GameController._instance != null) &&
+            (lVar4 = GameController._instance.worldData) != null) &&
            (lVar4 = WorldData.Player(lVar4,0)) != null) {
           *(uint64 *)(lVar4 + 0x2e0) = targetMission;
-          if (((*pStatics != 0) &&
-              (lVar4 = *(int64 *)(*pStatics + 32)) != null) &&
+          if (((GameController._instance != null) &&
+              (lVar4 = GameController._instance.worldData) != null) &&
              (lVar4 = WorldData.Player(lVar4,0)) != null) {
             if (*(int64 *)(lVar4 + 0x2e0) == 0) {
               return;
             }
-            if ((((*pStatics != 0) &&
-                 (lVar4 = *(int64 *)(*pStatics + 32)) != null) &&
+            if ((((GameController._instance != null) &&
+                 (lVar4 = GameController._instance.worldData) != null) &&
                 (lVar4 = WorldData.Player(lVar4,0)) != null) &&
                ((*(int64 *)(lVar4 + 0x2e0) != 0 &&
                 (lVar4 = *(int64 *)(*(int64 *)(lVar4 + 0x2e0) + 120)) != null))) {
-              if (*(int *)(lVar4 + 24) == 0) {
+              if (lVar4.TestBuildPlayer == null) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 32);
-              if ((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 56)) != null) {
-                if (*(int *)(lVar4 + 24) == 0) {
+              if ((lVar4 = lVar4?.enterAreaBountyAttackHero) != null) {
+                if (lVar4.TestBuildPlayer == null) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 32);
@@ -3348,25 +3329,25 @@ public class MeetingController
                   if (iVar1 == 1) {
                     lVar4 = FUN_18046c0a0(0);
                     if (lVar4 == null) throw; // [null/range check failed]
-                    lVar4 = *(int64 *)(lVar4 + 32);
+                    lVar4 = lVar4.worldData;
                     lVar5 = FUN_18046c0a0(0);
-                    if ((((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                        (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null) ||
+                    if ((((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                        (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null) ||
                        ((*(int64 *)(lVar5 + 0x2e0) == 0 ||
                         (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 0x2e0) + 120)) == null)))
                     throw; // [null/range check failed]
-                    if (*(int *)(lVar5 + 24) == 0) {
+                    if (lVar5.cityAreaID == null) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
                     }
-                    lVar5 = *(int64 *)(*(int64 *)(lVar5 + 16) + 32);
-                    if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 56)) == null)
+                    lVar5 = *(int64 *)(lVar5.chapter + 32);
+                    if ((lVar5 = lVar5?.Inns) == null)
                     throw; // [null/range check failed]
-                    if (*(int *)(lVar5 + 24) == 0) {
+                    if (lVar5.cityAreaID == null) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
                     }
-                    lVar5 = *(int64 *)(*(int64 *)(lVar5 + 16) + 32);
+                    lVar5 = *(int64 *)(lVar5.chapter + 32);
                     if ((lVar5 == null) ||
-                       (uVar3 = Int32.Parse(*(uint64 *)(lVar5 + 24),0), lVar4 == null))
+                       (uVar3 = Int32.Parse(lVar5.cityAreaID,0), lVar4 == null))
                     throw; // [null/range check failed]
                     lVar4 = WorldData.GetArea(lVar4,uVar3,0);
                     if ((lVar4 == null) || (*(int64 *)(lVar4 + 0x100) == 0)) throw; // [null/range check failed]
@@ -3375,25 +3356,25 @@ public class MeetingController
                   else if (iVar1 == 18) {
                     lVar4 = FUN_18046c0a0(0);
                     if (lVar4 == null) throw; // [null/range check failed]
-                    lVar4 = *(int64 *)(lVar4 + 32);
+                    lVar4 = lVar4.worldData;
                     lVar5 = FUN_18046c0a0(0);
-                    if ((((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                        (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null) ||
+                    if ((((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                        (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null) ||
                        ((*(int64 *)(lVar5 + 0x2e0) == 0 ||
                         (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 0x2e0) + 120)) == null)))
                     throw; // [null/range check failed]
-                    if (*(int *)(lVar5 + 24) == 0) {
+                    if (lVar5.cityAreaID == null) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
                     }
-                    lVar5 = *(int64 *)(*(int64 *)(lVar5 + 16) + 32);
-                    if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 56)) == null)
+                    lVar5 = *(int64 *)(lVar5.chapter + 32);
+                    if ((lVar5 = lVar5?.Inns) == null)
                     throw; // [null/range check failed]
-                    if (*(int *)(lVar5 + 24) == 0) {
+                    if (lVar5.cityAreaID == null) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
                     }
-                    lVar5 = *(int64 *)(*(int64 *)(lVar5 + 16) + 32);
+                    lVar5 = *(int64 *)(lVar5.chapter + 32);
                     if ((lVar5 == null) ||
-                       (uVar3 = Int32.Parse(*(uint64 *)(lVar5 + 24),0), lVar4 == null))
+                       (uVar3 = Int32.Parse(lVar5.cityAreaID,0), lVar4 == null))
                     throw; // [null/range check failed]
                     lVar4 = WorldData.GetArea(lVar4,uVar3,0);
                     if ((lVar4 == null) ||
@@ -3404,12 +3385,12 @@ public class MeetingController
                   else if (iVar1 != 19) {
                     if (iVar1 == 20) {
                       lVar4 = FUN_18046c0a0(0);
-                      if ((((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
-                          (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null) ||
+                      if ((((lVar4 == null) || (lVar4.worldData == null)) ||
+                          (lVar4 = WorldData.Player(lVar4.worldData,0)) == null) ||
                          ((*(int64 *)(lVar4 + 0x2e0) == 0 ||
                           (lVar4 = *(int64 *)(*(int64 *)(lVar4 + 0x2e0) + 120)) == null)))
                       throw; // [null/range check failed]
-                      if (*(int *)(lVar4 + 24) == 0) {
+                      if (lVar4.TestBuildPlayer == null) {
                         ThrowHelper.ThrowArgumentOutOfRangeException(0);
                       }
                       lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 32);
@@ -3417,121 +3398,121 @@ public class MeetingController
                          (plVar6 = (int64 *)EventData.Clone(this.AttackAreaForceMissionData,0),
                          lVar4 == null)) throw; // [null/range check failed]
                       if (plVar6 == (int64 *)0) {
-                        *(uint64 *)(lVar4 + 32) = 0;
+                        lVar4.worldData = 0;
                       }
                       else {
-                        *(int64 **)(lVar4 + 32) = plVar6;
+                        lVar4.worldData = plVar6;
                       }
                     }
                     else if (iVar1 == 21) {
                       lVar4 = FUN_18046c0a0(0);
                       if (lVar4 == null) throw; // [null/range check failed]
-                      lVar4 = *(int64 *)(lVar4 + 32);
+                      lVar4 = lVar4.worldData;
                       lVar5 = FUN_18046c0a0(0);
-                      if ((((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                          (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null) ||
+                      if ((((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                          (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null) ||
                          ((*(int64 *)(lVar5 + 0x2e0) == 0 ||
                           (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 0x2e0) + 120)) == null)))
                       throw; // [null/range check failed]
-                      if (*(int *)(lVar5 + 24) == 0) {
+                      if (lVar5.cityAreaID == null) {
                         ThrowHelper.ThrowArgumentOutOfRangeException(0);
                       }
-                      lVar5 = *(int64 *)(*(int64 *)(lVar5 + 16) + 32);
-                      if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 56)) == null)
+                      lVar5 = *(int64 *)(lVar5.chapter + 32);
+                      if ((lVar5 = lVar5?.Inns) == null)
                       throw; // [null/range check failed]
-                      if (*(int *)(lVar5 + 24) == 0) {
+                      if (lVar5.cityAreaID == null) {
                         ThrowHelper.ThrowArgumentOutOfRangeException(0);
                       }
-                      lVar5 = *(int64 *)(*(int64 *)(lVar5 + 16) + 32);
+                      lVar5 = *(int64 *)(lVar5.chapter + 32);
                       if ((lVar5 == null) ||
-                         (uVar3 = Int32.Parse(*(uint64 *)(lVar5 + 24),0), lVar4 == null))
+                         (uVar3 = Int32.Parse(lVar5.cityAreaID,0), lVar4 == null))
                       throw; // [null/range check failed]
                       lVar4 = WorldData.GetArea(lVar4,uVar3,0);
                       if ((lVar4 == null) || (*(int64 *)(lVar4 + 0x100) == 0)) throw; // [null/range check failed]
                       *(uint32 *)(*(int64 *)(lVar4 + 0x100) + 20) = 1;
                     }
                   }
-                  if ((((*pStatics != 0) &&
-                       (lVar4 = *(int64 *)(*pStatics + 32)) != null)
+                  if ((((GameController._instance != null) &&
+                       (lVar4 = GameController._instance.worldData) != null)
                       && (lVar4 = WorldData.Player(lVar4,0)) != null) &&
                      ((*(int64 *)(lVar4 + 0x2e0) != 0 &&
                       (lVar4 = *(int64 *)(*(int64 *)(lVar4 + 0x2e0) + 120)) != null))) {
-                    if (*(int *)(lVar4 + 24) == 0) {
+                    if (lVar4.TestBuildPlayer == null) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
                     }
                     lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 32);
                     if (lVar4 != null) {
-                      if (*(int64 *)(lVar4 + 32) != 0) {
+                      if (lVar4.worldData != null) {
                         lVar4 = FUN_18046c0a0(0);
-                        if ((((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
-                            (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null) ||
+                        if ((((lVar4 == null) || (lVar4.worldData == null)) ||
+                            (lVar4 = WorldData.Player(lVar4.worldData,0)) == null) ||
                            ((*(int64 *)(lVar4 + 0x2e0) == 0 ||
                             (lVar4 = *(int64 *)(*(int64 *)(lVar4 + 0x2e0) + 120)) == null)))
                         throw; // [null/range check failed]
-                        if (*(int *)(lVar4 + 24) == 0) {
+                        if (lVar4.TestBuildPlayer == null) {
                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
                         }
                         lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 32);
                         if (lVar4 == null) throw; // [null/range check failed]
-                        lVar4 = *(int64 *)(lVar4 + 32);
+                        lVar4 = lVar4.worldData;
                         lVar5 = FUN_18046c0a0(0);
-                        if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                           ((lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0), lVar5 == null ||
+                        if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                           ((lVar5 = WorldData.Player(lVar5.villageAreaID,0), lVar5 == null ||
                             ((*(int64 *)(lVar5 + 0x2e0) == 0 || (lVar4 == null)))))) throw; // [null/range check failed]
                         *(uint32 *)(lVar4 + 108) =
                              *(uint32 *)(*(int64 *)(lVar5 + 0x2e0) + 44);
                         lVar4 = FUN_18046c0a0(0);
                         if ((lVar4 == null) ||
-                           ((((*(int64 *)(lVar4 + 32) == 0 ||
-                              (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null) ||
+                           ((((lVar4.worldData == null ||
+                              (lVar4 = WorldData.Player(lVar4.worldData,0)) == null) ||
                              (*(int64 *)(lVar4 + 0x2e0) == 0)) ||
                             (lVar4 = *(int64 *)(*(int64 *)(lVar4 + 0x2e0) + 120)) == null)))
                         throw; // [null/range check failed]
-                        if (*(int *)(lVar4 + 24) == 0) {
+                        if (lVar4.TestBuildPlayer == null) {
                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
                         }
                         lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 32);
-                        if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 32)) == null)
+                        if ((lVar4 = lVar4?.worldData) == null)
                         throw; // [null/range check failed]
                         *(uint8 *)(lVar4 + 101) = 1;
                         lVar4 = FUN_18046c0a0(0);
                         lVar5 = FUN_18046c0a0(0);
                         if ((((lVar5 == null) ||
-                             ((*(int64 *)(lVar5 + 32) == 0 ||
-                              (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null))) ||
+                             ((lVar5.villageAreaID == null ||
+                              (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null))) ||
                             (*(int64 *)(lVar5 + 0x2e0) == 0)) ||
                            (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 0x2e0) + 120)) == null)
                         throw; // [null/range check failed]
-                        if (*(int *)(lVar5 + 24) == 0) {
+                        if (lVar5.cityAreaID == null) {
                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
                         }
-                        lVar5 = *(int64 *)(*(int64 *)(lVar5 + 16) + 32);
+                        lVar5 = *(int64 *)(lVar5.chapter + 32);
                         if (lVar5 == null) throw; // [null/range check failed]
-                        uVar2 = *(uint64 *)(lVar5 + 32);
+                        uVar2 = lVar5.villageAreaID;
                         lVar5 = FUN_18046c0a0(0);
-                        if ((((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-                            (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null) ||
+                        if ((((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+                            (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null) ||
                            ((*(int64 *)(lVar5 + 0x2e0) == 0 ||
                             (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 0x2e0) + 120)) == null)))
                         throw; // [null/range check failed]
-                        if (*(int *)(lVar5 + 24) == 0) {
+                        if (lVar5.cityAreaID == null) {
                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
                         }
-                        lVar5 = *(int64 *)(*(int64 *)(lVar5 + 16) + 32);
-                        if ((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 56)) == null)
+                        lVar5 = *(int64 *)(lVar5.chapter + 32);
+                        if ((lVar5 = lVar5?.Inns) == null)
                         throw; // [null/range check failed]
-                        if (*(int *)(lVar5 + 24) == 0) {
+                        if (lVar5.cityAreaID == null) {
                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
                         }
-                        lVar5 = *(int64 *)(*(int64 *)(lVar5 + 16) + 32);
+                        lVar5 = *(int64 *)(lVar5.chapter + 32);
                         if ((lVar5 == null) ||
-                           (uVar3 = Int32.Parse(*(uint64 *)(lVar5 + 24),0), lVar4 == null))
+                           (uVar3 = Int32.Parse(lVar5.cityAreaID,0), lVar4 == null))
                         throw; // [null/range check failed]
                         GameController.CreateAreaMapRandomEvent(lVar4,uVar2,uVar3,0);
                       }
-                      lVar4 = *pStatics;
-                      if ((((*pStatics != 0) &&
-                           (lVar5 = *(int64 *)(*pStatics + 32),
+                      lVar4 = GameController._instance;
+                      if ((((GameController._instance != null) &&
+                           (lVar5 = GameController._instance.worldData,
                            lVar5 != null)) && (lVar5 = WorldData.Player(lVar5,0)) != null) &&
                          (lVar4 != null)) {
                         GameController.ChangeMissionTargetNumCount
@@ -3551,15 +3532,14 @@ public class MeetingController
     // RVA   : 0xE616C0   Offset: 0xE60AC0   Length: 0x186
     public void RefuseMonthMissionButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         long lVar2;
         long lVar3;
-        if ((*pStatics != 0) &&
-           (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar2 = GameController._instance.worldData) != null) {
           lVar2 = WorldData.Player(lVar2,0);
-          if ((*pStatics != 0) &&
-             (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
+          if ((GameController._instance != null) &&
+             (lVar3 = GameController._instance.worldData) != null) {
             lVar3 = WorldData.Player(lVar3,0);
             if (lVar3 != null) {
               iVar1 = HeroData.GetMissMeetingReduceContribution(lVar3,0);
@@ -3888,9 +3868,7 @@ public class MeetingController
             FUN_18181e0a0(lVar1,"转守为攻",DAT_181da3d58);
             FUN_18181e0a0(lVar1,"攻城略地",DAT_181da3d58);
             FUN_18181e0a0(lVar1,"一统武林",DAT_181da3d58);
-            plVar2 = (int64 *)(pStatics + 8);
-            *plVar2 = lVar1;
-            il2cpp_internal(plVar2,lVar1);
+            MeetingController.MainFocusText = lVar1;
             return;
           }
         }

@@ -690,6 +690,16 @@
     translated: "Each modification will increase the experience of the corresponding body part. After upgrading a body part, it will provide permanent enhancements to the mecha beast."
   templates:
   - template: "♦{0}/{1}/{2}\\n♦{3}"
+- raw: "♦只能保留好感40以上的弟子。"
+  splits:
+  - text: "只能保留好感40以上的弟子。"
+    translated: "Only retain disciples with a good relationship score of 40 or higher."
+    qcReviewedText: "♦Only retain disciples with a good relationship score of 40 or higher."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "♦{0}"
 - raw: "♦在物品上下毒，当物品转移至他人身上时，就会使其中毒。\\n♦使用带毒装备，阅读带毒书籍等，会导致额外中毒。\\n♦服用带毒的丹药和饮食，会导致中毒加倍。"
   splits:
   - text: "在物品上下毒，当物品转移至他人身上时，就会使其中毒。"
@@ -722,19 +732,25 @@
     translated: "The higher the quality of the horse, the more initial stamina it has."
   templates:
   - template: "♦{0}\\n♦{1}\\n♦{2}"
-- raw: "♦将武功修炼至十重获得天赋点\\n♦在闭关室消耗天赋点领悟天赋"
+- raw: "♦将武功修炼至十重获得天赋点\\n♦在闭关室/武馆消耗天赋点领悟天赋"
   splits:
   - text: "将武功修炼至十重获得天赋点"
     translated: "Advance martial arts to the tenth level to gain a talent point"
-    qcReviewedText: "♦Advance martial arts to the tenth level to gain a talent point\\n♦Consume Talent Points in the Seclusion Room to Grasp Talents"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcReviewedText: "♦Advance martial arts to the tenth level to gain a talent point\\n♦In the meditation chamber/The martial arts academy consumes talent points to understand talents."
+    qcTranslated: "♦Advance martial arts to the tenth level to gain a talent point\\n♦Consume talent points in the meditation chamber/The martial arts academy to comprehend talents."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
+    qcDefectCategories:
+    - UnnaturalPhrasing
   - subIndex: 1
-    text: "在闭关室消耗天赋点领悟天赋"
-    translated: "Consume Talent Points in the Seclusion Room to Grasp Talents"
+    text: "在闭关室"
+    translated: "In the meditation chamber"
+  - subIndex: 2
+    text: "武馆消耗天赋点领悟天赋"
+    translated: "The martial arts academy consumes talent points to understand talents."
   templates:
-  - template: "♦{0}\\n♦{1}"
+  - template: "♦{0}\\n♦{1}/{2}"
 - raw: "♦左ctrl+~键打开/关闭控制台。\\n♦上/下方向键切换上条/下条历史指令。\\n<color=red>♦开启作弊功能后，存档将无法获取成就且可能导致未知bug，请谨慎使用。</color>"
   splits:
   - text: "左"
@@ -2402,6 +2418,14 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "保留弟子"
+  splits:
+  - text: "保留弟子"
+    translated: "Keep my disciple"
+    qcReviewedText: "Keep my disciple"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "信件格式测试文本信件格式测试文本信件格式测试文本信件格式测试文本信件格式测本信件格式测试文本信件格式测试文本"
   splits:
   - text: "信件格式测试文本信件格式测试文本信件格式测试文本信件格式测试文本信件格式测本信件格式测试文本信件格式测试文本"
@@ -2524,6 +2548,14 @@
   - text: "入门弟子"
     translated: "Initiate Disciple"
     qcReviewedText: "Initiate Disciple"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "全不选"
+  splits:
+  - text: "全不选"
+    translated: "None selected"
+    qcReviewedText: "None selected"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2683,6 +2715,14 @@
   - text: "全盔"
     translated: "Full helmet"
     qcReviewedText: "Full helmet"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "全选"
+  splits:
+  - text: "全选"
+    translated: "Select all"
+    qcReviewedText: "Select all"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3769,6 +3809,14 @@
     translated: "Shortcut keys"
   templates:
   - template: "{0}\\n<color=grey>{1}P</color>"
+- raw: "名称"
+  splits:
+  - text: "名称"
+    translated: "Name"
+    qcReviewedText: "Name"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "名门大派"
   splits:
   - text: "名门大派"
@@ -3845,6 +3893,14 @@
     translated: "Secret Manual"
   templates:
   - template: "{0} {1}/{2}/{3}/{4}/{5}/{6}"
+- raw: "喜好物品"
+  splits:
+  - text: "喜好物品"
+    translated: "Favorite items"
+    qcReviewedText: "Favorite items"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "嘴巴"
   splits:
   - text: "嘴巴"
@@ -4969,6 +5025,30 @@
     qcDefectCategory: None
   templates:
   - template: "{0}+1"
+- raw: "弟子会优先修炼门派的专长技艺。"
+  splits:
+  - text: "弟子会优先修炼门派的专长技艺。"
+    translated: "Disciples will prioritize training in their sect's specialized skills and techniques."
+    qcReviewedText: "Disciples will prioritize training in their sect's specialized skills and techniques."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "弟子会优先修炼门派的专长武学。"
+  splits:
+  - text: "弟子会优先修炼门派的专长武学。"
+    translated: "Disciples will prioritize cultivating the sect's specialized martial arts."
+    qcReviewedText: "Disciples will prioritize cultivating the sect's specialized martial arts."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "弟子会优先获取更高品质的门派喜好物品。"
+  splits:
+  - text: "弟子会优先获取更高品质的门派喜好物品。"
+    translated: "Disciples will prioritize obtaining higher quality Sect favored items."
+    qcReviewedText: "Disciples will prioritize obtaining higher quality Sect favored items."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "弟子方针"
   splits:
   - text: "弟子方针"
@@ -5693,6 +5773,14 @@
   - text: "技艺"
     translated: "Skill"
     qcReviewedText: "Skill"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "技艺专长"
+  splits:
+  - text: "技艺专长"
+    translated: "Skill Specialty"
+    qcReviewedText: "Skill Specialty"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -6840,6 +6928,14 @@
   - text: "武学"
     translated: "Martial arts"
     qcReviewedText: "Martial arts"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "武学专长"
+  splits:
+  - text: "武学专长"
+    translated: "Martial Arts Specialty"
+    qcReviewedText: "Martial Arts Specialty"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -8458,6 +8554,14 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "红"
+  splits:
+  - text: "红"
+    translated: "Red"
+    qcReviewedText: "Red"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "练功"
   splits:
   - text: "练功"
@@ -8618,6 +8722,14 @@
   - text: "继续游戏"
     translated: "Continue playing"
     qcReviewedText: "Continue playing"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "绿"
+  splits:
+  - text: "绿"
+    translated: "Green"
+    qcReviewedText: "Green"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -8888,6 +9000,22 @@
     translated: "Consume Sect Prestige to Unlock Special Jianghu Recruitments"
   templates:
   - template: "{0}\\n<color=green>{1}\\n{2}</color>"
+- raw: "自立门户"
+  splits:
+  - text: "自立门户"
+    translated: "Go out on my own"
+    qcReviewedText: "Go out on my own"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "自立门户后，会根据行事风格重置所有门派初始好感。"
+  splits:
+  - text: "自立门户后，会根据行事风格重置所有门派初始好感。"
+    translated: "After going independent, all sect initial affinities will be reset based on your style of action."
+    qcReviewedText: "After going independent, all sect initial affinities will be reset based on your style of action."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "自身"
   splits:
   - text: "自身"
@@ -9024,6 +9152,14 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "蓝"
+  splits:
+  - text: "蓝"
+    translated: "Blue"
+    qcReviewedText: "Blue"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "藏经经"
   splits:
   - text: "藏经经"
@@ -9056,6 +9192,14 @@
   - text: "蜀中仙云映霞光"
     translated: "Shu Central Immortal Clouds Gleaming with Dawn Light"
     qcReviewedText: "Shu Central Immortal Clouds Gleaming with Dawn Light"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "行事风格"
+  splits:
+  - text: "行事风格"
+    translated: "Operating style"
+    qcReviewedText: "Operating style"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -10063,6 +10207,14 @@
     translated: "Qinyu Ruirui loyalty to 3 points"
   templates:
   - template: "{0}\\n{1}<color=#FF8C06>{2}</color>{3}  (0/3)"
+- raw: "门派倾向"
+  splits:
+  - text: "门派倾向"
+    translated: "Sect preference"
+    qcReviewedText: "Sect preference"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "门派功绩\\n用途：\\n♦提升门派地位\\n♦藏经阁阅读新秘籍\\n♦门派仓库兑换物品\\n获取：\\n♦每月门派任务\\n♦完成门派委托\\n♦获取门派资源"
   splits:
   - text: "门派功绩"
@@ -10147,6 +10299,14 @@
     translated: "Raise your title in the palace to increase the area limit"
   templates:
   - template: "{0}\\n♦{1}\\n♦{2}/{3}/{4}/{5}/{6}"
+- raw: "门派名称"
+  splits:
+  - text: "门派名称"
+    translated: "Sect name"
+    qcReviewedText: "Sect name"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "门派威望"
   splits:
   - text: "门派威望"
@@ -10218,6 +10378,14 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "门派标志"
+  splits:
+  - text: "门派标志"
+    translated: "Sect emblem"
+    qcReviewedText: "Sect emblem"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "门派矿石"
   splits:
   - text: "门派矿石"
@@ -10271,6 +10439,14 @@
   - text: "门派银钱"
     translated: "Sect funds"
     qcReviewedText: "Sect funds"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "门派颜色"
+  splits:
+  - text: "门派颜色"
+    translated: "Sect color"
+    qcReviewedText: "Sect color"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

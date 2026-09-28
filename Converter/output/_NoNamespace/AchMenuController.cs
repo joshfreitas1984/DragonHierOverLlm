@@ -51,7 +51,6 @@ public class AchMenuController
     // RVA   : 0xA1A530   Offset: 0xA19930   Length: 0x1089
     public void ShowAchMenu()
     {
-        var pStatics = *(int64*)(DAT_181d72d50 + 184);
         bool cVar1;
         int iVar2;
         long lVar4;
@@ -118,11 +117,11 @@ public class AchMenuController
                            && (lVar4 = Transform.Find(lVar4,"AchRoot",0)) != null) &&
                           (lVar4 = Transform.Find(lVar4,"FinishCount",0)) != null))) {
                         uVar7 = Component.GetComponent(lVar4,DAT_181d96160);
-                        lVar4 = *(int64 *)(pStatics + 32);
+                        lVar4 = GameController.lockObj;
                         if (lVar4 != null) {
                           local_res18[0] = GameDataController.GetAchFinishedCount(lVar4,0);
                           uVar8 = il2cpp_value_box(DAT_181d80418,local_res18);
-                          lVar4 = *(int64 *)(pStatics + 32);
+                          lVar4 = GameController.lockObj;
                           if ((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 0x1c0)) != null) {
                             local_res20[0] = *(uint32 *)(lVar4 + 24);
                             uVar9 = il2cpp_value_box(DAT_181d80418,local_res20);
@@ -134,7 +133,7 @@ public class AchMenuController
                                 (lVar4 = Transform.Find(lVar4,"AchRoot",0)) != null) &&
                                (lVar4 = Transform.Find(lVar4,"ExtraTagPoint",0)) != null) {
                               uVar7 = Component.GetComponent(lVar4,DAT_181d96160);
-                              lVar4 = *(int64 *)(pStatics + 8);
+                              lVar4 = GameController.difficultyExtraPoint;
                               if ((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 16)) != null) {
                                 local_98[0] = PlayerPrefDictionary.GetInt(lVar4,"AchTagPoint",0);
                                 uVar8 = il2cpp_value_box(DAT_181d80418,local_98);
@@ -147,7 +146,7 @@ public class AchMenuController
                                 local_res8[0] = 0;
                                 plVar3 = plVar11;
                                 do {
-                                  lVar4 = *(int64 *)(pStatics + 32);
+                                  lVar4 = GameController.lockObj;
                                   if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 0x1c0)) == null)
                                   {
         LAB_180a1b5ae:
@@ -168,7 +167,7 @@ public class AchMenuController
                                   goto LAB_180a1b5ae;
                                   lVar4 = Component.GetComponent(lVar4,DAT_181d94460);
                                   uVar7 = Int32.ToString(local_res8,0);
-                                  lVar10 = *(int64 *)(pStatics + 8);
+                                  lVar10 = GameController.difficultyExtraPoint;
                                   if (lVar10 == null) goto LAB_180a1b5ae;
                                   lVar10 = *(int64 *)(lVar10 + 16);
                                   uVar8 = Int32.ToString(local_res8,0);
@@ -194,7 +193,7 @@ public class AchMenuController
                                   plVar3 = (int64 *)
                                            GameObject.GetComponent
                                                      (this.temp,DAT_181d71e80);
-                                  lVar4 = *(int64 *)(pStatics + 8);
+                                  lVar4 = GameController.difficultyExtraPoint;
                                   if (lVar4 == null) goto LAB_180a1b5ae;
                                   lVar4 = *(int64 *)(lVar4 + 16);
                                   uVar7 = Int32.ToString(local_res8,0);
@@ -254,7 +253,7 @@ public class AchMenuController
                                      (lVar4 = Transform.Find(lVar4,"Percent",0)) == null)
                                   goto LAB_180a1b5a8;
                                   uVar7 = Component.GetComponent(lVar4,DAT_181d96160);
-                                  lVar4 = *(int64 *)(pStatics + 8);
+                                  lVar4 = GameController.difficultyExtraPoint;
                                   if (lVar4 == null) goto LAB_180a1b5a8;
                                   lVar4 = *(int64 *)(lVar4 + 16);
                                   uVar8 = Int32.ToString(local_res8,0);
@@ -284,7 +283,7 @@ public class AchMenuController
                                       (lVar4 = Transform.Find(lVar4,"Bar",0)) == null)))
                                   goto LAB_180a1b5a8;
                                   lVar10 = Component.GetComponent(lVar4,DAT_181d94460);
-                                  lVar4 = *(int64 *)(pStatics + 8);
+                                  lVar4 = GameController.difficultyExtraPoint;
                                   if (lVar4 == null) goto LAB_180a1b5a8;
                                   lVar4 = *(int64 *)(lVar4 + 16);
                                   uVar7 = Int32.ToString(local_res8,0);

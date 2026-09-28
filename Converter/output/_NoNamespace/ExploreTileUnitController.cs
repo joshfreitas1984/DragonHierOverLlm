@@ -82,7 +82,6 @@ public class ExploreTileUnitController
     // RVA   : 0xB28FA0   Offset: 0xB283A0   Length: 0x9BC
     public void set_Seen(bool value)
     {
-        var pStatics_5e30 = *(int64*)(DAT_181dc5e30 + 184);
         var pStatics_60d8 = *(int64*)(DAT_181dc60d8 + 184);
         int iVar1;
         long lVar2;
@@ -113,7 +112,7 @@ public class ExploreTileUnitController
           fVar4 = local_60;
           if (lVar6 == null) goto LAB_180b29951;
           lVar6 = Component.GetComponent(lVar6,DAT_181d95de0);
-          lVar2 = *(int64 *)(pStatics_5e30 + 8);
+          lVar2 = BattleController.AttackAreaTypeStartMovePower;
           fVar4 = local_60;
           if ((lVar2 == null) || (lVar2 = *(int64 *)(lVar2 + 120)) == null) goto LAB_180b29951;
           if (*(int *)(lVar2 + 16) == 1) {
@@ -125,8 +124,8 @@ public class ExploreTileUnitController
             uVar11 = *(uint32 *)(lVar2 + 32);
           }
           else {
-            lVar2 = *(int64 *)(pStatics_60d8 + 40);
-            lVar3 = *(int64 *)(pStatics_5e30 + 8);
+            lVar2 = ExploreTileUnitController.UseBlackCoverColorBackgroundType;
+            lVar3 = BattleController.AttackAreaTypeStartMovePower;
             fVar4 = local_60;
             if ((lVar3 == null) || (lVar2 == null)) goto LAB_180b29951;
             cVar5 = FUN_18181e400(lVar2,*(uint64 *)(lVar3 + 88),DAT_181da3e58);
@@ -290,7 +289,7 @@ public class ExploreTileUnitController
         if (this.exploreTileData != null) {
           this.exploreTileData.seen = value;
           this.needRefreshColor = 1;
-          lVar6 = *(int64 *)(pStatics_5e30 + 8);
+          lVar6 = BattleController.AttackAreaTypeStartMovePower;
           fVar4 = local_60;
           if (lVar6 != null) {
             *(uint8 *)(lVar6 + 0x108) = 1;
@@ -368,7 +367,6 @@ public class ExploreTileUnitController
     // RVA   : 0xB27510   Offset: 0xB26910   Length: 0x876
     public void CheckNeedFade(bool anim)
     {
-        var pStatics = *(int64*)(DAT_181dc5e30 + 184);
         int iVar1;
         long lVar2;
         long lVar3;
@@ -383,10 +381,10 @@ public class ExploreTileUnitController
         cVar5 = false;
         if (this.exploreTileData == null) throw; // [null/range check failed]
         iVar1 = this.exploreTileData.row;
-        lVar7 = *(int64 *)(pStatics + 8);
+        lVar7 = BattleController.AttackAreaTypeStartMovePower;
         if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 120)) == null) throw; // [null/range check failed]
         if (iVar1 < *(int *)(lVar7 + 28) + -1) {
-          lVar7 = *(int64 *)(pStatics + 8);
+          lVar7 = BattleController.AttackAreaTypeStartMovePower;
           if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 120)) == null) throw; // [null/range check failed]
           lVar7 = *(int64 *)(lVar7 + 40);
           lVar2 = this.exploreTileData;
@@ -816,7 +814,6 @@ public class ExploreTileUnitController
     // RVA   : 0xB28970   Offset: 0xB27D70   Length: 0x2A0
     public void SetObstacleColor()
     {
-        var pStatics = *(int64*)(DAT_181dc5e30 + 184);
         long lVar1;
         bool cVar2;
         long lVar3;
@@ -836,11 +833,11 @@ public class ExploreTileUnitController
           this.exploreEventRenderer = uVar4;
         }
         lVar3 = this.exploreEventRenderer;
-        lVar1 = *(int64 *)(pStatics + 8);
+        lVar1 = BattleController.AttackAreaTypeStartMovePower;
         if (lVar1 == null) throw; // [null/range check failed]
         cVar2 = ExploreController.PlayerCanPassObstacle(lVar1,this.exploreTileData,0,0);
         if (!cVar2) {
-          lVar1 = *(int64 *)(pStatics + 8);
+          lVar1 = BattleController.AttackAreaTypeStartMovePower;
           if (lVar1 == null) throw; // [null/range check failed]
           cVar2 = ExploreController.PlayerCanPassObstacle(lVar1,this.exploreTileData,1,0);
           if (!cVar2) {
@@ -1010,9 +1007,7 @@ public class ExploreTileUnitController
         if (lVar1 != null) {
           FUN_18181e0a0(lVar1,"2",DAT_181da3d58);
           FUN_18181e0a0(lVar1,"6",DAT_181da3d58);
-          plVar2 = (int64 *)(pStatics + 40);
-          *plVar2 = lVar1;
-          il2cpp_internal(plVar2,lVar1);
+          ExploreTileUnitController.UseBlackCoverColorBackgroundType = lVar1;
           return;
         }
     }

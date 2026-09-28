@@ -172,8 +172,8 @@ public class MissionData
             if (lVar3 == null) break;
             if (*(int *)(lVar3 + 40) == 5) {
               if ((this.missionTargetDatas == null) ||
-                 (lVar3 = FUN_180002f80(this.missionTargetDatas,uVar7,ItemListController_StaticsPtr)
-                 , lVar3 == null)) break;
+                 (lVar3 = FUN_180002f80(this.missionTargetDatas,uVar7,DAT_181d95108)) == null)
+              break;
               uVar1 = *(uint64 *)(lVar3 + 48);
               uVar4 = Int32.ToString(local_res10,0);
               cVar2 = FUN_18171e540(uVar1,uVar4,0);
@@ -182,29 +182,26 @@ public class MissionData
               }
             }
             if ((this.missionTargetDatas == null) ||
-               (lVar3 = FUN_180002f80(this.missionTargetDatas,uVar7,ItemListController_StaticsPtr),
-               lVar3 == null)) break;
+               (lVar3 = FUN_180002f80(this.missionTargetDatas,uVar7,DAT_181d95108)) == null)
+            break;
             if (*(int64 *)(lVar3 + 56) != 0) {
               iVar6 = 0;
               while( true ) {
                 if (((this.missionTargetDatas == null) ||
-                    (lVar3 = FUN_180002f80(this.missionTargetDatas,uVar7,
-                                           ItemListController_StaticsPtr), lVar3 == null)) ||
-                   (*(int64 *)(lVar3 + 56) == 0)) throw; // [null/range check failed]
+                    (lVar3 = FUN_180002f80(this.missionTargetDatas,uVar7,DAT_181d95108)) == null
+                    ) || (*(int64 *)(lVar3 + 56) == 0)) throw; // [null/range check failed]
                 if (*(int *)(*(int64 *)(lVar3 + 56) + 24) <= iVar6) break;
                 lVar3 = *(int64 *)(*(int64 *)(DAT_181d8a990 + 184) + 16);
                 if (((this.missionTargetDatas == null) ||
-                    (lVar5 = FUN_180002f80(this.missionTargetDatas,uVar7,
-                                           ItemListController_StaticsPtr), lVar5 == null)) ||
-                   ((*(int64 *)(lVar5 + 56) == 0 ||
-                    ((lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 56),iVar6,DAT_181d94e88), lVar5 == null
-                     || (lVar3 == null)))))) throw; // [null/range check failed]
+                    (lVar5 = FUN_180002f80(this.missionTargetDatas,uVar7,DAT_181d95108)) == null
+                    ) || ((*(int64 *)(lVar5 + 56) == 0 ||
+                          ((lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 56),iVar6,DAT_181d94e88),
+                           lVar5 == null || (lVar3 == null)))))) throw; // [null/range check failed]
                 cVar2 = FUN_18182a3a0(lVar3,*(uint32 *)(lVar5 + 16),DAT_181d95288);
                 if (cVar2) {
                   if ((((this.missionTargetDatas == null) ||
-                       (lVar3 = FUN_180002f80(this.missionTargetDatas,uVar7,
-                                              ItemListController_StaticsPtr), lVar3 == null)) ||
-                      (*(int64 *)(lVar3 + 56) == 0)) ||
+                       (lVar3 = FUN_180002f80(this.missionTargetDatas,uVar7,DAT_181d95108),
+                       lVar3 == null)) || (*(int64 *)(lVar3 + 56) == 0)) ||
                      (lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 56),iVar6,DAT_181d94e88)) == null)
                   throw; // [null/range check failed]
                   uVar1 = lVar3.Count;
@@ -229,7 +226,6 @@ public class MissionData
     // RVA   : 0xE68C70   Offset: 0xE68070   Length: 0xDC
     public MissionData SetForceMission(string _name, MissionTargetType _missionTargetType, float _difficulty)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int64 MissionData.SetForceMission
                          (int64 this,uint64 _name,uint32 _missionTargetType,float _difficulty,
                          uint32 param_5,float param_6)
@@ -238,9 +234,9 @@ public class MissionData
         int64 lVar2;
         this.missionSourceType = 2;
         this.noAutoFinish = 1;
-        if (((*pStatics != 0) &&
-            (lVar2 = *(int64 *)(*pStatics + 32)) != null) &&
-           (lVar2 = *(int64 *)(lVar2 + 168)) != null) {
+        if (((GameController._instance != null) &&
+            (lVar2 = GameController._instance.worldData) != null) &&
+           (lVar2 = lVar2.worldTime) != null) {
           iVar1 = lVar2.Count;
           this.name = _name;
           this.leftTime = 31 - iVar1;
@@ -250,7 +246,7 @@ public class MissionData
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar2 = *(int64 *)(lVar2._items + 32);
-            if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
+            if ((lVar2 = lVar2?.Inns) != null) {
               if (lVar2.Count == null) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
@@ -272,7 +268,6 @@ public class MissionData
     // RVA   : 0xE68D50   Offset: 0xE68150   Length: 0xE5
     public MissionData SetForceMission(string _name, MissionTargetType _missionTargetType, float _difficulty, int _minForceLv)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int64 MissionData.SetForceMission
                          (int64 this,uint64 _name,uint32 _missionTargetType,float _difficulty,
                          uint32 _minForceLv,float param_6)
@@ -281,9 +276,9 @@ public class MissionData
         int64 lVar2;
         this.missionSourceType = 2;
         this.noAutoFinish = 1;
-        if (((*pStatics != 0) &&
-            (lVar2 = *(int64 *)(*pStatics + 32)) != null) &&
-           (lVar2 = *(int64 *)(lVar2 + 168)) != null) {
+        if (((GameController._instance != null) &&
+            (lVar2 = GameController._instance.worldData) != null) &&
+           (lVar2 = lVar2.worldTime) != null) {
           iVar1 = lVar2.Count;
           this.name = _name;
           this.leftTime = 31 - iVar1;
@@ -293,7 +288,7 @@ public class MissionData
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar2 = *(int64 *)(lVar2._items + 32);
-            if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
+            if ((lVar2 = lVar2?.Inns) != null) {
               if (lVar2.Count == null) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
@@ -315,7 +310,6 @@ public class MissionData
     // RVA   : 0xE68E40   Offset: 0xE68240   Length: 0x1B8
     public MissionData SetForceMission(string _name, MissionTargetType _missionTargetType, float _difficulty, int _minForceLv, float _baseMissionContributionReward)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int64 MissionData.SetForceMission
                          (int64 this,uint64 _name,uint32 _missionTargetType,float _difficulty,
                          uint32 _minForceLv,float _baseMissionContributionReward)
@@ -324,9 +318,9 @@ public class MissionData
         int64 lVar2;
         this.missionSourceType = 2;
         this.noAutoFinish = 1;
-        if (((*pStatics != 0) &&
-            (lVar2 = *(int64 *)(*pStatics + 32)) != null) &&
-           (lVar2 = *(int64 *)(lVar2 + 168)) != null) {
+        if (((GameController._instance != null) &&
+            (lVar2 = GameController._instance.worldData) != null) &&
+           (lVar2 = lVar2.worldTime) != null) {
           iVar1 = lVar2.Count;
           this.name = _name;
           this.leftTime = 31 - iVar1;
@@ -336,7 +330,7 @@ public class MissionData
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar2 = *(int64 *)(lVar2._items + 32);
-            if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 56)) != null) {
+            if ((lVar2 = lVar2?.Inns) != null) {
               if (lVar2.Count == null) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
@@ -432,7 +426,6 @@ public class MissionData
     // RVA   : 0xE63840   Offset: 0xE62C40   Length: 0x694
     public string GetMissionBaseDescribe(bool showFinishRate)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         bool cVar1;
         uint uVar2;
         uint uVar3;
@@ -497,22 +490,22 @@ public class MissionData
               uVar8 = "";
               if (0 < this.sourceHeroID) {
                 lVar6 = FUN_18046c0a0(0);
-                if (((lVar6 == null) || (*(int64 *)(lVar6 + 32) == 0)) ||
-                   (lVar6 = WorldData.GetHero(*(int64 *)(lVar6 + 32),this.sourceHeroID
+                if (((lVar6 == null) || (lVar6.villageAreaID == null)) ||
+                   (lVar6 = WorldData.GetHero(lVar6.villageAreaID,this.sourceHeroID
                                                ,0), lVar6 == null)) throw; // [null/range check failed]
-                uVar8 = *(uint64 *)(lVar6 + 104);
+                uVar8 = lVar6.AreaMapRandomEventDatas;
               }
               if (lVar4 == null) throw; // [null/range check failed]
               lVar4 = String.Replace(lVar4,uVar7,uVar8,0);
-              if (((*pStatics == 0) ||
-                  (lVar6 = *(int64 *)(*pStatics + 32)) == null) ||
+              if (((GameController._instance == null) ||
+                  (lVar6 = GameController._instance.worldData) == null) ||
                  (lVar6 = WorldData.Player(lVar6,0)) == null) throw; // [null/range check failed]
               local_res8[0] = HeroData.GetUpgradeForceLvNeedContribution(lVar6,0x3f800000,0);
               uVar7 = Int32.ToString(local_res8,0);
               if (lVar4 == null) throw; // [null/range check failed]
               lVar4 = String.Replace(lVar4,"#UpgradeForceLvNeedContributionNum#",uVar7,0);
-              if (((*pStatics == 0) ||
-                  (lVar6 = *(int64 *)(*pStatics + 32)) == null) ||
+              if (((GameController._instance == null) ||
+                  (lVar6 = GameController._instance.worldData) == null) ||
                  (lVar6 = WorldData.Player(lVar6,0)) == null) throw; // [null/range check failed]
               local_res8[0] = HeroData.GetUpgradeForceLvNeedSkillNum(lVar6,0);
               uVar7 = Int32.ToString(local_res8,0);
@@ -540,7 +533,7 @@ public class MissionData
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
                   }
                   lVar6 = *(int64 *)(lVar6._items + 32);
-                  if ((lVar6 != null) && (lVar6 = *(int64 *)(lVar6 + 56)) != null) {
+                  if ((lVar6 = lVar6?.Inns) != null) {
                     if (lVar6.Count == null) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
                     }
@@ -705,7 +698,7 @@ public class MissionData
             if (this.missionFameReward != null.0) {
               lVar9 = "声望";
               if (this.missionSourceType == 3) {
-                lVar9 = **(int64 **)(DAT_181d8a990 + 184);
+                lVar9 = MissionData.MissionBountyTypeRewardType;
                 if (lVar9 == null) throw; // [null/range check failed]
                 uVar2 = this.missionBountyType;
                 if (lVar9.Count <= uVar2) {
@@ -1126,8 +1119,8 @@ public class MissionData
                             return lVar6;
                           }
                           if ((this.missionTargetDatas != null) &&
-                             (lVar4 = FUN_180002f80(this.missionTargetDatas,targetID,
-                                                    ItemListController_StaticsPtr), lVar4 != null)) {
+                             (lVar4 = FUN_180002f80(this.missionTargetDatas,targetID,DAT_181d95108),
+                             lVar4 != null)) {
                             if (*(int *)(lVar4 + 40) == 1) {
                               uVar5 = "?";
                               if (!unclear) {
@@ -1145,8 +1138,8 @@ public class MissionData
                               return lVar6;
                             }
                             if ((this.missionTargetDatas != null) &&
-                               (lVar4 = FUN_180002f80(this.missionTargetDatas,targetID,
-                                                      ItemListController_StaticsPtr), lVar4 != null)) {
+                               (lVar4 = FUN_180002f80(this.missionTargetDatas,targetID,DAT_181d95108)
+                               , lVar4 != null)) {
                               if (*(int *)(lVar4 + 40) != 4) {
                                 return lVar7;
                               }
@@ -1212,10 +1205,9 @@ public class MissionData
           if (lVar6 != null) {
             lVar6 = *(int64 *)(lVar6 + 32);
             if (((this.missionTargetDatas != null) &&
-                (lVar7 = FUN_180002f80(this.missionTargetDatas,targetID,ItemListController_StaticsPtr
-                                      ), lVar7 != null)) &&
-               ((uVar2 = Int32.Parse(*(uint64 *)(lVar7 + 48),0), lVar6 != null &&
-                (lVar6 = WorldData.GetHero(lVar6,uVar2,0)) != null))) {
+                (lVar7 = FUN_180002f80(this.missionTargetDatas,targetID,DAT_181d95108)) != null)
+               && ((uVar2 = Int32.Parse(*(uint64 *)(lVar7 + 48),0), lVar6 != null &&
+                   (lVar6 = WorldData.GetHero(lVar6,uVar2,0)) != null))) {
               uVar5 = HeroData.Name(lVar6,1,0);
               uVar8 = HeroData.AtAreaName(lVar6,0);
               uVar8 = String.Format("[{0}]",uVar8,0);
@@ -1229,9 +1221,8 @@ public class MissionData
           if (lVar6 != null) {
             lVar6 = *(int64 *)(lVar6 + 32);
             if ((((this.missionTargetDatas != null) &&
-                 (lVar7 = FUN_180002f80(this.missionTargetDatas,targetID,
-                                        ItemListController_StaticsPtr), lVar7 != null)) &&
-                (uVar2 = Int32.Parse(*(uint64 *)(lVar7 + 48),0), lVar6 != null)) &&
+                 (lVar7 = FUN_180002f80(this.missionTargetDatas,targetID,DAT_181d95108)) != null)
+                && (uVar2 = Int32.Parse(*(uint64 *)(lVar7 + 48),0), lVar6 != null)) &&
                (lVar6 = WorldData.GetInn(lVar6,uVar2,0)) != null) {
               return lVar6.Count;
             }
@@ -1240,8 +1231,7 @@ public class MissionData
         case 7:
           lVar6 = FUN_18046c100(0);
           if (((this.missionTargetDatas == null) ||
-              (lVar7 = FUN_180002f80(this.missionTargetDatas,targetID,ItemListController_StaticsPtr),
-              lVar7 == null)) ||
+              (lVar7 = FUN_180002f80(this.missionTargetDatas,targetID,DAT_181d95108)) == null) ||
              ((uVar2 = Int32.Parse(*(uint64 *)(lVar7 + 48),0), lVar6 == null ||
               (lVar6 = GameDataController.GetSkillDataBase(lVar6,uVar2,0)) == null))) break;
           uVar8 = KungfuSkillData.Name(lVar6,0,0);
@@ -1250,8 +1240,8 @@ public class MissionData
         case 8:
           lVar6 = FUN_18046c100(0);
           if ((((this.missionTargetDatas == null) ||
-               (lVar7 = FUN_180002f80(this.missionTargetDatas,targetID,ItemListController_StaticsPtr)
-               , lVar7 == null)) || (uVar2 = Int32.Parse(*(uint64 *)(lVar7 + 48),0), lVar6 == null)) ||
+               (lVar7 = FUN_180002f80(this.missionTargetDatas,targetID,DAT_181d95108)) == null)
+              || (uVar2 = Int32.Parse(*(uint64 *)(lVar7 + 48),0), lVar6 == null)) ||
              (lVar6 = GameDataController.GetSkillDataBase(lVar6,uVar2,0)) == null) break;
           uVar8 = KungfuSkillData.Name(lVar6,0,0);
           uVar5 = "练习{0}";
@@ -2044,8 +2034,8 @@ public class MissionData
             goto LAB_180e67596;
             uVar6 = FUN_180002f80(lVar9,*(uint32 *)(lVar5 + 32),DAT_181da4358);
             if ((((this.missionTargetDatas == null) ||
-                 (lVar5 = FUN_180002f80(this.missionTargetDatas,0,ItemListController_StaticsPtr),
-                 lVar5 == null)) || (*(int64 *)(lVar5 + 56) == 0)) ||
+                 (lVar5 = FUN_180002f80(this.missionTargetDatas,0,DAT_181d95108)) == null) ||
+                (*(int64 *)(lVar5 + 56) == 0)) ||
                (lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 56),iVar11,DAT_181d94e88)) == null)
             goto LAB_180e67596;
             local_68 = *(uint32 *)(lVar5 + 40);
@@ -2062,15 +2052,14 @@ public class MissionData
             }
             lVar5 = *(int64 *)(lVar5 + 32);
             if ((((this.missionTargetDatas == null) ||
-                 (lVar9 = FUN_180002f80(this.missionTargetDatas,0,ItemListController_StaticsPtr),
-                 lVar9 == null)) || (*(int64 *)(lVar9 + 56) == 0)) ||
+                 (lVar9 = FUN_180002f80(this.missionTargetDatas,0,DAT_181d95108)) == null) ||
+                (*(int64 *)(lVar9 + 56) == 0)) ||
                (((lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 56),iVar11,DAT_181d94e88), lVar9 == null ||
                  (uVar3 = Int32.Parse(lVar9.Count,0), lVar5 == null)) ||
                 (lVar5 = WorldData.GetArea(lVar5,uVar3,0)) == null))) goto LAB_180e6759c;
             uVar10 = AreaData.GetAreaName(lVar5,0);
             if (((this.missionTargetDatas == null) ||
-                (lVar5 = FUN_180002f80(this.missionTargetDatas,0,ItemListController_StaticsPtr),
-                lVar5 == null)) ||
+                (lVar5 = FUN_180002f80(this.missionTargetDatas,0,DAT_181d95108)) == null) ||
                ((*(int64 *)(lVar5 + 56) == 0 ||
                 (lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 56),iVar11,DAT_181d94e88)) == null)))
             goto LAB_180e6759c;
@@ -2083,8 +2072,8 @@ public class MissionData
             if (lVar5 == null) throw; // [null/range check failed]
             lVar5 = *(int64 *)(lVar5 + 32);
             if ((((this.missionTargetDatas == null) ||
-                 (lVar9 = FUN_180002f80(this.missionTargetDatas,0,ItemListController_StaticsPtr),
-                 lVar9 == null)) || (*(int64 *)(lVar9 + 56) == 0)) ||
+                 (lVar9 = FUN_180002f80(this.missionTargetDatas,0,DAT_181d95108)) == null) ||
+                (*(int64 *)(lVar9 + 56) == 0)) ||
                ((lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 56),iVar11,DAT_181d94e88), lVar9 == null ||
                 (uVar3 = Int32.Parse(lVar9.Count,0), lVar5 == null)))) throw; // [null/range check failed]
             lVar5 = WorldData.GetHero(lVar5,uVar3,0);
@@ -2099,15 +2088,14 @@ public class MissionData
             }
             lVar5 = *(int64 *)(lVar5 + 32);
             if ((((this.missionTargetDatas == null) ||
-                 (lVar9 = FUN_180002f80(this.missionTargetDatas,0,ItemListController_StaticsPtr),
-                 lVar9 == null)) || (*(int64 *)(lVar9 + 56) == 0)) ||
+                 (lVar9 = FUN_180002f80(this.missionTargetDatas,0,DAT_181d95108)) == null) ||
+                (*(int64 *)(lVar9 + 56) == 0)) ||
                (((lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 56),iVar11,DAT_181d94e88), lVar9 == null ||
                  (uVar3 = Int32.Parse(lVar9.Count,0), lVar5 == null)) ||
                 (lVar5 = WorldData.GetHero(lVar5,uVar3,0)) == null))) goto LAB_180e675a2;
             uVar10 = HeroData.GetHeroName(lVar5,0,0);
             if (((this.missionTargetDatas == null) ||
-                (lVar5 = FUN_180002f80(this.missionTargetDatas,0,ItemListController_StaticsPtr),
-                lVar5 == null)) ||
+                (lVar5 = FUN_180002f80(this.missionTargetDatas,0,DAT_181d95108)) == null) ||
                ((*(int64 *)(lVar5 + 56) == 0 ||
                 (lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 56),iVar11,DAT_181d94e88)) == null)))
             goto LAB_180e675a2;
@@ -2120,8 +2108,8 @@ public class MissionData
             if (lVar5 != null) {
               lVar5 = *(int64 *)(lVar5 + 32);
               if ((((this.missionTargetDatas != null) &&
-                   (lVar9 = FUN_180002f80(this.missionTargetDatas,0,ItemListController_StaticsPtr),
-                   lVar9 != null)) && (*(int64 *)(lVar9 + 56) != 0)) &&
+                   (lVar9 = FUN_180002f80(this.missionTargetDatas,0,DAT_181d95108)) != null) &&
+                  (*(int64 *)(lVar9 + 56) != 0)) &&
                  (((lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 56),iVar11), lVar9 != null &&
                    (uVar3 = Int32.Parse(lVar9.Count,0), lVar5 != null)) &&
                   (lVar5 = WorldData.GetArea(lVar5,uVar3)) != null))) {
@@ -2141,15 +2129,14 @@ public class MissionData
             }
             lVar5 = *(int64 *)(lVar5 + 32);
             if ((((this.missionTargetDatas == null) ||
-                 (lVar9 = FUN_180002f80(this.missionTargetDatas,0,ItemListController_StaticsPtr),
-                 lVar9 == null)) || (*(int64 *)(lVar9 + 56) == 0)) ||
+                 (lVar9 = FUN_180002f80(this.missionTargetDatas,0,DAT_181d95108)) == null) ||
+                (*(int64 *)(lVar9 + 56) == 0)) ||
                (((lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 56),iVar11,DAT_181d94e88), lVar9 == null ||
                  (uVar3 = Int32.Parse(lVar9.Count,0), lVar5 == null)) ||
                 (lVar5 = WorldData.GetArea(lVar5,uVar3,0)) == null))) goto LAB_180e675a8;
             uVar10 = AreaData.GetAreaName(lVar5,0);
             if (((this.missionTargetDatas == null) ||
-                (lVar5 = FUN_180002f80(this.missionTargetDatas,0,ItemListController_StaticsPtr),
-                lVar5 == null)) ||
+                (lVar5 = FUN_180002f80(this.missionTargetDatas,0,DAT_181d95108)) == null) ||
                ((*(int64 *)(lVar5 + 56) == 0 ||
                 (lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 56),iVar11,DAT_181d94e88)) == null)))
             goto LAB_180e675a8;
@@ -2159,8 +2146,7 @@ public class MissionData
             break;
           case 22:
             if (((this.missionTargetDatas == null) ||
-                (lVar5 = FUN_180002f80(this.missionTargetDatas,0,ItemListController_StaticsPtr),
-                lVar5 == null)) ||
+                (lVar5 = FUN_180002f80(this.missionTargetDatas,0,DAT_181d95108)) == null) ||
                ((*(int64 *)(lVar5 + 56) == 0 ||
                 (lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 56),iVar11,DAT_181d94e88)) == null))) {
         LAB_180e675ae:
@@ -2171,14 +2157,14 @@ public class MissionData
             uVar10 = il2cpp_value_box(DAT_181da22d8,&local_58);
             lVar5 = *(int64 *)(pStatics + 0x4f0);
             if ((((this.missionTargetDatas == null) ||
-                 (lVar9 = FUN_180002f80(this.missionTargetDatas,0,ItemListController_StaticsPtr),
-                 lVar9 == null)) || (*(int64 *)(lVar9 + 56) == 0)) ||
+                 (lVar9 = FUN_180002f80(this.missionTargetDatas,0,DAT_181d95108)) == null) ||
+                (*(int64 *)(lVar9 + 56) == 0)) ||
                ((lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 56),iVar11,DAT_181d94e88), lVar9 == null ||
                 (lVar5 == null)))) goto LAB_180e675ae;
             uVar6 = FUN_180002f80(lVar5,*(uint32 *)(lVar9 + 32),DAT_181da4358);
             if (((this.missionTargetDatas == null) ||
-                ((lVar5 = FUN_180002f80(this.missionTargetDatas,0,ItemListController_StaticsPtr),
-                 lVar5 == null || (*(int64 *)(lVar5 + 56) == 0)))) ||
+                ((lVar5 = FUN_180002f80(this.missionTargetDatas,0,DAT_181d95108), lVar5 == null ||
+                 (*(int64 *)(lVar5 + 56) == 0)))) ||
                (lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 56),iVar11,DAT_181d94e88)) == null)
             goto LAB_180e675ae;
             uVar7 = GlobalData.GenerateRareLvColorText(uVar6,*(uint32 *)(lVar5 + 32),0);
@@ -2310,8 +2296,8 @@ public class MissionData
             }
             FUN_180002fd0(plVar8,0,lVar4);
             if ((((this.missionTargetDatas == null) ||
-                 (lVar4 = FUN_180002f80(this.missionTargetDatas,0,ItemListController_StaticsPtr),
-                 lVar4 == null)) || (*(int64 *)(lVar4 + 56) == 0)) ||
+                 (lVar4 = FUN_180002f80(this.missionTargetDatas,0,DAT_181d95108)) == null) ||
+                (*(int64 *)(lVar4 + 56) == 0)) ||
                (lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 56),iVar11,DAT_181d94e88)) == null)
             goto LAB_180e67600;
             local_4c = (int)*(float *)(lVar4 + 36);
@@ -2324,8 +2310,7 @@ public class MissionData
             }
             FUN_180002fd0(plVar8,1,lVar4);
             if (((this.missionTargetDatas == null) ||
-                (lVar4 = FUN_180002f80(this.missionTargetDatas,0,ItemListController_StaticsPtr),
-                lVar4 == null)) ||
+                (lVar4 = FUN_180002f80(this.missionTargetDatas,0,DAT_181d95108)) == null) ||
                ((*(int64 *)(lVar4 + 56) == 0 ||
                 (lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 56),iVar11,DAT_181d94e88)) == null)))
             goto LAB_180e67600;
@@ -2481,9 +2466,7 @@ public class MissionData
             FUN_18181de10(lVar1,0x41700000,DAT_181da0df8);
             FUN_18181de10(lVar1,0x41700000,DAT_181da0df8);
             FUN_18181de10(lVar1,0x41500000,DAT_181da0df8);
-            plVar2 = (int64 *)(pStatics + 8);
-            *plVar2 = lVar1;
-            il2cpp_internal(plVar2,lVar1);
+            MissionData.MissionTargetTypeBaseMissionContribution = lVar1;
             lVar1 = il2cpp_internal(DAT_181d94cd0);
             FUN_18132faf0(lVar1,DAT_181d95188);
             if (lVar1 != null) {
@@ -2494,9 +2477,7 @@ public class MissionData
               FUN_18182a0b0(lVar1,24,DAT_181d95208);
               FUN_18182a0b0(lVar1,19,DAT_181d95208);
               FUN_18182a0b0(lVar1,23,DAT_181d95208);
-              plVar2 = (int64 *)(pStatics + 16);
-              *plVar2 = lVar1;
-              il2cpp_internal(plVar2,lVar1);
+              MissionData.MissionTargetNpc = lVar1;
               return;
             }
           }

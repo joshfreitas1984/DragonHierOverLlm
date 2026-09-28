@@ -101,9 +101,8 @@ public class UIKeyNavigation
     // RVA   : 0x118EE10   Offset: 0x118E210   Length: 0xB3
     protected virtual void OnEnable()
     {
-        var pStatics = *(int64*)(DAT_181dafcf8 + 184);
-        if (*pStatics != 0) {
-          FUN_181583c60(*pStatics,this,DAT_181da6cb8);
+        if (UIKeyNavigation.list != null) {
+          FUN_181583c60(UIKeyNavigation.list,this,DAT_181da6cb8);
           if (this.mStarted) {
             MonoBehaviour.Invoke(this,"Start",0x3a83126f,0);
             return;
@@ -133,9 +132,8 @@ public class UIKeyNavigation
     // RVA   : 0x118ED80   Offset: 0x118E180   Length: 0x81
     protected virtual void OnDisable()
     {
-        var pStatics = *(int64*)(DAT_181dafcf8 + 184);
-        if (*pStatics != 0) {
-          FUN_181585c70(*pStatics,this,DAT_181da6d38);
+        if (UIKeyNavigation.list != null) {
+          FUN_181585c70(UIKeyNavigation.list,this,DAT_181da6d38);
           return;
         }
     }
@@ -276,7 +274,6 @@ public class UIKeyNavigation
     // RVA   : 0x118E6A0   Offset: 0x118DAA0   Length: 0x4D7
     public GameObject Get(Vector3 myDir, float x, float y)
     {
-        var pStatics = *(int64*)(DAT_181dafcf8 + 184);
         uint uVar1;
         float fVar2;
         long lVar3;
@@ -326,13 +323,13 @@ public class UIKeyNavigation
           local_128 = uVar9;
           local_120 = fVar2;
           while( true ) {
-            if (*pStatics == 0) break;
+            if (UIKeyNavigation.list == null) break;
             uVar12 = (uint32)uVar13;
-            if (*(int *)(*pStatics + 24) <= (int)uVar12) {
+            if (UIKeyNavigation.list.constraint <= (int)uVar12) {
               return uVar11;
             }
-            if ((*pStatics == 0) ||
-               (lVar3 = *(int64 *)(*pStatics + 16)) == null) break;
+            if ((UIKeyNavigation.list == null) ||
+               (lVar3 = *(int64 *)(UIKeyNavigation.list + 16)) == null) break;
             if (*(uint32 *)(lVar3 + 24) <= uVar12) {
               uVar9 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -492,7 +489,6 @@ public class UIKeyNavigation
     // RVA   : 0x118F320   Offset: 0x118E720   Length: 0x1AD
     public virtual void OnNavigate(KeyCode key)
     {
-        var pStatics = *(int64*)(DAT_181dafcf8 + 184);
         int iVar1;
         bool cVar2;
         int iVar3;
@@ -500,11 +496,11 @@ public class UIKeyNavigation
         ulong uVar5;
         cVar2 = UIPopupList.get_isOpen(0);
         if (!cVar2) {
-          iVar1 = *(int *)(pStatics + 8);
+          iVar1 = UIKeyNavigation.mLastFrame;
           iVar3 = Time.get_frameCount(0);
           if (iVar1 != iVar3) {
             uVar4 = Time.get_frameCount(0);
-            *(uint32 *)(pStatics + 8) = uVar4;
+            UIKeyNavigation.mLastFrame = uVar4;
             uVar5 = 0;
             if (key == 0x111) {
               uVar5 = UIKeyNavigation.GetUp(this,0);
@@ -530,8 +526,6 @@ public class UIKeyNavigation
     // RVA   : 0x118EED0   Offset: 0x118E2D0   Length: 0x442
     public virtual void OnKey(KeyCode key)
     {
-        var pStatics_f678 = *(int64*)(DAT_181daf678 + 184);
-        var pStatics_fcf8 = *(int64*)(DAT_181dafcf8 + 184);
         int iVar1;
         bool cVar2;
         int iVar3;
@@ -541,24 +535,24 @@ public class UIKeyNavigation
         if (cVar2) {
           return;
         }
-        iVar1 = *(int *)(pStatics_fcf8 + 8);
+        iVar1 = UIKeyNavigation.mLastFrame;
         iVar3 = Time.get_frameCount(0);
         if (iVar1 == iVar3) {
           return;
         }
         uVar4 = Time.get_frameCount(0);
-        *(uint32 *)(pStatics_fcf8 + 8) = uVar4;
+        UIKeyNavigation.mLastFrame = uVar4;
         if (key != 9) {
           return;
         }
         lVar5 = this.onTab;
         cVar2 = Object.op_Equality(lVar5,0,0);
         if (cVar2) {
-          lVar5 = *(int64 *)(pStatics_f678 + 24);
+          lVar5 = UICamera.GetKey;
           if (lVar5 == null) goto LAB_18118f30d;
           cVar2 = GetKeyStateFunc.Invoke(lVar5,0x130,0);
           if (!cVar2) {
-            lVar5 = *(int64 *)(pStatics_f678 + 24);
+            lVar5 = UICamera.GetKey;
             if (lVar5 == null) goto LAB_18118f30d;
             cVar2 = GetKeyStateFunc.Invoke(lVar5,0x12f,0);
             if (!cVar2) {

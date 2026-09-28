@@ -41,7 +41,6 @@ public class QuickTravelAreaIconController
     private void Update()
     {
         var pStatics_b490 = *(int64*)(DAT_181dab490 + 184);
-        var pStatics_b790 = *(int64*)(DAT_181d8b790 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
@@ -50,25 +49,25 @@ public class QuickTravelAreaIconController
         uint uStack_10;
         uint32 uStack_c;
         this.hightLight = 0;
-        uVar2 = *(uint64 *)(pStatics_b790 + 72);
+        uVar2 = MouseController.hoveredUI;
         cVar1 = Object.op_Inequality(uVar2,0,0);
         if (cVar1) {
-          lVar3 = *(int64 *)(pStatics_b790 + 72);
+          lVar3 = MouseController.hoveredUI;
           if (lVar3 == null) goto LAB_180b24add;
           uVar2 = GameObject.GetComponent(lVar3,DAT_181d725f0);
           cVar1 = Object.op_Inequality(uVar2,0,0);
           if (cVar1) {
-            lVar3 = *(int64 *)(pStatics_b790 + 72);
+            lVar3 = MouseController.hoveredUI;
             if (lVar3 == null) goto LAB_180b24add;
             lVar3 = GameObject.GetComponent(lVar3,DAT_181d725f0);
             if (lVar3 == null) goto LAB_180b24add;
             if (lVar3.areaName == null) goto LAB_180b24496;
-            lVar3 = *(int64 *)(pStatics_b790 + 72);
+            lVar3 = MouseController.hoveredUI;
             if (lVar3 == null) goto LAB_180b24add;
             lVar3 = GameObject.GetComponent(lVar3,DAT_181d725f0);
             if ((lVar3 == null) || (lVar3.areaName == null)) goto LAB_180b24add;
             if (*(char *)(lVar3.areaName + 97) != false) goto LAB_180b24496;
-            lVar3 = *(int64 *)(pStatics_b790 + 72);
+            lVar3 = MouseController.hoveredUI;
             if (lVar3 == null) goto LAB_180b24add;
             lVar3 = GameObject.GetComponent(lVar3,DAT_181d725f0);
             if ((lVar3 == null) || (lVar3.areaName == null)) goto LAB_180b24add;
@@ -80,22 +79,22 @@ public class QuickTravelAreaIconController
             goto LAB_180b24845;
           }
         LAB_180b24496:
-          lVar3 = *(int64 *)(pStatics_b790 + 72);
+          lVar3 = MouseController.hoveredUI;
           if (lVar3 == null) goto LAB_180b24add;
           uVar2 = GameObject.GetComponent(lVar3,DAT_181d72568);
           cVar1 = Object.op_Inequality(uVar2,0,0);
           if (cVar1) {
-            lVar3 = *(int64 *)(pStatics_b790 + 72);
+            lVar3 = MouseController.hoveredUI;
             if (lVar3 == null) goto LAB_180b24add;
             lVar3 = GameObject.GetComponent(lVar3,DAT_181d72568);
             if (lVar3 == null) goto LAB_180b24add;
             if (lVar3.areaName != null) {
-              lVar3 = *(int64 *)(pStatics_b790 + 72);
+              lVar3 = MouseController.hoveredUI;
               if (lVar3 == null) goto LAB_180b24add;
               lVar3 = GameObject.GetComponent(lVar3,DAT_181d72568);
               if ((lVar3 == null) || (lVar3.areaName == null)) goto LAB_180b24add;
               if (*(char *)(lVar3.areaName + 97) == false) {
-                lVar3 = *(int64 *)(pStatics_b790 + 72);
+                lVar3 = MouseController.hoveredUI;
                 if (lVar3 == null) goto LAB_180b24add;
                 lVar3 = GameObject.GetComponent(lVar3,DAT_181d72568);
                 if ((lVar3 == null) || (lVar3.areaName == null)) goto LAB_180b24add;
@@ -107,15 +106,15 @@ public class QuickTravelAreaIconController
               }
             }
           }
-          if (*(int64 *)(pStatics_b790 + 72) == 0) goto LAB_180b24add;
+          if (MouseController.hoveredUI == null) goto LAB_180b24add;
           uVar2 = GameObject.GetComponent();
           cVar1 = Object.op_Inequality(uVar2,0,0);
           if (cVar1) {
-            if (*(int64 *)(pStatics_b790 + 72) == 0) goto LAB_180b24add;
+            if (MouseController.hoveredUI == null) goto LAB_180b24add;
             lVar3 = GameObject.GetComponent();
             if (lVar3 == null) goto LAB_180b24add;
             if (lVar3.areaName != null) {
-              lVar3 = *(int64 *)(pStatics_b790 + 72);
+              lVar3 = MouseController.hoveredUI;
               if (lVar3 == null) goto LAB_180b24add;
               lVar3 = GameObject.GetComponent(lVar3,DAT_181d74cb8);
               if ((((lVar3 == null) || (lVar3.areaName == null)) ||
@@ -125,7 +124,7 @@ public class QuickTravelAreaIconController
               cVar1 = FUN_18182a3a0(lVar3,this.areaData.areaID,
                                     DAT_181d8f398);
               if (!cVar1) {
-                if (*(int64 *)(pStatics_b790 + 72) == 0) goto LAB_180b24add;
+                if (MouseController.hoveredUI == null) goto LAB_180b24add;
                 lVar3 = GameObject.GetComponent();
                 if (((lVar3 == null) || (lVar3.areaName == null)) ||
                    (this.areaData == null)) goto LAB_180b24add;

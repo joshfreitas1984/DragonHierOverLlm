@@ -16,10 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="Glossary\Statuses.yaml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Converted\" />
     <Folder Include="Mod\" />
     <Folder Include="Sprites\" />

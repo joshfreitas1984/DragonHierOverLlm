@@ -214,9 +214,9 @@ public class ResearchTechController
         long lVar6;
         lVar6 = *(int64 *)(*(int64 *)(DAT_181d9c580 + 184) + 8);
         if (lVar6 != null) {
-          iVar1 = *(int *)(lVar6 + 24);
+          iVar1 = lVar6.TestBuildPlayer;
           if (iVar1 == 0) {
-            lVar6 = **(int64 **)(DAT_181d72cc8 + 184);
+            lVar6 = GameController._instance;
             lVar3 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x3d8);
             uVar2 = **(uint32 **)(DAT_181d9c580 + 184);
             if (lVar3 != null) {

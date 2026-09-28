@@ -80,7 +80,7 @@ Applied by `Services/SummaryWriter.cs` to each decompiled method body, in order:
 
 ## File responsibilities
 
-- **`Services/SummaryWriter.cs`** — post-processing passes (most tuning work goes here); passes numbered 0–7 (see table above). `StripGhidraWrapper` also skips `/* WARNING: ... */` block-comment lines that Ghidra emits before the function signature when it removes unreachable blocks. `WriteAll` signature: `WriteAll(types, allTypes?, datToClass?)`. `datToClass` is a `Dictionary<string,string>` mapping hex DAT_ addresses (lower-case, no `0x` prefix) → class name, loaded from `_static_labels.csv` by `Program.cs` each run.
+- **`Services/SummaryWriter.cs`** — post-processing passes (most tuning work goes here); passes numbered 0–7 (see table above). `StripGhidraWrapper` also skips `/* WARNING: ... */` block-comment lines that Ghidra emits before the function signature when it removes unreachable blocks. `WriteAll` signature: `WriteAll(types, allTypes?, datToClass?)`. `datToClass` is a `Dictionary<string,string>` mapping hex DAT_ addresses (lower-case, no `0x` prefix) → class name, loaded from the previous run's `_static_labels.csv` by `Program.cs`. `WriteAll` pre-scans the raw Ghidra output first and lets this run's addresses override it, so a fresh import resolves statics in a single run; previous-run entries survive only for addresses Ghidra already labelled.
 - **`Program.cs`** — loads `_static_labels.csv` into `datToClass` map before calling `summaryWriter.WriteAll`; also decodes static field offset encoding from `NativeMethodExtractor` (`-(offset+1)` → `offset`)
 - **`Services/DllParser.cs`** — type/field/method parsing + `FormatTypeRef()` for generic types; field signatures now include access modifiers (`public`, `private`, `protected`, `static`, `const`, `readonly`)
 - **`Services/NativeMethodExtractor.cs`** — LibCpp2IL integration for engine method labels; also exports `ExtractFieldOffsets()` which returns real IL2CPP field offsets (instance and static) for all types using `Il2CppFieldReflectionData.FieldOffset`. Static field encoding: uses `-(offset+1)` (not `-offset`) so offset 0 static fields are distinguishable from instance fields. `Program.cs` decodes with `-(value) - 1`.
@@ -114,7 +114,7 @@ All paths below are auto-discovered when passing `--game-dir`:
 | `output/_manifest.csv` | Method list passed to Ghidra (token, RVA, class, method name) |
 | `output/_labels.csv` | RVA → label map used by Ghidra for function renaming |
 | `output/_string_map.csv` | IL2CPP string literal address → value (cached between runs) |
-| `output/_static_labels.csv` | Class statics-pointer RVA → symbol name — regenerated each run; fed back to Ghidra so `DAT_` addresses become `ClassName_StaticsPtr` on the next run |
+| `output/_static_labels.csv` | Class statics-pointer RVA → symbol name — regenerated each run from this run's scan plus still-labelled previous entries; fed back to Ghidra so `DAT_` addresses become `ClassName_StaticsPtr` on the next run. Delete it together with `_ghidra_project/` after a game update |
 
 ## Prerequisites
 

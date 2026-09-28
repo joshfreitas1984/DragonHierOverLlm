@@ -85,7 +85,6 @@ public class ShowRoomSpaceController
     public void SelectShowRoomItem()
     {
         var pStatics_2058 = *(int64*)(DAT_181da2058 + 184);
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_7518 = *(int64*)(DAT_181db7518 + 184);
         float fVar1;
         uint uVar2;
@@ -93,20 +92,20 @@ public class ShowRoomSpaceController
         long lVar4;
         long lVar5;
         float fVar6;
-        lVar5 = *(int64 *)(pStatics_2058 + 32);
-        if ((lVar5 != null) && (lVar5 = *(int64 *)(lVar5 + 64)) != null) {
+
+        if ((lVar5 = *(int64 *)(pStatics_2058 + 32)?.ResourcePoints) != null) {
           uVar2 = this.itemTypeID;
-          if (*(uint32 *)(lVar5 + 24) <= uVar2) {
+          if (lVar5.cityAreaID <= uVar2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          lVar5 = lVar5[uVar2];
+          lVar5 = lVar5.chapter[uVar2];
           uVar3 = this.itemID;
           if ((((*pStatics_7518 != 0) &&
                (lVar4 = *(int64 *)(*pStatics_7518 + 72)) != null) &&
               (lVar4 = GameObject.GetComponent(lVar4,DAT_181d720a0)) != null) && (lVar5 != null)) {
             FUN_181829cd0(lVar5,uVar3,*(uint64 *)(lVar4 + 32),DAT_181d90f98);
-            if ((*pStatics_2cc8 != 0) &&
-               (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
+            if ((GameController._instance != null) &&
+               (lVar5 = GameController._instance.worldData) != null) {
               lVar5 = WorldData.Player(lVar5,0);
               lVar4 = *(int64 *)(pStatics_2058 + 32);
               if ((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 64)) != null) {
@@ -124,41 +123,41 @@ public class ShowRoomSpaceController
                     HeroData.LoseItem(lVar5,*(uint64 *)
                                               (*(int64 *)(lVar4 + 16) + 32 +
                                               (int64)(int)uVar2 * 8),1,0);
-                    lVar5 = *(int64 *)(pStatics_2058 + 32);
-                    if ((lVar5 != null) && (lVar5 = *(int64 *)(lVar5 + 64)) != null) {
+
+                    if ((lVar5 = *(int64 *)(pStatics_2058 + 32)?.ResourcePoints) != null) {
                       uVar2 = this.itemTypeID;
-                      if (*(uint32 *)(lVar5 + 24) <= uVar2) {
+                      if (lVar5.cityAreaID <= uVar2) {
                         ThrowHelper.ThrowArgumentOutOfRangeException(0);
                       }
-                      lVar5 = lVar5[uVar2]
+                      lVar5 = lVar5.chapter[uVar2]
                       ;
                       if (lVar5 != null) {
                         uVar2 = this.itemID;
-                        if (*(uint32 *)(lVar5 + 24) <= uVar2) {
+                        if (lVar5.cityAreaID <= uVar2) {
                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
                         }
                         ShowRoomSpaceController.SetShowRoomSpaceItem
                                   (this,*(uint64 *)
-                                            (*(int64 *)(lVar5 + 16) + 32 + (int64)(int)uVar2 * 8
+                                            (lVar5.chapter + 32 + (int64)(int)uVar2 * 8
                                             ),0);
                         lVar5 = *(int64 *)(pStatics_2058 + 32);
                         if (lVar5 != null) {
-                          if (*(int *)(lVar5 + 24) == 0) {
-                            lVar5 = *(int64 *)(pStatics_2058 + 32);
-                            if ((lVar5 != null) && (lVar5 = *(int64 *)(lVar5 + 56)) != null) {
-                              *(uint8 *)(lVar5 + 0x10c) = 1;
+                          if (lVar5.cityAreaID == null) {
+
+                            if ((lVar5 = *(int64 *)(pStatics_2058 + 32)?.Inns) != null) {
+                              lVar5.openForceAttackBasement = 1;
                               return;
                             }
                           }
                           else {
-                            if ((*pStatics_2cc8 != 0) &&
-                               (lVar5 = *(int64 *)(*pStatics_2cc8 + 32),
+                            if ((GameController._instance != null) &&
+                               (lVar5 = GameController._instance.worldData,
                                lVar5 != null)) {
-                              fVar1 = *(float *)(lVar5 + 0x168);
+                              fVar1 = lVar5.showRoomChangeFame;
                               if (this.targetItem != null) {
                                 fVar6 = (float)ItemData.GetShowRoomFameChange
                                                          (this.targetItem,0x3e4ccccd,0);
-                                *(float *)(lVar5 + 0x168) = fVar6 + fVar1;
+                                lVar5.showRoomChangeFame = fVar6 + fVar1;
                                 return;
                               }
                             }
@@ -292,14 +291,13 @@ public class ShowRoomSpaceController
     public void ClearButtonClicked()
     {
         var pStatics_2058 = *(int64*)(DAT_181da2058 + 184);
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         float fVar1;
         uint uVar2;
         long lVar3;
         long lVar4;
         float fVar5;
-        if ((*pStatics_2cc8 != 0) &&
-           (lVar4 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar4 = GameController._instance.worldData) != null) {
           lVar4 = WorldData.Player(lVar4,0);
           lVar3 = *(int64 *)(pStatics_2058 + 32);
           if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 64)) != null) {
@@ -317,35 +315,35 @@ public class ShowRoomSpaceController
                 HeroData.GetItem(lVar4,*(uint64 *)
                                          (*(int64 *)(lVar3 + 16) + 32 + (int64)(int)uVar2 * 8),1
                                   ,0,0xffffffff,0,0);
-                lVar4 = *(int64 *)(pStatics_2058 + 32);
-                if ((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 64)) != null) {
+
+                if ((lVar4 = *(int64 *)(pStatics_2058 + 32)?.ResourcePoints) != null) {
                   uVar2 = this.itemTypeID;
-                  if (*(uint32 *)(lVar4 + 24) <= uVar2) {
+                  if (lVar4.cityAreaID <= uVar2) {
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
                   }
-                  lVar4 = lVar4[uVar2];
+                  lVar4 = lVar4.chapter[uVar2];
                   if (lVar4 != null) {
                     FUN_181829cd0(lVar4,this.itemID,0,DAT_181d90f98);
                     lVar4 = *(int64 *)(pStatics_2058 + 32);
                     if (lVar4 != null) {
-                      if (*(int *)(lVar4 + 24) == 0) {
-                        lVar4 = *(int64 *)(pStatics_2058 + 32);
-                        if ((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 56)) != null) {
-                          *(uint8 *)(lVar4 + 0x10c) = 1;
+                      if (lVar4.cityAreaID == null) {
+
+                        if ((lVar4 = *(int64 *)(pStatics_2058 + 32)?.Inns) != null) {
+                          lVar4.openForceAttackBasement = 1;
         LAB_18097fe6a:
                           ShowRoomSpaceController.SetShowRoomSpaceItem(this,0,0);
                           return;
                         }
                       }
                       else {
-                        if ((*pStatics_2cc8 != 0) &&
-                           (lVar4 = *(int64 *)(*pStatics_2cc8 + 32),
+                        if ((GameController._instance != null) &&
+                           (lVar4 = GameController._instance.worldData,
                            lVar4 != null)) {
-                          fVar1 = *(float *)(lVar4 + 0x168);
+                          fVar1 = lVar4.showRoomChangeFame;
                           if (this.targetItem != null) {
                             fVar5 = (float)ItemData.GetShowRoomFameChange
                                                      (this.targetItem,0x3e4ccccd,0);
-                            *(float *)(lVar4 + 0x168) = fVar1 - fVar5;
+                            lVar4.showRoomChangeFame = fVar1 - fVar5;
                             goto LAB_18097fe6a;
                           }
                         }

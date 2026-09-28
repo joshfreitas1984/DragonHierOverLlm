@@ -168,7 +168,6 @@ public class MissionUIController
     // RVA   : 0xE6AB80   Offset: 0xE69F80   Length: 0x156F
     public void RefreshForceMission()
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_b490 = *(int64*)(DAT_181dab490 + 184);
         long lVar1;
         bool cVar2;
@@ -182,14 +181,14 @@ public class MissionUIController
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+        if (((GameController._instance == null) ||
+            (lVar3 = GameController._instance.worldData) == null) ||
            (lVar3 = WorldData.Player(lVar3,0)) == null) goto LAB_180e6c0c6;
         cVar2 = HeroData.HaveForce(lVar3,0);
         if (!cVar2) {
         LAB_180e6ae33:
-          if (((*pStatics_2cc8 == 0) ||
-              (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+          if (((GameController._instance == null) ||
+              (lVar3 = GameController._instance.worldData) == null) ||
              (lVar3 = WorldData.Player(lVar3,0)) == null) goto LAB_180e6c0c6;
           if (*(int64 *)(lVar3 + 0x2e0) != 0) goto LAB_180e6aedd;
         LAB_180e6c096:
@@ -207,18 +206,18 @@ public class MissionUIController
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+        if (((GameController._instance == null) ||
+            (lVar3 = GameController._instance.worldData) == null) ||
            (lVar3 = WorldData.Player(lVar3,0)) == null) goto LAB_180e6c0c6;
-        if (*(char *)(lVar3 + 180) != false) goto LAB_180e6ae33;
+        if (lVar3.hour) goto LAB_180e6ae33;
         LAB_180e6aedd:
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
-           (lVar3 = *(int64 *)(lVar3 + 168)) == null) goto LAB_180e6c0c6;
-        if (*(int *)(lVar3 + 16) < 2) {
+        if (((GameController._instance == null) ||
+            (lVar3 = GameController._instance.worldData) == null) ||
+           (lVar3 = lVar3.worldTime) == null) goto LAB_180e6c0c6;
+        if (lVar3.chapter < 2) {
           lVar3 = FUN_18046c0a0(0);
-          if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-             (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 168)) == null) goto LAB_180e6c0c6;
+          if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+             (lVar3 = *(int64 *)(lVar3.villageAreaID + 168)) == null) goto LAB_180e6c0c6;
           if (*(int *)(lVar3 + 20) < 3) goto LAB_180e6c096;
         }
         if (this.forceMission == null) goto LAB_180e6c0c6;
@@ -227,13 +226,13 @@ public class MissionUIController
           if (this.forceMission == null) goto LAB_180e6c0c6;
           GameObject.SetActive(this.forceMission,1,0);
         }
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+        if (((GameController._instance == null) ||
+            (lVar3 = GameController._instance.worldData) == null) ||
            (lVar3 = WorldData.Player(lVar3,0)) == null) goto LAB_180e6c0c6;
         if (*(int64 *)(lVar3 + 0x2e0) != 0) {
           lVar3 = FUN_18046c0a0(0);
-          if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-             ((lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0), lVar3 == null ||
+          if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+             ((lVar3 = WorldData.Player(lVar3.villageAreaID,0), lVar3 == null ||
               (*(int64 *)(lVar3 + 0x2e0) == 0)))) goto LAB_180e6c0c6;
           cVar2 = FUN_18171e540(*(uint64 *)(*(int64 *)(lVar3 + 0x2e0) + 24),"",0);
           if (!cVar2) {
@@ -262,8 +261,8 @@ public class MissionUIController
                        && (lVar3 = Transform.Find(lVar3,"Text",0)) != null) {
                       uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
                       lVar3 = FUN_18046c0a0(0);
-                      if (((lVar3 != null) && (*(int64 *)(lVar3 + 32) != 0)) &&
-                         ((lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0), lVar3 != null &&
+                      if (((lVar3 != null) && (lVar3.villageAreaID != null)) &&
+                         ((lVar3 = WorldData.Player(lVar3.villageAreaID,0), lVar3 != null &&
                           (*(int64 *)(lVar3 + 0x2e0) != 0)))) {
                         uVar7 = MissionData.GetMissionDescribe(*(int64 *)(lVar3 + 0x2e0),0,0,1,0,0);
                         uVar7 = String.Concat("门派任务\n",uVar7,0);
@@ -274,18 +273,18 @@ public class MissionUIController
                         {
                           uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
                           lVar3 = FUN_18046c0a0(0);
-                          if (((lVar3 != null) && (*(int64 *)(lVar3 + 32) != 0)) &&
-                             (lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0)) != null) {
+                          if (((lVar3 != null) && (lVar3.villageAreaID != null)) &&
+                             (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) != null) {
                             uVar7 = "";
-                            if (*(char *)(lVar3 + 180) == false) {
+                            if (!lVar3.hour) {
                               lVar3 = FUN_18046c0a0(0);
-                              if ((((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                                  (lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0)) == null)
+                              if ((((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                                  (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) == null)
                                  || (*(int64 *)(lVar3 + 0x2e0) == 0)) goto LAB_180e6c0c6;
                               if (*(int *)(*(int64 *)(lVar3 + 0x2e0) + 36) < 0) {
                                 uVar7 = *(uint64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x2d0);
-                                if ((((*pStatics_2cc8 == 0) ||
-                                     (lVar3 = *(int64 *)(*pStatics_2cc8 + 32),
+                                if ((((GameController._instance == null) ||
+                                     (lVar3 = GameController._instance.worldData,
                                      lVar3 == null)) || (lVar3 = WorldData.Player(lVar3,0)) == null) ||
                                    (*(int64 *)(lVar3 + 0x2e0) == 0)) {
                           // WARNING: Subroutine does not return
@@ -297,8 +296,8 @@ public class MissionUIController
                               }
                               else {
                                 lVar3 = FUN_18046c0a0(0);
-                                if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                                   ((lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0), lVar3 == null
+                                if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                                   ((lVar3 = WorldData.Player(lVar3.villageAreaID,0), lVar3 == null
                                     || (*(int64 *)(lVar3 + 0x2e0) == 0)))) {
                           // WARNING: Subroutine does not return
                                   FUN_1800d6620();
@@ -323,13 +322,13 @@ public class MissionUIController
                                 (**(code **)(*plVar5 + 0x2a8))
                                           (plVar5,&local_28,*(uint64 *)(*plVar5 + 0x2b0));
                                 lVar3 = FUN_18046c0a0(0);
-                                if (((lVar3 != null) && (*(int64 *)(lVar3 + 32) != 0)) &&
-                                   (lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0)) != null)
+                                if (((lVar3 != null) && (lVar3.villageAreaID != null)) &&
+                                   (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) != null)
                                 {
-                                  if (*(char *)(lVar3 + 180) == false) {
+                                  if (!lVar3.hour) {
                                     lVar3 = FUN_18046c0a0(0);
-                                    if ((((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                                        (lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0),
+                                    if ((((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                                        (lVar3 = WorldData.Player(lVar3.villageAreaID,0),
                                         lVar3 == null)) || (*(int64 *)(lVar3 + 0x2e0) == 0))
                                     goto LAB_180e6c0c6;
                                     cVar2 = MissionData.MissionNeedFinished
@@ -353,7 +352,7 @@ public class MissionUIController
                                     uVar4 = "";
                                   }
                                   if (lVar3 != null) {
-                                    *(uint64 *)(lVar3 + 24) = uVar4;
+                                    lVar3.cityAreaID = uVar4;
                                     return;
                                   }
                                 }
@@ -382,12 +381,12 @@ public class MissionUIController
         if ((this.forceMission == null) ||
            (lVar3 = GameObject.GetComponent(this.forceMission,DAT_181d73448)) == null)
         goto LAB_180e6c0c6;
-        *(uint64 *)(lVar3 + 24) = "<i>每月一日门派正厅召开会议\n持续五日</i>";
-        if ((*pStatics_2cc8 == 0) ||
-           (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null)
+        lVar3.cityAreaID = "<i>每月一日门派正厅召开会议\n持续五日</i>";
+        if ((GameController._instance == null) ||
+           (lVar3 = GameController._instance.worldData) == null)
         goto LAB_180e6c0c6;
         lVar1 = this.forceMission;
-        if (*(char *)(lVar3 + 184) == false) {
+        if (!lVar3.forceMeetingStarted) {
           if (((lVar1 == null) || (lVar3 = GameObject.get_transform(lVar1,0)) == null) ||
              (lVar3 = Transform.Find(lVar3,"Icon",0)) == null) {
         LAB_180e6c0d8:
@@ -414,8 +413,8 @@ public class MissionUIController
              (lVar3 = Transform.Find(lVar3,"ForceMissionTime",0)) == null) goto LAB_180e6c0d8;
           uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
           lVar3 = FUN_18046c0a0(0);
-          if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-             (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 168)) == null) goto LAB_180e6c0d8;
+          if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+             (lVar3 = *(int64 *)(lVar3.villageAreaID + 168)) == null) goto LAB_180e6c0d8;
           local_res18[0] = TimeData.NextMeetingTime(lVar3,0);
           uVar7 = il2cpp_value_box(DAT_181d80418,local_res18);
           uVar7 = String.Format("{0}日",uVar7,0);
@@ -444,9 +443,9 @@ public class MissionUIController
         uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
         LTLocalization.SetText(uVar4,"门派会议已召开\n",0);
         lVar3 = FUN_18046c0a0(0);
-        if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-           (lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0)) == null) goto LAB_180e6c0c6;
-        if (*(int *)(lVar3 + 184) < 2) {
+        if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+           (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) == null) goto LAB_180e6c0c6;
+        if (lVar3.forceMeetingStarted < 2) {
         LAB_180e6be39:
           if (((this.forceMission == null) ||
               (lVar3 = GameObject.get_transform(this.forceMission,0)) == null) ||
@@ -457,20 +456,20 @@ public class MissionUIController
           }
           uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
           lVar3 = FUN_18046c0a0(0);
-          if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-             (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 168)) == null) goto LAB_180e6c0ea;
-          local_res18[0] = 6 - *(int *)(lVar3 + 24);
+          if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+             (lVar3 = *(int64 *)(lVar3.villageAreaID + 168)) == null) goto LAB_180e6c0ea;
+          local_res18[0] = 6 - lVar3.cityAreaID;
           uVar8 = il2cpp_value_box(DAT_181d80418,local_res18);
           uVar7 = "尽快返回门派正厅！";
         }
         else {
           lVar3 = FUN_18046c0a0(0);
-          if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-             (lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0)) == null) goto LAB_180e6c0c6;
-          if (*(int *)(lVar3 + 184) < 4) {
+          if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+             (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) == null) goto LAB_180e6c0c6;
+          if (lVar3.forceMeetingStarted < 4) {
             lVar3 = FUN_18046c0a0(0);
-            if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) goto LAB_180e6c0c6;
-            if (0 < *(int *)(*(int64 *)(lVar3 + 32) + 188)) goto LAB_180e6be39;
+            if ((lVar3 == null) || (lVar3.villageAreaID == null)) goto LAB_180e6c0c6;
+            if (0 < *(int *)(lVar3.villageAreaID + 188)) goto LAB_180e6be39;
           }
           if (((this.forceMission == null) ||
               (lVar3 = GameObject.get_transform(this.forceMission,0)) == null) ||
@@ -481,9 +480,9 @@ public class MissionUIController
           }
           uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
           lVar3 = FUN_18046c0a0(0);
-          if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-             (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 168)) == null) goto LAB_180e6c0de;
-          local_res18[0] = 6 - *(int *)(lVar3 + 24);
+          if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+             (lVar3 = *(int64 *)(lVar3.villageAreaID + 168)) == null) goto LAB_180e6c0de;
+          local_res18[0] = 6 - lVar3.cityAreaID;
           uVar8 = il2cpp_value_box(DAT_181d80418,local_res18);
           uVar7 = "可以不参加";
         }
@@ -494,9 +493,9 @@ public class MissionUIController
            (lVar3 = Transform.Find(lVar3,"ForceMissionTime",0)) != null) {
           uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
           lVar3 = FUN_18046c0a0(0);
-          if (((lVar3 != null) && (*(int64 *)(lVar3 + 32) != 0)) &&
-             (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 168)) != null) {
-            local_res18[0] = 6 - *(int *)(lVar3 + 24);
+          if (((lVar3 != null) && (lVar3.villageAreaID != null)) &&
+             (lVar3 = *(int64 *)(lVar3.villageAreaID + 168)) != null) {
+            local_res18[0] = 6 - lVar3.cityAreaID;
             uVar7 = il2cpp_value_box(DAT_181d80418,local_res18);
             uVar7 = String.Format("{0}日",uVar7,0);
             LTLocalization.SetText(uVar4,uVar7,0);
@@ -728,14 +727,13 @@ public class MissionUIController
     // RVA   : 0xE6A3E0   Offset: 0xE697E0   Length: 0x25D
     public void ClearMailButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         long lVar3;
         bVar2 = false;
-        if (((*pStatics != 0) &&
-            (lVar3 = *(int64 *)(*pStatics + 32)) != null) &&
-           (lVar3 = *(int64 *)(lVar3 + 144)) != null) {
-          iVar1 = *(int *)(lVar3 + 24);
+        if (((GameController._instance != null) &&
+            (lVar3 = GameController._instance.worldData) != null) &&
+           (lVar3 = lVar3.MailDatas) != null) {
+          iVar1 = lVar3.cityAreaID;
           while( true ) {
             do {
               iVar1 = iVar1 + -1;
@@ -752,13 +750,13 @@ public class MissionUIController
                 return;
               }
               lVar3 = FUN_18046c0a0(0);
-              if ((((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                  (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 144)) == null) ||
+              if ((((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                  (lVar3 = *(int64 *)(lVar3.villageAreaID + 144)) == null) ||
                  (lVar3 = FUN_180002f80(lVar3,iVar1,DAT_181d93808)) == null) throw; // [null/range check failed]
             } while (*(char *)(lVar3 + 41) == false);
             lVar3 = FUN_18046c0a0(0);
-            if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-               (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 144)) == null) break;
+            if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+               (lVar3 = *(int64 *)(lVar3.villageAreaID + 144)) == null) break;
             FUN_181823590(lVar3,iVar1,DAT_181d93708);
             bVar2 = true;
           }
@@ -769,14 +767,13 @@ public class MissionUIController
     // RVA   : 0xE6A840   Offset: 0xE69C40   Length: 0x2C6
     public void ReadAllMailButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         long lVar3;
         bVar2 = false;
-        if (((*pStatics != 0) &&
-            (lVar3 = *(int64 *)(*pStatics + 32)) != null) &&
-           (lVar3 = *(int64 *)(lVar3 + 144)) != null) {
-          iVar1 = *(int *)(lVar3 + 24);
+        if (((GameController._instance != null) &&
+            (lVar3 = GameController._instance.worldData) != null) &&
+           (lVar3 = lVar3.MailDatas) != null) {
+          iVar1 = lVar3.cityAreaID;
           while( true ) {
             do {
               do {
@@ -794,18 +791,18 @@ public class MissionUIController
                   return;
                 }
                 lVar3 = FUN_18046c0a0(0);
-                if ((((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                    (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 144)) == null) ||
+                if ((((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                    (lVar3 = *(int64 *)(lVar3.villageAreaID + 144)) == null) ||
                    (lVar3 = FUN_180002f80(lVar3,iVar1,DAT_181d93808)) == null) throw; // [null/range check failed]
               } while (*(char *)(lVar3 + 41) != false);
               lVar3 = FUN_18046c0a0(0);
-              if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                 ((lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 144), lVar3 == null ||
+              if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                 ((lVar3 = *(int64 *)(lVar3.villageAreaID + 144), lVar3 == null ||
                   (lVar3 = FUN_180002f80(lVar3,iVar1,DAT_181d93808)) == null))) throw; // [null/range check failed]
-            } while (*(char *)(lVar3 + 40) != false);
+            } while (lVar3.forceAreaID);
             lVar3 = FUN_18046c0a0(0);
-            if ((((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 144)) == null) ||
+            if ((((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                (lVar3 = *(int64 *)(lVar3.villageAreaID + 144)) == null) ||
                (lVar3 = FUN_180002f80(lVar3,iVar1,DAT_181d93808)) == null) break;
             *(uint8 *)(lVar3 + 41) = 1;
             bVar2 = true;
@@ -826,13 +823,13 @@ public class MissionUIController
         local_res18[0] = 0;
         iVar5 = 0;
         while( true ) {
-          lVar2 = **(int64 **)(DAT_181d72cc8 + 184);
-          if (((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) ||
-             (lVar1 = *(int64 *)(*(int64 *)(lVar2 + 32) + 144)) == null) throw; // [null/range check failed]
+          lVar2 = GameController._instance;
+          if (((lVar2 == null) || (lVar2.worldData == null)) ||
+             (lVar1 = *(int64 *)(lVar2.worldData + 144)) == null) throw; // [null/range check failed]
           if (*(int *)(lVar1 + 24) <= iVar5) break;
           lVar2 = FUN_18046c0a0(0);
-          if ((((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) ||
-              (lVar2 = *(int64 *)(*(int64 *)(lVar2 + 32) + 144)) == null) ||
+          if ((((lVar2 == null) || (lVar2.worldData == null)) ||
+              (lVar2 = *(int64 *)(lVar2.worldData + 144)) == null) ||
              (lVar2 = FUN_180002f80(lVar2,iVar5)) == null) throw; // [null/range check failed]
           if (*(char *)(lVar2 + 41) == false) {
             local_res18[0] = local_res18[0] + 1;
@@ -882,7 +879,6 @@ public class MissionUIController
     // RVA   : 0xE6C440   Offset: 0xE6B840   Length: 0x6F1
     public void RefreshMailTable()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         ulong uVar1;
         bool cVar2;
         int iVar3;
@@ -895,8 +891,8 @@ public class MissionUIController
           iVar3 = Transform.get_childCount(lVar5,0);
           while (iVar3 = iVar3 + -1, 1 < iVar3) {
             lVar5 = FUN_18046c0a0(0);
-            if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) throw; // [null/range check failed]
-            lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 144);
+            if ((lVar5 == null) || (lVar5.villageAreaID == null)) throw; // [null/range check failed]
+            lVar5 = *(int64 *)(lVar5.villageAreaID + 144);
             if (((this.mailTable == null) ||
                 (((lVar6 = GameObject.get_transform(this.mailTable,0), lVar6 == null ||
                   (lVar6 = Transform.GetChild(lVar6,iVar3,0)) == null) ||
@@ -919,10 +915,10 @@ public class MissionUIController
           }
           iVar3 = 0;
           while( true ) {
-            if (((*pStatics == 0) ||
-                (lVar5 = *(int64 *)(*pStatics + 32)) == null) ||
-               (lVar5 = *(int64 *)(lVar5 + 144)) == null) throw; // [null/range check failed]
-            if (*(int *)(lVar5 + 24) <= iVar3) break;
+            if (((GameController._instance == null) ||
+                (lVar5 = GameController._instance.worldData) == null) ||
+               (lVar5 = lVar5.MailDatas) == null) throw; // [null/range check failed]
+            if (lVar5.cityAreaID <= iVar3) break;
             if ((this.mailTable == null) ||
                (lVar5 = GameObject.get_transform(this.mailTable,0)) == null)
             throw; // [null/range check failed]
@@ -944,7 +940,7 @@ public class MissionUIController
                 if ((((lVar6 == null) || (*(int64 *)(lVar6 + 32) == 0)) ||
                     (lVar6 = *(int64 *)(*(int64 *)(lVar6 + 32) + 144)) == null) ||
                    (uVar7 = FUN_180002f80(lVar6,iVar3), lVar5 == null)) throw; // [null/range check failed]
-                *(uint64 *)(lVar5 + 24) = uVar7;
+                lVar5.cityAreaID = uVar7;
                 break;
               }
               if (((this.mailTable == null) ||
@@ -952,7 +948,7 @@ public class MissionUIController
                  ((lVar5 = Transform.GetChild(lVar5,iVar4,0), lVar5 == null ||
                   (lVar5 = Component.GetComponent(lVar5,DAT_181d948e0)) == null)))
               throw; // [null/range check failed]
-              lVar5 = *(int64 *)(lVar5 + 24);
+              lVar5 = lVar5.cityAreaID;
               lVar6 = FUN_18046c0a0(0);
               if (((lVar6 == null) || (*(int64 *)(lVar6 + 32) == 0)) ||
                  (*(int64 *)(*(int64 *)(lVar6 + 32) + 144) == 0)) throw; // [null/range check failed]
@@ -961,10 +957,10 @@ public class MissionUIController
             iVar3 = iVar3 + 1;
           }
           lVar5 = FUN_18046c0a0(0);
-          if (((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) &&
-             (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 144)) != null) {
+          if (((lVar5 != null) && (lVar5.villageAreaID != null)) &&
+             (lVar5 = *(int64 *)(lVar5.villageAreaID + 144)) != null) {
             lVar6 = this.mailTable;
-            if (*(int *)(lVar5 + 24) == 0) {
+            if (lVar5.cityAreaID == null) {
               if ((((lVar6 != null) && (lVar5 = GameObject.get_transform(lVar6,0)) != null) &&
                   (lVar5 = Transform.Find(lVar5,"ClearMailButton",0)) != null) &&
                  (lVar5 = Component.GetComponent(lVar5,DAT_181d93760)) != null) {
@@ -1012,13 +1008,13 @@ public class MissionUIController
         iVar5 = 0;
         local_res18[0] = 0;
         while( true ) {
-          lVar2 = **(int64 **)(DAT_181d72cc8 + 184);
-          if (((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) ||
-             (lVar1 = *(int64 *)(*(int64 *)(lVar2 + 32) + 128)) == null) throw; // [null/range check failed]
+          lVar2 = GameController._instance;
+          if (((lVar2 == null) || (lVar2.worldData == null)) ||
+             (lVar1 = *(int64 *)(lVar2.worldData + 128)) == null) throw; // [null/range check failed]
           if (*(int *)(lVar1 + 24) <= iVar5) break;
           lVar2 = FUN_18046c0a0(0);
-          if ((((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) ||
-              (lVar2 = *(int64 *)(*(int64 *)(lVar2 + 32) + 128)) == null) ||
+          if ((((lVar2 == null) || (lVar2.worldData == null)) ||
+              (lVar2 = *(int64 *)(lVar2.worldData + 128)) == null) ||
              (lVar2 = FUN_180002f80(lVar2,iVar5)) == null) throw; // [null/range check failed]
           if (*(char *)(lVar2 + 98) == false) {
             local_res18[0] = local_res18[0] + 1;
@@ -1052,7 +1048,6 @@ public class MissionUIController
     // RVA   : 0xE6D260   Offset: 0xE6C660   Length: 0x46E
     public void RefreshWorldEventTable()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         ulong uVar1;
         bool cVar2;
         int iVar3;
@@ -1065,8 +1060,8 @@ public class MissionUIController
           iVar3 = Transform.get_childCount(lVar5,0);
           while (iVar3 = iVar3 + -1, -1 < iVar3) {
             lVar5 = FUN_18046c0a0(0);
-            if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) throw; // [null/range check failed]
-            lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 128);
+            if ((lVar5 == null) || (lVar5.villageAreaID == null)) throw; // [null/range check failed]
+            lVar5 = *(int64 *)(lVar5.villageAreaID + 128);
             if (((this.worldEventTable == null) ||
                 (((lVar6 = GameObject.get_transform(this.worldEventTable,0), lVar6 == null ||
                   (lVar6 = Transform.GetChild(lVar6,iVar3,0)) == null) ||
@@ -1083,10 +1078,10 @@ public class MissionUIController
           }
           iVar3 = 0;
           while( true ) {
-            if (((*pStatics == 0) ||
-                (lVar5 = *(int64 *)(*pStatics + 32)) == null) ||
-               (lVar5 = *(int64 *)(lVar5 + 128)) == null) break;
-            if (*(int *)(lVar5 + 24) <= iVar3) {
+            if (((GameController._instance == null) ||
+                (lVar5 = GameController._instance.worldData) == null) ||
+               (lVar5 = lVar5.WorldEventDatas) == null) break;
+            if (lVar5.cityAreaID <= iVar3) {
               MissionUIController.RefreshWorldEventNewIcon(this,0);
               return;
             }
@@ -1106,7 +1101,7 @@ public class MissionUIController
                 if ((((lVar6 == null) || (*(int64 *)(lVar6 + 32) == 0)) ||
                     (lVar6 = *(int64 *)(*(int64 *)(lVar6 + 32) + 128)) == null) ||
                    (uVar7 = FUN_180002f80(lVar6,iVar3), lVar5 == null)) throw; // [null/range check failed]
-                *(uint64 *)(lVar5 + 24) = uVar7;
+                lVar5.cityAreaID = uVar7;
                 break;
               }
               if (((this.worldEventTable == null) ||
@@ -1114,7 +1109,7 @@ public class MissionUIController
                  ((lVar5 = Transform.GetChild(lVar5,iVar4,0), lVar5 == null ||
                   (lVar5 = Component.GetComponent(lVar5,DAT_181d97260)) == null)))
               throw; // [null/range check failed]
-              lVar5 = *(int64 *)(lVar5 + 24);
+              lVar5 = lVar5.cityAreaID;
               lVar6 = FUN_18046c0a0(0);
               if (((lVar6 == null) || (*(int64 *)(lVar6 + 32) == 0)) ||
                  (*(int64 *)(*(int64 *)(lVar6 + 32) + 128) == 0)) throw; // [null/range check failed]
@@ -1129,7 +1124,6 @@ public class MissionUIController
     // RVA   : 0xE6CB40   Offset: 0xE6BF40   Length: 0x4A1
     public void RefreshMissionTable()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         ulong uVar1;
         bool cVar2;
         int iVar3;
@@ -1142,8 +1136,8 @@ public class MissionUIController
           iVar3 = Transform.get_childCount(lVar5,0);
           while (iVar3 = iVar3 + -1, -1 < iVar3) {
             lVar5 = FUN_18046c0a0(0);
-            if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-               (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null) throw; // [null/range check failed]
+            if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+               (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null) throw; // [null/range check failed]
             lVar5 = *(int64 *)(lVar5 + 0x2e8);
             if (((this.missionTable == null) ||
                 (lVar6 = GameObject.get_transform(this.missionTable,0)) == null) ||
@@ -1161,8 +1155,8 @@ public class MissionUIController
           }
           iVar3 = 0;
           while( true ) {
-            if ((((*pStatics == 0) ||
-                 (lVar5 = *(int64 *)(*pStatics + 32)) == null) ||
+            if ((((GameController._instance == null) ||
+                 (lVar5 = GameController._instance.worldData) == null) ||
                 (lVar5 = WorldData.Player(lVar5,0)) == null) || (*(int64 *)(lVar5 + 0x2e8) == 0))
             break;
             if (*(int *)(*(int64 *)(lVar5 + 0x2e8) + 24) <= iVar3) {
@@ -1186,7 +1180,7 @@ public class MissionUIController
                    ((*(int64 *)(lVar6 + 0x2e8) == 0 ||
                     (uVar7 = FUN_180002f80(*(int64 *)(lVar6 + 0x2e8),iVar3), lVar5 == null))))
                 throw; // [null/range check failed]
-                *(uint64 *)(lVar5 + 24) = uVar7;
+                lVar5.cityAreaID = uVar7;
                 break;
               }
               if (((this.missionTable == null) ||
@@ -1194,7 +1188,7 @@ public class MissionUIController
                  ((lVar5 = Transform.GetChild(lVar5,iVar4,0), lVar5 == null ||
                   (lVar5 = Component.GetComponent(lVar5,DAT_181d94a60)) == null)))
               throw; // [null/range check failed]
-              lVar5 = *(int64 *)(lVar5 + 24);
+              lVar5 = lVar5.cityAreaID;
               lVar6 = FUN_18046c0a0(0);
               if ((((lVar6 == null) || (*(int64 *)(lVar6 + 32) == 0)) ||
                   (lVar6 = WorldData.Player(*(int64 *)(lVar6 + 32),0)) == null) ||

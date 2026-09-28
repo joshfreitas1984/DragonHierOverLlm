@@ -613,8 +613,6 @@ public class StudyAttackPlayer
     private void OnTriggerEnter2D(Collider2D other)
     {
         var pStatics_1be0 = *(int64*)(DAT_181da1be0 + 184);
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
-        var pStatics_2d50 = *(int64*)(DAT_181d72d50 + 184);
         var pStatics_7f90 = *(int64*)(DAT_181da7f90 + 184);
         var pStatics_be88 = *(int64*)(DAT_181dabe88 + 184);
         int iVar3;
@@ -703,8 +701,8 @@ public class StudyAttackPlayer
                   else {
                     if (iVar3 == 1) {
                       lVar6 = FUN_18046c0a0(0);
-                      if ((lVar6 == null) || (*(int64 *)(lVar6 + 32) == 0)) throw; // [null/range check failed]
-                      lVar6 = WorldData.Player(*(int64 *)(lVar6 + 32),0);
+                      if ((lVar6 == null) || (lVar6.villageAreaID == null)) throw; // [null/range check failed]
+                      lVar6 = WorldData.Player(lVar6.villageAreaID,0);
                       lVar7 = FUN_18046c0a0(0);
                       if ((lVar7 == null) ||
                          (((*(int64 *)(lVar7 + 32) == 0 ||
@@ -749,7 +747,7 @@ public class StudyAttackPlayer
                            lVar6 == null)) throw; // [null/range check failed]
                         fVar15 = (float)AudioSource.get_volume(lVar6,0);
                         AudioSource.set_volume
-                                  (lVar6,fVar15 * *(float *)(pStatics_2d50 + 16),0
+                                  (lVar6,fVar15 * GameController.CheckShowSpeHero,0
                                   );
                       }
                     }
@@ -794,8 +792,8 @@ public class StudyAttackPlayer
                   GlobalData.AddChild(uVar8,plVar11,&local_88,0);
                 }
                 lVar6 = FUN_18046c0a0(0);
-                if ((lVar6 == null) || (*(int64 *)(lVar6 + 32) == 0)) throw; // [null/range check failed]
-                lVar6 = WorldData.Player(*(int64 *)(lVar6 + 32),0);
+                if ((lVar6 == null) || (lVar6.villageAreaID == null)) throw; // [null/range check failed]
+                lVar6 = WorldData.Player(lVar6.villageAreaID,0);
                 if ((*plVar1 == 0) || (lVar7 = Component.GetComponent(*plVar1,DAT_181d95ee0)) == null
                    ) throw; // [null/range check failed]
                 fVar15 = *(float *)(lVar7 + 24);
@@ -815,7 +813,7 @@ public class StudyAttackPlayer
                 uVar8 = *(uint64 *)(*pStatics_7f90 + 72);
                 if ((*plVar1 != 0) && (lVar6 = Component.GetComponent(*plVar1,DAT_181d95ee0)) != null
                    ) {
-                  uVar13 = String.Concat("SpeEffect/",*(uint64 *)(lVar6 + 40),0);
+                  uVar13 = String.Concat("SpeEffect/",lVar6.forceAreaID,0);
                   plVar12 = (int64 *)Resources.Load(uVar13,0);
                   if ((*plVar1 != 0) && (lVar6 = Component.get_transform(*plVar1,0)) != null) {
                     puVar9 = (uint64 *)Transform.get_localPosition(local_68,lVar6,0);
@@ -845,7 +843,7 @@ public class StudyAttackPlayer
                            lVar6 == null)) throw; // [null/range check failed]
                         fVar15 = (float)AudioSource.get_volume(lVar6,0);
                         AudioSource.set_volume
-                                  (lVar6,fVar15 * *(float *)(pStatics_2d50 + 16),0
+                                  (lVar6,fVar15 * GameController.CheckShowSpeHero,0
                                   );
                       }
                       if (*pStatics_be88 != 0) {
@@ -856,17 +854,17 @@ public class StudyAttackPlayer
                           if (*plVar1 != 0) {
                             uVar8 = Component.get_gameObject(*plVar1,0);
                             Object.Destroy(uVar8,0);
-                            if (((*pStatics_2cc8 != 0) &&
-                                (lVar6 = *(int64 *)(*pStatics_2cc8 + 32),
+                            if (((GameController._instance != null) &&
+                                (lVar6 = GameController._instance.worldData,
                                 lVar6 != null)) && (lVar6 = WorldData.Player(lVar6,0)) != null) {
                               lVar7 = this.playerSkeleton;
-                              if (*(float *)(lVar6 + 0x178) <= 0.0) {
+                              if (lVar6.skinUnlockData <= 0.0) {
                                 if ((lVar7 != null) &&
                                    (lVar6 = SkeletonAnimation.get_AnimationState(lVar7,0)) != null) {
                                   AnimationState.SetAnimation(lVar6,1,"die",0,0);
                                   lVar6 = FUN_18046c0a0(0);
-                                  if ((lVar6 != null) && (*(int64 *)(lVar6 + 32) != 0)) {
-                                    lVar6 = WorldData.Player(*(int64 *)(lVar6 + 32),0);
+                                  if ((lVar6 != null) && (lVar6.villageAreaID != null)) {
+                                    lVar6 = WorldData.Player(lVar6.villageAreaID,0);
                                     lVar7 = FUN_18046c0a0(0);
                                     if ((lVar7 != null) &&
                                        (((*(int64 *)(lVar7 + 32) != 0 &&
@@ -893,8 +891,8 @@ public class StudyAttackPlayer
                                                       (this.playerSkeleton,0), lVar6 != null)) {
                                   AnimationState.AddEmptyAnimation(lVar6,1,0x3dcccccd,0,0);
                                   lVar6 = FUN_18046c0a0(0);
-                                  if ((lVar6 != null) && (*(int64 *)(lVar6 + 32) != 0)) {
-                                    lVar6 = WorldData.Player(*(int64 *)(lVar6 + 32),0);
+                                  if ((lVar6 != null) && (lVar6.villageAreaID != null)) {
+                                    lVar6 = WorldData.Player(lVar6.villageAreaID,0);
                                     lVar7 = FUN_18046c0a0(0);
                                     if ((lVar7 != null) &&
                                        (((*(int64 *)(lVar7 + 32) != 0 &&

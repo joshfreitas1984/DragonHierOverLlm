@@ -101,7 +101,6 @@ public class UICenterOnChild
     // RVA   : 0x12AE150   Offset: 0x12AD550   Length: 0xECF
     public void Recenter()
     {
-        var pStatics = *(int64*)(DAT_181daf678 + 184);
         ulong uVar1;
         bool cVar2;
         int iVar3;
@@ -405,7 +404,7 @@ public class UICenterOnChild
           }
         }
         if (this.nextPageThreshold <= 0.0) goto LAB_1812aefc8;
-        if (*(int64 *)(pStatics + 224) == 0) goto LAB_1812aefc8;
+        if (UICamera.currentTouch == null) goto LAB_1812aefc8;
         uVar6 = this.mCenteredObject;
         cVar2 = Object.op_Inequality(uVar6,0,0);
         if (!cVar2) goto LAB_1812aefc8;
@@ -423,7 +422,7 @@ public class UICenterOnChild
         }
         cVar2 = Object.op_Equality(uVar6,uVar7,0);
         if (!cVar2) goto LAB_1812aefc8;
-        lVar10 = *(int64 *)(pStatics + 224);
+        lVar10 = UICamera.currentTouch;
         uVar21 = local_128;
         if (lVar10 == null) goto LAB_1812aeffe;
         local_118 = lVar10.momentumAmount;

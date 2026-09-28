@@ -50,28 +50,26 @@ public class NGUITools
     // RVA   : 0xB8E8C0   Offset: 0xB8DCC0   Length: 0xF8
     public static float get_soundVolume()
     {
-        var pStatics = *(int64*)(DAT_181d8bd10 + 184);
         uint uVar1;
-        if (*(char *)(pStatics + 16) == false) {
-          *(uint8 *)(pStatics + 16) = 1;
+        if (!NGUITools.mLoaded) {
+          NGUITools.mLoaded = 1;
           uVar1 = PlayerPrefs.GetFloat("Sound",0x3f800000,0);
-          *(uint32 *)(pStatics + 20) = uVar1;
+          NGUITools.mGlobalVolume = uVar1;
         }
         if (((*(byte *)(DAT_181d8bd10 + 0x133) & 4) != 0) && (*(int *)(DAT_181d8bd10 + 224) == 0)) {
           il2cpp_runtime_class_init();
-          return *(uint32 *)(pStatics + 20);
+          return NGUITools.mGlobalVolume;
         }
-        return *(uint32 *)(pStatics + 20);
+        return NGUITools.mGlobalVolume;
     }
 
     // Token : 0x60003CB
     // RVA   : 0xB8EA40   Offset: 0xB8DE40   Length: 0xC4
     public static void set_soundVolume(float value)
     {
-        var pStatics = *(int64*)(DAT_181d8bd10 + 184);
-        if (*(float *)(pStatics + 20) != value) {
-          *(uint8 *)(pStatics + 16) = 1;
-          *(float *)(pStatics + 20) = value;
+        if (NGUITools.mGlobalVolume != value) {
+          NGUITools.mLoaded = 1;
+          NGUITools.mGlobalVolume = value;
           PlayerPrefs.SetFloat("Sound",value,0);
         }
     }
@@ -89,24 +87,21 @@ public class NGUITools
     // RVA   : 0xB8C280   Offset: 0xB8B680   Length: 0x5E
     public static AudioSource PlaySound(AudioClip clip)
     {
-        var pStatics = *(int64*)(DAT_181d8bd10 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
         uint uVar7;
         float fVar8;
         fVar8 = (float)RealTime.get_time(0);
-        uVar2 = *(uint64 *)(pStatics + 32);
+        uVar2 = NGUITools.mLastClip;
         cVar1 = Object.op_Equality(uVar2,clip,0);
         if (cVar1) {
-          if (fVar8 < *(float *)(pStatics + 24) + 0.1) {
+          if (fVar8 < NGUITools.mLastTimestamp + 0.1) {
             return 0;
           }
         }
-        puVar6 = (uint64 *)(pStatics + 32);
-        *puVar6 = clip;
-        il2cpp_internal(puVar6,clip);
-        *(float *)(pStatics + 24) = fVar8;
+        NGUITools.mLastClip = clip;
+        NGUITools.mLastTimestamp = fVar8;
         param_2 = param_2 * *(float *)(*(int64 *)(DAT_181d72d50 + 184) + 16);
         cVar1 = Object.op_Inequality(clip,0,0);
         if (!cVar1) {
@@ -181,13 +176,13 @@ public class NGUITools
         if (!cVar1) {
           return 0;
         }
-        if (*pStatics != 0) {
-          cVar1 = Behaviour.get_enabled(*pStatics,0);
+        if (NGUITools.mListener != null) {
+          cVar1 = Behaviour.get_enabled(NGUITools.mListener,0);
           if (!cVar1) {
             return 0;
           }
-          if (*pStatics != 0) {
-            lVar3 = Component.get_gameObject(*pStatics,0);
+          if (NGUITools.mListener != null) {
+            lVar3 = Component.get_gameObject(NGUITools.mListener,0);
             cVar1 = Object.op_Implicit(lVar3,0);
             if (!cVar1) {
               return 0;
@@ -197,36 +192,32 @@ public class NGUITools
               if (!cVar1) {
                 return 0;
               }
-              uVar2 = *(uint64 *)(pStatics + 8);
+              uVar2 = NGUITools.audioSource;
               cVar1 = Object.op_Implicit(uVar2,0);
               if (!cVar1) {
-                if (*pStatics == 0) throw; // [null/range check failed]
-                uVar2 = Component.GetComponent(*pStatics,DAT_181d93360);
-                puVar6 = (uint64 *)(pStatics + 8);
-                *puVar6 = uVar2;
-                il2cpp_internal(puVar6,uVar2);
-                uVar2 = *(uint64 *)(pStatics + 8);
+                if (NGUITools.mListener == null) throw; // [null/range check failed]
+                uVar2 = Component.GetComponent(NGUITools.mListener,DAT_181d93360);
+                NGUITools.audioSource = uVar2;
+                uVar2 = NGUITools.audioSource;
                 cVar1 = Object.op_Equality(uVar2,0,0);
                 if (cVar1) {
-                  if ((*pStatics == 0) ||
-                     (lVar3 = Component.get_gameObject(*pStatics,0),
+                  if ((NGUITools.mListener == null) ||
+                     (lVar3 = Component.get_gameObject(NGUITools.mListener,0),
                      lVar3 == null)) throw; // [null/range check failed]
                   uVar2 = GameObject.AddComponent(lVar3,DAT_181dc4cb8);
-                  puVar6 = (uint64 *)(pStatics + 8);
-                  *puVar6 = uVar2;
-                  il2cpp_internal(puVar6,uVar2);
+                  NGUITools.audioSource = uVar2;
                 }
               }
-              lVar3 = *(int64 *)(pStatics + 8);
+              lVar3 = NGUITools.audioSource;
               if (lVar3 != null) {
                 AudioSource.set_priority(lVar3,50);
-                lVar3 = *(int64 *)(pStatics + 8);
+                lVar3 = NGUITools.audioSource;
                 if (lVar3 != null) {
                   FUN_180467590(lVar3,param_3,0);
-                  lVar3 = *(int64 *)(pStatics + 8);
+                  lVar3 = NGUITools.audioSource;
                   if (lVar3 != null) {
                     AudioSource.PlayOneShot(lVar3,clip,param_2,0);
-                    return *(uint64 *)(pStatics + 8);
+                    return NGUITools.audioSource;
                   }
                 }
               }
@@ -239,24 +230,21 @@ public class NGUITools
     // RVA   : 0xB8B8B0   Offset: 0xB8ACB0   Length: 0x6B
     public static AudioSource PlaySound(AudioClip clip, float volume)
     {
-        var pStatics = *(int64*)(DAT_181d8bd10 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
         uint uVar7;
         float fVar8;
         fVar8 = (float)RealTime.get_time(0);
-        uVar2 = *(uint64 *)(pStatics + 32);
+        uVar2 = NGUITools.mLastClip;
         cVar1 = Object.op_Equality(uVar2,clip,0);
         if (cVar1) {
-          if (fVar8 < *(float *)(pStatics + 24) + 0.1) {
+          if (fVar8 < NGUITools.mLastTimestamp + 0.1) {
             return 0;
           }
         }
-        puVar6 = (uint64 *)(pStatics + 32);
-        *puVar6 = clip;
-        il2cpp_internal(puVar6,clip);
-        *(float *)(pStatics + 24) = fVar8;
+        NGUITools.mLastClip = clip;
+        NGUITools.mLastTimestamp = fVar8;
         volume = volume * *(float *)(*(int64 *)(DAT_181d72d50 + 184) + 16);
         cVar1 = Object.op_Inequality(clip,0,0);
         if (!cVar1) {
@@ -331,13 +319,13 @@ public class NGUITools
         if (!cVar1) {
           return 0;
         }
-        if (*pStatics != 0) {
-          cVar1 = Behaviour.get_enabled(*pStatics,0);
+        if (NGUITools.mListener != null) {
+          cVar1 = Behaviour.get_enabled(NGUITools.mListener,0);
           if (!cVar1) {
             return 0;
           }
-          if (*pStatics != 0) {
-            lVar3 = Component.get_gameObject(*pStatics,0);
+          if (NGUITools.mListener != null) {
+            lVar3 = Component.get_gameObject(NGUITools.mListener,0);
             cVar1 = Object.op_Implicit(lVar3,0);
             if (!cVar1) {
               return 0;
@@ -347,36 +335,32 @@ public class NGUITools
               if (!cVar1) {
                 return 0;
               }
-              uVar2 = *(uint64 *)(pStatics + 8);
+              uVar2 = NGUITools.audioSource;
               cVar1 = Object.op_Implicit(uVar2,0);
               if (!cVar1) {
-                if (*pStatics == 0) throw; // [null/range check failed]
-                uVar2 = Component.GetComponent(*pStatics,DAT_181d93360);
-                puVar6 = (uint64 *)(pStatics + 8);
-                *puVar6 = uVar2;
-                il2cpp_internal(puVar6,uVar2);
-                uVar2 = *(uint64 *)(pStatics + 8);
+                if (NGUITools.mListener == null) throw; // [null/range check failed]
+                uVar2 = Component.GetComponent(NGUITools.mListener,DAT_181d93360);
+                NGUITools.audioSource = uVar2;
+                uVar2 = NGUITools.audioSource;
                 cVar1 = Object.op_Equality(uVar2,0,0);
                 if (cVar1) {
-                  if ((*pStatics == 0) ||
-                     (lVar3 = Component.get_gameObject(*pStatics,0),
+                  if ((NGUITools.mListener == null) ||
+                     (lVar3 = Component.get_gameObject(NGUITools.mListener,0),
                      lVar3 == null)) throw; // [null/range check failed]
                   uVar2 = GameObject.AddComponent(lVar3,DAT_181dc4cb8);
-                  puVar6 = (uint64 *)(pStatics + 8);
-                  *puVar6 = uVar2;
-                  il2cpp_internal(puVar6,uVar2);
+                  NGUITools.audioSource = uVar2;
                 }
               }
-              lVar3 = *(int64 *)(pStatics + 8);
+              lVar3 = NGUITools.audioSource;
               if (lVar3 != null) {
                 AudioSource.set_priority(lVar3,50);
-                lVar3 = *(int64 *)(pStatics + 8);
+                lVar3 = NGUITools.audioSource;
                 if (lVar3 != null) {
                   FUN_180467590(lVar3,param_3,0);
-                  lVar3 = *(int64 *)(pStatics + 8);
+                  lVar3 = NGUITools.audioSource;
                   if (lVar3 != null) {
                     AudioSource.PlayOneShot(lVar3,clip,volume,0);
-                    return *(uint64 *)(pStatics + 8);
+                    return NGUITools.audioSource;
                   }
                 }
               }
@@ -389,24 +373,21 @@ public class NGUITools
     // RVA   : 0xB8B920   Offset: 0xB8AD20   Length: 0x95B
     public static AudioSource PlaySound(AudioClip clip, float volume, float pitch)
     {
-        var pStatics = *(int64*)(DAT_181d8bd10 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
         uint uVar7;
         float fVar8;
         fVar8 = (float)RealTime.get_time(0);
-        uVar2 = *(uint64 *)(pStatics + 32);
+        uVar2 = NGUITools.mLastClip;
         cVar1 = Object.op_Equality(uVar2,clip,0);
         if (cVar1) {
-          if (fVar8 < *(float *)(pStatics + 24) + 0.1) {
+          if (fVar8 < NGUITools.mLastTimestamp + 0.1) {
             return 0;
           }
         }
-        puVar6 = (uint64 *)(pStatics + 32);
-        *puVar6 = clip;
-        il2cpp_internal(puVar6,clip);
-        *(float *)(pStatics + 24) = fVar8;
+        NGUITools.mLastClip = clip;
+        NGUITools.mLastTimestamp = fVar8;
         volume = volume * *(float *)(*(int64 *)(DAT_181d72d50 + 184) + 16);
         cVar1 = Object.op_Inequality(clip,0,0);
         if (!cVar1) {
@@ -481,13 +462,13 @@ public class NGUITools
         if (!cVar1) {
           return 0;
         }
-        if (*pStatics != 0) {
-          cVar1 = Behaviour.get_enabled(*pStatics,0);
+        if (NGUITools.mListener != null) {
+          cVar1 = Behaviour.get_enabled(NGUITools.mListener,0);
           if (!cVar1) {
             return 0;
           }
-          if (*pStatics != 0) {
-            lVar3 = Component.get_gameObject(*pStatics,0);
+          if (NGUITools.mListener != null) {
+            lVar3 = Component.get_gameObject(NGUITools.mListener,0);
             cVar1 = Object.op_Implicit(lVar3,0);
             if (!cVar1) {
               return 0;
@@ -497,36 +478,32 @@ public class NGUITools
               if (!cVar1) {
                 return 0;
               }
-              uVar2 = *(uint64 *)(pStatics + 8);
+              uVar2 = NGUITools.audioSource;
               cVar1 = Object.op_Implicit(uVar2,0);
               if (!cVar1) {
-                if (*pStatics == 0) throw; // [null/range check failed]
-                uVar2 = Component.GetComponent(*pStatics,DAT_181d93360);
-                puVar6 = (uint64 *)(pStatics + 8);
-                *puVar6 = uVar2;
-                il2cpp_internal(puVar6,uVar2);
-                uVar2 = *(uint64 *)(pStatics + 8);
+                if (NGUITools.mListener == null) throw; // [null/range check failed]
+                uVar2 = Component.GetComponent(NGUITools.mListener,DAT_181d93360);
+                NGUITools.audioSource = uVar2;
+                uVar2 = NGUITools.audioSource;
                 cVar1 = Object.op_Equality(uVar2,0,0);
                 if (cVar1) {
-                  if ((*pStatics == 0) ||
-                     (lVar3 = Component.get_gameObject(*pStatics,0),
+                  if ((NGUITools.mListener == null) ||
+                     (lVar3 = Component.get_gameObject(NGUITools.mListener,0),
                      lVar3 == null)) throw; // [null/range check failed]
                   uVar2 = GameObject.AddComponent(lVar3,DAT_181dc4cb8);
-                  puVar6 = (uint64 *)(pStatics + 8);
-                  *puVar6 = uVar2;
-                  il2cpp_internal(puVar6,uVar2);
+                  NGUITools.audioSource = uVar2;
                 }
               }
-              lVar3 = *(int64 *)(pStatics + 8);
+              lVar3 = NGUITools.audioSource;
               if (lVar3 != null) {
                 AudioSource.set_priority(lVar3,50);
-                lVar3 = *(int64 *)(pStatics + 8);
+                lVar3 = NGUITools.audioSource;
                 if (lVar3 != null) {
                   FUN_180467590(lVar3,pitch,0);
-                  lVar3 = *(int64 *)(pStatics + 8);
+                  lVar3 = NGUITools.audioSource;
                   if (lVar3 != null) {
                     AudioSource.PlayOneShot(lVar3,clip,volume,0);
-                    return *(uint64 *)(pStatics + 8);
+                    return NGUITools.audioSource;
                   }
                 }
               }
@@ -601,7 +578,6 @@ public class NGUITools
     // RVA   : 0xB87320   Offset: 0xB86720   Length: 0x277
     public static Camera FindCameraForLayer(int layer)
     {
-        var pStatics = *(int64*)(DAT_181daf678 + 184);
         long lVar1;
         bool cVar2;
         uint uVar3;
@@ -616,10 +592,10 @@ public class NGUITools
         uVar10 = 0;
         uVar8 = 0;
         while( true ) {
-          if (*pStatics == 0) goto LAB_180b87572;
-          if (*(int *)(*pStatics + 24) <= (int)uVar8) break;
-          if ((*pStatics == 0) ||
-             (lVar6 = *(int64 *)(*pStatics + 16)) == null)
+          if (UICamera.list == null) goto LAB_180b87572;
+          if (UICamera.list.eventType <= (int)uVar8) break;
+          if ((UICamera.list == null) ||
+             (lVar6 = *(int64 *)(UICamera.list + 16)) == null)
           goto LAB_180b87572;
           if (*(uint32 *)(lVar6 + 24) <= uVar8) {
             uVar7 = il2cpp_internal();
@@ -1847,7 +1823,6 @@ public class NGUITools
     // RVA   : 0xB82E20   Offset: 0xB82220   Length: 0x59
     public static GameObject AddChild(GameObject parent)
     {
-        var pStatics = *(int64*)(DAT_181d8bd10 + 184);
         long lVar1;
         bool cVar3;
         long lVar4;
@@ -1856,7 +1831,7 @@ public class NGUITools
         local_res8 = 0;
         lVar4 = NGUITools.AddChild(parent,param_2,0);
         uVar5 = **(uint64 **)(param_3 + 48);
-        lVar1 = *(int64 *)(pStatics + 40);
+        lVar1 = NGUITools.mTypeNames;
         uVar5 = Type.GetTypeFromHandle(uVar5,0);
         if (lVar1 != null) {
           cVar3 = FUN_1808b04c0(lVar1,uVar5,&local_res8,DAT_181d79578);
@@ -1864,7 +1839,7 @@ public class NGUITools
             puVar2 = *(uint64 **)(*(int64 *)(param_3 + 48) + 8);
             local_res8 = (*(code *)*puVar2)(puVar2);
             uVar5 = **(uint64 **)(param_3 + 48);
-            lVar1 = *(int64 *)(pStatics + 40);
+            lVar1 = NGUITools.mTypeNames;
             uVar5 = Type.GetTypeFromHandle(uVar5,0);
             if (lVar1 == null) throw; // [null/range check failed]
             FUN_1808b2160(lVar1,uVar5,local_res8,DAT_181d795f8);
@@ -1882,7 +1857,6 @@ public class NGUITools
     // RVA   : 0xB82E80   Offset: 0xB82280   Length: 0x63
     public static GameObject AddChild(GameObject parent, int layer)
     {
-        var pStatics = *(int64*)(DAT_181d8bd10 + 184);
         long lVar1;
         bool cVar3;
         long lVar4;
@@ -1891,7 +1865,7 @@ public class NGUITools
         local_res8 = 0;
         lVar4 = NGUITools.AddChild(parent,layer,0);
         uVar5 = **(uint64 **)(param_3 + 48);
-        lVar1 = *(int64 *)(pStatics + 40);
+        lVar1 = NGUITools.mTypeNames;
         uVar5 = Type.GetTypeFromHandle(uVar5,0);
         if (lVar1 != null) {
           cVar3 = FUN_1808b04c0(lVar1,uVar5,&local_res8,DAT_181d79578);
@@ -1899,7 +1873,7 @@ public class NGUITools
             puVar2 = *(uint64 **)(*(int64 *)(param_3 + 48) + 8);
             local_res8 = (*(code *)*puVar2)(puVar2);
             uVar5 = **(uint64 **)(param_3 + 48);
-            lVar1 = *(int64 *)(pStatics + 40);
+            lVar1 = NGUITools.mTypeNames;
             uVar5 = Type.GetTypeFromHandle(uVar5,0);
             if (lVar1 == null) throw; // [null/range check failed]
             FUN_1808b2160(lVar1,uVar5,local_res8,DAT_181d795f8);
@@ -1917,7 +1891,6 @@ public class NGUITools
     // RVA   : 0xB82D40   Offset: 0xB82140   Length: 0x66
     public static GameObject AddChild(GameObject parent, bool undo)
     {
-        var pStatics = *(int64*)(DAT_181d8bd10 + 184);
         long lVar1;
         bool cVar3;
         long lVar4;
@@ -1926,7 +1899,7 @@ public class NGUITools
         local_res8 = 0;
         lVar4 = NGUITools.AddChild(parent,undo,0);
         uVar5 = **(uint64 **)(param_3 + 48);
-        lVar1 = *(int64 *)(pStatics + 40);
+        lVar1 = NGUITools.mTypeNames;
         uVar5 = Type.GetTypeFromHandle(uVar5,0);
         if (lVar1 != null) {
           cVar3 = FUN_1808b04c0(lVar1,uVar5,&local_res8,DAT_181d79578);
@@ -1934,7 +1907,7 @@ public class NGUITools
             puVar2 = *(uint64 **)(*(int64 *)(param_3 + 48) + 8);
             local_res8 = (*(code *)*puVar2)(puVar2);
             uVar5 = **(uint64 **)(param_3 + 48);
-            lVar1 = *(int64 *)(pStatics + 40);
+            lVar1 = NGUITools.mTypeNames;
             uVar5 = Type.GetTypeFromHandle(uVar5,0);
             if (lVar1 == null) throw; // [null/range check failed]
             FUN_1808b2160(lVar1,uVar5,local_res8,DAT_181d795f8);
@@ -1952,7 +1925,6 @@ public class NGUITools
     // RVA   : 0xB82850   Offset: 0xB81C50   Length: 0x191
     public static GameObject AddChild(GameObject parent, bool undo, int layer)
     {
-        var pStatics = *(int64*)(DAT_181d8bd10 + 184);
         long lVar1;
         bool cVar3;
         long lVar4;
@@ -1961,7 +1933,7 @@ public class NGUITools
         local_res8 = 0;
         lVar4 = NGUITools.AddChild(parent,undo,0);
         uVar5 = **(uint64 **)(layer + 48);
-        lVar1 = *(int64 *)(pStatics + 40);
+        lVar1 = NGUITools.mTypeNames;
         uVar5 = Type.GetTypeFromHandle(uVar5,0);
         if (lVar1 != null) {
           cVar3 = FUN_1808b04c0(lVar1,uVar5,&local_res8,DAT_181d79578);
@@ -1969,7 +1941,7 @@ public class NGUITools
             puVar2 = *(uint64 **)(*(int64 *)(layer + 48) + 8);
             local_res8 = (*(code *)*puVar2)(puVar2);
             uVar5 = **(uint64 **)(layer + 48);
-            lVar1 = *(int64 *)(pStatics + 40);
+            lVar1 = NGUITools.mTypeNames;
             uVar5 = Type.GetTypeFromHandle(uVar5,0);
             if (lVar1 == null) throw; // [null/range check failed]
             FUN_1808b2160(lVar1,uVar5,local_res8,DAT_181d795f8);
@@ -1987,7 +1959,6 @@ public class NGUITools
     // RVA   : 0xB829F0   Offset: 0xB81DF0   Length: 0x156
     public static GameObject AddChild(Transform parent, GameObject prefab)
     {
-        var pStatics = *(int64*)(DAT_181d8bd10 + 184);
         long lVar1;
         bool cVar3;
         long lVar4;
@@ -1996,7 +1967,7 @@ public class NGUITools
         local_res8 = 0;
         lVar4 = NGUITools.AddChild(parent,prefab,0);
         uVar5 = **(uint64 **)(param_3 + 48);
-        lVar1 = *(int64 *)(pStatics + 40);
+        lVar1 = NGUITools.mTypeNames;
         uVar5 = Type.GetTypeFromHandle(uVar5,0);
         if (lVar1 != null) {
           cVar3 = FUN_1808b04c0(lVar1,uVar5,&local_res8,DAT_181d79578);
@@ -2004,7 +1975,7 @@ public class NGUITools
             puVar2 = *(uint64 **)(*(int64 *)(param_3 + 48) + 8);
             local_res8 = (*(code *)*puVar2)(puVar2);
             uVar5 = **(uint64 **)(param_3 + 48);
-            lVar1 = *(int64 *)(pStatics + 40);
+            lVar1 = NGUITools.mTypeNames;
             uVar5 = Type.GetTypeFromHandle(uVar5,0);
             if (lVar1 == null) throw; // [null/range check failed]
             FUN_1808b2160(lVar1,uVar5,local_res8,DAT_181d795f8);
@@ -2022,7 +1993,6 @@ public class NGUITools
     // RVA   : 0xB82DB0   Offset: 0xB821B0   Length: 0x66
     public static GameObject AddChild(GameObject parent, GameObject prefab)
     {
-        var pStatics = *(int64*)(DAT_181d8bd10 + 184);
         long lVar1;
         bool cVar3;
         long lVar4;
@@ -2031,7 +2001,7 @@ public class NGUITools
         local_res8 = 0;
         lVar4 = NGUITools.AddChild(parent,prefab,0);
         uVar5 = **(uint64 **)(param_3 + 48);
-        lVar1 = *(int64 *)(pStatics + 40);
+        lVar1 = NGUITools.mTypeNames;
         uVar5 = Type.GetTypeFromHandle(uVar5,0);
         if (lVar1 != null) {
           cVar3 = FUN_1808b04c0(lVar1,uVar5,&local_res8,DAT_181d79578);
@@ -2039,7 +2009,7 @@ public class NGUITools
             puVar2 = *(uint64 **)(*(int64 *)(param_3 + 48) + 8);
             local_res8 = (*(code *)*puVar2)(puVar2);
             uVar5 = **(uint64 **)(param_3 + 48);
-            lVar1 = *(int64 *)(pStatics + 40);
+            lVar1 = NGUITools.mTypeNames;
             uVar5 = Type.GetTypeFromHandle(uVar5,0);
             if (lVar1 == null) throw; // [null/range check failed]
             FUN_1808b2160(lVar1,uVar5,local_res8,DAT_181d795f8);
@@ -2057,7 +2027,6 @@ public class NGUITools
     // RVA   : 0xB82B50   Offset: 0xB81F50   Length: 0x1E9
     public static GameObject AddChild(GameObject parent, GameObject prefab, int layer)
     {
-        var pStatics = *(int64*)(DAT_181d8bd10 + 184);
         long lVar1;
         bool cVar3;
         long lVar4;
@@ -2066,7 +2035,7 @@ public class NGUITools
         local_res8 = 0;
         lVar4 = NGUITools.AddChild(parent,prefab,0);
         uVar5 = **(uint64 **)(layer + 48);
-        lVar1 = *(int64 *)(pStatics + 40);
+        lVar1 = NGUITools.mTypeNames;
         uVar5 = Type.GetTypeFromHandle(uVar5,0);
         if (lVar1 != null) {
           cVar3 = FUN_1808b04c0(lVar1,uVar5,&local_res8,DAT_181d79578);
@@ -2074,7 +2043,7 @@ public class NGUITools
             puVar2 = *(uint64 **)(*(int64 *)(layer + 48) + 8);
             local_res8 = (*(code *)*puVar2)(puVar2);
             uVar5 = **(uint64 **)(layer + 48);
-            lVar1 = *(int64 *)(pStatics + 40);
+            lVar1 = NGUITools.mTypeNames;
             uVar5 = Type.GetTypeFromHandle(uVar5,0);
             if (lVar1 == null) throw; // [null/range check failed]
             FUN_1808b2160(lVar1,uVar5,local_res8,DAT_181d795f8);
@@ -2665,7 +2634,6 @@ public class NGUITools
     public static UIPanel CreateUI(bool advanced3D)
     {
         var pStatics_0178 = *(int64*)(DAT_181db0178 + 184);
-        var pStatics_fe78 = *(int64*)(DAT_181dafe78 + 184);
         bool cVar1;
         int iVar3;
         int iVar4;
@@ -2734,12 +2702,12 @@ public class NGUITools
         LAB_180b8644a:
         cVar1 = Object.op_Equality(lVar8,0,0);
         if (cVar1) {
-          if (*pStatics_fe78 == 0) throw; // [null/range check failed]
-          iVar3 = *(int *)(*pStatics_fe78 + 24);
+          if (UIPanel.list == null) throw; // [null/range check failed]
+          iVar3 = *(int *)(UIPanel.list + 24);
           if (0 < iVar3) {
             do {
-              if (((*pStatics_fe78 == 0) ||
-                  (lVar10 = FUN_180002f80(*pStatics_fe78,iVar12,DAT_181daa318),
+              if (((UIPanel.list == null) ||
+                  (lVar10 = FUN_180002f80(UIPanel.list,iVar12,DAT_181daa318),
                   lVar10 == null)) || (lVar9 = Component.get_gameObject(lVar10,0)) == null)
               throw; // [null/range check failed]
               iVar4 = Object.get_hideFlags(lVar9,0);
@@ -2918,7 +2886,6 @@ public class NGUITools
     public static UIPanel CreateUI(bool advanced3D, int layer)
     {
         var pStatics_0178 = *(int64*)(DAT_181db0178 + 184);
-        var pStatics_fe78 = *(int64*)(DAT_181dafe78 + 184);
         bool cVar1;
         int iVar3;
         int iVar4;
@@ -2987,12 +2954,12 @@ public class NGUITools
         LAB_180b8644a:
         cVar1 = Object.op_Equality(lVar8,0,0);
         if (cVar1) {
-          if (*pStatics_fe78 == 0) throw; // [null/range check failed]
-          iVar3 = *(int *)(*pStatics_fe78 + 24);
+          if (UIPanel.list == null) throw; // [null/range check failed]
+          iVar3 = *(int *)(UIPanel.list + 24);
           if (0 < iVar3) {
             do {
-              if (((*pStatics_fe78 == 0) ||
-                  (lVar10 = FUN_180002f80(*pStatics_fe78,iVar12,DAT_181daa318),
+              if (((UIPanel.list == null) ||
+                  (lVar10 = FUN_180002f80(UIPanel.list,iVar12,DAT_181daa318),
                   lVar10 == null)) || (lVar9 = Component.get_gameObject(lVar10,0)) == null)
               throw; // [null/range check failed]
               iVar4 = Object.get_hideFlags(lVar9,0);
@@ -3171,7 +3138,6 @@ public class NGUITools
     public static UIPanel CreateUI(Transform trans, bool advanced3D, int layer)
     {
         var pStatics_0178 = *(int64*)(DAT_181db0178 + 184);
-        var pStatics_fe78 = *(int64*)(DAT_181dafe78 + 184);
         bool cVar1;
         int iVar3;
         int iVar4;
@@ -3240,12 +3206,12 @@ public class NGUITools
         LAB_180b8644a:
         cVar1 = Object.op_Equality(lVar8,0,0);
         if (cVar1) {
-          if (*pStatics_fe78 == 0) throw; // [null/range check failed]
-          iVar3 = *(int *)(*pStatics_fe78 + 24);
+          if (UIPanel.list == null) throw; // [null/range check failed]
+          iVar3 = *(int *)(UIPanel.list + 24);
           if (0 < iVar3) {
             do {
-              if (((*pStatics_fe78 == 0) ||
-                  (lVar10 = FUN_180002f80(*pStatics_fe78,iVar12,DAT_181daa318),
+              if (((UIPanel.list == null) ||
+                  (lVar10 = FUN_180002f80(UIPanel.list,iVar12,DAT_181daa318),
                   lVar10 == null)) || (lVar9 = Component.get_gameObject(lVar10,0)) == null)
               throw; // [null/range check failed]
               iVar4 = Object.get_hideFlags(lVar9,0);
@@ -3449,7 +3415,6 @@ public class NGUITools
     // RVA   : 0xB9DA90   Offset: 0xB9CE90   Length: 0x1CE
     public static T AddChild<T>(GameObject parent)
     {
-        var pStatics = *(int64*)(DAT_181d8bd10 + 184);
         long lVar1;
         bool cVar3;
         long lVar4;
@@ -3458,7 +3423,7 @@ public class NGUITools
         local_res8 = 0;
         lVar4 = NGUITools.AddChild(parent,param_2,0);
         uVar5 = **(uint64 **)(param_3 + 48);
-        lVar1 = *(int64 *)(pStatics + 40);
+        lVar1 = NGUITools.mTypeNames;
         uVar5 = Type.GetTypeFromHandle(uVar5,0);
         if (lVar1 != null) {
           cVar3 = FUN_1808b04c0(lVar1,uVar5,&local_res8,DAT_181d79578);
@@ -3466,7 +3431,7 @@ public class NGUITools
             puVar2 = *(uint64 **)(*(int64 *)(param_3 + 48) + 8);
             local_res8 = (*(code *)*puVar2)(puVar2);
             uVar5 = **(uint64 **)(param_3 + 48);
-            lVar1 = *(int64 *)(pStatics + 40);
+            lVar1 = NGUITools.mTypeNames;
             uVar5 = Type.GetTypeFromHandle(uVar5,0);
             if (lVar1 == null) throw; // [null/range check failed]
             FUN_1808b2160(lVar1,uVar5,local_res8,DAT_181d795f8);
@@ -3484,7 +3449,6 @@ public class NGUITools
     // RVA   : 0xB9D8B0   Offset: 0xB9CCB0   Length: 0x1D5
     public static T AddChild<T>(GameObject parent, bool undo)
     {
-        var pStatics = *(int64*)(DAT_181d8bd10 + 184);
         long lVar1;
         bool cVar3;
         long lVar4;
@@ -3493,7 +3457,7 @@ public class NGUITools
         local_res8 = 0;
         lVar4 = NGUITools.AddChild(parent,undo,0);
         uVar5 = **(uint64 **)(param_3 + 48);
-        lVar1 = *(int64 *)(pStatics + 40);
+        lVar1 = NGUITools.mTypeNames;
         uVar5 = Type.GetTypeFromHandle(uVar5,0);
         if (lVar1 != null) {
           cVar3 = FUN_1808b04c0(lVar1,uVar5,&local_res8,DAT_181d79578);
@@ -3501,7 +3465,7 @@ public class NGUITools
             puVar2 = *(uint64 **)(*(int64 *)(param_3 + 48) + 8);
             local_res8 = (*(code *)*puVar2)(puVar2);
             uVar5 = **(uint64 **)(param_3 + 48);
-            lVar1 = *(int64 *)(pStatics + 40);
+            lVar1 = NGUITools.mTypeNames;
             uVar5 = Type.GetTypeFromHandle(uVar5,0);
             if (lVar1 == null) throw; // [null/range check failed]
             FUN_1808b2160(lVar1,uVar5,local_res8,DAT_181d795f8);
@@ -4891,7 +4855,6 @@ public class NGUITools
     // RVA   : 0xB883B0   Offset: 0xB877B0   Length: 0x9D
     public static Vector3[] GetSides(Camera cam)
     {
-        var pStatics = *(int64*)(DAT_181d8bd10 + 184);
         ulong uVar1;
         ulong uVar2;
         bool cVar3;
@@ -4923,7 +4886,7 @@ public class NGUITools
           cVar3 = Camera.get_orthographic(cam,0);
           if (!cVar3) {
             local_e8 = 0x3f00000000000000;
-            lVar6 = *(int64 *)(pStatics + 48);
+            lVar6 = NGUITools.mSides;
             local_e0 = param_2;
             puVar5 = (uint64 *)Camera.ViewportToWorldPoint(&local_c8,cam,&local_e8,0);
             if (lVar6 != null) {
@@ -4935,7 +4898,7 @@ public class NGUITools
               *(uint64 *)(lVar6 + 32) = *puVar5;
               *(uint32 *)(lVar6 + 40) = *(uint32 *)(puVar5 + 1);
               local_e8 = 0x3f8000003f000000;
-              lVar6 = *(int64 *)(pStatics + 48);
+              lVar6 = NGUITools.mSides;
               local_e0 = param_2;
               puVar5 = (uint64 *)Camera.ViewportToWorldPoint(&local_c8,cam,&local_e8,0);
               if (lVar6 != null) {
@@ -4947,7 +4910,7 @@ public class NGUITools
                 *(uint64 *)(lVar6 + 44) = *puVar5;
                 *(uint32 *)(lVar6 + 52) = *(uint32 *)(puVar5 + 1);
                 local_e8 = 0x3f0000003f800000;
-                lVar6 = *(int64 *)(pStatics + 48);
+                lVar6 = NGUITools.mSides;
                 local_e0 = param_2;
                 puVar5 = (uint64 *)Camera.ViewportToWorldPoint(&local_c8,cam,&local_e8,0);
                 if (lVar6 != null) {
@@ -4959,7 +4922,7 @@ public class NGUITools
                   *(uint64 *)(lVar6 + 56) = *puVar5;
                   *(uint32 *)(lVar6 + 64) = *(uint32 *)(puVar5 + 1);
                   local_e8 = 0x3f000000;
-                  lVar6 = *(int64 *)(pStatics + 48);
+                  lVar6 = NGUITools.mSides;
                   local_e0 = param_2;
                   puVar5 = (uint64 *)Camera.ViewportToWorldPoint(&local_c8,cam,&local_e8,0);
                   if (lVar6 != null) {
@@ -4975,7 +4938,7 @@ public class NGUITools
                     if (cVar3) {
                       uVar10 = 0;
                       do {
-                        lVar6 = *(int64 *)(pStatics + 48);
+                        lVar6 = NGUITools.mSides;
                         if (lVar6 == null) throw; // [null/range check failed]
                         lVar8 = (int64)(int)uVar10;
                         if (*(uint32 *)(lVar6 + 24) <= uVar10) {
@@ -4998,7 +4961,7 @@ public class NGUITools
                         *(uint32 *)(lVar6 + 40 + lVar8 * 12) = *(uint32 *)(puVar5 + 1);
                       } while ((int)uVar10 < 4);
                     }
-                    return *(uint64 *)(pStatics + 48);
+                    return NGUITools.mSides;
                   }
                 }
               }
@@ -5035,7 +4998,7 @@ public class NGUITools
                 fStack_f4 = 1.0 / fVar15 + fStack_f4;
               }
               local_e8 = (uint64)(uint32)(fVar12 * -fVar11);
-              lVar6 = *(int64 *)(pStatics + 48);
+              lVar6 = NGUITools.mSides;
               local_e0 = param_2;
               local_c8 = uVar1;
               uStack_c0 = uVar2;
@@ -5056,7 +5019,7 @@ public class NGUITools
                 *(uint64 *)(lVar6 + 32) = local_e8;
                 *(float *)(lVar6 + 40) = local_e0;
                 local_e8 = (uint64)(uint32)fVar11 << 32;
-                lVar6 = *(int64 *)(pStatics + 48);
+                lVar6 = NGUITools.mSides;
                 local_e0 = param_2;
                 local_c8 = uVar1;
                 uStack_c0 = uVar2;
@@ -5077,7 +5040,7 @@ public class NGUITools
                   *(uint64 *)(lVar6 + 44) = local_e8;
                   *(float *)(lVar6 + 52) = local_e0;
                   local_e8 = (uint64)(uint32)(fVar11 * fVar12);
-                  lVar6 = *(int64 *)(pStatics + 48);
+                  lVar6 = NGUITools.mSides;
                   local_e0 = param_2;
                   local_c8 = uVar1;
                   uStack_c0 = uVar2;
@@ -5098,7 +5061,7 @@ public class NGUITools
                     *(uint64 *)(lVar6 + 56) = local_e8;
                     *(float *)(lVar6 + 64) = local_e0;
                     local_e8 = (uint64)(uint32)-fVar11 << 32;
-                    lVar6 = *(int64 *)(pStatics + 48);
+                    lVar6 = NGUITools.mSides;
                     local_e0 = param_2;
                     local_c8 = uVar1;
                     uStack_c0 = uVar2;
@@ -5130,7 +5093,6 @@ public class NGUITools
     // RVA   : 0xB88500   Offset: 0xB87900   Length: 0x66
     public static Vector3[] GetSides(Camera cam, float depth)
     {
-        var pStatics = *(int64*)(DAT_181d8bd10 + 184);
         ulong uVar1;
         ulong uVar2;
         bool cVar3;
@@ -5162,7 +5124,7 @@ public class NGUITools
           cVar3 = Camera.get_orthographic(cam,0);
           if (!cVar3) {
             local_e8 = 0x3f00000000000000;
-            lVar6 = *(int64 *)(pStatics + 48);
+            lVar6 = NGUITools.mSides;
             local_e0 = depth;
             puVar5 = (uint64 *)Camera.ViewportToWorldPoint(&local_c8,cam,&local_e8,0);
             if (lVar6 != null) {
@@ -5174,7 +5136,7 @@ public class NGUITools
               *(uint64 *)(lVar6 + 32) = *puVar5;
               *(uint32 *)(lVar6 + 40) = *(uint32 *)(puVar5 + 1);
               local_e8 = 0x3f8000003f000000;
-              lVar6 = *(int64 *)(pStatics + 48);
+              lVar6 = NGUITools.mSides;
               local_e0 = depth;
               puVar5 = (uint64 *)Camera.ViewportToWorldPoint(&local_c8,cam,&local_e8,0);
               if (lVar6 != null) {
@@ -5186,7 +5148,7 @@ public class NGUITools
                 *(uint64 *)(lVar6 + 44) = *puVar5;
                 *(uint32 *)(lVar6 + 52) = *(uint32 *)(puVar5 + 1);
                 local_e8 = 0x3f0000003f800000;
-                lVar6 = *(int64 *)(pStatics + 48);
+                lVar6 = NGUITools.mSides;
                 local_e0 = depth;
                 puVar5 = (uint64 *)Camera.ViewportToWorldPoint(&local_c8,cam,&local_e8,0);
                 if (lVar6 != null) {
@@ -5198,7 +5160,7 @@ public class NGUITools
                   *(uint64 *)(lVar6 + 56) = *puVar5;
                   *(uint32 *)(lVar6 + 64) = *(uint32 *)(puVar5 + 1);
                   local_e8 = 0x3f000000;
-                  lVar6 = *(int64 *)(pStatics + 48);
+                  lVar6 = NGUITools.mSides;
                   local_e0 = depth;
                   puVar5 = (uint64 *)Camera.ViewportToWorldPoint(&local_c8,cam,&local_e8,0);
                   if (lVar6 != null) {
@@ -5214,7 +5176,7 @@ public class NGUITools
                     if (cVar3) {
                       uVar10 = 0;
                       do {
-                        lVar6 = *(int64 *)(pStatics + 48);
+                        lVar6 = NGUITools.mSides;
                         if (lVar6 == null) throw; // [null/range check failed]
                         lVar8 = (int64)(int)uVar10;
                         if (*(uint32 *)(lVar6 + 24) <= uVar10) {
@@ -5237,7 +5199,7 @@ public class NGUITools
                         *(uint32 *)(lVar6 + 40 + lVar8 * 12) = *(uint32 *)(puVar5 + 1);
                       } while ((int)uVar10 < 4);
                     }
-                    return *(uint64 *)(pStatics + 48);
+                    return NGUITools.mSides;
                   }
                 }
               }
@@ -5274,7 +5236,7 @@ public class NGUITools
                 fStack_f4 = 1.0 / fVar15 + fStack_f4;
               }
               local_e8 = (uint64)(uint32)(fVar12 * -fVar11);
-              lVar6 = *(int64 *)(pStatics + 48);
+              lVar6 = NGUITools.mSides;
               local_e0 = depth;
               local_c8 = uVar1;
               uStack_c0 = uVar2;
@@ -5295,7 +5257,7 @@ public class NGUITools
                 *(uint64 *)(lVar6 + 32) = local_e8;
                 *(float *)(lVar6 + 40) = local_e0;
                 local_e8 = (uint64)(uint32)fVar11 << 32;
-                lVar6 = *(int64 *)(pStatics + 48);
+                lVar6 = NGUITools.mSides;
                 local_e0 = depth;
                 local_c8 = uVar1;
                 uStack_c0 = uVar2;
@@ -5316,7 +5278,7 @@ public class NGUITools
                   *(uint64 *)(lVar6 + 44) = local_e8;
                   *(float *)(lVar6 + 52) = local_e0;
                   local_e8 = (uint64)(uint32)(fVar11 * fVar12);
-                  lVar6 = *(int64 *)(pStatics + 48);
+                  lVar6 = NGUITools.mSides;
                   local_e0 = depth;
                   local_c8 = uVar1;
                   uStack_c0 = uVar2;
@@ -5337,7 +5299,7 @@ public class NGUITools
                     *(uint64 *)(lVar6 + 56) = local_e8;
                     *(float *)(lVar6 + 64) = local_e0;
                     local_e8 = (uint64)(uint32)-fVar11 << 32;
-                    lVar6 = *(int64 *)(pStatics + 48);
+                    lVar6 = NGUITools.mSides;
                     local_e0 = depth;
                     local_c8 = uVar1;
                     uStack_c0 = uVar2;
@@ -5369,7 +5331,6 @@ public class NGUITools
     // RVA   : 0xB88450   Offset: 0xB87850   Length: 0xA9
     public static Vector3[] GetSides(Camera cam, Transform relativeTo)
     {
-        var pStatics = *(int64*)(DAT_181d8bd10 + 184);
         ulong uVar1;
         ulong uVar2;
         bool cVar3;
@@ -5401,7 +5362,7 @@ public class NGUITools
           cVar3 = Camera.get_orthographic(cam,0);
           if (!cVar3) {
             local_e8 = 0x3f00000000000000;
-            lVar6 = *(int64 *)(pStatics + 48);
+            lVar6 = NGUITools.mSides;
             local_e0 = relativeTo;
             puVar5 = (uint64 *)Camera.ViewportToWorldPoint(&local_c8,cam,&local_e8,0);
             if (lVar6 != null) {
@@ -5413,7 +5374,7 @@ public class NGUITools
               *(uint64 *)(lVar6 + 32) = *puVar5;
               *(uint32 *)(lVar6 + 40) = *(uint32 *)(puVar5 + 1);
               local_e8 = 0x3f8000003f000000;
-              lVar6 = *(int64 *)(pStatics + 48);
+              lVar6 = NGUITools.mSides;
               local_e0 = relativeTo;
               puVar5 = (uint64 *)Camera.ViewportToWorldPoint(&local_c8,cam,&local_e8,0);
               if (lVar6 != null) {
@@ -5425,7 +5386,7 @@ public class NGUITools
                 *(uint64 *)(lVar6 + 44) = *puVar5;
                 *(uint32 *)(lVar6 + 52) = *(uint32 *)(puVar5 + 1);
                 local_e8 = 0x3f0000003f800000;
-                lVar6 = *(int64 *)(pStatics + 48);
+                lVar6 = NGUITools.mSides;
                 local_e0 = relativeTo;
                 puVar5 = (uint64 *)Camera.ViewportToWorldPoint(&local_c8,cam,&local_e8,0);
                 if (lVar6 != null) {
@@ -5437,7 +5398,7 @@ public class NGUITools
                   *(uint64 *)(lVar6 + 56) = *puVar5;
                   *(uint32 *)(lVar6 + 64) = *(uint32 *)(puVar5 + 1);
                   local_e8 = 0x3f000000;
-                  lVar6 = *(int64 *)(pStatics + 48);
+                  lVar6 = NGUITools.mSides;
                   local_e0 = relativeTo;
                   puVar5 = (uint64 *)Camera.ViewportToWorldPoint(&local_c8,cam,&local_e8,0);
                   if (lVar6 != null) {
@@ -5453,7 +5414,7 @@ public class NGUITools
                     if (cVar3) {
                       uVar10 = 0;
                       do {
-                        lVar6 = *(int64 *)(pStatics + 48);
+                        lVar6 = NGUITools.mSides;
                         if (lVar6 == null) throw; // [null/range check failed]
                         lVar8 = (int64)(int)uVar10;
                         if (*(uint32 *)(lVar6 + 24) <= uVar10) {
@@ -5476,7 +5437,7 @@ public class NGUITools
                         *(uint32 *)(lVar6 + 40 + lVar8 * 12) = *(uint32 *)(puVar5 + 1);
                       } while ((int)uVar10 < 4);
                     }
-                    return *(uint64 *)(pStatics + 48);
+                    return NGUITools.mSides;
                   }
                 }
               }
@@ -5513,7 +5474,7 @@ public class NGUITools
                 fStack_f4 = 1.0 / fVar15 + fStack_f4;
               }
               local_e8 = (uint64)(uint32)(fVar12 * -fVar11);
-              lVar6 = *(int64 *)(pStatics + 48);
+              lVar6 = NGUITools.mSides;
               local_e0 = relativeTo;
               local_c8 = uVar1;
               uStack_c0 = uVar2;
@@ -5534,7 +5495,7 @@ public class NGUITools
                 *(uint64 *)(lVar6 + 32) = local_e8;
                 *(float *)(lVar6 + 40) = local_e0;
                 local_e8 = (uint64)(uint32)fVar11 << 32;
-                lVar6 = *(int64 *)(pStatics + 48);
+                lVar6 = NGUITools.mSides;
                 local_e0 = relativeTo;
                 local_c8 = uVar1;
                 uStack_c0 = uVar2;
@@ -5555,7 +5516,7 @@ public class NGUITools
                   *(uint64 *)(lVar6 + 44) = local_e8;
                   *(float *)(lVar6 + 52) = local_e0;
                   local_e8 = (uint64)(uint32)(fVar11 * fVar12);
-                  lVar6 = *(int64 *)(pStatics + 48);
+                  lVar6 = NGUITools.mSides;
                   local_e0 = relativeTo;
                   local_c8 = uVar1;
                   uStack_c0 = uVar2;
@@ -5576,7 +5537,7 @@ public class NGUITools
                     *(uint64 *)(lVar6 + 56) = local_e8;
                     *(float *)(lVar6 + 64) = local_e0;
                     local_e8 = (uint64)(uint32)-fVar11 << 32;
-                    lVar6 = *(int64 *)(pStatics + 48);
+                    lVar6 = NGUITools.mSides;
                     local_e0 = relativeTo;
                     local_c8 = uVar1;
                     uStack_c0 = uVar2;
@@ -5608,7 +5569,6 @@ public class NGUITools
     // RVA   : 0xB88570   Offset: 0xB87970   Length: 0x4C4
     public static Vector3[] GetSides(Camera cam, float depth, Transform relativeTo)
     {
-        var pStatics = *(int64*)(DAT_181d8bd10 + 184);
         ulong uVar1;
         ulong uVar2;
         bool cVar3;
@@ -5640,7 +5600,7 @@ public class NGUITools
           cVar3 = Camera.get_orthographic(cam,0);
           if (!cVar3) {
             local_e8 = 0x3f00000000000000;
-            lVar6 = *(int64 *)(pStatics + 48);
+            lVar6 = NGUITools.mSides;
             local_e0 = depth;
             puVar5 = (uint64 *)Camera.ViewportToWorldPoint(&local_c8,cam,&local_e8,0);
             if (lVar6 != null) {
@@ -5652,7 +5612,7 @@ public class NGUITools
               *(uint64 *)(lVar6 + 32) = *puVar5;
               *(uint32 *)(lVar6 + 40) = *(uint32 *)(puVar5 + 1);
               local_e8 = 0x3f8000003f000000;
-              lVar6 = *(int64 *)(pStatics + 48);
+              lVar6 = NGUITools.mSides;
               local_e0 = depth;
               puVar5 = (uint64 *)Camera.ViewportToWorldPoint(&local_c8,cam,&local_e8,0);
               if (lVar6 != null) {
@@ -5664,7 +5624,7 @@ public class NGUITools
                 *(uint64 *)(lVar6 + 44) = *puVar5;
                 *(uint32 *)(lVar6 + 52) = *(uint32 *)(puVar5 + 1);
                 local_e8 = 0x3f0000003f800000;
-                lVar6 = *(int64 *)(pStatics + 48);
+                lVar6 = NGUITools.mSides;
                 local_e0 = depth;
                 puVar5 = (uint64 *)Camera.ViewportToWorldPoint(&local_c8,cam,&local_e8,0);
                 if (lVar6 != null) {
@@ -5676,7 +5636,7 @@ public class NGUITools
                   *(uint64 *)(lVar6 + 56) = *puVar5;
                   *(uint32 *)(lVar6 + 64) = *(uint32 *)(puVar5 + 1);
                   local_e8 = 0x3f000000;
-                  lVar6 = *(int64 *)(pStatics + 48);
+                  lVar6 = NGUITools.mSides;
                   local_e0 = depth;
                   puVar5 = (uint64 *)Camera.ViewportToWorldPoint(&local_c8,cam,&local_e8,0);
                   if (lVar6 != null) {
@@ -5692,7 +5652,7 @@ public class NGUITools
                     if (cVar3) {
                       uVar10 = 0;
                       do {
-                        lVar6 = *(int64 *)(pStatics + 48);
+                        lVar6 = NGUITools.mSides;
                         if (lVar6 == null) throw; // [null/range check failed]
                         lVar8 = (int64)(int)uVar10;
                         if (*(uint32 *)(lVar6 + 24) <= uVar10) {
@@ -5715,7 +5675,7 @@ public class NGUITools
                         *(uint32 *)(lVar6 + 40 + lVar8 * 12) = *(uint32 *)(puVar5 + 1);
                       } while ((int)uVar10 < 4);
                     }
-                    return *(uint64 *)(pStatics + 48);
+                    return NGUITools.mSides;
                   }
                 }
               }
@@ -5752,7 +5712,7 @@ public class NGUITools
                 fStack_f4 = 1.0 / fVar15 + fStack_f4;
               }
               local_e8 = (uint64)(uint32)(fVar12 * -fVar11);
-              lVar6 = *(int64 *)(pStatics + 48);
+              lVar6 = NGUITools.mSides;
               local_e0 = depth;
               local_c8 = uVar1;
               uStack_c0 = uVar2;
@@ -5773,7 +5733,7 @@ public class NGUITools
                 *(uint64 *)(lVar6 + 32) = local_e8;
                 *(float *)(lVar6 + 40) = local_e0;
                 local_e8 = (uint64)(uint32)fVar11 << 32;
-                lVar6 = *(int64 *)(pStatics + 48);
+                lVar6 = NGUITools.mSides;
                 local_e0 = depth;
                 local_c8 = uVar1;
                 uStack_c0 = uVar2;
@@ -5794,7 +5754,7 @@ public class NGUITools
                   *(uint64 *)(lVar6 + 44) = local_e8;
                   *(float *)(lVar6 + 52) = local_e0;
                   local_e8 = (uint64)(uint32)(fVar11 * fVar12);
-                  lVar6 = *(int64 *)(pStatics + 48);
+                  lVar6 = NGUITools.mSides;
                   local_e0 = depth;
                   local_c8 = uVar1;
                   uStack_c0 = uVar2;
@@ -5815,7 +5775,7 @@ public class NGUITools
                     *(uint64 *)(lVar6 + 56) = local_e8;
                     *(float *)(lVar6 + 64) = local_e0;
                     local_e8 = (uint64)(uint32)-fVar11 << 32;
-                    lVar6 = *(int64 *)(pStatics + 48);
+                    lVar6 = NGUITools.mSides;
                     local_e0 = depth;
                     local_c8 = uVar1;
                     uStack_c0 = uVar2;
@@ -5847,7 +5807,6 @@ public class NGUITools
     // RVA   : 0xB88F90   Offset: 0xB88390   Length: 0x9D
     public static Vector3[] GetWorldCorners(Camera cam)
     {
-        var pStatics = *(int64*)(DAT_181d8bd10 + 184);
         ulong uVar1;
         ulong uVar2;
         float fVar3;
@@ -5882,7 +5841,7 @@ public class NGUITools
           cVar5 = Camera.get_orthographic(cam,0);
           if (!cVar5) {
             local_e8 = 0;
-            lVar9 = *(int64 *)(pStatics + 48);
+            lVar9 = NGUITools.mSides;
             local_e0 = param_2;
             puVar8 = (uint64 *)Camera.ViewportToWorldPoint(&local_b8,cam,&local_e8,0);
             if (lVar9 != null) {
@@ -5894,7 +5853,7 @@ public class NGUITools
               *(uint64 *)(lVar9 + 32) = *puVar8;
               *(uint32 *)(lVar9 + 40) = *(uint32 *)(puVar8 + 1);
               local_e8 = 0x3f80000000000000;
-              lVar9 = *(int64 *)(pStatics + 48);
+              lVar9 = NGUITools.mSides;
               local_e0 = param_2;
               puVar8 = (uint64 *)Camera.ViewportToWorldPoint(&local_b8,cam,&local_e8,0);
               if (lVar9 != null) {
@@ -5906,7 +5865,7 @@ public class NGUITools
                 *(uint64 *)(lVar9 + 44) = *puVar8;
                 *(uint32 *)(lVar9 + 52) = *(uint32 *)(puVar8 + 1);
                 local_e8 = 0x3f8000003f800000;
-                lVar9 = *(int64 *)(pStatics + 48);
+                lVar9 = NGUITools.mSides;
                 local_e0 = param_2;
                 puVar8 = (uint64 *)Camera.ViewportToWorldPoint(&local_b8,cam,&local_e8,0);
                 if (lVar9 != null) {
@@ -5918,7 +5877,7 @@ public class NGUITools
                   *(uint64 *)(lVar9 + 56) = *puVar8;
                   *(uint32 *)(lVar9 + 64) = *(uint32 *)(puVar8 + 1);
                   local_e8 = 0x3f800000;
-                  lVar9 = *(int64 *)(pStatics + 48);
+                  lVar9 = NGUITools.mSides;
                   local_e0 = param_2;
                   puVar8 = (uint64 *)Camera.ViewportToWorldPoint(&local_b8,cam,&local_e8,0);
                   if (lVar9 != null) {
@@ -5934,7 +5893,7 @@ public class NGUITools
                     if (cVar5) {
                       uVar12 = 0;
                       do {
-                        lVar9 = *(int64 *)(pStatics + 48);
+                        lVar9 = NGUITools.mSides;
                         if (lVar9 == null) throw; // [null/range check failed]
                         lVar10 = (int64)(int)uVar12;
                         if (*(uint32 *)(lVar9 + 24) <= uVar12) {
@@ -5957,7 +5916,7 @@ public class NGUITools
                         *(uint32 *)(lVar9 + 40 + lVar10 * 12) = *(uint32 *)(puVar8 + 1);
                       } while ((int)uVar12 < 4);
                     }
-                    return *(uint64 *)(pStatics + 48);
+                    return NGUITools.mSides;
                   }
                 }
               }
@@ -5986,7 +5945,7 @@ public class NGUITools
               local_e0 = *(float *)(puVar8 + 1);
               uVar11 = *puVar8;
               local_c0 = *(float *)(puVar8 + 1);
-              lVar9 = *(int64 *)(pStatics + 48);
+              lVar9 = NGUITools.mSides;
               local_f0 = param_2;
               local_e8 = uVar11;
               local_d8 = uVar1;
@@ -6009,7 +5968,7 @@ public class NGUITools
                 *(uint64 *)(lVar9 + 32) = local_f8;
                 *(float *)(lVar9 + 40) = local_f0;
                 local_f8 = CONCAT44(fVar13,fVar14);
-                lVar9 = *(int64 *)(pStatics + 48);
+                lVar9 = NGUITools.mSides;
                 local_f0 = param_2;
                 local_b8 = uVar1;
                 uStack_b0 = uVar2;
@@ -6033,7 +5992,7 @@ public class NGUITools
                   *(uint64 *)(lVar9 + 44) = local_f8;
                   *(float *)(lVar9 + 52) = local_f0;
                   local_e8 = CONCAT44(fVar13,fVar15);
-                  lVar9 = *(int64 *)(pStatics + 48);
+                  lVar9 = NGUITools.mSides;
                   local_e0 = param_2;
                   local_b8 = uVar1;
                   uStack_b0 = uVar2;
@@ -6054,7 +6013,7 @@ public class NGUITools
                     *(uint64 *)(lVar9 + 56) = local_e8;
                     *(float *)(lVar9 + 64) = local_e0;
                     local_e8 = CONCAT44(fVar16,fVar15);
-                    lVar9 = *(int64 *)(pStatics + 48);
+                    lVar9 = NGUITools.mSides;
                     local_e0 = param_2;
                     local_b8 = uVar1;
                     uStack_b0 = uVar2;
@@ -6086,7 +6045,6 @@ public class NGUITools
     // RVA   : 0xB89030   Offset: 0xB88430   Length: 0x66
     public static Vector3[] GetWorldCorners(Camera cam, float depth)
     {
-        var pStatics = *(int64*)(DAT_181d8bd10 + 184);
         ulong uVar1;
         ulong uVar2;
         float fVar3;
@@ -6121,7 +6079,7 @@ public class NGUITools
           cVar5 = Camera.get_orthographic(cam,0);
           if (!cVar5) {
             local_e8 = 0;
-            lVar9 = *(int64 *)(pStatics + 48);
+            lVar9 = NGUITools.mSides;
             local_e0 = depth;
             puVar8 = (uint64 *)Camera.ViewportToWorldPoint(&local_b8,cam,&local_e8,0);
             if (lVar9 != null) {
@@ -6133,7 +6091,7 @@ public class NGUITools
               *(uint64 *)(lVar9 + 32) = *puVar8;
               *(uint32 *)(lVar9 + 40) = *(uint32 *)(puVar8 + 1);
               local_e8 = 0x3f80000000000000;
-              lVar9 = *(int64 *)(pStatics + 48);
+              lVar9 = NGUITools.mSides;
               local_e0 = depth;
               puVar8 = (uint64 *)Camera.ViewportToWorldPoint(&local_b8,cam,&local_e8,0);
               if (lVar9 != null) {
@@ -6145,7 +6103,7 @@ public class NGUITools
                 *(uint64 *)(lVar9 + 44) = *puVar8;
                 *(uint32 *)(lVar9 + 52) = *(uint32 *)(puVar8 + 1);
                 local_e8 = 0x3f8000003f800000;
-                lVar9 = *(int64 *)(pStatics + 48);
+                lVar9 = NGUITools.mSides;
                 local_e0 = depth;
                 puVar8 = (uint64 *)Camera.ViewportToWorldPoint(&local_b8,cam,&local_e8,0);
                 if (lVar9 != null) {
@@ -6157,7 +6115,7 @@ public class NGUITools
                   *(uint64 *)(lVar9 + 56) = *puVar8;
                   *(uint32 *)(lVar9 + 64) = *(uint32 *)(puVar8 + 1);
                   local_e8 = 0x3f800000;
-                  lVar9 = *(int64 *)(pStatics + 48);
+                  lVar9 = NGUITools.mSides;
                   local_e0 = depth;
                   puVar8 = (uint64 *)Camera.ViewportToWorldPoint(&local_b8,cam,&local_e8,0);
                   if (lVar9 != null) {
@@ -6173,7 +6131,7 @@ public class NGUITools
                     if (cVar5) {
                       uVar12 = 0;
                       do {
-                        lVar9 = *(int64 *)(pStatics + 48);
+                        lVar9 = NGUITools.mSides;
                         if (lVar9 == null) throw; // [null/range check failed]
                         lVar10 = (int64)(int)uVar12;
                         if (*(uint32 *)(lVar9 + 24) <= uVar12) {
@@ -6196,7 +6154,7 @@ public class NGUITools
                         *(uint32 *)(lVar9 + 40 + lVar10 * 12) = *(uint32 *)(puVar8 + 1);
                       } while ((int)uVar12 < 4);
                     }
-                    return *(uint64 *)(pStatics + 48);
+                    return NGUITools.mSides;
                   }
                 }
               }
@@ -6225,7 +6183,7 @@ public class NGUITools
               local_e0 = *(float *)(puVar8 + 1);
               uVar11 = *puVar8;
               local_c0 = *(float *)(puVar8 + 1);
-              lVar9 = *(int64 *)(pStatics + 48);
+              lVar9 = NGUITools.mSides;
               local_f0 = depth;
               local_e8 = uVar11;
               local_d8 = uVar1;
@@ -6248,7 +6206,7 @@ public class NGUITools
                 *(uint64 *)(lVar9 + 32) = local_f8;
                 *(float *)(lVar9 + 40) = local_f0;
                 local_f8 = CONCAT44(fVar13,fVar14);
-                lVar9 = *(int64 *)(pStatics + 48);
+                lVar9 = NGUITools.mSides;
                 local_f0 = depth;
                 local_b8 = uVar1;
                 uStack_b0 = uVar2;
@@ -6272,7 +6230,7 @@ public class NGUITools
                   *(uint64 *)(lVar9 + 44) = local_f8;
                   *(float *)(lVar9 + 52) = local_f0;
                   local_e8 = CONCAT44(fVar13,fVar15);
-                  lVar9 = *(int64 *)(pStatics + 48);
+                  lVar9 = NGUITools.mSides;
                   local_e0 = depth;
                   local_b8 = uVar1;
                   uStack_b0 = uVar2;
@@ -6293,7 +6251,7 @@ public class NGUITools
                     *(uint64 *)(lVar9 + 56) = local_e8;
                     *(float *)(lVar9 + 64) = local_e0;
                     local_e8 = CONCAT44(fVar16,fVar15);
-                    lVar9 = *(int64 *)(pStatics + 48);
+                    lVar9 = NGUITools.mSides;
                     local_e0 = depth;
                     local_b8 = uVar1;
                     uStack_b0 = uVar2;
@@ -6325,7 +6283,6 @@ public class NGUITools
     // RVA   : 0xB890A0   Offset: 0xB884A0   Length: 0xA9
     public static Vector3[] GetWorldCorners(Camera cam, Transform relativeTo)
     {
-        var pStatics = *(int64*)(DAT_181d8bd10 + 184);
         ulong uVar1;
         ulong uVar2;
         float fVar3;
@@ -6360,7 +6317,7 @@ public class NGUITools
           cVar5 = Camera.get_orthographic(cam,0);
           if (!cVar5) {
             local_e8 = 0;
-            lVar9 = *(int64 *)(pStatics + 48);
+            lVar9 = NGUITools.mSides;
             local_e0 = relativeTo;
             puVar8 = (uint64 *)Camera.ViewportToWorldPoint(&local_b8,cam,&local_e8,0);
             if (lVar9 != null) {
@@ -6372,7 +6329,7 @@ public class NGUITools
               *(uint64 *)(lVar9 + 32) = *puVar8;
               *(uint32 *)(lVar9 + 40) = *(uint32 *)(puVar8 + 1);
               local_e8 = 0x3f80000000000000;
-              lVar9 = *(int64 *)(pStatics + 48);
+              lVar9 = NGUITools.mSides;
               local_e0 = relativeTo;
               puVar8 = (uint64 *)Camera.ViewportToWorldPoint(&local_b8,cam,&local_e8,0);
               if (lVar9 != null) {
@@ -6384,7 +6341,7 @@ public class NGUITools
                 *(uint64 *)(lVar9 + 44) = *puVar8;
                 *(uint32 *)(lVar9 + 52) = *(uint32 *)(puVar8 + 1);
                 local_e8 = 0x3f8000003f800000;
-                lVar9 = *(int64 *)(pStatics + 48);
+                lVar9 = NGUITools.mSides;
                 local_e0 = relativeTo;
                 puVar8 = (uint64 *)Camera.ViewportToWorldPoint(&local_b8,cam,&local_e8,0);
                 if (lVar9 != null) {
@@ -6396,7 +6353,7 @@ public class NGUITools
                   *(uint64 *)(lVar9 + 56) = *puVar8;
                   *(uint32 *)(lVar9 + 64) = *(uint32 *)(puVar8 + 1);
                   local_e8 = 0x3f800000;
-                  lVar9 = *(int64 *)(pStatics + 48);
+                  lVar9 = NGUITools.mSides;
                   local_e0 = relativeTo;
                   puVar8 = (uint64 *)Camera.ViewportToWorldPoint(&local_b8,cam,&local_e8,0);
                   if (lVar9 != null) {
@@ -6412,7 +6369,7 @@ public class NGUITools
                     if (cVar5) {
                       uVar12 = 0;
                       do {
-                        lVar9 = *(int64 *)(pStatics + 48);
+                        lVar9 = NGUITools.mSides;
                         if (lVar9 == null) throw; // [null/range check failed]
                         lVar10 = (int64)(int)uVar12;
                         if (*(uint32 *)(lVar9 + 24) <= uVar12) {
@@ -6435,7 +6392,7 @@ public class NGUITools
                         *(uint32 *)(lVar9 + 40 + lVar10 * 12) = *(uint32 *)(puVar8 + 1);
                       } while ((int)uVar12 < 4);
                     }
-                    return *(uint64 *)(pStatics + 48);
+                    return NGUITools.mSides;
                   }
                 }
               }
@@ -6464,7 +6421,7 @@ public class NGUITools
               local_e0 = *(float *)(puVar8 + 1);
               uVar11 = *puVar8;
               local_c0 = *(float *)(puVar8 + 1);
-              lVar9 = *(int64 *)(pStatics + 48);
+              lVar9 = NGUITools.mSides;
               local_f0 = relativeTo;
               local_e8 = uVar11;
               local_d8 = uVar1;
@@ -6487,7 +6444,7 @@ public class NGUITools
                 *(uint64 *)(lVar9 + 32) = local_f8;
                 *(float *)(lVar9 + 40) = local_f0;
                 local_f8 = CONCAT44(fVar13,fVar14);
-                lVar9 = *(int64 *)(pStatics + 48);
+                lVar9 = NGUITools.mSides;
                 local_f0 = relativeTo;
                 local_b8 = uVar1;
                 uStack_b0 = uVar2;
@@ -6511,7 +6468,7 @@ public class NGUITools
                   *(uint64 *)(lVar9 + 44) = local_f8;
                   *(float *)(lVar9 + 52) = local_f0;
                   local_e8 = CONCAT44(fVar13,fVar15);
-                  lVar9 = *(int64 *)(pStatics + 48);
+                  lVar9 = NGUITools.mSides;
                   local_e0 = relativeTo;
                   local_b8 = uVar1;
                   uStack_b0 = uVar2;
@@ -6532,7 +6489,7 @@ public class NGUITools
                     *(uint64 *)(lVar9 + 56) = local_e8;
                     *(float *)(lVar9 + 64) = local_e0;
                     local_e8 = CONCAT44(fVar16,fVar15);
-                    lVar9 = *(int64 *)(pStatics + 48);
+                    lVar9 = NGUITools.mSides;
                     local_e0 = relativeTo;
                     local_b8 = uVar1;
                     uStack_b0 = uVar2;
@@ -6564,7 +6521,6 @@ public class NGUITools
     // RVA   : 0xB89150   Offset: 0xB88550   Length: 0x37C
     public static Vector3[] GetWorldCorners(Camera cam, float depth, Transform relativeTo)
     {
-        var pStatics = *(int64*)(DAT_181d8bd10 + 184);
         ulong uVar1;
         ulong uVar2;
         float fVar3;
@@ -6599,7 +6555,7 @@ public class NGUITools
           cVar5 = Camera.get_orthographic(cam,0);
           if (!cVar5) {
             local_e8 = 0;
-            lVar9 = *(int64 *)(pStatics + 48);
+            lVar9 = NGUITools.mSides;
             local_e0 = depth;
             puVar8 = (uint64 *)Camera.ViewportToWorldPoint(&local_b8,cam,&local_e8,0);
             if (lVar9 != null) {
@@ -6611,7 +6567,7 @@ public class NGUITools
               *(uint64 *)(lVar9 + 32) = *puVar8;
               *(uint32 *)(lVar9 + 40) = *(uint32 *)(puVar8 + 1);
               local_e8 = 0x3f80000000000000;
-              lVar9 = *(int64 *)(pStatics + 48);
+              lVar9 = NGUITools.mSides;
               local_e0 = depth;
               puVar8 = (uint64 *)Camera.ViewportToWorldPoint(&local_b8,cam,&local_e8,0);
               if (lVar9 != null) {
@@ -6623,7 +6579,7 @@ public class NGUITools
                 *(uint64 *)(lVar9 + 44) = *puVar8;
                 *(uint32 *)(lVar9 + 52) = *(uint32 *)(puVar8 + 1);
                 local_e8 = 0x3f8000003f800000;
-                lVar9 = *(int64 *)(pStatics + 48);
+                lVar9 = NGUITools.mSides;
                 local_e0 = depth;
                 puVar8 = (uint64 *)Camera.ViewportToWorldPoint(&local_b8,cam,&local_e8,0);
                 if (lVar9 != null) {
@@ -6635,7 +6591,7 @@ public class NGUITools
                   *(uint64 *)(lVar9 + 56) = *puVar8;
                   *(uint32 *)(lVar9 + 64) = *(uint32 *)(puVar8 + 1);
                   local_e8 = 0x3f800000;
-                  lVar9 = *(int64 *)(pStatics + 48);
+                  lVar9 = NGUITools.mSides;
                   local_e0 = depth;
                   puVar8 = (uint64 *)Camera.ViewportToWorldPoint(&local_b8,cam,&local_e8,0);
                   if (lVar9 != null) {
@@ -6651,7 +6607,7 @@ public class NGUITools
                     if (cVar5) {
                       uVar12 = 0;
                       do {
-                        lVar9 = *(int64 *)(pStatics + 48);
+                        lVar9 = NGUITools.mSides;
                         if (lVar9 == null) throw; // [null/range check failed]
                         lVar10 = (int64)(int)uVar12;
                         if (*(uint32 *)(lVar9 + 24) <= uVar12) {
@@ -6674,7 +6630,7 @@ public class NGUITools
                         *(uint32 *)(lVar9 + 40 + lVar10 * 12) = *(uint32 *)(puVar8 + 1);
                       } while ((int)uVar12 < 4);
                     }
-                    return *(uint64 *)(pStatics + 48);
+                    return NGUITools.mSides;
                   }
                 }
               }
@@ -6703,7 +6659,7 @@ public class NGUITools
               local_e0 = *(float *)(puVar8 + 1);
               uVar11 = *puVar8;
               local_c0 = *(float *)(puVar8 + 1);
-              lVar9 = *(int64 *)(pStatics + 48);
+              lVar9 = NGUITools.mSides;
               local_f0 = depth;
               local_e8 = uVar11;
               local_d8 = uVar1;
@@ -6726,7 +6682,7 @@ public class NGUITools
                 *(uint64 *)(lVar9 + 32) = local_f8;
                 *(float *)(lVar9 + 40) = local_f0;
                 local_f8 = CONCAT44(fVar13,fVar14);
-                lVar9 = *(int64 *)(pStatics + 48);
+                lVar9 = NGUITools.mSides;
                 local_f0 = depth;
                 local_b8 = uVar1;
                 uStack_b0 = uVar2;
@@ -6750,7 +6706,7 @@ public class NGUITools
                   *(uint64 *)(lVar9 + 44) = local_f8;
                   *(float *)(lVar9 + 52) = local_f0;
                   local_e8 = CONCAT44(fVar13,fVar15);
-                  lVar9 = *(int64 *)(pStatics + 48);
+                  lVar9 = NGUITools.mSides;
                   local_e0 = depth;
                   local_b8 = uVar1;
                   uStack_b0 = uVar2;
@@ -6771,7 +6727,7 @@ public class NGUITools
                     *(uint64 *)(lVar9 + 56) = local_e8;
                     *(float *)(lVar9 + 64) = local_e0;
                     local_e8 = CONCAT44(fVar16,fVar15);
-                    lVar9 = *(int64 *)(pStatics + 48);
+                    lVar9 = NGUITools.mSides;
                     local_e0 = depth;
                     local_b8 = uVar1;
                     uStack_b0 = uVar2;
@@ -7892,7 +7848,6 @@ public class NGUITools
     public static T Draw<T>(string id, OnInitFunc<T> onInit)
     {
         var pStatics_0178 = *(int64*)(DAT_181db0178 + 184);
-        var pStatics_bd10 = *(int64*)(DAT_181d8bd10 + 184);
         long lVar1;
         bool cVar2;
         uint uVar3;
@@ -7907,7 +7862,7 @@ public class NGUITools
         local_res10 = onInit;
         uVar4 = 0;
         local_res8 = 0;
-        lVar6 = *(int64 *)(pStatics_bd10 + 64);
+        lVar6 = NGUITools.mWidgets;
         if (lVar6 == null) throw; // [null/range check failed]
         cVar2 = FUN_1808b04c0(lVar6,id,&local_res8,DAT_181d764f0);
         lVar6 = local_res8;
@@ -7930,7 +7885,7 @@ public class NGUITools
             FUN_1800d6070(lVar6,lVar1);
           }
         }
-        uVar8 = *(uint64 *)(pStatics_bd10 + 72);
+        uVar8 = NGUITools.mRoot;
         cVar2 = Object.op_Equality(uVar8,0,0);
         uVar9 = uVar4;
         if (cVar2) {
@@ -7967,27 +7922,25 @@ public class NGUITools
             uVar3 = LayerMask.NameToLayer("UI",0);
             uVar8 = NGUITools.CreateUI(0,uVar3,0);
           }
-          *(uint64 *)(pStatics_bd10 + 72) = uVar8;
-          lVar6 = *(int64 *)(pStatics_bd10 + 72);
+          NGUITools.mRoot = uVar8;
+          lVar6 = NGUITools.mRoot;
           if (lVar6 == null) throw; // [null/range check failed]
           UIPanel.set_depth(lVar6,100000,0);
-          lVar6 = *(int64 *)(pStatics_bd10 + 72);
+          lVar6 = NGUITools.mRoot;
           if (lVar6 == null) throw; // [null/range check failed]
           uVar8 = Component.get_gameObject(lVar6,0);
-          puVar10 = (uint64 *)(pStatics_bd10 + 80);
-          *puVar10 = uVar8;
-          il2cpp_internal(puVar10,uVar8);
-          lVar6 = *(int64 *)(pStatics_bd10 + 80);
+          NGUITools.mGo = uVar8;
+          lVar6 = NGUITools.mGo;
           if (lVar6 == null) throw; // [null/range check failed]
           Object.set_name(lVar6,"Immediate Mode GUI",0);
           onInit = local_res10;
         }
         puVar10 = *(uint64 **)(*(int64 *)(param_3 + 48) + 8);
-        local_res8 = (*(code *)*puVar10)(*(uint64 *)(pStatics_bd10 + 80),
+        local_res8 = (*(code *)*puVar10)(NGUITools.mGo,
                                          0x7fffffff,puVar10);
         if (local_res8 != 0) {
           Object.set_name(local_res8,id,0);
-          lVar6 = *(int64 *)(pStatics_bd10 + 64);
+          lVar6 = NGUITools.mWidgets;
           if (lVar6 != null) {
             FUN_1808b2160(lVar6,id,local_res8,DAT_181d76578);
             lVar6 = local_res8;
@@ -8022,17 +7975,16 @@ public class NGUITools
     // RVA   : 0xB87E20   Offset: 0xB87220   Length: 0x174
     public static Color GammaToLinearSpace(Color c)
     {
-        var pStatics = *(int64*)(DAT_181d8bd10 + 184);
         ulong uVar1;
         uint uVar2;
         uint uVar3;
         uint uVar4;
         uint uVar5;
-        if (*(int *)(pStatics + 88) == -1) {
+        if (NGUITools.mColorSpace == -1) {
           uVar2 = QualitySettings.get_activeColorSpace(0);
-          *(uint32 *)(pStatics + 88) = uVar2;
+          NGUITools.mColorSpace = uVar2;
         }
-        if (*(int *)(pStatics + 88) != 1) {
+        if (NGUITools.mColorSpace != 1) {
           uVar1 = param_2[1];
           *c = *param_2;
           c[1] = uVar1;
@@ -8052,17 +8004,16 @@ public class NGUITools
     // RVA   : 0xB8ADA0   Offset: 0xB8A1A0   Length: 0x174
     public static Color LinearToGammaSpace(Color c)
     {
-        var pStatics = *(int64*)(DAT_181d8bd10 + 184);
         ulong uVar1;
         uint uVar2;
         uint uVar3;
         uint uVar4;
         uint uVar5;
-        if (*(int *)(pStatics + 88) == -1) {
+        if (NGUITools.mColorSpace == -1) {
           uVar2 = QualitySettings.get_activeColorSpace(0);
-          *(uint32 *)(pStatics + 88) = uVar2;
+          NGUITools.mColorSpace = uVar2;
         }
-        if (*(int *)(pStatics + 88) != 1) {
+        if (NGUITools.mColorSpace != 1) {
           uVar1 = param_2[1];
           *c = *param_2;
           c[1] = uVar1;
@@ -8274,31 +8225,22 @@ public class NGUITools
     // RVA   : 0xB8E640   Offset: 0xB8DA40   Length: 0x1B4
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d8bd10 + 184);
         ulong uVar1;
-        *(uint8 *)(pStatics + 16) = 0;
-        *(uint32 *)(pStatics + 20) = 0x3f800000;
-        *(uint32 *)(pStatics + 24) = 0;
+        NGUITools.mLoaded = 0;
+        NGUITools.mGlobalVolume = 0x3f800000;
+        NGUITools.mLastTimestamp = 0;
         uVar1 = il2cpp_internal(DAT_181d83fe8);
         FUN_1808b1370(uVar1,DAT_181d794f8);
-        puVar2 = (uint64 *)(pStatics + 40);
-        *puVar2 = uVar1;
-        il2cpp_internal(puVar2,uVar1);
+        NGUITools.mTypeNames = uVar1;
         uVar1 = FUN_1800d60b0(DAT_181da6d60,4);
-        puVar2 = (uint64 *)(pStatics + 48);
-        *puVar2 = uVar1;
-        il2cpp_internal(puVar2,uVar1);
+        NGUITools.mSides = uVar1;
         uVar1 = FUN_1800d60b0(DAT_181da3aa0,145);
         RuntimeHelpers.InitializeArray(uVar1,DAT_181dbb060,0);
-        puVar2 = (uint64 *)(pStatics + 56);
-        *puVar2 = uVar1;
-        il2cpp_internal(puVar2,uVar1);
+        NGUITools.keys = uVar1;
         uVar1 = il2cpp_internal(DAT_181d834e8);
         FUN_1808b1370(uVar1,DAT_181d76468);
-        puVar2 = (uint64 *)(pStatics + 64);
-        *puVar2 = uVar1;
-        il2cpp_internal(puVar2,uVar1);
-        *(uint32 *)(pStatics + 88) = 0xffffffff;
+        NGUITools.mWidgets = uVar1;
+        NGUITools.mColorSpace = 0xffffffff;
     }
 
 }

@@ -37,7 +37,6 @@ public class SureStartButtonController
     // RVA   : 0xA95100   Offset: 0xA94500   Length: 0x634
     private void Update()
     {
-        var pStatics_6810 = *(int64*)(DAT_181da6810 + 184);
         var pStatics_a1b8 = *(int64*)(DAT_181d8a1b8 + 184);
         ulong uVar1;
         bool cVar2;
@@ -101,8 +100,8 @@ public class SureStartButtonController
               PlayerPrefDictionary.SetKey(lVar5,"NewGameTime",iVar3 + 1,0);
             }
           }
-          if ((*pStatics_6810 == 0) ||
-             (lVar5 = *(int64 *)(*pStatics_6810 + 48)) == null) {
+          if ((StartMenuController._instance == null) ||
+             (lVar5 = StartMenuController._instance.backMountain) == null) {
         LAB_180a95729:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
@@ -164,16 +163,15 @@ public class SureStartButtonController
     // RVA   : 0xA94D50   Offset: 0xA94150   Length: 0x2C7
     public virtual void OnPointerDown(PointerEventData eventData)
     {
-        var pStatics = *(int64*)(DAT_181da6810 + 184);
         bool cVar1;
         long lVar2;
-        if ((*pStatics == 0) ||
-           (lVar2 = *(int64 *)(*pStatics + 72)) == null)
+        if ((StartMenuController._instance == null) ||
+           (lVar2 = StartMenuController._instance.heroFamilyName) == null)
         throw; // [null/range check failed]
         cVar1 = FUN_18171e540(*(uint64 *)(lVar2 + 0x170),"",0);
         if (!cVar1) {
-          if ((*pStatics == 0) ||
-             (lVar2 = *(int64 *)(*pStatics + 80)) == null)
+          if ((StartMenuController._instance == null) ||
+             (lVar2 = StartMenuController._instance.heroGivenName) == null)
           throw; // [null/range check failed]
           cVar1 = FUN_18171e540(*(uint64 *)(lVar2 + 0x170),"",0);
           if (!cVar1) {
@@ -186,8 +184,8 @@ public class SureStartButtonController
             throw; // [null/range check failed]
           }
         }
-        if (*pStatics != 0) {
-          StartMenuController.ShowTextOnMouse(*pStatics,"请完整设置角色姓名！",0);
+        if (StartMenuController._instance != null) {
+          StartMenuController.ShowTextOnMouse(StartMenuController._instance,"请完整设置角色姓名！",0);
           plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
           plVar4 = (int64 *)0;
           if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {

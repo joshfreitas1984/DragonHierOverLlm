@@ -1,4 +1,4 @@
-using Il2CppExplorer;
+﻿using Il2CppExplorer;
 using Il2CppExplorer.Decompilers;
 using Il2CppExplorer.Services;
 
@@ -322,8 +322,10 @@ if (!string.IsNullOrEmpty(cfg.BinaryPath) && !string.IsNullOrEmpty(cfg.MetadataP
     }
 }
 
-// Load previous-run _static_labels.csv to resolve DAT_XXXX addresses → class names.
-// Enables passes 3d/3e/3f to handle **(int64**)(DAT_XXXX + 0xb8) singleton access chains.
+// Load previous-run _static_labels.csv (DAT_XXXX addresses → class names). SummaryWriter.WriteAll
+// overrides it with this run's own raw-output scan and only carries over entries for addresses
+// Ghidra has already labelled. Enables passes 3d/3e/3f to handle **(int64**)(DAT_XXXX + 0xb8)
+// singleton access chains.
 var datToClass = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
 {
     string staticLabCsv = Path.Combine(cfg.OutputDir, "_static_labels.csv");

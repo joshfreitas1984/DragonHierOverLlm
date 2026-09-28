@@ -51,7 +51,6 @@ public class HeroLittleTalkController
     // RVA   : 0xAF6D30   Offset: 0xAF6130   Length: 0x108
     public GameObject HeroTalk(GameObject target, string talkText)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         uint64
         HeroLittleTalkController.HeroTalk
                 (int64 this,int64 target,uint64 talkText,uint32 param_4,int param_5,
@@ -106,12 +105,12 @@ public class HeroLittleTalkController
         uVar6 = GlobalData.ReplaceSpeString(talkText,param_5,0);
         LTLocalization.SetText(uVar5,uVar6,0);
         if (-1 < param_5) {
-          if ((*pStatics == 0) ||
-             (lVar3 = *(int64 *)(*pStatics + 32)) == null)
+          if ((GameController._instance == null) ||
+             (lVar3 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
           lVar3 = WorldData.GetHero(lVar3,param_5,0);
-          if ((((*pStatics == 0) ||
-               (lVar7 = *(int64 *)(*pStatics + 32)) == null) ||
+          if ((((GameController._instance == null) ||
+               (lVar7 = GameController._instance.worldData) == null) ||
               (lVar7 = WorldData.GetHero(lVar7,param_5,0)) == null) ||
              (uVar5 = HeroData.GetHeroLittleTalkSound(lVar7,0), lVar3 == null)) throw; // [null/range check failed]
           HeroData.PlayHeroSound(lVar3,uVar5,0x3f800000,0xbf800000,0);
@@ -126,7 +125,7 @@ public class HeroLittleTalkController
             if ((this.newObj != null) &&
                (lVar3 = GameObject.GetComponent(this.newObj,DAT_181d71c60)) != null
                ) {
-              *(uint32 *)(lVar3 + 48) = param_4;
+              lVar3.Areas = param_4;
               if (this.newObj != null) {
                 lVar3 = GameObject.get_transform(this.newObj,0);
                 puVar8 = (uint64 *)Vector3.get_zero(local_48,0);
@@ -206,7 +205,6 @@ public class HeroLittleTalkController
     // RVA   : 0xAF6E40   Offset: 0xAF6240   Length: 0x110
     public GameObject HeroTalk(GameObject target, string talkText, float lifeTime)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         uint64
         HeroLittleTalkController.HeroTalk
                 (int64 this,int64 target,uint64 talkText,uint32 lifeTime,int param_5,
@@ -261,12 +259,12 @@ public class HeroLittleTalkController
         uVar6 = GlobalData.ReplaceSpeString(talkText,param_5,0);
         LTLocalization.SetText(uVar5,uVar6,0);
         if (-1 < param_5) {
-          if ((*pStatics == 0) ||
-             (lVar3 = *(int64 *)(*pStatics + 32)) == null)
+          if ((GameController._instance == null) ||
+             (lVar3 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
           lVar3 = WorldData.GetHero(lVar3,param_5,0);
-          if ((((*pStatics == 0) ||
-               (lVar7 = *(int64 *)(*pStatics + 32)) == null) ||
+          if ((((GameController._instance == null) ||
+               (lVar7 = GameController._instance.worldData) == null) ||
               (lVar7 = WorldData.GetHero(lVar7,param_5,0)) == null) ||
              (uVar5 = HeroData.GetHeroLittleTalkSound(lVar7,0), lVar3 == null)) throw; // [null/range check failed]
           HeroData.PlayHeroSound(lVar3,uVar5,0x3f800000,0xbf800000,0);
@@ -281,7 +279,7 @@ public class HeroLittleTalkController
             if ((this.newObj != null) &&
                (lVar3 = GameObject.GetComponent(this.newObj,DAT_181d71c60)) != null
                ) {
-              *(uint32 *)(lVar3 + 48) = lifeTime;
+              lVar3.Areas = lifeTime;
               if (this.newObj != null) {
                 lVar3 = GameObject.get_transform(this.newObj,0);
                 puVar8 = (uint64 *)Vector3.get_zero(local_48,0);
@@ -361,7 +359,6 @@ public class HeroLittleTalkController
     // RVA   : 0xAF6F60   Offset: 0xAF6360   Length: 0x11D
     public GameObject HeroTalk(GameObject target, string talkText, float lifeTime, GameObject parentObj, TalkTextPosType talkTextPosType)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         uint64
         HeroLittleTalkController.HeroTalk
                 (int64 this,int64 target,uint64 talkText,uint32 lifeTime,int parentObj,
@@ -416,12 +413,12 @@ public class HeroLittleTalkController
         uVar6 = GlobalData.ReplaceSpeString(talkText,parentObj,0);
         LTLocalization.SetText(uVar5,uVar6,0);
         if (-1 < parentObj) {
-          if ((*pStatics == 0) ||
-             (lVar3 = *(int64 *)(*pStatics + 32)) == null)
+          if ((GameController._instance == null) ||
+             (lVar3 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
           lVar3 = WorldData.GetHero(lVar3,parentObj,0);
-          if ((((*pStatics == 0) ||
-               (lVar7 = *(int64 *)(*pStatics + 32)) == null) ||
+          if ((((GameController._instance == null) ||
+               (lVar7 = GameController._instance.worldData) == null) ||
               (lVar7 = WorldData.GetHero(lVar7,parentObj,0)) == null) ||
              (uVar5 = HeroData.GetHeroLittleTalkSound(lVar7,0), lVar3 == null)) throw; // [null/range check failed]
           HeroData.PlayHeroSound(lVar3,uVar5,0x3f800000,0xbf800000,0);
@@ -436,7 +433,7 @@ public class HeroLittleTalkController
             if ((this.newObj != null) &&
                (lVar3 = GameObject.GetComponent(this.newObj,DAT_181d71c60)) != null
                ) {
-              *(uint32 *)(lVar3 + 48) = lifeTime;
+              lVar3.Areas = lifeTime;
               if (this.newObj != null) {
                 lVar3 = GameObject.get_transform(this.newObj,0);
                 puVar8 = (uint64 *)Vector3.get_zero(local_48,0);
@@ -516,7 +513,6 @@ public class HeroLittleTalkController
     // RVA   : 0xAF6D00   Offset: 0xAF6100   Length: 0x2A
     public GameObject HeroTalk(GameObject target, string talkText, float lifeTime, int sourceHeroID)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         uint64
         HeroLittleTalkController.HeroTalk
                 (int64 this,int64 target,uint64 talkText,uint32 lifeTime,int sourceHeroID,
@@ -571,12 +567,12 @@ public class HeroLittleTalkController
         uVar6 = GlobalData.ReplaceSpeString(talkText,sourceHeroID,0);
         LTLocalization.SetText(uVar5,uVar6,0);
         if (-1 < sourceHeroID) {
-          if ((*pStatics == 0) ||
-             (lVar3 = *(int64 *)(*pStatics + 32)) == null)
+          if ((GameController._instance == null) ||
+             (lVar3 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
           lVar3 = WorldData.GetHero(lVar3,sourceHeroID,0);
-          if ((((*pStatics == 0) ||
-               (lVar7 = *(int64 *)(*pStatics + 32)) == null) ||
+          if ((((GameController._instance == null) ||
+               (lVar7 = GameController._instance.worldData) == null) ||
               (lVar7 = WorldData.GetHero(lVar7,sourceHeroID,0)) == null) ||
              (uVar5 = HeroData.GetHeroLittleTalkSound(lVar7,0), lVar3 == null)) throw; // [null/range check failed]
           HeroData.PlayHeroSound(lVar3,uVar5,0x3f800000,0xbf800000,0);
@@ -591,7 +587,7 @@ public class HeroLittleTalkController
             if ((this.newObj != null) &&
                (lVar3 = GameObject.GetComponent(this.newObj,DAT_181d71c60)) != null
                ) {
-              *(uint32 *)(lVar3 + 48) = lifeTime;
+              lVar3.Areas = lifeTime;
               if (this.newObj != null) {
                 lVar3 = GameObject.get_transform(this.newObj,0);
                 puVar8 = (uint64 *)Vector3.get_zero(local_48,0);
@@ -671,7 +667,6 @@ public class HeroLittleTalkController
     // RVA   : 0xAF7080   Offset: 0xAF6480   Length: 0x6E6
     public GameObject HeroTalk(GameObject target, string talkText, float lifeTime, int sourceHeroID, GameObject parentObj, TalkTextPosType talkTextPosType)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         uint64
         HeroLittleTalkController.HeroTalk
                 (int64 this,int64 target,uint64 talkText,uint32 lifeTime,int sourceHeroID,
@@ -726,12 +721,12 @@ public class HeroLittleTalkController
         uVar6 = GlobalData.ReplaceSpeString(talkText,sourceHeroID,0);
         LTLocalization.SetText(uVar5,uVar6,0);
         if (-1 < sourceHeroID) {
-          if ((*pStatics == 0) ||
-             (lVar3 = *(int64 *)(*pStatics + 32)) == null)
+          if ((GameController._instance == null) ||
+             (lVar3 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
           lVar3 = WorldData.GetHero(lVar3,sourceHeroID,0);
-          if ((((*pStatics == 0) ||
-               (lVar7 = *(int64 *)(*pStatics + 32)) == null) ||
+          if ((((GameController._instance == null) ||
+               (lVar7 = GameController._instance.worldData) == null) ||
               (lVar7 = WorldData.GetHero(lVar7,sourceHeroID,0)) == null) ||
              (uVar5 = HeroData.GetHeroLittleTalkSound(lVar7,0), lVar3 == null)) throw; // [null/range check failed]
           HeroData.PlayHeroSound(lVar3,uVar5,0x3f800000,0xbf800000,0);
@@ -746,7 +741,7 @@ public class HeroLittleTalkController
             if ((this.newObj != null) &&
                (lVar3 = GameObject.GetComponent(this.newObj,DAT_181d71c60)) != null
                ) {
-              *(uint32 *)(lVar3 + 48) = lifeTime;
+              lVar3.Areas = lifeTime;
               if (this.newObj != null) {
                 lVar3 = GameObject.get_transform(this.newObj,0);
                 puVar8 = (uint64 *)Vector3.get_zero(local_48,0);

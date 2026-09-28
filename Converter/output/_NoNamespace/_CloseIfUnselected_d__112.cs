@@ -34,7 +34,6 @@ public class <CloseIfUnselected>d__112
     // RVA   : 0x8E9290   Offset: 0x8E8690   Length: 0x256
     private virtual bool MoveNext()
     {
-        var pStatics = *(int64*)(DAT_181dafff8 + 184);
         long lVar2;
         bool cVar3;
         long lVar4;
@@ -63,10 +62,10 @@ public class <CloseIfUnselected>d__112
           }
           cVar3 = Object.op_Equality(lVar4,0,0);
           if (!cVar3) {
-            uVar5 = *(uint64 *)(pStatics + 8);
+            uVar5 = UIPopupList.mChild;
             cVar3 = Object.op_Equality(lVar4,uVar5,0);
             if (cVar3) goto LAB_1808e92f9;
-            lVar2 = *(int64 *)(pStatics + 8);
+            lVar2 = UIPopupList.mChild;
             if ((lVar2 == null) || (uVar5 = GameObject.get_transform(lVar2,0), lVar4 == null))
             goto LAB_1808e94e1;
             uVar6 = GameObject.get_transform(lVar4,0);

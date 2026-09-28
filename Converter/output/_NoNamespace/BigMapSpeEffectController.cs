@@ -46,9 +46,7 @@ public class BigMapSpeEffectController
             FUN_18181e0a0(lVar1,"极寒区域\n缓慢减少内力",DAT_181da3d58);
             FUN_18181e0a0(lVar1,"瘴气区域\n缓慢减少生命内力",DAT_181da3d58);
             FUN_18181e0a0(lVar1,"毒雾区域\n缓慢积累中毒",DAT_181da3d58);
-            plVar2 = (int64 *)(pStatics + 8);
-            *plVar2 = lVar1;
-            il2cpp_internal(plVar2,lVar1);
+            BigMapSpeEffectController.bigMapSpeEffectTypeDescribe = lVar1;
             return;
           }
         }

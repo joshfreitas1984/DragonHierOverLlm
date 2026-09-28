@@ -1,3 +1,10 @@
+- raw: "#$PlayerName#一介江湖散人，竟敢来上门挑战我#TargetForceName#？\n阁下此举，未免没把我#$TargetInteractName#放在眼里！"
+  splits:
+  - text: "#$PlayerName#一介江湖散人，竟敢来上门挑战我#TargetForceName#？"
+  - subIndex: 1
+    text: "阁下此举，未免没把我#$TargetInteractName#放在眼里！"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "#$PlayerName#你作恶多端，江湖中人人得而诛之。\n今日我便要替天行道，将你捉拿归案！"
   splits:
   - text: "#$PlayerName#你作恶多端，江湖中人人得而诛之。"
@@ -1074,6 +1081,17 @@
     text: "两财物，还是应当全部归我所有！"
   templates:
   - template: "{0}\n{1}\n{2}⟦0⟧{3}"
+- raw: "#PlayerName#此话当真？\n{0}竟是这种忘恩负义的奸邪小人......难道是我看走眼了？\n（消耗{1}点好感）"
+  splits:
+  - text: "#PlayerName#此话当真？"
+  - subIndex: 1
+    text: "竟是这种忘恩负义的奸邪小人......难道是我看走眼了？"
+  - subIndex: 2
+    text: "（消耗"
+  - subIndex: 3
+    text: "点好感）"
+  templates:
+  - template: "{0}\n⟦0⟧{1}\n{2}⟦1⟧{3}"
 - raw: "#PlayerName#武功如此低微，竟也想与我们俩争夺宝物，真是异想天开！"
   splits:
   - text: "#PlayerName#武功如此低微，竟也想与我们俩争夺宝物，真是异想天开！"
@@ -1383,6 +1401,20 @@
   - text: "#PlayerName#竟愿放我离开吗..."
   - subIndex: 1
     text: "虽不愿欠你#SourceForceName#的人情，但也别无他法了，就此告辞！"
+  templates:
+  - template: "{0}\n{1}"
+- raw: "#PlayerName#竟然动用官府关系，为我开脱罪责？\n此等大恩大德，日后定当涌泉相报！"
+  splits:
+  - text: "#PlayerName#竟然动用官府关系，为我开脱罪责？"
+  - subIndex: 1
+    text: "此等大恩大德，日后定当涌泉相报！"
+  templates:
+  - template: "{0}\n{1}"
+- raw: "#PlayerName#竟然罗织构陷，导致我罪加一等？\n今日所受屈辱，日后定当加倍奉还！"
+  splits:
+  - text: "#PlayerName#竟然罗织构陷，导致我罪加一等？"
+  - subIndex: 1
+    text: "今日所受屈辱，日后定当加倍奉还！"
   templates:
   - template: "{0}\n{1}"
 - raw: "#PlayerName#竟连应战都不敢？\n哎，如此未免令人失望。"
@@ -2618,11 +2650,6 @@
   - text: "快捷键"
   templates:
   - template: "({0}E)"
-- raw: "(快捷键W)"
-  splits:
-  - text: "快捷键"
-  templates:
-  - template: "({0}W)"
 - raw: "(抵达瓶颈 需要突破)</color>"
   splits:
   - text: "抵达瓶颈"
@@ -3761,6 +3788,11 @@
   - text: "登录"
   templates:
   - template: "Apple{0}"
+- raw: "ChangeAllInjury;玩家-80"
+  splits:
+  - text: "玩家"
+  templates:
+  - template: "ChangeAllInjury;{0}-80"
 - raw: "FCM 计时:"
   splits:
   - text: "计时"
@@ -4017,6 +4049,21 @@
   - text: "读取账号缓存成功"
   templates:
   - template: "[CISAuthSDKLite] {0}:"
+- raw: "[StudyDodge] PlayerEnterGrid 目标格为空：{0},{1}"
+  splits:
+  - text: "目标格为空"
+  templates:
+  - template: "[StudyDodge] PlayerEnterGrid {0}：⟦0⟧,⟦1⟧"
+- raw: "[StudyDodge] PlayerEnterGrid 越界：{0},{1}"
+  splits:
+  - text: "越界"
+  templates:
+  - template: "[StudyDodge] PlayerEnterGrid {0}：⟦0⟧,⟦1⟧"
+- raw: "[StudyDodge] 移动超时，强制复位 moving。playerGrid="
+  splits:
+  - text: "移动超时，强制复位"
+  templates:
+  - template: "[StudyDodge] {0} moving。playerGrid="
 - raw: "[{0}合]"
   splits:
   - text: "合"
@@ -4228,6 +4275,20 @@
     text: "性"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
+- raw: "{0}与{1}割袍断席，结束了结义关系。"
+  splits:
+  - text: "与"
+  - subIndex: 1
+    text: "割袍断席，结束了结义关系。"
+  templates:
+  - template: "⟦0⟧{0}⟦1⟧{1}"
+- raw: "{0}与{1}情谊渐浅，结束了好友关系。"
+  splits:
+  - text: "与"
+  - subIndex: 1
+    text: "情谊渐浅，结束了好友关系。"
+  templates:
+  - template: "⟦0⟧{0}⟦1⟧{1}"
 - raw: "{0}与{1}撕毁了同盟协定"
   splits:
   - text: "与"
@@ -4249,6 +4310,13 @@
   - text: "与"
   - subIndex: 1
     text: "缔结了同盟协定"
+  templates:
+  - template: "⟦0⟧{0}⟦1⟧{1}"
+- raw: "{0}与各大门派缔结了为期{1}日的停战协定"
+  splits:
+  - text: "与各大门派缔结了为期"
+  - subIndex: 1
+    text: "日的停战协定"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
 - raw: "{0}与本门尚处于{1}关系，\n不可进攻其治下的资源点。"
@@ -4289,6 +4357,13 @@
   - text: "中..."
   templates:
   - template: "⟦0⟧{0}"
+- raw: "{0}乘机抢夺了{1}的{2}。"
+  splits:
+  - text: "乘机抢夺了"
+  - subIndex: 1
+    text: "的"
+  templates:
+  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧。"
 - raw: "{0}从{1}夺取了各项资源共计价值{2}"
   splits:
   - text: "从"
@@ -4552,11 +4627,6 @@
     text: "对方技能等级比你高出越多，效果越好"
   templates:
   - template: "⟦0⟧{0}\n({1}\n{2})"
-- raw: "{0}吗？此武功实乃不传之秘，我可不敢贸然领受"
-  splits:
-  - text: "吗？此武功实乃不传之秘，我可不敢贸然领受"
-  templates:
-  - template: "⟦0⟧{0}"
 - raw: "{0}吗？此武功实乃不传之秘，若非师徒只怕不宜传授。\n#PlayerName#你还是另选一门功法吧。"
   splits:
   - text: "吗？此武功实乃不传之秘，若非师徒只怕不宜传授。"
@@ -4595,6 +4665,42 @@
   - text: "回合"
   templates:
   - template: "⟦0⟧{0}"
+- raw: "{0}在{1}下毒暗害{2}，{3}。"
+  splits:
+  - text: "在"
+  - subIndex: 1
+    text: "下毒暗害"
+  templates:
+  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧，⟦3⟧。"
+- raw: "{0}在{1}与{2}切磋武艺，最终{3}技高一筹。"
+  splits:
+  - text: "在"
+  - subIndex: 1
+    text: "与"
+  - subIndex: 2
+    text: "切磋武艺，最终"
+  - subIndex: 3
+    text: "技高一筹。"
+  templates:
+  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧{3}"
+- raw: "{0}在{1}与{2}志同道合，相见恨晚，约定义结金兰。"
+  splits:
+  - text: "在"
+  - subIndex: 1
+    text: "与"
+  - subIndex: 2
+    text: "志同道合，相见恨晚，约定义结金兰。"
+  templates:
+  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
+- raw: "{0}在{1}与{2}相谈甚欢，一见如故，结为知己好友。"
+  splits:
+  - text: "在"
+  - subIndex: 1
+    text: "与"
+  - subIndex: 2
+    text: "相谈甚欢，一见如故，结为知己好友。"
+  templates:
+  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
 - raw: "{0}在{1}中休整疗养，{3}生命内力恢复{2}%"
   splits:
   - text: "在"
@@ -4715,6 +4821,17 @@
     text: "点。"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧{3}"
+- raw: "{0}在{1}袭击了{2}，血战一场最终{3}取得胜利。"
+  splits:
+  - text: "在"
+  - subIndex: 1
+    text: "袭击了"
+  - subIndex: 2
+    text: "，血战一场最终"
+  - subIndex: 3
+    text: "取得胜利。"
+  templates:
+  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧{3}"
 - raw: "{0}在农户中充分休息"
   splits:
   - text: "在农户中充分休息"
@@ -4797,6 +4914,11 @@
   - text: "宗主"
   templates:
   - template: "⟦0⟧{0}</color>"
+- raw: "{0}官职"
+  splits:
+  - text: "官职"
+  templates:
+  - template: "⟦0⟧{0}"
 - raw: "{0}宴会({1}日);SpeStartPartySure;{2}-{3};0/{4};基础评分{5}\n基础加成{6}%"
   splits:
   - text: "宴会"
@@ -4989,6 +5111,16 @@
     text: "掌门之位。"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
+- raw: "{0}援军;SetReplaceOtherForceGovernSuppotLv;{1};7/{2};;GovernLv/{3}"
+  splits:
+  - text: "援军"
+  templates:
+  - template: "⟦0⟧{0};SetReplaceOtherForceGovernSuppotLv;⟦1⟧;7/⟦2⟧;;GovernLv/⟦3⟧"
+- raw: "{0}援军;SetReplaceOtherForceRecruitSuppotLv;{1};0/{2}"
+  splits:
+  - text: "援军"
+  templates:
+  - template: "⟦0⟧{0};SetReplaceOtherForceRecruitSuppotLv;⟦1⟧;0/⟦2⟧"
 - raw: "{0}搜刮宝藏，获得了{1}银两"
   splits:
   - text: "搜刮宝藏，获得了"
@@ -5923,6 +6055,11 @@
 - raw: "一切尽在不言中"
   splits:
   - text: "一切尽在不言中"
+- raw: "一同享用;SureLoverEatFoodTogether"
+  splits:
+  - text: "一同享用"
+  templates:
+  - template: "{0};SureLoverEatFoodTogether"
 - raw: "一听说#SourceInteractName#要和{0}在此举办婚礼，我就马不停蹄赶来了！\n还特意备了这#PlotInteractItemName#聊表心意，不必客气！"
   splits:
   - text: "一听说#SourceInteractName#要和"
@@ -5964,6 +6101,17 @@
     text: "过完这个春节，咱们仙霞派也应当重整旗鼓，砥砺前行才是。"
   templates:
   - template: "{0}\n{1}"
+- raw: "一旦此战取胜，我便可在此开宗立派，在江湖中打下一席立足之地。\n而<b>{0}弟子中若有好感在40以上者</b>，也可劝其留下，为我这新门派尽忠效力。"
+  splits:
+  - text: "一旦此战取胜，我便可在此开宗立派，在江湖中打下一席立足之地。"
+  - subIndex: 1
+    text: "而"
+  - subIndex: 2
+    text: "弟子中若有好感在40以上者"
+  - subIndex: 3
+    text: "，也可劝其留下，为我这新门派尽忠效力。"
+  templates:
+  - template: "{0}\n{1}<b>⟦0⟧{2}</b>{3}"
 - raw: "一时觥筹交错，人声鼎沸，好不热闹......"
   splits:
   - text: "一时觥筹交错，人声鼎沸，好不热闹......"
@@ -6053,6 +6201,15 @@
   - text: "一言为定"
   templates:
   - template: "{0};SureHireHeroJoinTeam;;0/⟦0⟧"
+- raw: "一言为定！\n......此战需应战对方十二名精锐，只有我方几人难免势单力孤。\n若能寻得更多援军，方能增加我方之胜算。"
+  splits:
+  - text: "一言为定！"
+  - subIndex: 1
+    text: "......此战需应战对方十二名精锐，只有我方几人难免势单力孤。"
+  - subIndex: 2
+    text: "若能寻得更多援军，方能增加我方之胜算。"
+  templates:
+  - template: "{0}\n{1}\n{2}"
 - raw: "一路探寻，总算找到了这店铺的储藏之处，待我看看此次收获如何。"
   splits:
   - text: "一路探寻，总算找到了这店铺的储藏之处，待我看看此次收获如何。"
@@ -6397,6 +6554,11 @@
   - text: "不客气了"
   templates:
   - template: "{0};FinishExploreEvilCamp;0"
+- raw: "不客气了;HideInteractUIOneDay"
+  splits:
+  - text: "不客气了"
+  templates:
+  - template: "{0};HideInteractUIOneDay"
 - raw: "不容"
   splits:
   - text: "不容"
@@ -6858,6 +7020,9 @@
 - raw: "两人对酌山花开，一杯一杯复一杯"
   splits:
   - text: "两人对酌山花开，一杯一杯复一杯"
+- raw: "两人深感相见恨晚，约定义结金兰。"
+  splits:
+  - text: "两人深感相见恨晚，约定义结金兰。"
 - raw: "两双"
   splits:
   - text: "两双"
@@ -7619,6 +7784,13 @@
   - text: "乞讨"
   templates:
   - template: "{0};BegForNpcSpe;;-1/⟦0⟧;;;BegTime"
+- raw: "也罢也罢，#PlayerName#武功卓绝，我等输得心服口服。\n#TargetForceName#弟子中若有愿意留下者，便就此拜入#PlayerName#门派好了。"
+  splits:
+  - text: "也罢也罢，#PlayerName#武功卓绝，我等输得心服口服。"
+  - subIndex: 1
+    text: "#TargetForceName#弟子中若有愿意留下者，便就此拜入#PlayerName#门派好了。"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "习得{0}武功后解锁"
   splits:
   - text: "习得"
@@ -7690,6 +7862,15 @@
 - raw: "事件难度"
   splits:
   - text: "事件难度"
+- raw: "事已至此，别无他法。\n成王败寇，我#TargetForceName#便按照江湖规矩，\n如约让出总舵，供阁下开宗立派好了！"
+  splits:
+  - text: "事已至此，别无他法。"
+  - subIndex: 1
+    text: "成王败寇，我#TargetForceName#便按照江湖规矩，"
+  - subIndex: 2
+    text: "如约让出总舵，供阁下开宗立派好了！"
+  templates:
+  - template: "{0}\n{1}\n{2}"
 - raw: "事已至此，需先冷静下来，稳住阵脚。"
   splits:
   - text: "事已至此，需先冷静下来，稳住阵脚。"
@@ -7713,9 +7894,40 @@
   - text: "二人平分"
   templates:
   - template: "{0};GetTreasureMapReward;1-3"
+- raw: "二人相谈甚欢，离别之际{0}向{1}赠送了{2}。"
+  splits:
+  - text: "二人相谈甚欢，离别之际"
+  - subIndex: 1
+    text: "向"
+  - subIndex: 2
+    text: "赠送了"
+  templates:
+  - template: "{0}⟦0⟧{1}⟦1⟧{2}⟦2⟧。"
 - raw: "二人见你苦苦相劝，倒也都没了兴致，悻悻然散开而去了。"
   splits:
   - text: "二人见你苦苦相劝，倒也都没了兴致，悻悻然散开而去了。"
+- raw: "二人颇为投缘，{0}向{1}传授了{2}的心法口诀。"
+  splits:
+  - text: "二人颇为投缘，"
+  - subIndex: 1
+    text: "向"
+  - subIndex: 2
+    text: "传授了"
+  - subIndex: 3
+    text: "的心法口诀。"
+  templates:
+  - template: "{0}⟦0⟧{1}⟦1⟧{2}⟦2⟧{3}"
+- raw: "二人颇为投缘，{0}指点了{1}一些{2}的运用法门。"
+  splits:
+  - text: "二人颇为投缘，"
+  - subIndex: 1
+    text: "指点了"
+  - subIndex: 2
+    text: "一些"
+  - subIndex: 3
+    text: "的运用法门。"
+  templates:
+  - template: "{0}⟦0⟧{1}⟦1⟧{2}⟦2⟧{3}"
 - raw: "二位住手，要打就打我吧;HelpInteractHeroFight;2-DeathFight-HelpInteractHeroFightResult"
   splits:
   - text: "二位住手，要打就打我吧"
@@ -8180,6 +8392,17 @@
     text: "万万不能松散懈怠，堕了师傅我的威名！"
   templates:
   - template: "{0}\n{1}"
+- raw: "从今日起，我#PlayerForceName#便秉持{1}之道，在此地开宗立派。\n此外，我#PlayerForceName#也将继承{0}之武功秘籍和修行法门，并将之发扬光大。"
+  splits:
+  - text: "从今日起，我#PlayerForceName#便秉持"
+  - subIndex: 1
+    text: "之道，在此地开宗立派。"
+  - subIndex: 2
+    text: "此外，我#PlayerForceName#也将继承"
+  - subIndex: 3
+    text: "之武功秘籍和修行法门，并将之发扬光大。"
+  templates:
+  - template: "{0}⟦1⟧{1}\n{2}⟦0⟧{3}"
 - raw: "从今日起，我便将这#PlayerForceName#掌门之位交于你手。\n还望你能够励精图治，助我#PlayerForceName#发展壮大，称霸武林。"
   splits:
   - text: "从今日起，我便将这#PlayerForceName#掌门之位交于你手。"
@@ -8689,6 +8912,15 @@
   - text: "伺机逃跑"
   templates:
   - template: "{0};PlayerLoseFightEscapeSure"
+- raw: "但此战若是败北，恐怕会损害我与{0}之关系，此外也会增加我在江湖上的恶名。\n所以说，此事应该慎之又慎，当真要下定决心发起挑战吗？"
+  splits:
+  - text: "但此战若是败北，恐怕会损害我与"
+  - subIndex: 1
+    text: "之关系，此外也会增加我在江湖上的恶名。"
+  - subIndex: 2
+    text: "所以说，此事应该慎之又慎，当真要下定决心发起挑战吗？"
+  templates:
+  - template: "{0}⟦0⟧{1}\n{2}"
 - raw: "但见司仪朗声道：新郎搭躬。\n随后新郎躬身拱手，延请新娘。新娘款款上前，两人并肩伫立。"
   splits:
   - text: "但见司仪朗声道"
@@ -9473,6 +9705,20 @@
 - raw: "兰亭序"
   splits:
   - text: "兰亭序"
+- raw: "共同修炼;SureLoverStudyTogether"
+  splits:
+  - text: "共同修炼"
+  templates:
+  - template: "{0};SureLoverStudyTogether"
+- raw: "共餐;LoverEatFoodTogether;;;♦共同分享一件饮食\n♦双方均可获得完整服食效果;;EatFoodTogetherTime"
+  splits:
+  - text: "共餐"
+  - subIndex: 1
+    text: "共同分享一件饮食"
+  - subIndex: 2
+    text: "双方均可获得完整服食效果"
+  templates:
+  - template: "{0};LoverEatFoodTogether;;;♦{1}\n♦{2};;EatFoodTogetherTime"
 - raw: "共饮"
   splits:
   - text: "共饮"
@@ -9490,6 +9736,13 @@
   - text: "关系..."
   templates:
   - template: "{0};FurtherInteractWithNPC"
+- raw: "兴衰盈虚，自有定数，非人力所能强为。\n#TargetForceName#今日衰亡亦是天意使然，#TargetInteractName#不必过于自责。"
+  splits:
+  - text: "兴衰盈虚，自有定数，非人力所能强为。"
+  - subIndex: 1
+    text: "#TargetForceName#今日衰亡亦是天意使然，#TargetInteractName#不必过于自责。"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "兴隆"
   splits:
   - text: "兴隆"
@@ -10990,6 +11243,11 @@
 - raw: "发起挑战"
   splits:
   - text: "发起挑战"
+- raw: "发起挑战;SureReplaceOtherForcePlot"
+  splits:
+  - text: "发起挑战"
+  templates:
+  - template: "{0};SureReplaceOtherForcePlot"
 - raw: "取\n出"
   splits:
   - text: "取"
@@ -11036,9 +11294,13 @@
 - raw: "取消拆除"
   splits:
   - text: "取消拆除"
-- raw: "取消移动"
+- raw: "取消移动(快捷键W)"
   splits:
   - text: "取消移动"
+  - subIndex: 1
+    text: "快捷键"
+  templates:
+  - template: "{0}({1}W)"
 - raw: "取消自动"
   splits:
   - text: "取消自动"
@@ -11609,6 +11871,15 @@
 - raw: "合"
   splits:
   - text: "合"
+- raw: "合练;LoverStudyTogether;;;♦共同修炼一门武学\n♦双方均可获得经验和持续加成效果;;StudyTogetherTime"
+  splits:
+  - text: "合练"
+  - subIndex: 1
+    text: "共同修炼一门武学"
+  - subIndex: 2
+    text: "双方均可获得经验和持续加成效果"
+  templates:
+  - template: "{0};LoverStudyTogether;;;♦{1}\n♦{2};;StudyTogetherTime"
 - raw: "合谷"
   splits:
   - text: "合谷"
@@ -12127,6 +12398,15 @@
     text: "银钱"
   templates:
   - template: "{0}⟦0⟧{1}"
+- raw: "和解;AskHeroCancelOtherHater;;;♦使对方与仇敌握手言和\n♦消耗40点好感;FavorDegree/80"
+  splits:
+  - text: "和解"
+  - subIndex: 1
+    text: "使对方与仇敌握手言和"
+  - subIndex: 2
+    text: "消耗40点好感"
+  templates:
+  - template: "{0};AskHeroCancelOtherHater;;;♦{1}\n♦{2};FavorDegree/80"
 - raw: "和这{0}两经费"
   splits:
   - text: "和这"
@@ -12585,6 +12865,15 @@
 - raw: "哈哈，赢了！"
   splits:
   - text: "哈哈，赢了！"
+- raw: "哈哈，这{0}味道果然不错！\n#PlayerName#也别光看着呀，我来喂你一口......"
+  splits:
+  - text: "哈哈，这"
+  - subIndex: 1
+    text: "味道果然不错！"
+  - subIndex: 2
+    text: "#PlayerName#也别光看着呀，我来喂你一口......"
+  templates:
+  - template: "{0}⟦0⟧{1}\n{2}"
 - raw: "哈哈，这{0}我便与#SourceInteractName#欣然分享了，快滚吧！"
   splits:
   - text: "哈哈，这"
@@ -12627,6 +12916,13 @@
 - raw: "响马精锐"
   splits:
   - text: "响马精锐"
+- raw: "哎......只是没想到#TargetForceName#百年基业，竟然就这样断于我手。\n我#$TargetInteractName#有何颜面，去见#TargetForceName#列祖列宗？"
+  splits:
+  - text: "哎......只是没想到#TargetForceName#百年基业，竟然就这样断于我手。"
+  - subIndex: 1
+    text: "我#$TargetInteractName#有何颜面，去见#TargetForceName#列祖列宗？"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "哎呀#SourceInteractName#，我近来在此处探寻江湖奇遇，\n奈何一直风平浪静，无事发生，只得去别处碰碰运气了。"
   splits:
   - text: "哎呀#SourceInteractName#，我近来在此处探寻江湖奇遇，"
@@ -13192,6 +13488,13 @@
     text: "之动向。"
   templates:
   - template: "{0}\n{1}⟦0⟧{2}"
+- raw: "哦？能与#PlayerName#交情甚笃之人，想必与我也颇为投缘。\n不知究竟是何许人也，#PlayerName#尽管道来。"
+  splits:
+  - text: "哦？能与#PlayerName#交情甚笃之人，想必与我也颇为投缘。"
+  - subIndex: 1
+    text: "不知究竟是何许人也，#PlayerName#尽管道来。"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "哦？这{0}品相上乘，一看就出自名家之手！\n哎，若是我现在手上有这等好物，非得胡吃海塞一番不可...\n(提升{1}点好感。对方江湖地位越高，对礼物要求越贵重)"
   splits:
   - text: "哦？这"
@@ -13335,6 +13638,13 @@
     text: "#PlayerName#若与我论战，说出个所以然来，我自然不会再死缠烂打！"
   templates:
   - template: "{0}\n{1}"
+- raw: "哼！#PlayerName#这点三脚猫功夫，也敢来挑战我#TargetForceName#？\n今天我就略施惩戒，以儆效尤。阁下回去好好反省吧！"
+  splits:
+  - text: "哼！#PlayerName#这点三脚猫功夫，也敢来挑战我#TargetForceName#？"
+  - subIndex: 1
+    text: "今天我就略施惩戒，以儆效尤。阁下回去好好反省吧！"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "哼！一屋不扫，何以扫天下，你既然不肯，我差遣其他弟子去便是。"
   splits:
   - text: "哼！一屋不扫，何以扫天下，你既然不肯，我差遣其他弟子去便是。"
@@ -13358,6 +13668,15 @@
     text: "来人呐，快把这恶贼绑了！"
   templates:
   - template: "{0}\n{1}"
+- raw: "哼！我#TargetForceName#百年基业，兵精将广，\n岂容#$PlayerName#你在此胡言乱语，肆意菲薄？\n手底下见真章，今日我#TargetForceName#便来领教领教阁下的高招！"
+  splits:
+  - text: "哼！我#TargetForceName#百年基业，兵精将广，"
+  - subIndex: 1
+    text: "岂容#$PlayerName#你在此胡言乱语，肆意菲薄？"
+  - subIndex: 2
+    text: "手底下见真章，今日我#TargetForceName#便来领教领教阁下的高招！"
+  templates:
+  - template: "{0}\n{1}\n{2}"
 - raw: "哼！我本将心照明月，奈何明月照沟渠。\n既然#PlayerName#如此决绝，那便如你所愿，你我就此恩断义绝！"
   splits:
   - text: "哼！我本将心照明月，奈何明月照沟渠。"
@@ -13628,6 +13947,13 @@
     text: "愿赌服输，这宝藏便归你一人所有。"
   templates:
   - template: "{0}\n{1}"
+- raw: "唔......#PlayerName#好功夫！\n此战是我#TargetForceName#输了......"
+  splits:
+  - text: "唔......#PlayerName#好功夫！"
+  - subIndex: 1
+    text: "此战是我#TargetForceName#输了......"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "唔......;FinishPerformForMoneyDefence;"
   splits:
   - text: "唔......"
@@ -13647,6 +13973,13 @@
     text: "似乎只要如此运功，便能使出其中招式......"
   templates:
   - template: "{0}⟦0⟧{1}\n{2}"
+- raw: "唔......技不如人，我无话可说。\n#TargetInteractName#咱们后会有期，告辞！"
+  splits:
+  - text: "唔......技不如人，我无话可说。"
+  - subIndex: 1
+    text: "#TargetInteractName#咱们后会有期，告辞！"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "唔......这石碑上所刻，乃是各种修炼武学的无上秘法。\n只是这些文字驳杂纷乱，只能选择其中一个口诀进行修习。\n(目标武学潜力小于{0}时，修习可增加3点潜力，否则只增加3点技能)"
   splits:
   - text: "唔......这石碑上所刻，乃是各种修炼武学的无上秘法。"
@@ -13987,6 +14320,9 @@
 - raw: "喜好"
   splits:
   - text: "喜好"
+- raw: "喜好物品"
+  splits:
+  - text: "喜好物品"
 - raw: "喝喝喝！"
   splits:
   - text: "喝喝喝！"
@@ -14072,6 +14408,20 @@
     text: "好，看在你一片心意的份上，我就收下了。"
   templates:
   - template: "{0}\n{1}"
+- raw: "嗯，冤家宜解不宜结，此言确实不假。\n只是不知#PlayerName#，想要化解我与何人之仇怨？"
+  splits:
+  - text: "嗯，冤家宜解不宜结，此言确实不假。"
+  - subIndex: 1
+    text: "只是不知#PlayerName#，想要化解我与何人之仇怨？"
+  templates:
+  - template: "{0}\n{1}"
+- raw: "嗯，名不正则言不顺，言不顺则事不成。\n这“#PlayerForceName#”之名，正好配得上我#$PlayerName#之宏图大略。"
+  splits:
+  - text: "嗯，名不正则言不顺，言不顺则事不成。"
+  - subIndex: 1
+    text: "这“#PlayerForceName#”之名，正好配得上我#$PlayerName#之宏图大略。"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "嗯，看在你态度诚恳的份上，\n这些赔礼我会代为转交的。"
   splits:
   - text: "嗯，看在你态度诚恳的份上，"
@@ -14099,6 +14449,28 @@
     text: "就在本门比武场上与你等切磋一二。"
   templates:
   - template: "{0}\n{1}\n{2}"
+- raw: "嗯，诚如#PlayerName#所言，{0}此人确实是个不可多得的侠义之士。\n若你愿意引荐一番，我也乐于同此人结交为知己好友。\n（消耗20点好感）"
+  splits:
+  - text: "嗯，诚如#PlayerName#所言，"
+  - subIndex: 1
+    text: "此人确实是个不可多得的侠义之士。"
+  - subIndex: 2
+    text: "若你愿意引荐一番，我也乐于同此人结交为知己好友。"
+  - subIndex: 3
+    text: "（消耗20点好感）"
+  templates:
+  - template: "{0}⟦0⟧{1}\n{2}\n{3}"
+- raw: "嗯，诚如#PlayerName#所言，我与{0}此前虽有冲突，但并非什么血海深仇。\n若你愿意居中调停，我也乐于同此人握手言和。\n（消耗40点好感）"
+  splits:
+  - text: "嗯，诚如#PlayerName#所言，我与"
+  - subIndex: 1
+    text: "此前虽有冲突，但并非什么血海深仇。"
+  - subIndex: 2
+    text: "若你愿意居中调停，我也乐于同此人握手言和。"
+  - subIndex: 3
+    text: "（消耗40点好感）"
+  templates:
+  - template: "{0}⟦0⟧{1}\n{2}\n{3}"
 - raw: "嗯？有动静......什么人！"
   splits:
   - text: "嗯？有动静......什么人！"
@@ -15301,6 +15673,11 @@
 - raw: "大功告成"
   splits:
   - text: "大功告成"
+- raw: "大功告成;HideInteractUIOneDay"
+  splits:
+  - text: "大功告成"
+  templates:
+  - template: "{0};HideInteractUIOneDay"
 - raw: "大包"
   splits:
   - text: "大包"
@@ -15377,6 +15754,11 @@
   - text: "大肆羞辱"
   templates:
   - template: "{0};ReduceFavorOtherForceSure"
+- raw: "大肆诋毁;SureHeroCancelOtherRelation"
+  splits:
+  - text: "大肆诋毁"
+  templates:
+  - template: "{0};SureHeroCancelOtherRelation"
 - raw: "大胆表白;StartAskHeroToLoverPlot;QiXiFestivalLeave;;{0};FavorDegree/90"
   splits:
   - text: "大胆表白"
@@ -16125,6 +16507,22 @@
     text: "谁自告奋勇，打个头阵？"
   templates:
   - template: "{0}\n{1}"
+- raw: "好，那我改日便去向{0}登门致歉。\n相信有#PlayerName#居中调停，我等定能化敌为友，冰释前嫌。"
+  splits:
+  - text: "好，那我改日便去向"
+  - subIndex: 1
+    text: "登门致歉。"
+  - subIndex: 2
+    text: "相信有#PlayerName#居中调停，我等定能化敌为友，冰释前嫌。"
+  templates:
+  - template: "{0}⟦0⟧{1}\n{2}"
+- raw: "好，那我改日便去登门拜访{0}。\n相信有#PlayerName#引荐，我等定能相谈甚欢，一见如故。"
+  splits:
+  - text: "好，那我改日便去登门拜访"
+  - subIndex: 1
+    text: "相信有#PlayerName#引荐，我等定能相谈甚欢，一见如故。"
+  templates:
+  - template: "{0}⟦0⟧。\n{1}"
 - raw: "如今#PlayerForceName#以及附庸、盟友，占据了天下之大半壁江山。\n剩余各派势力已不足为虑，是时候宣告武林一统了。"
   splits:
   - text: "如今#PlayerForceName#以及附庸、盟友，占据了天下之大半壁江山。"
@@ -16284,6 +16682,13 @@
   - text: "如此甚好"
   templates:
   - template: "{0};HideInteractUIOneDay"
+- raw: "如此甚好。今日我#$PlayerName#便宣告，正式在此地开宗立派，\n这样一来，也算是在武林中打下一番基业。"
+  splits:
+  - text: "如此甚好。今日我#$PlayerName#便宣告，正式在此地开宗立派，"
+  - subIndex: 1
+    text: "这样一来，也算是在武林中打下一番基业。"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "如蒙不弃，我愿拜入#SourceForceName#门下，展鸿鹄之志，效犬马之劳。"
   splits:
   - text: "如蒙不弃，我愿拜入#SourceForceName#门下，展鸿鹄之志，效犬马之劳。"
@@ -16423,6 +16828,15 @@
   - text: "姜映泉"
   templates:
   - template: "{0}-819-2-4-false"
+- raw: "姜映泉-听闻唐门近来要与霹雳堂举行联姻大典，邀请巴蜀一带各大门派前往参与。\n可惜为师近来事务繁忙，还望徒儿能代为师前去道贺。"
+  splits:
+  - text: "姜映泉"
+  - subIndex: 1
+    text: "听闻唐门近来要与霹雳堂举行联姻大典，邀请巴蜀一带各大门派前往参与。"
+  - subIndex: 2
+    text: "可惜为师近来事务繁忙，还望徒儿能代为师前去道贺。"
+  templates:
+  - template: "{0}-{1}\n{2}"
 - raw: "姬清梵"
   splits:
   - text: "姬清梵"
@@ -17076,6 +17490,15 @@
 - raw: "对方银钱不足，确认交易吗？"
   splits:
   - text: "对方银钱不足，确认交易吗？"
+- raw: "对方门派占据区域已超过四处，称得上是名门大派。\n我这种江湖人士上门挑战，对方想必不会应允，而且还可能引起武林公愤。\n(对方门派占领区域不可超过4处)"
+  splits:
+  - text: "对方门派占据区域已超过四处，称得上是名门大派。"
+  - subIndex: 1
+    text: "我这种江湖人士上门挑战，对方想必不会应允，而且还可能引起武林公愤。"
+  - subIndex: 2
+    text: "对方门派占领区域不可超过4处"
+  templates:
+  - template: "{0}\n{1}\n({2})"
 - raw: "对方门派对我{0}尚且信任不足，恐怕难以{1}其与其他门派之间的关系。\n（需要对方门派好感达到80点。）"
   splits:
   - text: "对方门派对我"
@@ -17592,6 +18015,11 @@
 - raw: "局势"
   splits:
   - text: "局势"
+- raw: "居中调停;SureHeroCancelOtherHater"
+  splits:
+  - text: "居中调停"
+  templates:
+  - template: "{0};SureHeroCancelOtherHater"
 - raw: "属性"
   splits:
   - text: "属性"
@@ -18255,6 +18683,11 @@
 - raw: "开始思过"
   splits:
   - text: "开始思过"
+- raw: "开始挑战;StartReplaceOtherForceFight"
+  splits:
+  - text: "开始挑战"
+  templates:
+  - template: "{0};StartReplaceOtherForceFight"
 - raw: "开始探听;StartAskNearRandomEvent;;0/50"
   splits:
   - text: "开始探听"
@@ -18374,6 +18807,15 @@
 - raw: "引毒已完成！"
   splits:
   - text: "引毒已完成！"
+- raw: "引荐;AskHeroAddOtherFriend;;;♦将自己的亲友引荐给对方\n♦消耗20点好感;FavorDegree/60"
+  splits:
+  - text: "引荐"
+  - subIndex: 1
+    text: "将自己的亲友引荐给对方"
+  - subIndex: 2
+    text: "消耗20点好感"
+  templates:
+  - template: "{0};AskHeroAddOtherFriend;;;♦{1}\n♦{2};FavorDegree/60"
 - raw: "弟"
   splits:
   - text: "弟"
@@ -18720,9 +19162,6 @@
 - raw: "得罪了！"
   splits:
   - text: "得罪了！"
-- raw: "得胜而归"
-  splits:
-  - text: "得胜而归"
 - raw: "御史中丞"
   splits:
   - text: "御史中丞"
@@ -18781,7 +19220,7 @@
   - text: "忠诚"
   templates:
   - template: "{0} ⟦0⟧"
-- raw: "忠诚\n♦影响弟子工作效率，如习武练功/资源采集/物品制造等。\n♦每月自动向50点靠拢，可通过嘉奖/门派宴会快速提升。{0}"
+- raw: "忠诚\n♦影响弟子工作效率，如习武练功/资源采集/物品制造。\n♦每月自动向50点靠拢，可通过嘉奖/门派宴会提升。{0}"
   splits:
   - text: "忠诚"
   - subIndex: 1
@@ -18789,11 +19228,11 @@
   - subIndex: 2
     text: "资源采集"
   - subIndex: 3
-    text: "物品制造等。"
+    text: "物品制造。"
   - subIndex: 4
     text: "每月自动向50点靠拢，可通过嘉奖"
   - subIndex: 5
-    text: "门派宴会快速提升。"
+    text: "门派宴会提升。"
   templates:
   - template: "{0}\n♦{1}/{2}/{3}\n♦{4}/{5}⟦0⟧"
 - raw: "快刀斩乱麻吧"
@@ -19602,6 +20041,15 @@
     text: "消耗对方好感4点，若对方为师傅则减半"
   templates:
   - template: "{0}⟦0⟧{1}\n({2})"
+- raw: "我在江湖中尚未积累足够的声望，若想在此开宗立派，恐怕还难以服众。\n(在此总舵开宗立派需至少{0}点声望)"
+  splits:
+  - text: "我在江湖中尚未积累足够的声望，若想在此开宗立派，恐怕还难以服众。"
+  - subIndex: 1
+    text: "在此总舵开宗立派需至少"
+  - subIndex: 2
+    text: "点声望"
+  templates:
+  - template: "{0}\n({1}⟦0⟧{2})"
 - raw: "我对{0}忠心耿耿，任劳任怨，没想到竟落得这般下场，真是可悲可叹啊！\n事已至此，多说无益，#SourceInteractName#我们后会有期！"
   splits:
   - text: "我对"
@@ -19919,6 +20367,13 @@
 - raw: "我目前并无伤势在身，何必庸人自扰。"
   splits:
   - text: "我目前并无伤势在身，何必庸人自扰。"
+- raw: "我眼下已是#PlayerForceDescribe#。\n需要先结束门客关系，方可自立门户。"
+  splits:
+  - text: "我眼下已是#PlayerForceDescribe#。"
+  - subIndex: 1
+    text: "需要先结束门客关系，方可自立门户。"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "我竟会如此狼狈"
   splits:
   - text: "我竟会如此狼狈"
@@ -20063,6 +20518,15 @@
     text: "助我一臂之力，这宝藏咱们平分便是。"
   templates:
   - template: "{0}⟦0⟧{1}"
+- raw: "我近来对于这{0}确实颇有感悟。\n若#PlayerName#愿意一同修炼此功，定能对你我二人的修为大有裨益。"
+  splits:
+  - text: "我近来对于这"
+  - subIndex: 1
+    text: "确实颇有感悟。"
+  - subIndex: 2
+    text: "若#PlayerName#愿意一同修炼此功，定能对你我二人的修为大有裨益。"
+  templates:
+  - template: "{0}⟦0⟧{1}\n{2}"
 - raw: "我近来旧伤复发，身体不适，想劳烦#TargetInteractName#你诊治一番。\n(消耗2点好感)"
   splits:
   - text: "我近来旧伤复发，身体不适，想劳烦#TargetInteractName#你诊治一番。"
@@ -20881,6 +21345,15 @@
 - raw: "指点修行"
   splits:
   - text: "指点修行"
+- raw: "按照江湖规矩，只要向{0}正式递送战书，并击败其大部精锐，\n我#$PlayerName#便可取而代之，在此处开宗建派，自立门户。"
+  splits:
+  - text: "按照江湖规矩，只要向"
+  - subIndex: 1
+    text: "正式递送战书，并击败其大部精锐，"
+  - subIndex: 2
+    text: "我#$PlayerName#便可取而代之，在此处开宗建派，自立门户。"
+  templates:
+  - template: "{0}⟦0⟧{1}\n{2}"
 - raw: "按照规矩，这溢出来的酒可不用喝"
   splits:
   - text: "按照规矩，这溢出来的酒可不用喝"
@@ -21264,6 +21737,13 @@
 - raw: "援军"
   splits:
   - text: "援军"
+- raw: "援军已经安排妥当，是时候与#TargetForceName#一较高下了。\n#TargetInteractName#，多有得罪了！"
+  splits:
+  - text: "援军已经安排妥当，是时候与#TargetForceName#一较高下了。"
+  - subIndex: 1
+    text: "#TargetInteractName#，多有得罪了！"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "援军甲"
   splits:
   - text: "援军甲"
@@ -21328,9 +21808,13 @@
 - raw: "撞开阻挡"
   splits:
   - text: "撞开阻挡"
-- raw: "撤销移动"
+- raw: "撤销移动(快捷键W)"
   splits:
   - text: "撤销移动"
+  - subIndex: 1
+    text: "快捷键"
+  templates:
+  - template: "{0}({1}W)"
 - raw: "撤除职位"
   splits:
   - text: "撤除职位"
@@ -21836,9 +22320,13 @@
 - raw: "无法破坏"
   splits:
   - text: "无法破坏"
-- raw: "无法移动"
+- raw: "无法移动(快捷键W)"
   splits:
   - text: "无法移动"
+  - subIndex: 1
+    text: "快捷键"
+  templates:
+  - template: "{0}({1}W)"
 - raw: "无法进攻有其他据点的门派！"
   splits:
   - text: "无法进攻有其他据点的门派！"
@@ -21874,6 +22362,23 @@
 - raw: "无门派时不可进行招募"
   splits:
   - text: "无门派时不可进行招募"
+- raw: "无需多此一举;FinishReplaceOtherForceSendGift;3;;与所有门派停战30天"
+  splits:
+  - text: "无需多此一举"
+  - subIndex: 1
+    text: "与所有门派停战30天"
+  templates:
+  - template: "{0};FinishReplaceOtherForceSendGift;3;;{1}"
+- raw: "无需援军;SetReplaceOtherForceGovernSuppotLv;0"
+  splits:
+  - text: "无需援军"
+  templates:
+  - template: "{0};SetReplaceOtherForceGovernSuppotLv;0"
+- raw: "无需援军;SetReplaceOtherForceRecruitSuppotLv;0"
+  splits:
+  - text: "无需援军"
+  templates:
+  - template: "{0};SetReplaceOtherForceRecruitSuppotLv;0"
 - raw: "无需治疗"
   splits:
   - text: "无需治疗"
@@ -23661,6 +24166,11 @@
 - raw: "正在踏入江湖..."
   splits:
   - text: "正在踏入江湖..."
+- raw: "正式引荐;SureHeroAddOtherFriend"
+  splits:
+  - text: "正式引荐"
+  templates:
+  - template: "{0};SureHeroAddOtherFriend"
 - raw: "正式弟子"
   splits:
   - text: "正式弟子"
@@ -23684,6 +24194,15 @@
   - text: "正有此意"
   templates:
   - template: "{0};SureReduceHeroLoyal;2;;;FavorDegree/50"
+- raw: "正有此意！此战若我方能击败贵派大部精锐，\n按照江湖规矩便可取代#TargetForceName#，在此地开宗立派。\n还望#TargetInteractName#言而有信，莫要临阵反悔！"
+  splits:
+  - text: "正有此意！此战若我方能击败贵派大部精锐，"
+  - subIndex: 1
+    text: "按照江湖规矩便可取代#TargetForceName#，在此地开宗立派。"
+  - subIndex: 2
+    text: "还望#TargetInteractName#言而有信，莫要临阵反悔！"
+  templates:
+  - template: "{0}\n{1}\n{2}"
 - raw: "正面出手;StartKillNPCFight;0"
   splits:
   - text: "正面出手"
@@ -23759,6 +24278,13 @@
     text: "两拿下！"
   templates:
   - template: "{0}⟦1⟧{1}⟦0⟧{2}"
+- raw: "此事很快便会传遍大江南北，\n需得先给本门起一个响亮的名号才行......"
+  splits:
+  - text: "此事很快便会传遍大江南北，"
+  - subIndex: 1
+    text: "需得先给本门起一个响亮的名号才行......"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "此人之身份，似乎是{0}。\n听闻此人死讯，{1}上下定然不会善罢甘休。"
   splits:
   - text: "此人之身份，似乎是"
@@ -23799,6 +24325,15 @@
     text: "我聚义弟子若能拜入你的门下，定能如鱼得水，大展拳脚。"
   templates:
   - template: "{0}\n{1}"
+- raw: "此前不久才刚刚挑战过门派。\n还需等待{0}天后风平浪静，方能避免引起武林公愤。"
+  splits:
+  - text: "此前不久才刚刚挑战过门派。"
+  - subIndex: 1
+    text: "还需等待"
+  - subIndex: 2
+    text: "天后风平浪静，方能避免引起武林公愤。"
+  templates:
+  - template: "{0}\n{1}⟦0⟧{2}"
 - raw: "此前几场纷争中，我并未阻止双方争斗。\n此刻再想居中调停，恐怕无法取信于双方啊......"
   splits:
   - text: "此前几场纷争中，我并未阻止双方争斗。"
@@ -23937,6 +24472,13 @@
     text: "点耐力"
   templates:
   - template: "{0}⟦0⟧{1}\n{2}\n({3}⟦1⟧{4})"
+- raw: "此外也可重金聘请江湖高手助阵，以增加我方取胜之筹码。\n欲行大事，可不能再斤斤计较了。"
+  splits:
+  - text: "此外也可重金聘请江湖高手助阵，以增加我方取胜之筹码。"
+  - subIndex: 1
+    text: "欲行大事，可不能再斤斤计较了。"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "此外，为师还会安排一位本门{0}与你切磋比试，以考核你的武功修为是否达标。"
   splits:
   - text: "此外，为师还会安排一位本门"
@@ -23961,6 +24503,15 @@
 - raw: "此外，本掌门还会亲自与你切磋比试，以证明你的武功修为堪当重任。"
   splits:
   - text: "此外，本掌门还会亲自与你切磋比试，以证明你的武功修为堪当重任。"
+- raw: "此外，由于本门乃是初创，可按江湖规矩向其余门派送上拜帖和礼金。\n各大门派碍于情面，在一段时日内便不会进攻我方领地。\n此举可为本门赢得宝贵的发展时机。"
+  splits:
+  - text: "此外，由于本门乃是初创，可按江湖规矩向其余门派送上拜帖和礼金。"
+  - subIndex: 1
+    text: "各大门派碍于情面，在一段时日内便不会进攻我方领地。"
+  - subIndex: 2
+    text: "此举可为本门赢得宝贵的发展时机。"
+  templates:
+  - template: "{0}\n{1}\n{2}"
 - raw: "此女子来历不明，加上这番说辞未免过于老套。\n防人之心不可无，兄台不可轻信此人啊。"
   splits:
   - text: "此女子来历不明，加上这番说辞未免过于老套。"
@@ -24003,6 +24554,19 @@
     text: "场下群雄皆是心服口服，纷纷高声欢呼起了获胜者的姓名。"
   templates:
   - template: "{0}\n{1}"
+- raw: "此次挑战，我可<b>携所有队友一同上阵，挑战{0}十二名战力最高之弟子</b>。\n若我在官府内任职，可消耗官府功绩获取援军。\n此外也可重金聘请江湖高手助阵，以增加我方取胜之筹码。"
+  splits:
+  - text: "此次挑战，我可"
+  - subIndex: 1
+    text: "携所有队友一同上阵，挑战"
+  - subIndex: 2
+    text: "十二名战力最高之弟子"
+  - subIndex: 3
+    text: "若我在官府内任职，可消耗官府功绩获取援军。"
+  - subIndex: 4
+    text: "此外也可重金聘请江湖高手助阵，以增加我方取胜之筹码。"
+  templates:
+  - template: "{0}<b>{1}⟦0⟧{2}</b>。\n{3}\n{4}"
 - raw: "此次浴血奋战，#TargetInteractName#同样功不可没，本门也自当赐予厚赏，以示鼓励。"
   splits:
   - text: "此次浴血奋战，#TargetInteractName#同样功不可没，本门也自当赐予厚赏，以示鼓励。"
@@ -25275,6 +25839,11 @@
   - text: "溜之大吉"
   templates:
   - template: "{0};HideInteractUI"
+- raw: "溜之大吉;ReplaceOtherForceFightFailed"
+  splits:
+  - text: "溜之大吉"
+  templates:
+  - template: "{0};ReplaceOtherForceFightFailed"
 - raw: "溜了溜了;HideInteractUI"
   splits:
   - text: "溜了溜了"
@@ -26795,6 +27364,13 @@
   - text: "确认"
   templates:
   - template: "{0};BreakMedSure"
+- raw: "确认以当前设置自立门户吗？\n（所有未保留弟子都会退出门派）"
+  splits:
+  - text: "确认以当前设置自立门户吗？"
+  - subIndex: 1
+    text: "（所有未保留弟子都会退出门派）"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "确认兑换;GetGovernBodyGuardSure"
   splits:
   - text: "确认兑换"
@@ -27166,12 +27742,20 @@
 - raw: "称霸"
   splits:
   - text: "称霸"
-- raw: "移动"
+- raw: "移动(快捷键W)"
   splits:
   - text: "移动"
-- raw: "移动中"
+  - subIndex: 1
+    text: "快捷键"
+  templates:
+  - template: "{0}({1}W)"
+- raw: "移动中(快捷键W)"
   splits:
   - text: "移动中"
+  - subIndex: 1
+    text: "快捷键"
+  templates:
+  - template: "{0}({1}W)"
 - raw: "移动距离"
   splits:
   - text: "移动距离"
@@ -28144,6 +28728,11 @@
     text: "便归#PlayerName#所有便是了！"
   templates:
   - template: "{0}⟦0⟧{1}"
+- raw: "罪有应得;HideInteractUIOneDay"
+  splits:
+  - text: "罪有应得"
+  templates:
+  - template: "{0};HideInteractUIOneDay"
 - raw: "美酒"
   splits:
   - text: "美酒"
@@ -28227,6 +28816,15 @@
 - raw: "老饕"
   splits:
   - text: "老饕"
+- raw: "而余留的诸位{0}弟子，从今日起也拜入我#PlayerForceName#门下。\n还望各位为#PlayerForceName#尽忠职守，我#$PlayerName#也定不会亏待各位。"
+  splits:
+  - text: "而余留的诸位"
+  - subIndex: 1
+    text: "弟子，从今日起也拜入我#PlayerForceName#门下。"
+  - subIndex: 2
+    text: "还望各位为#PlayerForceName#尽忠职守，我#$PlayerName#也定不会亏待各位。"
+  templates:
+  - template: "{0}⟦0⟧{1}\n{2}"
 - raw: "而最后，这段历史的主角#$PlayerName#......"
   splits:
   - text: "而最后，这段历史的主角#$PlayerName#......"
@@ -28429,6 +29027,13 @@
 - raw: "胜负已分，是时候看看本届辩才大会的最终名次了..."
   splits:
   - text: "胜负已分，是时候看看本届辩才大会的最终名次了..."
+- raw: "胜负已分，还望#TargetInteractName#依照此前约定，\n将贵派总舵拱手相让，我#$PlayerName#便可在此开宗立派！"
+  splits:
+  - text: "胜负已分，还望#TargetInteractName#依照此前约定，"
+  - subIndex: 1
+    text: "将贵派总舵拱手相让，我#$PlayerName#便可在此开宗立派！"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "胡"
   splits:
   - text: "胡"
@@ -28463,6 +29068,13 @@
 - raw: "脑户"
   splits:
   - text: "脑户"
+- raw: "脱罪;ReduceBadFameNPCPrison;;7/{0};降低对方50点恶名;GovernLv/{1};BadFameInPrisonTime"
+  splits:
+  - text: "脱罪"
+  - subIndex: 1
+    text: "降低对方50点恶名"
+  templates:
+  - template: "{0};ReduceBadFameNPCPrison;;7/⟦0⟧;{1};GovernLv/⟦1⟧;BadFameInPrisonTime"
 - raw: "脸"
   splits:
   - text: "脸"
@@ -28581,6 +29193,11 @@
 - raw: "自由模式"
   splits:
   - text: "自由模式"
+- raw: "自立门户;ShowManageReplaceForceUI"
+  splits:
+  - text: "自立门户"
+  templates:
+  - template: "{0};ShowManageReplaceForceUI"
 - raw: "自行练习;StartPracticeCityHousePlot"
   splits:
   - text: "自行练习"
@@ -28594,6 +29211,9 @@
 - raw: "自身"
   splits:
   - text: "自身"
+- raw: "自选标志"
+  splits:
+  - text: "自选标志"
 - raw: "自首入狱"
   splits:
   - text: "自首入狱"
@@ -28610,6 +29230,9 @@
 - raw: "至圣"
   splits:
   - text: "至圣"
+- raw: "至少一个武学专长！"
+  splits:
+  - text: "至少一个武学专长！"
 - raw: "至阳"
   splits:
   - text: "至阳"
@@ -28794,6 +29417,13 @@
     text: "时，修习可增加1点潜力，否则只增加1点技能"
   templates:
   - template: "{0}⟦1⟧{1}\n{2}⟦1⟧{3}\n(⟦1⟧{4}⟦0⟧{5})"
+- raw: "若我在官府内任职，可消耗官府功绩获取援军。\n请求的援军级别越高，需要我有越高的官府职位，并消耗更多的官府功绩。"
+  splits:
+  - text: "若我在官府内任职，可消耗官府功绩获取援军。"
+  - subIndex: 1
+    text: "请求的援军级别越高，需要我有越高的官府职位，并消耗更多的官府功绩。"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "若无我#$TargetInteractName#在旁援护，\n恐怕各位也没那么容易得手吧！"
   splits:
   - text: "若无我#$TargetInteractName#在旁援护，"
@@ -28899,6 +29529,26 @@
     text: "两罚金不可。"
   templates:
   - template: "{0}⟦0⟧{1}"
+- raw: "若非#PlayerName#以实相告，只怕我还被{0}蒙在鼓里，真是知人知面不知心！\n哼，我从此便与{0}分道扬镳，恩断义绝！"
+  splits:
+  - text: "若非#PlayerName#以实相告，只怕我还被"
+  - subIndex: 1
+    text: "蒙在鼓里，真是知人知面不知心！"
+  - subIndex: 2
+    text: "哼，我从此便与"
+  - subIndex: 3
+    text: "分道扬镳，恩断义绝！"
+  templates:
+  - template: "{0}⟦0⟧{1}\n{2}⟦0⟧{3}"
+- raw: "若非#PlayerName#提醒，真想不到{0}还有此等精妙之处！\n#PlayerName#，我也有些修炼心得要说与你听......"
+  splits:
+  - text: "若非#PlayerName#提醒，真想不到"
+  - subIndex: 1
+    text: "还有此等精妙之处！"
+  - subIndex: 2
+    text: "#PlayerName#，我也有些修炼心得要说与你听......"
+  templates:
+  - template: "{0}⟦0⟧{1}\n{2}"
 - raw: "若非大侠相救，这些货品就都归强盗所有了，区区小礼不成敬意。\n小的还要继续赶路，就此别过恩公！"
   splits:
   - text: "若非大侠相救，这些货品就都归强盗所有了，区区小礼不成敬意。"
@@ -29786,6 +30436,19 @@
 - raw: "设备登录"
   splits:
   - text: "设备登录"
+- raw: "诋毁;AskHeroCancelOtherRelation;;;♦使对方断绝与他人的好友/结义关系\n♦断绝好友消耗30点好感\n♦断绝结义消耗50点好感;FavorDegree/70"
+  splits:
+  - text: "诋毁"
+  - subIndex: 1
+    text: "使对方断绝与他人的好友"
+  - subIndex: 2
+    text: "结义关系"
+  - subIndex: 3
+    text: "断绝好友消耗30点好感"
+  - subIndex: 4
+    text: "断绝结义消耗50点好感"
+  templates:
+  - template: "{0};AskHeroCancelOtherRelation;;;♦{1}/{2}\n♦{3}\n♦{4};FavorDegree/70"
 - raw: "试玩时间已结束，感谢您的游玩体验！\n敬请期待《龙胤立志传》的正式版本。"
   splits:
   - text: "试玩时间已结束，感谢您的游玩体验！"
@@ -29833,6 +30496,13 @@
 - raw: "该死，早知如此..."
   splits:
   - text: "该死，早知如此..."
+- raw: "诬陷;AddBadFameNPCPrison;;7/{0};增加对方50点恶名;GovernLv/{1};BadFameInPrisonTime"
+  splits:
+  - text: "诬陷"
+  - subIndex: 1
+    text: "增加对方50点恶名"
+  templates:
+  - template: "{0};AddBadFameNPCPrison;;7/⟦0⟧;{1};GovernLv/⟦1⟧;BadFameInPrisonTime"
 - raw: "误"
   splits:
   - text: "误"
@@ -29957,6 +30627,9 @@
 - raw: "请完整设置角色姓名！"
   splits:
   - text: "请完整设置角色姓名！"
+- raw: "请完整设置门派名称！"
+  splits:
+  - text: "请完整设置门派名称！"
 - raw: "请指教"
   splits:
   - text: "请指教"
@@ -30025,6 +30698,13 @@
 - raw: "请选择队友使用道具"
   splits:
   - text: "请选择队友使用道具"
+- raw: "诸事已毕，从今日起，我#PlayerForceName#之威名便将传扬四海，震慑群雄。\n我#$PlayerName#也当励精图治，以保我#PlayerForceName#江山稳固，香火永传！"
+  splits:
+  - text: "诸事已毕，从今日起，我#PlayerForceName#之威名便将传扬四海，震慑群雄。"
+  - subIndex: 1
+    text: "我#$PlayerName#也当励精图治，以保我#PlayerForceName#江山稳固，香火永传！"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "诸葛伶"
   splits:
   - text: "诸葛伶"
@@ -30332,6 +31012,22 @@
   - text: "购药"
   templates:
   - template: "{0};PlotOpenRandomShop;1-0.6-1"
+- raw: "贵派诸位弟子武功不俗，且个个赤胆忠心。\n若有愿意留下者，大可继续在我#$PlayerName#门下施展才能，争雄武林。"
+  splits:
+  - text: "贵派诸位弟子武功不俗，且个个赤胆忠心。"
+  - subIndex: 1
+    text: "若有愿意留下者，大可继续在我#$PlayerName#门下施展才能，争雄武林。"
+  templates:
+  - template: "{0}\n{1}"
+- raw: "贵派近些年来内忧外患，人才凋敝，早已是强弩之末。\n我#$PlayerName#如今在江湖中也算颇具威望，\n今日前来取而代之，正是上承天命，下应人心！"
+  splits:
+  - text: "贵派近些年来内忧外患，人才凋敝，早已是强弩之末。"
+  - subIndex: 1
+    text: "我#$PlayerName#如今在江湖中也算颇具威望，"
+  - subIndex: 2
+    text: "今日前来取而代之，正是上承天命，下应人心！"
+  templates:
+  - template: "{0}\n{1}\n{2}"
 - raw: "费彬"
   splits:
   - text: "费彬"
@@ -30692,6 +31388,15 @@
     text: "今天定要在这台上一展风采，不能叫天下英雄小瞧了我#PlayerForceName#。"
   templates:
   - template: "{0}\n{1}"
+- raw: "身为{0}性，恐怕无法在{1}自立门户啊......"
+  splits:
+  - text: "身为"
+  - subIndex: 1
+    text: "性，恐怕无法在"
+  - subIndex: 2
+    text: "自立门户啊......"
+  templates:
+  - template: "{0}⟦0⟧{1}⟦1⟧{2}"
 - raw: "身为本门{0}，#PlayerName#你已学有所成，同时立下了足够的功勋。\n若你想从本门出师，去江湖中行侠仗义、四处闯荡，本掌门也不会阻拦。"
   splits:
   - text: "身为本门"
@@ -31441,6 +32146,15 @@
     text: "之后还需勤加苦练，方能让更上一层楼。"
   templates:
   - template: "{0}⟦0⟧{1}\n{2}"
+- raw: "这{0}看着真是色香俱全，美味无比......\n#PlayerName#，莫非是想同我一起分享这{0}？"
+  splits:
+  - text: "这"
+  - subIndex: 1
+    text: "看着真是色香俱全，美味无比......"
+  - subIndex: 2
+    text: "#PlayerName#，莫非是想同我一起分享这"
+  templates:
+  - template: "{0}⟦0⟧{1}\n{2}⟦0⟧？"
 - raw: "这{0}素来与我{1}关系不和，\n想必不会将库存物品售卖与我。\n(需要门派好感40以上)"
   splits:
   - text: "这"
@@ -32252,6 +32966,27 @@
     text: "询问对方关于退隐江湖之事"
   templates:
   - template: "{0};AskNPCWantLeave;;;♦{1}"
+- raw: "送上中额礼金;FinishReplaceOtherForceSendGift;1;0/10000;与所有门派停战180天"
+  splits:
+  - text: "送上中额礼金"
+  - subIndex: 1
+    text: "与所有门派停战180天"
+  templates:
+  - template: "{0};FinishReplaceOtherForceSendGift;1;0/10000;{1}"
+- raw: "送上大额礼金;FinishReplaceOtherForceSendGift;0;0/20000;与所有门派停战360天"
+  splits:
+  - text: "送上大额礼金"
+  - subIndex: 1
+    text: "与所有门派停战360天"
+  templates:
+  - template: "{0};FinishReplaceOtherForceSendGift;0;0/20000;{1}"
+- raw: "送上小额礼金;FinishReplaceOtherForceSendGift;2;0/5000;与所有门派停战90天"
+  splits:
+  - text: "送上小额礼金"
+  - subIndex: 1
+    text: "与所有门派停战90天"
+  templates:
+  - template: "{0};FinishReplaceOtherForceSendGift;2;0/5000;{1}"
 - raw: "适中"
   splits:
   - text: "适中"
@@ -32286,11 +33021,21 @@
   - text: "选择功法"
   templates:
   - template: "{0};BreakThroughSkillMoney"
+- raw: "选择和解对象;ChooseHeroCancelOtherHater"
+  splits:
+  - text: "选择和解对象"
+  templates:
+  - template: "{0};ChooseHeroCancelOtherHater"
 - raw: "选择定情信物;ChooseLoverItem"
   splits:
   - text: "选择定情信物"
   templates:
   - template: "{0};ChooseLoverItem"
+- raw: "选择引荐对象;ChooseHeroAddOtherFriend"
+  splits:
+  - text: "选择引荐对象"
+  templates:
+  - template: "{0};ChooseHeroAddOtherFriend"
 - raw: "选择弟子;ChooseJuyiHeroReward"
   splits:
   - text: "选择弟子"
@@ -32356,6 +33101,11 @@
   - text: "选择装备"
   templates:
   - template: "{0};ChooseBreakEquipment"
+- raw: "选择诋毁对象;ChooseHeroCancelOtherRelation"
+  splits:
+  - text: "选择诋毁对象"
+  templates:
+  - template: "{0};ChooseHeroCancelOtherRelation"
 - raw: "选择赔礼;ReleaseHateWithNpcGiftChoose"
   splits:
   - text: "选择赔礼"
@@ -32715,6 +33465,15 @@
   - text: "那是自然"
   templates:
   - template: "{0};ReleaseHateWithNpcFameFinish;15;0/"
+- raw: "那是自然，我#$TargetInteractName#岂是出尔反尔之人？\n不过此战若是阁下落败，我#TargetForceName#也定不会轻饶。\n否则日后江湖中，岂不是人人以为我#TargetForceName#软弱可欺？"
+  splits:
+  - text: "那是自然，我#$TargetInteractName#岂是出尔反尔之人？"
+  - subIndex: 1
+    text: "不过此战若是阁下落败，我#TargetForceName#也定不会轻饶。"
+  - subIndex: 2
+    text: "否则日后江湖中，岂不是人人以为我#TargetForceName#软弱可欺？"
+  templates:
+  - template: "{0}\n{1}\n{2}"
 - raw: "那是自然，明年我还要接着吃枣泥月饼呢！"
   splits:
   - text: "那是自然，明年我还要接着吃枣泥月饼呢！"
@@ -34207,6 +34966,13 @@
 - raw: "额，我来选啊，那就……"
   splits:
   - text: "额，我来选啊，那就……"
+- raw: "额，难怪近来感觉诸事不顺......\n莫非真如#PlayerName#所言，是有小人在背后作梗？"
+  splits:
+  - text: "额，难怪近来感觉诸事不顺......"
+  - subIndex: 1
+    text: "莫非真如#PlayerName#所言，是有小人在背后作梗？"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "风市"
   splits:
   - text: "风市"
@@ -34417,6 +35183,15 @@
   - text: "魏胥华"
   templates:
   - template: "{0}-819-2-4-false"
+- raw: "魏胥华-听闻唐门近来要与霹雳堂举行联姻大典，邀请巴蜀一带各大门派前往参与。\n本门虽与唐门无甚交情，但表面功夫还需做上一做。#PlayerName#别忘了代表我仙霞派前去道贺一番。"
+  splits:
+  - text: "魏胥华"
+  - subIndex: 1
+    text: "听闻唐门近来要与霹雳堂举行联姻大典，邀请巴蜀一带各大门派前往参与。"
+  - subIndex: 2
+    text: "本门虽与唐门无甚交情，但表面功夫还需做上一做。#PlayerName#别忘了代表我仙霞派前去道贺一番。"
+  templates:
+  - template: "{0}-{1}\n{2}"
 - raw: "魔头"
   splits:
   - text: "魔头"

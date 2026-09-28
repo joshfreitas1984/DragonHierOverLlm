@@ -212,7 +212,7 @@ public class BountyIconController
                                           il2cpp_runtime_class_init(DAT_181d8a990);
                                           lVar5 = this.bountyData;
                                         }
-                                        lVar9 = **(int64 **)(DAT_181d8a990 + 184);
+                                        lVar9 = MissionData.MissionBountyTypeRewardType;
                                         if ((lVar5 == null) || (lVar9 == null)) throw; // [null/range check failed]
                                         uVar3 = lVar5.missionBountyType;
                                         if (*(uint32 *)(lVar9 + 24) <= uVar3) {
@@ -300,29 +300,28 @@ public class BountyIconController
     // RVA   : 0xC8AB30   Offset: 0xC89F30   Length: 0x43A
     public void OnClick()
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_30a0 = *(int64*)(DAT_181db30a0 + 184);
         int iVar1;
         int iVar2;
         long lVar3;
         ulong uVar4;
-        if ((*pStatics_2cc8 != 0) &&
-           (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar3 = GameController._instance.worldData) != null) {
           lVar3 = WorldData.Player(lVar3,0);
           if (lVar3 != null) {
             iVar1 = HeroData.GetBountyMissionNum(lVar3,0);
-            if ((*pStatics_2cc8 != 0) &&
-               (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
+            if ((GameController._instance != null) &&
+               (lVar3 = GameController._instance.worldData) != null) {
               lVar3 = WorldData.Player(lVar3,0);
               if (lVar3 != null) {
                 iVar2 = HeroData.GetMaxBountyMissionNum(lVar3,0);
                 if (iVar1 < iVar2) {
-                  if (*pStatics_2cc8 != 0) {
+                  if (GameController._instance != null) {
                     GameController.GetFullMission
-                              (*pStatics_2cc8,this.bountyData,0);
-                    lVar3 = *(int64 *)(*(int64 *)(DAT_181db4008 + 184) + 8);
-                    if (((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 24)) != null) &&
-                       (lVar3 = *(int64 *)(lVar3 + 48)) != null) {
+                              (GameController._instance,this.bountyData,0);
+
+                    if (((lVar3 = *(int64 *)(*(int64 *)(DAT_181db4008 + 184) + 8)?.cityAreaID) != null) &&
+                       (lVar3 = lVar3.Areas) != null) {
                       FUN_1817eee00(lVar3,this.bountyData,DAT_181d94a88);
                       uVar4 = Component.get_gameObject(this,0);
                       Object.Destroy(uVar4,0);
@@ -334,8 +333,8 @@ public class BountyIconController
                   }
                 }
                 else {
-                  if (*pStatics_2cc8 != 0) {
-                    GameController.ShowTextOnMouse(*pStatics_2cc8,"无法领取更多委托",0)
+                  if (GameController._instance != null) {
+                    GameController.ShowTextOnMouse(GameController._instance,"无法领取更多委托",0)
                     ;
                     plVar5 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
                     plVar6 = (int64 *)0;

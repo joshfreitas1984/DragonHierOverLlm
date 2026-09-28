@@ -52,7 +52,6 @@ public class AreaMapRandomEventController
     // RVA   : 0x7ED240   Offset: 0x7EC640   Length: 0x2BA
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181dac758 + 184);
         uint uVar1;
         long lVar2;
         ulong uVar4;
@@ -87,10 +86,10 @@ public class AreaMapRandomEventController
             }
             return;
           }
-          lVar2 = *(int64 *)(pStatics + 56);
+          lVar2 = PlotController.SpringFestivelRewardLvTalkText;
           if (lVar2 != null) {
             AreaController.DeleteEventButton(lVar2,this.areaMapRandomEventData,0);
-            lVar2 = *(int64 *)(pStatics + 56);
+            lVar2 = PlotController.SpringFestivelRewardLvTalkText;
             if (lVar2 != null) {
               lVar2 = *(int64 *)(lVar2 + 184);
               uVar4 = Component.get_gameObject(this,0);

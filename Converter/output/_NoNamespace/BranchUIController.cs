@@ -67,7 +67,6 @@ public class BranchUIController
     // RVA   : 0xC8F530   Offset: 0xC8E930   Length: 0x905
     public void ShowBranchUI(AreaData targetArea)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         ulong uVar1;
         ulong uVar3;
         long lVar4;
@@ -126,16 +125,16 @@ public class BranchUIController
                                 lVar4 = GameObject.GetComponent(lVar4,DAT_181dc7958);
                                 if (this.areaData != null) {
                                   lVar6 = AreaData.GetForce(this.areaData,0);
-                                  if ((*pStatics != 0) &&
-                                     (lVar7 = *(int64 *)(*pStatics + 32),
+                                  if ((GameController._instance != null) &&
+                                     (lVar7 = GameController._instance.worldData,
                                      lVar7 != null)) {
                                     lVar7 = WorldData.Player(lVar7,0);
                                     if (lVar7 != null) {
                                       lVar7 = HeroData.GetForce(lVar7,0,0);
                                       if (lVar6 == lVar7) {
-                                        if ((*pStatics == 0) ||
+                                        if ((GameController._instance == null) ||
                                            (lVar6 = *(int64 *)
-                                                     (*pStatics + 32),
+                                                     (GameController._instance + 32),
                                            lVar6 == null)) throw; // [null/range check failed]
                                         lVar6 = WorldData.Player(lVar6,0);
                                         if (lVar6 == null) throw; // [null/range check failed]
@@ -145,17 +144,17 @@ public class BranchUIController
                                         *(char *)(lVar4 + 24) = (char)plVar10;
                                         if (this.areaData != null) {
                                           lVar4 = AreaData.GetForce(this.areaData,0);
-                                          if ((*pStatics != 0) &&
+                                          if ((GameController._instance != null) &&
                                              (lVar6 = *(int64 *)
-                                                       (*pStatics + 32),
+                                                       (GameController._instance + 32),
                                              lVar6 != null)) {
                                             lVar6 = WorldData.Player(lVar6,0);
                                             if (lVar6 != null) {
                                               lVar6 = HeroData.GetForce(lVar6,0,0);
                                               if (lVar4 == lVar6) {
-                                                if ((*pStatics != 0) &&
+                                                if ((GameController._instance != null) &&
                                                    (lVar4 = *(int64 *)
-                                                             (*pStatics + 32
+                                                             (GameController._instance + 32
                                                              ), lVar4 != null)) {
                                                   lVar4 = WorldData.Player(lVar4,0);
                                                   if (lVar4 != null) {

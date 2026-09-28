@@ -23,14 +23,13 @@ public class SteamManager
     // RVA   : 0xC6C9D0   Offset: 0xC6BDD0   Length: 0x12C
     protected static SteamManager get_Instance()
     {
-        var pStatics = *(int64*)(DAT_181da6e10 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
-        uVar3 = *(uint64 *)(pStatics + 8);
+        uVar3 = SteamManager.s_instance;
         cVar1 = Object.op_Equality(uVar3,0,0);
         if (!cVar1) {
-          return *(uint64 *)(pStatics + 8);
+          return SteamManager.s_instance;
         }
         lVar2 = new GameObject("SteamManager",0);
         if (lVar2 != null) {
@@ -43,14 +42,13 @@ public class SteamManager
     // RVA   : 0xC6C850   Offset: 0xC6BC50   Length: 0x176
     public static bool get_Initialized()
     {
-        var pStatics = *(int64*)(DAT_181da6e10 + 184);
         ulong uVar1;
         bool cVar2;
         long lVar3;
-        uVar1 = *(uint64 *)(pStatics + 8);
+        uVar1 = SteamManager.s_instance;
         cVar2 = Object.op_Equality(uVar1,0,0);
         if (!cVar2) {
-          lVar3 = *(int64 *)(pStatics + 8);
+          lVar3 = SteamManager.s_instance;
         }
         else {
           lVar3 = new GameObject("SteamManager",0);
@@ -58,7 +56,7 @@ public class SteamManager
           lVar3 = GameObject.AddComponent(lVar3,DAT_181dc6308);
         }
         if (lVar3 != null) {
-          return *(uint8 *)(lVar3 + 24);
+          return lVar3.m_bInitialized;
         }
     }
 
@@ -83,19 +81,16 @@ public class SteamManager
     // RVA   : 0xC6C080   Offset: 0xC6B480   Length: 0x48D
     protected virtual void Awake()
     {
-        var pStatics = *(int64*)(DAT_181da6e10 + 184);
         ulong uVar1;
         bool cVar2;
         uint uVar3;
         ulong uVar4;
         ulong uVar5;
-        uVar4 = *(uint64 *)(pStatics + 8);
+        uVar4 = SteamManager.s_instance;
         cVar2 = Object.op_Inequality(uVar4,0,0);
         if (!cVar2) {
           if (**(int **)(DAT_181d73d40 + 184) == 0) {
-            plVar6 = (int64 *)(pStatics + 8);
-            *plVar6 = this;
-            il2cpp_internal(plVar6,this);
+            SteamManager.s_instance = this;
             if (**(char **)(DAT_181da6e10 + 184) != false) {
               uVar4 = il2cpp_runtime_class_init(&DAT_181dc54a0);
               uVar4 = il2cpp_internal(uVar4);
@@ -141,15 +136,12 @@ public class SteamManager
     // RVA   : 0xC6C690   Offset: 0xC6BA90   Length: 0x144
     protected virtual void OnEnable()
     {
-        var pStatics = *(int64*)(DAT_181da6e10 + 184);
         bool cVar2;
         ulong uVar3;
-        uVar3 = *(uint64 *)(pStatics + 8);
+        uVar3 = SteamManager.s_instance;
         cVar2 = Object.op_Equality(uVar3,0,0);
         if (cVar2) {
-          plVar4 = (int64 *)(pStatics + 8);
-          *plVar4 = this;
-          il2cpp_internal(plVar4,this);
+          SteamManager.s_instance = this;
         }
         if ((this.m_bInitialized) &&
            (puVar1 = (uint64 *)(this + 32), this.m_SteamAPIWarningMessageHook == null)) {
@@ -164,15 +156,12 @@ public class SteamManager
     // RVA   : 0xC6C590   Offset: 0xC6B990   Length: 0xF1
     protected virtual void OnDestroy()
     {
-        var pStatics = *(int64*)(DAT_181da6e10 + 184);
         ulong uVar1;
         bool cVar2;
-        uVar1 = *(uint64 *)(pStatics + 8);
+        uVar1 = SteamManager.s_instance;
         cVar2 = Object.op_Inequality(uVar1,this,0);
         if (!cVar2) {
-          puVar3 = (uint64 *)(pStatics + 8);
-          *puVar3 = 0;
-          il2cpp_internal(puVar3,0);
+          SteamManager.s_instance = 0;
           if (this.m_bInitialized) {
             SteamAPI.Shutdown(0);
           }

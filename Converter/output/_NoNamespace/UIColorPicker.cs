@@ -200,7 +200,6 @@ public class UIColorPicker
     // RVA   : 0x12B0440   Offset: 0x12AF840   Length: 0x3A1
     private void Sample()
     {
-        var pStatics = *(int64*)(DAT_181daf778 + 184);
         long lVar1;
         ulong uVar2;
         float fVar4;
@@ -305,15 +304,15 @@ public class UIColorPicker
         uint64 uStack_90;
         uint64 local_88;
         uint32 local_80;
-        if (*(int64 *)(pStatics + 8) != 0) {
+        if (UIColorPicker.mRed != null) {
         LAB_1812b013a:
-          lVar1 = *(int64 *)(pStatics + 8);
+          lVar1 = UIColorPicker.mRed;
           if (lVar1 != null) {
             fVar4 = (float)AnimationCurve.Evaluate(lVar1,param_2,0);
-            lVar1 = *(int64 *)(pStatics + 16);
+            lVar1 = UIColorPicker.mGreen;
             if (lVar1 != null) {
               fVar5 = (float)AnimationCurve.Evaluate(lVar1,param_2,0);
-              lVar1 = *(int64 *)(pStatics + 24);
+              lVar1 = UIColorPicker.mBlue;
               if (lVar1 != null) {
                 fVar6 = (float)AnimationCurve.Evaluate(lVar1,param_2,0);
                 fVar7 = param_3 + param_3;
@@ -458,9 +457,7 @@ public class UIColorPicker
           *(uint64 *)(lVar1 + 244) = local_288;
           *(uint32 *)(lVar1 + 252) = local_280;
           uVar2 = new AnimationCurve(lVar1,0);
-          puVar3 = (uint64 *)(pStatics + 8);
-          *puVar3 = uVar2;
-          il2cpp_internal(puVar3,uVar2);
+          UIColorPicker.mRed = uVar2;
           lVar1 = FUN_1800d60b0(DAT_181da3ba0,8);
           local_268 = 0;
           local_260 = 0;
@@ -578,9 +575,7 @@ public class UIColorPicker
             *(uint64 *)(lVar1 + 244) = local_188;
             *(uint32 *)(lVar1 + 252) = local_180;
             uVar2 = new AnimationCurve(lVar1,0);
-            puVar3 = (uint64 *)(pStatics + 16);
-            *puVar3 = uVar2;
-            il2cpp_internal(puVar3,uVar2);
+            UIColorPicker.mGreen = uVar2;
             lVar1 = FUN_1800d60b0(DAT_181da3ba0,8);
             local_168 = 0;
             local_160 = 0;
@@ -698,9 +693,7 @@ public class UIColorPicker
               *(uint64 *)(lVar1 + 244) = local_88;
               *(uint32 *)(lVar1 + 252) = local_80;
               uVar2 = new AnimationCurve(lVar1,0);
-              puVar3 = (uint64 *)(pStatics + 24);
-              *puVar3 = uVar2;
-              il2cpp_internal(puVar3,uVar2);
+              UIColorPicker.mBlue = uVar2;
               goto LAB_1812b013a;
             }
           }
@@ -987,7 +980,6 @@ public class UIColorPicker
     // RVA   : 0x12AF710   Offset: 0x12AEB10   Length: 0xD2C
     public static Color Sample(float x, float y)
     {
-        var pStatics = *(int64*)(DAT_181daf778 + 184);
         long lVar1;
         ulong uVar2;
         float fVar4;
@@ -1092,15 +1084,15 @@ public class UIColorPicker
         uint64 uStack_90;
         uint64 local_88;
         uint32 local_80;
-        if (*(int64 *)(pStatics + 8) != 0) {
+        if (UIColorPicker.mRed != null) {
         LAB_1812b013a:
-          lVar1 = *(int64 *)(pStatics + 8);
+          lVar1 = UIColorPicker.mRed;
           if (lVar1 != null) {
             fVar4 = (float)AnimationCurve.Evaluate(lVar1,y,0);
-            lVar1 = *(int64 *)(pStatics + 16);
+            lVar1 = UIColorPicker.mGreen;
             if (lVar1 != null) {
               fVar5 = (float)AnimationCurve.Evaluate(lVar1,y,0);
-              lVar1 = *(int64 *)(pStatics + 24);
+              lVar1 = UIColorPicker.mBlue;
               if (lVar1 != null) {
                 fVar6 = (float)AnimationCurve.Evaluate(lVar1,y,0);
                 fVar7 = param_3 + param_3;
@@ -1245,9 +1237,7 @@ public class UIColorPicker
           *(uint64 *)(lVar1 + 244) = local_288;
           *(uint32 *)(lVar1 + 252) = local_280;
           uVar2 = new AnimationCurve(lVar1,0);
-          puVar3 = (uint64 *)(pStatics + 8);
-          *puVar3 = uVar2;
-          il2cpp_internal(puVar3,uVar2);
+          UIColorPicker.mRed = uVar2;
           lVar1 = FUN_1800d60b0(DAT_181da3ba0,8);
           local_268 = 0;
           local_260 = 0;
@@ -1365,9 +1355,7 @@ public class UIColorPicker
             *(uint64 *)(lVar1 + 244) = local_188;
             *(uint32 *)(lVar1 + 252) = local_180;
             uVar2 = new AnimationCurve(lVar1,0);
-            puVar3 = (uint64 *)(pStatics + 16);
-            *puVar3 = uVar2;
-            il2cpp_internal(puVar3,uVar2);
+            UIColorPicker.mGreen = uVar2;
             lVar1 = FUN_1800d60b0(DAT_181da3ba0,8);
             local_168 = 0;
             local_160 = 0;
@@ -1485,9 +1473,7 @@ public class UIColorPicker
               *(uint64 *)(lVar1 + 244) = local_88;
               *(uint32 *)(lVar1 + 252) = local_80;
               uVar2 = new AnimationCurve(lVar1,0);
-              puVar3 = (uint64 *)(pStatics + 24);
-              *puVar3 = uVar2;
-              il2cpp_internal(puVar3,uVar2);
+              UIColorPicker.mBlue = uVar2;
               goto LAB_1812b013a;
             }
           }

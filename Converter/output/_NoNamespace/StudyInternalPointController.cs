@@ -296,7 +296,6 @@ public class StudyInternalPointController
     public void Init()
     {
         var pStatics_8110 = *(int64*)(DAT_181da8110 + 184);
-        var pStatics_8190 = *(int64*)(DAT_181da8190 + 184);
         int iVar1;
         long lVar2;
         bool cVar3;
@@ -329,15 +328,15 @@ public class StudyInternalPointController
             this.crashed = 0;
             fVar11 = (float)Random.Range();
             iVar1 = this.hardLv;
-            if (*pStatics_8190 != 0) {
-              if (*(int64 *)(*pStatics_8190 + 40) == 0) {
+            if (StudySkillController._instance != null) {
+              if (StudySkillController._instance.targetBuilding == null) {
                 fVar12 = 0.0;
               }
               else {
-                if ((*pStatics_8190 == 0) ||
-                   (lVar4 = *(int64 *)(*pStatics_8190 + 40)) == null)
+                if ((StudySkillController._instance == null) ||
+                   (lVar4 = StudySkillController._instance.targetBuilding) == null)
                 throw; // [null/range check failed]
-                fVar12 = (float)*(int *)(lVar4 + 20) * 0.01;
+                fVar12 = (float)lVar4.lv * 0.01;
               }
               this.successRate = (fVar11 - (float)iVar1 * 0.1) + fVar12;
               uVar6 = this.pointUI;
@@ -493,9 +492,9 @@ public class StudyInternalPointController
                               uVar7 = *(uint64 *)(lVar8 + lVar2._items);
                               lVar4 = new WarpText_d__8(0);
                               if (lVar4 == null) break;
-                              *(int64 *)(lVar4 + 40) = this;
-                              *(uint64 *)(lVar4 + 32) = uVar6;
-                              *(uint64 *)(lVar4 + 48) = uVar7;
+                              lVar4.shopItemList = this;
+                              lVar4.destroyTimeLeft = uVar6;
+                              lVar4.missionDatas = uVar7;
                               FUN_180d8c2e0(this);
                               lVar4 = this.lineRendererBack;
                               uVar9 = uVar9 + 1;
@@ -844,7 +843,6 @@ public class StudyInternalPointController
     {
         var pStatics_4450 = *(int64*)(DAT_181da4450 + 184);
         var pStatics_8110 = *(int64*)(DAT_181da8110 + 184);
-        var pStatics_8190 = *(int64*)(DAT_181da8190 + 184);
         ulong uVar2;
         uint uVar3;
         uint uVar4;
@@ -877,7 +875,7 @@ public class StudyInternalPointController
               lVar9 = *pStatics_8110;
               if (lVar9 != null) {
                 *(float *)(lVar9 + 28) = this.exp + *(float *)(lVar9 + 28);
-                lVar9 = **(int64 **)(DAT_181d72cc8 + 184);
+                lVar9 = GameController._instance;
                 uVar5 = Single.ToString(this + 48,0);
                 uVar5 = String.Concat("冲破经验+",uVar5,0);
                 lVar7 = Component.get_transform(this,0);
@@ -907,8 +905,8 @@ public class StudyInternalPointController
                           Behaviour.set_enabled(lVar9,0,0);
                           if (this.newObj != null) {
                             uVar5 = GameObject.get_transform(this.newObj,0);
-                            if ((*pStatics_8190 != 0) &&
-                               (lVar9 = *(int64 *)(*pStatics_8190 + 80),
+                            if ((StudySkillController._instance != null) &&
+                               (lVar9 = StudySkillController._instance.expText,
                                lVar9 != null)) {
                               lVar9 = Component.get_transform(lVar9,0);
                               if (lVar9 != null) {
@@ -1068,7 +1066,7 @@ public class StudyInternalPointController
               local_98 = uVar6;
               local_78 = uVar7;
               uStack_70 = uVar15;
-              GameController.ShowTextAtPos(lVar3,uVar5,&local_98,16,&local_78,0);
+              GameController.ShowTextAtPos(lVar3,uVar5,(int)uVar6,16,&local_78,0);
               if (((this.nextPoint == null) ||
                   (lVar3 = FUN_180002f80(this.nextPoint,uVar11,DAT_181d89918)) == null)
                  || (lVar3 = GameObject.GetComponent(lVar3,DAT_181d73e60)) == null) break;
@@ -1127,7 +1125,7 @@ public class StudyInternalPointController
               local_98 = uVar6;
               local_78 = uVar7;
               uStack_70 = uVar15;
-              GameController.ShowTextAtPos(lVar3,uVar5,&local_98,16,&local_78,0);
+              GameController.ShowTextAtPos(lVar3,uVar5,(int)uVar6,16,&local_78,0);
               if (((this.nextPoint == null) ||
                   (lVar3 = FUN_180002f80(this.nextPoint,uVar11)) == null) ||
                  (lVar3 = GameObject.GetComponent(lVar3,DAT_181d73e60)) == null) break;

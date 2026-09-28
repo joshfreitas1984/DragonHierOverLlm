@@ -824,7 +824,6 @@ public class KungfuSkillLvData
     // RVA   : 0xA78730   Offset: 0xA77B30   Length: 0xA3A
     public List<int> GetBreakThroughAvailableChoice()
     {
-        var pStatics_34e0 = *(int64*)(DAT_181db34e0 + 184);
         var pStatics_ba20 = *(int64*)(DAT_181d7ba20 + 184);
         uint uVar1;
         long lVar2;
@@ -855,12 +854,12 @@ public class KungfuSkillLvData
         uStack_a0 = 0;
         local_98 = 0;
         uVar12 = 0;
-        if (*pStatics_34e0 == 0) goto LAB_180a79122;
-        cVar4 = FUN_1808ab490(*pStatics_34e0,this.skillID,
+        if (PlotController.attriIndexCache == null) goto LAB_180a79122;
+        cVar4 = FUN_1808ab490(PlotController.attriIndexCache,this.skillID,
                               DAT_181db7138);
         if (cVar4) {
-          if ((*pStatics_34e0 != 0) &&
-             (lVar5 = FUN_1817d9e10(*pStatics_34e0,this.skillID,
+          if ((PlotController.attriIndexCache != null) &&
+             (lVar5 = FUN_1817d9e10(PlotController.attriIndexCache,this.skillID,
                                     DAT_181db71c0), lVar5 != null)) {
             uVar10 = FUN_181655b90(lVar5,DAT_181d8f898);
             lVar5 = il2cpp_internal(DAT_181d93cd0);
@@ -1001,12 +1000,12 @@ public class KungfuSkillLvData
           if (lVar6 != null) {
             FUN_18182e030(lVar6,lVar5,DAT_181d8f698);
             if (((*(byte *)(DAT_181db34e0 + 0x133) & 4) == 0) || (*(int *)(DAT_181db34e0 + 224) != 0)) {
-              lVar5 = *pStatics_34e0;
+              lVar5 = PlotController.attriIndexCache;
               lVar7 = lVar6;
             }
             else {
               il2cpp_runtime_class_init(DAT_181db34e0);
-              lVar5 = *pStatics_34e0;
+              lVar5 = PlotController.attriIndexCache;
               this = local_70;
               lVar7 = local_68;
             }
@@ -1124,35 +1123,33 @@ public class KungfuSkillLvData
     // RVA   : 0xA77F60   Offset: 0xA77360   Length: 0x7C4
     public HeroData GetBelongHero()
     {
-        var pStatics_0248 = *(int64*)(DAT_181db0248 + 184);
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
         int iVar4;
         int iVar5;
         if (this.belongHeroID < 0) {
-          lVar3 = *(int64 *)(pStatics_0248 + 80);
+          lVar3 = PlotController.LaBaFestivelResultTalkText;
           if (lVar3 != null) {
             iVar4 = 0;
             if (*(int *)(lVar3 + 36) == 0) {
         LAB_180a78580:
               do {
-                lVar3 = *(int64 *)(*(int64 *)(DAT_181d91b88 + 184) + 24);
-                if ((lVar3 == null) || (lVar3 = *(int64 *)(lVar3 + 0x100)) == null)
+
+                if ((lVar3 = *(int64 *)(*(int64 *)(DAT_181d91b88 + 184) + 24)?.tutorialFinished) == null)
                 goto LAB_180a7871f;
-                if (*(int *)(lVar3 + 24) <= iVar4) {
+                if (lVar3.cityAreaID <= iVar4) {
                   return 0;
                 }
                 lVar3 = FUN_18046c400(0);
-                if ((lVar3 == null) || (*(int64 *)(lVar3 + 0x100) == 0)) goto LAB_180a7871f;
-                lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 0x100),iVar4,DAT_181d8bb98);
+                if ((lVar3 == null) || (lVar3.tutorialFinished == null)) goto LAB_180a7871f;
+                lVar3 = FUN_180002f80(lVar3.tutorialFinished,iVar4,DAT_181d8bb98);
                 if (lVar3 != null) {
                   lVar3 = FUN_18046c400(0);
-                  if ((((lVar3 == null) || (*(int64 *)(lVar3 + 0x100) == 0)) ||
-                      (lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 0x100),iVar4,DAT_181d8bb98), lVar3 == null
-                      )) || (*(int64 *)(lVar3 + 0x260) == 0)) goto LAB_180a7871f;
-                  cVar1 = FUN_18181e400(*(int64 *)(lVar3 + 0x260),this,DAT_181d92210);
+                  if ((((lVar3 == null) || (lVar3.tutorialFinished == null)) ||
+                      (lVar3 = FUN_180002f80(lVar3.tutorialFinished,iVar4,DAT_181d8bb98), lVar3 == null
+                      )) || (lVar3.customDifficultyData == null)) goto LAB_180a7871f;
+                  cVar1 = FUN_18181e400(lVar3.customDifficultyData,this,DAT_181d92210);
                   if (cVar1) goto LAB_180a786d4;
                 }
                 iVar4 = iVar4 + 1;
@@ -1160,29 +1157,29 @@ public class KungfuSkillLvData
             }
             iVar5 = 0;
             while( true ) {
-              lVar3 = *(int64 *)(pStatics_0248 + 80);
-              if ((lVar3 == null) || (lVar3 = *(int64 *)(lVar3 + 64)) == null) break;
-              if (*(int *)(lVar3 + 24) <= iVar5) {
+
+              if ((lVar3 = PlotController.LaBaFestivelResultTalkText?.ResourcePoints) == null) break;
+              if (lVar3.cityAreaID <= iVar5) {
                 iVar5 = 0;
                 goto LAB_180a78350;
               }
               iVar4 = 0;
               while( true ) {
                 lVar3 = FUN_18046bb80(0);
-                if (((lVar3 == null) || (*(int64 *)(lVar3 + 64) == 0)) ||
-                   (lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 64),iVar5,DAT_181d78528)) == null)
+                if (((lVar3 == null) || (lVar3.ResourcePoints == null)) ||
+                   (lVar3 = FUN_180002f80(lVar3.ResourcePoints,iVar5,DAT_181d78528)) == null)
                 goto LAB_180a7871f;
-                if (*(int *)(lVar3 + 24) <= iVar4) break;
+                if (lVar3.cityAreaID <= iVar4) break;
                 lVar3 = FUN_18046bb80(0);
-                if (((lVar3 == null) || (*(int64 *)(lVar3 + 64) == 0)) ||
-                   ((lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 64),iVar5,DAT_181d78528), lVar3 == null ||
+                if (((lVar3 == null) || (lVar3.ResourcePoints == null)) ||
+                   ((lVar3 = FUN_180002f80(lVar3.ResourcePoints,iVar5,DAT_181d78528), lVar3 == null ||
                     ((lVar3 = FUN_180002f80(lVar3,iVar4,DAT_181d8bb98), lVar3 == null ||
-                     (*(int64 *)(lVar3 + 0x260) == 0)))))) goto LAB_180a7871f;
-                cVar1 = FUN_18181e400(*(int64 *)(lVar3 + 0x260),this,DAT_181d92210);
+                     (lVar3.customDifficultyData == null)))))) goto LAB_180a7871f;
+                cVar1 = FUN_18181e400(lVar3.customDifficultyData,this,DAT_181d92210);
                 if (cVar1) {
                   lVar3 = FUN_18046bb80(0);
-                  if (((lVar3 == null) || (*(int64 *)(lVar3 + 64) == 0)) ||
-                     (lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 64),iVar5,DAT_181d78528)) == null)
+                  if (((lVar3 == null) || (lVar3.ResourcePoints == null)) ||
+                     (lVar3 = FUN_180002f80(lVar3.ResourcePoints,iVar5,DAT_181d78528)) == null)
                   goto LAB_180a7871f;
                   goto LAB_180a7832c;
                 }
@@ -1193,8 +1190,8 @@ public class KungfuSkillLvData
           }
         }
         else {
-          if ((*pStatics_2cc8 != 0) &&
-             (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
+          if ((GameController._instance != null) &&
+             (lVar3 = GameController._instance.worldData) != null) {
             uVar2 = WorldData.GetHero(lVar3,this.belongHeroID,0);
             return uVar2;
           }
@@ -1203,33 +1200,33 @@ public class KungfuSkillLvData
                           // WARNING: Subroutine does not return
         FUN_1800d6620();
         LAB_180a78350:
-        lVar3 = *(int64 *)(pStatics_0248 + 80);
-        if ((lVar3 == null) || (lVar3 = *(int64 *)(lVar3 + 112)) == null) goto LAB_180a7871f;
+
+        if ((lVar3 = PlotController.LaBaFestivelResultTalkText?.lastRandomWorldEventDay) == null) goto LAB_180a7871f;
         iVar4 = 0;
-        if (*(int *)(lVar3 + 24) <= iVar5) goto LAB_180a78580;
+        if (lVar3.cityAreaID <= iVar5) goto LAB_180a78580;
         iVar4 = 0;
         while( true ) {
           lVar3 = FUN_18046bb80(0);
-          if ((((lVar3 == null) || (*(int64 *)(lVar3 + 112) == 0)) ||
-              (lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 112),iVar5,DAT_181d7f830)) == null) ||
-             (*(int64 *)(lVar3 + 24) == 0)) goto LAB_180a7871f;
-          if (*(int *)(*(int64 *)(lVar3 + 24) + 24) <= iVar4) break;
+          if ((((lVar3 == null) || (lVar3.lastRandomWorldEventDay == null)) ||
+              (lVar3 = FUN_180002f80(lVar3.lastRandomWorldEventDay,iVar5,DAT_181d7f830)) == null) ||
+             (lVar3.cityAreaID == null)) goto LAB_180a7871f;
+          if (*(int *)(lVar3.cityAreaID + 24) <= iVar4) break;
           lVar3 = FUN_18046bb80(0);
-          if ((((lVar3 == null) || (*(int64 *)(lVar3 + 112) == 0)) ||
-              ((lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 112),iVar5,DAT_181d7f830), lVar3 == null ||
-               (((*(int64 *)(lVar3 + 24) == 0 ||
-                 (lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 24),iVar4,DAT_181d7fc20)) == null) ||
-                (*(int64 *)(lVar3 + 64) == 0)))))) ||
-             (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 64) + 0x260)) == null) goto LAB_180a7871f;
+          if ((((lVar3 == null) || (lVar3.lastRandomWorldEventDay == null)) ||
+              ((lVar3 = FUN_180002f80(lVar3.lastRandomWorldEventDay,iVar5,DAT_181d7f830), lVar3 == null ||
+               (((lVar3.cityAreaID == null ||
+                 (lVar3 = FUN_180002f80(lVar3.cityAreaID,iVar4,DAT_181d7fc20)) == null) ||
+                (lVar3.ResourcePoints == null)))))) ||
+             (lVar3 = *(int64 *)(lVar3.ResourcePoints + 0x260)) == null) goto LAB_180a7871f;
           cVar1 = FUN_18181e400(lVar3,this,DAT_181d92210);
           if (cVar1) {
             lVar3 = FUN_18046bb80(0);
-            if (((lVar3 != null) && (*(int64 *)(lVar3 + 112) != 0)) &&
-               ((lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 112),iVar5,DAT_181d7f830), lVar3 != null &&
-                ((*(int64 *)(lVar3 + 24) != 0 &&
-                 (lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 24),iVar4,DAT_181d7fc20)) != null)))))
+            if (((lVar3 != null) && (lVar3.lastRandomWorldEventDay != null)) &&
+               ((lVar3 = FUN_180002f80(lVar3.lastRandomWorldEventDay,iVar5,DAT_181d7f830), lVar3 != null &&
+                ((lVar3.cityAreaID != null &&
+                 (lVar3 = FUN_180002f80(lVar3.cityAreaID,iVar4,DAT_181d7fc20)) != null)))))
             {
-              return *(uint64 *)(lVar3 + 64);
+              return lVar3.ResourcePoints;
             }
             goto LAB_180a7871f;
           }
@@ -1238,8 +1235,8 @@ public class KungfuSkillLvData
         iVar5 = iVar5 + 1;
         goto LAB_180a78350;
         LAB_180a786d4:
-        lVar3 = FUN_18046c400(0);
-        if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 0x100)) != null) {
+
+        if ((lVar3 = FUN_18046c400(0)?.tutorialFinished) != null) {
         LAB_180a7832c:
           uVar2 = FUN_180002f80(lVar3,iVar4,DAT_181d8bb98);
           return uVar2;
@@ -1409,7 +1406,6 @@ public class KungfuSkillLvData
     // RVA   : 0xA796E0   Offset: 0xA78AE0   Length: 0x13F6
     public string GetSkillDescribe(bool fullDetail, bool showDamage, bool bookDescribe)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int64 KungfuSkillLvData.GetSkillDescribe
                          (int64 this,char fullDetail,char showDamage,char bookDescribe)
         {
@@ -1439,8 +1435,8 @@ public class KungfuSkillLvData
         local_78 = 0.0;
         lVar3 = KungfuSkillLvData.GetBelongHero(this,0);
         if (lVar3 == null) {
-          if ((*pStatics == 0) ||
-             (lVar3 = *(int64 *)(*pStatics + 32)) == null)
+          if ((GameController._instance == null) ||
+             (lVar3 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
           lVar3 = WorldData.Player(lVar3,0);
         }
@@ -1923,7 +1919,7 @@ public class KungfuSkillLvData
                 if (cVar2) {
                   lVar3 = KungfuSkillLvData.DataBase(this,0);
                   if (lVar3 == null) throw; // [null/range check failed]
-                  lVar5 = String.Concat(lVar5,"\n\n<color=grey><i>",*(uint64 *)(lVar3 + 40),"</i></color>",0
+                  lVar5 = String.Concat(lVar5,"\n\n<color=grey><i>",lVar3.forceAreaID,"</i></color>",0
                                         );
                 }
                 if ((**(int **)(DAT_181d73d40 + 184) != 2) && (!cVar13)) {

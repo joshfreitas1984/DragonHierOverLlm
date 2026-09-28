@@ -246,7 +246,7 @@ public class UISavedOption
           uVar3 = Object.get_name(this,0);
           uVar3 = String.Concat("NGUI State: ",uVar3,0);
         }
-        plVar1 = (int64 *)**(int64 **)(DAT_181dafff8 + 184);
+        plVar1 = (int64 *)UIPopupList.current;
         if (plVar1 != (int64 *)0) {
           uVar4 = (**(code **)(*plVar1 + 0x178))(plVar1,*(uint64 *)(*plVar1 + 0x180));
           PlayerPrefs.SetString(uVar3,uVar4,0);

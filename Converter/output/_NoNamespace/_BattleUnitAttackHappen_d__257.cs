@@ -34,7 +34,6 @@ public class <BattleUnitAttackHappen>d__257
     // RVA   : 0x9C3720   Offset: 0x9C2B20   Length: 0x190B
     private virtual bool MoveNext()
     {
-        var pStatics = *(int64*)(DAT_181db0248 + 184);
         int iVar2;
         long lVar3;
         uint uVar4;
@@ -307,8 +306,8 @@ public class <BattleUnitAttackHappen>d__257
               fVar16 = *(float *)(puVar8 + 1);
               local_3d8 = (float)uVar9;
               fStack_3d4 = (float)((uint64)uVar9 >> 32);
-              uVar9 = *(uint64 *)(pStatics + 16);
-              local_2b0 = *(float *)(pStatics + 24);
+              uVar9 = PlotController.livingSkillIndexCache;
+              local_2b0 = PlotController._instance;
               if (lVar7 == null) throw; // [null/range check failed]
               local_2a8 = CONCAT44(fStack_3d4 + (float)((uint64)uVar9 >> 32),local_3d8 + (float)uVar9
                                   );
@@ -343,8 +342,8 @@ public class <BattleUnitAttackHappen>d__257
                       fVar16 = *(float *)(puVar8 + 1);
                       local_488 = (float)uVar9;
                       fStack_484 = (float)((uint64)uVar9 >> 32);
-                      uVar9 = *(uint64 *)(pStatics + 16);
-                      local_2f0 = *(float *)(pStatics + 24);
+                      uVar9 = PlotController.livingSkillIndexCache;
+                      local_2f0 = PlotController._instance;
                       if (lVar7 != null) {
                         local_2e8 = CONCAT44(fStack_484 + (float)((uint64)uVar9 >> 32),
                                              local_488 + (float)uVar9);
@@ -371,8 +370,8 @@ public class <BattleUnitAttackHappen>d__257
                     uVar10 = *puVar8;
                     local_350 = *(float *)(puVar8 + 1);
                     fVar16 = local_350 * 5.0 + local_340;
-                    uVar13 = *(uint64 *)(pStatics + 16);
-                    local_330 = *(float *)(pStatics + 24);
+                    uVar13 = PlotController.livingSkillIndexCache;
+                    local_330 = PlotController._instance;
                     if (lVar7 != null) {
                       local_328 = CONCAT44((float)((uint64)uVar13 >> 32) +
                                            (float)((uint64)uVar10 >> 32) * 5.0 +
@@ -402,8 +401,8 @@ public class <BattleUnitAttackHappen>d__257
                     local_res8 = (float)uVar10;
                     fStackX_c = (float)((uint64)uVar10 >> 32);
                     fVar16 = local_230 + 0.0;
-                    uVar10 = *(uint64 *)(pStatics + 16);
-                    local_370 = *(float *)(pStatics + 24);
+                    uVar10 = PlotController.livingSkillIndexCache;
+                    local_370 = PlotController._instance;
                     if (lVar7 != null) {
                       local_368 = CONCAT44((float)((uint64)uVar10 >> 32) +
                                            (float)((uint64)uVar9 >> 32) + fStackX_c * 5.0,
@@ -537,10 +536,10 @@ public class <BattleUnitAttackHappen>d__257
               fVar18 = *(float *)(puVar8 + 1);
               fStack_3a4 = (float)((uint64)uVar9 >> 32);
               local_3a8 = (float)uVar9;
-              uVar9 = *(uint64 *)(pStatics + 16);
+              uVar9 = PlotController.livingSkillIndexCache;
               local_3a8 = local_3a8 + (float)uVar9;
               fStack_3a4 = fStack_3a4 + (float)((uint64)uVar9 >> 32);
-              local_210 = fVar18 + *(float *)(pStatics + 24);
+              local_210 = fVar18 + PlotController._instance;
               *(uint64 *)(lVar7 + 28) = CONCAT44(fStack_3a4,local_3a8);
               *(float *)(lVar7 + 36) = local_210;
               fVar18 = (float)Vector2.Distance(*(uint64 *)(lVar7 + 16),
@@ -564,8 +563,8 @@ public class <BattleUnitAttackHappen>d__257
               uVar10 = *puVar8;
               fVar18 = *(float *)(puVar8 + 1);
               fStack_414 = (float)((uint64)uVar10 >> 32);
-              uVar13 = *(uint64 *)(pStatics + 16);
-              local_260 = *(float *)(pStatics + 24);
+              uVar13 = PlotController.livingSkillIndexCache;
+              local_260 = PlotController._instance;
               local_418 = (float)uVar10;
               local_250 = fVar18 + local_260;
               local_258 = CONCAT44(fStack_414 + (float)((uint64)uVar13 >> 32),

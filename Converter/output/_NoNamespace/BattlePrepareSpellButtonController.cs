@@ -23,8 +23,6 @@ public class BattlePrepareSpellButtonController
     // RVA   : 0x8CAA10   Offset: 0x8C9E10   Length: 0x795
     public void Init()
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
-        var pStatics_2d50 = *(int64*)(DAT_181d72d50 + 184);
         uint uVar1;
         long lVar2;
         ulong uVar3;
@@ -57,10 +55,10 @@ public class BattlePrepareSpellButtonController
                 lVar2 = Transform.Find(lVar2,"Text",0);
                 if (lVar2 != null) {
                   plVar5 = (int64 *)Component.GetComponent(lVar2,DAT_181d96160);
-                  lVar2 = *(int64 *)(pStatics_2d50 + 32);
+                  lVar2 = GameController.lockObj;
                   if (lVar2 != null) {
                     lVar2 = *(int64 *)(lVar2 + 56);
-                    lVar6 = *(int64 *)(pStatics_2d50 + 32);
+                    lVar6 = GameController.lockObj;
                     if ((this.targetSpellData != null) && (lVar6 != null)) {
                       lVar6 = GameDataController.GetSkillDataBase
                                         (lVar6,this.targetSpellData.targetSkillID,0);
@@ -83,8 +81,8 @@ public class BattlePrepareSpellButtonController
                             lVar2 = Component.GetComponent(lVar2,DAT_181d95560);
                             if (this.targetSpellData != null) {
                               uVar3 = this.targetSpellData.spellName;
-                              if ((*pStatics_2cc8 != 0) &&
-                                 (lVar6 = *(int64 *)(*pStatics_2cc8 + 32),
+                              if ((GameController._instance != null) &&
+                                 (lVar6 = GameController._instance.worldData,
                                  lVar6 != null)) {
                                 lVar6 = WorldData.Player(lVar6,0);
                                 if ((this.targetSpellData != null) && (lVar6 != null)) {
@@ -93,7 +91,7 @@ public class BattlePrepareSpellButtonController
                                                                      ),0);
                                   uVar4 = "{0}{1}";
                                   if (lVar6 == null) {
-                                    lVar6 = *(int64 *)(pStatics_2d50 + 32);
+                                    lVar6 = GameController.lockObj;
                                     if ((this.targetSpellData == null) || (lVar6 == null))
                                     throw; // [null/range check failed]
                                     lVar6 = GameDataController.GetSkillDataBase
@@ -117,18 +115,18 @@ public class BattlePrepareSpellButtonController
                                     uVar8 = HeroSpeAddData.GetDescribe
                                                       (lVar6,1,1,1,
                                                        in_stack_ffffffffffffff98 & 0xffffffffffffff00,0);
-                                    if ((((*pStatics_2cc8 == 0) ||
+                                    if ((((GameController._instance == null) ||
                                          (lVar6 = *(int64 *)
-                                                   (*pStatics_2cc8 + 32),
+                                                   (GameController._instance + 32),
                                          lVar6 == null)) || (this.targetSpellData == null)) ||
-                                       (lVar6 = *(int64 *)(lVar6 + 0x238)) == null)
+                                       (lVar6 = lVar6.speSpellRate) == null)
                                     goto LAB_1808cb1a0;
                                     uVar1 = this.targetSpellData.id;
-                                    if (*(uint32 *)(lVar6 + 24) <= uVar1) {
+                                    if (lVar6.cityAreaID <= uVar1) {
                                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
                                     }
                                     local_res20[0] =
-                                         *(float *)(*(int64 *)(lVar6 + 16) + 32 +
+                                         *(float *)(lVar6.chapter + 32 +
                                                    (int64)(int)uVar1 * 4) * 100.0;
                                     uVar9 = Single.ToString(local_res20,"f0",0);
                                     uVar7 = String.Format("(熟练{2}%)\n符法点-{0}\n{1}",uVar7,uVar8,uVar9,0);
@@ -137,9 +135,9 @@ public class BattlePrepareSpellButtonController
                                   if (lVar2 != null) {
                                     *(uint64 *)(lVar2 + 24) = uVar3;
                                     lVar2 = Component.GetComponent(this,DAT_181d93760);
-                                    if ((*pStatics_2cc8 != 0) &&
+                                    if ((GameController._instance != null) &&
                                        (lVar6 = *(int64 *)
-                                                 (*pStatics_2cc8 + 32),
+                                                 (GameController._instance + 32),
                                        lVar6 != null)) {
                                       lVar6 = WorldData.Player(lVar6,0);
                                       if ((this.targetSpellData != null) && (lVar6 != null)) {

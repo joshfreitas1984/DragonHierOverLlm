@@ -138,7 +138,6 @@ public class HudController
     private void Update()
     {
         var pStatics_2398 = *(int64*)(DAT_181d82398 + 184);
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
         var pStatics_4000 = *(int64*)(DAT_181d94000 + 184);
         var pStatics_5f40 = *(int64*)(DAT_181d75f40 + 184);
@@ -181,17 +180,17 @@ public class HudController
           this.inited = 1;
           if (this.heroFace == null) goto LAB_180b0c071;
           lVar3 = GameObject.GetComponent(this.heroFace,DAT_181d73338);
-          if (((*pStatics_2cc8 == 0) ||
-              (lVar14 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+          if (((GameController._instance == null) ||
+              (lVar14 = GameController._instance.worldData) == null) ||
              (uVar4 = WorldData.Player(lVar14,0), lVar3 == null)) goto LAB_180b0c071;
           lVar3.Count = uVar4;
           HudController.RefreshHeroSkeleton(this,0);
         }
         lVar3 = this.timeCircle;
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar14 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+        if (((GameController._instance == null) ||
+            (lVar14 = GameController._instance.worldData) == null) ||
            (lVar3 == null)) goto LAB_180b0c071;
-        Image.set_fillAmount(lVar3,*(float *)(lVar14 + 180) / 24.0,0);
+        Image.set_fillAmount(lVar3,lVar14.hour / 24.0,0);
         cVar1 = GlobalData.GetKeyDown(113);
         if (!cVar1) {
           cVar1 = GlobalData.GetKeyDown(105);
@@ -305,8 +304,8 @@ public class HudController
           goto LAB_180b0c071;
           cVar1 = GameObject.get_activeSelf(lVar3,0);
           if (cVar1) {
-            lVar3 = *(int64 *)(*(int64 *)(DAT_181dad378 + 184) + 8);
-            if ((lVar3 == null) || (lVar3 = *(int64 *)(lVar3 + 40)) == null) goto LAB_180b0c071;
+
+            if ((lVar3 = *(int64 *)(*(int64 *)(DAT_181dad378 + 184) + 8)?.forceAreaID) == null) goto LAB_180b0c071;
             cVar1 = GameObject.get_activeSelf(lVar3,0);
             if (!cVar1) {
               if ((*pStatics_2398 == 0) ||
@@ -393,17 +392,17 @@ public class HudController
         }
         uVar4 = this.timeLabel;
         this.refreshTime = 0x3e99999a;
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
-           (lVar3 = *(int64 *)(lVar3 + 168)) == null) goto LAB_180b0c071;
+        if (((GameController._instance == null) ||
+            (lVar3 = GameController._instance.worldData) == null) ||
+           (lVar3 = lVar3.worldTime) == null) goto LAB_180b0c071;
         uVar7 = Int32.ToString(lVar3 + 16,0);
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
-           (lVar3 = *(int64 *)(lVar3 + 168)) == null) goto LAB_180b0c071;
+        if (((GameController._instance == null) ||
+            (lVar3 = GameController._instance.worldData) == null) ||
+           (lVar3 = lVar3.worldTime) == null) goto LAB_180b0c071;
         uVar9 = Int32.ToString(lVar3 + 20,0);
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
-           (lVar3 = *(int64 *)(lVar3 + 168)) == null) goto LAB_180b0c071;
+        if (((GameController._instance == null) ||
+            (lVar3 = GameController._instance.worldData) == null) ||
+           (lVar3 = lVar3.worldTime) == null) goto LAB_180b0c071;
         uVar10 = Int32.ToString(lVar3 + 24,0);
         uVar7 = String.Format("{0}年{1}月{2}日",uVar7,uVar9,uVar10,0);
         LTLocalization.SetText(uVar4,uVar7,0);
@@ -411,70 +410,70 @@ public class HudController
         lVar14 = *pStatics_b490;
         lVar5 = *(int64 *)(*(int64 *)(DAT_181db4f18 + 184) + 8);
         if (lVar5 == null) goto LAB_180b0c071;
-        lVar5 = *(int64 *)(lVar5 + 32);
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar6 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+        lVar5 = lVar5.villageAreaID;
+        if (((GameController._instance == null) ||
+            (lVar6 = GameController._instance.worldData) == null) ||
            (lVar5 == null)) goto LAB_180b0c071;
-        uVar13 = *(uint32 *)(lVar6 + 0x16c);
-        if (*(uint32 *)(lVar5 + 24) <= uVar13) {
+        uVar13 = lVar6.nowWeather;
+        if (lVar5.cityAreaID <= uVar13) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
-        lVar5 = lVar5[uVar13];
+        lVar5 = lVar5.chapter[uVar13];
         if (((lVar5 == null) ||
-            (uVar4 = String.Concat("天气_",*(uint64 *)(lVar5 + 16),0), lVar14 == null)) ||
+            (uVar4 = String.Concat("天气_",lVar5.chapter,0), lVar14 == null)) ||
            (uVar4 = TextureController.LoadAtlasSprite(lVar14,"UIAtlas",uVar4,0), lVar3 == null))
         goto LAB_180b0c071;
         Image.set_sprite(lVar3,uVar4,0);
         lVar3 = this.seasonIcon;
         lVar14 = *pStatics_b490;
         lVar5 = *(int64 *)(pStatics_3d40 + 0x3d0);
-        if ((((*pStatics_2cc8 == 0) ||
-             (lVar6 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
-            (lVar6 = *(int64 *)(lVar6 + 168)) == null) ||
+        if ((((GameController._instance == null) ||
+             (lVar6 = GameController._instance.worldData) == null) ||
+            (lVar6 = lVar6.worldTime) == null) ||
            (iVar2 = Mathf.CeilToInt((float)*(int *)(lVar6 + 20) / 3.0,0), lVar5 == null))
         goto LAB_180b0c071;
-        if (*(uint32 *)(lVar5 + 24) <= iVar2 - 1U) {
+        if (lVar5.cityAreaID <= iVar2 - 1U) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         uVar4 = String.Concat("季节_",
                                *(uint64 *)
-                                (*(int64 *)(lVar5 + 16) + 32 + (int64)(int)(iVar2 - 1U) * 8),0);
+                                (lVar5.chapter + 32 + (int64)(int)(iVar2 - 1U) * 8),0);
         if ((lVar14 == null) ||
            (uVar4 = TextureController.LoadAtlasSprite(lVar14,"UIAtlas",uVar4,0), lVar3 == null))
         goto LAB_180b0c071;
         Image.set_sprite(lVar3,uVar4,0);
         uVar4 = this.nameLabel;
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+        if (((GameController._instance == null) ||
+            (lVar3 = GameController._instance.worldData) == null) ||
            (lVar3 = WorldData.Player(lVar3,0)) == null) goto LAB_180b0c071;
-        LTLocalization.SetText(uVar4,*(uint64 *)(lVar3 + 104),0);
+        LTLocalization.SetText(uVar4,lVar3.AreaMapRandomEventDatas,0);
         uVar4 = this.fightScoreLabel;
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+        if (((GameController._instance == null) ||
+            (lVar3 = GameController._instance.worldData) == null) ||
            (lVar3 = WorldData.Player(lVar3,0)) == null) goto LAB_180b0c071;
         uVar7 = Single.ToString(lVar3 + 0x3d4,"f0",0);
         LTLocalization.SetText(uVar4,uVar7,0);
         uVar4 = this.fameLabel;
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+        if (((GameController._instance == null) ||
+            (lVar3 = GameController._instance.worldData) == null) ||
            (lVar3 = WorldData.Player(lVar3,0)) == null) goto LAB_180b0c071;
         uVar7 = Single.ToString(lVar3 + 0x1c4,"f0",0);
         LTLocalization.SetText(uVar4,uVar7,0);
         uVar4 = this.badfameLabel;
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+        if (((GameController._instance == null) ||
+            (lVar3 = GameController._instance.worldData) == null) ||
            (lVar3 = WorldData.Player(lVar3,0)) == null) goto LAB_180b0c071;
         uVar7 = Single.ToString(lVar3 + 0x1c8,"f0",0);
         LTLocalization.SetText(uVar4,uVar7,0);
         plVar11 = this.badfameLabel;
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+        if (((GameController._instance == null) ||
+            (lVar3 = GameController._instance.worldData) == null) ||
            (lVar3 = WorldData.Player(lVar3,0)) == null) goto LAB_180b0c071;
-        if (*(float *)(lVar3 + 0x1c8) < *(float *)(pStatics_3d40 + 300)) {
-          if (((*pStatics_2cc8 == 0) ||
-              (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+        if (lVar3.thisYearExploreSpeEventNum < *(float *)(pStatics_3d40 + 300)) {
+          if (((GameController._instance == null) ||
+              (lVar3 = GameController._instance.worldData) == null) ||
              (lVar3 = WorldData.Player(lVar3,0)) == null) goto LAB_180b0c071;
-          if (*(float *)(lVar3 + 0x1c8) <= 0.0) {
+          if (lVar3.thisYearExploreSpeEventNum <= 0.0) {
             puVar8 = (uint64 *)FUN_1810d3570(&local_78,0);
           }
           else {
@@ -490,15 +489,15 @@ public class HudController
         (**(code **)(*plVar11 + 0x2a8))(plVar11,&local_78,*(uint64 *)(*plVar11 + 0x2b0));
         if (this.badfameIcon == null) goto LAB_180b0c071;
         plVar11 = (int64 *)GameObject.GetComponent(this.badfameIcon,DAT_181d71e80);
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+        if (((GameController._instance == null) ||
+            (lVar3 = GameController._instance.worldData) == null) ||
            (lVar3 = WorldData.Player(lVar3,0)) == null) goto LAB_180b0c071;
         cVar1 = HeroData.HaveArea(lVar3,0);
         if (!cVar1) {
           lVar3 = FUN_18046c0a0(0);
-          if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-             (lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0)) == null) goto LAB_180b0c071;
-          if (*(char *)(lVar3 + 208) == false) {
+          if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+             (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) == null) goto LAB_180b0c071;
+          if (!lVar3.infos) {
             puVar8 = (uint64 *)FUN_1810d3570(&local_78,0);
           }
           else {
@@ -514,46 +513,46 @@ public class HudController
         (**(code **)(*plVar11 + 0x2a8))(plVar11,&local_78,*(uint64 *)(*plVar11 + 0x2b0));
         if (this.badfameIcon == null) goto LAB_180b0c071;
         lVar3 = GameObject.GetComponent(this.badfameIcon,DAT_181d73448);
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar14 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+        if (((GameController._instance == null) ||
+            (lVar14 = GameController._instance.worldData) == null) ||
            (lVar14 = WorldData.Player(lVar14,0)) == null) goto LAB_180b0c071;
         cVar1 = HeroData.HaveArea(lVar14,0);
         uVar4 = "恶名\n城镇内x200%";
         if (!cVar1) {
           lVar14 = FUN_18046c0a0(0);
-          if (((lVar14 == null) || (*(int64 *)(lVar14 + 32) == 0)) ||
-             (lVar14 = WorldData.Player(*(int64 *)(lVar14 + 32),0)) == null)
+          if (((lVar14 == null) || (lVar14.villageAreaID == null)) ||
+             (lVar14 = WorldData.Player(lVar14.villageAreaID,0)) == null)
           goto LAB_180b0c071;
           uVar4 = "恶名\n野外x100%";
-          if (*(char *)(lVar14 + 208) != false) {
+          if (lVar14.infos) {
             uVar4 = "恶名\n安全区内x150%";
           }
         }
         if (lVar3 == null) goto LAB_180b0c071;
         lVar3.Count = uVar4;
         uVar4 = this.moneyLabel;
-        if ((((*pStatics_2cc8 == 0) ||
-             (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
-            (lVar3 = WorldData.Player(lVar3,0)) == null) || (*(int64 *)(lVar3 + 0x220) == 0))
+        if ((((GameController._instance == null) ||
+             (lVar3 = GameController._instance.worldData) == null) ||
+            (lVar3 = WorldData.Player(lVar3,0)) == null) || (lVar3.speBookStorageSpeAdd == null))
         goto LAB_180b0c071;
-        uVar7 = Int32.ToString(*(int64 *)(lVar3 + 0x220) + 24,0);
+        uVar7 = Int32.ToString(lVar3.speBookStorageSpeAdd + 24,0);
         LTLocalization.SetText(uVar4,uVar7,0);
         uVar4 = this.moneyLayout;
         LayoutRebuilder.ForceRebuildLayoutImmediate(uVar4,0);
         uVar4 = this.forceLabel;
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+        if (((GameController._instance == null) ||
+            (lVar3 = GameController._instance.worldData) == null) ||
            (lVar3 = WorldData.Player(lVar3,0)) == null) goto LAB_180b0c071;
         uVar7 = HeroData.GetHeroForceLvDescribe(lVar3,1,0);
         LTLocalization.SetText(uVar4,uVar7,0);
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+        if (((GameController._instance == null) ||
+            (lVar3 = GameController._instance.worldData) == null) ||
            (lVar3 = WorldData.Player(lVar3,0)) == null) goto LAB_180b0c071;
         cVar1 = HeroData.HaveForce(lVar3,0);
         if (!cVar1) {
           lVar3 = FUN_18046c0a0(0);
-          if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-             (lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0)) == null) goto LAB_180b0c071;
+          if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+             (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) == null) goto LAB_180b0c071;
           cVar1 = HeroData.HaveServantForce(lVar3,0);
           lVar3 = this.forceLabel;
           if (!cVar1) {
@@ -564,24 +563,24 @@ public class HudController
             }
             lVar3 = Component.GetComponent(lVar3,DAT_181d95560);
             lVar14 = FUN_18046c0a0(0);
-            if (((lVar14 == null) || (*(int64 *)(lVar14 + 32) == 0)) ||
-               (lVar14 = WorldData.Player(*(int64 *)(lVar14 + 32),0)) == null)
+            if (((lVar14 == null) || (lVar14.villageAreaID == null)) ||
+               (lVar14 = WorldData.Player(lVar14.villageAreaID,0)) == null)
             goto LAB_180b0c07d;
             local_b8 = (float)HeroData.OutsideForceExtraContributionRate(lVar14,0xffffffff);
             local_b8 = local_b8 * 100.0;
             uVar4 = il2cpp_value_box(DAT_181da22d8,&local_b8);
             uVar4 = String.Format("官府/所有门派功绩+{0}%",uVar4,0);
             lVar14 = FUN_18046c0a0(0);
-            if (((lVar14 == null) || (*(int64 *)(lVar14 + 32) == 0)) ||
-               (lVar14 = WorldData.Player(*(int64 *)(lVar14 + 32),0)) == null)
+            if (((lVar14 == null) || (lVar14.villageAreaID == null)) ||
+               (lVar14 = WorldData.Player(lVar14.villageAreaID,0)) == null)
             goto LAB_180b0c07d;
             uVar7 = "\n<i><color=#696969>江湖地位由声望直接决定\n达到下一级别需声望{0}</color></i>";
-            if (4 < *(int *)(lVar14 + 184)) {
+            if (4 < lVar14.forceMeetingStarted) {
               uVar7 = "";
             }
             lVar14 = FUN_18046c0a0(0);
-            if (((lVar14 == null) || (*(int64 *)(lVar14 + 32) == 0)) ||
-               (lVar14 = WorldData.Player(*(int64 *)(lVar14 + 32),0)) == null) {
+            if (((lVar14 == null) || (lVar14.villageAreaID == null)) ||
+               (lVar14 = WorldData.Player(lVar14.villageAreaID,0)) == null) {
         LAB_180b0c077:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -602,12 +601,12 @@ public class HudController
             lVar3 = Component.GetComponent(lVar3,DAT_181d95560);
             plVar11 = (int64 *)FUN_1800d60b0(DAT_181da4120,4);
             lVar14 = FUN_18046c0a0(0);
-            if ((lVar14 == null) || (*(int64 *)(lVar14 + 32) == 0)) goto LAB_180b0c109;
-            lVar14 = WorldData.Player(*(int64 *)(lVar14 + 32),0);
+            if ((lVar14 == null) || (lVar14.villageAreaID == null)) goto LAB_180b0c109;
+            lVar14 = WorldData.Player(lVar14.villageAreaID,0);
             lVar5 = FUN_18046c0a0(0);
             if ((lVar5 == null) ||
-               (((*(int64 *)(lVar5 + 32) == 0 ||
-                 (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null) || (lVar14 == null))
+               (((lVar5.villageAreaID == null ||
+                 (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null) || (lVar14 == null))
                )) goto LAB_180b0c109;
             local_b4 = (float)HeroData.OutsideForceExtraContributionRate
                                         (lVar14,*(uint32 *)(lVar5 + 0x380),0);
@@ -629,10 +628,10 @@ public class HudController
             il2cpp_internal(plVar11 + 4,lVar14);
             lVar14 = FUN_18046c0a0(0);
             if (lVar14 == null) goto LAB_180b0c109;
-            lVar14 = *(int64 *)(lVar14 + 32);
+            lVar14 = lVar14.villageAreaID;
             lVar5 = FUN_18046c0a0(0);
-            if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-               ((lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0), lVar5 == null ||
+            if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+               ((lVar5 = WorldData.Player(lVar5.villageAreaID,0), lVar5 == null ||
                 ((lVar14 == null ||
                  (lVar14 = WorldData.GetForce(lVar14,*(uint32 *)(lVar5 + 0x380),0)) == null)))))
             goto LAB_180b0c109;
@@ -651,10 +650,10 @@ public class HudController
             plVar11[5] = lVar14;
             il2cpp_internal(plVar11 + 5,lVar14);
             lVar14 = FUN_18046c0a0(0);
-            if (((lVar14 == null) || (*(int64 *)(lVar14 + 32) == 0)) ||
-               (lVar14 = WorldData.Player(*(int64 *)(lVar14 + 32),0)) == null)
+            if (((lVar14 == null) || (lVar14.villageAreaID == null)) ||
+               (lVar14 = WorldData.Player(lVar14.villageAreaID,0)) == null)
             goto LAB_180b0c109;
-            local_b8 = (float)(int)*(float *)(lVar14 + 160);
+            local_b8 = (float)(int)lVar14.gameDifficulty;
             lVar14 = il2cpp_value_box(DAT_181d80418,&local_b8);
             if ((lVar14 != null) &&
                (lVar5 = il2cpp_internal(lVar14,*(uint64 *)(*plVar11 + 64))) == null) {
@@ -670,8 +669,8 @@ public class HudController
             plVar11[6] = lVar14;
             il2cpp_internal(plVar11 + 6,lVar14);
             lVar14 = FUN_18046c0a0(0);
-            if ((lVar14 == null) || (*(int64 *)(lVar14 + 32) == 0)) goto LAB_180b0c109;
-            local_b0 = 1 - *(int *)(*(int64 *)(lVar14 + 32) + 0x150);
+            if ((lVar14 == null) || (lVar14.villageAreaID == null)) goto LAB_180b0c109;
+            local_b0 = 1 - *(int *)(lVar14.villageAreaID + 0x150);
             lVar14 = il2cpp_value_box(DAT_181d80418,&local_b0);
             if ((lVar14 != null) &&
                (lVar5 = il2cpp_internal(lVar14,*(uint64 *)(*plVar11 + 64))) == null) {
@@ -688,16 +687,16 @@ public class HudController
             il2cpp_internal(plVar11 + 7,lVar14);
             uVar4 = String.Format("{1}功绩+{0}%\n获得{0}%门派加成效果\n当月功绩可获月俸<b>{2}</b>\n每月刷新门派委托{3}/1次",plVar11,0);
             lVar14 = FUN_18046c0a0(0);
-            if (((lVar14 == null) || (*(int64 *)(lVar14 + 32) == 0)) ||
-               (lVar14 = WorldData.Player(*(int64 *)(lVar14 + 32),0)) == null)
+            if (((lVar14 == null) || (lVar14.villageAreaID == null)) ||
+               (lVar14 = WorldData.Player(lVar14.villageAreaID,0)) == null)
             goto LAB_180b0c109;
             uVar7 = "\n<i><color=#696969>门客地位由声望直接决定\n达到下一级别需声望{0}</color></i>";
-            if (4 < *(int *)(lVar14 + 184)) {
+            if (4 < lVar14.forceMeetingStarted) {
               uVar7 = "";
             }
             lVar14 = FUN_18046c0a0(0);
-            if (((lVar14 == null) || (*(int64 *)(lVar14 + 32) == 0)) ||
-               (lVar14 = WorldData.Player(*(int64 *)(lVar14 + 32),0)) == null) {
+            if (((lVar14 == null) || (lVar14.villageAreaID == null)) ||
+               (lVar14 = WorldData.Player(lVar14.villageAreaID,0)) == null) {
         LAB_180b0c103:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -714,59 +713,59 @@ public class HudController
           if (this.forceLabel == null) goto LAB_180b0c071;
           lVar3 = Component.GetComponent(this.forceLabel,DAT_181d95560);
           lVar14 = *(int64 *)(pStatics_3d40 + 0x4c0);
-          if (((*pStatics_2cc8 == 0) ||
-              (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+          if (((GameController._instance == null) ||
+              (lVar5 = GameController._instance.worldData) == null) ||
              (lVar5 = WorldData.Player(lVar5,0)) == null) goto LAB_180b0c071;
-          if (*(char *)(lVar5 + 180) == false) {
+          if (!lVar5.hour) {
             lVar5 = FUN_18046c0a0(0);
-            if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-               (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null) goto LAB_180b0c071;
-            uVar13 = *(uint32 *)(lVar5 + 184);
+            if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+               (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null) goto LAB_180b0c071;
+            uVar13 = lVar5.forceMeetingStarted;
           }
           else {
             uVar13 = 6;
           }
           if (lVar14 == null) goto LAB_180b0c071;
-          if (*(uint32 *)(lVar14 + 24) <= uVar13) {
+          if (lVar14.cityAreaID <= uVar13) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          uVar4 = lVar14[uVar13];
+          uVar4 = lVar14.chapter[uVar13];
           if (lVar3 == null) goto LAB_180b0c071;
           lVar3.Count = uVar4;
         }
         il2cpp_internal(puVar8,uVar4);
         HudController.RefreshNowResearch(this,0);
-        if ((*pStatics_2cc8 == 0) ||
-           (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null)
+        if ((GameController._instance == null) ||
+           (lVar3 = GameController._instance.worldData) == null)
         goto LAB_180b0c071;
         lVar3 = WorldData.Player(lVar3,0);
         uVar4 = Component.get_gameObject(this,0);
         if (lVar3 == null) goto LAB_180b0c071;
         HeroData.SetHpBar(lVar3,uVar4,0);
-        if ((*pStatics_2cc8 == 0) ||
-           (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null)
+        if ((GameController._instance == null) ||
+           (lVar3 = GameController._instance.worldData) == null)
         goto LAB_180b0c071;
         lVar3 = WorldData.Player(lVar3,0);
         uVar4 = Component.get_gameObject(this,0);
         if (lVar3 == null) goto LAB_180b0c071;
         HeroData.SetMpBar(lVar3,uVar4,0);
         uVar4 = this.externalInjury;
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+        if (((GameController._instance == null) ||
+            (lVar3 = GameController._instance.worldData) == null) ||
            (lVar3 = WorldData.Player(lVar3,0)) == null) goto LAB_180b0c071;
-        HudController.FreshHudInjury(this,uVar4,*(uint32 *)(lVar3 + 0x1a0),0);
+        HudController.FreshHudInjury(this,uVar4,lVar3.studyFightWithGreatHeroMultiWinNum,0);
         uVar4 = this.internalInjury;
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+        if (((GameController._instance == null) ||
+            (lVar3 = GameController._instance.worldData) == null) ||
            (lVar3 = WorldData.Player(lVar3,0)) == null) goto LAB_180b0c071;
-        HudController.FreshHudInjury(this,uVar4,*(uint32 *)(lVar3 + 0x1a4),0);
+        HudController.FreshHudInjury(this,uVar4,lVar3.studyFightWithGreatHeroFinalWinNum,0);
         uVar4 = *(uint64 *)(this + 200);
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+        if (((GameController._instance == null) ||
+            (lVar3 = GameController._instance.worldData) == null) ||
            (lVar3 = WorldData.Player(lVar3,0)) == null) goto LAB_180b0c071;
-        HudController.FreshHudInjury(this,uVar4,*(uint32 *)(lVar3 + 0x1a8),0);
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+        HudController.FreshHudInjury(this,uVar4,lVar3.totalHeroMeet,0);
+        if (((GameController._instance == null) ||
+            (lVar3 = GameController._instance.worldData) == null) ||
            (lVar3 = WorldData.Player(lVar3,0)) == null) goto LAB_180b0c071;
         cVar1 = HeroData.HaveForce(lVar3,0);
         lVar3 = this.forceUI;
@@ -829,22 +828,22 @@ public class HudController
         }
         uVar4 = this.contributionLabel;
         lVar3 = FUN_18046c0a0(0);
-        if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-           (lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0)) == null) goto LAB_180b0c071;
-        local_res8[0] = (int)*(float *)(lVar3 + 0x1c0);
+        if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+           (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) == null) goto LAB_180b0c071;
+        local_res8[0] = (int)lVar3.playerBookWriter;
         uVar7 = Int32.ToString(local_res8,0);
         lVar3 = FUN_18046c0a0(0);
-        if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-           (lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0)) == null) goto LAB_180b0c071;
+        if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+           (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) == null) goto LAB_180b0c071;
         local_res8[0] = HeroData.GetUpgradeForceLvNeedContribution(lVar3,0x3f800000,0);
         uVar9 = Int32.ToString(local_res8,0);
         uVar7 = String.Concat(uVar7,"/",uVar9,0);
         LTLocalization.SetText(uVar4,uVar7,0);
         lVar3 = FUN_18046c0a0(0);
-        if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-           (lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0)) == null) goto LAB_180b0c071;
+        if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+           (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) == null) goto LAB_180b0c071;
         lVar14 = this.forceUI;
-        if (*(char *)(lVar3 + 180) == false) {
+        if (!lVar3.hour) {
           if ((lVar14 == null) || (lVar3 = GameObject.get_transform(lVar14,0)) == null)
           goto LAB_180b0c071;
           lVar3 = Transform.Find(lVar3,"ContributionBarBack",0);
@@ -859,13 +858,13 @@ public class HudController
               (lVar3 = Transform.Find(lVar3,"ContributionBar",0)) == null))) goto LAB_180b0c071;
           lVar3 = Component.GetComponent(lVar3,DAT_181d94460);
           lVar14 = FUN_18046c0a0(0);
-          if (((lVar14 == null) || (*(int64 *)(lVar14 + 32) == 0)) ||
-             (lVar14 = WorldData.Player(*(int64 *)(lVar14 + 32),0)) == null)
+          if (((lVar14 == null) || (lVar14.villageAreaID == null)) ||
+             (lVar14 = WorldData.Player(lVar14.villageAreaID,0)) == null)
           goto LAB_180b0c071;
-          fVar16 = *(float *)(lVar14 + 0x1c0);
+          fVar16 = lVar14.playerBookWriter;
           lVar14 = FUN_18046c0a0(0);
-          if (((lVar14 == null) || (*(int64 *)(lVar14 + 32) == 0)) ||
-             ((lVar14 = WorldData.Player(*(int64 *)(lVar14 + 32),0), lVar14 == null ||
+          if (((lVar14 == null) || (lVar14.villageAreaID == null)) ||
+             ((lVar14 = WorldData.Player(lVar14.villageAreaID,0), lVar14 == null ||
               (iVar2 = HeroData.GetUpgradeForceLvNeedContribution(lVar14,0x3f800000,0), lVar3 == null))))
           goto LAB_180b0c071;
           Image.set_fillAmount(lVar3,fVar16 / (float)iVar2,0);
@@ -875,14 +874,14 @@ public class HudController
           lVar3 = Transform.Find(lVar3,"ContributionFull",0);
           lVar14 = FUN_18046c0a0(0);
           if ((lVar14 == null) ||
-             ((*(int64 *)(lVar14 + 32) == 0 ||
-              (lVar14 = WorldData.Player(*(int64 *)(lVar14 + 32),0)) == null)))
+             ((lVar14.villageAreaID == null ||
+              (lVar14 = WorldData.Player(lVar14.villageAreaID,0)) == null)))
           goto LAB_180b0c071;
-          fVar16 = *(float *)(lVar14 + 0x1c0);
+          fVar16 = lVar14.playerBookWriter;
           lVar14 = FUN_18046c0a0(0);
           if ((lVar14 == null) ||
-             ((*(int64 *)(lVar14 + 32) == 0 ||
-              (lVar14 = WorldData.Player(*(int64 *)(lVar14 + 32),0)) == null)))
+             ((lVar14.villageAreaID == null ||
+              (lVar14 = WorldData.Player(lVar14.villageAreaID,0)) == null)))
           goto LAB_180b0c071;
           iVar2 = HeroData.GetUpgradeForceLvNeedContribution(lVar14,0x3f800000,0);
           if (fVar16 < (float)iVar2) {
@@ -918,12 +917,12 @@ public class HudController
         Transform.set_localScale(lVar3,&local_98,0);
         uVar4 = this.heroNumLabel;
         lVar3 = FUN_18046c0a0(0);
-        if (((lVar3 != null) && (*(int64 *)(lVar3 + 32) != 0)) &&
-           (lVar3 = WorldData.GetHeroForce(*(int64 *)(lVar3 + 32),0,0)) != null) {
+        if (((lVar3 != null) && (lVar3.villageAreaID != null)) &&
+           (lVar3 = WorldData.GetHeroForce(lVar3.villageAreaID,0,0)) != null) {
           uVar7 = Int32.ToString(lVar3 + 132,0);
           lVar3 = FUN_18046c0a0(0);
-          if (((lVar3 != null) && (*(int64 *)(lVar3 + 32) != 0)) &&
-             (lVar3 = WorldData.GetHeroForce(*(int64 *)(lVar3 + 32),0,0)) != null) {
+          if (((lVar3 != null) && (lVar3.villageAreaID != null)) &&
+             (lVar3 = WorldData.GetHeroForce(lVar3.villageAreaID,0,0)) != null) {
             fVar16 = (float)ForceData.GetMaxHeroNum(lVar3,0);
             local_res8[0] = (int)fVar16;
             uVar9 = Int32.ToString(local_res8,0);
@@ -931,14 +930,14 @@ public class HudController
             LTLocalization.SetText(uVar4,uVar7,0);
             uVar4 = this.areaNumLabel;
             lVar3 = FUN_18046c0a0(0);
-            if ((((lVar3 != null) && (*(int64 *)(lVar3 + 32) != 0)) &&
-                (lVar3 = WorldData.GetHeroForce(*(int64 *)(lVar3 + 32),0,0)) != null) &&
-               (*(int64 *)(lVar3 + 96) != 0)) {
-              local_res8[0] = *(int *)(*(int64 *)(lVar3 + 96) + 24);
+            if ((((lVar3 != null) && (lVar3.villageAreaID != null)) &&
+                (lVar3 = WorldData.GetHeroForce(lVar3.villageAreaID,0,0)) != null) &&
+               (lVar3.BigMapRandomEventDatas != null)) {
+              local_res8[0] = *(int *)(lVar3.BigMapRandomEventDatas + 24);
               uVar7 = Int32.ToString(local_res8,0);
               lVar3 = FUN_18046c0a0(0);
-              if (((lVar3 != null) && (*(int64 *)(lVar3 + 32) != 0)) &&
-                 (lVar3 = WorldData.GetHeroForce(*(int64 *)(lVar3 + 32),0,0)) != null) {
+              if (((lVar3 != null) && (lVar3.villageAreaID != null)) &&
+                 (lVar3 = WorldData.GetHeroForce(lVar3.villageAreaID,0,0)) != null) {
                 fVar16 = (float)ForceData.GetMaxAreaNum(lVar3,0);
                 local_res8[0] = (int)fVar16;
                 uVar9 = Int32.ToString(local_res8,0);
@@ -947,14 +946,14 @@ public class HudController
                 local_res18[0] = 0;
                 do {
                   iVar2 = local_res18[0];
-                  if ((((*pStatics_2cc8 == 0) ||
-                       (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null)
+                  if ((((GameController._instance == null) ||
+                       (lVar3 = GameController._instance.worldData) == null)
                       || (lVar3 = WorldData.GetHeroForce(lVar3,0,0)) == null) ||
-                     (*(int64 *)(lVar3 + 136) == 0)) break;
-                  if (*(int *)(*(int64 *)(lVar3 + 136) + 24) <= iVar2) {
+                     (lVar3.WorldNewsDatas == null)) break;
+                  if (*(int *)(lVar3.WorldNewsDatas + 24) <= iVar2) {
                     lVar3 = FUN_18046c0a0(0);
-                    if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                       (lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0)) == null) break;
+                    if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                       (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) == null) break;
                     cVar1 = HeroData.HaveForceFunction(lVar3,6);
                     lVar3 = this.forceUI;
                     if (!cVar1) {
@@ -979,8 +978,8 @@ public class HudController
                           ) || (lVar3 = Transform.Find(lVar3,"SpeResourceNum",0)) == null) break;
                       uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
                       lVar3 = FUN_18046c0a0(0);
-                      if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) break;
-                      uVar7 = Int32.ToString(*(int64 *)(lVar3 + 32) + 0x230,0);
+                      if ((lVar3 == null) || (lVar3.villageAreaID == null)) break;
+                      uVar7 = Int32.ToString(lVar3.villageAreaID + 0x230,0);
                       LTLocalization.SetText(uVar4,uVar7,0);
                     }
                     goto LAB_180b0be8d;
@@ -991,26 +990,26 @@ public class HudController
                   if ((lVar3 == null) || (lVar3 = Transform.Find(lVar3,uVar4,0)) == null) break;
                   uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
                   lVar3 = FUN_18046c0a0(0);
-                  if ((((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                      (lVar3 = WorldData.GetHeroForce(*(int64 *)(lVar3 + 32),0,0)) == null) ||
-                     (*(int64 *)(lVar3 + 136) == 0)) break;
-                  fVar16 = (float)FUN_1800d6790(*(int64 *)(lVar3 + 136),local_res18[0],DAT_181da1078);
+                  if ((((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                      (lVar3 = WorldData.GetHeroForce(lVar3.villageAreaID,0,0)) == null) ||
+                     (lVar3.WorldNewsDatas == null)) break;
+                  fVar16 = (float)FUN_1800d6790(lVar3.WorldNewsDatas,local_res18[0],DAT_181da1078);
                   local_res8[0] = (int)fVar16;
                   uVar7 = Int32.ToString(local_res8,0);
                   lVar3 = FUN_18046c0a0(0);
-                  if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                     ((lVar3 = WorldData.GetHeroForce(*(int64 *)(lVar3 + 32),0,0), lVar3 == null ||
-                      (*(int64 *)(lVar3 + 144) == 0)))) break;
-                  fVar16 = (float)FUN_1800d6790(*(int64 *)(lVar3 + 144),local_res18[0],DAT_181da1078);
+                  if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                     ((lVar3 = WorldData.GetHeroForce(lVar3.villageAreaID,0,0), lVar3 == null ||
+                      (lVar3.MailDatas == null)))) break;
+                  fVar16 = (float)FUN_1800d6790(lVar3.MailDatas,local_res18[0],DAT_181da1078);
                   local_res8[0] = (int)fVar16;
                   uVar9 = Int32.ToString(local_res8,0);
                   uVar7 = String.Concat(uVar7,"/",uVar9,0);
                   LTLocalization.SetText(uVar4,uVar7,0);
                   lVar3 = FUN_18046c0a0(0);
-                  if ((((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                      (lVar3 = WorldData.GetHeroForce(*(int64 *)(lVar3 + 32),0,0)) == null) ||
-                     (*(int64 *)(lVar3 + 152) == 0)) break;
-                  fVar16 = (float)FUN_1800d6790(*(int64 *)(lVar3 + 152),local_res18[0]);
+                  if ((((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                      (lVar3 = WorldData.GetHeroForce(lVar3.villageAreaID,0,0)) == null) ||
+                     (lVar3.cheating == null)) break;
+                  fVar16 = (float)FUN_1800d6790(lVar3.cheating,local_res18[0]);
                   lVar3 = this.forceUI;
                   if (fVar16 == 0.0) {
                     if (lVar3 == null) break;
@@ -1029,11 +1028,11 @@ public class HudController
                        (lVar3 = Transform.Find(lVar3,"Add",0)) == null) break;
                     uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
                     lVar3 = FUN_18046c0a0(0);
-                    if ((((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                        (lVar3 = WorldData.GetHeroForce(*(int64 *)(lVar3 + 32),0,0)) == null) ||
-                       (*(int64 *)(lVar3 + 152) == 0)) break;
+                    if ((((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                        (lVar3 = WorldData.GetHeroForce(lVar3.villageAreaID,0,0)) == null) ||
+                       (lVar3.cheating == null)) break;
                     local_res20[0] =
-                         (float)FUN_1800d6790(*(int64 *)(lVar3 + 152),local_res18[0],DAT_181da1078);
+                         (float)FUN_1800d6790(lVar3.cheating,local_res18[0],DAT_181da1078);
                     uVar7 = Single.ToString(local_res20,"+0;-0;0",0);
                     LTLocalization.SetText(uVar4,uVar7,0);
                     if (this.forceUI == null) break;
@@ -1043,10 +1042,10 @@ public class HudController
                        (lVar3 = Transform.Find(lVar3,"Add",0)) == null) break;
                     plVar11 = (int64 *)Component.GetComponent(lVar3,DAT_181d96160);
                     lVar3 = FUN_18046c0a0(0);
-                    if ((((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                        (lVar3 = WorldData.GetHeroForce(*(int64 *)(lVar3 + 32),0,0)) == null) ||
-                       (*(int64 *)(lVar3 + 152) == 0)) break;
-                    fVar16 = (float)FUN_1800d6790(*(int64 *)(lVar3 + 152),local_res18[0],DAT_181da1078
+                    if ((((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                        (lVar3 = WorldData.GetHeroForce(lVar3.villageAreaID,0,0)) == null) ||
+                       (lVar3.cheating == null)) break;
+                    fVar16 = (float)FUN_1800d6790(lVar3.cheating,local_res18[0],DAT_181da1078
                                                  );
                     if (fVar16 <= 0.0) {
                       uVar4 = *(uint64 *)(pStatics_3d40 + 0x2f0);
@@ -1073,14 +1072,14 @@ public class HudController
                        (lVar3 = Transform.Find(lVar3,"Icon",0)) == null) goto LAB_180b0c10f;
                     lVar3 = Component.GetComponent(lVar3,DAT_181d95560);
                     lVar14 = FUN_18046c0a0(0);
-                    if (((lVar14 == null) || (*(int64 *)(lVar14 + 32) == 0)) ||
-                       (lVar14 = WorldData.GetHeroForce(*(int64 *)(lVar14 + 32),0,0)) == null)
+                    if (((lVar14 == null) || (lVar14.villageAreaID == null)) ||
+                       (lVar14 = WorldData.GetHeroForce(lVar14.villageAreaID,0,0)) == null)
                     goto LAB_180b0c10f;
                     local_ac = ForceData.GetRealSalaryCost(lVar14,0);
                     uVar4 = il2cpp_value_box(DAT_181d80418,&local_ac);
                     lVar14 = FUN_18046c0a0(0);
-                    if (((lVar14 == null) || (*(int64 *)(lVar14 + 32) == 0)) ||
-                       (lVar14 = WorldData.GetHeroForce(*(int64 *)(lVar14 + 32),0,0)) == null)
+                    if (((lVar14 == null) || (lVar14.villageAreaID == null)) ||
+                       (lVar14 = WorldData.GetHeroForce(lVar14.villageAreaID,0,0)) == null)
                     goto LAB_180b0c10f;
                     local_res20[0] = (float)ForceData.GetSalaryRate(lVar14,0);
                     local_res20[0] = local_res20[0] * 100.0;
@@ -1101,7 +1100,6 @@ public class HudController
     // RVA   : 0xB07F80   Offset: 0xB07380   Length: 0x969
     public void RefreshNowResearch()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         bool cVar1;
         long lVar2;
         long lVar3;
@@ -1112,13 +1110,13 @@ public class HudController
         ushort[] local_res18 = new ushort[4];
         uint[] local_res20 = new uint[2];
         uint[] local_18 = new uint[4];
-        if (((*pStatics == 0) ||
-            (lVar2 = *(int64 *)(*pStatics + 32)) == null) ||
+        if (((GameController._instance == null) ||
+            (lVar2 = GameController._instance.worldData) == null) ||
            (lVar2 = WorldData.Player(lVar2,0)) == null) throw; // [null/range check failed]
         lVar2 = HeroData.GetForce(lVar2,0,0);
         if (lVar2 != null) {
-          if ((((*pStatics == 0) ||
-               (lVar2 = *(int64 *)(*pStatics + 32)) == null) ||
+          if ((((GameController._instance == null) ||
+               (lVar2 = GameController._instance.worldData) == null) ||
               (lVar2 = WorldData.Player(lVar2,0)) == null) ||
              (lVar2 = HeroData.GetForce(lVar2,0,0)) == null) throw; // [null/range check failed]
           lVar2 = ForceData.GetNowResearchTech(lVar2,0);
@@ -1144,13 +1142,13 @@ public class HudController
                      (lVar2 = Transform.Find(lVar2,"Text",0)) != null) {
                     uVar4 = Component.GetComponent(lVar2,DAT_181d96160);
                     lVar2 = FUN_18046c0a0(0);
-                    if ((((lVar2 != null) && (*(int64 *)(lVar2 + 32) != 0)) &&
-                        (lVar2 = WorldData.Player(*(int64 *)(lVar2 + 32),0)) != null) &&
+                    if ((((lVar2 != null) && (lVar2.villageAreaID != null)) &&
+                        (lVar2 = WorldData.Player(lVar2.villageAreaID,0)) != null) &&
                        (((lVar2 = HeroData.GetForce(lVar2,0,0), lVar2 != null &&
                          (lVar2 = ForceData.GetNowResearchTech(lVar2,0)) != null) &&
                         ((lVar2 = ForceTechLvData.Database(lVar2,0), lVar2 != null &&
-                         (*(int64 *)(lVar2 + 24) != 0)))))) {
-                      local_res18[0] = String.get_Chars(*(int64 *)(lVar2 + 24),0,0);
+                         (lVar2.cityAreaID != null)))))) {
+                      local_res18[0] = String.get_Chars(lVar2.cityAreaID,0,0);
                       uVar5 = Char.ToString(local_res18,0);
                       LTLocalization.SetText(uVar4,uVar5,0);
                       if (this.nowResearch != null) {
@@ -1271,7 +1269,7 @@ public class HudController
                                         il2cpp_internal(plVar6 + 7,lVar3);
                                         uVar4 = String.Format("正在研究 {0}\n下一等级 {2}\n剩余时间 {1}日({3}%)",plVar6,0);
                                         if (lVar2 != null) {
-                                          *(uint64 *)(lVar2 + 24) = uVar4;
+                                          lVar2.cityAreaID = uVar4;
                                           return;
                                         }
                                       }

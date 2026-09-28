@@ -14,7 +14,6 @@ public class BattleAISettingController
     // RVA   : 0x7F7730   Offset: 0x7F6B30   Length: 0xA20
     public void Init()
     {
-        var pStatics_0248 = *(int64*)(DAT_181db0248 + 184);
         var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
         uint uVar1;
         ulong uVar2;
@@ -52,7 +51,7 @@ public class BattleAISettingController
         throw; // [null/range check failed]
         lVar6 = Component.get_gameObject(lVar6,0);
         lVar8 = this.targetBattleUnit;
-        uVar10 = *(uint64 *)(pStatics_0248 + 80);
+        uVar10 = PlotController.LaBaFestivelResultTalkText;
         if (((uVar10 == 0) || (lVar8 == null)) || (lVar3 = lVar8.heroData) == null)
         throw; // [null/range check failed]
         if ((*(int *)(lVar3 + 88) == 0) || (*(char *)(lVar3 + 0x246) != false)) {
@@ -84,7 +83,7 @@ public class BattleAISettingController
         if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,uVar7,0)) == null) throw; // [null/range check failed]
         lVar6 = Component.get_gameObject(lVar6,0);
         lVar8 = this.targetBattleUnit;
-        uVar10 = *(uint64 *)(pStatics_0248 + 80);
+        uVar10 = PlotController.LaBaFestivelResultTalkText;
         if (((uVar10 == 0) || (lVar8 == null)) || (lVar3 = lVar8.heroData) == null)
         throw; // [null/range check failed]
         if ((*(int *)(lVar3 + 88) == 0) || (*(char *)(lVar3 + 0x246) != false)) {
@@ -152,7 +151,7 @@ public class BattleAISettingController
           Selectable.set_interactable(lVar6,0,0);
         }
         else {
-          lVar6 = *(int64 *)(pStatics_0248 + 80);
+          lVar6 = PlotController.LaBaFestivelResultTalkText;
           if (lVar6 == null) throw; // [null/range check failed]
           cVar4 = BattleController.HavePlayerUnit(lVar6,0);
           if (!cVar4) goto LAB_1807f7d00;
@@ -335,7 +334,6 @@ public class BattleAISettingController
     // RVA   : 0x7F74F0   Offset: 0x7F68F0   Length: 0x236
     public void AutoSettingButtonClicked(GameObject buttonClicked)
     {
-        var pStatics = *(int64*)(DAT_181db0248 + 184);
         long lVar1;
         ulong uVar2;
         bool cVar3;
@@ -351,12 +349,12 @@ public class BattleAISettingController
           if ((lVar6 != null) && (lVar1 != null)) {
             FUN_181833d40(lVar1,uVar4,*(char *)(lVar6 + 0x118) != false,DAT_181d8fb18);
             uVar5 = this.targetBattleUnit;
-            lVar1 = *(int64 *)(pStatics + 80);
+            lVar1 = PlotController.LaBaFestivelResultTalkText;
             if (lVar1 != null) {
               uVar2 = *(uint64 *)(lVar1 + 0x110);
               cVar3 = Object.op_Equality(uVar5,uVar2,0);
               if (cVar3) {
-                lVar1 = *(int64 *)(pStatics + 80);
+                lVar1 = PlotController.LaBaFestivelResultTalkText;
                 if (lVar1 == null) throw; // [null/range check failed]
                 *(uint8 *)(lVar1 + 0x290) = 1;
               }

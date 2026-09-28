@@ -357,6 +357,11 @@
     text: "每次改装都会提升对应部位的经验，部位升级后会提供永久的机关兽加成。"
   templates:
   - template: "♦{0}/{1}/{2}\\n♦{3}"
+- raw: "♦只能保留好感40以上的弟子。"
+  splits:
+  - text: "只能保留好感40以上的弟子。"
+  templates:
+  - template: "♦{0}"
 - raw: "♦在物品上下毒，当物品转移至他人身上时，就会使其中毒。\\n♦使用带毒装备，阅读带毒书籍等，会导致额外中毒。\\n♦服用带毒的丹药和饮食，会导致中毒加倍。"
   splits:
   - text: "在物品上下毒，当物品转移至他人身上时，就会使其中毒。"
@@ -375,13 +380,15 @@
     text: "马匹品质越高，初始耐力越多"
   templates:
   - template: "♦{0}\\n♦{1}\\n♦{2}"
-- raw: "♦将武功修炼至十重获得天赋点\\n♦在闭关室消耗天赋点领悟天赋"
+- raw: "♦将武功修炼至十重获得天赋点\\n♦在闭关室/武馆消耗天赋点领悟天赋"
   splits:
   - text: "将武功修炼至十重获得天赋点"
   - subIndex: 1
-    text: "在闭关室消耗天赋点领悟天赋"
+    text: "在闭关室"
+  - subIndex: 2
+    text: "武馆消耗天赋点领悟天赋"
   templates:
-  - template: "♦{0}\\n♦{1}"
+  - template: "♦{0}\\n♦{1}/{2}"
 - raw: "♦左ctrl+~键打开/关闭控制台。\\n♦上/下方向键切换上条/下条历史指令。\\n<color=red>♦开启作弊功能后，存档将无法获取成就且可能导致未知bug，请谨慎使用。</color>"
   splits:
   - text: "左"
@@ -1160,6 +1167,9 @@
 - raw: "供奉"
   splits:
   - text: "供奉"
+- raw: "保留弟子"
+  splits:
+  - text: "保留弟子"
 - raw: "信件格式测试文本信件格式测试文本信件格式测试文本信件格式测试文本信件格式测本信件格式测试文本信件格式测试文本"
   splits:
   - text: "信件格式测试文本信件格式测试文本信件格式测试文本信件格式测试文本信件格式测本信件格式测试文本信件格式测试文本"
@@ -1209,6 +1219,9 @@
 - raw: "入门弟子"
   splits:
   - text: "入门弟子"
+- raw: "全不选"
+  splits:
+  - text: "全不选"
 - raw: "全体出战"
   splits:
   - text: "全体出战"
@@ -1288,6 +1301,9 @@
 - raw: "全盔"
   splits:
   - text: "全盔"
+- raw: "全选"
+  splits:
+  - text: "全选"
 - raw: "全部"
   splits:
   - text: "全部"
@@ -1737,6 +1753,9 @@
     text: "快捷键"
   templates:
   - template: "{0}\\n<color=grey>{1}P</color>"
+- raw: "名称"
+  splits:
+  - text: "名称"
 - raw: "名门大派"
   splits:
   - text: "名门大派"
@@ -1772,6 +1791,9 @@
     text: "秘籍"
   templates:
   - template: "{0} {1}/{2}/{3}/{4}/{5}/{6}"
+- raw: "喜好物品"
+  splits:
+  - text: "喜好物品"
 - raw: "嘴巴"
   splits:
   - text: "嘴巴"
@@ -2247,6 +2269,15 @@
   - text: "弟子上限"
   templates:
   - template: "{0}+1"
+- raw: "弟子会优先修炼门派的专长技艺。"
+  splits:
+  - text: "弟子会优先修炼门派的专长技艺。"
+- raw: "弟子会优先修炼门派的专长武学。"
+  splits:
+  - text: "弟子会优先修炼门派的专长武学。"
+- raw: "弟子会优先获取更高品质的门派喜好物品。"
+  splits:
+  - text: "弟子会优先获取更高品质的门派喜好物品。"
 - raw: "弟子方针"
   splits:
   - text: "弟子方针"
@@ -2581,6 +2612,9 @@
 - raw: "技艺"
   splits:
   - text: "技艺"
+- raw: "技艺专长"
+  splits:
+  - text: "技艺专长"
 - raw: "技艺潜力 60"
   splits:
   - text: "技艺潜力"
@@ -3087,6 +3121,9 @@
 - raw: "武学"
   splits:
   - text: "武学"
+- raw: "武学专长"
+  splits:
+  - text: "武学专长"
 - raw: "武学图鉴"
   splits:
   - text: "武学图鉴"
@@ -3795,6 +3832,9 @@
 - raw: "繁體中文"
   splits:
   - text: "繁體中文"
+- raw: "红"
+  splits:
+  - text: "红"
 - raw: "练功"
   splits:
   - text: "练功"
@@ -3862,6 +3902,9 @@
 - raw: "继续游戏"
   splits:
   - text: "继续游戏"
+- raw: "绿"
+  splits:
+  - text: "绿"
 - raw: "缴纳罚款"
   splits:
   - text: "缴纳罚款"
@@ -3974,6 +4017,12 @@
     text: "消耗门派威望解锁江湖特殊角色招募"
   templates:
   - template: "{0}\\n<color=green>{1}\\n{2}</color>"
+- raw: "自立门户"
+  splits:
+  - text: "自立门户"
+- raw: "自立门户后，会根据行事风格重置所有门派初始好感。"
+  splits:
+  - text: "自立门户后，会根据行事风格重置所有门派初始好感。"
 - raw: "自身"
   splits:
   - text: "自身"
@@ -4033,6 +4082,9 @@
 - raw: "落草为寇"
   splits:
   - text: "落草为寇"
+- raw: "蓝"
+  splits:
+  - text: "蓝"
 - raw: "藏经经"
   splits:
   - text: "藏经经"
@@ -4045,6 +4097,9 @@
 - raw: "蜀中仙云映霞光"
   splits:
   - text: "蜀中仙云映霞光"
+- raw: "行事风格"
+  splits:
+  - text: "行事风格"
 - raw: "行事风格 中\\n弟子 19/0\\n银钱 365/1000 (+1050)\\n粮食 342/1000 (+120)\\n木料 319/1000 (+280)\\n矿石 312/1000 (+320)\\n药材 396/1000 (+160)\\n威望 350/1000 (0)"
   splits:
   - text: "行事风格"
@@ -4475,6 +4530,9 @@
     text: "琴榆芮榆芮忠诚3点"
   templates:
   - template: "{0}\\n{1}<color=#FF8C06>{2}</color>{3}  (0/3)"
+- raw: "门派倾向"
+  splits:
+  - text: "门派倾向"
 - raw: "门派功绩\\n用途：\\n♦提升门派地位\\n♦藏经阁阅读新秘籍\\n♦门派仓库兑换物品\\n获取：\\n♦每月门派任务\\n♦完成门派委托\\n♦获取门派资源"
   splits:
   - text: "门派功绩"
@@ -4522,6 +4580,9 @@
     text: "在皇宫提升勋阶来提升区域上限"
   templates:
   - template: "{0}\\n♦{1}\\n♦{2}/{3}/{4}/{5}/{6}"
+- raw: "门派名称"
+  splits:
+  - text: "门派名称"
 - raw: "门派威望"
   splits:
   - text: "门派威望"
@@ -4559,6 +4620,9 @@
 - raw: "门派木料"
   splits:
   - text: "门派木料"
+- raw: "门派标志"
+  splits:
+  - text: "门派标志"
 - raw: "门派矿石"
   splits:
   - text: "门派矿石"
@@ -4580,6 +4644,9 @@
 - raw: "门派银钱"
   splits:
   - text: "门派银钱"
+- raw: "门派颜色"
+  splits:
+  - text: "门派颜色"
 - raw: "闪避平衡模式"
   splits:
   - text: "闪避平衡模式"

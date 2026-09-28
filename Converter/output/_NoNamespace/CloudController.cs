@@ -53,7 +53,6 @@ public class CloudController
     private void Update()
     {
         var pStatics_35d0 = *(int64*)(DAT_181da35d0 + 184);
-        var pStatics_4f18 = *(int64*)(DAT_181db4f18 + 184);
         float fVar1;
         ulong uVar2;
         bool cVar3;
@@ -98,7 +97,7 @@ public class CloudController
           fVar14 = (float)local_98 * fVar12;
           fVar15 = local_98._4_4_ * fVar12;
           fVar12 = fStack_90 * fVar12;
-          lVar6 = *(int64 *)(pStatics_4f18 + 8);
+          lVar6 = BattleController.AttackAreaTypeStartMovePower;
           if ((lVar6 != null) && (lVar6 = WeatherController.GetNowWeather(lVar6,0)) != null) {
             fVar1 = *(float *)(lVar6 + 92);
             fStack_90 = fVar12 * fVar11 * fVar1 + (float)uStack_80;
@@ -121,7 +120,7 @@ public class CloudController
               il2cpp_runtime_class_init(&DAT_181db4f18);
               DAT_181e9d712 = true;
             }
-            lVar4 = *(int64 *)(pStatics_4f18 + 8);
+            lVar4 = BattleController.AttackAreaTypeStartMovePower;
             if ((lVar4 != null) && (lVar4 = WeatherController.GetNowWeather(lVar4,0)) != null) {
               uVar7 = *(uint64 *)(lVar4 + 96);
               uVar2 = *(uint64 *)(lVar4 + 104);

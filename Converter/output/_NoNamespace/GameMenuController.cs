@@ -48,9 +48,7 @@ public class GameMenuController
     // RVA   : 0xC2DA10   Offset: 0xC2CE10   Length: 0x107C
     public void ShowGameMenu()
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
-        var pStatics_6e30 = *(int64*)(DAT_181db6e30 + 184);
         int iVar1;
         bool cVar2;
         long lVar3;
@@ -125,18 +123,18 @@ public class GameMenuController
                               throw; // [null/range check failed]
                               uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
                               lVar3 = *(int64 *)(pStatics_3d40 + 184);
-                              if (((*pStatics_2cc8 == 0) ||
-                                  (lVar9 = *(int64 *)(*pStatics_2cc8 + 32),
+                              if (((GameController._instance == null) ||
+                                  (lVar9 = GameController._instance.worldData,
                                   lVar9 == null)) || (lVar3 == null)) throw; // [null/range check failed]
-                              uVar12 = *(uint32 *)(lVar9 + 156);
-                              if (*(uint32 *)(lVar3 + 24) <= uVar12) {
+                              uVar12 = lVar9.gameMode;
+                              if (lVar3.cityAreaID <= uVar12) {
                                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
                               }
                               uVar8 = *(uint64 *)
-                                       (*(int64 *)(lVar3 + 16) + 32 + (int64)(int)uVar12 * 8);
+                                       (lVar3.chapter + 32 + (int64)(int)uVar12 * 8);
                               lVar3 = FUN_18046c0a0(0);
-                              if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) throw; // [null/range check failed]
-                              uVar7 = WorldData.GetDifficlutyName(*(int64 *)(lVar3 + 32),0);
+                              if ((lVar3 == null) || (lVar3.villageAreaID == null)) throw; // [null/range check failed]
+                              uVar7 = WorldData.GetDifficlutyName(lVar3.villageAreaID,0);
                               uVar8 = String.Format("模式: {0}\n难度: {1}",uVar8,uVar7,0);
                               LTLocalization.SetText(uVar4,uVar8,0);
                               if (((this.gameMenu == null) ||
@@ -147,22 +145,22 @@ public class GameMenuController
                               throw; // [null/range check failed]
                               lVar9 = Component.GetComponent(lVar3,DAT_181d95560);
                               lVar3 = *(int64 *)(pStatics_3d40 + 200);
-                              if ((*pStatics_2cc8 == 0) ||
-                                 (lVar10 = *(int64 *)(*pStatics_2cc8 + 32),
+                              if ((GameController._instance == null) ||
+                                 (lVar10 = GameController._instance.worldData,
                                  lVar10 == null)) throw; // [null/range check failed]
-                              iVar1 = *(int *)(lVar10 + 160);
+                              iVar1 = lVar10.gameDifficulty;
                               lVar10 = FUN_18046c0a0(0);
-                              if ((lVar10 == null) || ((*(int64 *)(lVar10 + 32) == 0 || (lVar3 == null))))
+                              if ((lVar10 == null) || ((lVar10.villageAreaID == null || (lVar3 == null))))
                               throw; // [null/range check failed]
-                              uVar12 = (uint32)(*(char *)(*(int64 *)(lVar10 + 32) + 164) == false) +
+                              uVar12 = (uint32)(*(char *)(lVar10.villageAreaID + 164) == false) +
                                        iVar1;
-                              if (*(uint32 *)(lVar3 + 24) <= uVar12) {
+                              if (lVar3.cityAreaID <= uVar12) {
                                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
                               }
                               if (lVar9 == null) throw; // [null/range check failed]
-                              *(uint64 *)(lVar9 + 24) =
+                              lVar9.cityAreaID =
                                    *(uint64 *)
-                                    (*(int64 *)(lVar3 + 16) + 32 + (int64)(int)uVar12 * 8);
+                                    (lVar3.chapter + 32 + (int64)(int)uVar12 * 8);
                               il2cpp_internal();
                             }
                           }
@@ -173,13 +171,13 @@ public class GameMenuController
                             uVar4 = Transform.Find(lVar3,"ChapterInfo",0);
                             cVar2 = Object.op_Inequality(uVar4,0,0);
                             if (cVar2) {
-                              uVar4 = *(uint64 *)(pStatics_6e30 + 8);
+                              uVar4 = ChapterController._instance;
                               cVar2 = Object.op_Inequality(uVar4,0,0);
                               if (cVar2) {
-                                if ((*pStatics_2cc8 == 0) ||
-                                   (lVar3 = *(int64 *)(*pStatics_2cc8 + 32),
+                                if ((GameController._instance == null) ||
+                                   (lVar3 = GameController._instance.worldData,
                                    lVar3 == null)) throw; // [null/range check failed]
-                                if (*(int *)(lVar3 + 156) == 1) {
+                                if (lVar3.gameMode == 1) {
                                   if ((((this.gameMenu == null) ||
                                        (lVar3 = GameObject.get_transform(this.gameMenu,0)
                                        , lVar3 == null)) ||
@@ -193,10 +191,10 @@ public class GameMenuController
                                 }
                                 else {
                                   lVar3 = FUN_18046c0a0(0);
-                                  if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0))
+                                  if ((lVar3 == null) || (lVar3.villageAreaID == null))
                                   throw; // [null/range check failed]
                                   lVar9 = this.gameMenu;
-                                  if (*(int *)(*(int64 *)(lVar3 + 32) + 16) < 0) {
+                                  if (*(int *)(lVar3.villageAreaID + 16) < 0) {
                                     if (((lVar9 == null) ||
                                         (lVar3 = GameObject.get_transform(lVar9,0)) == null) ||
                                        ((lVar3 = Transform.Find(lVar3,"GameInfoBack",0), lVar3 == null ||
@@ -218,16 +216,16 @@ public class GameMenuController
                                     throw; // [null/range check failed]
                                     uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
                                     lVar3 = FUN_18046c0a0(0);
-                                    if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0))
+                                    if ((lVar3 == null) || (lVar3.villageAreaID == null))
                                     throw; // [null/range check failed]
-                                    iVar1 = *(int *)(*(int64 *)(lVar3 + 32) + 16);
+                                    iVar1 = *(int *)(lVar3.villageAreaID + 16);
                                     uVar8 = GlobalData.GetNumText(iVar1 + 1,0);
-                                    lVar3 = *pStatics_6e30;
-                                    if (((*pStatics_2cc8 == 0) ||
+                                    lVar3 = ChapterController.chapterTitles;
+                                    if (((GameController._instance == null) ||
                                         (lVar9 = *(int64 *)
-                                                  (*pStatics_2cc8 + 32),
+                                                  (GameController._instance + 32),
                                         lVar9 == null)) || (lVar3 == null)) throw; // [null/range check failed]
-                                    uVar7 = FUN_180002f80(lVar3,*(uint32 *)(lVar9 + 16),
+                                    uVar7 = FUN_180002f80(lVar3,lVar9.chapter,
                                                           DAT_181da4358);
                                     lVar3 = FUN_18046bd00(0);
                                     if (lVar3 == null) throw; // [null/range check failed]
@@ -261,12 +259,12 @@ public class GameMenuController
                                    (lVar3 = Transform.Find(lVar3,"CustomDifficultyIcon",0)) == null)
                                 throw; // [null/range check failed]
                                 lVar3 = Component.GetComponent(lVar3,DAT_181d95560);
-                                if ((((*pStatics_2cc8 == 0) ||
-                                     (lVar9 = *(int64 *)(*pStatics_2cc8 + 32),
-                                     lVar9 == null)) || (lVar9 = *(int64 *)(lVar9 + 0x260)) == null)
+                                if ((((GameController._instance == null) ||
+                                     (lVar9 = GameController._instance.worldData,
+                                     lVar9 == null)) || (lVar9 = lVar9.customDifficultyData) == null)
                                    || (uVar4 = CustomDifficultyData.GetCustomDifficultyFullDescribe
                                                          (lVar9,0), lVar3 == null)) throw; // [null/range check failed]
-                                *(uint64 *)(lVar3 + 24) = uVar4;
+                                lVar3.cityAreaID = uVar4;
                               }
                               plVar5 = (int64 *)Resources.Load("Sound/SoundEffect/Paper",0);
                               plVar13 = (int64 *)0;
@@ -350,8 +348,6 @@ public class GameMenuController
     // RVA   : 0xC2D3C0   Offset: 0xC2C7C0   Length: 0x62D
     public void SaveButtonClicked()
     {
-        var pStatics_0248 = *(int64*)(DAT_181db0248 + 184);
-        var pStatics_5e30 = *(int64*)(DAT_181dc5e30 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
@@ -359,17 +355,17 @@ public class GameMenuController
         if (lVar2 == null) throw; // [null/range check failed]
         cVar1 = GameDataController.HaveTask(lVar2,0);
         if (!cVar1) {
-          if (*(int64 *)(lVar2 + 48) == 0) throw; // [null/range check failed]
-          cVar1 = GameSaveData.CheckAllFinished(*(int64 *)(lVar2 + 48),0);
+          if (lVar2.enterAreaHateAttackHero == null) throw; // [null/range check failed]
+          cVar1 = GameSaveData.CheckAllFinished(lVar2.enterAreaHateAttackHero,0);
           if (!cVar1) goto LAB_180c2d909;
-          uVar3 = *(uint64 *)(pStatics_5e30 + 8);
+          uVar3 = BattleController.AttackAreaTypeStartMovePower;
           cVar1 = Object.op_Inequality(uVar3,0,0);
           if (!cVar1) {
         LAB_180c2d69d:
-            uVar3 = *(uint64 *)(pStatics_0248 + 80);
+            uVar3 = PlotController.LaBaFestivelResultTalkText;
             cVar1 = Object.op_Inequality(uVar3,0,0);
             if (cVar1) {
-              lVar2 = *(int64 *)(pStatics_0248 + 80);
+              lVar2 = PlotController.LaBaFestivelResultTalkText;
               if (lVar2 == null) throw; // [null/range check failed]
               if (*(int *)(lVar2 + 36) != 0) {
                 lVar2 = FUN_18046c0a0(0);
@@ -381,8 +377,8 @@ public class GameMenuController
             cVar1 = Object.op_Inequality(uVar3,0,0);
             if (cVar1) {
               lVar2 = FUN_18046c360(0);
-              if ((lVar2 == null) || (*(int64 *)(lVar2 + 40) == 0)) throw; // [null/range check failed]
-              cVar1 = GameObject.get_activeSelf(*(int64 *)(lVar2 + 40),0);
+              if ((lVar2 == null) || (lVar2.needAutoSave == null)) throw; // [null/range check failed]
+              cVar1 = GameObject.get_activeSelf(lVar2.needAutoSave,0);
               if (cVar1) {
                 lVar2 = FUN_18046c0a0(0);
                 uVar3 = "会议中无法存档！";
@@ -395,7 +391,7 @@ public class GameMenuController
             }
             throw; // [null/range check failed]
           }
-          lVar2 = *(int64 *)(pStatics_5e30 + 8);
+          lVar2 = BattleController.AttackAreaTypeStartMovePower;
           if (lVar2 == null) throw; // [null/range check failed]
           cVar1 = ExploreController.IsExploring(lVar2,0);
           if (!cVar1) goto LAB_180c2d69d;
@@ -404,7 +400,7 @@ public class GameMenuController
         }
         else {
         LAB_180c2d909:
-          lVar2 = **(int64 **)(DAT_181d72cc8 + 184);
+          lVar2 = GameController._instance;
           uVar3 = "演算中无法存档！";
         }
         joined_r0x000180c2d688:
@@ -424,15 +420,14 @@ public class GameMenuController
     // RVA   : 0xC2D100   Offset: 0xC2C500   Length: 0x1F6
     public void LoadButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         bool cVar2;
         lVar1 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
         if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 48)) != null) {
           cVar2 = GameSaveData.CheckAllFinished(lVar1,0);
           if (!cVar2) {
-            if (*pStatics != 0) {
-              GameController.ShowTextOnMouse(*pStatics,"存档中无法读档！",0);
+            if (GameController._instance != null) {
+              GameController.ShowTextOnMouse(GameController._instance,"存档中无法读档！",0);
               plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
               plVar4 = (int64 *)0;
               if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {

@@ -158,17 +158,16 @@ public class UIPanel
     // RVA   : 0x119DA70   Offset: 0x119CE70   Length: 0xD1
     public void set_sortingLayerName(string value)
     {
-        var pStatics = *(int64*)(DAT_181dafe78 + 184);
         bool cVar1;
         uint uVar2;
         cVar1 = String.op_Inequality(this.mSortingLayerName,value,0);
         if (cVar1) {
           this.mSortingLayerName = value;
-          if (*pStatics == 0) {
+          if (UIPanel.list == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          uVar2 = FUN_1817eb4e0(*pStatics,this,DAT_181daa118);
+          uVar2 = FUN_1817eb4e0(UIPanel.list,this,DAT_181daa118);
           UIPanel.UpdateDrawCalls(this,uVar2,0);
         }
     }
@@ -177,23 +176,22 @@ public class UIPanel
     // RVA   : 0x119CC30   Offset: 0x119C030   Length: 0x121
     public static int get_nextUnusedDepth()
     {
-        var pStatics = *(int64*)(DAT_181dafe78 + 184);
         int iVar1;
         int iVar2;
         long lVar3;
         int iVar4;
         iVar4 = 0;
         iVar2 = -0x80000000;
-        if (*pStatics == 0) {
+        if (UIPanel.list == null) {
         LAB_18119cd4c:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        iVar1 = *(int *)(*pStatics + 24);
+        iVar1 = *(int *)(UIPanel.list + 24);
         if (0 < iVar1) {
           do {
-            if ((*pStatics == 0) ||
-               (lVar3 = FUN_180002f80(*pStatics,iVar4,DAT_181daa318),
+            if ((UIPanel.list == null) ||
+               (lVar3 = FUN_180002f80(UIPanel.list,iVar4,DAT_181daa318),
                lVar3 == null)) goto LAB_18119cd4c;
             iVar2 = Mathf.Max(iVar2,*(uint32 *)(lVar3 + 0x150),0);
             iVar4 = iVar4 + 1;
@@ -290,7 +288,7 @@ public class UIPanel
         ulong uVar2;
         if (this.mDepth != value) {
           this.mDepth = value;
-          lVar1 = **(int64 **)(DAT_181dafe78 + 184);
+          lVar1 = UIPanel.list;
           uVar2 = new OnTooltipCB(0,DAT_181dc5f80,DAT_181dab8b8);
           if (lVar1 == null) {
                           // WARNING: Subroutine does not return
@@ -313,15 +311,14 @@ public class UIPanel
     // RVA   : 0x119DB50   Offset: 0x119CF50   Length: 0xA8
     public void set_sortingOrder(int value)
     {
-        var pStatics = *(int64*)(DAT_181dafe78 + 184);
         uint uVar1;
         if (this.mSortingOrder != value) {
           this.mSortingOrder = value;
-          if (*pStatics == 0) {
+          if (UIPanel.list == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          uVar1 = FUN_1817eb4e0(*pStatics,this,DAT_181daa118);
+          uVar1 = FUN_1817eb4e0(UIPanel.list,this,DAT_181daa118);
           UIPanel.UpdateDrawCalls(this,uVar1,0);
         }
     }
@@ -600,7 +597,6 @@ public class UIPanel
     // RVA   : 0x1198D10   Offset: 0x1198110   Length: 0x19D
     private void InvalidateClipping()
     {
-        var pStatics = *(int64*)(DAT_181dafe78 + 184);
         int iVar1;
         ulong uVar2;
         bool cVar3;
@@ -609,16 +605,16 @@ public class UIPanel
         this.mResized = 1;
         iVar5 = 0;
         this.mMatrixFrame = 0xffffffff;
-        if (*pStatics == 0) {
+        if (UIPanel.list == null) {
         LAB_181198ea8:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        iVar1 = *(int *)(*pStatics + 24);
+        iVar1 = *(int *)(UIPanel.list + 24);
         if (0 < iVar1) {
           do {
-            if (*pStatics == 0) goto LAB_181198ea8;
-            lVar4 = FUN_180002f80(*pStatics,iVar5,DAT_181daa318);
+            if (UIPanel.list == null) goto LAB_181198ea8;
+            lVar4 = FUN_180002f80(UIPanel.list,iVar5,DAT_181daa318);
             cVar3 = Object.op_Inequality(lVar4,this,0);
             if (cVar3) {
               if (lVar4 == null) goto LAB_181198ea8;
@@ -812,7 +808,6 @@ public class UIPanel
     // RVA   : 0x119C8E0   Offset: 0x119BCE0   Length: 0x349
     public override Vector3[] get_localCorners()
     {
-        var pStatics = *(int64*)(DAT_181dafe78 + 184);
         long lVar1;
         long lVar2;
         ulong uVar4;
@@ -862,7 +857,7 @@ public class UIPanel
           fVar10 = *(float *)((int64)this + 0x144) + fVar8;
           local_68 = CONCAT44(fVar8,fVar7);
           local_60 = 0;
-          lVar1 = *(int64 *)(pStatics + 16);
+          lVar1 = UIPanel.mCorners;
           if (lVar1 != null) {
             if (*(int *)(lVar1 + 24) == 0) {
               uVar4 = il2cpp_internal();
@@ -873,7 +868,7 @@ public class UIPanel
             *(uint32 *)(lVar1 + 40) = 0;
             local_68 = CONCAT44(fVar10,fVar7);
             local_60 = 0;
-            lVar1 = *(int64 *)(pStatics + 16);
+            lVar1 = UIPanel.mCorners;
             if (lVar1 != null) {
               if (*(uint32 *)(lVar1 + 24) < 2) {
                 uVar4 = il2cpp_internal();
@@ -884,7 +879,7 @@ public class UIPanel
               *(uint32 *)(lVar1 + 52) = 0;
               local_68 = CONCAT44(fVar10,fVar9);
               local_60 = 0;
-              lVar1 = *(int64 *)(pStatics + 16);
+              lVar1 = UIPanel.mCorners;
               if (lVar1 != null) {
                 if (*(uint32 *)(lVar1 + 24) < 3) {
                   uVar4 = il2cpp_internal();
@@ -895,12 +890,12 @@ public class UIPanel
                 *(uint32 *)(lVar1 + 64) = 0;
                 local_68 = CONCAT44(fVar8,fVar9);
                 local_60 = 0;
-                lVar1 = *(int64 *)(pStatics + 16);
+                lVar1 = UIPanel.mCorners;
                 if (lVar1 != null) {
                   if (3 < *(uint32 *)(lVar1 + 24)) {
                     *(uint64 *)(lVar1 + 68) = local_68;
                     *(uint32 *)(lVar1 + 76) = 0;
-                    return *(int64 *)(pStatics + 16);
+                    return UIPanel.mCorners;
                   }
                   uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -916,7 +911,6 @@ public class UIPanel
     // RVA   : 0x119CE30   Offset: 0x119C230   Length: 0x6FC
     public override Vector3[] get_worldCorners()
     {
-        var pStatics = *(int64*)(DAT_181dafe78 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
@@ -947,7 +941,7 @@ public class UIPanel
           fVar9 = local_res8 * -0.5;
           fVar10 = fStackX_c * -0.5;
           local_78 = CONCAT44(fVar10,fVar9);
-          lVar3 = *(int64 *)(pStatics + 16);
+          lVar3 = UIPanel.mCorners;
           if (lVar3 != null) {
             if (*(int *)(lVar3 + 24) == 0) {
               uVar2 = il2cpp_internal();
@@ -957,7 +951,7 @@ public class UIPanel
             *(uint64 *)(lVar3 + 32) = local_78;
             *(uint32 *)(lVar3 + 40) = 0;
             local_78 = CONCAT44(fStackX_c + fVar10,fVar9);
-            lVar3 = *(int64 *)(pStatics + 16);
+            lVar3 = UIPanel.mCorners;
             if (lVar3 != null) {
               if (*(uint32 *)(lVar3 + 24) < 2) {
                 uVar2 = il2cpp_internal();
@@ -967,7 +961,7 @@ public class UIPanel
               *(uint64 *)(lVar3 + 44) = local_78;
               *(uint32 *)(lVar3 + 52) = 0;
               local_78 = CONCAT44(fStackX_c + fVar10,local_res8 + fVar9);
-              lVar3 = *(int64 *)(pStatics + 16);
+              lVar3 = UIPanel.mCorners;
               if (lVar3 != null) {
                 if (*(uint32 *)(lVar3 + 24) < 3) {
                   uVar2 = il2cpp_internal();
@@ -977,7 +971,7 @@ public class UIPanel
                 *(uint64 *)(lVar3 + 56) = local_78;
                 *(uint32 *)(lVar3 + 64) = 0;
                 local_78 = CONCAT44(fVar10,local_res8 + fVar9);
-                lVar3 = *(int64 *)(pStatics + 16);
+                lVar3 = UIPanel.mCorners;
                 if (lVar3 != null) {
                   if (*(uint32 *)(lVar3 + 24) < 4) {
                     uVar2 = il2cpp_internal();
@@ -1006,7 +1000,7 @@ public class UIPanel
                     local_78._4_4_ = (float)((uint64)*puVar5 >> 32);
                     local_78._0_4_ = (float)*puVar5;
                     do {
-                      lVar3 = *(int64 *)(pStatics + 16);
+                      lVar3 = UIPanel.mCorners;
                       if (lVar3 == null) throw; // [null/range check failed]
                       if (*(uint32 *)(lVar3 + 24) <= uVar7) {
                         uVar2 = il2cpp_internal();
@@ -1024,7 +1018,7 @@ public class UIPanel
                     } while ((int)uVar7 < 4);
                   }
         LAB_18119d45f:
-                  return *(uint64 *)(pStatics + 16);
+                  return UIPanel.mCorners;
                 }
               }
             }
@@ -1038,7 +1032,7 @@ public class UIPanel
           fVar12 = *(float *)(this + 0x140) + fVar9;
           fVar11 = *(float *)(this + 0x144) + fVar10;
           lVar3 = UIRect.get_cachedTransform(this);
-          lVar6 = *(int64 *)(pStatics + 16);
+          lVar6 = UIPanel.mCorners;
           if ((lVar3 != null) &&
              (puVar5 = (uint64 *)Transform.TransformPoint(local_68,lVar3,fVar9,fVar10,0,0),
              lVar6 != null)) {
@@ -1049,7 +1043,7 @@ public class UIPanel
             }
             *(uint64 *)(lVar6 + 32) = *puVar5;
             *(uint32 *)(lVar6 + 40) = *(uint32 *)(puVar5 + 1);
-            lVar6 = *(int64 *)(pStatics + 16);
+            lVar6 = UIPanel.mCorners;
             puVar5 = (uint64 *)Transform.TransformPoint(local_68,lVar3,fVar9,fVar11,0,0);
             if (lVar6 != null) {
               if (*(uint32 *)(lVar6 + 24) < 2) {
@@ -1059,7 +1053,7 @@ public class UIPanel
               }
               *(uint64 *)(lVar6 + 44) = *puVar5;
               *(uint32 *)(lVar6 + 52) = *(uint32 *)(puVar5 + 1);
-              lVar6 = *(int64 *)(pStatics + 16);
+              lVar6 = UIPanel.mCorners;
               puVar5 = (uint64 *)Transform.TransformPoint(local_68,lVar3,fVar12,fVar11,0,0);
               if (lVar6 != null) {
                 if (*(uint32 *)(lVar6 + 24) < 3) {
@@ -1069,7 +1063,7 @@ public class UIPanel
                 }
                 *(uint64 *)(lVar6 + 56) = *puVar5;
                 *(uint32 *)(lVar6 + 64) = *(uint32 *)(puVar5 + 1);
-                lVar6 = *(int64 *)(pStatics + 16);
+                lVar6 = UIPanel.mCorners;
                 puVar5 = (uint64 *)Transform.TransformPoint(local_68,lVar3,fVar12,fVar10,0,0);
                 if (lVar6 != null) {
                   if (*(uint32 *)(lVar6 + 24) < 4) {
@@ -1746,12 +1740,11 @@ public class UIPanel
     // RVA   : 0x119A530   Offset: 0x1199930   Length: 0x327
     protected override void OnInit()
     {
-        var pStatics = *(int64*)(DAT_181dafe78 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
-        if (*pStatics == 0) throw; // [null/range check failed]
-        cVar1 = FUN_18181e400(*pStatics,this,DAT_181daa098);
+        if (UIPanel.list == null) throw; // [null/range check failed]
+        cVar1 = FUN_18181e400(UIPanel.list,this,DAT_181daa098);
         if (cVar1) {
           return;
         }
@@ -1787,9 +1780,9 @@ public class UIPanel
         }
         this.mRebuild = 1;
         this.mMatrixFrame = 0xffffffffffffffff;
-        if (*pStatics != 0) {
-          FUN_18181e0a0(*pStatics,this,DAT_181daa018);
-          lVar3 = *pStatics;
+        if (UIPanel.list != null) {
+          FUN_18181e0a0(UIPanel.list,this,DAT_181daa018);
+          lVar3 = UIPanel.list;
           uVar2 = new OnTooltipCB(0,DAT_181dc5f80,DAT_181dab8b8);
           if (lVar3 != null) {
             List_1.Sort(lVar3,uVar2,DAT_181daa218);
@@ -1802,7 +1795,6 @@ public class UIPanel
     // RVA   : 0x119A270   Offset: 0x1199670   Length: 0x262
     protected override void OnDisable()
     {
-        var pStatics = *(int64*)(DAT_181dafe78 + 184);
         int iVar1;
         long lVar2;
         ulong uVar3;
@@ -1836,13 +1828,13 @@ public class UIPanel
             if (lVar7 == null) throw; // [null/range check failed]
           }
           FUN_1812f9a10(lVar7,DAT_181da9798);
-          if (*pStatics != 0) {
-            FUN_1817eee00(*pStatics,this,DAT_181daa198);
+          if (UIPanel.list != null) {
+            FUN_1817eee00(UIPanel.list,this,DAT_181daa198);
             this.mMatrixFrame = 0xffffffffffffffff;
-            if (*pStatics != 0) {
-              if (*(int *)(*pStatics + 24) == 0) {
+            if (UIPanel.list != null) {
+              if (*(int *)(UIPanel.list + 24) == 0) {
                 UIDrawCall.ReleaseAll(0);
-                *(uint32 *)(pStatics + 24) = 0xffffffff;
+                UIPanel.mUpdateFrame = 0xffffffff;
               }
               UIRect.OnDisable(this,0);
               return;
@@ -2241,42 +2233,41 @@ public class UIPanel
     private void LateUpdate()
     {
         var plVar5 = *(int64*)(lVar5 + 184);
-        var pStatics = *(int64*)(DAT_181dafe78 + 184);
         int iVar1;
         int iVar2;
         int iVar3;
         uint uVar4;
         long lVar5;
         int iVar6;
-        iVar6 = *(int *)(pStatics + 24);
+        iVar6 = UIPanel.mUpdateFrame;
         iVar3 = Time.get_frameCount(0);
         if (iVar6 == iVar3) {
           return;
         }
         uVar4 = Time.get_frameCount(0);
         iVar3 = 0;
-        *(uint32 *)(pStatics + 24) = uVar4;
+        UIPanel.mUpdateFrame = uVar4;
         iVar6 = 0;
-        if (*pStatics != 0) {
-          iVar1 = *(int *)(*pStatics + 24);
+        if (UIPanel.list != null) {
+          iVar1 = *(int *)(UIPanel.list + 24);
           if (0 < iVar1) {
             do {
-              if ((*pStatics == 0) ||
-                 (lVar5 = FUN_180002f80(*pStatics,iVar6,DAT_181daa318),
+              if ((UIPanel.list == null) ||
+                 (lVar5 = FUN_180002f80(UIPanel.list,iVar6,DAT_181daa318),
                  lVar5 == null)) throw; // [null/range check failed]
               UIPanel.UpdateSelf(lVar5,0);
               iVar6 = iVar6 + 1;
             } while (iVar6 < iVar1);
           }
           iVar6 = 3000;
-          if (*pStatics != 0) {
-            iVar1 = *(int *)(*pStatics + 24);
+          if (UIPanel.list != null) {
+            iVar1 = *(int *)(UIPanel.list + 24);
             if (iVar1 < 1) {
               return;
             }
             while( true ) {
-              if ((*pStatics == 0) ||
-                 (lVar5 = FUN_180002f80(*pStatics,iVar3,DAT_181daa318),
+              if ((UIPanel.list == null) ||
+                 (lVar5 = FUN_180002f80(UIPanel.list,iVar3,DAT_181daa318),
                  lVar5 == null)) break;
               if (*(int *)(lVar5 + 168) == 0) {
                 *(int *)(lVar5 + 172) = iVar6;
@@ -3404,15 +3395,14 @@ public class UIPanel
     // RVA   : 0x119A8D0   Offset: 0x1199CD0   Length: 0xF4
     public void Refresh()
     {
-        var pStatics = *(int64*)(DAT_181dafe78 + 184);
         long lVar1;
         this.mRebuild = 1;
-        *(uint32 *)(pStatics + 24) = 0xffffffff;
-        if (*pStatics != 0) {
-          if (*(int *)(*pStatics + 24) < 1) {
+        UIPanel.mUpdateFrame = 0xffffffff;
+        if (UIPanel.list != null) {
+          if (*(int *)(UIPanel.list + 24) < 1) {
             return;
           }
-          lVar1 = *pStatics;
+          lVar1 = UIPanel.list;
           if (lVar1 != null) {
             if (*(int *)(lVar1 + 24) == 0) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -3696,7 +3686,6 @@ public class UIPanel
     // RVA   : 0x119BED0   Offset: 0x119B2D0   Length: 0x100
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181dafe78 + 184);
         ulong uVar1;
         uVar1 = il2cpp_internal(DAT_181d987d0);
         FUN_18132faf0(uVar1,DAT_181da9f98);
@@ -3704,14 +3693,10 @@ public class UIPanel
         *puVar2 = uVar1;
         il2cpp_internal(puVar2,uVar1);
         uVar1 = FUN_1800d60b0(DAT_181da5360,4);
-        puVar2 = (uint64 *)(pStatics + 8);
-        *puVar2 = uVar1;
-        il2cpp_internal(puVar2,uVar1);
+        UIPanel.mTemp = uVar1;
         uVar1 = FUN_1800d60b0(DAT_181da6d60,4);
-        puVar2 = (uint64 *)(pStatics + 16);
-        *puVar2 = uVar1;
-        il2cpp_internal(puVar2,uVar1);
-        *(uint32 *)(pStatics + 24) = 0xffffffff;
+        UIPanel.mCorners = uVar1;
+        UIPanel.mUpdateFrame = 0xffffffff;
     }
 
 }

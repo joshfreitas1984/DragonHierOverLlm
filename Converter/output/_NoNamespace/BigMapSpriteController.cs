@@ -30,7 +30,6 @@ public class BigMapSpriteController
     // RVA   : 0xC7CE90   Offset: 0xC7C290   Length: 0x326
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
@@ -51,8 +50,8 @@ public class BigMapSpriteController
         }
         cVar1 = GameObject.get_activeInHierarchy(lVar2,0);
         if (cVar1) {
-          if (*pStatics == 0) goto LAB_180c7d1b1;
-          cVar1 = GameController.HaveSpeUI(*pStatics,1,0);
+          if (GameController._instance == null) goto LAB_180c7d1b1;
+          cVar1 = GameController.HaveSpeUI(GameController._instance,1,0);
           if (!cVar1) {
             lVar2 = FUN_18046bbe0(0);
             if (lVar2 == null) goto LAB_180c7d1b1;
@@ -117,8 +116,6 @@ public class BigMapSpriteController
     // RVA   : 0xC7C680   Offset: 0xC7BA80   Length: 0x395
     public void OnClick()
     {
-        var pStatics_0bc8 = *(int64*)(DAT_181db0bc8 + 184);
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         ulong uVar1;
         long lVar2;
         long lVar3;
@@ -126,16 +123,16 @@ public class BigMapSpriteController
         ulong local_28;
         uint local_20;
         byte[] local_18 = new byte[16];
-        lVar2 = *(int64 *)(pStatics_0bc8 + 16);
+        lVar2 = GameController.CheckShowSpeHero;
         if (lVar2 != null) {
-          if (*(char *)(lVar2 + 0x100) != false) {
+          if (lVar2.tutorialFinished) {
             return;
           }
-          if ((((*pStatics_2cc8 != 0) &&
-               (lVar2 = *(int64 *)(*pStatics_2cc8 + 32)) != null) &&
-              (lVar2 = WorldData.Player(lVar2,0)) != null) && (*(int64 *)(lVar2 + 64) != 0)) {
-            lVar2 = *(int64 *)(*(int64 *)(lVar2 + 64) + 56);
-            lVar3 = *(int64 *)(pStatics_0bc8 + 16);
+          if ((((GameController._instance != null) &&
+               (lVar2 = GameController._instance.worldData) != null) &&
+              (lVar2 = WorldData.Player(lVar2,0)) != null) && (lVar2.ResourcePoints != null)) {
+            lVar2 = *(int64 *)(lVar2.ResourcePoints + 56);
+            lVar3 = GameController.CheckShowSpeHero;
             if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 64)) != null) {
               lVar3 = GameObject.get_transform(lVar3,0);
               lVar4 = Camera.get_main(0);
@@ -150,14 +147,14 @@ public class BigMapSpriteController
                   puVar5 = (uint64 *)Transform.InverseTransformPoint(local_18,lVar3,&local_28,0);
                   if (lVar2 != null) {
                     uVar1 = *puVar5;
-                    *(float *)(lVar2 + 16) = (float)uVar1 * 100.0;
+                    lVar2.chapter = (float)uVar1 * 100.0;
                     *(float *)(lVar2 + 20) = (float)((uint64)uVar1 >> 32) * 100.0;
-                    lVar2 = *(int64 *)(pStatics_0bc8 + 16);
+                    lVar2 = GameController.CheckShowSpeHero;
                     if (lVar2 != null) {
                       puVar5 = (uint64 *)(lVar2 + 160);
                       *puVar5 = 0;
                       il2cpp_internal(puVar5,0);
-                      lVar2 = *(int64 *)(pStatics_0bc8 + 16);
+                      lVar2 = GameController.CheckShowSpeHero;
                       if (lVar2 != null) {
                         BigMapController.SetHorseButton(lVar2,0,0);
                         return;

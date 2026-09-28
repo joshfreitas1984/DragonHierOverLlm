@@ -102,7 +102,6 @@ public class StartGameSettingController
     // RVA   : 0xC5F450   Offset: 0xC5E850   Length: 0x12B0
     public void BirthSettingPlayerData()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         uint uVar2;
         uint uVar3;
@@ -576,7 +575,7 @@ public class StartGameSettingController
         case 0:
           lVar4 = this.Player;
           lVar9 = this.BirthSetting;
-          lVar6 = *pStatics;
+          lVar6 = GameController._instance;
           if (lVar9 == null) goto LAB_180c606f9;
           if (lVar9.Count < 4) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -590,7 +589,7 @@ public class StartGameSettingController
           goto LAB_180c603ee;
         case 1:
           lVar4 = this.Player;
-          lVar9 = *pStatics;
+          lVar9 = GameController._instance;
           uVar3 = FUN_180d95a30(0,6);
           if (lVar9 == null) goto LAB_180c606f9;
           in_stack_ffffffffffffffb0 = 0;
@@ -602,7 +601,7 @@ public class StartGameSettingController
         case 2:
           lVar4 = this.Player;
           lVar9 = this.BirthSetting;
-          lVar6 = *pStatics;
+          lVar6 = GameController._instance;
           if (lVar9 == null) goto LAB_180c606f9;
           if (lVar9.Count < 4) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -618,9 +617,9 @@ public class StartGameSettingController
           break;
         case 3:
           lVar4 = this.Player;
-          if (*pStatics == 0) goto LAB_180c606f9;
+          if (GameController._instance == null) goto LAB_180c606f9;
           in_stack_ffffffffffffffa8 = 0;
-          uVar5 = GameController.GenerateHorseData(*pStatics,1,1,0,0);
+          uVar5 = GameController.GenerateHorseData(GameController._instance,1,1,0,0);
           if (lVar4 == null) goto LAB_180c606f9;
           HeroData.GetItem(lVar4,uVar5,0,0);
           break;

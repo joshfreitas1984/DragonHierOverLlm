@@ -1021,3 +1021,282 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "40,朝朝暮暮,累计与情侣合练/共餐50次,int,50,无"
+  splits:
+  - split: 1
+    text: "朝朝暮暮"
+    translated: "Day after day, night after night"
+    qcReviewedText: "Day after day, night after night"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - split: 2
+    text: "累计与情侣合练"
+    translated: "Total coupled practice sessions accumulated"
+    qcReviewedText: "Total coupled practice sessions accumulated/Shared meals 50 times"
+    qcTranslated: "Total couple practice sessions/shared meals: 50"
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: UnnaturalPhrasing
+    qcDefectCategories:
+    - UnnaturalPhrasing
+  - split: 2
+    subIndex: 1
+    text: "共餐50次"
+    translated: "Shared meals 50 times"
+  - split: 5
+    text: "无"
+    translated: "None"
+    qcReviewedText: "None"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - split: 2
+    template: "{0}/{1}"
+- raw: "41,独占鳌头,累计在比武/辩才/赛马大会中夺冠50次,int,50,无"
+  splits:
+  - split: 1
+    text: "独占鳌头"
+    translated: "Be the sole leader"
+    qcReviewedText: "Be the sole leader"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - split: 2
+    text: "累计在比武"
+    translated: "Total time spent in the martial arts competition"
+    qcReviewedText: "Total time spent in the martial arts competition/Blessed Speaker/Won the horse racing tournament 50 times"
+    qcTranslated: "Total number of championships won in the martial arts competition/Blessed Speaker/horse racing tournament 50 times"
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: MeaningReversal
+    qcDefectCategories:
+    - MeaningReversal
+    - UnnaturalPhrasing
+  - split: 2
+    subIndex: 1
+    text: "辩才"
+    translated: "Blessed Speaker"
+  - split: 2
+    subIndex: 2
+    text: "赛马大会中夺冠50次"
+    translated: "Won the horse racing tournament 50 times"
+  - split: 5
+    text: "无"
+    translated: "None"
+    qcReviewedText: "None"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - split: 2
+    template: "{0}/{1}/{2}"
+- raw: "42,少年英雄,在少年英雄大会中夺冠,bool,1,无"
+  splits:
+  - split: 1
+    text: "少年英雄"
+    translated: "Young Hero"
+    qcReviewedText: "Young Hero"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - split: 2
+    text: "在少年英雄大会中夺冠"
+    translated: "Winning the championship at the Youth Hero Convention"
+    qcReviewedText: "Winning the championship at the Youth Hero Convention"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - split: 5
+    text: "无"
+    translated: "None"
+    qcReviewedText: "None"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "43,开宗立派,在自由模式中成功自立门户,bool,1,无"
+  splits:
+  - split: 1
+    text: "开宗立派"
+    translated: "Foundations and Establishment"
+    qcReviewedText: "Foundations and Establishment"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - split: 2
+    text: "在自由模式中成功自立门户"
+    translated: "Successfully established independence in Free Mode"
+    qcReviewedText: "Successfully established independence in Free Mode"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - split: 5
+    text: "无"
+    translated: "None"
+    qcReviewedText: "None"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "44,霸业宏图,用自立门派达成名门大派/武林盟主结局,bool,1,无"
+  splits:
+  - split: 1
+    text: "霸业宏图"
+    translated: "Grand Ambition Blueprint"
+    qcReviewedText: "Grand Ambition Blueprint"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - split: 2
+    text: "用自立门派达成名门大派"
+    translated: "Establish a sect to become a major powerhouse."
+    qcReviewedText: "Establish a sect to become a major powerhouse./Alliance Leader's ending"
+    qcTranslated: "Establish an independent sect to achieve the Major Sect/Wulin Alliance Leader ending"
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
+  - split: 2
+    subIndex: 1
+    text: "武林盟主结局"
+    translated: "Alliance Leader's ending"
+  - split: 5
+    text: "无"
+    translated: "None"
+    qcReviewedText: "None"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - split: 2
+    template: "{0}/{1}"
+- raw: "45,分久必合,用仙霞派附庸铁掌帮/用铁掌帮附庸仙霞派,bool,1,无"
+  splits:
+  - split: 1
+    text: "分久必合"
+    translated: "What divides for long will surely reunite"
+    qcReviewedText: "What divides for long will surely reunite"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - split: 2
+    text: "用仙霞派附庸铁掌帮"
+    translated: "Use the Xianxia Sect's affiliate, the Iron Palm Gang."
+    qcReviewedText: "Use the Xianxia Sect's affiliate, the Iron Palm Gang./Use the Iron Palm Gang to support the Xianxia Sect."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - split: 2
+    subIndex: 1
+    text: "用铁掌帮附庸仙霞派"
+    translated: "Use the Iron Palm Gang to support the Xianxia Sect."
+  - split: 5
+    text: "无"
+    translated: "None"
+    qcReviewedText: "None"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - split: 2
+    template: "{0}/{1}"
+- raw: "46,山河泣血,在剧情模式第四章最终决战中取胜,bool,1,无"
+  splits:
+  - split: 1
+    text: "山河泣血"
+    translated: "River and land weep blood"
+    qcReviewedText: "River and land weep blood"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - split: 2
+    text: "在剧情模式第四章最终决战中取胜"
+    translated: "Win the final battle in Chapter Four of Story Mode."
+    qcReviewedText: "Win the final battle in Chapter Four of Story Mode."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - split: 5
+    text: "无"
+    translated: "None"
+    qcReviewedText: "None"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "47,风云际会,集齐所有人物图鉴,bool,1,无"
+  splits:
+  - split: 1
+    text: "风云际会"
+    translated: "A Meeting of Storms and Winds"
+    qcReviewedText: "A Meeting of Storms and Winds"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - split: 2
+    text: "集齐所有人物图鉴"
+    translated: "Collect all character profiles"
+    qcReviewedText: "Collect all character profiles"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - split: 5
+    text: "无"
+    translated: "None"
+    qcReviewedText: "None"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "48,万象森罗,集齐所有武学图鉴,bool,1,无"
+  splits:
+  - split: 1
+    text: "万象森罗"
+    translated: "Myriad Phenomena Divine Array"
+    qcReviewedText: "Myriad Phenomena Divine Array"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - split: 2
+    text: "集齐所有武学图鉴"
+    translated: "Collect all the martial arts manuals"
+    qcReviewedText: "Collect all the martial arts manuals"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - split: 5
+    text: "无"
+    translated: "None"
+    qcReviewedText: "None"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "49,龙胤立志,九死一生难度达成天下第一/武林盟主结局,bool,1,无"
+  splits:
+  - split: 1
+    text: "龙胤立志"
+    translated: "Long Yin vows"
+    qcReviewedText: "Long Yin vows"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - split: 2
+    text: "九死一生难度达成天下第一"
+    translated: "Achieved First in the Land on the Nine Lives, One Death difficulty"
+    qcReviewedText: "Achieved First in the Land on the Nine Lives, One Death difficulty/Alliance Leader's ending"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - split: 2
+    subIndex: 1
+    text: "武林盟主结局"
+    translated: "Alliance Leader's ending"
+  - split: 5
+    text: "无"
+    translated: "None"
+    qcReviewedText: "None"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - split: 2
+    template: "{0}/{1}"

@@ -47,10 +47,10 @@
   splits:
   - split: 2
     text: "本地疗伤效率"
-- raw: "10,恢复效率,恢复效率,TRUE,0.02"
+- raw: "10,日常恢复效率,日常恢复效率,TRUE,0.02"
   splits:
   - split: 2
-    text: "恢复效率"
+    text: "日常恢复效率"
 - raw: "11,本地恢复效率,本地恢复效率,TRUE,0.1"
   splits:
   - split: 2

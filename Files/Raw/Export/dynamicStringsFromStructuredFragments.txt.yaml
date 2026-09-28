@@ -77,6 +77,11 @@
     text: "基础加成"
   templates:
   - template: "{0}⟦5⟧\n{1}⟦6⟧%"
+- raw: "{0}援军"
+  splits:
+  - text: "援军"
+  templates:
+  - template: "⟦0⟧{0}"
 - raw: "{0}教化"
   splits:
   - text: "教化"
@@ -477,6 +482,16 @@
   - text: "邀请对方入队30天"
   templates:
   - template: "♦{0}\n♦⟦0⟧⟦2⟧"
+- raw: "共餐"
+  splits:
+  - text: "共餐"
+- raw: "♦共同分享一件饮食\n♦双方均可获得完整服食效果"
+  splits:
+  - text: "共同分享一件饮食"
+  - subIndex: 1
+    text: "双方均可获得完整服食效果"
+  templates:
+  - template: "♦{0}\n♦{1}"
 - raw: "内功 吐纳法"
   splits:
   - text: "内功"
@@ -623,6 +638,16 @@
 - raw: "可惜可惜"
   splits:
   - text: "可惜可惜"
+- raw: "合练"
+  splits:
+  - text: "合练"
+- raw: "♦共同修炼一门武学\n♦双方均可获得经验和持续加成效果"
+  splits:
+  - text: "共同修炼一门武学"
+  - subIndex: 1
+    text: "双方均可获得经验和持续加成效果"
+  templates:
+  - template: "♦{0}\n♦{1}"
 - raw: "同行"
   splits:
   - text: "同行"
@@ -645,6 +670,16 @@
 - raw: "告辞！"
   splits:
   - text: "告辞！"
+- raw: "和解"
+  splits:
+  - text: "和解"
+- raw: "♦使对方与仇敌握手言和\n♦消耗40点好感"
+  splits:
+  - text: "使对方与仇敌握手言和"
+  - subIndex: 1
+    text: "消耗40点好感"
+  templates:
+  - template: "♦{0}\n♦{1}"
 - raw: "哼，还好我早有准备！"
   splits:
   - text: "哼，还好我早有准备！"
@@ -888,6 +923,16 @@
 - raw: "开赌！"
   splits:
   - text: "开赌！"
+- raw: "引荐"
+  splits:
+  - text: "引荐"
+- raw: "♦将自己的亲友引荐给对方\n♦消耗20点好感"
+  splits:
+  - text: "将自己的亲友引荐给对方"
+  - subIndex: 1
+    text: "消耗20点好感"
+  templates:
+  - template: "♦{0}\n♦{1}"
 - raw: "张口结舌"
   splits:
   - text: "张口结舌"
@@ -1209,6 +1254,15 @@
 - raw: "无话可说"
   splits:
   - text: "无话可说"
+- raw: "无需多此一举"
+  splits:
+  - text: "无需多此一举"
+- raw: "与所有门派停战30天"
+  splits:
+  - text: "与所有门派停战30天"
+- raw: "无需援军"
+  splits:
+  - text: "无需援军"
 - raw: "早该如此"
   splits:
   - text: "早该如此"
@@ -1522,6 +1576,12 @@
 - raw: "背后偷袭"
   splits:
   - text: "背后偷袭"
+- raw: "脱罪"
+  splits:
+  - text: "脱罪"
+- raw: "降低对方50点恶名"
+  splits:
+  - text: "降低对方50点恶名"
 - raw: "0-负3"
   splits:
   - text: "负3"
@@ -1574,6 +1634,20 @@
 - raw: "论战劝解"
   splits:
   - text: "论战劝解"
+- raw: "诋毁"
+  splits:
+  - text: "诋毁"
+- raw: "♦使对方断绝与他人的好友/结义关系\n♦断绝好友消耗30点好感\n♦断绝结义消耗50点好感"
+  splits:
+  - text: "使对方断绝与他人的好友"
+  - subIndex: 1
+    text: "结义关系"
+  - subIndex: 2
+    text: "断绝好友消耗30点好感"
+  - subIndex: 3
+    text: "断绝结义消耗50点好感"
+  templates:
+  - template: "♦{0}/{1}\n♦{2}\n♦{3}"
 - raw: "诚心相求"
   splits:
   - text: "诚心相求"
@@ -1587,6 +1661,12 @@
     text: "若好感小于50会断绝情侣关系"
   templates:
   - template: "♦{0}\n♦{1}"
+- raw: "诬陷"
+  splits:
+  - text: "诬陷"
+- raw: "增加对方50点恶名"
+  splits:
+  - text: "增加对方50点恶名"
 - raw: "误会一场"
   splits:
   - text: "误会一场"
@@ -1777,6 +1857,24 @@
   - text: "询问对方关于退隐江湖之事"
   templates:
   - template: "♦{0}"
+- raw: "送上中额礼金"
+  splits:
+  - text: "送上中额礼金"
+- raw: "与所有门派停战180天"
+  splits:
+  - text: "与所有门派停战180天"
+- raw: "送上大额礼金"
+  splits:
+  - text: "送上大额礼金"
+- raw: "与所有门派停战360天"
+  splits:
+  - text: "与所有门派停战360天"
+- raw: "送上小额礼金"
+  splits:
+  - text: "送上小额礼金"
+- raw: "与所有门派停战90天"
+  splits:
+  - text: "与所有门派停战90天"
 - raw: "选择弟子"
   splits:
   - text: "选择弟子"

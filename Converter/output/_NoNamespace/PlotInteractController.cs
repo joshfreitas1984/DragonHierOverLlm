@@ -195,16 +195,15 @@ public class PlotInteractController
     // RVA   : 0xB0CC40   Offset: 0xB0C040   Length: 0x3C7
     public void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181d91b88 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
-        lVar1 = *(int64 *)(pStatics + 24);
+        lVar1 = BuildingUIController.PartyLvName;
         if (lVar1 != null) {
           if (*(char *)(lVar1 + 208) != false) {
             return;
           }
-          lVar1 = *(int64 *)(pStatics + 24);
+          lVar1 = BuildingUIController.PartyLvName;
           if (lVar1 != null) {
             if (*(char *)(lVar1 + 209) != false) {
               return;

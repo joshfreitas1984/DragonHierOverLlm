@@ -39,15 +39,12 @@ public class SaveLoadMenuController
     // RVA   : 0x978590   Offset: 0x977990   Length: 0xE0
     private void Awake()
     {
-        var pStatics = *(int64*)(DAT_181d9ecf0 + 184);
         ulong uVar1;
         bool cVar2;
-        uVar1 = *(uint64 *)(pStatics + 8);
+        uVar1 = SaveLoadMenuController._instance;
         cVar2 = Object.op_Equality(uVar1,0,0);
         if (cVar2) {
-          puVar3 = (uint64 *)(pStatics + 8);
-          *puVar3 = this;
-          il2cpp_internal(puVar3,this);
+          SaveLoadMenuController._instance = this;
         }
     }
 
@@ -55,7 +52,6 @@ public class SaveLoadMenuController
     // RVA   : 0x978D80   Offset: 0x978180   Length: 0xE2B
     public void RefreshSlot(int slotID)
     {
-        var pStatics = *(int64*)(DAT_181d72d50 + 184);
         bool cVar1;
         int iVar2;
         long lVar3;
@@ -69,7 +65,7 @@ public class SaveLoadMenuController
         ulong local_28;
         ulong uStack_20;
         local_res10[0] = slotID;
-        lVar3 = *(int64 *)(pStatics + 32);
+        lVar3 = GameController.lockObj;
         if (lVar3 == null) throw; // [null/range check failed]
         cVar1 = GameDataController.HaveSave(lVar3,local_res10[0],0);
         if (!cVar1) {
@@ -134,7 +130,7 @@ public class SaveLoadMenuController
           puVar6 = (uint64 *)Vector3.get_zero(&local_28,0);
         }
         else {
-          lVar3 = *(int64 *)(pStatics + 32);
+          lVar3 = GameController.lockObj;
           if ((lVar3 == null) ||
              (lVar3 = GameDataController.GetSaveInfo(lVar3,local_res10[0],0)) == null)
           throw; // [null/range check failed]

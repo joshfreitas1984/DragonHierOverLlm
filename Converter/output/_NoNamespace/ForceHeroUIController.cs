@@ -65,7 +65,6 @@ public class ForceHeroUIController
     // RVA   : 0x7792C0   Offset: 0x7786C0   Length: 0x1A3C
     public void ShowForceHeroUI(ForceHeroUIType targetType, ForceData _targetForce)
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
         float fVar1;
         bool cVar2;
@@ -94,18 +93,18 @@ public class ForceHeroUIController
         GameObject.SetActive(this.forceHeroUIPanel,1,0);
         this.forceHeroUIType = targetType;
         this.targetForce = _targetForce;
-        if ((*pStatics_2cc8 == 0) ||
-           (lVar7 = *(int64 *)(*pStatics_2cc8 + 32)) == null)
+        if ((GameController._instance == null) ||
+           (lVar7 = GameController._instance.worldData) == null)
         throw; // [null/range check failed]
-        if ((*(int *)(lVar7 + 156) == 1) && (this.forceHeroUIType == null)) {
+        if ((lVar7.gameMode == 1) && (this.forceHeroUIType == null)) {
           lVar7 = FUN_18046c0a0(0);
-          if (((lVar7 == null) || (*(int64 *)(lVar7 + 32) == 0)) ||
-             (lVar7 = WorldData.Player(*(int64 *)(lVar7 + 32),0)) == null) throw; // [null/range check failed]
+          if (((lVar7 == null) || (lVar7.villageAreaID == null)) ||
+             (lVar7 = WorldData.Player(lVar7.villageAreaID,0)) == null) throw; // [null/range check failed]
           cVar2 = HeroData.HaveForce(lVar7,0);
           if (cVar2) goto LAB_18077982d;
           lVar7 = FUN_18046c0a0(0);
-          if (((lVar7 == null) || (*(int64 *)(lVar7 + 32) == 0)) ||
-             (lVar7 = WorldData.Player(*(int64 *)(lVar7 + 32),0)) == null) throw; // [null/range check failed]
+          if (((lVar7 == null) || (lVar7.villageAreaID == null)) ||
+             (lVar7 = WorldData.Player(lVar7.villageAreaID,0)) == null) throw; // [null/range check failed]
           cVar2 = HeroData.HaveServantForce(lVar7,0);
           if (cVar2) goto LAB_18077982d;
           if (this.upgradeButton == null) throw; // [null/range check failed]
@@ -140,20 +139,20 @@ public class ForceHeroUIController
         }
         else {
         LAB_18077982d:
-          if ((((*pStatics_2cc8 == 0) ||
-               (lVar7 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+          if ((((GameController._instance == null) ||
+               (lVar7 = GameController._instance.worldData) == null) ||
               (lVar7 = WorldData.Player(lVar7,0)) == null) || (this.targetForce == null))
           throw; // [null/range check failed]
           if ((*(int *)(lVar7 + 0x380) != this.targetForce.forceID) &&
              (this.forceHeroUIType == 1)) {
             lVar7 = FUN_18046c0a0(0);
-            if ((lVar7 == null) || (*(int64 *)(lVar7 + 32) == 0)) throw; // [null/range check failed]
-            if (*(int *)(*(int64 *)(lVar7 + 32) + 156) == 0) {
+            if ((lVar7 == null) || (lVar7.villageAreaID == null)) throw; // [null/range check failed]
+            if (*(int *)(lVar7.villageAreaID + 156) == 0) {
               lVar7 = FUN_18046c0a0(0);
-              if ((lVar7 == null) || (*(int64 *)(lVar7 + 32) == 0)) throw; // [null/range check failed]
-              lVar7 = WorldData.Player(*(int64 *)(lVar7 + 32),0);
+              if ((lVar7 == null) || (lVar7.villageAreaID == null)) throw; // [null/range check failed]
+              lVar7 = WorldData.Player(lVar7.villageAreaID,0);
               if (lVar7 == null) throw; // [null/range check failed]
-              if (4 < *(int *)(lVar7 + 184)) goto LAB_18077997e;
+              if (4 < lVar7.forceMeetingStarted) goto LAB_18077997e;
         LAB_180779a1e:
               if (this.upgradeButton == null) throw; // [null/range check failed]
               GameObject.SetActive(this.upgradeButton,1,0);
@@ -164,17 +163,17 @@ public class ForceHeroUIController
               if (this.upgradeText == null) throw; // [null/range check failed]
               uVar8 = GameObject.GetComponent(this.upgradeText,DAT_181d74108);
               lVar7 = FUN_18046c0a0(0);
-              if (((lVar7 == null) || (*(int64 *)(lVar7 + 32) == 0)) ||
-                 (lVar7 = WorldData.Player(*(int64 *)(lVar7 + 32),0)) == null)
+              if (((lVar7 == null) || (lVar7.villageAreaID == null)) ||
+                 (lVar7 = WorldData.Player(lVar7.villageAreaID,0)) == null)
               throw; // [null/range check failed]
               uVar9 = HeroData.GetUpgradeForceLvNeedText(lVar7,0);
               LTLocalization.SetText(uVar8,uVar9,0);
-              if (*(int *)(pStatics_3d40 + 8) == 1) {
-                if (((*pStatics_2cc8 == 0) ||
-                    (lVar7 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+              if (PlotController.fightSkillIndexCache == 1) {
+                if (((GameController._instance == null) ||
+                    (lVar7 = GameController._instance.worldData) == null) ||
                    (lVar7 = WorldData.Player(lVar7,0)) == null) throw; // [null/range check failed]
-                iVar5 = *(int *)(lVar7 + 184);
-                if (*(int *)(pStatics_3d40 + 104) <= iVar5) {
+                iVar5 = lVar7.forceMeetingStarted;
+                if (PlotController.StopWarCostFavor <= iVar5) {
                   if ((this.upgradeButton == null) ||
                      (lVar7 = GameObject.GetComponent(this.upgradeButton,DAT_181dc7c00),
                      lVar7 == null)) throw; // [null/range check failed]
@@ -190,29 +189,29 @@ public class ForceHeroUIController
               if (this.upgradeButton == null) throw; // [null/range check failed]
               lVar7 = GameObject.GetComponent(this.upgradeButton,DAT_181dc7c00);
               lVar11 = FUN_18046c0a0(0);
-              if (((lVar11 == null) || (*(int64 *)(lVar11 + 32) == 0)) ||
-                 (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) == null)
+              if (((lVar11 == null) || (lVar11.villageAreaID == null)) ||
+                 (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) == null)
               throw; // [null/range check failed]
-              fVar1 = *(float *)(lVar11 + 0x1c0);
+              fVar1 = lVar11.playerBookWriter;
               lVar11 = FUN_18046c0a0(0);
-              if (((lVar11 == null) || (*(int64 *)(lVar11 + 32) == 0)) ||
-                 (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) == null)
+              if (((lVar11 == null) || (lVar11.villageAreaID == null)) ||
+                 (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) == null)
               throw; // [null/range check failed]
               iVar5 = HeroData.GetUpgradeForceLvNeedContribution(lVar11,0x3f800000,0);
               if ((float)iVar5 <= fVar1) {
                 lVar11 = FUN_18046c0a0(0);
-                if (((lVar11 == null) || (*(int64 *)(lVar11 + 32) == 0)) ||
-                   (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) == null)
+                if (((lVar11 == null) || (lVar11.villageAreaID == null)) ||
+                   (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) == null)
                 throw; // [null/range check failed]
-                lVar11 = *(int64 *)(lVar11 + 600);
+                lVar11 = lVar11.skillSortType;
                 lVar10 = FUN_18046c0a0(0);
                 if (((lVar10 == null) || (*(int64 *)(lVar10 + 32) == 0)) ||
                    ((lVar10 = WorldData.Player(*(int64 *)(lVar10 + 32),0), lVar10 == null ||
                     (lVar11 == null)))) throw; // [null/range check failed]
                 iVar5 = FUN_1800d6760(lVar11,*(uint32 *)(lVar10 + 184),DAT_181d8fa18);
                 lVar11 = FUN_18046c0a0(0);
-                if (((lVar11 == null) || (*(int64 *)(lVar11 + 32) == 0)) ||
-                   (lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0)) == null)
+                if (((lVar11 == null) || (lVar11.villageAreaID == null)) ||
+                   (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) == null)
                 throw; // [null/range check failed]
                 iVar4 = HeroData.GetUpgradeForceLvNeedSkillNum(lVar11,0);
                 bVar12 = iVar4 <= iVar5;
@@ -231,13 +230,13 @@ public class ForceHeroUIController
             }
         LAB_18077997e:
             lVar7 = FUN_18046c0a0(0);
-            if ((lVar7 == null) || (*(int64 *)(lVar7 + 32) == 0)) throw; // [null/range check failed]
-            if (*(int *)(*(int64 *)(lVar7 + 32) + 156) == 1) {
+            if ((lVar7 == null) || (lVar7.villageAreaID == null)) throw; // [null/range check failed]
+            if (*(int *)(lVar7.villageAreaID + 156) == 1) {
               lVar7 = FUN_18046c0a0(0);
-              if ((lVar7 == null) || (*(int64 *)(lVar7 + 32) == 0)) throw; // [null/range check failed]
-              lVar7 = WorldData.Player(*(int64 *)(lVar7 + 32),0);
+              if ((lVar7 == null) || (lVar7.villageAreaID == null)) throw; // [null/range check failed]
+              lVar7 = WorldData.Player(lVar7.villageAreaID,0);
               if (lVar7 == null) throw; // [null/range check failed]
-              if (*(char *)(lVar7 + 180) == false) goto LAB_180779a1e;
+              if (!lVar7.hour) goto LAB_180779a1e;
             }
           }
           if (this.upgradeButton == null) throw; // [null/range check failed]
@@ -248,8 +247,8 @@ public class ForceHeroUIController
           GameObject.SetActive(this.upgradeText,0,0);
         }
         LAB_180779f39:
-        if ((((*pStatics_2cc8 == 0) ||
-             (lVar7 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+        if ((((GameController._instance == null) ||
+             (lVar7 = GameController._instance.worldData) == null) ||
             (lVar7 = WorldData.Player(lVar7,0)) == null) || (this.targetForce == null))
         throw; // [null/range check failed]
         if (*(int *)(lVar7 + 0x380) == this.targetForce.forceID) {
@@ -264,23 +263,23 @@ public class ForceHeroUIController
           if (this.leaveButton == null) throw; // [null/range check failed]
           lVar7 = GameObject.GetComponent(this.leaveButton,DAT_181d73448);
           uVar8 = "解除门客关系{0}";
-          if ((*pStatics_2cc8 == 0) ||
-             (lVar11 = *(int64 *)(*pStatics_2cc8 + 32)) == null)
+          if ((GameController._instance == null) ||
+             (lVar11 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
           uVar9 = "";
-          if (0 < *(int *)(lVar11 + 200)) {
+          if (0 < lVar11.playerServantForceTime) {
             lVar11 = FUN_18046c0a0(0);
-            if ((lVar11 == null) || (*(int64 *)(lVar11 + 32) == 0)) {
+            if ((lVar11 == null) || (lVar11.villageAreaID == null)) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            local_48 = *(uint32 *)(*(int64 *)(lVar11 + 32) + 200);
+            local_48 = *(uint32 *)(lVar11.villageAreaID + 200);
             uVar9 = il2cpp_value_box(DAT_181d80418,&local_48);
             uVar9 = String.Format("\n还需任职{0}日",uVar9,0);
           }
           uVar8 = String.Format(uVar8,uVar9,0);
           if (lVar7 == null) throw; // [null/range check failed]
-          *(uint64 *)(lVar7 + 24) = uVar8;
+          lVar7.cityAreaID = uVar8;
           if (((this.leaveButton == null) ||
               (lVar7 = GameObject.get_transform(this.leaveButton,0)) == null) ||
              (lVar7 = Transform.Find(lVar7,"Text",0)) == null) throw; // [null/range check failed]
@@ -288,43 +287,43 @@ public class ForceHeroUIController
           LTLocalization.SetText(uVar8,"解聘",0);
         }
         else {
-          if ((*pStatics_2cc8 == 0) ||
-             (lVar7 = *(int64 *)(*pStatics_2cc8 + 32)) == null)
+          if ((GameController._instance == null) ||
+             (lVar7 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
-          if ((*(int *)(lVar7 + 156) == 1) && (this.forceHeroUIType == 1)) {
+          if ((lVar7.gameMode == 1) && (this.forceHeroUIType == 1)) {
             lVar7 = this.betrayButton;
             lVar11 = FUN_18046c0a0(0);
-            if ((lVar11 == null) || (*(int64 *)(lVar11 + 32) == 0)) throw; // [null/range check failed]
-            lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0);
+            if ((lVar11 == null) || (lVar11.villageAreaID == null)) throw; // [null/range check failed]
+            lVar11 = WorldData.Player(lVar11.villageAreaID,0);
             if ((lVar11 == null) || (lVar7 == null)) throw; // [null/range check failed]
-            GameObject.SetActive(lVar7,*(int *)(lVar11 + 184) < 5,0);
+            GameObject.SetActive(lVar7,lVar11.forceMeetingStarted < 5,0);
             lVar7 = this.leaveButton;
             lVar11 = FUN_18046c0a0(0);
-            if ((lVar11 == null) || (*(int64 *)(lVar11 + 32) == 0)) throw; // [null/range check failed]
-            lVar11 = WorldData.Player(*(int64 *)(lVar11 + 32),0);
+            if ((lVar11 == null) || (lVar11.villageAreaID == null)) throw; // [null/range check failed]
+            lVar11 = WorldData.Player(lVar11.villageAreaID,0);
             if ((lVar11 == null) || (lVar7 == null)) throw; // [null/range check failed]
-            GameObject.SetActive(lVar7,*(int *)(lVar11 + 184) < 4,0);
+            GameObject.SetActive(lVar7,lVar11.forceMeetingStarted < 4,0);
             if ((this.leaveButton == null) ||
                (lVar7 = GameObject.GetComponent(this.leaveButton,DAT_181d73448)) == null
                ) throw; // [null/range check failed]
-            *(uint64 *)(lVar7 + 24) = "清空功绩并离开门派\n需身份为亲传弟子\n且功绩达到满值";
+            lVar7.cityAreaID = "清空功绩并离开门派\n需身份为亲传弟子\n且功绩达到满值";
             if ((this.leaveButton == null) ||
                ((lVar7 = GameObject.get_transform(this.leaveButton,0), lVar7 == null ||
                 (lVar7 = Transform.Find(lVar7,"Text",0)) == null))) throw; // [null/range check failed]
             uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
             LTLocalization.SetText(uVar8,"出师",0);
             lVar7 = FUN_18046c0a0(0);
-            if (((lVar7 == null) || (*(int64 *)(lVar7 + 32) == 0)) ||
-               (lVar7 = WorldData.Player(*(int64 *)(lVar7 + 32),0)) == null) throw; // [null/range check failed]
-            if (*(int *)(lVar7 + 184) == 3) {
+            if (((lVar7 == null) || (lVar7.villageAreaID == null)) ||
+               (lVar7 = WorldData.Player(lVar7.villageAreaID,0)) == null) throw; // [null/range check failed]
+            if (lVar7.forceMeetingStarted == 3) {
               lVar7 = FUN_18046c0a0(0);
-              if (((lVar7 == null) || (*(int64 *)(lVar7 + 32) == 0)) ||
-                 (lVar7 = WorldData.Player(*(int64 *)(lVar7 + 32),0)) == null)
+              if (((lVar7 == null) || (lVar7.villageAreaID == null)) ||
+                 (lVar7 = WorldData.Player(lVar7.villageAreaID,0)) == null)
               throw; // [null/range check failed]
-              fVar1 = *(float *)(lVar7 + 0x1c0);
+              fVar1 = lVar7.playerBookWriter;
               lVar7 = FUN_18046c0a0(0);
-              if (((lVar7 == null) || (*(int64 *)(lVar7 + 32) == 0)) ||
-                 (lVar7 = WorldData.Player(*(int64 *)(lVar7 + 32),0)) == null)
+              if (((lVar7 == null) || (lVar7.villageAreaID == null)) ||
+                 (lVar7 = WorldData.Player(lVar7.villageAreaID,0)) == null)
               throw; // [null/range check failed]
               iVar5 = HeroData.GetUpgradeForceLvNeedContribution(lVar7,0x3f800000,0);
               if ((float)iVar5 <= fVar1) {
@@ -357,10 +356,10 @@ public class ForceHeroUIController
           do {
             lVar7 = *(int64 *)(pStatics_3d40 + 0x4f8);
             if (lVar7 == null) break;
-            if (*(int *)(lVar7 + 24) <= (int)plVar15) {
-              if ((*pStatics_2cc8 == 0) ||
-                 (lVar7 = *(int64 *)(*pStatics_2cc8 + 32)) == null) break;
-              if (*(int *)(lVar7 + 156) == 1) {
+            if (lVar7.cityAreaID <= (int)plVar15) {
+              if ((GameController._instance == null) ||
+                 (lVar7 = GameController._instance.worldData) == null) break;
+              if (lVar7.gameMode == 1) {
                 lVar7 = *(int64 *)(pStatics_3d40 + 0x3a8);
                 if ((this.targetForce == null) || (lVar7 == null)) break;
                 cVar2 = FUN_18182a3a0(lVar7,this.targetForce.forceID,
@@ -372,7 +371,7 @@ public class ForceHeroUIController
                     uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
                     if ((this.targetForce != null) &&
                        (lVar7 = ForceData.DataBase(this.targetForce,0)) != null) {
-                      uVar9 = *(uint64 *)(lVar7 + 0x180);
+                      uVar9 = lVar7.speBuildingUnlocked;
                       uVar9 = String.Format("<b>门派特性</b>\n{1}{0}</color>",uVar9,
                                              *(uint64 *)(pStatics_3d40 + 600),0)
                       ;
@@ -419,11 +418,11 @@ public class ForceHeroUIController
                 (lVar7 = Transform.Find(lVar7,"Label",0)) == null))) break;
             plVar6 = (int64 *)Component.GetComponent(lVar7,DAT_181d96160);
             lVar7 = FUN_18046c100(0);
-            if ((((lVar7 == null) || (*(int64 *)(lVar7 + 56) == 0)) ||
-                (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 56),local_res8[0],DAT_181d9e108),
+            if ((((lVar7 == null) || (lVar7.Inns == null)) ||
+                (lVar7 = FUN_180002f80(lVar7.Inns,local_res8[0],DAT_181d9e108),
                 lVar7 == null)) || (plVar6 == (int64 *)0)) break;
-            local_38 = *(uint64 *)(lVar7 + 24);
-            uStack_30 = *(uint64 *)(lVar7 + 32);
+            local_38 = lVar7.cityAreaID;
+            uStack_30 = lVar7.villageAreaID;
             (**(code **)(*plVar6 + 0x2a8))(plVar6,&local_38,*(uint64 *)(*plVar6 + 0x2b0));
             if ((this.forceHeroUIPanel == null) ||
                (lVar7 = GameObject.get_transform(this.forceHeroUIPanel,0)) == null) break;
@@ -463,7 +462,7 @@ public class ForceHeroUIController
             uVar9 = il2cpp_value_box(DAT_181d80418,local_44);
             uVar8 = String.Format("月俸 {0}\n人口 {1}",uVar8,uVar9,0);
             if (lVar7 == null) goto LAB_18077acf7;
-            *(uint64 *)(lVar7 + 24) = uVar8;
+            lVar7.cityAreaID = uVar8;
             local_res8[0] = local_res8[0] + 1;
             plVar15 = (int64 *)(uint64)local_res8[0];
           } while( true );
@@ -576,13 +575,12 @@ public class ForceHeroUIController
     // RVA   : 0x77AD00   Offset: 0x77A100   Length: 0x23B
     public void UpgradeButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
-        if ((*pStatics != 0) &&
-           (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
-          if ((*(int *)(lVar2 + 156) == 1) && (this.forceHeroUIType == null)) {
+        if ((GameController._instance != null) &&
+           (lVar2 = GameController._instance.worldData) != null) {
+          if ((lVar2.gameMode == 1) && (this.forceHeroUIType == null)) {
             lVar2 = FUN_18046c400(0);
             if (lVar2 != null) {
               PlotController.ManagePlayerJoinForcePlot(lVar2,this.targetForce,0);
@@ -594,8 +592,8 @@ public class ForceHeroUIController
               return;
             }
             lVar2 = *(int64 *)(*(int64 *)(DAT_181d91b88 + 184) + 24);
-            if ((*pStatics != 0) &&
-               (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+            if ((GameController._instance != null) &&
+               (lVar1 = GameController._instance.worldData) != null) {
               uVar3 = WorldData.Player(lVar1,0);
               if (lVar2 != null) {
                 PlotController.ManageHeroForceLvPlot(lVar2,uVar3,0);

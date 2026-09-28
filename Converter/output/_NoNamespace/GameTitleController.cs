@@ -126,7 +126,7 @@ public class GameTitleController
         else {
           if (**(int **)(DAT_181d73d40 + 184) == 4) goto LAB_180a5e96c;
           plVar2 = this.versionText;
-          iVar1 = *(int *)(pStatics + 8);
+          iVar1 = PlotController.fightSkillIndexCache;
           uVar5 = "PlayTest ";
           if (((iVar1 != 1) && (uVar5 = "Demo ", iVar1 != 2)) && (uVar5 = "Expo ", iVar1 != 3)
              ) {
@@ -138,8 +138,8 @@ public class GameTitleController
           if (plVar2 == (int64 *)0) throw; // [null/range check failed]
           uVar5 = (**(code **)(*plVar2 + 0x5d8))(plVar2,*(uint64 *)(*plVar2 + 0x5e0));
           uVar5 = String.Concat(uVar5,"V",
-                                 *(uint64 *)(pStatics + 112),
-                                 *(uint64 *)(pStatics + 120),0);
+                                 PlotController.FirstMeetTalkText,
+                                 PlotController.YoungHeroFightMatchResultString,0);
           (**(code **)(*plVar2 + 0x5e8))(plVar2,uVar5,*(uint64 *)(*plVar2 + 0x5f0));
         }
         if (this.pathPoints != null) {
@@ -182,8 +182,6 @@ public class GameTitleController
     // RVA   : 0xA5F6F0   Offset: 0xA5EAF0   Length: 0xBCA
     private void Start()
     {
-        var pStatics_2d50 = *(int64*)(DAT_181d72d50 + 184);
-        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
         var pStatics_5190 = *(int64*)(DAT_181db5190 + 184);
         long lVar1;
         int iVar2;
@@ -271,16 +269,16 @@ public class GameTitleController
         }
         else {
           if (**(int **)(DAT_181d73d40 + 184) == 4) goto LAB_180a5fc75;
-          if (*(int *)(pStatics_3d40 + 8) == 1) {
+          if (PlotController.fightSkillIndexCache == 1) {
         LAB_180a5fc6f:
             lVar3 = this.StartInfoMenu;
             goto LAB_180a5fccf;
           }
-          lVar3 = *(int64 *)(pStatics_2d50 + 8);
+          lVar3 = GameController.difficultyExtraPoint;
           if ((lVar3 == null) || (lVar3 = *(int64 *)(lVar3 + 16)) == null) throw; // [null/range check failed]
           iVar2 = PlayerPrefDictionary.GetInt(lVar3,"WelcomeTextShowed",0);
           if (iVar2 < 1) {
-            lVar3 = *(int64 *)(pStatics_2d50 + 8);
+            lVar3 = GameController.difficultyExtraPoint;
             if ((lVar3 == null) || (lVar3 = *(int64 *)(lVar3 + 16)) == null) throw; // [null/range check failed]
             PlayerPrefDictionary.SetKey(lVar3,"WelcomeTextShowed",1);
             goto LAB_180a5fc6f;
@@ -291,7 +289,7 @@ public class GameTitleController
         local_res8[0] = 0;
         while( true ) {
           iVar2 = local_res8[0];
-          lVar3 = *(int64 *)(pStatics_3d40 + 64);
+          lVar3 = PlotController.LanternFestivelRewardLvTalkText;
           if (lVar3 == null) break;
           if (*(int *)(lVar3 + 24) <= iVar2) {
             return;
@@ -306,10 +304,10 @@ public class GameTitleController
           if (lVar3 == null) break;
           lVar3 = Component.GetComponent(lVar3,DAT_181d97160);
           if (**(int **)(DAT_181d73d40 + 184) == 1) {
-            lVar8 = *(int64 *)(pStatics_3d40 + 96);
+            lVar8 = PlotController.StopWarNeedFavor;
           }
           else {
-            lVar8 = *(int64 *)(pStatics_3d40 + 88);
+            lVar8 = PlotController.FightResultPlotText;
           }
           if (lVar8 == null) break;
           uVar6 = FUN_180002f80(lVar8,local_res8[0],DAT_181da4358);
@@ -330,7 +328,7 @@ public class GameTitleController
           lVar8 = FUN_180002f80(this.dlcSprites,local_res8[0],DAT_181d84ca0);
           if (lVar8 == null) break;
           lVar8 = *(int64 *)(lVar8 + 16);
-          lVar1 = *(int64 *)(pStatics_2d50 + 8);
+          lVar1 = GameController.difficultyExtraPoint;
           if (lVar1 == null) break;
           lVar1 = *(int64 *)(lVar1 + 16);
           uVar6 = Int32.ToString(local_res8,0);
@@ -352,7 +350,7 @@ public class GameTitleController
           lVar3 = Transform.Find(lVar3,"Text",0);
           if (lVar3 == null) break;
           plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d96160);
-          lVar3 = *(int64 *)(pStatics_2d50 + 8);
+          lVar3 = GameController.difficultyExtraPoint;
           if (lVar3 == null) break;
           lVar3 = *(int64 *)(lVar3 + 16);
           uVar6 = Int32.ToString(local_res8,0);
@@ -376,7 +374,7 @@ public class GameTitleController
           lVar3 = Transform.Find(lVar3,"Text",0);
           if (lVar3 == null) break;
           plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d96160);
-          lVar3 = *(int64 *)(pStatics_2d50 + 8);
+          lVar3 = GameController.difficultyExtraPoint;
           if (lVar3 == null) break;
           lVar3 = *(int64 *)(lVar3 + 16);
           uVar6 = Int32.ToString(local_res8,0);
@@ -437,8 +435,6 @@ public class GameTitleController
     // RVA   : 0xA5EC80   Offset: 0xA5E080   Length: 0x970
     public void ShowMainMenu()
     {
-        var pStatics_2d50 = *(int64*)(DAT_181d72d50 + 184);
-        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
         long lVar1;
         float fVar2;
         bool cVar3;
@@ -483,20 +479,20 @@ public class GameTitleController
               MonoBehaviour.Invoke(this,"PlayLeafSound",0x3f000000,0);
               if (**(int **)(DAT_181d73d40 + 184) != 2) {
                 if (**(int **)(DAT_181d73d40 + 184) != 4) {
-                  lVar7 = *(int64 *)(pStatics_2d50 + 8);
+                  lVar7 = GameController.difficultyExtraPoint;
                   if (lVar7 == null) throw; // [null/range check failed]
                   lVar7 = *(int64 *)(lVar7 + 16);
-                  uVar6 = String.Concat(*(uint64 *)(pStatics_3d40 + 112),
-                                         *(uint64 *)(pStatics_3d40 + 120),
+                  uVar6 = String.Concat(PlotController.FirstMeetTalkText,
+                                         PlotController.YoungHeroFightMatchResultString,
                                          "LogShowed",0);
                   if (lVar7 == null) throw; // [null/range check failed]
                   iVar4 = PlayerPrefDictionary.GetInt(lVar7,uVar6,0);
                   if (iVar4 == 0) {
-                    lVar7 = *(int64 *)(pStatics_2d50 + 8);
+                    lVar7 = GameController.difficultyExtraPoint;
                     if (lVar7 == null) throw; // [null/range check failed]
                     lVar7 = *(int64 *)(lVar7 + 16);
-                    uVar6 = String.Concat(*(uint64 *)(pStatics_3d40 + 112),
-                                           *(uint64 *)(pStatics_3d40 + 120),
+                    uVar6 = String.Concat(PlotController.FirstMeetTalkText,
+                                           PlotController.YoungHeroFightMatchResultString,
                                            "LogShowed",0);
                     if (lVar7 == null) throw; // [null/range check failed]
                     PlayerPrefDictionary.SetKey(lVar7,uVar6,"1",0);
@@ -671,9 +667,8 @@ public class GameTitleController
     // RVA   : 0xA5F640   Offset: 0xA5EA40   Length: 0xAB
     public void StartButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181da6810 + 184);
-        if (*pStatics != 0) {
-          StartMenuController.ShowStartMenu(*pStatics,0);
+        if (StartMenuController._instance != null) {
+          StartMenuController.ShowStartMenu(StartMenuController._instance,0);
           return;
         }
     }

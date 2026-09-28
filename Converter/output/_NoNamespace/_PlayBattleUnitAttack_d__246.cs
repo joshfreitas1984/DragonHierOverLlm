@@ -34,7 +34,6 @@ public class <PlayBattleUnitAttack>d__246
     // RVA   : 0x9306C0   Offset: 0x92FAC0   Length: 0x7EA
     private virtual bool MoveNext()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         ulong uVar1;
         uint uVar2;
         long lVar3;
@@ -108,9 +107,9 @@ public class <PlayBattleUnitAttack>d__246
             uStack_40 = puVar12[2];
             uStack_3c = puVar12[3];
             BattleUnit.ShowTextOnHead(lVar8,uVar11,&local_48,18,24,"UIAtlas",0,0,0);
-            if ((*(int64 *)(lVar3 + 0x110) != 0) && (*pStatics != 0)) {
+            if ((*(int64 *)(lVar3 + 0x110) != 0) && (GameController._instance != null)) {
               GameController.CountHeroData
-                        (*pStatics,
+                        (GameController._instance,
                          *(uint64 *)(*(int64 *)(lVar3 + 0x110) + 64),0);
               lVar8 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 8);
               if ((lVar8 != null) && (lVar8 = *(int64 *)(lVar8 + 16)) != null) {

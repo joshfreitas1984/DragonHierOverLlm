@@ -23,7 +23,7 @@ public class OpenURLOnClick
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          local_18 = *(uint64 *)(pStatics + 100);
+          local_18 = UICamera.lastWorldPosition;
           local_10 = *(uint32 *)(pStatics + 108);
           uVar3 = UILabel.GetUrlAtPosition(lVar2,&local_18,0);
           cVar1 = FUN_180d755b0(uVar3,0);

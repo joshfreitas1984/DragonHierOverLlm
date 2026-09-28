@@ -99,8 +99,6 @@ public class WegameStatsAndAchievements
     // RVA   : 0x9C7170   Offset: 0x9C6570   Length: 0x439
     private void CheckDLCState()
     {
-        var pStatics_2d50 = *(int64*)(DAT_181d72d50 + 184);
-        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
         long lVar1;
         int iVar2;
         long lVar3;
@@ -111,7 +109,7 @@ public class WegameStatsAndAchievements
         local_res18[0] = 0;
         do {
           iVar2 = local_res18[0];
-          lVar3 = *(int64 *)(pStatics_3d40 + 80);
+          lVar3 = PlotController.LaBaFestivelResultTalkText;
           if (lVar3 == null) goto LAB_1809c75a4;
           if (*(int *)(lVar3 + 24) <= iVar2) {
             return;
@@ -122,7 +120,7 @@ public class WegameStatsAndAchievements
             uVar5 = Int32.ToString(local_res18,0);
             uVar5 = String.Concat("DLC",uVar5," 0",0);
             Debug.Log(uVar5,0);
-            lVar3 = *(int64 *)(pStatics_2d50 + 8);
+            lVar3 = GameController.difficultyExtraPoint;
             if (lVar3 == null) goto LAB_1809c75a4;
             lVar3 = *(int64 *)(lVar3 + 16);
             uVar5 = Int32.ToString(local_res18,0);
@@ -140,7 +138,7 @@ public class WegameStatsAndAchievements
             lVar3 = FUN_180002970(19,DAT_181d7b780,lVar3);
             lVar4 = il2cpp_internal(DAT_181d95950);
             FUN_18132faf0(lVar4,DAT_181d99908);
-            lVar1 = *(int64 *)(pStatics_3d40 + 80);
+            lVar1 = PlotController.LaBaFestivelResultTalkText;
             if (lVar1 == null) goto LAB_1809c75a4;
             uVar5 = FUN_180002f80(lVar1,local_res18[0],DAT_181dab818);
             uVar6 = new RailDlcID(uVar5,0);
@@ -152,7 +150,7 @@ public class WegameStatsAndAchievements
             uVar5 = Int32.ToString(local_res18,0);
             uVar5 = String.Concat("DLC",uVar5," 1",0);
             Debug.Log(uVar5,0);
-            lVar3 = *(int64 *)(pStatics_2d50 + 8);
+            lVar3 = GameController.difficultyExtraPoint;
             if (lVar3 == null) goto LAB_1809c75a4;
             lVar3 = *(int64 *)(lVar3 + 16);
             uVar5 = Int32.ToString(local_res18,0);
@@ -219,7 +217,6 @@ public class WegameStatsAndAchievements
     // RVA   : 0x9C8300   Offset: 0x9C7700   Length: 0x765
     public void OnRailEvent(RAILEventID id, EventBase data)
     {
-        var pStatics = *(int64*)(DAT_181d72d50 + 184);
         long lVar1;
         bool cVar2;
         int iVar3;
@@ -261,7 +258,7 @@ public class WegameStatsAndAchievements
                   local_48 = 0;
                   while( true ) {
                     iVar3 = local_48;
-                    lVar1 = *(int64 *)(pStatics + 32);
+                    lVar1 = GameController.lockObj;
                     if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 0x1c0)) == null) break;
                     if (*(int *)(lVar1 + 24) <= iVar3) {
                       return;
@@ -300,7 +297,7 @@ public class WegameStatsAndAchievements
                     uVar6 = (**(code **)(*plVar11 + 0x168))(plVar11,*(uint64 *)(*plVar11 + 0x170));
                     cVar2 = FUN_18171e540(uVar6,"1",0);
                     if (cVar2) {
-                      lVar1 = *(int64 *)(pStatics + 8);
+                      lVar1 = GameController.difficultyExtraPoint;
                       if (lVar1 == null) break;
                       lVar1 = *(int64 *)(lVar1 + 16);
                       uVar6 = Int32.ToString(&local_48,0);
@@ -314,7 +311,7 @@ public class WegameStatsAndAchievements
                     if (plVar5 == (int64 *)0) break;
                     uVar6 = (**(code **)(*plVar5 + 0x168))(plVar5,*(uint64 *)(*plVar5 + 0x170));
                     iVar3 = Int32.Parse(uVar6,0);
-                    lVar1 = *(int64 *)(pStatics + 8);
+                    lVar1 = GameController.difficultyExtraPoint;
                     if (lVar1 == null) break;
                     lVar1 = *(int64 *)(lVar1 + 16);
                     uVar6 = Int32.ToString(&local_48,0);
@@ -322,7 +319,7 @@ public class WegameStatsAndAchievements
                     if (lVar1 == null) break;
                     iVar4 = PlayerPrefDictionary.GetInt(lVar1);
                     if (iVar4 < iVar3) {
-                      lVar1 = *(int64 *)(pStatics + 8);
+                      lVar1 = GameController.difficultyExtraPoint;
                       if (lVar1 == null) break;
                       lVar1 = *(int64 *)(lVar1 + 16);
                       uVar6 = Int32.ToString(&local_48,0);

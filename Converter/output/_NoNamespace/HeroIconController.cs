@@ -122,7 +122,6 @@ public class HeroIconController
     {
         var pStatics_05c8 = *(int64*)(DAT_181db05c8 + 184);
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
-        var pStatics_9de0 = *(int64*)(DAT_181da9de0 + 184);
         bool cVar1;
         int iVar2;
         uint uVar3;
@@ -478,8 +477,8 @@ public class HeroIconController
                   uVar6 = Component.GetComponent(lVar4,DAT_181d94460);
                   if (((this.heroData == null) ||
                       (lVar4 = this.heroData.heroAIData) == null) ||
-                     (*pStatics_9de0 == 0)) throw; // [null/range check failed]
-                  uVar5 = FUN_180002f80(*pStatics_9de0,
+                     (PlotController.attriIndexCache == null)) throw; // [null/range check failed]
+                  uVar5 = FUN_180002f80(PlotController.attriIndexCache,
                                         lVar4.isSummon,DAT_181da4358);
                   uVar5 = String.Concat("从事工作_",uVar5,0);
                 }

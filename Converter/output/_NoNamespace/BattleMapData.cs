@@ -175,7 +175,6 @@ public class BattleMapData
     // RVA   : 0x8C6EC0   Offset: 0x8C62C0   Length: 0x387
     private ObstacleData GenerateObstacleData(int obstacleID, bool bigObstacle)
     {
-        var pStatics = *(int64*)(DAT_181db0248 + 184);
         long lVar1;
         ulong uVar2;
         int iVar3;
@@ -186,14 +185,14 @@ public class BattleMapData
         byte uVar8;
         double dVar9;
         float fVar10;
-        lVar5 = *(int64 *)(pStatics + 80);
+        lVar5 = PlotController.LaBaFestivelResultTalkText;
         if ((lVar5 != null) && (lVar5 = *(int64 *)(lVar5 + 600)) != null) {
           if (*(uint32 *)(lVar5 + 24) <= obstacleID) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           uVar8 = 0;
           lVar5 = lVar5[obstacleID];
-          lVar1 = *(int64 *)(pStatics + 80);
+          lVar1 = PlotController.LaBaFestivelResultTalkText;
           if (lVar1 != null) {
             if (*(int *)(lVar1 + 32) != 0) {
               dVar9 = (double)GlobalData.RandomRangeDouble(0,0);
@@ -263,7 +262,6 @@ public class BattleMapData
     // RVA   : 0x8C6860   Offset: 0x8C5C60   Length: 0x304
     public void GenerateGuard(int homeBaseRow, float guardLv, int num)
     {
-        var pStatics = *(int64*)(DAT_181db0348 + 184);
         void BattleMapData.GenerateGuard
                      (int64 this,int homeBaseRow,uint32 guardLv,uint32 num)
         {
@@ -308,10 +306,10 @@ public class BattleMapData
             lVar2 = this.mapGrids;
             iVar1 = this.mapWidth;
             uVar3 = *(uint64 *)(*(int64 *)(lVar7 + 16) + 40);
-            lVar7 = *(int64 *)(pStatics + 8);
+            lVar7 = BattleMapData.DefenceGuardMapGridsOffset;
             if (lVar7 == null) goto LAB_1808c6b5f;
             fVar5 = (float)FUN_180132d60(lVar7,iVar10,DAT_181daba98);
-            lVar7 = *(int64 *)(pStatics + 8);
+            lVar7 = BattleMapData.DefenceGuardMapGridsOffset;
             if (((lVar7 == null) || (FUN_180132d60(lVar7,iVar10,DAT_181daba98), lVar2 == null)) ||
                (uVar9 = FUN_180127f90(lVar2,(int64)((int)fVar5 + iVar1),
                                       (int64)((int)extraout_var + homeBaseRow)), lVar6 == null))
@@ -327,7 +325,6 @@ public class BattleMapData
     // RVA   : 0x8C4500   Offset: 0x8C3900   Length: 0x235C
     private void GenerateBuildingObstacle(int obstacleCount, int gap)
     {
-        var pStatics = *(int64*)(DAT_181db0248 + 184);
         int iVar1;
         ulong uVar2;
         bool cVar3;
@@ -380,7 +377,7 @@ public class BattleMapData
                (lVar11 = WorldData.Player(lVar11.targetArea,0)) == null)
             goto LAB_1808c6839;
           }
-          lVar11 = *(int64 *)(pStatics + 80);
+          lVar11 = PlotController.LaBaFestivelResultTalkText;
           if (((lVar11 == null) || (this.battleMapTypeData == null)) ||
              (lVar11 = *(int64 *)(lVar11 + 0x250)) == null) goto LAB_1808c6839;
           uVar7 = this.battleMapTypeData.attackAreaType;
@@ -390,7 +387,7 @@ public class BattleMapData
           lVar11 = lVar11.battleMapType[uVar7];
           if (lVar11 == null) goto LAB_1808c6839;
           fVar29 = *(float *)(lVar11 + 36);
-          lVar11 = *(int64 *)(pStatics + 80);
+          lVar11 = PlotController.LaBaFestivelResultTalkText;
           if ((lVar11 == null) || (lVar11 = *(int64 *)(lVar11 + 112)) == null) goto LAB_1808c6839;
           if (lVar11.row < 2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -470,7 +467,7 @@ public class BattleMapData
                       (this,iVar5,(float)lVar11.column + (float)lVar11.column,4,0);
           }
           if (**(int **)(DAT_181d73d40 + 184) != 2) {
-            lVar11 = *(int64 *)(pStatics + 80);
+            lVar11 = PlotController.LaBaFestivelResultTalkText;
             if (((lVar11 == null) || (this.battleMapTypeData == null)) ||
                (lVar11 = *(int64 *)(lVar11 + 0x250)) == null) goto LAB_1808c6839;
             uVar7 = this.battleMapTypeData.attackAreaType;
@@ -725,7 +722,7 @@ public class BattleMapData
               lVar14 = FUN_18046bb80(0);
               if (lVar14 == null) goto LAB_1808c6839;
               lVar14 = *(int64 *)(lVar14 + 0x248);
-              lVar16 = **(int64 **)(DAT_181db0348 + 184);
+              lVar16 = BattleMapData.DefenceTrapID;
               if (lVar16 == null) goto LAB_1808c6839;
               uVar4 = FUN_180d95a30(0,*(uint32 *)(lVar16 + 24),0);
               uVar4 = FUN_1800d6760(lVar16,uVar4,DAT_181d8fa18);
@@ -778,7 +775,7 @@ public class BattleMapData
           FUN_18132faf0(lVar11,DAT_181d8f098);
           iVar22 = 0;
           while( true ) {
-            lVar12 = *(int64 *)(pStatics + 80);
+            lVar12 = PlotController.LaBaFestivelResultTalkText;
             if ((lVar12 == null) || (lVar12 = *(int64 *)(lVar12 + 600)) == null) break;
             if (*(int *)(lVar12 + 24) <= iVar22) goto joined_r0x0001808c5e01;
             lVar12 = FUN_18046bb80(0);
@@ -2507,9 +2504,7 @@ public class BattleMapData
             FUN_181829f90(lVar1,0xc0400000bf800000,DAT_181dab918);
             FUN_181829f90(lVar1,0x40800000bf800000,DAT_181dab918);
             FUN_181829f90(lVar1,0xc0a00000bf800000,DAT_181dab918);
-            plVar2 = (int64 *)(pStatics + 8);
-            *plVar2 = lVar1;
-            il2cpp_internal(plVar2,lVar1);
+            BattleMapData.DefenceGuardMapGridsOffset = lVar1;
             return;
           }
         }

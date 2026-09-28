@@ -169,7 +169,6 @@ public class MeditationData
     // RVA   : 0xA8DB00   Offset: 0xA8CF00   Length: 0x50C
     public void ChangeExp(float _exp, bool showInfo)
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_f6a8 = *(int64*)(DAT_181d7f6a8 + 184);
         int iVar1;
         long lVar2;
@@ -192,8 +191,8 @@ public class MeditationData
               this.lv = iVar1 + 1;
               this.exp = fVar6 - (float)((iVar1 + 2) * (iVar1 + 1)) * 50.0;
               lVar2 = *pStatics_f6a8;
-              if (((*pStatics_2cc8 == 0) ||
-                  (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+              if (((GameController._instance == null) ||
+                  (lVar3 = GameController._instance.worldData) == null) ||
                  (lVar3 = WorldData.Player(lVar3,0)) == null) {
         LAB_180a8e001:
                           // WARNING: Subroutine does not return
@@ -204,8 +203,8 @@ public class MeditationData
               uVar5 = il2cpp_value_box(DAT_181d80418,local_res18);
               uVar4 = String.Format("{0}修行达到{1}级",uVar4,uVar5,0);
               lVar3 = FUN_18046c0a0(0);
-              if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                 ((lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0), lVar3 == null ||
+              if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                 ((lVar3 = WorldData.Player(lVar3.villageAreaID,0), lVar3 == null ||
                   ((lVar3 = HeroData.GetForce(lVar3,0,0), lVar3 == null ||
                    (uVar5 = ForceData.GetForceIconName(lVar3,0), lVar2 == null)))))) goto LAB_180a8e001;
               local_58 = 0;
@@ -219,14 +218,14 @@ public class MeditationData
           return;
         }
         lVar2 = *pStatics_f6a8;
-        if (((*pStatics_2cc8 != 0) &&
-            (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) != null) &&
+        if (((GameController._instance != null) &&
+            (lVar3 = GameController._instance.worldData) != null) &&
            (lVar3 = WorldData.Player(lVar3,0)) != null) {
           uVar4 = HeroData.GetMeditationTopic(lVar3,0);
           uVar5 = Single.ToString(local_res10,"+0;-0;0",0);
           uVar4 = String.Format("{0}修行经验{1}",uVar4,uVar5,0);
-          if (((*pStatics_2cc8 != 0) &&
-              (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) != null) &&
+          if (((GameController._instance != null) &&
+              (lVar3 = GameController._instance.worldData) != null) &&
              ((lVar3 = WorldData.Player(lVar3,0), lVar3 != null &&
               ((lVar3 = HeroData.GetForce(lVar3,0,0), lVar3 != null &&
                (uVar5 = ForceData.GetForceIconName(lVar3,0), lVar2 != null)))))) {

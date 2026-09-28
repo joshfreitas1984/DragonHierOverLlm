@@ -280,7 +280,6 @@ public class UIButtonColor
     // RVA   : 0x152F5A0   Offset: 0x152E9A0   Length: 0x210
     protected virtual void OnEnable()
     {
-        var pStatics = *(int64*)(DAT_181daf678 + 184);
         long lVar1;
         byte uVar2;
         bool cVar3;
@@ -291,12 +290,12 @@ public class UIButtonColor
           uVar2 = UICamera.IsHighlighted(uVar4,0);
           (**(code **)(*this + 0x1c8))(this,uVar2,*(uint64 *)(*this + 0x1d0));
         }
-        if (*(int64 *)(pStatics + 224) == 0) {
+        if (UICamera.currentTouch == null) {
           return;
         }
-        lVar1 = *(int64 *)(pStatics + 224);
+        lVar1 = UICamera.currentTouch;
         if (lVar1 != null) {
-          uVar4 = *(uint64 *)(lVar1 + 80);
+          uVar4 = lVar1.pressed;
           uVar5 = Component.get_gameObject(this,0);
           cVar3 = Object.op_Equality(uVar4,uVar5,0);
           if (cVar3) {
@@ -305,9 +304,9 @@ public class UIButtonColor
             (**(code **)(*this + 0x1d8))(this,1,*(uint64 *)(*this + 0x1e0));
             return;
           }
-          lVar1 = *(int64 *)(pStatics + 224);
+          lVar1 = UICamera.currentTouch;
           if (lVar1 != null) {
-            uVar4 = *(uint64 *)(lVar1 + 72);
+            uVar4 = lVar1.current;
             uVar5 = Component.get_gameObject(this,0);
             cVar3 = Object.op_Equality(uVar4,uVar5,0);
             if (!cVar3) {
@@ -377,7 +376,6 @@ public class UIButtonColor
     // RVA   : 0x152FB60   Offset: 0x152EF60   Length: 0x25B
     protected virtual void OnPress(bool isPressed)
     {
-        var pStatics = *(int64*)(DAT_181daf678 + 184);
         long lVar1;
         bool cVar2;
         int iVar3;
@@ -399,13 +397,13 @@ public class UIButtonColor
           uVar5 = 2;
           goto LAB_18152fd90;
         }
-        if (*(int64 *)(pStatics + 224) != 0) {
-          lVar1 = *(int64 *)(pStatics + 224);
+        if (UICamera.currentTouch != null) {
+          lVar1 = UICamera.currentTouch;
           if (lVar1 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          uVar5 = *(uint64 *)(lVar1 + 72);
+          uVar5 = lVar1.current;
           uVar4 = Component.get_gameObject(this,0);
           cVar2 = Object.op_Equality(uVar5,uVar4,0);
           if (cVar2) {

@@ -897,7 +897,6 @@ public class EnhanceUIController
     // RVA   : 0x941040   Offset: 0x940440   Length: 0x3DB
     public void EnhanceButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         uint uVar2;
         long lVar3;
@@ -906,8 +905,8 @@ public class EnhanceUIController
         ulong uVar6;
         float fVar9;
         if (!this.useMoney) {
-          if (((*pStatics == 0) ||
-              (lVar5 = *(int64 *)(*pStatics + 32)) == null) ||
+          if (((GameController._instance == null) ||
+              (lVar5 = GameController._instance.worldData) == null) ||
              (lVar5 = WorldData.Player(lVar5,0)) == null) throw; // [null/range check failed]
           lVar5 = HeroData.GetForce(lVar5,0,0);
           uVar6 = EnhanceUIController.GetEnhanceResourceCost(this,0);
@@ -915,8 +914,8 @@ public class EnhanceUIController
           ForceData.CostResource(lVar5,uVar6,1,0);
         }
         else {
-          if ((*pStatics == 0) ||
-             (lVar5 = *(int64 *)(*pStatics + 32)) == null)
+          if ((GameController._instance == null) ||
+             (lVar5 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
           lVar5 = WorldData.Player(lVar5,0);
           fVar9 = (float)EnhanceUIController.GetEnhanceResourceCostNum(this,0);
@@ -955,7 +954,6 @@ public class EnhanceUIController
     // RVA   : 0x941B80   Offset: 0x940F80   Length: 0x175
     public int EnhanceNeedBuildingLv()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         bool cVar2;
         int iVar3;
@@ -969,11 +967,11 @@ public class EnhanceUIController
           FUN_1800d6620();
         }
         lVar5 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181d720a0);
-        if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) goto LAB_180941cf0;
-        iVar1 = *(int *)(*(int64 *)(lVar5 + 32) + 60);
+        if ((lVar5 == null) || (lVar5.villageAreaID == null)) goto LAB_180941cf0;
+        iVar1 = *(int *)(lVar5.villageAreaID + 60);
         if (this.enhanceType == 1) {
-          if ((*pStatics == 0) ||
-             (lVar5 = *(int64 *)(*pStatics + 32)) == null)
+          if ((GameController._instance == null) ||
+             (lVar5 = GameController._instance.worldData) == null)
           goto LAB_180941cf0;
           lVar5 = WorldData.Player(lVar5,0);
           if (lVar5 == null) goto LAB_180941cf0;
@@ -993,7 +991,6 @@ public class EnhanceUIController
     // RVA   : 0x941D00   Offset: 0x941100   Length: 0x17C
     public int EnhanceNeedSkillLv()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         bool cVar2;
         int iVar3;
@@ -1007,11 +1004,11 @@ public class EnhanceUIController
           FUN_1800d6620();
         }
         lVar5 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181d720a0);
-        if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) goto LAB_180941e77;
-        iVar1 = *(int *)(*(int64 *)(lVar5 + 32) + 60);
+        if ((lVar5 == null) || (lVar5.villageAreaID == null)) goto LAB_180941e77;
+        iVar1 = *(int *)(lVar5.villageAreaID + 60);
         if (this.enhanceType == 1) {
-          if ((*pStatics == 0) ||
-             (lVar5 = *(int64 *)(*pStatics + 32)) == null)
+          if ((GameController._instance == null) ||
+             (lVar5 = GameController._instance.worldData) == null)
           goto LAB_180941e77;
           lVar5 = WorldData.Player(lVar5,0);
           if (lVar5 == null) goto LAB_180941e77;
@@ -1105,17 +1102,16 @@ public class EnhanceUIController
     // RVA   : 0x942CF0   Offset: 0x9420F0   Length: 0x128
     public float GetPlayerTargetSkill()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         long lVar2;
         uint uVar3;
-        if ((*pStatics != 0) &&
-           (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar2 = GameController._instance.worldData) != null) {
           lVar2 = WorldData.Player(lVar2,0);
           if (lVar2 != null) {
             iVar1 = this.enhanceType;
             uVar3 = 0;
-            lVar2 = *(int64 *)(lVar2 + 0x168);
+            lVar2 = lVar2.showRoomChangeFame;
             if (iVar1 == 0) {
               uVar3 = 6;
             }
@@ -1126,10 +1122,10 @@ public class EnhanceUIController
               uVar3 = 8;
             }
             if (lVar2 != null) {
-              if (*(uint32 *)(lVar2 + 24) <= uVar3) {
+              if (lVar2.cityAreaID <= uVar3) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
-              return *(uint32 *)(*(int64 *)(lVar2 + 16) + 32 + (uint64)uVar3 * 4);
+              return *(uint32 *)(lVar2.chapter + 32 + (uint64)uVar3 * 4);
             }
           }
         }
@@ -1166,15 +1162,14 @@ public class EnhanceUIController
     // RVA   : 0x942E50   Offset: 0x942250   Length: 0x1D2
     public bool HaveResource()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         byte uVar2;
         long lVar3;
         ulong uVar4;
         float extraout_XMM0_Da;
         if (!this.useMoney) {
-          if ((*pStatics != 0) &&
-             (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
+          if ((GameController._instance != null) &&
+             (lVar3 = GameController._instance.worldData) != null) {
             lVar3 = WorldData.Player(lVar3,0);
             if (lVar3 != null) {
               lVar3 = HeroData.GetForce(lVar3,0,0);
@@ -1187,11 +1182,11 @@ public class EnhanceUIController
           }
         }
         else {
-          if ((*pStatics != 0) &&
-             (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
+          if ((GameController._instance != null) &&
+             (lVar3 = GameController._instance.worldData) != null) {
             lVar3 = WorldData.Player(lVar3,0);
-            if ((lVar3 != null) && (*(int64 *)(lVar3 + 0x220) != 0)) {
-              iVar1 = *(int *)(*(int64 *)(lVar3 + 0x220) + 24);
+            if ((lVar3 != null) && (lVar3.speBookStorageSpeAdd != null)) {
+              iVar1 = *(int *)(lVar3.speBookStorageSpeAdd + 24);
               EnhanceUIController.GetEnhanceResourceCostNum(this,0);
               return extraout_XMM0_Da <= (float)iVar1;
             }

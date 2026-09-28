@@ -42,27 +42,22 @@ public class FightResultContributionController
     // RVA   : 0xB2D7C0   Offset: 0xB2CBC0   Length: 0x11E
     private void Awake()
     {
-        var pStatics = *(int64*)(DAT_181dc6f30 + 184);
         bool cVar1;
         ulong uVar2;
-        uVar2 = *(uint64 *)(pStatics + 8);
+        uVar2 = PlotController.fightSkillIndexCache;
         cVar1 = Object.op_Equality(uVar2,0,0);
         if (!cVar1) {
           uVar2 = Component.get_gameObject(this,0);
           Object.Destroy(uVar2,0);
           return;
         }
-        puVar3 = (uint64 *)(pStatics + 8);
-        *puVar3 = this;
-        il2cpp_internal(puVar3,this);
+        PlotController.fightSkillIndexCache = this;
     }
 
     // Token : 0x6001486
     // RVA   : 0xB2D9B0   Offset: 0xB2CDB0   Length: 0x546
     public void ShowFightResultContribution(List<HeroData> _targetHeroList)
     {
-        var pStatics_6f30 = *(int64*)(DAT_181dc6f30 + 184);
-        var pStatics_7158 = *(int64*)(DAT_181d77158 + 184);
         void FightResultContributionController.ShowFightResultContribution
                      (int64 this,uint64 _targetHeroList)
         {
@@ -81,13 +76,11 @@ public class FightResultContributionController
         local_res8[0] = 0;
         il2cpp_internal(this + 56,_targetHeroList);
         lVar5 = this.targetHeroList;
-        lVar3 = *(int64 *)(pStatics_7158 + 8);
+        lVar3 = FightResultContributionController._instance;
         if (lVar3 == null) {
           uVar4 = **(uint64 **)(DAT_181d77158 + 184);
           var lVar3 = new OnTooltipCB(uVar4,DAT_181da3788,DAT_181dab2b8);
-          plVar8 = (int64 *)(pStatics_7158 + 8);
-          *plVar8 = lVar3;
-          il2cpp_internal(plVar8,lVar3);
+          FightResultContributionController._instance = lVar3;
         }
         if (lVar5 != null) {
           List_1.Sort(lVar5,lVar3,DAT_181d8ba18);
@@ -107,25 +100,25 @@ public class FightResultContributionController
               lVar5.Count = uVar4;
               if (this.temp == null) throw; // [null/range check failed]
               lVar5 = GameObject.GetComponent(this.temp,DAT_181d71600);
-              if (*pStatics_6f30 == 0) throw; // [null/range check failed]
+              if (PlotController.attriIndexCache == null) throw; // [null/range check failed]
               uVar4 = "";
-              if (iVar7 < *(int *)(*pStatics_6f30 + 24)) {
+              if (iVar7 < PlotController.attriIndexCache.plotHappen) {
                 uVar4 = *(uint64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x268);
-                if (*pStatics_6f30 == 0) throw; // [null/range check failed]
-                local_res8[0] = FUN_1800d6760(*pStatics_6f30,plVar8,DAT_181d8fa18);
+                if (PlotController.attriIndexCache == null) throw; // [null/range check failed]
+                local_res8[0] = FUN_1800d6760(PlotController.attriIndexCache,plVar8,DAT_181d8fa18);
                 uVar6 = Int32.ToString(local_res8,"+0;-0;0",0);
                 uVar4 = String.Concat(uVar4,uVar6,"</color>",0);
               }
               if (lVar5 == null) throw; // [null/range check failed]
               FightResultContributionHeroController.Init(lVar5,uVar4);
-              if (*pStatics_6f30 == 0) throw; // [null/range check failed]
-              if (iVar7 < *(int *)(*pStatics_6f30 + 24)) {
+              if (PlotController.attriIndexCache == null) throw; // [null/range check failed]
+              if (iVar7 < PlotController.attriIndexCache.plotHappen) {
                 if ((this.targetHeroList == null) ||
                    (lVar5 = FUN_180002f80(this.targetHeroList,plVar8,DAT_181d8bb98)) == null
                    ) throw; // [null/range check failed]
                 fVar1 = *(float *)(lVar5 + 176);
-                if (*pStatics_6f30 == 0) throw; // [null/range check failed]
-                iVar2 = FUN_1800d6760(*pStatics_6f30,plVar8);
+                if (PlotController.attriIndexCache == null) throw; // [null/range check failed]
+                iVar2 = FUN_1800d6760(PlotController.attriIndexCache,plVar8);
                 *(float *)(lVar5 + 176) = (float)iVar2 + fVar1;
               }
               lVar5 = this.targetHeroList;

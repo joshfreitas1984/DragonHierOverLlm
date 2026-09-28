@@ -48,7 +48,7 @@ public class RailManager
         uVar1 = **(uint64 **)(DAT_181d97780 + 184);
         cVar2 = Object.op_Equality(uVar1,0,0);
         if (!cVar2) {
-          lVar3 = **(int64 **)(DAT_181d97780 + 184);
+          lVar3 = RailManager.instance_;
         }
         else {
           lVar3 = new GameObject("RailManager",0);
@@ -56,7 +56,7 @@ public class RailManager
           lVar3 = GameObject.AddComponent(lVar3,DAT_181dc58f0);
         }
         if (lVar3 != null) {
-          return *(uint8 *)(lVar3 + 24);
+          return lVar3.initialized_;
         }
     }
 
@@ -76,7 +76,7 @@ public class RailManager
             plVar4 = pStatics;
             *plVar4 = this;
             il2cpp_internal(plVar4,this);
-            if (*(char *)(pStatics + 8) != false) {
+            if (RailManager.ever_initialize_) {
               Debug.LogError("Tried to Initialize the RailSDK twice in one session!",0);
               return;
             }
@@ -117,7 +117,7 @@ public class RailManager
                   uVar2 = new OnTooltipCB(this,DAT_181d9af10,0);
                   if (lVar5 != null) {
                     RailCallBackHelper.RegisterCallback(lVar5,0x714a,uVar2,0);
-                    *(uint8 *)(pStatics + 8) = 1;
+                    RailManager.ever_initialize_ = 1;
                     Debug.Log("RailInitialize success!",0);
                     return;
                   }

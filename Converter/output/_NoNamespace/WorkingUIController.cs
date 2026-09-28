@@ -87,7 +87,6 @@ public class WorkingUIController
     // RVA   : 0x9CA990   Offset: 0x9C9D90   Length: 0xA6E
     private void Update()
     {
-        var pStatics_2d50 = *(int64*)(DAT_181d72d50 + 184);
         var pStatics_4450 = *(int64*)(DAT_181da4450 + 184);
         var pStatics_5de8 = *(int64*)(DAT_181db5de8 + 184);
         var pStatics_6ea8 = *(int64*)(DAT_181d76ea8 + 184);
@@ -153,7 +152,7 @@ public class WorkingUIController
                           uVar9 = 0x3f800000;
                         }
                         else {
-                          lVar1 = *(int64 *)(pStatics_2d50 + 8);
+                          lVar1 = GameController.difficultyExtraPoint;
                           if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 16)) == null)
                           throw; // [null/range check failed]
                           iVar3 = PlayerPrefDictionary.GetInt(lVar1,"TestMode",0);
@@ -226,7 +225,7 @@ public class WorkingUIController
                             this.nextDayTime = fVar10;
                             fVar11 = **(float **)(DAT_181db5de8 + 184);
                             if (this.skipping) {
-                              lVar4 = *(int64 *)(pStatics_2d50 + 8);
+                              lVar4 = GameController.difficultyExtraPoint;
                               if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 16)) == null)
                               throw; // [null/range check failed]
                               iVar3 = PlayerPrefDictionary.GetInt(lVar4,"TestMode",0);
@@ -636,7 +635,7 @@ public class WorkingUIController
         if ((workResultType != 1) && (uVar2 = "", workResultType == 2)) {
           uVar2 = "\n(失手)";
         }
-        lVar6 = **(int64 **)(DAT_181d72cc8 + 184);
+        lVar6 = GameController._instance;
         uVar1 = Single.ToString(local_res18,"+0;-0;0",0);
         uVar2 = String.Concat(uVar1,uVar2,0);
         if (((this.workingUI != null) &&

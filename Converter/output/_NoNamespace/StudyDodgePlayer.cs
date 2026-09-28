@@ -530,7 +530,6 @@ public class StudyDodgePlayer
     public void OnHit(GameObject hitObj)
     {
         var pStatics_1be0 = *(int64*)(DAT_181da1be0 + 184);
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_8090 = *(int64*)(DAT_181da8090 + 184);
         var pStatics_be88 = *(int64*)(DAT_181dabe88 + 184);
         ulong uVar2;
@@ -603,12 +602,12 @@ public class StudyDodgePlayer
             }
             GlobalData.AddChild(uVar5,plVar10,&local_78,0);
           }
-          if ((*pStatics_2cc8 == 0) ||
-             (lVar7 = *(int64 *)(*pStatics_2cc8 + 32)) == null)
+          if ((GameController._instance == null) ||
+             (lVar7 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
           lVar7 = WorldData.Player(lVar7,0);
-          if ((((*pStatics_2cc8 == 0) ||
-               (lVar9 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+          if ((((GameController._instance == null) ||
+               (lVar9 = GameController._instance.worldData) == null) ||
               (lVar9 = WorldData.Player(lVar9,0)) == null) || (lVar7 == null)) throw; // [null/range check failed]
           HeroData.ChangeHp(lVar7,*(float *)(lVar9 + 0x17c) * -0.1,1,0,1,0,0);
           lVar7 = *(int64 *)(pStatics_8090 + 8);
@@ -623,19 +622,19 @@ public class StudyDodgePlayer
           TimeScaleController.SetSlowTime(*pStatics_be88,0x3f000000,0x3e4ccccd,0);
           if (*pStatics_1be0 != 0) {
             ShakeCam.StartShake(*pStatics_1be0,2,0);
-            if (((*pStatics_2cc8 != 0) &&
-                (lVar7 = *(int64 *)(*pStatics_2cc8 + 32)) != null) &&
+            if (((GameController._instance != null) &&
+                (lVar7 = GameController._instance.worldData) != null) &&
                (lVar7 = WorldData.Player(lVar7,0)) != null) {
               lVar9 = this.playerSkeleton;
-              if (*(float *)(lVar7 + 0x178) <= 0.0) {
+              if (lVar7.skinUnlockData <= 0.0) {
                 if ((lVar9 != null) && (lVar7 = SkeletonAnimation.get_AnimationState(lVar9,0)) != null)
                 {
                   AnimationState.SetAnimation(lVar7,1,"die",0,0);
-                  if ((*pStatics_2cc8 != 0) &&
-                     (lVar7 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
+                  if ((GameController._instance != null) &&
+                     (lVar7 = GameController._instance.worldData) != null) {
                     lVar7 = WorldData.Player(lVar7,0);
-                    if ((((*pStatics_2cc8 != 0) &&
-                         (lVar9 = *(int64 *)(*pStatics_2cc8 + 32)) != null
+                    if ((((GameController._instance != null) &&
+                         (lVar9 = GameController._instance.worldData) != null
                          ) && (lVar9 = WorldData.Player(lVar9,0)) != null) &&
                        (uVar5 = HeroData.GetHeroDieSound(lVar9,0), lVar7 != null)) {
                       HeroData.PlayHeroSound(lVar7,uVar5,0x3f000000,0xbf800000,0);
@@ -656,11 +655,11 @@ public class StudyDodgePlayer
                    (lVar7 = SkeletonAnimation.get_AnimationState(this.playerSkeleton,0),
                    lVar7 != null)) {
                   AnimationState.AddEmptyAnimation(lVar7,1,0x3dcccccd,0,0);
-                  if ((*pStatics_2cc8 != 0) &&
-                     (lVar7 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
+                  if ((GameController._instance != null) &&
+                     (lVar7 = GameController._instance.worldData) != null) {
                     lVar7 = WorldData.Player(lVar7,0);
-                    if ((((*pStatics_2cc8 != 0) &&
-                         (lVar9 = *(int64 *)(*pStatics_2cc8 + 32)) != null
+                    if ((((GameController._instance != null) &&
+                         (lVar9 = GameController._instance.worldData) != null
                          ) && (lVar9 = WorldData.Player(lVar9,0)) != null) &&
                        (uVar5 = HeroData.GetHeroHurtSound(lVar9,0), lVar7 != null)) {
                       HeroData.PlayHeroSound(lVar7,uVar5,0x3f000000,0xbf800000,0);

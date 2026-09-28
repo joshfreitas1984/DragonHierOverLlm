@@ -388,3 +388,116 @@
     text: "九死一生难度下达成任意结局"
   - split: 5
     text: "无"
+- raw: "40,朝朝暮暮,累计与情侣合练/共餐50次,int,50,无"
+  splits:
+  - split: 1
+    text: "朝朝暮暮"
+  - split: 2
+    text: "累计与情侣合练"
+  - split: 2
+    subIndex: 1
+    text: "共餐50次"
+  - split: 5
+    text: "无"
+  templates:
+  - split: 2
+    template: "{0}/{1}"
+- raw: "41,独占鳌头,累计在比武/辩才/赛马大会中夺冠50次,int,50,无"
+  splits:
+  - split: 1
+    text: "独占鳌头"
+  - split: 2
+    text: "累计在比武"
+  - split: 2
+    subIndex: 1
+    text: "辩才"
+  - split: 2
+    subIndex: 2
+    text: "赛马大会中夺冠50次"
+  - split: 5
+    text: "无"
+  templates:
+  - split: 2
+    template: "{0}/{1}/{2}"
+- raw: "42,少年英雄,在少年英雄大会中夺冠,bool,1,无"
+  splits:
+  - split: 1
+    text: "少年英雄"
+  - split: 2
+    text: "在少年英雄大会中夺冠"
+  - split: 5
+    text: "无"
+- raw: "43,开宗立派,在自由模式中成功自立门户,bool,1,无"
+  splits:
+  - split: 1
+    text: "开宗立派"
+  - split: 2
+    text: "在自由模式中成功自立门户"
+  - split: 5
+    text: "无"
+- raw: "44,霸业宏图,用自立门派达成名门大派/武林盟主结局,bool,1,无"
+  splits:
+  - split: 1
+    text: "霸业宏图"
+  - split: 2
+    text: "用自立门派达成名门大派"
+  - split: 2
+    subIndex: 1
+    text: "武林盟主结局"
+  - split: 5
+    text: "无"
+  templates:
+  - split: 2
+    template: "{0}/{1}"
+- raw: "45,分久必合,用仙霞派附庸铁掌帮/用铁掌帮附庸仙霞派,bool,1,无"
+  splits:
+  - split: 1
+    text: "分久必合"
+  - split: 2
+    text: "用仙霞派附庸铁掌帮"
+  - split: 2
+    subIndex: 1
+    text: "用铁掌帮附庸仙霞派"
+  - split: 5
+    text: "无"
+  templates:
+  - split: 2
+    template: "{0}/{1}"
+- raw: "46,山河泣血,在剧情模式第四章最终决战中取胜,bool,1,无"
+  splits:
+  - split: 1
+    text: "山河泣血"
+  - split: 2
+    text: "在剧情模式第四章最终决战中取胜"
+  - split: 5
+    text: "无"
+- raw: "47,风云际会,集齐所有人物图鉴,bool,1,无"
+  splits:
+  - split: 1
+    text: "风云际会"
+  - split: 2
+    text: "集齐所有人物图鉴"
+  - split: 5
+    text: "无"
+- raw: "48,万象森罗,集齐所有武学图鉴,bool,1,无"
+  splits:
+  - split: 1
+    text: "万象森罗"
+  - split: 2
+    text: "集齐所有武学图鉴"
+  - split: 5
+    text: "无"
+- raw: "49,龙胤立志,九死一生难度达成天下第一/武林盟主结局,bool,1,无"
+  splits:
+  - split: 1
+    text: "龙胤立志"
+  - split: 2
+    text: "九死一生难度达成天下第一"
+  - split: 2
+    subIndex: 1
+    text: "武林盟主结局"
+  - split: 5
+    text: "无"
+  templates:
+  - split: 2
+    template: "{0}/{1}"

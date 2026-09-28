@@ -341,9 +341,7 @@ public class ZhDictionary
           plVar1[4] = "STCharacters";
           il2cpp_internal(plVar1 + 4,lVar2);
           uVar3 = ZhDictionary.LoadDictionary(plVar1,0);
-          puVar4 = (uint64 *)(pStatics + 8);
-          *puVar4 = uVar3;
-          il2cpp_internal(puVar4,uVar3);
+          ZhDictionary.<STCharacters>k.BackingField = uVar3;
           plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
           if (plVar1 != (int64 *)0) {
             if (("STPhrases" != 0) &&
@@ -361,9 +359,7 @@ public class ZhDictionary
             plVar1[4] = "STPhrases";
             il2cpp_internal(plVar1 + 4,lVar2);
             uVar3 = ZhDictionary.LoadDictionary(plVar1,0);
-            puVar4 = (uint64 *)(pStatics + 16);
-            *puVar4 = uVar3;
-            il2cpp_internal(puVar4,uVar3);
+            ZhDictionary.<STPhrases>k.BackingField = uVar3;
             plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
             if (plVar1 != (int64 *)0) {
               if (("TSCharacters" != 0) &&
@@ -382,9 +378,7 @@ public class ZhDictionary
               plVar1[4] = "TSCharacters";
               il2cpp_internal(plVar1 + 4,lVar2);
               uVar3 = ZhDictionary.LoadDictionary(plVar1,0);
-              puVar4 = (uint64 *)(pStatics + 24);
-              *puVar4 = uVar3;
-              il2cpp_internal(puVar4,uVar3);
+              ZhDictionary.<TSCharacters>k.BackingField = uVar3;
               plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
               if (plVar1 != (int64 *)0) {
                 if (("TSPhrases" != 0) &&
@@ -403,9 +397,7 @@ public class ZhDictionary
                 plVar1[4] = "TSPhrases";
                 il2cpp_internal(plVar1 + 4,lVar2);
                 uVar3 = ZhDictionary.LoadDictionary(plVar1,0);
-                puVar4 = (uint64 *)(pStatics + 32);
-                *puVar4 = uVar3;
-                il2cpp_internal(puVar4,uVar3);
+                ZhDictionary.<TSPhrases>k.BackingField = uVar3;
                 plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
                 if (plVar1 != (int64 *)0) {
                   if (("TWVariants" != 0) &&
@@ -424,9 +416,7 @@ public class ZhDictionary
                   plVar1[4] = "TWVariants";
                   il2cpp_internal(plVar1 + 4,lVar2);
                   uVar3 = ZhDictionary.LoadDictionary(plVar1,0);
-                  puVar4 = (uint64 *)(pStatics + 40);
-                  *puVar4 = uVar3;
-                  il2cpp_internal(puVar4,uVar3);
+                  ZhDictionary.<TWVariants>k.BackingField = uVar3;
                   plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,3);
                   if (plVar1 != (int64 *)0) {
                     if (("TWPhrasesIT" != 0) &&
@@ -475,9 +465,7 @@ public class ZhDictionary
                     plVar1[6] = "TWPhrasesOther";
                     il2cpp_internal(plVar1 + 6,lVar2);
                     uVar3 = ZhDictionary.LoadDictionary(plVar1,0);
-                    puVar4 = (uint64 *)(pStatics + 48);
-                    *puVar4 = uVar3;
-                    il2cpp_internal(puVar4,uVar3);
+                    ZhDictionary.<TWPhrases>k.BackingField = uVar3;
                     plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
                     if (plVar1 != (int64 *)0) {
                       if (("TWVariants" != 0) &&
@@ -496,9 +484,7 @@ public class ZhDictionary
                       plVar1[4] = "TWVariants";
                       il2cpp_internal(plVar1 + 4,lVar2);
                       uVar3 = ZhDictionary.LoadDictionaryReversed(plVar1,0);
-                      puVar4 = (uint64 *)(pStatics + 56);
-                      *puVar4 = uVar3;
-                      il2cpp_internal(puVar4,uVar3);
+                      ZhDictionary.<TWVariantsRev>k.BackingField = uVar3;
                       plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
                       if (plVar1 != (int64 *)0) {
                         if (("TWVariantsRevPhrases" != 0) &&
@@ -517,9 +503,7 @@ public class ZhDictionary
                         plVar1[4] = "TWVariantsRevPhrases";
                         il2cpp_internal(plVar1 + 4,lVar2);
                         uVar3 = ZhDictionary.LoadDictionary(plVar1,0);
-                        puVar4 = (uint64 *)(pStatics + 64);
-                        *puVar4 = uVar3;
-                        il2cpp_internal(puVar4,uVar3);
+                        ZhDictionary.<TWVariantsRevPhrases>k.BackingField = uVar3;
                         plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,3);
                         if (plVar1 != (int64 *)0) {
                           if (("TWPhrasesIT" != 0) &&
@@ -568,9 +552,7 @@ public class ZhDictionary
                           plVar1[6] = "TWPhrasesOther";
                           il2cpp_internal(plVar1 + 6,lVar2);
                           uVar3 = ZhDictionary.LoadDictionaryReversed(plVar1,0);
-                          puVar4 = (uint64 *)(pStatics + 72);
-                          *puVar4 = uVar3;
-                          il2cpp_internal(puVar4,uVar3);
+                          ZhDictionary.<TWPhrasesRev>k.BackingField = uVar3;
                           plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
                           if (plVar1 != (int64 *)0) {
                             if (("HKVariants" != 0) &&
@@ -589,9 +571,7 @@ public class ZhDictionary
                             plVar1[4] = "HKVariants";
                             il2cpp_internal(plVar1 + 4,lVar2);
                             uVar3 = ZhDictionary.LoadDictionary(plVar1,0);
-                            puVar4 = (uint64 *)(pStatics + 80);
-                            *puVar4 = uVar3;
-                            il2cpp_internal(puVar4,uVar3);
+                            ZhDictionary.<HKVariants>k.BackingField = uVar3;
                             plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
                             if (plVar1 != (int64 *)0) {
                               if (("HKVariants" != 0) &&
@@ -611,9 +591,7 @@ public class ZhDictionary
                               plVar1[4] = "HKVariants";
                               il2cpp_internal(plVar1 + 4,lVar2);
                               uVar3 = ZhDictionary.LoadDictionaryReversed(plVar1,0);
-                              puVar4 = (uint64 *)(pStatics + 88);
-                              *puVar4 = uVar3;
-                              il2cpp_internal(puVar4,uVar3);
+                              ZhDictionary.<HKVariantsRev>k.BackingField = uVar3;
                               plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
                               if (plVar1 != (int64 *)0) {
                                 if (("HKVariantsRevPhrases" != 0) &&
@@ -633,9 +611,7 @@ public class ZhDictionary
                                 plVar1[4] = "HKVariantsRevPhrases";
                                 il2cpp_internal(plVar1 + 4,lVar2);
                                 uVar3 = ZhDictionary.LoadDictionary(plVar1,0);
-                                puVar4 = (uint64 *)(pStatics + 96);
-                                *puVar4 = uVar3;
-                                il2cpp_internal(puVar4,uVar3);
+                                ZhDictionary.<HKVariantsRevPhrases>k.BackingField = uVar3;
                                 plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
                                 if (plVar1 != (int64 *)0) {
                                   if (("JPVariants" != 0) &&
@@ -655,9 +631,7 @@ public class ZhDictionary
                                   plVar1[4] = "JPVariants";
                                   il2cpp_internal(plVar1 + 4,lVar2);
                                   uVar3 = ZhDictionary.LoadDictionary(plVar1,0);
-                                  puVar4 = (uint64 *)(pStatics + 104);
-                                  *puVar4 = uVar3;
-                                  il2cpp_internal(puVar4,uVar3);
+                                  ZhDictionary.<JPVariants>k.BackingField = uVar3;
                                   plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
                                   if (plVar1 != (int64 *)0) {
                                     if (("JPVariants" != 0) &&
@@ -677,9 +651,7 @@ public class ZhDictionary
                                     plVar1[4] = "JPVariants";
                                     il2cpp_internal(plVar1 + 4,lVar2);
                                     uVar3 = ZhDictionary.LoadDictionaryReversed(plVar1,0);
-                                    puVar4 = (uint64 *)(pStatics + 112);
-                                    *puVar4 = uVar3;
-                                    il2cpp_internal(puVar4,uVar3);
+                                    ZhDictionary.<JPVariantsRev>k.BackingField = uVar3;
                                     plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
                                     if (plVar1 != (int64 *)0) {
                                       if (("JPShinjitaiCharacters" != 0) &&
@@ -699,9 +671,7 @@ public class ZhDictionary
                                       plVar1[4] = "JPShinjitaiCharacters";
                                       il2cpp_internal(plVar1 + 4,lVar2);
                                       uVar3 = ZhDictionary.LoadDictionary(plVar1,0);
-                                      puVar4 = (uint64 *)(pStatics + 120);
-                                      *puVar4 = uVar3;
-                                      il2cpp_internal(puVar4,uVar3);
+                                      ZhDictionary.<JPShinjitaiCharacters>k.BackingField = uVar3;
                                       plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
                                       if (plVar1 != (int64 *)0) {
                                         if (("JPShinjitaiPhrases" != 0) &&
@@ -748,16 +718,13 @@ public class ZhDictionary
     // RVA   : 0x1845EA0   Offset: 0x18452A0   Length: 0x110
     private static IDictionary<string, string> LoadDictionary(string[] dictionaryNames)
     {
-        var pStatics = *(int64*)(DAT_181d93628 + 184);
         ulong uVar1;
         long lVar2;
-        lVar2 = *(int64 *)(pStatics + 8);
+        lVar2 = ZhDictionary.<STCharacters>k.BackingField;
         if (lVar2 == null) {
           uVar1 = **(uint64 **)(DAT_181d93628 + 184);
           lVar2 = new OnTooltipCB(uVar1,DAT_181dbadb8,DAT_181d98a28);
-          plVar3 = (int64 *)(pStatics + 8);
-          *plVar3 = lVar2;
-          il2cpp_internal(plVar3,lVar2);
+          ZhDictionary.<STCharacters>k.BackingField = lVar2;
         }
         ZhDictionary.LoadDictionaryInternal(dictionaryNames,lVar2,0);
     }
@@ -766,16 +733,13 @@ public class ZhDictionary
     // RVA   : 0x1845D90   Offset: 0x1845190   Length: 0x110
     private static IDictionary<string, string> LoadDictionaryReversed(string[] dictionaryNames)
     {
-        var pStatics = *(int64*)(DAT_181d93628 + 184);
         ulong uVar1;
         long lVar2;
-        lVar2 = *(int64 *)(pStatics + 16);
+        lVar2 = ZhDictionary.<STPhrases>k.BackingField;
         if (lVar2 == null) {
           uVar1 = **(uint64 **)(DAT_181d93628 + 184);
           lVar2 = new OnTooltipCB(uVar1,DAT_181dbaec8,DAT_181d98a28);
-          plVar3 = (int64 *)(pStatics + 16);
-          *plVar3 = lVar2;
-          il2cpp_internal(plVar3,lVar2);
+          ZhDictionary.<STPhrases>k.BackingField = lVar2;
         }
         ZhDictionary.LoadDictionaryInternal(dictionaryNames,lVar2,0);
     }
@@ -784,7 +748,6 @@ public class ZhDictionary
     // RVA   : 0x18457E0   Offset: 0x1844BE0   Length: 0x5AB
     private static IDictionary<string, string> LoadDictionaryInternal(IList<string> dictionaryNames, Action<IList<string>, Dictionary<string, string>> processLine)
     {
-        var pStatics = *(int64*)(DAT_181d93628 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
@@ -806,13 +769,11 @@ public class ZhDictionary
         }
         uVar2 = il2cpp_internal(DAT_181d83368);
         FUN_1808b1490(uVar2,10000,DAT_181d758b8);
-        lVar3 = *(int64 *)(pStatics + 24);
+        lVar3 = ZhDictionary.<TSCharacters>k.BackingField;
         if (lVar3 == null) {
           uVar7 = **(uint64 **)(DAT_181d93628 + 184);
           lVar3 = new OnTooltipCB(uVar7,DAT_181dbae40,DAT_181db2d78);
-          plVar9 = (int64 *)(pStatics + 24);
-          *plVar9 = lVar3;
-          il2cpp_internal(plVar9,lVar3);
+          ZhDictionary.<TSCharacters>k.BackingField = lVar3;
         }
         plVar9 = (int64 *)FUN_180970560(dictionaryNames,lVar3,DAT_181db41b0);
         if (plVar9 == (int64 *)0) {

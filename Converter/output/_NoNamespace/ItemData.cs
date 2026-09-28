@@ -481,19 +481,18 @@ public class ItemData
     // RVA   : 0xC9D8F0   Offset: 0xC9CCF0   Length: 0x117
     public bool DetectPoisonNum()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         if (this.poisonNumDetected) {
           return true;
         }
-        if ((((*pStatics != 0) &&
-             (lVar1 = *(int64 *)(*pStatics + 32)) != null) &&
+        if ((((GameController._instance != null) &&
+             (lVar1 = GameController._instance.worldData) != null) &&
             (lVar1 = WorldData.Player(lVar1,0)) != null) &&
-           (lVar1 = *(int64 *)(lVar1 + 0x168)) != null) {
-          if (*(uint32 *)(lVar1 + 24) < 2) {
+           (lVar1 = lVar1.showRoomChangeFame) != null) {
+          if (lVar1.cityAreaID < 2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          if (this.poisonNum <= *(float *)(*(int64 *)(lVar1 + 16) + 36)) {
+          if (this.poisonNum <= *(float *)(lVar1.chapter + 36)) {
             return true;
           }
           return false;
@@ -1314,14 +1313,13 @@ public class ItemData
     // RVA   : 0xC9DC50   Offset: 0xC9D050   Length: 0xFA
     public int GetContributionCost(int heroID)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         ulong uVar2;
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null) {
           lVar1 = WorldData.GetHero(lVar1,heroID,0);
           if (lVar1 != null) {
-            if (*(char *)(lVar1 + 180) != false) {
+            if (lVar1.hour) {
               return 0;
             }
             uVar2 = Mathf.RoundToInt((float)this.value * 0.1,0);
@@ -1341,15 +1339,14 @@ public class ItemData
     // RVA   : 0xC9EA10   Offset: 0xC9DE10   Length: 0x107
     public int GetReadBookContributionCost(int heroID)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         ulong uVar2;
         float fVar3;
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null) {
           lVar1 = WorldData.GetHero(lVar1,heroID,0);
           if (lVar1 != null) {
-            if (*(char *)(lVar1 + 180) != false) {
+            if (lVar1.hour) {
               return 0;
             }
             fVar3 = (float)FUN_1801f8ab0(0x40000000);

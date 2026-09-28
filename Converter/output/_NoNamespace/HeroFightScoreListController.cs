@@ -495,7 +495,6 @@ public class HeroFightScoreListController
     // RVA   : 0xAF2CE0   Offset: 0xAF20E0   Length: 0x680
     public void RefreshHeroFightScoreList()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         float fVar1;
         bool cVar2;
         long lVar3;
@@ -506,56 +505,56 @@ public class HeroFightScoreListController
         if (this.heroFightScoreList != null) {
           FUN_1812f9a10(this.heroFightScoreList,DAT_181d8b618);
           lVar3 = this.heroFightScoreList;
-          if (((*pStatics != 0) &&
-              (lVar4 = *(int64 *)(*pStatics + 32)) != null) &&
-             (lVar4 = *(int64 *)(lVar4 + 80)) != null) {
-            if (*(int *)(lVar4 + 24) == 0) {
+          if (((GameController._instance != null) &&
+              (lVar4 = GameController._instance.worldData) != null) &&
+             (lVar4 = lVar4.Heros) != null) {
+            if (lVar4.cityAreaID == null) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             if (lVar3 != null) {
-              FUN_18181e0a0(lVar3,*(uint64 *)(*(int64 *)(lVar4 + 16) + 32),DAT_181d8b518);
+              FUN_18181e0a0(lVar3,*(uint64 *)(lVar4.chapter + 32),DAT_181d8b518);
               iVar7 = 1;
         LAB_180af2e70:
               do {
-                if (((*pStatics == 0) ||
-                    (lVar3 = *(int64 *)(*pStatics + 32)) == null) ||
-                   (lVar3 = *(int64 *)(lVar3 + 80)) == null) break;
+                if (((GameController._instance == null) ||
+                    (lVar3 = GameController._instance.worldData) == null) ||
+                   (lVar3 = lVar3.Heros) == null) break;
                 if (lVar3.Count <= iVar7) {
                   return;
                 }
                 lVar3 = FUN_18046c0a0(0);
-                if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                   (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 80)) == null) break;
+                if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                   (lVar3 = *(int64 *)(lVar3.villageAreaID + 80)) == null) break;
                 lVar3 = FUN_180002f80(lVar3,iVar7,DAT_181d8bb98);
                 if (lVar3 != null) {
                   lVar3 = FUN_18046c0a0(0);
-                  if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                     (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 80)) == null) break;
+                  if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                     (lVar3 = *(int64 *)(lVar3.villageAreaID + 80)) == null) break;
                   lVar3 = FUN_180002f80(lVar3,iVar7,DAT_181d8bb98);
                   if (lVar3 == null) break;
-                  if (*(char *)(lVar3 + 96) == false) {
+                  if (!lVar3.BigMapRandomEventDatas) {
                     lVar3 = FUN_18046c0a0(0);
-                    if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                       (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 80)) == null) break;
+                    if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                       (lVar3 = *(int64 *)(lVar3.villageAreaID + 80)) == null) break;
                     lVar3 = FUN_180002f80(lVar3,iVar7,DAT_181d8bb98);
                     if (lVar3 == null) break;
                     if (*(char *)(lVar3 + 97) == false) {
                       lVar3 = FUN_18046c0a0(0);
-                      if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                         (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 80)) == null) break;
+                      if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                         (lVar3 = *(int64 *)(lVar3.villageAreaID + 80)) == null) break;
                       lVar3 = FUN_180002f80(lVar3,iVar7,DAT_181d8bb98);
                       if (lVar3 == null) break;
-                      cVar2 = FUN_18171e540(*(uint64 *)(lVar3 + 104),"白云天",0);
+                      cVar2 = FUN_18171e540(lVar3.AreaMapRandomEventDatas,"白云天",0);
                       if (cVar2) {
                         lVar3 = FUN_18046c0a0(0);
-                        if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                           (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 216)) == null) break;
+                        if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                           (lVar3 = *(int64 *)(lVar3.villageAreaID + 216)) == null) break;
                         cVar2 = FUN_1808ab490(lVar3,1000,DAT_181dbf7d8);
                         if (!cVar2) goto LAB_180af333a;
                       }
                       lVar3 = FUN_18046c0a0(0);
-                      if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                         (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 80)) == null) break;
+                      if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                         (lVar3 = *(int64 *)(lVar3.villageAreaID + 80)) == null) break;
                       lVar3 = FUN_180002f80(lVar3,iVar7,DAT_181d8bb98);
                       if (lVar3 == null) break;
                       HeroData.CheckHeroDetailDirty(lVar3,0,0);
@@ -566,16 +565,16 @@ public class HeroFightScoreListController
                         if (lVar3.Count <= iVar6) {
                           if (499 < lVar3.Count) goto LAB_180af333a;
                           lVar4 = FUN_18046c0a0(0);
-                          if (((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
-                             (lVar4 = *(int64 *)(*(int64 *)(lVar4 + 32) + 80)) == null)
+                          if (((lVar4 == null) || (lVar4.villageAreaID == null)) ||
+                             (lVar4 = *(int64 *)(lVar4.villageAreaID + 80)) == null)
                           throw; // [null/range check failed]
                           uVar5 = FUN_180002f80(lVar4,iVar7,DAT_181d8bb98);
                           FUN_18181e0a0(lVar3,uVar5,DAT_181d8b518);
                           goto LAB_180af333a;
                         }
                         lVar3 = FUN_18046c0a0(0);
-                        if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                           (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 80)) == null)
+                        if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                           (lVar3 = *(int64 *)(lVar3.villageAreaID + 80)) == null)
                         throw; // [null/range check failed]
                         lVar3 = FUN_180002f80(lVar3,iVar7,DAT_181d8bb98);
                         if (lVar3 == null) throw; // [null/range check failed]
@@ -589,8 +588,8 @@ public class HeroFightScoreListController
                       }
                       lVar3 = this.heroFightScoreList;
                       lVar4 = FUN_18046c0a0(0);
-                      if (((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
-                         (lVar4 = *(int64 *)(*(int64 *)(lVar4 + 32) + 80)) == null) break;
+                      if (((lVar4 == null) || (lVar4.villageAreaID == null)) ||
+                         (lVar4 = *(int64 *)(lVar4.villageAreaID + 80)) == null) break;
                       uVar5 = FUN_180002f80(lVar4,iVar7,DAT_181d8bb98);
                       if (lVar3 == null) break;
                       FUN_181822520(lVar3,iVar6,uVar5,DAT_181d8b818);

@@ -158,7 +158,6 @@ public class ChooseController
     // RVA   : 0x998330   Offset: 0x997730   Length: 0x15A
     public void ShowChoosePanel(ChooseType _chooseType, List<HeroData> param, GameObject _sendResultFucTarget, string _sendResultFuc, string _sendResultParam, ChooseFilterType _filterType, string _cancelFuc)
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
         void ChooseController.ShowChoosePanel
                      (int64 this,uint32 _chooseType,int64 param,uint64 _sendResultFucTarget,
@@ -1785,8 +1784,8 @@ public class ChooseController
         plVar6 = (int64 *)(uint64)(uVar5 + 1);
         goto LAB_18099bc20;
         LAB_18099bd20:
-        if ((((*pStatics_2cc8 == 0) ||
-             (lVar7 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+        if ((((GameController._instance == null) ||
+             (lVar7 = GameController._instance.worldData) == null) ||
             (lVar7 = WorldData.Player(lVar7,0)) == null) ||
            ((lVar7 = HeroData.GetForce(lVar7,0,0), lVar7 == null || (lVar7.heroAIData == null))))
         throw; // [null/range check failed]
@@ -2085,8 +2084,8 @@ public class ChooseController
         plVar6 = (int64 *)(uint64)(uVar5 + 1);
         goto LAB_18099af40;
         LAB_18099b0d0:
-        if ((((*pStatics_2cc8 == 0) ||
-             (lVar7 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+        if ((((GameController._instance == null) ||
+             (lVar7 = GameController._instance.worldData) == null) ||
             (lVar7 = WorldData.Player(lVar7,0)) == null) ||
            ((lVar7 = HeroData.GetForce(lVar7,0,0), lVar7 == null || (lVar7.heroAIData == null))))
         throw; // [null/range check failed]
@@ -2183,7 +2182,6 @@ public class ChooseController
     // RVA   : 0x998490   Offset: 0x997890   Length: 0x1174
     public void ShowChoosePanel(ChooseType _chooseType, List<object> param, GameObject _sendResultFucTarget, string _sendResultFuc, string _sendResultParam, ChooseFilterType _filterType, HeroData targetFavorHero, string _cancelFuc)
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
         void ChooseController.ShowChoosePanel
                      (int64 this,uint32 _chooseType,int64 param,uint64 _sendResultFucTarget,
@@ -3810,8 +3808,8 @@ public class ChooseController
         plVar6 = (int64 *)(uint64)(uVar5 + 1);
         goto LAB_18099bc20;
         LAB_18099bd20:
-        if ((((*pStatics_2cc8 == 0) ||
-             (lVar7 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+        if ((((GameController._instance == null) ||
+             (lVar7 = GameController._instance.worldData) == null) ||
             (lVar7 = WorldData.Player(lVar7,0)) == null) ||
            ((lVar7 = HeroData.GetForce(lVar7,0,0), lVar7 == null || (lVar7.heroAIData == null))))
         throw; // [null/range check failed]
@@ -4110,8 +4108,8 @@ public class ChooseController
         plVar6 = (int64 *)(uint64)(uVar5 + 1);
         goto LAB_18099af40;
         LAB_18099b0d0:
-        if ((((*pStatics_2cc8 == 0) ||
-             (lVar7 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+        if ((((GameController._instance == null) ||
+             (lVar7 = GameController._instance.worldData) == null) ||
             (lVar7 = WorldData.Player(lVar7,0)) == null) ||
            ((lVar7 = HeroData.GetForce(lVar7,0,0), lVar7 == null || (lVar7.heroAIData == null))))
         throw; // [null/range check failed]

@@ -117,12 +117,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "10,恢复效率,恢复效率,TRUE,0.02"
+- raw: "10,日常恢复效率,日常恢复效率,TRUE,0.02"
   splits:
   - split: 2
-    text: "恢复效率"
-    translated: "Recovery efficiency"
-    qcReviewedText: "Recovery efficiency"
+    text: "日常恢复效率"
+    translated: "Daily recovery efficiency"
+    qcReviewedText: "Daily recovery efficiency"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

@@ -275,7 +275,7 @@ public class HeroAIData
         long lVar6;
         uVar5 = this.aiStuffType;
         lVar6 = (int64)(int)uVar5;
-        lVar2 = **(int64 **)(DAT_181da9de0 + 184);
+        lVar2 = PlotController.attriIndexCache;
         if (lVar2 == null) goto LAB_180876367;
         if (*(uint32 *)(lVar2 + 24) <= uVar5) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);

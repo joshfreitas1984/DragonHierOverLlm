@@ -670,7 +670,6 @@ public class GameTextList
     // RVA   : 0xA5D450   Offset: 0xA5C850   Length: 0x50C
     protected void Rebuild()
     {
-        var pStatics = *(int64*)(DAT_181d8bc90 + 184);
         uint uVar1;
         long lVar2;
         bool cVar4;
@@ -691,8 +690,8 @@ public class GameTextList
           this.mLastWidth = *(uint32 *)(lVar6 + 164);
           this.mLastHeight = *(uint32 *)(lVar6 + 168);
           UILabel.UpdateNGUIText(lVar6,0);
-          *(uint32 *)(pStatics + 64) = 1000000;
-          *(uint32 *)(pStatics + 72) = 1000000;
+          NGUIText.rectHeight = 1000000;
+          NGUIText.regionHeight = 1000000;
           this.mTotalLines = 0;
           lVar6 = GameTextList.get_paragraphs(this,0);
           plVar10 = plVar11;

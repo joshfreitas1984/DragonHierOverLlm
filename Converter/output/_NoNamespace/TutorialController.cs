@@ -60,7 +60,6 @@ public class TutorialController
     // RVA   : 0xAE16A0   Offset: 0xAE0AA0   Length: 0x4C3
     public void StartTutorial(string tutorialName)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         bool cVar1;
         int iVar2;
         ulong uVar3;
@@ -68,8 +67,8 @@ public class TutorialController
         long lVar5;
         uint uVar6;
         if (*(int *)(*(int64 *)(DAT_181d73d40 + 184) + 8) == 1) {
-          if (*pStatics == 0) throw; // [null/range check failed]
-          cVar1 = GameController.CheckPlayTestEnd(*pStatics,0);
+          if (GameController._instance == null) throw; // [null/range check failed]
+          cVar1 = GameController.CheckPlayTestEnd(GameController._instance,0);
           if (cVar1) {
             return;
           }
@@ -78,14 +77,14 @@ public class TutorialController
         if ((lVar4 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 8)?._items) != null) {
           iVar2 = PlayerPrefDictionary.GetInt(lVar4,"SkipTutorial",0);
           if (iVar2 == 1) {
-            if (((*pStatics != 0) &&
-                (lVar4 = *(int64 *)(*pStatics + 32)) != null) &&
-               (lVar4 = *(int64 *)(lVar4 + 0x100)) != null) {
+            if (((GameController._instance != null) &&
+                (lVar4 = GameController._instance.worldData) != null) &&
+               (lVar4 = lVar4.tutorialFinished) != null) {
               cVar1 = FUN_18181e400(lVar4,tutorialName,DAT_181da3e58);
               if (!cVar1) {
                 lVar4 = FUN_18046c0a0(0);
-                if (((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
-                   (lVar4 = *(int64 *)(*(int64 *)(lVar4 + 32) + 0x100)) == null)
+                if (((lVar4 == null) || (lVar4.villageAreaID == null)) ||
+                   (lVar4 = *(int64 *)(lVar4.villageAreaID + 0x100)) == null)
                 throw; // [null/range check failed]
                 FUN_18181e0a0(lVar4,tutorialName,DAT_181da3d58);
               }
@@ -93,9 +92,9 @@ public class TutorialController
             }
           }
           else {
-            if (((*pStatics != 0) &&
-                (lVar4 = *(int64 *)(*pStatics + 32)) != null) &&
-               (lVar4 = *(int64 *)(lVar4 + 0x100)) != null) {
+            if (((GameController._instance != null) &&
+                (lVar4 = GameController._instance.worldData) != null) &&
+               (lVar4 = lVar4.tutorialFinished) != null) {
               cVar1 = FUN_18181e400(lVar4,tutorialName,DAT_181da3e58);
               if (cVar1) {
                 return;
@@ -702,7 +701,6 @@ public class TutorialController
     // RVA   : 0xAE3F90   Offset: 0xAE3390   Length: 0xB3B
     public void TutorialSkillPowerSpeFuc()
     {
-        var pStatics = *(int64*)(DAT_181db0248 + 184);
         float fVar1;
         uint uVar2;
         bool cVar3;
@@ -713,11 +711,11 @@ public class TutorialController
         long lVar9;
         float fVar10;
         uint[] local_res18 = new uint[2];
-        lVar4 = *(int64 *)(pStatics + 80);
+        lVar4 = PlotController.LaBaFestivelResultTalkText;
         if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 0x110)) == null) throw; // [null/range check failed]
         if (*(char *)(lVar4 + 176) != false) {
-          lVar4 = *(int64 *)(pStatics + 80);
-          lVar5 = *(int64 *)(pStatics + 80);
+          lVar4 = PlotController.LaBaFestivelResultTalkText;
+          lVar5 = PlotController.LaBaFestivelResultTalkText;
           if ((lVar5 == null) || (lVar4 == null)) throw; // [null/range check failed]
           cVar3 = BattleController.CanPlayerControl(lVar4,*(uint64 *)(lVar5 + 0x110),0);
           if (cVar3) {
@@ -728,21 +726,21 @@ public class TutorialController
         }
         lVar4 = 0;
         local_res18[0] = 0;
-        lVar5 = *(int64 *)(pStatics + 80);
+        lVar5 = PlotController.LaBaFestivelResultTalkText;
         if (((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 0x110)) == null) ||
            (lVar5 = *(int64 *)(lVar5 + 64)) == null) throw; // [null/range check failed]
         if (*(int64 *)(lVar5 + 0x270) == 0) {
         LAB_180ae440a:
-          lVar5 = *(int64 *)(pStatics + 80);
+          lVar5 = PlotController.LaBaFestivelResultTalkText;
           if (((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 0x110)) == null) ||
              (lVar5 = *(int64 *)(lVar5 + 64)) == null) throw; // [null/range check failed]
           if (*(int64 *)(lVar5 + 0x280) != 0) {
-            lVar5 = *(int64 *)(pStatics + 80);
+            lVar5 = PlotController.LaBaFestivelResultTalkText;
             if ((((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 0x110)) == null) ||
                 (lVar5 = *(int64 *)(lVar5 + 64)) == null) ||
                (lVar5 = *(int64 *)(lVar5 + 0x280)) == null) throw; // [null/range check failed]
             fVar1 = *(float *)(lVar5 + 100);
-            lVar5 = *(int64 *)(pStatics + 80);
+            lVar5 = PlotController.LaBaFestivelResultTalkText;
             if (((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 0x110)) == null) ||
                ((lVar5 = *(int64 *)(lVar5 + 64), lVar5 == null ||
                 (lVar5 = *(int64 *)(lVar5 + 0x280)) == null))) throw; // [null/range check failed]
@@ -757,7 +755,7 @@ public class TutorialController
               goto LAB_180ae47d9;
             }
           }
-          lVar5 = *(int64 *)(pStatics + 80);
+          lVar5 = PlotController.LaBaFestivelResultTalkText;
           if (((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 0x110)) == null) ||
              (lVar5 = *(int64 *)(lVar5 + 64)) == null) throw; // [null/range check failed]
           if (*(int64 *)(lVar5 + 0x290) != 0) {
@@ -782,12 +780,12 @@ public class TutorialController
           }
         }
         else {
-          lVar5 = *(int64 *)(pStatics + 80);
+          lVar5 = PlotController.LaBaFestivelResultTalkText;
           if ((((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 0x110)) == null) ||
               (lVar5 = *(int64 *)(lVar5 + 64)) == null) ||
              (lVar5 = *(int64 *)(lVar5 + 0x270)) == null) throw; // [null/range check failed]
           fVar1 = *(float *)(lVar5 + 100);
-          lVar5 = *(int64 *)(pStatics + 80);
+          lVar5 = PlotController.LaBaFestivelResultTalkText;
           if (((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 0x110)) == null) ||
              ((lVar5 = *(int64 *)(lVar5 + 64), lVar5 == null ||
               (lVar5 = *(int64 *)(lVar5 + 0x270)) == null))) throw; // [null/range check failed]
@@ -799,7 +797,7 @@ public class TutorialController
           lVar4 = *(int64 *)(lVar4 + 0x270);
         }
         LAB_180ae47d9:
-        lVar5 = *(int64 *)(pStatics + 80);
+        lVar5 = PlotController.LaBaFestivelResultTalkText;
         if ((lVar5 != null) && (lVar5 = *(int64 *)(lVar5 + 0x130)) != null) {
           lVar5 = Transform.Find(lVar5,"BaseSkillGrid",0);
           uVar6 = Int32.ToString(local_res18,0);
@@ -1967,11 +1965,10 @@ public class TutorialController
     // RVA   : 0xAE3520   Offset: 0xAE2920   Length: 0x10A
     public void TutorialFocusOnMazePlayer()
     {
-        var pStatics = *(int64*)(DAT_181dc5e30 + 184);
         long lVar1;
         long lVar2;
-        lVar1 = *(int64 *)(pStatics + 8);
-        lVar2 = *(int64 *)(pStatics + 8);
+        lVar1 = BattleController.AttackAreaTypeStartMovePower;
+        lVar2 = BattleController.AttackAreaTypeStartMovePower;
         if ((lVar2 != null) && (lVar1 != null)) {
           ExploreController.FocusOnTarget(lVar1,*(uint64 *)(lVar2 + 144),0);
           return;
@@ -1982,11 +1979,10 @@ public class TutorialController
     // RVA   : 0xAE3410   Offset: 0xAE2810   Length: 0x10A
     public void TutorialFocusOnMazeEnd()
     {
-        var pStatics = *(int64*)(DAT_181dc5e30 + 184);
         long lVar1;
         long lVar2;
-        lVar1 = *(int64 *)(pStatics + 8);
-        lVar2 = *(int64 *)(pStatics + 8);
+        lVar1 = BattleController.AttackAreaTypeStartMovePower;
+        lVar2 = BattleController.AttackAreaTypeStartMovePower;
         if ((lVar2 != null) && (lVar1 != null)) {
           ExploreController.FocusOnTarget(lVar1,*(uint64 *)(lVar2 + 160),0);
           return;
@@ -1997,14 +1993,13 @@ public class TutorialController
     // RVA   : 0xAE2CB0   Offset: 0xAE20B0   Length: 0x189
     public void TutorialFocusOnAreaCenter()
     {
-        var pStatics = *(int64*)(DAT_181dac758 + 184);
         long lVar1;
         long lVar2;
         long lVar3;
         ulong uVar4;
-        lVar1 = *(int64 *)(pStatics + 56);
-        lVar2 = *(int64 *)(pStatics + 56);
-        lVar3 = *(int64 *)(pStatics + 56);
+        lVar1 = PlotController.SpringFestivelRewardLvTalkText;
+        lVar2 = PlotController.SpringFestivelRewardLvTalkText;
+        lVar3 = PlotController.SpringFestivelRewardLvTalkText;
         if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 88)) != null) {
           uVar4 = AreaData.GetCenterBuilding(lVar3,0);
           if (lVar2 != null) {
@@ -2107,24 +2102,22 @@ public class TutorialController
     // RVA   : 0xAE2E40   Offset: 0xAE2240   Length: 0x298
     public void TutorialFocusOnArea(string _areaName)
     {
-        var pStatics_0bc8 = *(int64*)(DAT_181db0bc8 + 184);
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         long lVar2;
         long lVar3;
         uint local_38;
         uint uStack_24;
         byte[] local_18 = new byte[16];
-        if ((*pStatics_2cc8 != 0) &&
-           (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar3 = GameController._instance.worldData) != null) {
           lVar3 = WorldData.GetArea(lVar3,_areaName,0);
           if (lVar3 == null) {
             return;
           }
-          lVar1 = *(int64 *)(pStatics_0bc8 + 16);
-          lVar2 = *(int64 *)(pStatics_0bc8 + 16);
+          lVar1 = GameController.CheckShowSpeHero;
+          lVar2 = GameController.CheckShowSpeHero;
           if ((((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 96)) != null) &&
-              (lVar3 = FUN_1817d9e10(lVar2,*(uint32 *)(lVar3 + 16),DAT_181db9ed0)) != null) &&
+              (lVar3 = FUN_1817d9e10(lVar2,lVar3.chapter,DAT_181db9ed0)) != null) &&
              (lVar3 = GameObject.get_transform(lVar3,0)) != null) {
             puVar4 = (uint64 *)Transform.get_localPosition(local_18,lVar3,0);
             if (lVar1 != null) {
@@ -2132,7 +2125,7 @@ public class TutorialController
               uStack_24 = (uint32)((uint64)*puVar4 >> 32);
               *(uint32 *)(lVar1 + 168) = local_38;
               *(uint32 *)(lVar1 + 172) = uStack_24;
-              lVar3 = *(int64 *)(pStatics_0bc8 + 16);
+              lVar3 = GameController.CheckShowSpeHero;
               if (lVar3 != null) {
                 BigMapController.TweenFocusTarget(lVar3,0);
                 return;
@@ -2146,22 +2139,20 @@ public class TutorialController
     // RVA   : 0xAE3AE0   Offset: 0xAE2EE0   Length: 0x1E7
     public void TutorialSetMoveTargetArea(string _areaName)
     {
-        var pStatics_0bc8 = *(int64*)(DAT_181db0bc8 + 184);
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         long lVar2;
         long lVar3;
         ulong uVar4;
-        if ((*pStatics_2cc8 != 0) &&
-           (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar3 = GameController._instance.worldData) != null) {
           lVar3 = WorldData.GetArea(lVar3,_areaName,0);
           if (lVar3 == null) {
             return;
           }
-          lVar1 = *(int64 *)(pStatics_0bc8 + 16);
-          lVar2 = *(int64 *)(pStatics_0bc8 + 16);
+          lVar1 = GameController.CheckShowSpeHero;
+          lVar2 = GameController.CheckShowSpeHero;
           if (((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 96)) != null) &&
-             (uVar4 = FUN_1817d9e10(lVar2,*(uint32 *)(lVar3 + 16),DAT_181db9ed0), lVar1 != null)) {
+             (uVar4 = FUN_1817d9e10(lVar2,lVar3.chapter,DAT_181db9ed0), lVar1 != null)) {
             BigMapController.SetPlayerMoveTargetArea(lVar1,uVar4,0);
             return;
           }
@@ -2627,7 +2618,6 @@ public class TutorialController
     // RVA   : 0xAE1B70   Offset: 0xAE0F70   Length: 0x31A
     public void TutorialAskForItemFindPlotChoice()
     {
-        var pStatics = *(int64*)(DAT_181d91b88 + 184);
         uint uVar2;
         long lVar3;
         uint uVar4;
@@ -2640,7 +2630,7 @@ public class TutorialController
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar3 = lVar3[uVar2];
-          lVar5 = *(int64 *)(pStatics + 24);
+          lVar5 = BuildingUIController.PartyLvName;
           if ((lVar5 != null) && (lVar5 = *(int64 *)(lVar5 + 32)) != null) {
             lVar5 = GameObject.get_transform(lVar5,0);
             if (lVar5 != null) {
@@ -2683,7 +2673,7 @@ public class TutorialController
                               }
                               lVar3 = *(int64 *)
                                        (*(int64 *)(lVar3 + 16) + 32 + (int64)(int)uVar2 * 8);
-                              lVar5 = *(int64 *)(pStatics + 24);
+                              lVar5 = BuildingUIController.PartyLvName;
                               if ((lVar5 != null) && (lVar5 = *(int64 *)(lVar5 + 32)) != null) {
                                 lVar5 = GameObject.get_transform(lVar5,0);
                                 if (lVar5 != null) {
@@ -2721,7 +2711,6 @@ public class TutorialController
     // RVA   : 0xAE1E90   Offset: 0xAE1290   Length: 0x31A
     public void TutorialAskForSkillFindPlotChoice()
     {
-        var pStatics = *(int64*)(DAT_181d91b88 + 184);
         uint uVar2;
         long lVar3;
         uint uVar4;
@@ -2734,7 +2723,7 @@ public class TutorialController
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar3 = lVar3[uVar2];
-          lVar5 = *(int64 *)(pStatics + 24);
+          lVar5 = BuildingUIController.PartyLvName;
           if ((lVar5 != null) && (lVar5 = *(int64 *)(lVar5 + 32)) != null) {
             lVar5 = GameObject.get_transform(lVar5,0);
             if (lVar5 != null) {
@@ -2777,7 +2766,7 @@ public class TutorialController
                               }
                               lVar3 = *(int64 *)
                                        (*(int64 *)(lVar3 + 16) + 32 + (int64)(int)uVar2 * 8);
-                              lVar5 = *(int64 *)(pStatics + 24);
+                              lVar5 = BuildingUIController.PartyLvName;
                               if ((lVar5 != null) && (lVar5 = *(int64 *)(lVar5 + 32)) != null) {
                                 lVar5 = GameObject.get_transform(lVar5,0);
                                 if (lVar5 != null) {
@@ -2815,7 +2804,6 @@ public class TutorialController
     // RVA   : 0xAE2990   Offset: 0xAE1D90   Length: 0x313
     public void TutorialFindPlotChoice(string choiceString)
     {
-        var pStatics = *(int64*)(DAT_181d91b88 + 184);
         uint uVar2;
         long lVar3;
         uint uVar4;
@@ -2828,7 +2816,7 @@ public class TutorialController
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar3 = lVar3[uVar2];
-          lVar5 = *(int64 *)(pStatics + 24);
+          lVar5 = BuildingUIController.PartyLvName;
           if ((lVar5 != null) && (lVar5 = *(int64 *)(lVar5 + 32)) != null) {
             lVar5 = GameObject.get_transform(lVar5,0);
             if (lVar5 != null) {
@@ -2871,7 +2859,7 @@ public class TutorialController
                               }
                               lVar3 = *(int64 *)
                                        (*(int64 *)(lVar3 + 16) + 32 + (int64)(int)uVar2 * 8);
-                              lVar5 = *(int64 *)(pStatics + 24);
+                              lVar5 = BuildingUIController.PartyLvName;
                               if ((lVar5 != null) && (lVar5 = *(int64 *)(lVar5 + 32)) != null) {
                                 lVar5 = GameObject.get_transform(lVar5,0);
                                 if (lVar5 != null) {
@@ -3304,12 +3292,11 @@ public class TutorialController
     // RVA   : 0xAE3630   Offset: 0xAE2A30   Length: 0x119
     public void TutorialFocusOnNowActive()
     {
-        var pStatics = *(int64*)(DAT_181db0248 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
-        lVar1 = *(int64 *)(pStatics + 80);
-        lVar2 = *(int64 *)(pStatics + 80);
+        lVar1 = PlotController.LaBaFestivelResultTalkText;
+        lVar2 = PlotController.LaBaFestivelResultTalkText;
         if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 0x110)) != null) {
           uVar3 = Component.get_gameObject(lVar2,0);
           if (lVar1 != null) {
@@ -3323,13 +3310,12 @@ public class TutorialController
     // RVA   : 0xAE0430   Offset: 0xADF830   Length: 0x103
     public void ShowComboUI()
     {
-        var pStatics = *(int64*)(DAT_181da8190 + 184);
         long lVar1;
         ulong local_28;
         uint local_20;
         byte[] local_18 = new byte[16];
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 88)) != null) {
+        if ((StudySkillController._instance != null) &&
+           (lVar1 = StudySkillController._instance.comboText) != null) {
           lVar1 = Component.get_transform(lVar1,0);
           if (lVar1 != null) {
             lVar1 = FUN_180da9a20(lVar1,0);
@@ -3348,13 +3334,12 @@ public class TutorialController
     // RVA   : 0xAE80D0   Offset: 0xAE74D0   Length: 0x103
     public void UnshowComboUI()
     {
-        var pStatics = *(int64*)(DAT_181da8190 + 184);
         long lVar1;
         ulong local_28;
         uint local_20;
         byte[] local_18 = new byte[16];
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 88)) != null) {
+        if ((StudySkillController._instance != null) &&
+           (lVar1 = StudySkillController._instance.comboText) != null) {
           lVar1 = Component.get_transform(lVar1,0);
           if (lVar1 != null) {
             lVar1 = FUN_180da9a20(lVar1,0);

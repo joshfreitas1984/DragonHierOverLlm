@@ -59,7 +59,6 @@ public class UIStretch
     // RVA   : 0x170BA70   Offset: 0x170AE70   Length: 0x1C4
     private void Awake()
     {
-        var pStatics = *(int64*)(DAT_181daf678 + 184);
         ulong uVar1;
         ulong uVar2;
         uVar1 = Component.GetComponent(this,DAT_181d93168);
@@ -74,7 +73,7 @@ public class UIStretch
         this.mSprite = uVar1;
         uVar1 = Component.GetComponent(this,DAT_181d96b60);
         this.mPanel = uVar1;
-        uVar1 = *(uint64 *)(pStatics + 72);
+        uVar1 = UICamera.onScreenResize;
         uVar2 = new OnTooltipCB(this,DAT_181dc6888,0);
         plVar3 = (int64 *)Delegate.Combine(uVar1,uVar2,0);
         plVar4 = (int64 *)0;
@@ -87,17 +86,16 @@ public class UIStretch
             FUN_1800d6070(plVar3,DAT_181d8d738);
           }
         }
-        *(int64 **)(pStatics + 72) = plVar4;
+        UICamera.onScreenResize = plVar4;
     }
 
     // Token : 0x600096B
     // RVA   : 0x170BC40   Offset: 0x170B040   Length: 0xF9
     private void OnDestroy()
     {
-        var pStatics = *(int64*)(DAT_181daf678 + 184);
         ulong uVar1;
         ulong uVar2;
-        uVar1 = *(uint64 *)(pStatics + 72);
+        uVar1 = UICamera.onScreenResize;
         uVar2 = new OnTooltipCB(this,DAT_181dc6888,0);
         plVar3 = (int64 *)Delegate.Remove(uVar1,uVar2,0);
         plVar4 = (int64 *)0;
@@ -110,7 +108,7 @@ public class UIStretch
             FUN_1800d6070(plVar3,DAT_181d8d738);
           }
         }
-        *(int64 **)(pStatics + 72) = plVar4;
+        UICamera.onScreenResize = plVar4;
     }
 
     // Token : 0x600096C

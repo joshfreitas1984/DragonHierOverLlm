@@ -1,3 +1,16 @@
+- raw: "#$PlayerName#一介江湖散人，竟敢来上门挑战我#TargetForceName#？\n阁下此举，未免没把我#$TargetInteractName#放在眼里！"
+  splits:
+  - text: "#$PlayerName#一介江湖散人，竟敢来上门挑战我#TargetForceName#？"
+    translated: "#$PlayerName#, a mere Jianghu wanderer, dares to come and challenge my #TargetForceName#?"
+    qcReviewedText: "#$PlayerName#, a mere Jianghu wanderer, dares to come and challenge my #TargetForceName#?\nYour actions don't seem to respect #$TargetInteractName# at all!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "阁下此举，未免没把我#$TargetInteractName#放在眼里！"
+    translated: "Your actions don't seem to respect #$TargetInteractName# at all!"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "#$PlayerName#你作恶多端，江湖中人人得而诛之。\n今日我便要替天行道，将你捉拿归案！"
   splits:
   - text: "#$PlayerName#你作恶多端，江湖中人人得而诛之。"
@@ -2231,6 +2244,25 @@
     translated: "The two items of property should rightfully belong to me in full!"
   templates:
   - template: "{0}\n{1}\n{2}⟦0⟧{3}"
+- raw: "#PlayerName#此话当真？\n{0}竟是这种忘恩负义的奸邪小人......难道是我看走眼了？\n（消耗{1}点好感）"
+  splits:
+  - text: "#PlayerName#此话当真？"
+    translated: "Are you serious, #PlayerName#?"
+    qcReviewedText: "Are you serious, #PlayerName#?\n{0} Turns out he's such a disloyal and villainous scoundrel... Could I have been mistaken?\n(Consumes {1} Affection)"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "竟是这种忘恩负义的奸邪小人......难道是我看走眼了？"
+    translated: "Turns out he's such a disloyal and villainous scoundrel... Could I have been mistaken?"
+  - subIndex: 2
+    text: "（消耗"
+    translated: "(Consumes"
+  - subIndex: 3
+    text: "点好感）"
+    translated: "Affection)"
+  templates:
+  - template: "{0}\n⟦0⟧{1}\n{2}⟦1⟧{3}"
 - raw: "#PlayerName#武功如此低微，竟也想与我们俩争夺宝物，真是异想天开！"
   splits:
   - text: "#PlayerName#武功如此低微，竟也想与我们俩争夺宝物，真是异想天开！"
@@ -2894,6 +2926,32 @@
   - subIndex: 1
     text: "虽不愿欠你#SourceForceName#的人情，但也别无他法了，就此告辞！"
     translated: "Though I don't want to owe you a debt to #SourceForceName#, I see no other way, so I'll have to take my leave here!"
+  templates:
+  - template: "{0}\n{1}"
+- raw: "#PlayerName#竟然动用官府关系，为我开脱罪责？\n此等大恩大德，日后定当涌泉相报！"
+  splits:
+  - text: "#PlayerName#竟然动用官府关系，为我开脱罪责？"
+    translated: "#PlayerName# actually used official connections to clear me of the charges?"
+    qcReviewedText: "#PlayerName# actually used official connections to clear me of the charges?\nSuch great kindness will surely be repaid with overflowing gratitude in the future!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "此等大恩大德，日后定当涌泉相报！"
+    translated: "Such great kindness will surely be repaid with overflowing gratitude in the future!"
+  templates:
+  - template: "{0}\n{1}"
+- raw: "#PlayerName#竟然罗织构陷，导致我罪加一等？\n今日所受屈辱，日后定当加倍奉还！"
+  splits:
+  - text: "#PlayerName#竟然罗织构陷，导致我罪加一等？"
+    translated: "#PlayerName#, you actually framed me, causing my crimes to be intensified?"
+    qcReviewedText: "#PlayerName#, you actually framed me, causing my crimes to be intensified?\nThe humiliation I suffered today will be returned to you twofold in the future!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "今日所受屈辱，日后定当加倍奉还！"
+    translated: "The humiliation I suffered today will be returned to you twofold in the future!"
   templates:
   - template: "{0}\n{1}"
 - raw: "#PlayerName#竟连应战都不敢？\n哎，如此未免令人失望。"
@@ -5394,16 +5452,6 @@
     qcDefectCategory: None
   templates:
   - template: "({0}E)"
-- raw: "(快捷键W)"
-  splits:
-  - text: "快捷键"
-    translated: "Shortcut keys"
-    qcReviewedText: "(Shortcut keys W)"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-  templates:
-  - template: "({0}W)"
 - raw: "(抵达瓶颈 需要突破)</color>"
   splits:
   - text: "抵达瓶颈"
@@ -7389,6 +7437,12 @@
     qcDefectCategory: None
   templates:
   - template: "Apple{0}"
+- raw: "ChangeAllInjury;玩家-80"
+  splits:
+  - text: "玩家"
+    translated: "Player"
+  templates:
+  - template: "ChangeAllInjury;{0}-80"
 - raw: "FCM 计时:"
   splits:
   - text: "计时"
@@ -7907,6 +7961,42 @@
     qcDefectCategory: None
   templates:
   - template: "[CISAuthSDKLite] {0}:"
+- raw: "[StudyDodge] PlayerEnterGrid 目标格为空：{0},{1}"
+  splits:
+  - text: "目标格为空"
+    translated: "Target slot is empty"
+    qcReviewedText: "[StudyDodge] PlayerEnterGrid Target slot is empty：{0},{1}"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "[StudyDodge] PlayerEnterGrid {0}：⟦0⟧,⟦1⟧"
+- raw: "[StudyDodge] PlayerEnterGrid 越界：{0},{1}"
+  splits:
+  - text: "越界"
+    translated: "Overstepping the boundary"
+    qcReviewedText: "[StudyDodge] PlayerEnterGrid Overstepping the boundary：{0},{1}"
+    qcTranslated: "[StudyDodge] PlayerEnterGrid Out of bounds: {0},{1}"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+  templates:
+  - template: "[StudyDodge] PlayerEnterGrid {0}：⟦0⟧,⟦1⟧"
+- raw: "[StudyDodge] 移动超时，强制复位 moving。playerGrid="
+  splits:
+  - text: "移动超时，强制复位"
+    translated: "Timeout, forced reset"
+    qcReviewedText: "[StudyDodge] Timeout, forced reset moving。playerGrid="
+    qcTranslated: "[StudyDodge] Movement timeout, forced reset moving. playerGrid="
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+  templates:
+  - template: "[StudyDodge] {0} moving。playerGrid="
 - raw: "[{0}合]"
   splits:
   - text: "合"
@@ -8333,6 +8423,38 @@
     translated: "Sexual"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
+- raw: "{0}与{1}割袍断席，结束了结义关系。"
+  splits:
+  - text: "与"
+    translated: "And"
+    qcReviewedText: "{0} And {1} Cutting the robe and breaking the seat, they ended their sworn brotherhood."
+    qcTranslated: "{0} and {1} cut their robes and broke their seats, ending their sworn brotherhood."
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: UnnaturalPhrasing
+    qcDefectCategories:
+    - UnnaturalPhrasing
+  - subIndex: 1
+    text: "割袍断席，结束了结义关系。"
+    translated: "Cutting the robe and breaking the seat, they ended their sworn brotherhood."
+  templates:
+  - template: "⟦0⟧{0}⟦1⟧{1}"
+- raw: "{0}与{1}情谊渐浅，结束了好友关系。"
+  splits:
+  - text: "与"
+    translated: "And"
+    qcReviewedText: "{0} And {1} Friendship wanes, ending the close friendship"
+    qcTranslated: "{0} and {1}'s bond has grown thin, ending their close friendship."
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: UnnaturalPhrasing
+    qcDefectCategories:
+    - UnnaturalPhrasing
+  - subIndex: 1
+    text: "情谊渐浅，结束了好友关系。"
+    translated: "Friendship wanes, ending the close friendship"
+  templates:
+  - template: "⟦0⟧{0}⟦1⟧{1}"
 - raw: "{0}与{1}撕毁了同盟协定"
   splits:
   - text: "与"
@@ -8376,6 +8498,22 @@
   - subIndex: 1
     text: "缔结了同盟协定"
     translated: "Formed an alliance pact"
+  templates:
+  - template: "⟦0⟧{0}⟦1⟧{1}"
+- raw: "{0}与各大门派缔结了为期{1}日的停战协定"
+  splits:
+  - text: "与各大门派缔结了为期"
+    translated: "Entered into with major sects for a duration of"
+    qcReviewedText: "{0} Entered into with major sects for a duration of {1} The ceasefire agreement of the day"
+    qcTranslated: "{0} entered into a ceasefire agreement with the major sects for a duration of {1} days"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+  - subIndex: 1
+    text: "日的停战协定"
+    translated: "The ceasefire agreement of the day"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
 - raw: "{0}与本门尚处于{1}关系，\n不可进攻其治下的资源点。"
@@ -8460,6 +8598,22 @@
     qcDefectCategory: None
   templates:
   - template: "⟦0⟧{0}"
+- raw: "{0}乘机抢夺了{1}的{2}。"
+  splits:
+  - text: "乘机抢夺了"
+    translated: "Seized the opportunity to snatch"
+    qcReviewedText: "{0} Seized the opportunity to snatch {1} Of {2}。"
+    qcTranslated: "{0} seized the opportunity to snatch {1}'s {2}."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+  - subIndex: 1
+    text: "的"
+    translated: "Of"
+  templates:
+  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧。"
 - raw: "{0}从{1}夺取了各项资源共计价值{2}"
   splits:
   - text: "从"
@@ -8989,16 +9143,6 @@
     translated: "The higher the opponent's skill level is above yours, the better the effect."
   templates:
   - template: "⟦0⟧{0}\n({1}\n{2})"
-- raw: "{0}吗？此武功实乃不传之秘，我可不敢贸然领受"
-  splits:
-  - text: "吗？此武功实乃不传之秘，我可不敢贸然领受"
-    translated: ", this martial skill is a closely guarded secret, and I dare not accept it rashly."
-    qcReviewedText: "{0}, this martial skill is a closely guarded secret, and I dare not accept it rashly."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-  templates:
-  - template: "⟦0⟧{0}"
 - raw: "{0}吗？此武功实乃不传之秘，若非师徒只怕不宜传授。\n#PlayerName#你还是另选一门功法吧。"
   splits:
   - text: "吗？此武功实乃不传之秘，若非师徒只怕不宜传授。"
@@ -9067,6 +9211,101 @@
     qcDefectCategory: None
   templates:
   - template: "⟦0⟧{0}"
+- raw: "{0}在{1}下毒暗害{2}，{3}。"
+  splits:
+  - text: "在"
+    translated: "In"
+    qcReviewedText: "{0} In {1} Poison and assassinate {2}，{3}。"
+    qcTranslated: "{0} poisoned {2} at {1}, {3}"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
+    qcDefectCategories:
+    - UnnaturalPhrasing
+    - OtherNamedDefect
+  - subIndex: 1
+    text: "下毒暗害"
+    translated: "Poison and assassinate"
+    qcReviewedText: "Poison and assassinate"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧，⟦3⟧。"
+- raw: "{0}在{1}与{2}切磋武艺，最终{3}技高一筹。"
+  splits:
+  - text: "在"
+    translated: "In"
+    qcReviewedText: "{0} In {1} And {2} Sparring over martial arts skills, in the end {3} One notch above in skill"
+    qcStatus: FailedValidation
+    flaggedForQcReview: true
+    qcRejectedCorrection: "{0} spars with {1} and {2}, ultimately proving to be the superior martial artist."
+    qcFailureReason: " Restore `{3}` to the translation, as it was incorrectly removed."
+    qcDefectCategories:
+    - Unknown
+    qcRuleCheckFailureCount: 4
+    qcRuleCheckFailureBaseline: "{0} In {1} And {2} Sparring over martial arts skills, in the end {3} One notch above in skill"
+  - subIndex: 1
+    text: "与"
+    translated: "And"
+    qcReviewedText: "{0} And {1} Tore up the alliance agreement"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 2
+    text: "切磋武艺，最终"
+    translated: "Sparring over martial arts skills, in the end"
+  - subIndex: 3
+    text: "技高一筹。"
+    translated: "One notch above in skill"
+  templates:
+  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧{3}"
+- raw: "{0}在{1}与{2}志同道合，相见恨晚，约定义结金兰。"
+  splits:
+  - text: "在"
+    translated: "In"
+    qcReviewedText: "{0} In {1} And {2} Shared aspirations, regretting the late meeting, they vow to become sworn brothers."
+    qcTranslated: "{0} found kindred spirits in {1} and {2}, regretting that they had not met sooner, and vowed to form a sworn brotherhood."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+  - subIndex: 1
+    text: "与"
+    translated: "And"
+    qcReviewedText: "{0} And {1} Tore up the alliance agreement"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 2
+    text: "志同道合，相见恨晚，约定义结金兰。"
+    translated: "Shared aspirations, regretting the late meeting, they vow to become sworn brothers."
+  templates:
+  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
+- raw: "{0}在{1}与{2}相谈甚欢，一见如故，结为知己好友。"
+  splits:
+  - text: "在"
+    translated: "In"
+    qcReviewedText: "{0} In {1} And {2} They hit it off splendidly, felt as if they had known each other for years, and became close friends."
+    qcTranslated: "{0} and {2} hit it off splendidly at {1}, felt as if they had known each other for years, and became close friends."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+  - subIndex: 1
+    text: "与"
+    translated: "And"
+    qcReviewedText: "{0} And {1} Tore up the alliance agreement"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 2
+    text: "相谈甚欢，一见如故，结为知己好友。"
+    translated: "They hit it off splendidly, felt as if they had known each other for years, and became close friends."
+  templates:
+  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}"
 - raw: "{0}在{1}中休整疗养，{3}生命内力恢复{2}%"
   splits:
   - text: "在"
@@ -9317,6 +9556,28 @@
     translated: "Dot"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧{3}"
+- raw: "{0}在{1}袭击了{2}，血战一场最终{3}取得胜利。"
+  splits:
+  - text: "在"
+    translated: "In"
+    qcReviewedText: "{0} In {1} Attacked {2}, Fought a bloody battle to the end {3} Achieve victory"
+    qcTranslated: "{0} attacked {2} in {1}, and after a bloody battle, {3} ultimately emerged victorious."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
+    qcDefectCategories:
+    - UnnaturalPhrasing
+  - subIndex: 1
+    text: "袭击了"
+    translated: "Attacked"
+  - subIndex: 2
+    text: "，血战一场最终"
+    translated: ", Fought a bloody battle to the end"
+  - subIndex: 3
+    text: "取得胜利。"
+    translated: "Achieve victory"
+  templates:
+  - template: "⟦0⟧{0}⟦1⟧{1}⟦2⟧{2}⟦3⟧{3}"
 - raw: "{0}在农户中充分休息"
   splits:
   - text: "在农户中充分休息"
@@ -9495,6 +9756,16 @@
     qcDefectCategory: None
   templates:
   - template: "⟦0⟧{0}</color>"
+- raw: "{0}官职"
+  splits:
+  - text: "官职"
+    translated: "Position"
+    qcReviewedText: "{0} Position"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "⟦0⟧{0}"
 - raw: "{0}宴会({1}日);SpeStartPartySure;{2}-{3};0/{4};基础评分{5}\n基础加成{6}%"
   splits:
   - text: "宴会"
@@ -9874,6 +10145,18 @@
     translated: "Sect Leader Position"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
+- raw: "{0}援军;SetReplaceOtherForceGovernSuppotLv;{1};7/{2};;GovernLv/{3}"
+  splits:
+  - text: "援军"
+    translated: "Reinforcements"
+  templates:
+  - template: "⟦0⟧{0};SetReplaceOtherForceGovernSuppotLv;⟦1⟧;7/⟦2⟧;;GovernLv/⟦3⟧"
+- raw: "{0}援军;SetReplaceOtherForceRecruitSuppotLv;{1};0/{2}"
+  splits:
+  - text: "援军"
+    translated: "Reinforcements"
+  templates:
+  - template: "⟦0⟧{0};SetReplaceOtherForceRecruitSuppotLv;⟦1⟧;0/⟦2⟧"
 - raw: "{0}搜刮宝藏，获得了{1}银两"
   splits:
   - text: "搜刮宝藏，获得了"
@@ -11741,6 +12024,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "一同享用;SureLoverEatFoodTogether"
+  splits:
+  - text: "一同享用"
+    translated: "Enjoy together"
+  templates:
+  - template: "{0};SureLoverEatFoodTogether"
 - raw: "一听说#SourceInteractName#要和{0}在此举办婚礼，我就马不停蹄赶来了！\n还特意备了这#PlotInteractItemName#聊表心意，不必客气！"
   splits:
   - text: "一听说#SourceInteractName#要和"
@@ -11826,6 +12115,25 @@
     translated: "After this Spring Festival, the Xianxia Sect should also rejuvenate and press forward."
   templates:
   - template: "{0}\n{1}"
+- raw: "一旦此战取胜，我便可在此开宗立派，在江湖中打下一席立足之地。\n而<b>{0}弟子中若有好感在40以上者</b>，也可劝其留下，为我这新门派尽忠效力。"
+  splits:
+  - text: "一旦此战取胜，我便可在此开宗立派，在江湖中打下一席立足之地。"
+    translated: "Once we win this battle, I can establish a sect here and secure a place for myself in the Jianghu."
+    qcReviewedText: "Once we win this battle, I can establish a sect here and secure a place for myself in the Jianghu.\nAnd <b>{0} Disciples who have more than 40 affection points</b>, You could also persuade them to stay and be loyal to my new sect."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "而"
+    translated: "And"
+  - subIndex: 2
+    text: "弟子中若有好感在40以上者"
+    translated: "Disciples who have more than 40 affection points"
+  - subIndex: 3
+    text: "，也可劝其留下，为我这新门派尽忠效力。"
+    translated: ", You could also persuade them to stay and be loyal to my new sect."
+  templates:
+  - template: "{0}\n{1}<b>⟦0⟧{2}</b>{3}"
 - raw: "一时觥筹交错，人声鼎沸，好不热闹......"
   splits:
   - text: "一时觥筹交错，人声鼎沸，好不热闹......"
@@ -11984,6 +12292,22 @@
     translated: "A word is as good as a vow."
   templates:
   - template: "{0};SureHireHeroJoinTeam;;0/⟦0⟧"
+- raw: "一言为定！\n......此战需应战对方十二名精锐，只有我方几人难免势单力孤。\n若能寻得更多援军，方能增加我方之胜算。"
+  splits:
+  - text: "一言为定！"
+    translated: "Deal!"
+    qcReviewedText: "Deal!\n...This battle requires us to face twelve of their elite warriors; with only a few of us on our side, we are inevitably outnumbered.\nOnly by finding more reinforcements can we increase our chances of victory."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "......此战需应战对方十二名精锐，只有我方几人难免势单力孤。"
+    translated: "...This battle requires us to face twelve of their elite warriors; with only a few of us on our side, we are inevitably outnumbered."
+  - subIndex: 2
+    text: "若能寻得更多援军，方能增加我方之胜算。"
+    translated: "Only by finding more reinforcements can we increase our chances of victory."
+  templates:
+  - template: "{0}\n{1}\n{2}"
 - raw: "一路探寻，总算找到了这店铺的储藏之处，待我看看此次收获如何。"
   splits:
   - text: "一路探寻，总算找到了这店铺的储藏之处，待我看看此次收获如何。"
@@ -12698,6 +13022,12 @@
     translated: "You're welcome"
   templates:
   - template: "{0};FinishExploreEvilCamp;0"
+- raw: "不客气了;HideInteractUIOneDay"
+  splits:
+  - text: "不客气了"
+    translated: "You're welcome"
+  templates:
+  - template: "{0};HideInteractUIOneDay"
 - raw: "不容"
   splits:
   - text: "不容"
@@ -13576,6 +13906,14 @@
   - text: "两人对酌山花开，一杯一杯复一杯"
     translated: "The two of them drink wine under the mountain flowers, cup after cup, round after round."
     qcReviewedText: "The two of them drink wine under the mountain flowers, cup after cup, round after round."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "两人深感相见恨晚，约定义结金兰。"
+  splits:
+  - text: "两人深感相见恨晚，约定义结金兰。"
+    translated: "The two felt they had regretfully met too late and decided to become sworn siblings."
+    qcReviewedText: "The two felt they had regretfully met too late and decided to become sworn siblings."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -14977,6 +15315,19 @@
     translated: "Begging"
   templates:
   - template: "{0};BegForNpcSpe;;-1/⟦0⟧;;;BegTime"
+- raw: "也罢也罢，#PlayerName#武功卓绝，我等输得心服口服。\n#TargetForceName#弟子中若有愿意留下者，便就此拜入#PlayerName#门派好了。"
+  splits:
+  - text: "也罢也罢，#PlayerName#武功卓绝，我等输得心服口服。"
+    translated: "Very well, #PlayerName#, your martial arts are unparalleled; we are thoroughly convinced in our defeat."
+    qcReviewedText: "Very well, #PlayerName#, your martial arts are unparalleled; we are thoroughly convinced in our defeat.\nIf any of #TargetForceName#'s disciples wish to stay, they may join #PlayerName#'s sect."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "#TargetForceName#弟子中若有愿意留下者，便就此拜入#PlayerName#门派好了。"
+    translated: "If any of #TargetForceName#'s disciples wish to stay, they may join #PlayerName#'s sect."
+  templates:
+  - template: "{0}\n{1}"
 - raw: "习得{0}武功后解锁"
   splits:
   - text: "习得"
@@ -15118,6 +15469,22 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "事已至此，别无他法。\n成王败寇，我#TargetForceName#便按照江湖规矩，\n如约让出总舵，供阁下开宗立派好了！"
+  splits:
+  - text: "事已至此，别无他法。"
+    translated: "At this point, there are no other options."
+    qcReviewedText: "At this point, there are no other options.\nWinner takes all, so I, #TargetForceName#, will follow the rules of the Jianghu,\nAs promised, I yield the main headquarters to you so you can establish your own sect!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "成王败寇，我#TargetForceName#便按照江湖规矩，"
+    translated: "Winner takes all, so I, #TargetForceName#, will follow the rules of the Jianghu,"
+  - subIndex: 2
+    text: "如约让出总舵，供阁下开宗立派好了！"
+    translated: "As promised, I yield the main headquarters to you so you can establish your own sect!"
+  templates:
+  - template: "{0}\n{1}\n{2}"
 - raw: "事已至此，需先冷静下来，稳住阵脚。"
   splits:
   - text: "事已至此，需先冷静下来，稳住阵脚。"
@@ -15162,6 +15529,34 @@
     translated: "They split it evenly"
   templates:
   - template: "{0};GetTreasureMapReward;1-3"
+- raw: "二人相谈甚欢，离别之际{0}向{1}赠送了{2}。"
+  splits:
+  - text: "二人相谈甚欢，离别之际"
+    translated: "They had a delightful conversation, and as they parted ways,"
+    qcReviewedText: "They had a delightful conversation, and as they parted ways,{0} Towards {1} Gave as a gift {2}。"
+    qcTranslated: "They had a delightful conversation, and as they parted ways, {0} gave {1} {2} as a gift."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
+  - subIndex: 1
+    text: "向"
+    translated: "Towards"
+    qcReviewedText: "{0} Towards {1} To show goodwill, the relationship was elevated to {2}。"
+    qcTranslated: "{0} gave {1} silver to show goodwill, and the relationship between them was elevated to {2}."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
+    - OtherNamedDefect
+  - subIndex: 2
+    text: "赠送了"
+    translated: "Gave as a gift"
+  templates:
+  - template: "{0}⟦0⟧{1}⟦1⟧{2}⟦2⟧。"
 - raw: "二人见你苦苦相劝，倒也都没了兴致，悻悻然散开而去了。"
   splits:
   - text: "二人见你苦苦相劝，倒也都没了兴致，悻悻然散开而去了。"
@@ -15170,6 +15565,60 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "二人颇为投缘，{0}向{1}传授了{2}的心法口诀。"
+  splits:
+  - text: "二人颇为投缘，"
+    translated: "The two got along quite well"
+    qcReviewedText: "The two got along quite well {0} Towards {1} Taught {2} Heart Method incantation"
+    qcTranslated: "The two got along quite well, and {0} taught {1} the Heart Method incantation of {2}."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - UnnaturalPhrasing
+  - subIndex: 1
+    text: "向"
+    translated: "Towards"
+    qcReviewedText: "{0} Towards {1} To show goodwill, the relationship was elevated to {2}。"
+    qcTranslated: "{0} gave {1} silver to show goodwill, and the relationship between them was elevated to {2}."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
+    - OtherNamedDefect
+  - subIndex: 2
+    text: "传授了"
+    translated: "Taught"
+  - subIndex: 3
+    text: "的心法口诀。"
+    translated: "Heart Method incantation"
+  templates:
+  - template: "{0}⟦0⟧{1}⟦1⟧{2}⟦2⟧{3}"
+- raw: "二人颇为投缘，{0}指点了{1}一些{2}的运用法门。"
+  splits:
+  - text: "二人颇为投缘，"
+    translated: "The two got along quite well"
+    qcReviewedText: "The two got along quite well {0} Gave guidance {1} Some {2} Method of usage"
+    qcTranslated: "The two got along quite well, and {0} gave {1} some guidance on the methods of using {2}."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - UnnaturalPhrasing
+  - subIndex: 1
+    text: "指点了"
+    translated: "Gave guidance"
+  - subIndex: 2
+    text: "一些"
+    translated: "Some"
+  - subIndex: 3
+    text: "的运用法门。"
+    translated: "Method of usage"
+  templates:
+  - template: "{0}⟦0⟧{1}⟦1⟧{2}⟦2⟧{3}"
 - raw: "二位住手，要打就打我吧;HelpInteractHeroFight;2-DeathFight-HelpInteractHeroFightResult"
   splits:
   - text: "二位住手，要打就打我吧"
@@ -16202,6 +16651,29 @@
     translated: "You must not be lax or negligent; let down the reputation of your Master!"
   templates:
   - template: "{0}\n{1}"
+- raw: "从今日起，我#PlayerForceName#便秉持{1}之道，在此地开宗立派。\n此外，我#PlayerForceName#也将继承{0}之武功秘籍和修行法门，并将之发扬光大。"
+  splits:
+  - text: "从今日起，我#PlayerForceName#便秉持"
+    translated: "From today onward, I, #PlayerForceName#, shall uphold"
+    qcReviewedText: "From today onward, I, #PlayerForceName#, shall uphold {1} To establish a sect and start a school here.\nIn addition, I, #PlayerForceName#, will also inherit {0} To master the martial arts secret manual and cultivation methods, and to further develop them."
+    qcTranslated: "From today onward, I, #PlayerForceName#, shall uphold the Way of {1} and establish a sect here.\nIn addition, I, #PlayerForceName#, will also inherit the martial arts Secret Manual and cultivation methods of {0}, and carry them forward to greater heights."
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - UnnaturalPhrasing
+  - subIndex: 1
+    text: "之道，在此地开宗立派。"
+    translated: "To establish a sect and start a school here."
+  - subIndex: 2
+    text: "此外，我#PlayerForceName#也将继承"
+    translated: "In addition, I, #PlayerForceName#, will also inherit"
+  - subIndex: 3
+    text: "之武功秘籍和修行法门，并将之发扬光大。"
+    translated: "To master the martial arts secret manual and cultivation methods, and to further develop them."
+  templates:
+  - template: "{0}⟦1⟧{1}\n{2}⟦0⟧{3}"
 - raw: "从今日起，我便将这#PlayerForceName#掌门之位交于你手。\n还望你能够励精图治，助我#PlayerForceName#发展壮大，称霸武林。"
   splits:
   - text: "从今日起，我便将这#PlayerForceName#掌门之位交于你手。"
@@ -17198,6 +17670,22 @@
     translated: "Wait for an opportunity to flee"
   templates:
   - template: "{0};PlayerLoseFightEscapeSure"
+- raw: "但此战若是败北，恐怕会损害我与{0}之关系，此外也会增加我在江湖上的恶名。\n所以说，此事应该慎之又慎，当真要下定决心发起挑战吗？"
+  splits:
+  - text: "但此战若是败北，恐怕会损害我与"
+    translated: "But if we lose this battle, it will likely harm my relationship with"
+    qcReviewedText: "But if we lose this battle, it will likely harm my relationship with {0} This will also increase my infamy in the Jianghu.\nSo, should we proceed with utmost caution? Are you truly ready to make up your mind and take on this challenge?"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "之关系，此外也会增加我在江湖上的恶名。"
+    translated: "This will also increase my infamy in the Jianghu."
+  - subIndex: 2
+    text: "所以说，此事应该慎之又慎，当真要下定决心发起挑战吗？"
+    translated: "So, should we proceed with utmost caution? Are you truly ready to make up your mind and take on this challenge?"
+  templates:
+  - template: "{0}⟦0⟧{1}\n{2}"
 - raw: "但见司仪朗声道：新郎搭躬。\n随后新郎躬身拱手，延请新娘。新娘款款上前，两人并肩伫立。"
   splits:
   - text: "但见司仪朗声道"
@@ -18768,6 +19256,24 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "共同修炼;SureLoverStudyTogether"
+  splits:
+  - text: "共同修炼"
+    translated: "Joint cultivation"
+  templates:
+  - template: "{0};SureLoverStudyTogether"
+- raw: "共餐;LoverEatFoodTogether;;;♦共同分享一件饮食\n♦双方均可获得完整服食效果;;EatFoodTogetherTime"
+  splits:
+  - text: "共餐"
+    translated: "Dining together"
+  - subIndex: 1
+    text: "共同分享一件饮食"
+    translated: "Share a meal together"
+  - subIndex: 2
+    text: "双方均可获得完整服食效果"
+    translated: "Both parties can obtain the full effects of consumption."
+  templates:
+  - template: "{0};LoverEatFoodTogether;;;♦{1}\n♦{2};;EatFoodTogetherTime"
 - raw: "共饮"
   splits:
   - text: "共饮"
@@ -18806,6 +19312,19 @@
     translated: "Relationship..."
   templates:
   - template: "{0};FurtherInteractWithNPC"
+- raw: "兴衰盈虚，自有定数，非人力所能强为。\n#TargetForceName#今日衰亡亦是天意使然，#TargetInteractName#不必过于自责。"
+  splits:
+  - text: "兴衰盈虚，自有定数，非人力所能强为。"
+    translated: "Prosperity and decline, abundance and scarcity, are governed by their own destiny; they cannot be forced by human effort."
+    qcReviewedText: "Prosperity and decline, abundance and scarcity, are governed by their own destiny; they cannot be forced by human effort.\nThe fall of #TargetForceName# today is also the will of heaven; #TargetInteractName#, you need not blame yourself too much."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "#TargetForceName#今日衰亡亦是天意使然，#TargetInteractName#不必过于自责。"
+    translated: "The fall of #TargetForceName# today is also the will of heaven; #TargetInteractName#, you need not blame yourself too much."
+  templates:
+  - template: "{0}\n{1}"
 - raw: "兴隆"
   splits:
   - text: "兴隆"
@@ -21839,6 +22358,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "发起挑战;SureReplaceOtherForcePlot"
+  splits:
+  - text: "发起挑战"
+    translated: "Issue a challenge"
+  templates:
+  - template: "{0};SureReplaceOtherForcePlot"
 - raw: "取\n出"
   splits:
   - text: "取"
@@ -21921,14 +22446,22 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "取消移动"
+- raw: "取消移动(快捷键W)"
   splits:
   - text: "取消移动"
     translated: "Cancel move"
-    qcReviewedText: "Cancel move"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcReviewedText: "Cancel move(Shortcut keys W)"
+    qcTranslated: "Cancel Move (Shortcut Key W)"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
+    qcDefectCategories:
+    - UnnaturalPhrasing
+  - subIndex: 1
+    text: "快捷键"
+    translated: "Shortcut keys"
+  templates:
+  - template: "{0}({1}W)"
 - raw: "取消自动"
   splits:
   - text: "取消自动"
@@ -23017,6 +23550,18 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "合练;LoverStudyTogether;;;♦共同修炼一门武学\n♦双方均可获得经验和持续加成效果;;StudyTogetherTime"
+  splits:
+  - text: "合练"
+    translated: "Joint practice"
+  - subIndex: 1
+    text: "共同修炼一门武学"
+    translated: "Practicing a martial art together"
+  - subIndex: 2
+    text: "双方均可获得经验和持续加成效果"
+    translated: "Both sides can gain experience and continuous bonus effects."
+  templates:
+  - template: "{0};LoverStudyTogether;;;♦{1}\n♦{2};;StudyTogetherTime"
 - raw: "合谷"
   splits:
   - text: "合谷"
@@ -24061,6 +24606,18 @@
     translated: "Money"
   templates:
   - template: "{0}⟦0⟧{1}"
+- raw: "和解;AskHeroCancelOtherHater;;;♦使对方与仇敌握手言和\n♦消耗40点好感;FavorDegree/80"
+  splits:
+  - text: "和解"
+    translated: "Reconciliation"
+  - subIndex: 1
+    text: "使对方与仇敌握手言和"
+    translated: "Get the other party to make peace with their enemy"
+  - subIndex: 2
+    text: "消耗40点好感"
+    translated: "Spends 40 points of favor"
+  templates:
+  - template: "{0};AskHeroCancelOtherHater;;;♦{1}\n♦{2};FavorDegree/80"
 - raw: "和这{0}两经费"
   splits:
   - text: "和这"
@@ -25016,6 +25573,22 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "哈哈，这{0}味道果然不错！\n#PlayerName#也别光看着呀，我来喂你一口......"
+  splits:
+  - text: "哈哈，这"
+    translated: "Haha, this"
+    qcReviewedText: "Haha, this {0} Taste is indeed excellent!\n#PlayerName#, don't just watch, let me feed you a bite..."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "味道果然不错！"
+    translated: "Taste is indeed excellent!"
+  - subIndex: 2
+    text: "#PlayerName#也别光看着呀，我来喂你一口......"
+    translated: "#PlayerName#, don't just watch, let me feed you a bite..."
+  templates:
+  - template: "{0}⟦0⟧{1}\n{2}"
 - raw: "哈哈，这{0}我便与#SourceInteractName#欣然分享了，快滚吧！"
   splits:
   - text: "哈哈，这"
@@ -25106,6 +25679,22 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "哎......只是没想到#TargetForceName#百年基业，竟然就这样断于我手。\n我#$TargetInteractName#有何颜面，去见#TargetForceName#列祖列宗？"
+  splits:
+  - text: "哎......只是没想到#TargetForceName#百年基业，竟然就这样断于我手。"
+    translated: "Ah... I never thought that the century‑old foundation of #TargetForceName# would be destroyed by me."
+    qcReviewedText: "Ah... I never thought that the century‑old foundation of #TargetForceName# would be destroyed by me.\nWhat face do you have, #$TargetInteractName#, to meet the ancestors of the #TargetForceName#?"
+    qcTranslated: "Ah... I never thought that the century‑old foundation of #TargetForceName# would be destroyed by me.\nWith what face can I, #$TargetInteractName#, meet the ancestors of the #TargetForceName#?"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
+    qcDefectCategories:
+    - MeaningReversal
+  - subIndex: 1
+    text: "我#$TargetInteractName#有何颜面，去见#TargetForceName#列祖列宗？"
+    translated: "What face do you have, #$TargetInteractName#, to meet the ancestors of the #TargetForceName#?"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "哎呀#SourceInteractName#，我近来在此处探寻江湖奇遇，\n奈何一直风平浪静，无事发生，只得去别处碰碰运气了。"
   splits:
   - text: "哎呀#SourceInteractName#，我近来在此处探寻江湖奇遇，"
@@ -26225,6 +26814,22 @@
     translated: "Its movements"
   templates:
   - template: "{0}\n{1}⟦0⟧{2}"
+- raw: "哦？能与#PlayerName#交情甚笃之人，想必与我也颇为投缘。\n不知究竟是何许人也，#PlayerName#尽管道来。"
+  splits:
+  - text: "哦？能与#PlayerName#交情甚笃之人，想必与我也颇为投缘。"
+    translated: "Oh? Someone who is close friends with #PlayerName# must also get along well with me."
+    qcReviewedText: "Oh? Someone who is close friends with #PlayerName# must also get along well with me.\nWhoever you are, #PlayerName#, tell me"
+    qcTranslated: "Oh? Someone who is close friends with #PlayerName# must also get along well with me.\nI wonder just who this person is, #PlayerName#, please tell me"
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
+  - subIndex: 1
+    text: "不知究竟是何许人也，#PlayerName#尽管道来。"
+    translated: "Whoever you are, #PlayerName#, tell me"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "哦？这{0}品相上乘，一看就出自名家之手！\n哎，若是我现在手上有这等好物，非得胡吃海塞一番不可...\n(提升{1}点好感。对方江湖地位越高，对礼物要求越贵重)"
   splits:
   - text: "哦？这"
@@ -26534,6 +27139,19 @@
     translated: "#PlayerName#, if you challenge me to a battle, explain your reasoning, and I won't hassle you further!"
   templates:
   - template: "{0}\n{1}"
+- raw: "哼！#PlayerName#这点三脚猫功夫，也敢来挑战我#TargetForceName#？\n今天我就略施惩戒，以儆效尤。阁下回去好好反省吧！"
+  splits:
+  - text: "哼！#PlayerName#这点三脚猫功夫，也敢来挑战我#TargetForceName#？"
+    translated: "Hmph! #PlayerName#, with your amateur skills, dare to challenge me, #TargetForceName#?"
+    qcReviewedText: "Hmph! #PlayerName#, with your amateur skills, dare to challenge me, #TargetForceName#?\nToday, I will mete out a slight punishment to set an example. You should return and reflect on your actions!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "今天我就略施惩戒，以儆效尤。阁下回去好好反省吧！"
+    translated: "Today, I will mete out a slight punishment to set an example. You should return and reflect on your actions!"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "哼！一屋不扫，何以扫天下，你既然不肯，我差遣其他弟子去便是。"
   splits:
   - text: "哼！一屋不扫，何以扫天下，你既然不肯，我差遣其他弟子去便是。"
@@ -26584,6 +27202,25 @@
     translated: "Come quickly and tie up this evil bandit!"
   templates:
   - template: "{0}\n{1}"
+- raw: "哼！我#TargetForceName#百年基业，兵精将广，\n岂容#$PlayerName#你在此胡言乱语，肆意菲薄？\n手底下见真章，今日我#TargetForceName#便来领教领教阁下的高招！"
+  splits:
+  - text: "哼！我#TargetForceName#百年基业，兵精将广，"
+    translated: "Hmph! My #TargetForceName# has a hundred‑year legacy, with elite troops and a vast array of generals."
+    qcReviewedText: "Hmph! My #TargetForceName# has a hundred‑year legacy, with elite troops and a vast array of generals.\nHow dare you, #$PlayerName#, speak nonsense and slander here?\nLet's see what you've got! Today, I represent #TargetForceName# to learn from your superior skills!"
+    qcTranslated: "Hmph! My #TargetForceName# has a hundred‑year legacy, with elite troops and a vast array of generals. How dare you, #$PlayerName#, speak nonsense and slander here? Let's see what you've got! Today, I represent #TargetForceName# to test your superior skills!"
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: MeaningReversal
+    qcDefectCategories:
+    - MeaningReversal
+  - subIndex: 1
+    text: "岂容#$PlayerName#你在此胡言乱语，肆意菲薄？"
+    translated: "How dare you, #$PlayerName#, speak nonsense and slander here?"
+  - subIndex: 2
+    text: "手底下见真章，今日我#TargetForceName#便来领教领教阁下的高招！"
+    translated: "Let's see what you've got! Today, I represent #TargetForceName# to learn from your superior skills!"
+  templates:
+  - template: "{0}\n{1}\n{2}"
 - raw: "哼！我本将心照明月，奈何明月照沟渠。\n既然#PlayerName#如此决绝，那便如你所愿，你我就此恩断义绝！"
   splits:
   - text: "哼！我本将心照明月，奈何明月照沟渠。"
@@ -27158,6 +27795,19 @@
     translated: "Accept the loss, and this treasure is all yours."
   templates:
   - template: "{0}\n{1}"
+- raw: "唔......#PlayerName#好功夫！\n此战是我#TargetForceName#输了......"
+  splits:
+  - text: "唔......#PlayerName#好功夫！"
+    translated: "Mm... #PlayerName#, impressive skills!"
+    qcReviewedText: "Mm... #PlayerName#, impressive skills!\nThis battle... my #TargetForceName# has lost..."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "此战是我#TargetForceName#输了......"
+    translated: "This battle... my #TargetForceName# has lost..."
+  templates:
+  - template: "{0}\n{1}"
 - raw: "唔......;FinishPerformForMoneyDefence;"
   splits:
   - text: "唔......"
@@ -27189,6 +27839,19 @@
     translated: "It seems that just by using this method of qi cultivation, one can perform the moves..."
   templates:
   - template: "{0}⟦0⟧{1}\n{2}"
+- raw: "唔......技不如人，我无话可说。\n#TargetInteractName#咱们后会有期，告辞！"
+  splits:
+  - text: "唔......技不如人，我无话可说。"
+    translated: "Mm... ...I have no words to say when my skills are inferior to others."
+    qcReviewedText: "Mm... ...I have no words to say when my skills are inferior to others.\n#TargetInteractName#, we'll meet again soon, farewell!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "#TargetInteractName#咱们后会有期，告辞！"
+    translated: "#TargetInteractName#, we'll meet again soon, farewell!"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "唔......这石碑上所刻，乃是各种修炼武学的无上秘法。\n只是这些文字驳杂纷乱，只能选择其中一个口诀进行修习。\n(目标武学潜力小于{0}时，修习可增加3点潜力，否则只增加3点技能)"
   splits:
   - text: "唔......这石碑上所刻，乃是各种修炼武学的无上秘法。"
@@ -27896,6 +28559,14 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "喜好物品"
+  splits:
+  - text: "喜好物品"
+    translated: "Favorite items"
+    qcReviewedText: "Favorite items"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "喝喝喝！"
   splits:
   - text: "喝喝喝！"
@@ -28082,6 +28753,32 @@
     translated: "Alright, since you're being so sincere, I'll accept it."
   templates:
   - template: "{0}\n{1}"
+- raw: "嗯，冤家宜解不宜结，此言确实不假。\n只是不知#PlayerName#，想要化解我与何人之仇怨？"
+  splits:
+  - text: "嗯，冤家宜解不宜结，此言确实不假。"
+    translated: "Hmm, it's true that one should resolve conflicts rather than let them fester."
+    qcReviewedText: "Hmm, it's true that one should resolve conflicts rather than let them fester.\nI wonder, #PlayerName#, whose grudge do you wish to resolve?"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "只是不知#PlayerName#，想要化解我与何人之仇怨？"
+    translated: "I wonder, #PlayerName#, whose grudge do you wish to resolve?"
+  templates:
+  - template: "{0}\n{1}"
+- raw: "嗯，名不正则言不顺，言不顺则事不成。\n这“#PlayerForceName#”之名，正好配得上我#$PlayerName#之宏图大略。"
+  splits:
+  - text: "嗯，名不正则言不顺，言不顺则事不成。"
+    translated: "Well, if one's name is not proper, their words will lack authority; and if their words lack authority, matters will not succeed."
+    qcReviewedText: "Well, if one's name is not proper, their words will lack authority; and if their words lack authority, matters will not succeed.\nThis name, #PlayerForceName#, fits perfectly with my grand plans, #$PlayerName#."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "这“#PlayerForceName#”之名，正好配得上我#$PlayerName#之宏图大略。"
+    translated: "This name, #PlayerForceName#, fits perfectly with my grand plans, #$PlayerName#."
+  templates:
+  - template: "{0}\n{1}"
 - raw: "嗯，看在你态度诚恳的份上，\n这些赔礼我会代为转交的。"
   splits:
   - text: "嗯，看在你态度诚恳的份上，"
@@ -28137,6 +28834,47 @@
     translated: "To refine your skills, we shall spar here on this dojo floor."
   templates:
   - template: "{0}\n{1}\n{2}"
+- raw: "嗯，诚如#PlayerName#所言，{0}此人确实是个不可多得的侠义之士。\n若你愿意引荐一番，我也乐于同此人结交为知己好友。\n（消耗20点好感）"
+  splits:
+  - text: "嗯，诚如#PlayerName#所言，"
+    translated: "Indeed, as #PlayerName# said,"
+    qcReviewedText: "Indeed, as #PlayerName# said,{0} This person is indeed an exceptional chivalrous hero.\nIf you're willing to introduce me, I'd be happy to become close friends with this person.\n(consumes 20 points of favor)"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "此人确实是个不可多得的侠义之士。"
+    translated: "This person is indeed an exceptional chivalrous hero."
+  - subIndex: 2
+    text: "若你愿意引荐一番，我也乐于同此人结交为知己好友。"
+    translated: "If you're willing to introduce me, I'd be happy to become close friends with this person."
+  - subIndex: 3
+    text: "（消耗20点好感）"
+    translated: "(consumes 20 points of favor)"
+  templates:
+  - template: "{0}⟦0⟧{1}\n{2}\n{3}"
+- raw: "嗯，诚如#PlayerName#所言，我与{0}此前虽有冲突，但并非什么血海深仇。\n若你愿意居中调停，我也乐于同此人握手言和。\n（消耗40点好感）"
+  splits:
+  - text: "嗯，诚如#PlayerName#所言，我与"
+    translated: "Hmm, as #PlayerName# said, I do have a connection with"
+    qcReviewedText: "Hmm, as #PlayerName# said, I do have a connection with {0} Although there were conflicts before, they were not deep‑seated grudges.\nIf you're willing to mediate, I'm also happy to make peace with this person.\n(consumes 40 points of favor)"
+    qcTranslated: "Hmm, as #PlayerName# said, I do have a connection with {0}. Although there were conflicts before, they were not deep‑seated grudges.\nIf you're willing to mediate, I'm also happy to make peace with this person.\n(consumes 40 points of favor)"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+  - subIndex: 1
+    text: "此前虽有冲突，但并非什么血海深仇。"
+    translated: "Although there were conflicts before, they were not deep‑seated grudges."
+  - subIndex: 2
+    text: "若你愿意居中调停，我也乐于同此人握手言和。"
+    translated: "If you're willing to mediate, I'm also happy to make peace with this person."
+  - subIndex: 3
+    text: "（消耗40点好感）"
+    translated: "(consumes 40 points of favor)"
+  templates:
+  - template: "{0}⟦0⟧{1}\n{2}\n{3}"
 - raw: "嗯？有动静......什么人！"
   splits:
   - text: "嗯？有动静......什么人！"
@@ -30523,6 +31261,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "大功告成;HideInteractUIOneDay"
+  splits:
+  - text: "大功告成"
+    translated: "Task is complete"
+  templates:
+  - template: "{0};HideInteractUIOneDay"
 - raw: "大包"
   splits:
   - text: "大包"
@@ -30685,6 +31429,12 @@
     translated: "Grossly humiliate"
   templates:
   - template: "{0};ReduceFavorOtherForceSure"
+- raw: "大肆诋毁;SureHeroCancelOtherRelation"
+  splits:
+  - text: "大肆诋毁"
+    translated: "Viciously slander"
+  templates:
+  - template: "{0};SureHeroCancelOtherRelation"
 - raw: "大胆表白;StartAskHeroToLoverPlot;QiXiFestivalLeave;;{0};FavorDegree/90"
   splits:
   - text: "大胆表白"
@@ -32155,6 +32905,41 @@
     translated: "Who volunteered to lead the charge?"
   templates:
   - template: "{0}\n{1}"
+- raw: "好，那我改日便去向{0}登门致歉。\n相信有#PlayerName#居中调停，我等定能化敌为友，冰释前嫌。"
+  splits:
+  - text: "好，那我改日便去向"
+    translated: "Alright, then I'll go visit on another day."
+    qcReviewedText: "Alright, then I'll go visit on another day.{0} Apologize in person\nWith #PlayerName# mediating, we are sure to turn our enemies into friends and put our past grievances behind us."
+    qcTranslated: "Alright, then I'll go visit {0} on another day to apologize in person. With #PlayerName# mediating, we are sure to turn our enemies into friends and put our past grievances behind us."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+  - subIndex: 1
+    text: "登门致歉。"
+    translated: "Apologize in person"
+  - subIndex: 2
+    text: "相信有#PlayerName#居中调停，我等定能化敌为友，冰释前嫌。"
+    translated: "With #PlayerName# mediating, we are sure to turn our enemies into friends and put our past grievances behind us."
+  templates:
+  - template: "{0}⟦0⟧{1}\n{2}"
+- raw: "好，那我改日便去登门拜访{0}。\n相信有#PlayerName#引荐，我等定能相谈甚欢，一见如故。"
+  splits:
+  - text: "好，那我改日便去登门拜访"
+    translated: "Alright, then I'll pay you a visit another day."
+    qcReviewedText: "Alright, then I'll pay you a visit another day.{0}。\nWith your recommendation, #PlayerName#, we are sure to get along famously and feel like old friends upon meeting."
+    qcTranslated: "Alright, then I'll pay you a visit another day.{0}\nWith your recommendation, #PlayerName#, we are sure to get along famously and feel like old friends upon meeting."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+  - subIndex: 1
+    text: "相信有#PlayerName#引荐，我等定能相谈甚欢，一见如故。"
+    translated: "With your recommendation, #PlayerName#, we are sure to get along famously and feel like old friends upon meeting."
+  templates:
+  - template: "{0}⟦0⟧。\n{1}"
 - raw: "如今#PlayerForceName#以及附庸、盟友，占据了天下之大半壁江山。\n剩余各派势力已不足为虑，是时候宣告武林一统了。"
   splits:
   - text: "如今#PlayerForceName#以及附庸、盟友，占据了天下之大半壁江山。"
@@ -32455,6 +33240,19 @@
     translated: "So very good"
   templates:
   - template: "{0};HideInteractUIOneDay"
+- raw: "如此甚好。今日我#$PlayerName#便宣告，正式在此地开宗立派，\n这样一来，也算是在武林中打下一番基业。"
+  splits:
+  - text: "如此甚好。今日我#$PlayerName#便宣告，正式在此地开宗立派，"
+    translated: "Very well then. Today, I, #$PlayerName#, declare that I will formally establish a sect here."
+    qcReviewedText: "Very well then. Today, I, #$PlayerName#, declare that I will formally establish a sect here.\nThis way, it can also be considered establishing a foundation in Wulin."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "这样一来，也算是在武林中打下一番基业。"
+    translated: "This way, it can also be considered establishing a foundation in Wulin."
+  templates:
+  - template: "{0}\n{1}"
 - raw: "如蒙不弃，我愿拜入#SourceForceName#门下，展鸿鹄之志，效犬马之劳。"
   splits:
   - text: "如蒙不弃，我愿拜入#SourceForceName#门下，展鸿鹄之志，效犬马之劳。"
@@ -32717,6 +33515,22 @@
     qcDefectCategory: None
   templates:
   - template: "{0}-819-2-4-false"
+- raw: "姜映泉-听闻唐门近来要与霹雳堂举行联姻大典，邀请巴蜀一带各大门派前往参与。\n可惜为师近来事务繁忙，还望徒儿能代为师前去道贺。"
+  splits:
+  - text: "姜映泉"
+    translated: "Jiang Yingquan"
+    qcReviewedText: "Jiang Yingquan-It has been heard that the Tang Clan is planning to hold a grand wedding ceremony with Thunderclap Hall, inviting major sects from the Bashu region to attend.\nUnfortunately, I've been very busy lately. I hope my disciple can go on my behalf to offer congratulations."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "听闻唐门近来要与霹雳堂举行联姻大典，邀请巴蜀一带各大门派前往参与。"
+    translated: "It has been heard that the Tang Clan is planning to hold a grand wedding ceremony with Thunderclap Hall, inviting major sects from the Bashu region to attend."
+  - subIndex: 2
+    text: "可惜为师近来事务繁忙，还望徒儿能代为师前去道贺。"
+    translated: "Unfortunately, I've been very busy lately. I hope my disciple can go on my behalf to offer congratulations."
+  templates:
+  - template: "{0}-{1}\n{2}"
 - raw: "姬清梵"
   splits:
   - text: "姬清梵"
@@ -34013,6 +34827,22 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "对方门派占据区域已超过四处，称得上是名门大派。\n我这种江湖人士上门挑战，对方想必不会应允，而且还可能引起武林公愤。\n(对方门派占领区域不可超过4处)"
+  splits:
+  - text: "对方门派占据区域已超过四处，称得上是名门大派。"
+    translated: "The opposing sect has already occupied more than four areas and can be considered a major and prestigious sect."
+    qcReviewedText: "The opposing sect has already occupied more than four areas and can be considered a major and prestigious sect.\nAs a Jianghu figure like myself, coming to challenge them would likely be refused, and could even provoke the ire of Wulin.\n(The opponent's sect occupation area cannot exceed 4 locations.)"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "我这种江湖人士上门挑战，对方想必不会应允，而且还可能引起武林公愤。"
+    translated: "As a Jianghu figure like myself, coming to challenge them would likely be refused, and could even provoke the ire of Wulin."
+  - subIndex: 2
+    text: "对方门派占领区域不可超过4处"
+    translated: "The opponent's sect occupation area cannot exceed 4 locations."
+  templates:
+  - template: "{0}\n{1}\n({2})"
 - raw: "对方门派对我{0}尚且信任不足，恐怕难以{1}其与其他门派之间的关系。\n（需要对方门派好感达到80点。）"
   splits:
   - text: "对方门派对我"
@@ -35083,6 +35913,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "居中调停;SureHeroCancelOtherHater"
+  splits:
+  - text: "居中调停"
+    translated: "Mediate impartially"
+  templates:
+  - template: "{0};SureHeroCancelOtherHater"
 - raw: "属性"
   splits:
   - text: "属性"
@@ -36461,6 +37297,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "开始挑战;StartReplaceOtherForceFight"
+  splits:
+  - text: "开始挑战"
+    translated: "Start the challenge"
+  templates:
+  - template: "{0};StartReplaceOtherForceFight"
 - raw: "开始探听;StartAskNearRandomEvent;;0/50"
   splits:
   - text: "开始探听"
@@ -36653,6 +37495,18 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "引荐;AskHeroAddOtherFriend;;;♦将自己的亲友引荐给对方\n♦消耗20点好感;FavorDegree/60"
+  splits:
+  - text: "引荐"
+    translated: "Recommend"
+  - subIndex: 1
+    text: "将自己的亲友引荐给对方"
+    translated: "Introduce one's relatives and friends to the other party"
+  - subIndex: 2
+    text: "消耗20点好感"
+    translated: "Spends 20 points of favor"
+  templates:
+  - template: "{0};AskHeroAddOtherFriend;;;♦{1}\n♦{2};FavorDegree/60"
 - raw: "弟"
   splits:
   - text: "弟"
@@ -37374,14 +38228,6 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "得胜而归"
-  splits:
-  - text: "得胜而归"
-    translated: "Return victorious"
-    qcReviewedText: "Return victorious"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
 - raw: "御史中丞"
   splits:
   - text: "御史中丞"
@@ -37513,18 +38359,18 @@
     qcDefectCategory: None
   templates:
   - template: "{0} ⟦0⟧"
-- raw: "忠诚\n♦影响弟子工作效率，如习武练功/资源采集/物品制造等。\n♦每月自动向50点靠拢，可通过嘉奖/门派宴会快速提升。{0}"
+- raw: "忠诚\n♦影响弟子工作效率，如习武练功/资源采集/物品制造。\n♦每月自动向50点靠拢，可通过嘉奖/门派宴会提升。{0}"
   splits:
   - text: "忠诚"
     translated: "Loyalty"
-    qcReviewedText: "Loyalty\n♦Affecting the apprentices' work efficiency, such as practicing martial arts./Resource gathering/Item crafting and more\n♦Automatically aligns with 50 points each month, and rewards can be claimed./Sect banquet quickly boost {0}"
-    qcTranslated: "Loyalty\n♦Affects the apprentices' work efficiency, such as practicing martial arts/resource gathering/item crafting and more.\n♦Automatically aligns with 50 points each month, and can be quickly boosted through commendations/Sect banquets.{0}"
+    qcReviewedText: "Loyalty\n♦Affecting the apprentices' work efficiency, such as practicing martial arts./Resource gathering/Item crafting\n♦Automatically aligns with 50 points each month, and rewards can be claimed./Sect banquet improvement {0}"
+    qcTranslated: "Loyalty\n♦Affects the disciples' work efficiency, such as martial arts training/resource gathering/item crafting.\n♦Automatically moves toward 50 points each month; can be improved through commendations/Sect banquets. {0}"
     qcStatus: Corrected
     qcQualityScore: 92
-    qcDefectCategory: HardToParseSeam
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - HardToParseSeam
-    - OtherNamedDefect
+    - UnnaturalPhrasing
+    - DroppedContent
   - subIndex: 1
     text: "影响弟子工作效率，如习武练功"
     translated: "Affecting the apprentices' work efficiency, such as practicing martial arts."
@@ -37532,14 +38378,14 @@
     text: "资源采集"
     translated: "Resource gathering"
   - subIndex: 3
-    text: "物品制造等。"
-    translated: "Item crafting and more"
+    text: "物品制造。"
+    translated: "Item crafting"
   - subIndex: 4
     text: "每月自动向50点靠拢，可通过嘉奖"
     translated: "Automatically aligns with 50 points each month, and rewards can be claimed."
   - subIndex: 5
-    text: "门派宴会快速提升。"
-    translated: "Sect banquet quickly boost"
+    text: "门派宴会提升。"
+    translated: "Sect banquet improvement"
   templates:
   - template: "{0}\n♦{1}/{2}/{3}\n♦{4}/{5}⟦0⟧"
 - raw: "快刀斩乱麻吧"
@@ -39145,6 +39991,25 @@
     translated: "Consume the other party's affinity 4 points; if the other party is Master, reduce it by half."
   templates:
   - template: "{0}⟦0⟧{1}\n({2})"
+- raw: "我在江湖中尚未积累足够的声望，若想在此开宗立派，恐怕还难以服众。\n(在此总舵开宗立派需至少{0}点声望)"
+  splits:
+  - text: "我在江湖中尚未积累足够的声望，若想在此开宗立派，恐怕还难以服众。"
+    translated: "I haven't accumulated enough prestige in the Jianghu yet; if I want to establish a sect here, I might find it hard to win their support."
+    qcReviewedText: "I haven't accumulated enough prestige in the Jianghu yet; if I want to establish a sect here, I might find it hard to win their support.\n(To establish a sect at this main headquarters, one needs at least {0} Raise reputation)"
+    qcTranslated: "I haven't accumulated enough prestige in the Jianghu yet; if I want to establish a sect here, I might find it hard to win their support.\n(To establish a sect at this main headquarters, one needs at least {0} reputation points)"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
+    qcDefectCategories:
+    - UnnaturalPhrasing
+  - subIndex: 1
+    text: "在此总舵开宗立派需至少"
+    translated: "To establish a sect at this main headquarters, one needs at least"
+  - subIndex: 2
+    text: "点声望"
+    translated: "Raise reputation"
+  templates:
+  - template: "{0}\n({1}⟦0⟧{2})"
 - raw: "我对{0}忠心耿耿，任劳任怨，没想到竟落得这般下场，真是可悲可叹啊！\n事已至此，多说无益，#SourceInteractName#我们后会有期！"
   splits:
   - text: "我对"
@@ -39810,6 +40675,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "我眼下已是#PlayerForceDescribe#。\n需要先结束门客关系，方可自立门户。"
+  splits:
+  - text: "我眼下已是#PlayerForceDescribe#。"
+    translated: "I am now at #PlayerForceDescribe#"
+    qcReviewedText: "I am now at #PlayerForceDescribe#\nYou need to end your relationship with your current patron before you can establish your own domain."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "需要先结束门客关系，方可自立门户。"
+    translated: "You need to end your relationship with your current patron before you can establish your own domain."
+  templates:
+  - template: "{0}\n{1}"
 - raw: "我竟会如此狼狈"
   splits:
   - text: "我竟会如此狼狈"
@@ -40105,6 +40983,25 @@
     translated: "Help me out, and we can split the treasure evenly."
   templates:
   - template: "{0}⟦0⟧{1}"
+- raw: "我近来对于这{0}确实颇有感悟。\n若#PlayerName#愿意一同修炼此功，定能对你我二人的修为大有裨益。"
+  splits:
+  - text: "我近来对于这"
+    translated: "I've been thinking about this recently"
+    qcReviewedText: "I've been thinking about this recently {0} Indeed, I have gained much insight\nIf #PlayerName# is willing to practice this technique alongside me, it will surely be greatly beneficial to both of our cultivation levels."
+    qcTranslated: "I've been thinking about this {0} recently. Indeed, I have gained much insight. If #PlayerName# is willing to practice this technique alongside me, it will surely be greatly beneficial to both of our cultivation levels."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+  - subIndex: 1
+    text: "确实颇有感悟。"
+    translated: "Indeed, I have gained much insight"
+  - subIndex: 2
+    text: "若#PlayerName#愿意一同修炼此功，定能对你我二人的修为大有裨益。"
+    translated: "If #PlayerName# is willing to practice this technique alongside me, it will surely be greatly beneficial to both of our cultivation levels."
+  templates:
+  - template: "{0}⟦0⟧{1}\n{2}"
 - raw: "我近来旧伤复发，身体不适，想劳烦#TargetInteractName#你诊治一番。\n(消耗2点好感)"
   splits:
   - text: "我近来旧伤复发，身体不适，想劳烦#TargetInteractName#你诊治一番。"
@@ -41701,6 +42598,26 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "按照江湖规矩，只要向{0}正式递送战书，并击败其大部精锐，\n我#$PlayerName#便可取而代之，在此处开宗建派，自立门户。"
+  splits:
+  - text: "按照江湖规矩，只要向"
+    translated: "According to the rules of Jianghu, as long as one approaches"
+    qcReviewedText: "According to the rules of Jianghu, as long as one approaches {0} Formally deliver the challenge and defeat their main force of elite troops,\n'#$PlayerName#' can take your place and establish my own sect here."
+    qcTranslated: "According to the rules of Jianghu, as long as one formally delivers a challenge to {0} and defeats their main force of elite troops, #$PlayerName# can take their place and establish my own sect here."
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - UnnaturalPhrasing
+  - subIndex: 1
+    text: "正式递送战书，并击败其大部精锐，"
+    translated: "Formally deliver the challenge and defeat their main force of elite troops,"
+  - subIndex: 2
+    text: "我#$PlayerName#便可取而代之，在此处开宗建派，自立门户。"
+    translated: "'#$PlayerName#' can take your place and establish my own sect here."
+  templates:
+  - template: "{0}⟦0⟧{1}\n{2}"
 - raw: "按照规矩，这溢出来的酒可不用喝"
   splits:
   - text: "按照规矩，这溢出来的酒可不用喝"
@@ -42457,6 +43374,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "援军已经安排妥当，是时候与#TargetForceName#一较高下了。\n#TargetInteractName#，多有得罪了！"
+  splits:
+  - text: "援军已经安排妥当，是时候与#TargetForceName#一较高下了。"
+    translated: "Reinforcements have been arranged; it's time to settle things with #TargetForceName#."
+    qcReviewedText: "Reinforcements have been arranged; it's time to settle things with #TargetForceName#.\n#TargetInteractName#, I've caused you much offense!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "#TargetInteractName#，多有得罪了！"
+    translated: "#TargetInteractName#, I've caused you much offense!"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "援军甲"
   splits:
   - text: "援军甲"
@@ -42578,14 +43508,22 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "撤销移动"
+- raw: "撤销移动(快捷键W)"
   splits:
   - text: "撤销移动"
     translated: "Cancel move"
-    qcReviewedText: "Cancel move"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcReviewedText: "Cancel move(Shortcut keys W)"
+    qcTranslated: "Cancel Move (Shortcut Key W)"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
+    qcDefectCategories:
+    - UnnaturalPhrasing
+  - subIndex: 1
+    text: "快捷键"
+    translated: "Shortcut keys"
+  templates:
+  - template: "{0}({1}W)"
 - raw: "撤除职位"
   splits:
   - text: "撤除职位"
@@ -43578,14 +44516,22 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "无法移动"
+- raw: "无法移动(快捷键W)"
   splits:
   - text: "无法移动"
     translated: "Cannot move"
-    qcReviewedText: "Cannot move"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcReviewedText: "Cannot move(Shortcut keys W)"
+    qcTranslated: "Cannot move (Shortcut key W)"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
+    qcDefectCategories:
+    - UnnaturalPhrasing
+  - subIndex: 1
+    text: "快捷键"
+    translated: "Shortcut keys"
+  templates:
+  - template: "{0}({1}W)"
 - raw: "无法进攻有其他据点的门派！"
   splits:
   - text: "无法进攻有其他据点的门派！"
@@ -43675,6 +44621,27 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "无需多此一举;FinishReplaceOtherForceSendGift;3;;与所有门派停战30天"
+  splits:
+  - text: "无需多此一举"
+    translated: "It's unnecessary to go to this trouble"
+  - subIndex: 1
+    text: "与所有门派停战30天"
+    translated: "Cease fire with all Sects for 30 days"
+  templates:
+  - template: "{0};FinishReplaceOtherForceSendGift;3;;{1}"
+- raw: "无需援军;SetReplaceOtherForceGovernSuppotLv;0"
+  splits:
+  - text: "无需援军"
+    translated: "No need for reinforcements"
+  templates:
+  - template: "{0};SetReplaceOtherForceGovernSuppotLv;0"
+- raw: "无需援军;SetReplaceOtherForceRecruitSuppotLv;0"
+  splits:
+  - text: "无需援军"
+    translated: "No need for reinforcements"
+  templates:
+  - template: "{0};SetReplaceOtherForceRecruitSuppotLv;0"
 - raw: "无需治疗"
   splits:
   - text: "无需治疗"
@@ -47282,6 +48249,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "正式引荐;SureHeroAddOtherFriend"
+  splits:
+  - text: "正式引荐"
+    translated: "Formal Introduction"
+  templates:
+  - template: "{0};SureHeroAddOtherFriend"
 - raw: "正式弟子"
   splits:
   - text: "正式弟子"
@@ -47326,6 +48299,25 @@
     translated: "That's the idea"
   templates:
   - template: "{0};SureReduceHeroLoyal;2;;;FavorDegree/50"
+- raw: "正有此意！此战若我方能击败贵派大部精锐，\n按照江湖规矩便可取代#TargetForceName#，在此地开宗立派。\n还望#TargetInteractName#言而有信，莫要临阵反悔！"
+  splits:
+  - text: "正有此意！此战若我方能击败贵派大部精锐，"
+    translated: "That's exactly what I had in mind! If we can defeat most of your sect's elite forces in this battle,"
+    qcReviewedText: "That's exactly what I had in mind! If we can defeat most of your sect's elite forces in this battle,\nFollowing the rules of Jianghu, you can replace #TargetForceName# and establish your own sect here.\nI hope #TargetInteractName# will keep your word and not go back on it at the last moment!"
+    qcTranslated: "That's exactly what I had in mind! If we can defeat most of your sect's elite forces in this battle,\nFollowing the rules of Jianghu, we can replace #TargetForceName# and establish our own sect here.\nI hope #TargetInteractName# will keep your word and not go back on it at the last moment!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
+    qcDefectCategories:
+    - MeaningReversal
+  - subIndex: 1
+    text: "按照江湖规矩便可取代#TargetForceName#，在此地开宗立派。"
+    translated: "Following the rules of Jianghu, you can replace #TargetForceName# and establish your own sect here."
+  - subIndex: 2
+    text: "还望#TargetInteractName#言而有信，莫要临阵反悔！"
+    translated: "I hope #TargetInteractName# will keep your word and not go back on it at the last moment!"
+  templates:
+  - template: "{0}\n{1}\n{2}"
 - raw: "正面出手;StartKillNPCFight;0"
   splits:
   - text: "正面出手"
@@ -47472,6 +48464,19 @@
     translated: "Taels down!"
   templates:
   - template: "{0}⟦1⟧{1}⟦0⟧{2}"
+- raw: "此事很快便会传遍大江南北，\n需得先给本门起一个响亮的名号才行......"
+  splits:
+  - text: "此事很快便会传遍大江南北，"
+    translated: "This news will soon spread throughout the length and breadth of China."
+    qcReviewedText: "This news will soon spread throughout the length and breadth of China.\nWe need to come up with a catchy name for our sect first......"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "需得先给本门起一个响亮的名号才行......"
+    translated: "We need to come up with a catchy name for our sect first......"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "此人之身份，似乎是{0}。\n听闻此人死讯，{1}上下定然不会善罢甘休。"
   splits:
   - text: "此人之身份，似乎是"
@@ -47558,6 +48563,33 @@
     translated: "If my fellow brothers could join your sect, they would thrive and fully realize their potential."
   templates:
   - template: "{0}\n{1}"
+- raw: "此前不久才刚刚挑战过门派。\n还需等待{0}天后风平浪静，方能避免引起武林公愤。"
+  splits:
+  - text: "此前不久才刚刚挑战过门派。"
+    translated: "I had only recently challenged the Sect"
+    qcReviewedText: "I had only recently challenged the Sect\nStill waiting {0} Only when the seas are calm can one avoid arousing the collective anger of Wulin."
+    qcTranslated: "I had only recently challenged the Sect.\nI must wait {0} days until things calm down before I can avoid arousing the collective anger of Wulin."
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: UnnaturalPhrasing
+    qcDefectCategories:
+    - UnnaturalPhrasing
+  - subIndex: 1
+    text: "还需等待"
+    translated: "Still waiting"
+    qcReviewedText: "Still waiting {0} The Japanese could again bribe the jailer"
+    qcTranslated: "Still need to wait {0} days before you can bribe the jailer again."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
+    - OtherNamedDefect
+  - subIndex: 2
+    text: "天后风平浪静，方能避免引起武林公愤。"
+    translated: "Only when the seas are calm can one avoid arousing the collective anger of Wulin."
+  templates:
+  - template: "{0}\n{1}⟦0⟧{2}"
 - raw: "此前几场纷争中，我并未阻止双方争斗。\n此刻再想居中调停，恐怕无法取信于双方啊......"
   splits:
   - text: "此前几场纷争中，我并未阻止双方争斗。"
@@ -47847,6 +48879,19 @@
     translated: "Build endurance"
   templates:
   - template: "{0}⟦0⟧{1}\n{2}\n({3}⟦1⟧{4})"
+- raw: "此外也可重金聘请江湖高手助阵，以增加我方取胜之筹码。\n欲行大事，可不能再斤斤计较了。"
+  splits:
+  - text: "此外也可重金聘请江湖高手助阵，以增加我方取胜之筹码。"
+    translated: "Additionally, we can hire skilled Jianghu experts at a high price to increase our chances of winning."
+    qcReviewedText: "Additionally, we can hire skilled Jianghu experts at a high price to increase our chances of winning.\nIf we're going to do great things, we can't be petty anymore."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "欲行大事，可不能再斤斤计较了。"
+    translated: "If we're going to do great things, we can't be petty anymore."
+  templates:
+  - template: "{0}\n{1}"
 - raw: "此外，为师还会安排一位本门{0}与你切磋比试，以考核你的武功修为是否达标。"
   splits:
   - text: "此外，为师还会安排一位本门"
@@ -47897,6 +48942,22 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "此外，由于本门乃是初创，可按江湖规矩向其余门派送上拜帖和礼金。\n各大门派碍于情面，在一段时日内便不会进攻我方领地。\n此举可为本门赢得宝贵的发展时机。"
+  splits:
+  - text: "此外，由于本门乃是初创，可按江湖规矩向其余门派送上拜帖和礼金。"
+    translated: "In addition, since our sect is newly established, we can follow Jianghu customs and send invitation cards and gift money to other sects."
+    qcReviewedText: "In addition, since our sect is newly established, we can follow Jianghu customs and send invitation cards and gift money to other sects.\nDue to face‑saving considerations, the major sects will not attack our territory for a period of time.\nThis move can secure a valuable window of opportunity for our sect."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "各大门派碍于情面，在一段时日内便不会进攻我方领地。"
+    translated: "Due to face‑saving considerations, the major sects will not attack our territory for a period of time."
+  - subIndex: 2
+    text: "此举可为本门赢得宝贵的发展时机。"
+    translated: "This move can secure a valuable window of opportunity for our sect."
+  templates:
+  - template: "{0}\n{1}\n{2}"
 - raw: "此女子来历不明，加上这番说辞未免过于老套。\n防人之心不可无，兄台不可轻信此人啊。"
   splits:
   - text: "此女子来历不明，加上这番说辞未免过于老套。"
@@ -47987,6 +49048,32 @@
     translated: "The crowd below unanimously cheered loudly for the winner's name."
   templates:
   - template: "{0}\n{1}"
+- raw: "此次挑战，我可<b>携所有队友一同上阵，挑战{0}十二名战力最高之弟子</b>。\n若我在官府内任职，可消耗官府功绩获取援军。\n此外也可重金聘请江湖高手助阵，以增加我方取胜之筹码。"
+  splits:
+  - text: "此次挑战，我可"
+    translated: "This challenge, I can"
+    qcReviewedText: "This challenge, I can <b>Take all teammates along to face the challenge.{0} Twelve most powerful disciples</b>。\nIf I hold an official position, I can use my government merit to obtain reinforcements.\nAdditionally, we can hire skilled Jianghu experts at a high price to increase our chances of winning."
+    qcTranslated: "This challenge, I can <b>bring all my teammates to face the twelve most powerful disciples of {0}</b>.\nIf I hold an official position, I can use my government merit to obtain reinforcements.\nAdditionally, we can hire skilled Jianghu experts at a high price to increase our chances of winning."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - OtherNamedDefect
+  - subIndex: 1
+    text: "携所有队友一同上阵，挑战"
+    translated: "Take all teammates along to face the challenge."
+  - subIndex: 2
+    text: "十二名战力最高之弟子"
+    translated: "Twelve most powerful disciples"
+  - subIndex: 3
+    text: "若我在官府内任职，可消耗官府功绩获取援军。"
+    translated: "If I hold an official position, I can use my government merit to obtain reinforcements."
+  - subIndex: 4
+    text: "此外也可重金聘请江湖高手助阵，以增加我方取胜之筹码。"
+    translated: "Additionally, we can hire skilled Jianghu experts at a high price to increase our chances of winning."
+  templates:
+  - template: "{0}<b>{1}⟦0⟧{2}</b>。\n{3}\n{4}"
 - raw: "此次浴血奋战，#TargetInteractName#同样功不可没，本门也自当赐予厚赏，以示鼓励。"
   splits:
   - text: "此次浴血奋战，#TargetInteractName#同样功不可没，本门也自当赐予厚赏，以示鼓励。"
@@ -50673,6 +51760,12 @@
     translated: "Time to make myself scarce"
   templates:
   - template: "{0};HideInteractUI"
+- raw: "溜之大吉;ReplaceOtherForceFightFailed"
+  splits:
+  - text: "溜之大吉"
+    translated: "Time to make myself scarce"
+  templates:
+  - template: "{0};ReplaceOtherForceFightFailed"
 - raw: "溜了溜了;HideInteractUI"
   splits:
   - text: "溜了溜了"
@@ -53861,6 +54954,19 @@
     translated: "Confirm"
   templates:
   - template: "{0};BreakMedSure"
+- raw: "确认以当前设置自立门户吗？\n（所有未保留弟子都会退出门派）"
+  splits:
+  - text: "确认以当前设置自立门户吗？"
+    translated: "Are you sure you want to set up on your own with the current settings?"
+    qcReviewedText: "Are you sure you want to set up on your own with the current settings?\n(All unclaimed disciples will leave the sect)"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "（所有未保留弟子都会退出门派）"
+    translated: "(All unclaimed disciples will leave the sect)"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "确认兑换;GetGovernBodyGuardSure"
   splits:
   - text: "确认兑换"
@@ -54595,22 +55701,35 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "移动"
+- raw: "移动(快捷键W)"
   splits:
   - text: "移动"
     translated: "Move"
-    qcReviewedText: "Move"
+    qcReviewedText: "Move(Shortcut keys W)"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "移动中"
+  - subIndex: 1
+    text: "快捷键"
+    translated: "Shortcut keys"
+  templates:
+  - template: "{0}({1}W)"
+- raw: "移动中(快捷键W)"
   splits:
   - text: "移动中"
     translated: "In motion"
-    qcReviewedText: "In motion"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcReviewedText: "In motion(Shortcut keys W)"
+    qcTranslated: "Moving (Shortcut key W)"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
+    qcDefectCategories:
+    - UnnaturalPhrasing
+  - subIndex: 1
+    text: "快捷键"
+    translated: "Shortcut keys"
+  templates:
+  - template: "{0}({1}W)"
 - raw: "移动距离"
   splits:
   - text: "移动距离"
@@ -56538,6 +57657,12 @@
     translated: "Then it belongs to #PlayerName#!"
   templates:
   - template: "{0}⟦0⟧{1}"
+- raw: "罪有应得;HideInteractUIOneDay"
+  splits:
+  - text: "罪有应得"
+    translated: "As they say, one reaps what one sows."
+  templates:
+  - template: "{0};HideInteractUIOneDay"
 - raw: "美酒"
   splits:
   - text: "美酒"
@@ -56719,6 +57844,25 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "而余留的诸位{0}弟子，从今日起也拜入我#PlayerForceName#门下。\n还望各位为#PlayerForceName#尽忠职守，我#$PlayerName#也定不会亏待各位。"
+  splits:
+  - text: "而余留的诸位"
+    translated: "And the rest of you present"
+    qcReviewedText: "And the rest of you present {0} Disciple, from today onwards, I also join the ranks of #PlayerForceName#.\nI hope all of you will remain loyal and dedicated to #PlayerForceName#. I, #$PlayerName#, assure you that I will not fail to reward your efforts."
+    qcTranslated: "And the rest of you present {0} Disciples, from today onwards, will also join the ranks of #PlayerForceName#.\nI hope all of you will remain loyal and dedicated to #PlayerForceName#. I, #$PlayerName#, assure you that I will not fail to reward your efforts."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
+    qcDefectCategories:
+    - MeaningReversal
+  - subIndex: 1
+    text: "弟子，从今日起也拜入我#PlayerForceName#门下。"
+    translated: "Disciple, from today onwards, I also join the ranks of #PlayerForceName#."
+  - subIndex: 2
+    text: "还望各位为#PlayerForceName#尽忠职守，我#$PlayerName#也定不会亏待各位。"
+    translated: "I hope all of you will remain loyal and dedicated to #PlayerForceName#. I, #$PlayerName#, assure you that I will not fail to reward your efforts."
+  templates:
+  - template: "{0}⟦0⟧{1}\n{2}"
 - raw: "而最后，这段历史的主角#$PlayerName#......"
   splits:
   - text: "而最后，这段历史的主角#$PlayerName#......"
@@ -57155,6 +58299,22 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "胜负已分，还望#TargetInteractName#依照此前约定，\n将贵派总舵拱手相让，我#$PlayerName#便可在此开宗立派！"
+  splits:
+  - text: "胜负已分，还望#TargetInteractName#依照此前约定，"
+    translated: "The outcome is already decided; I hope #TargetInteractName# will abide by our previous agreement,"
+    qcReviewedText: "The outcome is already decided; I hope #TargetInteractName# will abide by our previous agreement,\nIf I can take over your sect's main headquarters, I, #$PlayerName#, can start my own sect right here!"
+    qcTranslated: "The outcome is already decided; I hope #TargetInteractName# will abide by our previous agreement and hand over your sect's main headquarters, so that I, #$PlayerName#, can start my own sect right here!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
+    qcDefectCategories:
+    - MeaningReversal
+  - subIndex: 1
+    text: "将贵派总舵拱手相让，我#$PlayerName#便可在此开宗立派！"
+    translated: "If I can take over your sect's main headquarters, I, #$PlayerName#, can start my own sect right here!"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "胡"
   splits:
   - text: "胡"
@@ -57232,6 +58392,15 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "脱罪;ReduceBadFameNPCPrison;;7/{0};降低对方50点恶名;GovernLv/{1};BadFameInPrisonTime"
+  splits:
+  - text: "脱罪"
+    translated: "Exonerate oneself"
+  - subIndex: 1
+    text: "降低对方50点恶名"
+    translated: "Reduce the target's Infamy by 50 points"
+  templates:
+  - template: "{0};ReduceBadFameNPCPrison;;7/⟦0⟧;{1};GovernLv/⟦1⟧;BadFameInPrisonTime"
 - raw: "脸"
   splits:
   - text: "脸"
@@ -57504,6 +58673,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "自立门户;ShowManageReplaceForceUI"
+  splits:
+  - text: "自立门户"
+    translated: "Go out on my own"
+  templates:
+  - template: "{0};ShowManageReplaceForceUI"
 - raw: "自行练习;StartPracticeCityHousePlot"
   splits:
   - text: "自行练习"
@@ -57521,6 +58696,14 @@
   - text: "自身"
     translated: "Oneself"
     qcReviewedText: "Oneself"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "自选标志"
+  splits:
+  - text: "自选标志"
+    translated: "Custom Emblem Selection"
+    qcReviewedText: "Custom Emblem Selection"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -57561,6 +58744,14 @@
   - text: "至圣"
     translated: "Supreme Sage"
     qcReviewedText: "Supreme Sage"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "至少一个武学专长！"
+  splits:
+  - text: "至少一个武学专长！"
+    translated: "At least one martial arts specialty!"
+    qcReviewedText: "At least one martial arts specialty!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -57961,6 +59152,19 @@
     translated: "Then, practicing can increase 1 points of Potential, otherwise it only increases 1 point of Skill."
   templates:
   - template: "{0}⟦1⟧{1}\n{2}⟦1⟧{3}\n(⟦1⟧{4}⟦0⟧{5})"
+- raw: "若我在官府内任职，可消耗官府功绩获取援军。\n请求的援军级别越高，需要我有越高的官府职位，并消耗更多的官府功绩。"
+  splits:
+  - text: "若我在官府内任职，可消耗官府功绩获取援军。"
+    translated: "If I hold an official position, I can use my government merit to obtain reinforcements."
+    qcReviewedText: "If I hold an official position, I can use my government merit to obtain reinforcements.\nThe higher the level of reinforcements I request, the higher my official government position must be, and it will also consume more government merit points."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "请求的援军级别越高，需要我有越高的官府职位，并消耗更多的官府功绩。"
+    translated: "The higher the level of reinforcements I request, the higher my official government position must be, and it will also consume more government merit points."
+  templates:
+  - template: "{0}\n{1}"
 - raw: "若无我#$TargetInteractName#在旁援护，\n恐怕各位也没那么容易得手吧！"
   splits:
   - text: "若无我#$TargetInteractName#在旁援护，"
@@ -58190,6 +59394,44 @@
     translated: "No double fines"
   templates:
   - template: "{0}⟦0⟧{1}"
+- raw: "若非#PlayerName#以实相告，只怕我还被{0}蒙在鼓里，真是知人知面不知心！\n哼，我从此便与{0}分道扬镳，恩断义绝！"
+  splits:
+  - text: "若非#PlayerName#以实相告，只怕我还被"
+    translated: "If not for #PlayerName# telling me the truth, I might still be deceived."
+    qcReviewedText: "If not for #PlayerName# telling me the truth, I might still be deceived.{0} Kept in the dark, how well they hide their true nature behind a friendly face!\nHmph, I will have nothing to do with {0} Part ways, sever all ties of friendship and righteousness!"
+    qcTranslated: "If not for #PlayerName# telling me the truth, I might still be deceived by {0}. Kept in the dark, how well they hide their true nature behind a friendly face!\nHmph, I will have nothing to do with {0} from now on. Part ways, sever all ties of friendship and righteousness!"
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+  - subIndex: 1
+    text: "蒙在鼓里，真是知人知面不知心！"
+    translated: "Kept in the dark, how well they hide their true nature behind a friendly face!"
+  - subIndex: 2
+    text: "哼，我从此便与"
+    translated: "Hmph, I will have nothing to do with"
+  - subIndex: 3
+    text: "分道扬镳，恩断义绝！"
+    translated: "Part ways, sever all ties of friendship and righteousness!"
+  templates:
+  - template: "{0}⟦0⟧{1}\n{2}⟦0⟧{3}"
+- raw: "若非#PlayerName#提醒，真想不到{0}还有此等精妙之处！\n#PlayerName#，我也有些修炼心得要说与你听......"
+  splits:
+  - text: "若非#PlayerName#提醒，真想不到"
+    translated: "Without #PlayerName#'s reminder, I never would have thought of it."
+    qcReviewedText: "Without #PlayerName#'s reminder, I never would have thought of it.{0} There's even such exquisite detail!\n#PlayerName#, I also have some insights to share with you about cultivation..."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "还有此等精妙之处！"
+    translated: "There's even such exquisite detail!"
+  - subIndex: 2
+    text: "#PlayerName#，我也有些修炼心得要说与你听......"
+    translated: "#PlayerName#, I also have some insights to share with you about cultivation..."
+  templates:
+  - template: "{0}⟦0⟧{1}\n{2}"
 - raw: "若非大侠相救，这些货品就都归强盗所有了，区区小礼不成敬意。\n小的还要继续赶路，就此别过恩公！"
   splits:
   - text: "若非大侠相救，这些货品就都归强盗所有了，区区小礼不成敬意。"
@@ -60034,6 +61276,24 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "诋毁;AskHeroCancelOtherRelation;;;♦使对方断绝与他人的好友/结义关系\n♦断绝好友消耗30点好感\n♦断绝结义消耗50点好感;FavorDegree/70"
+  splits:
+  - text: "诋毁"
+    translated: "Slander"
+  - subIndex: 1
+    text: "使对方断绝与他人的好友"
+    translated: "Cut off their friendships with others"
+  - subIndex: 2
+    text: "结义关系"
+    translated: "Brotherhood bond"
+  - subIndex: 3
+    text: "断绝好友消耗30点好感"
+    translated: "Breaking off friendship with a buddy costs 30 points of goodwill."
+  - subIndex: 4
+    text: "断绝结义消耗50点好感"
+    translated: "Breaking the sworn brotherhood will consume 50 points of goodwill."
+  templates:
+  - template: "{0};AskHeroCancelOtherRelation;;;♦{1}/{2}\n♦{3}\n♦{4};FavorDegree/70"
 - raw: "试玩时间已结束，感谢您的游玩体验！\n敬请期待《龙胤立志传》的正式版本。"
   splits:
   - text: "试玩时间已结束，感谢您的游玩体验！"
@@ -60127,6 +61387,15 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "诬陷;AddBadFameNPCPrison;;7/{0};增加对方50点恶名;GovernLv/{1};BadFameInPrisonTime"
+  splits:
+  - text: "诬陷"
+    translated: "Slander"
+  - subIndex: 1
+    text: "增加对方50点恶名"
+    translated: "Increase the target's Infamy by 50 points"
+  templates:
+  - template: "{0};AddBadFameNPCPrison;;7/⟦0⟧;{1};GovernLv/⟦1⟧;BadFameInPrisonTime"
 - raw: "误"
   splits:
   - text: "误"
@@ -60330,6 +61599,14 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "请完整设置门派名称！"
+  splits:
+  - text: "请完整设置门派名称！"
+    translated: "Please set the sect name completely!"
+    qcReviewedText: "Please set the sect name completely!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "请指教"
   splits:
   - text: "请指教"
@@ -60425,6 +61702,22 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "诸事已毕，从今日起，我#PlayerForceName#之威名便将传扬四海，震慑群雄。\n我#$PlayerName#也当励精图治，以保我#PlayerForceName#江山稳固，香火永传！"
+  splits:
+  - text: "诸事已毕，从今日起，我#PlayerForceName#之威名便将传扬四海，震慑群雄。"
+    translated: "With everything now complete, from today onward, the fame of #PlayerForceName# shall spread far and wide, striking fear into our rivals."
+    qcReviewedText: "With everything now complete, from today onward, the fame of #PlayerForceName# shall spread far and wide, striking fear into our rivals.\nI will also strive to govern wisely, $#$PlayerName#$$, ensuring our #PlayerForceName# realm's stability and eternal legacy!"
+    qcTranslated: "With everything now complete, from today onward, the fame of #PlayerForceName# shall spread far and wide, striking fear into our rivals.\nI, $#$PlayerName#$$, will also strive to govern wisely, ensuring our #PlayerForceName# realm's stability and eternal legacy!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+  - subIndex: 1
+    text: "我#$PlayerName#也当励精图治，以保我#PlayerForceName#江山稳固，香火永传！"
+    translated: "I will also strive to govern wisely, $#$PlayerName#$$, ensuring our #PlayerForceName# realm's stability and eternal legacy!"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "诸葛伶"
   splits:
   - text: "诸葛伶"
@@ -60995,6 +62288,35 @@
     translated: "Buy medicine"
   templates:
   - template: "{0};PlotOpenRandomShop;1-0.6-1"
+- raw: "贵派诸位弟子武功不俗，且个个赤胆忠心。\n若有愿意留下者，大可继续在我#$PlayerName#门下施展才能，争雄武林。"
+  splits:
+  - text: "贵派诸位弟子武功不俗，且个个赤胆忠心。"
+    translated: "Your disciples are all skilled in martial arts and utterly loyal."
+    qcReviewedText: "Your disciples are all skilled in martial arts and utterly loyal.\nThose who wish to stay may certainly continue to display their talents under my #$PlayerName# School and vie for dominance in Wulin."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "若有愿意留下者，大可继续在我#$PlayerName#门下施展才能，争雄武林。"
+    translated: "Those who wish to stay may certainly continue to display their talents under my #$PlayerName# School and vie for dominance in Wulin."
+  templates:
+  - template: "{0}\n{1}"
+- raw: "贵派近些年来内忧外患，人才凋敝，早已是强弩之末。\n我#$PlayerName#如今在江湖中也算颇具威望，\n今日前来取而代之，正是上承天命，下应人心！"
+  splits:
+  - text: "贵派近些年来内忧外患，人才凋敝，早已是强弩之末。"
+    translated: "Your sect has been plagued by internal strife and external threats in recent years, with a decline in talent. It is now at the end of its strength."
+    qcReviewedText: "Your sect has been plagued by internal strife and external threats in recent years, with a decline in talent. It is now at the end of its strength.\nI now have considerable prestige in the Jianghu, #$PlayerName#.\nComing here today to take your place is exactly in accordance with the will of heaven above and the wishes of the people below!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "我#$PlayerName#如今在江湖中也算颇具威望，"
+    translated: "I now have considerable prestige in the Jianghu, #$PlayerName#."
+  - subIndex: 2
+    text: "今日前来取而代之，正是上承天命，下应人心！"
+    translated: "Coming here today to take your place is exactly in accordance with the will of heaven above and the wishes of the people below!"
+  templates:
+  - template: "{0}\n{1}\n{2}"
 - raw: "费彬"
   splits:
   - text: "费彬"
@@ -61655,6 +62977,26 @@
     translated: "Today, I must shine on this stage and not let all the heroes of the world look down on me, #PlayerForceName#."
   templates:
   - template: "{0}\n{1}"
+- raw: "身为{0}性，恐怕无法在{1}自立门户啊......"
+  splits:
+  - text: "身为"
+    translated: "As"
+    qcReviewedText: "As {0} Probably unable to in terms of sex {1} Starting my own household..."
+    qcTranslated: "As a {0}, I'm afraid I won't be able to establish my own household in {1}..."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - UnnaturalPhrasing
+  - subIndex: 1
+    text: "性，恐怕无法在"
+    translated: "Probably unable to in terms of sex"
+  - subIndex: 2
+    text: "自立门户啊......"
+    translated: "Starting my own household..."
+  templates:
+  - template: "{0}⟦0⟧{1}⟦1⟧{2}"
 - raw: "身为本门{0}，#PlayerName#你已学有所成，同时立下了足够的功勋。\n若你想从本门出师，去江湖中行侠仗义、四处闯荡，本掌门也不会阻拦。"
   splits:
   - text: "身为本门"
@@ -63001,6 +64343,25 @@
     translated: "You must continue to practice diligently to reach the next level."
   templates:
   - template: "{0}⟦0⟧{1}\n{2}"
+- raw: "这{0}看着真是色香俱全，美味无比......\n#PlayerName#，莫非是想同我一起分享这{0}？"
+  splits:
+  - text: "这"
+    translated: "This"
+    qcReviewedText: "This {0} It's truly a feast for the eyes and the palate, incredibly delicious......\n#PlayerName#, don't tell me you want to share this with me?{0}？"
+    qcTranslated: "This {0} is truly a feast for the eyes and the palate, incredibly delicious......\n#PlayerName#, don't tell me you want to share this {0} with me?"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+  - subIndex: 1
+    text: "看着真是色香俱全，美味无比......"
+    translated: "It's truly a feast for the eyes and the palate, incredibly delicious......"
+  - subIndex: 2
+    text: "#PlayerName#，莫非是想同我一起分享这"
+    translated: "#PlayerName#, don't tell me you want to share this with me?"
+  templates:
+  - template: "{0}⟦0⟧{1}\n{2}⟦0⟧？"
 - raw: "这{0}素来与我{1}关系不和，\n想必不会将库存物品售卖与我。\n(需要门派好感40以上)"
   splits:
   - text: "这"
@@ -64620,6 +65981,33 @@
     translated: "Inquiring about the person's retirement from the Jianghu"
   templates:
   - template: "{0};AskNPCWantLeave;;;♦{1}"
+- raw: "送上中额礼金;FinishReplaceOtherForceSendGift;1;0/10000;与所有门派停战180天"
+  splits:
+  - text: "送上中额礼金"
+    translated: "Send a moderate gift of money"
+  - subIndex: 1
+    text: "与所有门派停战180天"
+    translated: "Cease fire with all Sects for 180 days."
+  templates:
+  - template: "{0};FinishReplaceOtherForceSendGift;1;0/10000;{1}"
+- raw: "送上大额礼金;FinishReplaceOtherForceSendGift;0;0/20000;与所有门派停战360天"
+  splits:
+  - text: "送上大额礼金"
+    translated: "Present a large sum of gift money"
+  - subIndex: 1
+    text: "与所有门派停战360天"
+    translated: "Cease fire with all Sects for 360 days."
+  templates:
+  - template: "{0};FinishReplaceOtherForceSendGift;0;0/20000;{1}"
+- raw: "送上小额礼金;FinishReplaceOtherForceSendGift;2;0/5000;与所有门派停战90天"
+  splits:
+  - text: "送上小额礼金"
+    translated: "Send a small gift of money"
+  - subIndex: 1
+    text: "与所有门派停战90天"
+    translated: "Cease fire with all sects for 90 days."
+  templates:
+  - template: "{0};FinishReplaceOtherForceSendGift;2;0/5000;{1}"
 - raw: "适中"
   splits:
   - text: "适中"
@@ -64683,12 +66071,24 @@
     translated: "Choose your cultivation method"
   templates:
   - template: "{0};BreakThroughSkillMoney"
+- raw: "选择和解对象;ChooseHeroCancelOtherHater"
+  splits:
+  - text: "选择和解对象"
+    translated: "Choose the party for reconciliation"
+  templates:
+  - template: "{0};ChooseHeroCancelOtherHater"
 - raw: "选择定情信物;ChooseLoverItem"
   splits:
   - text: "选择定情信物"
     translated: "Choose a token of affection"
   templates:
   - template: "{0};ChooseLoverItem"
+- raw: "选择引荐对象;ChooseHeroAddOtherFriend"
+  splits:
+  - text: "选择引荐对象"
+    translated: "Choose a Referral Candidate"
+  templates:
+  - template: "{0};ChooseHeroAddOtherFriend"
 - raw: "选择弟子;ChooseJuyiHeroReward"
   splits:
   - text: "选择弟子"
@@ -64767,6 +66167,12 @@
     translated: "Choose all characters in this sentence to English."
   templates:
   - template: "{0};ChooseBreakEquipment"
+- raw: "选择诋毁对象;ChooseHeroCancelOtherRelation"
+  splits:
+  - text: "选择诋毁对象"
+    translated: "Choose the target of your slander"
+  templates:
+  - template: "{0};ChooseHeroCancelOtherRelation"
 - raw: "选择赔礼;ReleaseHateWithNpcGiftChoose"
   splits:
   - text: "选择赔礼"
@@ -65375,6 +66781,22 @@
     translated: "That is natural"
   templates:
   - template: "{0};ReleaseHateWithNpcFameFinish;15;0/"
+- raw: "那是自然，我#$TargetInteractName#岂是出尔反尔之人？\n不过此战若是阁下落败，我#TargetForceName#也定不会轻饶。\n否则日后江湖中，岂不是人人以为我#TargetForceName#软弱可欺？"
+  splits:
+  - text: "那是自然，我#$TargetInteractName#岂是出尔反尔之人？"
+    translated: "Of course not, I #$TargetInteractName# wouldn't go back on my word."
+    qcReviewedText: "Of course not, I #$TargetInteractName# wouldn't go back on my word.\nBut if you lose this battle, I, #TargetForceName#, will not show you mercy either.\nOtherwise, in the Jianghu, won't everyone think that I, #TargetForceName#, am weak and easy to bully?"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "不过此战若是阁下落败，我#TargetForceName#也定不会轻饶。"
+    translated: "But if you lose this battle, I, #TargetForceName#, will not show you mercy either."
+  - subIndex: 2
+    text: "否则日后江湖中，岂不是人人以为我#TargetForceName#软弱可欺？"
+    translated: "Otherwise, in the Jianghu, won't everyone think that I, #TargetForceName#, am weak and easy to bully?"
+  templates:
+  - template: "{0}\n{1}\n{2}"
 - raw: "那是自然，明年我还要接着吃枣泥月饼呢！"
   splits:
   - text: "那是自然，明年我还要接着吃枣泥月饼呢！"
@@ -68758,6 +70180,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "额，难怪近来感觉诸事不顺......\n莫非真如#PlayerName#所言，是有小人在背后作梗？"
+  splits:
+  - text: "额，难怪近来感觉诸事不顺......"
+    translated: "Oh, no wonder everything's been feeling off lately..."
+    qcReviewedText: "Oh, no wonder everything's been feeling off lately...\nCould it be that there really are villains working against us behind the scenes, as #PlayerName# suggested?"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "莫非真如#PlayerName#所言，是有小人在背后作梗？"
+    translated: "Could it be that there really are villains working against us behind the scenes, as #PlayerName# suggested?"
+  templates:
+  - template: "{0}\n{1}"
 - raw: "风市"
   splits:
   - text: "风市"
@@ -69281,6 +70716,22 @@
     qcDefectCategory: None
   templates:
   - template: "{0}-819-2-4-false"
+- raw: "魏胥华-听闻唐门近来要与霹雳堂举行联姻大典，邀请巴蜀一带各大门派前往参与。\n本门虽与唐门无甚交情，但表面功夫还需做上一做。#PlayerName#别忘了代表我仙霞派前去道贺一番。"
+  splits:
+  - text: "魏胥华"
+    translated: "Wei Xuhua"
+    qcReviewedText: "Wei Xuhua-It has been heard that the Tang Clan is planning to hold a grand wedding ceremony with Thunderclap Hall, inviting major sects from the Bashu region to attend.\nAlthough our sect has no close relationship with the Tang Clan, we still need to go through the motions. #PlayerName#, don't forget to represent the Xianxia Sect and pay your respects."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "听闻唐门近来要与霹雳堂举行联姻大典，邀请巴蜀一带各大门派前往参与。"
+    translated: "It has been heard that the Tang Clan is planning to hold a grand wedding ceremony with Thunderclap Hall, inviting major sects from the Bashu region to attend."
+  - subIndex: 2
+    text: "本门虽与唐门无甚交情，但表面功夫还需做上一做。#PlayerName#别忘了代表我仙霞派前去道贺一番。"
+    translated: "Although our sect has no close relationship with the Tang Clan, we still need to go through the motions. #PlayerName#, don't forget to represent the Xianxia Sect and pay your respects."
+  templates:
+  - template: "{0}-{1}\n{2}"
 - raw: "魔头"
   splits:
   - text: "魔头"

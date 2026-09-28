@@ -55,10 +55,9 @@ public class BookWriterData
     // RVA   : 0xC84F80   Offset: 0xC84380   Length: 0xBE
     public HeroData GetBookWriterHero()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null) {
           WorldData.GetHero(lVar1,this.bookWriterHeroID,0);
           return;
         }
@@ -152,15 +151,14 @@ public class BookWriterData
     // RVA   : 0xC85950   Offset: 0xC84D50   Length: 0xE8
     public bool HaveMoney()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         int iVar2;
         long lVar3;
-        if ((*pStatics != 0) &&
-           (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar3 = GameController._instance.worldData) != null) {
           lVar3 = WorldData.Player(lVar3,0);
-          if ((lVar3 != null) && (*(int64 *)(lVar3 + 0x220) != 0)) {
-            iVar1 = *(int *)(*(int64 *)(lVar3 + 0x220) + 24);
+          if ((lVar3 != null) && (lVar3.speBookStorageSpeAdd != null)) {
+            iVar1 = *(int *)(lVar3.speBookStorageSpeAdd + 24);
             iVar2 = BookWriterData.GetMoneyCost(this,0);
             return iVar2 <= iVar1;
           }
@@ -405,7 +403,6 @@ public class BookWriterData
     // RVA   : 0xC85170   Offset: 0xC84570   Length: 0x181
     public int GetMinSkillLv()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         bool cVar2;
         long lVar3;
@@ -429,8 +426,8 @@ public class BookWriterData
           if (lVar3 == null) throw; // [null/range check failed]
           iVar4 = (*(int *)(lVar3 + 52) + 1) * 15;
         }
-        if ((*pStatics != 0) &&
-           (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar3 = GameController._instance.worldData) != null) {
           lVar3 = WorldData.Player(lVar3,0);
           if (lVar3 != null) {
             cVar2 = HeroData.HaveForceFunction(lVar3,9);

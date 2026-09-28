@@ -4140,8 +4140,6 @@
   - split: 4
     text: "陷阵之志，有死无生，乃猛将高顺所率精兵之口号，以此意志修习武功者，心神如铁，不可摧折"
     translated: "Charge to Death, No Retreat‑This was the battle cry of the elite soldiers led by General High Spring. Those who practiced martial arts with such resolve had hearts as steel, unbreakable."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Shatter,摧折,"
     qcReviewedText: "Charge to Death, No Retreat‑This was the battle cry of the elite soldiers led by General High Spring. Those who practiced martial arts with such resolve had hearts as steel, unbreakable."
     qcTranslated: "Charge to Death, No Retreat‑This was the battle cry of the elite soldiers led by General Gao Shun. Those who practiced martial arts with such resolve had hearts as steel, unbreakable."
     qcStatus: Corrected
@@ -6356,8 +6354,6 @@
   - split: 4
     text: "少林闻名江湖之硬功绝技，其气劲化为金钟遮罩全身，任刀枪棍棒袭来，只听一声钟声巨响，或震颤弹开，或摧折当场"
     translated: "Shaolin's renowned in the Jianghu for its hard‑body special techniques, where its energy forms a golden bell shield covering the entire body. No matter how swords, spears, staffs, and cudgels attack, one hears a resounding gong sound, and the strikes either bounce off with a tremor or break on impact."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "Shatter,摧折,"
     qcReviewedText: "Shaolin's renowned in the Jianghu for its hard‑body special techniques, where its energy forms a golden bell shield covering the entire body. No matter how swords, spears, staffs, and cudgels attack, one hears a resounding gong sound, and the strikes either bounce off with a tremor or break on impact."
     qcStatus: Passed
     qcQualityScore: 100

@@ -20,7 +20,6 @@ public class AISettingTabController
     // RVA   : 0xA19F10   Offset: 0xA19310   Length: 0x4FA
     public void Refresh()
     {
-        var pStatics = *(int64*)(DAT_181d72d50 + 184);
         uint uVar1;
         int iVar2;
         bool cVar3;
@@ -47,7 +46,7 @@ public class AISettingTabController
             lVar5 = Component.get_transform(this,0);
             if ((lVar5 != null) && (lVar5 = Transform.Find(lVar5,"Text",0)) != null) {
               plVar8 = (int64 *)Component.GetComponent(lVar5,DAT_181d96160);
-              lVar5 = *(int64 *)(pStatics + 32);
+              lVar5 = GameController.lockObj;
               if (lVar5 != null) {
                 lVar5 = *(int64 *)(lVar5 + 56);
                 if ((((this.sourceHero != null) &&
@@ -57,7 +56,7 @@ public class AISettingTabController
                     (lVar9 = FUN_1817d9a50(lVar9,this.AISettingID,DAT_181db2990),
                     lVar9 != null)))) {
                   uVar1 = *(uint32 *)(lVar9 + 16);
-                  lVar9 = *(int64 *)(pStatics + 32);
+                  lVar9 = GameController.lockObj;
                   if ((lVar9 != null) && (lVar9 = *(int64 *)(lVar9 + 56)) != null) {
                     uVar4 = Mathf.Clamp(uVar1,0,*(int *)(lVar9 + 24) + -1,0);
                     if (lVar5 != null) {

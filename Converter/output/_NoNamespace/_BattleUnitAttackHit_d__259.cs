@@ -566,8 +566,8 @@ public class <BattleUnitAttackHit>d__259
           puVar13 = (uint64 *)Transform.get_localPosition(&local_68,lVar10,0);
           local_88 = *puVar13;
           local_80 = *(float *)(puVar13 + 1);
-          local_78 = *(uint64 *)(pStatics_0248 + 16);
-          local_70 = *(float *)(pStatics_0248 + 24);
+          local_78 = PlotController.livingSkillIndexCache;
+          local_70 = PlotController._instance;
           fVar19 = local_80 + local_70;
           local_98 = CONCAT44(local_88._4_4_ + (float)((uint64)local_78 >> 32),
                               (float)local_88 + (float)local_78);

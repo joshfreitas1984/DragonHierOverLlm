@@ -50,7 +50,7 @@ public class LTLocalization
     // RVA   : 0xA7F3C0   Offset: 0xA7E7C0   Length: 0xB3
     public static string get_CurrentLanguage()
     {
-        if (**(int64 **)(DAT_181d84898 + 184) == 0) {
+        if (LTLocalization.LANGUAGE_ENGLISH == null) {
           LTLocalization.RefreshLanguageCache(0);
         }
         if (((*(byte *)(DAT_181d84898 + 0x133) & 4) != 0) && (*(int *)(DAT_181d84898 + 224) == 0)) {
@@ -280,43 +280,40 @@ public class LTLocalization
     // RVA   : 0xA7E590   Offset: 0xA7D990   Length: 0x2B4
     public static void Init()
     {
-        var pStatics = *(int64*)(DAT_181d84898 + 184);
         bool cVar1;
         int iVar2;
         uint uVar3;
         ulong uVar4;
         long lVar6;
         uVar4 = new LTLocalization(0);
-        puVar5 = (uint64 *)(pStatics + 16);
-        *puVar5 = uVar4;
-        il2cpp_internal(puVar5,uVar4);
+        LTLocalization.mInstance = uVar4;
         if (**(int **)(DAT_181d73d40 + 184) == 2) {
-          lVar6 = *(int64 *)(pStatics + 16);
+          lVar6 = LTLocalization.mInstance;
           if (lVar6 == null) throw; // [null/range check failed]
           uVar3 = 40;
         LAB_180a7e7bc:
           LTLocalization.SetLanguage(lVar6,uVar3,0);
         }
         else {
-          lVar6 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 8);
-          if ((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 16)) == null) throw; // [null/range check failed]
+
+          if ((lVar6 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 8)?.textData) == null) throw; // [null/range check failed]
           cVar1 = PlayerPrefDictionary.ContainsKey(lVar6,"Language",0);
           if (!cVar1) {
             iVar2 = Application.get_systemLanguage(0);
             if (iVar2 == 42) {
-              lVar6 = *(int64 *)(pStatics + 16);
+              lVar6 = LTLocalization.mInstance;
               if (lVar6 == null) throw; // [null/range check failed]
               uVar3 = 10;
             }
             else {
-              lVar6 = *(int64 *)(pStatics + 16);
+              lVar6 = LTLocalization.mInstance;
               uVar3 = Application.get_systemLanguage(0);
               if (lVar6 == null) throw; // [null/range check failed]
             }
             goto LAB_180a7e7bc;
           }
         }
-        lVar6 = *(int64 *)(pStatics + 16);
+        lVar6 = LTLocalization.mInstance;
         if (lVar6 != null) {
           LTLocalization.ReadData(lVar6,0);
           ZhConverter.Initialize("Dictionary","JiebaResource",0,0);
@@ -328,17 +325,14 @@ public class LTLocalization
     // RVA   : 0xA7E850   Offset: 0xA7DC50   Length: 0x19F
     public static void ManualSetLanguage(SystemLanguage setLanguage)
     {
-        var pStatics = *(int64*)(DAT_181d84898 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
         ulong uVar5;
-        if (*(int64 *)(pStatics + 16) == 0) {
+        if (LTLocalization.mInstance == null) {
           uVar3 = il2cpp_internal();
           LTLocalization.ctor(uVar3,0);
-          puVar4 = (uint64 *)(pStatics + 16);
-          *puVar4 = uVar3;
-          il2cpp_internal(puVar4,uVar3);
+          LTLocalization.mInstance = uVar3;
         }
         uVar3 = LTLocalization.get_CurrentLanguage(0);
         uVar5 = "CN";
@@ -347,10 +341,10 @@ public class LTLocalization
         }
         cVar2 = String.op_Inequality(uVar3,uVar5,0);
         if (cVar2) {
-          lVar1 = *(int64 *)(pStatics + 16);
+          lVar1 = LTLocalization.mInstance;
           if (lVar1 != null) {
             LTLocalization.SetLanguage(lVar1,setLanguage,0);
-            lVar1 = *(int64 *)(pStatics + 16);
+            lVar1 = LTLocalization.mInstance;
             if (lVar1 != null) {
               LTLocalization.ReadData(lVar1,0);
               return;
@@ -457,19 +451,18 @@ public class LTLocalization
     // RVA   : 0xA7DE80   Offset: 0xA7D280   Length: 0x137
     private static Font GetReplaceFont(string fontName)
     {
-        var pStatics = *(int64*)(DAT_181d84898 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
         ulong[] local_res8 = new ulong[4];
         local_res8[0] = 0;
-        lVar1 = *(int64 *)(pStatics + 24);
+        lVar1 = LTLocalization.replaceFontCache;
         if (lVar1 != null) {
           cVar2 = FUN_1808b04c0(lVar1,fontName,local_res8,DAT_181d73498);
           if (!cVar2) {
             uVar3 = String.Concat("Font/",fontName,0);
             local_res8[0] = Resources.Load(uVar3,DAT_181da0000);
-            lVar1 = *(int64 *)(pStatics + 24);
+            lVar1 = LTLocalization.replaceFontCache;
             if (lVar1 == null) throw; // [null/range check failed]
             FUN_1808b2160(lVar1,fontName,local_res8[0],DAT_181d73520);
           }
@@ -511,7 +504,6 @@ public class LTLocalization
     // RVA   : 0xA7E0F0   Offset: 0xA7D4F0   Length: 0x49B
     public static string GetText(string key, bool justReplace, bool needCheckReplace)
     {
-        var pStatics = *(int64*)(DAT_181dab190 + 184);
         bool cVar1;
         long lVar2;
         long lVar3;
@@ -549,10 +541,10 @@ public class LTLocalization
         if (needCheckReplace) {
           uVar6 = 0;
           while( true ) {
-            lVar3 = *(int64 *)(pStatics + 8);
+            lVar3 = TextReplaceData.ReplaceTexts;
             if (lVar3 == null) break;
             if (*(int *)(lVar3 + 24) <= (int)uVar6) goto LAB_180a7e340;
-            lVar3 = *(int64 *)(pStatics + 8);
+            lVar3 = TextReplaceData.ReplaceTexts;
             if (lVar3 == null) break;
             if (*(uint32 *)(lVar3 + 24) <= uVar6) {
               uVar4 = il2cpp_internal();
@@ -581,9 +573,9 @@ public class LTLocalization
         }
         LAB_180a7e340:
         do {
-          if (*pStatics == 0) goto LAB_180a7e586;
-          if (*(int *)(*pStatics + 24) <= (int)uVar5) goto LAB_180a7e3ff;
-          lVar3 = *pStatics;
+          if (TextReplaceData.ForceReplaceTexts == null) goto LAB_180a7e586;
+          if (*(int *)(TextReplaceData.ForceReplaceTexts + 24) <= (int)uVar5) goto LAB_180a7e3ff;
+          lVar3 = TextReplaceData.ForceReplaceTexts;
           if (lVar3 == null) goto LAB_180a7e586;
           if (*(uint32 *)(lVar3 + 24) <= uVar5) {
             uVar4 = il2cpp_internal();

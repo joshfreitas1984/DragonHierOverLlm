@@ -281,7 +281,7 @@ public class ReadBookTextController
         if (this.textData == null) throw; // [null/range check failed]
         cVar2 = FUN_18171e540(this.textData.showName,"缺",0);
         if (cVar2) {
-          lVar5 = **(int64 **)(DAT_181d72cc8 + 184);
+          lVar5 = GameController._instance;
           lVar8 = Component.get_transform(this,0);
           if (lVar8 != null) {
             puVar6 = (uint64 *)Transform.get_position(&local_68,lVar8,0);
@@ -531,8 +531,8 @@ public class ReadBookTextController
                 do {
                   iVar14 = this.row + iVar12;
                   if ((-1 < iVar14) && (iVar14 < *(int *)(lVar5 + 116))) {
-                    if ((*(int64 *)(lVar5 + 72) == 0) ||
-                       ((lVar8 = FUN_180127f90(*(int64 *)(lVar5 + 72),
+                    if ((lVar5.enterAreaChallengeHero == null) ||
+                       ((lVar8 = FUN_180127f90(lVar5.enterAreaChallengeHero,
                                                (int64)(this.column + iVar16),
                                                (int64)iVar14), lVar8 == null ||
                         (lVar8 = GameObject.GetComponent(lVar8,DAT_181d72ab8)) == null)))
@@ -587,8 +587,8 @@ public class ReadBookTextController
                               if (lVar5 == null) throw; // [null/range check failed]
                               if (iVar14 < *(int *)(lVar5 + 116)) {
                                 lVar5 = FUN_18046c540(0);
-                                if ((((lVar5 == null) || (*(int64 *)(lVar5 + 72) == 0)) ||
-                                    (lVar5 = FUN_180127f90(*(int64 *)(lVar5 + 72),
+                                if ((((lVar5 == null) || (lVar5.enterAreaChallengeHero == null)) ||
+                                    (lVar5 = FUN_180127f90(lVar5.enterAreaChallengeHero,
                                                            (int64)(this.column + iVar16),
                                                            (int64)(this.row + iVar12)),
                                     lVar5 == null)) ||
@@ -694,8 +694,8 @@ public class ReadBookTextController
                               if (lVar5 == null) throw; // [null/range check failed]
                               if (iVar14 < *(int *)(lVar5 + 116)) {
                                 lVar5 = FUN_18046c540(0);
-                                if ((((lVar5 == null) || (*(int64 *)(lVar5 + 72) == 0)) ||
-                                    (lVar5 = FUN_180127f90(*(int64 *)(lVar5 + 72),
+                                if ((((lVar5 == null) || (lVar5.enterAreaChallengeHero == null)) ||
+                                    (lVar5 = FUN_180127f90(lVar5.enterAreaChallengeHero,
                                                            (int64)(this.column + iVar16),
                                                            (int64)(this.row + iVar12)),
                                     lVar5 == null)) ||
@@ -789,8 +789,8 @@ public class ReadBookTextController
                                 if (lVar5 == null) throw; // [null/range check failed]
                                 if (iVar14 < *(int *)(lVar5 + 116)) {
                                   lVar5 = FUN_18046c540(0);
-                                  if ((((lVar5 == null) || (*(int64 *)(lVar5 + 72) == 0)) ||
-                                      (lVar5 = FUN_180127f90(*(int64 *)(lVar5 + 72),
+                                  if ((((lVar5 == null) || (lVar5.enterAreaChallengeHero == null)) ||
+                                      (lVar5 = FUN_180127f90(lVar5.enterAreaChallengeHero,
                                                              (int64)(this.column + iVar16)
                                                              ,(int64)
                                                               (this.row + iVar12)),
@@ -1382,7 +1382,7 @@ public class ReadBookTextController
              ((*(char *)(param_2 + 40) == false || (*(char *)(param_2 + 41) != false)))) {
         LAB_180d0dd59:
             uVar1 = *(uint64 *)(pStatics_9d00 + 40);
-            *this = *(uint64 *)(pStatics_9d00 + 32);
+            *this = ReadBookTextController.textGrayColor;
             this[1] = uVar1;
             return this;
           }
@@ -1395,7 +1395,7 @@ public class ReadBookTextController
                 if ((lVar3 == null) || (*(int64 *)(param_2 + 32) == 0)) throw; // [null/range check failed]
                 if (*(int *)(lVar3 + 124) < *(int *)(*(int64 *)(param_2 + 32) + 60)) {
                   uVar1 = *(uint64 *)(pStatics_9d00 + 56);
-                  *this = *(uint64 *)(pStatics_9d00 + 48);
+                  *this = ReadBookTextController.textRedColor;
                   this[1] = uVar1;
                   return this;
                 }

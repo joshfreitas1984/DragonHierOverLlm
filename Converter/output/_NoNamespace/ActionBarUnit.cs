@@ -113,17 +113,16 @@ public class ActionBarUnit
     // RVA   : 0xA1BFD0   Offset: 0xA1B3D0   Length: 0x251
     public void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181db0248 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
-        lVar2 = *(int64 *)(pStatics + 80);
+        lVar2 = PlotController.LaBaFestivelResultTalkText;
         if (lVar2 != null) {
           cVar1 = BattleController.HaveFocusTarget(lVar2,0);
           if (cVar1) {
             return;
           }
-          lVar2 = *(int64 *)(pStatics + 80);
+          lVar2 = PlotController.LaBaFestivelResultTalkText;
           if (lVar2 != null) {
             uVar3 = *(uint64 *)(lVar2 + 0x110);
             cVar1 = Object.op_Inequality(uVar3,0,0);

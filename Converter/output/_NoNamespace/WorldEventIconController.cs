@@ -168,7 +168,6 @@ public class WorldEventIconController
     // RVA   : 0x9D2510   Offset: 0x9D1910   Length: 0x3EA
     public void OnClick()
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
         uint uVar1;
         long lVar2;
@@ -180,8 +179,8 @@ public class WorldEventIconController
         uint local_28;
         uint uStack_24;
         byte[] local_18 = new byte[16];
-        if (*pStatics_2cc8 == 0) goto LAB_1809d28f5;
-        cVar3 = GameController.HaveSpeUI(*pStatics_2cc8,1,0);
+        if (GameController._instance == null) goto LAB_1809d28f5;
+        cVar3 = GameController.HaveSpeUI(GameController._instance,1,0);
         if (cVar3) {
           return;
         }

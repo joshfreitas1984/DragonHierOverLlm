@@ -120,7 +120,6 @@ public class StudyInternalSkillController
     // RVA   : 0xFE1FF0   Offset: 0xFE13F0   Length: 0x8D9
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
@@ -152,13 +151,13 @@ public class StudyInternalSkillController
           lVar2 = Transform.Find(lVar2,"InternalBar",0);
           if (lVar2 == null) throw; // [null/range check failed]
           lVar2 = Component.GetComponent(lVar2,DAT_181d94460);
-          if ((*pStatics == 0) ||
-             (lVar5 = *(int64 *)(*pStatics + 32)) == null)
+          if ((GameController._instance == null) ||
+             (lVar5 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
           lVar5 = WorldData.Player(lVar5,0);
           if (lVar5 == null) throw; // [null/range check failed]
-          if ((*pStatics == 0) ||
-             (lVar5 = *(int64 *)(*pStatics + 32)) == null)
+          if ((GameController._instance == null) ||
+             (lVar5 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
           lVar5 = WorldData.Player(lVar5,0);
           if ((lVar5 == null) || (lVar2 == null)) throw; // [null/range check failed]
@@ -169,26 +168,26 @@ public class StudyInternalSkillController
           lVar2 = Transform.Find(lVar2,"InternalInjuryBar",0);
           if (lVar2 == null) throw; // [null/range check failed]
           lVar2 = Component.GetComponent(lVar2,DAT_181d94460);
-          if ((*pStatics == 0) ||
-             (lVar5 = *(int64 *)(*pStatics + 32)) == null)
+          if ((GameController._instance == null) ||
+             (lVar5 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
           lVar5 = WorldData.Player(lVar5,0);
           if (lVar5 == null) throw; // [null/range check failed]
-          fVar15 = *(float *)(lVar5 + 0x198);
-          if ((*pStatics == 0) ||
-             (lVar5 = *(int64 *)(*pStatics + 32)) == null)
+          fVar15 = lVar5.totalBadFame;
+          if ((GameController._instance == null) ||
+             (lVar5 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
           lVar5 = WorldData.Player(lVar5,0);
           if ((lVar5 == null) || (lVar2 == null)) throw; // [null/range check failed]
-          Image.set_fillAmount(lVar2,1.0 - fVar15 / *(float *)(lVar5 + 0x194),0);
+          Image.set_fillAmount(lVar2,1.0 - fVar15 / lVar5.totalEnemyKilled,0);
           if (this.internalUI == null) throw; // [null/range check failed]
           lVar2 = GameObject.get_transform(this.internalUI,0);
           if (lVar2 == null) throw; // [null/range check failed]
           lVar2 = Transform.Find(lVar2,"InternalNum",0);
           if (lVar2 == null) throw; // [null/range check failed]
           uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
-          if ((*pStatics == 0) ||
-             (lVar2 = *(int64 *)(*pStatics + 32)) == null)
+          if ((GameController._instance == null) ||
+             (lVar2 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
           lVar2 = WorldData.Player(lVar2,0);
           if (lVar2 == null) throw; // [null/range check failed]
@@ -257,7 +256,7 @@ public class StudyInternalSkillController
                 if (this.crashingPoint == null) throw; // [null/range check failed]
                 lVar2 = GameObject.GetComponent(this.crashingPoint,DAT_181d73e60);
                 if (lVar2 == null) throw; // [null/range check failed]
-                if (1.0 <= *(float *)(lVar2 + 32)) {
+                if (1.0 <= lVar2.villageAreaID) {
                   if (this.crashingPoint == null) throw; // [null/range check failed]
                   lVar2 = GameObject.GetComponent(this.crashingPoint,DAT_181d73e60);
                   if (lVar2 == null) throw; // [null/range check failed]
@@ -265,10 +264,10 @@ public class StudyInternalSkillController
                 }
                 else {
                   lVar2 = FUN_18046c0a0(0);
-                  if ((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) throw; // [null/range check failed]
-                  lVar2 = WorldData.Player(*(int64 *)(lVar2 + 32),0);
+                  if ((lVar2 == null) || (lVar2.villageAreaID == null)) throw; // [null/range check failed]
+                  lVar2 = WorldData.Player(lVar2.villageAreaID,0);
                   if (lVar2 == null) throw; // [null/range check failed]
-                  if (*(float *)(lVar2 + 400) <= 0.0) {
+                  if (lVar2.totalWinFightCount <= 0.0) {
                     uVar3 = StudyInternalSkillController.FinishStudyInternalSkill(this,0,0);
                     FUN_180d8c2e0(this,uVar3,0);
                   }
@@ -297,7 +296,6 @@ public class StudyInternalSkillController
     // RVA   : 0xFDF2A0   Offset: 0xFDE6A0   Length: 0x261
     public void ChangeMana(float changeNum)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         ulong uVar1;
         uint uVar2;
         long lVar3;
@@ -314,13 +312,13 @@ public class StudyInternalSkillController
         uint uStack_20;
         uint32 uStack_1c;
         local_res10[0] = changeNum;
-        if ((*pStatics != 0) &&
-           (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar3 = GameController._instance.worldData) != null) {
           lVar3 = WorldData.Player(lVar3,0);
           if (lVar3 != null) {
             HeroData.ChangeMana
                       (lVar3,local_res10[0],1,1,in_stack_ffffffffffffffa8 & 0xffffffffffffff00,0);
-            lVar3 = *pStatics;
+            lVar3 = GameController._instance;
             uVar4 = Single.ToString(local_res10,"+0.#;-0.#;0",0);
             if (this.internalUI != null) {
               lVar5 = GameObject.get_transform(this.internalUI,0);

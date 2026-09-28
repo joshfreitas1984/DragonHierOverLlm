@@ -1786,7 +1786,6 @@ public class UISpriteCollection
     // RVA   : 0x1708C50   Offset: 0x1708050   Length: 0x2B1
     protected void OnHover(bool isOver)
     {
-        var pStatics = *(int64*)(DAT_181daf678 + 184);
         ulong uVar1;
         long lVar2;
         bool cVar3;
@@ -1794,7 +1793,7 @@ public class UISpriteCollection
         long lVar6;
         if (this.onHover != null) {
           if (!isOver) {
-            uVar1 = *(uint64 *)(pStatics + 0x180);
+            uVar1 = UICamera.onMouseMove;
             uVar4 = new OnTooltipCB(this,DAT_181dc6800,0);
             plVar5 = (int64 *)Delegate.Remove(uVar1,uVar4,0);
             plVar7 = (int64 *)0;
@@ -1807,10 +1806,10 @@ public class UISpriteCollection
                 FUN_1800d6070(plVar5,DAT_181d8d638);
               }
             }
-            *(int64 **)(pStatics + 0x180) = plVar7;
+            UICamera.onMouseMove = plVar7;
             return;
           }
-          uVar1 = *(uint64 *)(pStatics + 0x180);
+          uVar1 = UICamera.onMouseMove;
           uVar4 = new OnTooltipCB(this,DAT_181dc6800,0);
           plVar5 = (int64 *)Delegate.Combine(uVar1,uVar4,0);
           plVar7 = (int64 *)0;
@@ -1823,7 +1822,7 @@ public class UISpriteCollection
               FUN_1800d6070(plVar5,DAT_181d8d638);
             }
           }
-          *(int64 **)(pStatics + 0x180) = plVar7;
+          UICamera.onMouseMove = plVar7;
           Vector2.get_zero(0);
           cVar3 = Object.op_Implicit(this,0);
           if (!cVar3) {

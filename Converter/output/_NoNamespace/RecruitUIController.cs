@@ -202,7 +202,6 @@ public class RecruitUIController
     // RVA   : 0xD122C0   Offset: 0xD116C0   Length: 0x6B3
     public void SureButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         uint uVar1;
         int iVar2;
         long lVar3;
@@ -222,11 +221,11 @@ public class RecruitUIController
            (lVar3 = *(int64 *)(lVar3 + 32)) == null) throw; // [null/range check failed]
         iVar2 = HeroData.GetRecruitCost(lVar3,this.recruitUIType == 1,0x3f800000,0);
         if (this.recruitUIType == null) {
-          if ((((*pStatics == 0) ||
-               (lVar4 = *(int64 *)(*pStatics + 32)) == null) ||
-              (lVar4 = WorldData.Player(lVar4,0)) == null) || (*(int64 *)(lVar4 + 0x220) == 0))
+          if ((((GameController._instance == null) ||
+               (lVar4 = GameController._instance.worldData) == null) ||
+              (lVar4 = WorldData.Player(lVar4,0)) == null) || (lVar4.speBookStorageSpeAdd == null))
           throw; // [null/range check failed]
-          if (*(int *)(*(int64 *)(lVar4 + 0x220) + 24) < iVar2) {
+          if (*(int *)(lVar4.speBookStorageSpeAdd + 24) < iVar2) {
         LAB_180d1268f:
             lVar3 = FUN_18046c0a0(0);
             if (lVar3 != null) {
@@ -242,8 +241,8 @@ public class RecruitUIController
             throw; // [null/range check failed]
           }
           lVar4 = FUN_18046c0a0(0);
-          if (((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
-             (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null) throw; // [null/range check failed]
+          if (((lVar4 == null) || (lVar4.villageAreaID == null)) ||
+             (lVar4 = WorldData.Player(lVar4.villageAreaID,0)) == null) throw; // [null/range check failed]
           HeroData.ChangeMoney(lVar4,-iVar2,1,0);
           lVar4 = FUN_18046c0a0(0);
           if (lVar4 == null) throw; // [null/range check failed]
@@ -263,17 +262,17 @@ public class RecruitUIController
         else {
           if (this.recruitUIType != 1) goto LAB_180d12680;
           lVar4 = FUN_18046c0a0(0);
-          if (((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
-             ((lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0), lVar4 == null ||
-              (*(int64 *)(lVar4 + 0x220) == 0)))) throw; // [null/range check failed]
-          if (*(int *)(*(int64 *)(lVar4 + 0x220) + 24) < iVar2) goto LAB_180d1268f;
+          if (((lVar4 == null) || (lVar4.villageAreaID == null)) ||
+             ((lVar4 = WorldData.Player(lVar4.villageAreaID,0), lVar4 == null ||
+              (lVar4.speBookStorageSpeAdd == null)))) throw; // [null/range check failed]
+          if (*(int *)(lVar4.speBookStorageSpeAdd + 24) < iVar2) goto LAB_180d1268f;
           lVar4 = FUN_18046c0a0(0);
-          if (((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
-             (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null) throw; // [null/range check failed]
+          if (((lVar4 == null) || (lVar4.villageAreaID == null)) ||
+             (lVar4 = WorldData.Player(lVar4.villageAreaID,0)) == null) throw; // [null/range check failed]
           HeroData.ChangeMoney(lVar4,-iVar2,1,0);
           lVar4 = FUN_18046c0a0(0);
-          if ((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) throw; // [null/range check failed]
-          WorldData.AddTempHero(*(int64 *)(lVar4 + 32),lVar3,0);
+          if ((lVar4 == null) || (lVar4.villageAreaID == null)) throw; // [null/range check failed]
+          WorldData.AddTempHero(lVar4.villageAreaID,lVar3,0);
           lVar4 = FUN_18046c0a0(0);
           lVar5 = FUN_18046c0a0(0);
           if ((lVar5 == null) ||

@@ -176,6 +176,16 @@
     translated: "Base bonus"
   templates:
   - template: "{0}⟦5⟧\n{1}⟦6⟧%"
+- raw: "{0}援军"
+  splits:
+  - text: "援军"
+    translated: "Reinforcements"
+    qcReviewedText: "{0} Reinforcements"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "⟦0⟧{0}"
 - raw: "{0}教化"
   splits:
   - text: "教化"
@@ -1086,6 +1096,27 @@
     qcDefectCategory: None
   templates:
   - template: "♦{0}\n♦⟦0⟧⟦2⟧"
+- raw: "共餐"
+  splits:
+  - text: "共餐"
+    translated: "Dining together"
+    qcReviewedText: "Dining together"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "♦共同分享一件饮食\n♦双方均可获得完整服食效果"
+  splits:
+  - text: "共同分享一件饮食"
+    translated: "Share a meal together"
+    qcReviewedText: "♦Share a meal together\n♦Both parties can obtain the full effects of consumption."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "双方均可获得完整服食效果"
+    translated: "Both parties can obtain the full effects of consumption."
+  templates:
+  - template: "♦{0}\n♦{1}"
 - raw: "内功 吐纳法"
   splits:
   - text: "内功"
@@ -1447,6 +1478,27 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "合练"
+  splits:
+  - text: "合练"
+    translated: "Joint practice"
+    qcReviewedText: "Joint practice"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "♦共同修炼一门武学\n♦双方均可获得经验和持续加成效果"
+  splits:
+  - text: "共同修炼一门武学"
+    translated: "Practicing a martial art together"
+    qcReviewedText: "♦Practicing a martial art together\n♦Both sides can gain experience and continuous bonus effects."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "双方均可获得经验和持续加成效果"
+    translated: "Both sides can gain experience and continuous bonus effects."
+  templates:
+  - template: "♦{0}\n♦{1}"
 - raw: "同行"
   splits:
   - text: "同行"
@@ -1500,6 +1552,27 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "和解"
+  splits:
+  - text: "和解"
+    translated: "Reconciliation"
+    qcReviewedText: "Reconciliation"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "♦使对方与仇敌握手言和\n♦消耗40点好感"
+  splits:
+  - text: "使对方与仇敌握手言和"
+    translated: "Get the other party to make peace with their enemy"
+    qcReviewedText: "♦Get the other party to make peace with their enemy\n♦Spends 40 points of favor"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "消耗40点好感"
+    translated: "Spends 40 points of favor"
+  templates:
+  - template: "♦{0}\n♦{1}"
 - raw: "哼，还好我早有准备！"
   splits:
   - text: "哼，还好我早有准备！"
@@ -2098,6 +2171,27 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "引荐"
+  splits:
+  - text: "引荐"
+    translated: "Recommend"
+    qcReviewedText: "Recommend"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "♦将自己的亲友引荐给对方\n♦消耗20点好感"
+  splits:
+  - text: "将自己的亲友引荐给对方"
+    translated: "Introduce one's relatives and friends to the other party"
+    qcReviewedText: "♦Introduce one's relatives and friends to the other party\n♦Spends 20 points of favor"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "消耗20点好感"
+    translated: "Spends 20 points of favor"
+  templates:
+  - template: "♦{0}\n♦{1}"
 - raw: "张口结舌"
   splits:
   - text: "张口结舌"
@@ -2872,6 +2966,30 @@
   - text: "无话可说"
     translated: "No words to say"
     qcReviewedText: "No words to say"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "无需多此一举"
+  splits:
+  - text: "无需多此一举"
+    translated: "It's unnecessary to go to this trouble"
+    qcReviewedText: "It's unnecessary to go to this trouble"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "与所有门派停战30天"
+  splits:
+  - text: "与所有门派停战30天"
+    translated: "Cease fire with all Sects for 30 days."
+    qcReviewedText: "Cease fire with all Sects for 30 days."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "无需援军"
+  splits:
+  - text: "无需援军"
+    translated: "No need for reinforcements"
+    qcReviewedText: "No need for reinforcements"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3671,6 +3789,22 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "脱罪"
+  splits:
+  - text: "脱罪"
+    translated: "Exonerate oneself"
+    qcReviewedText: "Exonerate oneself"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "降低对方50点恶名"
+  splits:
+  - text: "降低对方50点恶名"
+    translated: "Reduce the target's Infamy by 50 points"
+    qcReviewedText: "Reduce the target's Infamy by 50 points"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "0-负3"
   splits:
   - text: "负3"
@@ -3806,6 +3940,33 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "诋毁"
+  splits:
+  - text: "诋毁"
+    translated: "Slander"
+    qcReviewedText: "Slander"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "♦使对方断绝与他人的好友/结义关系\n♦断绝好友消耗30点好感\n♦断绝结义消耗50点好感"
+  splits:
+  - text: "使对方断绝与他人的好友"
+    translated: "Cut off their friendships with others"
+    qcReviewedText: "♦Cut off their friendships with others/Brotherhood bond\n♦Breaking off friendship with a buddy costs 30 points of goodwill.\n♦Breaking the sworn brotherhood will consume 50 points of goodwill."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "结义关系"
+    translated: "Brotherhood bond"
+  - subIndex: 2
+    text: "断绝好友消耗30点好感"
+    translated: "Breaking off friendship with a buddy costs 30 points of goodwill."
+  - subIndex: 3
+    text: "断绝结义消耗50点好感"
+    translated: "Breaking the sworn brotherhood will consume 50 points of goodwill."
+  templates:
+  - template: "♦{0}/{1}\n♦{2}\n♦{3}"
 - raw: "诚心相求"
   splits:
   - text: "诚心相求"
@@ -3835,6 +3996,22 @@
     translated: "If affection is less than 50, the romantic relationship will be severed."
   templates:
   - template: "♦{0}\n♦{1}"
+- raw: "诬陷"
+  splits:
+  - text: "诬陷"
+    translated: "Slander"
+    qcReviewedText: "Slander"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "增加对方50点恶名"
+  splits:
+  - text: "增加对方50点恶名"
+    translated: "Increase the target's Infamy by 50 points"
+    qcReviewedText: "Increase the target's Infamy by 50 points"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "误会一场"
   splits:
   - text: "误会一场"
@@ -4271,6 +4448,54 @@
     qcDefectCategory: None
   templates:
   - template: "♦{0}"
+- raw: "送上中额礼金"
+  splits:
+  - text: "送上中额礼金"
+    translated: "Send a moderate gift of money"
+    qcReviewedText: "Send a moderate gift of money"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "与所有门派停战180天"
+  splits:
+  - text: "与所有门派停战180天"
+    translated: "Cease fire with all Sects for 180 days."
+    qcReviewedText: "Cease fire with all Sects for 180 days."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "送上大额礼金"
+  splits:
+  - text: "送上大额礼金"
+    translated: "Present a large sum of gift money"
+    qcReviewedText: "Present a large sum of gift money"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "与所有门派停战360天"
+  splits:
+  - text: "与所有门派停战360天"
+    translated: "Cease fire with all Sects for 360 days."
+    qcReviewedText: "Cease fire with all Sects for 360 days."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "送上小额礼金"
+  splits:
+  - text: "送上小额礼金"
+    translated: "Send a small gift of money"
+    qcReviewedText: "Send a small gift of money"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "与所有门派停战90天"
+  splits:
+  - text: "与所有门派停战90天"
+    translated: "Cease fire with all Sects for 90 days."
+    qcReviewedText: "Cease fire with all Sects for 90 days."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "选择弟子"
   splits:
   - text: "选择弟子"

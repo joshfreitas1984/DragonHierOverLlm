@@ -424,7 +424,7 @@
 - raw: ♦从气海出发，一路打通穴位。\n♦最终回归气海，便可打通周天获取额外经验。\n♦中途内力耗尽，修炼会自动结束，也可点击按钮主动结束。
   field: text
   path: SimpleDetailText.Base.text
-- raw: ♦传授对方一门武功\n♦只能传授非绝世武功，且品级不能超过对方身份等级\n♦根据武功品级提升好感
+- raw: ♦传授对方一门武功，品级不能超过对方身份等级\n♦结义/结缘后方能传授绝世武功\n♦根据武功品级提升好感
   field: describe
   path: PlotController.Base.PlotPrefabs.Array.data.choices.Array.data.describe
 - raw: ♦使用头盔/护甲/足履对机关兽进行改装，可获得对所有机关兽生效的特殊加成，持续30日。\n♦每次改装都会提升对应部位的经验，部位升级后会提供永久的机关兽加成。
@@ -439,6 +439,9 @@
 - raw: ♦偷窃对方的一件物品\n♦偷窃成功率由物品价值和双方的好感/灵巧/意志/轻功共同决定\n♦根据结果增加略少恶名
   field: describe
   path: PlotController.Base.PlotPrefabs.Array.data.choices.Array.data.describe
+- raw: ♦只能保留好感40以上的弟子。
+  field: text
+  path: SimpleDetailText.Base.text
 - raw: ♦向对方请教/传授生活技艺
   field: describe
   path: PlotController.Base.PlotPrefabs.Array.data.choices.Array.data.describe
@@ -460,7 +463,7 @@
 - raw: ♦将有悬赏的角色抓捕归案，获取银两和官府功绩\n♦抓捕成功降低对方20点好感
   field: describe
   path: PlotController.Base.PlotPrefabs.Array.data.choices.Array.data.describe
-- raw: ♦将武功修炼至十重获得天赋点\n♦在闭关室消耗天赋点领悟天赋
+- raw: ♦将武功修炼至十重获得天赋点\n♦在闭关室/武馆消耗天赋点领悟天赋
   field: text
   path: SimpleDetailText.Base.text
 - raw: ♦左ctrl+~键打开/关闭控制台。\n♦上/下方向键切换上条/下条历史指令。\n<color=red>♦开启作弊功能后，存档将无法获取成就且可能导致未知bug，请谨慎使用。</color>
@@ -722,9 +725,6 @@
   field: startCallSpeFuc
   path: WorldPlotEventController.Base.WorldPlotEventDataBase.Array.data.startCallSpeFuc
 - raw: PlotGetNewMail;姜映泉-几位师兄已探得情报，铁掌帮近几日就将和黑风寨一道大举进攻。#PlayerName#<b>速回门派</b>，协助师兄部署防御。
-  field: startCallSpeFuc
-  path: WorldPlotEventController.Base.WorldPlotEventDataBase.Array.data.startCallSpeFuc
-- raw: PlotGetNewMail;姜映泉-听闻唐门近来要与霹雳堂举行联姻大典，邀请巴蜀一带各大门派前往参与。可惜为师近来事务繁忙，还望徒儿能代为师前去道贺。
   field: startCallSpeFuc
   path: WorldPlotEventController.Base.WorldPlotEventDataBase.Array.data.startCallSpeFuc
 - raw: PlotGetNewMail;姜映泉-近来七大恶人之一雨人屠现身<b>江陵东方</b>，此人武功高强，穷凶极恶，为免当地百姓受戮，为师先去抵挡，还望仙霞派弟子速速前来支援！
@@ -2869,6 +2869,9 @@
 - raw: 保持与周边门派关系和睦，\n并优先攻击关系不睦的门派，\n可有效避免腹背受敌。
   field: tutorialText
   path: TutorialController.Base.tutorialDatas.Array.data.tutorialPlotDatas.Array.data.tutorialText
+- raw: 保留弟子
+  field: m_Text
+  path: Text.Base.m_Text
 - raw: 信件格式测试文本信件格式测试文本信件格式测试文本信件格式测试文本信件格式测本信件格式测试文本信件格式测试文本
   field: m_Text
   path: Text.Base.m_Text
@@ -2968,6 +2971,9 @@
 - raw: 入门弟子可以修习藏经阁内绿色进阶武功，\n从而大大提升自身修为。
   field: tutorialText
   path: TutorialController.Base.tutorialDatas.Array.data.tutorialPlotDatas.Array.data.tutorialText
+- raw: 全不选
+  field: m_Text
+  path: Text.Base.m_Text
 - raw: 全体出战
   field: m_Text
   path: Text.Base.m_Text
@@ -3014,6 +3020,9 @@
   field: text
   path: SimpleDetailText.Base.text
 - raw: 全盔
+  field: m_Text
+  path: Text.Base.m_Text
+- raw: 全选
   field: m_Text
   path: Text.Base.m_Text
 - raw: 全部
@@ -4105,6 +4114,9 @@
 - raw: 名录向右滑动提示
   field: data
   path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 名称
+  field: m_Text
+  path: Text.Base.m_Text
 - raw: 名贵药引
   field: eventName
   path: RandomEventController.Base.RandomEventDataBase.Array.data.eventName
@@ -4451,6 +4463,9 @@
   field: m_Text
   path: Text.Base.m_Text
 - raw: 喜好 剑/秘籍/秘籍/秘籍/秘籍/秘籍
+  field: m_Text
+  path: Text.Base.m_Text
+- raw: 喜好物品
   field: m_Text
   path: Text.Base.m_Text
 - raw: 嗜酒如命
@@ -5890,6 +5905,15 @@
 - raw: 弟子上限+1
   field: m_Text
   path: Text.Base.m_Text
+- raw: 弟子会优先修炼门派的专长技艺。
+  field: text
+  path: SimpleDetailText.Base.text
+- raw: 弟子会优先修炼门派的专长武学。
+  field: text
+  path: SimpleDetailText.Base.text
+- raw: 弟子会优先获取更高品质的门派喜好物品。
+  field: text
+  path: SimpleDetailText.Base.text
 - raw: 弟子方针
   field: m_Text
   path: Text.Base.m_Text
@@ -6494,6 +6518,9 @@
   field: data
   path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
 - raw: 技艺
+  field: m_Text
+  path: Text.Base.m_Text
+- raw: 技艺专长
   field: m_Text
   path: Text.Base.m_Text
 - raw: 技艺工作
@@ -7964,6 +7991,9 @@
   field: m_Text
   path: Text.Base.m_Text
 - raw: 武学
+  field: m_Text
+  path: Text.Base.m_Text
+- raw: 武学专长
   field: m_Text
   path: Text.Base.m_Text
 - raw: 武学图鉴
@@ -9679,6 +9709,9 @@
 - raw: 繁體中文
   field: m_Text
   path: Dropdown.Base.m_Options.m_Options.Array.data.m_Text
+- raw: 红
+  field: m_Text
+  path: Text.Base.m_Text
 - raw: 红烧肉
   field: data
   path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
@@ -9826,6 +9859,9 @@
 - raw: 维持治安
   field: name
   path: MissionDataController.Base.bountyMissionDataBase.Array.data.name
+- raw: 绿
+  field: m_Text
+  path: Text.Base.m_Text
 - raw: 绿耳马
   field: data
   path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
@@ -10024,12 +10060,135 @@
 - raw: 自相残杀
   field: name
   path: WorldPlotEventController.Base.WorldPlotEventDataBase.Array.data.name
+- raw: 自立门户
+  field: m_Text
+  path: Text.Base.m_Text
+- raw: 自立门户后，会根据行事风格重置所有门派初始好感。
+  field: text
+  path: SimpleDetailText.Base.text
 - raw: 自行练习
   field: tutorialName
   path: TutorialController.Base.tutorialDatas.Array.data.tutorialName
 - raw: 自身
   field: m_Text
   path: Text.Base.m_Text
+- raw: 自选标志1
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志10
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志11
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志12
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志13
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志14
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志15
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志16
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志17
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志18
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志19
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志2
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志20
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志21
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志22
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志23
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志24
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志25
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志26
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志27
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志28
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志29
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志3
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志30
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志31
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志32
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志33
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志34
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志35
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志36
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志37
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志38
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志39
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志4
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志5
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志6
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志7
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志8
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 自选标志9
+  field: data
+  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
 - raw: 自黑风寨被剿灭以来，巴陵村已风平浪静，但传闻一伙黑风寨残党逃窜到了<b>乐山镇北方</b>。
   field: startRemindText
   path: WorldPlotEventController.Base.WorldPlotEventDataBase.Array.data.startRemindText
@@ -10180,6 +10339,9 @@
 - raw: 蒙古马大
   field: data
   path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
+- raw: 蓝
+  field: m_Text
+  path: Text.Base.m_Text
 - raw: 蓬头垢面千家客，衣衫褴褛万里游。\n身无长物轻似燕，腰缠万贯...他不自由，\n嗝~嘿嘿嘿嘿
   field: plotText
   path: RandomEventController.Base.RandomEventDataBase.Array.data.plotData.plotDatas.Array.data.plotText
@@ -10246,6 +10408,9 @@
 - raw: 行
   field: showName
   path: ReadBookController.Base.readBookTextTypeDataBase.Array.data.showName
+- raw: 行事风格
+  field: m_Text
+  path: Text.Base.m_Text
 - raw: 行事风格 中\n弟子 19/0\n银钱 365/1000 (+1050)\n粮食 342/1000 (+120)\n木料 319/1000 (+280)\n矿石 312/1000 (+320)\n药材 396/1000 (+160)\n威望 350/1000 (0)
   field: m_Text
   path: Text.Base.m_Text
@@ -11716,6 +11881,9 @@
 - raw: 门派会议情况会显示在任务栏上方。
   field: tutorialText
   path: TutorialController.Base.tutorialDatas.Array.data.tutorialPlotDatas.Array.data.tutorialText
+- raw: 门派倾向
+  field: m_Text
+  path: Text.Base.m_Text
 - raw: 门派功绩\n用途：\n♦提升门派地位\n♦藏经阁阅读新秘籍\n♦门派仓库兑换物品\n获取：\n♦每月门派任务\n♦完成门派委托\n♦获取门派资源
   field: text
   path: SimpleDetailText.Base.text
@@ -11725,6 +11893,9 @@
 - raw: 门派区域\n♦达到上限后将无法占领新区域\n♦可通过升级门派正厅/科研/建造销金窟/占领京城/在皇宫提升勋阶来提升区域上限
   field: text
   path: SimpleDetailText.Base.text
+- raw: 门派名称
+  field: m_Text
+  path: Text.Base.m_Text
 - raw: 门派外发光
   field: data
   path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
@@ -11758,6 +11929,9 @@
 - raw: 门派木料
   field: text
   path: SimpleDetailText.Base.text
+- raw: 门派标志
+  field: m_Text
+  path: Text.Base.m_Text
 - raw: 门派标志0
   field: data
   path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
@@ -11767,13 +11941,7 @@
 - raw: 门派标志10
   field: data
   path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
-- raw: 门派标志10_check
-  field: data
-  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
 - raw: 门派标志11
-  field: data
-  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
-- raw: 门派标志11_check
   field: data
   path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
 - raw: 门派标志12
@@ -11810,9 +11978,6 @@
   field: data
   path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
 - raw: 门派标志22
-  field: data
-  path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
-- raw: 门派标志22_check
   field: data
   path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
 - raw: 门派标志23
@@ -11905,6 +12070,9 @@
 - raw: 门派银钱
   field: text
   path: SimpleDetailText.Base.text
+- raw: 门派颜色
+  field: m_Text
+  path: Text.Base.m_Text
 - raw: 闪避-0.04
   field: spellEffectString
   path: BattlePrepareSpellController.Base.BattlePrepareSpellDataBase.Array.data.spellEffectString

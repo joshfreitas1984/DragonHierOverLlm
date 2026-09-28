@@ -66,7 +66,6 @@ public class SimpleDetail
     // RVA   : 0x9819D0   Offset: 0x980DD0   Length: 0xB7E
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d8b790 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar4;
@@ -95,7 +94,7 @@ public class SimpleDetail
             SimpleDetail.RefreshPosition(this,0);
           }
         }
-        uVar4 = *(uint64 *)(pStatics + 72);
+        uVar4 = MouseController.hoveredUI;
         cVar1 = Object.op_Inequality(uVar4,0,0);
         if (!cVar1) {
           uVar4 = MouseController.get_hoveredObject(0);
@@ -106,11 +105,11 @@ public class SimpleDetail
           }
         }
         uVar4 = this.nowShowObject;
-        uVar5 = *(uint64 *)(pStatics + 72);
+        uVar5 = MouseController.hoveredUI;
         cVar1 = Object.op_Inequality(uVar5,0,0);
         if (!cVar1) {
         LAB_180981dd9:
-          uVar5 = *(uint64 *)(pStatics + 72);
+          uVar5 = MouseController.hoveredUI;
           cVar1 = Object.op_Inequality(uVar5,0,0);
           if (!cVar1) {
         LAB_180981fec:
@@ -149,21 +148,21 @@ public class SimpleDetail
             this.nowShowObject = 0;
           }
           else {
-            lVar2 = *(int64 *)(pStatics + 72);
+            lVar2 = MouseController.hoveredUI;
             if (lVar2 == null) goto LAB_180982549;
             uVar5 = GameObject.GetComponent(lVar2,DAT_181d74218);
             cVar1 = Object.op_Inequality(uVar5,0,0);
             if (!cVar1) goto LAB_180981fec;
-            lVar2 = *(int64 *)(pStatics + 72);
+            lVar2 = MouseController.hoveredUI;
             if ((lVar2 == null) || (lVar2 = GameObject.GetComponent(lVar2,DAT_181d74218)) == null)
             goto LAB_180982549;
             if (*(int64 *)(lVar2 + 24) == 0) goto LAB_180981fec;
-            lVar2 = *(int64 *)(pStatics + 72);
+            lVar2 = MouseController.hoveredUI;
             if ((lVar2 == null) || (lVar2 = GameObject.GetComponent(lVar2,DAT_181d74218)) == null)
             goto LAB_180982549;
             cVar1 = String.op_Inequality(*(uint64 *)(lVar2 + 24),"",0);
             if (!cVar1) goto LAB_180981fec;
-            this.nowShowObject = *(uint64 *)(pStatics + 72);
+            this.nowShowObject = MouseController.hoveredUI;
             if ((this.nowShowObject == null) ||
                (lVar2 = GameObject.GetComponent(this.nowShowObject,DAT_181d74218)) == null
                ) goto LAB_180982549;
@@ -171,21 +170,21 @@ public class SimpleDetail
           }
         }
         else {
-          lVar2 = *(int64 *)(pStatics + 72);
+          lVar2 = MouseController.hoveredUI;
           if (lVar2 == null) goto LAB_180982549;
           uVar5 = GameObject.GetComponent(lVar2,DAT_181d73448);
           cVar1 = Object.op_Inequality(uVar5,0,0);
           if (!cVar1) goto LAB_180981dd9;
-          lVar2 = *(int64 *)(pStatics + 72);
+          lVar2 = MouseController.hoveredUI;
           if ((lVar2 == null) || (lVar2 = GameObject.GetComponent(lVar2,DAT_181d73448)) == null)
           goto LAB_180982549;
           if (*(int64 *)(lVar2 + 24) == 0) goto LAB_180981dd9;
-          lVar2 = *(int64 *)(pStatics + 72);
+          lVar2 = MouseController.hoveredUI;
           if ((lVar2 == null) || (lVar2 = GameObject.GetComponent(lVar2,DAT_181d73448)) == null)
           goto LAB_180982549;
           cVar1 = String.op_Inequality(*(uint64 *)(lVar2 + 24),"",0);
           if (!cVar1) goto LAB_180981dd9;
-          uVar5 = *(uint64 *)(pStatics + 72);
+          uVar5 = MouseController.hoveredUI;
           this.nowShowObject = uVar5;
         LAB_180982274:
           il2cpp_internal(this + 40,uVar5);

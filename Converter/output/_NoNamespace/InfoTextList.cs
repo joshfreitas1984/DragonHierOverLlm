@@ -38,12 +38,11 @@ public class InfoTextList
     // RVA   : 0xC999E0   Offset: 0xC98DE0   Length: 0x16C
     protected BetterList<Paragraph> get_paragraphs()
     {
-        var pStatics = *(int64*)(DAT_181d7f828 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
         if (this.mParagraphs == null) {
-          lVar1 = *(int64 *)(pStatics + 8);
+          lVar1 = InfoTextList.mHistory;
           uVar3 = Object.get_name(this,0);
           if (lVar1 == null) {
         LAB_180c99b47:
@@ -53,7 +52,7 @@ public class InfoTextList
           cVar2 = FUN_1808b04c0(lVar1,uVar3,this + 64,DAT_181d71760);
           if (!cVar2) {
             this.mParagraphs = new BetterList_1(DAT_181da75b8);
-            lVar1 = *(int64 *)(pStatics + 8);
+            lVar1 = InfoTextList.mHistory;
             uVar3 = Object.get_name(this,0);
             if (lVar1 == null) goto LAB_180c99b47;
             FUN_1808ab370(lVar1,uVar3,this.mParagraphs,DAT_181d716d8);

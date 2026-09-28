@@ -72,12 +72,11 @@ public class SkyController
     // RVA   : 0x98AAB0   Offset: 0x989EB0   Length: 0x336
     public void RefreshCloud(bool fromStart)
     {
-        var pStatics = *(int64*)(DAT_181db4f18 + 184);
         int iVar1;
         uint uVar2;
         long lVar3;
         long lVar4;
-        lVar3 = *(int64 *)(pStatics + 8);
+        lVar3 = BattleController.AttackAreaTypeStartMovePower;
         if ((lVar3 != null) && (lVar3 = WeatherController.GetNowWeather(lVar3,0)) != null) {
           iVar1 = Mathf.RoundToInt(*(float *)(lVar3 + 88) * 40.0,0);
           lVar3 = this.clouds;
@@ -98,7 +97,7 @@ public class SkyController
               lVar3 = this.clouds;
               if (lVar3 == null) throw; // [null/range check failed]
             }
-            lVar3 = *(int64 *)(pStatics + 8);
+            lVar3 = BattleController.AttackAreaTypeStartMovePower;
             if ((lVar3 != null) && (lVar3 = WeatherController.GetNowWeather(lVar3,0)) != null) {
               iVar1 = Mathf.RoundToInt(*(float *)(lVar3 + 88) * 20.0,0);
               lVar3 = this.areaClouds;
@@ -652,7 +651,6 @@ public class SkyController
     // RVA   : 0x98A670   Offset: 0x989A70   Length: 0x2CC
     public float GetScaleAlphaPercent(SkyObjType skyObjType)
     {
-        var pStatics_0bc8 = *(int64*)(DAT_181db0bc8 + 184);
         var pStatics_c758 = *(int64*)(DAT_181dac758 + 184);
         float fVar1;
         long lVar2;
@@ -661,28 +659,28 @@ public class SkyController
         if (skyObjType != null) {
           if (skyObjType == 1) {
             fVar4 = *(float *)(pStatics_c758 + 20);
-            lVar2 = *(int64 *)(pStatics_c758 + 56);
+            lVar2 = PlotController.SpringFestivelRewardLvTalkText;
             if (lVar2 == null) throw; // [null/range check failed]
             fVar3 = (float)AreaController.AreaMapNowScale(lVar2,0);
             fVar4 = (fVar4 - fVar3) /
                     (*(float *)(pStatics_c758 + 20) -
-                    *(float *)(pStatics_c758 + 16));
+                    PlotController.livingSkillIndexCache);
           }
           else {
             fVar4 = 0.0;
           }
           return fVar4;
         }
-        lVar2 = *(int64 *)(pStatics_0bc8 + 16);
+        lVar2 = GameController.CheckShowSpeHero;
         if (lVar2 != null) {
           fVar4 = *(float *)(lVar2 + 24);
-          lVar2 = *(int64 *)(pStatics_0bc8 + 16);
+          lVar2 = GameController.CheckShowSpeHero;
           if (lVar2 != null) {
             fVar3 = (float)BigMapController.BigMapNowScale(lVar2,0);
-            lVar2 = *(int64 *)(pStatics_0bc8 + 16);
+            lVar2 = GameController.CheckShowSpeHero;
             if (lVar2 != null) {
               fVar1 = *(float *)(lVar2 + 24);
-              lVar2 = *(int64 *)(pStatics_0bc8 + 16);
+              lVar2 = GameController.CheckShowSpeHero;
               if (lVar2 != null) {
                 return (fVar4 - fVar3) / (fVar1 - *(float *)(lVar2 + 28));
               }

@@ -406,7 +406,6 @@ public class UIButton
     // RVA   : 0x1531F20   Offset: 0x1531320   Length: 0x182
     protected virtual void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181daf678 + 184);
         ulong uVar1;
         long lVar3;
         bool cVar4;
@@ -415,8 +414,8 @@ public class UIButton
         if (cVar4) {
           cVar4 = (**(code **)(*this + 0x178))(this,*(uint64 *)(*this + 0x180));
           if (cVar4) {
-            if (*(int *)(pStatics + 212) != -2) {
-              if (*(int *)(pStatics + 212) != -3) {
+            if (UICamera.currentTouchID != -2) {
+              if (UICamera.currentTouchID != -3) {
                 puVar2 = *(uint64 **)(DAT_181daf5f8 + 184);
                 *puVar2 = this;
                 il2cpp_internal(puVar2,this);

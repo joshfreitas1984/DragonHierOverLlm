@@ -44,7 +44,6 @@ public class LoadSceneController
     // RVA   : 0xA80A40   Offset: 0xA7FE40   Length: 0x780
     private void Start()
     {
-        var pStatics_2d50 = *(int64*)(DAT_181d72d50 + 184);
         var pStatics_6790 = *(int64*)(DAT_181da6790 + 184);
         bool cVar1;
         uint uVar2;
@@ -61,10 +60,10 @@ public class LoadSceneController
         cVar1 = Object.op_Inequality(uVar4,0,0);
         if (!cVar1) {
           plVar5 = this.tipsText;
-          lVar7 = *(int64 *)(pStatics_2d50 + 32);
+          lVar7 = GameController.lockObj;
           if (lVar7 == null) throw; // [null/range check failed]
           lVar7 = *(int64 *)(lVar7 + 0x1c8);
-          lVar8 = *(int64 *)(pStatics_2d50 + 32);
+          lVar8 = GameController.lockObj;
           if ((lVar8 == null) || (lVar8 = *(int64 *)(lVar8 + 0x1c8)) == null) throw; // [null/range check failed]
           uVar2 = FUN_180d95a30(0,*(uint32 *)(lVar8 + 24),0);
           if (lVar7 == null) throw; // [null/range check failed]
@@ -144,7 +143,7 @@ public class LoadSceneController
           if (!cVar1) {
             return;
           }
-          lVar7 = *(int64 *)(pStatics_2d50 + 32);
+          lVar7 = GameController.lockObj;
           lVar8 = GameObject.FindGameObjectWithTag("LoadSaveIDTag",0);
           if (lVar8 != null) {
             uVar4 = Object.get_name(lVar8,0);

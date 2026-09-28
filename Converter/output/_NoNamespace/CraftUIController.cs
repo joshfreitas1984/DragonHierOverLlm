@@ -435,7 +435,6 @@ public class CraftUIController
     // RVA   : 0xA40420   Offset: 0xA3F820   Length: 0xDA5
     public void OpenCraftUI(CraftType _targetType, AreaBuildingData _targetBuilding, bool _useMoney)
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
         void CraftUIController.OpenCraftUI
                      (int64 this,int _targetType,uint64 _targetBuilding,uint8 _useMoney)
@@ -521,10 +520,10 @@ public class CraftUIController
           lVar4 = *(int64 *)(pStatics_3d40 + 0x578);
           if (lVar4 == null) throw; // [null/range check failed]
           uVar1 = this.craftType;
-          if (*(uint32 *)(lVar4 + 24) <= uVar1) {
+          if (lVar4.cityAreaID <= uVar1) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          uVar6 = lVar4[uVar1];
+          uVar6 = lVar4.chapter[uVar1];
           LTLocalization.SetText(uVar5,uVar6,0);
           local_res10[0] = 0;
           do {
@@ -613,7 +612,7 @@ public class CraftUIController
               }
               uVar5 = String.Format(uVar5,uVar7,uVar6,0);
               if (lVar4 == null) throw; // [null/range check failed]
-              *(uint64 *)(lVar4 + 24) = uVar5;
+              lVar4.cityAreaID = uVar5;
             }
             local_res10[0] = local_res10[0] + 1;
           } while (local_res10[0] < 6);
@@ -645,18 +644,18 @@ public class CraftUIController
           GameObject.SetActive
                     (this.forceCraftToggle,
                      CONCAT31((int3)((uint32)local_48 >> 8),!this.useMoney),0);
-          if (((*pStatics_2cc8 == 0) ||
-              (lVar4 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+          if (((GameController._instance == null) ||
+              (lVar4 = GameController._instance.worldData) == null) ||
              (lVar4 = WorldData.Player(lVar4,0)) == null) throw; // [null/range check failed]
           cVar2 = HeroData.HaveForceFunction(lVar4,2);
           if ((!cVar2) || (this.craftType != 1)) {
-            if (((*pStatics_2cc8 == 0) ||
-                (lVar4 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+            if (((GameController._instance == null) ||
+                (lVar4 = GameController._instance.worldData) == null) ||
                (lVar4 = WorldData.Player(lVar4,0)) == null) throw; // [null/range check failed]
             cVar2 = HeroData.HaveForceFunction(lVar4,6);
             if ((!cVar2) || (this.craftType != null)) {
-              if (((*pStatics_2cc8 == 0) ||
-                  (lVar4 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+              if (((GameController._instance == null) ||
+                  (lVar4 = GameController._instance.worldData) == null) ||
                  (lVar4 = WorldData.Player(lVar4,0)) == null) throw; // [null/range check failed]
               cVar2 = HeroData.HaveForceFunction(lVar4,12);
               if ((!cVar2) || (this.craftType != 2)) {
@@ -962,17 +961,16 @@ public class CraftUIController
     // RVA   : 0xA3FBE0   Offset: 0xA3EFE0   Length: 0x11C
     public float GetCraftTargetSkillNum()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         long lVar2;
         uint uVar3;
-        if ((*pStatics == 0) ||
-           (lVar2 = *(int64 *)(*pStatics + 32)) == null)
+        if ((GameController._instance == null) ||
+           (lVar2 = GameController._instance.worldData) == null)
         throw; // [null/range check failed]
         lVar2 = WorldData.Player(lVar2,0);
         if (lVar2 == null) throw; // [null/range check failed]
         iVar1 = this.craftType;
-        lVar2 = *(int64 *)(lVar2 + 0x168);
+        lVar2 = lVar2.showRoomChangeFame;
         if (iVar1 == 0) {
         LAB_180a3fcca:
           uVar3 = 6;
@@ -985,10 +983,10 @@ public class CraftUIController
           uVar3 = 8;
         }
         if (lVar2 != null) {
-          if (*(uint32 *)(lVar2 + 24) <= uVar3) {
+          if (lVar2.cityAreaID <= uVar3) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          return *(uint32 *)(*(int64 *)(lVar2 + 16) + 32 + (uint64)uVar3 * 4);
+          return *(uint32 *)(lVar2.chapter + 32 + (uint64)uVar3 * 4);
         }
     }
 
@@ -996,7 +994,6 @@ public class CraftUIController
     // RVA   : 0xA3F8A0   Offset: 0xA3ECA0   Length: 0x337
     public float GetCraftRate(int costID)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         bool cVar2;
         long lVar3;
@@ -1005,22 +1002,22 @@ public class CraftUIController
         float fVar6;
         float fVar7;
         fVar7 = 0.0;
-        if ((*pStatics == 0) ||
-           (lVar3 = *(int64 *)(*pStatics + 32)) == null)
+        if ((GameController._instance == null) ||
+           (lVar3 = GameController._instance.worldData) == null)
         throw; // [null/range check failed]
         lVar3 = WorldData.Player(lVar3,0);
         if (lVar3 == null) throw; // [null/range check failed]
         cVar2 = HeroData.HaveForceFunction(lVar3,2);
         if ((!cVar2) || (this.craftType != 1)) {
-          if ((*pStatics == 0) ||
-             (lVar3 = *(int64 *)(*pStatics + 32)) == null)
+          if ((GameController._instance == null) ||
+             (lVar3 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
           lVar3 = WorldData.Player(lVar3,0);
           if (lVar3 == null) throw; // [null/range check failed]
           cVar2 = HeroData.HaveForceFunction(lVar3,6);
           if ((cVar2) && (this.craftType == null)) goto LAB_180a3fb01;
-          if ((*pStatics == 0) ||
-             (lVar3 = *(int64 *)(*pStatics + 32)) == null)
+          if ((GameController._instance == null) ||
+             (lVar3 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
           lVar3 = WorldData.Player(lVar3,0);
           if (lVar3 == null) throw; // [null/range check failed]
@@ -1355,15 +1352,14 @@ public class CraftUIController
     // RVA   : 0xA40100   Offset: 0xA3F500   Length: 0x1E8
     public bool HaveResource(int _resourceCostID)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         byte uVar2;
         long lVar3;
         ulong uVar4;
         float extraout_XMM0_Da;
         if (!this.useMoney) {
-          if ((*pStatics != 0) &&
-             (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
+          if ((GameController._instance != null) &&
+             (lVar3 = GameController._instance.worldData) != null) {
             lVar3 = WorldData.Player(lVar3,0);
             if (lVar3 != null) {
               lVar3 = HeroData.GetForce(lVar3,0,0);
@@ -1376,11 +1372,11 @@ public class CraftUIController
           }
         }
         else {
-          if ((*pStatics != 0) &&
-             (lVar3 = *(int64 *)(*pStatics + 32)) != null) {
+          if ((GameController._instance != null) &&
+             (lVar3 = GameController._instance.worldData) != null) {
             lVar3 = WorldData.Player(lVar3,0);
-            if ((lVar3 != null) && (*(int64 *)(lVar3 + 0x220) != 0)) {
-              iVar1 = *(int *)(*(int64 *)(lVar3 + 0x220) + 24);
+            if ((lVar3 != null) && (lVar3.speBookStorageSpeAdd != null)) {
+              iVar1 = *(int *)(lVar3.speBookStorageSpeAdd + 24);
               CraftUIController.GetResourceCostNum(this,_resourceCostID,0);
               return extraout_XMM0_Da <= (float)iVar1;
             }
@@ -1408,7 +1404,6 @@ public class CraftUIController
     // RVA   : 0xA3E730   Offset: 0xA3DB30   Length: 0x3F5
     public void CraftButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         bool cVar2;
         uint uVar3;
@@ -1419,8 +1414,8 @@ public class CraftUIController
         float fVar10;
         cVar2 = CraftUIController.HaveResource(this,this.resourceCostID,0);
         if (!cVar2) {
-          if (*pStatics != 0) {
-            GameController.ShowTextOnMouse(*pStatics,"资源不足！",0);
+          if (GameController._instance != null) {
+            GameController.ShowTextOnMouse(GameController._instance,"资源不足！",0);
             plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
             plVar7 = (int64 *)0;
             if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {

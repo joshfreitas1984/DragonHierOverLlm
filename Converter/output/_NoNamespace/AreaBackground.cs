@@ -10,7 +10,6 @@ public class AreaBackground
     // RVA   : 0xA1EE50   Offset: 0xA1E250   Length: 0x2CA
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
@@ -28,8 +27,8 @@ public class AreaBackground
         }
         cVar1 = GameObject.get_activeInHierarchy(lVar2,0);
         if (cVar1) {
-          if (*pStatics == 0) goto LAB_180a1f115;
-          cVar1 = GameController.HaveSpeUI(*pStatics,1,0);
+          if (GameController._instance == null) goto LAB_180a1f115;
+          cVar1 = GameController.HaveSpeUI(GameController._instance,1,0);
           if (!cVar1) {
             lVar2 = FUN_18046bac0(0);
             if (lVar2 == null) goto LAB_180a1f115;

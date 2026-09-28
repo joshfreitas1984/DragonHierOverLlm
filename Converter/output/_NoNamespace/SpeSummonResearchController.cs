@@ -116,7 +116,6 @@ public class SpeSummonResearchController
     public void RefreshUI()
     {
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
-        var pStatics_4550 = *(int64*)(DAT_181da4550 + 184);
         byte uVar1;
         bool cVar2;
         int iVar3;
@@ -156,8 +155,8 @@ public class SpeSummonResearchController
           if (((lVar4 == null) || (lVar4 = Transform.Find(lVar4,uVar5,0)) == null) ||
              (lVar6 = Transform.Find(lVar4,"Lv",0)) == null) goto LAB_180c5b62f;
           uVar5 = Component.GetComponent(lVar6,DAT_181d96160);
-          if (*pStatics_4550 == 0) goto LAB_180c5b62f;
-          uVar7 = FUN_180002f80(*pStatics_4550,local_res8[0],DAT_181da4358);
+          if (GameController._instance == null) goto LAB_180c5b62f;
+          uVar7 = FUN_180002f80(GameController._instance,local_res8[0],DAT_181da4358);
           lVar6 = FUN_18046c0a0(0);
           if ((((lVar6 == null) || (*(int64 *)(lVar6 + 32) == 0)) ||
               (lVar6 = *(int64 *)(*(int64 *)(lVar6 + 32) + 0x228)) == null) ||
@@ -169,7 +168,7 @@ public class SpeSummonResearchController
           lVar6 = Transform.Find(lVar4,"ResearchLvAdd",0);
           if (lVar6 == null) goto LAB_180c5b62f;
           uVar5 = Component.GetComponent(lVar6,DAT_181d96160);
-          lVar6 = *(int64 *)(pStatics_4550 + 8);
+          lVar6 = GameController.difficultyExtraPoint;
           if (lVar6 == null) goto LAB_180c5b62f;
           uVar7 = FUN_180002f80(lVar6,local_res8[0],DAT_181da4358);
           lVar6 = FUN_18046c0a0(0);
@@ -525,8 +524,6 @@ public class SpeSummonResearchController
     // RVA   : 0xC5BB10   Offset: 0xC5AF10   Length: 0xB01
     public void SureButtonClicked(int id)
     {
-        var pStatics_1b88 = *(int64*)(DAT_181d91b88 + 184);
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         uint uVar1;
         long lVar2;
         long lVar3;
@@ -550,26 +547,26 @@ public class SpeSummonResearchController
           lVar2 = lVar2._items[id];
           if ((lVar2 != null) && (lVar2 = GameObject.GetComponent(lVar2,DAT_181d720a0)) != null) {
             lVar2 = *(int64 *)(lVar2 + 32);
-            if ((((*pStatics_2cc8 != 0) &&
-                 (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) != null) &&
-                (lVar3 = *(int64 *)(lVar3 + 0x228)) != null) &&
-               (lVar3 = *(int64 *)(lVar3 + 32)) != null) {
+            if ((((GameController._instance != null) &&
+                 (lVar3 = GameController._instance.worldData) != null) &&
+                (lVar3 = lVar3.speSummonResearchData) != null) &&
+               (lVar3 = lVar3.villageAreaID) != null) {
               FUN_181829cd0(lVar3,id,lVar2,DAT_181d90f98);
-              if (((*pStatics_2cc8 != 0) &&
-                  (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) != null) &&
-                 ((lVar3 = *(int64 *)(lVar3 + 0x228), lVar3 != null &&
-                  (lVar3 = *(int64 *)(lVar3 + 48)) != null))) {
+              if (((GameController._instance != null) &&
+                  (lVar3 = GameController._instance.worldData) != null) &&
+                 ((lVar3 = lVar3.speSummonResearchData, lVar3 != null &&
+                  (lVar3 = lVar3.Areas) != null))) {
                 FUN_181833d40(lVar3,id,30,DAT_181d8fb18);
-                if (((*pStatics_2cc8 != 0) &&
-                    (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) != null) &&
+                if (((GameController._instance != null) &&
+                    (lVar3 = GameController._instance.worldData) != null) &&
                    (lVar3 = WorldData.Player(lVar3,0)) != null) {
                   HeroData.LoseItem(lVar3,lVar2,1,0);
-                  if ((*pStatics_2cc8 != 0) &&
-                     (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) != null) {
-                    lVar3 = *(int64 *)(lVar3 + 0x228);
-                    if (((*pStatics_2cc8 != 0) &&
-                        (lVar4 = *(int64 *)(*pStatics_2cc8 + 32)) != null)
-                       && (*(int64 *)(lVar4 + 0x228) != 0)) {
+                  if ((GameController._instance != null) &&
+                     (lVar3 = GameController._instance.worldData) != null) {
+                    lVar3 = lVar3.speSummonResearchData;
+                    if (((GameController._instance != null) &&
+                        (lVar4 = GameController._instance.worldData) != null)
+                       && (lVar4.speSummonResearchData != null)) {
                       if (lVar2 == null) {
                         uVar11 = 0;
                       }
@@ -580,7 +577,7 @@ public class SpeSummonResearchController
                         iVar10 = 0;
                         uVar12 = 0;
                         SpeSummonResearchData.ChangeExp(lVar3,id,uVar11,1,0);
-                        lVar3 = *(int64 *)(pStatics_1b88 + 24);
+                        lVar3 = BuildingUIController.PartyLvName;
                         if (lVar3 != null) {
                           PlotController.SetPlotItem(lVar3,lVar2,1,0);
                           lVar3 = new HeroSpeAddData(0);
@@ -699,7 +696,7 @@ public class SpeSummonResearchController
                             iVar10 = iVar10 + 1;
                           } while (iVar10 < 5);
                           lVar5 = DAT_181d8b140;
-                          lVar2 = *(int64 *)(pStatics_1b88 + 24);
+                          lVar2 = BuildingUIController.PartyLvName;
                           plVar6 = *(int64 **)(DAT_181d8b140 + 48);
                           lVar3 = *plVar6;
                           if ((*(byte *)(lVar3 + 0x132) & 1) == 0) {
@@ -712,7 +709,7 @@ public class SpeSummonResearchController
                               FUN_18009a510(lVar3);
                               plVar6 = *(int64 **)(lVar5 + 48);
                             }
-                            if (*(int *)(lVar3 + 224) == 0) {
+                            if (lVar3.missionFinished == null) {
                               lVar3 = *plVar6;
                               if ((*(byte *)(lVar3 + 0x132) & 1) == 0) {
                                 FUN_18009a510(lVar3);
@@ -724,7 +721,7 @@ public class SpeSummonResearchController
                           if ((*(byte *)(lVar3 + 0x132) & 1) == 0) {
                             FUN_18009a510(lVar3);
                           }
-                          uVar8 = String.Format("将这#PlotInteractItemName#改装到机关兽上，可以针对某些特效进行强化。\n此后30日内召唤的所有机关兽，便都能从中获益......",**(uint64 **)(lVar3 + 184),0);
+                          uVar8 = String.Format("将这#PlotInteractItemName#改装到机关兽上，可以针对某些特效进行强化。\n此后30日内召唤的所有机关兽，便都能从中获益......",*lVar3.forceMeetingStarted,0);
                           uVar9 = il2cpp_internal(DAT_181da24d8);
                           SinglePlotData.ctor
                                     (uVar9,uVar8,lVar4,1,0,CONCAT44(uVar1,3),"0",1,0,0);

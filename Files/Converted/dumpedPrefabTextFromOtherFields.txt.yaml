@@ -1245,22 +1245,29 @@
     translated: "Win +2 favor, lose ‑2 favor"
   templates:
   - template: "♦{0}\\n♦{1}+1"
-- raw: "♦传授对方一门武功\\n♦只能传授非绝世武功，且品级不能超过对方身份等级\\n♦根据武功品级提升好感"
+- raw: "♦传授对方一门武功，品级不能超过对方身份等级\\n♦结义/结缘后方能传授绝世武功\\n♦根据武功品级提升好感"
   splits:
-  - text: "传授对方一门武功"
-    translated: "Teach the other party a martial art skill"
-    qcReviewedText: "♦Teach the other party a martial art skill\\n♦Can only teach non‑supreme martial arts, and the skill's rank cannot exceed the other party's status rank.\\n♦Increase liking for them by improving martial arts rank"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+  - text: "传授对方一门武功，品级不能超过对方身份等级"
+    translated: "Teaching someone a martial art cannot exceed their rank or status."
+    qcReviewedText: "♦Teaching someone a martial art cannot exceed their rank or status.\\n♦Brotherhood by blood/Only after forming a bond can I teach you my unparalleled martial arts.\\n♦Increase liking for them by improving martial arts rank"
+    qcTranslated: "♦Teach a martial art to the other party; its grade cannot exceed their status rank.\\n♦Only after forming a sworn brotherhood or bond can you teach unparalleled martial arts.\\n♦Improve affinity based on the grade of the martial art."
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: MeaningReversal
+    qcDefectCategories:
+    - MeaningReversal
+    - UnnaturalPhrasing
   - subIndex: 1
-    text: "只能传授非绝世武功，且品级不能超过对方身份等级"
-    translated: "Can only teach non‑supreme martial arts, and the skill's rank cannot exceed the other party's status rank."
+    text: "结义"
+    translated: "Brotherhood by blood"
   - subIndex: 2
+    text: "结缘后方能传授绝世武功"
+    translated: "Only after forming a bond can I teach you my unparalleled martial arts."
+  - subIndex: 3
     text: "根据武功品级提升好感"
     translated: "Increase liking for them by improving martial arts rank"
   templates:
-  - template: "♦{0}\\n♦{1}\\n♦{2}"
+  - template: "♦{0}\\n♦{1}/{2}\\n♦{3}"
 - raw: "♦使用毒物向对方下毒\\n♦毒术比对方高出越多，成功率越高\\n♦根据结果增加少量恶名"
   splits:
   - text: "使用毒物向对方下毒"
@@ -2065,14 +2072,6 @@
     translated: ", Assist Senior Brother in deploying the defense"
   templates:
   - template: "{0}<b>{1}</b>{2}"
-- raw: "听闻唐门近来要与霹雳堂举行联姻大典，邀请巴蜀一带各大门派前往参与。可惜为师近来事务繁忙，还望徒儿能代为师前去道贺。"
-  splits:
-  - text: "听闻唐门近来要与霹雳堂举行联姻大典，邀请巴蜀一带各大门派前往参与。可惜为师近来事务繁忙，还望徒儿能代为师前去道贺。"
-    translated: "Heard that the Tang Clan plans to hold a grand alliance wedding with Thunderclap Hall recently, inviting major sects from Bashu to attend. Too bad my affairs have been busy lately, so I hope you, my disciple, can go on my behalf to offer congratulations."
-    qcReviewedText: "Heard that the Tang Clan plans to hold a grand alliance wedding with Thunderclap Hall recently, inviting major sects from Bashu to attend. Too bad my affairs have been busy lately, so I hope you, my disciple, can go on my behalf to offer congratulations."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
 - raw: "近来七大恶人之一雨人屠现身<b>江陵东方</b>，此人武功高强，穷凶极恶，为免当地百姓受戮，为师先去抵挡，还望仙霞派弟子速速前来支援！"
   splits:
   - text: "近来七大恶人之一雨人屠现身"

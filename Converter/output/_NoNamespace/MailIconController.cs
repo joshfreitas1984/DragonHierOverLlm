@@ -129,7 +129,6 @@ public class MailIconController
     // RVA   : 0xA86A70   Offset: 0xA85E70   Length: 0x214
     public void OnClick()
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_ab90 = *(int64*)(DAT_181d8ab90 + 184);
         long lVar1;
         bool cVar2;
@@ -155,9 +154,9 @@ public class MailIconController
           }
         }
         else {
-          if (((*pStatics_2cc8 != 0) &&
-              (lVar1 = *(int64 *)(*pStatics_2cc8 + 32)) != null) &&
-             (lVar1 = *(int64 *)(lVar1 + 144)) != null) {
+          if (((GameController._instance != null) &&
+              (lVar1 = GameController._instance.worldData) != null) &&
+             (lVar1 = lVar1.MailDatas) != null) {
             FUN_1817eee00(lVar1,this.mailData,DAT_181d93688);
             if (*pStatics_ab90 != 0) {
               MissionUIController.RefreshMailTable(*pStatics_ab90,0);

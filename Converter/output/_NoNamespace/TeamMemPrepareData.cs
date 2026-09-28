@@ -47,7 +47,6 @@ public class TeamMemPrepareData
     // RVA   : 0xA9D2D0   Offset: 0xA9C6D0   Length: 0x336
     public bool PrepareControlable()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         uint uVar1;
         int iVar2;
         bool cVar3;
@@ -58,8 +57,8 @@ public class TeamMemPrepareData
         if ((!lVar4.inTeam) || (lVar4.teamLeader != null)) {
           cVar3 = HeroData.IsPlayerSameForce(lVar4,0);
           if (cVar3) {
-            if (((*pStatics == 0) ||
-                (lVar4 = *(int64 *)(*pStatics + 32)) == null) ||
+            if (((GameController._instance == null) ||
+                (lVar4 = GameController._instance.worldData) == null) ||
                (lVar4 = WorldData.Player(lVar4,0)) == null) throw; // [null/range check failed]
             if (lVar4.isLeader) goto LAB_180a9d3ed;
           }

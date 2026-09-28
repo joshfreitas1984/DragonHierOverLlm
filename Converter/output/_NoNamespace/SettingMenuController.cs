@@ -72,15 +72,12 @@ public class SettingMenuController
     // RVA   : 0x97B600   Offset: 0x97AA00   Length: 0xE0
     private void Awake()
     {
-        var pStatics = *(int64*)(DAT_181da1960 + 184);
         ulong uVar1;
         bool cVar2;
-        uVar1 = *(uint64 *)(pStatics + 8);
+        uVar1 = SettingMenuController._instance;
         cVar2 = Object.op_Equality(uVar1,0,0);
         if (cVar2) {
-          puVar3 = (uint64 *)(pStatics + 8);
-          *puVar3 = this;
-          il2cpp_internal(puVar3,this);
+          SettingMenuController._instance = this;
         }
     }
 
@@ -107,30 +104,30 @@ public class SettingMenuController
           Dropdown.AddOptions(lVar8,*(uint64 *)(pStatics_3d40 + 176),0);
         }
         plVar1 = this.volumeSlider;
-        lVar8 = *(int64 *)(pStatics_2d50 + 8);
+        lVar8 = GameController.difficultyExtraPoint;
         if ((lVar8 != null) && (lVar8 = *(int64 *)(lVar8 + 16)) != null) {
           uVar9 = PlayerPrefDictionary.GetFloat(lVar8,"Volume",0);
           if (plVar1 != (int64 *)0) {
             (**(code **)(*plVar1 + 0x428))(plVar1,uVar9,*(uint64 *)(*plVar1 + 0x430));
             plVar1 = this.bgmVolumeSlider;
-            lVar8 = *(int64 *)(pStatics_2d50 + 8);
+            lVar8 = GameController.difficultyExtraPoint;
             if ((lVar8 != null) && (lVar8 = *(int64 *)(lVar8 + 16)) != null) {
               uVar9 = PlayerPrefDictionary.GetFloat(lVar8,"BgmVolume",0);
               if (plVar1 != (int64 *)0) {
                 (**(code **)(*plVar1 + 0x428))(plVar1,uVar9,*(uint64 *)(*plVar1 + 0x430));
                 plVar1 = this.soundEffectVolumeSlider;
-                lVar8 = *(int64 *)(pStatics_2d50 + 8);
+                lVar8 = GameController.difficultyExtraPoint;
                 if ((lVar8 != null) && (lVar8 = *(int64 *)(lVar8 + 16)) != null) {
                   uVar9 = PlayerPrefDictionary.GetFloat(lVar8,"SoundEffectVolume",0);
                   if (plVar1 != (int64 *)0) {
                     (**(code **)(*plVar1 + 0x428))(plVar1,uVar9,*(uint64 *)(*plVar1 + 0x430));
                     lVar8 = this.solutionDropDown;
                     lVar2 = *(int64 *)(pStatics_3d40 + 176);
-                    lVar3 = *(int64 *)(pStatics_2d50 + 8);
+                    lVar3 = GameController.difficultyExtraPoint;
                     if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 16)) != null) {
                       local_res8[0] = PlayerPrefDictionary.GetInt(lVar3,"ScreenWidth",0);
                       uVar6 = Int32.ToString(local_res8,0);
-                      lVar3 = *(int64 *)(pStatics_2d50 + 8);
+                      lVar3 = GameController.difficultyExtraPoint;
                       if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 16)) != null) {
                         local_res8[0] = PlayerPrefDictionary.GetInt(lVar3,"ScreenHeight",0);
                         uVar7 = Int32.ToString(local_res8,0);
@@ -156,7 +153,7 @@ public class SettingMenuController
                                 if (lVar8 == null) throw; // [null/range check failed]
                                 GameObject.SetActive(lVar8,1,0);
                                 lVar8 = this.languageDropDown;
-                                lVar2 = **(int64 **)(DAT_181da1960 + 184);
+                                lVar2 = SettingMenuController.TargetLanguage;
                                 uVar9 = LTLocalization.GetNowSystemLanguage(0);
                                 if (lVar2 == null) throw; // [null/range check failed]
                                 uVar9 = FUN_1817eb4e0(lVar2,uVar9,DAT_181da4b58);
@@ -164,25 +161,25 @@ public class SettingMenuController
                                 Dropdown.set_value(lVar8,uVar9,0);
                               }
                               lVar8 = this.fullScreen;
-                              lVar2 = *(int64 *)(pStatics_2d50 + 8);
+                              lVar2 = GameController.difficultyExtraPoint;
                               if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 16)) != null) {
                                 iVar5 = PlayerPrefDictionary.GetInt(lVar2,"FullScreen",0);
                                 if (lVar8 != null) {
                                   Toggle.set_isOn(lVar8,iVar5 == 1,0);
                                   lVar8 = this.skipTutorial;
-                                  lVar2 = *(int64 *)(pStatics_2d50 + 8);
+                                  lVar2 = GameController.difficultyExtraPoint;
                                   if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 16)) != null) {
                                     iVar5 = PlayerPrefDictionary.GetInt(lVar2,"SkipTutorial",0);
                                     if (lVar8 != null) {
                                       Toggle.set_isOn(lVar8,iVar5 == 1,0);
                                       lVar8 = this.autoSave;
-                                      lVar2 = *(int64 *)(pStatics_2d50 + 8);
+                                      lVar2 = GameController.difficultyExtraPoint;
                                       if ((lVar2 != null) &&
                                          (lVar2 = *(int64 *)(lVar2 + 16)) != null) {
                                         uVar9 = PlayerPrefDictionary.GetInt(lVar2,"AutoSave",0);
                                         if (lVar8 != null) {
                                           Dropdown.set_value(lVar8,uVar9,0);
-                                          if (*(char *)(pStatics_3d40 + 16) !=
+                                          if (PlotController.livingSkillIndexCache !=
                                               false) {
                                             if (this.settingMenu == null) throw; // [null/range check failed]
                                             lVar8 = GameObject.get_transform
@@ -197,7 +194,7 @@ public class SettingMenuController
                                             GameObject.SetActive(lVar8,0,0);
                                           }
                                           lVar8 = this.fastTalk;
-                                          lVar2 = *(int64 *)(pStatics_2d50 + 8);
+                                          lVar2 = GameController.difficultyExtraPoint;
                                           if ((lVar2 != null) &&
                                              (lVar2 = *(int64 *)(lVar2 + 16)) != null) {
                                             iVar5 = PlayerPrefDictionary.GetInt(lVar2,"FastTalk",0);
@@ -416,11 +413,10 @@ public class SettingMenuController
     // RVA   : 0x97D4A0   Offset: 0x97C8A0   Length: 0x17C
     public void VolumeSliderChanged()
     {
-        var pStatics = *(int64*)(DAT_181d72d50 + 184);
         long lVar1;
         ulong uVar3;
         uint uVar4;
-        lVar1 = *(int64 *)(pStatics + 8);
+        lVar1 = GameController.difficultyExtraPoint;
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 16);
           plVar2 = this.volumeSlider;
@@ -432,7 +428,7 @@ public class SettingMenuController
               if (plVar2 != (int64 *)0) {
                 uVar4 = (**(code **)(*plVar2 + 0x418))(plVar2,*(uint64 *)(*plVar2 + 0x420));
                 AudioListener.set_volume(uVar4,0);
-                lVar1 = *(int64 *)(pStatics + 32);
+                lVar1 = GameController.lockObj;
                 if (lVar1 != null) {
                   uVar3 = *(uint64 *)(lVar1 + 0x1f0);
                   NGUITools.PlaySound(uVar3,0x3e4ccccd,0);
@@ -448,13 +444,11 @@ public class SettingMenuController
     // RVA   : 0x97B6E0   Offset: 0x97AAE0   Length: 0x2C9
     public void BgmVolumeSliderChanged()
     {
-        var pStatics_2d50 = *(int64*)(DAT_181d72d50 + 184);
-        var pStatics_fac8 = *(int64*)(DAT_181dafac8 + 184);
         long lVar1;
         ulong uVar3;
         bool cVar4;
         uint uVar5;
-        lVar1 = *(int64 *)(pStatics_2d50 + 8);
+        lVar1 = GameController.difficultyExtraPoint;
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 16);
           plVar2 = this.bgmVolumeSlider;
@@ -462,14 +456,14 @@ public class SettingMenuController
             uVar5 = (**(code **)(*plVar2 + 0x418))(plVar2,*(uint64 *)(*plVar2 + 0x420));
             if (lVar1 != null) {
               PlayerPrefDictionary.SetKey(lVar1,"BgmVolume",uVar5,0);
-              uVar3 = *(uint64 *)(pStatics_fac8 + 8);
+              uVar3 = BGMController._instance;
               cVar4 = Object.op_Inequality(uVar3,0,0);
               if (cVar4) {
-                lVar1 = *(int64 *)(pStatics_fac8 + 8);
+                lVar1 = BGMController._instance;
                 if (lVar1 == null) throw; // [null/range check failed]
                 BGMController.RefreshNowBgmVolumn(lVar1,0);
               }
-              lVar1 = *(int64 *)(pStatics_2d50 + 32);
+              lVar1 = GameController.lockObj;
               if (lVar1 != null) {
                 uVar3 = *(uint64 *)(lVar1 + 0x1f0);
                 NGUITools.PlaySound(uVar3,0x3e4ccccd,0);
@@ -484,15 +478,14 @@ public class SettingMenuController
     // RVA   : 0x97D040   Offset: 0x97C440   Length: 0x195
     public void SoundEffectVolumeSliderChanged()
     {
-        var pStatics = *(int64*)(DAT_181d72d50 + 184);
         long lVar2;
         ulong uVar3;
         uint uVar4;
         plVar1 = this.soundEffectVolumeSlider;
         if (plVar1 != (int64 *)0) {
           uVar4 = (**(code **)(*plVar1 + 0x418))(plVar1,*(uint64 *)(*plVar1 + 0x420));
-          *(uint32 *)(pStatics + 16) = uVar4;
-          lVar2 = *(int64 *)(pStatics + 8);
+          GameController.CheckShowSpeHero = uVar4;
+          lVar2 = GameController.difficultyExtraPoint;
           if (lVar2 != null) {
             plVar1 = this.soundEffectVolumeSlider;
             lVar2 = *(int64 *)(lVar2 + 16);
@@ -500,7 +493,7 @@ public class SettingMenuController
               uVar4 = (**(code **)(*plVar1 + 0x418))(plVar1,*(uint64 *)(*plVar1 + 0x420));
               if (lVar2 != null) {
                 PlayerPrefDictionary.SetKey(lVar2,"SoundEffectVolume",uVar4,0);
-                lVar2 = *(int64 *)(pStatics + 32);
+                lVar2 = GameController.lockObj;
                 if (lVar2 != null) {
                   uVar3 = *(uint64 *)(lVar2 + 0x1f0);
                   NGUITools.PlaySound(uVar3,0x3e4ccccd,0);
@@ -619,7 +612,7 @@ public class SettingMenuController
         uint uVar1;
         uint uVar2;
         long lVar3;
-        lVar3 = **(int64 **)(DAT_181da1960 + 184);
+        lVar3 = SettingMenuController.TargetLanguage;
         if ((this.languageDropDown != null) && (lVar3 != null)) {
           uVar1 = *(uint32 *)(this.languageDropDown + 0x120);
           if (*(uint32 *)(lVar3 + 24) <= uVar1) {
@@ -647,13 +640,12 @@ public class SettingMenuController
     // RVA   : 0x97CA40   Offset: 0x97BE40   Length: 0x1A6
     public void SetSkipTutorial()
     {
-        var pStatics_2d50 = *(int64*)(DAT_181d72d50 + 184);
         var pStatics_dcf8 = *(int64*)(DAT_181dadcf8 + 184);
         long lVar1;
         ulong uVar2;
         bool cVar3;
         int iVar4;
-        lVar1 = *(int64 *)(pStatics_2d50 + 8);
+        lVar1 = GameController.difficultyExtraPoint;
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 16);
           if ((this.skipTutorial != null) && (lVar1 != null)) {
@@ -662,7 +654,7 @@ public class SettingMenuController
             uVar2 = **(uint64 **)(DAT_181dadcf8 + 184);
             cVar3 = Object.op_Inequality(uVar2,0,0);
             if (cVar3) {
-              lVar1 = *(int64 *)(pStatics_2d50 + 8);
+              lVar1 = GameController.difficultyExtraPoint;
               if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 16)) == null) throw; // [null/range check failed]
               iVar4 = PlayerPrefDictionary.GetInt(lVar1,"SkipTutorial",0);
               if (iVar4 == 1) {

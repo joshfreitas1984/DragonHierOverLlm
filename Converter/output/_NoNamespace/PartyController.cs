@@ -123,7 +123,6 @@ public class PartyController
     // RVA   : 0xB98620   Offset: 0xB97A20   Length: 0x674
     public void PartyStart(PartyType _partyType, HeroData _sourceHero, AreaData _sourceArea, float _baseScore, float _scoreRate, HeroData _sourceAssistHero)
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
         void PartyController.PartyStart
                      (int64 this,uint32 _partyType,int64 _sourceHero,uint64 _sourceArea,
@@ -203,17 +202,17 @@ public class PartyController
                               }
                             }
                             else {
-                              if ((*plVar1 != 0) && (*pStatics_2cc8 != 0)) {
+                              if ((*plVar1 != 0) && (GameController._instance != null)) {
                                 uVar5 = GameController.GenerateRandomItem
-                                                  (*pStatics_2cc8,2);
+                                                  (GameController._instance,2);
                                 PartyController.SetDrinkWine(this,uVar5,0);
-                                if ((*plVar1 != 0) && (*pStatics_2cc8 != 0)) {
+                                if ((*plVar1 != 0) && (GameController._instance != null)) {
                                   uVar5 = GameController.GenerateRandomItem
-                                                    (*pStatics_2cc8,2);
+                                                    (GameController._instance,2);
                                   PartyController.SetDrinkFood(this,uVar5,0);
-                                  if ((*plVar1 != 0) && (*pStatics_2cc8 != 0)) {
+                                  if ((*plVar1 != 0) && (GameController._instance != null)) {
                                     uVar5 = GameController.GenerateRandomItem
-                                                      (*pStatics_2cc8,4);
+                                                      (GameController._instance,4);
                                     PartyController.SetDrinkTreasure(this,uVar5,0);
                                     PartyController.StartButtonClicked(this,0);
                                     return;
@@ -742,7 +741,6 @@ public class PartyController
     // RVA   : 0xB99790   Offset: 0xB98B90   Length: 0xEB1
     public void StartButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         bool cVar2;
         uint uVar3;
         int iVar4;
@@ -769,12 +767,12 @@ public class PartyController
                 GameObject.SetActive(this.treasureCancel,0,0);
                 if (this.sourceHero != null) {
                   if (this.sourceHero.heroID == null) {
-                    if (((*pStatics == 0) ||
-                        (lVar5 = *(int64 *)(*pStatics + 32)) == null)
+                    if (((GameController._instance == null) ||
+                        (lVar5 = GameController._instance.worldData) == null)
                        || (lVar5 = WorldData.Player(lVar5,0)) == null) goto LAB_180b9a63c;
                     HeroData.LoseItem(lVar5,this.wineData,1,0);
-                    if (((*pStatics == 0) ||
-                        (lVar5 = *(int64 *)(*pStatics + 32)) == null)
+                    if (((GameController._instance == null) ||
+                        (lVar5 = GameController._instance.worldData) == null)
                        || (lVar5 = WorldData.Player(lVar5,0)) == null) goto LAB_180b9a63c;
                     HeroData.LoseItem(lVar5,this.foodData,1,0);
                   }
@@ -951,8 +949,8 @@ public class PartyController
                                 FUN_181823590(lVar5,uVar3,DAT_181d8b998);
                                 lVar5 = *plVar1;
                               }
-                              if (((*pStatics == 0) ||
-                                  (lVar6 = *(int64 *)(*pStatics + 32),
+                              if (((GameController._instance == null) ||
+                                  (lVar6 = GameController._instance.worldData,
                                   lVar6 == null)) || (uVar12 = WorldData.Player(lVar6,0), lVar5 == null))
                               break;
                               FUN_18181e0a0(lVar5,uVar12,DAT_181d8b518);
@@ -1041,18 +1039,18 @@ public class PartyController
               if (iVar4 != 0) {
                 lVar6 = AreaData.GetInsideHero(lVar5,uVar10,0);
                 if (lVar6 == null) goto LAB_180b9a63c;
-                iVar4 = *(int *)(lVar6 + 184);
+                iVar4 = lVar6.forceMeetingStarted;
                 fVar15 = (float)PartyController.GetMaxHeroLv(this,0);
                 if ((float)iVar4 <= fVar15) {
                   lVar6 = AreaData.GetInsideHero(lVar5,uVar10,0);
                   if (lVar6 == null) goto LAB_180b9a63c;
-                  if (*(char *)(lVar6 + 96) == false) {
+                  if (!lVar6.BigMapRandomEventDatas) {
                     lVar6 = AreaData.GetInsideHero(lVar5,uVar10,0);
                     if (lVar6 == null) goto LAB_180b9a63c;
                     if (*(char *)(lVar6 + 209) == false) {
                       lVar6 = AreaData.GetInsideHero(lVar5,uVar10,0);
                       if (lVar6 == null) goto LAB_180b9a63c;
-                      if (*(char *)(lVar6 + 0x120) == false) {
+                      if (!lVar6.monthDoctorTime) {
                         lVar6 = AreaData.GetInsideHero(lVar5,uVar10,0);
                         if (lVar6 == null) goto LAB_180b9a63c;
                         cVar2 = HeroData.CanPlayerMeet(lVar6,0);
@@ -1081,7 +1079,6 @@ public class PartyController
     // RVA   : 0xB96B60   Offset: 0xB95F60   Length: 0x9DB
     public void AddFriendToList(HeroData sourceHeroData, List<HeroData> targetList, HeroData restrictHeroData)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         void PartyController.AddFriendToList
                      (uint64 this,int64 sourceHeroData,int64 targetList,int64 restrictHeroData)
         {
@@ -1118,20 +1115,20 @@ public class PartyController
           }
           cVar1 = HeroData.HaveTeacher(sourceHeroData,0);
           if (cVar1) {
-            if ((*pStatics == 0) ||
-               (lVar3 = *(int64 *)(*pStatics + 32)) == null)
+            if ((GameController._instance == null) ||
+               (lVar3 = GameController._instance.worldData) == null)
             throw; // [null/range check failed]
             lVar3 = WorldData.GetHero(lVar3,*(uint32 *)(sourceHeroData + 0x31c),0);
             if (lVar3 != restrictHeroData) {
               lVar3 = FUN_18046c0a0(0);
-              if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) throw; // [null/range check failed]
-              uVar4 = WorldData.GetHero(*(int64 *)(lVar3 + 32),*(uint32 *)(sourceHeroData + 0x31c),0);
+              if ((lVar3 == null) || (lVar3.villageAreaID == null)) throw; // [null/range check failed]
+              uVar4 = WorldData.GetHero(lVar3.villageAreaID,*(uint32 *)(sourceHeroData + 0x31c),0);
               if (targetList == null) throw; // [null/range check failed]
               cVar1 = FUN_18181e400(targetList,uVar4,DAT_181d8b698);
               if (!cVar1) {
                 lVar3 = FUN_18046c0a0(0);
-                if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) throw; // [null/range check failed]
-                uVar4 = WorldData.GetHero(*(int64 *)(lVar3 + 32),*(uint32 *)(sourceHeroData + 0x31c),0)
+                if ((lVar3 == null) || (lVar3.villageAreaID == null)) throw; // [null/range check failed]
+                uVar4 = WorldData.GetHero(lVar3.villageAreaID,*(uint32 *)(sourceHeroData + 0x31c),0)
                 ;
                 FUN_18181e0a0(targetList,uVar4,DAT_181d8b518);
               }
@@ -1143,7 +1140,7 @@ public class PartyController
             if (*(int *)(*(int64 *)(sourceHeroData + 800) + 24) <= iVar6) goto LAB_180b96fcb;
             lVar3 = FUN_18046c0a0(0);
             if (lVar3 == null) break;
-            lVar3 = *(int64 *)(lVar3 + 32);
+            lVar3 = lVar3.villageAreaID;
             if (*(int64 *)(sourceHeroData + 800) == 0) break;
             uVar2 = FUN_1800d6760(*(int64 *)(sourceHeroData + 800),iVar6,DAT_181d8fa18);
             if (lVar3 == null) break;
@@ -1151,7 +1148,7 @@ public class PartyController
             if (lVar3 != restrictHeroData) {
               lVar3 = FUN_18046c0a0(0);
               if (lVar3 == null) break;
-              lVar3 = *(int64 *)(lVar3 + 32);
+              lVar3 = lVar3.villageAreaID;
               if (*(int64 *)(sourceHeroData + 800) == 0) break;
               uVar2 = FUN_1800d6760(*(int64 *)(sourceHeroData + 800),iVar6,DAT_181d8fa18);
               if (lVar3 == null) break;
@@ -1161,7 +1158,7 @@ public class PartyController
               if (!cVar1) {
                 lVar3 = FUN_18046c0a0(0);
                 if (lVar3 == null) break;
-                lVar3 = *(int64 *)(lVar3 + 32);
+                lVar3 = lVar3.villageAreaID;
                 if (*(int64 *)(sourceHeroData + 800) == 0) break;
                 uVar2 = FUN_1800d6760(*(int64 *)(sourceHeroData + 800),iVar6,DAT_181d8fa18);
                 if (lVar3 == null) break;
@@ -1182,7 +1179,7 @@ public class PartyController
         }
         lVar3 = FUN_18046c0a0(0);
         if (lVar3 == null) throw; // [null/range check failed]
-        lVar3 = *(int64 *)(lVar3 + 32);
+        lVar3 = lVar3.villageAreaID;
         if (*(int64 *)(sourceHeroData + 0x348) == 0) throw; // [null/range check failed]
         uVar2 = FUN_1800d6760(*(int64 *)(sourceHeroData + 0x348),iVar8,DAT_181d8fa18);
         if (lVar3 == null) throw; // [null/range check failed]
@@ -1190,7 +1187,7 @@ public class PartyController
         if (lVar3 != restrictHeroData) {
           lVar3 = FUN_18046c0a0(0);
           if (lVar3 == null) throw; // [null/range check failed]
-          lVar3 = *(int64 *)(lVar3 + 32);
+          lVar3 = lVar3.villageAreaID;
           if (*(int64 *)(sourceHeroData + 0x348) == 0) throw; // [null/range check failed]
           uVar2 = FUN_1800d6760(*(int64 *)(sourceHeroData + 0x348),iVar8,DAT_181d8fa18);
           if (lVar3 == null) throw; // [null/range check failed]
@@ -1200,7 +1197,7 @@ public class PartyController
           if (!cVar1) {
             lVar3 = FUN_18046c0a0(0);
             if (lVar3 == null) throw; // [null/range check failed]
-            lVar3 = *(int64 *)(lVar3 + 32);
+            lVar3 = lVar3.villageAreaID;
             if (*(int64 *)(sourceHeroData + 0x348) == 0) throw; // [null/range check failed]
             uVar2 = FUN_1800d6760(*(int64 *)(sourceHeroData + 0x348),iVar8,DAT_181d8fa18);
             if (lVar3 == null) throw; // [null/range check failed]
@@ -1211,47 +1208,47 @@ public class PartyController
         iVar8 = iVar8 + 1;
         goto LAB_180b96fcb;
         LAB_180b97180:
-        if (((*pStatics == 0) ||
-            (lVar3 = *(int64 *)(*pStatics + 32)) == null) ||
-           (lVar3 = *(int64 *)(lVar3 + 80)) == null) throw; // [null/range check failed]
-        if (*(int *)(lVar3 + 24) <= iVar6) goto LAB_180b974a1;
+        if (((GameController._instance == null) ||
+            (lVar3 = GameController._instance.worldData) == null) ||
+           (lVar3 = lVar3.Heros) == null) throw; // [null/range check failed]
+        if (lVar3.cityAreaID <= iVar6) goto LAB_180b974a1;
         lVar3 = FUN_18046c0a0(0);
-        if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-           (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 80)) == null) throw; // [null/range check failed]
+        if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+           (lVar3 = *(int64 *)(lVar3.villageAreaID + 80)) == null) throw; // [null/range check failed]
         lVar3 = FUN_180002f80(lVar3,iVar6,DAT_181d8bb98);
         if (lVar3 != null) {
           lVar3 = FUN_18046c0a0(0);
-          if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-             (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 80)) == null) throw; // [null/range check failed]
+          if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+             (lVar3 = *(int64 *)(lVar3.villageAreaID + 80)) == null) throw; // [null/range check failed]
           lVar3 = FUN_180002f80(lVar3,iVar6,DAT_181d8bb98);
           if (lVar3 == null) throw; // [null/range check failed]
           fVar9 = (float)HeroData.Favor(lVar3,0,0);
           if (50.0 <= fVar9) {
             lVar3 = FUN_18046c0a0(0);
-            if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-               (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 80)) == null)
+            if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+               (lVar3 = *(int64 *)(lVar3.villageAreaID + 80)) == null)
             throw; // [null/range check failed]
             lVar3 = FUN_180002f80(lVar3,iVar6,DAT_181d8bb98);
             if (lVar3 != restrictHeroData) {
               lVar3 = FUN_18046c0a0(0);
-              if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                 (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 80)) == null)
+              if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                 (lVar3 = *(int64 *)(lVar3.villageAreaID + 80)) == null)
               throw; // [null/range check failed]
               lVar3 = FUN_180002f80(lVar3,iVar6,DAT_181d8bb98);
               if (lVar3 == null) throw; // [null/range check failed]
-              cVar1 = HeroData.HavePrelover(sourceHeroData,*(uint32 *)(lVar3 + 88),0);
+              cVar1 = HeroData.HavePrelover(sourceHeroData,lVar3.TempHeros,0);
               if (!cVar1) {
                 lVar3 = FUN_18046c0a0(0);
-                if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                   (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 80)) == null)
+                if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                   (lVar3 = *(int64 *)(lVar3.villageAreaID + 80)) == null)
                 throw; // [null/range check failed]
                 uVar4 = FUN_180002f80(lVar3,iVar6,DAT_181d8bb98);
                 if (targetList == null) throw; // [null/range check failed]
                 cVar1 = FUN_18181e400(targetList,uVar4,DAT_181d8b698);
                 if (!cVar1) {
                   lVar3 = FUN_18046c0a0(0);
-                  if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                     (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 80)) == null)
+                  if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                     (lVar3 = *(int64 *)(lVar3.villageAreaID + 80)) == null)
                   throw; // [null/range check failed]
                   uVar4 = FUN_180002f80(lVar3,iVar6,DAT_181d8bb98);
                   FUN_18181e0a0(targetList,uVar4,DAT_181d8b518);

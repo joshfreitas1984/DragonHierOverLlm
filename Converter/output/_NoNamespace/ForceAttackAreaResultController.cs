@@ -360,7 +360,6 @@ public class ForceAttackAreaResultController
     // RVA   : 0xB309E0   Offset: 0xB2FDE0   Length: 0x2FE
     public void UnshowForceAttackAreaResultUI()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         byte uVar1;
         long lVar2;
         long lVar3;
@@ -373,17 +372,17 @@ public class ForceAttackAreaResultController
         }
         if (this.forceAttackAreaResultUIPanel != null) {
           GameObject.SetActive(this.forceAttackAreaResultUIPanel,0,0);
-          if (*pStatics != 0) {
+          if (GameController._instance != null) {
             uVar1 = GameController.MangeForceTryConquerArea
-                              (*pStatics,this.attackForce,
+                              (GameController._instance,this.attackForce,
                                this.defenceForce,this.targetArea,0);
-            if (*pStatics != 0) {
+            if (GameController._instance != null) {
               GameController.ShowForceAttackAreaInfo
-                        (*pStatics,this.attackForce,
+                        (GameController._instance,this.attackForce,
                          this.defenceForce,this.targetArea,1,uVar1,0);
               lVar3 = this.attackForce;
-              if (((*pStatics != 0) &&
-                  (lVar2 = *(int64 *)(*pStatics + 32)) != null) &&
+              if (((GameController._instance != null) &&
+                  (lVar2 = GameController._instance.worldData) != null) &&
                  (lVar2 = WorldData.Player(lVar2,0)) != null) {
                 lVar2 = HeroData.GetForce(lVar2,0,0);
                 if (lVar3 == lVar2) {
@@ -402,8 +401,8 @@ public class ForceAttackAreaResultController
                 else {
                   lVar3 = this.defenceForce;
                   lVar2 = FUN_18046c0a0(0);
-                  if (((lVar2 != null) && (*(int64 *)(lVar2 + 32) != 0)) &&
-                     (lVar2 = WorldData.Player(*(int64 *)(lVar2 + 32),0)) != null) {
+                  if (((lVar2 != null) && (lVar2.villageAreaID != null)) &&
+                     (lVar2 = WorldData.Player(lVar2.villageAreaID,0)) != null) {
                     lVar2 = HeroData.GetForce(lVar2,0,0);
                     if (lVar3 != lVar2) {
                       return;

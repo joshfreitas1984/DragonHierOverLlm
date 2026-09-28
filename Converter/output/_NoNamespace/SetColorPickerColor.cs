@@ -31,12 +31,12 @@ public class SetColorPickerColor
         uVar2 = **(uint64 **)(DAT_181daf778 + 184);
         cVar3 = Object.op_Inequality(uVar2,0,0);
         if (cVar3) {
-          lVar4 = **(int64 **)(DAT_181daf778 + 184);
+          lVar4 = UIColorPicker.current;
           if ((lVar4 == null) || (*plVar1 == 0)) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          local_18 = *(uint32 *)(lVar4 + 24);
+          local_18 = lVar4.value;
           uStack_14 = *(uint32 *)(lVar4 + 28);
           uStack_10 = *(uint32 *)(lVar4 + 32);
           uStack_c = *(uint32 *)(lVar4 + 36);

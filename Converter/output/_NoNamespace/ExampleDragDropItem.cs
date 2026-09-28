@@ -53,7 +53,7 @@ public class ExampleDragDropItem
                 Transform.set_localScale(lVar5,&local_48,0);
                 lVar4 = GameObject.get_transform(lVar4,0);
                 if (lVar4 != null) {
-                  local_48 = *(uint64 *)(pStatics + 100);
+                  local_48 = UICamera.lastWorldPosition;
                   uStack_40 = CONCAT44(uStack_40._4_4_,
                                        *(uint32 *)(pStatics + 108));
                   Transform.set_position(lVar4,&local_48,0);

@@ -13,11 +13,12 @@ public class SummaryWriter
     private readonly Dictionary<string, string> _stringMap;
 
     /// <summary>
-    /// Accumulated during WriteAll: DAT-address (hex, no prefix) → (className → occurrence count).
-    /// Used by WriteStaticLabels to produce _static_labels.csv for the next Ghidra run.
+    /// Built by WriteAll's pre-scan: DAT-address (hex, no prefix) → owning class name. Combines
+    /// this run's raw-output scan (authoritative) with previous-run entries for addresses that no
+    /// longer appear in DAT_ form because Ghidra already labelled them. Used both to resolve
+    /// statics in this run and by WriteStaticLabels to produce _static_labels.csv.
     /// </summary>
-    private readonly Dictionary<string, Dictionary<string, int>> _staticsUsage =
-        new(StringComparer.OrdinalIgnoreCase);
+    private Dictionary<string, string> _staticLabels = new(StringComparer.OrdinalIgnoreCase);
 
     public SummaryWriter(Dictionary<string, string>? stringMap = null)
     {
@@ -40,12 +41,32 @@ public class SummaryWriter
         var gameTypeNames = new HashSet<string>(
             registrySource.Select(t => t.ClassName), StringComparer.OrdinalIgnoreCase);
 
+        // Pre-scan every raw method for statics-pointer DAT_ addresses BEFORE post-processing,
+        // so this run resolves them itself instead of relying on the previous run's
+        // _static_labels.csv - which is stale/garbage after a game update or fresh Ghidra import.
+        // Previous-run entries are kept only for addresses not seen in DAT_ form this run (Ghidra
+        // already applied them as labels); without that, labelled addresses drop out of the file
+        // and lose their labels on the following run.
+        var staticsUsage = new Dictionary<string, Dictionary<string, int>>(StringComparer.OrdinalIgnoreCase);
+        foreach (var type in types)
+        {
+            if (type.SummaryOutputPath == null) continue;
+            foreach (var m in type.Members)
+                if (m.DecompiledOutputPath != null && File.Exists(m.DecompiledOutputPath))
+                    ScanStaticsPointers(File.ReadAllLines(m.DecompiledOutputPath), type.ClassName, staticsUsage);
+        }
+        _staticLabels = new Dictionary<string, string>(datToClass ?? new(), StringComparer.OrdinalIgnoreCase);
+        foreach (var (addr, classMap) in staticsUsage)
+            _staticLabels[addr] = classMap.OrderByDescending(kv => kv.Value).First().Key;
+        Console.WriteLine($"  [StaticLabels] {staticsUsage.Count} statics pointers found this run, " +
+                          $"{_staticLabels.Count - staticsUsage.Count} carried over from _static_labels.csv.");
+
         int written = 0;
         foreach (var type in types)
         {
             if (type.SummaryOutputPath == null) continue;
             Directory.CreateDirectory(Path.GetDirectoryName(type.SummaryOutputPath)!);
-            WriteSummary(type, _stringMap, typeOffsets, staticTypeOffsets, _staticsUsage, gameTypeNames, registrySource, datToClass);
+            WriteSummary(type, _stringMap, typeOffsets, staticTypeOffsets, gameTypeNames, registrySource, _staticLabels);
             written++;
         }
         Console.WriteLine($"  Class files written: {written}");
@@ -58,22 +79,21 @@ public class SummaryWriter
     /// these as data symbols so DAT_ addresses are replaced in decompiled output.
     ///
     /// The file is regenerated every run (overwritten); call after WriteAll.
-    /// No-op if no statics-pointer patterns were seen during this run.
+    /// No-op if no statics pointers are known.
     /// </summary>
     public void WriteStaticLabels(string outputDir)
     {
-        if (_staticsUsage.Count == 0) return;
+        if (_staticLabels.Count == 0) return;
 
         string csvPath = Path.Combine(outputDir, "_static_labels.csv");
         Directory.CreateDirectory(outputDir);
         using var w = new StreamWriter(csvPath, append: false, Encoding.UTF8);
         w.WriteLine("RVA,Label");
 
-        // For each DAT_ address, the class that uses it most often "owns" it.
+        // Each DAT_ address is "owned" by the class that uses it most often (chosen in WriteAll).
         int written = 0;
-        foreach (var (addr, classMap) in _staticsUsage.OrderBy(kv => kv.Key))
+        foreach (var (addr, owner) in _staticLabels.OrderBy(kv => kv.Key))
         {
-            string owner = classMap.OrderByDescending(kv => kv.Value).First().Key;
             string label = SanitizeLabel(owner) + "_StaticsPtr";
             w.WriteLine($"0x{addr},{label}");
             written++;
@@ -165,7 +185,6 @@ public class SummaryWriter
     private static void WriteSummary(TypeInfo type, Dictionary<string, string> stringMap,
         Dictionary<string, Dictionary<int, string>> typeOffsets,
         Dictionary<string, Dictionary<int, string>> staticTypeOffsets,
-        Dictionary<string, Dictionary<string, int>> staticsUsage,
         HashSet<string> gameTypeNames,
         List<TypeInfo> registryTypes,
         Dictionary<string, string>? datToClass = null)
@@ -220,7 +239,6 @@ public class SummaryWriter
                 if (m.DecompiledOutputPath != null && File.Exists(m.DecompiledOutputPath))
                 {
                     var rawLines = File.ReadAllLines(m.DecompiledOutputPath);
-                    ScanStaticsPointers(rawLines, type.ClassName, staticsUsage);
                     var cleaned = CleanDecompiledC(rawLines, m, type, stringMap, typeOffsets, staticTypeOffsets, gameTypeNames, registryTypes, datToClass);
                     foreach (var line in cleaned)
                         w.WriteLine(string.IsNullOrWhiteSpace(line) ? "" : $"        {line}");

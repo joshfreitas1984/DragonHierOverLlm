@@ -152,19 +152,18 @@ public class UIToggle
     // RVA   : 0xC06000   Offset: 0xC05400   Length: 0x14B
     public static UIToggle GetActiveToggle(int group)
     {
-        var pStatics = *(int64*)(DAT_181db04f8 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
         uint uVar4;
         uVar4 = 0;
         while( true ) {
-          if (*pStatics == 0) break;
-          if (*(int *)(*pStatics + 24) <= (int)uVar4) {
+          if (UIPlayAnimation.current == null) break;
+          if (UIPlayAnimation.current.target <= (int)uVar4) {
             return 0;
           }
-          if ((*pStatics == 0) ||
-             (lVar1 = *(int64 *)(*pStatics + 16)) == null) break;
+          if ((UIPlayAnimation.current == null) ||
+             (lVar1 = *(int64 *)(UIPlayAnimation.current + 16)) == null) break;
           if (*(uint32 *)(lVar1 + 24) <= uVar4) {
             uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -186,9 +185,8 @@ public class UIToggle
     // RVA   : 0xC063A0   Offset: 0xC057A0   Length: 0x81
     private void OnEnable()
     {
-        var pStatics = *(int64*)(DAT_181db04f8 + 184);
-        if (*pStatics != 0) {
-          FUN_181583c60(*pStatics,this,DAT_181da72b8);
+        if (UIPlayAnimation.current != null) {
+          FUN_181583c60(UIPlayAnimation.current,this,DAT_181da72b8);
           return;
         }
     }
@@ -197,9 +195,8 @@ public class UIToggle
     // RVA   : 0xC06310   Offset: 0xC05710   Length: 0x81
     private void OnDisable()
     {
-        var pStatics = *(int64*)(DAT_181db04f8 + 184);
-        if (*pStatics != 0) {
-          FUN_181585c70(*pStatics,this,DAT_181da7338);
+        if (UIPlayAnimation.current != null) {
+          FUN_181585c70(UIPlayAnimation.current,this,DAT_181da7338);
           return;
         }
     }
@@ -354,13 +351,13 @@ public class UIToggle
             bVar3 = state;
           }
           if (bVar3 != 0) {
-            if (*pStatics == 0) throw; // [null/range check failed]
-            iVar8 = *(int *)(*pStatics + 24);
+            if (UIPlayAnimation.current == null) throw; // [null/range check failed]
+            iVar8 = UIPlayAnimation.current.target;
             uVar9 = uVar10;
             if (0 < iVar8) {
               do {
-                if ((*pStatics == 0) ||
-                   (lVar6 = *(int64 *)(*pStatics + 16)) == null)
+                if ((UIPlayAnimation.current == null) ||
+                   (lVar6 = *(int64 *)(UIPlayAnimation.current + 16)) == null)
                 throw; // [null/range check failed]
                 if (lVar6.method <= uVar9) {
                   uVar4 = il2cpp_internal();
@@ -375,13 +372,13 @@ public class UIToggle
                     UIToggle.Set(lVar6,0,1,0);
                   }
                 }
-                if (*pStatics == 0) throw; // [null/range check failed]
-                if (*(int *)(*pStatics + 24) == iVar8) {
+                if (UIPlayAnimation.current == null) throw; // [null/range check failed]
+                if (UIPlayAnimation.current.target == iVar8) {
                   uVar9 = uVar9 + 1;
                 }
                 else {
-                  if (*pStatics == 0) throw; // [null/range check failed]
-                  iVar8 = *(int *)(*pStatics + 24);
+                  if (UIPlayAnimation.current == null) throw; // [null/range check failed]
+                  iVar8 = UIPlayAnimation.current.target;
                   uVar9 = uVar10;
                 }
               } while ((int)uVar9 < iVar8);

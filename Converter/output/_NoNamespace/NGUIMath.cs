@@ -3050,16 +3050,23 @@ public class NGUIMath
     // RVA   : 0xDFE200   Offset: 0xDFD600   Length: 0x28E
     public static Vector2 ScreenToParentPixels(Vector2 pos, Transform relativeTo)
     {
-        uint uVar1;
-        bool cVar2;
-        long lVar3;
-        ulong uVar4;
-        uint[] local_res10 = new uint[2];
-        ulong local_50;
-        uint local_48;
-        ulong local_38;
-        uint local_30;
-        byte[] local_28 = new byte[32];
+        uint64
+        NGUIMath.ScreenToParentPixels
+                (uint64 pos,int64 relativeTo,uint64 param_3,uint64 param_4)
+        {
+        uint32 uVar1;
+        char cVar2;
+        int64 lVar3;
+        uint64 uVar4;
+        uint64 *puVar5;
+        uint64 uVar6;
+        uint32 local_res10 [2];
+        uint64 local_50;
+        uint32 local_48;
+        uint64 local_38;
+        uint32 local_30;
+        uint8 local_28 [32];
+        uVar6 = pos;
         if ((relativeTo != null) && (lVar3 = Component.get_gameObject(relativeTo,0)) != null) {
           local_res10[0] = GameObject.get_layer(lVar3,0);
           uVar4 = FUN_180da9a20(relativeTo,0);
@@ -3074,7 +3081,7 @@ public class NGUIMath
             uVar4 = Int32.ToString(local_res10,0);
             uVar4 = String.Concat("No camera found for layer ",uVar4,0);
             Debug.LogWarning(uVar4,0);
-            return pos;
+            return uVar6;
           }
           local_48 = 0;
           local_50 = pos;
@@ -3082,17 +3089,17 @@ public class NGUIMath
             local_30 = 0;
             local_38 = pos;
             puVar5 = (uint64 *)Camera.ScreenToWorldPoint(&local_50,lVar3,&local_38,0);
-            uVar4 = *puVar5;
+            uVar6 = *puVar5;
             uVar1 = *(uint32 *)(puVar5 + 1);
             cVar2 = Object.op_Inequality(relativeTo,0,0);
             if (cVar2) {
               if (relativeTo == null) throw; // [null/range check failed]
-              local_38 = uVar4;
+              local_38 = uVar6;
               local_30 = uVar1;
               puVar5 = (uint64 *)Transform.InverseTransformPoint(local_28,relativeTo,&local_38,0);
-              uVar4 = *puVar5;
+              uVar6 = *puVar5;
             }
-            local_50 = uVar4;
+            local_50 = uVar6;
             return local_50;
           }
         }

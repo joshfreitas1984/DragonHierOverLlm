@@ -126,7 +126,6 @@ public class ManageTagController
     public void ShowManageTagUI(HeroData _targetHero, bool _useMoney)
     {
         var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
-        var pStatics_7a18 = *(int64*)(DAT_181d87a18 + 184);
         ulong uVar1;
         long lVar2;
         bool cVar3;
@@ -195,7 +194,7 @@ public class ManageTagController
                                         ManageTagController.FreshManageTagUI(this,0);
                                         return;
                                       }
-                                      lVar8 = *(int64 *)(pStatics_7a18 + 8);
+                                      lVar8 = ManageTagController.availableCategory;
                                       if (lVar6 == null) {
                           // WARNING: Subroutine does not return
                                         FUN_1800d6620();
@@ -208,7 +207,7 @@ public class ManageTagController
                                                             DAT_181da3e58);
                                     } while (!cVar3);
                                     lVar8 = this.allTagList;
-                                    lVar2 = *(int64 *)(pStatics_7a18 + 8);
+                                    lVar2 = ManageTagController.availableCategory;
                                     if (lVar2 == null) {
                           // WARNING: Subroutine does not return
                                       FUN_1800d6620();
@@ -740,13 +739,12 @@ public class ManageTagController
     // RVA   : 0xA8C8C0   Offset: 0xA8BCC0   Length: 0x1FA
     public void UnderstandTag(string tagIDString)
     {
-        var pStatics = *(int64*)(DAT_181d72d50 + 184);
         long lVar1;
         uint uVar2;
         long lVar3;
         uint uVar4;
         lVar1 = this.targetHero;
-        lVar3 = *(int64 *)(pStatics + 32);
+        lVar3 = GameController.lockObj;
         uVar2 = Int32.Parse(tagIDString,0);
         if (lVar3 != null) {
           lVar3 = GameDataController.GetTagDataBase(lVar3,uVar2,0);
@@ -761,7 +759,7 @@ public class ManageTagController
                 ManageTagController.FreshManageTagUI(this,0);
                 if (this.targetHero != null) {
                   if (this.targetHero.heroID == null) {
-                    lVar1 = *(int64 *)(pStatics + 32);
+                    lVar1 = GameController.lockObj;
                     if (lVar1 == null) throw; // [null/range check failed]
                     GameDataController.ChangeAchStats(lVar1,12,0x3f800000);
                   }

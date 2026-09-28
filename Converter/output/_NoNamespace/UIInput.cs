@@ -955,8 +955,6 @@ public class UIInput
     // RVA   : 0x12C7480   Offset: 0x12C6880   Length: 0xB65
     protected virtual void Update()
     {
-        var pStatics_f678 = *(int64*)(DAT_181daf678 + 184);
-        var pStatics_fb78 = *(int64*)(DAT_181dafb78 + 184);
         bool cVar1;
         int iVar2;
         int iVar3;
@@ -999,7 +997,7 @@ public class UIInput
             uVar4 = 0;
           }
           *(uint32 *)((int64)this + 196) = uVar4;
-          *(uint32 *)(pStatics_fb78 + 16) = 0;
+          UIInput.mDrawStart = 0;
           uVar4 = 0;
           if (*(char *)((int64)this + 45) == false) {
             uVar4 = *(uint32 *)((int64)this + 196);
@@ -1011,7 +1009,7 @@ public class UIInput
           uStack_40 = (uint32)this[10];
           uStack_3c = *(uint32 *)((int64)this + 84);
           UIWidget.set_color(this[3],&local_48,0);
-          uVar5 = *(uint64 *)(pStatics_f678 + 184);
+          uVar5 = UICamera.current;
           cVar1 = Object.op_Inequality(uVar5,0,0);
           if (!cVar1) {
         LAB_1812c7783:
@@ -1028,12 +1026,12 @@ public class UIInput
             uVar12 = (uint32)((uint64)*(uint64 *)(lVar6 + 32) >> 32);
           }
           else {
-            lVar6 = *(int64 *)(pStatics_f678 + 184);
+            lVar6 = UICamera.current;
             if (lVar6 == null) goto LAB_1812c7fc0;
             uVar5 = UICamera.get_cachedCamera(lVar6,0);
             cVar1 = Object.op_Inequality(uVar5,0,0);
             if (!cVar1) goto LAB_1812c7783;
-            lVar6 = *(int64 *)(pStatics_f678 + 184);
+            lVar6 = UICamera.current;
             if (lVar6 == null) goto LAB_1812c7fc0;
             lVar6 = UICamera.get_cachedCamera(lVar6,0);
             plVar9 = (int64 *)this[3];
@@ -1083,21 +1081,19 @@ public class UIInput
             }
           }
         }
-        cVar1 = String.op_Inequality(*(uint64 *)(pStatics_fb78 + 24),lVar6,0)
+        cVar1 = String.op_Inequality(UIInput.mLastIME,lVar6,0)
         ;
         if (cVar1) {
           cVar1 = FUN_180d755b0(lVar6,0);
           if (!cVar1) {
             if ((this[18] == 0) || (lVar6 == null)) goto LAB_1812c7fc0;
-            iVar3 = *(int *)(this[18] + 16) + *(int *)(lVar6 + 16);
+            iVar3 = *(int *)(this[18] + 16) + lVar6.key;
           }
           else {
             iVar3 = (int)this[24];
           }
           *(int *)((int64)this + 196) = iVar3;
-          plVar9 = (int64 *)(pStatics_fb78 + 24);
-          *plVar9 = lVar6;
-          il2cpp_internal(plVar9,lVar6);
+          UIInput.mLastIME = lVar6;
           UIInput.UpdateLabel(this,0);
           UIInput.ExecuteOnChange(this,0);
         }
@@ -1151,13 +1147,13 @@ public class UIInput
             bVar10 = bVar10 ^ 1;
           }
         }
-        lVar6 = *(int64 *)(pStatics_f678 + 8);
+        lVar6 = UICamera.GetKeyDown;
         if ((*plVar9 == 0) || (lVar6 == null)) goto LAB_1812c7fc0;
         cVar1 = GetKeyStateFunc.Invoke(lVar6,*(uint32 *)(*plVar9 + 124),0);
         if (!cVar1) {
           if (*plVar9 == 0) goto LAB_1812c7fc0;
           if (*(int *)(*plVar9 + 124) == 13) {
-            lVar6 = *(int64 *)(pStatics_f678 + 8);
+            lVar6 = UICamera.GetKeyDown;
             if (lVar6 == null) goto LAB_1812c7fc0;
             cVar1 = GetKeyStateFunc.Invoke(lVar6,0x10f,0);
             if (!(cVar1))
@@ -1167,14 +1163,14 @@ public class UIInput
               else {
             }
           if (bVar10 == 0) {
-            lVar6 = *(int64 *)(pStatics_f678 + 400);
+            lVar6 = UICamera.controller;
             if (lVar6 == null) goto LAB_1812c7fc0;
-            uVar5 = *(uint64 *)(lVar6 + 72);
+            uVar5 = lVar6.current;
             cVar1 = Object.op_Inequality(uVar5,0,0);
             if (cVar1) {
-              lVar6 = *(int64 *)(pStatics_f678 + 400);
+              lVar6 = UICamera.controller;
               if (lVar6 == null) goto LAB_1812c7fc0;
-              *(uint32 *)(lVar6 + 112) = 0;
+              lVar6.clickNotification = 0;
             }
             if (*plVar9 == 0) goto LAB_1812c7fc0;
             uVar4 = *(uint32 *)(*plVar9 + 124);
@@ -1185,13 +1181,13 @@ public class UIInput
             (**(code **)(*this + 0x1a8))(this,"\n",*(uint64 *)(*this + 0x1b0));
           }
         }
-        lVar6 = *(int64 *)(pStatics_f678 + 8);
+        lVar6 = UICamera.GetKeyDown;
         if ((*plVar9 == 0) || (lVar6 == null)) goto LAB_1812c7fc0;
         cVar1 = GetKeyStateFunc.Invoke(lVar6,*(uint32 *)(*plVar9 + 128),0);
         if (!cVar1) {
           if (*plVar9 == 0) goto LAB_1812c7fc0;
           if (*(int *)(*plVar9 + 128) == 13) {
-            lVar6 = *(int64 *)(pStatics_f678 + 8);
+            lVar6 = UICamera.GetKeyDown;
             if (lVar6 == null) goto LAB_1812c7fc0;
             cVar1 = GetKeyStateFunc.Invoke(lVar6,0x10f,0);
             if (!(cVar1))
@@ -1201,14 +1197,14 @@ public class UIInput
               else {
             }
           if (bVar10 == 0) {
-            lVar6 = *(int64 *)(pStatics_f678 + 400);
+            lVar6 = UICamera.controller;
             if (lVar6 == null) goto LAB_1812c7fc0;
-            uVar5 = *(uint64 *)(lVar6 + 72);
+            uVar5 = lVar6.current;
             cVar1 = Object.op_Inequality(uVar5,0,0);
             if (cVar1) {
-              lVar6 = *(int64 *)(pStatics_f678 + 400);
+              lVar6 = UICamera.controller;
               if (lVar6 == null) goto LAB_1812c7fc0;
-              *(uint32 *)(lVar6 + 112) = 0;
+              lVar6.clickNotification = 0;
             }
             if (*plVar9 == 0) goto LAB_1812c7fc0;
             uVar4 = *(uint32 *)(*plVar9 + 128);
@@ -1225,7 +1221,7 @@ public class UIInput
           FUN_1800d6620();
         }
         if (*(char *)(*plVar9 + 44) == false) {
-          lVar6 = *(int64 *)(pStatics_f678 + 16);
+          lVar6 = UICamera.GetKeyUp;
           if (lVar6 == null) goto LAB_1812c7fc0;
           cVar1 = GetKeyStateFunc.Invoke(lVar6,9);
           if (cVar1) {
@@ -1238,13 +1234,12 @@ public class UIInput
     // RVA   : 0x12C5130   Offset: 0x12C4530   Length: 0x280
     private void OnKey(KeyCode key)
     {
-        var pStatics = *(int64*)(DAT_181dafb78 + 184);
         ulong uVar1;
         long lVar2;
         bool cVar3;
         int iVar4;
         iVar4 = Time.get_frameCount(0);
-        if (*(int *)(pStatics + 32) != iVar4) {
+        if (UIInput.mIgnoreKey != iVar4) {
           uVar1 = this.mCam;
           cVar3 = Object.op_Inequality(uVar1,0,0);
           if (cVar3) {
@@ -1252,7 +1247,7 @@ public class UIInput
             if (lVar2 == null) goto LAB_1812c53ab;
             if ((key == lVar2.cancelKey0) || (key == lVar2.cancelKey1)) {
               bVar6 = !DAT_181ea25d5;
-              *(int *)(pStatics + 32) = iVar4;
+              UIInput.mIgnoreKey = iVar4;
               if (bVar6) {
                 il2cpp_runtime_class_init(&DAT_181daf678);
                 DAT_181ea25d5 = true;
@@ -1267,7 +1262,7 @@ public class UIInput
           }
           if (key == 9) {
             bVar6 = !DAT_181ea25d5;
-            *(int *)(pStatics + 32) = iVar4;
+            UIInput.mIgnoreKey = iVar4;
             if (bVar6) {
               il2cpp_runtime_class_init(&DAT_181daf678);
               DAT_181ea25d5 = true;
@@ -1317,7 +1312,6 @@ public class UIInput
     // RVA   : 0x12C59A0   Offset: 0x12C4DA0   Length: 0x6CC
     public virtual bool ProcessEvent(Event ev)
     {
-        var pStatics = *(int64*)(DAT_181dafb78 + 184);
         bool cVar1;
         int iVar2;
         uint uVar3;
@@ -1435,7 +1429,7 @@ public class UIInput
           ;
           *(int *)((int64)this + 196) = iVar2;
           if (iVar2 != 0) {
-            iVar2 = iVar2 + *(int *)(pStatics + 16);
+            iVar2 = iVar2 + UIInput.mDrawStart;
             *(int *)((int64)this + 196) = iVar2;
           }
           if (uVar3 == 0) {
@@ -1460,7 +1454,7 @@ public class UIInput
           goto LAB_1812c6063;
           if (iVar2 == *(int *)(lVar6 + 16)) goto LAB_1812c5e94;
           iVar2 = *(int *)((int64)this + 196);
-          iVar2 = *(int *)(pStatics + 16) + iVar2;
+          iVar2 = UIInput.mDrawStart + iVar2;
           break;
         case 2:
           Event.Use(ev,0);
@@ -2008,7 +2002,6 @@ public class UIInput
     // RVA   : 0x12C67D0   Offset: 0x12C5BD0   Length: 0xCA2
     public void UpdateLabel()
     {
-        var pStatics = *(int64*)(DAT_181dafb78 + 184);
         bool cVar5;
         bool cVar6;
         int iVar7;
@@ -2130,7 +2123,7 @@ public class UIInput
           lVar13 = String.Concat(uVar11,uVar12,0);
           if (!cVar5) {
         LAB_1812c6d7e:
-            *(uint32 *)(pStatics + 16) = 0;
+            UIInput.mDrawStart = 0;
             goto LAB_1812c6dc6;
           }
           lVar15 = this[3];
@@ -2138,7 +2131,7 @@ public class UIInput
           if ((*(int *)(lVar15 + 0x1dc) != 1) || (*(int *)(lVar15 + 0x1b8) != 1)) goto LAB_1812c6d7e;
           iVar8 = UILabel.CalculateOffsetToFit(lVar15,lVar13,0);
           if (iVar8 == 0) {
-            *(uint32 *)(pStatics + 16) = 0;
+            UIInput.mDrawStart = 0;
             lVar15 = this[3];
             if (lVar15 == null) throw; // [null/range check failed]
             uVar21 = (uint32)this[23];
@@ -2146,32 +2139,32 @@ public class UIInput
             UILabel.set_alignment(lVar15,uVar21,0);
           }
           else {
-            if (iVar7 < *(int *)(pStatics + 16)) {
-              *(int *)(pStatics + 16) = iVar7;
+            if (iVar7 < UIInput.mDrawStart) {
+              UIInput.mDrawStart = iVar7;
         LAB_1812c6c6e:
               lVar15 = this[3];
               if (lVar15 == null) throw; // [null/range check failed]
               uVar21 = 1;
               goto LAB_1812c6cf2;
             }
-            if (iVar8 < *(int *)(pStatics + 16)) {
-              *(int *)(pStatics + 16) = iVar8;
+            if (iVar8 < UIInput.mDrawStart) {
+              UIInput.mDrawStart = iVar8;
               goto LAB_1812c6c6e;
             }
             lVar15 = this[3];
             if ((lVar13 == null) || (uVar11 = String.Substring(lVar13,0,iVar7,0), lVar15 == null))
             throw; // [null/range check failed]
             iVar7 = UILabel.CalculateOffsetToFit(lVar15,uVar11,0);
-            if (*(int *)(pStatics + 16) < iVar7) {
-              *(int *)(pStatics + 16) = iVar7;
+            if (UIInput.mDrawStart < iVar7) {
+              UIInput.mDrawStart = iVar7;
               lVar15 = this[3];
               if (lVar15 == null) throw; // [null/range check failed]
               uVar21 = 3;
               goto LAB_1812c6cf2;
             }
           }
-          if (*(int *)(pStatics + 16) != 0) {
-            iVar7 = *(int *)(pStatics + 16);
+          if (UIInput.mDrawStart != null) {
+            iVar7 = UIInput.mDrawStart;
             if (lVar13 == null) throw; // [null/range check failed]
             lVar13 = String.Substring(lVar13,iVar7,*(int *)(lVar13 + 16) - iVar7,0);
           }
@@ -2194,8 +2187,8 @@ public class UIInput
         lVar13 = this[24];
         plVar4 = this + 27;
         lVar15 = *plVar4;
-        iVar8 = (int)lVar13 - *(int *)(pStatics + 16);
-        iVar7 = *(int *)((int64)this + 196) - *(int *)(pStatics + 16);
+        iVar8 = (int)lVar13 - UIInput.mDrawStart;
+        iVar7 = *(int *)((int64)this + 196) - UIInput.mDrawStart;
         cVar5 = Object.op_Equality(lVar15,0,0);
         if (cVar5) {
           lVar13 = new Texture2D(2,2,5,in_stack_ffffffffffffff98 & 0xffffffffffffff00,0);
@@ -2642,10 +2635,9 @@ public class UIInput
     // RVA   : 0x12C84E0   Offset: 0x12C78E0   Length: 0x7C
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181dafb78 + 184);
-        *(uint32 *)(pStatics + 16) = 0;
-        *(uint64 *)(pStatics + 24) = "";
-        *(uint32 *)(pStatics + 32) = 0;
+        UIInput.mDrawStart = 0;
+        UIInput.mLastIME = "";
+        UIInput.mIgnoreKey = 0;
     }
 
 }

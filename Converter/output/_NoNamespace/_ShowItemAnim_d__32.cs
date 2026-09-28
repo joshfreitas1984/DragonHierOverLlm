@@ -40,7 +40,6 @@ public class <ShowItemAnim>d__32
     // RVA   : 0x8F2720   Offset: 0x8F1B20   Length: 0x8A7
     private virtual bool MoveNext()
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_4450 = *(int64*)(DAT_181da4450 + 184);
         float fVar1;
         float fVar2;
@@ -87,8 +86,8 @@ public class <ShowItemAnim>d__32
             iVar4 = 0;
             if (*(char *)(lVar3 + 24) != false) {
               lVar6 = **(int64 **)(DAT_181d7f6a8 + 184);
-              if (((*pStatics_2cc8 == 0) ||
-                  (lVar8 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+              if (((GameController._instance == null) ||
+                  (lVar8 = GameController._instance.worldData) == null) ||
                  (lVar8 = WorldData.Player(lVar8,0)) == null) throw; // [null/range check failed]
               uVar7 = HeroData.HeroName(lVar8,0,0);
               if ((*(int64 *)(lVar3 + 56) == 0) ||
@@ -98,11 +97,11 @@ public class <ShowItemAnim>d__32
               uVar7 = String.Format("{0}获得了 {1}",uVar7,uVar9,0);
               if ((*(int64 *)(lVar3 + 56) == 0) ||
                  ((lVar8 = *(int64 *)(*(int64 *)(lVar3 + 56) + 48), lVar8 == null ||
-                  (lVar8 = *(int64 *)(lVar8 + 40)) == null))) throw; // [null/range check failed]
-              if (*(int *)(lVar8 + 24) == 0) {
+                  (lVar8 = lVar8.forceAreaID) == null))) throw; // [null/range check failed]
+              if (lVar8.cityAreaID == null) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
-              lVar8 = *(int64 *)(*(int64 *)(lVar8 + 16) + 32);
+              lVar8 = *(int64 *)(lVar8.chapter + 32);
               if ((lVar8 == null) || (uVar9 = ItemData.GetItemIconName(lVar8,0), lVar6 == null))
               throw; // [null/range check failed]
               local_78 = 0;

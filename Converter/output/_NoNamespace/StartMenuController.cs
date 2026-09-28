@@ -138,7 +138,6 @@ public class StartMenuController
     // RVA   : 0xC6A140   Offset: 0xC69540   Length: 0x1825
     private void Start()
     {
-        var pStatics_2d50 = *(int64*)(DAT_181d72d50 + 184);
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
         var pStatics_6790 = *(int64*)(DAT_181da6790 + 184);
         bool cVar1;
@@ -302,7 +301,7 @@ public class StartMenuController
               if (lVar3 != null) {
                 Dropdown.AddOptions(lVar3,*(uint64 *)(pStatics_3d40 + 0x5a8),0)
                 ;
-                if (*(int *)(pStatics_3d40 + 8) != 1) {
+                if (PlotController.fightSkillIndexCache != 1) {
                   lVar3 = il2cpp_internal(DAT_181d97750);
                   FUN_18132faf0(lVar3,DAT_181da3bd8);
                   uVar6 = uVar12;
@@ -355,7 +354,7 @@ public class StartMenuController
         uVar11 = (uint64)local_44;
         goto LAB_180c6ab70;
         LAB_180c6aea0:
-        lVar4 = *(int64 *)(pStatics_2d50 + 32);
+        lVar4 = GameController.lockObj;
         if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 0x1a8)) == null) throw; // [null/range check failed]
         if (*(int *)(lVar4 + 24) <= (int)uVar6) {
           if (this.clothDropDown != null) {
@@ -375,13 +374,13 @@ public class StartMenuController
         throw; // [null/range check failed]
         uVar8 = "";
         if (-1 < *(int *)(lVar4 + 40)) {
-          lVar4 = *(int64 *)(pStatics_3d40 + 64);
-          lVar7 = *(int64 *)(pStatics_2d50 + 32);
+          lVar4 = PlotController.LanternFestivelRewardLvTalkText;
+          lVar7 = GameController.lockObj;
           if ((((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 0x1a8)) == null) ||
               (lVar7 = FUN_180002f80(lVar7,uVar6,DAT_181da2f58)) == null) || (lVar4 == null))
           throw; // [null/range check failed]
           uVar8 = FUN_180002f80(lVar4,*(uint32 *)(lVar7 + 40),DAT_181da4358);
-          lVar4 = *(int64 *)(pStatics_2d50 + 8);
+          lVar4 = GameController.difficultyExtraPoint;
           if (lVar4 == null) throw; // [null/range check failed]
           lVar4 = *(int64 *)(lVar4 + 16);
           lVar7 = FUN_18046c100(0);
@@ -432,10 +431,10 @@ public class StartMenuController
           if (*(int64 *)(this + 200) == 0) throw; // [null/range check failed]
         }
         LAB_180c6b47b:
-        lVar3 = *(int64 *)(pStatics_2d50 + 32);
+        lVar3 = GameController.lockObj;
         if (lVar3 != null) {
           GameDataController.CheckAllAch(lVar3,0);
-          lVar3 = *(int64 *)(pStatics_2d50 + 32);
+          lVar3 = GameController.lockObj;
           if (lVar3 != null) {
             GameDataController.SavePlayerprefData(lVar3,0);
             StartMenuController.RefreshDifficultyTotalLv(this,0);
@@ -696,9 +695,7 @@ public class StartMenuController
     // RVA   : 0xC681B0   Offset: 0xC675B0   Length: 0x504
     public void ResetPlayerTag()
     {
-        var pStatics_2d50 = *(int64*)(DAT_181d72d50 + 184);
         var pStatics_6790 = *(int64*)(DAT_181da6790 + 184);
-        var pStatics_6810 = *(int64*)(DAT_181da6810 + 184);
         long lVar1;
         bool cVar2;
         int iVar3;
@@ -716,7 +713,7 @@ public class StartMenuController
         if (*pStatics_6790 != 0) {
           lVar5 = *(int64 *)(*pStatics_6790 + 24);
 
-          if ((lVar8 = *(int64 *)(pStatics_2d50 + 8)?._items) != null) {
+          if ((lVar8 = GameController.difficultyExtraPoint?._items) != null) {
             iVar3 = PlayerPrefDictionary.GetInt(lVar8,"AchTagPoint",0);
             if (lVar5 != null) {
               *(float *)(lVar5 + 0x364) = (float)(iVar3 + 20);
@@ -724,7 +721,7 @@ public class StartMenuController
                   (lVar5 = *(int64 *)(*pStatics_6790 + 24)) != null) &&
                  (lVar5 = *(int64 *)(lVar5 + 0x368)) != null) {
                 FUN_1812f9a10(lVar5,DAT_181d8c598);
-                lVar5 = *(int64 *)(pStatics_2d50 + 32);
+                lVar5 = GameController.lockObj;
                 if ((lVar5 != null) && (lVar5 = *(int64 *)(lVar5 + 0x198)) != null) {
                   lVar5 = FUN_1808ae5b0(lVar5,DAT_181dba4a8);
                   if (lVar5 != null) {
@@ -741,7 +738,7 @@ public class StartMenuController
                           StartMenuController.RefreshTagMenu(this,0);
                           return;
                         }
-                        lVar8 = *(int64 *)(pStatics_6810 + 8);
+                        lVar8 = StartMenuController.canStartChooseTagCategory;
                         if (lVar5 == null) {
                           // WARNING: Subroutine does not return
                           FUN_1800d6620();
@@ -753,7 +750,7 @@ public class StartMenuController
                         cVar2 = FUN_18181e400(lVar8,*(uint64 *)(lVar5 + 80),DAT_181da3e58);
                       } while (!cVar2);
                       lVar8 = this.allTagGrid;
-                      lVar1 = *(int64 *)(pStatics_6810 + 8);
+                      lVar1 = StartMenuController.canStartChooseTagCategory;
                       if (lVar1 == null) {
                           // WARNING: Subroutine does not return
                         FUN_1800d6620();
@@ -1067,7 +1064,6 @@ public class StartMenuController
     // RVA   : 0xC698E0   Offset: 0xC68CE0   Length: 0x4CB
     public void StartChooseTagClicked(int tagID)
     {
-        var pStatics_2d50 = *(int64*)(DAT_181d72d50 + 184);
         var pStatics_6790 = *(int64*)(DAT_181da6790 + 184);
         float fVar1;
         long lVar2;
@@ -1077,7 +1073,7 @@ public class StartMenuController
             (lVar2 = *(int64 *)(*pStatics_6790 + 24)) != null) &&
            (lVar2 = *(int64 *)(lVar2 + 0x368)) != null) {
           if (4 < *(int *)(lVar2 + 24)) {
-            lVar2 = *(int64 *)(pStatics_2d50 + 32);
+            lVar2 = GameController.lockObj;
             if ((((lVar2 == null) || (lVar2 = *(int64 *)(lVar2 + 0x198)) == null) ||
                 (lVar2 = FUN_1817d9e10(lVar2,tagID,DAT_181dba420)) == null) ||
                (*(int64 *)(lVar2 + 72) == 0)) throw; // [null/range check failed]
@@ -1086,7 +1082,7 @@ public class StartMenuController
           if ((*pStatics_6790 != 0) &&
              (lVar2 = *(int64 *)(*pStatics_6790 + 24)) != null) {
             fVar1 = *(float *)(lVar2 + 0x364);
-            lVar2 = *(int64 *)(pStatics_2d50 + 32);
+            lVar2 = GameController.lockObj;
             if (((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 0x198)) != null) &&
                (lVar2 = FUN_1817d9e10(lVar2,tagID,DAT_181dba420)) != null) {
               fVar6 = (float)HeroTagDataBase.GetCostValue(lVar2,1,0);
@@ -1112,7 +1108,7 @@ public class StartMenuController
                 if ((*pStatics_6790 != 0) &&
                    (lVar2 = *(int64 *)(*pStatics_6790 + 24)) != null) {
                   fVar1 = *(float *)(lVar2 + 0x364);
-                  lVar4 = *(int64 *)(pStatics_2d50 + 32);
+                  lVar4 = GameController.lockObj;
                   if (((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 0x198)) != null) &&
                      (lVar4 = FUN_1817d9e10(lVar4,tagID,DAT_181dba420)) != null) {
                     fVar6 = (float)HeroTagDataBase.GetCostValue(lVar4,1,0);
@@ -1131,7 +1127,6 @@ public class StartMenuController
     // RVA   : 0xC69DB0   Offset: 0xC691B0   Length: 0x38E
     public void StartUnchooseTagClicked(int tagID)
     {
-        var pStatics_2d50 = *(int64*)(DAT_181d72d50 + 184);
         var pStatics_6790 = *(int64*)(DAT_181da6790 + 184);
         float fVar1;
         long lVar2;
@@ -1140,7 +1135,7 @@ public class StartMenuController
         if ((*pStatics_6790 != 0) &&
            (lVar2 = *(int64 *)(*pStatics_6790 + 24)) != null) {
           fVar1 = *(float *)(lVar2 + 0x364);
-          lVar2 = *(int64 *)(pStatics_2d50 + 32);
+          lVar2 = GameController.lockObj;
           if (((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 0x198)) != null) &&
              (lVar2 = FUN_1817d9e10(lVar2,tagID,DAT_181dba420)) != null) {
             fVar6 = (float)HeroTagDataBase.GetCostValue(lVar2,1,0);
@@ -1165,7 +1160,7 @@ public class StartMenuController
               if ((*pStatics_6790 != 0) &&
                  (lVar2 = *(int64 *)(*pStatics_6790 + 24)) != null) {
                 fVar1 = *(float *)(lVar2 + 0x364);
-                lVar4 = *(int64 *)(pStatics_2d50 + 32);
+                lVar4 = GameController.lockObj;
                 if (((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 0x198)) != null) &&
                    (lVar4 = FUN_1817d9e10(lVar4,tagID,DAT_181dba420)) != null) {
                   fVar6 = (float)HeroTagDataBase.GetCostValue(lVar4,1,0);
@@ -1965,14 +1960,13 @@ public class StartMenuController
     // RVA   : 0xC64A50   Offset: 0xC63E50   Length: 0x234
     public void RandomNameButtonClicked()
     {
-        var pStatics_2d50 = *(int64*)(DAT_181d72d50 + 184);
         var pStatics_6790 = *(int64*)(DAT_181da6790 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
         ulong uVar4;
         long lVar5;
-        lVar1 = *(int64 *)(pStatics_2d50 + 32);
+        lVar1 = GameController.lockObj;
         if (lVar1 != null) {
           uVar3 = GameDataController.GenerateRandomHeroFamilyName(lVar1,0);
           lVar1 = this.heroFamilyName;
@@ -1980,7 +1974,7 @@ public class StartMenuController
           if (lVar1 != null) {
             InputField.set_text(lVar1,uVar4,0);
             lVar1 = this.heroGivenName;
-            lVar5 = *(int64 *)(pStatics_2d50 + 32);
+            lVar5 = GameController.lockObj;
             if (((*pStatics_6790 != 0) &&
                 (lVar2 = *(int64 *)(*pStatics_6790 + 24)) != null) &&
                (lVar5 != null)) {

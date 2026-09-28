@@ -638,24 +638,23 @@ public class SpeEnhanceEquipController
     // RVA   : 0x98F480   Offset: 0x98E880   Length: 0x3F8
     public void FinishSpeEnhance()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar2;
         long lVar3;
         ulong uVar4;
         long lVar5;
-        if (*pStatics != 0) {
-          lVar3 = *(int64 *)(*pStatics + 32);
+        if (GameController._instance != null) {
+          lVar3 = GameController._instance.worldData;
           iVar2 = SpeEnhanceEquipController.GetStoneNeed(this,0);
           if (lVar3 != null) {
             WorldData.ChangeSpeEnhanceStoneNum(lVar3,-iVar2,1,0);
             if (this.nowChoice != null) {
               lVar3 = GameObject.GetComponent(this.nowChoice,DAT_181d73998);
               if (lVar3 != null) {
-                if (*(int64 *)(lVar3 + 24) == 0) {
+                if (lVar3.cityAreaID == null) {
                   if (this.enhanceTargetItemIcon == null) throw; // [null/range check failed]
                   lVar3 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181d720a0);
-                  if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                     (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 96)) == null)
+                  if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                     (lVar3 = *(int64 *)(lVar3.villageAreaID + 96)) == null)
                   throw; // [null/range check failed]
                   piVar1 = (int *)(lVar3 + 76);
                   *piVar1 = *piVar1 + 1;
@@ -665,19 +664,19 @@ public class SpeEnhanceEquipController
                   lVar3 = GameObject.GetComponent(this.nowChoice,DAT_181d73998);
                   if (lVar3 == null) throw; // [null/range check failed]
                   lVar5 = this.enhanceTargetItemIcon;
-                  if (*(char *)(lVar3 + 32) == false) {
+                  if (!lVar3.villageAreaID) {
                     if (lVar5 == null) throw; // [null/range check failed]
                     lVar3 = GameObject.GetComponent(lVar5,DAT_181d720a0);
-                    if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                       (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 96)) == null)
+                    if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                       (lVar3 = *(int64 *)(lVar3.villageAreaID + 96)) == null)
                     throw; // [null/range check failed]
                     puVar6 = (uint64 *)(lVar3 + 40);
                   }
                   else {
                     if (lVar5 == null) throw; // [null/range check failed]
                     lVar3 = GameObject.GetComponent(lVar5,DAT_181d720a0);
-                    if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
-                       (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 96)) == null)
+                    if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
+                       (lVar3 = *(int64 *)(lVar3.villageAreaID + 96)) == null)
                     throw; // [null/range check failed]
                     puVar6 = (uint64 *)(lVar3 + 32);
                   }
@@ -685,20 +684,20 @@ public class SpeEnhanceEquipController
                   if (this.nowChoice == null) throw; // [null/range check failed]
                   lVar3 = GameObject.GetComponent(this.nowChoice,DAT_181d73998);
                   if (lVar3 == null) throw; // [null/range check failed]
-                  uVar4 = HeroSpeAddData.op_Addition(uVar4,*(uint64 *)(lVar3 + 24),0);
+                  uVar4 = HeroSpeAddData.op_Addition(uVar4,lVar3.cityAreaID,0);
                   *puVar6 = uVar4;
                   il2cpp_internal(puVar6,uVar4);
                 }
                 if (this.enhanceTargetItemIcon != null) {
                   lVar3 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181d720a0);
-                  if (((lVar3 != null) && (*(int64 *)(lVar3 + 32) != 0)) &&
-                     (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 96)) != null) {
+                  if (((lVar3 != null) && (lVar3.villageAreaID != null)) &&
+                     (lVar3 = *(int64 *)(lVar3.villageAreaID + 96)) != null) {
                     piVar1 = (int *)(lVar3 + 72);
                     *piVar1 = *piVar1 + 1;
                     if (this.enhanceTargetItemIcon != null) {
                       lVar3 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181d720a0);
-                      if ((lVar3 != null) && (*(int64 *)(lVar3 + 32) != 0)) {
-                        ItemData.CountValueAndWeight(*(int64 *)(lVar3 + 32),0);
+                      if ((lVar3 != null) && (lVar3.villageAreaID != null)) {
+                        ItemData.CountValueAndWeight(lVar3.villageAreaID,0);
                         lVar3 = **(int64 **)(DAT_181da4450 + 184);
                         if (this.enhanceTargetItemIcon != null) {
                           lVar5 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181d720a0);

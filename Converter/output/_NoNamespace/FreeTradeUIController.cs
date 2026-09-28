@@ -59,7 +59,6 @@ public class FreeTradeUIController
     // RVA   : 0x784A90   Offset: 0x783E90   Length: 0x183
     public void ShowFreeTradeUI(FreeTradeUIType targetType, ForceData targetForce)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar2;
         ulong uVar3;
         plVar1 = (int64 *)Resources.Load("Sound/SoundEffect/Deal",0);
@@ -71,8 +70,8 @@ public class FreeTradeUIController
         if (this.freeTradeUIPanel != null) {
           GameObject.SetActive(this.freeTradeUIPanel,1,0);
           this.freeTradeUIType = targetType;
-          if ((*pStatics != 0) &&
-             (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+          if ((GameController._instance != null) &&
+             (lVar2 = GameController._instance.worldData) != null) {
             lVar2 = WorldData.Player(lVar2,0);
             if (lVar2 != null) {
               uVar3 = HeroData.GetForce(lVar2,0,0);
@@ -88,7 +87,6 @@ public class FreeTradeUIController
     // RVA   : 0x784C20   Offset: 0x784020   Length: 0x7AC
     public void SureButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar2;
         uint uVar3;
         long lVar4;
@@ -99,11 +97,11 @@ public class FreeTradeUIController
         float fVar11;
         float fVar12;
         if (this.money <= 0.0 && this.money != null.0) {
-          if ((((*pStatics == 0) ||
-               (lVar4 = *(int64 *)(*pStatics + 32)) == null) ||
-              (lVar4 = WorldData.Player(lVar4,0)) == null) || (*(int64 *)(lVar4 + 0x220) == 0))
+          if ((((GameController._instance == null) ||
+               (lVar4 = GameController._instance.worldData) == null) ||
+              (lVar4 = WorldData.Player(lVar4,0)) == null) || (lVar4.speBookStorageSpeAdd == null))
           goto LAB_1807853c7;
-          iVar2 = *(int *)(*(int64 *)(lVar4 + 0x220) + 24);
+          iVar2 = *(int *)(lVar4.speBookStorageSpeAdd + 24);
           if (this.freeTradeUIType == 1) {
             if ((this.playerForce == null) ||
                (lVar4 = this.playerForce.resourceStore) == null)
@@ -218,8 +216,8 @@ public class FreeTradeUIController
             if (lVar4 == null) goto LAB_1807853c7;
             HeroData.ChangeMoney(lVar4,uVar3,1,0);
           }
-          if (((*pStatics != 0) &&
-              (lVar4 = *(int64 *)(*pStatics + 32)) != null) &&
+          if (((GameController._instance != null) &&
+              (lVar4 = GameController._instance.worldData) != null) &&
              (lVar4 = WorldData.Player(lVar4,0)) != null) {
             HeroData.ChangeResource
                       (lVar4,this.resourceNum,1,this.freeTradeUIType != 1,0);
@@ -282,7 +280,6 @@ public class FreeTradeUIController
     // RVA   : 0x784120   Offset: 0x783520   Length: 0x2E8
     public float GetResourceValueRate(int resourceID)
     {
-        var pStatics = *(int64*)(DAT_181dac758 + 184);
         float fVar1;
         float fVar2;
         float fVar3;
@@ -291,7 +288,7 @@ public class FreeTradeUIController
         long lVar6;
         float fVar7;
         lVar6 = (int64)(int)resourceID;
-        lVar4 = *(int64 *)(pStatics + 56);
+        lVar4 = PlotController.SpringFestivelRewardLvTalkText;
         if (lVar4 != null) {
           if (*(int64 *)(lVar4 + 88) == 0) {
             fVar7 = 1.0;
@@ -299,14 +296,14 @@ public class FreeTradeUIController
             Mathf.Max(0x3dcccccd,fVar7,0);
             return;
           }
-          lVar4 = *(int64 *)(pStatics + 56);
+          lVar4 = PlotController.SpringFestivelRewardLvTalkText;
           if (((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 88)) != null) &&
              (lVar4 = *(int64 *)(lVar4 + 136)) != null) {
             if (*(uint32 *)(lVar4 + 24) <= resourceID) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             fVar1 = *(float *)(*(int64 *)(lVar4 + 16) + 32 + lVar6 * 4);
-            lVar4 = *(int64 *)(pStatics + 56);
+            lVar4 = PlotController.SpringFestivelRewardLvTalkText;
             if (((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 88)) != null) &&
                (lVar4 = *(int64 *)(lVar4 + 144)) != null) {
               if (*(uint32 *)(lVar4 + 24) <= resourceID) {
@@ -319,7 +316,7 @@ public class FreeTradeUIController
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 fVar3 = *(float *)(lVar5._items + 32 + lVar6 * 4);
-                lVar6 = *(int64 *)(pStatics + 56);
+                lVar6 = PlotController.SpringFestivelRewardLvTalkText;
                 if (lVar6 != null) {
                   fVar7 = (float)AreaController.GetAreaSpePriceRate(lVar6,0);
                   fVar7 = fVar7 * (fVar2 + fVar1 + fVar3);

@@ -361,10 +361,9 @@ public class ForceData
     // RVA   : 0xB34EC0   Offset: 0xB342C0   Length: 0xBE
     public ForceData GetMasterForce()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null) {
           WorldData.GetForce(lVar1,this.masterForce,0);
           return;
         }
@@ -517,7 +516,6 @@ public class ForceData
     // RVA   : 0xB35690   Offset: 0xB34A90   Length: 0x1AA
     public float GetResearchSpeedRate()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         long lVar2;
         float fVar3;
@@ -525,16 +523,16 @@ public class ForceData
         if (this.forceSpeAddData != null) {
           fVar3 = (float)ForceSpeAddData.Get(this.forceSpeAddData,4);
           iVar1 = this.forceID;
-          if ((*pStatics != 0) &&
-             (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+          if ((GameController._instance != null) &&
+             (lVar2 = GameController._instance.worldData) != null) {
             lVar2 = WorldData.Player(lVar2,0);
             if (lVar2 != null) {
               if (iVar1 == *(int *)(lVar2 + 132)) {
                 fVar4 = 0.0;
               }
               else {
-                if ((*pStatics == 0) ||
-                   (lVar2 = *(int64 *)(*pStatics + 32)) == null)
+                if ((GameController._instance == null) ||
+                   (lVar2 = GameController._instance.worldData) == null)
                 throw; // [null/range check failed]
                 fVar4 = (float)WorldData.GetAIForceDevelopSpeed(lVar2,0);
                 fVar4 = fVar4 * 0.05;
@@ -549,21 +547,20 @@ public class ForceData
     // RVA   : 0xB35500   Offset: 0xB34900   Length: 0x18C
     public float GetResearchCostRate()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         long lVar2;
         float fVar3;
         iVar1 = this.forceID;
-        if ((*pStatics != 0) &&
-           (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar2 = GameController._instance.worldData) != null) {
           lVar2 = WorldData.Player(lVar2,0);
           if (lVar2 != null) {
             if (iVar1 == *(int *)(lVar2 + 132)) {
               fVar3 = 0.0;
             }
             else {
-              if ((*pStatics == 0) ||
-                 (lVar2 = *(int64 *)(*pStatics + 32)) == null)
+              if ((GameController._instance == null) ||
+                 (lVar2 = GameController._instance.worldData) == null)
               throw; // [null/range check failed]
               fVar3 = (float)WorldData.GetAIForceDevelopSpeed(lVar2,0);
               fVar3 = fVar3 * -0.05;
@@ -578,21 +575,20 @@ public class ForceData
     // RVA   : 0xB335F0   Offset: 0xB329F0   Length: 0x18C
     public float GetBuildCostRate()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         long lVar2;
         float fVar3;
         iVar1 = this.forceID;
-        if ((*pStatics != 0) &&
-           (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar2 = GameController._instance.worldData) != null) {
           lVar2 = WorldData.Player(lVar2,0);
           if (lVar2 != null) {
             if (iVar1 == *(int *)(lVar2 + 132)) {
               fVar3 = 0.0;
             }
             else {
-              if ((*pStatics == 0) ||
-                 (lVar2 = *(int64 *)(*pStatics + 32)) == null)
+              if ((GameController._instance == null) ||
+                 (lVar2 = GameController._instance.worldData) == null)
               throw; // [null/range check failed]
               fVar3 = (float)WorldData.GetAIForceDevelopSpeed(lVar2,0);
               fVar3 = fVar3 * -0.05;
@@ -630,7 +626,6 @@ public class ForceData
     // RVA   : 0xB358F0   Offset: 0xB34CF0   Length: 0x1B9
     public float GetSalaryRate()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         byte[] auVar1 = new byte[12];
         long lVar2;
         float fVar3;
@@ -642,13 +637,13 @@ public class ForceData
           auVar5._0_4_ = (float)(this.totalPopulation + -100) * 0.01 + 1.0;
         }
         uVar4 = auVar5._0_8_;
-        if ((*pStatics != 0) &&
-           (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar2 = GameController._instance.worldData) != null) {
           lVar2 = WorldData.Player(lVar2,0);
           if (lVar2 != null) {
             if (*(int *)(lVar2 + 132) != this.forceID) {
-              if ((*pStatics == 0) ||
-                 (lVar2 = *(int64 *)(*pStatics + 32)) == null)
+              if ((GameController._instance == null) ||
+                 (lVar2 = GameController._instance.worldData) == null)
               throw; // [null/range check failed]
               fVar3 = (float)WorldData.GetAIForceDevelopSpeed(lVar2,0);
               auVar1._4_8_ = auVar5._4_8_;
@@ -664,7 +659,6 @@ public class ForceData
     // RVA   : 0xB35320   Offset: 0xB34720   Length: 0x1D6
     public int GetRealSalaryCost()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         int iVar1;
         long lVar2;
         float fVar3;
@@ -675,13 +669,13 @@ public class ForceData
           auVar4._4_8_ = 0;
           auVar4._0_4_ = (float)(this.totalPopulation + -100) * 0.01 + 1.0;
         }
-        if ((*pStatics != 0) &&
-           (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar2 = GameController._instance.worldData) != null) {
           lVar2 = WorldData.Player(lVar2,0);
           if (lVar2 != null) {
             if (*(int *)(lVar2 + 132) != this.forceID) {
-              if ((*pStatics == 0) ||
-                 (lVar2 = *(int64 *)(*pStatics + 32)) == null)
+              if ((GameController._instance == null) ||
+                 (lVar2 = GameController._instance.worldData) == null)
               throw; // [null/range check failed]
               fVar3 = (float)WorldData.GetAIForceDevelopSpeed(lVar2,0);
               auVar4._4_8_ = auVar4._4_8_;
@@ -709,7 +703,6 @@ public class ForceData
     // RVA   : 0xB36ED0   Offset: 0xB362D0   Length: 0x412
     public void SetForceStopWarTime(int targetForceID, int time, bool back, bool showInfo)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         void ForceData.SetForceStopWarTime
                      (int64 this,uint32 targetForceID,uint32 time,char back,char showInfo)
         {
@@ -746,8 +739,8 @@ public class ForceData
         if (!back) {
           return;
         }
-        if (((*pStatics != 0) &&
-            (lVar4 = *(int64 *)(*pStatics + 32)) != null) &&
+        if (((GameController._instance != null) &&
+            (lVar4 = GameController._instance.worldData) != null) &&
            (lVar4 = WorldData.GetForce(lVar4,targetForceID,0)) != null) {
           uVar2 = 0;
           ForceData.SetForceStopWarTime(lVar4,this.forceID,time,0,1,0);
@@ -841,7 +834,6 @@ public class ForceData
     // RVA   : 0xB30DC0   Offset: 0xB301C0   Length: 0x346
     public void AddAllyForce(int targetForceID, bool back, bool showInfo)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
@@ -861,8 +853,8 @@ public class ForceData
         if (!back) {
           return;
         }
-        if (((*pStatics != 0) &&
-            (lVar3 = *(int64 *)(*pStatics + 32)) != null) &&
+        if (((GameController._instance != null) &&
+            (lVar3 = GameController._instance.worldData) != null) &&
            (lVar3 = WorldData.GetForce(lVar3,targetForceID,0)) != null) {
           ForceData.AddAllyForce(lVar3,this.forceID,0,1,0);
           if (!showInfo) {
@@ -906,7 +898,6 @@ public class ForceData
     // RVA   : 0xB31730   Offset: 0xB30B30   Length: 0x367
     public void BreakAllyForce(int targetForceID, bool back, bool showInfo)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
@@ -929,8 +920,8 @@ public class ForceData
         if (!back) {
           return;
         }
-        if (((*pStatics != 0) &&
-            (lVar3 = *(int64 *)(*pStatics + 32)) != null) &&
+        if (((GameController._instance != null) &&
+            (lVar3 = GameController._instance.worldData) != null) &&
            (lVar3 = WorldData.GetForce(lVar3,targetForceID,0)) != null) {
           ForceData.BreakAllyForce(lVar3,this.forceID,0,1,0);
           if (!showInfo) {
@@ -1148,7 +1139,6 @@ public class ForceData
     // RVA   : 0xB36920   Offset: 0xB35D20   Length: 0x5AC
     public void SetForceJob(int jobType, int jobID, HeroData targetHero)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         long lVar3;
         long lVar4;
@@ -1174,8 +1164,8 @@ public class ForceData
             lVar3 = (int64)(int)jobID * 4 + 32;
             uVar6 = 0xffffffff;
             if (*(int *)(lVar3 + lVar5.emptyNum) != -1) {
-              if (*pStatics == 0) throw; // [null/range check failed]
-              lVar5 = *(int64 *)(*pStatics + 32);
+              if (GameController._instance == null) throw; // [null/range check failed]
+              lVar5 = GameController._instance.worldData;
               if ((this.forceJobSettingData == null) ||
                  (lVar4 = this.forceJobSettingData.ForceJobs) == null)
               throw; // [null/range check failed]
@@ -1190,9 +1180,9 @@ public class ForceData
               if (lVar5 == null) throw; // [null/range check failed]
               lVar5 = WorldData.GetHero(lVar5,*(uint32 *)(lVar3 + *(int64 *)(lVar4 + 16)),0);
               if (lVar5 == null) throw; // [null/range check failed]
-              *(uint32 *)(lVar5 + 144) = 0xffffffff;
-              if (*pStatics == 0) throw; // [null/range check failed]
-              lVar5 = *(int64 *)(*pStatics + 32);
+              lVar5.MailDatas = 0xffffffff;
+              if (GameController._instance == null) throw; // [null/range check failed]
+              lVar5 = GameController._instance.worldData;
               if ((this.forceJobSettingData == null) ||
                  (lVar4 = this.forceJobSettingData.ForceJobs) == null)
               throw; // [null/range check failed]
@@ -1208,8 +1198,8 @@ public class ForceData
               lVar5 = WorldData.GetHero(lVar5,*(uint32 *)(lVar3 + *(int64 *)(lVar4 + 16)),0);
               if (lVar5 == null) throw; // [null/range check failed]
               *(uint32 *)(lVar5 + 148) = 0xffffffff;
-              if (*pStatics == 0) throw; // [null/range check failed]
-              lVar5 = *(int64 *)(*pStatics + 32);
+              if (GameController._instance == null) throw; // [null/range check failed]
+              lVar5 = GameController._instance.worldData;
               if ((this.forceJobSettingData == null) ||
                  (lVar4 = this.forceJobSettingData.ForceJobs) == null)
               throw; // [null/range check failed]
@@ -1224,9 +1214,9 @@ public class ForceData
               if (lVar5 == null) throw; // [null/range check failed]
               lVar5 = WorldData.GetHero(lVar5,*(uint32 *)(lVar3 + *(int64 *)(lVar4 + 16)),0);
               if (lVar5 == null) throw; // [null/range check failed]
-              *(uint32 *)(lVar5 + 152) = 0;
-              if (*pStatics == 0) throw; // [null/range check failed]
-              lVar5 = *(int64 *)(*pStatics + 32);
+              lVar5.cheating = 0;
+              if (GameController._instance == null) throw; // [null/range check failed]
+              lVar5 = GameController._instance.worldData;
               if ((this.forceJobSettingData == null) ||
                  (lVar4 = this.forceJobSettingData.ForceJobs) == null)
               throw; // [null/range check failed]
@@ -1311,12 +1301,11 @@ public class ForceData
     // RVA   : 0xB35060   Offset: 0xB34460   Length: 0xFD
     public HeroData GetOwnHero(int id)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         long lVar2;
-        if (*pStatics != 0) {
+        if (GameController._instance != null) {
           lVar1 = this.ownHeros;
-          lVar2 = *(int64 *)(*pStatics + 32);
+          lVar2 = GameController._instance.worldData;
           if (lVar1 != null) {
             if (lVar1.Count <= id) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1335,7 +1324,6 @@ public class ForceData
     // RVA   : 0xB35160   Offset: 0xB34560   Length: 0x1BA
     public List<HeroData> GetOwnHeros()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
@@ -1352,9 +1340,9 @@ public class ForceData
             if (lVar4.Count <= (int)uVar5) {
               return lVar2;
             }
-            if (*pStatics == 0) break;
+            if (GameController._instance == null) break;
             lVar4 = this.ownHeros;
-            lVar1 = *(int64 *)(*pStatics + 32);
+            lVar1 = GameController._instance.worldData;
             if (lVar4 == null) break;
             if (lVar4.Count <= uVar5) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1487,10 +1475,9 @@ public class ForceData
     // RVA   : 0xB35F40   Offset: 0xB35340   Length: 0xBE
     public AreaData MainArea()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null) {
           WorldData.GetArea(lVar1,this.mainAreaID,0);
           return;
         }
@@ -1519,7 +1506,6 @@ public class ForceData
     // RVA   : 0xB37D10   Offset: 0xB37110   Length: 0x47B
     public void UpgradeNowResearch(bool showInfo)
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_f6a8 = *(int64*)(DAT_181d7f6a8 + 184);
         float fVar1;
         uint uVar2;
@@ -1535,7 +1521,7 @@ public class ForceData
         ulong uStack_40;
         lVar5 = ForceData.GetNowResearchTech(this,0);
         if (lVar5 != null) {
-          *(uint32 *)(lVar5 + 24) = 0;
+          lVar5.cityAreaID = 0;
           lVar5 = ForceData.GetNowResearchTech(this,0);
           if (lVar5 != null) {
             *(int *)(lVar5 + 20) = *(int *)(lVar5 + 20) + 1;
@@ -1581,14 +1567,14 @@ public class ForceData
                           if (lVar5 != null) {
                             lVar5 = ForceTechLvData.Database(lVar5,0);
                             if (lVar5 != null) {
-                              uVar3 = *(uint64 *)(lVar5 + 24);
+                              uVar3 = lVar5.cityAreaID;
                               lVar5 = ForceData.GetNowResearchTech(this,0);
                               if (lVar5 != null) {
                                 local_res20[0] = *(uint32 *)(lVar5 + 20);
                                 uVar7 = il2cpp_value_box(DAT_181d80418,local_res20);
                                 uVar8 = String.Format("{0}完成研究[{1}Lv{2}]！",uVar8,uVar3,uVar7,0);
-                                if ((*pStatics_2cc8 != 0) &&
-                                   (lVar5 = *(int64 *)(*pStatics_2cc8 + 32),
+                                if ((GameController._instance != null) &&
+                                   (lVar5 = GameController._instance.worldData,
                                    lVar5 != null)) {
                                   lVar5 = WorldData.Player(lVar5,0);
                                   if (lVar5 != null) {
@@ -1602,9 +1588,9 @@ public class ForceData
                                                  &local_48,0);
                                     }
                                     lVar5 = *pStatics_f6a8;
-                                    if ((*pStatics_2cc8 != 0) &&
+                                    if ((GameController._instance != null) &&
                                        (lVar6 = *(int64 *)
-                                                 (*pStatics_2cc8 + 32),
+                                                 (GameController._instance + 32),
                                        lVar6 != null)) {
                                       lVar6 = WorldData.Player(lVar6,0);
                                       if ((lVar6 != null) && (lVar5 != null)) {
@@ -1637,7 +1623,6 @@ public class ForceData
     // RVA   : 0xB37840   Offset: 0xB36C40   Length: 0x358
     public void SetNowResearch(ForceTechLvData targetTech, bool showInfo)
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_f6a8 = *(int64*)(DAT_181d7f6a8 + 184);
         ulong uVar1;
         bool cVar2;
@@ -1666,14 +1651,14 @@ public class ForceData
         }
         lVar3 = ForceData.GetNowResearchTech(this,0);
         if ((lVar3 != null) && (lVar3 = ForceTechLvData.Database(lVar3,0)) != null) {
-          uVar1 = *(uint64 *)(lVar3 + 24);
+          uVar1 = lVar3.cityAreaID;
           lVar3 = ForceData.GetNowResearchTech(this,0);
           if (lVar3 != null) {
             local_res10[0] = *(uint32 *)(lVar3 + 20);
             uVar4 = il2cpp_value_box(DAT_181d80418,local_res10);
             uVar5 = String.Format("{0}开始研究[{1}Lv{2}]！",uVar5,uVar1,uVar4,0);
-            if (((*pStatics_2cc8 != 0) &&
-                (lVar3 = *(int64 *)(*pStatics_2cc8 + 32)) != null) &&
+            if (((GameController._instance != null) &&
+                (lVar3 = GameController._instance.worldData) != null) &&
                (lVar3 = WorldData.Player(lVar3,0)) != null) {
               if (*(int *)(lVar3 + 132) == this.forceID) {
                 if (*pStatics_f6a8 == 0) goto LAB_180b37b8d;
@@ -1684,8 +1669,8 @@ public class ForceData
                            "NoticeLittle",0x3f800000,0x40a00000,&local_18,0);
               }
               lVar3 = *pStatics_f6a8;
-              if ((((*pStatics_2cc8 != 0) &&
-                   (lVar6 = *(int64 *)(*pStatics_2cc8 + 32)) != null) &&
+              if ((((GameController._instance != null) &&
+                   (lVar6 = GameController._instance.worldData) != null) &&
                   (lVar6 = WorldData.Player(lVar6,0)) != null) && (lVar3 != null)) {
                 InfoController.AddInfo(lVar3,*(int *)(lVar6 + 132) == this.forceID,uVar5,0);
                 return;
@@ -1783,7 +1768,6 @@ public class ForceData
     // RVA   : 0xB368F0   Offset: 0xB35CF0   Length: 0x22
     public void SetForceFavor(ForceFavorSettingData setting)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         bool cVar1;
         long lVar2;
         ForceData.UpgradeForceFavorDict(this,0);
@@ -1798,29 +1782,29 @@ public class ForceData
             if (lVar2 == null) throw; // [null/range check failed]
             FUN_1817c6620(lVar2,setting,param_3,DAT_181dbe540);
           }
-          if ((*pStatics != 0) &&
-             (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+          if ((GameController._instance != null) &&
+             (lVar2 = GameController._instance.worldData) != null) {
             lVar2 = WorldData.GetForce(lVar2,setting,0);
-            if ((lVar2 != null) && (*(int64 *)(lVar2 + 216) != 0)) {
-              cVar1 = FUN_1808ab490(*(int64 *)(lVar2 + 216),this.forceID,
+            if ((lVar2 != null) && (lVar2.plotHappened != null)) {
+              cVar1 = FUN_1808ab490(lVar2.plotHappened,this.forceID,
                                     DAT_181dbde60);
               if (!cVar1) {
-                if ((*pStatics != 0) &&
-                   (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+                if ((GameController._instance != null) &&
+                   (lVar2 = GameController._instance.worldData) != null) {
                   lVar2 = WorldData.GetForce(lVar2,setting,0);
-                  if ((lVar2 != null) && (*(int64 *)(lVar2 + 216) != 0)) {
-                    FUN_1817af4f0(*(int64 *)(lVar2 + 216),this.forceID,param_3,
+                  if ((lVar2 != null) && (lVar2.plotHappened != null)) {
+                    FUN_1817af4f0(lVar2.plotHappened,this.forceID,param_3,
                                   DAT_181dbdd50);
                     return;
                   }
                 }
               }
               else {
-                if ((*pStatics != 0) &&
-                   (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+                if ((GameController._instance != null) &&
+                   (lVar2 = GameController._instance.worldData) != null) {
                   lVar2 = WorldData.GetForce(lVar2,setting,0);
-                  if ((lVar2 != null) && (*(int64 *)(lVar2 + 216) != 0)) {
-                    FUN_1817c6620(*(int64 *)(lVar2 + 216),this.forceID,param_3,
+                  if ((lVar2 != null) && (lVar2.plotHappened != null)) {
+                    FUN_1817c6620(lVar2.plotHappened,this.forceID,param_3,
                                   DAT_181dbe540);
                     return;
                   }
@@ -1835,7 +1819,6 @@ public class ForceData
     // RVA   : 0xB365D0   Offset: 0xB359D0   Length: 0x314
     public void SetForceFavor(int id, float favor)
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         bool cVar1;
         long lVar2;
         ForceData.UpgradeForceFavorDict(this,0);
@@ -1850,29 +1833,29 @@ public class ForceData
             if (lVar2 == null) throw; // [null/range check failed]
             FUN_1817c6620(lVar2,id,favor,DAT_181dbe540);
           }
-          if ((*pStatics != 0) &&
-             (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+          if ((GameController._instance != null) &&
+             (lVar2 = GameController._instance.worldData) != null) {
             lVar2 = WorldData.GetForce(lVar2,id,0);
-            if ((lVar2 != null) && (*(int64 *)(lVar2 + 216) != 0)) {
-              cVar1 = FUN_1808ab490(*(int64 *)(lVar2 + 216),this.forceID,
+            if ((lVar2 != null) && (lVar2.plotHappened != null)) {
+              cVar1 = FUN_1808ab490(lVar2.plotHappened,this.forceID,
                                     DAT_181dbde60);
               if (!cVar1) {
-                if ((*pStatics != 0) &&
-                   (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+                if ((GameController._instance != null) &&
+                   (lVar2 = GameController._instance.worldData) != null) {
                   lVar2 = WorldData.GetForce(lVar2,id,0);
-                  if ((lVar2 != null) && (*(int64 *)(lVar2 + 216) != 0)) {
-                    FUN_1817af4f0(*(int64 *)(lVar2 + 216),this.forceID,favor,
+                  if ((lVar2 != null) && (lVar2.plotHappened != null)) {
+                    FUN_1817af4f0(lVar2.plotHappened,this.forceID,favor,
                                   DAT_181dbdd50);
                     return;
                   }
                 }
               }
               else {
-                if ((*pStatics != 0) &&
-                   (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+                if ((GameController._instance != null) &&
+                   (lVar2 = GameController._instance.worldData) != null) {
                   lVar2 = WorldData.GetForce(lVar2,id,0);
-                  if ((lVar2 != null) && (*(int64 *)(lVar2 + 216) != 0)) {
-                    FUN_1817c6620(*(int64 *)(lVar2 + 216),this.forceID,favor,
+                  if ((lVar2 != null) && (lVar2.plotHappened != null)) {
+                    FUN_1817c6620(lVar2.plotHappened,this.forceID,favor,
                                   DAT_181dbe540);
                     return;
                   }
@@ -2645,10 +2628,9 @@ public class ForceData
     // RVA   : 0xB34E00   Offset: 0xB34200   Length: 0xBE
     public HeroData GetLeader()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar1 = GameController._instance.worldData) != null) {
           WorldData.GetHero(lVar1,this.leader,0);
           return;
         }
@@ -3053,9 +3035,7 @@ public class ForceData
     // RVA   : 0xB344F0   Offset: 0xB338F0   Length: 0x902
     public string GetJoinForceNeedDescribe()
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
-        var pStatics_7c78 = *(int64*)(DAT_181dc7c78 + 184);
         float fVar1;
         long lVar2;
         bool cVar3;
@@ -3077,17 +3057,17 @@ public class ForceData
           if (fVar13 != 1.0) {
             uVar6 = "仅限女性";
           }
-          if ((*pStatics_2cc8 == 0) ||
-             (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) == null)
+          if ((GameController._instance == null) ||
+             (lVar5 = GameController._instance.worldData) == null)
           goto LAB_180b34de1;
           lVar5 = WorldData.Player(lVar5,0);
           if (this.forceMaleRate == 1.0) {
             if (lVar5 == null) goto LAB_180b34de1;
-            uVar12 = *(char *)(lVar5 + 128) == false;
+            uVar12 = !lVar5.WorldEventDatas;
           }
           else if (this.forceMaleRate == null.0) {
             if (lVar5 == null) goto LAB_180b34de1;
-            uVar12 = *(uint8 *)(lVar5 + 128);
+            uVar12 = lVar5.WorldEventDatas;
           }
           else {
             uVar12 = 1;
@@ -3106,11 +3086,11 @@ public class ForceData
         else {
           fVar13 = 1.0;
         }
-        local_res8[0] = fVar13 * *(float *)(pStatics_7c78 + 4);
+        local_res8[0] = fVar13 * ForceData.JoinBigForceNeedFame;
         uVar7 = il2cpp_value_box(DAT_181da22d8,local_res8);
         uVar8 = String.Format(uVar8,uVar7,0);
-        if (((*pStatics_2cc8 == 0) ||
-            (lVar5 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+        if (((GameController._instance == null) ||
+            (lVar5 = GameController._instance.worldData) == null) ||
            (lVar5 = WorldData.Player(lVar5,0)) == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
@@ -3122,7 +3102,7 @@ public class ForceData
         else {
           fVar14 = 1.0;
         }
-        fVar1 = *(float *)(pStatics_7c78 + 4);
+        fVar1 = ForceData.JoinBigForceNeedFame;
         uVar8 = GlobalData.GenerateChangeColorText(uVar8,fVar1 * fVar14 <= fVar13,0);
         uVar6 = String.Concat(uVar6,uVar9,uVar8,0);
         iVar11 = 0;
@@ -3151,13 +3131,13 @@ public class ForceData
           uVar7 = il2cpp_value_box(DAT_181da22d8,local_res8);
           uVar8 = String.Format(uVar8,uVar9,uVar7,0);
           lVar5 = FUN_18046c0a0(0);
-          if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-             (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null) {
+          if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+             (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null) {
         LAB_180b34de7:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          lVar5 = *(int64 *)(lVar5 + 0x150);
+          lVar5 = lVar5.monthFreshBountyTime;
           if ((this.kungfuSkillFocus == null) ||
              (uVar4 = FUN_1800d6760(this.kungfuSkillFocus,iVar10,DAT_181d8fa18), lVar5 == null))
           goto LAB_180b34de7;
@@ -3201,13 +3181,13 @@ public class ForceData
         uVar7 = il2cpp_value_box(DAT_181da22d8,local_res8);
         uVar8 = String.Format(uVar8,uVar9,uVar7,0);
         lVar5 = FUN_18046c0a0(0);
-        if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
-           (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null) {
+        if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
+           (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null) {
         LAB_180b34ded:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        lVar5 = *(int64 *)(lVar5 + 0x168);
+        lVar5 = lVar5.showRoomChangeFame;
         if ((this.livingSkillFocus == null) ||
            (uVar4 = FUN_1800d6760(this.livingSkillFocus,iVar11,DAT_181d8fa18), lVar5 == null))
         goto LAB_180b34ded;
@@ -3230,30 +3210,29 @@ public class ForceData
     // RVA   : 0xB36050   Offset: 0xB35450   Length: 0x4AD
     public bool PlayerMeetForceJoinRequire()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         uint uVar1;
         long lVar2;
         int iVar4;
         int iVar5;
         float fVar6;
         float fVar7;
-        if ((*pStatics == 0) ||
-           (lVar2 = *(int64 *)(*pStatics + 32)) == null)
+        if ((GameController._instance == null) ||
+           (lVar2 = GameController._instance.worldData) == null)
         goto LAB_180b364f8;
         lVar2 = WorldData.Player(lVar2,0);
         if (this.forceMaleRate == 1.0) {
           if (lVar2 == null) goto LAB_180b364f8;
-          pfVar3 = (float *)CONCAT71((int7)((uint64)lVar2 >> 8),*(char *)(lVar2 + 128) == false);
+          pfVar3 = (float *)CONCAT71((int7)((uint64)lVar2 >> 8),!lVar2.WorldEventDatas);
         LAB_180b361a5:
           if ((char)!pfVar3) goto LAB_180b364f4;
         }
         else if (this.forceMaleRate == null.0) {
           if (lVar2 == null) goto LAB_180b364f8;
-          pfVar3 = (float *)(uint64)*(byte *)(lVar2 + 128);
+          pfVar3 = (float *)(uint64)lVar2.WorldEventDatas;
           goto LAB_180b361a5;
         }
-        if (((*pStatics != 0) &&
-            (lVar2 = *(int64 *)(*pStatics + 32)) != null) &&
+        if (((GameController._instance != null) &&
+            (lVar2 = GameController._instance.worldData) != null) &&
            (lVar2 = WorldData.Player(lVar2,0)) != null) {
           fVar6 = *(float *)(lVar2 + 0x1c4);
           if (!this.bigForce) {
@@ -3273,10 +3252,10 @@ public class ForceData
           if (lVar2 != null) {
             while (iVar5 < lVar2.Count) {
               lVar2 = FUN_18046c0a0(0);
-              if (((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) ||
-                 (lVar2 = WorldData.Player(*(int64 *)(lVar2 + 32),0)) == null)
+              if (((lVar2 == null) || (lVar2.villageAreaID == null)) ||
+                 (lVar2 = WorldData.Player(lVar2.villageAreaID,0)) == null)
               goto LAB_180b364f8;
-              lVar2 = *(int64 *)(lVar2 + 0x150);
+              lVar2 = lVar2.monthFreshBountyTime;
               if ((this.kungfuSkillFocus == null) ||
                  (uVar1 = FUN_1800d6760(this.kungfuSkillFocus,iVar5,DAT_181d8fa18), lVar2 == null))
               goto LAB_180b364f8;
@@ -3305,9 +3284,9 @@ public class ForceData
           return CONCAT71((int7)((uint64)lVar2 >> 8),1);
         }
         lVar2 = FUN_18046c0a0(0);
-        if (((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) ||
-           (lVar2 = WorldData.Player(*(int64 *)(lVar2 + 32),0)) == null) goto LAB_180b364f8;
-        lVar2 = *(int64 *)(lVar2 + 0x168);
+        if (((lVar2 == null) || (lVar2.villageAreaID == null)) ||
+           (lVar2 = WorldData.Player(lVar2.villageAreaID,0)) == null) goto LAB_180b364f8;
+        lVar2 = lVar2.showRoomChangeFame;
         if ((this.livingSkillFocus == null) ||
            (uVar1 = FUN_1800d6760(this.livingSkillFocus,iVar4,DAT_181d8fa18), lVar2 == null))
         goto LAB_180b364f8;

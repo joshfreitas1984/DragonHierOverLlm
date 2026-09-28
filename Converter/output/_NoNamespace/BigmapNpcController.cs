@@ -1003,17 +1003,16 @@ public class BigmapNpcController
     // RVA   : 0xC7E920   Offset: 0xC7DD20   Length: 0x176
     public float GetBigMapExtraScale(float extraScale)
     {
-        var pStatics = *(int64*)(DAT_181db0bc8 + 184);
         float fVar1;
         float fVar2;
         long lVar3;
         float fVar4;
         fVar1 = **(float **)(DAT_181db0bc8 + 184);
-        lVar3 = *(int64 *)(pStatics + 16);
+        lVar3 = GameController.CheckShowSpeHero;
         if (lVar3 != null) {
           fVar4 = (float)BigMapController.BigMapNowScale(lVar3,0);
           fVar2 = **(float **)(DAT_181db0bc8 + 184);
-          lVar3 = *(int64 *)(pStatics + 16);
+          lVar3 = GameController.CheckShowSpeHero;
           if (lVar3 != null) {
             Mathf.Max(lVar3,((fVar1 - fVar4) * extraScale) / (fVar2 - *(float *)(lVar3 + 28)) + 1.0,0);
             return;
@@ -2015,19 +2014,18 @@ public class BigmapNpcController
     // RVA   : 0xC806D0   Offset: 0xC7FAD0   Length: 0x16E
     public void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181db0bc8 + 184);
         long lVar1;
         ulong uVar2;
         if (this.heroData != null) {
           if (this.heroData.heroID == null) {
-            lVar1 = *(int64 *)(pStatics + 16);
+            lVar1 = GameController.CheckShowSpeHero;
             if (lVar1 != null) {
               BigMapController.PlayerStopMove(lVar1,0);
               return;
             }
           }
           else {
-            lVar1 = *(int64 *)(pStatics + 16);
+            lVar1 = GameController.CheckShowSpeHero;
             uVar2 = Component.get_gameObject(this,0);
             if (lVar1 != null) {
               BigMapController.SetPlayerMoveTargetArea(lVar1,uVar2,0);

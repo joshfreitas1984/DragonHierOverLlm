@@ -114,8 +114,6 @@ public class StudyDodgeSkillController
     // RVA   : 0xFDA050   Offset: 0xFD9450   Length: 0x3DA
     private void Update()
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
-        var pStatics_8190 = *(int64*)(DAT_181da8190 + 184);
         ulong uVar1;
         long lVar2;
         ulong uVar3;
@@ -125,21 +123,21 @@ public class StudyDodgeSkillController
           lVar2 = this.finishButton;
         }
         else {
-          if (*pStatics_8190 == 0) throw; // [null/range check failed]
-          uVar3 = *(uint64 *)(*pStatics_8190 + 80);
+          if (StudySkillController._instance == null) throw; // [null/range check failed]
+          uVar3 = StudySkillController._instance.expText;
           uVar1 = Single.ToString(this + 72,0);
           uVar1 = String.Concat("经验 ",uVar1,0);
           LTLocalization.SetText(uVar3,uVar1,0);
-          if (*pStatics_8190 == 0) throw; // [null/range check failed]
-          uVar3 = *(uint64 *)(*pStatics_8190 + 88);
+          if (StudySkillController._instance == null) throw; // [null/range check failed]
+          uVar3 = StudySkillController._instance.comboText;
           uVar1 = Int32.ToString(this + 76,0);
           LTLocalization.SetText(uVar3,uVar1,0);
-          if ((*pStatics_2cc8 == 0) ||
-             (lVar2 = *(int64 *)(*pStatics_2cc8 + 32)) == null)
+          if ((GameController._instance == null) ||
+             (lVar2 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
           lVar2 = WorldData.Player(lVar2,0);
-          if ((*pStatics_8190 == 0) || (lVar2 == null)) throw; // [null/range check failed]
-          HeroData.SetHpBar(lVar2,*(uint64 *)(*pStatics_8190 + 96),0);
+          if ((StudySkillController._instance == null) || (lVar2 == null)) throw; // [null/range check failed]
+          HeroData.SetHpBar(lVar2,StudySkillController._instance.hpBarRoot,0);
           lVar2 = this.finishButton;
           if (!this.finishing) {
             if (lVar2 != null) {
@@ -660,7 +658,6 @@ public class StudyDodgeSkillController
     private void InitStudyDodgeGround()
     {
         var plVar2 = *(int64*)(lVar2 + 184);
-        var pStatics = *(int64*)(DAT_181da8090 + 184);
         long lVar2;
         ulong uVar3;
         ulong uVar5;
@@ -677,7 +674,7 @@ public class StudyDodgeSkillController
         uint local_50;
         long local_48;
         long local_40;
-        lVar2 = *pStatics;
+        lVar2 = StudyDodgePlayer.MoveTimeLimit;
         if (lVar2 != null) {
           if (*(uint32 *)(lVar2 + 24) < 6) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -688,7 +685,7 @@ public class StudyDodgeSkillController
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             iVar9 = *(int *)(*(int64 *)(lVar2 + 16) + 32);
-            lVar2 = *pStatics;
+            lVar2 = StudyDodgePlayer.MoveTimeLimit;
             if (lVar2 != null) {
               if (*(uint32 *)(lVar2 + 24) < 6) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -819,8 +816,6 @@ public class StudyDodgeSkillController
     // RVA   : 0xFD9CD0   Offset: 0xFD90D0   Length: 0x379
     public void StartStudyDodgeSkill(KungfuSkillLvData target)
     {
-        var pStatics_8090 = *(int64*)(DAT_181da8090 + 184);
-        var pStatics_8190 = *(int64*)(DAT_181da8190 + 184);
         uint uVar1;
         long lVar2;
         long lVar3;
@@ -841,8 +836,8 @@ public class StudyDodgeSkillController
               }
               *(uint64 *)(lVar2 + 72) = 0;
               *(uint8 *)(lVar2 + 64) = 0;
-              if ((*pStatics_8190 != 0) &&
-                 (lVar2 = *(int64 *)(*pStatics_8190 + 96)) != null) {
+              if ((StudySkillController._instance != null) &&
+                 (lVar2 = StudySkillController._instance.hpBarRoot) != null) {
                 GameObject.SetActive(lVar2,1,0);
                 this.inStudy = 1;
                 this.targetSkill = target;
@@ -854,7 +849,7 @@ public class StudyDodgeSkillController
                     StudyDodgeSkillController.ResetCombo(this,0);
                     this.comboTime = 0x3f800000;
                     this.skillUsed = 0;
-                    lVar2 = *pStatics_8090;
+                    lVar2 = StudyDodgePlayer.MoveTimeLimit;
                     if (this.targetSkill != null) {
                       lVar3 = KungfuSkillLvData.DataBase(this.targetSkill,0);
                       if ((lVar3 != null) && (lVar2 != null)) {
@@ -870,7 +865,7 @@ public class StudyDodgeSkillController
                           }
                           this.mapWidth =
                                *(uint32 *)(*(int64 *)(lVar2 + 16) + 32);
-                          lVar2 = *pStatics_8090;
+                          lVar2 = StudyDodgePlayer.MoveTimeLimit;
                           if (this.targetSkill != null) {
                             lVar3 = KungfuSkillLvData.DataBase(this.targetSkill,0);
                             if ((lVar3 != null) && (lVar2 != null)) {
@@ -920,7 +915,6 @@ public class StudyDodgeSkillController
     // RVA   : 0xFD7CB0   Offset: 0xFD70B0   Length: 0x77B
     public void GenerateStudyDodgePanel()
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_8010 = *(int64*)(DAT_181da8010 + 184);
         float fVar1;
         bool cVar2;
@@ -991,8 +985,8 @@ public class StudyDodgeSkillController
                       }
                       else {
                         lVar3 = *pStatics_8010;
-                        if ((*pStatics_2cc8 == 0) ||
-                           (lVar4 = *(int64 *)(*pStatics_2cc8 + 32),
+                        if ((GameController._instance == null) ||
+                           (lVar4 = GameController._instance.worldData,
                            lVar4 == null)) throw; // [null/range check failed]
                         lVar4 = WorldData.Player(lVar4,0);
                         if (*pStatics_8010 == 0) throw; // [null/range check failed]
@@ -1062,21 +1056,20 @@ public class StudyDodgeSkillController
     // RVA   : 0xFDA430   Offset: 0xFD9830   Length: 0x14F
     public void UseSlowTimeSkill()
     {
-        var pStatics = *(int64*)(DAT_181d72cc8 + 184);
         long lVar1;
         long lVar2;
         this.skillUsed = 1;
         lVar1 = **(int64 **)(DAT_181dabe88 + 184);
-        if ((*pStatics != 0) &&
-           (lVar2 = *(int64 *)(*pStatics + 32)) != null) {
+        if ((GameController._instance != null) &&
+           (lVar2 = GameController._instance.worldData) != null) {
           lVar2 = WorldData.Player(lVar2,0);
-          if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 0x150)) != null) {
-            if (*(uint32 *)(lVar2 + 24) < 2) {
+          if ((lVar2 = lVar2?.monthFreshBountyTime) != null) {
+            if (lVar2.cityAreaID < 2) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             if (lVar1 != null) {
               TimeScaleController.SetSlowTime
-                        (lVar1,*(float *)(*(int64 *)(lVar2 + 16) + 36) * 0.04 + 1.0,0x3e4ccccd,0);
+                        (lVar1,*(float *)(lVar2.chapter + 36) * 0.04 + 1.0,0x3e4ccccd,0);
               return;
             }
           }
@@ -1109,7 +1102,6 @@ public class StudyDodgeSkillController
     // RVA   : 0xFD7A20   Offset: 0xFD6E20   Length: 0x1DB
     public void ChangeCombo(int num)
     {
-        var pStatics = *(int64*)(DAT_181da8190 + 184);
         long lVar1;
         ulong uVar3;
         uint uVar4;
@@ -1117,8 +1109,8 @@ public class StudyDodgeSkillController
         uint local_20;
         byte[] local_18 = new byte[16];
         this.combo = this.combo + num;
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 88)) != null) {
+        if ((StudySkillController._instance != null) &&
+           (lVar1 = StudySkillController._instance.comboText) != null) {
           lVar1 = Component.get_transform(lVar1,0);
           if (lVar1 != null) {
             lVar1 = FUN_180da9a20(lVar1,0);
@@ -1127,8 +1119,8 @@ public class StudyDodgeSkillController
               local_20 = *(uint32 *)(puVar2 + 1);
               local_28 = *puVar2;
               Transform.set_localScale(lVar1,&local_28,0);
-              if ((*pStatics != 0) &&
-                 (lVar1 = *(int64 *)(*pStatics + 88)) != null) {
+              if ((StudySkillController._instance != null) &&
+                 (lVar1 = StudySkillController._instance.comboText) != null) {
                 lVar1 = Component.get_transform(lVar1,0);
                 if (lVar1 != null) {
                   uVar3 = FUN_180da9a20(lVar1,0);
@@ -1152,14 +1144,13 @@ public class StudyDodgeSkillController
     // RVA   : 0xFD9B50   Offset: 0xFD8F50   Length: 0x106
     public void ResetCombo()
     {
-        var pStatics = *(int64*)(DAT_181da8190 + 184);
         long lVar1;
         ulong local_28;
         uint local_20;
         byte[] local_18 = new byte[16];
         this.combo = 0;
-        if ((*pStatics != 0) &&
-           (lVar1 = *(int64 *)(*pStatics + 88)) != null) {
+        if ((StudySkillController._instance != null) &&
+           (lVar1 = StudySkillController._instance.comboText) != null) {
           lVar1 = Component.get_transform(lVar1,0);
           if (lVar1 != null) {
             lVar1 = FUN_180da9a20(lVar1,0);

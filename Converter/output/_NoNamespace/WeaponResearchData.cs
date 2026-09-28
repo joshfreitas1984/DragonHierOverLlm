@@ -55,7 +55,6 @@ public class WeaponResearchData
     // RVA   : 0xC13930   Offset: 0xC12D30   Length: 0x3DA
     public void ChangeExp(float _exp)
     {
-        var pStatics_2cc8 = *(int64*)(DAT_181d72cc8 + 184);
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
         long lVar1;
         long lVar2;
@@ -75,8 +74,8 @@ public class WeaponResearchData
             this.exp = _exp - (float)((iVar3 + 2) * (iVar3 + 1)) * 0.5;
             lVar1 = **(int64 **)(DAT_181d7f6a8 + 184);
             lVar2 = *(int64 *)(pStatics_3d40 + 0x4a0);
-            if ((((*pStatics_2cc8 == 0) ||
-                 (lVar4 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+            if ((((GameController._instance == null) ||
+                 (lVar4 = GameController._instance.worldData) == null) ||
                 (lVar4 = WorldData.Player(lVar4,0)) == null) ||
                (iVar3 = HeroData.GetWeaponResearchWeaponType(lVar4,0), lVar2 == null)) {
         LAB_180c13d05:
@@ -88,8 +87,8 @@ public class WeaponResearchData
             uVar6 = il2cpp_value_box(DAT_181d80418,local_res10);
             uVar5 = String.Format("{0}兵器研究达到{1}级",uVar5,uVar6,0);
             lVar2 = *(int64 *)(pStatics_3d40 + 0x4a0);
-            if (((*pStatics_2cc8 == 0) ||
-                (lVar4 = *(int64 *)(*pStatics_2cc8 + 32)) == null) ||
+            if (((GameController._instance == null) ||
+                (lVar4 = GameController._instance.worldData) == null) ||
                ((lVar4 = WorldData.Player(lVar4,0), lVar4 == null ||
                 ((iVar3 = HeroData.GetWeaponResearchWeaponType(lVar4,0), lVar2 == null ||
                  (uVar6 = FUN_180002f80(lVar2,iVar3 + 3,DAT_181da4358), lVar1 == null))))))
