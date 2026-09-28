@@ -5773,11 +5773,7 @@
 - raw: "断臂"
   splits:
   - text: "断臂"
-    translated: "Amputated arm"
-    qcReviewedText: "Amputated arm"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Severed Arm"
 - raw: "跛足"
   splits:
   - text: "跛足"
@@ -8509,11 +8505,7 @@
 - raw: "断腕0.1"
   splits:
   - text: "断腕0.1"
-    translated: "Amputate 0.1"
-    qcReviewedText: "Amputate 0.1"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Severed Wrist 0.1"
 - raw: "手15"
   splits:
   - text: "手15"
@@ -10202,11 +10194,7 @@
 - raw: "断腕0.06"
   splits:
   - text: "断腕0.06"
-    translated: "Amputate 0.06"
-    qcReviewedText: "Amputate 0.06"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Severed Wrist 0.06"
 - raw: "腹17"
   splits:
   - text: "腹17"
@@ -13877,11 +13865,7 @@
 - raw: "断腕0.08"
   splits:
   - text: "断腕0.08"
-    translated: "Amputate 0.08"
-    qcReviewedText: "Amputate 0.08"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Severed Wrist 0.08"
 - raw: "二十四路枪势"
   splits:
   - text: "二十四路枪势"
@@ -16782,7 +16766,7 @@
 - raw: "断腕0.05;伤害0.05"
   splits:
   - text: "断腕0.05"
-    translated: "Amputate 0.05"
+    translated: "Severed Wrist 0.05"
   - subIndex: 1
     text: "伤害0.05"
     translated: "Damage 0.05"
@@ -53359,11 +53343,7 @@
 - raw: "断腕"
   splits:
   - text: "断腕"
-    translated: "Amputate"
-    qcReviewedText: "Amputate"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Severed Wrist"
 - raw: "断招"
   splits:
   - text: "断招"

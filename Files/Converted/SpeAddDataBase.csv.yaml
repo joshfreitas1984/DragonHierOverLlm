@@ -1940,11 +1940,7 @@
   splits:
   - split: 3
     text: "断腕"
-    translated: "Amputate"
-    qcReviewedText: "Amputate"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Severed Wrist"
   - split: 4
     text: "顺受"
     translated: "Submit willingly"
@@ -3761,11 +3757,7 @@
   splits:
   - split: 3
     text: "断腕"
-    translated: "Amputate"
-    qcReviewedText: "Amputate"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Severed Wrist"
   - split: 4
     text: "无"
     translated: "None"
