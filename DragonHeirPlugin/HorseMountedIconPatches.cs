@@ -123,6 +123,7 @@ internal static class HorseMountedIconPatches
         }
     }
 
+    // [GameCoupled HorseIconController.Update logic] builds the sprite key as targetHorseData.name + "大"
     [HarmonyPatch(typeof(HorseIconController), nameof(HorseIconController.Update))]
     [HarmonyPostfix]
     private static void Update_Postfix(HorseIconController __instance)

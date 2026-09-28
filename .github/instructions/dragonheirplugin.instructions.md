@@ -24,6 +24,14 @@ are indexed by [`docs/KNOWN_ISSUES.md`](../../docs/KNOWN_ISSUES.md).
   target was bound and that the patch executes at runtime.
 - Keep `UnityEngine.Object` and `Il2CppSystem.Object` types distinct in signatures and patch
   attributes.
+- Tag any patch that a game update could break without a compile error with
+  `// [GameCoupled Class.Method kind] reason` directly above it (or `Class` alone for a
+  class-wide dependency). Kinds: `replaces` (skip-original prefix that re-implements the method),
+  `by-name` (target/member/parameter bound by string), `logic` (depends on how the game method
+  behaves internally), `ui-path` (hard-coded GameObject hierarchy names). Name the game method
+  whose code the assumption is about, not a line number - `Scripts/check_game_coupled_patches.py`
+  diffs exactly that method after a re-decompile (see the `game-update-refresh` skill, step 3b).
+  Unity/engine types (`Text`, `Resources`, `String.Concat`, ...) are out of scope.
 
 For the concrete raw-pointer, TextAsset, Unity logging, and prefab patterns, read the relevant
 references under [`docs/features/runtime-plugin/`](../../docs/features/runtime-plugin/).

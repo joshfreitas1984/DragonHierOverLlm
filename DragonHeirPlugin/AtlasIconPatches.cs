@@ -82,6 +82,7 @@ internal static class AtlasIconPatches
         public string Result { get; set; } = string.Empty;
     }
 
+    // [GameCoupled InnIconController.Init logic] passes the inn's (already translated) display name as the atlas sprite key
     [HarmonyPatch(typeof(TextureController), nameof(TextureController.LoadAtlasSprite))]
     [HarmonyPrefix]
     private static void LoadAtlasSprite_Prefix(ref string spriteName)

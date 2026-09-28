@@ -39,6 +39,7 @@ internal static class GlobalDataListOverrides
     // If any entry's Count doesn't match its expected length here, that list is skipped (logged as
     // a warning) rather than partially overwritten - a game update reordering/resizing the tier
     // scale should never silently mislabel it.
+    // [GameCoupled GlobalData logic] overwrites static tier lists by property name and expected Count
     private static readonly (string PropertyName, string[] Values)[] Overrides =
     {
         ("BattleScoreText", new[] { "Poor", "Average", "Good", "Excellent", "Supreme", "Peerless" }),
@@ -54,6 +55,7 @@ internal static class GlobalDataListOverrides
         //("MaterialTypeName", new []{ "Timber", "Ore", "Medical", "Ingredients", "Poison"}),
     };
 
+    // [GameCoupled PlotController.Awake by-name] targeted by string
     [HarmonyPatch(typeof(PlotController), "Awake")]
     [HarmonyPostfix]
     private static void PlotController_Awake_Postfix() => TryApply("PlotController.Awake");

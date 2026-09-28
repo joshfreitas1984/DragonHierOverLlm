@@ -209,6 +209,7 @@ internal static class HeroNamePatches
     /// that is separate, not-yet-implemented work (see
     /// docs/investigations/plugin/hero-name-spacing-and-translation-plan.md).
     /// </summary>
+    // [GameCoupled HeroData.HeroName logic] assumes family+given are concatenated with no separator
     [HarmonyPatch(typeof(HeroData), nameof(HeroData.HeroName), new[] { typeof(bool) })]
     [HarmonyPostfix]
     public static void HeroNamePostfix(HeroData __instance, bool useSetName, ref string __result)
@@ -247,6 +248,7 @@ internal static class HeroNamePatches
         return $"{familyName} {properGivenName}";
     }
 
+    // [GameCoupled GameController.GetHeroName logic] parses the native name + relation-word result shapes
     [HarmonyPatch(typeof(GameController), nameof(GameController.GetHeroName), new[] { typeof(int), typeof(int) })]
     [HarmonyPostfix]
     public static void GetHeroNameIntPostfix(ref string __result)
@@ -345,16 +347,30 @@ internal static class HeroNamePatches
     // dictionary - so this postfix only needs to handle the fullName: false case, gated directly
     // on the method's own bool parameter (no ambiguity about which case produced __result, unlike
     // GetHeroName's postfix which has to infer shape from the string itself).
+    //
+    // Since the force-rename update the prefix comes from ForceData.GetForceName, which returns the
+    // player-set forceSetName when there is one - an English one would be cut to 2 letters
+    // ("Iron Fist Sect" -> "Ir"), so a dictionary miss falls back to the set name minus its last
+    // word (the force-type part - see NameLengthPatches' force rename patches).
+    // [GameCoupled HeroData.GetHeroForceLvDescribe logic] 2-char prefix of GetForceName; TryGetSetForceName mirrors its force choice
     [HarmonyPatch(typeof(HeroData), nameof(HeroData.GetHeroForceLvDescribe), new[] { typeof(bool) })]
     [HarmonyPostfix]
-    public static void GetHeroForceLvDescribePostfix(bool fullName, ref string __result)
+    public static void GetHeroForceLvDescribePostfix(HeroData __instance, bool fullName, ref string __result)
     {
         try
         {
             if (fullName || string.IsNullOrEmpty(__result) || __result.Length < 2) return;
 
             var prefix = __result.Substring(0, 2);
-            if (!_forceNamePartDictionary.TryGetValue(prefix, out var translated)) return;
+            if (!_forceNamePartDictionary.TryGetValue(prefix, out var translated))
+            {
+                var setName = TryGetSetForceName(__instance);
+                if (string.IsNullOrEmpty(setName) || DynamicStringPatches.ContainsCjk(setName)
+                    || !setName.StartsWith(prefix, StringComparison.Ordinal)) return;
+
+                var lastSpace = setName.LastIndexOf(' ');
+                translated = lastSpace > 0 ? setName.Substring(0, lastSpace) : setName;
+            }
 
             __result = translated + __result.Substring(2);
         }
@@ -362,5 +378,31 @@ internal static class HeroNamePatches
         {
             MainPlugin.Logger.LogError($"Error in GetHeroForceLvDescribe translation postfix: {ex}");
         }
+    }
+
+    // Same force GetHeroForceLvDescribe(false) takes its name from: outside-force heroes use
+    // skillForceID (set name only if replacedForce), otherwise servantForceID, then belongForceID
+    // (-1/-2 mean none). Null when that force has no player-set name.
+    private static string TryGetSetForceName(HeroData hero)
+    {
+        if (hero == null || hero.isSummon) return null;
+
+        var world = GameController.Instance?.worldData;
+        if (world == null) return null;
+
+        ForceData force;
+        if (hero.outsideForce)
+        {
+            if (!hero.replacedForce) return null;
+            force = world.GetForce(hero.skillForceID);
+        }
+        else if (hero.servantForceID != -1 && hero.servantForceID != -2)
+            force = world.GetForce(hero.servantForceID);
+        else if (hero.belongForceID != -1 && hero.belongForceID != -2)
+            force = world.GetForce(hero.belongForceID);
+        else
+            return null;
+
+        return force?.forceSetName;
     }
 }

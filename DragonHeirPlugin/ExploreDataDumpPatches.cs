@@ -42,6 +42,7 @@ internal static class ExploreDataDumpPatches
     private static readonly string PluginDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? ".";
     private static readonly string RawDir = Path.Combine(PluginDir, "raw");
 
+    // [GameCoupled ExploreController.Awake by-name] targeted by string; dumps ExploreTile*/ExploreMapTypeDataBase list fields
     [HarmonyPatch(typeof(ExploreController), "Awake")]
     [HarmonyPostfix]
     private static void Awake_Postfix(ExploreController __instance)
@@ -64,6 +65,7 @@ internal static class ExploreDataDumpPatches
     // BattleController's own obstacle name lists (e.g. "雕像"/statue, "城墙"/wall) - same
     // embedded-MonoBehaviour-list problem as ExploreController's lists above, just on the combat
     // screen instead of the explore map.
+    // [GameCoupled BattleController.Awake by-name] targeted by string; dumps obstacle/speGridObj list fields
     [HarmonyPatch(typeof(BattleController), "Awake")]
     [HarmonyPostfix]
     private static void BattleAwake_Postfix(BattleController __instance)
@@ -83,6 +85,7 @@ internal static class ExploreDataDumpPatches
         }
     }
 
+    // [GameCoupled BattlePrepareSpellController.Awake by-name] targeted by string; dumps BattlePrepareSpellDataBase
     [HarmonyPatch(typeof(BattlePrepareSpellController), "Awake")]
     [HarmonyPostfix]
     private static void BattlePrepareSpellAwake_Postfix(BattlePrepareSpellController __instance)
@@ -100,6 +103,7 @@ internal static class ExploreDataDumpPatches
         }
     }
 
+    // [GameCoupled WeatherController.Awake by-name] targeted by string; dumps WeatherDataBase
     [HarmonyPatch(typeof(WeatherController), "Awake")]
     [HarmonyPostfix]
     private static void WeatherAwake_Postfix(WeatherController __instance)
@@ -116,6 +120,7 @@ internal static class ExploreDataDumpPatches
         }
     }
 
+    // [GameCoupled WorldEventController.Awake by-name] targeted by string; dumps worldEventDataBase
     [HarmonyPatch(typeof(WorldEventController), "Awake")]
     [HarmonyPostfix]
     private static void WorldEventAwake_Postfix(WorldEventController __instance)
@@ -132,6 +137,7 @@ internal static class ExploreDataDumpPatches
         }
     }
 
+    // [GameCoupled ReadBookController.Awake by-name] targeted by string; dumps readBookTextTypeDataBase
     [HarmonyPatch(typeof(ReadBookController), "Awake")]
     [HarmonyPostfix]
     private static void ReadBookAwake_Postfix(ReadBookController __instance)

@@ -48,6 +48,7 @@ namespace EnglishPatch;
 /// </summary>
 internal static class ItemIconPatches
 {
+    // [GameCoupled ItemData.GetItemIconName logic] only types 1/2/6 (subType != 1) use the display name as the sprite key
     [HarmonyPatch(typeof(ItemData), nameof(ItemData.GetItemIconName))]
     [HarmonyPostfix]
     private static void GetItemIconName_Postfix(ItemData __instance, ref string __result)

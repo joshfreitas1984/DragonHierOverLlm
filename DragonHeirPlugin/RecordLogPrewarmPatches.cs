@@ -26,10 +26,12 @@ namespace EnglishPatch;
 // safe (see MemoCache's comment in DynamicStringPatches.cs).
 internal static class RecordLogPrewarmPatches
 {
+    // [GameCoupled HeroData.AddLog by-name] targeted by string; binds the "newLog" parameter by name
     [HarmonyPatch(typeof(HeroData), "AddLog")]
     [HarmonyPrefix]
     private static void HeroDataAddLog_Prefix(string newLog) => Prewarm(newLog);
 
+    // [GameCoupled AreaData.AddLog by-name] targeted by string; binds the "newLog" parameter by name
     [HarmonyPatch(typeof(AreaData), "AddLog")]
     [HarmonyPrefix]
     private static void AreaDataAddLog_Prefix(string newLog) => Prewarm(newLog);

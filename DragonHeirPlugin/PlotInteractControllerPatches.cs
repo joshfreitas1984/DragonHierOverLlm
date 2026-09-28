@@ -17,6 +17,7 @@ internal static class PlotInteractControllerPatches
     [ThreadStatic]
     private static bool _inGetHeroPrefix;
 
+    // [GameCoupled WorldData.GetHero logic] exact-match lookup on HeroData.heroName (stored with the "." stripped)
     [HarmonyPatch(typeof(WorldData), nameof(WorldData.GetHero), new[] { typeof(string) })]
     [HarmonyPrefix]
     private static bool GetHero_Prefix(WorldData __instance, string heroName, ref HeroData __result)

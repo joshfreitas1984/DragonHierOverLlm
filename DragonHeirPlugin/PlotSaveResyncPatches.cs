@@ -43,6 +43,8 @@ namespace EnglishPatch;
 // untouched-list moment, different identity anchor since choices have no speaker fields.
 internal static class PlotSaveResyncPatches
 {
+    // [GameCoupled PlotController.ShowPlot logic] assumes plotDatas is still untouched when ShowPlot is entered
+    // [GameCoupled PlotController.GoNextPlot logic] removes plotDatas[0] before each later line
     [HarmonyPatch(typeof(PlotController), nameof(PlotController.ShowPlot))]
     [HarmonyPrefix]
     private static void ShowPlot_Prefix(PlotData targetPlot)

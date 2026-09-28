@@ -1718,6 +1718,8 @@
   - split: 4
     text: "摧折"
     translated: "Breaking"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "Shatter,摧折,"
     qcReviewedText: "Breaking"
     qcStatus: Passed
     qcQualityScore: 100

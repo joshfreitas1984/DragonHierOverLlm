@@ -538,6 +538,7 @@ public class MainPlugin : BasePlugin
     // GlobalData.ConvertNumToChinese(int input) spells a number out as Chinese numeral text (e.g.
     // "一万二千三百四十五") for display. Skip the original entirely and return a plain,
     // English-friendly formatted number instead (e.g. "12,345").
+    // [GameCoupled GlobalData.ConvertNumToChinese replaces] original skipped; returns an N0-formatted number
     [HarmonyPatch(typeof(GlobalData), nameof(GlobalData.ConvertNumToChinese))]
     [HarmonyPrefix]
     public static bool ConvertNumToChinese_Prefix(int input, ref string __result)
@@ -559,6 +560,7 @@ public class MainPlugin : BasePlugin
     // controllers across the codebase (AreaData, BuildingUIController, ChapterController,
     // QuickDetail, etc.), unlike ConvertNumToChinese which is only used for one specific spot.
     // Same treatment: skip the Chinese-word lookup, return the plain Arabic numeral instead.
+    // [GameCoupled GlobalData.GetNumText replaces] original skipped; returns the Arabic numeral
     [HarmonyPatch(typeof(GlobalData), nameof(GlobalData.GetNumText))]
     [HarmonyPrefix]
     public static bool GetNumText_Prefix(int num, ref string __result)
@@ -579,6 +581,7 @@ public class MainPlugin : BasePlugin
     // string via "id % length" (no other call sites found in the decompiled codebase - likely
     // rare/decorative, e.g. a looping digit animation). Return the equivalent Arabic digit
     // character instead, mirroring the "id % 10" style of the original.
+    // [GameCoupled GlobalData.GetChineseNumText replaces] original skipped; mirrors its "id % length" digit pick
     [HarmonyPatch(typeof(GlobalData), nameof(GlobalData.GetChineseNumText))]
     [HarmonyPrefix]
     public static bool GetChineseNumText_Prefix(int id, ref char __result)

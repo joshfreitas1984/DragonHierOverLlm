@@ -962,6 +962,7 @@ internal static class DynamicStringPatches
     // output, so RunGenericPipeline trusts _logNarrativeCompiledTemplates alone here rather than
     // also falling back to the full corpus - see that method's comment for why a fallback actively
     // backfired for the one case (a stale save entry's own template timing out) this exists to fix.
+    // [GameCoupled HeroData.GetRecordLog ui-path] HeroDetailPanel/Log, AreaLog and PlotPanel/RecordScrollView hierarchy names
     private static bool IsKnownLogPanelPath(string path)
     {
         if (string.IsNullOrEmpty(path)) return false;
@@ -1002,6 +1003,7 @@ internal static class DynamicStringPatches
     // concatenates "提升"/"降低" with a dynamic name elsewhere (:1764, :2945), but that name's
     // domain (skill/hero names, not a fixed resource list) isn't confirmed, so it's left alone
     // pending an actual report.
+    // [GameCoupled MeetingController.GetAvailableMissions logic] builds the mission name via String.Concat("获取", resourceName)
     private static readonly (string Raw, string Result)[] ForceMissionResourceCompounds =
     [
         ("获取矿石", "Obtain Mineral"),
@@ -1217,6 +1219,7 @@ internal static class DynamicStringPatches
     // every caller would risk breaking that comparison in the opposite direction instead.
     // TutorialController's targetBuilding is the same class of bug but is fixed separately below
     // (a dynamic value, not a fixed literal, so it doesn't fit this whitelist).
+    // [GameCoupled AreaBuildController.BuildChoiceButtonClicked logic] compares button labels against GetText of these literal keys
     private static readonly HashSet<string> BuildActionRoutingKeys = new()
     {
         "升级", "迁移", "拆除", "新建", "取消建造", "取消升级", "取消拆除",
@@ -1255,6 +1258,7 @@ internal static class DynamicStringPatches
     [ThreadStatic]
     private static bool _inHeroSearchNameCompare;
 
+    // [GameCoupled HeroSearchController.RegenerateHeroIcon logic] compares names via LTLocalization.GetText(rawName) + Contains
     [HarmonyPatch(typeof(HeroSearchController), nameof(HeroSearchController.RegenerateHeroIcon))]
     [HarmonyPrefix]
     private static void HeroSearchRegenerateHeroIcon_Prefix() => _inHeroSearchNameCompare = true;
@@ -1267,6 +1271,7 @@ internal static class DynamicStringPatches
         return __exception;
     }
 
+    // [GameCoupled HeroSearchController.RefreshFliter logic] compares names via LTLocalization.GetText(rawName) + Contains
     [HarmonyPatch(typeof(HeroSearchController), nameof(HeroSearchController.RefreshFliter))]
     [HarmonyPrefix]
     private static void HeroSearchRefreshFliter_Prefix() => _inHeroSearchNameCompare = true;
@@ -1284,6 +1289,7 @@ internal static class DynamicStringPatches
     // LTLocalization.GetText(targetBuilding) - same class of bug as the build-action routing
     // keys above, but targetBuilding is a dynamic building name rather than a fixed literal, so
     // it's translated at the call site instead of widening the GetText key whitelist.
+    // [GameCoupled TutorialController.TutorialFindBuildingButton logic] matches the child label against GetText(targetBuilding)
     [HarmonyPatch(typeof(TutorialController), nameof(TutorialController.TutorialFindBuildingButton))]
     [HarmonyPrefix]
     private static void TutorialFindBuildingButton_Prefix(ref string targetBuilding)
@@ -1292,6 +1298,7 @@ internal static class DynamicStringPatches
             targetBuilding = RunGenericPipeline(targetBuilding);
     }
 
+    // [GameCoupled TutorialController.TutorialFindBuildingChoiceButton logic] matches the child label against GetText(targetBuilding)
     [HarmonyPatch(typeof(TutorialController), nameof(TutorialController.TutorialFindBuildingChoiceButton))]
     [HarmonyPrefix]
     private static void TutorialFindBuildingChoiceButton_Prefix(ref string targetBuilding)
@@ -1315,6 +1322,7 @@ internal static class DynamicStringPatches
     // cases further up this file - a translated value being compared against a differently-cased
     // (translated vs. raw) source - just resolved here by forward-translating the query to match
     // the already-English list, not by reverse-translating it.
+    // [GameCoupled MartialClubDataBase.FindMartialClub logic] linear areaName compare against the already-English list
     [HarmonyPatch(typeof(MartialClubDataBase), nameof(MartialClubDataBase.FindMartialClub))]
     [HarmonyPrefix]
     private static void FindMartialClub_Prefix(ref string areaName)

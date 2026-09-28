@@ -195,6 +195,7 @@ internal static class MissionPatches
     // TranslateCompoundName used for the bare-compound-name fallback above, resolves both pieces
     // (area name, building name) before they are ever concatenated/Formatted downstream, and the
     // in-place write memoizes the result so this only needs to run once per mission instance.
+    // [GameCoupled GameController.GetFullMission logic] bakes missionHideTargetPlaceString once at mission creation
     [HarmonyPatch(typeof(MissionData), nameof(MissionData.GetMissionBaseDescribe), new[] { typeof(bool) })]
     [HarmonyPrefix]
     private static void GetMissionBaseDescribePrefix(MissionData __instance)
@@ -209,6 +210,7 @@ internal static class MissionPatches
         }
     }
 
+    // [GameCoupled MissionIconController.Update by-name] targeted by string; reads missionHideTargetPlaceString directly
     [HarmonyPatch(typeof(MissionIconController), "Update")]
     [HarmonyPrefix]
     private static void MissionIconControllerUpdatePrefix(MissionIconController __instance)

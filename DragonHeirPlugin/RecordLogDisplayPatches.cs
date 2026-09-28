@@ -66,6 +66,7 @@ internal static class RecordLogDisplayPatches
     private static int _heroInvocationCount;
     private static int _areaInvocationCount;
 
+    // [GameCoupled HeroData.GetRecordLog replaces] BuildTranslatedRecordLog mirrors the newest-first "\n" / "\n......" join
     [HarmonyPatch(typeof(HeroData), nameof(HeroData.GetRecordLog))]
     [HarmonyPrefix]
     private static bool HeroDataGetRecordLog_Prefix(HeroData __instance, ref string __result)
@@ -89,6 +90,7 @@ internal static class RecordLogDisplayPatches
         }
     }
 
+    // [GameCoupled AreaData.GetRecordLog replaces] BuildTranslatedRecordLog mirrors the newest-first "\n" / "\n......" join
     [HarmonyPatch(typeof(AreaData), nameof(AreaData.GetRecordLog))]
     [HarmonyPrefix]
     private static bool AreaDataGetRecordLog_Prefix(AreaData __instance, ref string __result)

@@ -3,3 +3,5 @@
 - raw: 断臂
   result: Severed Arm
   badtrans: false
+# - raw: 摧折
+#   result: Shatter

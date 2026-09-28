@@ -209,6 +209,7 @@ internal static class PrefabTextPatches
     // real GameObject return type. GlobalData has multiple overloaded AddChild methods (confirmed
     // via HarmonyException: AmbiguousMatchException), so resolved via reflection like
     // AssetBundleLoadAssetPatch instead of a plain [HarmonyPatch(typeof(GlobalData), "AddChild")].
+    // [GameCoupled GlobalData.AddChild by-name] overload resolved by reflection on name + (GameObject, GameObject) shape
     [HarmonyPatch(typeof(GlobalData))]
     internal static class GlobalDataAddChildPatch
     {

@@ -1,6 +1,6 @@
 ---
 name: game-update-refresh
-description: Walks the user through refreshing the translation pipeline after the game (Legend of Dragon Heir / LongYinLiZhiZhuan) receives an update - commit, regenerate BepInEx interop + raw dumps, rebuild the plugin, re-decompile, copy raws, export, and merge - asking for explicit approval before running each step. Stops before translation, QC, packaging, and release, which it must never run. Use when the user says the game updated/patched and they need to pull in new strings or files.
+description: Walks the user through refreshing the translation pipeline after the game (Legend of Dragon Heir / LongYinLiZhiZhuan) receives an update - commit, regenerate BepInEx interop + raw dumps, rebuild the plugin, re-decompile, audit game-coupled plugin patches, copy raws, export, and merge - asking for explicit approval before running each step. Stops before translation, QC, packaging, and release, which it must never run. Use when the user says the game updated/patched and they need to pull in new strings or files.
 ---
 
 # Refresh the pipeline after a game update
@@ -73,8 +73,9 @@ dotnet build DragonHeirPlugin
 ```
 
 Report any compile errors - they usually mean a game type/signature changed and a Harmony patch
-needs updating. Also suggest the user check `BepInEx/LogOutput.log` for patches that failed to
-apply at runtime.
+needs updating. A clean build only proves the `nameof`/`typeof` targets still exist; patches
+targeted by string or relying on game logic are checked in step 3b, and runtime binding is
+checked after the user next launches the game with this build (see step 3b's last bullet).
 
 ### 3. Re-decompile (Converter)
 
@@ -122,6 +123,46 @@ wait for completion. When it finishes, verify it before moving on:
 Check
 [`converter.instructions.md`](../../../.github/instructions/converter.instructions.md) if it
 stalls or produces no types/strings.
+
+### 3b. Audit game-coupled plugin patches
+
+Plugin patches that a game update can break **without** a compile error are tagged in
+`DragonHeirPlugin/` with `// [GameCoupled Class.Method kind] reason` comments (kinds: `replaces`,
+`by-name`, `logic`, `ui-path` - see
+[`dragonheirplugin.instructions.md`](../../../.github/instructions/dragonheirplugin.instructions.md)).
+This step is read-only, so it needs no approval beyond the walkthrough itself. From the repo root:
+
+```powershell
+python Scripts/check_game_coupled_patches.py
+```
+
+It compares each tagged target in the new `Converter/output` against `HEAD`, so it must run
+**before** the new decompile is committed. If it has already been committed, pass the last
+pre-update revision instead, e.g.
+`--rev <hash>~1`, where `<hash>` is the newest commit from
+`git log -3 --format="%h %s" -- Converter/output/_NoNamespace/GameController.cs`.
+
+Report the result table, most urgent first:
+
+- **MISSING** - the tagged class/method is gone. The patch is dead or won't bind; flag it as
+  needing a fix.
+- **CHANGED** - the IL2CPP metadata changed: a signature, or the method's native code `Length`.
+  This doesn't depend on Ghidra, but the compiled code size also shifts when nothing meaningful
+  changed (static-field access or field offsets moved). Under each CHANGED method the script
+  lists the string literals and `Class.Method` calls that were added or removed. "no string/call
+  changes" is usually that kind of codegen churn. For methods that do list changes, read the
+  patch next to its reason and the old vs new decompiled method (`git show <rev>:<path>`). Then
+  say whether the assumption on the tag still holds. `replaces` tags are the top priority: the patch re-implements the original, so
+  upstream changes must be mirrored by hand.
+- **TEXT-ONLY** - same metadata, but the decompiled text differs. Almost always Ghidra drift
+  between runs (fields shown as raw offsets, renamed labels). Only look closer for `replaces`
+  tags.
+
+Do not edit patches in this step. List the findings and ask whether the user wants to fix any of
+them now or after the refresh. Remind them that once they relaunch the game with the rebuilt
+plugin, `BepInEx/LogOutput.log` should be grepped for `Failed to patch`, `PatchAll failed` and
+`HarmonyException`. That catches `by-name` targets that no longer bind, which the offline check
+can only infer. Also check `RecordLogDisplayPatches`' `PATCHED`/`MISSING` line.
 
 ### 4. Copy raws into the working directory
 
@@ -190,4 +231,5 @@ Tell the user the remaining steps are theirs:
 - **8. Package & test** - `FileOutputWorkflowTests` "6. Package to Game Files", check in-game for
   untranslated text (the `investigate-missing-translation` skill helps here), then "7. Zip Release".
 
-End with a short recap of which steps were run, skipped, or failed.
+End with a short recap of which steps were run, skipped, or failed, including any open 3b
+game-coupled findings.

@@ -35,6 +35,7 @@ internal static class InfoListPatches
         TranslateInfoListSourceText(__instance, ref text);
     }
 
+    // [GameCoupled InfoTextList.Add by-name] 4-arg overload targeted by string
     [HarmonyPatch(typeof(InfoTextList), "Add", new[] { typeof(int), typeof(TimeData), typeof(string), typeof(bool) })]
     [HarmonyPrefix]
     private static void InfoTextListAddWithTime_Prefix(InfoTextList __instance, ref string text)
