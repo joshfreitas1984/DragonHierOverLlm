@@ -5,6 +5,7 @@
   <Project Path="DragonHeirPlugin/GamePlugin.csproj" />
   <Project Path="Files/Files.csproj" />
   <Project Path="Translate/Translate.csproj" />
+  <Project Path="Installer/Installer.csproj" />
   <Project Path="Tests/Tests.csproj" />
   <Project Path="Verify/Verify.csproj" />
 </Solution>

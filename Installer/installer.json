@@ -1,0 +1,19 @@
+{
+  "gameName": "Legend of Dragon Heir",
+  "steamAppId": 3202030,
+  "steamFolderName": "LongYinLiZhiZhuan",
+  "exeName": "LongYinLiZhiZhuan.exe",
+  "gitHubRepo": "joshfreitas1984/DragonHierOverLlm",
+  // gh account to publish as from "7. Package Release". Leave null to open the browser instead.
+  "ghAccount": null,
+  "patchZipPrefix": "EnglishPatch",
+  "wineLaunchOption": "WINEDLLOVERRIDES=\"winhttp=n,b\" %command%",
+  "bepInEx": {
+    "flavour": "il2Cpp",
+    "architecture": "x64",
+    "version": "6.0.0-be.785",
+    // Pin the exact build: url from builds.bepinex.dev (filenames carry a commit hash) and the zip's SHA256.
+    "url": "https://builds.bepinex.dev/projects/bepinex_be/785/BepInEx-Unity.IL2CPP-win-x64-6.0.0-be.785%2B6abdba4.zip",
+    "sha256": "2a7cbf74d26abe4765c3e662db1721b923bac39849ebfef2ca5dc7de7e2d9b7f"
+  }
+}

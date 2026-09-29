@@ -2,6 +2,10 @@
   sampleText: Heart Method of Vajra Mind
   idealFontSize: 11.0
   allowWordWrap: true
+- path: Canvas/TradePanel/LeftList/SortType/Dropdown List/Viewport/Content/*/Item Label
+  sampleText: Type
+  maxFontSize: 12.0
+  allowAutoSizing: true
 - path: Canvas/TradePanel/LeftOutList/ItemListScrollView/Viewport/Content/*/Name
   sampleText: Essential Sword Controlling Technique
   idealFontSize: 11.0

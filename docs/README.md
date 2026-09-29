@@ -2,9 +2,31 @@
 
 # Latest release
 
-Install [BepinEx Bleeding Edge build for IL2CPP 64bit build 785](https://builds.bepinex.dev/projects/bepinex_be).
+## Install with the installer (recommended)
 
-Extract the [Latest Release](https://github.com/joshfreitas1984/DragonHierOverLlm/releases) into your `<Game Folder>` folder where the game .exe is.
+1. Download the installer: [Windows](https://github.com/joshfreitas1984/DragonHierOverLlm/releases/download/installer/Installer-win-x64.exe) or [Linux](https://github.com/joshfreitas1984/DragonHierOverLlm/releases/download/installer/Installer-linux-x64). These links always give you the newest installer.
+2. Run it. It finds the game through Steam (use **Browse** if it can't), installs BepInEx, and installs the [latest patch release](https://github.com/joshfreitas1984/DragonHierOverLlm/releases/latest). Press **Install / Update**.
+3. Start the game once and let it reach the main menu, so BepInEx can generate its files.
+
+Windows may warn "Windows protected your PC" because the installer isn't code-signed. Choose **More info**, then **Run anyway**.
+
+**Linux (Steam/Proton):** the game and BepInEx are the Windows builds. Paste this into the game's Steam **Properties > Launch Options** (the installer shows it with a Copy button):
+
+```
+WINEDLLOVERRIDES="winhttp=n,b" %command%
+```
+
+To remove the patch, run the installer and press **Uninstall patch**. It removes the patch files and leaves BepInEx in place.
+
+## Updates
+
+When the game starts it checks for a newer patch. If there is one, an **Update available** window appears about 15 seconds later. **Update now** downloads it, closes the game, applies the update and restarts the game through Steam (on Linux you may need to start the game yourself afterwards). **Later** hides it until the next start. If a check or download fails, nothing changes and the reason is written to the BepInEx log.
+
+Your settings files under `BepInEx/config` are never overwritten by an update. To turn the check off, set `Enabled = false` under `[Updates]` in `BepInEx/config/FanslationStudio.Plugins.UIEditor.cfg`. Updates only work for a patch installed with the installer.
+
+## Manual install
+
+Install [BepinEx Bleeding Edge build for IL2CPP 64bit build 785](https://builds.bepinex.dev/projects/bepinex_be), then extract the [latest release zip](https://github.com/joshfreitas1984/DragonHierOverLlm/releases/latest) into your `<Game Folder>` where the game .exe is. A manual install won't get the in-game update prompt.
 
 # Contacting us
 You can join us here: [Discord](https://discord.gg/sqXd5ceBWT)
@@ -65,4 +87,4 @@ project-local `docs/` folders or project-local issue indexes.
 | Understand the `Files/` layout | [GameFileHandling reference](features/translation-pipeline/gamefilehandling-reference.md) |
 | Work on the QC pass | [KNOWN_ISSUES.md](KNOWN_ISSUES.md), then the sibling repo's [quality-review-pass.md](../../FanslationStudio.LlmKit/docs/features/translation-pipeline/quality-review-pass.md) |
 | Reproduce isolated logic bugs | [`Verify/`](../Verify/) and the repository instructions |
-| Install/play the released patch | [root readme](../readme.md) |
+| Install/play the released patch | [Latest release](#latest-release) at the top of this file |

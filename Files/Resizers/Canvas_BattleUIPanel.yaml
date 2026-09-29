@@ -81,3 +81,8 @@
   idealFontSize: 12.0
   allowWordWrap: true
   adjustWidth: 20.0
+- path: Canvas/BattleUIPanel/PrepareUIPanel/Title/Text
+  sampleText: Refine skills through practice
+  idealFontSize: 30.0
+  allowWordWrap: true
+  adjustWidth: 70.0

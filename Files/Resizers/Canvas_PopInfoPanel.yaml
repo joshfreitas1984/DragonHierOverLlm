@@ -1,3 +1,7 @@
+- path: Canvas/PopInfoPanel/QuickDetail/DescribeGrid/SkillLittleDescribe(Clone)/Text
+  sampleText: Scorching:(2 Turn) <color=orange>[Attack]</color><color=red…
+  idealFontSize: 10.0
+  adjustHeight: 10.0
 - path: Canvas/PopInfoPanel/QuickDetail/ResourcePointDetail/Back/Text
   sampleText: >-
     <size=18>Baling Village 湖泽</size>

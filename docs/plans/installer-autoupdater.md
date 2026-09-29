@@ -1,6 +1,6 @@
 # Installer and auto-updater plan
 
-Status: proposed (2026-09-29). Nothing here is implemented yet.
+Status (2026-09-29): steps 1-3 are implemented (release library, `Installer.Core`, `Installer.App` GUI and the `Installer/` host). Step 4 (in-game prompt) and the other two games are not started.
 
 ## Goals
 
@@ -34,7 +34,8 @@ Status: proposed (2026-09-29). Nothing here is implemented yet.
 
 ### Installer config and packaging
 
-- The installer binaries are **outside** the patch zip and attached to the GitHub Release as standalone assets. The one exception is the win-x64 build, which is also copied into the zip at `BepInEx/updater/` for the in-game update.
+- The installer binaries are **outside** the patch zip. They live on one rolling GitHub **pre-release tagged `installer`** (`Installer-win-x64.exe`, `Installer-linux-x64`), so the download URL never changes (`InstallerAssets.DownloadUrl`) and a pre-release never counts as the "latest" patch release. The in-game update downloads the win-x64 build from that URL on demand (Wine users need the Windows build), so patch releases neither rebuild nor re-upload it. Published trimmed and compressed the binaries are about 20 MB (untrimmed they are about 90 MB, which is why they are not bundled in the zip).
+- "7b. Package Installer" builds both binaries into `ReleaseFolder` and opens the prefilled new-release page for `installer`; run it only when the installer code or `installer.json` (for example a new BepInEx pin) changes.
 - `installer.json` is included in the host project as an `EmbeddedResource`, so each published single-file binary carries its own config and users download one file. The standalone installer and the in-zip updater are two publishes of the same host, so both carry the same config.
 - If an `installer.json` sits next to the exe it overrides the embedded one, which allows testing against a different repo or game folder without rebuilding.
 - Config is data, not code: changing the pinned BepInEx version or repo means rebuilding the installer, which `PackageRelease()` does on every release anyway.
@@ -83,23 +84,22 @@ Consequences for the generic design:
 
 ## Release flow ("7. Package Release")
 
-1. Publish the installer host (`dotnet publish`) for win-x64 and linux-x64.
+1. (Separate, only when the installer changes: "7b. Package Installer" publishes the host for win-x64 and linux-x64 to the rolling `installer` pre-release.)
 2. Stage the payload:
    - Resizers, Layouts, Sprites and `Files/Mod` (the mappings `ZipRelease()` uses today).
    - The plugin DLL, FanslationStudio.Plugins DLLs and configs from the ReleaseFolder.
    - The static folder.
-   - The win-x64 updater at `BepInEx/updater/` (used by the in-game update; Wine users need the Windows build).
 3. Remove the auto-added `zzAddedResizers.yaml`, `zzAddedLayouts.yaml` and `zzAddedSprites.yaml`.
 4. Generate `release-manifest.json`: version (`yyyy.MM.dd.HH.mm`), per-file hashes and a `seedOnly` list (config files written only if missing, so user tweaks survive updates).
 5. Zip as `EnglishPatch-<version>.zip`.
-6. Publish a GitHub Release tagged with the version, attaching the patch zip and the installer binaries. New users need the installer as a standalone asset, since they do not have the zip yet.
+6. Publish a GitHub Release tagged with the version, attaching the patch zip and `release-manifest.json`. New users get the installer from the rolling `installer` pre-release.
 
 Publishing is manual and needs no credentials from the tool. When packaging finishes, `PackageRelease()`:
 
 - writes outputs next to the existing staging folder (see layout below);
 - opens that folder and the browser at `https://github.com/<owner>/<repo>/releases/new?tag=<version>&title=<version>`, taking `<owner>/<repo>` from `installer.json`.
 
-You sign in as the correct account in the browser, drag the files in and click Publish. Assets to attach: `EnglishPatch-<version>.zip` and the installer binaries (new users need the installer standalone since they do not have the zip yet). Nothing is built in GitHub Actions: the zip is built from the local tested files.
+You sign in as the correct account in the browser, drag the files in and click Publish. Assets to attach: `EnglishPatch-<version>.zip` and `release-manifest.json`. The release notes start with the game version (`Files/Packaging/GameVersion.txt`) followed by the git commits since the newest tag. Nothing is built in GitHub Actions: the zip is built from the local tested files.
 
 An optional automated publish can be added later using a fine-grained token scoped to this one repo, read from an explicit environment variable, so the account is never guessed.
 
@@ -130,17 +130,18 @@ Before copying, `PackageRelease()` clears only the folders it fully owns (`BepIn
 ## In-game update behaviour
 
 - On startup the plugin checks the latest release and compares it with the `version` in the installed manifest. The assembly version (1.0.0) is not used.
-- If newer, show an in-game prompt. On accept: download the zip to `BepInEx/update-staging/`, launch `updater --apply-update <zip> --pid <gamePid>` (detached), and quit the game.
-- The updater waits for the PID to exit (no locked DLLs), applies the zip with a small progress window, and relaunches via `steam://rungameid/<appId>`.
+- If newer, show an in-game prompt. On accept: download the patch zip and `Installer-win-x64.exe` (from the rolling `installer` release) to a folder under the system temp path (not the game folder, so the updater never sits inside the folder it overwrites), launch `Installer-win-x64.exe --apply-update <zip> --pid <gamePid> --game-dir <dir> --steam-app-id <id>` (detached), and quit the game.
+- The updater waits for the PID to exit (no locked DLLs), verifies every hash before writing anything, applies the zip with a small progress window, and relaunches via `steam://rungameid/<appId>`. (If run from inside the game folder it first copies itself to temp.)
+- The plugin needs no per-game config: `PackageRelease()` stamps `gitHubRepo`, `steamAppId` and `patchZipPrefix` (from `installer.json`) into `release-manifest.json`, and the installer records that manifest at `BepInEx/release-manifest.json`. The plugin reads its repo and app ID from there; `[Updates] Enabled` in the UI Editor `.cfg` only toggles it.
 - The plugin runs inside Wine on Linux, so the spawned updater is the win-x64 build. Relaunch from inside the Wine prefix may not work; the fallback there is "Update complete, please start the game."
 - If the download or hash check fails, keep the current install and log rather than quitting the game.
 
 ## Order of work
 
-1. `Release` library in LlmKit and rename `ZipRelease()` to `PackageRelease()` and rewrite it to use it (manifest, release folder, prefilled release URL). Releases work end to end at this point.
-2. `Installer.Core`, then headless `--apply-update`.
-3. `Installer.App` GUI and this repo's `Installer/` host.
-4. In-game prompt in FanslationStudio.Plugins.
+1. **Done.** `Release` library in LlmKit and rename `ZipRelease()` to `PackageRelease()` and rewrite it to use it (manifest, release folder, prefilled release URL). Releases work end to end at this point.
+2. **Done.** `Installer.Core`, then headless `--apply-update`.
+3. **Done.** `Installer.App` GUI and this repo's `Installer/` host (trimmed single-file publish, shared icon).
+4. **Done for the BepInEx 6 IL2CPP host (untested in-game).** In-game prompt in FanslationStudio.Plugins (`UpdateHost`/`UpdatePrompt` in UnityShared, `UpdateService` in Shared). Mono hosts still need wiring, and old Unity Mono may need `UnityWebRequest` instead of `HttpClient` (TLS).
 5. Update the `new-translation-project` skill to scaffold `installer.json`, the `Installer/` host and the packager call for new games, and update the install steps in `docs/README.md`.
 
 ## Open items
