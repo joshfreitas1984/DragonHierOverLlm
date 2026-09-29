@@ -28,7 +28,7 @@ mid-walkthrough to "just finish it off":
 - translation facts (`TranslationWorkflowTests`, any live LLM call),
 - quality-review facts (`QualityControlWorkflowTests`),
 - packaging (`FileOutputWorkflowTests.PackageFinalTranslation`),
-- release zipping (`FileOutputWorkflowTests.ZipRelease`),
+- release packaging (`FileOutputWorkflowTests.PackageRelease`),
 - any flag/QC reset facts.
 
 After step 6, list steps 7-8 as things for the user to do themselves and end.
@@ -281,7 +281,7 @@ Tell the user the remaining steps are theirs:
 - **7. Translate** new/changed lines - `TranslationWorkflowTests` "3. Translate Lines Only", then
   the QC facts if they use QC.
 - **8. Package & test** - `FileOutputWorkflowTests` "6. Package to Game Files", check in-game for
-  untranslated text (the `investigate-missing-translation` skill helps here), then "7. Zip Release".
+  untranslated text (the `investigate-missing-translation` skill helps here), then "7. Package Release".
 
 End with a short recap of which steps were run, skipped, or failed, including any open 3b
 game-coupled findings.
