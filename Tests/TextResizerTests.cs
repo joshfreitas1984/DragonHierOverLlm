@@ -5,89 +5,15 @@ namespace Tests;
 
 public class TextResizerTests
 {
-    // Splits Defaults.yaml/zzAddedResizers.yaml resizer entries into one file per top-level
-    // path prefix (first two path segments), e.g. "Canvas/MonthMissionPanel/..." -> Canvas_MonthMissionPanel.yaml
+    // The splitting itself lives in LlmKit (EditorFileSplitter) so every game packages the editor folders the same way.
     [Fact]
-    public static void MoveResizersIntoPathBasedFiles()
-    {
-        var workingDirectory = GameFileHandling.WorkingDirectory;
-        var resizersFolder = Path.GetFullPath($"{workingDirectory}/Resizers");
-        var sourceFiles = new[] { "Defaults.yaml", "zzAddedResizers.yaml" };
-
-        SplitEditorFiles(resizersFolder, sourceFiles);
-    }
+    public static void MoveResizersIntoPathBasedFiles() => EditorFileSplitter.SplitResizers(GameFileHandling.WorkingDirectory);
 
     [Fact]
-    public static void MoveSpritesIntoPathBasedFiles()
-    {
-        var workingDirectory = GameFileHandling.WorkingDirectory;
-        var resizersFolder = Path.GetFullPath($"{workingDirectory}/Sprites");
-        var sourceFiles = new[] { "Defaults.yaml", "zzAddedSprites.yaml" };
-
-        SplitEditorFiles(resizersFolder, sourceFiles);
-    }
+    public static void MoveSpritesIntoPathBasedFiles() => EditorFileSplitter.SplitSprites(GameFileHandling.WorkingDirectory);
 
     [Fact]
-    public static void MoveLayoutsIntoPathBasedFiles()
-    {
-        var workingDirectory = GameFileHandling.WorkingDirectory;
-        var resizersFolder = Path.GetFullPath($"{workingDirectory}/Layouts");
-        var sourceFiles = new[] { "Defaults.yaml", "zzAddedLayouts.yaml" };
-
-        SplitEditorFiles(resizersFolder, sourceFiles);
-    }
-
-    private static void SplitEditorFiles(string resizersFolder, string[] sourceFiles)
-    {
-        var deserializer = YamlHelper.CreateDeserializer();
-        var serializer = YamlHelper.CreateSerializer();
-
-        var groups = new Dictionary<string, List<Dictionary<string, object>>>();
-
-        foreach (var sourceFile in sourceFiles)
-        {
-            var sourcePath = Path.Combine(resizersFolder, sourceFile);
-            if (!File.Exists(sourcePath))
-                continue;
-
-            var entries = deserializer.Deserialize<List<Dictionary<string, object>>>(File.ReadAllText(sourcePath))
-                ?? [];
-
-            foreach (var entry in entries)
-            {
-                if (!entry.TryGetValue("path", out var pathValue) || pathValue is not string path)
-                    continue;
-
-                var segments = path.Split('/');
-                var key = segments.Length >= 2
-                    ? $"{segments[0]}_{segments[1]}"
-                    : segments[0];
-
-                if (!groups.TryGetValue(key, out var group))
-                    groups[key] = group = [];
-
-                group.Add(entry);
-            }
-
-            // All entries have been moved out of the source file.
-            FileHelper.WriteAllTextWithRetry(sourcePath, serializer.Serialize(new List<Dictionary<string, object>>()));
-        }
-
-        foreach (var (key, entries) in groups)
-        {
-            var outputPath = Path.Combine(resizersFolder, $"{key}.yaml");
-
-            var existingEntries = File.Exists(outputPath)
-                ? deserializer.Deserialize<List<Dictionary<string, object>>>(File.ReadAllText(outputPath)) ?? []
-                : [];
-
-            var merged = existingEntries.Concat(entries)
-                .OrderBy(entry => entry.TryGetValue("path", out var pathValue) ? pathValue as string : null, StringComparer.Ordinal)
-                .ToList();
-
-            FileHelper.WriteAllTextWithRetry(outputPath, serializer.Serialize(merged));
-        }
-    }
+    public static void MoveLayoutsIntoPathBasedFiles() => EditorFileSplitter.SplitLayouts(GameFileHandling.WorkingDirectory);
 
     [Fact] // Can only be run when VS is running in admin
     public void CreateSymlinkToResizer()
